@@ -30,7 +30,7 @@ Beginning December 2021, the following changed for this API:<br><br>1. The `fiel
 
 ## Credentials-based response details
 
-If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}
 ZIP file format:

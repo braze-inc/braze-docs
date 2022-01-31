@@ -22,7 +22,7 @@ channel: email
 - Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
-- Don’t use JavaScript because it does not work with any ESP.
+- Avoid using JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
 
 ### Email validation
@@ -221,7 +221,7 @@ Since spam filters watch for both an HTML and a plain text version of a message,
 
 ### Setting from and reply-to addresses
 
-When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e. `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
 
 ## Styling tips
 
@@ -236,7 +236,7 @@ When setting your "From" addresses, make sure your "From" email domain, matches 
 - The **“From Field”** should clearly show who the sender is.
   - Try not to use an unknown person’s name or an uncommon abbreviation, instead try using something recognizable like the company name.
   - If using a person’s name suits your company methods of personalizing email, stay consistent and retain the same “From Name” to develop a relationship with the recipient.
-  -  “From” name should be no more than 25 characters to display appropriately on mobile.
+  - “From” name should be no more than 25 characters to display appropriately on mobile.
 
 ### Body styling
 
@@ -286,8 +286,7 @@ When setting your "From" addresses, make sure your "From" email domain, matches 
   {: .reset-td-br-1 .reset-td-br-2}
 
 
-  Source: [Email on Acid][62]
-
+ [Email on Acid][62]
 
 - **Call to actions** come into play once readers have opened your email.
   - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
@@ -311,9 +310,9 @@ When setting your "From" addresses, make sure your "From" email domain, matches 
 | 25KB maximum |   60KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Make sure to limit your **Body Size**: Large E-Mail bodies (larger than 102kb) are not only extremely taxing on Braze and SendGrid's servers, but are also clipped by Gmail and other E-Mail clients. We recommend keeping the size of your email under 25kb for just text, or 60kb with images.
+Make sure to limit your **Body Size**: Email bodies larger than 102KB are not only extremely taxing on Braze and SendGrid's servers, but they are also clipped by Gmail and other email clients. We recommend keeping the size of your email under 25KB for just text or 60KB with images.
 
-If you are receiving this error in the editor, you likely have base64 encoded images that have been embedded in the email itself. This is not an effective way to send emails with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by href.
+If you are receiving this error in the editor, you likely have `base64` encoded images that have been embedded in the email itself. However, this is not the most effective way to send emails with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by the href.
 
 ### Text length
 
@@ -341,10 +340,11 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 ### Onboarding
 
-- provide tips to help users get started.
-- Showcase only the most essential features - too much information can be overwhelming and potentially confusing if the user is still unfamiliar with your app.
+- Provide tips to help users get started.
+- Showcase only the most essential features 
+- Too much information can be overwhelming and potentially confusing if the user is still unfamiliar with your app
 - Provide links to your documentation and let users know how they can get support.
-- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple but clear calls to action and lets users know about a deal:
+- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple but clear calls to action and informs users about a deal:
 
 ![LivingSocial email][26]{: style="max-width:70%;"}
 
@@ -370,12 +370,12 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 ### Retention
 
-- Keep your tone friendly.
+- Keep your tone friendly!
 - This may be your last chance to win users back, so be sure to include content that showcases your app's value.
 - If the user has been relatively inactive since installing, offer helpful hints for getting started.
 - For social apps, keep users updated on their friends' activities.
 - Offer discounts or any other incentives that may bring users back.
-- Try to make your message personal to show the user that he is still valued. Rue La La, for instance, frames its retention email as a note from its CEO:
+- Try to make your message personal to show the user that he is still valued. Rue La La, for instance, frames the retention email as a note from its CEO:
 
 ![Ruelala email][29]{: style="max-width:80%;"}
 
@@ -403,8 +403,6 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 [29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
 [30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
 [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-
-
 [24]: http://tools.ietf.org/html/rfc2822
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
 [62]: https://www.emailonacid.com/blog/article/email-marketing/preview-vs-preheader-text-how-long-should-preheader-text-be/
