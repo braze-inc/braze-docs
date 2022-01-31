@@ -9,13 +9,13 @@ channel: messages intégrés à l'application
 
 # Impressions de messages faibles dans l'application
 
-Si vos impressions sont inférieures à ce que vous voulez, nous vous recommandons :
+Si vos impressions sont inférieures à ce que vous voulez qu'elles soient, nous vous recommandons de vérifier pour:
 
-* [Vérifier le segment](#segment-size)
-* [Vérifier l'historique des modifications](#segment-changelogs)
+* [Taille du segment](#segment-size)
+* [Changelogs](#segment-changelogs)
 * [Exécuter des tests](#run-tests)
-* [Vérifier les déclencheurs d'événements](#event-triggers)
-* [Vérifier les impressions des messages](#message-impressions)
+* [Déclencheurs d'événement](#event-triggers)
+* [Impressions des messages](#message-impressions)
 
 ## Taille du segment
 
