@@ -21,7 +21,7 @@ channel: Email
 - Toujours utiliser les alt-tags pour les images si elles n'apparaissent pas dans l'email (bloqué, ne pas charger, etc.)
 - Ne définissez pas les hauteurs et les largeurs des images car cela provoquera des espaces inutiles dans un courriel dégradé.
 - Les balises `div` ne doivent pas être utilisées car la plupart des clients de messagerie ne supportent pas leur utilisation. Utilisez plutôt des tables imbriquées.
-- N'utilisez pas JavaScript car il ne fonctionne pas avec ESP.
+- Évitez d'utiliser JavaScript car il ne fonctionne avec aucun ESP.
 - Braze améliore les temps de chargement en utilisant un CDN global pour héberger toutes les images de courriel.
 
 ### Validation de l'adresse e-mail
@@ -219,7 +219,7 @@ Puisque les filtres anti-spam surveillent à la fois une version HTML et une ver
 
 ### Paramétrage et adresse de réponse
 
-Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de messagerie "De" corresponde à votre domaine d'envoi (c'est-à-dire `marketing.yourdomain.com`). Si vous ne le faites pas, cela peut entraîner un déséquilibre entre SPF et DKIM. Tous les e-mails de réponse peuvent être configurés sur votre domaine racine.
+Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de messagerie "De" correspond à votre domaine d'envoi (c'est-à-dire `marketing.yourdomain.com`). Si vous ne le faites pas, cela peut entraîner un déséquilibre entre SPF et DKIM. Tous les e-mails de réponse peuvent être configurés sur votre domaine racine.
 
 ## Astuces de style
 
@@ -234,7 +234,7 @@ Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de me
 - Le **« De Champ»** devrait clairement montrer qui est l'expéditeur.
   - Essayez de ne pas utiliser le nom d'une personne inconnue ou une abréviation inhabituelle, plutôt essayez d'utiliser quelque chose de reconnaissable comme le nom de la société.
   - Si vous utilisez le nom d'une personne correspond aux méthodes de votre entreprise pour personnaliser l'e-mail, rester cohérent et conserver le même « De Nom » pour développer une relation avec le destinataire.
-  -  Le nom « De » ne doit pas contenir plus de 25 caractères à afficher correctement sur mobile.
+  - Le nom « De » ne doit pas contenir plus de 25 caractères à afficher correctement sur mobile.
 
 ### Style du corps
 
@@ -284,8 +284,7 @@ Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de me
   {: .reset-td-br-1 .reset-td-br-2}
 
 
-  Source: [Email sur Acid][62]
-
+ [E-mail sur Acid][62]
 
 - **Appel aux actions** entrent en jeu une fois que les lecteurs ont ouvert votre email.
   - Pointez vos lecteurs dans la bonne direction, que vous vouliez qu'ils s'abonnent, achètent un produit ou visitent votre site Web.
@@ -309,9 +308,9 @@ Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de me
 |   25Ko maximum   |     60 Ko maximum     | 600 pixels maximum  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Assurez-vous de limiter votre **taille de corps**: les gros corps de courrier électronique (plus de 102kb) ne sont pas seulement extrêmement taxables sur les serveurs de Braze et SendGrid, mais sont également coupées par Gmail et d'autres clients E-Mail. Nous vous recommandons de garder la taille de votre e-mail sous 25kb pour juste du texte, ou 60kb avec des images.
+Assurez-vous de limiter votre **taille de corps**: les corps de courriel de plus de 102KB ne sont pas seulement extrêmement taxables sur les serveurs de Braze et SendGrid, mais elles sont également coupées par Gmail et d'autres clients de messagerie. Nous vous recommandons de garder la taille de votre e-mail en dessous de 25 Ko pour seulement du texte ou 60 Ko avec des images.
 
-Si vous recevez cette erreur dans l'éditeur, vous avez probablement des images encodées en base64 qui ont été intégrées dans le courriel lui-même. Ce n'est pas un moyen efficace d'envoyer des courriels avec des images. Nous vous encourageons vivement à utiliser le chargeur d'images de Braze pour héberger des images et les référencer par href.
+Si vous recevez cette erreur dans l'éditeur, vous avez probablement des images encodées `base64` qui ont été intégrées dans l'e-mail lui-même. Cependant, ce n'est pas le moyen le plus efficace d'envoyer des courriels avec des images. Nous vous encourageons vivement à utiliser le chargeur d'images de Braze pour héberger des images et les référencer par le href.
 
 ### Longueur du texte
 
@@ -339,10 +338,11 @@ Un pourcentage élevé des courriels sont lus sur les appareils mobiles. L’uti
 
 ### Embarquement
 
-- fournir des conseils pour aider les utilisateurs à commencer.
-- Ne montrer que les fonctionnalités les plus essentielles - trop d'informations peuvent être accablantes et potentiellement déroutantes si l'utilisateur n'est toujours pas familier avec votre application.
+- Fournir des conseils pour aider les utilisateurs à démarrer.
+- Ne montrer que les fonctionnalités les plus essentielles
+- Trop d'informations peuvent être accablantes et potentiellement déroutantes si l'utilisateur n'est toujours pas familier avec votre application
 - Fournissez des liens vers votre documentation et indiquez aux utilisateurs comment ils peuvent obtenir de l'aide.
-- Essayez de toujours envoyer un e-mail de bienvenue après l'inscription d'un utilisateur. Ci-dessous est un exemple de LivingSocial qui contient des appels simples mais clairs à l'action et permet aux utilisateurs de connaître une affaire :
+- Essayez de toujours envoyer un e-mail de bienvenue après l'inscription d'un utilisateur. Ci-dessous est un exemple de LivingSocial qui contient des appels simples mais clairs à l'action et informe les utilisateurs sur une affaire:
 
 !\[LivingSocial email\]\[26\]{: style="max-width:70%;"}
 
@@ -368,12 +368,12 @@ Un pourcentage élevé des courriels sont lus sur les appareils mobiles. L’uti
 
 ### Rétention
 
-- Gardez votre ton convivial.
+- Gardez votre ton amical !
 - Ceci peut être votre dernière chance de gagner des utilisateurs, alors assurez-vous d'inclure du contenu qui montre la valeur de votre application.
 - Si l'utilisateur a été relativement inactif depuis l'installation, offrez des conseils utiles pour commencer.
 - Pour les applications sociales, gardez les utilisateurs à jour sur les activités de leurs amis.
 - Offrez des réductions ou toute autre incitation susceptible de ramener les utilisateurs.
-- Essayez de rendre votre message personnel pour montrer à l'utilisateur qu'il est toujours valorisé. Rue La La, par exemple, encadre son e-mail de rétention comme une note de son PDG :
+- Essayez de rendre votre message personnel pour montrer à l'utilisateur qu'il est toujours valorisé. Rue La La, par exemple, encadre l'e-mail de rétention comme une note de son PDG :
 
 !\[Ruelala email\]\[29\]{: style="max-width:80%;"}
 
@@ -392,9 +392,7 @@ Un pourcentage élevé des courriels sont lus sur les appareils mobiles. L’uti
 - Si votre fonctionnalité nécessite une explication ou une démo, incluez un lien dans le message. Voici un exemple de Allrecipes.com :
 
 !\[Toutes recettes email\]\[31\]{: style="max-width:70%;"}
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %} [27]: {% image_buster /assets/img_archive/Ideeli_email.png %} [28]: {% image_buster /assets/img_archive/Restaurant_email.png %} [29]: {% image_buster /assets/img_archive/Ruelala_email.png %} [30]: {% image_buster /assets/img_archive/Hailo_social_email.png %} [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}
-
+[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %} [27]: {% image_buster /assets/img_archive/Ideeli_email.png %} [28]: {% image_buster /assets/img_archive/Restaurant_email.png %} [29]: {% image_buster /assets/img_archive/Ruelala_email.png %} [30]: {% image_buster /assets/img_archive/Hailo_social_email.png %} [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %} [61]: {% image_buster /assets/img_archive/preheader_example.png %}
 
 [24]: http://tools.ietf.org/html/rfc2822
 [62]: https://www.emailonacid.com/blog/article/email-marketing/preview-vs-preheader-text-how-long-should-preheader-text-be/
