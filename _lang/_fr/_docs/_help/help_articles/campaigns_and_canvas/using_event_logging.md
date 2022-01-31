@@ -16,13 +16,13 @@ Deux étapes particulièrement utiles sont mises en place :
 
 ## Mise en place d'un profil anonyme
 
-Pour configurer un profil anonyme, consultez cet article sur [l'ajout d'utilisateurs de test][2]
+Pour configurer un profil anonyme, consultez cet article sur [l'ajout d'utilisateurs de test][2].
 
 ## Utiliser la journalisation des événements
 
-Utilisez Event Logging pour tester à quoi ressemble un utilisateur anonyme. Cela peut être particulièrement utile pour trouver l'ID de l'utilisateur si l'application en cours de test ne collecte pas les e-mails. Vous pouvez utiliser Braze avec l'adresse IP de votre appareil pour ajouter cet appareil en tant qu'utilisateur de test.
+Utilisez la journalisation des événements pour tester le comportement d'un utilisateur anonyme. Cela peut être particulièrement utile pour identifier l'identifiant de l'utilisateur si l'application en cours de test ne collecte pas les e-mails. Vous pouvez utiliser Braze avec l'adresse IP de votre appareil pour ajouter cet appareil en tant qu'utilisateur de test.
 
-C'est un excellent moyen de trouver des utilisateurs anonymes. Vous pouvez également utiliser ces informations pour vérifier quelles données sont envoyées à Braze et vérifier s'il y a des divergences. De ce point de vue, vous pouvez identifier si les deltas de vos données sont envoyées à Braze. Si une adresse e-mail ou un jeton push est envoyé avec chaque événement enregistré, toutes les données sont envoyées à Braze.
+C'est aussi un excellent moyen de trouver des utilisateurs anonymes. Vous pouvez également utiliser ces informations pour vérifier quelles données sont envoyées à Braze et vérifier s'il y a des divergences. De ce point de vue, vous pouvez identifier si les deltas de vos données sont envoyées à Braze. Si une adresse e-mail ou un jeton push est envoyé avec chaque événement enregistré, toutes les données sont envoyées à Braze.
 
 Vous avez encore besoin d'aide ? Ouvrez un ticket de support []({{site.baseurl}}/braze_support/).
 
