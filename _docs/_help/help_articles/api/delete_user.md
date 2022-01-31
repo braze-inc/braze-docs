@@ -13,7 +13,7 @@ platform: API
 
 When you [delete a user via the Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint), the following occurs:
 
-- The Lifetime Users count (i.e. "Users") will be updated to account for the newly deleted users.	
+- The [Lifetime Users]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#lifetime-users) count will be updated to account for the newly deleted users.	
 - The entire user profile will be deleted.	
 - The deleted user will still count towards the aggregated conversion percentage.	
 

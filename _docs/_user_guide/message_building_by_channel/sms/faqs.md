@@ -25,8 +25,8 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 There are three common SMS use cases that Braze does not currently support:
 - Two-factor authorization
-- Chat Bots
-- Phone Calls
+- Chat bots
+- Phone calls
 
 ### Do test text messages count toward limits?
 
@@ -47,12 +47,12 @@ While we can't promise that you won't occasionally have an overage, you could fo
 - Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
-- Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
+- Test, test, and test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
 
 ### What are the best sending practices to avoid spam detection for SMS?
 
 1. Make sure opt-in and opt-out instructions are clear.
-2. Ensure you(the brand) have a relationship with the customer.
+2. Ensure you (the brand) have a relationship with the customer.
 3. Make sure the content is relevant to the relationship and what the user has opted-in to receive.
 
 For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
@@ -85,7 +85,7 @@ Some downsides to this approach include:
 
 ### How do you whitelist URLs for SMS?
 
-Before sending SMS messages containing URLs to users in certain countries (For example, Sweden/Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help; this process will take around five days.  
+Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help. This process will take around five days.  
 
 ### What happens if multiple users have the same phone number?
 
@@ -98,7 +98,9 @@ Braze will use the following flow to determine the recipient profile:
 
 If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed.
 
-{% alert important %} If you stagger your users into a Canvas and have different schedule times for each Canvas step, you can send a user with the same email or phone duplicate messages. {% endalert %}
+{% alert important %} 
+If you stagger your users into a Canvas and have different schedule times for each Canvas step, you can send a user with the same email or phone duplicate messages. 
+{% endalert %}
 
 ### Will SMS event properties capture keywords in a sentence?
 

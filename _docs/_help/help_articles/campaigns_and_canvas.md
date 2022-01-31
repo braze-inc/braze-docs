@@ -3,6 +3,7 @@ page_order: 2
 nav_title: Campaigns & Canvas
 layout: dev_guide
 guide_top_header: "Campaigns & Canvas Help Articles"
+guide_top_text: "Looking for helpful information to? Look no further! Check out our help articles to assist you in troubleshooting areas of your Canvases and campaigns. <br><br> For more information on building and optimizing your engagement with users, check out the articles in the <a href='/docs/user_guide/engagement_tools/campaigns/'>Campaigns</a> and <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a>!"
 
 page_type: landing
 description: "This landing page is home to help articles related to common issues with your campaigns or Canvases."
