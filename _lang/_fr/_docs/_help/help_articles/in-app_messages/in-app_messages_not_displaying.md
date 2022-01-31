@@ -7,15 +7,15 @@ description: "Cet article d'aide vous guide à travers le dépannage de problèm
 channel: messages intégrés à l'application
 ---
 
-# Les messages dans l'application ne sont pas affichés
+# Les messages de l'application ne s'affichent pas
 
-Il existe un certain nombre d'approches que vous pouvez essayer :
+Si vous trouvez que vos messages dans l'application ne s'affichent pas ou ne s'affichent pas correctement, il y a un certain nombre d'approches que vous pouvez essayer de cocher :
 
-* [Vérifier les déclencheurs d'événements](#event-triggers)
-* [Vérifier les impressions des messages](#message-impressions)
-* [Exécuter des tests](#run-tests)
-* [Délai de vérification de la session](#session-timeout)
-* [Vérifier l'intervalle de la messagerie](#minimum-interval)
+* [Déclencheurs d'événement](#event-triggers)
+* [Impressions des messages](#message-impressions)
+* [Tests](#run-tests)
+* [Expiration de la session](#session-timeout)
+* [Intervalle de messagerie](#minimum-interval)
 
 ## Déclencheurs d'événement
 
@@ -27,13 +27,11 @@ Si la campagne est déclenchée par un début de session ou un événement perso
 
 La personnalisation de l'interface utilisateur de message dans l'application ou des mécanismes de livraison dans le SDK peut nécessiter que vos développeurs utilisent nos méthodes pour connecter manuellement les impressions de messages dans l'application. Vérifiez avec vos développeurs si vous utilisez la personnalisation des messages dans l'application.
 
-
 ## Exécuter des tests
 
-Il est important de déterminer si l'événement déclencheur ne se produit pas, ou si le message lui-même ne peut pas s'afficher. Pour tester, déclencher le message en utilisant une action différente (comme le démarrage d'une session, ou un événement personnalisé différent) et vérifier s'il s'affiche. Cela aidera à isoler si c'est potentiellement un problème de données.
+Il est important de déterminer si l'événement déclencheur ne se produit pas, ou si le message lui-même ne peut pas s'afficher. Pour tester, déclencher le message en utilisant une action différente (comme un démarrage de session ou un autre événement personnalisé) et vérifier s'il s'affiche. Cela aidera à isoler si c'est potentiellement un problème de données.
 
 Vous pouvez également essayer d'utiliser un autre type de modèle de message ou de taille d'image dans l'application. Il y a [spécifications pour les messages dans l'application][15] qui doivent être suivies. Parfois, si une image est trop grande, cela empêchera l'affichage du message dans l'application.
-
 
 ## Expiration de la session
 
@@ -47,12 +45,12 @@ Si vous avez prolongé le délai d'attente de la session, cela prolongera la pé
 
 ## Intervalle minimum
 
-Il y a un intervalle minimum auquel nous autoriserons le déclenchement consécutif des messages dans l'application. Vous pouvez essayer de les déclencher trop rapidement. Consultez notre documentation pour plus d'informations à ce sujet:
+Il y a un intervalle minimum auquel nous autoriserons le déclenchement consécutif des messages dans l'application, vous pouvez donc essayer de les déclencher trop rapidement. Consultez notre documentation pour plus d'informations à ce sujet:
 * [iOS][19]
 * [Android][20]
 * [Web][21]
 
-Ils sont personnalisables, mais nous les avons mis en place pour éviter de surenvoyer vos utilisateurs.
+Bien que les intervalles soient personnalisables, nous les avons toujours en place pour éviter de surenvoyer vos utilisateurs.
 
 Vous avez encore besoin d'aide ? Ouvrez un ticket de support []({{site.baseurl}}/braze_support/).
 
