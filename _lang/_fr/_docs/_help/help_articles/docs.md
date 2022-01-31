@@ -3,8 +3,9 @@ page_order: 10
 nav_title: Documents
 layout: dev_guide
 guide_top_header: "Articles d'aide de la documentation"
+guide_top_text: "Consultez les ressources ci-dessous pour obtenir des informations supplémentaires sur le site de la documentation de Braze."
 page_type: atterrissage
-description: "Cette page d'accueil comprend des ressources liées au site de documentation de Braze — comme la façon de contribuer à la documentation open source de Braze."
+description: "Cette page d'accueil comprend des ressources liées au site de documentation de Braze, comme la façon de contribuer à la documentation open source de Braze."
 noindex: vrai
 guide_menu_title: ""
 guide_menu_list:
