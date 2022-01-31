@@ -3,6 +3,7 @@ page_order: 2
 nav_title: Campagnes & Toile
 layout: dev_guide
 guide_top_header: "Campagnes & Articles d'aide sur Canvas"
+guide_top_text: "Vous recherchez des informations utiles à ? Ne cherchez pas plus loin ! Consultez nos articles d'aide pour vous aider dans le dépannage de vos toiles et de vos campagnes. <br><br> Pour plus d'informations sur le développement et l'optimisation de votre engagement avec les utilisateurs, Consultez les articles des <a href='/docs/user_guide/engagement_tools/campaigns/'>Campagnes</a> et <a href='/docs/user_guide/engagement_tools/canvas/'>Toile</a>!"
 page_type: atterrissage
 description: "Cette page d'accueil vous aide à trouver des articles liés à des problèmes courants avec vos campagnes ou Canvases."
 tool:
