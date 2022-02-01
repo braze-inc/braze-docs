@@ -13,7 +13,7 @@ hidden: true
 
 # Lexer
 
-> Built for retail from the beginning, we know that the fastest path to customer centricity is making data accessible to all teams. So we combine powerful data enrichment with the most intuitive tools and expert advisory, making understanding and delighting your customers at every interaction a reality today. www.lexer.io
+> Built for retail from the beginning, we know that the fastest path to customer centricity is making data accessible to all teams. So we combine powerful data enrichment with the most intuitive tools and expert advisory, making understanding and delighting your customers at every interaction a reality today. [Learn more.][6]
 
 Lexer and Braze are changing retail by unlocking one of the most vital business assets: customer data. Together helping marketers know their customers, inspiring them to create the experiences that grow sales.
 
@@ -25,7 +25,7 @@ Lexer's segmentation, insights and audience activation and measurement capabilit
 | Requirement | Description |
 | ----------- | ----------- |
 | Partner account | A Lexer account is required to take advantage of this partnership. |
-| Braze REST API key | "A Braze REST API Key with users.track permissions (except for user.delete) and segment.list permissions.The permission set may change as Lexer adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future. This can be created within the Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key" |
+| Braze REST API key | A Braze REST API Key with users.track permissions (except for user.delete) and segment.list permissions.The permission set may change as Lexer adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future. This can be created within the Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key |
 | Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Amazon AWS S3 Bucket and credentials | Before beginning the integration, you must have access credentials for an AWS S3 bucket connected to your Lexer hub (this may be a bucket you create, or one that Lexer creates and manages for you). Visit Lexer documentation <link to our s3 help article> for guidance on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -64,3 +64,4 @@ This integration works by providing Lexer with your existing API token and secre
 [3]: https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
 [4]: https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html
 [5]: https://www.braze.com/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
+[6]: https://lexer.io/
