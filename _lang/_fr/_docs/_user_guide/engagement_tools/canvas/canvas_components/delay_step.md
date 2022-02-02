@@ -55,6 +55,10 @@ Disons que c’est le 10 juin. Le 11 juin, vous aimeriez que les utilisateurs en
 
 Vous commencerez par ajouter une étape complète qui vous enverra immédiatement après l’entrée des utilisateurs sur Canvas le 11 juin. Ensuite, vous créerez une étape de retard qui contiendra les utilisateurs à l’étape jusqu’à 15h heure locale le 17 juin. Après cela, vous liez le délai à une étape complète qui envoie un message immédiatement.
 
+### Délai des étapes à la fin d'une toile {#delay-as-last-step}
+
+Si vous ajoutez une étape de retard à votre Canvas, mais qu'il n'y a plus aucune étape après l'étape de retard, tout utilisateur qui atteint l'étape de retard est automatiquement avancé hors du Canvas. C'est vrai même si le temps de l'étape de retard n'a pas encore été atteint. Cela signifie que, pour les utilisateurs qui ont déjà atteint l'étape de retard, ils ne recevront aucun message que vous ajouterez après l'étape de délai. Cependant, si un utilisateur n'a pas atteint l'étape de retard et qu'un message est ajouté, il recevra ce message.
+
 ## Délai de l'analyse des étapes
 
 Les étapes de retard comportent trois statistiques disponibles dans la vue analytique d'un Canvas actif ou déjà actif.
