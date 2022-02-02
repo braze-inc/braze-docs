@@ -56,6 +56,10 @@ Let’s say that it’s June 10. On June 11, you’d like users to enter the Can
 
 You’d start by adding a full step that sends immediately after users enter the Canvas on June 11. Then, you’d create a delay step that holds users in the step until 3pm local time on June 17. After that, you’d link the delay step to a full step that sends it’s message immediately.
 
+### Delay steps at the end of a Canvas {#delay-as-last-step}
+
+If you add a delay step to your Canvas, but there are no more steps after the delay step, any user that reaches the delay step is automatically advanced out of the Canvas. This is true even if the time of the delay step hasn't been reached yet. This means that, for users that have already reached the delay step, they will not receive any messages you add after the delay step. However, if a user has not reached the delay step and a message is added, then they would receive that message.
+
 ## Delay step analytics
 
 Delay steps have three statistics available in the analytics view of an active or previously active Canvas.
