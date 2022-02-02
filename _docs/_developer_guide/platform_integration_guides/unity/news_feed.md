@@ -19,7 +19,7 @@ You may register Unity Game Objects to be notified of incoming News Feed cards.
 
 On iOS, we recommend setting game object listeners from the Braze configuration editor.
 
-On Android, set `com_appboy_feed_listener_callback_method_name` and `com_appboy_feed_listener_game_object_name` in your Unity project's `braze.xml`.
+On Android, set `com_braze_feed_listener_callback_method_name` and `com_braze_feed_listener_game_object_name` in your Unity project's `braze.xml`.
 
 - To configure your game object listener at runtime on either platform, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.NEWS_FEED`.
 

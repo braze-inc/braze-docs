@@ -79,8 +79,8 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -147,15 +147,15 @@ Your Braze representative should have already advised you of the [correct endpoi
 To update the default endpoint in your integration of the Braze SDKs please add the following code to your `braze.xml`:
 
 ```xml
-<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
 ## Step 6: Enable location tracking
 
-If you would like to enable Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you would like to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
-<bool name="com_appboy_enable_location_collection">true</bool>
+<bool name="com_braze_enable_location_collection">true</bool>
 ```
 
 {% alert important %}
