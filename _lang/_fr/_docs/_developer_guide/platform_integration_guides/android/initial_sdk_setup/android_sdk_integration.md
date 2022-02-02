@@ -78,8 +78,8 @@ Maintenant que les bibliothèques ont été intégrées, vous devez créer un fi
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_appboy_custom_endpoint">VOTRE_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string translatable="false" name="com_braze_custom_endpoint">VOTRE_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -145,15 +145,15 @@ Votre représentant de Braze aurait déjà dû vous aviser du [bon terminaison](
 Pour mettre à jour le point de terminaison par défaut dans votre intégration des SDK Braze, veuillez ajouter le code suivant à votre `braze.xml`:
 
 ```xml
-<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
 ## Étape 6 : Activer le suivi de localisation
 
-Si vous souhaitez activer la collecte de l'emplacement de Braze, mettez à jour votre `brasier. ml` fichier à inclure `com_appboy_enable_location_collection` et s'assurer que sa valeur est définie à `true`.
+Si vous souhaitez activer la collecte de l'emplacement de Braze, mettez à jour votre `brasier. ml` fichier à inclure `com_braze_enable_location_collection` et s'assurer que sa valeur est définie à `true`.
 
 ```xml
-<bool name="com_appboy_enable_location_collection">vrai</bool>
+<bool name="com_braze_enable_location_collection">vrai</bool>
 ```
 
 {% alert important %}
