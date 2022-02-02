@@ -19,7 +19,7 @@ description: "Cet article de référence couvre les directives d'intégration de
 
 Sur Android, les messages dans l'application de Braze sont affichés automatiquement en natif. Pour désactiver cette fonctionnalité, désélectionnez "Afficher automatiquement les messages dans l'application" dans l'éditeur de configuration de Braze.
 
-You may alternatively set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
+You may alternatively set `com_braze_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
 {% endtab %}
 {% tab iOS %}
