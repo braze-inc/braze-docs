@@ -83,8 +83,8 @@ Par exemple, disons que nous voulons référencer l'élément `tales_storefront`
 
 Sous la balise `catalogues` , utilisez l'objet `item` pour référencer des attributs différents pour cet élément.
 
-{% alert note %}
-Rappelez-vous que Liquid est sensible à la casse! Assurez-vous que vous correspondez exactement au cas utilisé dans votre catalogue. Dans notre catalogue d'exemple, nous avons utilisé des minuscules pour nos colonnes, donc nous utilisons des minuscules dans les objets `item`.
+{% alert important %}
+Rappelez-vous que Liquid est sensible à la casse! Assurez-vous que vous correspondez exactement au cas utilisé dans votre catalogue. Dans notre catalogue d'exemple, nous avons utilisé des minuscules pour nos colonnes, donc nous utilisons des minuscules dans les objets `item`. <br><br>Si une colonne dans votre CSV a des espaces, cet espace doit également être inclus dans votre syntaxe de personnalisation. Par exemple, un élément `` de `nom de produit` est référencé par {% raw %}`{{item["Product Name"]}}` au lieu de `{{item.Product Name}}`.{% endraw %}
 {% endalert %}
 
 Par exemple, pour référencer le titre et le prix de l'élément `tales_storefront` nous pourrions ajouter les éléments suivants :
