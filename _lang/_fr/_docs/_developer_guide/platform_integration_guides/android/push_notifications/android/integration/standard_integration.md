@@ -50,8 +50,8 @@ Pour enregistrer automatiquement les jetons d’enregistrement FCM, activez l’
 Dans votre `braze.xml`:
 
 ```xml
-<bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">vrai</bool>
-<string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">votre_fcm_sender_id_here</string>
+<bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">vrai</bool>
+<string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">votre_fcm_sender_id_here</string>
 ```
 
 Ou dans votre [BrazeConfig][68]:
@@ -272,8 +272,8 @@ Les grandes et petites icônes illustrées ci-dessous sont des exemples d'icône
 - Braze vous permet de configurer vos icônes de notification en spécifiant des ressources dessinables dans votre `braze.xml`:
 
 ```xml
-<drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
-<drawable name="com_appboy_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_braze_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_braze_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
 
 Définir une petite icône de notification est nécessaire. __Si vous n'en avez pas défini, Braze utilisera par défaut l'icône de l'application en tant que petite icône de notification qui peut sembler sous-optimale.__
@@ -285,23 +285,23 @@ Définir une grande icône de notification est facultatif mais recommandé.
 - La couleur d'arrière-plan de l'icône de notification peut être remplacée dans votre `braze.xml`. Si la couleur n'est pas spécifiée, la couleur d'arrière-plan par défaut est la même couleur grise utilisée par Lollipop pour les notifications système. Veuillez voir l'exemple de remplacement de couleur ci-dessous:
 
 ```xml
-<integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
+<integer name="com_braze_default_notification_accent_color">0xFFf33e3e</integer>
 ```
 
 Vous pouvez également utiliser une référence de couleur, voir:
 
 ```xml
-<color name="com_appboy_default_notification_accent_color">@color/my_color_ici</color>
+<color name="com_braze_default_notification_accent_color">@color/my_color_ici</color>
 ```
 
 ### Étape 4 : Ajouter des liens profonds
 
 #### Activation de l'ouverture automatique des liens profonds
 
-Pour activer Braze pour ouvrir automatiquement votre application et tous les liens profonds quand une notification push est cliquée, mettez `com_appboy_handle_push_deep_links_automatically` à `true`, dans votre `braze. ml`:
+Pour activer Braze pour ouvrir automatiquement votre application et tous les liens profonds quand une notification push est cliquée, mettez `com_braze_handle_push_deep_links_automatically` à `true`, dans votre `braze. ml`:
 
 ```xml
-<bool name="com_appboy_handle_push_deep_links_automatically">vrai</bool>
+<bool name="com_braze_handle_push_deep_links_automatically">vrai</bool>
 ```
 
 Ce drapeau peut également être défini via la configuration [runtime][65]:
@@ -375,8 +375,8 @@ Braze.configure(this, brazeConfig)
 Consultez la configuration équivalente pour votre `braze.xml`. Notez que le nom de la classe doit être le même que celui retourné par `Class.forName()`:
 
 ```xml
-<bool name="com_appboy_push_deep_link_back_stack_activity_enabled">vrai</bool>
-<string name="com_appboy_push_deep_link_back_stack_activity_class_name">votre.package.name.YourMainActivity</string>
+<bool name="com_braze_push_deep_link_back_stack_activity_enabled">vrai</bool>
+<string name="com_braze_push_deep_link_back_stack_activity_class_name">votre.package.name.YourMainActivity</string>
 ```
 
 ### Étape 5 : Définir les canaux de notification
@@ -547,7 +547,7 @@ Votre récepteur devrait gérer les intentions diffusées par Braze et lancer vo
   - Une intention `NOTIFICATION_RECEIVED` sera reçue lorsqu'une notification push arrive.
   - Une intention `NOTIFICATION_OPENED` sera reçue lorsqu'une notification push est cliquée par l'utilisateur.
   - Une intention `NOTIFICATION_DELETED` sera reçue lorsqu'une notification push est rejetée (balayée) par l'utilisateur.
-- Le récepteur doit exécuter votre logique personnalisée pour chacun de ces cas.  Si votre récepteur ouvre des liens profonds, Assurez-vous de désactiver l'ouverture automatique de liens profonds en définissant `com_appboy_handle_push_deep_links_automatically` à `false` dans votre `frein. ml`.
+- Le récepteur doit exécuter votre logique personnalisée pour chacun de ces cas.  Si votre récepteur ouvre des liens profonds, Assurez-vous de désactiver l'ouverture automatique de liens profonds en définissant `com_braze_handle_push_deep_links_automatically` à `false` dans votre `frein. ml`.
 
 Pour un exemple de récepteur personnalisé détaillé, veuillez consulter le lien suivant :
 
