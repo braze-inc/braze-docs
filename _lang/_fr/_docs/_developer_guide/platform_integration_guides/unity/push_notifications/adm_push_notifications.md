@@ -29,7 +29,7 @@ Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon De
 - Alternativement, vous pouvez ajouter la ligne suivante à votre fichier `res/values/braze.xml` pour activer l'enregistrement ADM :
 
   ```xml
-  <bool name="com_appboy_push_adm_messaging_registration_enabled">vrai</bool>
+  <bool name="com_braze_push_adm_messaging_registration_enabled">vrai</bool>
   ```
 
 ## Étape 2 : Mettre à jour Unity AndroidManifest.xml
