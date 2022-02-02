@@ -31,7 +31,7 @@ L'exemple ci-dessus est rendu avec le HTML suivant :
 Dans votre `braze.xml`:
 
 ```xml
-<bool translatable="false" name="com_appboy_push_notification_html_rendering_enabled">vrai</bool>
+<bool translatable="false" name="com_braze_push_notification_html_rendering_enabled">vrai</bool>
 ```
 
 Ou dans votre [BrazeConfig][2]:
