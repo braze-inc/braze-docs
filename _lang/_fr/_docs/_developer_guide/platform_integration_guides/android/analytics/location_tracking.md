@@ -31,10 +31,10 @@ Ou:
 
 ## Désactivation du suivi automatique de la localisation
 
-Pour désactiver le suivi automatique d'emplacement, mettez `com_appboy_enable_location_collection` à false dans `braze.xml`:
+Pour désactiver le suivi automatique d'emplacement, mettez `com_braze_enable_location_collection` à false dans `braze.xml`:
 
 ```xml
-<bool name="com_appboy_enable_location_collection">faux</bool>
+<bool name="com_braze_enable_location_collection">faux</bool>
 ```
 
 Ensuite, vous pouvez enregistrer manuellement des points de données d'emplacement unique via la méthode `setLastKnownLocation()` sur `BrazeUser` comme ceci :
