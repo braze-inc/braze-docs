@@ -18,7 +18,7 @@ Les campagnes déclenchées par le géofence sont disponibles sur iOS et Android
 3. Pour les appareils sur iOS version 11 et supérieure, l'utilisateur doit toujours autoriser l'accès à la localisation pour que le géorepérage fonctionne.
 
 {% alert important %}
-La collection d'emplacement Braze SDK 3.6.0 Braze est désactivée par défaut. Pour vérifier que la collection d'emplacement est activée sur Android, assurez-vous que `com_appboy_enable_location_collection` est défini à `true` dans votre `braze.xml`.
+La collection d'emplacement Braze SDK 3.6.0 Braze est désactivée par défaut. Pour vérifier que la collection d'emplacement est activée sur Android, assurez-vous que `com_braze_enable_location_collection` est défini à `true` dans votre `braze.xml`.
 {% endalert %}
 
 ## Configuration du géorepérage
