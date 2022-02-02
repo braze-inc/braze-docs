@@ -23,11 +23,11 @@ __Remarque :__ Si une session se termine alors que l'utilisateur a l'application
 **Note**: Si vous avez besoin de forcer une nouvelle session, vous pouvez le faire en changeant d'utilisateurs.
 
 ## Personnalisation du délai d'attente de la session
-Pour personnaliser le délai d'attente de la session, ajoutez `com_appboy_session_timeout` à votre fichier [`braze.xml`][session_tracking_3]:
+Pour personnaliser le timeout de la session, ajoutez `com_braze_session_timeout` à votre fichier [`braze.xml`][session_tracking_3]:
 
 ```xml
 <!-- La durée de temps avant qu'une session ne se termine en secondes. Le gestionnaire de session "rouvrira" sinon les sessions fermées si l'appel à StartSession intervient dans cet intervalle. (défaut est 10) -->
-<integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
+<integer name="com_braze_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ```
 
 **Remarque**: La valeur minimale pour `sessionTimeoutInSeconds` est de 1 seconde.
