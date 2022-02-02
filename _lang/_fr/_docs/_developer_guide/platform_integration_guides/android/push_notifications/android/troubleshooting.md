@@ -63,9 +63,9 @@ Assurez-vous que votre appareil possède une bonne connexion Internet et qu'il n
 
 ### Taper sur la notification push n'ouvre pas l'application
 
-Vérifier si `com_appboy_handle_push_deep_links_automatically` est défini à `true` ou `false`. Pour activer Braze pour ouvrir automatiquement l'application et tous les liens profonds quand une notification push est activée, mettez `com_appboy_handle_push_deep_links_automatically` à `true` dans votre `braze. ML` fichier.
+Vérifier si `com_braze_handle_push_deep_links_automatically` est défini à `true` ou `false`. Pour activer Braze pour ouvrir automatiquement l'application et tous les liens profonds quand une notification push est activée, mettez `com_braze_handle_push_deep_links_automatically` à `true` dans votre `braze. ML` fichier.
 
-Si `com_appboy_handle_push_deep_links_automatically` est défini à sa valeur par défaut `false`, vous devez alors créer un récepteur de diffusion pour écouter et gérer les intentions reçues et ouvertes.
+Si `com_braze_handle_push_deep_links_automatically` est défini à sa valeur par défaut `false`, vous devez alors créer un récepteur de diffusion pour écouter et gérer les intentions reçues et ouvertes.
 
 ### Notifications push bounce
 
@@ -155,7 +155,7 @@ Si le lien profond [fonctionne correctement avec ADB][17] mais ne fonctionne pas
 Si le lien profond [fonctionne correctement avec ADB][17] mais ne fonctionne pas depuis Braze push, essayez de désactiver [la pile arrière][22]. Pour ce faire, mettez à jour votre fichier **braze.xml** pour inclure :
 
 ```xml
-<bool name="com_appboy_push_deep_link_back_stack_activity_enabled">faux</bool>
+<bool name="com_braze_push_deep_link_back_stack_activity_enabled">faux</bool>
 ```
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %} [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 
