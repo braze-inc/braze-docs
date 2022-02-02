@@ -63,20 +63,20 @@ Si vous utilisez une version du SDK Android inférieure à `2.3.0`, la déclarat
 
 ## Étape 3 : Activer la collecte de l'emplacement de Braze
 
-Si vous n'avez pas encore activé la collecte de l'emplacement de Braze, mettez à jour votre `brasier. ml` fichier à inclure `com_appboy_enable_location_collection` et s'assurer que sa valeur est définie à `true`.
+Si vous n'avez pas encore activé la collecte de l'emplacement de Braze, mettez à jour votre `brasier. ml` fichier à inclure `com_braze_enable_location_collection` et s'assurer que sa valeur est définie à `true`.
 
 ```xml
-<bool name="com_appboy_enable_location_collection">vrai</bool>
+<bool name="com_braze_enable_location_collection">vrai</bool>
 ```
 
 {% alert important %}
 La collection d'emplacement Braze Android SDK 3.6.0 Braze est désactivée par défaut.
 {% endalert %}
 
-Les géorepérages sont activés si la collection de localisation de Braze est activée. Si vous souhaitez vous retirer de notre collection d'emplacement par défaut, mais que vous voulez toujours utiliser des géorepérages, il peut être activé sélectivement en définissant la valeur de la clé `com_appboy_geofences_enabled` à `true` dans `braze. ml`, indépendamment de la valeur de `com_appboy_enable_location_collection`.
+Les géorepérages sont activés si la collection de localisation de Braze est activée. Si vous souhaitez vous retirer de notre collection d'emplacement par défaut, mais que vous voulez toujours utiliser des géorepérages, il peut être activé sélectivement en définissant la valeur de la clé `com_braze_geofences_enabled` à `true` dans `braze. ml`, indépendamment de la valeur de `com_braze_enable_location_collection`.
 
 ```xml
-<bool name="com_appboy_geofences_enabled">vrai</bool>
+<bool name="com_braze_geofences_enabled">vrai</bool>
 ```
 
 ## Étape 4 : Obtenir les autorisations de localisation de l'utilisateur final
@@ -247,10 +247,10 @@ Par défaut, Braze récupère automatiquement la localisation de l'appareil et d
 
 #### Partie 1 : Désactiver les requêtes automatiques de géorepérage
 
-Les requêtes automatiques Braze Geofence peuvent être désactivées dans votre fichier `braze.xml` en définissant `com_appboy_automatic_geofence_requests_enabled` à `false`.
+Les requêtes automatiques de géorepérage de Braze peuvent être désactivées dans votre fichier `braze.xml` en définissant `com_braze_automatic_geofence_requests_enabled` à `false`.
 
 ```xml
-<bool name="com_appboy_automatic_geofence_requests_enabled">faux</bool>
+<bool name="com_braze_automatic_geofence_requests_enabled">faux</bool>
 ```
 
 Cela peut être fait en plus lors de l'exécution via :
