@@ -18,7 +18,7 @@ Vous pouvez enregistrer des objets Unity Game pour être averti des cartes de fl
 
 Sur iOS, nous vous recommandons de configurer les écouteurs d'objets du jeu à partir de l'éditeur de configuration de Braze.
 
-Sur Android, définissez `com_appboy_feed_listener_callback_method_name` et `com_appboy_feed_listener_game_object_name` dans le `braze.xml` de votre projet Unity.
+Sur Android, définissez `com_braze_feed_listener_callback_method_name` et `com_braze_feed_listener_game_object_name` dans le `braze.xml` de votre projet Unity.
 
 - Pour configurer votre écouteur d'objet de jeu lors de l'exécution sur l'une ou l'autre des plateformes, utilisez `AppboyBinding.ConfigureListener()` et spécifiez `BrazeUnityMessageType.NEWS_FEED`.
 
