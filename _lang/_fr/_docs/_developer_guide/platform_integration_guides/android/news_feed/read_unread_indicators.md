@@ -21,7 +21,7 @@ Braze vous permet d'activer optionnellement un indicateur non lu/lu sur les cart
 Afin d'activer cette fonctionnalité, ajoutez la ligne suivante à votre fichier `braze.xml`:
 
 ```xml
-<bool name="com_appboy_newsfeed_unread_visual_indicator_on">vrai</bool>
+<bool name="com_braze_newsfeed_unread_visual_indicator_on">vrai</bool>
 ```
 
 ## Personnalisation des indicateurs
