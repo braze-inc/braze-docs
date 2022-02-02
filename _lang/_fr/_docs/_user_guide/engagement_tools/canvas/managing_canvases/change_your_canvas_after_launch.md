@@ -63,6 +63,7 @@ Il y a un certain nombre de choses à savoir si vous prévoyez de modifier ou aj
 - Utilisateurs qui sont actuellement dans un Canvas, mais n'ont pas atteint les points où de nouvelles étapes sont ajoutées sera éligible pour recevoir ces nouvelles étapes.
 - Vous ne pouvez pas modifier ou supprimer des connexions existantes, pas plus que vous ne pouvez insérer une étape entre les étapes connectées existantes une fois qu'un Canvas est lancé.
 - Si vous mettez à jour le délai ou la fenêtre pour une étape, Seuls les nouveaux utilisateurs qui entrent dans le Canvas et les utilisateurs qui n'ont pas encore été mis en file d'attente pour cette étape recevront le message au délai mis à jour.
+- Si une étape de retard est la dernière étape dans le Canvas, les utilisateurs qui atteignent cette étape sont automatiquement avancés hors de Canvas et ne recevront aucune étape nouvellement créée.
 
 {% alert note %}
 Arrêt d'une Canvas n'effacera pas les utilisateurs qui attendent de recevoir des messages. Si vous réactivez le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (sauf si le temps qu’il leur faut pour être envoyés, le message est passé, alors ils ne le recevront pas).
