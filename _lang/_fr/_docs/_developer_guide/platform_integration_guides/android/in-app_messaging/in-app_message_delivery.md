@@ -32,10 +32,10 @@ Pour les messages intégrés qui s'affichent immédiatement à la livraison (*i.
 
 Par défaut, nous évaluons la limite des messages dans l'application à une fois toutes les 30 secondes pour assurer une expérience utilisateur de qualité.
 
-Pour remplacer cette valeur, définissez `com_appboy_trigger_action_minimum_time_interval_seconds` dans votre `braze.xml` via:
+Pour remplacer cette valeur, définissez `com_braze_trigger_action_minimum_time_interval_seconds` dans votre `braze.xml` via:
 
 ```xml
-  <integer name="com_appboy_trigger_action_minimum_time_interval_seconds">5</integer>
+  <integer name="com_braze_trigger_action_minimum_time_interval_seconds">5</integer>
 ```
 
 ## Déclenchement d'événement côté serveur
