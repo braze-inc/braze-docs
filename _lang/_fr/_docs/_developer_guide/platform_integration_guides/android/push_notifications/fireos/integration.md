@@ -27,7 +27,7 @@ Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon De
 - Ajoutez la ligne suivante à votre fichier `res/values/braze.xml` pour activer ADM:
 
   ```xml
-  <bool name="com_appboy_push_adm_messaging_registration_enabled">vrai</bool>
+  <bool name="com_braze_push_adm_messaging_registration_enabled">vrai</bool>
   ```
 
 ## Étape 2 : Mettre à jour AndroidManifest.xml
@@ -95,10 +95,10 @@ Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon De
 
 #### Activation de l'ouverture automatique des liens profonds
 
-Pour activer Braze pour ouvrir automatiquement votre application et tous les liens profonds quand une notification push est cliquée, mettez `com_appboy_handle_push_deep_links_automatically` à `true` dans votre `braze. ml`:
+Pour activer Braze pour ouvrir automatiquement votre application et tous les liens profonds quand une notification push est cliquée, mettez `com_braze_handle_push_deep_links_automatically` à `true` dans votre `braze. ml`:
 
 ```
-<bool name="com_appboy_handle_push_deep_links_automatically">vrai</bool>
+<bool name="com_braze_handle_push_deep_links_automatically">vrai</bool>
 ```
 
 Si vous souhaitez gérer des liens profonds, vous aurez besoin de créer un `BroadcastReceiver` qui écoute les messages reçus et ouverts de Braze. Reportez-vous à notre section sur [Recettes de Push et Ouvre][52] dans la documentation de push Android pour plus d'informations.
@@ -116,7 +116,7 @@ Si vous avez besoin de gérer l'enregistrement ADM vous-même, vous devriez fair
 
   ```xml
   <!-- Cela désactivera l'enregistrement automatique pour ADM via le SDK Braze -->
-  <bool name="com_appboy_push_adm_messaging_registration_enabled">faux</bool>
+  <bool name="com_braze_push_adm_messaging_registration_enabled">faux</bool>
   ```
 - Utilisez la méthode [registerPushToken()][37] pour passer l'ADM de votre utilisateur `registration_id` au Brésil :
 
