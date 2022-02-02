@@ -83,8 +83,8 @@ For example, let's say we want to reference the `tales_storefront` item:
 
 Below the `catalogs` tag, use the `item` object to reference different attributes for that item.
 
-{% alert note %}
-Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects.
+{% alert important %}
+Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects. <br><br>If a column in your CSV has spaces, that space must also be included in your personalization syntax. For example, an `item` of `Product Name` is referenced with {% raw %}`{{item["Product Name"]}}` instead of `{{item.Product Name}}`.{% endraw %}
 {% endalert %}
 
 For example, to reference the title and price of the `tales_storefront` item we could add the following:
