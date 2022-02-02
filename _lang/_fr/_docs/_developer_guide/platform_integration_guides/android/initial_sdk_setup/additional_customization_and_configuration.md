@@ -87,7 +87,7 @@ Pour chaque variante de compilation pertinente, créez un nouveau `braze.xml` da
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
+<string name="com_braze_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
 </resources>
 ```
 
