@@ -20,7 +20,7 @@ Pour que Android Talkback/"VoiceOver" ne lise pas le contenu derrière un messag
 {% tab braze.xml %}
 
 ```xml
-<bool name="com_appboy_device_in_app_message_accessibility_exclusive_mode_enabled">vrai</bool>
+<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">vrai</bool>
 ```
 
 {% endtab %}
