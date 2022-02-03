@@ -9,45 +9,45 @@ search_tag: Partner
 
 # Shopify
 
-> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services that are engineered for reliability while delivering a better shopping experience for consumers everywhere. 
+> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 
-Our Shopify integration allows brands to connect their Shopify store seamlessly with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase or retarget users based on their previous purchases. 
+The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase or retarget users based on their previous purchases. 
 
 <!--
 For some Canvas and Campaign examples, please check out our guide here. 
 -->
 
-## Before you begin
-1. All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Please reach out to your Account Executive for more details. 
-2. This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation](#shopify-user-syncing)). Please consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+## Prerequisites
 
-## Requirements
+All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Please reach out to your Account Executive for more details.
 
-| Requirement | Origin | Access | Description |
-| ----------- | ------ | ------ | ----------- |
-| Shopify Store | Shopify | [https://www.shopify.com](https://www.shopify.com) | You must have an active Shopify store.<br><br>Please note that at this time, you are only able to connect __one__ Shopify store per app group. |
-| Event Property Segmentation Enabled | Braze | Please reach out to your Customer Success Manager or contact Braze [support]({{site.baseurl}}/braze_support/) | To ensure you can segment your Shopify events properties, please work with your Customer Success Manager or Braze support to confirm that you have event property segmentation enabled for your dashboard. |
-| Nested Custom Event Property Support in Segment Extensions | Braze | Enabled with the Shopify Integration | You will be given access to this feature to filter Shopify nested custom event properties for up to 365 days within Segment Extensions. |
-| Nested Custom Event Property Support for Message Triggering | Braze | Enabled with the Shopify Integration | You will be given access to this feature to trigger campaigns and Canvases using the nested properties within Shopify customer events. |
-| Nested Custom Attribute Support | Braze | Enabled with the Shopify Integration | You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
+This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation](#shopify-user-syncing)). Please consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+
+| Requirement | Description |
+| ----------- | ----------- |
+| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Please note that at this time, you are only able to connect one Shopify store per app group. |
+| Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
+| Nested custom event property support in segment extensions | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to filter Shopify nested custom event properties for up to 365 days within Segment Extensions. |
+| Nested custom event property support for message triggering | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to trigger campaigns and Canvases using the nested properties within Shopify customer events. |
+| Nested custom attribute support | This will be enabled with the Spotify integration.<br><br>You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Integration details
+## Integration
 
 With Braze's turnkey Shopify integration, you can:
 - Seamlessly connect your Shopify store within Braze
 - Allow Braze to ingest and process the following Shopify webhook events:
-	- Order Create
-	- Checkout Update
+  - Order create
+  - Checkout update
 - Sync Shopify user profiles into Braze
 
 ### Step 1: Locate Shopify within the dashboard
-From the Braze dashboard, go to the __Technology Partners__ section and then search __Shopify__. On the Shopify partner page, select __Begin Setup__ to start the integration process.
+In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
 
 ![Shopify][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
-Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your __Shopify Store Name__, review the __Shopify Webhook Events__ (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select __Install Unlisted App__, you will be redirected to the Braze dashboard.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
 <br>![Shopify][3]{: style="max-width:80%;"}
@@ -56,7 +56,7 @@ Next, you are prompted by Braze's setup wizard. Within this flow, you must enter
 <br>![Shopify][7]{: style="max-width:60%;"}
 
 ### Step 3: Verify completion
-That's it! The status of your integration appears in the __Data Import__ section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email. In addition, the __Connection Pending__ status will be updated to __Connected__ and will display the timestamp of when the connection was established.
+That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed, and the webhook creation is complete, you will be notified via email. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
 
 ![Shopify][8]{: style="max-width:80%;"}
 ![Arrow][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
@@ -74,8 +74,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Events %}
 | Event Name | Braze Event Type | Triggered When... |
 | --- | --- | --- |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds/removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after __1 hour__ of checkout/cart activity. |
-| `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>__OR__<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after **1 hour** of checkout or cart activity. |
+| `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -193,9 +193,9 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | The `shopify_accepts_marketing` custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
-| `shopify_sms_consent` | The `shopify_sms_consent` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
-| `shopify_tags`  | The `shopify_tags` custom attribute corresponds to the [Customer Tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+| `shopify_accepts_marketing` | This custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
+| `shopify_sms_consent` | This custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
+| `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -255,25 +255,25 @@ Once the app installation is complete, Braze automatically creates your webhook 
 - Country
 
 {% alert note %}
-Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update and the customer will not be charged a data point.
+Braze will only update supported Shopify custom attributes, and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and the customer will not be charged a data point.
 {% endalert %}
 
 ## Shopify user syncing
 
 Braze will map the supported Shopify data to user profiles using the customer's email address or phone number. 
 
-__Identified User Profiles__<br>
+**Identified User Profiles**<br>
 - If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user.
 - If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.
 
-__Anonymous Users__<br>
+**Anonymous Users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
-	- For existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
-- If the email address or phone number is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
-	- If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+  - For existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
+- If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
+  - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 ## Using Shopify data in Braze
-Once you've completed your integration, take a look at our next Shopify article [here]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
+Once you've completed your integration, take a look at our next Shopify [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
 
 ## Troubleshooting
 
@@ -293,18 +293,18 @@ Your install may have failed for one of the following reasons:
   - Your Shopify access token is invalid 
   - The Braze Shopify app was deleted from your Shopify admin page
 
-If this happens, you will be able to select __Retry Setup__ and start the installation process again.<br><br>
+If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
 {% details How do I uninstall the Braze application from my Shopify store? %}
-You will need to go to your Shopify admin page located under __Apps__. You will then see an option to delete the Braze application<br><br>
+You will need to go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
 ## GDPR
 
-With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor, and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
+Concerning personal data submitted to Braze services by or on behalf of its customers, Braze is the data processor, and our customers are the data controllers. Accordingly, Braze processes such personal data solely at the instruction of our customers and, when applicable, notifies our customers of data subject requests. As the data controllers, our customers respond directly to Data subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to data subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
 [3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.gif %}
