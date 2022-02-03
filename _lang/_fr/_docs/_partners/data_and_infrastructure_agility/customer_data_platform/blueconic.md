@@ -13,6 +13,10 @@ search_tag: Partenaire
 
 L'intégration de Braze et BlueConic permet aux utilisateurs d'unifier les données de manière persistante, les profils individuels et ensuite les synchroniser sur les deux systèmes pour les objectifs d'importation via un serveur Amazon Web Services S3. Parmi les objectifs potentiels figurent des initiatives axées sur la croissance, l'orchestration du cycle de vie des clients, la modélisation et l'analyse, les produits et expériences numériques, la monétisation basée sur le public, et plus encore. Cette intégration prend en charge à la fois l'importation et l'exportation de lots planifiés.
 
+{% alert important %}
+BlueConic n'enverra pas exclusivement des deltas (changement de données), mais enverra au lieu de cela l'ensemble des données lors de l'envoi de données en Brésil. Veuillez surveiller l'utilisation des points de données en conséquence.
+{% endalert %}
+
 ## Pré-requis
 
 | Exigences                                   | Libellé                                                                                                                                                                                                      |
