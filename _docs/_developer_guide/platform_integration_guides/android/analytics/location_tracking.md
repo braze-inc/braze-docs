@@ -32,10 +32,10 @@ Or:
 
 ## Disabling automatic location tracking
 
-To disable automatic location tracking, set `com_appboy_enable_location_collection` to false in `braze.xml`:
+To disable automatic location tracking, set `com_braze_enable_location_collection` to false in `braze.xml`:
 
 ```xml
-<bool name="com_appboy_enable_location_collection">false</bool>
+<bool name="com_braze_enable_location_collection">false</bool>
 ```
 
 Then you can manually log single location data points via the `setLastKnownLocation()` method on `BrazeUser` like this:
