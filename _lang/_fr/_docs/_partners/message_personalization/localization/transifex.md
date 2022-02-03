@@ -13,6 +13,10 @@ search_tag: Partenaire
 
 L'effet de levier de l'intégration Transifex et Braze du contenu connecté, vous permettant d'inclure une chaîne source dans vos messages au lieu de lignes de mise en forme conditionnelle basée sur le langage. Cela permet d'automatiser la traduction et de libérer vos équipes pour leur permettre de réaliser de brillantes expériences clients.
 
+{% alert important %}
+En date du 7 avril 2022, Transifex est en train de déprécier leurs versions API 2 et 2.5 pour faire place à la version 3. Après cette date, la v2 et la v2.5 ne seront plus opérationnelles et les demandes pertinentes commenceront à échouer.
+{% endalert %}
+
 ## Pré-requis
 
 | Exigences        | Libellé                                                                                              |
@@ -30,7 +34,7 @@ Pour configurer l'authentification de base de votre compte, accédez à la plate
 
 Cliquez sur __Nouveaux identifiants__, nommez votre identifiant, et ajoutez votre nom d'utilisateur et votre mot de passe pour votre compte Transifex.
 
-!\[Création d'authentification basique\]\[35\]
+!\[Création d'authentification basique\]\[35\]{: style="max-width:35%" }
 
 ### Étape 2 : Contenu connecté
 
