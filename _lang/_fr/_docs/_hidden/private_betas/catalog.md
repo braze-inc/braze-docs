@@ -267,7 +267,7 @@ Les limitations suivantes s'appliquent à l'utilisation des ensembles filtrés d
 - Le filtre est pour les opérations `ET` seulement
 - Le tri est ascendant (`asc`) ou descendant (`desc`), par défaut à `asc`
 - La limite par défaut (nombre d'articles à retourner) est de 10
-- Limite maximale est de 100
+- Limite maximale est de 10
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %} [2]: {% image_buster /assets/img_archive/catalog_id. ng %} [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %} [4]: {% image_buster /assets/img_archive/catalog_image_link2. ng %} [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %} [6]: {% image_buster /assets/img_archive/catalog_filtered_csv. ng %} [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %} [8]: {% image_buster /assets/img_archive/catalog_replace.png %}
 
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
