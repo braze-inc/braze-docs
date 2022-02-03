@@ -88,7 +88,7 @@ For each relevant build variant, create a new `braze.xml` for it in `src/<build 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
+<string name="com_braze_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
 </resources>
 ```
 

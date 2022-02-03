@@ -17,6 +17,25 @@
     font-family: $braze-black;
     font-size: 16px;
     margin-bottom: 0px;
+    .glossary_share {
+      display: none;
+    }
+    &:hover .glossary_share {
+      display: inline;
+      border-bottom-width: 2px !important;
+      border-color: transparent !important;
+      margin: 0px 5px 0px 5px;
+      cursor: copy;
+      &:hover {
+        border-bottom-width: 2px !important;
+        border-color: $braze-link-color !important;
+        background-color: transparent !important;
+      }
+    }
+    span {
+      font-size: 12px;
+      color: $grey-dust;
+    }
   }
   .tags {
     display: block;
