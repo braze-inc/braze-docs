@@ -45,16 +45,16 @@ Les clients qui utilisent l'API pour les appels de serveur à serveur peuvent av
 
 ### Paramètres de la requête
 
+{% alert important %}
+Pour chacun des composants de requête listés ci-dessous, un des `external_id`, `user_alias`, ou `braze_id` est requis.
+{% endalert %}
+
 | Paramètre    | Requis    | Type de données              | Libellé                                                                                            |
 | ------------ | --------- | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | `attributs`  | Optionnel | Tableau d'objets d'attributs | Voir l'objet [attributs utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `Evénements` | Optionnel | Tableau d'objets d'événement | Voir l'objet [événements]({{site.baseurl}}/api/objects_filters/event_object/)                      |
 | `achats`     | Optionnel | Tableau des objets d'achat   | Voir [l'objet achats]({{site.baseurl}}/api/objects_filters/purchase_object/)                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-{% alert important %}
-Pour chacun des composants de requête listés ci-dessus, un des `external_id`, `user_alias`, ou `braze_id` est requis.
-{% endalert %}
 
 {% alert note %}
 - Lors de la création d'utilisateurs uniquement alias à travers cette extrémité, vous devez définir explicitement le drapeau `_update_existing_only` à `false`.
@@ -119,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze. om/users/track' \
 
 ## Réponses
 
-Lors de l'utilisation de l'une des requêtes API susmentionnées, vous devriez recevoir l'une des trois réponses générales suivantes :
+Lorsque vous utilisez l'une des requêtes API susmentionnées, vous devriez recevoir l'une des trois réponses générales suivantes :
 
 ### Message réussi
 
@@ -136,7 +136,7 @@ Les messages réussis seront rencontrés avec la réponse suivante:
 
 ### Message réussi avec des erreurs non fatales
 
-Si votre message est réussi mais comporte des erreurs non fatales telles qu'un objet événement invalide sur une longue liste d'événements, vous recevrez la réponse suivante :
+Si votre message est réussi mais a des erreurs non fatales, tel qu'un objet événement invalide dans une longue liste d'événements, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -149,9 +149,11 @@ Si votre message est réussi mais comporte des erreurs non fatales telles qu'un 
 }
 ```
 
+Pour les messages de réussite, toutes les données qui n'ont pas été affectées par une erreur dans le tableau `erreurs` seront toujours traitées.
+
 ### Message avec erreurs fatales
 
-En cas de succès, toutes les données qui n'ont pas été affectées par une erreur dans le tableau _erreurs_ seront toujours traitées. Si votre message a une erreur fatale, vous recevrez la réponse suivante:
+Si votre message a une erreur fatale, vous recevrez la réponse suivante:
 
 ```json
 {
@@ -166,7 +168,7 @@ En cas de succès, toutes les données qui n'ont pas été affectées par une er
 
 ### Code de réponse d'erreur fatal
 
-Les codes de statut suivants et les messages d'erreur associés seront retournés si votre requête rencontre une erreur fatale. Ces codes d’erreur indiquent qu’aucune donnée ne sera traitée.
+Les codes de statut suivants et les messages d'erreur associés seront retournés si votre requête rencontre une erreur fatale. Les codes d'erreur suivants indiquent qu'aucune donnée ne sera traitée.
 
 | Code d'erreur          | Raison / Cause                                                                 |
 | ---------------------- | ------------------------------------------------------------------------------ |
@@ -183,7 +185,7 @@ Si vous recevez l'erreur "external_id fourni est blacklisté et rejeté", votre 
 
 Vous pouvez soumettre des données via l'API Braze pour un utilisateur qui n'a pas encore utilisé votre application mobile afin de générer un profil utilisateur. Si l'utilisateur utilise l'application par la suite, toutes les informations après leur identification via le SDK seront fusionnées avec le profil utilisateur existant que vous avez créé via l'appel API. Tout comportement de l'utilisateur qui est enregistré anonymement par le SDK avant l'identification sera perdu lors de la fusion avec le profil utilisateur généré par l'API existante.
 
-L'outil de segmentation inclura ces utilisateurs, qu'ils se soient engagés ou non avec l'application. Si vous voulez exclure les utilisateurs téléchargés via l'API utilisateur qui n'ont pas encore participé à l'application, vous devez ajouter le filtre -- `Nombre de sessions > 0`.
+L'outil de segmentation inclura ces utilisateurs, qu'ils se soient engagés ou non avec l'application. Si vous voulez exclure les utilisateurs téléchargés via l'API utilisateur qui n'ont pas encore participé à l'application, ajoutez simplement le filtre : `Nombre de sessions > 0`.
 
 ## Mise à jour en masse
 
@@ -205,7 +207,7 @@ Lorsque l'en-tête `X-Braze-Bulk` est présent avec n'importe quelle valeur, Bra
 
 ### Cas d'utilisation
 
-Certains cas d'utilisation dans lesquels vous pouvez utiliser l'en-tête de mise à jour en masse incluent :
+Considérez les cas d'utilisation suivants où vous pouvez utiliser l'en-tête de mise à jour en vrac :
 
 - Un travail quotidien où les attributs personnalisés de plusieurs utilisateurs sont mis à jour via le point de terminaison `/users/track`.
 - Un script de remplissage de données utilisateur ad-hoc qui met à jour les informations de l'utilisateur via le point de terminaison `/users/track`.
