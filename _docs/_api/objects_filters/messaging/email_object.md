@@ -27,7 +27,7 @@ description: "This article explains the different components of Braze's Email Ob
   "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
   "should_inline_css": (optional, boolean), whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the App Group,
   "attachments": (optional, array), array of JSON objects that define the files you need attached, defined by "file_name" and "url" below,
-    "file_name": (required, string) the name of the file you would like to attach to your email. You can attach any number of files up to 2MB. This is required if you use "attachments",
+    "file_name": (required, string) the name of the file you would like to attach to your email, excluding the extension (e.g., ".pdf"). You can attach any number of files up to 2MB. This is required if you use "attachments",
     "url": (required, string) the corresponding URL of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined below, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments".
 }
 ```
