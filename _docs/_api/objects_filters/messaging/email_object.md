@@ -10,6 +10,7 @@ description: "This article explains the different components of Braze's Email Ob
 
 # Email object specification
 
+## Body
 ```json
 {
   "app_id": (required, string) see App Identifier above,
@@ -31,11 +32,32 @@ description: "This article explains the different components of Braze's Email Ob
 }
 ```
 
-For more information and best practices on pre-headers, see [our help article on email body styling][46].
+{% alert warning %}
+Braze recommends that you avoid using Google Drive links for your attachment's `url`, as this can block our servers' calls to get the file and result in the email message not sending.
+{% endalert %}
+
+For more information and best practices on pre-headers, see our help article on [email body styling][46].
 
 An `email_template_id` can be retrieved from the bottom of any Email Template created with the HTML editor. Below is an example of what this ID looks like:
 
 ![API Identifier section of an HTML email template][31]
 
+## Example email object with attachment
+
+```json
+{
+  "external_user_ids": ["YOUR_EXTERNAL_USER_ID"],
+  "messages":{
+     "email":{
+        "app_id":"YOUR_APP_ID",
+        "attachments":[{
+            "file_name":"YourFileName",
+            "url":"https://exampleurl.com/YourFileName.pdf"
+         }]
+     }
+  }
+}
+```
+
 [31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling
