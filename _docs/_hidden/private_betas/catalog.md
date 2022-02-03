@@ -268,7 +268,7 @@ The following limitations apply to using filtered sets in catalogs:
 - Filter is for `AND` operations only
 - Sort is ascending (`asc`) or descending (`desc`), defaults to `asc`
 - Default limit (number of items to return) is 10
-- Max limit is 100
+- Max limit is 10
 
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
