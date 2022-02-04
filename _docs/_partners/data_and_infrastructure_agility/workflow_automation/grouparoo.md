@@ -2,7 +2,7 @@
 nav_title: Grouparoo
 article_title: Grouparoo
 page_order: 1
-description: "This article outlines the partnership between Braze and Grouparoo, a open-source Reverse ETL tool that makes it easy to power your Marketing, Sales, and Support tools using the data in your data warehouse."
+description: "This article outlines the partnership between Braze and Grouparoo, a open-source reverse ETL tool that makes it easy to power your Marketing, Sales, and Support tools using the data in your data warehouse."
 alias: /partners/grouparoo/
 page_type: partner
 search_tag: Partner
