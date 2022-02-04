@@ -2,7 +2,7 @@
 nav_title: Snowplow
 article_title: Snowplow
 page_order: 1
-description: "The Braze and Snowplow integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side."
+description: "The Braze and Snowplow integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side tagging."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
