@@ -8,18 +8,6 @@ channel:
   
 ---
 
-<style>
-table th:nth-child(1),
-table th:nth-child(2),
-table td:nth-child(1),
-table td:nth-child(2) {
-    max-width:50%;
-}
-table td {
-    word-break: break-word;
-}
-</style>
-
 # Customize Content Cards
 
 > This article provides a breakdown in the different customization options available as part of your Content Card implementation. For technical details, visit our developer documentation for [Android][1], [iOS][2], or [Web][3].
@@ -37,6 +25,9 @@ Content Cards are fully customizable! At Braze, we break down customization into
 <style>
 table {
   width: 60%;
+}
+table td {
+    word-break: break-word;
 }
 </style>
 
