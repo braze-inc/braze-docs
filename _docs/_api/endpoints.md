@@ -31,7 +31,7 @@ table td {
 
 | Method | Endpoints |
 | --- | --- |
-| POST | [/campaigns/trigger/send][/campaigns/trigger/send]<br>[/canvas/trigger/send][/canvas/trigger/send]<br>[/messages/send][/messages/send]<br>[/sends/id/create][/sends/id/create]<br>[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send][/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send] |
+| POST | [/campaigns/trigger/send][/campaigns/trigger/send]<br>[/canvas/trigger/send][/canvas/trigger/send]<br>[/messages/send][/messages/send]<br>[/sends/id/create][/sends/id/create]<br>{% raw %}[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send][/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Schedule messages
