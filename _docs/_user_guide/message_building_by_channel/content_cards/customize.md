@@ -38,7 +38,7 @@ table td {
 
 Best suited for teams with limited developer resources, the Crawl approach relies solely on out-of-the-box [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards in as little as one hour.
 
-Some light development work is needed upfront to decide where Content Cards will appear in your app or website. With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of each Content Card directly in Braze. However, styling options are limited.
+With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of each Content Card directly in Braze. Some light development work is needed upfront to decide where Content Cards will appear in your app or website, and styling options are limited.
 
 <table>
 <thead>
@@ -62,7 +62,7 @@ Some light development work is needed upfront to decide where Content Cards will
   </tr>
   <tr>
     <td><b>Card behavior</b></td>
-    <td>Choose from three "on-click behavior" options.</td>
+    <td>Choose from three on-click behavior options.</td>
   </tr>
   <tr>
     <td><b>Card order</b></td>
@@ -79,12 +79,20 @@ Some light development work is needed upfront to decide where Content Cards will
 </tbody>
 </table>
 
+{% alert tip %}
+Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned above, consider a Walk or Run approach instead.
+{% endalert %}
+
 {% endtab %}
 {% tab Walk %}
 
 ![Alt text]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Summary text here 
+A hybrid approach to implementation, the Walk approach involves both marketing and developer teams pitching in to match your app or site's branding. 
+
+During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the out-of-the-box Content Cards, however, template styling is handled programmatically by your developers with subclassing.
+
+Marketers still maintain control of the audience, content, on-click behavior, expiration, and pinning directly in the Braze dashboard.
 
 <table>
 <thead>
@@ -96,31 +104,31 @@ Summary text here
 <tbody>
   <tr>
     <td><b>Effort</b></td>
-    <td></td>
+    <td>Low</td>
   </tr>
   <tr>
     <td><b>Developer work</b></td>
-    <td></td>
+    <td>0-4 hours</td>
   </tr>
   <tr>
     <td><b>Card style</b></td>
-    <td></td>
+    <td>Choose from three Braze templates or use your own developer-created templates.</td>
   </tr>
   <tr>
     <td><b>Card behavior</b></td>
-    <td></td>
+    <td>Choose from three on-click behavior options.</td>
   </tr>
   <tr>
     <td><b>Card order</b></td>
-    <td></td>
+    <td>Newer Content Cards appear toward the top of the feed. Pinned cards stay at the very top.</td>
   </tr>
   <tr>
     <td><b>Analytics tracking</b></td>
-    <td></td>
+    <td>Content card analytics are captured in Braze.</td>
   </tr>
   <tr>
     <td><b>Key-value pairs</b></td>
-    <td></td>
+    <td>Optional, powers additional UI/UX customization.</td>
   </tr>
 </tbody>
 </table>
@@ -130,7 +138,9 @@ Summary text here
 
 ![Alt text]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Summary text here 
+With the Run approach, developers take the lead with full control of the Content Card user experience. Custom code dictates what the cards will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
+
+The Braze SDK still handles the on-click behavior, order, and analytics.That means that marketers can still access valuable Content Card metrics in the Braze dashboard—like impressions, clicks, and dismissals.
 
 <table>
 <thead>
@@ -142,34 +152,46 @@ Summary text here
 <tbody>
   <tr>
     <td><b>Effort</b></td>
-    <td></td>
+    <td>Depends on use case.</td>
   </tr>
   <tr>
     <td><b>Developer work</b></td>
-    <td></td>
+    <td><b>Low effort:</b> 0-4 hours<br><b>Medium effort:</b> 4-8 hours<br><b>High effort:</b> 8+</td>
   </tr>
   <tr>
     <td><b>Card style</b></td>
-    <td></td>
+    <td>Custom</td>
   </tr>
   <tr>
     <td><b>Card behavior</b></td>
-    <td></td>
+    <td>Custom</td>
   </tr>
   <tr>
     <td><b>Card order</b></td>
-    <td></td>
+    <td>Custom</td>
   </tr>
   <tr>
     <td><b>Analytics tracking</b></td>
-    <td></td>
+    <td>Custom</td>
   </tr>
   <tr>
     <td><b>Key-value pairs</b></td>
-    <td></td>
+    <td>Required</td>
   </tr>
 </tbody>
 </table>
+
+### Use cases
+
+- Multiple Content Card feeds, such as adding a newsfeed, notification center, or promotions tab.
+- Display Content Cards in an existing feed.
+- Display Content Cards in a carousel view.
+- Use a Content Card to capture user information.
+- Trigger Content Cards based on other messaging channels.
+
+{% alert tip %}
+Check out the [sample use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guide to get an idea of what you can do with this approach. Note that while the documentation is specific to iOS, the fundamentals are applicable to all operating systems.
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
