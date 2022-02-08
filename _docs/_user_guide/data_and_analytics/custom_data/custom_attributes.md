@@ -48,6 +48,10 @@ The following data types may be stored as custom attributes:
 - [Arrays](#arrays)
 - [Time](#time)
 
+{% alert note %}
+**Coming soon!** Support for object and object array data types is arriving in Spring 2022.
+{% endalert %}
+
 ### Booleans (true/false) {#booleans}
 
 Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
