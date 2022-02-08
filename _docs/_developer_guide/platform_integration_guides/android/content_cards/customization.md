@@ -13,9 +13,13 @@ channel:
 
 # Customization
 
+Customizing Content Cards and the feed they are located in must be done during in the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches) in our user guide.
+
+It's also important to consider whether you should use a subclassing strategy versus a complete view controller customization. For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on a listener to implement ordering and filtering logic. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
+
 ## Default styling {#default-styling-for-android}
 
-Braze In-App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
+Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
 ```xml
   <!-- Content Cards Example -->
