@@ -36,7 +36,7 @@ table td {
 
 ![Sample finance app showing Captioned Image and Banner Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Best suited for teams with limited developer resources, the Crawl approach relies solely on out-of-the-box [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards in as little as one hour.
+Best suited for teams with limited developer resources, the Crawl approach relies solely on out-of-the-box [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards with less than five lines of code.
 
 With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of each Content Card directly in Braze. Some light development work is needed upfront to decide where Content Cards will appear in your app or website, and styling options are limited.
 
@@ -53,10 +53,6 @@ With this approach, customization is in the hands of marketers, who determine th
     <td>Low</td>
   </tr>
   <tr>
-    <td><b>Developer work</b></td>
-    <td>0-1 hours</td>
-  </tr>
-  <tr>
     <td><b>Card style</b></td>
     <td>Choose from three Braze templates.</td>
   </tr>
@@ -66,7 +62,7 @@ With this approach, customization is in the hands of marketers, who determine th
   </tr>
   <tr>
     <td><b>Card order</b></td>
-    <td>Newer Content Cards appear toward the top of the feed. Pinned cards stay at the very top.</td>
+    <td>Newer Content Cards appear toward the top of the feed. Pinned cards stay at the very top.</td> 
   </tr>
   <tr>
     <td><b>Analytics tracking</b></td>
@@ -90,7 +86,7 @@ Content Cards are considered out-of-the-box when you leverage the Braze SDK tabl
 
 A hybrid approach to implementation, the Walk approach involves both marketing and developer teams pitching in to match your app or site's branding. 
 
-During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the out-of-the-box Content Cards, however, template styling is handled programmatically by your developers with subclassing.
+During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the out-of-the-box Content Cards, however, template styling is handled programmatically by your developers.
 
 Marketers still maintain control of the audience, content, on-click behavior, expiration, and pinning directly in the Braze dashboard.
 
@@ -105,10 +101,6 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
   <tr>
     <td><b>Effort</b></td>
     <td>Low</td>
-  </tr>
-  <tr>
-    <td><b>Developer work</b></td>
-    <td>0-4 hours</td>
   </tr>
   <tr>
     <td><b>Card style</b></td>
@@ -140,7 +132,7 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
 
 With the Run approach, developers take the lead with full control of the Content Card user experience. Custom code dictates what the cards will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
 
-The Braze SDK still handles the on-click behavior, order, and analytics.That means that marketers can still access valuable Content Card metrics in the Braze dashboard—like impressions, clicks, and dismissals.
+The Braze SDK does not handle the on-click behavior, order, or analytics. These traits must be handled programmatically by the developer for marketers to access valuable Content Card metrics in the Braze dashboard—like impressions, clicks, and dismissals.
 
 <table>
 <thead>
@@ -153,10 +145,6 @@ The Braze SDK still handles the on-click behavior, order, and analytics.That mea
   <tr>
     <td><b>Effort</b></td>
     <td>Depends on use case.</td>
-  </tr>
-  <tr>
-    <td><b>Developer work</b></td>
-    <td><b>Low effort:</b> 0-4 hours<br><b>Medium effort:</b> 4-8 hours<br><b>High effort:</b> 8+</td>
   </tr>
   <tr>
     <td><b>Card style</b></td>

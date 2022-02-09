@@ -13,7 +13,7 @@ channel:
 
 Customizing Content Cards and the feed they are located in must be done during in the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
 
-It's also important to consider whether you should use a subclassing strategy versus a complete view controller customization. For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method ([below](#overriding-populated-content-cards)) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on a listener to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
+It's also important to consider whether you should use a subclassing strategy versus a complete view controller customization. For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method ([below](#overriding-populated-content-cards)) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on a observer to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
 
 ## Overriding default images
 
@@ -278,9 +278,9 @@ For information on the analytics methods, refer to [Card methods]({{site.baseurl
 The same page also details the different properties inherited from our generic Content Card model class, which you may find useful during your view implementation.
 {% endalert %}
 
-#### Step 3: Create a Content Card listener
+#### Step 3: Create a Content Card observer
 
-Create a [Content Card listener]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/#step-2-set-up-a-content-card-listener) that is responsible for listening for the arrival of Content Cards, and implement conditional logic to display a specific number of cards in the carousel at any one time. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for.
+Create a [Content Card observer]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/#step-2-set-up-a-content-card-listener) that is responsible for handling the arrival of Content Cards, and implement conditional logic to display a specific number of cards in the carousel at any one time. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for.
 
 That said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array, or introduce key-value pairs (the `extras` property in the data model) to build conditional logic around.
 
