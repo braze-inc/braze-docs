@@ -82,7 +82,7 @@ Content Cards are considered out-of-the-box when you leverage the Braze SDK tabl
 {% endtab %}
 {% tab Walk %}
 
-![Alt text]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Sample finance app showing Content Cards with customization]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 A hybrid approach to implementation, the Walk approach involves both marketing and developer teams pitching in to match your app or site's branding. 
 
@@ -128,7 +128,7 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
 {% endtab %}
 {% tab Run %}
 
-![Alt text]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Sample finance app showing custom Content Cards with email capture]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 With the Run approach, developers take the lead with full control of the Content Card user experience. Custom code dictates what the cards will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
 
