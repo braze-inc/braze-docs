@@ -178,7 +178,7 @@ The Braze SDK does not handle the on-click behavior, order, or analytics. These 
 - Trigger Content Cards based on other messaging channels.
 
 {% alert tip %}
-Check out the [sample use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guide to get an idea of what you can do with this approach. Note that while the documentation is specific to iOS, the fundamentals are applicable to all operating systems.
+Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#sample-use-cases) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/#sample-use-cases) outlined in our Advanced Content Card implementation guides to get an idea of what you can do with this approach.
 {% endalert %}
 
 {% endtab %}
