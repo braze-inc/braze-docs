@@ -25,7 +25,7 @@ Line allows both promotional and non-promotional messaging to users as long your
 | ----------- | ----------- | 
 | Line business account | A Line [official business account](https://www.linebiz.com/jp-en/) is required to take advantage of this partnership.<br><br>When sending Line messages, your messages will all be associated with your Line official account, resulting in users seeing your account name and page.|
 | Messaging API channel | When enabling the use of the messaging API in the LINE [official account manager](https://developers.line.biz/en/docs/messaging-api/getting-started/#using-oa-manager), a messaging API channel is created. This will be the channel you use to communicate with your customers. |
-| Channel access tokens |The [channel access token](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/) will allow you to send messages to users that have added your Live official account as a friend. This token can be found in the **Line Developer Console** under the **Messaging API** tab.
+| Channel access tokens |The [channel access token](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/) will allow you to send messages to users that have added your Line official account as a friend. This token can be found in the **Line Developer Console** under the **Messaging API** tab.
 | Line user IDs | You will need to have users' Line IDs (this ID is different from users' usernames) to send messages on Line.<br><br>Once a user adds your Line official account as a friend, you can access the user's Line ID through Line's Users API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
