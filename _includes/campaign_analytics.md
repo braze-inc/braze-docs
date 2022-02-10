@@ -56,7 +56,7 @@ If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remov
 
 #### Heat maps
 
-Additionally, you can see how successful different links in a single email campaign are using heat maps. Expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. Note that date ranges are not taken into consideration for email heat maps.
+Additionally, you can see how successful different links in a single email campaign are using heat maps. Expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign.
 
 ![email_analytics]({% image_buster /assets/img_archive/email_click_results_heatmap.gif %})
 
