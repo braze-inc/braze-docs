@@ -20,7 +20,7 @@ search_tag: Partner
 |---|---|
 | Foursquare account | A Foursquare account is required to take advantage of this partnerhsip. |
 | Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
-| Braze App Group and App IDs | The Braze App Group and App IDs can be found in the [developer console]({{site.baseurl}}/docs/api/api_key/). |
+| Braze App Group and App IDs | The Braze App Group and App IDs can be found in the [developer console]({{site.baseurl}}/api/api_key/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
