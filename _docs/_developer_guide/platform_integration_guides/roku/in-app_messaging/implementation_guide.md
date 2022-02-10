@@ -33,7 +33,7 @@ end sub
 Here are the fields you'll need to handle the in-app message:
 
 | `buttons` | List of buttons (could be an empty list) |
-| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be "URI" or "NONE". |
+| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be "URI" or "NONE" |
 | `dismiss_type` | Can be "AUTO_DISMISS" or "SWIPE" |
 | `display_delay` | How long (in seconds) to wait until displaying the in-app message |
 | `duration` | How long (in milliseconds), the message should be displayed when dismiss_type is "AUTO_DISMISS" |
@@ -46,6 +46,8 @@ Here are the fields you'll need to handle the in-app message:
 {: .reset-td-br-1 .reset-td-br-2}
 
 # Styling fields
+Here are the fields you can optionally use to apply style to the in-app message if you're not using your base palette:
+
 | `bg_color` | Background color |
 | `close_button_color` | Close button color |
 | `frame_color` | The color of the background screen overlay |
@@ -55,7 +57,9 @@ Here are the fields you'll need to handle the in-app message:
 {: .reset-td-br-1 .reset-td-br-2}
 
 # Button fields
-| `click_action` | Can be "URI" to indicate to open the uri field. Can be "NONE" to indicate this button should close the in-app message. |
+These are the fields on buttons:
+
+| `click_action` | Can be "URI" to indicate to open the uri field. Can be "NONE" to indicate this button should close the in-app message |
 | `id` | The ID value of the button itself |
 | `text` | The text to display on the button |
 | `uri` | When click_action is "URI", this should be displayed |
