@@ -150,7 +150,7 @@ A notification will inform you whether your credentials have been successfully v
 
 ## AWS role ARN auth method
 
-This authentication method generates a role ARN (Amazon Resource Name) that enables Braze's Amazon account to authenticate as a member of the role you created to write data to your bucket.
+This authentication method generates a role Amazon Resource Name (ARN) that enables Braze's Amazon account to authenticate as a member of the role you created to write data to your bucket.
 
 ### Step 1: Create policy {#role-arn-1}
 
