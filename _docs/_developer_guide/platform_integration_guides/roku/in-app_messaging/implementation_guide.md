@@ -26,37 +26,40 @@ Then within your handler, you have access to the highest in-app message that has
 sub onInAppMessageReceived()
   in_app_message = m.BrazeTask.BrazeInAppMessage
   ...
-  end sub
+end sub
 ```
 
 ## In-App Message fields
 Here are the fields you'll need to handle the in-app message:
 
-| message | The body text of the in-app message |
-| buttons | List of buttons (could be an empty list) |
-| id | ID to use when logging impressions or clicks |
-| extras | Key/value pairs |
-| image_url | Image URL |
-| click_action | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be "URI" or "NONE". |
-| dismiss_type | Can be "AUTO_DISMISS" or "SWIPE" |
-| display_delay | How long (in seconds) to wait until displaying the in-app message |
-| duration | How long (in milliseconds), the message should be displayed when dismiss_type is "AUTO_DISMISS" |
-| header | The header text of the in-app message |
-| uri | When click_action is "URI", this should be displayed |
+| `buttons` | List of buttons (could be an empty list) |
+| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be "URI" or "NONE". |
+| `dismiss_type` | Can be "AUTO_DISMISS" or "SWIPE" |
+| `display_delay` | How long (in seconds) to wait until displaying the in-app message |
+| `duration` | How long (in milliseconds), the message should be displayed when dismiss_type is "AUTO_DISMISS" |
+| `extras` | Key/value pairs |
+| `header` | The header text of the in-app message |
+| `id` | ID to use when logging impressions or clicks |
+| `image_url` | Image URL |
+| `message` | The body text of the in-app message |
+| `uri` | When click_action is "URI", this should be displayed |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Styling fields
-| bg_color | Background color |
-| close_button_color | Close button color |
-| frame_color | The color of the background screen overlay |
-| header_text_color | Header text color |
-| message_text_color | Message text color |
-| text_align | Can be "START", "CENTER", or "END" |
+# Styling fields
+| `bg_color` | Background color |
+| `close_button_color` | Close button color |
+| `frame_color` | The color of the background screen overlay |
+| `header_text_color` | Header text color |
+| `message_text_color` | Message text color |
+| `text_align` | Can be "START", "CENTER", or "END" |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Button fields
-| click_action | Can be "URI" to indicate to open the uri field. Can be "NONE" to indicate this button should close the in-app message. |
-| id | The ID value of the button itself |
-| text | The text to display on the button |
-| uri | When click_action is "URI", this should be displayed |
+# Button fields
+| `click_action` | Can be "URI" to indicate to open the uri field. Can be "NONE" to indicate this button should close the in-app message. |
+| `id` | The ID value of the button itself |
+| `text` | The text to display on the button |
+| `uri` | When click_action is "URI", this should be displayed |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Handling interactions
 
