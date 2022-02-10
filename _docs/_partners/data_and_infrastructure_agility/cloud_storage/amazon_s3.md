@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
-The Braze and Amazon S3 integration leverages [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) to send Braze data to your S3 instance, enabling you to store it there until you want to connect it to other platforms, tools, and locations. You can also integrate via dashboard data exports. Follow the instructions on this page to get started with your AWS S3 integration.
+The Braze and Amazon S3 integration leverages [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) to send Braze data to your S3 instance, enabling you to store data there until you want to connect it to other platforms, tools, and locations. You can also integrate via dashboard data exports. Follow the instructions on this page to get started with your AWS S3 integration.
 
 ## Prerequisites
 
