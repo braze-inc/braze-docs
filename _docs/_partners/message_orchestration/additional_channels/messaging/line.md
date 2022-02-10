@@ -17,8 +17,8 @@ The Braze and Line integration allows you to leverage Braze webhooks, advanced s
 ## Prerequisites
 
 Line allows both promotional and non-promotional messaging to users as long your brand has secured users' consent. To send messages to users, you must meet one of two conditions:
-- Users who have added your LINE official account as a friend
-- Users who haven't added your LINE official account as a friend but have sent a message to your LINE official account (excluding users who have blocked your LINE official account).
+- Users who have added your Line official account as a friend
+- Users who haven't added your Line official account as a friend but have sent a message to your Line official account (excluding users who have blocked your LINE official account).
 <br><br>
 
 | Requirement | Description |
@@ -71,27 +71,27 @@ From **Templates & Media**, go to **Webhook Templates** and choose one of the fo
 ![Available templates]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
 
 {% tabs %}
-{% tab LINE Text %}
-The LINE [Text](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages) webhook template will allow you to send text-based messages that support emojis.
+{% tab Line Text %}
+The Line [text](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages) webhook template will allow you to send text-based messages that support emojis.
 
 ![Text Type]({% image_buster /assets/img_archive/line_text_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
-{% tab LINE Sticker %}
-The LINE [Sticker](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages) template will allow you to send sticker messages. Stickers can be used to make your bot app more expressive and engaging for your users. 
+{% tab Line Sticker %}
+The Line [sticker](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages) template will allow you to send sticker messages. Stickers can be used to make your bot app more expressive and engaging for your users. 
 
 To send a sticker, include the sticker's package ID and sticker ID in the message object. See the [list of available stickers](https://developers.line.biz/en/docs/messaging-api/sticker-list/) that can be sent with the Messaging API.
 
 ![Sticker Type]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
-{% tab LINE Image %}
-The LINE [Image](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages) template allows you to send images to your Line users.
+{% tab Line Image %}
+The Line [image](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages) template allows you to send images to your Line users.
 
 To send images, include URLs of the original image and a smaller preview image in the message object. The preview image is displayed in the chat, and the full image is opened when the image is tapped. Note that the URLs must use HTTPS over TLS 1.2 or later.
 
 ![Image Type]({% image_buster /assets/img_archive/line_image_type.png %})
 {% endtab %}
-{% tab LINE Carousel %}
-The LINE [Carousel](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template) template allows you to send messages with multiple column objects that users can cycle through. In addition to having buttons, you can also indicate in each column object a single action to be executed when a user taps anywhere in the image, title, or text area.
+{% tab Line Carousel %}
+The Line [carousel](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template) template allows you to send messages with multiple column objects that users can cycle through. In addition to having buttons, you can also indicate in each column object a single action to be executed when a user taps anywhere in the image, title, or text area.
 
 ![Carousel Type]({% image_buster /assets/img_archive/line_carousel_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
