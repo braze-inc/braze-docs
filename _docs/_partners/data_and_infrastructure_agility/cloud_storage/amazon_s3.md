@@ -29,7 +29,7 @@ To create a bucket for your app, open the [Amazon S3 console](https://console.aw
 
 ## Integration
 
-Braze has two different integration strategies with Amazon S3 - one for [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) and one for all dashboard data exports (CSV exports, engagement reports, etc.) Both integrations support two different authentication/authorization methods:
+Braze has two different integration strategies with Amazon S3—one for [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) and one for all dashboard data exports (CSV exports, engagement reports, etc.) Both integrations support two different authentication/authorization methods:
 
 - [AWS secret access key method](#aws-secret-key-auth-method)
 - [AWS role ARN method](#aws-role-arn-auth-method)
