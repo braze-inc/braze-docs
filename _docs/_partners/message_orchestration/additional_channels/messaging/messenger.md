@@ -87,11 +87,13 @@ If you receive the message successfully, you can configure its delivery settings
 
 ## Using this integration
 
-Once set up, use this integration to target Facebook Messenger users. If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment][62] for all users for whom the Messenger ID exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors:
+Once set up, use this integration to target Facebook Messenger users. If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment][62] for all users for whom the Messenger ID exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. 
 
 ![Segment filter for Messenger IDs][63]
 
-You may also use other segmentation to target your Messenger campaigns, and the rest of the campaign creation process is as with any other campaign.
+If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors.
+
+You may also use other segmentation to target your Messenger campaigns, and the rest of the campaign creation process, as is with any other campaign.
 
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
 [61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
