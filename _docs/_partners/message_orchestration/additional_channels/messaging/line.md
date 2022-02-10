@@ -16,7 +16,7 @@ The Braze and Line integration allows you to leverage Braze webhooks, advanced s
 
 ## Prerequisites
 
-Line allows both promotional and non-promotional messaging to users as long as brands have secured users' consent. To send messages to users, they must meet one of two conditions:
+Line allows both promotional and non-promotional messaging to users as long your brand has secured users' consent. To send messages to users, you must meet one of two conditions:
 - Users who have added your LINE official account as a friend
 - Users who haven't added your LINE official account as a friend but have sent a message to your LINE official account (excluding users who have blocked your LINE official account).
 <br><br>
