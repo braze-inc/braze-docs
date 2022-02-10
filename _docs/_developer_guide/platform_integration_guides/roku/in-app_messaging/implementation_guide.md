@@ -46,7 +46,7 @@ Here are the fields you'll need to handle the in-app message:
 {: .reset-td-br-1 .reset-td-br-2}
 
 # Styling fields
-Here are the fields you can optionally use to apply style to the in-app message if you're not using your base palette:
+There are also various styling fields that you could choose to use from the dashboard.  Alternatively, you could implement the In-App Message and style it within your Roku application using a standard palette:
 
 | `bg_color` | Background color |
 | `close_button_color` | Close button color |
