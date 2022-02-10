@@ -16,13 +16,13 @@ channel:
 
 To process in-app messages, you can add an observer on BrazeTask.BrazeInAppMessage:
 
-```javascript
+```
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
 Then within your handler, you have access to the highest in-app message that has been triggered by your campaigns:
 
-```javascript
+```
 sub onInAppMessageReceived()
   in_app_message = m.BrazeTask.BrazeInAppMessage
   ...
@@ -70,23 +70,23 @@ These are the fields on buttons:
 You will need to make sure certain functions are called to handle the analytics for your campaign.<br />
 
 When a message is displayed or seen, log an impression:
-```javascript
+```
 LogInAppMessageImpression(in_app_message.id, brazetask)
 ```
 
 Once a user clicks on the message, log a click:
-```javascript
+```
 LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 and then process in_app_message.click_action
 
 If the user clicks on a button, log the button click:
-```javascript
+```
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
 ```
 and then process inappmessage.buttons[selected].click_action
 
 After processing in-app message, you should clear the field:
-```javascript
+```
 m.BrazeTask.BrazeInAppMessage = invalid
 ```
