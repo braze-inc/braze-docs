@@ -265,7 +265,7 @@ Give your Current a name. Then, in the **Credentials** section, make sure the **
 You can also add the following customizations based on your needs:
 
 - Folder Path (defaults to `currents`)
-- Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
+- Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
 
 Click **Launch Current** to continue.
 
