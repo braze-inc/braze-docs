@@ -17,7 +17,8 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 ## Campaign sending
 
 With Intelligent Timing, you may choose the day(s) on which your message will send and, optionally, choose to send the campaign on a recurring schedule. We recommend only using Intelligent Timing when you can schedule the campaign at least 24 hours before the send date to ensure that users optimal times' have not passed when the campaign is launched. If a campaign is launched and a user's optimal time has already passed, the message goes out immediately. If it is more than an hour in the past, the message is not sent at all.
-**Note:** to make sure every single eligible user is able to fall into, and receive your campaign at their intelligent time we recommend launching your campaign 48hrs prior to schedule time of send. In a single day, there are approximately 48 hours that it spans. Depending on where your users reside, they may need more than 24hrs to receive their intelligent time message as their intelligent time may have already passed when the campaign launches. 
+
+To ensure every eligible user can fall into and receive your campaign at their intelligent time, we recommend launching your campaign 48hrs before the scheduled time of send. In a single day, there are approximately 48 hours that it spans. Depending on where your users reside, they may need more than 24hrs to receive their intelligent time message as their intelligent time may have already passed when the campaign launches. 
 
 ![Optimal Send Time][1]
 
