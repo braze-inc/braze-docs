@@ -9,13 +9,13 @@ description: "This reference article outlines what Data Points are at Braze and 
 
 # Data points
 
-At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger & cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
+At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger & cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See the [Consumption count](#consumption-count) section of this article to understand what data counts toward your data point allocation.
  
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
 ## Management and usage
 
-To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
+To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, refer to [Subscriptions and usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
 __Only update your deltas (changing data)!__
