@@ -38,6 +38,9 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+- name: Knak
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
+
 
 ---
 
