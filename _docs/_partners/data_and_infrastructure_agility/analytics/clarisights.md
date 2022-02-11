@@ -20,7 +20,7 @@ The Braze and Clarisights integration allows you to import data from Braze campa
 | Requirement | Description |
 | ----------- | ----------- |
 | Clarisights account | A Clarisights workspace is required to take advantage of this partnership |
-| Braze REST API key | A Braze REST API key with the following permissions:  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with the following permissions:  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze app group name | The name of the app group associated with the Braze API key. This name will be used to identify the app group integration on Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2}
