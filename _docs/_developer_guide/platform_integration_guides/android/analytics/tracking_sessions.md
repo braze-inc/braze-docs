@@ -24,11 +24,11 @@ __Note:__ If a session closes while the user has the app backgrounded, that data
 **Note**: If you need to force a new session, you can do so by changing users.
 
 ## Customizing session timeout
-To customize the session timeout, add `com_appboy_session_timeout` to your [`braze.xml`][session_tracking_3] file:
+To customize the session timeout, add `com_braze_session_timeout` to your [`braze.xml`][session_tracking_3] file:
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
-<integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
+<integer name="com_braze_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ```
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
@@ -71,7 +71,7 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#subscribeToSessionUpdates-com.appboy.events.IEventSubscriber-
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/subscribe-to-session-updates.html
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize

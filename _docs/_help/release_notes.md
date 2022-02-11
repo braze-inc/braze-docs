@@ -48,6 +48,51 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## March 2022
+
+### Canvas Action Paths
+
+[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) allow you to sort your users based on their actions. Using Action Paths, you can:
+- Customize user paths based on a specific action. 
+- Hold users for a given duration to prioritize their next path based on their actions during this evaluation period. 
+
+Access to Action Paths will be rolled out slowly to all Braze instances. Contact your Braze account manager to learn more.
+
+### API endpoint reference page
+
+Looking for a quick reference page of all available Braze endpoints? Visit our [API endpoint index]({{site.baseurl}}/api/endpoints/).
+
+### Transifex v2 and v2.5 API deprecation
+Beginning April 7, 2022, [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#transifex) will be deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. Users of this partner integration are urged to update their API version before this date.
+
+### Available custom attribute data types
+Coming soon! Object and object array data type support for custom attributes is arriving in Spring 2022.
+
+## February 2022
+
+### Canvas Experiment Paths Step
+The new Canvas Experiment Paths Step helps track path performance by testing multiple Canvas paths against each other and a control group at any point in the user journey. Now, you can leverage the analytics gathered here to further determine which path is most effective. Read more about how to create a [Experiment Paths Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+
+### Handling invalid phone numbers
+You've encountered a scenario where a user has entered an invalid phone number. Here's your solution! Braze marks these invalid phone numbers and will not attempt to send any further communications to those numbers. Read more on how Braze [handles invalid phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers/).
+
+### New SMS endpoints
+You can now manage invalid phone numbers using the new [Braze SMS Endpoints]({{site.baseurl}}/api/endpoints/sms/)! This update features:
+- [GET: Query or list invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) returns a list of phone numbers that are considered "invalid" by Braze.
+- [POST: Remove invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) allows you to remove the "invalid" phone numbers from Braze's invalid list.
+
+### Rate limits
+API rate limits have been included for all [Braze Endpoint articles]({{site.baseurl}}/api/basics/#nav_top_endpoints). You can now easily view the rate limits by request type. For more information on rate limits, check out our article on [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+### New REST endpoint
+Braze has added a [new EU-02 REST Endpoint]({{site.baseurl}}/api/basics/#api-definitions).
+
+### About email
+Email messages are a great way to connect with your customers. For a quick introduction on how you can customize and leverage email messages, check out our new article on [About email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/). 
+
+### About in-app messages
+In-app messages deliver rich content to your users who are active within your app. You can easily engage with your active customers by creating in-app messges for personalized greetings or feature adoption. To learn about the advantages and message types, check out our new article on [About in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/).
+
 ## January 2022
 
 Welcome to a new year!
@@ -279,35 +324,6 @@ The Braze and [Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agil
 
 [optilyz]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing and automate and better personalize campaigns. Use the optilyz and Braze webhook integration to send direct mail to your customers.
 
-## August 2021
-
-### Simple survey in-app message
-
-Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
-
-### Liquid use case library
-
-Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from Anniversaries and Birthdays to Platform Targeting and more.
-
-### Email tracking
-
-Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) to learn more.
-
-### SDK data collection options
-
-Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
-
-### SSL overview
-
-Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
-
-### Amplitude user profile API endpoints
-
-Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
-
-### Campaign details endpoint
-
-The GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
 
 <br><br>
 

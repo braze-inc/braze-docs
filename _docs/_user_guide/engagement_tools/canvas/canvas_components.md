@@ -24,6 +24,9 @@ guide_featured_list:
   - name: Delay Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     fa_icon: fas fa-stopwatch
+  - name: Experiment Paths Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
+    fa_icon: fas fa-columns    
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
     fa_icon: fas fa-comment-alt

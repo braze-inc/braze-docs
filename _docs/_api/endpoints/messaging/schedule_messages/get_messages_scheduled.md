@@ -20,7 +20,7 @@ You can view a JSON list of upcoming and scheduled campaigns and Canvases using 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

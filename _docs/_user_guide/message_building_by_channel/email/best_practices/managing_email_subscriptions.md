@@ -20,11 +20,13 @@ If a user unsubscribes and later changes their email, their new email will also 
 
 ## Bounces and invalid emails
 
-If an email address hard bounces (due to the fact that the email is invalid or doesn't exist) then we will mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we will resume sending emails to them, as their new email may be valid. Soft Bounces (inbox full, etc) are automatically retried for 72 hours.
+Hard bounces can happen if the email is invalid or doesn't exist. In this case, Braze will mark the user's email address as invalid and will not attempt to send any further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ## Duplicate emails
 
-Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which ensures that it doesn't hit the same email multiple times even if multiple user profiles share a common address. Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns, see below) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. 
+Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which ensures that it doesn't hit the same email multiple times even if multiple user profiles share a common address. 
+
+Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns, see below) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. 
 
 {% alert important %}
 If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times are listed in the call. This is because we assume that API calls are purposefully constructed. 

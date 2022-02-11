@@ -2,7 +2,7 @@
 nav_title: Action Paths Step
 article_title: Action Paths Step
 alias: /action_paths/
-page_order: 1
+page_order: 0.1
 page_type: reference
 description: "This reference article covers Action Paths and how to use them in your Canvases."
 tool: Canvas
@@ -12,16 +12,16 @@ tool: Canvas
 
 Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can do the following: 
  
-* Customize user paths based on a specific action
+* Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
-{% alert important %}
-Canvas Action Paths are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+{% alert note %}
+Action Paths are gradually being rolled out to all Braze instances, so there's a chance you may not see the Action Paths component in your Canvas yet. If you'd like immediate access, please contact your Braze account manager or customer success representative.
 {% endalert %}
 
 ## Create Action Paths
 
-![canvas_actionpath][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Action Paths][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select **Action Paths**.
 
@@ -35,7 +35,7 @@ When the **Ranking** is on, all users will be held until the end of the evaluati
 
 ### Define action groups
 
-Add a trigger or multiple triggers to define your action groups. 
+Add a trigger or multiple triggers to define your action groups. Here, you can select a range of trigger events such as [custom events][2], engagement events like interactions with your app, and more.
 
 When **Ranking** is off, users who perform one or more of the triggers will immediately advance through the relevant action group. 
 
@@ -53,3 +53,4 @@ If users enter into an action path multiple times and have multiple entries in t
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %} 
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events

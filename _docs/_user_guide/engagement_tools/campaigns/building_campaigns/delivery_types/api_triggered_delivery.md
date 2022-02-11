@@ -21,23 +21,22 @@ Setting up an API-triggered campaign takes a few quick steps. First, create a ne
 An API-triggered campaign is different from an [API campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
 {% endalert %}
 
-Next, configure your copy and notifications the same way as you would were it a normally scheduled notification and select __API-Triggered Delivery__. For more information on the triggering of these campaigns from your server, please see the endpoint documentation section on [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Next, configure your copy and notifications the same way as you would normally for scheduled notifications and select **API-Triggered Delivery**. For more information on the triggering of these campaigns from your server, check out the endpoint documentation on [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 
 ![API-Triggered Delivery Step][37]
 
 ## Using the templated content included with an API request
 
 In addition to triggering the message, you can also include content with the API request to be templated into the message within the `trigger_properties` object. This content can be referenced in the body of the message by saying something like
-``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``.
-See the following social notification example use case for additional context:
+``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. See the following social notification example for additional context:
 
 ![Social Example Delivery Window][38]{: style="max-width:70%;"}
 
 ## Re-eligibility with API-triggered campaigns
 
-The number of times a user receives an API-triggered campaign can be limited using re-eligibility settings, meaning the user will receive the campaign only once or once in a given window, regardless of how many times the API trigger is fired.
+The number of times a user receives an API-triggered campaign can be limited using re-eligibility settings. This means the user will receive the campaign only once or once in a given window, regardless of how many times the API trigger is fired.
 
-For example, if you are using an API-triggered campaign to send the user a campaign about an item they recently viewed, you can limit the campaign to send a maximum of one message a day regardless of how many items they viewed while firing the API trigger for each item. On the other hand, if your API-triggered campaign is transactional, you will want to make sure that the user receives the campaign every time they do the transaction by setting the delay to 0 minutes:
+For example, let's say you're using an API-triggered campaign to send the user a campaign about an item they recently viewed. In this case, you can limit the campaign to send a maximum of one message a day regardless of how many items they viewed while firing the API trigger for each item. On the other hand, if your API-triggered campaign is transactional, you will want to make sure that the user receives the campaign every time they do the transaction by setting the delay to 0 minutes:
 
 ![Re-eligibility settings][43]
 

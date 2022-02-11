@@ -100,14 +100,12 @@ Each webhook is allowed 90 seconds before it times out.
 
 ## IP whitelisting
 
-When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers.
+When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
-With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
-
-Braze will send Webhooks from the IP ranges below.
+Braze will send webhooks from the IP ranges below. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
 
 {% alert important %}
-  If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
+If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed below, including `127.0.0.1`.
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |
@@ -175,6 +173,6 @@ Check out:
 [21]: {% image_buster /assets/img/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
-[42]: https://dashboard-01.braze.com/app_settings/developer_console/
+[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
 [64]: {% image_buster /assets/img_archive/webhook_test_send.png %}

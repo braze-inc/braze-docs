@@ -1,6 +1,6 @@
 ---
-nav_title: Change Your Canvas After Launch
-article_title: Change Your Canvas After Launch
+nav_title: Changing Your Canvas After Launch
+article_title: Changing Your Canvas After Launch
 page_order: 1
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
 page_type: reference
@@ -64,6 +64,7 @@ There are a number of things to know if you plan to edit or add more steps to an
 - Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps.
 - You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
 - If you update the Delay or Window for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
+- If a delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
 {% alert note %}
 Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).

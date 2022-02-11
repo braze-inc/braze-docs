@@ -32,10 +32,10 @@ Or:
 
 ## Disabling automatic location tracking
 
-To disable automatic location tracking, set `com_appboy_enable_location_collection` to false in `braze.xml`:
+To disable automatic location tracking, set `com_braze_enable_location_collection` to false in `braze.xml`:
 
 ```xml
-<bool name="com_appboy_enable_location_collection">false</bool>
+<bool name="com_braze_enable_location_collection">false</bool>
 ```
 
 Then you can manually log single location data points via the `setLastKnownLocation()` method on `BrazeUser` like this:
@@ -57,7 +57,7 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtab %}
 {% endtabs %}
 
-See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
+See [here in our KDoc][4] for more information on the `setLastKnownLocation()` method.
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

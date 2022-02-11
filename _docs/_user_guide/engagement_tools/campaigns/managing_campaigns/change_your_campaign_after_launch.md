@@ -28,7 +28,7 @@ Any message content changes (including titles, bodies, images, etc.) take effect
 
 ### Scheduling and audience
 
-If you edit your campaign's scheduled send time, or its audience, those changes won't be reflected in the actual campaign until after the end of the current 24 hour period.
+If you edit your campaign's scheduled send time or its audience, those changes are reflected in the actual campaign immediately.
 
 ### Send rate
 

@@ -23,7 +23,6 @@ Braze provides predefined methods for setting the following user attributes with
 - Country
 - Date of Birth
 - Email
-- Avatar Image URLs for Braze User Profiles
 - Gender
 - Home City
 - Phone Number

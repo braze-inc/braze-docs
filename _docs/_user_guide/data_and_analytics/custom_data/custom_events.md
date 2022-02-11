@@ -34,7 +34,7 @@ Listed below are the methods across various platforms that are used to log custo
 
 ## Custom event storage
 
-All data store on the **User Profile**, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is retained indefinitely as long as each profile is active.
+All data stored on the **User Profile**, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days), is retained indefinitely as long as each profile is active.
 
 ## Custom event segmentation filters
 

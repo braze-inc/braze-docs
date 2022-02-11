@@ -10,11 +10,9 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining Braze’s industry-leading engagement platform and Radar’s industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences.
+> [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining Braze’s industry-leading engagement platform and Radar’s industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences. These include pickup and delivery tracking, location-triggered notifications, contextual personalization, location verification, store locators, address autocomplete, and more.
 
-The Radar and Braze integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. 
-
-When Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze in real-time. You can use these events and attributes to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
+The Braze and Radar integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. When Radar geofence or trip tracking events are generated, custom events and user attributes are sent to Braze in real-time. These events and attributes can then be used to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
@@ -23,7 +21,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | Requirement | Description |
 |---|---|
 | Radar account | A Radar account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 | Group identifier | Your group identifier can be found can be found within the __Braze Dashboard -> Developer Console__ page. |
 | iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard -> Manage Settings__ page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -48,17 +46,17 @@ Whenever Radar events are generated, Radar will send custom events and user attr
 
 You can use custom events and user attributes to build location-based segments or trigger location-based campaigns.
 
-### Segment of traveling users
+### Trigger a store arrival notification for curbside pickup 
 
-Send a push notification to the user when they’ve arrived at your store for a curbside pickup. 
-
-![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
-
-### Trigger when a user enters a location with high confidence
-
-Send a notification as a user walks into your store.
+Send a push notification to the user with arrival instructions as they arrive at your store for a curbside pickup.
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
+
+### Build an audience segment of recent store visitors
+
+For example, target any users who have visited your store within the past 7 days, whether they made a purchase or not.
+
+![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Connected Content
 

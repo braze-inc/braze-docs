@@ -11,6 +11,8 @@ description: "This reference article covers time-based functionalities for Campa
 
 > This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions. You can also check out our [Campaign Setup](https://lab.braze.com/campaign-setup-delivery-targeting-conversions) LAB course for more on campaign delivery. 
 
+When using campaigns, you can use the time-based scheduling options to reach your audience. These time-based functionalities include cammpaigns that are set to scheduled delivery and action-based delivery.
+
 ## Scheduled delivery
 
 This section covers time-based scheduling and delivery options for [Scheduled Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) campaigns.
@@ -28,7 +30,7 @@ This section covers time-based scheduling and delivery options for [Scheduled De
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. [Learn more]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. [Learn more]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Intelligent Timing][3]
@@ -99,7 +101,7 @@ For example, suppose you select "Send on the next Saturday at 3:15pm". If a user
 
 ![Send in X days at Y time][9]
 
-Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose the user performs the trigger event on Monday at 9pm, and the schedule delay is set to "Send campaign in 1 day at 9am". That message will be delivered on Tuesday at 9am, because Braze calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
+Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose the user performs the trigger event on Monday at 9pm, and the schedule delay is set to "Send campaign in 1 day at 9am". That message will be delivered on Tuesday at 9am because Braze calculates the delay as `Monday` + `1 calendar day` and then adds on `9am`.
 
 ### Quiet hours
 

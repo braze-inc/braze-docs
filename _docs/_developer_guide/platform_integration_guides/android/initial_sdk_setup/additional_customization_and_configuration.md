@@ -88,7 +88,7 @@ For each relevant build variant, create a new `braze.xml` for it in `src/<build 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
+<string name="com_braze_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
 </resources>
 ```
 
@@ -101,4 +101,4 @@ To set an API key in code, please see the [runtime configuration][69] documentat
 [50]: https://developer.android.com/studio/build/shrink-code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
-[70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/support/BrazeLogger.html#setLogLevel-int-
+[70]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html

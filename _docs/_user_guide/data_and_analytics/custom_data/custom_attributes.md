@@ -48,6 +48,10 @@ The following data types may be stored as custom attributes:
 - [Arrays](#arrays)
 - [Time](#time)
 
+{% alert note %}
+**Coming soon!** Support for object and object array data types is arriving in Spring 2022.
+{% endalert %}
+
 ### Booleans (true/false) {#booleans}
 
 Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
@@ -114,7 +118,7 @@ Array attributes are good for storing related lists of information about your us
 
 By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
-The maximum for individual arrays can be increased to 100. If you would like this maximum increased, please reach out to your customer service manager.
+Your dashboard administrator can increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

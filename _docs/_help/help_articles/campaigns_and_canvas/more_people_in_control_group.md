@@ -12,23 +12,13 @@ tool: Canvas
 
 When creating your Canvas, you may have expected your audience to split evenly between your control group and your variant group, like in [our example](#example) below. We can explain why that is and how to fix it!
 
-The group a user joins (either the control group or variant group) depends on their settings. A user will enter a Canvas when they fit all of your criteria defined in the [Entry Step][1]. When setting up your Canvas, you define what percentage of users will enter each variant and the control group.
+The group that a user joins depends on their settings. This can be either the control group or variant group. A user will enter a Canvas when they fit all of your criteria defined in the [Entry Step][1]. When setting up your Canvas, you define what percentage of users will enter each variant and the control group.
 
-If your control group is large compared to your variant group (and this is not your intent), we recommend that you:
-
-* [Set Entry Audience Push status](#set-entry-audience-push-status)
-* [Set Entry Audience Email status](#set-entry-audience-email-status)
+If your control group is large compared to your variant group (and this is not your intent), we recommend the following:
+1. Set your entry audience filter to "Is Push Enabled".
+2. Set your entry audience filter to "is Opted In or Subscribed".
 
 When creating a Canvas with a control group, ensure that all users in the Entry Audience are able to receive messages within the Canvas (i.e. the Canvas contains push and email messages).
-
-## Set entry audience push status
-
-Set your entry audience filter to "Is Push Enabled".
-
-## Set entry audience email status
-
-Set your entry audience filter to "is Opted In or Subscribed".
-
 
 ## Example
 

@@ -56,7 +56,7 @@ glossaries:
     description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
     tags:
       - iOS
-      - Web
+      - Android
   - name: "Provisional Push Notifications for iOS"
     description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
     tags:
