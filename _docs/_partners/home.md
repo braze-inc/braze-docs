@@ -171,5 +171,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
-
+- name: Grouparoo
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/
 ---
