@@ -14,11 +14,15 @@ search_tag: Partner
 
 The Braze and BlueConic integration allows users to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server. Potential goals include growth-focused initiatives, customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more. This integration supports both scheduled batch import and export. 
 
+{% alert important %}
+When using the integration, BlueConic will send deltas (changing data) on each sync. This includes any profiles that have changed since the last send and all attributes of that profile. Please monitor data point usage accordingly.
+{% endalert %}
+
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
-|BlueConic account | A [BlueConic account][1] is required to take advantage of this partnership. You will need access to [view and edit connections][4] within your BlueConic account to access the plugins. |
+| BlueConic account | A [BlueConic account][1] is required to take advantage of this partnership. You will need access to [view and edit connections][4] within your BlueConic account to access the plugins. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
 | S3 authentication | You will need access to an Amazon Web Services (S3) server to export and import the data. |

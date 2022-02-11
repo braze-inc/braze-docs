@@ -37,11 +37,19 @@ Your **Total Data Points Dashboard** can be found under the __Total Data Points 
 
 Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
+The fields in this section are defined as follows:
+
+- **Contract Type:** Billing term structure, either Annual or Multi-Year.
+- **Contract Start and End Date:** Start and end date of the entire contract.
+- **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
+- **Contract Data Point Usage:** A cumulative total of all data points consumed over the contract's lifetime, and does not reset in the next billing term.
+
 ![Contract Details][5]
 
 ### Current billing cycle
 
 This section of the dashboard displays the data point usage for the current billing cycle. This includes the following information for the current billing cycle:
+
 - Start date 
 - End date  
 - Allotted number of data points 
