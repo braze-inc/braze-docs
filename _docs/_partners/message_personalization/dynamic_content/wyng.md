@@ -22,7 +22,7 @@ The Braze and Wyng integration allows you to leverage Wyng experiences to delive
 | Requirement | Description |
 | ----------- | ----------- |
 | Wyng account | A Wyng account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
