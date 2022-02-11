@@ -65,7 +65,7 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
-#### Deactiviating and deleting connections
+#### Deactivating and deleting connections
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 

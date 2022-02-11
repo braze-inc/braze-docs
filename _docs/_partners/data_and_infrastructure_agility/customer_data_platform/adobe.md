@@ -2,7 +2,7 @@
 nav_title: Adobe
 article_title: Adobe
 alias: /partners/adobe/
-description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users."
+description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users."
 page_type: partner
 page_order: 2.1
 search_tag: Partner
@@ -11,56 +11,60 @@ search_tag: Partner
 
 # Adobe
 
-> Built on the Adobe Experience Platform, Adobe's Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
+> Built on the Adobe Experience Platform, Adobe's real-time customer data platform helps companies bring together known and anonymous data from multiple enterprise sources to create customer profiles. These profiles can then be used to provide personalized experiences across all channels and devices in real-time.
 
-The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute.
+The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Adobe account | An [Adobe account](https://account.adobe.com/) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
+| Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Please note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep for a better understanding of this potential data point increase.
+Please note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep to better understand this potential data point increase.
 {% endalert %}
 
-## Integration overview
+## Integration
 
-### Step 1: Connect Adobe account to Braze destination
+### Step 1: Configure Braze destination
 
-From the Adobe settings page, select __Destinations__ under __Collections__. From there, locate the Braze tile and select __Configure__. 
+From the Adobe **Settings** page, select **Destinations** under **Collections**. From there, locate the **Braze** tile and select **Configure**. 
 
 ![Connect][1]
 
 {% alert note %}
-If a connection with Braze already exists, you will see an Activate button on the destination card. For more information about the difference between Activate and Configure, refer to the Catalog section of the Adobe destination workspace [documentation](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destinations-interface/destinations-workspace.html?lang=en#catalog).
+If a connection with Braze already exists, you will see an **Activate** button on the destination card. For more information about the difference between activate and configure, refer to the catalog section of the Adobe destination workspace [documentation](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destinations-interface/destinations-workspace.html?lang=en#catalog).
 {% endalert %}
 
 ### Step 2: Provide Braze token
-![Token][3]{: style="float:right;max-width:40%;margin-left:15px;"}
-In the account step, provide your Braze account token API key. For more information on how to obtain your API key in the Braze [REST API Key Overview]({{site.baseurl}}/api/api_key/). Enter this key and click __Connect to destination__.
+
+In the **Account** step, provide your Braze API key and click **Connect to destination**.
+
+![Token][3]{: style="max-width:60%"}
+
 
 ### Step 3: Authentication
 
-Next, you will be presented with the Authentication step. Here, you must enter your Braze connection details:
-- __Name__: Enter the name you would like to recognize this destination by in the future.
-- __Destination__: Enter a description that will help you identify this destination.
-- __Endpoint Instance__: Please reach out to your Braze representative about which endpoint instance you should use. 
-- __Marketing Use Case__: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. To read more about Adobe marketing use cases, visit their [Data Governance in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations) documentation.
+Next, in the  **Authentication** step, you must enter your Braze connection details:
+- **Name**: Enter the name you would like to recognize this destination by in the future.
+- **Destination**: Enter a description that will help you identify this destination.
+- **Endpoint instance**: Enter your Braze endpoint instance.
+- **Marketing use case**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or create your own marketing use case. To read more about Adobe marketing use cases, visit [Data governance in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations).
 
 ![Authentication][4]{: style="max-width:60%;"}
 
 ### Step 4: Create destination
-Lastly, click __Create destination__. Your destination has now been created. You can click __Save & Exit__ if you want to activate segments later, or you can select __Next__ to continue the workflow and select segments to Activate. 
+Click **Create destination**. Your destination has now been created. You can click **Save & Exit** to activate segments later or **Next** to continue the workflow and select segments to activate. 
 
 ### Step 5: Activate segments
-Activate the data you have in the Adobe Real-Time CDP by mapping segments to the Braze destination.
+Activate the data you have in the Adobe real-time CDP by mapping segments to the Braze destination.
 
-Listed below are the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit their [Segment Documentation](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
+Listed below are the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
 
 1. Select and activate the Braze destination.
 2. Select applicable segments.
@@ -70,21 +74,21 @@ Listed below are the general steps required to activate a segment. For thorough 
 
 ### Step 6: Field mapping
 
-To correctly send your audience data from Adobe Experience Platform to Braze, you must complete the field mapping step. Mapping consists of creating a link between the Adobe Experience Data Model fields and the corresponding Braze Platform fields.
+To correctly send your audience data from the Adobe Experience Platform to Braze, you must complete the field mapping step. Mapping creates a link between the Adobe Experience data model fields and the corresponding Braze platform fields.
 
-1. In the Mapping Step, click __Add new mapping__.<br>![Mapping][5]{: style="max-width:50%;"}<br><br>
-2. In the Source Field Section, click the arrow button next to the empty field, this will open the Select source field window.<br>![Source][6]<br><br>
-3. From the Select source field window, you must select Adobe attributes to map to your Braze Attributes. <br>![Field][7]{: style="max-width:70%;"}<br><br>Next, you must select the identity namespace. This option is used to map a Platform identity namespace to a Braze namespace.<br>![Identity][8]{: style="max-width:80%;"}<br> Choose your source fields, then click __Select__.<br><br>
-4. In the Target Field section, click the mapping icon to the right of the field.<br>![Tagret][9]{: style="max-width:90%;"} <br><br>
-5. In the Select target field window, you can choose between three categories of target fields:<br><br>• __Select attributes__: Use this option to map your Adobe XDM attributes to standard Braze Attributes.<br>• __Select identity namespace__: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• __Select custom attributes__: Use this option to map Adobe XDM attributes to custom Braze Attributes that you defined in your Braze account. <br><br>![Attributes][10]{: style="max-width:60%;"}<br><br>__You can also use this option to rename existing XDM attributes into Braze.__ For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, the click __Select__.<br><br>
+1. In the mapping step, click **Add new mapping**.<br>![Mapping][5]{: style="max-width:50%;"}<br><br>
+2. In the source field section, click the arrow button next to the empty field; this will open the select source field window.<br>![Source][6]<br><br>
+3. In this window, you must select Adobe attributes to map to your Braze attributes. <br>![Field][7]{: style="max-width:70%;"}<br><br>Next, you must select the identity namespace. This option is used to map a platform identity namespace to a Braze namespace.<br>![Identity][8]{: style="max-width:80%;"}<br> Choose your source fields, then click **Select**.<br><br>
+4. In the target field section, click the mapping icon to the right of the field.<br>![Tagret][9]{: style="max-width:90%;"} <br><br>
+5. In the select target field window, you can choose between three categories of target fields:<br><br>• **Select attributes**: Use this option to map your Adobe XDM attributes to standard Braze Attributes.<br>• **Select identity namespace**: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• **Select custom attributes**: Use this option to map Adobe XDM attributes to custom Braze Attributes that you defined in your Braze account. <br><br>![Attributes][10]{: style="max-width:60%;"}<br><br>**You can also use this option to rename existing XDM attributes into Braze.** For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, the click **Select**.<br><br>
 6. You should now see your field mapping in the list.<br>![List][11]<br><br>
-7. To add more mappings, repeat steps 1 through 6 as necessary. 
+7. To add more mappings, repeat steps 1 through 6, as necessary. 
 
 ## Example
 
 Let's say your XDM profile schema and your Braze instance contains the following attributes and identities:
 
-|     | XDM Profile Schema | Braze Instance |
+|     | XDM profile schema | Braze instance |
 | --- | ------------------ | -------------- |
 | Attributes | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
 | Identities | - `Email`<br>- `Google Ad ID (GAID)`<br>- `Apple ID For Advertisers (IDFA)` | - `external_id` |
@@ -92,13 +96,13 @@ Let's say your XDM profile schema and your Braze instance contains the following
 
 The correct mapping would look like this:
 
-![Correct][12]
+![Correct mapping][12]
 
 ## Exported data
 To verify if data has been exported successfully to Braze, check your Braze account. Adobe Experience Platform segments are exported to Braze under the `AdobeExperiencePlatformSegments` attribute.
 
 ## Data usage and governance
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how the Adobe Experience Platform enforces data governance, see Adobe's [Data Governance in Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en) documentation. 
+All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. See [Data governance in real-time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en) for detailed information on how the Adobe Experience Platform enforces data governance. 
 
 [1]: {% image_buster /assets/img/adobe/braze-destination-configure.png %} 
 [3]: {% image_buster /assets/img/adobe/braze-destination-account.png %}

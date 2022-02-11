@@ -8,15 +8,15 @@ description: "This help article walks you through troubleshooting issues with in
 channel: in-app messages
 ---
 
-# In-App Messages Are Not Displaying
+# In-app messages not displaying
 
-There are a number of approaches that you may try:
+If you find that your in-app messages are not displaying or rendering properly, there are a number of approaches that you may try to check:
 
-* [Check Event Triggers](#event-triggers)
-* [Check Message Impressions](#message-impressions)
-* [Run Tests](#run-tests)
-* [Check Session Timeout](#session-timeout)
-* [Check Messaging Interval](#minimum-interval)
+* [Event triggers](#event-triggers)
+* [Message impressions](#message-impressions)
+* [Tests](#run-tests)
+* [Session timeout](#session-timeout)
+* [Messaging interval](#minimum-interval)
 
 ## Event triggers
 
@@ -28,13 +28,11 @@ If the campaign is triggered by a session start or a custom event, you want to e
 
 Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
 
-
 ## Run tests
 
-It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start, or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
+It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
 
 Alternatively try using a different type of in-app message template or size of image. There are [specifications for in-app messages][15] that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
-
 
 ## Session timeout
 
@@ -48,12 +46,12 @@ If you have an extended the session timeout it will extended the period of time 
 
 ## Minimum interval
 
-There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered. You might be trying to trigger them too quickly. Review our documentation for more information on this:
+There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Review our documentation for more information on this:
 * [iOS][19]
 * [Android][20]
 * [Web][21]
 
-These are customizable, however we have them in place to avoid over-messaging your users.
+While intervals are customizable, we still have them in place to avoid over-messaging your users.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

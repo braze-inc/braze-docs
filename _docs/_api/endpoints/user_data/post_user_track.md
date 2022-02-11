@@ -45,16 +45,16 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 
 ### Request parameters
 
+{% alert important %}
+For each of the request components listed below, one of `external_id`, `user_alias`, or `braze_id` is required.
+{% endalert %}
+
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-{% alert important %}
-For each of the request components listed above, one of `external_id`, `user_alias`, or `braze_id` is required.
-{% endalert %}
 
 {% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
@@ -119,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Responses
 
-Upon using any of the aforementioned API requests you should receive one of the following three general responses:
+When using any of the aforementioned API requests, you should receive one of the following three general responses:
 
 ### Successful message
 
@@ -136,7 +136,7 @@ Successful messages will be met with the following response:
 
 ### Successful message with non-fatal errors
 
-If your message is successful but has non-fatal errors such as one invalid Event Object out of a long list of events you will receive the following response:
+If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, then you will receive the following response:
 
 ```json
 {
@@ -149,9 +149,11 @@ If your message is successful but has non-fatal errors such as one invalid Event
 }
 ```
 
+For success messages, any data that was not affected by an error in the `errors` array will still be processed. 
+
 ### Message with fatal errors
 
-In the case of a success, any data that was not affected by an error in the _errors_ array will still be processed. If your message has a fatal error you will receive the following response:
+If your message has a fatal error, you will receive the following response:
 
 ```json
 {
@@ -166,7 +168,7 @@ In the case of a success, any data that was not affected by an error in the _err
 
 ### Fatal error response codes
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
+The following status codes and associated error messages will be returned if your request encounters a fatal error. The following error codes indicate that no data will be processed.
 
 | Error Code | Reason / Cause |
 | ---------------------| --------------- |
@@ -183,7 +185,7 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.
 
 ## Making bulk updates
 
@@ -205,7 +207,7 @@ When the `X-Braze-Bulk` header is present with any value, Braze will consider th
 
 ### Use cases
 
-Some use cases in which you might use the bulk update header include:
+Consider the following use cases where you may use the bulk update header:
 
 - A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
 - An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.

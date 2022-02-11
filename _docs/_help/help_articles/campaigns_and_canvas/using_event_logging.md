@@ -17,13 +17,13 @@ Two particularly helpful steps are setting up:
 
 ## Setting up an anonymous profile
 
-To set up an anonymous profile, check out this article on [adding test users][2]
+To set up an anonymous profile, check out this article on [adding test users][2].
 
 ## Using event logging
 
-Use Event Logging to test what behavior looks like for an anonymous user. This can be particularly helpful to find the user ID if the app being tested doesn't collect email. You can use Braze along with your device’s IP address to add that device as a test user.
+Use event logging to test what behavior looks like for an anonymous user. This can be particularly helpful to identify the user ID if the app being tested doesn't collect email. You can use Braze along with your device’s IP address to add that device as a test user.
 
-This is a great way to find anonymous users. You can also use this information to test what data is being sent to Braze and check for any discrepancies. From this view, you are able to identify whether the deltas of your data are being sent to Braze. If an email address or push token is being sent with every event logged, then all data is being sent to Braze.
+This is also a great way to find anonymous users. You can also use this information to test what data is being sent to Braze and check for any discrepancies. From this view, you are able to identify whether the deltas of your data are being sent to Braze. If an email address or push token is being sent with every event logged, then all data is being sent to Braze.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
