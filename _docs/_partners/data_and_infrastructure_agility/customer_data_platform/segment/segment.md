@@ -42,7 +42,7 @@ In Segment, navigate to __Destinations > Braze > Receiving from [platform]__.
 
 Next, provide the following fields in the configuration page:
 - __App identifer__: Previously called the API key. Found in the Braze __Developer Console__ under __Settings__.
-- __App group REST API key__:  Braze REST API key with `users/track` permissions. This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__
+- __App group REST API key__:  Braze REST API key with `users/track` permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__
 - __Braze SDK endpoint__: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
 - __Braze REST endpoint__: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
 - __Appboy datacenter__: Specify which instance your Braze data will be forwarded to.
