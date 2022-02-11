@@ -2,7 +2,7 @@
 nav_title: Knak
 article_title: Knak
 alias: /partners/knak/
-description: "This article outlines the partnership between Braze and Knak, a campaign creation platform that allows you to create fully-responsive emails in minutes or hours instead of days or weeks, and export them as ready-to-use Braze templates."
+description: "This article outlines the partnership between Braze and Knak, a campaign creation platform that allows you to create fully responsive emails in minutes or hours instead of days or weeks, and export them as ready-to-use Braze templates."
 page_type: partner
 search_tag: Knak
 
