@@ -40,7 +40,7 @@ In Wyng, go to [**Integrations**][1] and select the **Add** tab. Next, hover ove
 2. Next, use the dropdown to select the Wyng campaign you would like to share with Braze.![Select a Wyng campaign][5]{: style="max-width:80%;"}<br><br>
 3. Next, you must set up subscriptions, attribute and event objects, and custom events.<br><br>
 - **Subscriptions setup (required)**<br>
-To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and id. To add multiple group names and ids, click the **Add Subscription** button again.<br>![Add subscription group name and ID][8]{: style="max-width:80%;"}<br><br>
+To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and ID. To add multiple group names and IDs, click the **Add Subscription** button again.<br>![Add subscription group name and ID][8]{: style="max-width:80%;"}<br><br>
 - **User track setup**<br>
 Click **Add custom property** to add attribute and event object pairs to send to the users/track endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![Add attribute custom properties][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
