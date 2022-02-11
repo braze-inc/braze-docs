@@ -27,7 +27,7 @@ Leverage Snowplow’s rich behavioral data to drive powerful customer-centric in
 | ----------- | ----------- |
 | Snowplow pipeline | A Snowplow pipeline needs to be up and running. |
 | Google Tag Manager server-side | GTM-SS needs to be deployed and the [Snowplow client for GTM-SS][2] set up. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
 | Braze REST endpoint | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
