@@ -13,7 +13,7 @@ page_order: 5
 When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. **Prior to this feature, the entry properties could only be used in the first step of Canvas**. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
 {% alert important %}
-This feature is currently in beta. Please reach out to your Braze account manager for more information.
+This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
 ## Using entry properties
@@ -22,30 +22,16 @@ Entry properties can be used in Action-based and API-Triggered Canvases. These e
 
 Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag.
 
-- For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
+For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
-{% alert important %} 
-If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to the following edge case. <br><br>
-Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one message from each step. In the edge case where a user’s re-entry reaches the same step as its previous entry, Braze will only deduplicate that step’s messages if the messages are scheduled to send within 5 minutes of each other.
-{% endalert %}
-
-## Action-based Canvas step
-
-When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an action-based or API-triggered Canvas:
-- `canvas_entry_properties` will template with properties associated with the custom event, purchase, or API call that triggered the Canvas.
-- `event_properties` will template with properties associated with the custom event or purchase that triggered the step.
-
-{% alert note %} 
-For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
-{% endalert %}
 
 ## Updating Canvas to use entry properties
 
 If an active Canvas that previously did not include any messages that use `canvas_entry_properties` is edited to include `canvas_entry_properties`, the value corresponding to that property will not be available for users who entered the Canvas before `canvas_entry_properties` was added to the Canvas. The values will only be saved for users that enter the Canvas after the change is made.
 
-For example: If you initially launched a Canvas that did not use any entry properties on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward.
+For example, if you initially launched a Canvas that did not use any entry properties on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward.
 
 In the case that a Canvas entry property is null or blank, you can abort messages using conditionals. The following code snippet is an example of how you may use Liquid to abort a message.
 {%raw%}

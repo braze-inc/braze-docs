@@ -22,4 +22,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stripo/
 - name: Taxi for Email
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
+- name: Knak
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 ---

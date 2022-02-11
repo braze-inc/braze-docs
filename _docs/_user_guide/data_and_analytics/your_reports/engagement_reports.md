@@ -67,7 +67,7 @@ The Stats tab will automatically show you stats for the types of campaigns or Ca
 
 | channel| stats available|
 | ------| --------------|
-| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Unsubscribes, Bounces, Delivered, Reported Spam |
+| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
 | Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
 | Web Push | Sends, Opens, Bounces, Body Clicks |
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
@@ -105,7 +105,7 @@ This option gives you the flexibility to choose how frequently you would like to
 
 ## Open report  
 
-You will receive an email with links to your reports. When you click on the provided links you will automatically download a ZIP file containing your CSV files - one for all Campaigns.
+You will receive an email with links to your reports. When you click on the provided links you will automatically download a ZIP file containing your CSV files-one for all Campaigns.
 
 The report, when opened, will contain all the statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 

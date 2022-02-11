@@ -32,6 +32,14 @@ $(document).ready(function () {
         }
       }
     }
+    
+    // if no platform is selected, show all platforms
+    if (!dev_selected && !url_selected) {
+      platform_objects.each(function () {
+        var id = $(this).attr('id');
+        show(id);
+      });
+    }
   });
   $("#parent_nav_top").css("width", "100%");
   select_html += "</select></div>";
