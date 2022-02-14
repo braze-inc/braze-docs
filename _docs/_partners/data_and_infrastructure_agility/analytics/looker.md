@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
-The Braze and Looker integration allows Braze users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. Once flagged, these users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker. 
+The Braze and Looker integration allows Braze users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. Once flagged, these users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@ The Braze and Looker integration allows Braze users to leverage first-party [Loo
 |Looker account | A [Looker account](https://looker.com/) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3} 
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Limitations 
+#### Limitations
 
 - This process only works with data that has not been pivoted.
 - Currently, the API is limited to 100,000 rows sent.
@@ -60,7 +60,7 @@ Be aware of different naming conventions! Custom names can cause incongruences i
 
 ### Looker Actions
 
-Looker Actions allow you to flag users within Braze via the REST API endpoint from a Looker Look. Actions require that a dimension is tagged with `braze_id`. The Action will append the flagged value to the user's`looker_export` custom attribute.
+Looker Actions allow you to flag users within Braze via the REST API endpoint from a Looker Look. Actions require that a dimension is tagged with `braze_id`. The Action will append the flagged value to the user's `looker_export` custom attribute.
 
 {% alert important %}
 Only existing users will be flagged. You cannot use pivoted Looks when flagging data in Braze.
@@ -94,7 +94,7 @@ Note the following limitations:
 - Supported types are `Strings`, `Boolean`, `Numbers`, and `Dates`.
 - Attribute names are case-sensitive.
 - Default attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
-- The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored. 
+- The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
 - Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
 
 #### Step 4: Send the Looker action
@@ -107,11 +107,16 @@ Note the following limitations:
 
 ##### Sample outgoing API
 
-The following is a sample of an outgoing API call, which will be sent to the [/users/track/][10] endpoint. 
+The following is a sample of an outgoing API call, which will be sent to the [/users/track/][10] endpoint.
 
+###### Header
+```
+Authorization: Bearer [API_KEY]
+```
+
+###### Body
 ```json
 {
-   "api_key" : "[API_KEY]",
    "attributes" : [
       {
         "external_id" : "user_01",
@@ -141,6 +146,22 @@ In Braze, to create a segment of these flagged users, navigate to **Segments** u
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
+
+## Troubleshooting
+If you're having issues with the Looker Action, add a test user to [internal groups][16] and try the following troubleshooting steps:
+
+* API key has the `users.track` permission
+* The correct REST endpoint is entered ie `https://rest.iad-01.braze.com`
+* A `braze_id` tag is set in the dimension view
+* Ensure your query includes the Id attribute as an column
+* Looker results are not pivoted
+* Unique Key is correctly selected. Usually `external_id`
+* The `external_id` user exist in the Braze platform
+* The `looker_export` field is set as `Automatically Detect` under `Settings->Manage Settings->Custom Attributes`
+
+
+
+
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
@@ -149,10 +170,11 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct
 [8]: https://dashboard.braze.com/app_settings/developer_console/
-[9]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-request
+[9]: {{site.baseurl}}/api/basics/#endpoints
+[10]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [11]: {% image_buster /assets/img/user_track_api.png %}
 [12]: {% image_buster /assets/img/braze-looker-action.png %}
 [13]: {% image_buster /assets/img/send-looker-action.png %}
 [14]: {% image_buster /assets/img/custom-attributes-looker.png %}
 [15]: {% image_buster /assets/img/braze_segments.png %}
+[16]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/
