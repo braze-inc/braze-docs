@@ -13,7 +13,7 @@ description: "This article explains the different components of Braze's Email Ob
 ## Body
 ```json
 {
-  "app_id": (required, string) see App Identifier above,
+  "app_id": (required, string), see App Identifier below,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
   "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set) - use "NO_REPLY_TO" to set reply-to address to null,
@@ -32,11 +32,12 @@ description: "This article explains the different components of Braze's Email Ob
 }
 ```
 
+- [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)
+- For more information and best practices on pre-headers, see our help article on [email body styling][46].
+
 {% alert warning %}
 Braze recommends that you avoid using Google Drive links for your attachment's `url`, as this can block our servers' calls to get the file and result in the email message not sending.
 {% endalert %}
-
-For more information and best practices on pre-headers, see our help article on [email body styling][46].
 
 An `email_template_id` can be retrieved from the bottom of any Email Template created with the HTML editor. Below is an example of what this ID looks like:
 

@@ -170,6 +170,7 @@ User export object (we will include the least data possible - if a field is miss
 
 ```json
 {
+    "created_at" : (date),
     "external_id" : (string),
     "user_aliases" : [
       {
@@ -178,14 +179,15 @@ User export object (we will include the least data possible - if a field is miss
       }
     ],
     "braze_id": (string),
+    "random_bucket" : (int)
     "first_name" : (string),
     "last_name" : (string),
     "email" : (string),
     "dob" : (string) date for the user's date of birth,
     "home_city" : (string),
-    "country" : (string),
+    "country" : (string) ISO-3166-1 alpha-2 standard,
     "phone" : (string),
-    "language" : (string) ISO-639 two letter code,
+    "language" : (string) ISO-639 ISO-639-1 standard,
     "time_zone" : (string),
     "last_coordinates" : (array of float) [lon, lat],
     "gender" : (string) "M" | "F",
@@ -233,7 +235,9 @@ User export object (we will include the least data possible - if a field is miss
         {
             "app" : (string) app name,
             "platform" : (string),
-            "token" : (string)
+            "token" : (string),
+            "device_id": (string),
+            "notifications_enabled": (bool)
         },
         ...
     ],

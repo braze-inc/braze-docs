@@ -40,9 +40,10 @@ A Purchase Object is an object that gets passed through the API when a purchase 
 }
 ```
 
+- [External User ID][23]
+- [App Identifier][21]
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
-- [App Identifier][21]
 
 ## Purchase product_id
 
@@ -148,3 +149,4 @@ For info on how to set up webhooks, check out our [Webhook][1] documentation.
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
+[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation
