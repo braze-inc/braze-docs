@@ -34,4 +34,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
+- name: Toovio
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
+
 ---
