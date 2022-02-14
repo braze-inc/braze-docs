@@ -38,8 +38,9 @@ You can check out how to set up custom events for a specific platform by reading
 }
 ```
 
-- [ISO 8601 Time Code Wiki][22]
+- [External User ID][23]
 - [App Identifier][21]
+- [ISO 8601 Time Code Wiki][22]
 
 #### Update existing profiles only
 
@@ -117,3 +118,4 @@ Using the example provided above, we can see that someone watched a trailer rece
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
+[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

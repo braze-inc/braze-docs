@@ -22,12 +22,13 @@ An API request with any fields in the Attributes Object will create or update an
       // external_ids for users that do not exist will return a non-fatal error.
       // See Server Responses for details.
       "user_alias" : {
-        "alias_name" : (required, string),
-        "alias_label" : (required, string)
+        "alias_name" : (required, string) see User Aliases below,
+        "alias_label" : (required, string) see User Aliases below
       }
     }
   ]
 }
 ```
 
-For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [External User ID]({{site.baseurl}}/api/basics/#external-user-id-explanation)
+- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
