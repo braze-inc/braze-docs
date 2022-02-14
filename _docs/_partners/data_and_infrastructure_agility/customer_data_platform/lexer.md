@@ -20,7 +20,7 @@ The Braze and Lexer integration allows you to sync data across the two platforms
 | ----------- | ----------- |
 | Partner account | A Lexer account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions (excluding `user.delete`) and `segment.list` permissions. The permission set may change as Lexer adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
-| Braze REST endpoint | [Your REST Endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | Your [REST Endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Amazon AWS S3 bucket and credentials | Before beginning the integration, you must have access credentials for an AWS S3 bucket connected to your Lexer hub (this may be a bucket you create or one that Lexer creates and manages for you). Visit [Lexer](https://learn.lexer.io/docs/amazon-s3) for guidance on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
