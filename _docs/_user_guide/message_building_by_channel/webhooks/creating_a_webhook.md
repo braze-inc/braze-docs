@@ -173,6 +173,6 @@ Check out:
 [21]: {% image_buster /assets/img/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
-[42]: https://dashboard-01.braze.com/app_settings/developer_console/
+[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
 [64]: {% image_buster /assets/img_archive/webhook_test_send.png %}

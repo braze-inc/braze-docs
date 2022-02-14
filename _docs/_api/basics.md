@@ -83,7 +83,7 @@ For additional security, you can specify a list of IP addresses and subnets whic
 If you don’t specify any, requests can be sent from any IP address.
 
 {% alert tip %}
-Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
 #### Creating and managing REST API keys

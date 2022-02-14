@@ -64,9 +64,9 @@ Ensure your device has good internet connectivity and that it isn't sending netw
 
 ### Tapping push notification doesn't open app
 
-Check if `com_appboy_handle_push_deep_links_automatically` is set to `true` or `false`. To enable Braze to automatically open the app and any deep links when a push notification is tapped, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml` file.
+Check if `com_braze_handle_push_deep_links_automatically` is set to `true` or `false`. To enable Braze to automatically open the app and any deep links when a push notification is tapped, set `com_braze_handle_push_deep_links_automatically` to `true` in your `braze.xml` file.
 
-If `com_appboy_handle_push_deep_links_automatically` is set to its default of `false`, then you need to create a broadcast receiver to listen for and handle the push received and opened intents.
+If `com_braze_handle_push_deep_links_automatically` is set to its default of `false`, then you need to create a broadcast receiver to listen for and handle the push received and opened intents.
 
 ### Push notifications bounced
 
@@ -156,7 +156,7 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 If the deep link [works correctly with ADB][17] but fails to work from Braze push, try disabling [back stack][22]. To do so, update your **braze.xml** file to include:
 
 ```xml
-<bool name="com_appboy_push_deep_link_back_stack_activity_enabled">false</bool>
+<bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>
 ```
 
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client

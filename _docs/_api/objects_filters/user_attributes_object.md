@@ -35,6 +35,8 @@ An API request with any fields in the Attributes Object will create or update an
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
 }
 ```
+- [External User ID]({{site.baseurl}}/api/basics/#external-user-id-explanation)
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 

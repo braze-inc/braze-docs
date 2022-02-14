@@ -48,12 +48,32 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
-# February 2022
+## March 2022
 
-## Canvas Experiment Paths Step
+### Canvas Action Paths
+
+[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) allow you to sort your users based on their actions. Using Action Paths, you can:
+- Customize user paths based on a specific action. 
+- Hold users for a given duration to prioritize their next path based on their actions during this evaluation period. 
+
+Access to Action Paths will be rolled out slowly to all Braze instances. Contact your Braze account manager to learn more.
+
+### API endpoint reference page
+
+Looking for a quick reference page of all available Braze endpoints? Visit our [API endpoint index]({{site.baseurl}}/api/endpoints/).
+
+### Transifex v2 and v2.5 API deprecation
+Beginning April 7, 2022, [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#transifex) will be deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. Users of this partner integration are urged to update their API version before this date.
+
+### Available custom attribute data types
+Coming soon! Object and object array data type support for custom attributes is arriving in Spring 2022.
+
+## February 2022
+
+### Canvas Experiment Paths Step
 The new Canvas Experiment Paths Step helps track path performance by testing multiple Canvas paths against each other and a control group at any point in the user journey. Now, you can leverage the analytics gathered here to further determine which path is most effective. Read more about how to create a [Experiment Paths Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
 
-## Handling invalid phone numbers
+### Handling invalid phone numbers
 You've encountered a scenario where a user has entered an invalid phone number. Here's your solution! Braze marks these invalid phone numbers and will not attempt to send any further communications to those numbers. Read more on how Braze [handles invalid phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers/).
 
 ### New SMS endpoints
@@ -61,16 +81,16 @@ You can now manage invalid phone numbers using the new [Braze SMS Endpoints]({{s
 - [GET: Query or list invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) returns a list of phone numbers that are considered "invalid" by Braze.
 - [POST: Remove invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) allows you to remove the "invalid" phone numbers from Braze's invalid list.
 
-## Rate limits
+### Rate limits
 API rate limits have been included for all [Braze Endpoint articles]({{site.baseurl}}/api/basics/#nav_top_endpoints). You can now easily view the rate limits by request type. For more information on rate limits, check out our article on [API rate limits]({{site.baseurl}}/api/api_limits/).
 
-## New REST endpoint
+### New REST endpoint
 Braze has added a [new EU-02 REST Endpoint]({{site.baseurl}}/api/basics/#api-definitions).
 
-## About email
+### About email
 Email messages are a great way to connect with your customers. For a quick introduction on how you can customize and leverage email messages, check out our new article on [About email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/). 
 
-## About in-app messages
+### About in-app messages
 In-app messages deliver rich content to your users who are active within your app. You can easily engage with your active customers by creating in-app messges for personalized greetings or feature adoption. To learn about the advantages and message types, check out our new article on [About in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/).
 
 ## January 2022

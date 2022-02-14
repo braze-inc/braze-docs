@@ -161,7 +161,7 @@ You can export the following statistics depending on your message channel:
 
 | channel| stats available|
 | ------| --------------|
-| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Unsubscribes, Bounces, Delivered, Reported Spam |
+| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
 | Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
 | Web Push | Sends, Opens, Bounces, Body Clicks |
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
