@@ -56,7 +56,7 @@ Lexer Activate will automatically update your Braze profiles, adding or removing
 3. Add your Segment.
 4. Update your audience name; this will become your attribute value in Braze.
 5. This is the custom attribute we’ll be updating in Braze. Contact [Lexer support](support@lexer.io) to update.
-6. Check the appropriate list action - in most cases, you’ll want to maintain your list.
+6. Check the appropriate list action—in most cases, you’ll want to maintain your list.
 7. Agree to terms, and click **SEND AUDIENCE**.
 
 ![Integrating Activate][7]
