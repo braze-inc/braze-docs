@@ -34,7 +34,7 @@ In Lexer, navigate to **Manage > Integration**, select the **Braze** tile, and c
   - **AWS S3 [bucket region][4]**
   - **AWS S3 bucket path**: This path should match the path you specified when [connecting your S3 bucket to Braze][5]. This should be blank if you did not specify anything to Braze.
   - **AWS S3 secret access key**: Visit Amazon for information on [creating an access key][3].
-- **Braze export segment id**: The id for the segment you have created in Braze containing all users you wish to export to Lexer. If there are users you do not want to export to Lexer, you may exclude them from the segment you created in Braze. To find your segment identifier, click into your desired segment in Braze and locate the **Segment API Identifier**.
+- **Braze export segment ID**: The ID for the segment you have created in Braze containing all users you wish to export to Lexer. If there are users you do not want to export to Lexer, you may exclude them from the segment you created in Braze. To find your segment identifier, click into your desired segment in Braze and locate the **Segment API Identifier**.
 
 ![Integrating Braze in Lexer][1]
 
