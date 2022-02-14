@@ -20,7 +20,7 @@ The Braze and Phrasee partnership allows you to enhance customer experiences by 
 | Requirement | Description |
 |---|---|
 | Phrasee account | A [Phrasee account][3] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

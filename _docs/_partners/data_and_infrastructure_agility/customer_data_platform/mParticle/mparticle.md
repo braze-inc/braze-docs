@@ -48,7 +48,7 @@ To create an audience in mParticle, navigate to __Audiences > Single Workspace >
 - __API key__: Found in the Braze __Developer Console__ under __Settings__.
 - __API key operating system__: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
 - __Send segments as__: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- __App group REST API key__:  Braze REST API key with full permissions. This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__
+- __App group REST API key__:  Braze REST API key with full permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__
 - __External identity type__: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - __Email identity type__: The mParticle user identity type to forward as the email to Braze.
 - __Braze instance__: Specify which cluster your Braze data will be forwarded to
@@ -124,7 +124,7 @@ In mParticle, navigate to __Connections > Connect > [Your desired platform] > Co
 ![mParticle Connections Setting][4]
 
 Provide the following fields on the Braze output page: 
-- __App group REST API key__: A Braze REST API key with full permissions. This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__.
+- __App group REST API key__: A Braze REST API key with full permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__.
 - __Custom REST endpoint__: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the __Custom REST endpoint__ provided in [this step](#step-3-configure-your-mparticle-dashboard-to-enable-the-braze-kit).
 
 ##### Data mapping

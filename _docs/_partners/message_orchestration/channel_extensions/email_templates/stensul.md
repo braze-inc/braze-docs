@@ -19,7 +19,7 @@ The Braze and Stensul integration allows you to export your HTML-formatted Stens
 | Requirement | Description |
 | ------------| ----------- |
 | Stensul account | A Stensul account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Cluster instance | Your Braze [cluster instance]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard and REST endpoint.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

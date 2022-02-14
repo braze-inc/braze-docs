@@ -21,7 +21,7 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 | Rokt Calendar account | A client-specific Rokt Calendar account is required to take advantage of this partnership. Please contact [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) to speak with an account manager  |
 | Rokt Calendar setup | Your Rokt Calendar account manager will work with you to set up the calendar to best suit your needs, including settings like:<br>- Merge flag<br>- SubscriberID fallback flag<br>- Email capture, if needed |
 | Rokt Calendar OAuth credentials | This key provided by your Rokt Calendar account manager will enable you to connect your Braze and Rokt Calendar accounts.<br><br>This can be created in the Braze dashboard under **Manage Settings > Connected Content > +Add Credential**. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. You will need to provide this key to your Rokt Calendar account manager.<br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. You will need to provide this key to your Rokt Calendar account manager.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | [Braze REST endpoint]({{site.baseurl}}/api/basics/#endpoints) | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 | External subscriber ID | This is the identifier used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something you pass to Rokt Calendar.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -168,14 +168,14 @@ Listed below is information that can be customized at the event level.
 
 | Field             | Definition       | Example          |
 | ----------------  | ---------------- | ---------------- |
-| `eventId` <br>*__Required__ | A unique identifier for the event to be added or updated | `Event_00001`
-| `eventTitle` <br>*__Required__ | The title of the event as it would appear in the calendar | Summer Sale 2019
+| `eventId` <br>***Required** | A unique identifier for the event to be added or updated | `Event_00001`
+| `eventTitle` <br>***Required** | The title of the event as it would appear in the calendar | Summer Sale 2019
 | `eventDescr` | The description of the event as it would appear in the calendar | The sale is on for three days; click this link `www.mybusiness.com/sale` to see the offers. |
 | `eventLocation` | The event's location as it would appear in the calendar, note that this is often used as a second call to action, which is complementary to the eventTitle. | Open the event to get 50% off |
-| `eventStart` <br>*__Required__  | The start date and time of the event as it would appear in the calendar | `2019-02-21T15:00:00` |
-| `eventEnd` <br>*__Required__  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
-| `eventTz` <br>*__Required__  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found [here](https://roktcalendar-api.readme.io/docs/timezones). | `Eastern Standard Time` |
-| `notifyBefore` <br>*__Required__  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
+| `eventStart` <br>***Required**  | The start date and time of the event as it would appear in the calendar | `2019-02-21T15:00:00` |
+| `eventEnd` <br>***Required**  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
+| `eventTz` <br>***Required**  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found [here](https://roktcalendar-api.readme.io/docs/timezones). | `Eastern Standard Time` |
+| `notifyBefore` <br>***Required**  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% endtabs %}

@@ -19,7 +19,7 @@ The Braze and Iterate integration lets you include Iterate survey links in your 
 | Requirement | Origin |
 |---|---|
 |Iterate account | A [Iterate account](https://iteratehq.com) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -35,7 +35,7 @@ Log in to your Iterate account and add your Braze REST endpoint and REST API key
 
 ### Step 2: Create your survey
 
-Create a link survey to send out. Once the questions have been written and you've customized the design, select **Send survey -> Integrations -> Braze**.
+Create a link survey to send out. Once the questions have been written and you've customized the design, select **Send survey > Integrations > Braze**.
 
 You'll then see the configuration options to send responses to Braze.
 Toggle on the integration to begin sending responses for that survey into Braze. 

@@ -23,7 +23,7 @@ The Braze and Voucherify integration allows you to grow your promotional campaig
 | Requirement | Description |
 | ----------- | ----------- |
 |Voucherify account | A Voucherify account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -112,14 +112,14 @@ To set up manual distribution with Braze and Voucherify, [visit a Voucherify ste
 {% tab Automatic Workflow %}
 
 Set an automated workflow that delivers codes to Braze in response to actions taken by your users:
--   __Customer entered/left specific Voucherify segment.__
--   __Successful code publication__ – the message is sent once the code from a campaign is published (assigned) to a customer in Voucherify.
--   __Order status changed__ (order created, order update, order paid, order canceled).
--   __Gift credits added__ – the message is sent once gift card credits are added to the customer's card.
--   __Loyalty points added__ – the message is sent once loyalty points are added to the customer's profile.
--   __Voucher redeemed__ – the message is sent to customers who successfully redeemed vouchers.
--   __Voucher redemption rollback__ – the message is sent to the customer whose redemption was successfully rolled back.
--   __Reward redemption__ – the message is sent when a customer redeems a loyalty or referral reward.
+-   **Customer entered/left specific Voucherify segment.**
+-   **Successful code publication** – the message is sent once the code from a campaign is published (assigned) to a customer in Voucherify.
+-   **Order status changed** (order created, order update, order paid, order canceled).
+-   **Gift credits added** – the message is sent once gift card credits are added to the customer's card.
+-   **Loyalty points added** – the message is sent once loyalty points are added to the customer's profile.
+-   **Voucher redeemed** – the message is sent to customers who successfully redeemed vouchers.
+-   **Voucher redemption rollback** – the message is sent to the customer whose redemption was successfully rolled back.
+-   **Reward redemption** – the message is sent when a customer redeems a loyalty or referral reward.
 
 To set up an automatic workflow with Braze and Voucherify, [visit a Voucherify step-by-step tutorial](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work).
 {% endtab %}
