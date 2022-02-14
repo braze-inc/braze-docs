@@ -9,9 +9,15 @@ description: "This reference article covers important information for admins on 
 
 # Company contact information
 
-If you're an admin (you'll see so in the top, right corner), this is where you can manage your company's contact information and time zone.
+<style>
+.fa-crown {
+  color: gold;
+}
+</style>
 
-Make sure to hit _Save_ before you leave the page!
+You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. If you're an admin (you'll see a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your name), this page is where you can manage your company's contact information and time zone.
+
+Make sure to hit **Save** before you leave the page!
 
 
 {% alert warning %}
