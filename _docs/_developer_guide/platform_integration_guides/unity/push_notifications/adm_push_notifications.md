@@ -30,7 +30,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 - Alternatively, you may add the following line to your `res/values/braze.xml` file to enable ADM registration:
 
   ```xml
-  <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
+  <bool name="com_braze_push_adm_messaging_registration_enabled">true</bool>
   ```
 
 ## Step 2: Update Unity AndroidManifest.xml
@@ -110,7 +110,7 @@ Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2]
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages(java.lang.String) "registerAppboyPushMessages()"
+[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://docs.unity3d.com/Manual/AndroidJARPlugins.html
 [54]: https://docs.unity3d.com/Manual/AndroidAARPlugins.html

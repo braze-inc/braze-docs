@@ -9,7 +9,7 @@ search_tag: Partner
 tool: Currents
 
 ---
-
+ 
 # Mixpanel for Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.

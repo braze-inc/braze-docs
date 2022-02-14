@@ -16,10 +16,10 @@ channel:
 You can queue a manual refresh of the Braze News Feed at any time by calling:
 
 ```java
-Appboy.requestFeedRefresh()
+Braze.requestFeedRefresh()
 ```
 
-See the [Javadoc][16] for more information.
+See the [KDoc][16] for more information.
 
 
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
+[16]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-feed-refresh.html

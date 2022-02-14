@@ -48,7 +48,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 **Implementation Example**
 
-Full class information can be found in the [javadocs][4].
+Full class information can be found in the [KDocs][4].
 
 ## User ID integration best practices and notes
 
@@ -56,30 +56,8 @@ Full class information can be found in the [javadocs][4].
 
 ## Aliasing users
 
-An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
-
-* Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
-* Add the identifiers used by a third-party vendor to your Braze users in order to more easily reconcile your data externally.
-
-Each alias consists of two parts: a _name_ for the identifier itself, and a _label_ indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one name per label.
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
-```
-
-{% endtab %}
-{% endtabs %}
+{% include archive/setting_user_ids/aliasing.md platform="Android" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/change-user.html

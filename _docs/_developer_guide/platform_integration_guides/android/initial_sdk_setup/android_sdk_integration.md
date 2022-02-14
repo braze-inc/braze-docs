@@ -79,8 +79,8 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -134,7 +134,7 @@ class MyApplication : Application() {
 The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
 The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
 
-See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
+See the [KDoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
 ## Step 5: Custom endpoint setup {#step-5-optional-custom-endpoint-setup}
 
@@ -147,15 +147,15 @@ Your Braze representative should have already advised you of the [correct endpoi
 To update the default endpoint in your integration of the Braze SDKs please add the following code to your `braze.xml`:
 
 ```xml
-<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
 ## Step 6: Enable location tracking
 
-If you would like to enable Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you would like to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
-<bool name="com_appboy_enable_location_collection">true</bool>
+<bool name="com_braze_enable_location_collection">true</bool>
 ```
 
 {% alert important %}
@@ -173,7 +173,7 @@ Please see the following sections in order to enable [custom event tracking]({{s
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
-[63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-boolean-boolean-
-[64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
+[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [support]: {{site.baseurl}}/braze_support/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze

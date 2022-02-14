@@ -51,7 +51,7 @@ valid_partner_list:
 - name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 - name: Census
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/census/
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: NPAW
@@ -81,5 +81,11 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
 - name: Lexer
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
+- name: Snowplow
+  url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
+- name: Clarisights
+  url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+- name: Grouparoo
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/
 
 ---

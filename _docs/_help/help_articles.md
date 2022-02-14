@@ -9,8 +9,8 @@ guide_top_text: "We have plenty of help articles that can help you solve issues 
 page_type: landing
 description: "This section is home to help articles that can help you solve issues and reveal dependencies in your campaigns."
 
-guide_menu_title: "Popular Topics"
-guide_menu_list:
+guide_featured_title: "Topics"
+guide_featured_list:
   - name: Account
     link: /docs/help/help_articles/account/
     fa_icon: fas fa-user-circle
@@ -41,8 +41,5 @@ guide_menu_list:
   - name: Segments
     link: /docs/help/help_articles/segments/
     fa_icon: fas fa-users
-
-
-
 ---
 

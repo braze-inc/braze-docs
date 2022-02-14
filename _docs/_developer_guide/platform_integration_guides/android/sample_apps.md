@@ -17,7 +17,7 @@ Braze's SDKs each come with a sample application within the repository for your 
 Braze's test application within the [Android SDK github repository][3] is called Droidboy. Follow the instructions below to build a fully functional copy of it alongside your project.
 
 - Create a new ["App Group"][25] and note the Braze API key.
-- Copy your FCM Sender ID and Braze API key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named "com_appboy_push_fcm_sender_id" and "com_appboy_api_key", respectively).
+- Copy your FCM Sender ID and Braze API key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named "com_braze_push_fcm_sender_id" and "com_braze_api_key", respectively).
 - Copy your FCM API Key into your **Settings** page.
 - To assemble the Droidboy APK run the following command within the SDK directory:
 

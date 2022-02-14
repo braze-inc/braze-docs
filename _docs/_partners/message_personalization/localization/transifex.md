@@ -14,6 +14,10 @@ search_tag: Partner
 
 The Transifex and Braze integration leverage Connected Content, allowing you to include a source string in your messages instead of lines of language-based conditional formatting. This, in turn, automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
+{% alert important %}
+As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational and relevant requests will begin to fail.
+{% endalert %}
+
 ## Prerequisites
 
 | Requirement| Description|
@@ -31,7 +35,7 @@ To set up basic authentication for your account, navigate to the Braze platform,
 
 Click __New Credential__, name your credential, and add your user name and password for your Transifex account.
 
-![Basic Authentication Credential Creation][35]
+![Basic Authentication Credential Creation][35]{: style="max-width:35%" }
 
 ### Step 2: Connected Content
 
