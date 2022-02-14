@@ -36,7 +36,7 @@ A drop location for the Currents feed must be shared with Toovio; this allows To
 
 Create a Braze [API triggered campaign][4] based on the customer events that Toovio will target. Additionally, target user attributes and values that will trigger the campaign should be defined.
 
-### Step 3: Set up Toovio account
+### Step 3: Set up your Toovio account
 
 Contact Toovio at [info@toovio.com](mailto:info@toovio.com?subject=New%20Customer%20Request) with the subject "New Customer Request" to set up an account. Toovio will work with clients to set up triggers and underlying models.
 
