@@ -38,7 +38,7 @@ Contact Toovio at [info@toovio.com](mailto:info@toovio.com?subject=New%20Custome
 
 ### Step 3: Set up a triggered campaign
 
-Create a Braze [triggered campaign][4] based on the customer events that Toovio will target. Additionally, target user attributes and values that will trigger the campaign should be defined.
+Create a Braze API [triggered campaign][4] based on the customer events that Toovio will target. Additionally, target user attributes and values that will trigger the campaign should be defined.
 
 
 [1]: https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/
