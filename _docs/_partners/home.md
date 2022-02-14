@@ -171,6 +171,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
+- name: Lexer
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
 - name: Snowplow
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
