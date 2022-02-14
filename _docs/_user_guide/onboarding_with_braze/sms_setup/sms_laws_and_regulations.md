@@ -46,7 +46,7 @@ Here are some links you might need to consult as you build up your SMS campaign:
 
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Twilio's Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
-- [IBM's Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
+- [Acoustic's United States SMS compliance and resources](https://help.goacoustic.com/hc/en-us/articles/360043717414-United-States-SMS-compliance-and-resources)
 
 ## Considerations for compliance
 
@@ -54,7 +54,7 @@ Here are some links you might need to consult as you build up your SMS campaign:
 
 A customer's privacy is key to a meaningful and respectful relationship. Respecting a customer's privacy and information is just another opportunity to create a bond between them and your brand. Sometimes, using marketing tools can put data and privacy last.
 
-Luckily for you, Braze follows the guidelines of [many security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{site.baseurl}}/help/dp-technical-assistance/).
+Luckily for you, Braze follows the guidelines of many [security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications "Braze security qualifications"), including [GDPR]({{site.baseurl}}/dp-technical-assistance/).
 
 The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
 
@@ -62,7 +62,7 @@ The [CTIA](https://www.ctia.org/) (a trade association representing the wireless
 
 Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
-The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991)) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
+The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991 "Wikipedia:Telephone Consumer Protection Act of 1991")) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
@@ -70,7 +70,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 ### Spam and cadence
 
-Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act to ensure compliance (in the U.S.)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
+Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf "PDF: Federal Trade Commission Act Section 5") to ensure compliance (in the U.S.).
 
 Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider compliance laws when planning your campaigns.
 
@@ -86,7 +86,7 @@ The [CTIA](https://www.ctia.org/) recommends that you ensure SHAFT compliance, w
 - Firearms
 - Tobacco
 
-You can [read more about the CTIA's Messaging Principles and Best Practices for 2019 here](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
+Fore more on this topic, check out the CTIA's [Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
 
 ### Scheduling
 
