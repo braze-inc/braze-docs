@@ -25,7 +25,7 @@ Create an In-app message for Roku by selecting __Roku Devices__.
 
 ## Technical Documentation
 
-Please see our [implementation guide][5] for instructions on how to display In-app messages, and how to log impressions and click analytics.
+Please see our [Integration Guide][5] for instructions on how to display In-app messages, and how to log impressions and click analytics.
 
 ![example][2]
 
