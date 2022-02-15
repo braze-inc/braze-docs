@@ -148,16 +148,16 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 
 ## Troubleshooting
-If you're having issues with the Looker Action, add a test user to [internal groups][16] and try the following troubleshooting steps:
+If you're having issues with the Looker Action, add a test user to [internal groups][16] and check that the following:
 
-* API key has the `users.track` permission
-* The correct REST endpoint is entered ie `https://rest.iad-01.braze.com`
-* A `braze_id` tag is set in the dimension view
-* Ensure your query includes the Id attribute as an column
-* Looker results are not pivoted
-* Unique Key is correctly selected. Usually `external_id`
-* The `external_id` user exist in the Braze platform
-* The `looker_export` field is set as `Automatically Detect` under `Settings->Manage Settings->Custom Attributes`
+* The API key has the `users.track` permissions.
+* The correct REST endpoint is entered i.e. `https://rest.iad-01.braze.com`.
+* A `braze_id` tag is set in the dimension view.
+* Your query includes the Id attribute as a column.
+* Looker results are not pivoted.
+* The unique key is correctly selected. Usually the `external_id`.
+* The `external_id` user exist in the Braze platform.
+* The `looker_export` field is set as `Automatically Detect` under `Braze Platform > Settings > Manage Settings > Custom Attributes`.
 
 
 
