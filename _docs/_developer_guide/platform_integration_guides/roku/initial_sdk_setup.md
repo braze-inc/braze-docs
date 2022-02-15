@@ -14,7 +14,7 @@ Installing the Braze Roku SDK will provide you with basic analytics and segmenta
 
 ## Step 1: Add files
 
-Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repo](https://github.com/Appboy/appboy-roku-sdk).
+Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repo][1].
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
@@ -42,6 +42,8 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
+You can find your [SDK Endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze Dashboard.
+
 ## Step 4: Initialize Braze
 
 Initialize the Braze instance:
@@ -53,4 +55,15 @@ m.Braze = getBrazeInstance(m.BrazeTask)
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application with the Braze Roku SDK. Please see the following sections on how to [log attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/) to our SDK.
+Braze should now be collecting data from your application with the Braze Roku SDK. 
+
+Please see the following sections on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
+
+To learn more about In-App Messages on Roku, see our [In-App Message Integration Guide][5].
+
+
+[1]: https://github.com/braze-inc/braze-roku-sdk
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
