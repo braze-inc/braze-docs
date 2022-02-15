@@ -27,7 +27,7 @@ To access Braze's messaging features, you must integrate the UI library. Please 
 
 #### Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`.
+In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories`.
 
 For example:
 

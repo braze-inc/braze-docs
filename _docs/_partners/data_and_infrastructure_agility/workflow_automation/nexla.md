@@ -20,7 +20,7 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 | Requirement | Description |
 |---|---|
 | Nexla account | A [Nexla account][2] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST Endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2}
 

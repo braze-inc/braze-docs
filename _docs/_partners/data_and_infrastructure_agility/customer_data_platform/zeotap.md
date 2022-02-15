@@ -18,7 +18,7 @@ With the Zeotap and Braze integration, you can extend the scale and reach of you
 | Requirement | Description |
 | --- | --- |
 |Zeotap account | A [Zeotap account](https://zeotap.com/) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 

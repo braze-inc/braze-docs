@@ -24,7 +24,7 @@ Please note that Tealium AudienceStreams and EventStreams are batched according 
 | Name | Description |
 | ---- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with both server and client-side access is required to take advantage of this partnership. |
-| REST API Key | A Braze REST API Key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
+| REST API Key | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
 | [Braze REST Endpoint][6] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -70,7 +70,7 @@ Badges are special visitor attributes that represent valuable behavior patterns.
 
 Looking at the visitor attribute `Lifetime Order Value`, this attribute calculates the cumulative amount spent by the customer for all completed orders. To set up Lifetime Order Value in your Tealium account, follow the instructions below:
 
-1. Navigate to **AudienceStream -> Visitor/Visit Attributes** and click **Add Attribute**.
+1. Navigate to **AudienceStream > Visitor/Visit Attributes** and click **Add Attribute**.
 2. Select the scope as **Visitor** and click **Continue**.
 3. Select the data type **Number** and click **Continue**.
 4. Enter the name of the attribute, "Lifetime Order Value".

@@ -13,9 +13,9 @@ search_tag: Partner
 > [Gimbal](https://gimbal.com/) enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
 Combine your beacon or geofence support with Braze’s targeting and messaging features to learn more about your user’s physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
-- __Marketing:__ Send contextually relevant messaging and build experiential consumer journeys.
-- __Competitive Analysis:__ Set up triggers around competitive locations to understand consumer trends and patterns.
-- __Audience Insights:__ Understand your users' visitation behaviors and further segment based on those learnings.
+- **Marketing:** Send contextually relevant messaging and build experiential consumer journeys.
+- **Competitive Analysis:** Set up triggers around competitive locations to understand consumer trends and patterns.
+- **Audience Insights:** Understand your users' visitation behaviors and further segment based on those learnings.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 | ---| ---|
 | [Gimbal manager account][1] | A Gimbal manager account is required to take advantage of this partnership. |
 |[Gimbal Location SDK](https://docs.gimbal.com/index.html) | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. You must have the SDK implemented, and geofences (or beacons) set up. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## SDK integration

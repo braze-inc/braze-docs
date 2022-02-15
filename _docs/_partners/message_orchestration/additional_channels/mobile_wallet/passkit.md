@@ -21,7 +21,7 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 | ----------- | ----------- |
 | PassKit account | You will need to have a PassKit account and a PassKit account manager. |
 | `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the `userDefinedID`. This `userDefinedID` will be used when making API calls to the PassKit endpoints. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

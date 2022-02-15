@@ -100,7 +100,7 @@ Your final `AndroidManifest.xml` should only contain a single Activity with `"an
 
 #### Part 2: Finding your package name 
 
-- Click File -> Build Settings -> Player Settings -> Android Tab
+- Click File > Build Settings > Player Settings > Android Tab
 ![Unity Package Name]({% image_buster /assets/img_archive/UnityPackageName.png %})
 
 #### Part 3: Make replacements in the AndroidManifest

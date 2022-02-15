@@ -79,4 +79,15 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
+- name: Toovio
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
+- name: Lexer
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
+- name: Snowplow
+  url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
+- name: Clarisights
+  url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+- name: Grouparoo
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/
+
 ---

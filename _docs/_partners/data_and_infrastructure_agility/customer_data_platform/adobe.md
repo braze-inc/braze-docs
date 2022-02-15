@@ -20,7 +20,7 @@ The Braze and Adobe CDP integration allows brands to connect and map their Adobe
 | Requirement | Description |
 | ----------- | ----------- |
 | Adobe account | An [Adobe account](https://account.adobe.com/) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}

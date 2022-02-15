@@ -19,7 +19,7 @@ Partnership Documentation Overview
 - [Review process](#review)
 <br><br>
 {% alert important %}
-This partnership guide is for NEW Braze partners that **do not have existing documentation** already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located at `braze-docs` -> `_docs` -> `_partners` and update your pages as you normally would. 
+This partnership guide is for NEW Braze partners that **do not have existing documentation** already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located at `braze-docs` > `_docs` > `_partners` and update your pages as you normally would. 
 {% endalert %}
 
 ## Step 1: Set up your local environment {#setup_env}
@@ -27,19 +27,19 @@ This partnership guide is for NEW Braze partners that **do not have existing doc
 To contribute to Braze docs, you must have a Github account to commit changes and edits. 
 
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
-1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click __Fork__ in the upper right corner of the page. <br><br>
-2. Next, within this newly forked repo, click the green __Clone or download__ button. From the dialogue that appears, click __Use SSH__, and __save the repository link provided__ for step 3. <br><br>
-3. Lastly, follow our Github Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) __ommitting step 3 of the guide__, and instead, __using the repository link saved,__ to clone your forked repo.
+1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork** in the upper right corner of the page. <br><br>
+2. Next, within this newly forked repo, click the green **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
+3. Lastly, follow our Github Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
 
 ## Step 2: Create and add content to your page {#create_page}
 
-To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`. Here, you will find a [partnership template]({{site.baseurl}}/partners/your_partner_name/).
+To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` > `_docs` > `_hidden` > `wip_partnerships`. Here, you will find a [partnership template]({{site.baseurl}}/partners/your_partner_name/).
 
 Next, create a folder, name it your partner name, copy this template into your folder, and get to work!
 
-> Your file pathing should now look like this: <br>`braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships` -> `partner_name` (folder) -> `partner.md`.
+> Your file pathing should now look like this: <br>`braze-docs` > `_docs` > `_hidden` > `wip_partnerships` > `partner_name` (folder) > `partner.md`.
 
 ### Useful Resources
 
@@ -70,7 +70,7 @@ hidden: true
 ```
 
 {% alert note %}
-Note that we require you to fill out all metadata fields __except__ `page_order`, `page_type`, and `hidden`.
+Note that we require you to fill out all metadata fields **except** `page_order`, `page_type`, and `hidden`.
 {% endalert %}
 
 {% endtab %}
@@ -97,7 +97,7 @@ The requirements listed below are typical requirements you might need from Braze
 | Requirement | Description |
 | ----------- | ----------- |
 | Partner account | A partner account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -127,7 +127,7 @@ Links and images are a necessary part of any integration document. They help sup
 
 The higher quality of the images you can provide, the better. Images should not include important information such as API keys or employee names; we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process.
 
-To add images to your partner doc, you must place them in our repository's `img` folder. This folder can be found by following the file path: `braze-docs` -> `assets` -> `img`.
+To add images to your partner doc, you must place them in our repository's `img` folder. This folder can be found by following the file path: `braze-docs` > `assets` > `img`.
 
 Within this new folder, create a folder to keep your partnership images in. Name this folder your company name.
 
@@ -203,7 +203,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 
 1. Set up your branch to be merged in a similar fashion as shown above.<br><br>
 2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
-3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze product manager__ so we can reach out to them to get in contact with you about your changes if needed.<br><br>
+3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your **Braze product manager** so we can reach out to them to get in contact with you about your changes if needed.<br><br>
 4. After you are done making changes, tag @KellieHawks and @Timothy-Kim in a comment within the pull request, and our team will take a look.<br><br>
 
 ## Review process {#review}

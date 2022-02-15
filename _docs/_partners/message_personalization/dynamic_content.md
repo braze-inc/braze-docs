@@ -28,4 +28,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/judo/
+- name: Wyng
+  url: /docs/partners/message_personalization/dynamic_content/wyng/
 ---

@@ -49,7 +49,7 @@ Please note that Tealium AudienceStreams and EventStreams are batched according 
 | Installed source and Tealium source [libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze app identifier key | (Side-by-side only) Your app identifier key. <br><br>his can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| REST API Key | (Server-to-server only) A Braze REST API Key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
+| REST API Key | (Server-to-server only) A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Choose your integration type
