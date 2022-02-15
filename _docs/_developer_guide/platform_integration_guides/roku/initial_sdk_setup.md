@@ -42,7 +42,7 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
-You can find your [SDK Endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze Dashboard.
+You can find your [SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze dashboard.
 
 ## Step 4: Initialize Braze
 
@@ -59,7 +59,7 @@ Braze should now be collecting data from your application with the Braze Roku SD
 
 Please see the following sections on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
 
-To learn more about In-App Messages on Roku, see our [In-App Message Integration Guide][5].
+To learn more about in-app messaging on Roku, see our [in-app message integration guide][5].
 
 
 [1]: https://github.com/braze-inc/braze-roku-sdk

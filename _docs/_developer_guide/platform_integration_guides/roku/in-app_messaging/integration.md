@@ -10,17 +10,17 @@ channel:
 
 # In-app messaging implementation guide
 
- This implementation guide covers in-app message code considerations and accompanying code snippets.  While we provide a a sample implementation, you will probably need to implement custom code. Since your code will be unique to your app, so you don't need to handle all situations if you don't plan on using them.  For example, if you don't use delayed display of in-app messages, you don't need to implement that logic and edge cases.
+This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide a sample implementation, you will most likely need to implement custom code. Because your code will be unique to your app, you will not need to handle all situations listed below if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
 
-### In-App Message Setup
+## In-app message setup
 
-To process in-app messages, you can add an observer on BrazeTask.BrazeInAppMessage:
+To process in-app messages, you can add an observer on `BrazeTask.BrazeInAppMessage`:
 
 ```
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
-Then within your handler, you have access to the highest in-app message that has been triggered by your campaigns:
+Then within your handler, you have access to the highest in-app message that your campaigns have triggered:
 
 ```
 sub onInAppMessageReceived()
@@ -29,66 +29,76 @@ sub onInAppMessageReceived()
 end sub
 ```
 
-## In-App Message fields
-Here are the fields you'll need to handle the in-app message:
+## In-app message fields
 
-| `buttons` | List of buttons (could be an empty list) |
-| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be `"URI"` or `"NONE"` |
-| `dismiss_type` | Can be `"AUTO_DISMISS"` or `"SWIPE"` |
-| `display_delay` | How long (in seconds) to wait until displaying the in-app message |
-| `duration` | How long (in milliseconds), the message should be displayed when dismiss_type is `"AUTO_DISMISS"` |
-| `extras` | Key/value pairs |
-| `header` | The header text |
-| `id` | ID to use when logging impressions or clicks |
-| `image_url` | Image URL |
-| `message` | The body text |
-| `uri` | When click_action is `"URI"`, this should be displayed |
+Listed below are the fields you will need to handle your in-app messages:
+
+| Fields | Description |
+| ------ | ----------- |
+| `buttons` | List of buttons (could be an empty list). |
+| `click_action` | `"URI"` or `"NONE"`. Use this field to indicate whether the in-app message should open to a URI link or close the message when clicked. When there are no buttons, this should happen when the user clicks "OK" when the in-app message is displayed. |
+| `dismiss_type` | `"AUTO_DISMISS"` or `"SWIPE"`. Use this field to indicate whether your in-app message will auto dismiss or require a swipe to dismiss. |
+| `display_delay` | How long (seconds) to wait until displaying the in-app message. |
+| `duration` | How long (milliseconds) the message should be displayed when `dismiss_type` is set to `"AUTO_DISMISS"`. |
+| `extras` | Key-value pairs. |
+| `header` | The header text. |
+| `id` | The ID used to log impressions or clicks. |
+| `image_url` | In-app message image URL. |
+| `message` | Message body text. |
+| `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-# Styling fields
+### Styling fields
 There are also various styling fields that you could choose to use from the dashboard:
 
-| `bg_color` | Background color |
-| `close_button_color` | Close button color |
-| `frame_color` | The color of the background screen overlay |
-| `header_text_color` | Header text color |
-| `message_text_color` | Message text color |
-| `text_align` | Can be "START", "CENTER", or "END" |
+| Fields | Description |
+| ------ | ----------- |
+| `bg_color` | Background color. |
+| `close_button_color` | Close button color. |
+| `frame_color` | The color of the background screen overlay. |
+| `header_text_color` | Header text color. |
+| `message_text_color` | Message text color. |
+| `text_align` | "START", "CENTER", or "END". Your selected text alignment. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Alternatively, you could implement the In-App Message and style it within your Roku application using a standard palette:
+Alternatively, you could implement the in-app message and style it within your Roku application using a standard palette:
 
-# Button fields
-These are the fields on buttons:
+### Button fields
 
-| `click_action` | Can be `"URI"` to indicate to open the uri field. Can be `"NONE"` to indicate this button should close the in-app message |
-| `id` | The ID value of the button itself |
-| `text` | The text to display on the button |
-| `uri` | When click_action is `"URI"`, this should be displayed |
+| Fields | Description |
+| ------ | ----------- |
+| `click_action` | `"URI"` or `"NONE"`. Use this field to indicate whether the in-app message should open to a URI link or close the message when clicked. |
+| `id` | The ID value of the button itself. |
+| `text` | The text to display on the button. |
+| `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Handling interactions
+## Handling interactions
 
-You will need to make sure certain functions are called to handle the analytics for your campaign.<br />
+You will need to make sure certain functions are called to handle the analytics for your campaign.
+
+##### When a message is displayed
 
 When a message is displayed or seen, log an impression:
 ```
 LogInAppMessageImpression(in_app_message.id, brazetask)
 ```
 
-Once a user clicks on the message, log a click:
+##### When a user clicks on a message
+Once a user clicks on the message, log a click and then process `in_app_message.click_action`:
 ```
 LogInAppMessageClick(in_app_message.id, brazetask)
 ```
-and then process in_app_message.click_action
 
-If the user clicks on a button, log the button click:
+##### When a user clicks a button
+If the user clicks on a button, log the button click and then process `inappmessage.buttons[selected].click_action`:
+
 ```
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
 ```
-and then process inappmessage.buttons[selected].click_action
 
-After processing in-app message, you should clear the field:
+##### After processing an in-app message
+After processing an in-app message, you should clear the field:
 ```
 m.BrazeTask.BrazeInAppMessage = invalid
 ```
