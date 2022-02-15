@@ -14,47 +14,59 @@ search_tag: Partner
 
 > [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is a massively scalable object storage for unstructured data offered by Microsoft as part of the Azure product suite.
 
-After transporting data into Azure Blob Storage, you can use ETL processes (Extract, Transform, Load) to transfer your data to other locations.
+The Braze and Microsoft Azure Blob Storage integration allows you to stream Currents data. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
+
+## Prerequisites
+
+| Requirement | Description |
+| ----------- | ----------- |
+| Microsft Azure and Azure storage account | A Microsft Azure and Azure storage account are required to take advantage of this partnership. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
-Integration with Microsoft Azure Blob Storage requires a Storage Account and a Connection String to allow Braze to connect to stream Currents data.
+To integrate with Microsoft Azure Blob Storage, you must have a storage account and a connection string to allow Braze to stream Currents data.
 
-### Step 1: Create storage account
+### Step 1: Create a storage account
 
-Navigate to "Storage Accounts" in the sidebar, and click the **Add** button in the center column to create a new storage account. Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.
+In Microsoft Azure, navigate to **Storage Accounts** in the sidebar and click **+ Add** to create a new storage account. Next, provide a storage account name. Other default settings will not need to be updated. Lastly, select **Review + create**. 
 
-All you need to do is give the Storage Account a name. You don't need to change any of the defaults.
+Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-1.png %})
 
 ### Step 2: Get connection string
 
-Once the Storage Account is deployed, navigate to the Access Keys menu from the center column. Take note of the Connection String. Microsoft provides two access keys so that you can maintain connections using one key while regenerating the other. You only need the connection string from one of them.
+Once the storage account is deployed, navigate to the **Access Keys** menu from the storage account and take note of the connection string.
+
+Microsoft provides two access keys to maintain connections using one key while regenerating the other. You only need the connection string from one of them.
 
 {% alert note %}
-Braze Currents uses the Connection String from this menu, not the Key.
+Braze Currents uses the connection string from this menu, not the key.
 {% endalert %}
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-2.png %})
 
 ### Step 3: Create a blob service container
 
-Then, navigate to the "Blobs" menu under the "Blob Service" section of the center column. Create a Blob Service Container within that same Storage Account that you created earlier. All you need to do is give the Blob Service Container a name. You don't need to change any of the defaults. Take note of the name of the container.
+Navigate to the **Blobs** menu under the **Blob Service** section of your storage account. Create a Blob Service Container within that storage account you created earlier. 
+
+Provide a name for your Blob Service Container. Other default settings will not need to be updated.
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-3.png %})
 
-### Step 4: Finish up
+### Step 4: Setting up Currents in Braze
 
-Add this information to the Azure Blob Currents page on the dashboard, and press "Launch Current".
+In Braze, navigate to **Currents > + Create Current > Azure Blob Data Export** and provide your integration name and contact email.
 
-![Azure Blob]({% image_buster /assets/img_archive/currents-azure-blob-edit.png %})
+Next, provide your connection string, container name, and BlobStorage prefix (optional).
 
 {% alert important %}
-It's important to keep your Connection String up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-You can also add the following customizations, based on your needs:
+![Microsoft Azure Blob storage Currents in Braze][1]
 
--   Prefix (defaults to `currents`)
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 
+[1]: {% image_buster /assets/img/maz.png %}
