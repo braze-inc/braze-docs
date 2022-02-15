@@ -25,7 +25,7 @@ Create an In-app message for Roku by selecting __Roku Devices__.
 
 ## Technical Documentation
 
-Please see our [technical documentation][5] for instructions on how to display In-app messages, and how to log impressions and click analytics.
+Please see our [implementation guide][5] for instructions on how to display In-app messages, and how to log impressions and click analytics.
 
 ![example][2]
 
@@ -37,5 +37,5 @@ The __Test Send__ feature is not supported for Roku In-app messages. To test a m
 [2]: {% image_buster /assets/img/roku/Roku-In-App-Messages-Example.png %}
 [3]: {% image_buster /assets/img/roku/Docs-Imagery.png %}
 [4]: {% image_buster /assets/img/roku/1-Platform-Selector.png %}
-[5]: https://github.com/Appboy/appboy-roku-sdk#in-app-message-setup
+[5]: {{ site.baseurl }}/developer_guide/platform_integration_guides/roku/in-app_messaging/integration
 [6]: https://www.braze.com/customers
