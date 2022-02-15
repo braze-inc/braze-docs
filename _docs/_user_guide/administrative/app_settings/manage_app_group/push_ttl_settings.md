@@ -14,7 +14,7 @@ The **Push TTL Settings** tab in **Manage Settings** enables you to control the 
 
 This feature will not remove a notification if it has already been received by the user's device—it will only control how long the push provider will attempt to deliver a notification.
 
-![Time to Live][1]
+![Push Time to Live Settings tab under Manage Settings][1]
 
 {% alert tip %}
 Remember to click **Save** before you leave the page!
