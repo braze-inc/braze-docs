@@ -33,20 +33,20 @@ end sub
 Here are the fields you'll need to handle the in-app message:
 
 | `buttons` | List of buttons (could be an empty list) |
-| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be "URI" or "NONE" |
-| `dismiss_type` | Can be "AUTO_DISMISS" or "SWIPE" |
+| `click_action` | When there are no buttons, this is what should happen when the user clicks "OK" when the IAM is displayed. Can be `"URI"` or `"NONE"` |
+| `dismiss_type` | Can be `"AUTO_DISMISS"` or `"SWIPE"` |
 | `display_delay` | How long (in seconds) to wait until displaying the in-app message |
-| `duration` | How long (in milliseconds), the message should be displayed when dismiss_type is "AUTO_DISMISS" |
+| `duration` | How long (in milliseconds), the message should be displayed when dismiss_type is `"AUTO_DISMISS"` |
 | `extras` | Key/value pairs |
-| `header` | The header text of the in-app message |
+| `header` | The header text |
 | `id` | ID to use when logging impressions or clicks |
 | `image_url` | Image URL |
-| `message` | The body text of the in-app message |
-| `uri` | When click_action is "URI", this should be displayed |
+| `message` | The body text |
+| `uri` | When click_action is `"URI"`, this should be displayed |
 {: .reset-td-br-1 .reset-td-br-2}
 
 # Styling fields
-There are also various styling fields that you could choose to use from the dashboard.  Alternatively, you could implement the In-App Message and style it within your Roku application using a standard palette:
+There are also various styling fields that you could choose to use from the dashboard:
 
 | `bg_color` | Background color |
 | `close_button_color` | Close button color |
@@ -56,13 +56,15 @@ There are also various styling fields that you could choose to use from the dash
 | `text_align` | Can be "START", "CENTER", or "END" |
 {: .reset-td-br-1 .reset-td-br-2}
 
+Alternatively, you could implement the In-App Message and style it within your Roku application using a standard palette:
+
 # Button fields
 These are the fields on buttons:
 
-| `click_action` | Can be "URI" to indicate to open the uri field. Can be "NONE" to indicate this button should close the in-app message |
+| `click_action` | Can be `"URI"` to indicate to open the uri field. Can be `"NONE"` to indicate this button should close the in-app message |
 | `id` | The ID value of the button itself |
 | `text` | The text to display on the button |
-| `uri` | When click_action is "URI", this should be displayed |
+| `uri` | When click_action is `"URI"`, this should be displayed |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Handling interactions
