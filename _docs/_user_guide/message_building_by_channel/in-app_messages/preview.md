@@ -14,10 +14,6 @@ Learn about the new Preview features for custom HTML In-App Messages.
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
-{% alert important %}
-This is an opt-in feature. Ask your Braze account team to get access today!
-{% endalert %}
-
 ## New features
 
 ### Interactive preview
