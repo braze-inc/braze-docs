@@ -26,7 +26,7 @@ To create an Internal Group, perform the following steps:
 3. Give your group a meaningful name.
 4. Choose one or more group types (defined below).
 
-![Internal Group][7]
+![Creating an Internal Group in Braze][7]
 
 | Group Type     | Use Case     |
 | :------------- | :------------- |
@@ -39,7 +39,7 @@ To create an Internal Group, perform the following steps:
 
 After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them in bulk, as identified users, or as anonymous users.
 
-![User Logs 1][8]
+![Internal Group Settings when creating a new Internal Group][8]
 
 | Addition Method | Description |
 | :------------- | :------------- |
@@ -64,7 +64,7 @@ Lastly, if you use an IP pool to send out email, you can select which IP pool yo
 
 Only groups that are tagged as Content Test Groups will be available on the preview section of a message.
 
-![Content test group settings][9]{: style="max-width:50%" }
+![Test send to Content Test Groups][9]{: style="max-width:50%" }
 
 ### Seed groups
 
@@ -88,7 +88,7 @@ If your campaign is multivariate and your variant has a 0% send percentage, it w
 If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants, or to turn off seed group sending upon update.
 {% endalert %}
 
-![Seed group campaign][11]
+![Seed groups preview for a campaign][11]
 
 #### For Canvas
 

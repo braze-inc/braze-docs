@@ -14,23 +14,23 @@ Braze tracks author, editor, date, and status information about segments, campai
 
 You can add tags when creating or editing a campaign, Canvas, or segment. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** below the engagement name and select an existing tag, or start typing to add a new tag.
 
-![Campaign Creation][2]
+![Adding tags during campaign creation][2]
 
 You can also add tags to multiple campaigns, Canvases, or segments by selecting multiple engagements and clicking <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
 
-![Tagging multiple][5]
+![Adding tags to multiple campaigns at the same time][5]
 
 The tags set on a campaign, Canvas, or segment are visible on the detail page below the engagement name.
 
-![Campaign Details][3]
+![Tags shown on the Campaign Details page][3]
 
 They are also visible in the list of campaigns, Canvases, or segments as bubbles above the engagement name, along with status labels such as **Archived** and **Draft**.
 
-![Campaigns][4]{: style ="max-width:70%;" }
+![Tags on the list of campaigns][4]{: style ="max-width:70%;" }
 
 To filter by a tag, select the tag name in the left-hand toolbar or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
 
-![Tag Search for Campaigns and Segments][6]
+![Searching for all campaigns tagged as Welcome Email][6]
 
 ## Best practices {#tags-best-practices}
 
@@ -38,11 +38,39 @@ Tags can be a useful organizational tool for keeping track of engagement tactics
 
 Below is an example of tags an eCommerce app might find useful:
 
-![Potential Tags][7]
+<style>
+table td {
+    word-break: break-word;
+}
+</style>
+
+
+<table>
+<thead>
+  <tr>
+    <th>Funnel</th>
+    <th>Business Objectives</th>
+    <th>Regional</th>
+    <th>Campaigns</th>
+    <th>Holidays</th>
+    <th>Transactions</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>On-boarding<br>Re-engagement<br>Loyal<br>PowerUser<br>Churn<br>Lost</td>
+    <td>HighSpender<br>ActiveUser<br>NewUsers<br>FacebookAttribution<br>FirstAction</td>
+    <td>UnitedStates<br>Northeast<br>Midwest<br>South<br>West<br>LATAM<br>AP<br>WesternEurope<br>MiddleEast</td>
+    <td>Sales<br>Coupons<br>Events</td>
+    <td>MLK<br>SuperBowl<br>PiDay<br>StPatricksDay<br>MarchMadness<br>Easter<br>Passover<br>MothersDay<br>MemorialDay<br>FathersDay<br>FourthJuly<br>LaborDay<br>VeteransDay<br>ColumbusDay<br>PresidentsDay<br>Halloween<br>RoshHashanah<br>Thanksgiving<br>Christmas<br>Hanukkah<br>NewYears</td>
+    <td>Transactional<br>Notification<br>ConnectedActionTaken</td>
+  </tr>
+</tbody>
+</table>
 
 You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
 
-![tags view][8]
+![Tags tab on the Manage Settings page][8]
 
 To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
 
