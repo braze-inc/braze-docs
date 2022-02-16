@@ -15,7 +15,7 @@ channel:
 
 ![Opt-in Option][56]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-Push subscription states are filters that allow your users to control whether they receive messages or not. In order for your user to receive your messages through push, they must be `Subscribed` or `Opted-In`, as well as [push enabled](#push-enabled). 
+Push subscription states are filters that allow your users to control whether they receive messages or not. In order for your user to receive your messages through push, their push subscription state must be either `Subscribed` or `Opted-In`, and they must be [push enabled](#push-enabled). 
 
 ## Push subscription state
 
@@ -28,8 +28,8 @@ A user's push subscription state applies to their entire user profile, which inc
 |Opt-in State|Description|
 |---|---|
 |Subscribed| Default push subscription state. |
-|Opted-In| A user has explicitly expressed a preference to receive push notifications. Braze will automatically move a user's opt-in state to "Opted-In". |
-|Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze push campaigns only target users that are "Subscribed" or "Opted-in" for push.|
+|Opted-In| A user has explicitly expressed a preference to receive push notifications. Braze will automatically move a user's opt-in state to **Opted-In**. |
+|Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze push campaigns only target users that are **Subscribed** or **Opted-in** for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 If a user doesn't have a push token (that is, they turn off push tokens at the device level through settings, opting not to receive messages), they can still be subscribed to push. 
@@ -79,14 +79,9 @@ For Android, Braze will move a user to be push disabled if:
 
 ### iOS
 
-#### iOS push states
-
 To receive a push token for iOS, you must request whether the user would like to receive push. 
 
-Depending on the user’s response, Braze adjusts the user’s push subscription state to `opted in` if accepted, or keeps the push subscription state as `subscribed` if rejected. Before this, the opt-in state is `subscribed`. Upon receiving a response, Braze attempts to register the user for push. After Braze successfully receives a token, we update the user's push-enabled state.
-
-- Push Enabled: Braze has a push token for the device.
-- Push Opted-In: The user has expressed a preference to send them push notifications.
+By default, a user's push subscription state is `Subscribed`. Braze updates a user's push subscription state from `Subscribed` to `Opted in` if the user chooses to opt-in to push notifications. If the user decides to not opt-in, then their push subscription state remains as `Subscribed`. 
 
 #### Enabled state
 
