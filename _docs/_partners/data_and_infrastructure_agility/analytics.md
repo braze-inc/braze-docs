@@ -29,7 +29,10 @@ valid_partner_list:
 - name: Neura
   url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
   title: Insights
+- name: Snowplow
+  url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+
 
 ---

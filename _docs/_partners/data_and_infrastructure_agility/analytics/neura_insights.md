@@ -32,7 +32,7 @@ The Braze and Neura integration allows you to leverage [Neura Insights](https://
 | Requirement | Description |
 |---|---|
 | Neura account | A Neura account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track`, `users.alias.new`, and `users.export.ids` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track`, `users.alias.new`, and `users.export.ids` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Server region | This is your Braze REST API endpoint and can be found in our [Braze API documentation]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 

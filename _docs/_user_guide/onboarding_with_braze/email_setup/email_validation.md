@@ -70,7 +70,7 @@ The Microsoft address local part must follow these parameters:
 ### All other domains
 
 For all other domains, Braze allows email addresses matching the following regex for the local part:<br>
-`\A [\p{L}\p{N}_\-] (?: [\.\+\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] )? \z`
+`/\A [\p{L}\p{N}_\-] (?: [\.\+\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] )? \z/x`
 
 The local part must follow these parameters:
 - Can contain any letter, number, underscore, or dash, including Unicode letters and numbers

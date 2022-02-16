@@ -21,8 +21,8 @@ The Braze and RudderStack integration offers a native SDK integration for your A
 | --- | --- |
 | RudderStack account | A [RudderStack account](https://app.rudderstack.com/) is required to take advantage of this partnership. |
 | Configured source | A [source][3] is essentially the origin of any data sent to RudderStack, such as websites, mobile apps, or backend servers. You are required to configure the source before setting up Braze as a destination in RudderStack. |
-| Braze REST API key | A Braze REST API Key with `users.track`, `users.identify`, and `users.alias.new` permissions.<br><br>This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
-| Braze app key | To get your app key, navigate to **Braze Dashboard -> Developer Console -> Identification** and find your app name. Save the associated identifier string.
+| Braze REST API key | A Braze REST API key with `users.track`, `users.identify`, and `users.alias.new` permissions.<br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze app key | To get your app key, navigate to **Braze Dashboard > Developer Console > Identification** and find your app name. Save the associated identifier string.
 | Data center | Your data center aligns with your Braze dashboard [instance][15].  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

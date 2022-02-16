@@ -16,6 +16,8 @@ api_key: "5b26b83b-aa4e-4bd1-b9fa-81880aa8ac83"
 # statuspage.io Key
 status_io_key: "c947v6z63ltm"
 
+# Google Tag Key
+gta_tag_key: "GTM-W8DKT4D"
 
 # Source dir
 source: '.'

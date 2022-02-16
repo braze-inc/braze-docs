@@ -19,7 +19,7 @@ The Dyspatch and Braze integration allow you to simplify your email creation lif
 | Requirement | Description |
 | ----------- | ----------- |
 | Dyspatch account | A [Dyspatch account][3] with an [owner or admin role][4] is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration

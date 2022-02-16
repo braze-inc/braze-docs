@@ -20,7 +20,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 | Requirement | Description |
 |---|---|
 | Punchh Account | You need an active Punchh account to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST Endpoint | [Your REST Endpoint URL][6]. Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -109,26 +109,26 @@ curl --location --request PUT 'https://sandbox.punchh.com/api2/mobile/users' \
 {% endtabs %}
 
 {% alert note %}
-Platform configuration: In order to enable external identifiers in Punchh, from the Punchh dashboard, navigate to __Cockpit -> Dashboard -> External User Identifier__.
+Platform configuration: In order to enable external identifiers in Punchh, from the Punchh dashboard, navigate to **Cockpit > Dashboard > External User Identifier**.
 {% endalert %}
 
 ### Step 2: Braze adapter setup in Punchh
 
 To set up the Braze and Punchh integration:
 
-1. In the Punchh dashboard, navigate to __Cockpit -> Dashboard -> Major Features -> Enable Webhook Management__ and toggle on __Enable Webhook Management__.<br><br>
-2. Next, enable adapters by navigating to __Settings -> Webhooks Manager -> Configurations -> Show Adapters Tab__ and toggle on __Show Adapters Tab__.<br><br>
-3. Navigate to __Webhooks Manager__ under the __Settings__ tab, select the __Adapters__ tab, and click __Create Adapter__. <br><br>![Punch Platform][1]<br><br>
-5. Fill in the adapter name, description, and admin email. Select __Braze__ as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
+1. In the Punchh dashboard, navigate to **Cockpit > Dashboard > Major Features > Enable Webhook Management** and toggle on **Enable Webhook Management**.<br><br>
+2. Next, enable adapters by navigating to **Settings > Webhooks Manager > Configurations > Show Adapters Tab** and toggle on **Show Adapters Tab**.<br><br>
+3. Navigate to **Webhooks Manager** under the **Settings** tab, select the **Adapters** tab, and click **Create Adapter**. <br><br>![Punch Platform][1]<br><br>
+5. Fill in the adapter name, description, and admin email. Select **Braze** as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
 6. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync) above.<br><br>![Punch Platform][3]<br><br>
-7. Click __Submit__ to enable the webhook.
+7. Click **Submit** to enable the webhook.
 comm
 ### Step 3: Create Punchh webhook in Braze
 
 The Braze and Punchh integration allows you to leverage Braze webhook capabilities to create Punchh segments:
 
 1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL. <br><br>For example, the page below is located at `www.dashboard.punchhtest.com/segments/11646`. The numer "11646" at the end of this link is the `custom_segment_id`.<br><br>![Punch Platform][5]<br><br>
-2. Next, navigate to __Webhook Templates__ in Braze and select the Punchh template. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![Punch Platform][4]<br><br>
+2. Next, navigate to **Webhook Templates** in Braze and select the Punchh template. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![Punch Platform][4]<br><br>
 3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown below:<br><br>![Punch Platform][7]
 
 For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

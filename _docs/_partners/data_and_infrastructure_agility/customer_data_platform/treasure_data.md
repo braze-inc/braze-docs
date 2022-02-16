@@ -25,7 +25,7 @@ The Braze and Treasure Data integration allows you to write job results from Tre
 | Requirement | Description |
 | --- | --- |
 | Treasure Data account | A [Treasure Data account](https://www.treasuredata.com/custom-demo/) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track`, `users.delete`, `users.alias.new`, `users.identify` permissions.<br><br>This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track`, `users.delete`, `users.alias.new`, `users.identify` permissions.<br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 

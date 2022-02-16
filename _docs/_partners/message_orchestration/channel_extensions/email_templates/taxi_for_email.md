@@ -19,7 +19,7 @@ The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to cr
 | Requirement | Description |
 | ------------| ----------- |
 | Taxi for Email account | A Taxi for Email account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze endpoint | Your Braze [endpoint]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard URL.<br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

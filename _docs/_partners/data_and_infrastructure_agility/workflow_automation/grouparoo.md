@@ -20,7 +20,7 @@ The Braze and Grouparoo integration makes it easy to operationalize data stored 
 | Requirement | Description |
 | ----------- | ----------- |
 | Grouparoo account and project | A Grouparoo account and project are required to take advantage of this partnership.<br><br>This integration is possible to use with the free community edition and enterprise solutions provided by Grouparoo. Setup will take place in the Grouparoo configuration user interface. |
-| Braze REST API key | A Braze REST API key with users and track permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST API key | A Braze REST API key with users and track permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
