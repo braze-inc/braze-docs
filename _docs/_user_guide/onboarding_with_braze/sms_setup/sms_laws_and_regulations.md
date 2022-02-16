@@ -86,7 +86,7 @@ The [CTIA](https://www.ctia.org/) recommends that you ensure SHAFT compliance, w
 - Firearms
 - Tobacco
 
-Fore more on this topic, check out the CTIA's [Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
+For more on this topic, check out the CTIA's [Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
 
 ### Scheduling
 
