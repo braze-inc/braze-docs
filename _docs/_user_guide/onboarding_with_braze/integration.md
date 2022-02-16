@@ -31,7 +31,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
   * Braze no longer gives out custom endpoints so please use the predefined SDK endpoints. If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
-You can either give this information to them directly, or you can give them access to Braze by creating an account for them. /
+You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
 {% alert warning %}
 Please ensure that you and your engineer don't unknowingly or unintentionally change the company's credentials in Braze, as this could cause issues during the implementation process or lock one or more of you out of your accounts.

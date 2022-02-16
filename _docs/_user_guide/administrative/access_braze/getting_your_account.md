@@ -24,5 +24,5 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 * [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
 * [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
-* [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/).
+* [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 
