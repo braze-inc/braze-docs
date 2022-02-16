@@ -34,7 +34,7 @@ These messages can come from our own system, your apps or platforms, or our thir
 
 To determine what your messages mean, pay attention to the wording of each message and the columns that correspond with it, as it can help you troubleshoot using context clues. 
 
-For example, if you have a log entry whose message states "empty-cart_app" and you aren't sure what that means, look to the left at the **Type** column. If you see "Aborted Message Error", you can safely assume the message was what was written as the abort message using [Liquid][1], and that the message was aborted because the intended recipient of the message had an empty cart in your app.
+For example, if you have a log entry whose message states "empty-cart_app" and you aren't sure what that means, look to the left at the **Type** column. If you see "Aborted Message Error", you can safely assume the message was what was written as the [abort message][1] using Liquid, and that the message was aborted because the intended recipient of the message had an empty cart in your app.
 
 ### Common messages
 
@@ -55,4 +55,4 @@ The messages listed below are for example purposes and may not exactly match wha
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[8]: {% image_buster /assets/img_archive/UserLogs1.png %}
+[8]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/
