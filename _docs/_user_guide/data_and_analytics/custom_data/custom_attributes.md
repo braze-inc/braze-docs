@@ -47,9 +47,11 @@ The following data types may be stored as custom attributes:
 - [Strings](#strings)
 - [Arrays](#arrays)
 - [Time](#time)
+- [Objects]({{site.baseurl}}/nested_custom_attribute_support/) (early access)
+- [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
 
 {% alert note %}
-**Coming soon!** Support for object and object array data types is arriving in Spring 2022.
+**Coming soon!** Generally available support for object and object array data types is arriving in Spring 2022.
 {% endalert %}
 
 ### Booleans (true/false) {#booleans}

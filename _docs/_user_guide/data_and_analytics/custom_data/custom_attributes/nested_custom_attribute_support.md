@@ -1,10 +1,12 @@
 ---
 nav_title: Nested Custom Attributes
-permalink: "/nested_custom_attribute_support/"
-hidden: true
+article_title: Nested Custom Attributes
+alias: "/nested_custom_attribute_support/"
+page_order: 1
+page_type: reference
 ---
 
-# Nested Custom Attributes
+# Nested custom attributes
 
 You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
