@@ -15,7 +15,7 @@ Link aliasing works by decorating a Braze-generated query parameter on links in 
 
 These query parameters are also added to Content Blocks, enabling link tracking for segmentation purposes. 
 
-![link_aliasing_composer][2]
+![Link Aliasing Composer][2]
 
 To create a link alias, click on the __Link Management__ tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. Users can also set an alias that will be used to reference this link when dealing with reporting or segmentation. Aliases must be uniquely named per email campaign variant or Canvas step. You can also add link templates from the link management section. 
 
@@ -68,7 +68,7 @@ For Content Blocks, it is recommended to create copies of existing Content Block
 {% endtabs %}
 
 ## Link Templates
-For new message variants, any existing link template can be used from the __Link Management__ tab.
+For new message variants, any existing link template can be used from the **Link Management** tab.
 
 For any email message variation set up before this feature was enabled, the existing link templates will still be present. However, if the message variation is edited, the link templates will need to be reapplied.
 
@@ -79,14 +79,17 @@ Retargeting of aliases is now available as a segmentation filter. The two new fi
 
 ### Tracking a Link
 
-When composing your email message, a new column will be present in the __Link Management__ tab. Here, you can indicate to Braze which alias you would like to be 'tracked' for segmentation purposes. Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
+When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be "tracked" for segmentation purposes. Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
 
 #### Untracking a Link
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist but new segments cannot be created with that filter.
 
 ### Segment Filters
 
-![link_aliasing_segmentation_filters][5]
+![Segmentation Filters for Link Aliasing][5]
+
+#### Clicked Alias in Campaign or Canvas
+Retarget users based on any alias that was clicked in the campaign or Canvas step. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
 #### Clicked Alias in Campaign
 Retarget users based on the specific alias that was clicked in a campaign. Only the campaigns that have aliases which were tracked will be reflected here.
@@ -94,13 +97,10 @@ Retarget users based on the specific alias that was clicked in a campaign. Only 
 #### Clicked Alias in Canvas Step
 Retarget users based on the specific alias that was clicked in a Canvas step. A pipe delimited filter option displays the Canvas and Canvas step, followed by the alias within the Canvas step. Only Canvas steps with tracked aliases will be shown here.
 
-{% alert tip%}
-Aliases are unique per campaign message variant or Canvas step. Thus, you must first select the campaign, Canvas, or Canavas Step prior to selecting your alias.
-{% endalert %}
 
 ### Action Based Filters
 
-![link_aliasing_action_based_filters][6]
+![Action Based Filters for Link Aliasing][6]
  
 In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.
 
@@ -113,7 +113,7 @@ For segmentation purposes, only 100 links can be tracked per app group by defaul
 ### Link Click Reporting
 Link reporting will now be indexed by the `alias` rather than top-level domains and/or full URLs. 
 
-![link_aliasing_click_table][1]
+![Link Aliasing Click Table][1]
 
 ### Currents Event Changes
 {% api %}
