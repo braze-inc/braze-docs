@@ -150,7 +150,7 @@ $nav_bottom_height: 60px;
     }
     .nav_title {
       display: inline;
-      color: $black-shark;
+      color: $left-nav;
     }
     div  {
       &.nav {
@@ -180,7 +180,7 @@ $nav_bottom_height: 60px;
 
         a {
           font-family: $braze-regular;
-          color: $black-shark;
+          color: $left-nav;
         }
         a[aria-expanded="true"] i.fas:after {
             content: icon($nav_expanded);

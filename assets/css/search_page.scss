@@ -1,6 +1,6 @@
 #search_page{
   font-size: $search_font_size;
-  font-family: $braze-regular;
+  font-family: $search_font_color;
   .ais-current-refined-values--link, .ais-geo-search--toggle-label,
   .ais-hierarchical-menu--link, .ais-menu--link, .ais-price-ranges--link,
   .ais-refinement-list--label, .ais-star-rating--link, .ais-toggle--label {
@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     font-family: $braze-black;
-    color: $black-shark;
+    color: $search_font_color;
   }
   .ais-search-box--input {
     border-radius: 0;
@@ -25,11 +25,11 @@
   .ais-refinement-list--list {
     .ais-refinement-list--item {
       padding: $search_padding/4 $search_padding/4 0px 0px;
-      color: $black-shark;
+      color: $search_font_color;
 
 
       .ais-refinement-list--count {
-        color: $black-shark;
+        color: $search_font_color;
         border-radius: 5px;
         padding: 2px 5px;
       }
