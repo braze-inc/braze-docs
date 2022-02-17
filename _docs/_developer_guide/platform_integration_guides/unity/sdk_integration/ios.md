@@ -38,7 +38,7 @@ Alternatively, follow the Unity instructions for [Importing Asset packages][41] 
 If you only wish to import the iOS/Android plugin, deselect the `Plugins/Android`/`Plugins/iOS` subdirectory when importing the Braze `.unitypackage`.
 {% endalert %}
 
-## Step 3b: Set your API key
+## Step 3: Set your API key
 
 Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`](http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html)) and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 

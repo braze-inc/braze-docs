@@ -8,11 +8,14 @@ $search_transition_time: 0.25s;
 
 $search_footer_height: 50px;
 $search_offset: 65px;
+$search_icon: #D4D4D4;
 
 #search-form_div {
 
   width: 40px;
-
+  .aa-SubmitIcon {
+    color: $search_icon;
+  }
   @media(max-width: $window-mobile-px) {
     //width: 25px;
     margin-right: 0px;
@@ -70,7 +73,7 @@ $search_offset: 65px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
       background-color: transparent;
-      color: $navy-cove;
+      color: $header-nav;
       padding-left: 40px;
       padding-right: 0px;
       margin-right: 10px;

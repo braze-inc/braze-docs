@@ -21,6 +21,7 @@ The Braze and Amazon S3 integration leverages [Currents]({{site.baseurl}}/user_g
 | ----------- | ----------- |
 | Amazon S3 account | An Amazon S3 account is required to take advantage of this partnership. |
 | Dedicated S3 bucket | Before integrating with Amazon S3, you must create an S3 bucket for your app.<br><br>If you already have an S3 bucket, we still recommend creating a new bucket specifically for Braze so you can limit permissions. Refer to the following instructions on how to create a new bucket. |
+| Currents | In order to export data back into Amazon S3, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Create a new S3 bucket

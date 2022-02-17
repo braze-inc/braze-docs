@@ -25,7 +25,7 @@ This section provides your App Group REST API keys, the unique identifiers that 
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
-![API IP Whitelisting][26]
+![API IP Whitelisting section of creating a new API key][26]
 
 If you don’t specify any, requests can be sent from any IP address.
 
@@ -47,5 +47,5 @@ For more information, refer to [API Identifier Types]({{site.baseurl}}/api/ident
 [4]: {{site.baseurl}}/api/endpoints/messaging/
 [5]: {{site.baseurl}}/api/endpoints/email/
 [6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8
+[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

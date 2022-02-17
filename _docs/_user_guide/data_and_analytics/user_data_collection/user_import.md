@@ -53,6 +53,20 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 <i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
 
+### Importing with Braze ID
+
+To update existing user profiles in Braze using an internal Braze ID value instead of an `external_id` or `user_alias_name` / `user_alias_label` value, you can do this by specifying `braze_id` as a column header.
+
+This can be helpful if you have exported user data from Braze via our CSV export option within segmentation and wish to add a new custom attribute to these existing users.
+
+{% alert important %}
+You can't use a CSV import to create a new user using `braze_id`. This method can only be used to update pre-existing users within the Braze platform.
+{% endalert %}
+
+{% alert tip %}
+The `braze_id` value may be labelled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user and therefore you can simply rename this column to `braze_id` when you re-import the CSV.
+{% endalert %}
+
 ### Constructing your CSV
 
 There are several data types in Braze. When importing or updating user profiles via CSV, you can create or update default user attributes or custom attributes.

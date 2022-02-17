@@ -1,10 +1,13 @@
 ---
 nav_title: Array of Objects
-permalink: "/array_of_objects/"
-hidden: true
+article_title: Array of Objects
+alias: "/array_of_objects/"
+page_order: 0
+page_type: reference
+description: "This reference article covers using an array of objects as a data type for custom attributes, including limitations and usage examples." 
 ---
 
-# Array of Objects
+# Array of objects
 
 Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 

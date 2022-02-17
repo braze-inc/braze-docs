@@ -60,16 +60,16 @@ Authorization: Bearer YOUR-REST-API-KEY
                       "total_opens" : (int),
                       "bounces" : (int),
                       "body_clicks" : (int)
-                      "revenue": 0,
-                      "unique_recipients": 1,
-                      "conversions": 0,
-                      "conversions_by_send_time": 0,
-                      "conversions1": 0,
-                      "conversions1_by_send_time": 0,
-                      "conversions2": 0,
-                      "conversions2_by_send_time": 0,
-                      "conversions3": 0,
-                      "conversions3_by_send_time": 0,
+                      "revenue": (optional, float),
+                      "unique_recipients": (int),
+                      "conversions": (int),
+                      "conversions_by_send_time": (optional, int),
+                      "conversions1": (optional, int),
+                      "conversions1_by_send_time": (optional, int),
+                      "conversions2": (optional, int),
+                      "conversions2_by_send_time": (optional, int),
+                      "conversions3": (optional, int),
+                      "conversions3_by_send_time": (optional, int),
                       "carousel_slide_[NUM]_[TITLE]_click": (optional, int),
                       "notif_button_[NUM]_[TITLE]_click": (optional, int)
                     }
@@ -111,6 +111,29 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "delivery_failed": (int),
                     "opt_out" : (int),
                     "help" : (int)
+                  }
+                ],
+                "content_cards" : [
+                  { 
+                    "variation_name": "Variant 1", 
+                    "variation_api_id": (string), 
+                    "sent": (int), 
+                    "total_impressions": (int), 
+                    "unique_impressions": (int),
+                    "total_clicks": (int), 
+                    "unique_clicks": (int), 
+                    "total_dismissals": (int), 
+                    "unique_dismissals": (int), 
+                    "revenue": (optional, float), 
+                    "unique_recipients": (int), 
+                    "conversions": (int), 
+                    "conversions_by_send_time": (optional, int), 
+                    "conversions1": (optional, int), 
+                    "conversions1_by_send_time": (optional, int), 
+                    "conversions2": (optional, int), 
+                    "conversions2_by_send_time": (optional, int), 
+                    "conversions3": (optional, int), 
+                    "conversions3_by_send_time": (optional, int) 
                   }
                 ]
               },

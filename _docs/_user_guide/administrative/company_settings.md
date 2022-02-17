@@ -25,13 +25,9 @@ guide_featured_list:
 
 ## Additional information
 
-If you're looking for more information about your own account settings, check out our [Administrative][1] articles.
+If you're looking for more information about your own account settings, check out our collection of [Administrative][1] articles.
 
-You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down.
-
-Then, click on the tab in the top bar to navigate to the settings you want to manage.
-
-![Company Settings][2]
+You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. Then, select the respective tab to navigate to the settings you want to manage.
 
 {% alert warning %}
 Any edits to the **Company Settings** section will apply to every Braze user account that is attached to your company.
@@ -40,4 +36,3 @@ Any edits to the **Company Settings** section will apply to every Braze user acc
 <br>
 
 [1]: {{site.baseurl}}/user_guide/administrative/
-[2]: {% image_buster /assets/img/navigation_co_set.gif %}"

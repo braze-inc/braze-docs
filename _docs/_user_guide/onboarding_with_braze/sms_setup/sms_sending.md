@@ -25,21 +25,21 @@ An SMS message body accepts up to 1600 characters, including Emojis, Liquid, and
 SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.<br><br>
 
 4. __Keyword Customization (Optional)__<br>
-Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. Read more about keyword customization [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
+Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 
 {% alert tip %}
-Want to learn how to create an SMS campaign? Visit our SMS onboarding [Next Steps]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/next_steps/) navigation page and select the step-by-step guide.
+Want to learn how to create an SMS campaign? Check out our step-by-step guide on [Creating an SMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
 {% endalert %}
 
 ## Sending best practices
 
 ### Multi-country SMS sending
 
-Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, __short codes can only send SMS to phone numbers from the same country the short code was created in__. 
+Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, short codes can only send SMS to phone numbers from the same country the short code was created in 
 
 To overcome this limitation, during the Subscription Groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. Once completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas step to target relevant users.
 
-![picture][2]
+![SMS payloads are sent using the same country code as the target user's phone number][2]
 
 #### Best practices
 
@@ -53,8 +53,8 @@ To overcome this limitation, during the Subscription Groups [setup process][5], 
 
 Plan on doing some high-volume sending? We have some best practices for you to ensure it runs smoothly.
 
-- Adjust the delivery speed rate limiting for your campaign/canvases as needed, based on target audience size. This will ensure that (1) you reach the send volume that you need and (2) Braze sends the messages at the rate that Twilio is expecting and can handle.
-- Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
+- Adjust the delivery speed rate limiting for your campaign/canvases as needed, based on target audience size. This will ensure that you reach the send volume that you need and that Braze sends the messages at the rate that Twilio is expecting and can handle.
+- Ensure you stick to the 160 character limit, and be aware of special characters double-counting (e.g., forward-slashes `\`, carets `^`, and tildes `~`). 
 
 [2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

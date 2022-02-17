@@ -10,9 +10,15 @@ tool: Dashboard
 
 # Setting user permissions
 
-Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a yellow crown next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the upper right corner of the dashboard and selecting **Manage Users** from the drop-down. 
+<style>
+.fa-crown {
+  color: gold;
+}
+</style>
 
-![User Permissions][30]
+Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the upper right corner of the dashboard and selecting **Manage Users** from the drop-down. 
+
+![Account users list on the Manage Settings page][30]
 
 |Level of Access|Permissions|
 |---|---|
@@ -24,7 +30,7 @@ Braze’s user permission feature allows you to choose who can access your apps 
 
 From the Manage Users page, you can edit a specific user’s permissions, either by allowing them to remain as the default Administrator role, or changing them to a Limited role. To change their role, click on the edit icon in the user’s row and select Limited from the User Role drop down.
 
-![Edit User Permission][29]
+![Selecting Administrator or Limited when editing a user][29]
 
 When you switch a user’s permissions from Admin to Limited, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear below the Edit User box. Explanations for each of these permissions can be found in the Level of Access chart at the top of this page.
 

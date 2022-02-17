@@ -43,7 +43,7 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 || Day of Week | ✔* | ✔ | * Supported but not recommended because push notifications are cached upon receipt and do not refresh |
 || Time of Day | ✔* | ✔ | * Supported but not recommended because push notifications are cached upon receipt and do not refresh |
 | Stories/Behavior Activity | | ✔* | ✔* | * The unique user identifier used for Braze must be linked to your ESP’s identifier |
-| Deep Linking within the app | | ✔* | ✔* | * Must use Branch’s deep linking solution |
+| Deep Linking within the app | | ✔* | ✔* | * To provide a streamlined experience for your customers, either use established deep linking solution via Branch, or a validated solution with Movable Ink's Client Experience team. |
 | Apps | Countdown Timer | ✔* | ✔ | * Supported but not recommended because push notifications are cached upon receipt and do not refresh |
 || Polling | ✗ | ✔* | * After voting, will leave the app to be a mobile landing page |
 || Scratch Off | ✔* | ✔* | * On click, will leave the app for the Scratch Off experience |

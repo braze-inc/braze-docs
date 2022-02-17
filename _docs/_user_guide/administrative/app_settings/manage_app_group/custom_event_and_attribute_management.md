@@ -23,7 +23,7 @@ To add a custom attribute, event, or product, go to the respective tab and click
 
 Once you have created a **Custom Event** or **Product**, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
-![manageproperties1.png][73]{: style="max-width:70%"}
+![Custom properties for a custom event][73]{: style="max-width:70%"}
 
 To make these added custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you can use Braze's [APIs]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
 
@@ -55,7 +55,7 @@ Braze automatically recognizes data types for attribute data that is sent to us.
 
 {% alert note %} Forcing data types does not apply to event properties, or purchase properties. {% endalert %}
 
-![Custom Attributes View Data Type Dropdown][75]
+![Custom attributes data type drop-down][75]
 
 {% alert warning %}
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
@@ -70,7 +70,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 | Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on specific filter options exposed by different data type comparisons check out [Configuring Reporting][43]. And for more information on the different available data types, refer to [Custom Attribute Data Types][44].
+For more information on specific filter options exposed by different data type comparisons check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
 Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard.

@@ -42,9 +42,9 @@ Features like Braze's Local Time Zone delivery and [Intelligent Timing]({{site.b
 5. __Ensure that your email list is clean and doesn't have old or un-verified emails.__<br>Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.<br><br>
 6. __Carefully monitor your Sender Reputation while you conduct the IP warming process.__ <br>
 The following metrics are important to watch during warming:
-- __Bounce Rates__: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our ["Keep It Clean: The Importance of Email List Hygiene" article][43]. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
+- __Bounce Rates__: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
 - __Spam Reports__: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
-- __Sender Reputation Scores__: The following services are useful for checking how your reputation is progressing: [ReturnPath's SenderScore][44] & Cisco's IronPort [SenderBase][45]
+- __Sender Reputation Scores__: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
 
 ## IP warming schedules
 
@@ -88,8 +88,8 @@ Subdomain segmentation is especially important for large-volume senders. These s
 {% endalert %}
 
 [18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
+[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/
 [45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

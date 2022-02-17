@@ -19,7 +19,7 @@ To navigate to the **Subscriptions and Usage** page, select your account icon on
 
 Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
-![Usage Graphs][3]{: style="max-width:90%;"}
+![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
 
 Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
 
@@ -29,9 +29,9 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Total data points dashboard
 
-Your **Total Data Points Dashboard** can be found under the __Total Data Points Dashboard__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
+Your **Data Points Usage** can be found under the __Total Data Points Usage__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
 
-![Subscription and Usage][2]{: style="max-width:80%;"}
+![Filtering Data Point Usage by weeks][2]{: style="max-width:80%;"}
 
 ### Contract details
 
@@ -44,7 +44,7 @@ The fields in this section are defined as follows:
 - **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
 - **Contract Data Point Usage:** A cumulative total of all data points consumed over the contract's lifetime, and does not reset in the next billing term.
 
-![Contract Details][5]
+![Contract Details section of Total Data Point Usage tab][5]
 
 ### Current billing cycle
 
@@ -55,21 +55,21 @@ This section of the dashboard displays the data point usage for the current bill
 - Allotted number of data points 
 - Total data point usage 
 
-![Current Billing Cycle Info][6]{: style="max-width:90%;"}
+![Current Billing Cycle section of Total Data Points Usage tab][6]{: style="max-width:90%;"}
 
 ### Company billing data
 
 #### Usage across app groups
 
-This table allows you to assess the total data point usage of a company by app group. This table gives you the ability to assess how each app group is contributing to the company's data point usage.
+This graph allows you to assess the total data point usage of a company by app group. This graph gives you the ability to assess how each app group is contributing to the company's data point usage.
 
-![App Group Data Point Usage][7]{: style="max-width:90%;"}
+![App Group Data Point Usage graph for two app groups][7]{: style="max-width:90%;"}
 
 #### Data point usage over time
 
-This table gives you the ability to quickly see your total data point usage vs your allotted amount of data points. 
+This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
 
-![Data Point Usage over Time][8]{: style="max-width:90%;"}
+![Data Point Usage over time contrasting current billing cycle alloted data points with running total][8]{: style="max-width:90%;"}
 
 ### App group billing data
 
@@ -81,7 +81,7 @@ The app group billing data and app group charts only display for dates after Oct
 
 The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
 
-![App Group Drill Down][9]{: style="max-width:90%;"}
+![Drill to app groups for billable data points][9]{: style="max-width:90%;"}
 
 The **App Group Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the app group.
 
@@ -91,9 +91,9 @@ The **App Group Level Data Point Usage over Time** table enables you to see how 
 
 ![App Group Level Data Point Usage over Time][11]{: style="max-width:90%;"}
 
-The **App Level Stats** table enables you to see data point usage for each of the apps in your app group. You can use this table to identify which apps are driving data point consumption for the app group.
+The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your app group. You can use this table to identify which apps are driving data point consumption for the app group.
 
-![App Level Stats][12]{: style="max-width:90%;"}
+![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
 
 ## Most used events and attributes by app
 

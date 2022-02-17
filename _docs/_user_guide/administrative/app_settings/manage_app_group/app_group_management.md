@@ -11,8 +11,6 @@ description: "This reference article covers managing app groups in your Braze da
 
 You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
 
-![Manage App Group Call Out][69]
-
 App groups are designed to house versions of the same application across multiple platforms. Many Braze customers also use app groups to contain free and premium versions of their application on the same platform.
 
 ## Multiple apps in an app group
@@ -42,7 +40,7 @@ To rename your app group, click <span style="font-size: 14px;margin-bottom: .5re
 
 To delete your App Group entirely from the Dashboard, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-cog" ></span>**Settings** on the same page and select **Delete App Group**.
 
-![appsettingsview1.png][70]
+![Rename app group from the Settings tab][70]
 
 {% alert warning %}
 Be careful when deleting app groups! Once an app group is deleted, it can't be restored.
