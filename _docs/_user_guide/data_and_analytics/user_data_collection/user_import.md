@@ -53,7 +53,7 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 <i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
 
-### Importing with braze_id
+### Importing with Braze ID
 
 To update existing user profiles in Braze using an internal Braze ID value instead of an `external_id` or `user_alias_name` / `user_alias_label` value, you can do this by specifying `braze_id` as a column header.
 
