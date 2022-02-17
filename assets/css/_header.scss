@@ -216,7 +216,7 @@ $header_transition_time: 0.25s;
 
     .navbar-nav {
       .nav-link {
-        color: $navy-cove;
+        color: $header-nav;
         line-height: 1;
         @media (min-width:  $window-medium-px) {
           font-size: $header_nav_font_size ;
