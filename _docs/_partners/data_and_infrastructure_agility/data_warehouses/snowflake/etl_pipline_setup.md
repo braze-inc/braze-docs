@@ -8,11 +8,11 @@ search_tag: Partner
 
 ---
 
-# ETL event pipeline setup
+# Snowflake ETL event pipeline setup
 
->  This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries.
+>  This partner page offers an example set up for an email clicks query to reference when setting up your own queries.
 
-You can use this Email Clicks query to analyze the interactions with specific emails in your Braze campaigns and Canvases.
+You can use this email clicks query to analyze the interactions with specific emails in your Braze campaigns and Canvases.
 
 ## Set up this query
 
@@ -32,7 +32,7 @@ alter stage braze_currents.public.braze_data set file_format = braze_currents.pu
 show stages;
 ```
 
-_Use the following command to create your table:_
+Use the following command to create your table:
 
 ```sql
 CREATE TABLE
@@ -58,7 +58,7 @@ CREATE TABLE
   );
 ```
 
-_Use the following command to create or replace your pipe:_
+Use the following command to create or replace your pipe:
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -99,15 +99,13 @@ show pipes;
 Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
 
 Manually sync from S3 to Snowflake for the pipe name given below:
-
 ```sql
 ALTER PIPE
   pipe_users_messages_email_click
   refresh ;
 ```
 
-Check the pipe status, which will show when the message was forwarded from S3 into Snowflake.
-
+Check the pipe status, which will show when the message was forwarded from S3 into Snowflake:
 ```sql
 SELECT
   SYSTEM$PIPE_STATUS(
@@ -115,8 +113,7 @@ SELECT
   )
 ```
 
-Finally, show the copy history for the table by selecting `*` from
-
+Finally, show the copy history for the table by selecting `*` from:
 ```sql
 table(braze_currents.information_schema.copy_history(table_name=>'users_messages_email_click', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
