@@ -4,6 +4,7 @@ article_title: Array of Objects
 alias: "/array_of_objects/"
 page_order: 0
 page_type: reference
+description: "This reference article covers using an array of objects as a data type for custom attributes, including limitations and usage examples." 
 ---
 
 # Array of objects

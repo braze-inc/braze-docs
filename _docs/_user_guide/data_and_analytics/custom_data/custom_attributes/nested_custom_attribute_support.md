@@ -4,6 +4,7 @@ article_title: Nested Custom Attributes
 alias: "/nested_custom_attribute_support/"
 page_order: 1
 page_type: reference
+description: "Early access: This reference article covers using nested custom attributes as a data type for custom attributes, including limitations and usage examples."
 ---
 
 # Nested custom attributes
