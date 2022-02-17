@@ -81,12 +81,10 @@ Retargeting of aliases is now available as a segmentation filter. The two new fi
 
 When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be "tracked" for segmentation purposes. Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
 
-#### Untracking a Link
+### Untracking a Link
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist but new segments cannot be created with that filter.
 
 ### Segment Filters
-
-![Segmentation Filters for Link Aliasing][5]
 
 #### Clicked Alias in Campaign
 Retarget users based on the specific alias that was clicked in a campaign. Only the campaigns that have aliases which were tracked will be reflected here.
@@ -97,11 +95,13 @@ Retarget users based on the specific alias that was clicked in a Canvas step. A 
 #### Clicked Alias in Campaign or Canvas
 Retarget users based on any alias that was clicked in the campaign or Canvas step. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
-### Action Based Filters
+![Segmentation Filters for Link Aliasing][5]
 
-![Action Based Filters for Link Aliasing][6]
+### Action Based Filters
  
 In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.
+
+![Action Based Filters for Link Aliasing][6]
 
 ## Tracking and Reporting
 
@@ -115,14 +115,8 @@ Link reporting will now be indexed by the `alias` rather than top-level domains 
 ![Link Aliasing Click Table][1]
 
 ### Currents Event Changes
-{% api %}
-Email Clicks Events
 
-{% apitags %}
-Email, Clicks
-{% endapitags %}
-
-This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+The [email clicks event][7] occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
 
 ```json
 // Email Click: users.messages.email.Click
@@ -158,8 +152,6 @@ The behavior for `dispatch_id` differs between Canvas and campaigns because Braz
 _Update noted in August 2019._
 {% endalert %}
 
-{% endapi %}
-
 ## Additional information
 
 ### HTML Content Blocks in other channels 
@@ -184,3 +176,4 @@ The following endpoints are available to extract the `alias` set in each message
 [4]: {{site.baseurl}}/get_canvas_link_alias/
 [5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
 [6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
+[7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#email-clicks-events/
