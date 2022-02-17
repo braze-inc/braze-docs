@@ -156,7 +156,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 |Property|Description|
 |---|---|
 | `image` | This property is the URL of the card's image.|
-| `imageAspectRatio` | This property is the aspect ratio of the card's image, and is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+| `imageAspectRatio` | This property is the aspect ratio of the card's image and is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned image Content Card properties - ABKCaptionedImageCard
