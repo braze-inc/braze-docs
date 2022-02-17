@@ -47,9 +47,11 @@ The following data types may be stored as custom attributes:
 - [Strings](#strings)
 - [Arrays](#arrays)
 - [Time](#time)
+- [Objects]({{site.baseurl}}/nested_custom_attribute_support/) (early access)
+- [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
 
 {% alert note %}
-**Coming soon!** Support for object and object array data types is arriving in Spring 2022.
+**Coming soon!** Generally available support for object and object array data types is arriving in Spring 2022.
 {% endalert %}
 
 ### Booleans (true/false) {#booleans}
@@ -162,13 +164,21 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Time attribute details
+#### Time attribute details
 
 - Day of Recurring Event
   - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
   - For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
 - Less than X Days Ago: The "Less than X Days Ago" filter includes dates between X days ago and the current date/time.
 - Less than X Days in the Future: Includes dates between the current date/time and X days in the future.
+
+### Objects
+
+Support for objects as a data type for custom attributes is currently in early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+
+### Arrays of objects
+
+Support for arrays of objects depends on nested custom attributes, which is currently in early access. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/). 
 
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 
