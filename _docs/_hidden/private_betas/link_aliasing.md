@@ -149,7 +149,7 @@ The [email clicks event][7] occurs when a user clicks an email. Multiple events 
 {% alert update %}
 The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-Update noted in August 2019.
+_Update noted in August 2019._
 {% endalert %}
 
 ## Additional information
