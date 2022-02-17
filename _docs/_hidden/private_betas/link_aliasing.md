@@ -149,13 +149,13 @@ The [email clicks event][7] occurs when a user clicks an email. Multiple events 
 {% alert update %}
 The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-_Update noted in August 2019._
+Update noted in August 2019.
 {% endalert %}
 
 ## Additional information
 
 ### HTML Content Blocks in other channels 
-If the HTML Content Block is used in other channels (for example, in-app message), a `lid=` value will still be appended on each link. The value will not be populated, so your links will look something like this: `http://www.braze.com?lid="`
+If the HTML Content Block is used in other channels (for example, in-app message), a `lid=` value will still be appended on each link. The value will not be populated, so your links will look something like this: `http://www.braze.com?lid="`.
 
 ### Heatmap
 The heatmap feature is not supported with this version of the link aliasing product. Future iterations may support showcasing the heatmap.
