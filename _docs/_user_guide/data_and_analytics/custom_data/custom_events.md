@@ -122,6 +122,7 @@ This feature is generally available. However, triggering messages and segmenting
 #### Limitations
 
 - Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
+- Sending nested custom attributes (objects as a custom attribute data type) is limited to customers participating in the early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
 - The following SDK versions support nested objects:
 
@@ -239,6 +240,10 @@ Triggering a campaign with nested properties from the "Ordered" event:
 ##### Segmentation
 
 Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (described above).
+
+{% alert important %}
+Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+{% endalert %}
 
 #### Frequently asked questions
 
