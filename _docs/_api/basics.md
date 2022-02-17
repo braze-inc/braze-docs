@@ -128,14 +128,14 @@ For most APIs, Braze has a default rate limit of 250,000 requests per hour. Howe
 
 ## Additional resources
 
-### Ruby client library (beta)
+### Ruby client library
 
-If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) (beta) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
+If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
 The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/#user-data).
 
 {% alert note %}
-Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
+This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
