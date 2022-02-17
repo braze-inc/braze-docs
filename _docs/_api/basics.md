@@ -137,7 +137,7 @@ A client library is a collection of code specific to one programming language—
 The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/#user-data).
 
 {% alert note %}
-Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com) and let us know why the client library is or isn't helpful so that we can add to it over time.
+Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
