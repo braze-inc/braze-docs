@@ -74,7 +74,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 #### Error: MismatchSenderID
 
-`MismatchSenderID` indicates an authentication failure. Ensure sure your Firebase Sender ID and FCM API key are correct. See our section on [debugging push registration][3] for more information.
+`MismatchSenderID` indicates an authentication failure. Ensure sure your Firebase Sender ID and FCM API key are correct.
 
 #### Error: InvalidRegistration
 
@@ -161,7 +161,6 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client
 [2]: #utilizing-the-push-error-log
-[3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
