@@ -40,10 +40,12 @@ If all of the messages in your campaign are going to be similar or have the same
 
 **Steps:**
 
-1. Go to the **Canvas** page and click <i class="fas fa-plus"></i> **Create Canvas**.
-2. Set up your Canvas. For detailed instructions, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/). 
-3. After you've set up your Canvas, add a step in the Canvas builder. 
-4. Within this step, click **Messages** and then select the **Content Card** messaging channel. Here you will create and configure your Content Card.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
+2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed. Steps containing Content Cards can be scheduled or action-based.
+4. Filter your audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). You can either **Advance when Message Sent**, which advances your users to the next steps when the Content Card is sent, or **Immediately Advance Audience**, which advances users when the Content Card is sent, or if the Content Card is aborted for any reason.
+6. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
 {% endtabs %}
@@ -71,7 +73,7 @@ The content here varies based on the **Card Type** chosen in the previous step, 
 
 #### Language
 
-Click **Add Languages** and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
 
 #### Title and message
 
@@ -96,7 +98,7 @@ For Android, iOS, and Web, you can choose between:
 * None
 
 {% alert warning %}
-Content Card message fields are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
+Content Card message fields are limited to 2KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}
 
 {% alert note %}
@@ -118,41 +120,27 @@ Build the remainder of your campaign; see the sections below for further details
 
 #### Choose delivery schedule or trigger
 
-- Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
-- You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) in this step.
-- Determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
-- Frequency Capping does not apply to Content Cards.
+Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
-#### Choose target segment
+You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) and determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
 
-- Next, you need to choose the target segment from the dropdown menu.
-- You'll automatically be given a snapshot of what that approximate segment population looks like right now.
-- Keep in mind that exact segment membership is always calculated just before the message is sent.
+{% alert note %}
+Frequency Capping does not apply to Content Cards.
+{% endalert %}
+
+#### Choose a target segment
+
+Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
 
-- Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign.
-- You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 {% endtab %}
 
 {% tab Canvas %}
 
-Complete the remaining sections of your Canvas step; see the sections below for further details on how to best utilize our tools to build Content Cards. After you have created and configured your step, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation for further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more.
-
-#### Choose step schedule
-
-Content Cards can be delivered based on a scheduled time or Action in Canvas. For more information, refer to [Time-based functionalities for Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/).
-
-#### Choose audience
-
-Next, you need to adjust Audience Options for this step. Here, you can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
-
-#### Choose advancement behavior
-
-Lastly, select your [Advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) for this step. 
-
-Here you can choose to either **Advance when Message Sent**, which advances your users to the next steps when the Content Card is sent, or **Immediately Advance Audience**, which advances users when the Content Card is sent, or if the Content Card is aborted for any reason.
+If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 {% endtab %}
 {% endtabs %}

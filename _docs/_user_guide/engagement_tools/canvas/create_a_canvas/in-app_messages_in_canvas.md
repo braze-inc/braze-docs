@@ -191,6 +191,18 @@ Steps with an in-app message and another channel have the following advancement 
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
+## Prioritizing in-app messages
+
+A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
+
+![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
+
+Navigate to the **Send Settings** of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
+
+By default, Canvas step priority is set to medium, with the most recently created steps having the highest relative priority. Canvas and campaign-level priorities also default to medium, with the highest relative priority defaulting to the most recently created items.
+
+![canvas_priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
+
 ## Custom event properties in a Canvas
 
 Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
