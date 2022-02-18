@@ -40,4 +40,6 @@ This way, customers who use transactional messaging can trace the call back thro
 
 Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
 
-![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog1.png %})
+
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog2.png %})

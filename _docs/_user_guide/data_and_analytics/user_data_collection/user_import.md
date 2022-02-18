@@ -164,11 +164,11 @@ If Braze notices something malformed in your file during the upload, errors will
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to [Troubleshooting](#troubleshooting) below.
 
+![CSV Import][4]
+
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.
 {% endalert %}
-
-![CSV Import Errors][6]
 
 When you're satisfied with the upload, start the import. The pop-up will close and the import will begin in the background. You can track its progress on the **User Import** page, which will refresh every 5 seconds, or at the press of the refresh button in the **Recent Imports** box.
 
@@ -247,7 +247,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [3]: {% image_buster /assets/img/importcsv.png %}
-[6]: {% image_buster /assets/img/csv-errors.png %}
+[4]: {% image_buster /assets/img/importcsv2.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint

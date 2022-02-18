@@ -25,8 +25,6 @@ Reports are not saved in the dashboard, and re-running the report can result in 
 
 ## Create a new report
 
-![GIF of creating an engagement report]({% image_buster /assets/img/engagement_reports.gif %}){: style="float:right;max-width:50%;border:0px;"}
-
 1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
 2. Click **+ Create New Report**.
 3. Add the [campaigns and Canvas messages](#manually-select-campaigns-or-canvases) (individually or [by tag](#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
