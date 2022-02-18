@@ -13,6 +13,8 @@ channel:
 
 # Creating a Content Card
 
+> This article covers how to create a Content Card in Braze. Here, we'll cover choosing a messaging type, composing your card, and scheduling your message delivery.
+
 You can create a Content Card using the Braze platform using campaigns and Canvases.
 
 ## Step 1: Choose where to build your message

@@ -1,8 +1,8 @@
 ---
-nav_title: Creating an Email Campaign
-article_title: Creating an Email Campaign
+nav_title: Creating an Email
+article_title: Creating an Email
 page_order: 1
-description: "This reference article covers how to create an email campaign using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign."
+description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
 tool:
   - Campaigns
 channel:
@@ -24,43 +24,111 @@ If this is your first time creating an email campaign, we highly recommend that 
 
 {% endalert %}
 
-## Step 1: Create a new campaign
+## Step 1: Choose where to build your message
 
-On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
-![New Campaign Page][19]
+Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+
+{% tabs %}
+{% tab Campaigns %}
+**Steps:**
+
+1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
+2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+3. Name your campaign something clear and meaningful.
+4. Add **Teams** and **Tags** as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+5. Add and name as many variants as you need for your campaign.
+
+{% alert tip %}
+If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
+{% endalert %}
+{% endtab %}
+{% tab Canvas %}
+
+**Steps:**
+
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
+2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+6. Choose any other messaging channels which you would like to pair with your message.
+{% endtab %}
+{% endtabs %}
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics.
+Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer.
+
+![Select your email editing experience][3]{: style="max-width:75%" }
+
+Then, either select an existing [email template][10], [upload a template from a file][18] (HTML editor only), or use a blank template.
+
+## Step 3: Compose your email
+
+After you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance.
 
 {% alert tip %}
-Tags make your campaigns easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email.
 {% endalert %}
 
-Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
+![New Email Overview][14]{: style="max-width:75%" }
 
-![Email Creation][3]
+### Step 3a: Add email headers
 
-Once you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
+To add email headers, click **Edit Sending Info** and select **Add New Header**.
 
-![New Email Overview][14]
+Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
-### Step 2a: Add email headers
+However, Braze does allow you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
-Email headers contain information about the email being sent. These key-value pairs typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+Avoid using the following keys:
 
-However, Braze does allow you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. Avoid using the following keys:
+<style>
+#reserved-fields td {
+    word-break: break-word;
+    width: 33%;
+}
+</style>
 
-| Reserved Fields |  |  |
-| --- | --- | --- |
-| BCC | dkim-signature | Reply-To |
-| CC | From | Subject |
-| Content-Transfer-Encoding | MIME-Version | To |
-| Content-Type | Received | x-sg-eid |
-| DKIM-Signature | received | x-sg-id |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+<table id="reserved-fields">
+<thead>
+  <tr>
+    <th>Reserved Fields</th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>BCC</td>
+    <td>dkim-signature</td>
+    <td>Reply-To</td>
+  </tr>
+  <tr>
+    <td>CC</td>
+    <td>From</td>
+    <td>Subject</td>
+  </tr>
+  <tr>
+    <td>Content-Transfer-Encoding</td>
+    <td>MIME-Version</td>
+    <td>To</td>
+  </tr>
+  <tr>
+    <td>Content-Type</td>
+    <td>Received</td>
+    <td>x-sg-eid</td>
+  </tr>
+  <tr>
+    <td>DKIM-Signature</td>
+    <td>received</td>
+    <td>x-sg-id</td>
+  </tr>
+</tbody>
+</table>
 
-### Step 2b: Preview and test your message
+### Step 3b: Preview and test your message
 
 After you finish composing your perfect email, you need to test it before sending it out.
 
@@ -76,13 +144,15 @@ If you see any issues with your email, or want to make any changes, click **Edit
 
 {% alert tip %}
 Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimised.
-<br><br>To avoid this, you can create white space after your desired preview text so that email clients don’t pull other distracting text or characters into the envelope content. To do so, add a chain of zero-width non-joiners (‌`&zwnj;`) and non-breaking spaces (`&nbsp;`) after the preview text that you want displayed. <br><br>When added to the end of your preview text in the preheader section, the following piece of code will add the white space you’re looking for:
+<br><br>To avoid this, you can create white space after your desired preview text so that email clients don’t pull other distracting text or characters into the envelope content. To do so, add a chain of zero-width non-joiners (‌`&zwnj;`) and non-breaking spaces (`&nbsp;`) after the preview text that you want displayed. <br><br>When added to the end of your preview text in the preheader section, the following piece of code will add the white space you’re looking for:<br><br>
+
 ```html
 <div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
 ```
+
 {% endalert %}
 
-### Step 2c: Check for email errors
+### Step 3c: Check for email errors
 
 The editor will call out any problems it catches with your message before you send it. Here's a list of errors that are accounted for in our editor:
 
@@ -90,69 +160,36 @@ The editor will call out any problems it catches with your message before you se
 - Invalid **From** and **Reply-To** addresses.
 - Duplicate **Header** keys.
 - Liquid syntax problems.
-- [Email bodies larger than 400kb; bodies are highly recommended to be smaller than 102kb.][16]
+- Email bodies larger than 400kb; bodies are highly recommended to be [smaller than 102kb][16].
 - Emails with a blank **Body** or **Subject**.
 - Emails with no unsubscribe link.
 - The email you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
 
-## Step 3: Schedule your messaging campaign
-
-You can schedule your campaigns against three types of delivery:
-
-- Scheduled (sending your campaign at a designated time)
-- Action-Based (sending when your users perform specified actions)
-- API-Triggered (sending according to an API request)
+## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
-{% tab Scheduled Delivery %}
-Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use [Intelligent Timing][21] to send the message when the user is most likely to engage. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
+{% tab Campaigns %}
+Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build your email campaign.
 
-Messages can also be configured to recur daily, weekly (optionally on specific days), or monthly.
+#### Choose delivery schedule or trigger
 
-Unless you check **Allow users to become re-eligible to receive campaign**, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
-
-![Schedule]({% image_buster /assets/img_archive/schedule_new.png %}){: height="80%"" width="80%"}
-
-{% endtab %}
-{% tab Action-Based Delivery %}
-
-Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the **New Trigger Action** dropdown.)
-
-![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
-
-{% endtab %}
-{% tab API-Triggered Delivery %}
+Emails can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 {% alert note %}
-When the trigger action is set to **Interact With Campaign**, selecting a **Receive** option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
+For API-triggered campaigns, when the trigger action is set to **Interact With Campaign**, selecting a **Receive** option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
 {% endalert %}
 
-Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more information on API-Triggered Delivery.
+You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours), and set [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules.
 
-{% endtab %}
-{% endtabs %}
-
-## Step 4: Choose conversion events
-
-Braze allows you to track how often users perform specific actions after receiving a campaign, known as a [conversion event][22]. You can specify any of the following actions as a conversion event:
-
-- Opens app
-- Makes purchase (This can be a generic purchase or a specific item)
-- Performs specific custom event
-- Opens email
-- Clicks email
-
-You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection][13] feature.
-
-## Step 5: Choose your target segment
+#### Choose a target segment
 
 Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-![Target Segment][5]
+You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
 Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
-### Multichannel campaigns with email and push
+##### Multichannel campaigns with email and push
 
 For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -166,49 +203,28 @@ To do so, under **Audience Summary**, select to send this campaign to "opted-in 
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
-## Step 6: Review and deploy
+#### Choose conversion events
+
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
+
+- Opens app
+- Makes purchase (This can be a generic purchase or a specific item)
+- Performs specific custom event
+- Opens email
+
+You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
+{% endtab %}
+
+{% tab Canvas %}
+If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+{% endtab %}
+{% endtabs %}
+
+## Step 5: Review and deploy
 
 The final page will give you a summary of the campaign you've just designed. Confirm all the relevant details and click **Launch Campaign** to enable it for sending.
 
-Now just wait for all the data to roll in!
-
-![Launch Campaign][6]
-
-## Email reporting
-
-Braze provides you with a detailed report of each of your email campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** page. This page is broken up into three tabs:
-
-- Campaign Analytics
-- Retention Report
-- Funnel Report
-
-### Campaign analytics
-
-On the **Campaign Analytics** page, you can comprehensively view and analyze the success of your campaign in an organized format.
-
-Additionally, you can see how successful different links in a single email campaign are using heat maps. Under **Email Performance**, expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. 
-
-{% alert note %}
-Date ranges are not taken into consideration for email heat maps.
-{% endalert %}
-
-![Email Analytics][17]
-
-When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique).
-
-For detailed definitions of the metrics on this page, check out our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/analytics_glossary/).
-
-{% alert note %}
-Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
-{% endalert %}
-
-### Retention Report
-
-On the **Retention Report** page, you can run various reports to measure user retention for users who have performed a selected retention event in a specific campaign. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/).
-
-### Funnel Report
-
-On the **Funnel Report** page, you can analyze the journeys your customers take after receiving your campaign. If your campaign uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
+Now just wait for all the data to roll in! Next, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) to learn how you can access the results of your email campaigns.
 
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
@@ -217,7 +233,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [13]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
+[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
