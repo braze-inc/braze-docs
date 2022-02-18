@@ -37,7 +37,7 @@ module Jekyll
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/android/changelog/##{@android_changelog_ref}' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa fa-android'></i> &nbsp; Android: #{@original_android}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_roku.nil?
-          render_html += "<a href='/docs/developer_guide/platform_integration_guides/roku/changelog/##{@roku_changelog_ref}' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa fa-roku'></i> &nbsp; Roku: #{@original_roku}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/roku/changelog/##{@roku_changelog_ref}' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa fa-tv'></i> &nbsp; Roku: #{@original_roku}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
 
         render_html += "</div>"
