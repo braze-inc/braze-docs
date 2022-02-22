@@ -12,6 +12,12 @@ channel:
 
 This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide a sample implementation, you will most likely need to implement custom code. Because your code will be unique to your app, you will not need to handle all situations listed below if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
 
+## SDK requirements {#supported-sdk-versions}
+
+In-app messages will only be sent to Roku devices running the minimum supported SDK version:
+
+{% sdk_min_versions roku:0.1.0 %}
+
 ## In-app message setup
 
 To process in-app messages, you can add an observer on `BrazeTask.BrazeInAppMessage`:
