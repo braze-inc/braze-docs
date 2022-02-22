@@ -37,7 +37,7 @@ Note that `Push enabled for App` only considers the presence of a valid a foregr
 
 ### Check user's push enablement status
 
-On the **Engagement** tab in a user's profile, you will see **Push Registered For** followed by an app name. If no app information exists for that device, you will see  two dashes (**&#45;&#45;**). There will be an entry for every device that belongs to the user.
+On the **Engagement** tab in a user's profile, you will see **Push Registered For** followed by an app name. If no app information exists for that device, you will see two dashes (**&#45;&#45;**). There will be an entry for every device that belongs to the user.
 
 If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
 ![Push Changelog][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
