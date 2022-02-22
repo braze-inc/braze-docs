@@ -42,7 +42,7 @@ On the **Engagement** tab in a user's profile, you will see **Push Registered Fo
 If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
 ![Push Changelog][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
-On the other hand, if the device entry's app name is prefixed by `Background:`, the app is only authorized to receive [background push]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) and can not display user-visible notifications on that device. This usually indicates the user has disabled notifications for the app on that device.
+On the other hand, if the device entry's app name is prefixed by `Background:`, the app is only authorized to receive [background push]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) and cannot display user-visible notifications on that device. This usually indicates the user has disabled notifications for the app on that device.
 
 If a push token is moved to a different user on the same device, that first user will no longer be push registered.
 
