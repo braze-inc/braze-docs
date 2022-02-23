@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised in October 2021*
+*Last revised in February 2022*
 
 > This article covers general Braze data retention information.
 
@@ -36,7 +36,7 @@ A User may have multiple profiles, and you may need to delete multiple profiles 
 
 ## Data Retention Handled by Braze
 
-In some cases we store certain data only for a predetermined period of time before it is automatically deleted based on certain criteria. For each type of data, we set retention timeframes outlined below.
+In some cases, we store certain data only for a predetermined period of time before it is automatically deleted based on certain criteria. For each type of data, we set retention timeframes outlined below.
 
 {% alert important %} The timeframes outlined in this section are not customizable. {% endalert %}
 
@@ -46,6 +46,10 @@ Each week, Braze runs a process to remove Inactive Users and Dormant Users from 
 
 {% alert note %} While archival of Inactive or Dormant User profiles is automated and the data retention is not customizable, you can run a data point on such profiles at regular intervals to prevent archiving, thus keeping them active. {% endalert %}
 
+#### Braze Troubleshooting
+
+Braze may delete data where necessary as part of the resolution to a technical issue or incident, for example, for de-duplication of data.
+
 #### Braze Servers: Short-term Retention for Recovery Purposes
 
 Data sent from the Braze Services to Braze's Snowflake Data Lake via Braze servers is retained in such Braze servers for up to 90 days for recovery purposes.
@@ -54,7 +58,7 @@ Data sent from the Braze Services to Braze's Snowflake Data Lake via Braze serve
 
 Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the “Data Lake”, formerly known as “BI Database”).
 
-Braze has instituted processes to ensure regularly scheduled deletions of PII from the “Data Lake” at an app group or event level. If you use our APIs to delete user profiles, or delete or amend attributes from user profiles, within two weeks this automatic deletion process will apply to:
+Braze has instituted processes to ensure regularly scheduled deletions of PII from the “Data Lake” at an app group or event level. If you use our APIs to delete user profiles or delete or amend attributes from user profiles, within two weeks, this automatic deletion process will apply to:
 
 - Events
 - Purchases
@@ -65,7 +69,7 @@ Deletion of data in the Data Lake will not affect your segmentation.
 
 #### Braze Backup Servers
 
-When data is deleted from your production instance, the data remains in Braze’s backup servers for 6 months and is then deleted according to our internal processes.
+When data is deleted from your production instance, the data remains in Braze’s backup servers for six months and is then deleted according to our internal processes.
 
 ## Data Retention Handled by Braze for Specific Features of the Braze Services
  
