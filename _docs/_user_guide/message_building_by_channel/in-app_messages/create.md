@@ -26,7 +26,7 @@ Not sure whether your message should be send using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
-2. Select **In-App Message**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+2. Select **In-App Message**. Note that in-app messages aren't available in multichannel campaigns.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
