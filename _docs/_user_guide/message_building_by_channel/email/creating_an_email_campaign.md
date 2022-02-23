@@ -29,15 +29,15 @@ If this is your first time creating an email campaign, we highly recommend that 
 Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
-{% tab Campaigns %}
+{% tab Campaign %}
 **Steps:**
 
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
 2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
-4. Add **Teams** and **Tags** as needed.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign.
+5. Add and name as many variants as you need for your campaign. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -168,7 +168,7 @@ The editor will call out any problems it catches with your message before you se
 ## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
-{% tab Campaigns %}
+{% tab Campaign %}
 Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
