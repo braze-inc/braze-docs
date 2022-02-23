@@ -52,4 +52,4 @@ To find your dashboard's dummy users, perform the following steps:
 
 If necessary, you can delete the users via the [Users Delete]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) API endpoint.
 
-[1]: {{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure
+[1]: {{site.baseurl}}/dp-technical-assistance/#the-right-to-erasure

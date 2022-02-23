@@ -108,11 +108,11 @@ Finally, use the `show pipes;` command to show your SQS information. The name of
 
 In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
 
-![AWS Properties][1]{: height="50%" width="50%"}
+![AWS Properties tab][1]{: height="50%" width="50%"}
 
 In **Events**, create new events for each set of Currents Data, as needed ([Messaging]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User Behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
 
-![AWS Events][2]{: height="50%" width="50%"}
+![Creating a new event in AWS][2]{: height="50%" width="50%"}
 
 Check the appropriate box for the object create notifications, as well as the ARN on the bottom of the form (from the notification channel column in Snowflake).
 
@@ -267,7 +267,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
   {% endtab %}
 {% endtabs %}
 
-To see the types of analytics you can perform using Braze Currents, please consult [our Looker Blocks](https://github.com/llooker?q=braze).
+To see the types of analytics you can perform using Braze Currents, please consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.
