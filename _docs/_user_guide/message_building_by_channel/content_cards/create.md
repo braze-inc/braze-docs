@@ -130,9 +130,9 @@ You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user
 Frequency Capping does not apply to Content Cards.
 {% endalert %}
 
-#### Choose a target segment
+#### Choose users to target
 
-Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
 
@@ -147,13 +147,15 @@ If you haven't done so already, complete the remaining sections of your Canvas s
 {% endtab %}
 {% endtabs %}
 
-## Step 5: Test your card
+## Step 5: Review and deploy
 
 After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 {% alert warning %}
 After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
+
+Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) to learn how you can access the results of your Content Card campaigns.
 
 ## Things to know
 

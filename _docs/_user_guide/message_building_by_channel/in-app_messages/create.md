@@ -290,20 +290,6 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 You can add [key-value pairs][19] to send extra custom fields to user devices.
 
-### Re-evaluate campaign eligibility and Liquid
-
-In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
-
-![Re-evaluate IAM Membership][27]
-
-When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated at that moment before the message is displayed.
-
-{% alert note %}
-Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
-<br><br>
-Do not use this option for messages that can be triggered while a user is offline or when eligibility and Liquid re-evaluation are not required.
-{% endalert %}
-
 ## Step 7: Build the remainder of your campaign or Canvas
 
 {% tabs %}
@@ -356,12 +342,26 @@ The high, medium, and low options for triggered message priorities are buckets, 
 
 ![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
-#### Choose a target segment
+#### Choose users to target
 
-Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 {% alert note %} 
 If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.
+{% endalert %}
+
+##### Re-evaluate campaign eligibility and Liquid
+
+In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
+
+![Re-evaluate IAM Membership]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+
+When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
+
+{% alert note %}
+Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
+<br><br>
+Do not use this option for messages that can be triggered while a user is offline or when eligibility and Liquid re-evaluation are not required.
 {% endalert %}
 
 #### Choose conversion events
@@ -378,11 +378,15 @@ For information on Canvas-specific in-app messaging options, refer to [In-app me
 {% endtab %}
 {% endtabs %}
 
-## Step 8: Test your in-app message
+## Step 8: Review and deploy
 
 After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), then send it!
 
-## Active in-app message campaign limits
+Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) to learn how you can access the results of your messaging campaigns.
+
+## Things to know
+
+### Active in-app message campaign limits
 
 Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend turning off any campaigns that are no longer adding any value to your brand.
 
