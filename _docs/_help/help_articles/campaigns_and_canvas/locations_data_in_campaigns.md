@@ -26,7 +26,7 @@ Confirm that your app is collecting location data:
 
 In order to see whether user location data is being sent to Braze, use the **Location Available** filter. This filter allows you to see the percentage of users for whom you have a “most recent location”.
 
-![Test location][25]
+![Test recent location][25]
 
 ## Data transfer
 
