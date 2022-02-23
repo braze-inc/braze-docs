@@ -70,7 +70,7 @@ A user alias can also be set on a known user profile to reference a known user b
 
 For information on how to set a user alias please see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
 
-![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their idenfied user profile. The Identified User has a braze ID and external ID. At this point, if a second anonymous user has changeUser() called, their anonymous user data will be orphaned. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the identified user but a different alias name then has changeUser() called, the existing data is discarded and only the alias label on the identified user profile is maintained.][26]
+![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, their anonymous user data will be orphaned. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the identified user but a different alias name then has changeUser() called, the existing data is discarded and only the alias label on the identified user profile is maintained.][26]
 
 ## Advanced use case information
 
