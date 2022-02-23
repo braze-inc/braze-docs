@@ -178,7 +178,7 @@ These in-app messages are customizable to your needs.
 If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: <br><br>`<a href= "appboy://close">X</a>`.
 {% endalert %}
 
-## Step 4: Compose in-app message
+## Step 4: Compose your in-app message
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
