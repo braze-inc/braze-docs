@@ -3,9 +3,8 @@ nav_title: Campaign Basics
 article_title: Campaign Basics
 page_order: 1
 page_type: reference
-description: “This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns.”
+description: "This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns."
 tool: Campaigns
-
 ---
 
 # Campaigns: The basics
@@ -104,4 +103,4 @@ Selecting at least one conversion event will give you the ability to understand 
 Consider setting up variants and A/B testing. A variant is a trail each customer follows on their journey. Campaigns support up to eight variants with a control group. While not required, you can name each variant and control the distribution of the target audience following each variant. The sky’s the limit from there—so how do you decide on the shape of your campaign? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right user journey for your campaign. There are a couple of approaches you can use:
 - **Work backwards:** Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
 - **Start with the status quo and add more:** Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a follow-up message. Look at your performance and keep optimizing by making incremental changes.
-- **Look to others:** Imitation is the highest form of flattery. Don’t reinvent the wheel. Don’t worry; we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
+- **Look to others:** Imitation is the highest form of flattery. Don’t reinvent the wheel. Don’t worry! We have you covered. At the end of this guide, you’ll find some outlines that can help you get started.

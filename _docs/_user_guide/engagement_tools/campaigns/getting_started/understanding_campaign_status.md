@@ -2,19 +2,19 @@
 nav_title: Understanding Campaign Status
 article_title: Understanding Campaign Status
 page_order: 2
-tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
+tool: Campaigns
 ---
 
 # Understanding campaign status
 
 > This reference article gives an overview of the various statuses a campaign can have and what they mean.
 
-On your Braze dashboard, your campaigns are grouped by their status. Checko out the different campaign statuses and descriptions for what they mean.
+Your campaigns are grouped by their status on the Braze dashboard. Check out the following campaign statuses and descriptions for what they mean.
 
 ## Draft
-Campaigns marked as drafts are saved but not launched campaigns. Clicking on them allows you to continue editing and begin sending.
+Campaigns marked as drafts are saved, but are not launched campaigns. To continue editing and begin sending, select your campaign draft.
 
 ## Active
 Active campaigns are in the process of sending. They can fall under one of the following behaviors:
@@ -25,10 +25,10 @@ Active campaigns are in the process of sending. They can fall under one of the f
 ## Archived
 Archivced campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
-To [archive a campaign][2], click on the gear icon to the right of the campaign, or simply check it off and select **Archive Selected**.
+To [archive a campaign][2], click the <i class="fas fa-cog" aria-label="gear icon"></i> gear icon by the campaign name, or check the checkbox and select **Archive Selected**.
 
 ## Inactive
-Inactive campaigns have been paused but are still editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting **Resume**.
+Inactive campaigns have been paused but are still editable. You can resume an inactive campaign by clicking the  <i class="fas fa-cog" aria-label="gear icon"></i> gear icon by the campaign's name and selecting **Resume**.
 
 ## Multivariate Testing in Progress
 This status marks campaigns with [multivariate tests][1] still running. If they reach a point where a variant outperforms others with better than 95% confidence, then the variant will be marked as the "winner."
