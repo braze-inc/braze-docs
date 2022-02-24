@@ -9,9 +9,7 @@ description: "This help article describes how to use event logging to troublesho
 
 # Using event logging
 
-The [Event User Log][1] helps you troubleshoot any issues with your Braze integration.
-
-Two particularly helpful steps are setting up:
+The [Event User Log][1] helps you troubleshoot any issues with your Braze integration. Two particularly helpful steps are setting up:
 * [An anonymous profile](#setting-up-an-anonymous-profile)
 * [Event logging](#using-event-logging)
 

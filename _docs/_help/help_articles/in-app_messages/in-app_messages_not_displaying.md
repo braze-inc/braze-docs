@@ -10,7 +10,7 @@ channel: in-app messages
 
 # In-app messages not displaying
 
-If you find that your in-app messages are not displaying or rendering properly, there are a number of approaches that you may try to check:
+If you find that your in-app messages are not displaying or rendering properly, there are a number of approaches to check:
 
 * [Event triggers](#event-triggers)
 * [Message impressions](#message-impressions)
@@ -38,7 +38,7 @@ Alternatively try using a different type of in-app message template or size of i
 
 Find out if you have customized your session timeout. By default, Braze retrieves in-app messages at the start of a session from the server.
 
-If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the App in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. You can read more about that for:
+If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. You can read more about that for:
 
 * [iOS][16]
 * [Android][17]

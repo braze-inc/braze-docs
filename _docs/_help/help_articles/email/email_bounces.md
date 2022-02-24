@@ -27,7 +27,7 @@ Soft bounces occur when your recipient's email address is valid, the email messa
 
 While soft bounces aren't tracked in your campaign analytics, you can monitor the soft bounces in the **Message Activity Log** in the **Developer** console on the Braze dashboard. Here, you can also see the reason for the soft bounces and understand possible discrepencies between the "sends" and "deliveries" for your email campaigns.
 
-To learn more about managing your email subscriptions and campaign, check out the [Email Best Practices][2] section!
+To learn more about managing your email subscriptions and campaign, check out [best practices for email][2]!
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
