@@ -9,7 +9,7 @@ description: "This article contains release notes for June 2020."
 
 ## Retention Reports
 
-Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. To read more about Range Retention and Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
+Retention Reports now offer Range Retention for [campaigns][2] and [Canvases][1]. Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. 
 
 ## User track API updates
 

@@ -30,4 +30,4 @@ SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guid
 
 ## Delete a Braze user's teams
 
-You can now delete a team from a Braze User's account!
+You can now delete a team from a Braze user's account!

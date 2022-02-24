@@ -14,7 +14,7 @@ Braze had two (you read that right - **two**) product release cycles this month!
 
 ## SAML/SSO
 
-[Single Sign On (SSO)]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
+[Single sign-on]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
 
 In addition to [Google Sign-In using OAuth 2.0 support](https://developers.google.com/identity/protocols/OAuth2), companies would like SSO with Security Assertion Markup Language (SAML) support. This enables them to seamlessly integrate with large identity providers (IdPs), including [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) and [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/), which support the latest industry standards (SAML 2.0).
 
@@ -29,44 +29,44 @@ We have updated Adjust's partner page to make this API key accessible to custome
 
 ## New Partners
 
-Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
+Some new partners have joined our Alloys program and have been added to our Docs! Say hello to:
 - [FiveTran]({{site.baseurl}}/partners/fivetran/)
 - [Talon.One]({{site.baseurl}}/partners/talonone/)
 - [Voucherify]({{site.baseurl}}/partners/voucherify/)
 
 ## Campaign details improvement
 
-Expanded campaign details are now shown in the ... wait for it ... **Campaign Details** section of the **Campaign** Page!
+Expanded campaign details are now shown in the ...wait for it...**Campaign Details** section of the **Campaign** Page!
 
 ## Show only mine in segments & Canvas
 
-The "Only Show Mine" check filter on the **Campaigns** page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
+The "Only Show Mine" check filter on the **Campaigns** page has proven to be wildly popular. As a result, we're also adding this option to the Canvas and Segment lists!
 
 ### Advancement behavior
 
-You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
+You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next. These options include "Message Sent" and "Entire Audience After Delay".
 
 ### In-app messages in Canvas
 
-[In-app messages are now available to use with Canvas!]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) Add a Canvas step and browse available channels to add an in-app message.
+[In-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) are now available in Canvas! Add a Canvas step and browse the available channels to add an in-app message.
 
 # Earlier this month
 
 ## User profile image removal
 
-We are removing the user profile pictures displayed in Braze User Profiles and User Searches.
+We are removing the user profile pictures displayed in Braze user profiles and user searches.
 
 ## Connected Content in Content Cards
 
 You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
 
-Connected Content calls to external servers will happen when a Card is actually sent, __not__ when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
+Connected Content calls to external servers will happen when a Card is actually sent, not when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
 
-## Null 'reply-to' address
+## Null "reply-to" address
 
-Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
+Customers can now set a `null` value for an email messages's "reply-to" address from the **Email Settings** page in Braze or using the [API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com`, and your customers will have the ability to reply directly back to Dan.
 
-To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage Settings` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
+To set a `null` value for an email messages's "reply-to-" address from Braze, go to **Manage Settings** in the navigation, then the **Email Settings** tab. Scroll to the **Outbound Email Settings** section, and select **Exclude “Reply-To” and send replies to “From”** as the default address.
 
 ## Campaign comparisons
 
@@ -75,7 +75,7 @@ Look at [multiple campaigns at one time to compare their relative performance]({
 ## Template dispatch ID into messages with Liquid
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior in Canvas and campaigns]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
