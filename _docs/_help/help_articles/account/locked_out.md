@@ -20,11 +20,11 @@ You can tell what kind of lock out you're experiencing by the error message you 
 
 ## Password error
 
-Your account's security is important to us, so passwords are required to log into your Braze account.	
+Your account security is important to us, so passwords are required to log into your Braze account.	
 
-- Check that you are logging into the incorrect dashboard [instance][1]. Check with your account administrator or Braze Account Manager to be sure.	
-- Your password may have expired and [you'll need to reset it][2].	
-- If you use a [Single Sign-On][3] service, check with your account administrator that the set up has been completed properly.	
+- Check that you are logging into the correct [Braze dashboard instance][1]. Check with your account administrator or Braze Account Manager to be sure.	
+- Your password may have expired, so you'll need to [reset it][2].	
+- If you use a [single sign-on][3] service, check with your account administrator that the set up has been completed properly.	
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.  	
 
 When in doubt, you can always [reset your password][2].	
@@ -33,12 +33,12 @@ When in doubt, you can always [reset your password][2].
 
 If you are using the same machine you usually do to log in, Braze should automatically detect the correct instance. However, in the event that it doesn't or you're logging in for the first time, we recommend that you consider the following:	
 
-- Check that you are logging into the incorrect dashboard [instance][1]. Check with your account administrator or Braze Account Manager to be sure.
+- Check that you are logging into the correct [Braze dashboard instance][1]. Check with your account administrator or Braze Account Manager to be sure.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.	
 
 ## Account suspension	
 
-This doesn't happen very often, but we take account suspension and deletions very seriously. If you find this error, your best bet is to reach out to your company's Braze administrator, Braze Account Manager, or Braze [Support][support].	
+This doesn't happen very often, but we take account suspension and deletions very seriously. If you find this error, your best bet is to reach out to your company's Braze administrator, Braze Account Manager, or [Braze Support][support].
 
 _Last updated on October 19, 2019_
 

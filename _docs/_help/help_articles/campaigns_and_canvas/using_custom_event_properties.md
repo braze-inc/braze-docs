@@ -18,26 +18,21 @@ There are three important checks to carry out to ensure your custom events are b
 * [Verify log](#verify-log)
 * [Verify values](#verify-values)
 
-## Custom event properties
+## Verify custom event properties
 
 [Custom event properties][22] are metadata that describe custom events. Multiple properties may be logged each time a custom event is logged.
 
-## Verify custom event properties
-
 ### Verify events
 
-Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive.
-
-For further information see:
+Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive. For additional information on tracking custom events, check out the following articles based on your platform:
 
 * [Android][51]
 * [iOS][23]
 * [Web][52]
 
-
 ### Verify log
 
-To confirm that the event properties are successfully tracked, you can view all event properties by going to the **Manage Settings** page, clicking on the **Custom Events** tab, then clicking **Manage Properties**. This will show you the names of all of the properties associated with an event.
+To confirm that the event properties are successfully tracked, you can view all event properties by navigating to the **Manage Settings** page, clicking on the **Custom Events** tab, then clicking **Manage Properties**. This will show you the names of all of the properties associated with an event.
 
 ### Verify values
 

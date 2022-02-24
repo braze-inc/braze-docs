@@ -23,19 +23,19 @@ When creating a Canvas with a control group, ensure that all users in the Entry 
 ## Example
 
 Let’s imagine the following scenario:
-- A Canvas has a single **variant** and a **control group**.
-- The first step of the **variant** is a push notification.
-- 90% of users were selected to enter the **variant**, and 10% to enter the control **group**.
+- A Canvas has a single variant and a control group.
+- The first step of the variant is a push notification.
+- 90% of users were selected to enter the variant, and 10% to enter the control group.
 
 ![Canvas Example][41]
 
 In this scenario, 90% of the users who enter the Canvas will enter the variant. 
 
-If we look back to the Entry Audience (active users), we can see that even though it contains 39.8k users, only 29.1k (73%) of them are push enabled:
+If we look back to the active users, we can see that even though it contains 39.8k users with only 73% of them push enabled:
 
 ![Entry Audience][42]
 
-This means that even though we specified 90% of users to enter the variant, not all of those users are actually **able to** recieve a push notification. These users who are unable to recieve a push notification will still enter the variant regardless.
+This means that even though we specified 90% of users to enter the variant, not all of those users are actually able to recieve a push notification. These users who are unable to recieve a push notification will still enter the variant regardless.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

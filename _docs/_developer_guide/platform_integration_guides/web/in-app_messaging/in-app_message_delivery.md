@@ -19,8 +19,8 @@ Our in-app message product allows you to trigger an in-app message display as a 
 Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with a web app, check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
-## Delivery demantics
-All in-app messages that a user is eligible for are automatically downloaded to the user's device/browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
+## Delivery semantics
+All in-app messages that a user is eligible for are automatically downloaded to the user's device or browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
 
 ## Minimum time interval between triggers
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function.
