@@ -27,9 +27,9 @@ Closes #**ISSUE_NUMBER_HERE**
 <summary>⭐ Helpful Wiki Shortcuts</summary>
 <br>
 
-- [Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub)
-- [Technical Documentation Style Guide](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub#h.wstt3flbts5k)
-- [Styling Test Page](https://github.com/braze-inc/braze-docs/blob/develop/_docs/_home/styling_test_page.md)
+- [Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub)
+- [Image Style Guide](https://docs.google.com/document/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub)
+- [Styling Test Page](https://www.braze.com/docs/home/styling_test_page/)
 
 </details>
 
