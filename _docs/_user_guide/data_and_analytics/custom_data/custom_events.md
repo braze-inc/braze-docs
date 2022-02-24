@@ -56,9 +56,9 @@ The following table shows the filters available for segmenting users by custom e
 
 ## Custom event analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [Custom Events][7] page in the Dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [Custom Events][7] page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
-![custom_event_analytics_example.png][8]
+![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
 
 {% alert tip %}
 [Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded using this method.
@@ -95,7 +95,7 @@ For example, if an eCommerce application wanted to send a message to a user when
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
 {% endalert %}
 
-![customEventProperties.png][16]
+![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
@@ -103,7 +103,7 @@ Custom event properties can also be used for personalization within the messagin
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
 {% endalert %}
 
-You can change the data type of your custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+You can change the data type of your custom event property, but please be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 {% alert important %}
 When making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "`, then your users would be considered "not blank".
@@ -220,7 +220,7 @@ Nested objects is generally available. However, triggering messages and segmenti
 
 Triggering a campaign with nested properties from the "Created Playlist" event:
 
-![Triggering Campaign]({% image_buster /assets/img/nested_object2.png %})
+![A user choosing a nested property for property filters on a custom event]({% image_buster /assets/img/nested_object2.png %})
 
 The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if __any__ item in the traversed array matches the event property.<br>
 {% endtab %}
@@ -228,7 +228,7 @@ The trigger condition `songs[].album.yearReleased` "is" "1968" will match an eve
 
 Triggering a campaign with nested properties from the "Ordered" event:
 
-![Triggering Campaign]({% image_buster /assets/img/nested_object1.png %})
+![A user adding the property filter r_details.name is McDonalds for a custom event]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`: "Mcdonalds"<br>
 `r_details.location.city`: "Montclair"

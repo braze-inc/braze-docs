@@ -132,7 +132,7 @@ Your dashboard administrator can increase the maximum length for individual arra
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions](http://www.regextester.com/pregsyntax.html) (PCRE).
 <br>
 More resources on regex:
 - [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
@@ -202,5 +202,5 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
 
-You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
+You can change the data type of your custom attribute, but you should be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
