@@ -88,7 +88,6 @@ Steps with in-app messages have specific advancement options that allow you to s
   When "In-App Live" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
-
 ### Steps with Multiple Channels
 
 ![iampush.png][3]
