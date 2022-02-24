@@ -10,7 +10,7 @@ channel: email
 
 # HTML rendering in test emails
 
-If your [test email][37] looks off, we recommend first checking your HTML setup. Next, you can check for:
+If your [test email][37] looks off, we recommend first checking your HTML setup. Next, you can check for these issues:
 
 * [Extension conflicts](#check-conflicts)
 * [Email rendering](#check-rendering)
