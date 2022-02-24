@@ -26,7 +26,7 @@ If this is your first time creating an email campaign, we highly recommend that 
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -52,7 +52,7 @@ If all of the messages in your campaign are going to be similar or have the same
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
-6. Choose any other messaging channels which you would like to pair with your message.
+6. Choose any other messaging channels that you would like to pair with your message.
 {% endtab %}
 {% endtabs %}
 
@@ -143,7 +143,7 @@ When you're ready for a final check, select **Test Send** and send a test messag
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
 
 {% alert tip %}
-Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimised.
+Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimized.
 <br><br>To avoid this, you can create white space after your desired preview text so that email clients don’t pull other distracting text or characters into the envelope content. To do so, add a chain of zero-width non-joiners (‌`&zwnj;`) and non-breaking spaces (`&nbsp;`) after the preview text that you want displayed. <br><br>When added to the end of your preview text in the preheader section, the following piece of code will add the white space you’re looking for:<br><br>
 
 ```html
@@ -156,20 +156,20 @@ Email clients that support preview text always pull in enough characters to fill
 
 The editor will call out any problems it catches with your message before you send it. Here's a list of errors that are accounted for in our editor:
 
-- **From Display Name** and **Header** not specified together.
-- Invalid **From** and **Reply-To** addresses.
-- Duplicate **Header** keys.
-- Liquid syntax problems.
-- Email bodies larger than 400kb; bodies are highly recommended to be [smaller than 102kb][16].
-- Emails with a blank **Body** or **Subject**.
-- Emails with no unsubscribe link.
-- The email you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
+- **From Display Name** and **Header** not specified together
+- Invalid **From** and **Reply-To** addresses
+- Duplicate **Header** keys
+- Liquid syntax problems
+- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb][16])
+- Emails with a blank **Body** or **Subject**
+- Emails without an unsubscribe link
+- Email you're sending from is not whitelisted (sends will be highly limited to ensure deliverability)
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build your email campaign.
+Next, build the remainder of your campaign! See the following sections for further details on how to best utilize our tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
 
@@ -187,11 +187,11 @@ Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/ca
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
-Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
+Optionally, you can also limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
 ##### Multichannel campaigns with email and push
 
-For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in statuses:
 
 - **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.

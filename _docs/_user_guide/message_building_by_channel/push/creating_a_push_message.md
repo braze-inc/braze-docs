@@ -18,7 +18,7 @@ To see examples of push notifications, check out our [Case Studies][8].
 
 ## Step 1: Choose where to build your message {#create-new-campaign-push}
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -44,7 +44,7 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
-4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+4. Filter your Audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
@@ -87,7 +87,7 @@ Add copy in multiple languages using the __Add Languages__ button. We recommend 
 
 #### Title and body
 
-Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text, but can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to make your push personalized and targeted.
+Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 #### Image
 
@@ -111,7 +111,7 @@ Here, you can also set up button prompts within your push notification, such as:
 
 #### Device options
 
-If desired, you can choose to only send your push to a user's most recently used device. If a users most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
+If desired, you can choose to only send your push to a user's most recently used device. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
@@ -152,11 +152,11 @@ Keep in mind that exact segment membership is always calculated just before the 
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to push.
 
-Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
+Optionally, you can also limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
 ##### Multichannel campaigns with email and push
 
-For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in statuses:
 
 - **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
@@ -183,7 +183,7 @@ If you haven't done so already, complete the remaining sections of your Canvas s
 
 ## Step 6: Review and deploy {#review-and-deploy-push}
 
-After you’ve finished building the last of your campaign or Canvas, review its details, For campaigns, the final page will give you a summary of the campaign you've just designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
+After you’ve finished building the last of your campaign or Canvas, review its details. For campaigns, the final page will give you a summary of the campaign you've just designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
 
 Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 

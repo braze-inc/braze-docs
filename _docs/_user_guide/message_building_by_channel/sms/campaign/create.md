@@ -16,7 +16,7 @@ channel:
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -43,7 +43,7 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
-4. Filter your audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
@@ -77,7 +77,7 @@ Braze always recommends previewing and testing your message before sending. Swit
 ![Test SMS]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
-If you'd like to test how many segments yout SMS may be split into, test your copy length with our [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+If you'd like to test how many segments your SMS may be split into, test your copy length with our [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 {% endalert %}
 
 ## Step 4: Build the remainder of your campaign or Canvas
@@ -85,7 +85,7 @@ If you'd like to test how many segments yout SMS may be split into, test your co
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build SMS messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build SMS messages.
 
 #### Choose delivery schedule or trigger
 
@@ -107,7 +107,7 @@ Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseu
 
 Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
-Conversion events help you measure the success of your campaign, for example:
+Conversion events help you measure the success of your campaign. For example:
 
 - If you are using geotargeting to trigger an SMS message that has an end goal of the user making a purchase, set the conversion event to a `Purchase`.
 - If you are attempting to drive the user to your app, set the conversion event to `Starts Session`.

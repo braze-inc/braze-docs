@@ -16,7 +16,7 @@ If you want to learn more about what webhooks are and how you can use them in Br
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -42,7 +42,7 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
-4. Filter your audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
@@ -118,7 +118,7 @@ After sending the test webhook, a dialog will appear with the response message. 
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build webhooks.
+Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build webhooks.
 
 #### Choose delivery schedule or trigger
 

@@ -18,7 +18,7 @@ You can create an in-app message or in-browser message using the Braze platform 
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -169,7 +169,7 @@ These in-app messages are customizable to your needs.
       </ul>
     </td>
     <td>Web Modal with CSS is unique to the Web SDK and can only be used after selecting <b>Web Browsers</b>.</td>
-    <td>When you want to upload or write custom CSS to create beautiful, all around custom-styled messaging. </td>
+    <td>When you want to upload or write custom CSS to create beautiful, all-around custom-styled messaging. </td>
   </tr>
 </tbody>
 </table>
@@ -281,7 +281,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
 {% alert important %}
-Some in-app message types do not have the option for styling beyond uploading custom HTML (and/or CSS and/or JavaScript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
 {% endalert %}
 
 ## Step 6: Configure additional settings (optional)

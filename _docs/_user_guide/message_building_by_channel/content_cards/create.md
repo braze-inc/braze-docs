@@ -47,7 +47,7 @@ If all of the messages in your campaign are going to be similar or have the same
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed. Steps containing Content Cards can be scheduled or action-based.
 4. Filter your audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). You can either **Advance when Message Sent**, which advances your users to the next steps when the Content Card is sent, or **Immediately Advance Audience**, which advances users when the Content Card is sent, or if the Content Card is aborted for any reason.
-6. Choose any other messaging channels which you would like to pair with your message.
+6. Choose any other messaging channels that you would like to pair with your message.
 
 {% endtab %}
 {% endtabs %}
@@ -87,7 +87,7 @@ To add an image to your Content Card, click **Add Image** or provide an image UR
 
 #### Pin to top
 
-A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
+A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
 
 #### On-click behavior
 
@@ -171,7 +171,7 @@ The following capabilities are not yet supported for Content Cards:
 
 ### Sending behavior
 
-Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes; this data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes. This data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
 
 If you need to remove old cards, you must stop the campaign to do so. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you would like to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
