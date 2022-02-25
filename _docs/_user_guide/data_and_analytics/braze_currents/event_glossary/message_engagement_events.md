@@ -40,7 +40,7 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB.
+These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB.
 {% endalert %}
 
 {% api %}
@@ -221,7 +221,7 @@ This event occurs when an error is received from either Apple Push Notification 
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end-user’s inbox.
+This event occurs when an email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end user's inbox.
 
 ```json
 // Email Send: users.messages.email.Send
