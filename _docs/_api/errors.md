@@ -64,10 +64,11 @@ The provided send id can be used as a parameter for the send/data_series endpoin
 
 ## Fatal errors
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no messages will be sent.
+The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no messages will be sent. 
 
 | Error Code | Description |
 |---|---|
+| `5XX Internal Server Error` | You should retry your request with exponential backoff.|
 | `400 Bad Request` | Bad syntax.|
 | `400 No Recipients` | There are no external IDs or segment IDs or no push tokens in the request.|
 | `400 Invalid Campaign ID` | No Messaging API campaign was found for the campaign ID you provided.|
@@ -89,7 +90,6 @@ The following status codes and associated error messages will be returned if you
 | `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|
 | `429 Rate Limited` | Over rate limit.|
-| `5XX Internal Server Error` | You should retry your request with exponential backoff.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
