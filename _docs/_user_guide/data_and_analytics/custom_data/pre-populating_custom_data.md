@@ -20,7 +20,7 @@ To pre-populate custom events and attributes, navigate to the **Manage Settings*
 
 For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine what types of segmentation filters are available for that attribute.
 
-![Add new attribute or event][22]{: style="max-width:60%;" }
+![Add new attribute or event][22]{: style="max-width:40%;" }
 
 Custom events and custom attributes are case sensitive. Keep this in mind when your development team integrates these custom events or attributes later, they must name them exactly as you have named them here—including the use of uppercase or lowercase letters—or else Braze will generate a different custom event or attribute.
 

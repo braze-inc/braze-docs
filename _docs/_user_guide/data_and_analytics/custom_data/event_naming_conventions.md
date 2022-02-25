@@ -22,7 +22,7 @@ Ensuring consistency in your event and attribute taxonomy during your Braze inte
 
 ### Use event groups
 
-__Use groups to differentiate parts of your product to name events.__ By categorizing your product into groups any user can clearly understand what the event is referring to and what it does.
+Use groups to differentiate parts of your product to name events. By categorizing your product into groups any user can clearly understand what the event is referring to and what it does.
 
 ### Event naming structure
 
@@ -30,6 +30,6 @@ The most common naming structure is `group_noun_action`. Events should all be lo
 
 ### Properties
 
-Is it an event or a property? __tag one event and then identify differences by using properties.__
+Is it an event or a property? Tag one event and then identify differences by using properties.
 
 This is helpful for events that are inherently the same but have minor differences, such as channels for a campaign. We can also easily see how users flow through events. Aggregation of these events will be more tedious as we will have to create a custom event to group them together.

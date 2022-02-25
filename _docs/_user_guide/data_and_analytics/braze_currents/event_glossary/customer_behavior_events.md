@@ -16,7 +16,7 @@ Please contact your Braze representative or open a [support ticket]({{site.baseu
 
 This customer behavior and user events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
 
-![image]({% image_buster /assets/img/customer_engagement_event.png %})
+![Breakdown of a user event showing a purchase event with the listed properties grouped by user-specific properties, behavior-specific properties, and device-specific properties]({% image_buster /assets/img/customer_engagement_event.png %})
 
 Customer behavior and user events are comprised of __user-specific__ properties, __behavior-specific__ properties, and __device-specific__ properties. 
 
@@ -39,7 +39,7 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment connectors. For schema that apply to other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Please note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment connectors. For schema that apply to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
 
 {% endalert %}
 {% api %}

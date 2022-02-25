@@ -23,12 +23,12 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import, depending on if your users have an `external_id` or not.
 
 {% alert tip %}
-Need to upload a CSV larger than 100MB? Contact us at smb-product@braze.com and we may be able to help!  
+Need to upload a CSV larger than 100MB? Contact us at [smb-product@braze.com](mailto:smb-product@braze.com) and we may be able to help!  
 {% endalert %}
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze’s [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -105,7 +105,7 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (e.g. `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). <br>[List of accepted Languages][1] | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). <br>Refer to our [list of accepted languages][1]. | No |
 | `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g. `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.   | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user. | No |
@@ -164,7 +164,7 @@ If Braze notices something malformed in your file during the upload, errors will
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to [Troubleshooting](#troubleshooting) below.
 
-![CSV Import][4]
+![CSV upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
 
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.
@@ -178,9 +178,7 @@ If the import process runs into an error, a yellow warning icon will be displaye
 
 ## Segmenting
 
-User import creates and updates user profiles, and can also be used to create segments. To create a segment, select **Create a Segment from this CSV**.
-
-![CSV Import Segmenting Users][7]{: style="max-width:80%;"}
+User import creates and updates user profiles, and can also be used to create segments. To create a segment, select **Automatically generate a segment from the users who are imported from this CSV** before starting the import.
 
 You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment once the import has been completed.
 

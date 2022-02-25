@@ -16,15 +16,13 @@ Braze's uninstall tracking provides the following details:
 
 Showing aggregate uninstalls over time can help you visualize trends and anomalies so that you can monitor app uninstalls with ease. Similarly, tracking campaign-level uninstalls can reveal whether a specific campaign is driving or preventing app uninstalls.
 
-Braze __automatically collects a base level of uninstall information__ from your regular push campaigns. However, because the frequency that different users receive push campaigns may vary, Braze offers Uninstall Tracking to provide a more accurate snapshot of uninstall activity among your users.
+Braze automatically collects a base level of uninstall information from your regular push campaigns. However, because the frequency that different users receive push campaigns may vary, Braze offers Uninstall Tracking to provide a more accurate snapshot of uninstall activity among your users.
 
 {% alert note %} You must opt-in to uninstall tracking on the dashboard. This feature is currently available for apps on iOS, Android, and Fire OS. {% endalert %}
 
 ## Implementation
 
-You can enable uninstall tracking in the **Settings** tab of the **Manage Settings** page. for each app you are interested in tracking, check the box in the uninstall tracking section.
-
-![Uninstall Tracking Checkbox][1]
+You can enable uninstall tracking in the **Settings** tab of the **Manage Settings** page for each app you are interested in tracking.
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 

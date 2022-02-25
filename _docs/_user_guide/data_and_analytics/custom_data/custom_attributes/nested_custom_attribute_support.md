@@ -127,17 +127,17 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 <br> `{{custom_attribute.${most_played_song}.play_analytics.count}}` — "50"
 {% endraw %}
 
-![Last Played Push Notification Example][5]
+![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
 
 ### Segmentation
 
 You can build Segments based on nested custom attributes to further target your users. To do so, filter your Segment based on the custom attribute object, then specify the property name and associated value you want to segment on.
 
-![Last Played Song Segment][6]
+![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
 When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
-![NCA Segment Comparator][7]
+![A user choosing an operator based on the data type for the nested custom attribute][7]
 
 ## Data Points
 

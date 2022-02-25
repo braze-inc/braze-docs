@@ -11,9 +11,7 @@ description: "This reference article describes purchase events and properties, t
 
 Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each individual user profile. These purchase events must be set up by your team. Logging purchase events gives you the option to add properties like quantity and type, helping you further target your users based on these properties.
 
-Once you have set up and begun logging purchase events, you can view this purchase data on the User Profile.
-
-![User profile][5]{: style="max-width:80%;margin-left:15px;"}
+After you have set up and begun logging purchase events, you can view this purchase data on a user's profile, in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
 
 ## Logging purchase events
 
@@ -54,7 +52,7 @@ You can trigger any number or type of follow-up campaigns based on logged purcha
 
 **Example of Filtering based on Purchase Event:**
 
-![Purchase targeting][1]{: style="max-width:80%;margin-left:15px;"}
+![Filtering for users that have made more than five purchases][1]{: style="max-width:80%;margin-left:15px;"}
 
 {% alert tip %} 
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -64,9 +62,9 @@ If you would like to segment on the number of times a specific purchase has occu
 
 In addition to tracking purchase metrics for segmentation, Braze also notes the number purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
 
-![Purchase graph][4]
+![Purchase graph on the Revenue page showing statistics for all purchases][4]
 
-![Purchase breakdown][3]
+![Purchase breakdown table on the Revenue page listing the products in your applications, the number of times they've been purchased, and their associated revenue][3]
 
 ## Purchase event properties {#purchase-properties}
 
@@ -76,7 +74,7 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 **Example of Triggering based on Purchase Event Properties:**
 
-![Purchase delivery][2]{: style="max-width:80%;margin-left:15px;"}
+![Action-based delivery settings to send a campaign to users who purchase headphones with a brand name equal to HeadphoneMart][2]{: style="max-width:80%;margin-left:15px;"}
 
 Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 

@@ -20,7 +20,7 @@ When either importing or updating a user profile via [API][api_doc] or [CSV][csv
 
 For easy reference, this information is reflected on the user profile in the email **Contact Settings**, located in the **Engagement** tab.
 
-![open_click_user_profile][1]{: style="max-width:60%;"}
+![Email open and click tracking pixel fields on the Engagement tab of a user's profile][1]{: style="max-width:60%;"}
 
 [open_tracking]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel
 [api_doc]: {{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields
