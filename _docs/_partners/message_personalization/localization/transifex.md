@@ -31,11 +31,11 @@ As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to ma
 
 To set up basic authentication for your account, navigate to the Braze platform, under __Manage Settings__, open the __Connected Content__ tab. Here you will provide the credentials used for all Connected Content calls to Transifex.
 
-![Basic Authentication Credential Management][34]
+![An image of a user adding Connected Content authentication for Transifex to their dashboard.][34]
 
 Click __New Credential__, name your credential, and add your user name and password for your Transifex account.
 
-![Basic Authentication Credential Creation][35]{: style="max-width:35%" }
+![A Connected Content prompt asking for name, username, and password.][35]{: style="max-width:35%" }
 
 ### Step 2: Connected Content
 
@@ -49,7 +49,7 @@ For example, if your Transifex project is located at `https://www.transifex.com/
 
 An example response with a blank context field is pictured below:
 
-![Terminal response][33]{: style="max-width:60%;"}
+![A text example of what a response may look like.][33]{: style="max-width:60%;"}
 
 ## Connnected Content message example
 

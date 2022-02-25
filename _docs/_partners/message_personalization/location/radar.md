@@ -50,19 +50,19 @@ You can use custom events and user attributes to build location-based segments o
 
 Send a push notification to the user with arrival instructions as they arrive at your store for a curbside pickup.
 
-![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
+![An action-based delivery campaign showing that the campaign will be delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbisde".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Build an audience segment of recent store visitors
 
 For example, target any users who have visited your store within the past 7 days, whether they made a purchase or not.
 
-![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
+![A segment where "radar_geofence_tags" includes value my_store and "radar_updated_at" was less than 7 days ago.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Connected Content
 
 The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 
-![Connected Content Example][1]{: style="float:right;max-width:30%;border:0;"}
+![An Android image of a Connected Content push message that displays "New In Store Deals, Walmart and target near you".][1]{: style="float:right;max-width:30%;border:0;"}
 
 To get started, you'll need to have your Radar publishable API key on hand to use within your request URLs.
 

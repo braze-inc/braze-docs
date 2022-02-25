@@ -31,23 +31,23 @@ The Braze and Wyng integration allows you to leverage Wyng experiences to delive
 
 In Wyng, go to [**Integrations**][1] and select the **Add** tab. Next, hover over **Braze** and click **Connect** for the integration.
 
-![Select the Braze tile][2]{: style="max-width:80%;"}
+![The Braze partner tile in the Wyng plaform.][2]{: style="max-width:80%;"}
 
 ### Step 2: Configure the Braze connector
 
 1. In the configuration window that opens, provide your Braze REST API key.
-![Enter Braze API key][4]{: style="max-width:80%;"}<br><br>
-2. Next, use the dropdown to select the Wyng campaign you would like to share with Braze.![Select a Wyng campaign][5]{: style="max-width:80%;"}<br><br>
+![An image of the what the credentials prompt looks like.][4]{: style="max-width:80%;"}<br><br>
+2. Next, use the dropdown to select the Wyng campaign you would like to share with Braze.![An image of the Braze connector prompting you to select an existing Wyng campaign you would like to share with Braze.][5]{: style="max-width:80%;"}<br><br>
 3. Next, you must set up subscriptions, attribute and event objects, and custom events.<br><br>
 - **Subscriptions setup (required)**<br>
-To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and ID. To add multiple group names and IDs, click the **Add Subscription** button again.<br>![Add subscription group name and ID][8]{: style="max-width:80%;"}<br><br>
+To subscribe users to subscription groups, click **Add Subscription** and add your subscription group name and ID. To add multiple group names and IDs, click the **Add Subscription** button again.<br>![An image prompting you for a subscription group name and ID.][8]{: style="max-width:80%;"}<br><br>
 - **User track setup**<br>
-Click **Add custom property** to add attribute and event object pairs to send to the users/track endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![Add attribute custom properties][9]{: style="max-width:80%;"}<br><br>
+Click **Add custom property** to add attribute and event object pairs to send to the users/track endpoint. Use this to add hardcoded attribute values for each data transaction sent for the integration. To add multiple properties, click the **Add custom property** button again.<br>![An image prompting you to add attribute custom properties.][9]{: style="max-width:80%;"}<br><br>
 - **Send custom event**<br>
-Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![Add custom events][10]{: style="max-width:80%;"}<br><br>
+Optionally, you can enable **Sending custom event**. If enabled, you should include the event name and corresponding app ID.<br>![An image prompting you to send custom events, if needed.][10]{: style="max-width:80%;"}<br><br>
 4. Lastly, you must map Wyng fields to Braze API fields based on your use case. Click **Select a field** to choose fields to map, and afterwards, **Save** your integration. Once saved, these mapped fields can be found under **Integrations > Manage**.
-![Map Wyng form fields to Braze API fields][11]{: style="max-width:80%;"}
-![Select a mapped field from the dropdown][12]{: style="max-width:80%;margin-top:2px"}
+![An example of the different Wyng fields you can map to certain Braze fields.][11]{: style="max-width:80%;"}
+![A list of available sync fields.][12]{: style="max-width:80%;margin-top:2px"}
 
 ### Step 3: Test your integration
 
@@ -65,15 +65,15 @@ Applications are broad, and specific questions can be addressed to [contact@wyng
 
 In the case of a failed submission, when sending data to Braze, click on the **View Log** link to review the failed submission and the associated error message.
 
-![List active integrations][14]{: style="max-width:80%;"}
+![The "View Log" link found under the actions header.][14]{: style="max-width:80%;"}
 
 The log page will show the failed submission, retry count, data from the submission, error, and a link to re-push the submission.
 
-![View submission log][15]{: style="max-width:80%;"}
+![An example of what a failed submission will show.][15]{: style="max-width:80%;"}
 
 The **View Error** section will show the error code and some additional information about the cause of the error. You can then cross-reference the error code with Braze to determine the cause.
 
-![View error log][16]{: style="max-width:80%;"}
+![An example error log shown in the Wyng paltform.][16]{: style="max-width:80%;"}
 
 If you have any additional questions, please reach out to Wyng support ([support@wyng.com][13]) for assistance.
 

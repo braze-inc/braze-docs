@@ -56,7 +56,7 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![Connected Content Push Example][17]{: style="max-width:40%"}
+![A Connected Content push message that says "It's raining! Grab an Umbrella!" shown on an Android device][17]{: style="max-width:40%"}
 
 A breakdown of the two Connected Content calls can be found below.
 
