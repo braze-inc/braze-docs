@@ -13,5 +13,5 @@ tool: Reports
 
 > This article covers push reporting, which you can use to view and analyze the success of your push campaigns.
 
-{% include campaign_analytics.md channel="push" %}
+{% include campaign_analytics.md channel="push" %}.
 
