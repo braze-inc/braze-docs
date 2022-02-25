@@ -13,7 +13,7 @@ platform:
 
 # Common push error messages
 
-Check out the common error messages for push messaging below:
+Check out these common error messages for push messaging:
 
 {% tabs %}
 {% tab Android %} 
