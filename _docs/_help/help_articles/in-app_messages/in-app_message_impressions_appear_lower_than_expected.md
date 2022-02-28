@@ -24,7 +24,7 @@ It’s important to ensure that your segment size in the campaign reflects your 
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![Campaign changelog example][10]
+![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
 
 ## Run tests
 
