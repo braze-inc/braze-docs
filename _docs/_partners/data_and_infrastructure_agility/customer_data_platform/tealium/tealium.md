@@ -34,6 +34,11 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 Tealium AudienceStream is an omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. Check out our documentation on how to set up [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/).
 
 {% endtab %}
+{% tab iQ Tag Management %}
+Tealium iQ allows you to trigger code in your apps by using a tag in Tealium iQ tag management UI. This tag will collect, control, and deliver event data from mobile applications allowing you to configure a native Braze implementation without adding Braze-specific code to your apps. Users can integrate the iQ tag management through either remote commands tags or JSON configuration files (recommended Tealium approach). Users using the Braze Web SDK must integrate through the JSON config file method.
+
+To learn more about the pros and cons of each method, check out our [Tealium iQ tag manager](#mobile-remote-commands) section below.
+{% endtab %}
 {% endtabs %}
 
 {% alert important %}
@@ -70,27 +75,15 @@ Note: Tealium does not batch consent events (subscription preferences) or user d
 
 ### Remote commands
 
-Remote commands allow you to trigger code in your apps by using a tag in Tealium iQ Tag Management - which collects, controls, and delivers event data from mobile applications allowing you to configure a native Braze implementation without adding Braze-specific code to your apps. Instead, the Braze remote command module will automatically install and build the required Braze libraries. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
+Remote commands are a feature of the Tealium iOS and Android libraries that allows you to make calls from the Tealium SDK - through the Braze servers - to Braze using Tealium iQ tag management. The Braze remote command module will automatically install and build the required Braze libraries and handle all message rendering and analytics tracking. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
 
-Using remote commands, the Braze and Tealium SDKs work in tandem, allowing you to make calls from the Tealium SDK - through the Braze servers - to Braze. **The Braze SDK will continue to handle all message rendering and analytics tracking**.
+Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types, and the underlying native code is identical.
 
-### Mobile remote commands
-
-Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types, and the underlying native code is identical:
-
-#### Remote Command Tag
-Remote commands tag allows clients to trigger code in their apps by using a tag set up in Tealium iQ Tag Management UI.
-| Pros | Cons |
-| ---- | ---- |
-| Easily modify the mappings and data sent to the remote command using the Tealium iQ UI. This allows us to send additional data or events to a 3rd party SDK once the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-#### JSON Configuration File. 
-This is Tealium's recommended approach as [noted here](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works) in their documentation. 
-| Pros | Cons |
-| ---- | ---- |
-| Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption. | The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
-{: .reset-td-br-1 .reset-td-br-2}
+| Mobile remote command method | Pros | Cons |
+| --- | --- | --- |
+| **Remote command tag** | Easily modify the mappings and data sent to the remote command using the Tealium iQ UI.<br><br>This allows us to send additional data or events to a 3rd party SDK once the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
+| **JSON configuration file**<br>([Recommended](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption.<br><br>The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. It will also allow you to track location and social data on Twitter and Facebook - like the number of followers or friends a user has. Check out the remote command chart to see the corresponding Braze methods.
 
@@ -106,11 +99,11 @@ Braze mobile remote commands do not support all Braze methods and messaging chan
 
 ### Braze Web SDK tag
 
-Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883)  allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
+Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883) allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
 
 1. In Tealium, navigate to **iQ [Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Tags/ta-p/5016) > Tags > + Add Tag > Braze Web SDK**.
 2. In the Tag Configuration dialogue box, enter the API Key (your Braze app identifier key), Base URL (Braze SDK endpoint), and Braze Web SDK code version](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md). You can also choose to enable logging to log information in the web console for debugging purposes.
-3. In the [Load Rules]((https://community.tealiumiq.com/t5/iQ-Tag-Management/Load-Rules/ta-p/5098) dialogue box, choose "Load on All Pages" or select **Create Rule** to determine when and where to load an instance of this tag on your site.
+3. In the [Load Rules](https://community.tealiumiq.com/t5/iQ-Tag-Management/Load-Rules/ta-p/5098) dialogue box, choose "Load on All Pages" or select **Create Rule** to determine when and where to load an instance of this tag on your site.
 4. In the **[Data Mappings](https://community.tealiumiq.com/t5/iQ-Tag-Management/Data-Mappings/ta-p/10645#mapping_data_sources)** dialogue box, select **Create Mappings** to map Tealium data to Braze. The destination variables for the Braze Web SDK tag are built into the **Data Mapping** tab for the tag. The [following tables](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106#toc-hId--2077373923) list the available destination categories and describe each destination name.
 5. Select **Finish**.
 
