@@ -36,17 +36,17 @@ Welcome to my Rickshaw App platform.
 Please access your onboarding course at:
 
 {% connected_content
-  https://edume-braze-connect.herokuapp.com/
-  <EDUME-CONTENT-LINK-AND-CONTENT-ID>&groupId=5681&externalUserId={{${driver_id}}}
+  https://connect.edume.com/
+  EDUME-CONTENT-LINK-AND-CONTENT-ID&groupId=5681&externalUserId={{${driver_id}}}
   :headers {
-       "X-Api-Key": "<YOUR-EDUME-API-KEY>"
+       "X-Api-Key": "YOUR-EDUME-API-KEY"
   }
 %}
 ```
 {% endraw %}
 
-1. Replace `<YOUR-EDUME-API-KEY>` with your EduMe API key.<br><br>
-2. Replace the `<EDUME-CONTENT-LINK-AND-CONTENT-ID>` with the corresponding content link string and module, lesson, or survey identifier. These identifiers can be found in your EduMe account.
+1. Replace `YOUR-EDUME-API-KEY` with your EduMe API key.<br><br>
+2. Replace the `EDUME-CONTENT-LINK-AND-CONTENT-ID` with the corresponding content link string and module, lesson, or survey identifier. These identifiers can be found in your EduMe account.
   - Course: `getCourseLink?moduleId=12087`
   - Lesson: `getLessonLink?lessonId=25805`
   - eNPS survey: `getSurveyLink?surveyId=654`<br><br>
