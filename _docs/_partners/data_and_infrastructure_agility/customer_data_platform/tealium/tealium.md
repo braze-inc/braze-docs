@@ -39,12 +39,12 @@ Tealium AudienceStream is an omnichannel customer segmentation and real-time act
 {% alert important %}
 Tealium offers both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case, and there are no concerns about hitting Braze's API rate limit specifications. Please contact Braze Support or your CSM if you have any questions. 
 
-For batch connectors requests are queued until one of the following thresholds is met:
+For batch connectors, requests are queued until one of the following thresholds is met:
 - Max number of requests: 75
 - Max time since oldest request: 10 minutes
 - Max size of requests: 1 MB
 
-Note: by default Tealium does not batch consent events (subscription preferences) or user deletion events.
+Note: Tealium does not batch consent events (subscription preferences) or user deletion events by default.
 {% endalert %}
 
 ## Prerequisites
@@ -62,7 +62,7 @@ Note: by default Tealium does not batch consent events (subscription preferences
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
+| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
 | [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -70,26 +70,26 @@ Note: by default Tealium does not batch consent events (subscription preferences
 
 ### Remote commands
 
-Remote commands allow you to trigger code in your apps by using a tag in Tealium iQ Tag Management - which collects, controls, and delivers event data from mobile applications allowing you to configure a native Braze implementation without having to add Braze-specific code to your apps. Instead, the Braze remote command module will automatically install and build the required Braze libraries. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
+Remote commands allow you to trigger code in your apps by using a tag in Tealium iQ Tag Management - which collects, controls, and delivers event data from mobile applications allowing you to configure a native Braze implementation without adding Braze-specific code to your apps. Instead, the Braze remote command module will automatically install and build the required Braze libraries. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
 
 Using remote commands, the Braze and Tealium SDKs work in tandem, allowing you to make calls from the Tealium SDK - through the Braze servers - to Braze. **The Braze SDK will continue to handle all message rendering and analytics tracking**.
 
 ### Mobile remote commands
 
-Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types and the underlying native code is identical:
+Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types, and the underlying native code is identical:
 
 #### Remote Command Tag
-Remote commands Tag allows clients to trigger code in their apps by using a tag set up in Tealium iQ Tag Management UI.
+Remote commands tag allows clients to trigger code in their apps by using a tag set up in Tealium iQ Tag Management UI.
 | Pros | Cons |
 | ---- | ---- |
-| Easily modify the mappings and data being sent to the remote command using the Tealium iQ UI. This allows us to send additional data or events to a 3rd party SDK once the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
+| Easily modify the mappings and data sent to the remote command using the Tealium iQ UI. This allows us to send additional data or events to a 3rd party SDK once the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### JSON Configuration File. 
 This is Tealium's recommended approach as [noted here](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works) in their documentation. 
 | Pros | Cons |
 | ---- | ---- |
-| Using the JSON method eliminates the need to have a hidden webview in the app, and greatly reduces memory consumption. | The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
+| Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption. | The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. It will also allow you to track location and social data on Twitter and Facebook - like the number of followers or friends a user has. Check out the remote command chart to see the corresponding Braze methods.
@@ -106,7 +106,7 @@ Braze mobile remote commands do not support all Braze methods and messaging chan
 
 ### Braze Web SDK tag
 
-Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883) Management  allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
+Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883)  allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
 
 1. In Tealium, navigate to **iQ [Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Tags/ta-p/5016) > Tags > + Add Tag > Braze Web SDK**.
 2. In the Tag Configuration dialogue box, enter the API Key (your Braze app identifier key), Base URL (Braze SDK endpoint), and Braze Web SDK code version](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md). You can also choose to enable logging to log information in the web console for debugging purposes.
@@ -162,7 +162,7 @@ In the dialogue that opens, select the data source you just built, and under **E
 
 #### Configuration
 
-Next, select **Add Connector** at the bottom of the page. You must name your connector and provide your Braze API endpoint and Braze REST API key here.
+Next, select **Add Connector** at the bottom of the page. Name your connector and provide your Braze API endpoint and Braze REST API key here.
 
 ![Create Configuration][15]{: style="max-width:70%;"}
 
