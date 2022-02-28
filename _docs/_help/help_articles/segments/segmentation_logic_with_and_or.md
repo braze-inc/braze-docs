@@ -10,7 +10,7 @@ tool: Segments
 
 # Segmentation logic with AND/OR
 
-The `AND` and `OR` operators enable some very powerful filtering. There are 2 scenarios you may wish to apply using:
+The `AND` and `OR` operators enable some very powerful filtering. There are two scenarios you may wish to apply using:
 * [AND or OR](#using-and-or-or)
 * [Both](#using-both)
 
