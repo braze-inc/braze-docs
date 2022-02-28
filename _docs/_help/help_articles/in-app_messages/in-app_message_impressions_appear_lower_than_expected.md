@@ -24,7 +24,7 @@ It’s important to ensure that your segment size in the campaign reflects your 
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![Campaign changelog example][10]
+![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
 
 ## Run tests
 
@@ -34,7 +34,7 @@ A quick way to identify any obvious issues is to clone the campaign, target your
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![Custom Event Counts example][11]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][11]
 
 ## Message impressions
 
