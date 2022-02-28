@@ -13,7 +13,7 @@ platform:
 
 # Common push error messages
 
-Check out the common error messages for push messaging below:
+Check out these common error messages for push messaging:
 
 {% tabs %}
 {% tab Android %} 
@@ -51,7 +51,7 @@ This error may occur for several reasons:
 
 ### Push bounced: APNS feedback service removed
 
-This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to [Apple's Communicating with APNs article](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
+This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to Apple's [Communicating with APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
 
 
 {% endtab %}

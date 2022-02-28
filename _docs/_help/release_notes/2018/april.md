@@ -25,14 +25,14 @@ Braze has added tagging and better search functionality to Braze to improve your
 
 ## Push stories
 
-[Create notifications][95] with multiple pages, an image, click behavior, and an optional title & subtitle. Just create a push message and select "Push Story" from the dropdown.
+[Create notifications][95] with multiple pages, an image, click behavior, and an optional title and subtitle. Simply create a push message and select **Push Story** from the dropdown.
 
-_Please note that you must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to use this feature._
+Note that you must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to use this feature.
 
 
 ## Inbox vision
 
-You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Talk to your Customer Success Manager or Account Manager for pricing and options.
+You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Contact your Customer Success Manager or Account Manager for more information.
 
 
 [92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management

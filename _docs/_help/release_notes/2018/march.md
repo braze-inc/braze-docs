@@ -9,7 +9,7 @@ description: "This article contains release notes for March 2018."
 
 ## Link templates
 
-You can now [create templates that append parameters][91] or pre-append URI's to all links in an email message. Want to append Google Analytics query parameters to all links? Go for it!
+You can now create [templates that append parameters][91] or pre-append URI's to all links in an email message. Want to append Google Analytics query parameters to all links? Go for it!
 
 ## Universal APNs certificates for development builds
 

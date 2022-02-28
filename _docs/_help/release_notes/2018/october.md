@@ -19,7 +19,7 @@ description: "This article contains release notes for October 2018."
 
 ## Calculate exact audience stats for campaigns
 
-You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Press __Calculate Exact Stats__ in the footer of the __Target Users__ section and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as draft).
+You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Click **Calculate Exact Stats** in the footer of the **Target Users** section, and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as drafts).
 
 ## Windows 8 deprecation
 
@@ -27,7 +27,7 @@ Braze no longer supports Windows 8 as of October 10, 2018.
 
 ## Partnerships hub
 
-You can now find a list of your integrations on the Braze platform under __Integrations__, along with integration keys and instructions.
+You can now find a list of your integrations on the Braze platform under **Integrations**, along with integration keys and instructions.
 
 ## Email analytics calculations
 
@@ -47,4 +47,4 @@ Braze customers using Currents can now see [Azure]({{site.baseurl}}/partners/bra
 
 ## Input field expansions
 
-You can now expand the input boxes for Email subject lines and Push titles.
+You can now expand the input boxes for email subject lines and push titles.
