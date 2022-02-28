@@ -69,7 +69,7 @@ To learn more about the expected behavior and look of each of these message type
 
 You can edit all aspects of your message's content and behavior in the **Compose** tab of the message editor.
 
-![Compose Content Card][24]
+![Sample Content Card details in the Compose tab of the message editor][24]
 
 The content here varies based on the **Card Type** chosen in the previous step, but may include any of the following options:
 
@@ -175,7 +175,7 @@ Once Content Cards have been sent, similar to emails, they sit waiting in an "in
 
 If you need to remove old cards, you must stop the campaign to do so. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you would like to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
-![Confirm Content Card deactivation dialog][25]{: style="max-width:75%" }
+![Dialog for confirming Content Card deactivation][25]{: style="max-width:75%" }
 
 ### Card removal events {#action-based-card-removal}
 
@@ -187,12 +187,11 @@ Within a campaign or Canvas Message, you can optionally add a __Removal Event__ 
 You can specify multiple custom events and purchases that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
 {% endalert %}
 
-![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Content Card Removal Conditions panel with Content Card Removal Event option]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Updating already sent cards
+### Updating sent cards
 
 If you find you need to make changes to cards that have already been sent:
-
 1. Stop your campaign.
 2. Remove active Content Cards from users' feeds.
 3. Edit your campaign as needed.
