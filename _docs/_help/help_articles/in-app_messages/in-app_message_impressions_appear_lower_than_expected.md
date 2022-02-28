@@ -34,7 +34,7 @@ A quick way to identify any obvious issues is to clone the campaign, target your
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![Custom Event Counts example][11]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][11]
 
 ## Message impressions
 
