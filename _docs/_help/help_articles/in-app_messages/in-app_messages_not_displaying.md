@@ -22,7 +22,7 @@ If you find that your in-app messages are not displaying or rendering properly, 
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![Custom Event Counts Statistic][14]
+![Custom Event Counts example][14]
 
 ## Message impressions
 
@@ -38,15 +38,16 @@ Alternatively try using a different type of in-app message template or size of i
 
 Find out if you have customized your session timeout. By default, Braze retrieves in-app messages at the start of a session from the server.
 
-If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. You can read more about that for:
+If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. 
 
+Learn more about customizing session timeouts for for:
 * [iOS][16]
 * [Android][17]
 * [Web][18]
 
 ## Minimum interval
 
-There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Review our documentation for more information on this:
+There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for: 
 * [iOS][19]
 * [Android][20]
 * [Web][21]

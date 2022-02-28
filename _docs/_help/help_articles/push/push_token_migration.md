@@ -48,7 +48,7 @@ When importing push tokens from other systems, an `external_id` is not always av
 
 #### Migration if external ID is not present
 
-These tokens can be migrated by [importing them with our API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import). To do this, use the `users/track` endpoint and post the following information:
+These tokens can be migrated by importing them with our [API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import). To do this, use the `users/track` endpoint and post the following information:
 
 ```json
 "attributes" : [
