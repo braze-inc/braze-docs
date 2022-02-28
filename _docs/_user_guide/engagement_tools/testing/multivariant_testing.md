@@ -62,7 +62,7 @@ Click **Create Campaign** and select a channel for the campaign from the section
 
 ### Step 2: Compose your variants
 
-You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test. 
+You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test—an A/B test examines the effect of changing one variable, whereas a multivariate test examines two or more.
 
 For some ideas on how to get started differentiating your variants, see the section in this article on [Tips for different channels][70].
 
@@ -70,11 +70,11 @@ For some ideas on how to get started differentiating your variants, see the sect
 
 ### Step 3: Schedule your campaign
 
-Test scheduling works the same as scheduling any other Braze campaign. All of Braze's standard [delivery types][175] are available.
+Test scheduling works the same as scheduling any other Braze campaign. All of Braze's standard [delivery types][175] are available. However, the option to send a winning variant automatically is only available when you schedule a campaign to deliver once for select messaging channels.
 
 ### Step 4: Choose a segment and distribute your users across variants
 
-Select segments to target, then distribute its members across your selected variants, as well as reserving a portion to send to the winning variant, if necessary.
+Select segments to target, then distribute its members across your selected variants. For push, email, and webhook campaigns scheduled to send once, you can also reserve a portion to send to the winning variant, if necessary.
 
 Decide what percentage of your target segment should receive each of your variants, be in the control group (if any), and what percentage should receive the winning variant once the A/B test is complete.
 
@@ -86,21 +86,32 @@ When viewing your results, you can compare the conversion rates of your variants
 
 The size of the control group for a campaign with [Intelligent Selection][intelselection] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have multiple variants such that each variant is sent to less than 20% of users, then the control group must become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
-{% alert important %}
-Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
-{% endalert %}
-
-Sending the winning variant automatically is only available for Email, Push, and Webhook campaigns scheduled to send once.
-
 ![Choose a Segment][180]
 
 For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
 
+{% alert important %}
+Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
+{% endalert %}
+
+#### Sending the winning variant
+
+For email, push, and webhook campaigns scheduled to send once, you can reserve a portion of your audience for the "Winning Variant" group. Users in this group will receive the winning variant once the A/B test is complete.
+
+![Send winning variant when A/B testing with email, push, or webhook campaigns][10]
+
+Specify what percentage of your campaign audience should be assigned to the Winning Variant group, then configure the following additional send settings:
+
+- What determines the winning variant
+- When the A/B test starts
+- When the A/B test ends
+- What to do if the test results aren't statistically significant (abort message or send anyways)
+
 ### Step 5: Pick the action that determines the winner
 
-The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner does not affect what you choose for the campaign’s [conversion events][2].
+The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner does not affect what you choose for the campaign’s [conversion events][2].
 
-Keep in mind that if you’re using a control group, users in the control group can't perform `Opens` or `Clicks`, so the “performance” of the control group is guaranteed to be `0`. As a result, the control group cannot “win” the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message.
+Keep in mind that if you’re using a control group, users in the control group can't perform `Opens` or `Clicks`, so the “performance” of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message.
 
 ### Step 6: Schedule when to send the winning variant
 
@@ -234,6 +245,7 @@ If you’re A/B testing re-engagement messages, don’t forget to compare the lo
 [175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
 [180]: {% image_buster /assets/img/ab_create_4.png %}
 [210]: {% image_buster /assets/img/ab_create_8.png %}
+[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
 [272]: #intelligent-selection
 [273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [intelselection]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
