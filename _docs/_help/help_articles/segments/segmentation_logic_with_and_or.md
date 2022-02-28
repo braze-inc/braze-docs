@@ -33,7 +33,7 @@ For example, imagine that you want to send a message to all your users except th
 
 Finally, check out this example where we use both `AND` and `OR`. Here, the target audience includes users who purchased Nike sneakers `OR` Adidas sneakers `AND` are opted in to receive email notifications.
 
-![Example for segmentation logic][33]
+![Building a segment for Sneaker Shoppers where a customer's favorite brand equals Nike or Adidas, and they have opted in to email][33]
 
 Another way to ensure you’re building the right logic is to create your segment and [preview the users][35] who are falling into it based on your filters. This way you can make sure that their attributes, app version, or any other segmentation matches what you are seeing.
 
