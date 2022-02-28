@@ -47,7 +47,7 @@ Learn more about customizing session timeouts for the following platforms:
 
 ## Minimum interval
 
-There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for: 
+There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for the following platforms: 
 * [iOS][19]
 * [Android][20]
 * [Web][21]
