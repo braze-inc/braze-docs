@@ -34,7 +34,7 @@ Additional stats, like **push open rate** and **conversion rate**, are now avail
 
 ## Apple push certificates: Using .p8 files
 
-You can now use a [.p8 file][80] when uploading an Apple Push Certificate, ensuring that your iOS push credentials will never expire.
+You can now use a [p8 file][80] when uploading an Apple Push Certificate, ensuring that your iOS push credentials will never expire.
 
 
 [80]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
