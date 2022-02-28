@@ -29,7 +29,7 @@ For example, imagine that you want to send a message to all your users except th
 - You can use two filters “is not `1.0`” or “is not `1.1`”. This targets all users that do not have those versions.
 - The alternative may be a longer route. You will need to add a filter for every version of your app using the OR statement, making sure to exclude app versions `1.0` and `1.1`.
 
-# Using both
+## Using both
 
 Finally, check out this example where we use both `AND` and `OR`. Here, the target audience includes users who purchased Nike sneakers `OR` Adidas sneakers `AND` are opted in to receive email notifications.
 
