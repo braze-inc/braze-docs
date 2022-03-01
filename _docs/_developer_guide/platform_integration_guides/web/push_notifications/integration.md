@@ -73,7 +73,6 @@ If you wish to unsubscribe a user, you can do so by calling ```appboy.unregister
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
-
 ## Step 3: Configure Safari push
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
