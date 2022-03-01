@@ -62,7 +62,7 @@ Once you have finished the app-side integration, you can test it by running a te
 
 From the Braze platform, create a Braze in-app message campaign with a __Custom Code__ message type. Next, select __HTML Upload__ as the custom type. Make sure to populate the content of the message with the base in-app messaging fields; this content will not be shown to the user.
 
-![Braze Custom Code Campaign][2]
+![An image of what the dashboard looks like when selecting the "Custom Code" message type.][2]
 
 Next, use the following minimal HTML snippet to satisfy the form validation: 
 ```
@@ -71,10 +71,10 @@ Next, use the following minimal HTML snippet to satisfy the form validation:
 
 Note that this will not be displayed in production on your device as Judo will rewrite and replace this with a Judo Experience.
 
-![Braze HTML Snippet][3]
+![An image showing the form validation code added to the compose step of your campaign.][3]
 
 ### Step 2: Set a key-value pair for Judo
-![Braze Campaign Extras Configuration][4]{: style="float:right;max-width:50%;margin-left:15px;"}
+![This image shows the one key-value pair needed for this integration with the "key" being "judo-experience", and the "value" being your Judo link.][4]{: style="float:right;max-width:50%;margin-left:15px;"}
 
 Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) on the campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect this key-value pair in the handler and use it to inject your Judo Experience in place of the standard Braze in-app message UI.
 <br><br>

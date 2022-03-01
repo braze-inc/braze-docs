@@ -21,7 +21,7 @@ You will need to clone the [Retail Demo Store repository](https://github.com/aws
 
 Before setting up Braze to send personalized messages to users, review the relevant components required for a typical eCommerce website, using the Retail Demo Store architecture as an example.
 
-![Braze personalization architecture]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
+![An image breaking down the Braze personalization architecture noting how the different components interact with one another.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
 1. Retail Demo Store's web UI uses the AWS Amplify JavaScript library to send training events to Amazon Personalize.
 2. Braze campaign user records are updated from the Global Store User service.
@@ -38,7 +38,7 @@ Braze Connected Content will be able to get these recommendations via a recommen
 
 ### Step 1: Deploy the Retail Demo Store to your AWS account
 
-![Choose AWS Region][2]{: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
+![An image of the available AWS regions.][2]{: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
 
 In the following table, choose an **AWS Region** and select **Launch Stack**. This list does not represent all the possible regions where you can deploy the project, only the currently configured regions for deployment with the Retail Demo Store.
 

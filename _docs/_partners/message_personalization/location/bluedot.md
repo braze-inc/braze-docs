@@ -47,9 +47,9 @@ You can set up a push campaign or Canvas that will action off of location events
 
 Set up an action-based campaign within Braze that will send messages based on a set location. For your trigger, use a custom event of `bluedot_entry` or `bluedot_exit` as shown below:
 
-![Bluedot Campaign Compose]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![An action-based campaign in the delivery step. Here, you have two scheduling options that will send the campaign if a user performs a custom `bluedot_entry` or `bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### Targeting users
 
 Make sure to target **All Users** for your app group.
-![Bluedot Campaign Compose]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![An action-based campaign with the target users step encouraging you to select "All Users" as the desired segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}

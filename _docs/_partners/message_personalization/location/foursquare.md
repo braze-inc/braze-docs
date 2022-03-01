@@ -32,7 +32,7 @@ To integrate the two platforms, you must integrate the two SDKs and map the matc
 To correctly map fields between the two SDKs, set the same user ID in both systems using the [`changeUser` method]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) in the Braze SDK and the `setUserId` method of [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) in the Pilgrim SDK.
 
 ### Step 2: Configure Pilgrim console
-![Pilgrim Developer Console][2]{: style="float:right;max-width:40%;margin-left:15px;"}
+![An image of the Pilgrim console asking for Group ID, Android App ID, and iOS App ID.][2]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Find the App Group and App IDs in the Braze developer console. Next, enter your Braze REST API Key and App IDs in the Foursquare Pilgrim Console.
 
@@ -50,13 +50,13 @@ To send a campaign that will send messages based on a set location:
 - Create a Braze campaign or Canvas that sends with **Action-Based Delivery**
 - For your trigger, use a custom event of `arrival` with an event property filter for `locationType` as shown below.
 
-![Pilgrim Developer Console]({% image_buster /assets/img_archive/action-based-campaign.png %})
+![An action-based campaign in the delivery step showing "arrival" selected as the "perform custom event" option, where "locationType" equals "home".]({% image_buster /assets/img_archive/action-based-campaign.png %})
 
 ## Retargeting
 
 To retarget your users, use the Pilgrim SDK to set a `last_location` custom attribute on your Braze users' user profiles. You can then use the `matches regex` comparison to retarget users who went to a particular location in the real world, for example, segmenting all users who were recently at a pizza place.
 
-![Braze Dashboard Targeting]({% image_buster /assets/img_archive/last-location-segment.png %})
+![An action-based campaign in the target users step showing "last_location" equals "Pizza Place".]({% image_buster /assets/img_archive/last-location-segment.png %})
 
 You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, please refer to the [Foursquare developer site](https://developer.foursquare.com/).
 
