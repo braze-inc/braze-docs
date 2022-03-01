@@ -22,10 +22,6 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import, depending on if your users have an `external_id` or not.
 
-{% alert tip %}
-Need to upload a CSV larger than 100MB? Contact us at [smb-product@braze.com](mailto:smb-product@braze.com) and we may be able to help!  
-{% endalert %}
-
 ### Importing with external ID
 
 When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze’s [user profile lifecycle][13].
