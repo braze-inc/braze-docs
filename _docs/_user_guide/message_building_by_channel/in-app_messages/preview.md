@@ -18,9 +18,9 @@ Learn about the new Preview features for custom HTML In-App Messages.
 
 ### Interactive preview
 
-The message preview screen now shows a more realistic preview that renders the JavaScript included in your message.
+The message preview screen shows a realistic preview that renders the JavaScript included in your message.
 
-This means you can now preview _and interact_ with your custom messages (i.e. click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
+This means you can preview _and interact_ with your custom messages (i.e., click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
 ![New HTML in app preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
@@ -37,11 +37,9 @@ This new HTML message type now lets you create one message that can be sent to b
 
 ### New asset uploader
 
-Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
+Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface. You can either upload files individually or via ZIP and copy/paste their URLs or asset file names directly into your HTML.
 
-This new workflow makes it easy to upload files and copy/paste their URLs directly into your HTML.
-
-We've also added the ability to upload newly supported file types, including:
+We've also added the ability to upload the following supported file types:
 
 | File Type | File Extension|
 |:-------- |:------------|
@@ -79,8 +77,8 @@ You can also track new custom button names - up to 100 unique names per campaign
 
 #### Requirements
 
-* up to 100 unique button ids are allowed per campaign
-* Each Button ID can not be longer than 255 characters
+* Up to 100 unique button IDs are allowed per campaign.
+* Each button ID can not be longer than 255 characters.
 * Only alphanumeric, space, dash, and underscore characters are allowed.
 
 **Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
@@ -138,9 +136,9 @@ To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a 
 
 You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting __Add from Media Library__.
 
-Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
+Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard. Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
-Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+Alternatively, you can use the asset file names directly in the HTML message.
 
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
