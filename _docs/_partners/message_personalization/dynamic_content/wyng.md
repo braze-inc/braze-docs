@@ -73,7 +73,7 @@ The log page will show the failed submission, retry count, data from the submiss
 
 The **View Error** section will show the error code and some additional information about the cause of the error. You can then cross-reference the error code with Braze to determine the cause.
 
-![An example error log shown in the Wyng paltform.][16]{: style="max-width:80%;"}
+![An example error log shown in the Wyng platform.][16]{: style="max-width:80%;"}
 
 If you have any additional questions, please reach out to Wyng support ([support@wyng.com][13]) for assistance.
 
