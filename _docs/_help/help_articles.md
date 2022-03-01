@@ -7,7 +7,7 @@ guide_top_header: "Help Articles"
 guide_top_text: "We have plenty of help articles that can help you solve issues and reveal dependencies in your campaigns. If you have a suggestion for a new help article, leave feedback at the bottom of this or any help article page. Or, you can write an article yourself by going to the <a href='https://github.com/braze-inc/braze-docs/wiki'>Braze Docs repository</a> on GitHub. <br> <br>  Choose from the popular topics below or see other articles listed in the navigation panel to your left."
 
 page_type: landing
-description: "This section is home to help articles that can help you solve issues and reveal dependencies in your campaigns."
+description: "This section is home to help articles that can help you solve issues and reveal dependencies when using Braze."
 
 guide_featured_title: "Topics"
 guide_featured_list:

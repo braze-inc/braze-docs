@@ -8,7 +8,7 @@ description: "This help article covers the implications of over-segmenting your 
 tool: Segments
 ---
 
-# Over-Segmentation
+# Over-segmentation
 
 Don't over-segment your tracking! Being more generic will help you target more users and draw more useful divisions between user segments.
 

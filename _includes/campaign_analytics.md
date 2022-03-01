@@ -48,7 +48,22 @@ To measure the impact of an individual SMS message, you can add a [Control Group
 
 The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
-![CC_Message_Performance]({% image_buster /assets/img/cc-message-performance.png %})
+{% if include.channel == "Content Card" %}
+![Content Card message performance analytics]({% image_buster /assets/img/cc-message-performance.png %})
+
+{% elsif include.channel == "email" %}
+![Email message performance analytics]({% image_buster /assets/img_archive/email_message_performance.png %})
+
+{% elsif include.channel == "in-app message" %}
+![In-app message performance analytics]({% image_buster /assets/img_archive/iam_message_performance.png %})
+
+{% elsif include.channel == "push" %}
+![Push message performance analytics]({% image_buster /assets/img_archive/push_message_performance.png %})
+
+{% elsif include.channel == "SMS" %}
+![SMS message performance analytics]({% image_buster /assets/img_archive/sms_message_performance.png %})
+
+{% endif %}
 
 If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remove Columns** and clear any metrics as desired. By default, all metrics are displayed.
 
@@ -109,7 +124,7 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | Unique opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything above 20% is exceptional!
 | Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything above 10% is exceptional!
 | Click to open | The percentage of recipients that opened your email and then clicked on it.
-| Machine opens | Includes emails that are opened without user engagement by Apple devices with [Mail Privacy Protection]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/) enabled. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost. 
+| Machine opens | Includes the proportion of "opens" that are affected by Apple iOS 15. If a user opens an email using the Mail app on an Apple device, the mail is loaded from a proxy server and will be logged as a “Machine Opens.” However, if the mail is opened on another platform (i.e. Gmail app on phone, or Gmail via desktop browser), it will be logged as an “Other opens". It’s also possible that a user opens an email (i.e. "Other opens") before a machine open is logged. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
 | Other opens | Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens".   
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email.
 {: .reset-td-br-1 .reset-td-br-2}

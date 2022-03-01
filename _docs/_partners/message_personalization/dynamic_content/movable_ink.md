@@ -56,13 +56,13 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 
 Customers will need to create a data source that can either be a CSV, website import, or API integration.
 
-![datasource]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![Different data source options that will appear: CSV Upload, Website, or API Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs %}
 {% tab CSV Data Source %}
 - __CSV Data Source__: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content. [Example CSV File]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
-![datasource]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
+![The fields that will show up when selecting "CSV" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
 {% tab Website Data Source %}
 - __Website Data Source__: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content.
@@ -70,12 +70,12 @@ Customers will need to create a data source that can either be a CSV, website im
     - Which fields will be used as Segments
     - Which fields you want as data fields that can be dynamically personalized in the creative (ex: user attributes or custom attributes like first name, last name, city, etc.)
 
-![datasource]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
+![The fields that will show up when selecting "Website" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
 {% tab API Integrations %}
 - __API Integrations__: Use your company's API to power content directly from an API response.
 
-![datasource]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
+![The fields that will show up when selecting "API Integration" as your data source]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -84,11 +84,11 @@ Customers will need to create a data source that can either be a CSV, website im
 From the Movable Ink home screen, create a campaign. You can select from email from HTML, email from image, or a block that can be used in any channel, including push, in-app message, and Content Cards (suggested).
 We also suggest taking a look at the various content options available through blocks.
 
-![create_campaign]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![An image of what the Movable Ink platform looks like when creating a new Movable Ink campaign.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
 Movable Ink has an easy editor for you to drag and drop elements like text, image, etc. If you have populated your data source, you can dynamically generate an image using the data properties. In addition, you can also create fallbacks within this flow for users if the campaign is sent and a user doesn't fit within the personalization criteria.
 
-![create_campaign2]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
+![The Movable Ink block editor showing the different customizable elements.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
 Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. Once complete, a dynamic URL will generate that can then be inserted into Braze!
 
@@ -100,7 +100,7 @@ To include Movable Ink content into Braze messages, you must locate the source U
 
 To obtain the source URL, you must have set up the content in the Movable Ink dashboard, and then from there, finish and export your content. On the **Finish** page, copy the source URL(`img src`) from the creative tag.
 
-![Obtain URL]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![The page that appears once you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
 Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e. {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 

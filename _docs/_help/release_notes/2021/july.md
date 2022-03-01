@@ -10,7 +10,7 @@ description: "This article contains release notes for July 2021."
 
 ## Transactional email campaigns
 
-Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. Visit our [documentation]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) to learn more. 
+Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's [Transactional email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. 
 
 ## Nested object support for event properties
 
@@ -18,11 +18,11 @@ Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analyti
 
 ## New HMAC Liquid filters
 
-New `hmac_sha1` and `hmac_sha256` Liquid encoding filters have been added to the Braze platform. Documentation on these new filters can be found [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/).
+New [`hmac_sha1` and `hmac_sha256` Liquid encoding filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) have been added to the Braze platform.
 
 ## Purchase event page
 
-Curious about the details of purchase events at Braze? Visit our dedicated [purchase event documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) to learn more.
+Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) article to learn more.
 
 ## New Braze partnerships
 

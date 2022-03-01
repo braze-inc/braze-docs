@@ -25,8 +25,7 @@ With [Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passk
 
 ## Dispatch ID value return via messaging endpoints
 
-A message's `dispatch_id` will be included in the following Messaging endpoint responses:
-
+A message's `dispatch_id` will be included in the following messaging endpoint responses:
 - [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-via-api-triggered-delivery)
 - [`/campaigns/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#create-schedule-endpoint)
 - [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-immediately-via-api-only)
@@ -41,5 +40,4 @@ This way, customers who use transactional messaging can trace the call back thro
 Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
 
 ![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog1.png %})
-
 ![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog2.png %})

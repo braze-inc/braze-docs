@@ -146,7 +146,7 @@ This seems like a great fit for you:
 
 Including the title, the image, and linking the URL, this is what the complete Content Card would look like:
 
-![Personalize Campaign][2]
+![An image of a campaign with Connected Content added to the message body and "Add Image" field. This image also shows Connected Content logic added to the "Redirect to Web URL" field, linking users to a recommendation URL.][2]
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}

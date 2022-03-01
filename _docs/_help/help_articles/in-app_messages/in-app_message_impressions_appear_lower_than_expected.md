@@ -10,7 +10,6 @@ channel: in-app messages
 # Low in-app message impressions
 
 If your impressions are lower than you'd like them to be, we recommend that you check for:
-
 * [Segment size](#segment-size)
 * [Changelogs](#segment-changelogs)
 * [Run tests](#run-tests)
@@ -25,26 +24,23 @@ It’s important to ensure that your segment size in the campaign reflects your 
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![Campaign Changelog][10]
+![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
 
 ## Run tests
 
 A quick way to identify any obvious issues is to clone the campaign, target your own user ID or email, and launch the campaign. Once you perform the message trigger (session start, custom event, etc.), verify that you received the message correctly. Then, navigate to the dashboard, and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
 
-
 ## Event triggers
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![Custom Event Counts Statistic][11]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][11]
 
 ## Message impressions
 
-Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
-
-You can read more about this:
-  * [iOS][12] In-app message documentation
-  * [Android][13] In-app message documentation
+Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization for:
+  * [iOS][12] 
+  * [Android][13] 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

@@ -18,8 +18,8 @@ Background push enabled refers to users that are push enabled but have disabled 
 
 For more information, check out our article on [About push notifications][1].
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about
-
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on January 24, 2021_
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about

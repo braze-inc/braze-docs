@@ -11,7 +11,6 @@ Welcome to a New Year and New Decade!
 
 ## Added SMS capability
 
-Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages as well as implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
+Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages. You can also implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
 
-In the SMS channel, the New User settings and behavior have been outlined and can be checked out [here](/docs/user_guide/message_building_by_channel/sms/keywords/).
-
+For more information on user settings and behavior, check out [SMS keyword processing](/docs/user_guide/message_building_by_channel/sms/keywords/)

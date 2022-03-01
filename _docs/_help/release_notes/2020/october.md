@@ -12,7 +12,7 @@ description: "This article contains release notes for October 2020."
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
-The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more [here]({{site.baseurl}}/report_builder)!
+The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 
 ## iOS 14 upgrade guide
 
@@ -32,7 +32,7 @@ Users can now add descriptions to campaigns and Canvases! This new field can be 
 
 ## Canvas exception events
 
-New documention has beed added describing the expected behavior of exception events in Canvases. Visit our [documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more!
+New documention has beed added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
 
 ## User delete updates
 

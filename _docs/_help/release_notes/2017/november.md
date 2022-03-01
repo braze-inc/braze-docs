@@ -14,7 +14,7 @@ You can use the Braze [Notification Preferences Center][77] within your Company 
 
 ## Updates to Media Library
 
-You can now upload multiple assets and folders of assets to the [Media Library][79] from your Templates & Media page, as well as perform bulk actions, such as applying tags or deleting multiple assets.
+You can now upload multiple assets and folders of assets to the [Media Library][79] from your **Templates & Media** page, as well as perform bulk actions, such as applying tags or deleting multiple assets.
 
 ## Branching for Canvas first steps
 

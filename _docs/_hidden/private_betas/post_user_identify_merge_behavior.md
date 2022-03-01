@@ -54,6 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 #### Merge_behavior field {#merge}
 
 Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of the following fields found exclusively on the anonymous user to the identified user:
+
 - First name
 - Last name
 - Email
@@ -66,6 +67,7 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of 
 - Language
 - Custom event data (excluding event properties)
 - Purchase event data (excluding purchase properties)
+- Custom attributes
 
 {% alert warning %}
 The following attributes are not yet supported:
