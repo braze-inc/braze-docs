@@ -40,6 +40,7 @@ You can add metadata about custom events by passing an `NSDictionary` populated 
 {% tab OBJECTIVE-C %}
 
 ```objc
+todo:
 [[Appboy sharedInstance] logCustomEvent:@"YOUR_EVENT_NAME" withProperties:@{@"key1":"value1"}];
 ```
 
@@ -47,6 +48,7 @@ You can add metadata about custom events by passing an `NSDictionary` populated 
 {% tab swift %}
 
 ```swift
+todo:
 Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1":"value1"])
 ```
 
