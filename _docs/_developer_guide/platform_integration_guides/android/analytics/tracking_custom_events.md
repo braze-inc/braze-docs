@@ -46,6 +46,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 {% tab JAVA %}
 
 ```java
+todo:
 BrazeProperties eventProperties = new BrazeProperties();
 eventProperties.addProperty("key", "value");
 Braze.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
@@ -55,6 +56,7 @@ Braze.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventPrope
 {% tab KOTLIN %}
 
 ```kotlin
+todo:
 val eventProperties = BrazeProperties()
 eventProperties.addProperty("key", "value")
 Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
