@@ -145,6 +145,17 @@ appboy.openSession();
 appboy.logCustomEvent("prime-for-push");
 ```
 
+## Service Worker Advanced Settings
+
+Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, above importing Braze:
+
+```javascript
+self.addEventListener('install', (event) => {
+  event.stopImmediatePropagation();
+}); 
+self.importScripts('https://js.appboycdn.com/web-sdk/3.4/service-worker.js');
+```
+
 [1]: http://www.w3.org/TR/push-api/
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
 [4]: http://appboyj.com/modal-test.html
