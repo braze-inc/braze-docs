@@ -153,6 +153,7 @@ Braze's service worker file will automatically call `skipWaiting` upon install. 
 self.addEventListener('install', (event) => {
   event.stopImmediatePropagation();
 }); 
+self.importScripts('https://js.appboycdn.com/web-sdk/3.4/service-worker.js');
 ```
 
 [1]: http://www.w3.org/TR/push-api/
