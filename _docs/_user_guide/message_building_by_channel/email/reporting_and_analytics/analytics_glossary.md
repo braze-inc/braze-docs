@@ -74,7 +74,7 @@ glossaries:
   - name: "Confidence"
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
   - name: "Machine Opens"
-    description: Includes emails that are opened without user engagement by Apple devices with <a href='/docs/user_guide/message_building_by_channel/email/mpp/'>Mail Privacy Protection</a> enabled. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
+    description: Includes the proportion of "opens" that are affected by Apple iOS 15. If a user opens an email using the Mail app on an Apple device, the mail is loaded from a proxy server and will be logged as a “Machine Opens.” However, if the mail is opened on another platform (i.e. Gmail app on phone, or Gmail via desktop browser), it will be logged as an “Other opens". It’s also possible that a user opens an email (i.e. "Other opens") before a machine open is logged. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
     calculation: Count
   - name: "Other Opens"
     description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens". 
