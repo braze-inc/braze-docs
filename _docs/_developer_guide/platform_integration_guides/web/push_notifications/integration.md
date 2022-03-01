@@ -73,6 +73,7 @@ If you wish to unsubscribe a user, you can do so by calling ```appboy.unregister
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
+
 ## Step 3: Configure Safari push
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
@@ -143,6 +144,16 @@ When you wish to display the soft push prompt to the user, call `appboy.logCusto
 ```
 appboy.openSession();
 appboy.logCustomEvent("prime-for-push");
+```
+
+## Service Worker Advanced Settings
+
+Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, above importing Braze:
+
+```javascript
+self.addEventListener('install', (event) => {
+  event.stopImmediatePropagation();
+}); 
 ```
 
 [1]: http://www.w3.org/TR/push-api/
