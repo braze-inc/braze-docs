@@ -49,7 +49,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 If you have set a session timeout, then the above session semantics all extend to that customized timeout.
 
-**Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
+**Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second. The default value is 10 seconds.
 
 ## Testing session tracking
 
