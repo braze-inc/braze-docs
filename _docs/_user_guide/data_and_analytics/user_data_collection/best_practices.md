@@ -47,7 +47,7 @@ Call `changeUser()` before making an API request to the [`/users/identify`]({{si
 
 By calling `changeUser()` before the request, Braze will merge and preserve anonymous user data (for example, if the user downloaded the app and logged custom data before signing in) to the identified user profile but "orphan" all data associated with the alias-only profile (attributes, events, purchases, etc.).
 
-![User profile process][1]{: style="max-width:90%;"}
+![Diagram showing the process to overwrite alias-only data and maintain anonymous data when identifying a user. The process starts with an anonymous user and their Braze ID. Then the user creates an account, and anonymous user data is migrated to an identified user profile when changeUser is called. The identified user now has a Braze ID and external ID. An arrow pointing from the identified user to an identified user with an alias shows a Braze API request to the users identify endpoint with the user's external ID, alias name, and alias label. During this step, the user data associated with that alias-only user is lost. The final step shows the identified user with a Braze ID, external ID, alias name, and alias label, but none of the custom attributes associated with the alias-only profile before they merged.][1]{: style="max-width:90%;"}
 
 #### Keep user alias profile information
 If you have events or attributes that you want to keep when you merge user profiles, you can export aliased user data before identification using the [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint, then re-associate the attributes, events, and purchases with the identified user.
