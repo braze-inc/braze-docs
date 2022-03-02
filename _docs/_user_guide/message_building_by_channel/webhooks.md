@@ -20,4 +20,7 @@ guide_featured_list:
 - name: Creating a Webhook Template
   link: /docs/user_guide/message_building_by_channel/webhooks/webhook_template/
   fa_icon: fas fa-table
+- name: Braze to Braze Webhooks
+  link: /docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
+  fa_icon: fas fa-exchange-alt
 ---
