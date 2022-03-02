@@ -67,7 +67,7 @@ If you make any edits to an existing template, those changes will not be reflect
 
 To use your email for an API campaign, you need the `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![API Identifier section of an HTML email template][4]
+![Image of the API Identifier section of an HTML email template.][4]
 
 ## Managing email templates
 

@@ -45,11 +45,11 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 To create a subscription group, go to the __Subscription Groups__ page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
 
-![Create a Subscription Group][26]{: height="50%" width="50%"}
+![Image of the fields to create a subscription group.][26]{: height="50%" width="50%"}
 
 When creating your segments, set the subscription group name as a filter. This will ensure users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more!
 
-![Use a Subscription Group][27]{: style="max-width:80%"}
+![GIF that shows how to set a subscription group name as a filter.][27]{: style="max-width:80%"}
 
 #### Archiving groups
 
@@ -63,7 +63,7 @@ Braze will not process any state changes for users in archived groups. For examp
 
 You can export your users' subscription state changes via CSV file. From the **Preference Center** page, click **User Subscription Data**, then select **CSV Export User Subscription Data** from the dropdown.
 
-![Export][29]
+![Image that shows the option to export user subscription state data as a CSV file.][29]
 
 By default, the past 30 days of state changes across all subscription groups are exported.
 
@@ -125,24 +125,24 @@ It is your responsibility to make sure that your custom footer meets those requi
 
 To create or edit your custom footer, go to the **Manage Settings** page, and select the **Email Settings** tab.
 
-![Email Settings][19]
+![Image of the Outbound Email Settings panel.][19]
 
-In the **Custom Footer** section, you can choose to turn on Custom Footers. Once turned on, you will see a window to edit your footer and send a test message.
+In the **Custom Footer** section, you can choose to turn on custom footers. Once turned on, you will see a window to edit your footer and send a test message.
 
-![Custom Footer][20]
+![Image that shows the enabled Custom Footer toggle.][20]
 
 {% raw %}
 You will see the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute.
 
 If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**, as indicated below.
 
-![Default Unsub URL Protocol][24]{: style="max-width:50%;"}
+![Image that shows the protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
-![No Footer-Email Settings][21]
+![Image of an example email composed without a footer.][21]
 
 > Be very careful to use a template with the custom footer ``{{${email_footer}}}`` or ``{{${set_user_to_unsubscribed_url}}}``when composing an email campaign. A warning will pop up; however, the ultimate decision of whether to send an email without an unsubscribe link lies with you.
 
-![No Footer-Campaign Composition][22]
+![Image of a no-footer campaign composition.][22]
 
 When creating a custom footer, Braze suggests you use attributes for personalization. Here are a few you may find useful:
 
@@ -158,7 +158,7 @@ Of course, the full set of default and custom attributes are available to you. A
 
 You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you choose not to write a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
-![Save Custom Footer][23]{: style="max-width:70%" }
+![Image with the Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
 
 #### Custom unsubscribe landing page
 
@@ -168,7 +168,7 @@ Optionally, you may provide HTML for your custom landing page that users will be
 
 We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
-![Custom Unsubscribe][11]
+![Image of an example custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
 {% endraw %}
 
@@ -186,7 +186,7 @@ You can manually change the subscription status for any user in their user profi
 
 Click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 
-![User Profile Subscription UI][16]{: style="max-width:60%" }
+![Image that shows an example of a user profile's subscription status as subscribed to email and opted-in to push.][16]{: style="max-width:60%" }
 
 ## Subscriptions and campaign targeting {#subscriptions-and-campaign-targeting}
 
@@ -202,7 +202,7 @@ Braze supports three targeting states:
 It is your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
 
-![Campaign Targeting Subscription UI][17]
+![Image of a audience targeting example for users who are subscribed or opted in in the Advanced Options of the Target Users step.][17]
 
 ## Segmenting by user subscriptions {#segmenting-by-user-subscriptions}
 
@@ -210,7 +210,7 @@ The `Email Subscription Status` and `Push Subscription Status` filters allow you
 
 For example, this can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed, but not opted in.
 
-![Subscription Filter][18]
+![Image that shows the Email Subscription Status used as a segment filter.][18]
 
 [10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}

@@ -37,7 +37,7 @@ Transactional Emails differ from transactional campaigns, which can be used to t
 
 To create a new Transaction Email campaign, navigate to the **Campaigns** page and click **Create Campaign**, then select **Transactional Email** from the dropdown.
 
-![Select Transactional Email Campaign][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Image of the Create Campaign dropdown with the highlighted option for Transactional Email.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Now, you can move on to configuring your Transactional Email campaign.
 
@@ -51,7 +51,7 @@ As a result, you'll notice a few settings you may be familiar with from other Br
 - The **Target Users** step has been removed. As Transactional Emails enroll your entire user base as eligible (including unsubscribed users) there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
 - The **Conversions** step has been removed. Transactional Emails do not support Conversion Event Tracking at this time.
 
-![Transactional Campaign Creation Flow][2]
+![Image that shows Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.][2]
 
 To configure your Transactional Email campaign, follow these general steps:
 

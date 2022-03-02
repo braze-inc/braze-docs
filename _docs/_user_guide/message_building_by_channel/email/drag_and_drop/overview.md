@@ -24,7 +24,7 @@ tool:
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
 
 - Select the **Drag & Drop Editor** to select templates created using the Drag & Drop Editor.
-- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Drag & Drop Editor Workflow][6]{: style="max-width:80%;"}
+- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Image that shows the option to select the Drag & Drop Editor as the email editing experience.][6]{: style="max-width:80%;"}
 
 {% alert tip %}
 You can also access all templates in the **Templates & Media** page under the **Engagement** section.
@@ -32,8 +32,8 @@ You can also access all templates in the **Templates & Media** page under the **
 
 ### Step 2: Build out email structure
 
-1. __Assemble Rows__ - Drag & drop different row configurations to design the structure of your email. New configurations must be dragged to the beginning or end of an existing section.
-2. __Add Content__ - Add desired content types to the various row components.<br><br>![Drag & Drop Email GIF][1]
+1. **Assemble Rows:** Drag & drop different row configurations to design the structure of your email. New configurations must be dragged to the beginning or end of an existing section.
+2. **Add Content:** Add desired content types to the various row components.<br><br>![GIF that shows an example of using Drag & Drop Editor to compose an email.][1]
 
 ## Editing experience
 
@@ -51,7 +51,7 @@ Advanced functionality will appear in the campaign or Canvas step composer. In a
 {% tab Content %}
 The **Content** section contains the editor. There are three key components within this section.
 
-- __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
+- __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/).<br><br>
 - __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
 - __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
 
@@ -83,23 +83,23 @@ This user may or may not be part of your segmentation criteria. Segmentation is 
 
 Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed. 
 
-![Drag & Drop Image Widths][2]
+![Image that shows the Auto width option in the Content tab of the Drag & Drop Editor.][2]
 
 ### Color layering
 
 The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
-![Drag & Drop Color Layering][3]
+![Image that shows an example of the color layering in the Drag & Drop Editor.][3]
 
 ### Content padding
 
-![Drag & Drop Block Options][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Image that shows the Block Options for the Drag & Drop Editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
 ### Adding Liquid 
 
-![Drag & Drop Personalization][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Image that shows the options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
