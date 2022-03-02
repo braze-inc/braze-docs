@@ -20,7 +20,7 @@ First, create your email campaign, as you normally would. Then, as you're editin
 
 ![GIF that shows an example of how to build a card.][2]
 
-After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the "`<head>` "section/element of your email's `HTML`.
+After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the `<head>` element of your email's HTML.
 
 ![GIF that shows how to copy your script to paste into the email's HTML body.][3]
 

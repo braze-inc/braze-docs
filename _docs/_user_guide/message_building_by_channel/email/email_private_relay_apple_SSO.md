@@ -25,11 +25,11 @@ Braze customers who use SendGrid as an email provider can now, essentially, "[wh
 
 Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist the email address you wish to use for sending via Apple's Email Relay Service (your desired `From` address). 
 
-![Image that shows the option to whitelabel individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
+![Option to whitelist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
 To find the proper address, go to your Sendgrid DNS record and copy the **UID**, **Whitelabel Subdomain**, and **Domain** from the **Host Value** column. 
 
-![Image that shows the HOST Value column in Sendgrid DNS records section.]({% image_buster /assets/img/email-relay-dns-records.png %})
+![HOST Value column in Sendgrid DNS records section.]({% image_buster /assets/img/email-relay-dns-records.png %})
 
 The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`
 

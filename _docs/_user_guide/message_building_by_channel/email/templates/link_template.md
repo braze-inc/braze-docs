@@ -25,7 +25,7 @@ When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalizati
 
 ## Creating a link template
 
-![Image of the Create Link Template option.][11]{: style="float:right;max-width:30%;"}
+![][11]{: style="float:right;max-width:30%;"}
 
 To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
 
@@ -44,7 +44,7 @@ If you want to add a string or URL before the links in your email message, creat
 
 A preview section is provided to give you an example of the insertion process.
 
-![Image of the Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %})
+![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %})
 
 ### Append: Create a link template that inserts after a URL {#append-link-template}
 
@@ -52,7 +52,7 @@ If you want to add query parameters after a URL in your email message, create a 
 
 You can have multiple parameters appended to the end of a URL.
 
-![Image of the Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %})
+![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %})
 
 ## Using your templates in email campaigns
 
@@ -60,7 +60,7 @@ Once your templates are set up, you can select which template you would like to 
 
 From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email and can add the template from there.
 
-![Image of the Link Templating tab with an example list of link templates.][1]
+![Link Templating tab with an example list of link templates.][1]
 
 ## Managing link templates
 

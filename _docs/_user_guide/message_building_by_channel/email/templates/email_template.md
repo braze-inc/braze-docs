@@ -41,7 +41,7 @@ You can write your message within the rich-text editor or optionally flip over t
 When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![Image of the Drag and Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Drag and Drop Editor badge in the Email Body section]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
@@ -50,7 +50,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your HTML emai
 
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
-![Image of the Email Template Details panel in the HTML editor.]({% image_buster/assets/img/email_templates/template3.png %})
+![Email Template Details panel in the HTML editor.]({% image_buster/assets/img/email_templates/template3.png %})
 <br>
 <br>
 
@@ -60,7 +60,7 @@ To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit
 Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![Image of the dropdown in the Body tab that displays options for the editor types.]({% image_buster/assets/img/email_templates/template4.png %})
+![Dropdown in the Body tab that displays options for the editor types.]({% image_buster/assets/img/email_templates/template4.png %})
 
 Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
 {% raw %}
@@ -130,7 +130,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your email by 
 
 Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward. "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
-![Image of an errors and warnings list from an example email.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Errors and warnings list from an example email.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Here's a list of errors that are accounted for in our editor:
 
@@ -150,7 +150,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![Image that shows an example email preview to be sent for testing.][6]
+![Example email preview to be sent for testing.][6]
 
 If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
@@ -166,7 +166,7 @@ If you make any edits to an existing template, those changes will not be reflect
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![Image of an example Template API Identifier.][5]
+![Example Template API Identifier.][5]
 
 ## Managing email templates
 

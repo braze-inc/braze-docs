@@ -24,7 +24,7 @@ tool:
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
 
 - Select the **Drag & Drop Editor** to select templates created using the Drag & Drop Editor.
-- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Image that shows the option to select the Drag & Drop Editor as the email editing experience.][6]{: style="max-width:80%;"}
+- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Option to select the Drag & Drop Editor as the email editing experience.][6]{: style="max-width:80%;"}
 
 {% alert tip %}
 You can also access all templates in the **Templates & Media** page under the **Engagement** section.
@@ -83,23 +83,23 @@ This user may or may not be part of your segmentation criteria. Segmentation is 
 
 Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed. 
 
-![Image that shows the Auto width option in the Content tab of the Drag & Drop Editor.][2]
+![Auto width option in the Content tab of the Drag & Drop Editor.][2]
 
 ### Color layering
 
 The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
-![Image that shows an example of the color layering in the Drag & Drop Editor.][3]
+![Example of the color layering in the Drag & Drop Editor.][3]
 
 ### Content padding
 
-![Image that shows the Block Options for the Drag & Drop Editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Block Options for the Drag & Drop Editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
 ### Adding Liquid 
 
-![Image that shows the options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
