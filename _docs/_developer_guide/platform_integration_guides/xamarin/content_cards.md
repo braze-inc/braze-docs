@@ -15,11 +15,11 @@ description: "This reference article covers Content Card implementation guidelin
 
 ## Android
 
-See [the Android integration guide][1] for information on how to integrate the Content Cards into your Xamarin Android app.
+See our [Android integration guide][1] for information on how to integrate the Content Cards into your Xamarin Android app.
 
 ## iOS 
 
-See [the iOS integration guide][2] for information on how to integrate the Content Cards into your Xamarin iOS app.
+See our [iOS integration guide][2] for information on how to integrate the Content Cards into your Xamarin iOS app.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
