@@ -30,6 +30,10 @@ On this page, specify if your users' purchases are stored in Braze as standard [
 
 Here, you'll see if the selected Purchase method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a Prediction with the quantity of data available. If you believe you're incorrectly seeing this error, please get in touch with your CSM.
 
+#### Prediction Window
+
+Prediction Window is the time frame in which you want to predict if a user will make a purchase. Prediction Window can be set up to 60 days. When using Full Filter Mode in Prediction Audience, it can be set up to 14 days. Note that for windows longer than 14 days, Braze can't estimate if there will be enough user data to build a reliable Prediction until it's in the training process. The Prediction Window applies after the Prediction finishes building or updating.
+
 ### Step 3: Filter your Prediction Audience (optional) {#audience}
 
 Your Prediction Audience is the group of users whose Purchase likelihood you would like to predict. Purchase Prediction allows you to run a Prediction on your entire population of users. To do this, leave the default option __All Users__ selected.
@@ -42,7 +46,11 @@ The Prediction Audience definition is also used to query historical data to allo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with "Last..." like "Last Used App" and "Last Made Purchase", the time window to look back for these filters __cannot exceed 16 days__.
+For filters that begin with "Last..." like "Last Used App" and "Last Made Purchase", the time window to look back for these filters __cannot exceed the Prediction Window specified in Purchase Event Tracking__. For example, if the Prediction Window is set to 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+
+#### Full Filter Mode
+
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode gives you access to all Braze filters but will require one Prediction Window to build the Prediction. For example, if the Prediction Window is set to 14 days, it will take 14 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. 
 
 ### Step 4: Choose the update frequency
 
