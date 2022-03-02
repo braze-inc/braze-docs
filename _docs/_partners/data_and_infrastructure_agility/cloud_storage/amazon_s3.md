@@ -59,7 +59,7 @@ Navigate to **Policies > Get Started > Create Policy** to add permissions for yo
 Different policies are required for "Currents" and "Dashboard Data Export".
 {% endalert %}
 
-Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name.
+Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
 
 {% tabs %}
 {% tab Braze Currents %}
