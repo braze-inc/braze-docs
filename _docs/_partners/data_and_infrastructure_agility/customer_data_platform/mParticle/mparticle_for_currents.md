@@ -82,7 +82,7 @@ You can export the following data from Braze to mParticle:
 | Email Sends| Unbound Feed| An email was successfully sent.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Deliveries| Unbound Feed| An email was successfully delivered to a User’s mail server.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Opens| Unbound Feed| User opened an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`, `machine_open`|
-| Email Clicks| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
+| Email Clicks| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled. Link ID and Alias require Link Aliasing to be enabled | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
 | Email Bounces| Unbound Feed| Braze attempted to send an email, but the User’s receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Marks As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
 | Email Unsubscribes| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
