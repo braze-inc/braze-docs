@@ -9,20 +9,17 @@ description: ""
 
 # User data collection best practices
 
-> Knowing when and how to collect user data for known and unknown users can be difficult to navigate when first picturing the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for how new and existing user data should be collected.
+> Knowing when and how to collect user data for known and unknown users can be challenging to navigate when envisioning the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for collecting new and existing user data.
 
 ## Overview
 
-The example below is comprised of an email collection use case, but the logic is applicable to many different user interaction scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
+The example below comprises an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
 
-Once a user provides information for you to log, we recommend you verify if the information already exists in your database and create a user-alias profile or update the existing user profile, as necessary. 
+Once a user provides information for you to log, we recommend you verify if the data already exists in your database and create a user-alias profile or update the existing user profile, as necessary. 
 
-1. Integrate a sign-up form
-2. Verify if the user is known to Braze
-3. How to pull in this data and add it to their existing user profile if the user is already known.
-4. How to pull in this data and create a user profile if an unknown user lands on the website (where they have tracking disabled, so the SDK is not active); then merge with a second profile if they fill out the newsletter sign-up form in the future, providing only their email address.
+If an unknown user were to view your site and then at a later date create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method you merge, alias-only user info or anonymous data may be overwritten.
 
-## When a user enters content through a webform
+## Capturing user data through a webform
 
 ### Step 1: Check if user exists
 
@@ -41,28 +38,28 @@ Note: if multiple user profiles in Braze exist with the same email address, all 
 
 ![User profile process][3]{: style="max-width:90%;"}
 
-## When a user creates an account with alias-only user info already present
+## Capturing user data when alias-only user info is already present
 
 When a user creates an account or identifies themselves via email sign-up, there are two options are merging the profiles depending on which data should be retained:
 
-### Option 1: Lose all associated data with the alias-only profile, but maintain anonymous data
+### Option 1: Overwrite alias-only data and maintain anonymous data
 
 Call `changeUser()` before making an API request to the `/users/identify` endpoint. Braze will merge anonymous user data (for example, if the user downloaded the app and logged various custom data before signing in) to the identified User Profile. Then, set the user alias.
 
-Only push tokens and message history associated with the user alias profile are retained. Once merged, any attributes, events, or purchases will be "orphaned" and not available on the identifier user (`external_id` profile).
+Only push tokens and message history associated with the user alias profile are retained. Once merged, any attributes, events, or purchases will be "orphaned" and unavailable on the identifier user (`external_id` profile).
 
-By calling `changeUser()` before making a request to the `/users/identify` endpoint, you will preserve any anonymous data but will lose all data associated to the alias-only Profile.
+By calling `changeUser()` before making a request to the `/users/identify` endpoint, you will preserve any anonymous data but lose all data associated with the alias-only profile.
 
 ![User profile process][1]{: style="max-width:90%;"}
 
 #### Keep user alias profile information
 If you have events or attributes that you want to keep when you merge user profiles, you can export aliased user data before identification using the `/users/export/ids` endpoint, then re-associate the attributes, events, and purchases with the identified user.
 
-### Option 2: Lose all anonymous data, but maintain the alias-only profile
+### Option 2: Overwrite anonymous data and maintain the alias-only profile
 
 Make a Braze API request to the `/users/identify` endpoint to identify any users that match a given user alias. If any exist, Braze will migrate the user alias data to the identified user profile.
 
-Calling `changeUser()` after hitting the `/users/identify` endpoint will result in losing the anonymous data but maintaining all data associated to the alias-only profile.
+Calling `changeUser()` after hitting the `/users/identify` endpoint will result in losing the anonymous data but maintaining all data associated with the alias-only profile.
 
 ![User profile process][2]{: style="max-width:90%;"}
 
