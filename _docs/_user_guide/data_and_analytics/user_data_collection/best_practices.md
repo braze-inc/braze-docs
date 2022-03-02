@@ -58,7 +58,7 @@ Make a Braze API request to the [`/users/identify`]({{site.baseurl}}/api/endpoin
 
 By calling `changeUser()` after hitting the `/users/identify` endpoint, Braze will merge and preserve all data associated with the alias-only profile but "orphan" any anonymous user data.
 
-![User profile process][2]{: style="max-width:90%;"}
+![Diagram showing the process to overwrite anonymous data and maintain the alias-only profile. The process starts with an anonymous user and their Braze ID. Then the user creates an account. An arrow pointing from the account creation step to the identified user profile shows a Braze API request to the users identify endpoint with the user's external ID, alias name, and alias label. A box above the arrow shows that this alias-only user already exists in Braze, and has custom attributes associated with the alias user. Those custom attributes are preserved and written to the identified user profile. The last step shows changeUser being called, after which the anonymous user data is lost.][2]{: style="max-width:90%;"}
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>
