@@ -10,7 +10,7 @@ channel:
 
 # In-app messaging implementation guide
 
-This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide a sample implementation, you will need to build a container for your payload, and most likely need to implement custom code for your desired UI. Because your code will be unique to your app, you will not need to handle all situations listed below if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
+This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide a sample out-of-the-box implementation, you will need to build a container for your payload and most likely implement custom code for your desired UI. Because your code will be unique to your app, you do not need to handle all situations listed below if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
 
 ## SDK requirements {#supported-sdk-versions}
 
