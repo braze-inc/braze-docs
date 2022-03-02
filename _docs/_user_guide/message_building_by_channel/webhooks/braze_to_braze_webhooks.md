@@ -24,7 +24,7 @@ While there's a lot you can do with Braze to Braze webhooks, here are some commo
 
 - [Write or update custom attributes](#use-case-custom-attribute) on a user profile.
 - [Reference an event property](#use-case-event-property) throughout a Canvas.
-- Increment an integer custom attribute for a counter when a user receives a message.
+- [Increment an integer custom attribute](#use-case-increment-counter) for a counter when a user receives a message.
 - Trigger a second Canvas from an initial Canvas.
 - Endless "If This Then That" ([IFTTT](https://ifttt.com/about)) recipes.
 
@@ -43,11 +43,11 @@ This use case involves using a webhook to update user information as part of a C
     - **Request Body:** Select **Raw Text** and add the user track request in the text field. For more details, refer to [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). The following is an example request body for this endpoint: {% raw %}
     ```json
 {
-  "app_group_id": "YOUR_APP_GROUP_ID",
+  "app_group_id": "your_app_group_id",
   "attributes": [
     {
-      "external_id": "{{${USER_ID}}}",
-      "new_custom_attribute": "{{event_properties.${YOUR_EVENT_PROPERTY}}}"
+      "external_id": "{{${user_id}}}",
+      "new_custom_attribute": "{{event_properties.${your_event_property}}}"
     }
   ]
 }
@@ -57,8 +57,9 @@ This use case involves using a webhook to update user information as part of a C
 3. In the **Settings** tab, set the **HTTP Method** to POST and add a **Request Header** with a key of `Content-Type` and a value of `application/json`.
 4. Continue to step 2 and configure your delivery options.<br><br>
     - Select **Action-Based Delivery**.   
-    - Set the **Trigger Action** to "Perform Custom Event" and choose the action that should trigger this webhook.<br><br>
-5. Continue to build out the rest of your webhook as needed. Braze recommends that you always test your messages before sending. Test by targeting yourself and triggered the custom event, then verify that the custom attribute was written to your profile.
+    - Set the **Trigger Action** to "Perform Custom Event" and choose the action that should trigger this webhook.
+
+Continue to build out the rest of your webhook as needed. Braze recommends that you always test your messages before sending. Test by targeting yourself and triggered the custom event, then verify that the custom attribute was written to your profile.
 
 ### Reference an event property throughout a Canvas {#use-case-event-property}
 
@@ -75,8 +76,8 @@ This use case involves using a webhook to have event properties persist througho
 {
     "attributes": [
         {
-        "external_id": "{{${USER_ID}}}",
-        "your_attribute": "{{event_properties.${YOUR_EVENT_PROPERTY}}}"
+        "external_id": "{{${user_id}}}",
+        "your_attribute": "{{event_properties.${your_event_property}}}"
         }
     ]
 }
@@ -87,7 +88,37 @@ This use case involves using a webhook to have event properties persist througho
     - `Content-Type` --> `application/json`
     - `Authorization` --> `Bearer YOUR_API_KEY`<br><br>
 
-4. Continue to build out the rest of your webhook as needed. Braze recommends that you always test your messages before sending. Test by targeting and triggering yourself and sending the event and event property, then verify that the event property was written to your profile.
+Continue to build out the rest of your webhook as needed. Braze recommends that you always test your messages before sending. Test by targeting and triggering yourself and sending the event and event property, then verify that the event property was written to your profile.
+
+### Increment an integer custom attribute for a counter {#use-case-increment-counter}
+
+This use case involves creating a custom attribute to count the number of times a specific action has occurred. For example, you might want to count how many times a user has seen an active in-app message campaign, and prevent them from receiving the campaign again after they've seen it three times. With this use case, you'll leverage the `/users/track` endpoint.
+
+1. [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-choose-where-to-build-your-message) as a campaign or Canvas step. Choose **Blank Template**.
+2. In the **Compose** tab, fill out the following fields:<br><br>
+    - **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances) followed by `/users/track`. For example, for the US-06 instance, the URL would be as follows:
+    ```
+    https://rest.iad-06.braze.com/users/track
+    ```
+    - **Request Body:** Select **Raw Text** and add the user track request in the text field as well as the Liquid to assign a counter variable. For more details, refer to [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). The following is an example of both the required Liquid and request body for this endpoint, where `your_attribute_count` is the attribute you're using to count how many times a user has seen a message: {% raw %}
+    ```json
+{% assign new_number = {{custom_attribute.${your_attribute_count}}} | plus: 1 %}
+{
+    "attributes": [
+        {
+        "external_id": "{{${user_id}}}",
+        "your_attribute_count": "{{new_number}}"
+        }
+    ]
+}
+    ```
+{% endraw %}
+
+3. In the **Settings** tab, set the **HTTP Method** to POST and configure the following key-value pairs for your **Request Headers:**<br><br>
+    - `Content-Type` --> `application/json`
+    - `Authorization` --> `Bearer YOUR_API_KEY`<br><br>
+
+Continue to build out the rest of your webhook as needed. Braze recommends that you always test your messages before sending.
 
 ## Things to know
 
