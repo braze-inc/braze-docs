@@ -98,7 +98,7 @@ You can then to do the following:
 - Select which permissions you would like to be associated with your new key
 - Specify allowlisted IP addresses and subnets for the new key
 
-Existing REST API Keys can be wiewed or deleted by clicking settings <i class="fas fa-gear"></i> and selecting the corresponding option.
+Existing REST API Keys can be viewed or deleted by clicking settings <i class="fas fa-gear"></i> and selecting the corresponding option.
 
 ![][29]
 
