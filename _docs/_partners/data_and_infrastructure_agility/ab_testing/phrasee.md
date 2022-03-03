@@ -37,31 +37,31 @@ With this integration, you can integrate email or push campaigns into Phrasee. T
 
 Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
-![Phrasee campaign]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
+![An image of a Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
 #### Step 2: Create your Braze email campaign
 
 Navigate to the Braze dashboard to create your email campaign. When creating your campaign, add the tag **Email Campaign**. If this tag does not yet exist, create it.
 
-![Phrasee email tag]({% image_buster /assets/img/phrasee/4_braze_emailtag.png %})
+![The Braze email builder emphasizing the email tag that can be added directly under the campaign description field.]({% image_buster /assets/img/phrasee/4_braze_emailtag.png %})
 
 Next, click **Edit Sending Info** for each variant to paste the Phrasee variant into the subject line. Ensure the number of variants matches between Phrasee and Braze.
 
 You will not need to recreate each email from scratch; you can simply copy the first variant and then edit the subject line for each new variant.
 
-![Phrasee copy variant]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
+![An image showing how to copy an existing email variant in Braze.]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
 
 #### Step 3: Schedule your Braze campaign
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![Phrasee schedule Braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![The delivery step in the campaign builder.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 4: Finalize the Braze campaign setup
 
 Complete the remaining steps in Braze to set up your campaign. Under **A/B Testing**, check the box to **Send Winning Variant**. Then select how long to wait before sending the winning variant.
 
-![Phrasee send winner]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
+![The A/B testing portion of the campaign showing how the A/B tests and control group will be split. Also shown are settings allowing you to determine the winning variant, sending information, and preferences for if the test ends up being statistically insignificant.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 
 Finalize any other settings as needed and save your campaign.
 
@@ -73,7 +73,7 @@ The schedule campaign window will pop up. Here, select your Braze campaign from 
 
 Launch your campaign in Braze, and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
-![Phrasee schedule campaign]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
+![The Phrasee platform showing the schedule campaign window where you can adjust the send settings.]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
 
 {% alert note %}
 Ensure your scheduled date and time match Braze's configured schedule so that Phrasee pulls in the results at the correct time.
@@ -88,13 +88,13 @@ Ensure your scheduled date and time match Braze's configured schedule so that Ph
 
 Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
-![Phrasee campaign]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
+![An image of a Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
 #### Step 2: Setup your Braze push campaign
 
 Phrasee’s integration will allow you to select both an iOS and an Android Braze push campaign to integrate into one Phrasee campaign if needed. To enable this functionality, ensure you tag it **Push Campaign**. This is required for step 4.
 
-![Phrasee tag]({% image_buster /assets/img/phrasee/9_braze_push_tag.png %})
+![The Braze email builder emphasizing the email tag that can be added directly under the campaign description field.]({% image_buster /assets/img/phrasee/9_braze_push_tag.png %})
 
 #### Step 3: Copy the Phrasee variants into Braze
 
@@ -104,23 +104,23 @@ For Phrasee to automatically pull the results of the variants within your push c
 
 A Phrasee language model can generate two-line variants split between the ‘Title’ and ‘Message’. Make sure that the second line is included in the message body; this way, Phrasee can automatically pull the results of the variants within your campaign.
 
-![Phrasee two lines]({% image_buster /assets/img/phrasee/10_push_two_lines.png %})
+![An example of Phrasee's two-line variant split language model shown in the Braze message composer.]({% image_buster /assets/img/phrasee/10_push_two_lines.png %})
 
 You can also enter the whole Phrasee variant into the **Message body** for the results to be pulled correctly into Phrasee. In that instance, the ‘Title’ must remain constant across all variants to ensure an accurate test.
 
-![push_oneline]({% image_buster /assets/img/phrasee/11_push_messagebody.png %})
+![An example of what a Phrasee variant may look like if you add the entire variant into the message body.]({% image_buster /assets/img/phrasee/11_push_messagebody.png %})
 
 #### Step 4: Schedule your Braze campaign
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![Phrasee schedule Braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![The delivery step in the campaign builder.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 5: Finalize the Braze campaign setup
 
 Complete the remaining steps in Braze to set up your campaign. Under **A/B Testing**, check the box to **Send Winning Variant**. Then select how long to wait before sending the winning variant.
 
-![Phrasee send winner]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
+![The A/B testing portion of the campaign showing how the A/B tests and control group will be split. Also shown are settings allowing you to determine the winning variant, sending information, and preferences for if the test ends up being statistically insignificant.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 
 Finalize any other settings as needed and save your campaign.
 
@@ -132,7 +132,7 @@ The schedule campaign window will pop up. Here, select your Braze campaign from 
 
 Launch your campaign in Braze, and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
-![Phrasee schedule campaign]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
+![The Phrasee platform showing the schedule campaign window where you can adjust the send settings.]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
 
 {% alert note %}
 Ensure your scheduled date and time match Braze's configured schedule so that Phrasee pulls in the results at the correct time.
