@@ -107,7 +107,7 @@ The custom attribute `Line ID` should be templated in the message body's `To:` f
 
 Before you send your message, test your webhook. Make sure your Line ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
 
-![An image of the test tab in the Braze webhook builder showing you can preview the message by sending it to an existing user.][3]
+![Test tab in the Braze webhook builder that shows you can preview the message by sending it to an existing user.][3]
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
