@@ -41,7 +41,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 - **Webhook URL**: `https://internal.inkit.io/integrations/webhook`
 - **Request Body**: Raw Text
 
-![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
+![Request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
 
 #### Request headers and method
 
