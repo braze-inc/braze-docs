@@ -80,7 +80,7 @@ Next, save your audience by clicking the __Create Audience__ button at the botto
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![An image of the alert that appears once a new audience is created in the Canvas step.]({% image_buster /assets/img/google_sync/google_sync9.png %})
+![An alert that appears once a new audience is created in the Canvas step.]({% image_buster /assets/img/google_sync/google_sync9.png %})
 
 When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience Step. 
 
