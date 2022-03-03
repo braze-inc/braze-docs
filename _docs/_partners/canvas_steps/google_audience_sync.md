@@ -94,7 +94,7 @@ Braze also offers the ability to either add or remove users from existing Google
 
 Once you've configured your Google Audience step, select __Done__. Your Google Audience step will include details about the new audience.
 
-![An image of the Custom Audience Canvas step expanded. Here, the desired Ad account and existing audience is selected, as well as the "Add user to Audience" radio button.]({% image_buster /assets/img/google_sync/google_sync8.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience is selected, as well as the "Add user to Audience" radio button.]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
 {% endtab %}
 {% endtabs %}
