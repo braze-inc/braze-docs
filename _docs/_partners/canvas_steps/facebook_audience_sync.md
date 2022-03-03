@@ -107,7 +107,7 @@ Once you have configured your Facebook Audience Step, simply launch the Canvas! 
 
 The __History__ tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
 
-![An image of what the audience deatils and history looks like for a given Facebook audience.][9]{: style="max-width:80%;"}
+![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.][9]{: style="max-width:80%;"}
 
 ## User syncing and rate limit considerations
  
