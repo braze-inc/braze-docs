@@ -81,7 +81,7 @@ From **Templates & Media**, go to **Webhook Templates** and choose the **Faceboo
 
 Before you send your message, test your webhook. Make sure your Messenger ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
 
-![An image of the test tab in the Facebook Messenger webhook template showing you can preview the message by sending it to an existing user.][60]
+![Test tab in the Facebook Messenger webhook template showing you can preview the message by sending it to an existing user.][60]
 
 If you receive the message successfully, you can configure its delivery settings.
 
