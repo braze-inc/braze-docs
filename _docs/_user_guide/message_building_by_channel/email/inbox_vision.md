@@ -27,7 +27,7 @@ Braze will then display screenshots of a sample, rendered HTML on desktops, mobi
 
 If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
 
-![Inbox Vision Overview][1]
+![Overview of Inbox Vision for the HTML editor.][1]
 
 Once you make changes to a template, you will need to click **Re-Run Test** to see the effect of the changes on the previews.
 
@@ -39,9 +39,7 @@ In general, your email will not work with Inbox Vision if your email content rel
 
 Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
-![Inbox Vision Code Analysis][2]
-
-![Inbox Vision Code Analysis 2][3]
+![Example code analysis on the Inbox Vision preview.][2]
 
 {% alert note %} 
 Sometimes the code analysis will show up faster than the preview for a particular email client. This is because we wait until the email arrives in the inbox before taking the screenshot. 
@@ -57,5 +55,4 @@ All of our tests are run through actual email clients. We work hard to ensure th
 
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %}
 [2]: {% image_buster /assets/img_archive/inboxvision2.png %}
-[3]: {% image_buster /assets/img_archive/inboxvision3.png %}
 [4]: {{site.baseurl}}/email_spam_testing/
