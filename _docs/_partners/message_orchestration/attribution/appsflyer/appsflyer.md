@@ -90,7 +90,7 @@ Assuming you configure your integration as suggested above, Braze will map all o
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![An image of four available filters. The first being "Install Atrribution Source is network_val_0". The second being "Install Atrribution Source is campaign_val_0". The third being "Install Atrribution Source is adgroup_val_0". The fourth being "Install Atrribution Source is creative_val_0". On the right side of the image, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
+![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". On the right side of the image, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
 
 Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
 
