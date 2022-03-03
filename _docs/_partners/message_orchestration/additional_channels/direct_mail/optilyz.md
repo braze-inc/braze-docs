@@ -85,7 +85,7 @@ The `variation` field is optional and can define which design inside the automat
 
 Next, preview your request in the left-hand panel or navigate to the __Test__ tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
-![An image of the different testing fields available in the test tab of the Braze webhook builder.][7]
+![Different testing fields available in the test tab of the Braze webhook builder.][7]
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
