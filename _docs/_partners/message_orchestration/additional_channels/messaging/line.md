@@ -115,7 +115,7 @@ If you receive the message successfully, you can start to configure its delivery
 
 Once set up, use this integration to target Line users. First, [create a segment][62] for all users for whom the `Line ID` exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. 
 
-![An image of the segment filter "line_id" set to "is not blank".][63]
+![Segment filter "line_id" set to "is not blank".][63]
 
 If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for `Line ID` existing to avoid errors.
 
