@@ -81,7 +81,7 @@ Select the desired Facebook ad account. Under the __Choose a New or Existing Aud
 __Create a New Audience__<br>
 Enter a name for the new custom audience, select __Add Users to Audience__ and select which fields you would like to sync with Facebook. Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![An image of the Custom Audience Canvas step expanded. Here, the desired Ad account is selected and a new audience is created.]({% image_buster /assets/img/fb_audience_sync/create_audience.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected and a new audience is created.]({% image_buster /assets/img/fb_audience_sync/create_audience.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
