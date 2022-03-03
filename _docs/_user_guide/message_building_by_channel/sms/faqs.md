@@ -55,7 +55,7 @@ While we can't promise that you won't occasionally have an overage, you could fo
 2. Ensure you (the brand) have a relationship with the customer.
 3. Make sure the content is relevant to the relationship and what the user has opted-in to receive.
 
-For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
+For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
 
 ### How do you create logic for selective opt-ins to SMS so users are in the right subscription group?
 
@@ -129,3 +129,7 @@ In the US, Canada, and UK:
 
 In other countries:
 - Twilio will throw an error, and you will not be billed for the attempted SMS message. 
+
+### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
+
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout), they will receieve the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling), they will not receive the response for that keyword. 

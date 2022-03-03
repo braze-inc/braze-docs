@@ -60,9 +60,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer.
 
-![Select your email editing experience][3]{: style="max-width:75%" }
+![Choosing between Drag & Drop Editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
 
-Then, either select an existing [email template][10], [upload a template from a file][18] (HTML editor only), or use a blank template.
+Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template.
 
 ## Step 3: Compose your email
 
@@ -72,7 +72,7 @@ After you've selected your template, you'll see an overview of your email where 
 Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email.
 {% endalert %}
 
-![New Email Overview][14]{: style="max-width:75%" }
+![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
 
 ### Step 3a: Add email headers
 
@@ -138,7 +138,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![New Email Preview][15]
+![Test Send option and example email preview when composing your email.][15]
 
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
 

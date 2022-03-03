@@ -48,8 +48,8 @@ For a customer to receive an SMS message, they must have a valid phone number an
 When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
 A phone number is considered invalid in the following cases:
-- The phone number supplied is not a valid phone number or was incorrectly formatted.
-- The phone number is a landline.
+- The phone number supplied is not a valid phone number.
+- The phone number is incorrectly formatted.
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 

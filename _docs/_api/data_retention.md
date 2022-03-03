@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised in February 2022*
+*Last revised in March 2nd, 2022*
 
 > This article covers general Braze data retention information.
 
@@ -50,10 +50,6 @@ Each week, Braze runs a process to remove Inactive Users and Dormant Users from 
 
 Braze may delete data where necessary as part of the resolution to a technical issue or incident, for example, for de-duplication of data.
 
-#### Braze Servers: Short-term Retention for Recovery Purposes
-
-Data sent from the Braze Services to Braze's Snowflake Data Lake via Braze servers is retained in such Braze servers for up to 90 days for recovery purposes.
-
 #### Braze Data Lake Data Retention
 
 Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the “Data Lake”, formerly known as “BI Database”).
@@ -66,6 +62,10 @@ Braze has instituted processes to ensure regularly scheduled deletions of PII fr
 - Sessions data
 
 Deletion of data in the Data Lake will not affect your segmentation.
+
+#### Braze Servers: Short-term Retention for Recovery Purposes
+
+Data sent from the Braze Services to Braze’s Data Lake via Braze servers is retained for up to 90 days for recovery purposes.
 
 #### Braze Backup Servers
 

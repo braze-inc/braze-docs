@@ -103,12 +103,13 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-### iOS 14 AppTrackingTransparency
-In the future, Apple will require a new permission prompt in order to collect IDFA. For now, prompting for IDFA permission with `AppTrackingTransparency` is not required, but you should be prepared for a future iOS release from Apple which will require user opt-in.
+### iOS 14.5 AppTrackingTransparency
 
-When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12.
+Apple requires users to opt-in through a permission prompt in order to collect IDFA.
 
-The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
+To collect IDFA, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization from the user using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/).
+
+The prompt for App Tracking Transparency authorization requires an `Info.plist` entry to explain your usage of the identifier:
 
 ```
 <key>NSUserTrackingUsageDescription</key>

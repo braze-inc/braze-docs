@@ -73,7 +73,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 }'
 ```
 
-For more information on `alias_name` and `alias_label`, check out our [user aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).
+For more information on `alias_name` and `alias_label`, check out our [user aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.
 
 {% endapi %}
 
