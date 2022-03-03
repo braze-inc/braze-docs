@@ -52,7 +52,7 @@ optilyz also requires an HTTP Header for authorization and an HTTP method. The f
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![optilyz_settings][6]{: style="max-width:50%"}
+![The request headers and HTTP method shown in the Braze webhook builder.][6]{: style="max-width:50%"}
 
 #### Request body
 
@@ -79,13 +79,13 @@ The `variation` field is optional and can define which design inside the automat
 ```
 {% endraw %}
 
-![optilyz_compose][5]
+![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
 
 ### Step 2: Preview your request
 
 Next, preview your request in the left-hand panel or navigate to the __Test__ tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
-![optilyz_testing][7]
+![An image of the different testing fields available in the test tab of the Braze webhook builder.][7]
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

@@ -57,7 +57,7 @@ AppsFlyer.setAdditionalData(customData);
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer Image][4]{: style="max-width:70%;"}
+In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![An image showing the "Data Import for Install Atrribution" box available on the AppsFlyer Technology page. Inclued in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
@@ -90,7 +90,7 @@ Assuming you configure your integration as suggested above, Braze will map all o
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![User Attributes][2]
+![An image of four available filters. The first being "Install Atrribution Source is network_val_0". The second being "Install Atrribution Source is campaign_val_0". The third being "Install Atrribution Source is adgroup_val_0". The fourth being "Install Atrribution Source is creative_val_0". On the right side of the image, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
 
 Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
 

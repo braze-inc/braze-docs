@@ -14,7 +14,6 @@ search_tag: Partner
 
 The Braze and PassKit integration allows you to increase and measure the engagement of your online campaigns by instantly delivering custom Apple Wallet and Google Pay passes. You can then analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet. 
 
-
 ## Prerequisites
 
 | Requirement | Description |
@@ -41,9 +40,9 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s `externalId`.
 
-1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![Settings Button][5]{: style="max-width:80%"}<br><br>
+1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![An image of the Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
-3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![Connect to Braze][4]{: style="max-width:70%"}
+3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![The PassKit Braze integration tile expanded to accept the API key, endpoint URL, integration name, enablement settings, membership settings, and pass settings.][4]{: style="max-width:70%"}
 
 ## Create pass using a SmartPass link
 
@@ -191,10 +190,10 @@ Capture your minified JSON payload from [step 1](#passkit-integrations) above:
 {% endraw %}
 
 Your message body should look something like this:
-![Message Body][1]{: style="max-width:70%"}
+![An image of the Content Block message composer with the captured JSON and Content Block reference shown.][1]{: style="max-width:70%"}
 
 The output URL for the sample above is:
-![Output URL][2]{: style="max-width:70%"}
+![The output URL that includes a long, randomly generated string of letters and numbers.][2]{: style="max-width:70%"}
 
 The above output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint!
 

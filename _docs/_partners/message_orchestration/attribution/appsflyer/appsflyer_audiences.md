@@ -46,7 +46,7 @@ NSDictionary *brazeInfo = @{
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer Image][5]{: style="max-width:90%;"}
+In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![This image shows the "Data Import Using Cohort Import" box found in the AppsFlyer technology page. In this box, you are shown the data import key and the REST endpoint.][5]{: style="max-width:90%;"}
 
 ### Step 3: Configure a Braze connection in AppsFlyer Audiences
 
@@ -55,13 +55,13 @@ In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, yo
 3. Provide the data import key and Braze REST endpoint.
 4. Save the connection, and it will be available to link to any new or existing audience.
 
-![Partner connection][6]{: style="max-width:80%;"}
+![An image of the AppsFlyer audiences platform partner connection configuration page. The lower part of the images shows that the Braze external id box is checked.][6]{: style="max-width:80%;"}
 
 ### Step 4: Using AppsFlyer Audiences cohorts in Braze
 
 Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filter when defining segments in Braze by selecting the __AppsFlyer Cohorts__ filter.
 
-![Cohort filter][7]
+![An image of the user attributes filter "AppsFlyer Cohorts" selected.][7]
 
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/
