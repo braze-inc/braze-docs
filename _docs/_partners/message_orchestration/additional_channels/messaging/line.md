@@ -68,7 +68,7 @@ Once you've set the channel access token inside a Content Block, you will be abl
 
 From **Templates & Media**, go to **Webhook Templates** and choose one of the following Line Messenger webhook templates: 
 
-![An image of some of the available predesigned webhook templates in Braze.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
+![A selection of available predesigned webhook templates.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
 
 {% tabs %}
 {% tab Line Text %}
