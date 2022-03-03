@@ -58,7 +58,7 @@ For a deeper dive on the different kinds of API Keys here at Braze, check out ou
 
 The `api_key` included in each request acts as an authentication key that allows your server code to utilize our REST APIs. Within your company, each app group will have a unique set of REST API Keys. They can be found within the Braze dashboard by navigating to the Developer Console section for each app group. To use the REST API for any given App Group, you must create keys and give them permissions.
 
-![REST API Keys][27]
+![REST API Keys panel on the API Settings tab of the Developer Console.][27]
 
 #### API key permissions
 
@@ -66,7 +66,7 @@ API Keys are used to authenticate an API call. When you create a new REST API Ke
 
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account.
 
-![REST API Key Permissions][25]
+![API key permissions available when creating an API key.][25]
 
 {% alert warning %}
 Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
@@ -78,7 +78,7 @@ If accidental exposure of a key occurs, it can be deleted from the [Developer Co
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
-![API IP Whitelisting][26]
+![Option to whitelist IPs when creating an API key][26]
 
 If you don’t specify any, requests can be sent from any IP address.
 
@@ -88,7 +88,7 @@ Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [I
 
 #### Creating and managing REST API keys
 
-![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
+![][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
 To create a new REST API Key, visit the [Developer Console][8] on your Braze dashboard. This page displays your existing API Keys. To create a new key, click **Create New API Key**.
 
@@ -98,9 +98,9 @@ You can then to do the following:
 - Select which permissions you would like to be associated with your new key
 - Specify allowlisted IP addresses and subnets for the new key
 
-Existing REST API Keys can be Viewed or Deleted by clicking the gear icon and selecting the corresponding option.
+Existing REST API Keys can be wiewed or deleted by clicking settings <i class="fas fa-gear"></i> and selecting the corresponding option.
 
-![API Key Options][29]
+![][29]
 
 {% alert important %}
 Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
