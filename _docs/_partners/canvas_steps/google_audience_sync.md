@@ -59,7 +59,7 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 
 Add a step in your Canvas, select the dropdown at the top of the step, and select the __Google Audience__ step.
 
-![An image of the steps to create a Google audience in Canvas.][6]
+![Workflow of the previous steps to add a Google audience in Canvas.][6]
 
 ### Step 3: Sync setup
 
