@@ -76,7 +76,7 @@ Enter a name for the new custom audience, select __Add Users to Audience__ and s
 
 Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![An image of the Custom Audience Canvas step expanded. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" check box selected.]({% image_buster /assets/img/google_sync/google_sync7.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" checkbox is selected.]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
