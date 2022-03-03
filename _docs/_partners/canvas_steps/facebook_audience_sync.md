@@ -94,7 +94,7 @@ When you launch a Canvas with a new audience, Braze will create the new custom a
 __Sync with an Existing Audience__<br>
 Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to __Add to the Audience__ or __Remove from the Audience__. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
 
-![An image of the Custom Audience Canvas step expanded. Here, the desired Ad account and existing audience is selected.]({% image_buster /assets/img/fb_audience_sync/add_audience.png %})
+![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/fb_audience_sync/add_audience.png %})
 
 It's important to note that Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000). As a result, Braze will be unable to sync users for a Remove from Audience step until the audience reaches the appropriate audience size.
 
