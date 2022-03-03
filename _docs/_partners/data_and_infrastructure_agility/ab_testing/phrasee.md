@@ -120,7 +120,7 @@ Schedule your campaign to start at a specific time. You will need to know this t
 
 Complete the remaining steps in Braze to set up your campaign. Under **A/B Testing**, check the box to **Send Winning Variant**. Then select how long to wait before sending the winning variant.
 
-![The A/B testing portion of the campaign showing how the A/B tests and control group will be split. Also shown are settings allowing you to determine the winning variant, sending information, and preferences for if the test ends up being statistically insignificant.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
+![The A/B testing portion of a campaign showing how the A/B tests and control group will be split. Also shown are settings allowing you to determine the winning variant, sending information, and preferences for if the test ends up being statistically insignificant.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 
 Finalize any other settings as needed and save your campaign.
 
@@ -132,7 +132,7 @@ The schedule campaign window will pop up. Here, select your Braze campaign from 
 
 Launch your campaign in Braze, and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
-![The Phrasee platform showing the schedule campaign window where you can adjust the send settings.]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
+![The Phrasee platform schedule campaign window where you can adjust the send settings.]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
 
 {% alert note %}
 Ensure your scheduled date and time match Braze's configured schedule so that Phrasee pulls in the results at the correct time.
