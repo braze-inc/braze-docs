@@ -50,7 +50,7 @@ Lob requires an HTTP Header for authorization and an HTTP method. The following 
   - **Authorization**: Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.][35]
+![Request body code and webhook URL shown in the Braze webhook builder compose tab.][35]
 
 #### Request body
 
