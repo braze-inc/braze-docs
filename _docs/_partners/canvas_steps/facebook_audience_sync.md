@@ -85,7 +85,7 @@ Enter a name for the new custom audience, select __Add Users to Audience__ and s
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![An image of the alert that appears once a new audience is created in the Canvas step.]({% image_buster /assets/img/fb_audience_sync/new_audience.png %})
+![An alert that appears once a new audience is created in the Canvas step.]({% image_buster /assets/img/fb_audience_sync/new_audience.png %})
 
 When you launch a Canvas with a new audience, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Facebook Audience Step. 
 
