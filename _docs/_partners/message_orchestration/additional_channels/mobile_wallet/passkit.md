@@ -40,7 +40,7 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s `externalId`.
 
-1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![An image of the Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
+1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
 3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![The PassKit Braze integration tile expanded to accept the API key, endpoint URL, integration name, enablement settings, membership settings, and pass settings.][4]{: style="max-width:70%"}
 
