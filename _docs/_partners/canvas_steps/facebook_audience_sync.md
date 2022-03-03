@@ -42,7 +42,7 @@ You will need to ensure that you have the following items created and/or complet
 
 In the Braze dashboard, go to __Technology Partners__ and select __Facebook__. In the Facebook Audience Export module, click __Connect Facebook__.
 
-![An image of the Facebook technology page in Braze.][4]{: style="max-width:70%;"}
+![Facebook technology page in Braze that includes an Overview module and Facebook Audience Export module with the Connected Facebook button.][4]{: style="max-width:70%;"}
 
 A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
 
