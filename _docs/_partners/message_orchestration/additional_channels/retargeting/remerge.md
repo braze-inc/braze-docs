@@ -56,7 +56,7 @@ In the above webhook URL, you must:
 - Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678") to remerge.
 - Define a key; Remerge will provide this.
 
-![Webhook template remerge][67]
+![The webhook URL and message preview shown in the Braze webhook builder.][67]
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
@@ -70,7 +70,7 @@ The Remerge webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![Request Method Remerge][68]
+![The request headers, HTTP method, and message preview shown in the Braze webhook builder.][68]
 
 #### Request body
 
