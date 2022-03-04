@@ -37,7 +37,8 @@ curl --request GET \
      --header 'Accept: application/vnd.api+json' \
      --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475e3d61671ac795302'
 ```
-For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `organization_name` will be "appboy-3", the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
+
+For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
 ## Connnected Content message example
 

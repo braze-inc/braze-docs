@@ -39,19 +39,19 @@ If you are using this feature alongside the [Audience Sync to Facebook]({{site.b
 
 In the Braze dashboard, go to **Technology Partners** and select **Facebook**. In the Facebook Audience Export module, click **Connect Facebook**.
 
-![Activate Facebook][6]{: style="max-width:70%;"}
+![Facebook technology partners page in the Braze platform.][6]{: style="max-width:70%;"}
 
 A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
 
-![Facebook Dialog][8]{: style="max-width:30%;"}  ![Facebook Dialog][7]{: style="max-width:40%;"}
+![The first facebook dialog box prompting to "Connect as X", where X is your Facebook username.][8]{: style="max-width:30%;"}  ![The second Facebook dialog box prompting for permission to manage ads for your ad accounts.][7]{: style="max-width:40%;"}
 
 Once you have linked Braze to your Facebook account, you will then be able to select which ad accounts you would like to sync within your Braze app group. 
 
-![Facebook Dialog][9]{: style="max-width:70%;"}
+![A list of available ad accounts you can connect to Facebook.][9]{: style="max-width:70%;"}
 
 Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![Facebook Connected][10]{: style="max-width:70%;"}
+![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.][10]{: style="max-width:70%;"}
 
 Your Facebook connection will be applied at the Braze app group level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
 
@@ -65,7 +65,7 @@ For customers that have previously undergone the Facebook app review process for
 
 Braze's Facebook audience export is accessible through the **Segments** page. Click on the gear next to the segment you'd like to export. Then click on **Export as Facebook Audience**.
 
-![Facebook export button][11]
+![A list of Braze segments. For the first segment, the setting symbol is selected and the "Export as Facebook Audience" button is shown.][11]
 
 If you haven't already activated Facebook within Braze, it will prompt you to go to the Facebook Technology Partners page in the dashboard. If you have already activated Facebook through **Technology Partners > Facebook**, you will be able to select the user field to export, and a dropdown to select your Facebook ad account will show.
 

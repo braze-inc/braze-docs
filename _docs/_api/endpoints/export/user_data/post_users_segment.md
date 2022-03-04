@@ -309,7 +309,7 @@ User export object (we will include the least data possible - if a field is miss
 ```
 
 {% alert tip %}
-For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

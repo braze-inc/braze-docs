@@ -35,11 +35,11 @@ Next, define the content you would like to call such as relevant text or images.
 
 {% endraw %}
 
-![Certona message composer][1]
+![An image of a push campaign with Certona related Connected Content included in the message body.][1]
 
 Once you put this message into the composer body, preview your Connected Content call to make sure you have displayed the correct information.
 
-![Certona testing][2]
+![An image showing the "Test" tab, encouraging users to thoroughly test their message before send.][2]
 
 [1]: {% image_buster /assets/img/certona.png %}
 [2]: {% image_buster /assets/img/certona2.png %}
