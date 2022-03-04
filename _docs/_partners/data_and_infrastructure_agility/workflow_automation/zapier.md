@@ -56,7 +56,7 @@ These data fields are key-value pairs that will be used for the data portion of 
 
 ### Step 5: Create a Braze campaign
 
-![A Braze push campaign with the Liquid "{{api_trigger_properties.${name} | default: "there"}}." This Liquid will template your name into the message.][12]
+![A Braze push campaign with Liquid that references the trigger properties name. This Liquid will template your name into the message.][12]
 
 Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with Wordpress data by using Liquid formatting to display the information in your messages.
 
