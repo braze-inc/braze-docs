@@ -70,7 +70,7 @@ Only existing users will be flagged. You cannot use pivoted Looks when flagging 
 
 Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 
-![Braze Looker Action][12]
+![The Looker Braze configuration page. Here you can find fields for Braze API key and Braze REST API endpoint.][12]
 
 #### Step 2: Set up Looker Develop
 
@@ -103,7 +103,7 @@ Note the following limitations:
 2. Select the custom Braze Action.
 3. Under **Unique Key**, provide the primary user mapping key for the Braze account (`external_id` or `braze_id`).
 4. Give the export a name. If none is provided, `LOOKER_EXPORT` will be used.
-5. Under **Advanced Options**, select **Results in Table** or **All Results** and then **Send**.<br><br>![Send Looker Action][13]<br><br>If the export was correctly sent, then `LOOKER_EXPORT` should appear in the user's profile as a custom attribute with the value you entered in the action.<br><br>![Custom Attribute in Braze from Looker][14]
+5. Under **Advanced Options**, select **Results in Table** or **All Results** and then **Send**.<br><br>![][13]<br><br>If the export was correctly sent, then `LOOKER_EXPORT` should appear in the user's profile as a custom attribute with the value you entered in the action.<br><br>![][14]
 
 ##### Sample outgoing API
 
@@ -142,10 +142,9 @@ Authorization: Bearer [API_KEY]
 
 In Braze, to create a segment of these flagged users, navigate to **Segments** under **Engagement**, name your segment, and select **Looker_Export** as the filter. Next, use the "includes value" option and provide the custom attribute flag you assigned in Looker.
 
-![Braze Segment by Looker Export][15]
+![In the Braze segment builder, the filter "looker_export" is set to "includes_value" and "Looker".][15]
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
-
 
 ## Troubleshooting
 If you're having issues with the Looker Action, add a test user to [internal groups][16] and check that the following:
@@ -158,9 +157,6 @@ If you're having issues with the Looker Action, add a test user to [internal gro
 * The unique key is correctly selected. Usually the `external_id`.
 * The `external_id` user exist in the Braze platform.
 * The `looker_export` field is set as `Automatically Detect` under `Braze Platform > Settings > Manage Settings > Custom Attributes`.
-
-
-
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md

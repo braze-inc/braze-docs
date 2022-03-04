@@ -46,7 +46,7 @@ Zendesk requires an HTTP Header for authorization and an HTTP method. In the **S
   - **Authorization**: Basic {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![Zendesk HTTP header and method][3]{: style="max-width:70%;"}
+![][3]{: style="max-width:70%;"}
 
 #### Request body
 

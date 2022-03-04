@@ -122,7 +122,7 @@ In the **Source** dialogue that appears, select the audience you created in the 
 
 Next, a **Configuration** dialogue will appear. Select **Add Connector** at the bottom of the page. Name your connector and provide your Braze API endpoint and Braze REST API key here.
 
-![Create Configuration]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
 If you have created a connector before, you may optionally use an existing from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
@@ -135,7 +135,7 @@ Next, name your connector action and select an action type that will send data a
 {% alert important %}
 **Note that not all fields offered are required**. <br>If you wish to skip over a field, Tealium requires that you **minimize it** before continuing onto the next step.
 
-![Minimize]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
+![]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
 {% endalert %}
 
 {% tabs local %}
@@ -152,7 +152,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 | Purchase attributes | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Track User Example]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
+![]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
 
 {% endtab %}
 {% tab Delete User %}
@@ -164,7 +164,7 @@ This action allows you to delete users from the Braze dashboard.
 | User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name & Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Delete Users]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}

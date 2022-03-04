@@ -17,13 +17,13 @@ search_tag: Partner
 
 The Neura and Braze integration allows you to create segments and audiences with Neura's [True Personas™](https://dev.theneura.com/api-reference/persona/?ref=braze)) and trigger campaigns to reach users with [Neura Moments™](https://dev.theneura.com/api-reference/situations-and-moments/?ref=braze).
 
-![Moments of availability]({% image_buster /assets/img_archive/neura-personas-moments.png %}){: style="border:0"}
+![A simple graphic showing how Neura’s True Personas and Neura Moments can be used together to reach users.]({% image_buster /assets/img_archive/neura-personas-moments.png %}){: style="border:0"}
 
 {% endtab %}
 {% tab Insights %}
 The Braze and Neura integration allows you to leverage [Neura Insights](https://www.theneura.com/neura-insights/?ref=braze) to uncover the relationships between users real-world behavior and the actions they take in your app to find the best moment to engage with each user.
 
-![Insights Bubble Graph]({% image_buster /assets/img/insights-bubble-graph.png %})
+![A Neura Insights bubble graphs and chart showing "When are people available to engage in the app?".]({% image_buster /assets/img/insights-bubble-graph.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -57,7 +57,7 @@ Add a new mobile engagement platform in the [Neura console][7]. Here, you will b
 - Region: Braze manages server endpoints in different regions. Use your region as the input to the "Server" field.
 - Android/iOS App ID: We recommend providing a unique Braze application ID for each mobile platform, allowing you to segment the users for each platform individually.
 
-![Neura MEP Details in Neura][12]
+![][12]
 
 ### Step 2: Map Neura users to Braze
 
@@ -106,13 +106,13 @@ The Neura SDK requires that you enable location services.
 
 Once both SDKs are integrated, you can set up a campaign or Canvas in the Braze dashboard to be triggered by Neura Moments, available in the Braze platform as custom events.
 
-![action-based-delivery.png]({% image_buster /assets/img/action-based-delivery.png %})
+![In a Braze action-based campaign, "Perform Custom Event" is set to "neura_user_arrived_home".]({% image_buster /assets/img/action-based-delivery.png %})
 
 ### Create Braze segment
 
 Neura recognizes real-world behavioral traits for each user. Using Braze, you can create segments to target specific users based on their True Personas™, available in the Braze platform as custom attributes.
 
-![segment-creation.png]( {% image_buster /assets/img/segment-creation.png %})
+![In the Braze segment builder, the filter "neura_personas" is set to "includes_value" and "avid_runner".]( {% image_buster /assets/img/segment-creation.png %})
 
 ## Neura Insights
 
@@ -124,7 +124,7 @@ Neura's generic data import allows for two types of import methods:
 Neura closes the loop by sending actionable data back to Braze, so you can seamlessly execute on Neura's real-world insights right within Braze.
 After you've identified the right engagement moment for the right user, easily create campaigns and Canvases with Neura Actions in Braze.
 
-![insights-moments-personas.png]({% image_buster /assets/img/insights-moments-personas.png %})
+![Neura insights infograph showing "which neura insights momens drive the most successful engagements?" and "which true-personas have the most successful engagements?".]({% image_buster /assets/img/insights-moments-personas.png %})
 
 [1]: https://www.theneura.com/
 [2]: https://dev.theneura.com/api-reference/persona/?ref=braze

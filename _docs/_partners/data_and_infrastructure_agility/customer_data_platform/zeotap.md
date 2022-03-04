@@ -29,7 +29,7 @@ With the Zeotap and Braze integration, you can extend the scale and reach of you
 1. From the Zeotap Unity platform, navigate to the **DESTINATIONS** application.
 2. Under **All Channels**, select **Braze**.
 3. In the prompt that appears, name your destination, and provide your client name and Braze REST API key associated with your Braze account.
-4. Lastly, select your Braze REST endpoint instance from the dropdown and save the destination. <br><br>![Zeotap Braze destination][1]
+4. Lastly, select your Braze REST endpoint instance from the dropdown and save the destination. <br><br>![][1]
 
 ### Step 2: Create and link a Zeotap segment to your destination 
  
@@ -38,7 +38,7 @@ With the Zeotap and Braze integration, you can extend the scale and reach of you
 3. Select a supported output identifier: MAID, sha56 email, or sha56 phone. Only one can be used for the Braze integration. These identifiers must be the same as the external ID set when collecting Braze SDK data.
 4. Save the segment.
 
-![Zeotap segment][2]
+![][2]
 
 {% alert note %}
 The identifiers that appear are the ones that are both available in the segment and supported by Braze.
@@ -48,7 +48,7 @@ The identifiers that appear are the ones that are both available in the segment 
 
 After successfully creating, pushing, and processing a segment in Zeotap, the Zeotap users will appear in the Braze dashboard. You can look up users by user ID in the Braze dashboard. 
 
-![Zeotap user profile][4]
+![A Braze user profile showing the segment 1-4 listed as "true" under "Custom attributes".][4]
 
 If a user is part of the Zeotap segment, the segment name appears as a custom attribute on their user profile with the boolean value `true`. Take note of the custom attribute name as you will need it when creating a Braze segment. 
 
@@ -57,7 +57,7 @@ Next, you must create and define this segment within Braze:
 2. Next, name your segment and select the custom attribute segment made in Zeotap.
 3. Save your changes. 
 
-![Braze segment][3]
+![In the Braze segment builder, you can find the imported segments set as custom attributes.][3]
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users. 
 

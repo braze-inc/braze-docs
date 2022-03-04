@@ -37,7 +37,7 @@ With this integration, you can integrate email or push campaigns into Phrasee. T
 
 Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
-![An image of a Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
+![A Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
 #### Step 2: Create your Braze email campaign
 
@@ -49,13 +49,13 @@ Next, click **Edit Sending Info** for each variant to paste the Phrasee variant 
 
 You will not need to recreate each email from scratch; you can simply copy the first variant and then edit the subject line for each new variant.
 
-![An image showing how to copy an existing email variant in Braze.]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
+![Where to copy an existing email variant in Braze.]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
 
 #### Step 3: Schedule your Braze campaign
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![The delivery step in the campaign builder.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![A scheduled deivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 4: Finalize the Braze campaign setup
 
@@ -88,7 +88,7 @@ Ensure your scheduled date and time match Braze's configured schedule so that Ph
 
 Set up your Phrasee email campaign as you normally would. Once you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
-![An image of a Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
+![A Phrasee campaign showing the available variants.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
 #### Step 2: Setup your Braze push campaign
 
@@ -114,7 +114,7 @@ You can also enter the whole Phrasee variant into the **Message body** for the r
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![The delivery step in the campaign builder.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![A scheduled deivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 5: Finalize the Braze campaign setup
 

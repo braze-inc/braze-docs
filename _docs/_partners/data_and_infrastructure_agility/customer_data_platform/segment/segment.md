@@ -38,7 +38,7 @@ After successfully setting up your Braze and Segment integrations individually, 
 
 In Segment, navigate to __Destinations > Braze > Receiving from [platform]__.
 
-![Destination connection settings]({% image_buster /assets/img/segment_destination_braze.png %})
+![]({% image_buster /assets/img/segment_destination_braze.png %})
 
 Next, provide the following fields in the configuration page:
 - __App identifer__: Previously called the API key. Found in the Braze __Developer Console__ under __Settings__.

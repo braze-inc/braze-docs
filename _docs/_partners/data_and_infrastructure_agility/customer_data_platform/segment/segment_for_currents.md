@@ -33,7 +33,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 2. In Braze, navigate to **Currents > + Create Currents > Create Segment Export**.
 3. Next, provide an integration name, contact email, and Segment write key.
 
-![Segment current settings][1]
+![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, and API key.][1]
 
 {% alert warning %}
 It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
@@ -43,7 +43,7 @@ It's important to keep your Segment write key up to date. If your connector's cr
 
 Next, select the message engagement events you would like to export. Reference the export events and properties table listed below. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-![Segment engagement events][2]
+![List of all available message engagement events on the Segment Currents page in Braze.][2]
 
 Lastly, select __Launch Current__.
 
