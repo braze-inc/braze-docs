@@ -32,7 +32,8 @@ Here, you'll see if the selected Purchase method provides enough data for Braze 
 
 #### Prediction Window
 
-Prediction Window is the time frame in which you want to predict if a user will make a purchase. Prediction Window can be set up to 60 days. When using Full Filter Mode in Prediction Audience, it can be set up to 14 days. Note that for windows longer than 14 days, Braze can't estimate if there will be enough user data to build a reliable Prediction until it's in the training process. The Prediction Window applies after the Prediction finishes building or updating.
+Prediction Window is the time frame in which you want to predict if a user will make a purchase. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Purchase Likelihood Score indicates how likely a user is to Purchase within the number of days specified by the Prediction Window. 
+
 
 ### Step 3: Filter your Prediction Audience (optional) {#audience}
 
@@ -50,7 +51,7 @@ For filters that begin with "Last..." like "Last Used App" and "Last Made Purcha
 
 #### Full Filter Mode
 
-In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode gives you access to all Braze filters but will require one Prediction Window to build the Prediction. For example, if the Prediction Window is set to 14 days, it will take 14 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. 
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode gives allows you to use all Braze filters but will require one Prediction Window to build the Prediction. For example, if the Prediction Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
 ### Step 4: Choose the update frequency
 
