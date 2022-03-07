@@ -38,7 +38,7 @@ Better visibility on overall campaigns and Canvases performance.
 {% tab Granular reporting %}
 Granular reporting for campaigns and Canvases.
 
-![A graphic showing granular reporting, like "overall sent by send channel" and conversion rate".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
+![A graphic showing granular reporting, like "overall sent by send channel" and "conversion rate".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
 {% tab Unified dashboards %}
 Unified dashboards for CMOs and CXOs.
