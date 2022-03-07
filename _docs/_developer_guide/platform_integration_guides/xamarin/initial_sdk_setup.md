@@ -18,9 +18,9 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 ### Step 1: Get the Xamarin binding
 
-A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See [the Xamarin documentation][2].
+A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application. See the [ Xamarin documentation][2].
 
-There are two ways to include the Braze SDK binding.
+There are two ways to include the Braze SDK binding:
 
 #### Option 1: Nuget
 
@@ -28,7 +28,7 @@ The simplest integration method involves getting the Braze SDK Bindings from the
 
 #### Option 2: Source
 
-The second integration method is to include the binding source found [here][3].  Under `appboy-component\src\android` you will find our binding source code; adding a project reference to the ```AppboyPlatform.XamarinAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
+The second integration method is to include the [binding source][3]. Under `appboy-component\src\android` you will find our binding source code; adding a project reference to the ```AppboyPlatform.XamarinAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
 
 >  The Braze Nuget package depends on the [`Xamarin.Android.Support.v4`][12] Nuget package.
 
@@ -80,13 +80,13 @@ The simplest integration method involves getting the Braze SDK Bindings from the
 
 #### Option 2: Source
 
-The second integration method is to include the binding source found [here][113].  In [our github repo][17] you will find our binding source code; adding a project reference to the ```AppboyPlatformXamariniOSBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze iOS SDK. Please make sure `AppboyPlatformXamariniOSBinding` is showing in your project's "Reference" folder.
+The second integration method is to include the [binding source][113]. In [our github repo][17] you will find our binding source code; adding a project reference to the ```AppboyPlatformXamariniOSBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze iOS SDK. Please make sure `AppboyPlatformXamariniOSBinding` is showing in your project's "Reference" folder.
 
 ### Step 2: Update your app delegate and declare Xamarin usage
 
 Within your `AppDelegate.cs` file, add the following snippet within your `FinishedLaunching` method:
 
->  Be sure to update `YOUR-API-KEY` with the correct value from your [Settings][5] page.
+>  Be sure to update `YOUR-API-KEY` with the correct value from your [Settings][4] page.
 
 ```csharp
 // C#

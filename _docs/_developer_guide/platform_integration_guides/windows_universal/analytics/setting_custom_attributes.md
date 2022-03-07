@@ -11,7 +11,7 @@ description: "This reference article covers how to set custom attributes on the 
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][7].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7] section.
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
@@ -38,8 +38,7 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 
 ## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
-For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
 
 ### Setting custom attribute values
 
@@ -106,7 +105,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
+You can also use our REST API to set user attributes. Refer to the [users API][4] documentation for details.
 
 ### Custom attribute value limits
 
@@ -124,11 +123,11 @@ To set up a subscription for your users (either email or push), you can set the 
 {: .reset-td-br-1 .reset-td-br-2}
 
 - `EmailNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user.
 - `PushNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user.
 
->  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`
+>  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Visit [Managing user subscriptions][10] for more details.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
 [2]: http://en.wikipedia.org/wiki/ISO_8601

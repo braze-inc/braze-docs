@@ -90,7 +90,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 </manifest>
 ```
 
-> Your `AndroidManifest.xml` should exist under `Assets/Plugins/Android/AndroidManifest.xml`. Please see [the Unity AndroidManifest documentation](https://docs.unity3d.com/Manual/android-manifest.html) for more information.
+> Your `AndroidManifest.xml` should exist under `Assets/Plugins/Android/AndroidManifest.xml`. Please see the [Unity AndroidManifest documentation](https://docs.unity3d.com/Manual/android-manifest.html) for more information.
 
 > All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK. If you add your own Activity class, you must follow [Braze's Unity Activity integration instructions](#extending-braze-unity-player) to ensure that analytics are being collected.
 
