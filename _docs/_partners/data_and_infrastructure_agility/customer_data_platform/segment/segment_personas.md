@@ -51,7 +51,7 @@ For example, if you have a Personas computed trait for “Last Product Viewed It
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
-| ![Computed trait]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![Segment Audience]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![The custom attribute section within a user profile lists "last_product_viewed_item" as "Sweater".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![The custom attribute section within a user profile lists "dormant_shopper" as "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
 {% tab Track %}
@@ -62,7 +62,7 @@ Continuing the previous example, if a user has a computed trait for “Last Prod
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
-| ![Computed trait]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![Segment Audience]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![The custom event section within a user profile lists "Trait Computed" "1" time, with the last time being "20 hours ago".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![The custom attribute section within a user profile lists "Audience Entered" "1" time, with the last time being "March 9 at 1:45 am".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

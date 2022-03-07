@@ -32,25 +32,25 @@ Any integration you set up will count towards your account's data point volume.
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![Mixpanel]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
 ### Step 2: Set up the Braze integration in Mixpanel
 
 In Mixpanel, navigate to **Data Management > Integrations.** Next, select the Braze integration tab and click **Connect**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Continue**.
 
-![Mixpanel integration set up]({% image_buster /assets/img_archive/mixpanel2.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/mixpanel2.png %}){: style="max-width:50%;"}
 
 ### Step 3: Export a Mixpanel cohort to Braze
 
 In Mixpanel, navigate to **Data Management > Cohorts.** Select the cohort to send to Braze and then select **Export to Braze**. Lastly, select a one-time sync or dynamic sync. Selecting dynamic sync will sync your Braze cohort every two hours to match users in Mixpanel. 
 
-![Mixpanel cohort export]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
 
 ### Step 4: Segment users in Braze
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Mixpanel_Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Mixpanel. 
 
-![Mixpanel segment]({% image_buster /assets/img_archive/mixpanel1.png %})
+![In the Braze segment builder, the user attributes filter "Mixpanel cohorts" is set to "includes" and "Braze cohort".]({% image_buster /assets/img_archive/mixpanel1.png %})
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
@@ -70,7 +70,7 @@ In your Mixpanel dashboard, click into the **Project Settings**in either a new o
 
 In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
 
-![Mixpanel current]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
 {% tab note %}
 Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) or this Braze [Mixpanel LAB course](https://lab.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2) to learn more. 
