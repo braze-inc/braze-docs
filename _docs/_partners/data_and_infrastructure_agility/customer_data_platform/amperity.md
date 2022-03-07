@@ -33,9 +33,9 @@ The Braze and Amperity integration offers a unified view of your customers acros
 ### Step 1: Create an Amperity user segment
 
 To upload Amperity user data to Braze, you must first create a segment of existing Amperity users.
-1. Navigate to the **Segments** tab within the Amperity dashboard.<br>![Amperity segments overview][2]<br><br>
-2. Click **Create** to filter and define a segment of users to capture. Under the **Summary** tab, you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![Amperity segment builder][3] <br><br>
-3. Select the **Customers** tab, and choose which user fields you would like to include using the **Show Columns** selector on the right.<br>![Amperity segment builder][4]<br><br>
+1. Navigate to the **Segments** tab within the Amperity dashboard.<br>![][2]<br><br>
+2. Click **Create** to filter and define a segment of users to capture. Under the **Summary** tab, you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![A summary of an Amperity segment showing the revenue and reachability stats.][3] <br><br>
+3. Select the **Customers** tab, and choose which user fields you would like to include using the **Show Columns** selector on the right.<br>![The Amperity segment builder showing the available customer attributes to include.][4]<br><br>
 4. Next, click **Run Segment**.
 
 ### Step 2: Select upload method
@@ -72,7 +72,7 @@ In the window that opens:
 - Set a file name template
 - Set the workflow query frequency
 
-![Segment 1][7]{: style="max-width:60%;"}
+![][7]{: style="max-width:60%;"}
 
 Click **Activate**.
 
@@ -90,7 +90,7 @@ In the window that opens:
 - Set encoding to **None**
 - Include header row in output files
 
-![Destination Configuration][8]{: style="max-width:60%;"}
+![][8]{: style="max-width:60%;"}
 
 Click **Save**.
 
@@ -167,7 +167,7 @@ To read more about different aspects of the Lambda function such as monitoring a
 
 #### Step 3b: Create Amperity CSV
 
-1. Once the segment has run, click **View SQL**. This will generate a SQL query that preformats the data to work well with what is required by the Braze platform. Make sure the field names match the fields in Braze that you want to load data into. If you would like to customize it, you can convert the Segment to SQL and alias the fields. Click **Run Query** to run the SQL query.<br>![Amperity segment builder][5]<br><br>
+1. Once the segment has run, click **View SQL**. This will generate a SQL query that preformats the data to work well with what is required by the Braze platform. Make sure the field names match the fields in Braze that you want to load data into. If you would like to customize it, you can convert the Segment to SQL and alias the fields. Click **Run Query** to run the SQL query.<br>![Braze demo CSV shown in the AmperitySQL query editor.][5]<br><br>
 2. Lastly, click **Download** to download a CSV version of this user segment. This is the file you'll upload to Braze.
 
 #### Step 4b: Import CSV

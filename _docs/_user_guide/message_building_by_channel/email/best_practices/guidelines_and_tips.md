@@ -19,7 +19,7 @@ channel: email
 - If you would like one email template for both mobile and desktop, keep the width below 500 pixels.
 - Use inline style sheets to format your email as CSS or it will not be recognized by Email Service Providers (ESPs).
 - Images uploaded to the email template must be less than 5MB and either PNG, JPG, GIF.
-- Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
+- Always provide alternative text for images in case they don't appear in the email (blocked, fail to load, etc.)
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
@@ -215,13 +215,13 @@ The following HTML attributes are disallowed as well:
 - `<seeksegmenttime>`
 - `<transitionend>`
 
-### Implementing 'alt' tags
+### Implementing alternative text
 
-Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, ALT texts can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider.
+Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text (`alt=""`) can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider.
 
 ### Setting from and reply-to addresses
 
-When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e. `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e. `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
 
 ## Styling tips
 
@@ -240,19 +240,19 @@ When setting your "From" addresses, make sure your "From" email domain matches y
 
 ### Body styling
 
-- Many users use **Email Previewing**, either in Gmail or Outlook.
+- Many users use **Email Previewing** in Gmail or Outlook.
   - These preview areas generally allow for around 300 pixels or 85 characters of content to be shown.
   - It is recommended that the email communicate the main point of the message efficiently within that space, engaging the reader’s interest to encourage opens.
 
-- **No-reply** email addresses are generally not recommended for multiple reasons as they disengage your readers.
+- No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers.
   - Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
   - Getting out of office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed).
   - On a personal level, a no-reply can appear impersonal, lazy and arrogant to recipients (suggesting “You aren’t worth my time”), and may turn them off from receiving further email from your company.
 
-- **Preheader Text** is often used by email marketers to provide additional information on an email's contents.
+- Preheader text is often used by email marketers to provide additional information on an email's contents.
   - A preheader is the preview text displayed immediately after an email subject. In the example below, the preheader is `- Brand. New. Lounge Shorts`.
 
-![Preheader Example][61]
+![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts"][61]
 
   - The amount of visible preheader text is dependent on the User's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
 
@@ -285,15 +285,14 @@ When setting your "From" addresses, make sure your "From" email domain matches y
   | Mail.ru                | 64      |
   {: .reset-td-br-1 .reset-td-br-2}
 
+Here are some best practices to keep in mind when writing your preheaders:
 
- [Email on Acid][62]
-
-- **Call to actions** come into play once readers have opened your email.
+- Calls to action come into play once readers have opened your email.
   - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
   - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company’s brand voice and that every call to action exhibits some sort of value to the consumer.
   - Pre-header should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
 
-- **Email and landing sites** to which you direct your users to should be mobile optimized:
+- Email and landing sites to which you direct your users to should be mobile optimized:
   - No interstitial boxes
   - Large form-fields
   - Easy navigation
@@ -344,9 +343,9 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Showcase only the most essential features 
 - Too much information can be overwhelming and potentially confusing if the user is still unfamiliar with your app
 - Provide links to your documentation and let users know how they can get support.
-- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple but clear calls to action and informs users about a deal:
+- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple calls to action and informs users about a deal:
 
-![LivingSocial email][26]{: style="max-width:70%;"}
+![Onboarding email sent from LivingSocial that welcomes new users.][26]{: style="max-width:70%;"}
 
 ### Sales and promotional
 
@@ -358,7 +357,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Use social proof to promote your products. Show users any items their friends have liked or purchased.
 - If you're promoting a limited time offer, be sure to let users know! Ideeli does a great job at conveying urgency in this email:
 
-![Ideeli email][27]{: style="max-width:70%;"}
+![Promotional email sent from Ideeli that notifies users of a limited-time offer. A large banner contains the text "Ends at midnight EDT. 6-hour flash sale. Hurry! These amazing finds won't last long."][27]{: style="max-width:70%;"}
 
 ### Transactional
 
@@ -366,7 +365,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - If the user recently made an out-of-app purchase, provide them with shipping confirmation and a way to ask questions about their shipment.
 - Asking users to give feedback after a purchase is a good way to solicit input without being pushy. Because you've just provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
 
-![Restaurant email][28]{: style="max-width:80%;"}
+![Transactional email sent from Restaurants.com that asks users for feedback. The email reads "Tell Us All About It! We hope you enjoyed your meal and experience at REDACTED. To ensure we are doing everything we can to provide you with the best service, food, and overall experience, please take a moment to give us your feedback. Your opinion is very valuable to us and we appreciate your thoughts." The call to action reads "Take Survey".][28]{: style="max-width:80%;"}
 
 ### Retention
 
@@ -375,9 +374,9 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - If the user has been relatively inactive since installing, offer helpful hints for getting started.
 - For social apps, keep users updated on their friends' activities.
 - Offer discounts or any other incentives that may bring users back.
-- Try to make your message personal to show the user that he is still valued. Rue La La, for instance, frames the retention email as a note from its CEO:
+- Try to make your message personal to show the user that they are still valued. Rue La La, for instance, frames the retention email as a note from its CEO:
 
-![Ruelala email][29]{: style="max-width:80%;"}
+![Retention email sent to customers with a personalized message from the CEO of Rue La La. The email reads "Just a quick hello. As Rue's CEO, I like checking in with our Members. Most tell me how much they love Rue. (And we're flattered.) But it doesn't seem like you're feeling it... yet. I'm not going to be subtle here. I'm giving you a 25 dollar credit to go shop the site and find what speaks to you, whether it's a designer bag, a new pair of jeans, or something amazing for your home. I (really) believe this is where you'll start feeling the Rue love. Enjoy!"][29]{: style="max-width:80%;"}
 
 ### Social
 
@@ -385,7 +384,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Include links to your social media accounts within the email to make it easy for users to connect.
 - Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. Below is an email from Hailo that offers a reward for participating in photo challenges:
 
-![Hailo social email][30]{: style="max-width:70%;"}
+![Social email example from Hailo that notifies their users to participate in a photo challenge.][30]{: style="max-width:70%;"}
 
 ### Updates
 
@@ -393,7 +392,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Updating users on new features is also a re-engagement tool because it reminds lapsing users of your app's value.
 - If your feature requires an explanation or demo, include a link in the message. Here's an example by Allrecipes.com:
 
-![Allrecipes email][31]{: style="max-width:70%;"}
+![Update-focused email example from Allrecipes that notifies their users of a new feature. The top of the email reads "Too. Many. Passwords. Tired of passwords? So are we." The email body directs users to sign in with Facebook or Google plus, with a call to action of "See How".][31]{: style="max-width:70%;"}
 
 
 [25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
@@ -405,4 +404,3 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
 [24]: http://tools.ietf.org/html/rfc2822
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
-[62]: https://www.emailonacid.com/blog/article/email-marketing/preview-vs-preheader-text-how-long-should-preheader-text-be/

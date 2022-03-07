@@ -108,7 +108,7 @@ After you've set up the RevenueCat purchases SDK and Braze SDK to have the same 
 3. Enter the event names that RevenueCat will send or choose the default event names. More details on available events can be found in [step 3](#configure-event-names).
 4. Select whether you want RevenueCat to report proceeds (after app store cut) or revenue (gross sales).
 
-![Braze settings in revenuecat][3]
+![Braze settings in RevenueCat with fields for Braze instance, API key identifier, and sandbox identifier.][3]
 
 ### Step 3: Configure event names {#configure-event-names}
 

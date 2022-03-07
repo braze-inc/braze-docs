@@ -10,7 +10,7 @@ channel:
 
 # Gmail Promotion tool
 
-Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
 ## Building the card with Braze
 
@@ -18,11 +18,11 @@ Building the card in Braze is easy!
 
 First, create your email campaign, as you normally would. Then, as you're editing the content of your email, click the **Gmail Promo** tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
 
-![Build Your Card][2]
+![GIF that shows an example of how to build a card.][2]
 
-After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the "`<head>` "section/element of your email's `HTML`.
+After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the `<head>` element of your email's HTML.
 
-![Copy Your Script][3]
+![GIF that shows how to copy your script to paste into the email's HTML body.][3]
 
 {% alert warning %}
 
@@ -34,7 +34,7 @@ The Promotions script will only appear if your email lands in the Gmail **Promot
 
 You can customize many variables for your card, which will map to the locations shown in the card layout below.
 
-![Promo Card Map][4]
+![Card layout that maps out the parameters for the company logo, sender, subject line, discount offer and discount code, and related images.][4]
 
 | Customizable Variable | Description |
 |---|---|

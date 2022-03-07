@@ -25,17 +25,15 @@ Braze customers who use SendGrid as an email provider can now, essentially, "[wh
 
 Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist the email address you wish to use for sending via Apple's Email Relay Service (your desired `From` address). 
 
-![Whitelabel the Address]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
+![Option to whitelist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
-To find the proper address, go to your Sendgrid DNS record and copy the UID, Whitelabel Subdomain, and Domain from the Host Value column. 
+To find the proper address, go to your Sendgrid DNS record and copy the **UID**, **Whitelabel Subdomain**, and **Domain** from the **Host Value** column. 
 
-![HOST Value DNS Records]({% image_buster /assets/img/email-relay-dns-records.png %})
+![HOST Value column in Sendgrid DNS records section.]({% image_buster /assets/img/email-relay-dns-records.png %})
 
-The address should be formatted as:
+The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`
 
-`bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`
-
-For example: `bounces+1234567@braze.online.docs.com`.
+An example is: `bounces+1234567@braze.online.docs.com`.
 
 Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
 
@@ -51,8 +49,8 @@ This might not be the case for your address. Please check your DNS records in Se
 
 | Value | Description |
 |---|---|
-| UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> <br> _You can also ask your Braze representative to provide your UID, if you do not have access to your DNS records._ |
-| Whitelabeled Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the HOST value in your DNS Records in Sendgrid. <br> <br> ![HOST Value DNS Records]({% image_buster /assets/img/email-relay-dns-records.png %}) |
+| UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> <br> You can also contact your Braze representative to provide your UID if you do not have access to your DNS records. |
+| Whitelabeled Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the **HOST Value** in your DNS Records in Sendgrid.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Sending emails to Apple Private Relay for Sparkpost

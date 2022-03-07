@@ -62,7 +62,7 @@ In the above webhook URL, you must:
 - Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678").
 - Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Please note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
 
-![Webhook template Jampp][2]
+![The webhook URL and message preview shown in the Braze webhook builder.][2]
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
@@ -76,7 +76,7 @@ The Jampp webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![Jampp method][3]
+![The request headers, HTTP method, and message preview shown in the Braze webhook builder.][3]
 
 #### Request body
 

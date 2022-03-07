@@ -30,7 +30,7 @@ The Braze and Grouparoo integration makes it easy to operationalize data stored 
 
 In Grouparoo, navigate to **Apps** and select **Braze** to create a new Braze app. In the modal that appears, provide your Braze API key and REST endpoint.
 
-![Add an app][2]
+![][2]
 
 ### Step 2: Set up a model and data source
 
@@ -51,7 +51,7 @@ Next, select the **Braze** app you made, name the destination, and select your d
 
 Next, you must map Grouparoo property fields to Braze property fields. 
 
-![Property to Profile Field Mapping][3]{: style="max-width:80%;"}
+![Example property mapping fields. Grouparoo userID is set to map to external_id. email, firstName, and lastName are set as equivalent "email", "first_name", and "last_name" grouparoo fields.][3]{: style="max-width:80%;"}
 
 Make sure the Braze `external_id` field is mapped to the primary key in your source table. Map the rest of the fields as necessary for your use case.
 
@@ -63,7 +63,7 @@ Make sure the Braze `external_id` field is mapped to the primary key in your sou
 
 In addition to mapping, you may also choose to add Grouparoo groups to Braze subscription groups. 
 
-![Groups to Lists][4]{: style="max-width:80%;"}
+![Under "Braze Subscription Groups" in the Grouparoo destination configuration window, the "High value with recent automotive purchase" Grouparoo group will be added to the "High value with recent automotive purchase" Braze subscription group.][4]{: style="max-width:80%;"}
 
 {% alert important %}
 Further details and updates on this integration can be found in [Grouparoo's documentation](https://www.grouparoo.com/docs/integrations/grouparoo-braze).

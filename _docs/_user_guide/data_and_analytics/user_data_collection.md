@@ -23,6 +23,9 @@ guide_featured_list:
   - name: Data Collection Use Case Example
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
     fa_icon: fas fa-taxi
+  - name: Data Collection Best Practices
+    link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
+    fa_icon: fa fa-thumbs-up
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     fa_icon: fas fa-user
