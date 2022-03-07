@@ -37,7 +37,7 @@ The Braze feed integration supports four separate feeds: iOS, Android, Web, and 
 
 For each feed, under __Act as Platform__ select the matching platform from the list. If you do not see an option to select an __act-as__ feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.
 
-![The first integration dialogue box box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.][2]{: style="max-width:40%;"}  ![The second integration dialogue box showing the server-to-server key and server-to-server secret.][3]{: style="max-width:37%;"}
+![The first integration dialog box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.][2]{: style="max-width:40%;"}  ![The second integration dialog box showing the server-to-server key and server-to-server secret.][3]{: style="max-width:37%;"}
 
 As you create each input, mParticle will provide you with a key and secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
 
