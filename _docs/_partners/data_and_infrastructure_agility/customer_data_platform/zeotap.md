@@ -48,7 +48,7 @@ The identifiers that appear are the ones that are both available in the segment 
 
 After successfully creating, pushing, and processing a segment in Zeotap, the Zeotap users will appear in the Braze dashboard. You can look up users by user ID in the Braze dashboard. 
 
-![A Braze user profile showing the segment 1-4 listed as "true" under "Custom attributes".][4]
+![A Braze user profile showing the segment one through four listed as "true" under "Custom attributes".][4]
 
 If a user is part of the Zeotap segment, the segment name appears as a custom attribute on their user profile with the boolean value `true`. Take note of the custom attribute name as you will need it when creating a Braze segment. 
 
