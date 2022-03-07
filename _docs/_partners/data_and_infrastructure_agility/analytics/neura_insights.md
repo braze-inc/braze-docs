@@ -124,7 +124,7 @@ Neura's generic data import allows for two types of import methods:
 Neura closes the loop by sending actionable data back to Braze, so you can seamlessly execute on Neura's real-world insights right within Braze.
 After you've identified the right engagement moment for the right user, easily create campaigns and Canvases with Neura Actions in Braze.
 
-![Neura insights infograph showing "which neura insights momens drive the most successful engagements?" and "which true-personas have the most successful engagements?".]({% image_buster /assets/img/insights-moments-personas.png %})
+![Neura insights infograph showing "which neura insights moments drive the most successful engagements?" and "which true-personas have the most successful engagements?".]({% image_buster /assets/img/insights-moments-personas.png %})
 
 [1]: https://www.theneura.com/
 [2]: https://dev.theneura.com/api-reference/persona/?ref=braze
