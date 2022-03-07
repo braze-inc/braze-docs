@@ -25,7 +25,7 @@ This integration supports iOS and Android apps.
 
 | Requirement | Description |
 |---|---|
-| Jampp account | A [Jampp account][https://www.jampp.com/] is required to take advantage of this partnership. |
+| Jampp account | A [Jampp account](https://www.jampp.com/) is required to take advantage of this partnership. |
 | Android app ID | Your unique Braze application identifier for Android (i.e., "com.example"). |
 | iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
