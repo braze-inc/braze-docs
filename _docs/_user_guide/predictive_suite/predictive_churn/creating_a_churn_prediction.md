@@ -56,7 +56,7 @@ For filters that begin with “Last...” like Last Used App and Last Made Purch
 
 #### Full Filter Mode
 
-In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
 For a sample list of Prediction Audience definitions, check out our sample definitions in the section on [Sample churn definitions](#sample-definitions) below.
 
