@@ -30,7 +30,7 @@ Remember, you don’t need to explain what behaviors might precede churn—only 
 
 #### Churn Window
 
-Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Likelihood Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
