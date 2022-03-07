@@ -49,7 +49,7 @@ Next, click **Edit Sending Info** for each variant to paste the Phrasee variant 
 
 You will not need to recreate each email from scratch; you can simply copy the first variant and then edit the subject line for each new variant.
 
-![Where to copy an existing email variant in Braze.]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
+![Option to copy an existing email variant in Braze.]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
 
 #### Step 3: Schedule your Braze campaign
 
