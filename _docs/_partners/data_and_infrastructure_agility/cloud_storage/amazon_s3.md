@@ -114,9 +114,9 @@ After creating a new policy, navigate to **Users** and click into your specific 
 
 In Braze, navigate to the **Currents** page under **Integrations**. Next, click **Create Current** and select **Amazon S3 Data Export**.
 
-![]({{site.baseurl}}/assets/img/currents-s3-example.png)
-
 Name your current, and then in the **Credentials** section, make sure the **AWS Secret Access Key** radio button is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
+
+![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
 Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
@@ -136,9 +136,9 @@ A notification will inform you whether your credentials have been successfully v
 
 In Braze, navigate to the **Technology Partners** page under **Integrations** and click **Amazon S3**.
 
-![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
-
 On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS access ID, AWS secret access key, and AWS S3 bucket name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once successful.
+
+![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
 {% alert tip %}
 You can always retrieve new credentials by navigating to your user, and clicking **Create Access Key** in the **Security Credentials** tab within the AWS Console.
