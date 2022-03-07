@@ -54,7 +54,7 @@ The Prediction Audience cannot exceed 100 million users.
 For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed the Churn Window specified__ in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
 
 #### Full Filter Mode
-In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode gives allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters is supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
 For a sample list of Prediction Audience definitions, check out our sample definitions in the section on [Sample churn definitions](#sample-definitions) below.
 
