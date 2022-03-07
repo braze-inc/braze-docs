@@ -28,6 +28,10 @@ In the __Churn Definition__ panel, use the provided filters to specify how you d
 
 Remember, you don’t need to explain what behaviors might precede churn—only what makes a user a churned user. Think of this in terms of something a user either does once (`do`) or stops doing (`do not`) that constitutes churning. For example, you might consider users who haven’t opened your app in 7 days to be churned. You might consider uninstalling, or custom events like unsubscribing, disabling an account, or others to cause a user to become churned. 
 
+#### Churn Window
+
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
 ![Churn Definition][1]
@@ -48,7 +52,11 @@ Your Prediction Audience is the group of users you want to predict churn risk fo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 30 days minus the number of days of the window specified__ in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed the Churn Window specified__ in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+
+#### Full Filter Mode
+
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
 For a sample list of Prediction Audience definitions, check out our sample definitions in the section on [Sample churn definitions](#sample-definitions) below.
 
