@@ -33,7 +33,6 @@ To configure your campaign, perform the following steps:
 3. Optionally, You can add a conversion event to track user conversions on a specific action or campaign goal.
 4. Click **Save Campaign** and you're set to begin your API campaign!
 
-![Create API Campaigns][4]
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
-[4]: {% image_buster /assets/img/createapicampaigns.gif %} "API Campaign Creation"
+

@@ -62,8 +62,11 @@ The custom attribute's type determines the comparisons that are valid for a give
 
 #### Attribute comparison caveats
 
-| `value` - The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.<br><br>`matches_regex` - When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, check out our documentation on [Regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data types]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
-{: .reset-td-br-1}
+| Comparison | Additional considerations |
+| --- | --- |
+| `value` | The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.
+|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, check out our documentation on [regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data types]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Custom attribute example
 
