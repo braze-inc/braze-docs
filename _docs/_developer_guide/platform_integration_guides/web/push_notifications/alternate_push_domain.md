@@ -11,24 +11,22 @@ channel: push
 
 # Alternate web push domain
 
-To integrate Push on the web, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C Push Standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file.
+To integrate web push, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file.
 
-_If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a Push Prompt dialog to your website. 
-
-For example, if you want the user to opt-in from an `http` (insecure) website, or from a Browser Extension popup which prevent the Push Prompt from displaying, keep reading!
+_If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a Push Prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 
 **Caveats**:
-Keep in mind that like many workarounds on the web, browsers continually evolve and in the future this may not work as intended.
+Keep in mind that like many workarounds on the web, browsers continually evolve, and in the future, this may not work as intended.
 
-* This requires that you own a separate secure domain (`https://`) and have access to register a Service Worker on that domain.
-* This requires users to be logged-in to your website, to ensure that push tokens are tied to the same profiles.
+- This requires that:
+  - You own a separate secure domain (`https://`) and have access to register a Service Worker on that domain.
+  - Users to be logged in to your website to ensure that push tokens are tied to the same profiles.
 
-To make the example below more clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
+To make the example below clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 
 ## Step 1: Initiate prompting flow
 
-On `insecure.com`, open a new window to your secure domain using a URL parameter to pass the currently logged-in user's Braze External ID.
-
+On `insecure.com`, open a new window to your secure domain using a URL parameter to pass the currently logged-in user's Braze external ID.
 
 **http://insecure.com**
 ```html
@@ -53,7 +51,7 @@ document.getElementById("opt-in").onclick = function(){
 
 ## Step 2: Register for push
 
-At this point, `secure.com` will open a popup window in which you can initialize the Braze Web SDK for the same User ID, and request the user's permission for Web Push.
+At this point, `secure.com` will open a popup window in which you can initialize the Braze Web SDK for the same user ID and request the user's permission for Web push.
 
 **https://secure.com/push-registration.html**
 ```html
@@ -147,8 +145,6 @@ window.addEventListener("message", (event) => {
 });
 </script>
 ```
-
-
 
 [1]: https://www.w3.org/TR/service-workers/#security-considerations
 [2]: https://w3c.github.io/webappsec-secure-contexts/
