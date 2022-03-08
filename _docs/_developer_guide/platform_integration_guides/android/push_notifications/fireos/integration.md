@@ -15,7 +15,7 @@ A push notification is an out-of-app alert that appears on the user's screen whe
 
 >  ADM (Amazon Device Messaging) is not supported on non-Amazon devices. In order to test Kindle Push you must have a FireOS device ([see Amazon Listing of supported devices][32]).
 
-Check out [the Help section][8] for additional best practices.
+Check out the [Help section][8] for additional best practices.
 
 Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)][14].
 

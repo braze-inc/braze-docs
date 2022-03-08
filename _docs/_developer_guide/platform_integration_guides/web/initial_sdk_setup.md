@@ -10,7 +10,7 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 # Initial SDK setup
 
-The Braze Web SDK lets you collect analytics and display rich In-App Messages, Push, and Content Card messages to your web users.
+The Braze Web SDK lets you collect analytics and display rich in-app messages, Push, and Content Card messages to your web users.
 
 For a complete technical reference, please see our [JavaScript Documentation][9].
 
@@ -71,7 +71,7 @@ appboy.initialize('YOUR-API-KEY-HERE', {
     baseUrl: "YOUR-SDK-ENDPOINT-HERE"
 });
 
-// optionally show all In-App Messages without custom handling
+// optionally show all in-app messages without custom handling
 appboy.display.automaticallyShowNewInAppMessages();
 
 // optionally set the current user's External ID

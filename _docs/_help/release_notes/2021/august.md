@@ -10,7 +10,7 @@ description: "This article contains release notes for August 2021."
 
 ## Simple Survey in-app message
 
-Use the new [Simple Survey In-App Message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
+Use the new [Simple Survey in-app message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
 
 ## Liquid use case library
 

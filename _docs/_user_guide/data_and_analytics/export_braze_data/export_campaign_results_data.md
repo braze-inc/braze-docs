@@ -20,7 +20,7 @@ For multichannel campaigns, the data that can be exported will depend on which m
 
 - Messages Sent by Date
     - Total Messages Sent
-    - Messages Sent Across Campaign's Channels (can include Push, Email and In-App Message)
+    - Messages Sent Across Campaign's Channels (can include push, email and in-app message)
 - Email Message Engagement by Date
     - Number of Emails Delivered
     - Number of Emails Sent

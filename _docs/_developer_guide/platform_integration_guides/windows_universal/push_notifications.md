@@ -10,7 +10,7 @@ channel: push
 
 # Push notification integration
 
-![Sample Push][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![An example windows universal push.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
@@ -24,8 +24,8 @@ Within the __Application__ tab, ensure that `Toast Capable` is set to `YES`.
 
 ## Step 2: Configure the Braze dashboard
 
-1. Find your SID and Client Secret - [Step By Step Instructions][4]
-2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.
+1. [Find your SID and Client Secret][4]
+2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
 
 ## Step 3: Update for background open logging
 
@@ -38,8 +38,6 @@ if (!string.IsNullOrEmpty(campaignId))
 Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);          
 }
 ```
-
-![Windows SID Dashboard][6]
 
 ## Step 4: Creating event handlers
 
@@ -67,11 +65,11 @@ If you specify an extra launch string in the dashboard or the REST API, it will 
 
 Specify the string to be appended to the launch string in the “Additional Launch String Configuration” field in push notification settings.
 
-![Deep_Link_Dash_Example][15]
+![][15]
 
 ### Part 3: Deep linking through the REST API
 
-Braze also allows sending deep links through the REST API. Windows Universal Push objects accept an optional `extra_launch_string` parameter. See the [Windows Universal Push Object Example.][13]
+Braze also allows sending deep links through the REST API. [Windows Universal push objects][13] accept an optional `extra_launch_string` parameter.
 
 [4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
 [6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID Dashboard"

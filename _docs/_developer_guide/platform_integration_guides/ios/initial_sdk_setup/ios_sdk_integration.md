@@ -22,12 +22,12 @@ The following steps help you build a `BrazeManager` helper file that your produc
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)
-- [Push Notifications](#push-notifications)
-- [Access User Variables and Methods](#access-user-variables-and-methods)
-- [Log Analytics](#log-analytics)
-- [In-App Messages (Optional)](#in-app-messages)
-- [Content Cards (Optional)](#content-cards)
-- [Next Steps](#next-steps)
+- [Push motifications](#push-notifications)
+- [Access user variables and methods](#access-user-variables-and-methods)
+- [Log analytics](#log-analytics)
+- [In-app messages (optional)](#in-app-messages)
+- [Content Cards (optional)](#content-cards)
+- [Next steps](#next-steps)
 
 ### Create BrazeManager.swift
 
@@ -728,9 +728,9 @@ Proceed to compile your code and run your application.<br><br>Try displaying the
 Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift)
 
 Now that you have decoupled any dependencies on the Braze iOS SDK from the rest of your production code, check out some of our optional advanced implementation guides:
-- [Advanced Push Notification Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)
-- [Advanced In-App Messages Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
-- [Advanced Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
+- [Advanced push notification implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)
+- [Advanced in-app messages implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
+- [Advanced Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
 [2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %} 
 [3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 

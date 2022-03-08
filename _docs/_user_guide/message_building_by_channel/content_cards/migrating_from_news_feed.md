@@ -42,7 +42,7 @@ The following table further outlines the difference in supported features betwee
 
 ## Implementation
 
-- Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use content cards.
+- Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use Content Cards.
 - If desired, existing News Feed Cards will need to be manually migrated to Content Card campaigns when you switch.
 - Content Cards is not intended to be used at the same time as the News Feed, as it is a replacement for the News Feed.
 - Content Cards does not currently support categories. Categories can be achieved via [customization and key-value pairs][1].

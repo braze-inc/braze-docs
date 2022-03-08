@@ -136,7 +136,7 @@ Key-value pairs can also be added to web push notifications. Select the gear ico
 
 ![key-valueInput][20]
 
-## In-App Messages
+## In-app messages
 
 To add a key-value pair to an in-app message, select the gear icon in the Braze message composer.
 

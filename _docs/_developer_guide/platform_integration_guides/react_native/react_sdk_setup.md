@@ -13,7 +13,7 @@ Installing the Braze React Native SDK provides basic analytics functionality and
 
 You will need to complete installation steps on both platforms separately.
 
-To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the dashboard.
+To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
 
 ## Step 1: Integrate the Braze library
 
@@ -32,7 +32,7 @@ npm install react-native-appboy-sdk
 
 #### Step 2.1a: Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`:
+In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories`:
 
 ```gradle
 allprojects {

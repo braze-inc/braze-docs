@@ -14,7 +14,7 @@ This best practice guide will help you to understand exactly what Braze consider
 
 ## Automatically collected data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), check out our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. Visit our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article if you wish to whitelist processes that block the default collection of certain data items (not suggested).
 
 #### Usage information
 - First Used App (Time)
@@ -74,7 +74,7 @@ Custom events are actions taken by your users; they're best suited for tracking 
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
-![custom_event_analytics_example.png][8]
+![A custom event analytics graph showing stats on users who added a credit card and made a search across a period of a thirty days.][8]
 
 >  [Incrementing custom attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 
@@ -88,11 +88,11 @@ With custom event properties, Braze allows you to set properties on custom event
 
 For example, if an eCommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a custom event property of the 'cart value' of users' carts.
 
-![customEventProperties.png][18]
+![A custom event example that will send a campaign to a user who has abandoned their cart and left the cart value at more than 100 and less than 200.][18]
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
-![custom_event_properties_gaming.png][19]{: style="max-width:75%;"}
+![A Liquid example of a user pulling custom event properties to set up different message options based on the time spent on a level.][19]{: style="max-width:75%;"}
 
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager or our support team, as this may incur additional data costs.
 
@@ -293,8 +293,8 @@ Adding these attributes would afford you the ability to send campaigns to users 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We __strongly recommend__ providing this identifier as it will allow you to:
 
 - Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
-- Import data about your users using our [User Data API][9].
-- Target specific users with our [Messaging API][10] for both general and transactional messages.
+- Import data about your users using our [user data API][9].
+- Target specific users with our [messaging API][10] for both general and transactional messages.
 
 User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. Below are some examples of suitable and unsuitable user IDs.
 
