@@ -34,11 +34,11 @@ Below is a list of features and messaging channels supported today.
 <table id="tv-feature-table">
     <thead>
         <tr>
-            <th>Device Type</th>
-            <th>Data and Analytics</th>
-            <th>In-App Messages</th>
+            <th>Device type</th>
+            <th>Data and analytics</th>
+            <th>In-app messages</th>
             <th>Content Cards</th>
-            <th>Push Notifications</th>
+            <th>Push notifications</th>
             <th>Canvas</th>
         </tr>
     </thead>
@@ -118,7 +118,7 @@ Features include:
 - Push Notifications (known as ["Heads Up Notifications"][7])
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
-- In-App Messages
+- In-app messages
 
 For more information, visit the [Fire OS Integration Guide][2].
 
@@ -131,7 +131,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications
 - Content Cards
-- In-App Messages
+- In-app messages
 
 For more information, visit the [Fire OS Integration Guide][2].
 
@@ -143,7 +143,7 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
-- In-App Messages 
+- In-app messages 
 - &#42; Push Notifications (Manual Integration Required, See Below)
 
 For more information, visit the [Android SDK Integration Guide][2].
@@ -156,9 +156,9 @@ Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lg
 
 Features include:
 
-- Data and Analytics collection for cross-channel engagement
+- Data and analytics collection for cross-channel engagement
 - Content Cards (via Custom UI)
-- In-App Messages (via Custom UI)
+- In-app messages (via Custom UI)
 
 For more information, visit the [Web Smart TV Integration Guide][8].
 
@@ -168,9 +168,9 @@ Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.
 
 Features include:
 
-- Data and Analytics collection for cross-channel engagement
+- Data and analytics collection for cross-channel engagement
 - Content Cards (via Custom UI)
-- In-App Messages (via Custom UI)
+- In-app messages (via Custom UI)
 
 For more information, visit the [Web Smart TV Integration Guide][8].
 
@@ -180,8 +180,8 @@ Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/doc
 
 Features include:
 
-- Data and Analytics collection for cross-channel engagement
-- In-App Messages (via Custom UI)
+- Data and analytics collection for cross-channel engagement
+- In-app messages (via Custom UI)
 
 For more information, visit the [Roku Integration Guide][3].
 
@@ -193,7 +193,7 @@ For more information, visit the [iOS SDK Integration Guide][4].
 
 ## In-app message with custom UI
 
-For platforms that support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In-App Message templates into your existing app designs.
+For platforms that support in-app messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native in-app message templates into your existing app designs.
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/

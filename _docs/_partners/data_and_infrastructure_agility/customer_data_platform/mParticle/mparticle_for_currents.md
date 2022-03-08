@@ -33,11 +33,11 @@ From your mParticle admin account, navigate to __Setup > Inputs__. Locate __Braz
 
 The Braze feed integration supports four separate feeds: iOS, Android, Web, and Unbound. The unbound feed can be used for events such as emails that are not connected to a platform. You will need to create an input for each main platform feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.
 
-![mParticle Settings][1]
+![][1]
 
 For each feed, under __Act as Platform__ select the matching platform from the list. If you do not see an option to select an __act-as__ feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.
 
-![mParticle Settings][2]{: style="max-width:40%;"}  ![mParticle Settings][3]{: style="max-width:37%;"}
+![The first integration dialog box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.][2]{: style="max-width:40%;"}  ![The second integration dialog box showing the server-to-server key and server-to-server secret.][3]{: style="max-width:37%;"}
 
 As you create each input, mParticle will provide you with a key and secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
 
@@ -45,7 +45,7 @@ As you create each input, mParticle will provide you with a key and secret. Copy
 
 In Braze, navigate to **Currents > + Create Current > Create mParticle Export**. Provide an integration name,  contact email and the mParticle API key and mParticle secret key for each platform. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
 
-![mParticle]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
+![The mParticle Currents page in Braze. Here, you can find fields for integration name, contact email, API key, and secret key.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
 It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.

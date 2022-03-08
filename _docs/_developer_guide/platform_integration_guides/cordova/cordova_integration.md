@@ -45,10 +45,10 @@ If you use the Cordova SDK default setup you won't have to make any new changes 
 ## In-app messaging
 {% tabs %}
 {% tab Android %}
-By default the Cordova SDK supports in-app messages with no changes. See [the Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the [sample Android application](https://github.com/Appboy/appboy-android-sdk ) for implementation samples.
+By default the Cordova SDK supports in-app messages with no changes. See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the [sample Android application](https://github.com/Appboy/appboy-android-sdk ) for implementation samples.
 {% endtab %}
 {% tab iOS %}
-By default the Cordova SDK supports in-app messages with no changes. See [the iOS integration instructions]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the [sample iOS application](https://github.com/Appboy/appboy-ios-sdk) for implementation samples.
+By default the Cordova SDK supports in-app messages with no changes. See the [iOS integration instructions]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) or the [sample iOS application](https://github.com/Appboy/appboy-ios-sdk) for implementation samples.
 {% endtab %}
 {% endtabs %}
 
@@ -96,4 +96,4 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 
 The Braze Cordova SDK has several methods to get the number of read/unread News Feed cards for different categories. See our [sample project implementation](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.
 
-You can look at the sample [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application and sample Cordova Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application implementation samples.
+You can look at the sample [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application and sample Cordova [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application implementation samples.

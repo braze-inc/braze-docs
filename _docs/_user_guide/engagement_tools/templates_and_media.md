@@ -37,12 +37,12 @@ To access Templates and Media, navigate to __Engagement__ in your left navigatio
 
 You can use and manage templates and creative content in Templates & Media for the following features:
 
-- **[Email Templates][2]**
+- **[Email templates][2]**
 - **[Content Blocks][7]**
-- **[Webhook Templates][3]**
-- **[Link Templates][6]**
-- **[In-App Message Color Profiles and CSS Templates][4]**
-- **[Manage Assets in the Media Library][5]**
+- **[Webhook templates][3]**
+- **[Link templates][6]**
+- **[In-app message color profiles and CSS templates][4]**
+- **[Manage assets in the media library][5]**
 <br><br><br>
 
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template

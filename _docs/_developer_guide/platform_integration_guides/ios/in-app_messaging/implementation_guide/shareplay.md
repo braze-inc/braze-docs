@@ -43,7 +43,7 @@ override var nibName: String {
   return "ModalVideoViewController"
 }
    
-/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the In-App Message
+/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the in-app message
 override func loadView() {
   Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }

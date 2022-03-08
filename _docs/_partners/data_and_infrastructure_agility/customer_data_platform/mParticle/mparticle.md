@@ -60,8 +60,8 @@ Check out this article for more information on creating Braze [mParticle audienc
 #### Step 2: Segment users in Braze
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment.
-- __Single attribute__: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter 1][9]<br><br>
-- __One attribute per segment__: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter 2][8]
+- __Single attribute__: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
+- __One attribute per segment__: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
@@ -103,7 +103,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 In mParticle, navigate to __Setup > Outputs > Add Output__ and select __Braze__ to open the Braze kit configuration. __Save__ once completed. 
 
-![mParticle Event Config UI][3]
+![][3]
 
 Provide the following fields on the Braze configuration page: 
 - __API key__: Found in the Braze __Developer Console__ under __Settings__. Note that API keys will differ for each platform (iOS, Android, and Web).
@@ -121,7 +121,7 @@ This is an add-on to route your backend data to Braze if you're using mParticle'
 
 In mParticle, navigate to __Connections > Connect > [Your desired platform] > Connect Output__ to add Braze as an output. __Save__ once completed. 
 
-![mParticle Connections Setting][4]
+![][4]
 
 Provide the following fields on the Braze output page: 
 - __App group REST API key__: A Braze REST API key with full permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__.

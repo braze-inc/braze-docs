@@ -9,14 +9,14 @@ page_type: reference
 
 > At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. Listed below, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" SDK code snippets to make your migration quick, simple, and painless.
 
-## Beyond the Code
-### Token Management
+## Beyond the code
+### Token management
 Braze uses Apple's device token for iOS.
 
 | __Braze Perspective:__<br>We ensure customers can continuously communicate with their users (such as push notifications) when in the process of migrating from Airship to Braze (Whether it be a hard cutover to 100% Braze or a granular transition such as 50% Airship 50% Braze, etc.). |
 {: .reset-td-br-1}
 
-#### Push Token Migration
+#### Push token migration
 
 It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
@@ -32,15 +32,15 @@ If your user profiles and push tokens happen to be stored in separate locations,
 Push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` once users start a session with the Braze SDK.
 {% endalert %}
 
-#### Multiple Push Tokens
+#### Multiple push tokens
 
 With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, you can send notifications to multiple user devices. It is also possible to configure campaigns to only send to the most recent device of a user.
 
-## Campaign Configuration
+## Campaign configuration
 At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
 
 ### Composition
-#### Push Notifications
+#### Push notifications
 Braze requires separate channels for push (one for iOS, one for Android).
 
 | __Braze Perspective:__<br>We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS. |
@@ -48,11 +48,11 @@ Braze requires separate channels for push (one for iOS, one for Android).
 
 Braze is able to send push notifications to users who do not update their application with the Braze SDK installed. Given that Braze has a valid push token, Braze can send the push notification without the Braze SDK as APNs will handle the rest. It is crucial to note that push message __analytics will not be available for builds without the Braze SDK__.
 
-##### Sharing Tokens
+##### Sharing tokens
 
 For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
-#### Message Center
+#### Message center
 To replace Airship's message center campaign functionality, we recommend creating a multichannel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center).
 
 ### Segmentation
@@ -61,7 +61,7 @@ Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tool
 | __Braze Perspective__:<br> Segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. |
 {: .reset-td-br-1}
 
-#### User Segment Migration
+#### User segment migration
 
 To directly recreate a static Airship segment in Braze, there exist two options:
 - __Import via API - Assign a Custom Attribute__ (Recommended)<br>
@@ -71,14 +71,14 @@ There is an option in Braze to filter specifically users who are included within
 ![CSV Import Filter][1]{: style="max-width:90%;border:0;"}
 Please note that for CSV imports, an `External ID` is required for each imported user and __segments with anonymous or alias only users will not able to be imported__. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
-## Rip and Replace SDK Code Snippets
+## Rip and replace SDK code snippets
 To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Please visit the following topics to get started:
 - [Installation](#installation)
-- [Getting and Setting User ID](#userid)
-- [Handling Push Notifications](#pushnotifications)
+- [Getting and setting user ID](#userid)
+- [Handling push notifications](#pushnotifications)
 - [Analytics](#analytics)
-- [Handling In-App Messages](#iammessages)
-- [Content Cards/ Message Center](#messagecenter)
+- [Handling in-app messages](#iammessages)
+- [Content Cards and message center](#messagecenter)
 
 ### Installation {#installation}
 {% tabs %}
@@ -166,7 +166,7 @@ __Braze__
 {% endtab %}
 {% endtabs %}
 
-### Getting and Setting User ID {#userid}
+### Getting and setting user ID {#userid}
 {% tabs %}
 {% tab Swift %}
 __Airship__
@@ -219,7 +219,7 @@ __Braze__
 {% endtab %}
 {% endtabs %}
 
-### Handling Push Notifications {#pushnotifications}
+### Handling push notifications {#pushnotifications}
 {% tabs %}
 {% tab Swift %}
 __Airship__
@@ -371,7 +371,7 @@ __Braze__
 {% endtab %}
 {% endtabs %}
 
-### Handling In-App Messages {#iammessages}
+### Handling in-app messages {#iammessages}
 {% tabs %}
 {% tab Swift %}
 __Airship__
@@ -474,7 +474,7 @@ __Braze__
 {% endtab %}
 {% endtabs %}
 
-### Content Cards / Message Center {#messagecenter}
+### Content Cards and message center {#messagecenter}
 {% tabs %}
 {% tab Swift %}
 __Airship__

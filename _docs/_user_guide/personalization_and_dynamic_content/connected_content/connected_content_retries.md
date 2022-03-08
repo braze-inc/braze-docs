@@ -21,7 +21,7 @@ If the API call fails and this is enabled, Braze will retry the call while respe
 If a retried attempt succeeds, the message is sent and no further retries are attempted for that message. If the Connected Content call errors out 5 times, the message is aborted similar to if an [abort message tag][1] was triggered.
 
 {% alert note %}
-Connected Content `:retry` is not available for In-App Messages.
+Connected Content `:retry` is not available for in-app messages.
 {% endalert %}
 
 

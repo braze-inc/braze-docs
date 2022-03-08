@@ -26,7 +26,7 @@ You can't test push notification related app behavior on an iOS simulator becaus
 {% endalert %}
 
 1. Set an active user in the Flutter application. To do so, initialize your plugin by calling `braze.changeUser('your-user-id')`.
-2. Head to **Campaigns** and create a new **Push Notification** campaign. Choose the platforms that you'd like to test.
+2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. You should receive the notification on your device shortly. You may need to check in the Notification Center or update Settings if it doesn't display.
 

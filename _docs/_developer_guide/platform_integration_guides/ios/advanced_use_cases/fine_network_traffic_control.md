@@ -50,7 +50,7 @@ __*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
 
 - This protocol is the same as Automatic Request Processing **EXCEPT**:
     - Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in In-App Messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in in-app messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 Data can be manually flushed to Braze's servers at any time using the following method:
 

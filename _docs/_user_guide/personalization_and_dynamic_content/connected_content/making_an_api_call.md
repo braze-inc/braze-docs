@@ -34,7 +34,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 {% alert note %}
 * Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid Syntax.
-* Connected Content calls will happen when the message is sent, except for In-App Messages, which will make this call when the message is viewed.
+* Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
 * Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
 {% endalert %}

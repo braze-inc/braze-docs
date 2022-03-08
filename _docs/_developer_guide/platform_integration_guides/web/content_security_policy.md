@@ -41,7 +41,7 @@ braze.initialize(apiKey, {
 - `script-src https://js.appboycdn.com` - required when using the CDN-hosted integration.
 - `script-src 'unsafe-eval'` - required only when using the integration snippet which contains reference to `appboyQueue`
   - To avoid using this directive, integrate using NPM instead.
-- `script-src 'nonce-...'` or `script-src 'unsafe-inline'` are required for certain In-App Messages (custom HTML, for example).
+- `script-src 'nonce-...'` or `script-src 'unsafe-inline'` are required for certain in-app messages (custom HTML, for example).
 
 ### img-src {#img-src}
 - `img-src: appboy-images.com braze-images.com cdn.braze.eu` - required when using Braze CDN-hosted images. These hostnames may vary based on dashboard cluster.

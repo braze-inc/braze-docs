@@ -28,7 +28,7 @@ We've added a column indicating the message variation received to the Campaign R
 
 ## Approximate limit on number of impressions
 
-Once an In-App Message has received a certain number of impressions, Braze will stop allowing users to become eligible to receive the message. Learn more about setting approximate [limits on impressions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap).
+Once an in-app message has received a certain number of impressions, Braze will stop allowing users to become eligible to receive the message. Learn more about setting approximate [limits on impressions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap).
 
 ![IAM impression cap][11]
 

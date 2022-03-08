@@ -38,7 +38,7 @@ After successfully setting up your Braze and Segment integrations individually, 
 
 In Segment, navigate to __Destinations > Braze > Receiving from [platform]__.
 
-![Destination connection settings]({% image_buster /assets/img/segment_destination_braze.png %})
+![]({% image_buster /assets/img/segment_destination_braze.png %})
 
 Next, provide the following fields in the configuration page:
 - __App identifer__: Previously called the API key. Found in the Braze __Developer Console__ under __Settings__.
@@ -133,7 +133,7 @@ Some [automatically captured][25] data is only available through side-by-side in
 Currently, Braze's server-to-server integration with Segment __does not__ support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
 
 
-### Step 2: Map methods {#methods}
+### Step 3: Map methods {#methods}
 
 Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page) (web), [Identify](https://segment.com/docs/spec/identify/), and [Track](https://segment.com/docs/spec/track/), and Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports custom attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
 
@@ -194,7 +194,7 @@ When you _track_ an event, we will record that event as a [custom event]({{site.
 
 ##### Order completed {#order-completed}
 
-When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
+When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 {% endtab %}
 
 {% tab group %}
@@ -210,13 +210,13 @@ When you call _group_ in Segment, we will record a [custom attributes]({{site.ba
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Test your integration
+### Step 4: Test your integration
 
 Most of your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
 You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's __Custom Events__ page allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [order completed](#order-completed)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
+If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on the custom event and attribute data.
 
@@ -291,7 +291,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% enddetails %}
 
-[4]: https://segment.com/docs/spec/ecommerce/v2/
 [5]: https://segment.com
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/

@@ -10,7 +10,7 @@ channel:
 
 # In-app messages HTML Preview
 
-Learn about the new Preview features for custom HTML In-App Messages.
+Learn about the new Preview features for custom HTML in-app messages.
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
@@ -33,7 +33,7 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
-![New HTML In-App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+![New HTML in-app message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
 ### New asset uploader
 
@@ -59,13 +59,13 @@ The code editor now includes Syntax Highlighting with a number of different colo
 
 This helps to easily spot potential code errors directly in the message composer, and better organize your code (using spaces or tabs - whichever side of that argument you're on).
 
-![New HTML In-App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
+![New HTML in-app message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
 ### Button tracking improvements
 
 You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML in-app messages are no longer limited to recording one button click event per impression.
 
 For example, to close a message and log Button 2 click, you can use:
 

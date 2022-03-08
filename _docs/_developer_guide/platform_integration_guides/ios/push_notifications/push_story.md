@@ -15,7 +15,7 @@ The Push Story feature requires UNNotification Framework and iOS 10. The feature
 
 ## Step 1: Enable push in your app
 
-Please follow [The Push notification Integration][1] to enable push in your app.
+Please follow the [Push notification Integration][1] to enable push in your app.
 
 ## Step 2: Adding the Notification Content Extension target
 
