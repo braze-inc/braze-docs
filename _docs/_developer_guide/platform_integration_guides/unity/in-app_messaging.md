@@ -35,13 +35,13 @@ On iOS, in-app messages from Braze are automatically displayed natively. To disa
 You may optionally change the display behavior of in-app messages at runtime via the following:
 
 ```csharp
-// Sets In-App Messages to display immediately when triggered.
+// Sets in-app messages to display immediately when triggered.
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_NOW);
 
-// Sets In-App Messages to display at a later time and be saved in a stack.
+// Sets in-app messages to display at a later time and be saved in a stack.
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER);
 
-// Sets In-App Messages to be discarded after being triggered.
+// Sets in-app messages to be discarded after being triggered.
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
 ```
 

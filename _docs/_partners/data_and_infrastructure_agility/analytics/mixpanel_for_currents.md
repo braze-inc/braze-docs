@@ -356,10 +356,10 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### In-App Message Events
+### In-app message Events
 
 ```json
-// In-App Message Impression
+// In-app message Impression
 {
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -374,7 +374,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
 }
-// In-App Message Click
+// In-app message Click
 {
   "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
   "campaign_id": (string) id of the campaign if from a campaign,

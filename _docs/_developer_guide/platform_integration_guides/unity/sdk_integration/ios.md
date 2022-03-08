@@ -18,7 +18,6 @@ Follow the below instructions to get Braze running in your Unity application. If
 The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a C# interface.
 
 There are several Braze Unity packages available for download on the [Braze Unity releases page][42]:
-
 - `Appboy.unitypackage`
     - This package bundles the Braze Android and iOS SDKs and the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for the proper functionality of Braze's In-App Messaging, and Content Cards features on iOS. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
 - `Appboy-nodeps.unitypackage`

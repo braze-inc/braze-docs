@@ -13,7 +13,7 @@ channel: in-app messages
 
 {% include video.html id="6X8E20BlblI" align="right" %}
 
-> In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas in-app messages.
+> In-app messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas in-app messages.
 
 Before continuing, you should have already [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and set up delay and audience options. 
 

@@ -70,7 +70,7 @@ News Feed items deep linking into your app can be configured to use UTM tags as 
 
 Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
 
-![UTM Tags in In-App Message][10]
+![UTM Tags in in-app messages][10]
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
