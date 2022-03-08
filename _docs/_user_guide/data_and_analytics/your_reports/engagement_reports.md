@@ -68,7 +68,7 @@ The Stats tab will automatically show you stats for the types of campaigns or Ca
 | Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
 | Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
 | Web Push | Sends, Opens, Bounces, Body Clicks |
-| In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
+| In-app message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2}

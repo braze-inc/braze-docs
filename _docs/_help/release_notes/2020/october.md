@@ -20,7 +20,7 @@ The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 an
 
 ## Android 11 upgrade guide
 
-The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML in-app messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
 
 ## Attribution partners - Click tracking guide
 

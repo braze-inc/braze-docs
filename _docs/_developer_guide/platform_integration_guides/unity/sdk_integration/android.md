@@ -25,7 +25,7 @@ There are several Braze Unity packages available for download at [Braze Unity Re
     - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework not being present. This package is useful if you do not want the [SDWebImage][unity-1] framework present in your iOS app.
 <br><br>
 
-> iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS In-App Message Documentation][unity-4].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
+> iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS in-app message Documentation][unity-4].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
 
 ## Step 2: Import the package
 
@@ -162,7 +162,7 @@ This automatic integration should not be used in conjunction with a manually cre
 Braze should now be collecting data from your application and your basic integration should be complete.
 
 - __Push__: See the [Android][53] or [iOS][50] push documentation for information on integrating push.
-- __In-App Messages__: See the [In-App Message documentation][34] for information on integrating in-app messages.
+- __In-app messages__: See the [in-app message documentation][34] for information on integrating in-app messages.
 - __Content Cards__: See the [Content Cards documentation][40] for information on integrating Content Cards.
 - __News Feed__: See the [News Feed documentation][35] for information on integrating the News Feed.
 

@@ -11,7 +11,7 @@ channel:
 
 # In-app messages
 
-[In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
+[In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Case Studies][31].
 
@@ -33,7 +33,7 @@ All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
 <br><br>
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
 ### Expected behaviors by message types

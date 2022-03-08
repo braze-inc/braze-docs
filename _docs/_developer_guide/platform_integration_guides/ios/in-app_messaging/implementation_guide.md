@@ -71,9 +71,9 @@ __ABKInAppMessage Subclasses__<br>
 ## Sample use cases
 
 There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how in-app messages may look and be used in the Braze dashboard:
-- [Custom Slide-up In-App Message](#custom-slide-up-in-app-message)
-- [Custom Modal In-App Message](#custom-modal-in-app-message)
-- [Custom Full In-App Message](#custom-full-in-app-message)
+- [Custom slide-up in-app message](#custom-slide-up-in-app-message)
+- [Custom modal in-app message](#custom-modal-in-app-message)
+- [Custom full in-app message](#custom-full-in-app-message)
 
 ### Custom slide-up in-app message
 

@@ -89,7 +89,7 @@ To access the Content Cards data model, subscribe to Content Cards update events
 {% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-// Subscribe to content cards updates
+// Subscribe to Content Cards updates
 // Note: you should remove the observer where appropriate
 [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:@selector(contentCardsUpdated:)
@@ -98,7 +98,7 @@ To access the Content Cards data model, subscribe to Content Cards update events
 ```
 
 ```objc
-// Called when content cards are refreshed (via `requestContentCardsRefresh`)
+// Called when Content Cards are refreshed (via `requestContentCardsRefresh`)
 - (void)contentCardsUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
@@ -117,7 +117,7 @@ NotificationCenter.default.addObserver(self, selector:
 ```
 
 ```swift
-// Called when the content cards are refreshed (via `requestContentCardsRefresh`)
+// Called when the Content Cards are refreshed (via `requestContentCardsRefresh`)
 @objc private func contentCardsUpdated(_ notification: Notification) {
   if let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
     if (updateIsSuccessful) {

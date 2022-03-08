@@ -17,7 +17,7 @@ Integrate Braze's Web SDK within your Browser Extension to collect analytics and
 In general, since Extensions are simply HTML and Javascript, you can use Braze for the following:
 
 * **Analytics** Capture custom events, attributes, and even identify repeat users within your extension. Use these profile traits to power cross-channel messaging.
-* **In-App Messages** Trigger In-App Messages when users take action within your Extension, using our native or custom HTML messaging!
+* **In-app messages** Trigger in-app messages when users take action within your Extension, using our native or custom HTML messaging!
 * **Content Cards** Add a feed of native cards to your extension for onboarding or promotional content.
 * **Web Push** Send timely notifications even when your web page is not currently open.
 
@@ -26,9 +26,9 @@ Braze can be included in the following areas of your extension:
 
 |Area|Details|What's supported|
 |--------|-------|------|
-|Popup Page| The [Popup][1] page is a dialog that can be shown to users when clicking on your extension's icon in the browser toolbar.|Analytics, In-App Messages, Content Cards|
-|Background Scripts|[Background Scripts][2] allow your extension to inspect and interact with user navigation, or modify webpages (for example, how ad blockers detect and change content on pages).|Analytics, In-App Messages, Content Cards. Note: Background scripts aren't visible to users, so for messaging you would need to communicate with browser tabs or your popup page when displaying messages.|
-|Options Pages|The [Options Page][3] lets your users toggle settings within your extension. It's a standalone HTML page that opens a new tab.|Analytics, In-App Messages, Content Cards| 
+|Popup Page| The [Popup][1] page is a dialog that can be shown to users when clicking on your extension's icon in the browser toolbar.|Analytics, in-app messages, Content Cards|
+|Background Scripts|[Background Scripts][2] allow your extension to inspect and interact with user navigation, or modify webpages (for example, how ad blockers detect and change content on pages).|Analytics, in-app messages, Content Cards. Note: Background scripts aren't visible to users, so for messaging you would need to communicate with browser tabs or your popup page when displaying messages.|
+|Options Pages|The [Options Page][3] lets your users toggle settings within your extension. It's a standalone HTML page that opens a new tab.|Analytics, in-app messages, Content Cards| 
 {: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
 
 ## Permissions
