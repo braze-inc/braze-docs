@@ -52,7 +52,7 @@ guide_featured_list:
 
 ### In-app messages for Roku
 
-Braze now supports sending in-app messages to your users on their Roku devices! Please note that his requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
+Braze now supports sending in-app messages to your users on their Roku devices! Please note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 ### Full Filter Mode for Churn Predictions and Purchase Predictions
 
