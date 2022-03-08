@@ -100,10 +100,10 @@ ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
 Follow the steps below to test a sample in-app message.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][5] to create a new **In-App Messaging** campaign.
+2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
-![In-App Messaging Campaign Test][6]
+![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
 A sample implementation can be found in AppboyProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 

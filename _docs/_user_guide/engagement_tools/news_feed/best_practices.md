@@ -12,12 +12,12 @@ channel: news feed
 
 The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
 
-To learn about the different types of News Feed cards, how to create them, use cases, as well as card and image specifications, please read our [page on creating News Feed items][4].
+To learn about the different types of News Feed cards, how to create them, use cases, as well as card and image specifications, please read our page on [creating News Feed items][4].
 
 > Braze improves load times by using a global CDN to host all News feed images.
 
 {% alert note %}
-Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
+Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel-it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
 ## Best practices {#news-feed-best-practices}

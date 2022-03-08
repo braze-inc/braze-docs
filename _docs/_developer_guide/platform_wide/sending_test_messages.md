@@ -16,11 +16,11 @@ Once you set up a test segment, you can utilize it to test __any__ of our messag
 
 Navigate to the "Segments" page in the dashboard and create a new segment. In the dropdown menu under "Add Filter", you'll find our testing filters at the bottom of the list.
 
-![Testing Filters][1]
+![A Braze test campaign displaying the filters available in the targeting step.][1]
 
 Our testing filters allow you to select users with specific email addresses or external [user IDs][2].
 
-![Testing Filter Options][3]
+![][3]
 
 These filters have three options:
 
@@ -30,11 +30,11 @@ These filters have three options:
 
   3) __"Matches"__ - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". You can also select multiple specific emails by using the "matches" option and separating the email addresses with a <code>|</code> character (e.g. "matches" "email1@braze.com &#124; email2@braze.com").
+These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". You can also select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (e.g. "matches" "email1@braze.com &#124; email2@braze.com").
 
 After adding the testing filters to your test segment, you can verify that you've selected only the users you intended by clicking "Preview" at the top of the segment editor or by exporting that segment's user data to CSV by clicking on the gear icon in the right-hand corner of the editor and selecting "CSV Export All User Data" from the dropdown menu.
 
-![Verify Test Segment][4]
+![][4]
 
 >  Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][9] - and therefore may appear to have not selected all intended members.
 
@@ -44,7 +44,7 @@ Once you've confirmed that you're only targeting the users that you want to rece
 
 To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 
-![Test Segment][11]
+![A Braze test campaign displaying the segments available in the targeting step.][11]
 
 Finish confirming your campaign and launch it to test your push notification and in-app messages.
 
@@ -54,9 +54,9 @@ Finish confirming your campaign and launch it to test your push notification and
 
 ## Sending a test email message
 
-![Send Test Button][5]
+![][5]
 
-Clicking on this button causes a window to appear where you can enter the email address you would like the test email to be sent to. Click "Send Test" and your test email will be delivered shortly.
+Clicking on this button causes a window to appear where you can enter the email address you would like the test email to be sent to. Click **Send Test** and your test email will be delivered shortly.
 
 ## Testing push via cURL
 

@@ -18,14 +18,14 @@ description: "This reference article covers in-app messaging integration guideli
 {% tabs %}
 {% tab Android %}
 
-On Android, in-app messages from Braze are automatically displayed natively. To disable this functionality, deselect "Automatically Display In-App Messages" in the Braze configuration editor.
+On Android, in-app messages from Braze are automatically displayed natively. To disable this functionality, deselect **Automatically Display In-App Messages** in the Braze configuration editor.
 
 You may alternatively set `com_braze_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
 {% endtab %}
 {% tab iOS %}
 
-On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor, and ensure "Braze Displays In-App Messages" is not selected.
+On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor and ensure **Braze Displays In-App Messages** is not selected.
 
 {% endtab %}
 {% endtabs %}
@@ -47,9 +47,9 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 
 ## Receiving in-app message data in Unity
 
-You may register Unity Game Objects to be notified of incoming in-app messages. We recommend setting game object listeners from the Braze configuration editor. In the configuration editor, listeners must be set separately for Android and iOS.
+You may register Unity game objects to be notified of incoming in-app messages. We recommend setting game object listeners from the Braze configuration editor. In the configuration editor, listeners must be set separately for Android and iOS.
 
-- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.IN_APP_MESSAGE`.
+If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.IN_APP_MESSAGE`.
 
 ## Parsing in-app messages
 

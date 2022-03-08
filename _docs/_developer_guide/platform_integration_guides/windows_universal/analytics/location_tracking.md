@@ -10,6 +10,5 @@ tool: Location
 
 # Location tracking
 
-1. Ensure that within your `Package.appxmanifest` file the following option is checked:
-  - Location
-2. If you want to turn off automatic location tracking, set `<DisableLocationCollection>false</DisableLocationCollection>` to true in your `AppboyConfiguration.xml`
+1. Ensure that within your `Package.appxmanifest` file the `location` is checked.
+2. If you want to turn off automatic location tracking, set `<DisableLocationCollection>false</DisableLocationCollection>` to `true` in your `AppboyConfiguration.xml`.
