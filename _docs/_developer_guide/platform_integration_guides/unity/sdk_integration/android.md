@@ -25,7 +25,7 @@ There are several Braze Unity packages available for download at [Braze Unity Re
     - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework not being present. This package is useful if you do not want the [SDWebImage][unity-1] framework present in your iOS app.
 <br><br>
 
-> iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS in-app message Documentation][unity-4].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
+> iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS in-app message documentation][unity-4].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
 
 ## Step 2: Import the package
 
