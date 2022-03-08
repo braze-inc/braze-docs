@@ -18,7 +18,7 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 ### Step 1: Get the Xamarin binding
 
-A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See [the Xamarin documentation][2].
+A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See the [Xamarin documentation][2].
 
 There are two ways to include the Braze SDK binding.
 

@@ -17,9 +17,9 @@ You will need to complete installation steps on both platforms separately.
 
 ## Prerequisites
 
-To complete the installation, you will need the [App Identifier API key][3] as well as the [SDK endpoint][4]. Both are located in the **Developer Console** under **Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key][3] as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
 
-Before following the steps below, please install and set up [the Flutter SDK][5].
+Before following the steps below, please install and set up the [Flutter SDK][5].
 
 ## Step 1: Integrate the Braze library
 
@@ -36,7 +36,7 @@ This will add the appropriate line to your `pubspec.yaml`.
 {% tabs %}
 {% tab Android %}
 
-To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API key and endpoint with your values:
+To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API identifier key and endpoint with your values:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -54,9 +54,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 ```
 
 {% endtab %}
-
 {% tab iOS %}
-
 {% subtabs global %}
 {% subtab SWIFT %}
 Add Appboy SDK import at the top of the `AppDelegate.swift` file:
@@ -64,7 +62,7 @@ Add Appboy SDK import at the top of the `AppDelegate.swift` file:
 import Appboy_iOS_SDK
 ```
 
-In the same file, add the following snippet within the `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method:
+In the same file, add the following snippet within the `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method and replace the API identifier key with your value:
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -76,7 +74,7 @@ Add Appboy SDK import at the top of the `AppDelegate.m` file:
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method and replace the API identifier key with your value::
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"

@@ -37,7 +37,7 @@ Braze has successfully completed the Type 2 SOC 2 examination for _Security_, pe
 
 ## HIPAA
 
-Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) cluster complies with [the Security and Privacy rules of HIPAA](https://aspe.hhs.gov/report/health-insurance-portability-and-accountability-act-1996), as applicable. When creating this cluster, Braze worked with a lawyer who advised on HIPAA laws and worked through the compliance needs for HIPAA with respect to the Security and Privacy rules. This included a risk analysis for the environment, as well as going through each safeguard and ensuring compliance as required.
+Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) cluster complies with the [Security and Privacy rules of HIPAA](https://aspe.hhs.gov/report/health-insurance-portability-and-accountability-act-1996), as applicable. When creating this cluster, Braze worked with a lawyer who advised on HIPAA laws and worked through the compliance needs for HIPAA with respect to the Security and Privacy rules. This included a risk analysis for the environment, as well as going through each safeguard and ensuring compliance as required.
 
 [1]: {% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}
 [2]: {% image_buster /assets/img/SOC2.png %}

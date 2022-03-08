@@ -16,7 +16,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][5].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][5].
 
 To use this feature, add this method call after a successful purchase in your app:
 
@@ -24,13 +24,13 @@ To use this feature, add this method call after a successful purchase in your ap
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal));
 ```
 
-The above method logs a purchase with a quantity of 1. If you would like to pass in a different quantity, you can call this method:
+The above method logs a purchase with a quantity of one. If you would like to pass in a different quantity, you can call this method:
 
 ```csharp
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int));
 ```
 
-Quantity must be less than or equal to 100. Braze also supports adding metadata about purchases by passing a `Dictionary` of purchase properties:
+Quantity must be less than or equal to one hundred. Braze also supports adding metadata about purchases by passing a `Dictionary` of purchase properties:
 
 ```csharp
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
@@ -50,7 +50,7 @@ AppboyBinding.LogPurchase("product ID", "USD", 12.5m);
 
 ## REST API
 
-You can also use our REST API to record purchases. Refer to the [user API documentation][4] for details.
+You can also use our REST API to record purchases. Refer to the [users API][4] documentation for details.
 
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

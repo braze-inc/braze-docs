@@ -14,11 +14,11 @@ channel: push
 
 ## Android
 
-See [the Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
+See the [Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
 
 ## iOS
 
-See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
+See the [iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
 
 ### Requesting push permissions
 
