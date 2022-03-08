@@ -25,7 +25,6 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `ReactAppboy.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
 | `ReactAppboy.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
 | `ReactAppboy.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
-
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Test displaying sample Content Card
@@ -33,10 +32,10 @@ You can use these additional methods to build a custom Content Cards Feed within
 Follow the steps below to test a sample content card.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][4] to create a new **Content Card** campaign.
+2. Head to **Campaigns** and follow [this guide][4] to create a new Content Card campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch a Content Card on your device shortly.
 
-![Content Card Campaign Test][5]
+![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.][5]
 
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 

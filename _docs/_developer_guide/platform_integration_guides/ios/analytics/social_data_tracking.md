@@ -45,7 +45,7 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser
 | `likes` | The array of user's Facebook likes from the endpoint "/me/likes". |
 {: .reset-td-br-1 .reset-td-br-2}
 
->  For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
+>  For additional information regarding the Facebook Graph API, please refer to the [Facebook Graph API Developer Documentation][10].
 
 Additionally, you can tailor what Facebook data you're sending to Braze, in case you don't want to include the entire basic profile. For example:
 

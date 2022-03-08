@@ -15,19 +15,19 @@ description: "This article covers an overview of Roku in-app messaging, includin
 
 Check out our [case studies][6] to see examples of in-app messages.
 
-![in-app message case study][3]
+![Three images of potential Roku in-app messages that a user could build. These examples include "full-screen takeover", "homepage banner", and "corner notifier".][3]
 
 ## In-app message types
 
 Create an in-app message for Roku by selecting **Roku Devices** as the in-app message platform.
 
-![platform selector][4]
+![][4]
 
 ## Technical documentation
 
 Visit our [integration guide][5] for instructions on displaying in-app messages and logging impressions and click analytics.
 
-![example][2]
+![A "homepage banner" example showing the different components needed to build the custom banner. Components listed include the message composition component (showing the body, button text, image, assigned button behavior (deep link), and key-value pairs), the backend details (audience listed as "users who watched season 1", intended interactions (button beeplinks to app, closing the message dismisses the message, and automatic dismissal after 10 seconds), the trigger (session start), and the key-value pair (template = homepage_banner)).][2]
 
 ## Testing and QA
 
