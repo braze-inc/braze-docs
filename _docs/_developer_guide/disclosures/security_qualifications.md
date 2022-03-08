@@ -21,7 +21,7 @@ For more on this, check out [Braze Perspectives](https://www.braze.com/perspecti
 
 ## ISO 27001 certification
 
-![ISO Certification][1]{: height="25%" width="25%" style="border:0px;"}
+![ISO certification graphic][1]{: height="25%" width="25%" style="border:0px;"}
 
 _Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018, and renewed as of August 6, 2021. Expires December 16, 2024._
 
@@ -29,7 +29,7 @@ Any third party wishing to independently verify the status of Braze's certificat
 
 ## SOC 2 examination
 
-![SOC 2 Examination][2]{: height="25%" width="25%" style="border:0px;"}
+![SOC 2 examination graphic][2]{: height="25%" width="25%" style="border:0px;"}
 
 _Last Review Date/Period: July 1, 2020 to June 30, 2021_
 

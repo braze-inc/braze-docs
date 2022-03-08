@@ -14,7 +14,7 @@ channel: push
 
 ## Android
 
-See the [Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
+See the [Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from Java to C#.
 
 ## iOS
 
@@ -56,7 +56,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 ### Badge count
 
-If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
+If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, refer to [Xamarin][3] and use the following code:
 
 ```csharp
 // C#

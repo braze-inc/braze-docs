@@ -96,4 +96,4 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 
 The Braze Cordova SDK has several methods to get the number of read/unread News Feed cards for different categories. See our [sample project implementation](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js) for an example.
 
-You can look at the sample [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application and sample Cordova Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application implementation samples.
+You can look at the sample [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application and sample Cordova [Android](https://github.com/Appboy/appboy-android-sdk) or [iOS](https://github.com/Appboy/appboy-ios-sdk) application implementation samples.

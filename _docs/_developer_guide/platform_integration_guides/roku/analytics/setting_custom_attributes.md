@@ -12,7 +12,7 @@ description: "This page describes methods to assign custom attributes to users v
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. User attributes vs. purchase events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, user attributes, and purchase events in our [Best practices][7]. We also recommend familiarizing yourself with our [Event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 
@@ -36,7 +36,7 @@ m.Braze.setFirstName("User's First Name")
 
 ## Assigning custom user attributes
 
-Beyond the default attributes above, Braze also allows you to define custom attributes using several different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best Practices documentation][1] within this section.
+Beyond the default attributes above, Braze also allows you to define custom attributes using several different data types.
 
 ### Settings custom attribute values
 {% tabs %}
@@ -97,7 +97,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
+You can also use our REST API to set user attributes. Refer to the [users API][4] documentation for details.
 
 ### Custom attribute value limits
 
@@ -116,7 +116,7 @@ You can set the following email subscription statuses for your users programmati
 
 >  These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
 
-The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. For more details, visit [Managing user subscriptions][10].
 
 Example usage:
 ```javascript

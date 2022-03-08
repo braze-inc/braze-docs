@@ -14,13 +14,13 @@ Braze organizes your apps via "App Groups." Think of each of these app groups as
 
 ### Step 1: Click on the "<i class='icon-plus'> </i>  Add App Group" button in the sidebar
 
-![Add App Group][3]
+![][3]
 
 Type the name of your app group into the form.
 
-Once you have created your app group, you will be taken to the settings page. Generally, you can access this page by navigating to the Apps tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
+Once you have created your app group, you will be taken to the **Settings** page. Generally, you can access this page by navigating to the **Apps** tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
 
-![Braze Settings][4]
+![][4]
 
 ### Step 2: Add your apps
 
@@ -29,7 +29,7 @@ Using the form at the top right of your screen, select your platform, type in th
 - After adding your app, you will have access to its API key, which you will need to complete SDK integration.
     - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
 
-![Braze API Input][5]
+![The app group setting page showing the different apps within an app group. In this example, four similiar app instances are shown representing the different versions of their app.][5]
 
 ### Step 3: Add a testing app group
 

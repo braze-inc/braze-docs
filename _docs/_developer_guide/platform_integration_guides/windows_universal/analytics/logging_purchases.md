@@ -13,7 +13,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][3]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][3] section. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 To use this feature, add this method call after a successful purchase in your app:
 
@@ -25,7 +25,7 @@ bool LogPurchase(string productId, string currencyCode, decimal price)
 
 ## REST API
 
-You can also use our REST API to record purchases. Refer to the [user API documentation][2] for details.
+You can also use our REST API to record purchases. Refer to the [users API][2] documentation for details.
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

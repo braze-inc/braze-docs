@@ -100,7 +100,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 ## Location tracking
 
 - Android: See the [Android integration instructions][2] for information on how to support location tracking.
-- iOS: See [Xamarin Walkthrough - Using Background Location][11] and the [iOS integration instructions][12] for information on how to support location tracking.
+- iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
 
 ## Social data tracking (Android only)
 
