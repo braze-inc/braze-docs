@@ -54,9 +54,9 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| High | 76-100 | 60 MPS | 60 MPS | 60 MPS |
-| Medium | 51-75 | 10 MPS | 10 MPS | 10 MPS |
-| Low | 16-50 | 1 MPS | 1 MPS | 1 MPS | 
+| High | 75-100 | 75 MPS | 75 MPS | 75 MPS |
+| Medium | 50-74 | 40 MPS | 40 MPS | 40 MPS |
+| Low | 1-49 | 4 MPS | 4 MPS | 4 MPS | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
@@ -94,9 +94,9 @@ A declared use case means you have chosen one specific non-marketing use case (f
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 76-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
-| 51-75 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
-| 16-50 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
+| 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
+| 51-75 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
+| 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -106,10 +106,9 @@ Mixed/Marketing use cases can be registered for customers who want to send messa
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
-| 66-85 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
-| 26-65 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
-| 15-25 | 2.2 MPS | 0.2 MPS | 1 MPS | 1 MPS |
+| 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
+| 50-74 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
+| 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
