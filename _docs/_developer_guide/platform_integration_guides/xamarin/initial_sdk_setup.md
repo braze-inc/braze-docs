@@ -42,8 +42,13 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
     <resources>
     <string name="com_braze_api_key">REPLACE_WITH_YOUR_API_KEY</string>
     <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+    <string-array name="com_braze_internal_sdk_metadata">
+      <item>XAMARIN</item>
+      <item>NUGET</item>
+    </string-array>
     </resources>
 ```
+If you are including the binding source manually, remove `<item>NUGET</item>` from the above code.
 
 ### Step 3: Add required permissions to Android manifest
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml` file:
@@ -92,7 +97,9 @@ Within your `AppDelegate.cs` file, add the following snippet within your `Finish
 // C#
  Appboy.StartWithApiKey ("YOUR-API-KEY", UIApplication.SharedApplication, options);
  Appboy.SharedInstance.SdkFlavor = ABKSDKFlavor.Xamarin;
+ Appboy.SharedInstance.AddSdkMetadata(new []{ ABKSdkMetadata.ABKSdkMetadataXamarin, ABKSdkMetadata.ABKSdkMetadataNuGet });
 ```
+If you are including the binding source manually, remove `ABKSdkMetadata.ABKSdkMetadataNuGet` from the above code.
 
 **Implementation Example**
 
