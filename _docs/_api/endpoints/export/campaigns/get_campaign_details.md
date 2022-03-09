@@ -139,7 +139,7 @@ The `messages` response will contain information about each message. Example mes
 ```json
 {
     "channel": "webhook",
-    "url": (string) url for webhook,
+    "url": (string) URL for webhook,
     "body": (string) payload body,
     "type": (string) body content type,
     "headers": (hash) specified request headers,
