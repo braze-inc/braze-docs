@@ -181,7 +181,7 @@ You can utilize the HTTP status from a [Connected Content][38] call by first sav
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
-{% if connected.**http_status_code** != 200 %}
+{% if connected.__http_status_code__ != 200 %}
 {% abort_message('Connected Content returned a non-200 status code') %}
 {% endif %}
 ```
