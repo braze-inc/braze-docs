@@ -12,7 +12,7 @@ channel: news feed
 
 # Analytics
 
-Similar to scheduled campaigns, the News Feed tool comes with an analytics dashboard to monitor impressions, clicks, and clickthrough rates. Clicking on a specific News Feed message in your dashboard brings up a host of visual analytics to sort through. At the top of the page, you can select your data date range and see a quick visualization of your most important metrics. Additionally, you can see specifics about this news feed message, such as when it was sent and who it was sent to.
+Similar to scheduled campaigns, the News Feed tool comes with an analytics dashboard to monitor impressions, clicks, and clickthrough rates. Clicking on a specific News Feed message in your dashboard brings up a host of visual analytics to sort through. At the top of the page, you can select your data date range and see a quick visualization of your most important metrics. Additionally, you can see specifics about this News Feed message, such as when it was sent and who it was sent to.
 
 ![Details and analytics for News Feed.][19]
 
