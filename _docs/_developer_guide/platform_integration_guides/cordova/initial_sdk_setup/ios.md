@@ -26,7 +26,7 @@ cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
 
 ## Configure the plugin
 
-In your config.xml, add a `preference` element under the iOS `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
+In your `config.xml`, add a `preference` element under the iOS `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
 
 ```xml
 <platform name="ios">
@@ -36,7 +36,7 @@ In your config.xml, add a `preference` element under the iOS `platform` element 
 
 Set up your applications to have the appropriate certificates for push, via the [iOS push documentation][2].
 
-### Removing Automatic Push Setup
+### Removing automatic push setup
 
 If you want to turn off iOS automatic push registration, set the following configuration preferences:
 
@@ -47,9 +47,9 @@ If you want to turn off iOS automatic push registration, set the following confi
 </platform>
 ```
 
-### Optional IDFA Collection
+### Optional IDFA collection
 
-To enable the automatic collection of the iOS IDFA, set the following configuration preferences:
+To enable the automatic collection of the [iOS IDFA][3], set the following configuration preferences:
 
 ```xml
 <platform name="ios">
@@ -57,9 +57,7 @@ To enable the automatic collection of the iOS IDFA, set the following configurat
 </platform>
 ```
 
-> Please see the [iOS IDFA][3] documentation for more information.
-
-### Location Collection and Geofences
+### Location collection and geofences
 
 To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
@@ -70,15 +68,15 @@ To enable location collection and Braze Geofences, use the [`geofence-branch`][3
 </platform>
 ```
 
-The geofence-branch can be added to your Cordova project with the following:
+The `geofence-branch` can be added to your Cordova project with the following:
 
 ```
 cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
 ```
 
-> Please also visit the [iOS Geofences][4] documentation for more information.
+See [iOS Geofences][4] for more details.
 
-### Initial Setup Complete
+### Initial setup complete
 
 Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
 
