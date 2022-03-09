@@ -49,7 +49,7 @@ Accept all the default parameter values for the template. The deployment of all 
 Before you can provide personalized product recommendations, you first need to train the machine learning models and provide inference endpoints that will allow you to get recommendations from Amazon Personalize. The CloudFormation template deployed in step 1 includes an Amazon SageMaker notebook instance that provides a Jupyter notebook with detailed step-by-step instructions.
 
 1. Sign in to the AWS account where you deployed the AWS CloudFormation template in step 1.
-2. On the Amazon SageMaker console, choose __Notebook instances__.
+2. On the Amazon SageMaker console, choose **Notebook instances**.
 3. If you don't see the **RetailDemoStore** notebook instance, make sure you are in the same region where you deployed the project in step 1.
 4. To access the notebook instance, choose **Open Jupyter** or **Open JupyterLab**.
 5. When the Jupyter web interface has loaded for the notebook instance, choose the `workshop/1-Personalization/1.1-Personalize.ipynb` notebook. You may have to choose the `workshop` folder to see the notebook subdirectories.

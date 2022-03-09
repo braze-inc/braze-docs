@@ -65,7 +65,7 @@ Be sure to enter the current user's unique ID in the **External User ID** field,
 
 #### Log custom events {#custom-events}
 
-The __Custom Event__ tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
+The **Custom Event** tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
 Use this tag to send custom events to Braze, optionally including custom event properties.
 

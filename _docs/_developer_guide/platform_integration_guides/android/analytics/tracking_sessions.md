@@ -19,7 +19,7 @@ If you have integrated Braze using our recommended [Activity Lifecycle Callback 
 
 An Android session times out after 10 seconds without any communication from the host application. This means if a user backgrounds the app and returns 9 seconds later, the same session will be continued.
 
-__Note:__ If a session closes while the user has the app backgrounded, that data may not be flushed to the server until the app is opened again.
+**Note:** If a session closes while the user has the app backgrounded, that data may not be flushed to the server until the app is opened again.
 
 **Note**: If you need to force a new session, you can do so by changing users.
 

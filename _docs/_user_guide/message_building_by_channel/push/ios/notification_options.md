@@ -23,9 +23,9 @@ Create your iOS push campaign, then look to the top of the **Compose** tab for t
 
 ![notificationgroupsdropdown][26]{: style="max-width:60%;" }
 
-Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select __None__ from the dropdown, the message will automatically send as normal to all defined users in the app group.
+Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the app group.
 
-If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking __Manage Notification Groups__ in the dropdown and filling out the required fields in the __Manage iOS Push Notification Groups__ window that appears.
+If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
 ![Manage Notification Groups][27]
 
@@ -39,7 +39,7 @@ In addition to grouping notifications by Thread IDs, Apple allows you to edit th
 Note that the way notifications with the same Thread ID are grouped in the notification tray is under the control of the OS. iOS may choose to display notifications with the same Thread ID separately or in groups depending on what it deems optimal.
 {% endalert %}
 
-Check the __Alert Options__ box in the __Push Composer__.
+Check the **Alert Options** box in the **Push Composer**.
 
 Then, select `summary-arg` and `summary-arg-count` as keys and input those values in the corresponding column. If you do not set a value for `summary-arg`, it will default to 1.
 
@@ -66,7 +66,7 @@ This will not require an SDK update.
 Please note that `%u` and `%@` are formatting strings for the summary count and summary argument, respectively. When the summary is shown, these placeholders will be replaced with the values for `summary-count` and `summary-arg`.
 {% endalert %}
 
-Once this is set up on your app, use the summary category by checking the __Notification Buttons__ box and selecting __Enter Pre-registered iOS Category__.
+Once this is set up on your app, use the summary category by checking the **Notification Buttons** box and selecting **Enter Pre-registered iOS Category**.
 
 Then, input the summary category identifier that you set in your app.
 
@@ -106,7 +106,7 @@ The implementation of Provisional Push Authentication only supports iOS 12+ and 
 
 {% tabs local %}
   {% tab Swift %}
-__Swift__
+**Swift**
 
 ```
 var options: UNAuthorizationOptions = [.alert, .sound, .badge]
@@ -117,7 +117,7 @@ if #available(iOS 12.0, *) {
   {% endtab %}
   {% tab Objective-C %}
 
-__Objective-C__
+**Objective-C**
 
 ```
 UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -146,7 +146,7 @@ The four new Interruption Level options are:
 |--|--|--|--|
 |[Passive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)|Sends a notification without sound, vibration, or turning on the screen.|Notifications that do not require immediate attention.|No|
 |[Active](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (default)|Will only make a sound, vibration, and turn on the screen if the user is not in Focus Mode.|Notifications that require immediate attention, unless the user has Focus Mode enabled.|No|
-|[Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the __Time Sensitive Notifications capability__ is added your app in Xcode|Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification.|Yes|
+|[Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the **Time Sensitive Notifications capability** is added your app in Xcode|Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification.|Yes|
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -162,7 +162,7 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 iOS 15 also introduces a new way for users to (optionally) schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
 
-Apps can specify which push notifications are most relevant by setting a __Relevance Score__. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
+Apps can specify which push notifications are most relevant by setting a **Relevance Score**. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
 
 All notifications will still be accessible in the user's notification center.
 

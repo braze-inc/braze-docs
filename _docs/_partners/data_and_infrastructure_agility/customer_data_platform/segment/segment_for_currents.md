@@ -29,7 +29,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 
 ### Step 1: Obtain Segment write key
 
-1. In your Segment dashboard, select your Segment source. Next, go to __Settings > API keys__. Here you will find the __Segment Write Key__.
+1. In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 2. In Braze, navigate to **Currents > + Create Currents > Create Segment Export**.
 3. Next, provide an integration name, contact email, and Segment write key.
 
@@ -45,7 +45,7 @@ Next, select the message engagement events you would like to export. Reference t
 
 ![List of all available message engagement events on the Segment Currents page in Braze.][2]
 
-Lastly, select __Launch Current__.
+Lastly, select **Launch Current**.
 
 {% alert warning %}
 If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different app groups. Because the Braze Segment Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 

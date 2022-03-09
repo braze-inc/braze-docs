@@ -49,10 +49,10 @@ First, choose **POST** as the webhook action type. Next, make sure to fill out t
 
 - **Webhook URL**: `https://rest.iad-01.braze.com/campaigns/trigger/send`
 - **Payload Type** : JSON
-- **Data** : `trigger_properties__name`, `api_key`, and `campaign_id`
+- **Data** : `trigger_properties**name`, `api_key`, and `campaign_id`
 These data fields are key-value pairs that will be used for the data portion of the request.
 
-![The data key-value pairs for this example are "app_group_id" set as "your-app-group-id", "campaign_id" set as "your-campaign-id", and "trigger_properties__name" set as "Post Name".][10]
+![The data key-value pairs for this example are "app_group_id" set as "your-app-group-id", "campaign_id" set as "your-campaign-id", and "trigger_properties**name" set as "Post Name".][10]
 
 ### Step 5: Create a Braze campaign
 

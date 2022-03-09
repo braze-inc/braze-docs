@@ -14,7 +14,7 @@ Tool:
 
 Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
 
-__Common use cases for syncing Custom Audiences include__:
+**Common use cases for syncing Custom Audiences include**:
 
 - Targeting high-value users via multiple channels to drive purchases or engagement.
 - Retargeting users who are less responsive to other marketing channels.
@@ -40,7 +40,7 @@ You will need to ensure that you have the following items created and/or complet
 
 ### Step 1: Connect to Facebook
 
-In the Braze dashboard, go to __Technology Partners__ and select __Facebook__. In the Facebook Audience Export module, click __Connect Facebook__.
+In the Braze dashboard, go to **Technology Partners** and select **Facebook**. In the Facebook Audience Export module, click **Connect Facebook**.
 
 ![Facebook technology page in Braze that includes an Overview module and Facebook Audience Export module with the Connected Facebook button.][4]{: style="max-width:70%;"}
 
@@ -66,20 +66,20 @@ For customers who have previously undergone the Facebook App Review process for 
 
 ### Step 2: Add a Facebook Audience step in Canvas
 
-Add a step in your Canvas, select the dropdown at the top of the step, and select __Facebook Audience Step__.
+Add a step in your Canvas, select the dropdown at the top of the step, and select **Facebook Audience Step**.
 
 ![Workflow of the previous steps to add a Facebook Audience step in Canvas.][11]{:style="max-width:70%"}
 
 ### Step 3: Sync setup
 
-Click on the __Custom Audience__ button to open the step editor.
+Click on the **Custom Audience** button to open the step editor.
 
-Select the desired Facebook ad account. Under the __Choose a New or Existing Audience__ dropdown, type in the name of a new or existing audience. 
+Select the desired Facebook ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
-__Create a New Audience__<br>
-Enter a name for the new custom audience, select __Add Users to Audience__ and select which fields you would like to sync with Facebook. Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
+**Create a New Audience**<br>
+Enter a name for the new custom audience, select **Add Users to Audience** and select which fields you would like to sync with Facebook. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected and a new audience is created.]({% image_buster /assets/img/fb_audience_sync/create_audience.png %})
 
@@ -91,8 +91,8 @@ When you launch a Canvas with a new audience, Braze will create the new custom a
 
 {% endtab %}
 {% tab Sync with an Existing Audience %}
-__Sync with an Existing Audience__<br>
-Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to __Add to the Audience__ or __Remove from the Audience__. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
+**Sync with an Existing Audience**<br>
+Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to **Add to the Audience** or **Remove from the Audience**. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/fb_audience_sync/add_audience.png %})
 
@@ -105,7 +105,7 @@ It's important to note that Facebook prohibits removing users from custom audien
 
 Once you have configured your Facebook Audience Step, simply launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience step will be passed into this custom audience on Facebook. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
 
-The __History__ tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
+The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
 
 ![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.][9]{: style="max-width:80%;"}
 

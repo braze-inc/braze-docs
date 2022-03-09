@@ -154,7 +154,7 @@ Message sending endpoint responses will include the message’s `dispatch_id` fo
 
 ## Create send endpoint
 
-__Using the Attributes Object in Campaigns__
+**Using the Attributes Object in Campaigns**
 
 Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 

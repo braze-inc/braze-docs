@@ -15,7 +15,7 @@ channel:
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 
 ### Step 1: Configuring your Google Cloud API key
-In the development of your app, you'll need to provide the Braze Android SDK with your Firebase Sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key when we attempt to send messages to your devices. You will need to ensure that FCM service is enabled in Google Developer's console as well. __Note__: A common mistake in this step is using an API key for Android applications. This is a different, incompatible API key for the type of access Braze needs.
+In the development of your app, you'll need to provide the Braze Android SDK with your Firebase Sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key when we attempt to send messages to your devices. You will need to ensure that FCM service is enabled in Google Developer's console as well. **Note**: A common mistake in this step is using an API key for Android applications. This is a different, incompatible API key for the type of access Braze needs.
 
 ### Step 2: Devices register for FCM and provide Braze with push tokens
 In typical integrations, the Braze Android SDK will handle the process of registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with a FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user and that user will become "Push Registered" if they previously did not have a push token for any of your apps.
@@ -56,7 +56,7 @@ We recommend setting a breakpoint or logging to ensure that the FCM-generated pu
 
 For FCM push to work, Google Play Services must be present on the device. If Google Play Services isn't on a device, push registration will not occur.
 
-__Note:__ Google Play Services is not installed on Android emulators without Google APIs installed.
+**Note:** Google Play Services is not installed on Android emulators without Google APIs installed.
 
 #### Device not connected to the internet
 

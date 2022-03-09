@@ -30,16 +30,16 @@ If you have any historical information about your user’s [subscription states]
 
 Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works. 
 
-__Here's a quick summary of the user data you'll need to update in Braze:__
+**Here's a quick summary of the user data you'll need to update in Braze:**
 
-1. __Import users' phone numbers in the correct format__ ([E.164][0]) formatting requires a '+' and a country code, e.g. +12408884782. For more information on how to import user phone numbers, check out our [documentation][userphone].
+1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a '+' and a country code, e.g. +12408884782. For more information on how to import user phone numbers, check out our [documentation][userphone].
   - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
 
-2. __Add a user alias__ to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'
+2. **Add a user alias** to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'
   - Use the [users/alias/new][2] REST API endpoint to assign an alias to existing user profiles.
   - There are also SDK methods for Aliasing Users [iOS][3] / [Android][4] / [Web][5].<br><br>
 
-3. __Assign your user's SMS [subscription state][subscriptionstate]__ (e.g. subscribed or unsubscribed) if you have this information.
+3. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g. subscribed or unsubscribed) if you have this information.
   - Use the [subscription/status/set][6] REST API endpoint to set users as subscribed or unsubscribed from your SMS Subscription Group(s).
   - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
 

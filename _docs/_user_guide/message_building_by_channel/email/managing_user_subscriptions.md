@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a group
 
-To create a subscription group, go to the __Subscription Groups__ page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
+To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
@@ -71,7 +71,7 @@ By default, the past 30 days of state changes across all subscription groups are
 
 You can see the number of users who changed their Subscription State (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
 
-From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under __Subscription Groups__ to see the aggregate count of state changes, as submitted by your customers.
+From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
 ![Sub Group Performance][30]
 

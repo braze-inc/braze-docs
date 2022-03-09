@@ -34,7 +34,7 @@ When should you use this feature? Braze highly recommends that you consider usin
 
 {% tabs %}
   {% tab Promotional %}
-__Promotional Canvases__
+**Promotional Canvases**
 
 Promotions, coupons, and sales often have hard expiration dates. The Canvas outlined below should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by 2/28/2019 at 11:15 AM in the company's time zone.
 
@@ -50,7 +50,7 @@ As you can see, the in-app messages expire when the promotion expires to prevent
   {% endtab %}
   {% tab Onboarding %}
 
-__User Onboarding Canvases__
+**User Onboarding Canvases**
 
 Your first impression with a user is, perhaps, your most critical one. It can make or break future visits to your app. Your initial communications with your user should be sensibly timed and encourage frequent visits to your app to promote usage.
 
@@ -70,7 +70,7 @@ As you can see, the push messages are spaced around an in-app message to ensure 
 
 Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. [Steps with only in-app messages](#steps-with-in-app-messages-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
 
-Action-based delivery is __not available for Canvas steps with in-app messages__. Canvas steps with in-app messages __must be scheduled__. Instead, Canvas in-app messages will appear the first time that your user opens the app after the scheduled message in the Canvas step has been sent to them.
+Action-based delivery is **not available for Canvas steps with in-app messages**. Canvas steps with in-app messages **must be scheduled**. Instead, Canvas in-app messages will appear the first time that your user opens the app after the scheduled message in the Canvas step has been sent to them.
 
 ### Steps with in-app messages only
 

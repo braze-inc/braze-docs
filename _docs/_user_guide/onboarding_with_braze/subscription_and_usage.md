@@ -11,7 +11,7 @@ tool: Dashboard
 
 # Subscriptions and usage
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
+To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
 ## Page contents
 
@@ -29,7 +29,7 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Total data points dashboard
 
-Your **Data Points Usage** can be found under the __Total Data Points Usage__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
+Your **Data Points Usage** can be found under the **Total Data Points Usage** tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
 
 ![Filtering Data Point Usage by weeks][2]{: style="max-width:80%;"}
 

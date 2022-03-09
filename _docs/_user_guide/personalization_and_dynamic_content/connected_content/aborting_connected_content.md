@@ -20,7 +20,7 @@ Using Liquid templating, you have the option to abort messages with conditionals
 
 In the example above, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
-You can also specify an abort reason, which will be saved to the __Message Activity Log__ in your __Developer Console__. This abort reason must be a string and cannot contain Liquid.
+You can also specify an abort reason, which will be saved to the **Message Activity Log** in your **Developer Console**. This abort reason must be a string and cannot contain Liquid.
 
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}

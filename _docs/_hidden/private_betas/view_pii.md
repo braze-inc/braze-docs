@@ -17,9 +17,9 @@ When this permission is disabled, developers are not able to see the email addre
 
 |Dashboard Navigation| Result| Notes|
 |--------------------|-------|------|
-|User Search| The developer who logs in is not able to search by email address or phone number anymore:<br><br>__&#45;__ Can not be shown the email address or phone number when viewing a user profile<br><br>__&#45;__ Can not edit the email address or phone number of a user profile from the dashboard| Access to this section, still requires access to 'view user profile' permission |
+|User Search| The developer who logs in is not able to search by email address or phone number anymore:<br><br>**&#45;** Can not be shown the email address or phone number when viewing a user profile<br><br>**&#45;** Can not edit the email address or phone number of a user profile from the dashboard| Access to this section, still requires access to 'view user profile' permission |
 |User Import| The developer no longer can download files from the user import page| |
-|Segments/Campaign/Canvas |Under the User Data Dropdown: <br><br>__&#45;__ The developer no longer sees an option for 'CSV Export Email Address"<br><br>__&#45;__ The developer will no longer be provided with the email address or phone number in the CSV file, when selecting "CSV Export User Data"||
+|Segments/Campaign/Canvas |Under the User Data Dropdown: <br><br>**&#45;** The developer no longer sees an option for 'CSV Export Email Address"<br><br>**&#45;** The developer will no longer be provided with the email address or phone number in the CSV file, when selecting "CSV Export User Data"||
 |Internal Test Group| The developer no longer can see the email address of any user added to the internal test group | | 
 |Message Activity Log | The developer will no longer see the email address or phone number for any users identified via the message activity log | | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

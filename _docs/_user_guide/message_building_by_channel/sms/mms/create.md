@@ -19,12 +19,12 @@ channel:
 
 Sending MMS with Braze:
 
-- __Select your subscription group__
+- **Select your subscription group**
   - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
-- __Input message body__
+- **Input message body**
   - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
   - Only 1 image supported<br><br>
-- __Understand MMS sending__
+- **Understand MMS sending**
   - MMS are billed at a different rate vs. text-only SMS.
   - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
 

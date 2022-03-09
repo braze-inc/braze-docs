@@ -32,9 +32,9 @@ For a user to qualify to receive your Push Messages, they must enable push at th
 - [iOS Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 
 {% alert note %}
-__Should I be using Push Primers?__ Depends on your iOS version.<br><br>
-- __iOS 12__: With the iOS 12 update offering [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), allowing this initial push prompt to be delivered silently to your notification center, some may find Push Primers no longer needed, while others may continue its use. We recognize not every iOS app will have its developers incorporate provisional authorization, so push primers are still a great approach for those applications. We recommend meeting with your Customer Success Manager to discuss if incorporating push primers are the right move.
-- __iOS 11 and Later__: Because these iOS versions only allow foreground Push, the intrusive native iOS Push opt-in prompt will still get sent, in turn sacrificing your marketability to those users. We strongly suggest setting up Push Primers for these versions. 
+**Should I be using Push Primers?** Depends on your iOS version.<br><br>
+- **iOS 12**: With the iOS 12 update offering [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), allowing this initial push prompt to be delivered silently to your notification center, some may find Push Primers no longer needed, while others may continue its use. We recognize not every iOS app will have its developers incorporate provisional authorization, so push primers are still a great approach for those applications. We recommend meeting with your Customer Success Manager to discuss if incorporating push primers are the right move.
+- **iOS 11 and Later**: Because these iOS versions only allow foreground Push, the intrusive native iOS Push opt-in prompt will still get sent, in turn sacrificing your marketability to those users. We strongly suggest setting up Push Primers for these versions. 
 {% endalert %}
 
 ## Step 1: Push primer integrations
@@ -60,7 +60,7 @@ After you have chosen the appropriate in-app message type, you can customize you
 Here are some resources to get you started:
 - Braze supports using [Font Awesome v4.3.0 icons](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
-Remember that a push primer is supposed to prime the user to turn on push notifications. <br>In your message body, we suggest __highlighting the reasons your users should have push notifications turned on__. 
+Remember that a push primer is supposed to prime the user to turn on push notifications. <br>In your message body, we suggest **highlighting the reasons your users should have push notifications turned on**. 
 
 Here are some example Push Primer Messages:
 
@@ -86,7 +86,7 @@ Documentation on push primer integrations and deep linking customization can be 
 
 ## Step 5: Selecting the delivery method
 
-To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward your allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, it will trigger the push primer in-app message. 
+To set your Push Primer to trigger when you want it to, you must set **Perform Custom Event** as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer campaign. To figure out how your company references this custom event, check with your developers. **This custom event counts as one data point toward your allotment.** This customer event will check if a user has already been provided a native push prompt, and if not, it will trigger the push primer in-app message. 
 
 ## Step 6: Targeting users
 

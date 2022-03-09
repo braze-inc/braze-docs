@@ -58,7 +58,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
 
 Construct your AMP email using the [components](#components) below, then use [our API](#api-usage) to send. Be sure to use `amp_body` for your AMP HTML! You can also check out [AMP's tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email) or [sample code](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73) to see how the final product should look. You can also checkout AMP's [full email components library here](https://amp.dev/documentation/components/?format=email/).
 
-When you write your email for our API, we __require__ a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email, in the event that your email is sent via a provider who does not yet support AMP for Email.
+When you write your email for our API, we **require** a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email, in the event that your email is sent via a provider who does not yet support AMP for Email.
 
 ### Components
 

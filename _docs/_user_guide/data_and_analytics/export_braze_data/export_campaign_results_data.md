@@ -78,7 +78,7 @@ In-app message campaign results contain graphs for the following analytics:
 
 ## Campaign recipients
 
-You can export user data for all the recipients of a campaign as a CSV file. To do so, click the __User Data__ button in the __Campaign Details__ block.
+You can export user data for all the recipients of a campaign as a CSV file. To do so, click the **User Data** button in the **Campaign Details** block.
 
 {% alert note %}
 Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that app group.

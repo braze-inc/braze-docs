@@ -4,7 +4,7 @@ Braze requires an external image library to display animated GIFs with {{ includ
 
 Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
 
-__Note:__ Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
+**Note:** Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
 
 #### Step 1: Creating the image loader delegate
 

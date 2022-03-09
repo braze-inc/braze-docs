@@ -9,7 +9,7 @@ noindex: true
 
 {% alert important %}
 
-The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Please note that you __can__ currently use the `platform` content tag.
+The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Please note that you **can** currently use the `platform` content tag.
 
 {% endalert %}
 
@@ -101,7 +101,7 @@ For example: `page_type: glossary`
 | Tutorial Page <br> <br> `tutorial` | A general walkthrough of an instructional concept. Should contain practical knowledge. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks step-by-step through solving a specific issue (How to target specific users, how to segment based on location, etc.). | [Tutorial Article with Video]({{site.baseurl}}/home/templates/tutorial_video/) <br> <br> [Tutorial Article]({{site.baseurl}}/home/templates/tutorial/) <br> <br> [Use Case Article with Video]({{site.baseurl}}/home/templates/use_case_video/) <br> <br> [Use Case Article]({{site.baseurl}}/home/templates/use_case/) |
 | Landing Page <br> <br> `landing` | Page provides a selection of options within a certain section, as well as a description or overview of said section. | [Single Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_single/) <br> <br> [Single Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_images/) <br> <br> [Multi-Section Landing Page using FA Icons]({{site.baseurl}}/home/templates/landing_multiple/) <br> <br> [Multi-Section Landing Page using Images]({{site.baseurl}}/home/templates/landing_multiple_images/)
 | Partner Page <br> <br> `partner` | A page that combines many of the page types above into a single page. These pages describe a partner, the benefits of that partner, how to integrate that partner, then how to use that integration and any best practices associated with that usage. | [Partner Page with Video]({{site.baseurl}}/home/templates/partner_page_template_video/) <br> <br> [Partner Page]({{site.baseurl}}/home/templates/partner_page_template/) |
-| Updates and Release Notes <br> <br> `update` | A page that lists updates to a product or SDK in succession. A single update on a larger page or a page about a new feature would __not__ count as an `update` page type. | See Release Notes Pages and SDK Changelogs pages. | 
+| Updates and Release Notes <br> <br> `update` | A page that lists updates to a product or SDK in succession. A single update on a larger page or a page about a new feature would **not** count as an `update` page type. | See Release Notes Pages and SDK Changelogs pages. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Potential Page Type: Best Practices

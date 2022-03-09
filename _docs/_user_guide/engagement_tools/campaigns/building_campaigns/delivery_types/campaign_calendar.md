@@ -23,16 +23,16 @@ Only scheduled campaigns are displayed in the Campaign Calendar. Canvas steps, t
 
 ## Future send calendar
 
-__Red__: Single-channel scheduled campaigns<br>
-__Blue__: Multichannel scheduled campaigns
+**Red**: Single-channel scheduled campaigns<br>
+**Blue**: Multichannel scheduled campaigns
 
-Note that only __Scheduled Campaigns__ are displayed in the Campaign Calendar.<br> 
-Canvas steps, triggered campaigns, and API campaigns __will not be displayed here__. 
+Note that only **Scheduled Campaigns** are displayed in the Campaign Calendar.<br> 
+Canvas steps, triggered campaigns, and API campaigns **will not be displayed here**. 
 
 ## Messaging analytics
 
-__Upcoming Message Types__: Details the amount of push, email, and in-app messaging campaigns over the course of the next 14 days.<br> 
-__Messages Sent__: Details the number of messages sent and opened over the course of the past 14 days. 
+**Upcoming Message Types**: Details the amount of push, email, and in-app messaging campaigns over the course of the next 14 days.<br> 
+**Messages Sent**: Details the number of messages sent and opened over the course of the past 14 days. 
 
 To get more detailed information on these analytics, you can scroll over the individual bars within the charts for a breakdown by day. If you wish to save the message analytics charts, you can press the ![hamburger][3]{: style="border:0;"} icon to save the chart in various formats. 
 

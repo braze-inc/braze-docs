@@ -19,7 +19,7 @@ This event breakdown shows what type of information is generally included in a m
 
 ![Breakdown of a message engagement event showing an email unsubscribe event with the listed properties grouped by user-specific properties, campaign or Canvas tracking properties, and event-specific properties]({% image_buster /assets/img/message_engagement_event.png %})
 
-Message engagement events are comprised of __user-specific__ properties, __campaign/canvas tracking__ properties, and __event-specific__ properties.
+Message engagement events are comprised of **user-specific** properties, **campaign/canvas tracking** properties, and **event-specific** properties.
 
 ### Platform values
 
@@ -503,7 +503,7 @@ Email, Subscription
 This event occurs when the end-user has clicked “unsubscribe” from the email.
 
 {% alert important %}
-Please note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, __not__ when the user changes state to unsubscribed.
+Please note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, **not** when the user changes state to unsubscribed.
 {% endalert %}
 
 ```json

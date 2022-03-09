@@ -29,7 +29,7 @@ This article will help you understand the use cases Amazon Personalize offers, t
 {% tabs %}
 {% tab Use Cases %}
 
-__Use Cases__
+**Use Cases**
 
 Before creating a model, you must determine your use case for this integration. Some common use cases include:
 - Recommend items for users based on their previous interactions, creating a truly personalized experience for your users.
@@ -41,7 +41,7 @@ In the guide below, we will focus on the user personalized recommendations recip
 {% endtab %}
 {% tab Datasets %}
 
-__Datasets__
+**Datasets**
 
 To get started with Amazon Personalize recommendation models, you need three types of datasets:
 
@@ -73,7 +73,7 @@ Amazon Personalize lets you adjust hyperparameters that the model uses for train
 
 The number of hidden dimensions helps detect more complicated patterns for complex datasets, while the back-propagation through time technique (BPTT) adjusts rewards for an early event after a chain of events took place that resulted in a high-value action.
 
-Additionally, Amazon Personalize offers automatic hyperparameter tuning by running multiple versions of the solution with different values simultaneously. To use the tuning, turn on __Perform HPO__ when creating a solution.
+Additionally, Amazon Personalize offers automatic hyperparameter tuning by running multiple versions of the solution with different values simultaneously. To use the tuning, turn on **Perform HPO** when creating a solution.
 
 ### Step 2: Evaluate and Compare
 

@@ -37,7 +37,7 @@ Try to use the same conversion events for conversion A, B, etc across campaigns 
 
 Within the dashboard, navigate to the **Report Builder** page in the lefthand navigation. Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report. 
 
-If you choose to run a report on campaigns, you can select between a __Manual__ or __Automated__ report. Reports may contain either campaigns or Canvases, but not both together.
+If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together.
 
 {% alert note %} Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report. {% endalert %}
 
@@ -45,11 +45,11 @@ If you choose to run a report on campaigns, you can select between a __Manual__ 
 
 Below are the differences between these two options:
 
-| __Action__ | __Manual__ | __Automated__ |
+| **Action** | **Manual** | **Automated** |
 | ---- | ---------- | ------------- |
-| __Building Report__ | You will be able to narrow down your campaign list using filters, and then check off specific campaigns. | You will build your report by using the filter options to narrow down your campaign list. |
-| __Saving and Viewing Report__ | You can save your report. The next time you view it, you will be able to view the same campaign you previously added, as these campaigns still fall under your "Last Sent" filter. | You can save your report. The next time you view it, the report will automatically update to include all campaigns that currently match your filters. |
-| __Editing Report__ | You can click Edit Report to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
+| **Building Report** | You will be able to narrow down your campaign list using filters, and then check off specific campaigns. | You will build your report by using the filter options to narrow down your campaign list. |
+| **Saving and Viewing Report** | You can save your report. The next time you view it, you will be able to view the same campaign you previously added, as these campaigns still fall under your "Last Sent" filter. | You can save your report. The next time you view it, the report will automatically update to include all campaigns that currently match your filters. |
+| **Editing Report** | You can click Edit Report to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} Both **Manual** and **Automated** reports can include a maximum of 50 campaigns in a report. {% endalert %}
@@ -58,13 +58,13 @@ Canvas reports work similarly to a manual campaign report in that Canvas selecti
 
 ### Step 2: Choose your metrics
 
-Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select __Edit Columns__ and choose the metrics you’d like to add. From here, click __Run Report__ to generate your metrics.
+Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select **Edit Columns** and choose the metrics you’d like to add. From here, click **Run Report** to generate your metrics.
 
 ![Campaign Options][15]{: style="max-width:80%;"}
 
 Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary][16]. Some metrics are only available for campaign comparison reports.
 
-You can also toggle calculations for the __Average__ of any rate or numerical metric and __Total__ for any numerical metric.
+You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
 
 ### Step 3: Choose a time period
 
@@ -78,7 +78,7 @@ Name your report before saving it. If a report is saved without being named, Bra
 
 ![Campaign Note][7]{: style="max-width:60%;"}
 
-When you're ready, click __Save__. Saved reports can be viewed at a later point on the **Report Builder** page.
+When you're ready, click **Save**. Saved reports can be viewed at a later point on the **Report Builder** page.
 
 ## Campaign comparison report with multivariate campaigns
 
@@ -116,15 +116,15 @@ Note that within the Braze dashboard, you can preview the first 50 rows of your 
 
 ## Accessing saved reports
 
-When you access a saved __Manual Report__, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
+When you access a saved **Manual Report**, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
 
-When you access a saved __Automatic Report__, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag “Promotion,” then each time you view this report, you will be able to see all campaigns with the “Promotion” tag, even if these campaigns were created after you made this report.
+When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag “Promotion,” then each time you view this report, you will be able to see all campaigns with the “Promotion” tag, even if these campaigns were created after you made this report.
 
 ## Editing reports
 
-In a __Manual Report__, you can edit a report by clicking **Edit**. From there, you can select or deselect campaigns to include in your report.
+In a **Manual Report**, you can edit a report by clicking **Edit**. From there, you can select or deselect campaigns to include in your report.
 
-In an __Automatic Report__, simply toggle your filters to narrow down the results in your report.
+In an **Automatic Report**, simply toggle your filters to narrow down the results in your report.
 
 ## Exporting reports
 
@@ -135,13 +135,13 @@ If your report contains any multivariant campaigns, your export will include two
 - One file containing only the top-level metrics for each campaign
 - One file that contains variant-level metrics
 
-The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you’ll receive a pop-up asking you to grant permission for downloading multiple files—click __Allow__.
+The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you’ll receive a pop-up asking you to grant permission for downloading multiple files—click **Allow**.
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 
 ### Exporting canvas comparison reports
 
-Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click __Export__ from there.
+Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click **Export** from there.
 
 If you download a variant breakdown Canvas report, you'll receive two CSV files:
 

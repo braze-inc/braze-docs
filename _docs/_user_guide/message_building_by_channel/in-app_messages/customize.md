@@ -158,7 +158,7 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
-If you choose to apply your own template, click __Apply Template__ and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
+If you choose to apply your own template, click **Apply Template** and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
 ## Email capture form {#email-capture-form}
 
@@ -238,13 +238,13 @@ Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_
 
 ## Reusable message templates {#reusable-color-profiles}
 
-You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
+You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
 ### Color profile
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
-Click __Save Color Profile__ on the bottom right when you’re finished.
+Click **Save Color Profile** on the bottom right when you’re finished.
 
 #### Managing color profiles
 

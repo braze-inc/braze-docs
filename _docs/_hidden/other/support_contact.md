@@ -1172,7 +1172,7 @@ $( document ).ready(function() {
            noResults({createElement}) {
              return createElement("div", {
                dangerouslySetInnerHTML: {
-                 __html: '<div class="no_results">No results were found with your current search. Try to change the search query.</div>',
+                 **html: '<div class="no_results">No results were found with your current search. Try to change the search query.</div>',
                  },
                })
           },
@@ -1223,7 +1223,7 @@ $( document ).ready(function() {
                 "</div></div></a>";
             return createElement("div", {
               dangerouslySetInnerHTML: {
-                __html: resulttemplate,
+                **html: resulttemplate,
               },
             });
           },

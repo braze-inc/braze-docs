@@ -36,19 +36,19 @@ To integrate Braze and Segment, you must set [Braze as a Destination](#connectio
 
 After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the chart below.
 
-In Segment, navigate to __Destinations > Braze > Receiving from [platform]__.
+In Segment, navigate to **Destinations > Braze > Receiving from [platform]**.
 
 ![]({% image_buster /assets/img/segment_destination_braze.png %})
 
 Next, provide the following fields in the configuration page:
-- __App identifer__: Previously called the API key. Found in the Braze __Developer Console__ under __Settings__.
-- __App group REST API key__:  Braze REST API key with `users/track` permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__
-- __Braze SDK endpoint__: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
-- __Braze REST endpoint__: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
-- __Appboy datacenter__: Specify which instance your Braze data will be forwarded to.
-- __Log purchase when revenue is present__: Choose when to log purchases.
-- __Safari website push ID__: Safari requires a [Website Push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
-- __Braze web SDK version__: Indicate which version of the braze web SDK you have integrated. If you are unsure, reach out to your account manager or Braze [support]({{site.baseurl}}/braze_support/).
+- **App identifer**: Previously called the API key. Found in the Braze **Developer Console** under **Settings**.
+- **App group REST API key**:  Braze REST API key with `users/track` permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **Braze SDK endpoint**: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
+- **Braze REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
+- **Appboy datacenter**: Specify which instance your Braze data will be forwarded to.
+- **Log purchase when revenue is present**: Choose when to log purchases.
+- **Safari website push ID**: Safari requires a [Website Push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
+- **Braze web SDK version**: Indicate which version of the braze web SDK you have integrated. If you are unsure, reach out to your account manager or Braze [support]({{site.baseurl}}/braze_support/).
 
 {% details Additional connection settings %}
 
@@ -123,14 +123,14 @@ Similar to the side-by-side integration, you will need to map Segment [methods](
 
 However, unlike the side-by-side integration, the server-to-server integration does **not** support any of Braze's UI features, such as in-app messaging, News Feed, or push notifications.
 
-Some [automatically captured][25] data is only available through side-by-side integration. The following data is __not available via the server-to-server integration__:
+Some [automatically captured][25] data is only available through side-by-side integration. The following data is **not available via the server-to-server integration**:
 - Sessions
 - First Used App
 - Last Used App
 
 ##### Enabling push notifications
 
-Currently, Braze's server-to-server integration with Segment __does not__ support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
+Currently, Braze's server-to-server integration with Segment **does not** support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
 
 
 ### Step 3: Map methods {#methods}
@@ -214,7 +214,7 @@ When you call _group_ in Segment, we will record a [custom attributes]({{site.ba
 
 Most of your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
-You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's __Custom Events__ page allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
+You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's **Custom Events** page allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
 If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
@@ -226,7 +226,7 @@ If you use a server-to-server integration, filters related to automatically coll
 
 ## User deletion and suppression 
 
-If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment (as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
 
@@ -244,7 +244,7 @@ If users do not have an external ID, they will not be imported into Braze. Our u
 
 {% details Review use cases to avoid data overages. %}
 
-Segment __does not__ limit the number of data elements clients send to them. Segment allows you to send all or decide which events you will send to Braze. Rather than sending all of your events using Segment, we suggest you review use cases with your marketing and editorial teams to determine which events you will send to Braze to avoid data overages.
+Segment **does not** limit the number of data elements clients send to them. Segment allows you to send all or decide which events you will send to Braze. Rather than sending all of your events using Segment, we suggest you review use cases with your marketing and editorial teams to determine which events you will send to Braze to avoid data overages.
 
 {% enddetails %}
 

@@ -122,12 +122,12 @@ If you want to provide your own JSON body, you can write it inline if there are 
 
 ## HTTP status codes
 
-You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
+You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `**http_status_code**` key. For example:
 
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :save result %}
-{% if result.__http_status_code__ != 200 %}
+{% if result.**http_status_code** != 200 %}
   {% abort_message('Connected Content returned a non-200 status code') %}
 {% endif %}
 ```

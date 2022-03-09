@@ -15,11 +15,11 @@ Here are some error messages you may encounter while exporting data via CSV or A
 
 #### ‘AccessDenied’ 
 
-If you are using __your own S3 bucket__, this could happen because:
+If you are using **your own S3 bucket**, this could happen because:
 - The expected object is no longer in the S3 bucket; check with your engineers.
 - The configured S3 credentials within the Braze dashboard do not have the correct permissions; confirm the proper credentials with your team.
 
-If you are using __Braze’s S3 bucket__, this could happen because:
+If you are using **Braze’s S3 bucket**, this could happen because:
 - The object is no longer there. This could occur if you clicked on a link for an export that ran 4+ hours ago. If this is the case, please re-run your export.
 - You clicked on the download link right away, before the S3 was ready to serve the object. Please wait a few minutes and try again. Larger reports will generally take longer. 
 - The export is too big, so our server ran out of memory trying to create this zip file. We’ll automatically email the user attempting this export if this occurs. If you consistently run into this issue, we recommend that you use your own S3 buckets in the future.

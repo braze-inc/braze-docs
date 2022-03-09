@@ -20,12 +20,12 @@ Visit our [documentation][9] for additional best practices.
 
 Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
 
-Within the __Application__ tab, ensure that `Toast Capable` is set to `YES`.
+Within the **Application** tab, ensure that `Toast Capable` is set to `YES`.
 
 ## Step 2: Configure the Braze dashboard
 
 1. [Find your SID and Client Secret][4]
-2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
+2. Within the **Settings** page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
 
 ## Step 3: Update for background open logging
 
