@@ -5,13 +5,13 @@ page_order: 5
 page_type: reference
 tool: 
   - Dashboard
-description: "This reference article will go through how to use User Search in the Dashboard and showcases some User Search use cases."
+description: "This reference article will go through how to use User Search in the dashboard and showcases some User Search use cases."
 
 ---
 
 # Using user search
 
-> This reference article will go through how to use User Search in the Dashboard, the different components involved in a user profile, and showcases some examples of how this feature can be used to troubleshoot campaigns. 
+> This reference article will go through how to use User Search in the dashboard, the different components involved in a user profile, and showcases some examples of how this feature can be used to troubleshoot campaigns. 
 
 ## Feature overview
 

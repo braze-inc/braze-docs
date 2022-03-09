@@ -113,7 +113,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 ## Managing notification subscription statuses
 
-To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both Email and Push:
+To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both email and push:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |

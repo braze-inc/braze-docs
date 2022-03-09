@@ -11,7 +11,7 @@ This application is built out and maintained by the Braze Growth department. If 
 
 # User Attribute CSV to Braze Import
 
-> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on our Github [here](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
+> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on our GitHub [here](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 
 This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. It can handle large files and uploads, but due to Lambda's time limits, the function will stop execution after 10 minutes. This process will then launch another Lambda instance to finish processing the remaining part of the file. For more details about function timing, check out the [estimated execution times](#estimated-execution-times).
 
@@ -52,14 +52,14 @@ To successfully run this Lambda function, you will need:
 You can find your API URL, or REST endpoint, in the Braze API documentation and through the dashboard.
 
 - __API Documentation__<br>Per the [API documentation]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), simply match your Braze instance URL to the REST endpoint URL. For example, if your dashboard shows `dashboard-01.braze.com/` URL, your REST endpoint would be `https://rest.iad-01.braze.com`. <br><br>
-- __Dashboard__<br>From the left navigation panel, scroll down and select **Manage Settings**. There, you can find your `SDK Endpoint`. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
+- __dashboard__<br>From the left navigation panel, scroll down and select **Manage Settings**. There, you can find your `SDK Endpoint`. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}
 
 To connect with the Braze servers, you will need an API key. This unique identifier allows Braze to verify your identity and upload your data. 
 
-To get your API key, open the Dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
+To get your API key, open the dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
 To create a new one, click on `Create New API Key` on the right side of your screen. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
 
@@ -121,5 +121,5 @@ If you have already deployed the application and a new version is available in t
 In case of an unexpected error that prevents the further processing of the file, an event is logged (accessible through CloudWatch described in [Monitoring and Logging](#monitoring-and-logging)) that can be used to restart the Lambda from the point where the program stopped processing the file. It is important not to re-import the same data to save Data Points. You can find instructions to do this in our [Github repo](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error).
 
 {% alert important %}
-Visit our Github repo to learn more about how to deal with [fatal errors](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error) or [lambda configuration](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#lambda-configuration).
+Visit our GitHub repo to learn more about how to deal with [fatal errors](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error) or [lambda configuration](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#lambda-configuration).
 {% endalert%}

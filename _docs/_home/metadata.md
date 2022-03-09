@@ -78,7 +78,7 @@ The top of every markdown page should begin with a section of yaml to define the
 nav_title: "Docs Metadata"
 page_order: 0
 
-description: "This page walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata. This is a great resource for contributors via our Github page."
+description: "This page walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata. This is a great resource for contributors via our GitHub page."
 page_type: reference
 tool: 
   - docs

@@ -37,12 +37,12 @@ Okta connects any person with any application on any device. It's an enterprise-
 
 ### Step 1b: Edit SAML SSO settings
 
-From your Okta Admin Dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate which you must input into your Braze account.
+From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate which you must input into your Braze account.
 
 | Requirement | Details |
 |---|---|
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, For example, "Okta". |
-| `Target URL` | This is the Login URL provided by Okta Admin Dashboard.|
+| `Target URL` | This is the Login URL provided by Okta Admin dashboard.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. You must copy and paste it into this field. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

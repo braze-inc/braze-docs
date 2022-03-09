@@ -87,7 +87,7 @@ If the application does not prompt you to register for push notifications, there
 
 This would likely indicate that user had an invalid push token. This can happen for several reasons:
 
-#### Dashboard/app certificate mismatch
+#### dashboard/app certificate mismatch
 
 If the push certificate that you uploaded in the dashboard is not the same one in the provisioning profile that your app was built with, APNs will reject the token. Verify that you have uploaded the correct certificate and complete another session in the app before attempting another test notification.
 

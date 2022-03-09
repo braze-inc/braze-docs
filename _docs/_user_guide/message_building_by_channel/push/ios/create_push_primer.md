@@ -43,7 +43,7 @@ We leverage in-app messages to drive push primer campaigns. Unlike many of our o
 
 ## Step 2: Select your channel of choice
 
-From the **Campaigns** pane within the Dashboard, select **In-App Messaging** as the messaging channel under **Create Campaign**.
+From the **Campaigns** pane within the dashboard, select **In-App Messaging** as the messaging channel under **Create Campaign**.
 
 ## Step 3: Set up initial campaign options
 

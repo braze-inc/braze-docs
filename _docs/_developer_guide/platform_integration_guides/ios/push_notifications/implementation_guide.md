@@ -69,9 +69,9 @@ Push notifications can respond to user actions inside a content extension. For u
 
 To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
-![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
+![Interactive Push dashboard Example][3]{: style="float:right;max-width:45%;"}
 
-![Interactive Push Dashboard Example][14]{: style="max-width:50%;"}
+![Interactive Push dashboard Example][14]{: style="max-width:50%;"}
 
 #### Other use cases
 Push content extensions are an exciting option to introduce interactivity to your promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
@@ -80,7 +80,7 @@ Push content extensions are an exciting option to introduce interactivity to you
 Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
 ### Personalized push notifications
-![Personalized Push Dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![Personalized Push dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
@@ -88,7 +88,7 @@ Push notifications can display user-specific information inside a content extens
 
 To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
 
-![Personalized Push Dashboard Example][5]{: style="max-width:60%;"}
+![Personalized Push dashboard Example][5]{: style="max-width:60%;"}
 
 #### Handling key-value pairs
 
@@ -143,7 +143,7 @@ Push notifications can capture user information inside a content extension, allo
 3. Information is provided and if valid, the register button is shown.
 3. Confirmation view is displayed, and push gets dismissed. 
 
-![Information Capture Push Dashboard Example][8]{: style="border:0;"}
+![Information Capture Push dashboard Example][8]{: style="border:0;"}
 
 Note that the information requested here can be a wide range of things such as SMS number capture, it doesn't have to be email-specific.
 
@@ -151,7 +151,7 @@ Note that the information requested here can be a wide range of things such as S
 
 To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
-![Information Capture Push Dashboard Example][9]
+![Information Capture Push dashboard Example][9]
 
 #### Handling button actions
 
@@ -205,7 +205,7 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
 
-![Personalized Push Dashboard Example][18]{: style="max-width:80%;"}
+![Personalized Push dashboard Example][18]{: style="max-width:80%;"}
 
 ### Logging manually
 

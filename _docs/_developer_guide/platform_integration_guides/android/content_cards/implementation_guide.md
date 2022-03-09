@@ -27,7 +27,7 @@ When building out Content Cards, you should expose the Braze SDK via a single ma
 
 Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format already understood by your application code. Data source abstractions such as this provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data, fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
 
-When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze Dashboard to populate the necessary fields.
+When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze dashboard to populate the necessary fields.
 
 Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to start implementing your own custom objects.
 

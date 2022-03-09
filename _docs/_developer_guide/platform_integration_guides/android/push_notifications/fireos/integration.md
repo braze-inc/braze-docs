@@ -108,7 +108,7 @@ If you would like to custom handle deep links, you will need to create a `Broadc
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
-![FireOS Dashboard][34]
+![FireOS dashboard][34]
 
 ## Manual push registration
 If you need to handle ADM registration yourself, you should do the following:

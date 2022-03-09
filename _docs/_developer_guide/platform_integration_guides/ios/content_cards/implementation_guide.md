@@ -424,8 +424,8 @@ The `class_type` is used to determine which of your custom objects will be initi
 ## Sample use cases
 
 There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
-- [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
-- [Content Cards in a Message Center](#content-cards-in-a-message-center)
+- [Content Cards as supplemental content](#content-cards-as-supplemental-content)
+- [Content Cards in a message center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
 
 ### Content Cards as supplemental content

@@ -1035,7 +1035,7 @@ $( document ).ready(function() {
     var userinfo = '';
 
     userinfo += "Question:\n" + user_issue ; //+  "\n\nComments: " + user_comments;
-    // userinfo += "\n\nAllow Dashboard Access: ";
+    // userinfo += "\n\nAllow dashboard Access: ";
     // if($("#all_dashboard").is(':checked')) {
     //   userinfo += 'Yes'
     // }
@@ -1378,7 +1378,7 @@ $( document ).ready(function() {
               <a target="" href="{{site.baseurl}}/help/home/">Help & Troubleshooting Guides</a><br />
               <a target="" href="{{site.baseurl}}/help/faqs/">FAQs</a><br />
               <a target="" href="https://lab.braze.com/">LAB</a><br />
-              <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
+              <a target="" href="https://dashboard.braze.com/">Braze dashboard</a><br />
             </div>
 
         </div>

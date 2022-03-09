@@ -33,7 +33,7 @@ With the Braze and Clarisights integration, users can create different visualiza
 {% tab Better visibility %}
 Better visibility on overall campaigns and Canvases performance.
 
-![A graphic showing an example of better visability in the Clarisights platform. This graphic includes statisticcs for campaign and canvas opens, clicks, sent, converstions, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
+![A graphic showing an example of better visability in the Clarisights platform. This graphic includes statisticcs for campaign and Canvas opens, clicks, sent, converstions, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
 {% tab Granular reporting %}
 Granular reporting for campaigns and Canvases.

@@ -112,7 +112,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) API id of the canvas step message variation this user received,
+  "canvas_step_message_variation_id": (string) API id of the Canvas step message variation this user received,
   "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
@@ -1122,7 +1122,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 SMS, InboundReceived
 {% endapitags %}
 
-This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. Note when Braze receives an Inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number. If we detect that this inbound message is a reply to an outbound campaign or canvas step sent from Braze, we will also include the campaign or canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message.
+This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. Note when Braze receives an Inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number. If we detect that this inbound message is a reply to an outbound campaign or Canvas step sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message.
 
 ```json
 // SMS Inbound Received: users.messages.sms.InboundReceive

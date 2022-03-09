@@ -204,7 +204,7 @@ Some message types do not need and therefore do not ask for headers.
 
 #### Button text {#buttons}
 
-When available for your message type, you can have up to two buttons appear below your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within Email Capture forms.
+When available for your message type, you can have up to two buttons appear below your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
@@ -241,7 +241,7 @@ This setting only applies to the Custom code message type. Copy and paste HTML i
 
 #### Email capture input placeholder
 
-This setting only applies to the Email Capture Form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
+This setting only applies to the email capture form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
 
 ### Generations
 

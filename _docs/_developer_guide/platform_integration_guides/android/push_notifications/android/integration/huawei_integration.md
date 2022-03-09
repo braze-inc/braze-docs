@@ -31,7 +31,7 @@ In the Braze dashboard, go to **Manage Settings**, listed under the **Settings**
 
 Click **+ Add App**, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the push provider.
 
-![Create Huawei App in Braze Dashboard][4]
+![Create Huawei App in Braze dashboard][4]
 
 Once your new Braze App has been created, you will be shown an `API Key`, and a section for **Push Notification Settings** where you will enter your Huawei credentials from the previous step.
 
@@ -39,7 +39,7 @@ Once your new Braze App has been created, you will be shown an `API Key`, and a 
 
 Using the credentials from your Huawei Developer account, enter the `Huawei App ID` and `Huawei App Secret` within your newly created Huawei Braze App. When you're done, save your changes.
 
-![Huawei Dashboard Credentials][12]
+![Huawei dashboard Credentials][12]
 
 ## Step 4: Integrate the Huawei messaging SDK into your app
 
