@@ -122,7 +122,7 @@ If you want to provide your own JSON body, you can write it inline if there are 
 
 ## HTTP status codes
 
-You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `**http_status_code**` key. For example:
+You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
 {% raw %}
 ```js
