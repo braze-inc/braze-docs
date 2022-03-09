@@ -335,7 +335,7 @@ from engine import RunForrestRun
 """Test code for syntax highlighting!"""
 
 class Foo:
-	def **init**(self, var):
+	def __init__(self, var):
 		self.var = var
 		self.run()
 
