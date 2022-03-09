@@ -11,11 +11,11 @@ description: "This article covers the content card integration for Web, includin
 
 # Content Card integration
 
-The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
+The Braze Web SDK includes a Content Cards feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
 ## Standard feed UI
 
-To use the included Content Cards UI, you'll need to specify where on your website to show the feed. 
+To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
 
 In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. 
 
@@ -61,12 +61,12 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 |Parameters | Description |
 |---|---|
 |`parentNode` | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. For example, you should pass in `document.querySelector(".my-container")`.|
-|`filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed. |
+|`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `ab.Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `ab.Card` objects to render for this user. If omitted, all cards will be displayed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
+[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on Content Card toggling.
 
-### Requesting unviewed Content Card count
+## Requesting unviewed Content Card count
 
 You can request the number of unread cards at any time by calling:
 
@@ -80,11 +80,11 @@ This is often used to power badges signifying how many unread Content Cards ther
 Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
 {% endcomment %}
 
-### Control group 
+## Control group 
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card _would have been seen_.
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen.
 
 Here is an example of how to determine if a Content Card is a "Control" card:
 
@@ -94,11 +94,11 @@ function isControlCard(card) {
 }
 ```
 
-### Key-value pairs
+## Key-value pairs
 
 `ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.
 
-### Additional card methods
+## Additional card methods
 
 |Method | Description | Link|
 |---|---|---|
