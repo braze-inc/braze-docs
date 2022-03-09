@@ -15,7 +15,7 @@ To integrate web push, your domain must be [secure][2], which generally means `h
 
 _If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a Push Prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 
-**Caveats**:
+#### **Caveats**
 Keep in mind that like many workarounds on the web, browsers continually evolve, and in the future, this may not work as intended.
 
 - This requires that:
