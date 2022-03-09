@@ -102,7 +102,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] in the Android push documentation for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom handling push receipts and opens][52] in the Android push documentation for more information.
 
 ## Step 5: Add Client Secret and Client ID to Braze dashboard
 

@@ -148,7 +148,7 @@ Features include:
 
 For more information, visit the [Android SDK Integration Guide][2].
 
-Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, __do a manual integration of Push notification UI to achieve this__. Please see our [documentation][6] on how to set this up.
+Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, __do a manual integration of push notification UI to achieve this__. Please see our [documentation][6] on how to set this up.
 
 ### LG webOS
 

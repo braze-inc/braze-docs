@@ -216,7 +216,7 @@ By default, Filters and Segments for **Full Steps** in Canvas are checked at sen
 
 #### Messages in Canvas
 
-Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send email, mobile, and Web push messages, and Webhooks to integrate with other systems.
 
 Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
 

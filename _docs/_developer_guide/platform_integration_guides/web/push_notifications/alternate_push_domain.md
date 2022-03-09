@@ -13,7 +13,7 @@ channel: push
 
 To integrate web push, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file.
 
-_If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a Push Prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
+_If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a push prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 
 #### **Caveats**
 Keep in mind that like many workarounds on the web, browsers continually evolve, and in the future, this may not work as intended.

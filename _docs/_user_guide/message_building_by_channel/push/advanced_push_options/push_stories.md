@@ -59,7 +59,7 @@ When you create a campaign or Canvas, you can filter which users you want to tar
 
 ![Push Story Analytics][5]
 
-The analytics will look very similar to the current analytics section for Push Notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
+The analytics will look very similar to the current analytics section for push notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
 
 ## Troubleshooting
 

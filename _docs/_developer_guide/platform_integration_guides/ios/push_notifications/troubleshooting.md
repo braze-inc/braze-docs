@@ -52,13 +52,13 @@ Apple has more details about APNs in their [Developer Library][20].
 
 ## Utilizing the push error logs
 
-Braze provides a log of Push Notification Errors within the [Message Activity Log][27]. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected.  Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+Braze provides a log of push notification errors within the [Message Activity Log][27]. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected.  Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Push Error Log][26]
 
 Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"][35].
 
-In addition, Braze also provides a Push Changelog on the user profile under the Engagement tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
+In addition, Braze also provides a push changelog on the user profile under the Engagement tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
 
 ![Push Changelog][1]{: style="max-width:50%;" }
 
@@ -71,7 +71,7 @@ If the application does not prompt you to register for push notifications, there
 ### No "push registered" users showing in the dashboard
 
   - Ensure that your app is prompting you to allow push notifications. Typically this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it is not appearing where it should be, then the problem is likely with the basic configuration of your app's push capabilities.
-    - Verify the steps for [Push Integration][21] were successfully completed.
+    - Verify the steps for [Push integration][21] were successfully completed.
     - Make sure that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple Developer account, as well. To confirm this, perform the following steps:
       1. In Xcode, navigate to **Preferences** > **Accounts** (Or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
       2. Select the Apple ID you use for your developer account and click **View Details**.
