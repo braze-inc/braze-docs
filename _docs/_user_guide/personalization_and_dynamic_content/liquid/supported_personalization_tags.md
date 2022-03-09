@@ -177,7 +177,7 @@ This is a simple example of how iteration tags can be used in Braze's message co
 
 ## HTTP status codes {#http-personalization}
 
-You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `**http_status_code**` key. For example:
+You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
