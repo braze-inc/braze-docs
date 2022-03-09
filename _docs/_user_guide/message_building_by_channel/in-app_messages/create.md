@@ -214,7 +214,17 @@ If you choose to only use one button, it will automatically adjust to take over 
 
 #### On-click behavior
 
-When your customer clicks on a button in your in-app message, your link can either lead them deeper into your app or to another site. For Android, iOS, and Web, you can choose between:
+When your customer clicks on a button in your in-app message, your link can either lead them deeper into your app or to another site. The following actions are available to take for button clicks:
+
+| Action | Description |
+|---|---|
+| Redirect to Web URL | Open a non-native web page |
+| [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Deep link into an existing screen in your app |
+| Close Message | Closes the currently active message |
+| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another In-App Message or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
+| Request Push Permission | (iOS and Web only) Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for Push. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 * Redirect to Web URL
 * [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)
