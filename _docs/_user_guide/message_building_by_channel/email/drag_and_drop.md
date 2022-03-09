@@ -15,50 +15,52 @@ tool:
 
 {% include video.html id="4dTrkxe8DLo" align="right" %}
 
-> With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using a drag & drop editing experience.
+> With the Drag & Drop Editor, you can create completely custom and personalized email messages in either Campaigns or Canvas using the drag & drop editing experience.
 
 ## Create a drag & drop email
 
-### Step 1: Select editing experience
+Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. 
 
-Navigate to the email wizard and select your editing experience. Two editing options will be shown:
+Once you've selected where to build your message, let's dive into the steps to create a drag & drop email! 
 
-- Select the **Drag & Drop Editor** to select templates created using the Drag & Drop Editor.
-- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Option to select the Drag & Drop Editor as the email editing experience.][6]{: style="max-width:80%;"}
+### Step 1: Build or choose your template
+
+After selecting the Drag & Drop Editor as your editing experience, you can choose to:
+- Build a new template
+- Use a Braze drag & drop email template 
+- Select a saved drag & drop email template
+
+If you want to use your existing custom templates, they must be recreated in the Drag & Drop Editor. 
 
 {% alert tip %}
 You can also access all templates in the **Templates & Media** page under the **Engagement** section.
 {% endalert %}
 
-### Step 2: Build out email structure
+### Step 2: Design the email structure
 
 1. **Assemble Rows:** Drag & drop different row configurations to design the structure of your email. New configurations must be dragged to the beginning or end of an existing section.
-2. **Add Content:** Add desired content types to the various row components.<br><br>![GIF that shows an example of using Drag & Drop Editor to compose an email.][1]
-
-## Editing experience
+2. **Add Content:** Add desired content types to the various row components.
 
 The drag & drop editing experience is broken out into 3 sections: **Sending Settings**, **Content**, and **Preview & Test**.
 
-{% tabs %}
-{% tab Send Settings %}
+#### Sending information
 The **Sending Settings** section allows you to configure your from and reply-to address and set the subject line or pre-header. 
 
 {% alert note %}
 Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
-{% endtab %}
-{% tab Content %}
-The **Content** section contains the editor. There are three key components within this section.
+#### Email content
+There are three key components within this section.
 
-- __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/).<br><br>
-- __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
+- __Content__: Includes a series of tiles that represent the different kinds of content you can use in your message. Just drag one inside an existing row segment, and it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/).
+- __Rows__: Structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 - __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
 
 This is very useful to build a coherent message very quickly.
 
-{% endtab %}
-{% tab Preview and Test %}
+### Step 3: Test your email
+
 The **Preview & Test** section allows you to preview of your emails across different email clients and devices. By previewing your email campaign as a user, you can ensure that the details are aligned across all platforms.
 
 {% alert important %}
@@ -73,9 +75,6 @@ This user may or may not be part of your segmentation criteria. Segmentation is 
 {% endalert %}
 - __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
 - __Custom User__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
-
-{% endtab %}
-{% endtabs %}
 
 ## Creative details 
 
