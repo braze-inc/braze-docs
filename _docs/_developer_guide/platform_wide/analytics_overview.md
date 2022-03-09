@@ -190,7 +190,7 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 | Check if the numeric attribute **is more than** a **numver**| **MORE THAN** | **NUMVER** |
 | Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
 | Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
-| Check if the numeric attribute **does not equal** a **numver**| **DOES NOT EQUAL** | **NUMBER** |
+| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
 | Check if the numeric attribute **exists** on a user's profile | **EXISTS** | **N/A** |
 | Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
