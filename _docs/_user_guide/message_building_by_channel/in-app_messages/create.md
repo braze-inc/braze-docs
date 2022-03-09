@@ -212,7 +212,7 @@ If you choose to only use one button, it will automatically adjust to take over 
   If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
 {% endalert %}
 
-#### On-click behavior
+#### On-click behavior {#button-actions}
 
 When your customer clicks on a button in your in-app message, your link can either lead them deeper into your app or to another site. The following actions are available to take for button clicks:
 
