@@ -49,7 +49,7 @@ import os
 NAME = '{ CUSTOMER NAME }'
 BOTS = []
 CSV_BOTS = ['{ SOLUTION NAME }']
-PATH = os.path.dirname(**file**)
+PATH = os.path.dirname(__file__)
 
 PARAMS = {
     'sandbox': {
