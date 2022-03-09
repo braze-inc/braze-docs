@@ -1223,7 +1223,7 @@ $( document ).ready(function() {
                 "</div></div></a>";
             return createElement("div", {
               dangerouslySetInnerHTML: {
-                **html: resulttemplate,
+                __html: resulttemplate,
               },
             });
           },
