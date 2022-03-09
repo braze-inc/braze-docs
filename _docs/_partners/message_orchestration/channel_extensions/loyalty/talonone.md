@@ -127,7 +127,7 @@ Use Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dy
 {% alert tip %}
 You can access the coupon code with {% raw %} `{{result.value}}` {% endraw %} as shown above, which will return the generated value similar to `44D4-U4PL`.
 
-You can also access the entire response from Talon.One by accessing {% raw %} `{{result}}` {% endraw %} directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "**http_status_code**"=>200}`.
+You can also access the entire response from Talon.One by accessing {% raw %} `{{result}}` {% endraw %} directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
 {% endalert %}
 
 ## Troubleshooting
