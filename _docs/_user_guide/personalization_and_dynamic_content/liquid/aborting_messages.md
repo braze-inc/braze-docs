@@ -10,15 +10,25 @@ description: "Messages may now be aborted within conditional statements. In this
 
 Optionally, you can also abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:
 
-**Aborting message if "Number Games Attended" = 0:**
+## Abort message if "Number Games Attended" = 0
 
-For example, let’s say that you did not want to send the above message to customers who had not attended a game:
+For example, let’s say that you did not want to send a message to customers who have not attended a game:
 
-![Liquid Abort Message Example][15]
+{% raw %}
+```liquid
+{% if customer_attribute.${Number_Game_Attended} == 1 %}
+Loved the game? Get 10% off your second one with code SAVE10.
+{% elsif customer_attribute.${Number_Game Attended} > 1 %}
+Love the games? Get 10% off your next one with code SAVE10.
+{% else %}
+{% abort_message() %}
+{% endif %}
+```
+{% endraw %}
 
 This message will only send to customers who are known to have attended a game.
 
-**Messaging English speaking customers only:**
+## Message English speaking customers only
 
 You can message English speaking customers only by creating an "if" statement that'll match when a customer's language is English and an else statement that'll abort the message for anyone who does not speak English or does not have a language on their profile.
 
@@ -38,14 +48,14 @@ By default Braze will log a generic error message to your Developer Console log:
 {% abort_message %} called
 ```
 
-You can also have the abort_message log something to your Developer Console log by including a string inside the parentheses:
+You can also have the abort message log something to your Developer Console log by including a string inside the parentheses:
 
 ```liquid
 {% abort_message('language was nil') %}
 ```
 {% endraw %}
 
-![developer_console][26]
+![Message error log in the Developer Console with an error message of "language was nil".][26]
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
