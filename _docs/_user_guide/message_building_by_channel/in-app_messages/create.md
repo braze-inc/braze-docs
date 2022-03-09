@@ -226,10 +226,6 @@ When your customer clicks on a button in your in-app message, your link can eith
 | Request Push Permission | (iOS and Web only) Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for Push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-* Redirect to Web URL
-* [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)
-* None
-
 #### iOS device options
 
 If desired, you can restrict your in-app message to only send to iOS devices. To do so, click **Change** and select **Only send to iOS devices**.
