@@ -26,6 +26,6 @@ Braze supports each version of an SDK for a minimum of one year. Once a newer ve
 
 * No longer guarantees successful message delivery for that older SDK version.
 * May not send messages in the case of known bugs for that older SDK version.
-* Will not be able to provide support, troubleshoot integrations, or answer questions around that older SDK version.
+* May not be able to provide support, troubleshoot integrations, or answer questions around that older SDK version.
 
 We encourage you to always update to the latest recommended versions of our SDKs when you are making updates to your relevant apps and services. Staying up-to-date on your Braze SDK integration will help ensure a longer support timeline, and best of all, access to the latest and greatest Braze features.
