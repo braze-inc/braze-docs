@@ -10,6 +10,8 @@ search_tag: Partner
 
 # Voucherify
 
+{% include video.html id="Xh_c53cBA9w" align="right" %}
+
 > [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
 
 The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
