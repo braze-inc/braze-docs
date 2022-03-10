@@ -525,7 +525,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
-#### **Implementation components**<br><br>
+#### Implementation components<br><br>
 
 {% tabs %}
 {% tab Swift %}
