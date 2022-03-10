@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Technology partners
 
-You can also leverage location tracking with some of our partners, for example: 
+You can also leverage location tracking with some of our partners: 
 
 - [Neura][5]
 - [Radar][6]
@@ -57,7 +57,7 @@ You can also leverage location tracking with some of our partners, for example:
 
 ## Frequently asked questions
 
-Visit our [Locations FAQs][11] page for answers to frequently asked questions about locations.
+Check out our [Locations FAQs][11] for answers to frequently asked questions about locations.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/

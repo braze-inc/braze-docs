@@ -15,7 +15,7 @@ tool:
 
 ## Archive an individual template
 
-![template_archive_cog][10]{: style="float:right;max-width:20%;margin-left:15px;"}
+![Expanded settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option highlighted.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 To archive an individual template, click the settings icon on the template grid screen and select **Archive**.
 
@@ -23,7 +23,7 @@ To archive an individual template, click the settings icon on the template grid 
 
 To archive multiple templates, select the checkbox next to each template that you want to archive. After you've selected multiple templates, click **Archive Selected**. You can find your archived templates by selecting **Archived** under **Show** in the template grid.
 
-![archive_multiple_template][11]
+![Saved Drop & Drop Email Templates section that shows two selected templates: "Try Premium Template" and "Welcome Template". The "Archive Selected" button is highlighted by the user.][11]
 
 {% alert important %}
 Archiving is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).

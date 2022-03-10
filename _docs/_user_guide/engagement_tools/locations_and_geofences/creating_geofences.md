@@ -87,7 +87,7 @@ To use geofence data to personalize a message, you can use the following Liquid 
 
 ## Frequently asked questions
 
-Visit our [Geofence FAQs][3] page for answers to frequently asked questions about geofences.
+Visit [Geofence FAQs][3] for answers to frequently asked questions about geofences.
 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
