@@ -83,7 +83,7 @@ While building out your slide-up in-app message, you may notice you aren't able 
 
 Visit the [SlideFromBottomViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) to get started.
 
-#### **Adding additional behavior to our default UI**<br><br>
+#### Adding additional behavior to our default UI<br><br>
 
 {% tabs %}
 {% tab Swift %}
