@@ -15,7 +15,7 @@ SDK versions which are **deprecated** are still fully supported, but have a know
 
 ## SDK Support Timelines
 
-Braze supports each SDK version for at least one year following a newer version’s release. Once a newer version of an SDK is released, its previous version will be considered __deprecated__, and will have an __end-of-life date__ in 12 months.
+Braze supports each version of an SDK for a minimum of one year. Once a newer version of an SDK is released, its previous version(s) will be considered __deprecated__, and will have an __end-of-life date__ in 12 months.
 
 **Before** an SDK version reaches its __end-of-life date__, Braze will:
 
