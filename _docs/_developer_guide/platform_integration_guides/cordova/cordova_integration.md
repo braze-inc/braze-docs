@@ -44,7 +44,7 @@ By default the Cordova SDK supports in-app messages with no changes. See the [An
 
 ### Setting user IDs
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) integration instructions for an in-depth discussion of when to set and change a user ID.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) integration instructions for an in-depth discussion of when to set and change a user ID.
 
 ```javascript
 AppboyPlugin.changeUser("YOUR_USER_ID");
