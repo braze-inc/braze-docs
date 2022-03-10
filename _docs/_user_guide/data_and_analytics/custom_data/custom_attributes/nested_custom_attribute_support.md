@@ -129,7 +129,9 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 
 ## Segmentation
 
-You can build segments based on nested custom attributes to further target your users. To do so, filter your segment based on the custom attribute object, then specify the property name and associated value you want to segment on.
+You can build segments based on nested custom attributes to further target your users. To do so, filter your segment based on the custom attribute object, then specify the path to your property name and associated value you want to segment on. If you're not sure what that path looks like, you can [generate a schema](#generate-schema) and use the nested object explorer to have Braze populate that path for you.
+
+After adding a path to your property, click **Validate** to verify that the value in the path field is valid.
 
 ![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
@@ -137,7 +139,7 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
 
-### Generate a schema using the nested object explorer
+### Generate a schema using the nested object explorer {#generate-schema}
 
 You can generate a schema for your objects to build segment filters without needed to memorize nested object paths. To do so, perform the following steps.
 
