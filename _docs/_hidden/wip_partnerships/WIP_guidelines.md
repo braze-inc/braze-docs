@@ -24,12 +24,12 @@ This partnership guide is for NEW Braze partners that **do not have existing doc
 
 ## Step 1: Set up your local environment {#setup_env}
 
-To contribute to Braze docs, you must have a Github account to commit changes and edits. 
+To contribute to Braze docs, you must have a GitHub account to commit changes and edits. 
 
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
 1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork** in the upper right corner of the page. <br><br>
 2. Next, within this newly forked repo, click the green **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
-3. Lastly, follow our Github Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
+3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
 
@@ -193,11 +193,11 @@ Your page will be viewable at `http://localhost:4000/docs/partners/your_partner_
 
 After reviewing your edits, press **Ctrl-C** in the terminal and end the rake command.
 
-## Step 5: Commiting to Github {#committing}
+## Step 5: Commiting to GitHub {#committing}
 
 Once you have made the adequate changes to your partnership doc, save your document, and commit your changes. 
 
-Within the Braze docs GitHub repository, find your branch. If your document is completed and ready to review, navigate to your forked repo in Github and select `New Pull Request`. Next, select how you would like your forked branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
+Within the Braze docs GitHub repository, find your branch. If your document is completed and ready to review, navigate to your forked repo in GitHub and select `New Pull Request`. Next, select how you would like your forked branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
 
 ![Merge Branches][2]
 

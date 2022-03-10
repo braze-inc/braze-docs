@@ -11,13 +11,13 @@ channel:
 
 # About push notifications
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations. For more on this topic, check out our [Push LAB course](https://lab.braze.com/messaging-channels-push)!
+> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations. For more on this topic, check out our [push LAB course](https://lab.braze.com/messaging-channels-push)!
 
 Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
-![Push Message Example][1]{: height="400px"}  ![Push Message Example][2]{: height="400px"}
+![Push message example][1]{: height="400px"}  ![Push message example][2]{: height="400px"}
 
 _To see more examples of push notifications, check out our [Case Studies][8]._
 
@@ -56,7 +56,7 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |Apple App Store Policies|
 |---|
 |[4.5.4][7] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
-|[3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
+|[3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as push notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 |Google Play Store Policy|
@@ -76,8 +76,8 @@ For best results, refer to the following image size and message length guideline
 **Image Type** | **Recommended Image Size** | **Max Image Size** | **File Types**
 --- | --- | --- | ---
 (iOS) 2:1 *Recommended* | 500KB | 5MB | PNG, JPG, GIF
-(Android) Push Icon | 500KB | 5MB | PNG, JPG
-(Android) Expanded Notification | 500KB | 5MB | PNG, JPG
+(Android) Push icon | 500KB | 5MB | PNG, JPG
+(Android) Expanded notification | 500KB | 5MB | PNG, JPG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}

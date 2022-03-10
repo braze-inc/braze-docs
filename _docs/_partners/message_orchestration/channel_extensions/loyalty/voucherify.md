@@ -144,7 +144,7 @@ If a user redeems the code, you’ll see the redemption details in your Voucheri
 
 ![Code redemption]({% image_buster /assets/img/voucherify-redemption.png %})
 
-### Upload Voucherify codes to Braze promo codes lists
+### Upload Voucherify codes to Braze promotion codes lists
 
 Next to the Connected Content and custom attributes, you can share Voucherify codes using Braze Promo Codes snippet.
 

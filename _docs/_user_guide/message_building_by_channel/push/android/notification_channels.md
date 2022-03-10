@@ -92,7 +92,7 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 
 ## Adding channels to your Android push messages
 
-* Navigate to the Android Push composer on any campaign or Canvas
+* Navigate to the Android push composer on any campaign or Canvas
 
 ![choose_channel][11]
 

@@ -43,7 +43,7 @@ To build out your `BrazeManager.swift` file, create a new Swift file named _Braz
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
-2. Next, add a private constant variable named _apiKey_ and set it as the API key value from your app group in the Braze dashboard.
+2. Next, add a private constant variable named _apiKey_ and set it as the API key-value from your app group in the Braze dashboard.
 3. Add a private computed variable named _appboyOptions_, which will store configuration values for the SDK. It will be empty for now.
 
 {% subtabs global %}

@@ -12,14 +12,16 @@ channel:
 # Android TV push
 ![TV icon][12]{: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
-While not a native feature, Android TV Push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received. The steps to do so are detailed below. 
+While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received. The steps to do so are detailed below. 
 
 ## Implementation
 - **Step 1: Integrate Braze Android SDK**<br>
 First, you must integrate the [Braze Android SDK][6] (If not already completed).<br><br>
+
 - **Step 2: Integrate Push Notifications**<br>
 Next, you must integrate the [Android Push Notifications][10] (If not already completed).<br><br>
 - **Step 3: Create Custom Toast View**<br>
+
 Next, you will need to create a custom toast view for the app to display your notifications. Please refer to [Google Documentation][9] on how to do this.<br><br>
 - **Step 4: Create a Custom Notification Factory**<br>
 Lastly, you must create a custom notification factory. This will be used to override the default SDK behavior and allow you to manually display the notifications. By returning `null`, this will prevent the SDK from processing and will require custom code to display the notification. Please reference our [Braze documentation][8] that describes how to do this. 

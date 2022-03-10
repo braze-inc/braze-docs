@@ -176,8 +176,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `templates.email.create` | Create a new email template on the Dashboard. |
-| `templates.email.update` | Update an email template stored on the Dashboard. |
+| `templates.email.create` | Create a new email template on the dashboard. |
+| `templates.email.update` | Update an email template stored on the dashboard. |
 | `templates.email.info` | Query for information of a specific template. |
 | `templates.email.list` | Query for a list of email templates. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -197,7 +197,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 |---|---|---|
 | `content_blocks.info` | Query for information of a specific template. |
 | `content_blocks.list` | Query for a list of Content Blocks. |
-| `content_blocks.create` | Create a new Content Block on the Dashboard. |
+| `content_blocks.create` | Create a new Content Block on the dashboard. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}

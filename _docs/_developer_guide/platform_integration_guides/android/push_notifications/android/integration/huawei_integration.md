@@ -29,9 +29,9 @@ In the next step, you will enter these credentials in the Braze dashboard which 
 
 In the Braze dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
 
-Click **+ Add App**, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the Push Provider.
+Click **+ Add App**, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the push provider.
 
-![Create Huawei App in Braze Dashboard][4]
+![Create Huawei App in Braze dashboard][4]
 
 Once your new Braze App has been created, you will be shown an `API Key`, and a section for **Push Notification Settings** where you will enter your Huawei credentials from the previous step.
 
@@ -39,7 +39,7 @@ Once your new Braze App has been created, you will be shown an `API Key`, and a 
 
 Using the credentials from your Huawei Developer account, enter the `Huawei App ID` and `Huawei App Secret` within your newly created Huawei Braze App. When you're done, save your changes.
 
-![Huawei Dashboard Credentials][12]
+![Huawei dashboard Credentials][12]
 
 ## Step 4: Integrate the Huawei messaging SDK into your app
 
@@ -106,13 +106,13 @@ After adding your custom push service, add the following to your `AndroidManifes
 
 At this point, you've created a new Huawei Android app in the Braze dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 
-Next, we can test out the integration by testing out a new Push campaign in Braze.
+Next, we can test out the integration by testing out a new push campaign in Braze.
 
 ### Create a new push notification campaign
 
 In the **Campaigns** page, create a new campaign, and choose **Push Notification** as your message type.
 
-After you name your campaign, choose **Android Push** as the Push Platform.
+After you name your campaign, choose **Android Push** as the push platform.
 
 ![Choose Android push channel][5]
 
@@ -130,7 +130,7 @@ At this point, you should receive a test push notification on your Huawei (HMS) 
 
 ### Setting up Huawei segmentation (optional)
 
-Since your Huawei App in the Braze dashboard is built upon the Android Push platform, you have the flexibility to send push to all android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
+Since your Huawei App in the Braze dashboard is built upon the Android push platform, you have the flexibility to send push to all android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
 
 To send push to only Huawei apps, [create a new Segment][15] and select your Huawei App within the "Apps" section.
 
@@ -140,7 +140,7 @@ Of course, if you want to send the same push to all Android push providers, you 
 
 ## Analytics
 
-Once your campaign has been launched, you will see analytics for your campaign or Canvas aggregated for Android Push. For more information on Android Push analytics and settings, see our [User Guide for Push][10].
+Once your campaign has been launched, you will see analytics for your campaign or Canvas aggregated for Android push. For more information on Android push analytics and settings, see our [User guide for push][10].
 
 [1]: https://huaweimobileservices.com/
 [2]: https://developer.huawei.com/consumer/en/console

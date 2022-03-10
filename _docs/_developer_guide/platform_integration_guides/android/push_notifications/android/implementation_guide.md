@@ -29,13 +29,13 @@ Android imposes some limitations on what components can be used to implement cus
 
 Push notifications can display user-specific information inside a custom view hierarchy. The example below shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
-![Personalized Push Dashboard Example][1]{: style="max-width:65%;border:0"}
+![Personalized Push dashboard Example][1]{: style="max-width:65%;border:0"}
 
 #### Dashboard configuration
 
 To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed. Set the appropriate user attributes you would like the message to show within the key-value pairs using standard Liquid. These views can be personalized based on specific user attributes of a specific user profile.
 
-![Personalized Push Dashboard Example][2]{: style="max-width:60%;"}
+![Personalized Push dashboard Example][2]{: style="max-width:60%;"}
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-analytics) to better understand how the flow of data should look.
@@ -46,7 +46,7 @@ Visit the [following section](#logging-analytics) to better understand how the f
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
 
-![Personalized Push Dashboard Example][3]{: style="max-width:80%;"}
+![Personalized Push dashboard Example][3]{: style="max-width:80%;"}
 
 ### Logging manually 
 

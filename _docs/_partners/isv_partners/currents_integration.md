@@ -4,7 +4,7 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner custom currents connector
+# Partner custom Currents connector
 
 ## Serialization and data format
 

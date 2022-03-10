@@ -270,7 +270,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 1. Reminding users who haven't used the app in 7 days who have promotional credit remaining on their account that it is there and that they should come back to the app and use it!
 2. Messaging users who give low driver ratings to get direct customer feedback to see why they didn't enjoy their rides.
-3. Use our [message templating and personalization features][17] to drag the unique promo code attribute into messaging directed at users.
+3. Use our [message templating and personalization features][17] to drag the unique promotion code attribute into messaging directed at users.
 
 ## Best practices
 

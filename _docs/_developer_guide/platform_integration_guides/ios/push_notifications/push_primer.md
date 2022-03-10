@@ -11,7 +11,7 @@ channel:
 
 # Push primer integration
 
-> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate Push Priming.
+> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate push priming.
 
 ## Step 1: Add snippet in AppDelegate.m file
 

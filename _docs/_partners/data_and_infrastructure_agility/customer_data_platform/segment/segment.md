@@ -47,7 +47,7 @@ Next, provide the following fields in the configuration page:
 - **Braze REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
 - **Appboy datacenter**: Specify which instance your Braze data will be forwarded to.
 - **Log purchase when revenue is present**: Choose when to log purchases.
-- **Safari website push ID**: Safari requires a [Website Push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
+- **Safari website push ID**: Safari requires a [website push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
 - **Braze web SDK version**: Indicate which version of the braze web SDK you have integrated. If you are unsure, reach out to your account manager or Braze [support]({{site.baseurl}}/braze_support/).
 
 {% details Additional connection settings %}

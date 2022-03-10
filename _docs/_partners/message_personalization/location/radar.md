@@ -137,7 +137,7 @@ Bringing our use-case together, here is what the syntax of the campaign would lo
 {% raw %}
 ```
 {% connected_content https://api.radar.io/v1/search/places?radius=2000&near={{${most_recent_location}.latitude}},{{${most_recent_location}.longitude}}&chains=target,walmart&limit=5 :method get :headers {"Authorization": "<yourRadarPublishableKey>"} :content_type application/json :save nearbyplaces %}
-{% if nearbyplaces.__http_status_code__ != 200 %}
+{% if nearbyplaces.**http_status_code** != 200 %}
 {% abort_message('Connected Content returned a non-200 http status code') %}
 {% endif %}
 {% if nearbyplaces.meta.code != 200 %}

@@ -106,7 +106,7 @@ In Fivetran, click on **+ Connector** found at the top right corner of the scree
 - `Destination schema`: A unique schema name.
 - `API URL`: Your Braze REST API endpoint.
 - `API Key`: Your Braze REST API key. 
-- `External ID`: The external ID set in [step 2](#step-two) of the currents set up directions. This ID is a fixed value.
+- `External ID`: The external ID set in [step 2](#step-two) of the Currents set up directions. This ID is a fixed value.
 - `Bucket`: Found in your Braze account by navigating to **Integration > Currents > [Your Current name] > Bucket Name**.
 - `Role ARN`: The Role ARN can be found in [step 1](#step-one) of the Current setup directions.
 

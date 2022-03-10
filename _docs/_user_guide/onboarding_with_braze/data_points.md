@@ -29,57 +29,59 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 
 You can find a breakdown of how Braze accumulates data points below, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
-{% alert note %} Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! {% endalert %}
+{% alert note %} 
+Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 
+{% endalert %}
 
 {% tabs %}
 {% tab General %}
 
 ### General
 
-|data type | data point | does it count towards consumption? |
+|Data type | Data point | Does it count towards consumption? |
 |---|---|---|
-|Profile Data | First Name | Yes |
-|Profile Data | Last Name | Yes |
-|Profile Data | User ID | No |
-|Profile Data | User Alias | No |
-|Profile Data | Email Address | Yes |
-|Profile Data | Gender | Yes |
-|Profile Data | Age Group | Yes |
-|Profile Data | Country | Yes |
-|Profile Data | City | Yes |
-|Profile Data | Language | Yes |
-|Profile Data | Most Recent Device Locale | Yes |
-|Profile Data | Time Zone | Yes |
-|Profile Data | Date of Birth (DOB) | Yes |
-|Profile Data | Bio | Yes |
-|Profile Data | Phone Number  | Yes |
-|App Usage Data |Session Start | Yes |
-|App Usage Data |Session End | Yes |
-|Custom Attributes | All Custom Attributes | Yes |
-|Recent Devices | Number of Devices | No |
-|Recent Devices | Most Recent Watch | No |
-|Recent Devices | App Version | No |
-|Recent Devices | Device | No |
-|Recent Devices | Device OS | No |
-|Custom Events | All Custom Events | Yes |
-|Custom Event Properties | All Custom Event Properties* | Yes |
-|Purchases | All Purchases | Yes |
-|Amplitude Cohort Assignment | All Assignments | Yes |
-|Mixpanel Cohort Assignment | All Assignments | Yes |
+|Profile data | First name | Yes |
+|Profile data | Last name | Yes |
+|Profile data | User ID | No |
+|Profile data | User alias | No |
+|Profile data | Email address | Yes |
+|Profile data | Gender | Yes |
+|Profile data | Age group | Yes |
+|Profile data | Country | Yes |
+|Profile data | City | Yes |
+|Profile data | Language | Yes |
+|Profile data | Most recent device locale | Yes |
+|Profile data | Time zone | Yes |
+|Profile data | Date of birth (DOB) | Yes |
+|Profile data | Bio | Yes |
+|Profile data | Phone number  | Yes |
+|App usage data |Session start | Yes |
+|App usage data |Session end | Yes |
+|Custom attributes | All custom attributes | Yes |
+|Recent devices | Number of devices | No |
+|Recent devices | Most recent watch | No |
+|Recent devices | App version | No |
+|Recent devices | Device | No |
+|Recent devices | Device OS | No |
+|Custom events | All custom events | Yes |
+|Custom event properties | All custom event properties* | Yes |
+|Purchases | All purchases | Yes |
+|Amplitude cohort assignment | All assignments | Yes |
+|Mixpanel cohort assignment | All assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
 In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
 {% endalert %}
 
-  {% endtab %}
+{% endtab %}
 {% tab Location %}
 
 ### Location
 
-|data type | data point | does it count towards consumption? |
+|Data type | Data point | Does it count towards consumption? |
 |---|---|---|
-|Most Recent Location | All Most Recent Locations | Yes |
+|Most recent location | All most recent locations | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} Entering or exiting geofences doesn't consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services, Braze only gets notified upon a user triggering a geofence. {% endalert %}
@@ -89,19 +91,19 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 ### Engagement
 
-|data type | data point | does it count towards consumption? |
+|Data type | Data point | Does it count towards consumption? |
 |---|---|---|
-| Contact Settings | Email Subscribed | No |
-| Contact Settings |  Push Subscribed | No |
-| Contact Settings |  Apps Registered for Push | No |
-|Campaigns Received | Email Address | No |
-|News Feed Cards Clicked | News Feed Cards Clicked | No |
-|Install Attribution | Install Source | No |
-|Install Attribution | Campaign | No |
-|Install Attribution | Ad Group | No |
-|Install Attribution | Ad | No |
-|Miscellaneous | Random Bucket Number | No |
-|Canvas Messages Received | Canvas Messages Received | No |
+| Contact settings | Email subscribed | No |
+| Contact settings |  Push subscribed | No |
+| Contact settings |  Apps registered for push | No |
+|Campaigns received | Email address | No |
+|News Feed cards clicked | News Feed Cards clicked | No |
+|Install attribution | Install source | No |
+|Install attribution | Campaign | No |
+|Install attribution | Ad Group | No |
+|Install attribution | Ad | No |
+|Miscellaneous | Random bucket number | No |
+|Canvas messages received | Canvas messages received | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
  {% endtab %}
@@ -109,12 +111,12 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 ### Social
 
-|data type | data point | does it count towards consumption? |
+|Data type | Data point | Does it count towards consumption? |
 |---|---|---|
 |Twitter | Username | Yes |
 |Twitter | Followers | No |
 |Twitter | Following | No |
-|Twitter | Number of Tweets | No |
+|Twitter | Number of tweets | No |
 |Facebook | Likes | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

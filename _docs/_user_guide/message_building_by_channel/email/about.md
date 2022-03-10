@@ -10,7 +10,7 @@ channel:
 
 # About email
 
-> This article provides an overview of email at Braze, including the available customizations and potential use cases. In addition to the content covered here, we also recommend checking out our [Email](https://lab.braze.com/messaging-channels-email) LAB course.
+> This article provides an overview of email at Braze, including the available customizations and potential use cases. In addition to the content covered here, we also recommend checking out our [email](https://lab.braze.com/messaging-channels-email) LAB course.
 
 You can do a lot with email messages! Email messages are a great way to deliver rich content to your users. Email messaging has unlimited flexibility for communicating with your users outside of your app or website. Customize your email messages from managing your audience to including eye-catching multimedia content. To see examples of email campaigns, check out our [Case Studies][6].
 
@@ -34,7 +34,7 @@ Here are some great use cases to get you inspired!
 | Rich messages | Allow for rich and dynamic HTML messages. |
 | Multimedia content | Ease of multimedia content placement that engages users, like videos and images. |
 | Newsletters | Convenient method for sending monthly or weekly newsletters to maintain user engagement. |
-| Transactions | Notify users of recent purchases and deliver important product and shipping information with [Transactional Emails][3].
+| Transactions | Notify users of recent purchases and deliver important product and shipping information with [transactional emails][3].
 {: .reset-td-br-1 .reset-td-br-2}
 
 
