@@ -52,7 +52,7 @@ AppboyPlugin.changeUser("YOUR_USER_ID");
 
 ### Logging custom events
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) integration instructions for in-depth discussion of event tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) integration instructions for in-depth discussion of event tracking best practices and interfaces.
 
 ```javascript
 var properties = {};
