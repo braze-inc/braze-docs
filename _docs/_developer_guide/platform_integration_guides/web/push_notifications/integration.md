@@ -79,7 +79,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 * [Generate a safari push certificate following these "Registering with Apple" instructions][3]
 * In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
-* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the website push id you used when generating your Safari push certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
+* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
 ## Common issues
 
