@@ -10,6 +10,8 @@ search_tag: Partner
 
 # Voucherify
 
+{% include video.html id="Xh_c53cBA9w" align="right" %}
+
 > [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
 
 The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
@@ -25,9 +27,6 @@ The Braze and Voucherify integration allows you to grow your promotional campaig
 |Voucherify account | A Voucherify account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-## Webinar
-[![Voucherify <> Braze Webinar](https://img.youtube.com/vi/Xh_c53cBA9w/0.jpg)](https://www.youtube.com/watch?v=Xh_c53cBA9w)
 
 ## Integration
 
