@@ -61,7 +61,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 _Update noted in August 2019._
 {% endalert %}
 
-In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
+In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents email events across all connector types.
 
 The `dispatch_id` is the unique out-of-the-box ID generated for each transmission ,or dispatch, sent from the Braze platform.
 
@@ -79,7 +79,7 @@ You can now use the `users/delete` endpoint to [delete users by alias]({{site.ba
 
 ## Unique calculation for email clicks and opens
 
-Unique Clicks and Unique Opens for Email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
+Unique Clicks and Unique Opens for email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
 
 Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
 

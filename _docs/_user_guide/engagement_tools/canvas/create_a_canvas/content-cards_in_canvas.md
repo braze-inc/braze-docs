@@ -76,7 +76,7 @@ Add cards to a user's feed as they qualify for specific promotions and advertise
 
 There are times when a user may dismiss a push notification or delete an email, but you want to remind them or promote the offer in case they change their mind.
 
-Using Canvas, you can add a step that sends both a Content Card and Push Notification to give users a persistent "inbox" of cards that align with promotional messages sent via Push. 
+Using Canvas, you can add a step that sends both a Content Card and push notification to give users a persistent "inbox" of cards that align with promotional messages sent via push. 
 
 #### Multiple feeds based on categories
 

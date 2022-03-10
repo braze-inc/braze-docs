@@ -65,9 +65,9 @@ Braze performs two checks when campaigns are launched. Once, as soon as the firs
 
 Be careful when creating campaigns that filter off of other campaigns' sends. For example, if you were to send out two campaigns on the same day for different times and add a filter that only allows users to receive the second campaign if they've received the first, users will not receive the second campaign as no one was eligible when the campaign was first created and segments were formed.
 
-### Can I use quiet hours in my intelligent timing campaign?
+### Can I use Quiet Hours in my intelligent timing campaign?
 
-We do not recommend using both intelligent timing and quiet hours for your campaign or Canvas as it is counterproductive. Quiet hours are based on top-down assumptions about user behavior, whereas intelligent timing is based on user activity.
+We do not recommend using both intelligent timing and Quiet Hours for your campaign or Canvas as it is counterproductive. Quiet Hours are based on top-down assumptions about user behavior, whereas intelligent timing is based on user activity.
 
 ### Can I use intelligent timing and rate-limiting?
 

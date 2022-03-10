@@ -13,7 +13,7 @@ channel:
 
 Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].
 
->  Using Baidu Cloud Push __does not__ require you to distribute your apps via the Baidu App Store.
+>  Using Baidu Cloud push __does not__ require you to distribute your apps via the Baidu App Store.
 
 ## Step 1: Create a Baidu account
 
@@ -57,7 +57,7 @@ On the following page, enter your application name. The following two checkboxes
 
 ![Baidu App Name][26]
 
-Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Click on the cloud push link in the menu on the left-hand side of the console. On the following page, click __推送设置__ (Set Up Push).
+Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Click on the cloud push link in the menu on the left-hand side of the console. On the following page, click __推送设置__ (Set up push).
 
 ![Baidu App Console][14]
 
@@ -69,11 +69,11 @@ On the following page, enter your app package name (e.g. com.braze.sample) and s
 
 ## Step 4: Add Baidu to your application
 
-Visit the [Baidu Push SDK Portal][40] and download the latest Baidu Cloud Push Android SDK.
+Visit the [Baidu push SDK portal][40] and download the latest Baidu Cloud push Android SDK.
 
 ![Baidu SDK Portal][41]
 
-Inside the SDK, you will find the push service jar and platform-specific native libraries. Integrate these into your project. Make sure your app targets the highest SDK version currently supported by Baidu. This documentation is current for Baidu Cloud Push Android SDK version `4.6.2.38`.
+Inside the SDK, you will find the push service jar and platform-specific native libraries. Integrate these into your project. Make sure your app targets the highest SDK version currently supported by Baidu. This documentation is current for Baidu Cloud push Android SDK version `4.6.2.38`.
 
 Add the following required Baidu permissions to your application's `AndroidManifest.xml`.
 
@@ -233,17 +233,17 @@ try {
 
 You need to input your Baidu API Key and Baidu Secret Key into the Braze dashboard. Both keys are available from the Baidu application console.
 
-On the **Settings** page (where your API keys are located), select your Android China app. Enter your Baidu API Key and Baidu Secret Key in their respective fields in the Push Notifications section.
+On the **Settings** page (where your API keys are located), select your Android China app. Enter your Baidu API Key and Baidu Secret Key in their respective fields in the push notifications section.
 
 ![APIKey][19]{: style="max-width:80%;"}
 
 ## Resources
 
-- [Baidu Portal][7]
-- [Baidu Developer Portal][36]
-- [Baidu Project Portal][11]
-- [Baidu Push SDK Portal][40]
-- [Baidu Integration Docs][43]
+- [Baidu portal][7]
+- [Baidu developer portal][36]
+- [Baidu project portal][11]
+- [Baidu push SDK portal][40]
+- [Baidu integration docs][43]
 
 [7]: https://www.baidu.com/
 [10]: {% image_buster /assets/img_archive/baidu_project.png %}

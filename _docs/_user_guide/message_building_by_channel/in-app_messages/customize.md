@@ -14,7 +14,7 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
-- [Email Capture Form](#email-capture-form) - collect email addresses into Braze.
+- [Email capture form](#email-capture-form) - collect email addresses into Braze.
 - [Reusable Color profiles and CSS](#reusable-color-profiles) - save and re-use color profiles for in-app message templates.
 - [Video](#video) - add video to a custom in-app message.
 
@@ -195,10 +195,10 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![Select Email Capture Form][4]
+![Select email capture form][4]
 
 {% alert note %}
-To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ### Step 2: Customize the form {#customizable-features}

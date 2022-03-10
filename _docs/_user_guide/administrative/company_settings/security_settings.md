@@ -58,7 +58,7 @@ Two-factor authentication is optional by default. However, when enabled, users w
 ![Remember this account for 30 days checkbox][0]{: style="float:right;max-width:35%;margin-left:15px;"}
 Upon toggling on two-factor authentication for your company, the __Remember Me__ checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days.
 
-Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
+Customers with multiple accounts under a dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
 Be sure to save your changes before leaving the page!
 

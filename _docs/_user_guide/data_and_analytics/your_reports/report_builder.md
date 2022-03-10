@@ -4,7 +4,7 @@ article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "This reference article notes updates to the Report Builder feature within the Dashboard."
+description: "This reference article notes updates to the Report Builder feature within the dashboard."
 tool: 
   - Reports
 
@@ -41,7 +41,7 @@ If you choose to run a report on campaigns, you can select between a __Manual__ 
 
 {% alert note %} Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report. {% endalert %}
 
-![Campaign Dashboard][6]{: style="max-width:80%;"}
+![Campaign dashboard][6]{: style="max-width:80%;"}
 
 Below are the differences between these two options:
 
@@ -96,7 +96,7 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 ### Variant
 
-Selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the canvas name.
+Selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
 
 ![Variants][12]{: style="max-width:90%;"}
 
@@ -139,7 +139,7 @@ The file containing variant metrics will have `variant_` appended to the beginni
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 
-### Exporting canvas comparison reports
+### Exporting Canvas comparison reports
 
 Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click __Export__ from there.
 

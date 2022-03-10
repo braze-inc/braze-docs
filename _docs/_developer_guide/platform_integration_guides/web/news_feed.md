@@ -15,7 +15,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 ## Example News Feed
 
-<img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="An example news feed displaying several notifications such as follow request, update notices, ads, and more." height="600" />
+<img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="An example News Feed displaying several notifications such as follow request, update notices, ads, and more." height="600" />
 
 ## News Feed integration
 

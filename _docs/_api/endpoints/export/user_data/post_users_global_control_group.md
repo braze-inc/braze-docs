@@ -48,7 +48,7 @@ Example ZIP File:
 
 If you do not have S3 credentials provided, the response to the request provides the URL where a zip file containing all the user files can be downloaded. The URL will only become a valid location once the export is ready. Please be aware that if you do not have S3 credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you’re exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using ‘fields_to_export’ and specifying only the fields you need, in order to keep the size of the transfer lower. If you want to export all your users and are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g. create a segment where random bucket number <1000, between 1000 and 2000, etc).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download url as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
+    "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
     "fields_to_export" : (required, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'],
     "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
 }
@@ -132,11 +132,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
-    "url" : (optional, string) the url where the segment export data can be downloaded if you do not have your own S3 credentials
+    "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-Once made available, the url will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
 ### Sample user export file output
 

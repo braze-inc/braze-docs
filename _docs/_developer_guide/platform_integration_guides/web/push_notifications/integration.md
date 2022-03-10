@@ -36,11 +36,11 @@ A site is deemed secure if it matches one of the following secure origin pattern
 - (file, *, —)
 - (chrome-extension, *, —)
 
-This is a security requirement in the open standards specification that Braze Web Push is built on, and prevents man-in-the-middle attacks.
+This is a security requirement in the open standards specification that Braze Web push is built on, and prevents man-in-the-middle attacks.
 
 ### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a working demo [here][4].
 
 ## Step 1: Configure your site's service worker
 
@@ -77,9 +77,9 @@ Recent versions of Safari and Firefox require that you call this method from a s
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
-* [Generate a Safari Push Certificate following these "Registering with Apple" instructions][3]
+* [Generate a safari push certificate following these "Registering with Apple" instructions][3]
 * In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
-* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
+* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
 ## Common issues
 

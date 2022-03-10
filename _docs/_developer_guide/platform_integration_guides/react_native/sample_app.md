@@ -8,6 +8,6 @@ description: "This article covers a sample app for React Native that integrates 
 
 # Sample app
 
-In the React SDK Github repository, you can find a sample application that implements many of the SDK methods. You can use the app as a reference to building your own React Native integration.
+In the React SDK GitHub repository, you can find a sample application that implements many of the SDK methods. You can use the app as a reference to building your own React Native integration.
 
 You can find the application [here](https://github.com/Appboy/appboy-react-sdk/tree/master/AppboyProject).

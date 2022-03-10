@@ -56,7 +56,7 @@ Braze should now be collecting data from your application, and your basic integr
 
 ### Extending the SDK (iOS)
 
-To extend the SDK's behaviors, fork the [Braze Unity SDK Github project](https://github.com/appboy/appboy-unity-sdk) and make your required changes.
+To extend the SDK's behaviors, fork the [Braze Unity SDK GitHub project](https://github.com/appboy/appboy-unity-sdk) and make your required changes.
 
 To publish your modified code as a Unity package, see our [Advanced use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases).
 
