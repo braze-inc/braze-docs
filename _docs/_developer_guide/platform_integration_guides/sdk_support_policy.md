@@ -11,7 +11,7 @@ This article outlines the timing and definitions of Braze's SDK support policy.
 
 **Deprecated** - SDK versions which are deprecated have a known end-of-life date in the future.
 
-**End-Of-Life Date** - Braze will no longer support an older SDK after its end-of-life date.
+**End-Of-Life Date** - SDK versions which have passed their end-of-life date will no longer be supported or maintained.
 
 ## SDK Support Timelines
 
