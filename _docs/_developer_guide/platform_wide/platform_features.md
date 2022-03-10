@@ -25,7 +25,7 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 | Web | 35 KB |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## dashboard/UI
+## Dashboard user interface
 
 The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
