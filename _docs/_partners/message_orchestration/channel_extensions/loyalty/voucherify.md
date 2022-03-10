@@ -26,6 +26,9 @@ The Braze and Voucherify integration allows you to grow your promotional campaig
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+## Webinar
+[![Voucherify <> Braze Webinar](https://img.youtube.com/vi/Xh_c53cBA9w/0.jpg)](https://www.youtube.com/watch?v=Xh_c53cBA9w)
+
 ## Integration
 
 ### Generate unique codes using Connected Content
