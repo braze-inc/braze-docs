@@ -13,7 +13,7 @@ search_tag: Partner
 
 > Tealium is a universal data hub and customer data platform composed of EventStream, AudienceStream, and iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
-![Tealium Overview][22]{: style="border:0;"}
+![A Tealium overview graphic showing how the different tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.][22]{: style="border:0;"}
 
 The Braze and Tealium integration allows you to track your users and route data to various user analytics providers. Tealium allows you to:
 - Sync Tealium audiences with [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) to Braze for use in Braze campaign and Canvas segmentation.
@@ -70,7 +70,26 @@ Using remote commands, the Braze and Tealium SDKs work in tandem, allowing you t
 
 Braze mobile remote command maps default user attributes and custom attributes and can track purchases and custom events. It also allows you to track location and social data on Twitter and Facebook - like the number of followers or friends a user has. Check out the remote command chart to see the corresponding Braze methods.
 
-![Remote command mappings][23]{: style="max-width:60%;"}
+| Remote command | Braze method |
+| -------------- | ------------ |
+| appendcustomarrayattribute | addToCustomAttributeArrayWithKey()|
+| emailnotification | setEmailNotificationSubscriptionType() |
+| facebookuser | facebookUser() |
+| incrementcustomattribute | incrementCustomAttribute() |
+| Initalize | startWithApiKey() |
+| logcustomevent | logCustomEvent() |
+| logpurchase | logPurchase() |
+| pushnotification | setPushNotificationSubscriptionType() |
+| removecustomattribute | setCustomAttributeWithKey() |
+| setcustomattribute | setCustomAttributeArrayWithKey() |
+| setcustomarrayattribute | setCustomAttributeArrayWithKey() |
+| setlastknownlocation | setLastKnownLocationWithLatitude() |
+| twitteruser | twitterUser() |
+| unsetcustomattribute | unsetCustomAttributeWithKey() |
+| useralias | addAlias() |
+| userattribute | ABKUser() |
+| useridentifier | changeUser() |
+{: .reset-td-br-1 .reset-td-br-2}
 
 You can find more details on how to set up the Braze mobile remote command tag, as well as an overview of supported methods in the Tealium developer [documentation](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828).
 
@@ -106,10 +125,10 @@ If you wish to use this data and these features, consider our [side-by-side]({{s
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
 1. From the left sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
-2. Locate **HTTP API** platform within the available catagories, and name your HTTP API app, this is a required field.<br>![Data Source][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
-3. From the **Event Specifications** options, choose the [event specs](https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![Event Specs][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
-4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** once finished. <br>![Get Code][8]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>
-5. You will now be able to view your saved source as well as add or remove event specs. <br>![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
+2. Locate **HTTP API** platform within the available catagories, and name your HTTP API app, this is a required field.<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+3. From the **Event Specifications** options, choose the [event specs](https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
+4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** once finished. <br>![][8]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>
+5. You will now be able to view your saved source as well as add or remove event specs. <br>![][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
 - Return to the **Get Code** page
@@ -138,7 +157,7 @@ In the dialogue that opens, select the data source you just built, and under **E
 
 Next, select **Add Connector** at the bottom of the page. You must name your connector and provide your Braze API endpoint and Braze REST API key here.
 
-![Create Configuration][15]{: style="max-width:70%;"}
+![][15]{: style="max-width:70%;"}
 
 If you have created a connector before, you may optionally use an existing one from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
@@ -149,7 +168,7 @@ Next, name your connector action and select an action type that will send data a
 {% alert important %}
 **Note that not all fields offered are required**. <br>If you wish to skip over a field, Tealium requires that you minimize it before continuing onto the next step.
 
-![Minimize]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
+![]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
 {% endalert %}
 
 {% tabs local %}
@@ -166,7 +185,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 | Purchase attributes | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Track User Example]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
+![]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
 
 {% endtab %}
 {% tab Delete User %}
@@ -178,7 +197,7 @@ This action allows you to delete users from the Braze dashboard.
 | User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name & Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Delete Users]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -189,9 +208,9 @@ Select **Continue**.
 
 View the summary of the connector you created. If you would like to modify your chosen options, select **Back** to edit or **Finish** to complete.
 
-![Connector Summary][16]{: style="max-width:80%;"}
+![][16]{: style="max-width:80%;"}
 
-Your connector now displays in the list of connectors on your Tealium home page. <br>![Connector][13]{: style="max-width:80%;"}
+Your connector now displays in the list of connectors on your Tealium home page. <br>![][13]{: style="max-width:80%;"}
 
 Make sure to **Save / Publish** your connector once finished. The actions you configured will now fire when the trigger connections are met. 
 

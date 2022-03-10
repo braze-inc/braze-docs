@@ -42,7 +42,7 @@ See the Windows Universal [toast template catalog][32] for details on the option
 }
 ```
 
-For more information on using the `extra_launch_string` parameter for deep linking, see [Deep Linking with Windows Universal.][37] For information regarding what a deep link is, please see our [FAQ Section][38].
+For more information on using the `extra_launch_string` parameter for [deep linking][38], see [Deep Linking with Windows Universal.][37]
 
 [32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app

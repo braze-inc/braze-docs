@@ -19,7 +19,9 @@ The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCa
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.
 
-By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800px wide:
+By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. 
+
+For instance, the following is an example override that will cause Content Cards to appear 800px wide:
 
 ``` css
 body .ab-feed {
@@ -31,7 +33,7 @@ body .ab-feed {
 
 ### Refreshing the feed
 
-To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method.
+To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method:
 
 ```javascript
 import braze from "@braze/web-sdk"
@@ -56,7 +58,7 @@ braze.subscribeToContentCardsUpdates(function(updates){
 
 ### Logging analytics events
 
-Log impression events when cards are viewed by users.
+Log impression events when cards are viewed by users:
 
 ```javascript
 import braze from "@braze/web-sdk"
@@ -64,7 +66,7 @@ import braze from "@braze/web-sdk"
 braze.logCardImpressions(cards, true);
 ```
 
-Log card click events when users interact with a card.
+Log card click events when users interact with a card:
 
 ```javascript
 import braze from "@braze/web-sdk"

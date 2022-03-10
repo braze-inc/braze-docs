@@ -53,9 +53,9 @@ Advanced functionality will appear in the campaign or Canvas step composer. In a
 #### Email content
 There are three key components within this section.
 
-- __Content__: Includes a series of tiles that represent the different kinds of content you can use in your message. Just drag one inside an existing row segment, and it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/).
-- __Rows__: Structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
-- __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
+- **Content:** Includes a series of tiles that represent the different kinds of content you can use in your message. Just drag one inside an existing row segment, and it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/).
+- **Rows:** Structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
+- **Settings:** General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
 
 This is very useful to build a coherent message very quickly.
 
@@ -69,12 +69,13 @@ Inbox Vision for the Drag & Drop Editor is currently in early access. Please con
 
 You can also view your email previews with these user types:
 
-- __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes or event information.
+- **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes or event information.
+- **Select User:** You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information
+- **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
+
 {% alert note %}
-This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
+The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
-- __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
-- __Custom User__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 
 ## Creative details 
 

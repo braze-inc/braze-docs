@@ -572,7 +572,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
-        // List of all content cards
+        // List of all Content Cards
         List<Card> allCards = event.getAllCards();
 
         // Your logic below
@@ -589,7 +589,7 @@ Braze.getInstance(context).requestContentCardsRefresh(true);
 // Remove the previous subscriber before rebuilding a new one with our new activity.
 Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
-  // List of all content cards
+  // List of all Content Cards
   val allCards = event.allCards
 
   // Your logic below
@@ -660,7 +660,7 @@ This section applies to integrations which use the Braze SDK's default Content C
 
 ## Use case: Carousel view
 
-![Sample news app showing carousel of content cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
+![Sample news app showing carousel of Content Cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
 This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. In order to integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 

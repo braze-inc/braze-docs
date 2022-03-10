@@ -17,7 +17,11 @@ An Event Object is an object that gets passed through the API when a specific ev
 
 You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the __Analytics__ tab of the various platforms. We have linked several for you.
 
-- Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
+Tracking Custom Events article:
+
+- [Android][2]
+- [iOS][3]
+- [Web][4]
 
 ### Event object
 
@@ -68,7 +72,7 @@ Property values can be any of the following data types:
 Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 ### Event property persistence
-Event Properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent Events. By default, they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.
+Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events][5], which details the various approaches to storing event property values long-term.
 
 #### Event example request
 

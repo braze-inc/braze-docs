@@ -250,7 +250,7 @@ If you override the `handleCardClick:` method in `ABKContentCardsTableViewContro
 
 ## Use case: Carousel view
 
-![Sample news app showing carousel of content cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Sample news app showing carousel of Content Cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. In order to integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 

@@ -31,9 +31,9 @@ Using Zapier's terminology, a "zap" is an automated workflow that connects your 
 
 Using our WordPress example, in the Zapier platform, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
 
-![Zapier new post] [5]
+![In the Zapier platform, within a zap, select the trigger to be a "new comment", "any webhook", or "new post". For this example, "new post" is selected. ] [5]
 
-![Zapier published options] [6]
+![In the Zapier platform, within a zap, configure the trigger by selecting the desired post status and post type. For this example, "Published", and "Posts" is selected.] [6]
 
 ### Step 3: Add an action webhook
 
@@ -41,7 +41,7 @@ Next, define the zap action. When your zap is enabled, and your trigger is detec
 
 Continuing our example, we want to send a POST request as a JSON to a Braze endpoint. This can be done by selecting the **Webhooks** option under **Apps**.
 
-![Zapier webhook] [7]
+![][7]
 
 ### Step 4: Set up Braze POST
 
@@ -52,11 +52,11 @@ First, choose **POST** as the webhook action type. Next, make sure to fill out t
 - **Data** : `trigger_properties__name`, `api_key`, and `campaign_id`
 These data fields are key-value pairs that will be used for the data portion of the request.
 
-![Zapier POST] [10]
+![The data key-value pairs for this example are "app_group_id" set as "your-app-group-id", "campaign_id" set as "your-campaign-id", and "trigger_properties__name" set as "Post Name".][10]
 
 ### Step 5: Create a Braze campaign
 
-![Zapier campaign] [12]
+![A Braze push campaign with Liquid that references the trigger properties name. This Liquid will template your name into the message.][12]
 
 Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with Wordpress data by using Liquid formatting to display the information in your messages.
 

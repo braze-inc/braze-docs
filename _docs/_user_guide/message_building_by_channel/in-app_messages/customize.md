@@ -19,7 +19,7 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
+Additional customization of the appearance of your in-app messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on in-app messages for more details.
 {% endalert %}
 
 ## HTML in-app messages {#custom-html-messages}
@@ -158,7 +158,7 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
-If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
+If you choose to apply your own template, click __Apply Template__ and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
 ## Email capture form {#email-capture-form}
 
@@ -252,7 +252,7 @@ You can also [duplicate][6] and [archive][7] templates! Learn more about creatin
 
 ### CSS template {#in-app-message-templates}
 
-You can customize a complete CSS template for your [Web Modal In-App Message](#web-modal-css).
+You can customize a complete CSS template for your [Web Modal in-app message](#web-modal-css).
 
 Name and tag your CSS Template, then choose whether or not it will be your default template. You can write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
 

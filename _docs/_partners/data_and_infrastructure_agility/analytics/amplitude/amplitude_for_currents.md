@@ -34,13 +34,13 @@ Any integration you set up will count towards your account's data point volume.
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![Ampltiude]({% image_buster /assets/img/amplitude3.png %})
+In Braze, navigate to **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
 ### Step 2: Set up the Braze integration in Amplitude
 
 In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
-![Amplitude integration set up]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
 
 ### Step 3: Export an Amplitude cohort to Braze
 
@@ -54,7 +54,7 @@ Cohort syncs can be scheduled to be performed hours or daily. Scheduled sync wil
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Amplitude Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Amplitude. 
 
-![Amplitude segment]({% image_buster /assets/img/amplitude2.png %})
+![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
@@ -80,7 +80,7 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 
 In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
 
-![Amplitude]({% image_buster /assets/img/amplitude4.png %})
+![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})
 
 {% tab note %}
 Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) or this Braze [Amplitude LAB course](https://lab.braze.com/amplitude-integration-with-braze) to learn more. 
@@ -357,10 +357,10 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### In-App Message Events
+### In-app message Events
 
 ```json
-// In-App Message Impression
+// In-app message Impression
 {
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -375,7 +375,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
 }
-// In-App Message Click
+// In-app message Click
 {
   "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
   "campaign_id": (string) id of the campaign if from a campaign,

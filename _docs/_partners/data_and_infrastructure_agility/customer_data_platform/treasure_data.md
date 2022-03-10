@@ -41,7 +41,7 @@ In Treasure Data, navigate to the **Catalog** under the **Integrations Hub** and
 
 In the **New Authentication** prompt that shows up, name your connection and provide your Braze REST API key and REST endpoint. Select **Done** when finished.
 
-![Treasure Data authentication dialog][2]{: style="max-width:80%;"}
+![][2]{: style="max-width:80%;"}
 
 ### Step 2: Define your query
 
@@ -49,11 +49,11 @@ In Treasure Data, navigate to **Queries** under your **Data Workbench** and sele
 
 Next, select **Export Results** and select an existing integration authentication.
 
-![Treasure Data query][11]{: style="max-width:80%;"}
+![][11]{: style="max-width:80%;"}
 
 Define additional export results parameters as outlined below in the [customization section](#customization). In your export integration content, review the integration parameters.
 
-![Treasure Data query][3]{: style="max-width:80%;"}
+![The "Export Results" page. On this page are fields for "mode", "track record type", and "pre-formatted fields". For this example, "User-Track" and "Custom Events" are set to these fields, respectively.][3]{: style="max-width:80%;"}
 
 Finally, select **Done**, run your query, and validate that your data moved to Braze.
 

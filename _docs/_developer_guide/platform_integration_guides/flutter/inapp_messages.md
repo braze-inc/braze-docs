@@ -47,7 +47,7 @@ To disable automatic in-app message display, make these updates in the native la
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
 
 2. Update your `beforeInAppMessageDisplayed` delegate implementation to return `ABKInAppMessageDisplayChoice.discardInAppMessage`.
 
@@ -72,7 +72,7 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
 
 2. Update your `beforeInAppMessageDisplayed` delegate implementation to call `BrazePlugin.process(inAppMessage)`.
 
@@ -97,8 +97,7 @@ Follow the steps below to test a sample in-app message.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should display the in-app message on your device.
 
-![In-App Messaging Campaign Test][2]
-
+![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][2]
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"

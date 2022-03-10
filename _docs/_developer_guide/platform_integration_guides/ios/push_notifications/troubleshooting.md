@@ -155,7 +155,7 @@ iOS 9+ requires links be ATS compliant in order to be opened in web views. Ensur
 
 Most of the code that handles deep links also handles push opens.  First, ensure that push opens are being logged; if not, first [fix that issue][34] (as the fix often fixes link handling).
 
-If opens are being logged, check to see if it is an issue with the deep link in general or with the deep linking push click handling.  To do this, test to see if a deep link from an In-App Message click works.
+If opens are being logged, check to see if it is an issue with the deep link in general or with the deep linking push click handling.  To do this, test to see if a deep link from an in-app message click works.
 
 [1]: {% image_buster /assets/img_archive/push_changelog.gif %}
 [20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

@@ -35,7 +35,7 @@ The Braze and Hightouch integration allows you to build better campaigns on Braz
 
 1. On the Hightouch platform, in the **Destinations** section, click **Add destination**.
 2. Select **Braze** from the list of available destinations.
-3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![Add destination][3]
+3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![][3]
 
 ### Step 2: Object and event syncing
 
