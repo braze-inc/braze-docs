@@ -62,7 +62,7 @@ AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 
 ### Setting custom attributes
 
-See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) integration instructions for in-depth discussion of attribute tracking best practices and interfaces.
+See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) integration instructions for in-depth discussion of attribute tracking best practices and interfaces.
 
 ```javascript
 AppboyPlugin.setFirstName("firstName");
