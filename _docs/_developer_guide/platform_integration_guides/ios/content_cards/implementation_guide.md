@@ -84,7 +84,7 @@ A `ContentCardData` object that represents the `ABKContentCard` data along with 
 @protocol ContentCardable <NSObject>
  
 @property (nonatomic, strong) ContentCardData *contentCardData;
-- (instancetype **nullable)initWithMetaData:(NSDictionary *)metaData
+- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData
                                   classType:(enum ContentCardClassType)classType;
  
 - (BOOL)isContentCard;
