@@ -9,9 +9,9 @@ This article describes Braze's SDK support policy and relevant timelines.
 
 ## Definitions
 
-**End-Of-Life Date** - An SDK version's __end-of-life date__ is the date at which Braze no longer supports that version. An SDK version's __end-of-life date__ will be 1 year after its next version is released.
+An SDK version's **end-of-life date** is the date at which Braze no longer supports that version. An SDK version's __end-of-life date__ will be 1 year after its next version is released.
 
-**Deprecated** - SDK versions which are deprecated have a known __end-of-life date__ in the future. For example, if Android SDK version 1.0.1 were released today, then for the next year its previous version is considered deprecated, and will have an __end-of-life date__ one year from today.
+SDK versions which are **deprecated** have a known __end-of-life date__ in the future. For example, if Android SDK version 1.0.1 were released today, then for the next year its previous version is considered deprecated, and will have an __end-of-life date__ one year from today.
 
 ## SDK Support Timelines
 
