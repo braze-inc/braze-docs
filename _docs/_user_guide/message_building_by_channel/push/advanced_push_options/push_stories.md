@@ -59,7 +59,7 @@ When you create a campaign or Canvas, you can filter which users you want to tar
 
 ![Push Story Analytics][5]
 
-The analytics will look very similar to the current analytics section for Push Notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
+The analytics will look very similar to the current analytics section for push notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
 
 ## Troubleshooting
 
@@ -69,7 +69,7 @@ Apple has specific rules in place that will prevent certain types of notificatio
 
 These are limitations imposed by Apple that should be considered when designing your Push Story.
 
-### I sent myself a push story on iOS but saw the condensed view instead
+### I sent myself a Push Story on iOS but saw the condensed view instead
 
 In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.
 

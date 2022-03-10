@@ -181,7 +181,7 @@ If you need to remove old cards, you must stop the campaign to do so. To stop a 
 
 Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
-Within a campaign or Canvas Message, you can optionally add a __Removal Event__ to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
+Within a campaign or Canvas Message, you can optionally add a **Removal Event** to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
 
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.

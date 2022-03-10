@@ -10,7 +10,7 @@ page_order: 2
 
 Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
-__Analytics Components__<br>
+**Analytics Components**<br>
 &#45; [Churn Score and Category](#churn_score)<br>
 &#45; [Prediction Quality](#prediction_quality)<br>
 &#45; [Estimated Results](#estimated_results)<br>
@@ -36,7 +36,7 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Prediction quality {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Here's what we recommend for various ranges of Prediction Quality:
 

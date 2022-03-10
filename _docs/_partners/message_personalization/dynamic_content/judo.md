@@ -60,7 +60,7 @@ Once you have finished the app-side integration, you can test it by running a te
 
 ### Step 1: Create a custom code in-app message campaign
 
-From the Braze platform, create a Braze in-app message campaign with a __Custom Code__ message type. Next, select __HTML Upload__ as the custom type. Make sure to populate the content of the message with the base in-app messaging fields; this content will not be shown to the user.
+From the Braze platform, create a Braze in-app message campaign with a **Custom Code** message type. Next, select **HTML Upload** as the custom type. Make sure to populate the content of the message with the base in-app messaging fields; this content will not be shown to the user.
 
 ![An image of what the dashboard looks like when selecting the "Custom Code" message type.][2]
 
@@ -80,7 +80,7 @@ Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dy
 <br><br>
 ### Step 3: Finishing the campaign
 
-Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the __Delivery__ and __Target User__ sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on the different components of a Braze in-app message.
+Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on the different components of a Braze in-app message.
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}

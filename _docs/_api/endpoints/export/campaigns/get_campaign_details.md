@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) channel type of the message (as in, "email", "ios_push", "webhook", "content_card", "in-app_message", "sms"),
-            "name": (string) name of the message in the Dashboard (eg., "Variation 1")
+            "name": (string) name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see below ...
         }
     },
@@ -139,7 +139,7 @@ The `messages` response will contain information about each message. Example mes
 ```json
 {
     "channel": "webhook",
-    "url": (string) url for webhook,
+    "url": (string) URL for webhook,
     "body": (string) payload body,
     "type": (string) body content type,
     "headers": (hash) specified request headers,

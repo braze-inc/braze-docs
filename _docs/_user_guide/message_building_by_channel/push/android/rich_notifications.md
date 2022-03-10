@@ -21,7 +21,7 @@ tool:
 ## Requirements
 
 - Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or above. If a user's device is not running on these systems, they will not see the notification image.
-- Android Extended Notification images must be 2:1 ratio, but __do not have a size limit__. 
+- Android Extended Notification images must be 2:1 ratio, but **do not have a size limit**. 
 - Android also allows for setting a separate image for the standard notification view. <br>Recommended size images: 512x256 for Small, 1024x512 for Medium, and 2048x1024 for Large.
 - Currently, Android rich notifications only allow for static images including jpg and png file formats, gifs and other image formats are not yet supported.
 - Note, adding Action Buttons to your push notification may affect the area of the image that is displayable. Please test with the dashboard preview and live devices to ensure that results are as expected.

@@ -21,7 +21,7 @@ Full-screen messages take up the whole screen of the device! This message type i
 
 Full-screen in-app messages will fill the entire height of a device and crop horizontally (left and right sides) as needed. Image and text full-screen messages will fill 50% of the height of a device. All full-screen in-app messages will fill the status bar on "notched" devices.
 
-- __All images must be less than 5MB.__
+- **All images must be less than 5MB.**
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 

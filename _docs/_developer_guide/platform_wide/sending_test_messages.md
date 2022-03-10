@@ -12,7 +12,7 @@ Before sending out a messaging campaign to your users, you may want to test it t
 
 ## Creating a designated test segment <a class="margin-fix" name="test-segment"></a>
 
-Once you set up a test segment, you can utilize it to test __any__ of our messaging channels. The process is very simple and if configured properly will only need to be done once.
+Once you set up a test segment, you can utilize it to test **any** of our messaging channels. The process is very simple and if configured properly will only need to be done once.
 
 Navigate to the "Segments" page in the dashboard and create a new segment. In the dropdown menu under "Add Filter", you'll find our testing filters at the bottom of the list.
 
@@ -24,11 +24,11 @@ Our testing filters allow you to select users with specific email addresses or e
 
 These filters have three options:
 
-  1) __"Equals"__ - This will look for an exact match of the email or user ID that you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
+  1) **"Equals"** - This will look for an exact match of the email or user ID that you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
 
-  2) __"Does Not Equal"__ - Use this if you want to exclude a particular email or user ID from test campaigns.
+  2) **"Does Not Equal"** - Use this if you want to exclude a particular email or user ID from test campaigns.
 
-  3) __"Matches"__ - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
+  3) **"Matches"** - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
 These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". You can also select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (e.g. "matches" "email1@braze.com &#124; email2@braze.com").
 
@@ -48,7 +48,7 @@ To send test push notifications and/or in-app messages, you need to target your 
 
 Finish confirming your campaign and launch it to test your push notification and in-app messages.
 
->  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
 
 >  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, there is a "Send Test" button in the bottom left corner.
 

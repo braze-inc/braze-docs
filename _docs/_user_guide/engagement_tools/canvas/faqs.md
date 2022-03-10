@@ -60,7 +60,7 @@ There is a Canvas path with 10 push notifications and the conversion event is "s
 The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
 
 {% alert note %}
-If quiet hours is active when the conversion event happens, the same rules apply.
+If Quiet Hours is active when the conversion event happens, the same rules apply.
 {% endalert %}
 
 #### Example 2

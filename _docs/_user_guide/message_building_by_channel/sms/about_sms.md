@@ -38,11 +38,11 @@ Before you start sending SMS, there are some things you need. Refer to the basic
 
 ## Terms to know
 
-- __Short code:__ A 5 to 6-digit code, that's shorter than a full phone number. This code is used to address and send SMS messages.<br><br>
-- __Long codes:__ A 10-digit code that is used to address SMS messages. Most average phone numbers are considered long codes (e.g 123-456-7891). These codes are used to address and send SMS messages.<br><br>
-- __Subscription group:__ A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.<br><br>
-- __Message segment and character limits:__ A message segment refers to how many segments your initial SMS message will be split into. Each message has a character limit that if exceeded, will cause the message to be broken into segments. Based on what encoding standards you use (UTF-2 or GSM-7), there are varying character limits. Please reference our [Message Copy Limits][2] documentation for more information on messaging segmentation and message character limits.<br><br>
-- __Common SMS campaign metrics:__ <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these Metrics, please check out the [SMS Campaign Analytics][1] documentation.
+- **Short code:** A 5 to 6-digit code, that's shorter than a full phone number. This code is used to address and send SMS messages.<br><br>
+- **Long codes:** A 10-digit code that is used to address SMS messages. Most average phone numbers are considered long codes (e.g 123-456-7891). These codes are used to address and send SMS messages.<br><br>
+- **Subscription group:** A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.<br><br>
+- **Message segment and character limits:** A message segment refers to how many segments your initial SMS message will be split into. Each message has a character limit that if exceeded, will cause the message to be broken into segments. Based on what encoding standards you use (UTF-2 or GSM-7), there are varying character limits. Please reference our [Message Copy Limits][2] documentation for more information on messaging segmentation and message character limits.<br><br>
+- **Common SMS campaign metrics:** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these Metrics, please check out the [SMS Campaign Analytics][1] documentation.
 
 
 [picture]: {% image_buster /assets/img/sms/sms_about.jpg %}

@@ -24,7 +24,7 @@ With the rich level of content offered by in-app messages, you can leverage this
 | Use case | Explanation |
 | --- | --- |
 | Push priming | Run a [push priming][2] campaign using a rich in-app message to show your customers the benefit of opting into push for your app or site, and present them with a prompt to grant push permission.
-| Sales and promotions | Use modal in-app messages to greet customers with visually appealing media containing [promo codes][6] or offers. Incentivize them to make purchases or conversions when they otherwise wouldn't have. |
+| Sales and promotions | Use modal in-app messages to greet customers with visually appealing media containing [promotion codes][6] or offers. Incentivize them to make purchases or conversions when they otherwise wouldn't have. |
 | Encouraging feature adoption | Encourage customers to use other parts of your app or take advantage of a service. |
 | Highly personalized campaigns | Place in-app messages as the first thing your customers see when they enter your app or site. Add in some Braze personalization features, such as [Connected Content][3], to compel users to take action and therefore make your outreach more effective.
 {: .reset-td-br-1 .reset-td-br-2}

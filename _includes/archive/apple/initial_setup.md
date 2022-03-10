@@ -14,9 +14,9 @@ Simply run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-__Note__: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
+**Note**: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
 
-__Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+**Note**: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
 
 ### Step 2: Constructing the podfile
 
@@ -30,9 +30,9 @@ target 'YourAppTarget' do
 end
 ```
 
-__Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
+**Note**: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
 {% if include.platform == 'iOS' %}
-__Note__: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
+**Note**: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
 
 ### Step 3: Installing the Braze SDK
 
@@ -81,7 +81,7 @@ In `AppDelegate.swift`, add following snippet to your `application(application: 
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+**Note**: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% endtab %}
 {% endtabs %}
@@ -164,7 +164,7 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-__Note__: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+**Note**: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
 
 This method is called with the following parameters:
 

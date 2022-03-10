@@ -26,7 +26,7 @@ You can also pull content directly from a web server via Braze's [Connected Cont
 {% endraw %}
 
 {% alert important %}
-Braze currently supports Liquid up to and including __Liquid 3 from Shopify__. We do not currently support Liquid 4 and beyond.
+Braze currently supports Liquid up to and including **Liquid 3 from Shopify**. We do not currently support Liquid 4 and beyond.
 {% endalert %}
 
 ## Using Liquid
@@ -71,7 +71,7 @@ If you're using a custom tag, you can copy and paste the tag into whatever messa
 
 {% alert note %}
 
-If you choose to use Liquid in your Email messages, be sure to:
+If you choose to use Liquid in your email messages, be sure to:
 
 1. Insert it using the HTML editor as opposed to the classic editor. The Classic Editor may parse the Liquid as plaintext.
 2. Place Liquid code within the `<body>` tag only. Placing it outside this tag may cause inconsistent rendering upon delivery.

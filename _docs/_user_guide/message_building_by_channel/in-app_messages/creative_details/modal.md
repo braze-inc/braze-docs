@@ -20,7 +20,7 @@ Modals appear in the center of the device's screen with a screen overlay that he
 
 Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
-- __All images must be less than 5MB.__
+- **All images must be less than 5MB.**
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
@@ -32,7 +32,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 | Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+You should **always** [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
 ### Font Awesome
 

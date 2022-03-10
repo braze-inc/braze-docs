@@ -22,10 +22,10 @@ All customers who currently have and/or use US long codes to send to US customer
 10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
 
 10DLC helps alleviate those issues by offering: 
-- __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
-- __Better Deliverability__: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
-- __Improved Compliance__: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
-- __Budget Friendly__: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code. 
+- **Higher Throughput**: 10DLC numbers support a higher volume of messages than regular long codes.
+- **Better Deliverability**: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
+- **Improved Compliance**: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
+- **Budget Friendly**: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code. 
 
 Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
@@ -54,9 +54,9 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| High | 76-100 | 60 MPS | 60 MPS | 60 MPS |
-| Medium | 51-75 | 10 MPS | 10 MPS | 10 MPS |
-| Low | 16-50 | 1 MPS | 1 MPS | 1 MPS | 
+| High | 75-100 | 75 MPS | 75 MPS | 75 MPS |
+| Medium | 50-74 | 40 MPS | 40 MPS | 40 MPS |
+| Low | 1-49 | 4 MPS | 4 MPS | 4 MPS | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
@@ -94,9 +94,9 @@ A declared use case means you have chosen one specific non-marketing use case (f
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 76-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
-| 51-75 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
-| 16-50 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
+| 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
+| 51-75 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
+| 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -106,10 +106,9 @@ Mixed/Marketing use cases can be registered for customers who want to send messa
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
-| 66-85 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
-| 26-65 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
-| 15-25 | 2.2 MPS | 0.2 MPS | 1 MPS | 1 MPS |
+| 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
+| 50-74 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
+| 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -119,4 +118,4 @@ Visit the Twilio 10DLC article to check out updated [throughput estimates](https
 
 ## Next steps
 
-Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. __If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.__ Reach out to your CSM to get started on your 10DLC registration. 
+Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. **If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.** Reach out to your CSM to get started on your 10DLC registration. 

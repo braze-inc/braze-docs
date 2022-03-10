@@ -43,13 +43,13 @@ channel: push
 {% endtab %}
 {% tab Text Example %}
 
-![Small iOS Push Notification]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![Small iOS push notification]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+![iOS rich push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS rich push on hard push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -91,12 +91,12 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 {% endtab %}
 {% tab Text Example %}
 
-![Android Push]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Android push]({% image_buster /assets/img_archive/Push_Android_2.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![Large Android Image]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Large android image]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 Large image notifications display best when using an image of at least 600x300 pixels.
@@ -119,7 +119,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push Window Universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
+![Push window universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
+![Push window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
 
 {% endtab %}
 {% endtabs %}

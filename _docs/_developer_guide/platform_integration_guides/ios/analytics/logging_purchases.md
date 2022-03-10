@@ -83,7 +83,7 @@ See the [Technical Documentation][6] for more information.
 
 ### Reserved keys
 
-The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Properties:
+The following keys are **RESERVED** and **CANNOT** be used as Purchase Properties:
 
 - `time`
 - `product_id`

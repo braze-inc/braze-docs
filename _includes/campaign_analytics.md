@@ -152,7 +152,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 | Term | Description |
 | --------- | --- |
-| Bounces | The push notifications sent to these users were undeliverable. These users have been automatically unsubscribed from all future push notifications. See [Bounced Push Notifications](#bounced-push). |
+| Bounces | The push notifications sent to these users were undeliverable. These users have been automatically unsubscribed from all future push notifications. See [Bounced push notifications](#bounced-push). |
 | Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
 | Opens | Instances including both Direct Opens (defined above) and Influenced Opens in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}

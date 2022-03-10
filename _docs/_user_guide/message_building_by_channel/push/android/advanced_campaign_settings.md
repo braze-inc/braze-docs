@@ -20,15 +20,15 @@ tool:
 
 ## Notification ID {#notification-id}
 
-A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
+A **"Notification ID"** is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
 
 ## Time to live (TTL) {#ttl}
 
-The __"Time to Live"__ (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
+The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
 ## Firebase messaging delivery priority {#fcm-priority}
 
-The __"Firebase Messaging Delivery Priority"__ field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
+The **"Firebase Messaging Delivery Priority"** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
 
 ## Summary text
 
@@ -44,7 +44,7 @@ For push notifications that include images, the message text will be shown in th
 
 ## Custom URIs
 
-The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+The **"Custom URI"** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
 > To enable Custom URI, your app's `BroadcastReceiver` must be configured to properly handle opening the URI.  This involves parsing incoming message contents for the custom URI and navigating to it.  Our [example receiver][14] provides a sample implementation.
 

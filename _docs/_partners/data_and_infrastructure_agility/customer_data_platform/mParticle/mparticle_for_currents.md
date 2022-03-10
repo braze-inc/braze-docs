@@ -29,13 +29,13 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 
 ### Step 1: Create feeds
 
-From your mParticle admin account, navigate to __Setup > Inputs__. Locate __Braze__ in the mParticle __Directory__ and add the feed integration.
+From your mParticle admin account, navigate to **Setup > Inputs**. Locate **Braze** in the mParticle **Directory** and add the feed integration.
 
-The Braze feed integration supports four separate feeds: iOS, Android, Web, and Unbound. The unbound feed can be used for events such as emails that are not connected to a platform. You will need to create an input for each main platform feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.
+The Braze feed integration supports four separate feeds: iOS, Android, Web, and Unbound. The unbound feed can be used for events such as emails that are not connected to a platform. You will need to create an input for each main platform feed. You can create additional inputs from **Setup > Inputs**, on the **Feed Configurations** tab.
 
 ![][1]
 
-For each feed, under __Act as Platform__ select the matching platform from the list. If you do not see an option to select an __act-as__ feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.
+For each feed, under **Act as Platform** select the matching platform from the list. If you do not see an option to select an **act-as** feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.
 
 ![The first integration dialog box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.][2]{: style="max-width:40%;"}  ![The second integration dialog box showing the server-to-server key and server-to-server secret.][3]{: style="max-width:37%;"}
 
