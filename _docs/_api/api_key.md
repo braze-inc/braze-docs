@@ -32,7 +32,7 @@ Prior to April 2020, API keys would be included as a part of the API request bod
 While the old way of passing API keys continues to work, after a period of time this will be permanently removed so we urge users to update API calls accordingly. 
 
 {% alert important %}
-__Looking for the `api_key` parameter in your Braze endpoints?__<br>
+**Looking for the `api_key` parameter in your Braze endpoints?**<br>
 As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see YOUR-REST-API-KEY within each endpoint Example Requests.
 <br><br>
 Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
@@ -233,7 +233,7 @@ There are two ways to locate your `app_id`:
 
 1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
 
-2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
+2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 
@@ -256,7 +256,7 @@ Security is of the utmost importance at Braze. Given that REST API Keys allow ac
 
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
 
-With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
+With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is **crucial** in the security of your application.
 
 
 [2]: {{site.baseurl}}/api/identifier_types/

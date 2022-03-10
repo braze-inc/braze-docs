@@ -29,6 +29,6 @@ Additional ways to avoid spam traps:
 
 1. Send a double-opt-in email.
 2. Implement a best-practice [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
-3. __Never purchase email lists.__
+3. **Never purchase email lists.**
 
 The Braze Customer Success and Deliverability teams can help make sure you're following best practices to maximize deliverability across the globe.

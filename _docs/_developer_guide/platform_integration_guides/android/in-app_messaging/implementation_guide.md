@@ -26,7 +26,7 @@ The Braze SDK allows developers to override a number of defaults through the use
 
 {% tabs %}
 {% tab Kotlin %}
-__In App Message Types__<br>
+**In App Message Types**<br>
 
 ```kotlin
 class BrazeDemoApplication : Application(){
@@ -40,7 +40,7 @@ class BrazeDemoApplication : Application(){
 ```
 {% endtab %}
 {% tab Java %}
-__In App Message Types__<br> 
+**In App Message Types**<br> 
 
 ```java
 public class BrazeDemoApplication extends Application {
@@ -71,7 +71,7 @@ While building out your slide-up in-app message, you may notice you aren't able 
 
 {% tabs %}
 {% tab Kotlin %}
-__Override and Return Custom Layout Parameters__<br>
+**Override and Return Custom Layout Parameters**<br>
 Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
 
 ```kotlin
@@ -98,7 +98,7 @@ class CustomSlideUpInAppMessageViewWrapper(inAppMessageView: View?,
 ```
 {% endtab %}
 {% tab Java %}
-__Override and Return Custom Layout Parameters__<br>
+**Override and Return Custom Layout Parameters**<br>
 Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
 
 ```java
@@ -134,7 +134,7 @@ class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 
 {% tabs %}
 {% tab Kotlin %} 
-__Supply a Custom Factory to Return Your Custom Wrapper__<br>
+**Supply a Custom Factory to Return Your Custom Wrapper**<br>
 In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `AppboyInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```kotlin
@@ -175,7 +175,7 @@ class CustomInAppMessageViewWrapperFactory : AppboyInAppMessageViewWrapperFactor
 ```
 {% endtab %}
 {% tab Java %}
-__Supply a Custom Factory to Return Your Custom Wrapper__<br>
+**Supply a Custom Factory to Return Your Custom Wrapper**<br>
 In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `AppboyInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```java
@@ -215,7 +215,7 @@ class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapper
 
 {% tabs %}
 {% tab Kotlin %}
-__Register Your Factory with Braze__<br>
+**Register Your Factory with Braze**<br>
 Once you've created your custom wrapper factory, register it with the Braze SDK via the `AppboyInAppMessageManager`:
 
 ```kotlin
@@ -223,7 +223,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(
 ```
 {% endtab %}
 {% tab Java %}
-__Register Your Factory with Braze__<br>
+**Register Your Factory with Braze**<br>
 Once you've created your custom wrapper factory, register it with the Braze SDK via the `AppboyInAppMessageManager`:
 
 ```java
@@ -238,7 +238,7 @@ An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offer
 
 {% tabs %}
 {% tab Kotlin %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ```kotlin
@@ -259,7 +259,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 ```
 {% endtab %}
 {% tab Java %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ```java
@@ -279,7 +279,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtab %}
 {% endtabs %}
 
-__Override and Provide Custom View__<br>
+**Override and Provide Custom View**<br>
 Provide a layout that mimics the standard modal in-app message, but supply your view as the root elment, and then inflate that layout 
 ```xml
 <com.braze.advancedsamples.inapp.modal.TeamPickerView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -297,7 +297,7 @@ Provide a layout that mimics the standard modal in-app message, but supply your 
 
 {% tabs %}
 {% tab Kotlin %}
-__Inflate and Customize the View__<br>
+**Inflate and Customize the View**<br>
 Before reloading the `Spinner` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`.
 
 ```kotlin
@@ -310,7 +310,7 @@ private fun getCustomView(activity: Activity, inAppMessage: IInAppMessage): Team
 ```
 {% endtab %}
 {% tab Java %}
-__Inflate and Customize the View__<br>
+**Inflate and Customize the View**<br>
 Before reloading the `Spinner` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`.
 
 ```java
@@ -326,7 +326,7 @@ private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessa
 
 {% tabs %}
 {% tab Kotlin %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 ```kotlin
@@ -338,7 +338,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 ```
 {% endtab %}
 {% tab Java %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 ```java
@@ -357,7 +357,7 @@ Implementing a fully custom immersive (full screen) in-app message involves a si
 
 {% tabs %}
 {% tab Kotlin %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 We will add another `view_type` extra for our new immersive customization. Revisiting the `createInAppMessageView` method, add a option for the "switches" UI:
 
 ```kotlin
@@ -380,7 +380,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 ```
 {% endtab %}
 {% tab Java %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 We will add another `view_type` extra for our new immersive customization. Revisiting the `createInAppMessageView` method, add a option for the "switches" UI:
 
 ```java
@@ -402,7 +402,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtab %}
 {% endtabs %}
 
-__Override and Provide Custom View__<br>
+**Override and Provide Custom View**<br>
 Provide a layout that mimics the standard modal in-app message, but supply your view as the root elment, and then inflate that layout 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -424,7 +424,7 @@ Provide a layout that mimics the standard modal in-app message, but supply your 
 
 {% tabs %}
 {% tab Kotlin %}
-__Inflate and Customize the View__<br>
+**Inflate and Customize the View**<br>
 Before setting the options for the `RecyclerView` component, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`. The `title` and `subtitle` are also extracted from the `extras` bundle.
 
 ```kotlin
@@ -439,7 +439,7 @@ private fun getCustomImmersiveView(activity: Activity, inAppMessage: IInAppMessa
 ```
 {% endtab %}
 {% tab Java %}
-__Inflate and Customize the View__<br>
+**Inflate and Customize the View**<br>
 Before setting the options for the `RecyclerView` component, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`. The `title` and `subtitle` are also extracted from the `extras` bundle.
 
 ```java
@@ -459,7 +459,7 @@ private CustomImmersiveInAppMessage getCustomImmersiveView(Activity activity, II
 
 {% tabs %}
 {% tab Kotlin %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the view subclass, after a user toggles one of the switches, pass the associated attribute and the toggle status to Braze.
 
 ```kotlin
@@ -490,7 +490,7 @@ override fun onBindViewHolder(holder: OptionViewHolder, position: Int) {
 ```
 {% endtab %}
 {% tab Java %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the view subclass, after a user toggles one of the switches, pass the associated attribute and the toggle status to Braze.
 
 ```java

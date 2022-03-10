@@ -15,10 +15,10 @@ Our Customer Success team can help recommend data best practices to fit your spe
 
 ## Management and usage
 
-To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, refer to [Subscriptions and usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
+To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select **Subscriptions and Usage**. For more information on the Data Point Dashboard components, refer to [Subscriptions and usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
-__Only update your deltas (changing data)!__
+**Only update your deltas (changing data)!**
 
 To prevent using up your allocated data points, we recommend setting up a program that will prevent sending the same, unchanging data from your app to Braze over and over.
 {% endalert %}

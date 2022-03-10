@@ -68,7 +68,7 @@ Directly clicking and opening the push message will send you to your app, where 
 
 #### Content card
 
-After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message. 
+After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
 ![Test Content Card]({% image_buster /assets/img/contentcard_test.png %})
 
@@ -77,7 +77,7 @@ After creating your Content Card, you can send a test Content Card to your app t
 
 #### SMS/MMS
 
-After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message. 
+After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
 ![Test Content Card]({% image_buster /assets/img/sms_test.png %})
 
@@ -86,7 +86,7 @@ After creating your SMS/MMS message, you can send a test message to your phone t
 
 #### Webhook
 
-After creating your webhook, you can do a test send to check the webhook response. Select the __test__ tab and select __send test__ to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
+After creating your webhook, you can do a test send to check the webhook response. Select the **test** tab and select **send test** to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
@@ -133,7 +133,7 @@ To send test News Feed cards, you need to target your previously created test se
 
 Finish confirming your campaign and launch it to test your News Feed cards.
 
->  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
 
 {% endtab %}
 {% endtabs %}

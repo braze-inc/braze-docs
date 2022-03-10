@@ -19,7 +19,7 @@ Check out the [Help section][8] for additional best practices.
 
 Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)][14].
 
->  Amazon Device Messaging (ADM) is __only__ supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
+>  Amazon Device Messaging (ADM) is **only** supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
 
 ## Step 1: Enable ADM
 

@@ -83,7 +83,7 @@ For more information on platform-specific notification options, see [iOS Notific
 
 #### Language
 
-Add copy in multiple languages using the __Add Languages__ button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
 
 #### Title and body
 

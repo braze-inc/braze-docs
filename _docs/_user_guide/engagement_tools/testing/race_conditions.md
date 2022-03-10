@@ -25,7 +25,7 @@ However, in some cases, the second event will trigger first. This means that a m
 
 ## Using multiple API endpoints
 
-If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Please note that if you are sending a scheduled message API call, these requests __must__ be separate, and a user must be created before sending the schdeuled API call.
+If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Please note that if you are sending a scheduled message API call, these requests **must** be separate, and a user must be created before sending the schdeuled API call.
 
 {% alert note %}
 If user attributes are sent via SDK or in the same user/track call as the event, then Braze will automatically process those first before attempting to send any message.

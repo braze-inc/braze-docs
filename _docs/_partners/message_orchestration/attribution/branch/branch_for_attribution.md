@@ -99,7 +99,7 @@ user_data_idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-__This recommendation is purely optional__<br>
+**This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 

@@ -26,7 +26,7 @@ You can also pull content directly from a web server via Braze's [Connected Cont
 {% endraw %}
 
 {% alert important %}
-Braze currently supports Liquid up to and including __Liquid 3 from Shopify__. We do not currently support Liquid 4 and beyond.
+Braze currently supports Liquid up to and including **Liquid 3 from Shopify**. We do not currently support Liquid 4 and beyond.
 {% endalert %}
 
 ## Using Liquid

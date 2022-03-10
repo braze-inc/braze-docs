@@ -35,7 +35,7 @@ Once you have a solid understanding of these code considerations, check out our 
 {% tab No Card Dependencies %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__No `Card` Dependencies__<br>
+**No `Card` Dependencies**<br>
 `ContentCardData` represents the parsed out, common values of an `Card`.
 
 ```kotlin
@@ -73,7 +73,7 @@ data class ContentCardData (var contentCardId: String,
 ```
 {% endsubtab %}
 {% subtab Java %}
-__No `Card` Dependencies__<br>
+**No `Card` Dependencies**<br>
 `ContentCardData` represents the parsed out, common values of an `Card`.
 
 ```java
@@ -129,7 +129,7 @@ public class ContentCardData{
 {% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__Custom Object Initializer__<br>
+**Custom Object Initializer**<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```kotlin
@@ -150,7 +150,7 @@ class Tile: ContentCardable {
 ```
 {% endsubtab %}
 {% subtab Java %}
-__Custom Object Initializer__<br>
+**Custom Object Initializer**<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```java
@@ -176,7 +176,7 @@ public class Tile extends ContentCardable {
 {% tab Identifying Types %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__Identifying Types__<br>
+**Identifying Types**<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```kotlin
@@ -208,7 +208,7 @@ enum class ContentCardClass{
 ```
 {% endsubtab %}
 {% subtab Java %}
-__Identifying Types__<br>
+**Identifying Types**<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```java
@@ -298,7 +298,7 @@ The message center logic is driven by the `class_type` that is provided by the k
 
 {% tabs %}
 {% tab Kotlin %}
-__Using `class_type` for On Click Behavior__<br>
+**Using `class_type` for On Click Behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
 store the data.
 
@@ -347,7 +347,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 {% endtab %}
 {% tab Java %}
-__Using `class_type` for On Click Behavior__<br>
+**Using `class_type` for On Click Behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
 
 ```java
@@ -439,11 +439,11 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done by using a `ContentCardable` base class that references and provides data to the `BrazeManager`.
 
-#### __Implementation components__<br><br>
+#### **Implementation components**<br><br>
 
 {% tabs %}
 {% tab Kotlin %}
-__Custom Objects Call the Logging Methods__<br>
+**Custom Objects Call the Logging Methods**<br>
 Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 
 ```kotlin
@@ -454,7 +454,7 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
     }
 ```
 
-__Retrieve the Content Card from the ContentCardId__<br>
+**Retrieve the Content Card from the ContentCardId**<br>
 The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
 
 ```kotlin
@@ -463,7 +463,7 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
     }
 ```
 
-__Call `Card` Functions__<br>
+**Call `Card` Functions**<br>
 The [BrazeManager](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```kotlin
@@ -481,7 +481,7 @@ The [BrazeManager](https://github.com/braze-inc/braze-growth-shares-android-demo
 ```
 {% endtab %}
 {% tab Java %}
-__Custom Objects Call the Logging Methods__<br>
+**Custom Objects Call the Logging Methods**<br>
 Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 ```java
 @Override
@@ -492,7 +492,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
     }
 ```
 
-__Retrieve the Content Card from the `ContentCardId`__<br>
+**Retrieve the Content Card from the `ContentCardId`**<br>
 The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
 
 ```java
@@ -503,7 +503,7 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
     }
 ```
 
-__Call `Card` Functions__<br>
+**Call `Card` Functions**<br>
 The `[BrazeManager](insert)` can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```java

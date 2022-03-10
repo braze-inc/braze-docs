@@ -37,31 +37,31 @@ Use Braze and mParticle's partnership to configure your integration and import m
 
 mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. The processing of each option is described below:
 
-- __Single attribute__ (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a list of mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under __Audiences__. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036". ![mParticle segment membership][6]<br><br>
-- __One attribute per segment__: mParticle will create a custom attribute for each audience that a user belongs to. ![mParticle custom attribute][7]<br><br>
-- __Both single attribute and one attribute per segment__
+- **Single attribute** (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a list of mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036". ![mParticle segment membership][6]<br><br>
+- **One attribute per segment**: mParticle will create a custom attribute for each audience that a user belongs to. ![mParticle custom attribute][7]<br><br>
+- **Both single attribute and one attribute per segment**
 
 #### Step 1: Create an audience in mParticle {#send_settings}
 
-To create an audience in mParticle, navigate to __Audiences > Single Workspace > + New Audience__. Here you must provide the following fields:
+To create an audience in mParticle, navigate to **Audiences > Single Workspace > + New Audience**. Here you must provide the following fields:
 
-- __API key__: Found in the Braze __Developer Console__ under __Settings__.
-- __API key operating system__: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
-- __Send segments as__: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- __App group REST API key__:  Braze REST API key with full permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__
-- __External identity type__: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
-- __Email identity type__: The mParticle user identity type to forward as the email to Braze.
-- __Braze instance__: Specify which cluster your Braze data will be forwarded to
+- **API key**: Found in the Braze **Developer Console** under **Settings**.
+- **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
+- **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
+- **App group REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
+- **Email identity type**: The mParticle user identity type to forward as the email to Braze.
+- **Braze instance**: Specify which cluster your Braze data will be forwarded to
 
-Lastly __Save__ your audience. 
+Lastly **Save** your audience. 
 
 Check out this article for more information on creating Braze [mParticle audiences](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
 
 #### Step 2: Segment users in Braze
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment.
-- __Single attribute__: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
-- __One attribute per segment__: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
+- **Single attribute**: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
+- **One attribute per segment**: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
@@ -101,17 +101,17 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 ##### Step 3: Configure your mParticle dashboard to enable the Braze kit
 
-In mParticle, navigate to __Setup > Outputs > Add Output__ and select __Braze__ to open the Braze kit configuration. __Save__ once completed. 
+In mParticle, navigate to **Setup > Outputs > Add Output** and select **Braze** to open the Braze kit configuration. **Save** once completed. 
 
 ![][3]
 
 Provide the following fields on the Braze configuration page: 
-- __API key__: Found in the Braze __Developer Console__ under __Settings__. Note that API keys will differ for each platform (iOS, Android, and Web).
-- __External identity type__: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
-- __Braze instance__: Custom
-- __Custom REST endpoint__: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).
-- __Custom SDK endpoint__: Given to you by your Braze support or account representative (e.g., `sdk.api.braze.com`). Leave this setting blank if you were not given a custom API endpoint.
-- __Custom JavaScript endpoint__: Given to you by your Braze support or account representative. Leave this setting blank if you were not given a custom JavaScript endpoint.
+- **API key**: Found in the Braze **Developer Console** under **Settings**. Note that API keys will differ for each platform (iOS, Android, and Web).
+- **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
+- **Braze instance**: Custom
+- **Custom REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).
+- **Custom SDK endpoint**: Given to you by your Braze support or account representative (e.g., `sdk.api.braze.com`). Leave this setting blank if you were not given a custom API endpoint.
+- **Custom JavaScript endpoint**: Given to you by your Braze support or account representative. Leave this setting blank if you were not given a custom JavaScript endpoint.
 
 #### Server API integration
 
@@ -119,13 +119,13 @@ This is an add-on to route your backend data to Braze if you're using mParticle'
 
 ##### Connections settings for your Braze output
 
-In mParticle, navigate to __Connections > Connect > [Your desired platform] > Connect Output__ to add Braze as an output. __Save__ once completed. 
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed. 
 
 ![][4]
 
 Provide the following fields on the Braze output page: 
-- __App group REST API key__: A Braze REST API key with full permissions. This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__.
-- __Custom REST endpoint__: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the __Custom REST endpoint__ provided in [this step](#step-3-configure-your-mparticle-dashboard-to-enable-the-braze-kit).
+- **App group REST API key**: A Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.
+- **Custom REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the **Custom REST endpoint** provided in [this step](#step-3-configure-your-mparticle-dashboard-to-enable-the-braze-kit).
 
 ##### Data mapping
 

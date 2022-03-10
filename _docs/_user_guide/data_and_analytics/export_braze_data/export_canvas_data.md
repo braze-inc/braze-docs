@@ -14,9 +14,9 @@ tool:
 
 User data can be exported to a CSV. This data can be exported for your entire Canvas or a particular Canvas step.
 
-__Export user data for the entire Canvas:__<br>From the Canvas page of the dashboard, select the Canvas you wish to view. Then, click the __User Data__ dropdown in the __Canvas Details__ section. Select the option that fits your needs best.
+**Export user data for the entire Canvas:**<br>From the Canvas page of the Dashboard, select the Canvas you wish to view. Then, click the **User Data** dropdown in the **Canvas Details** section. Select the option that fits your needs best.
 
-__Export user data for individual Canvas steps:__<br>Canvas results can also be exported on a step-by-step basis. To do this, select the step you would like, then click the __User Data__ dropdown in the __Canvas Step Details__ page. 
+**Export user data for individual Canvas steps:**<br>Canvas results can also be exported on a step-by-step basis. To do this, select the step you would like, then click the **User Data** dropdown in the **Canvas Step Details** page. 
 
 ![User Data dropdown on the Canvas Details page][1]
 

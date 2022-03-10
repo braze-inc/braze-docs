@@ -12,7 +12,7 @@ tool: in-app messages
 > This article provides answers to some frequently asked questions about in-app messages.
 
 ### What is an in-browser message and how does it differ from an in-app message?
-In-browser messages are in-app messages sent to web browsers. To create an in-browser message, make sure to select __Web Browser__ under the __Send To__ field when creating your in-app message campaign or Canvas. 
+In-browser messages are in-app messages sent to web browsers. To create an in-browser message, make sure to select **Web Browser** under the **Send To** field when creating your in-app message campaign or Canvas. 
 
 ### Will an in-app message display if a device is offline?
 

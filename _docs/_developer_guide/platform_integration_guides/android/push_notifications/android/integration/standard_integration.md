@@ -278,7 +278,7 @@ The large and small icons pictured below are examples of properly designed icons
 <drawable name="com_braze_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
 
-Setting a small notification icon is required. __If you do not set one, Braze will default to using the application icon as the small notification icon which may look suboptimal.__
+Setting a small notification icon is required. **If you do not set one, Braze will default to using the application icon as the small notification icon which may look suboptimal.**
 
 Setting a large notification icon is optional but recommended.
 

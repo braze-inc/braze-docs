@@ -60,16 +60,16 @@ Custom events are actions taken by your users; they're best suited for tracking 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the custom event has occurred __more than X number of times__ | __MORE THAN__ | __NUMBER__ |
-| Check if the custom event has occurred __less than X number of times__ | __LESS THAN__ | __NUMBER__ |
-| Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __NUMBER__ |
-| Check if the custom event last occurred __after X date__ | __AFTER__ | __TIME__ |
-| Check if the custom event last occurred __before X date__ | __BEFORE__ | __TIME__ |
-| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
-| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
-| Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+| Check if the custom event has occurred **more than X number of times** | **MORE THAN** | **NUMBER** |
+| Check if the custom event has occurred **less than X number of times** | **LESS THAN** | **NUMBER** |
+| Check if the custom event has occurred **exactly X number of times** | **EXACTLY** | **NUMBER** |
+| Check if the custom event last occurred **after X date** | **AFTER** | **TIME** |
+| Check if the custom event last occurred **before X date** | **BEFORE** | **TIME** |
+| Check if the custom event last occurred **more than X days ago** | **MORE THAN** | **NUMBER OF DAYS AGO** (Positive) Number) |
+| Check if the custom event last occurred **less than X days ago** | **LESS THAN** | **NUMBER OF DAYS AGO** (Positive) Number) |
+| Check if the custom event occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the custom event occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the custom event occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
@@ -111,16 +111,16 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the string attribute __exactly matches__ an inputted string| __EQUALS__ | __STRING__ |
-| Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__* | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __IS BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX*** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
+| Check if the string attribute **exists** on a user's profile | **IS BLANK** | **N/A** |
+| Check if the string attribute **does not exist** on a user's profile | **IS NOT BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+&#42; When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
 {% endalert %}
 
 {% alert tip %}
@@ -135,7 +135,7 @@ More resources on regex:
 #### Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.
+Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. **Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.** For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.
 
 If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
 
@@ -153,11 +153,11 @@ The maximum number of elements in custom attribute arrays defaults to 25. The ma
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the array attribute __includes a value which exactly matches__ an inputted value| __INCLUDES VALUE__ | __STRING__ |
-| Check if the array attribute __does not include a value which exactly matches__ an inputted value| __DOESN'T INCLUDE VALUE__ | __STRING__ |
-| Check if the array attribute __contains a value which partially matches__ an inputted value __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the array attribute __has any value__ | __HAS A VALUE__ | __N/A__ |
-| Check if the array attribute __is empty__ | __IS EMPTY__ | __N/A__ |
+| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
+| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** |
+| Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
+| Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 >  We use [Perl compatible regular expressions (PCRE)][11].
@@ -171,14 +171,14 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the time attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
-| Check if the time attribute __is after__ a __selected date__| __AFTER__ | __CALENDAR DATE SELECTOR__ |
-| Check if the time attribute is __more than X number__ of __days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the time attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the time attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
-| Check if the time attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
-| Check if the time attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
-| Check if the time attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** |
+| Check if the time attribute **is after** a **selected date**| **AFTER** | **CALENDAR DATE SELECTOR** |
+| Check if the time attribute is **more than X number** of **days ago** | **MORE THAN** | **NUMBER OF DAYS AGO** |
+| Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** |
+| Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** |
+| Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  |
+| Check if the time attribute **exists** on a user's profile | **BLANK** | **N/A** |
+| Check if the time attribute **does not exist** on a user's profile | **IS NOT BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
@@ -187,12 +187,12 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the numeric attribute __is more than__ a __numver__| __MORE THAN__ | __NUMVER__ |
-| Check if the numeric attribute __is less than__ a __number__| __LESS THAN__ | __NUMBER__ |
-| Check if the numeric attribute __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
-| Check if the numeric attribute __does not equal__ a __numver__| __DOES NOT EQUAL__ | __NUMBER__ |
-| Check if the numeric attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
-| Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+| Check if the numeric attribute **is more than** a **numver**| **MORE THAN** | **NUMVER** |
+| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
+| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
+| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
+| Check if the numeric attribute **exists** on a user's profile | **EXISTS** | **N/A** |
+| Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booleans (true/false)
@@ -200,9 +200,9 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the boolean value __is__ | __IS__  | __TRUE__, __FALSE__, __TRUE OR NOT SET__, or __FALSE OR NOT SET__ |
-| Check if the boolean value __exists__ on a user's profile | __EXISTS__  | __N/A__ |
-| Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
+| Check if the boolean value **is** | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
+| Check if the boolean value **exists** on a user's profile | **EXISTS**  | **N/A** |
+| Check if the boolean value **does not exist** on a user's profile | **DOES NOT EXIST**  | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Purchase events / revenue tracking
@@ -211,16 +211,16 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the total number of dollars spent __is greater than__ a __number__| __GREATER THAN__ | __NUMBER__ |
-| Check if the total number of dollars spent __is less than__ a __number__| __LESS THAN__ | __NUMBERL__ |
-| Check if total number of dollars spent __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
-| Check if the purchase last occurred __after X date__ | __AFTER__ | __TIME__ |
-| Check if the purchase last occurred __before X date__ | __BEFORE__ | __TIME__ |
-| Check if the purchase last occurred __more than X days ago__ | __MORE THAN__ | __TIME__ |
-| Check if the purchase last occurred __less than X days ago__ | __LESS THAN__ | __TIME__ |
-| Check if the purchase occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the purchase occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** |
+| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBERL** |
+| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** |
+| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** |
+| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** |
+| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** |
+| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |
+| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
@@ -228,11 +228,11 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 ## Taxi/ride-sharing app use case {#example-case}
 For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
-__Case Question #1: What is the goal?__
+**Case Question #1: What is the goal?**
 
 Their goal is straightforward in that they want users to hail taxi rides via their app.
 
-__Case Question #2: What are the intermediate steps on the way to that goal from app installation?__
+**Case Question #2: What are the intermediate steps on the way to that goal from app installation?**
 
 1. They need users to begin the registration process and fill out their personal information.
 2. They need users to complete & verify the registration process by inputting a code into the app they receive via SMS.
@@ -254,7 +254,7 @@ After implementing the events, you can now run the following campaigns:
 4. Send promotions to power users with lots of Successful Taxi Hails to thank them for their loyalty.
 5. Many, Many More.
 
-__Case Question #3: What other information might we want to know about our users that will inform our messaging?__
+**Case Question #3: What other information might we want to know about our users that will inform our messaging?**
 
 - Whether or not they have any promotional credit?
 - The average rating they give to their drivers?
@@ -290,7 +290,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 #### Set user IDs for every user
 
-User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We __strongly recommend__ providing this identifier as it will allow you to:
+User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We **strongly recommend** providing this identifier as it will allow you to:
 
 - Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [user data API][9].
@@ -344,7 +344,7 @@ The following content will be trimmed programmatically from your attributes and 
   -  "My \x80 Field" would be condensed to "My Field"
 
 #### Reserved keys
-Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are __RESERVED__ and __CANNOT__ be used as custom attributes:
+Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
 
 - `email`
 - `facebook`

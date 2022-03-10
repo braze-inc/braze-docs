@@ -72,7 +72,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 {% alert important %}
 
-To enable HTML in-app messages, your SDK integration __must__ supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+To enable HTML in-app messages, your SDK integration **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 <br> <br>
 At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message; therefore, the same `allowUserSuppliedJavascript` option must be set.
 

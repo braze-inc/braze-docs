@@ -22,8 +22,8 @@ With the Global Control Group, you can set a percentage of all users as a contro
 
 Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of News Feed Cards—users in your control group will still receive News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
 
-__Assigning users randomly to the Global Control Group:__<br> Braze randomly selects multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, please read the section [things to watch out for](#things-to-watch-for) below. <br><br>
-__Data tracking for reporting:__<br>Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method mentioned above.
+**Assigning users randomly to the Global Control Group:**<br> Braze randomly selects multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, please read the section [things to watch out for](#things-to-watch-for) below. <br><br>
+**Data tracking for reporting:**<br>Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method mentioned above.
 
 ## Create a Global Control Group
 
@@ -33,7 +33,7 @@ From the dashboard, go to **Global Message Settings** under **Engagement**, and 
 
 ### Step 2: Assign a percentage of all users to this control group
 
-Input a percentage for your control group and click __Save__. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 
+Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 
 
 The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
 
@@ -57,9 +57,9 @@ At this point, Braze generates a randomly selected group of users to comprise th
 
 You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
 
-__Before disabling your Control Group__ we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
+**Before disabling your Control Group** we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
 
-__After disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
+**After disabling your Control Group** you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
 ![Global Control Group][2]{: style="max-width:50%" }
 
@@ -75,7 +75,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 ## View reporting
 
-To view a report for your Global Control Group from the dashboard, navigate to __Global Control Group__ under __Data__. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click __Run Report__.
+To view a report for your Global Control Group from the dashboard, navigate to **Global Control Group** under **Data**. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
 
 ![Global Control Group][6]
 
@@ -143,7 +143,7 @@ Only one of these segments is active and can be queried using the [Users by Glob
 
 ### Optimal control group size {#percentage-guidelines}
 
-<br>__Two main rules to keep in mind are__:<br>- Your control group should be no smaller than 1000 users.<br>- Your control group should be no more than 10% of your entire audience.
+<br>**Two main rules to keep in mind are**:<br>- Your control group should be no smaller than 1000 users.<br>- Your control group should be no more than 10% of your entire audience.
 
 If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage above 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
 - Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you’re using your campaigns to drive engagement and conversions.

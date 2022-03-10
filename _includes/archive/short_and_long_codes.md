@@ -83,12 +83,12 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 | Pros |
 | ---- |
-| __Speed and scalability__<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>__MMS enabled__<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
 | ---- |
-| __Short codes are not available everywhere__<br> Short codes are currently available in only the US, UK, and Canada.<br><br>__Long application process__<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will __not__ filter messages allowing for higher sending rates.<br><br>__Higher cost__<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
+| **Short codes are not available everywhere**<br> Short codes are currently available in only the US, UK, and Canada.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
 {: .reset-td-br-1}
 
 {% endtab %}
@@ -100,12 +100,12 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| __Can be used immediately to send messages__<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process. Long codes can also be set as a fallback number if a short code fails.<br><br>__Greater availability worldwide__<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>__MMS enabled__<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Can be used immediately to send messages**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process. Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Cons |
 | --- |
-| __Slower sending speeds__<br>Long codes do not match the speed and sending of short codes. SMS sending rates are 1 segment per second in the US, 10 segments per second internationally. |
+| **Slower sending speeds**<br>Long codes do not match the speed and sending of short codes. SMS sending rates are 1 segment per second in the US, 10 segments per second internationally. |
 {: .reset-td-br-1}
 
 {% endtab %}
@@ -120,12 +120,12 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 | Pros |
 | ---- |
-| __Speed and scalability__<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>__MMS enabled__<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
 | ---- |
-| __Short codes are not available everywhere__<br> Short codes are currently available in only the __US and Canada__.<br><br>__Long application process__<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will __not__ filter messages allowing for higher sending rates.<br><br>__Higher cost__<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
+| **Short codes are not available everywhere**<br> Short codes are currently available in only the **US and Canada**.<br><br>**Long application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to ensure deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost**<br> Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
 {: .reset-td-br-1}
 
 {% endtab %}
@@ -137,7 +137,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages altogether. Through the use of Alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
 
-Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There __may not__ be only numbers. 
+Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There **may not** be only numbers. 
 
 | Pros | Cons |
 | ---- | ---- | 
@@ -154,7 +154,7 @@ A toll-free telephone number, or a freephone number, is a telephone number that 
 
 | Pros | Cons |
 | ---- | ---- | 
-| - Can be used immediately to send messages | - Toll-free numbers are only the __US and Canada__<br>- Slower sending speed of 1 segment per second.<br>- MMS is not enabled |
+| - Can be used immediately to send messages | - Toll-free numbers are only the **US and Canada**<br>- Slower sending speed of 1 segment per second.<br>- MMS is not enabled |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -185,7 +185,7 @@ Regulations require that there are responses to all opt-in, opt-out, and help/in
 | Help | n/a | `Our company is a company that does this and that. For more info on the company, let us know here. Or, you can contact support at 1-800-111-1111.` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Depending on your situation, you may need to provide more or fewer flows like the ones listed above. You'll also have to let us know __three general examples__ of messages you plan to send via SMS - feel free to ask your Braze representative for guidance.
+Depending on your situation, you may need to provide more or fewer flows like the ones listed above. You'll also have to let us know **three general examples** of messages you plan to send via SMS - feel free to ask your Braze representative for guidance.
 
 You also must inform us, regardless of which number you use, of how many messages per month you plan to send.
 

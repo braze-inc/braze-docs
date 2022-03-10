@@ -33,7 +33,7 @@ Before you can send an iOS push notification using Braze, you must provide your 
 
 {% tabs local %}
   {% tab .p8 File (Recommended) %}
-__Using a .p8 File (Authentication Tokens)__
+**Using a .p8 File (Authentication Tokens)**
 
 As described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3):
 
@@ -50,11 +50,11 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
 
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
-__Using a .p12 Certificate (Legacy)__
+**Using a .p12 Certificate (Legacy)**
 
 Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process we recommend utilizing the above-described .p8 authentication scheme instead.  However, if you still wish to, you may configure and upload .p12 certificates as described here:
 
-__Step 1: Generate Certificate Signing Request__
+**Step 1: Generate Certificate Signing Request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
 2. Select Identifiers > App IDs in the left sidebar<br>![iOS Provisioning]({% image_buster /assets/img_archive/ios_provisioning.png %})
@@ -65,7 +65,7 @@ __Step 1: Generate Certificate Signing Request__
 
 >  You must update your provisioning profile for the app after you create your SSL certificates. A simple "Refresh" in the organizer will accomplish this.
 
-__Step 2: Export Certificate__
+**Step 2: Export Certificate**
 
 1. Download the production push certificate that you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on My Certificates and locate your push certificate.

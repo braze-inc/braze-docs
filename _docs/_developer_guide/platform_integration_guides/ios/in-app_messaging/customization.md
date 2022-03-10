@@ -16,7 +16,7 @@ All of Braze's in-app message types are highly customizable across messages, ima
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support.
 <br><br>
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS in-app messages, News Feed, or Content Cards.
+**Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images** within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
 ## Key-value pair extras

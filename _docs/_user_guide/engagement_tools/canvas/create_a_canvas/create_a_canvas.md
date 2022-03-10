@@ -235,7 +235,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 - For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-__Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
+**Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step**! 
 
 For more information on the Canvas Entry Properties Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endtab %}

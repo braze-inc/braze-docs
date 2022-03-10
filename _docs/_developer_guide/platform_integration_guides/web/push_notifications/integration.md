@@ -83,7 +83,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Common issues
 
-__I followed the integration instructions but I'm still not receiving any push notifications.__
+**I followed the integration instructions but I'm still not receiving any push notifications.**
 
 - Not all browsers can receive push messages. Please ensure that ```appboy.isPushSupported()``` returns true in the browser.
 - Note that if a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.

@@ -160,7 +160,7 @@ This example uses the following frequency capping rules:
 - A user triggers the same campaign, `Campaign ABC` three times over the course of a week.
 - This user triggers `Campaign ABC` once on Monday, once on Wednesday, and once on Thursday.
 
-__Then, the expected behavior is that:__
+**Then, the expected behavior is that:**
 
 - This user will receive the campaign sends that triggered on Monday and Wednesday.
 - This user will not receive the third campaign send on Thursday because the user has already received two push campaign sends that week.
@@ -216,8 +216,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 | Action | Result |
 |---|---|
-| The `promotional` tag is removed from __Campaign A__ after your user received the message, but before __Campaign B has sent.__ | Your user will receive __Campaign B__.|
-| The `promotional` tag is mistakenly removed from __Campaign A__ after your user received the message. <br> The tag is added back to __Campaign A__ on Tuesday, before __Campaign B__ is sent. | Your user will not receive __Campaign B__. |
+| The `promotional` tag is removed from **Campaign A** after your user received the message, but before **Campaign B has sent.** | Your user will receive **Campaign B**.|
+| The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user will not receive **Campaign B**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Sending at large scales

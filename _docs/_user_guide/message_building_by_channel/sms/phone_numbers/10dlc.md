@@ -22,10 +22,10 @@ All customers who currently have and/or use US long codes to send to US customer
 10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
 
 10DLC helps alleviate those issues by offering: 
-- __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
-- __Better Deliverability__: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
-- __Improved Compliance__: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
-- __Budget Friendly__: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code. 
+- **Higher Throughput**: 10DLC numbers support a higher volume of messages than regular long codes.
+- **Better Deliverability**: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
+- **Improved Compliance**: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
+- **Budget Friendly**: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code. 
 
 Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
@@ -118,4 +118,4 @@ Visit the Twilio 10DLC article to check out updated [throughput estimates](https
 
 ## Next steps
 
-Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. __If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.__ Reach out to your CSM to get started on your 10DLC registration. 
+Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. **If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.** Reach out to your CSM to get started on your 10DLC registration. 

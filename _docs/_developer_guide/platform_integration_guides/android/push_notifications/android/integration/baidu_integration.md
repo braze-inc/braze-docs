@@ -13,19 +13,19 @@ channel:
 
 Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].
 
->  Using Baidu Cloud push __does not__ require you to distribute your apps via the Baidu App Store.
+>  Using Baidu Cloud Push **does not** require you to distribute your apps via the Baidu App Store.
 
 ## Step 1: Create a Baidu account
 
-Visit the [Baidu Portal][7]. You will see a homepage similar to the following. Click __登录__ (Log In) among the menu options on the top right to bring up a dialog that will allow you to log in or create a new account.
+Visit the [Baidu Portal][7]. You will see a homepage similar to the following. Click **登录** (Log In) among the menu options on the top right to bring up a dialog that will allow you to log in or create a new account.
 
 ![Baidu Portal][33]
 
-To create a new account, in the log-in dialog, click __立即注册__ (New Account) directly to the bottom right of the large blue 登录 (Log In) button.
+To create a new account, in the log-in dialog, click **立即注册** (New Account) directly to the bottom right of the large blue 登录 (Log In) button.
 
 ![Baidu Login Dialog][38]
 
-Enter an email address, password, and captcha on the account creation page. Accept the license agreement and click __注册__ (Create Account) to register.
+Enter an email address, password, and captcha on the account creation page. Accept the license agreement and click **注册** (Create Account) to register.
 
 ![Baidu Sign-up Page][17]
 
@@ -33,23 +33,23 @@ You will receive an email from Baidu. Follow the verification link. Make sure to
 
 ![Baidu Verification Email][34]
 
-On the following page, you will complete an SMS verification. Choose your country code (美国 in the example image denotes the United States). Enter your phone number and click __发送验证短信__ (Send SMS). You should receive a text message containing a six-digit number, which you will enter in the 验证码 (Code). Make sure to enter your verification code within 30 minutes. Click __提交__ (Submit) to submit. Congratulations! You now have a Baidu account.
+On the following page, you will complete an SMS verification. Choose your country code (美国 in the example image denotes the United States). Enter your phone number and click **发送验证短信** (Send SMS). You should receive a text message containing a six-digit number, which you will enter in the 验证码 (Code). Make sure to enter your verification code within 30 minutes. Click **提交** (Submit) to submit. Congratulations! You now have a Baidu account.
 
 ![Baidu Verification SMS][35]
 
 ## Step 2: Register as a Baidu developer
 
-Visit the [Baidu Developer Portal][36]. Open the dropdown menu in the top right of the screen. Choose __注册开发者__ (Create New Developer Account) to begin registration.
+Visit the [Baidu Developer Portal][36]. Open the dropdown menu in the top right of the screen. Choose **注册开发者** (Create New Developer Account) to begin registration.
 
 ![Baidu Developer Portal][37]
 
-On the registration page, choose your account type (个人 for personal, 公司 for business) and developer type (Developer is preselected and correct for most cases). Enter your name, a bio, and phone number with country code in parenthesis (For example, (1)xxxxxxxxxx). Click __发送验证码__ (Send Verification Code) and enter the verification code in the following line. The next two fields, developer website, and developer logo are optional. Accept the license agreement and click 提交 (Submit) to submit. Congratulations! You now have a Baidu developer account.
+On the registration page, choose your account type (个人 for personal, 公司 for business) and developer type (Developer is preselected and correct for most cases). Enter your name, a bio, and phone number with country code in parenthesis (For example, (1)xxxxxxxxxx). Click **发送验证码** (Send Verification Code) and enter the verification code in the following line. The next two fields, developer website, and developer logo are optional. Accept the license agreement and click 提交 (Submit) to submit. Congratulations! You now have a Baidu developer account.
 
 ![Baidu Developer Registration][13]
 
 ## Step 3: Register your application with Baidu
 
-Visit the [Baidu Project Portal][11]. Click __创建工程__ (Create Project).
+Visit the [Baidu Project Portal][11]. Click **创建工程** (Create Project).
 
 ![Baidu Project Portal][10]
 
@@ -57,13 +57,13 @@ On the following page, enter your application name. The following two checkboxes
 
 ![Baidu App Name][26]
 
-Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Click on the cloud push link in the menu on the left-hand side of the console. On the following page, click __推送设置__ (Set up push).
+Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Click on the cloud push link in the menu on the left-hand side of the console. On the following page, click **推送设置** (Set Up Push).
 
 ![Baidu App Console][14]
 
 ![Baidu Continue][29]
 
-On the following page, enter your app package name (e.g. com.braze.sample) and specify whether to cache messages and if so, how long. This indicates to Baidu how long to continue to attempt to send messages to offline users. Click __保存设置__ (Save Settings) to save.
+On the following page, enter your app package name (e.g. com.braze.sample) and specify whether to cache messages and if so, how long. This indicates to Baidu how long to continue to attempt to send messages to offline users. Click **保存设置** (Save Settings) to save.
 
 ![Baidu Configure Cloud][39]
 

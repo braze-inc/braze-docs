@@ -94,7 +94,7 @@ To set up a personalized push in the dashboard, you must register the specific c
 
 The method below, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
 
-__Parsing key-value pairs from push notifications__<br>
+**Parsing Key-Value Pairs from Push Notifications**<br>
 
 {% tabs %}
 {% tab Swift %}
@@ -157,7 +157,7 @@ To set up an information capture capable push in the dashboard, you must registe
 
 Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button.
 
-__Handling push notification action button responses__<br>
+**Handling Push Notification Action Button Responses**<br>
 
 {% tabs %}
 {% tab Swift %}

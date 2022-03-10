@@ -12,7 +12,7 @@ tool:
 
 # Content Blocks
 
-> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
+> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the **Content Blocks Library** tab in the [Templates & Media][6] section of your Braze account.
 
 With Content Blocks, you can:
 
@@ -23,7 +23,7 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy — go to __Templates & Media__, then select the __Content Blocks Library__ tab. Click __Create Content Block.__
+Creating a Content Block is easy — go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.**
 
 Then, create your Content Block!
 
@@ -34,7 +34,7 @@ Content Blocks have two types: `HTML` or `text`. Braze will select the type for 
 You can also [create and manage your Content Blocks via API][5].
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the __Capture__ tag on your block along with the __&#124; strip__ filter. 
+When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
@@ -80,7 +80,7 @@ Messages using the archived Block will still perform as though it was there. How
 
 1. When your Block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
 2. When your Block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!
-3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
+3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing **all** content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
 
 {% alert tip %}
   You can save a Content Block without content in it.

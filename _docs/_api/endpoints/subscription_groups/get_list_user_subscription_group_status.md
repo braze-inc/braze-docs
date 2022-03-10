@@ -14,13 +14,13 @@ description: "This article outlines details about the List Users' Subscription G
 /subscription/status/get
 {% endapimethod %}
 
-Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 

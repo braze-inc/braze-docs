@@ -112,7 +112,7 @@ You may either simply not integrate certain parts of the SDK, or use [`stopWebTr
 You can use [`setDeviceObjectAllowlist`][1]to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
-An empty allowlist will result in __no__ device data being sent to Braze.
+An empty allowlist will result in **no** device data being sent to Braze.
 {% endalert %}
 
 ### iOS SDK

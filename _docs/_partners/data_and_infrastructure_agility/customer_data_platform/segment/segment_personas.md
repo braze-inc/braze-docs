@@ -28,10 +28,10 @@ The Braze and Segment integration allows you to use [Personas](https://segment.c
 
 ### Step 1: Create a Segment computed trait or audience
 
-1. In Segment, navigate to the __Computed Traits__ or __Audiences__ tab in __Personas__, and click __New__.
+1. In Segment, navigate to the **Computed Traits** or **Audiences** tab in **Personas**, and click **New**.
 2. Create your computed trait or audience. A lightning bolt in the upper right corner of the page will indicate if the computation updates in real-time.
-3. Next, select __Braze__ as your destination. 
-4. Preview your audience by clicking  __Review & Create__. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck __Historical Backfill__.
+3. Next, select **Braze** as your destination. 
+4. Preview your audience by clicking  **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 5. In the computed trait or audience settings, adjust the connection settings based on how you would like your data sent to Braze (see below).
 
 #### Computed traits and audiences
@@ -47,7 +47,7 @@ You can choose which method to use (or choose to use both) when you connect the 
 
 You can send computed traits and audiences to Braze as `identify` calls to create custom attributes in Braze. 
 
-For example, if you have a Personas computed trait for “Last Product Viewed Item,” you would find `last_product_viewed_item` in the user’s Braze profile under __Custom Attributes__. If this were instead a Personas audience, you would find your audience listed under __Custom Attributes__ set as `true`.
+For example, if you have a Personas computed trait for “Last Product Viewed Item,” you would find `last_product_viewed_item` in the user’s Braze profile under **Custom Attributes**. If this were instead a Personas audience, you would find your audience listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
@@ -58,7 +58,7 @@ For example, if you have a Personas computed trait for “Last Product Viewed It
 
 You can send computed traits and audiences to Braze as `track` calls to create custom events in Braze. 
 
-Continuing the previous example, if a user has a computed trait for “Last Product Viewed Item”, it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under __Custom Events__. If this were instead a Personas audience, you would find your audience, count, and most recent timestamp listed under __Custom Attributes__ set as `true`.
+Continuing the previous example, if a user has a computed trait for “Last Product Viewed Item”, it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead a Personas audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
@@ -70,8 +70,8 @@ Continuing the previous example, if a user has a computed trait for “Last Prod
 ### Step 2: Segment users in Braze
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, create a new segment, and name your segment. Next, based on which call you used:
-- __Identify__: Select __custom attribute__ as the filter and locate your custom attribute. Next, use the "matches regex" option (trait) or the "equals" option (audience) and input the appropriate variable.
-- __Track__: Select __custom event__ as the filter and locate your custom event. Next, use the "more than", "less than", or "exactly" option, and insert your desired value. This will depend on how you want to define your segment.
+- **Identify**: Select **custom attribute** as the filter and locate your custom attribute. Next, use the "matches regex" option (trait) or the "equals" option (audience) and input the appropriate variable.
+- **Track**: Select **custom event** as the filter and locate your custom event. Next, use the "more than", "less than", or "exactly" option, and insert your desired value. This will depend on how you want to define your segment.
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
