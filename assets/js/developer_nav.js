@@ -34,7 +34,7 @@ $(document).ready(function () {
     }
     
     // if no platform is selected, or in the discolure menu, show all platforms
-    if (!dev_selected && !url_selected || location.pathname.split('/')[3] === 'disclosures') {
+    if (!dev_selected && !url_selected || location.pathname.indexOf('disclosures') > -1 {
       platform_objects.each(function () {
         var id = $(this).attr('id');
         show(id);
