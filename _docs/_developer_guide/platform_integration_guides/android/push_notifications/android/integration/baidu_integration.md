@@ -69,7 +69,7 @@ On the following page, enter your app package name (e.g. com.braze.sample) and s
 
 ## Step 4: Add Baidu to your application
 
-Visit the [Baidu push sdk portal][40] and download the latest Baidu Cloud push Android SDK.
+Visit the [Baidu push SDK portal][40] and download the latest Baidu Cloud push Android SDK.
 
 ![Baidu SDK Portal][41]
 
