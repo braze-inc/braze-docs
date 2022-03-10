@@ -158,7 +158,7 @@ For this example, suppose we have an `acccounts` object array that we've just se
 
 In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**. Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
 
-![][generate_schema]
+![][8]
 
 {% alert tip %}
 It may take a few minutes for your schema to generate depending on how much data you've sent us. Feel free to grab a coffee and check back on this later.
@@ -166,7 +166,7 @@ It may take a few minutes for your schema to generate depending on how much data
 
 After the schema has been generated, a new <i class="fas fa-plus"></i> plus button appears in place of the **Generate Schema** button. You can click on it to see what Braze knows about this nested custom attribute. 
 
-![][generate_schema_complete]
+![][9]
 
 During schema generation, Braze looks at previous data sent and builds an ideal representation of your data for this attribute. Braze also analyzes and adds a data type for your nested values.
 
@@ -176,7 +176,7 @@ For our `accounts` object array, you can see that within the object array, there
 - A number type with a key of `balance` (balance amount in the account)
 - A string type with a key of `type` (non-taxable or taxable account)
 
-![][schema]{: style="max-width:50%" }
+![][10]{: style="max-width:50%" }
 
 Now that we’ve analyzed and built a representation of the data, let’s build a segment.
 
@@ -186,15 +186,15 @@ Let's target customers who have a balance of less than 100 so that we can send t
 
 Create a segment and add the filter `Nested Custom Attribute`, then search for and select your object or object array. Here we've added the `accounts` object array. 
 
-![][segment_schema1]
+![][11]
 
 Click the <i class="fas fa-plus"></i> plus button in the path field. This will bring up a representation of your object or object array. You can select any of the listed items and Braze will insert them into the path field for you. For our use case, we need to get the balance. Select the balance and the path (in this case, `[].balance`) is automatically populated in the path field.
 
-![][segment_schema2]{: style="max-width:50%" }
+![][12]{: style="max-width:50%" }
 
 You can click **Validate** to verify that the contents of the path field is valid, then build the rest of the filter as needed. Here we've specified that the balance should be less than 100.
 
-![][segment_schema3]
+![][13]
 
 Thats it! You just created a segment using a nested custom attribute all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
@@ -232,9 +232,9 @@ Updating a custom attribute object to `null` also consumes a data point.
 [5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
 [6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
 [7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[generate_schema]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[generate_schema_complete]: {% image_buster /assets/img_archive/nca_generate_schema_complete.png %}
-[schema]: {% image_buster /assets/img_archive/nca_schema.png %}
-[segment_schema1]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[segment_schema2]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[segment_schema3]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
+[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
+[9]: {% image_buster /assets/img_archive/nca_generate_schema_complete.png %}
+[10]: {% image_buster /assets/img_archive/nca_schema.png %}
+[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
+[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
+[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
