@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This article covers additional customization and configuration options such as verbose logging, suppressing loggind, and how to implement multiple API keys."
+description: "This article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys."
 
 ---
 
@@ -23,7 +23,7 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ## Enabling verbose logging {#android-verbose-logging}
 
-Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred! Verbose logging is only intended to be used in development environments and should not be enabled in a released application. Logs sent to our support team should begin as soon as the application is launched and should end well after the observed issue occurs.
+Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
 
 To enable verbose logging on the Braze Android SDK:
 
@@ -45,7 +45,7 @@ BrazeLogger.setLogLevel(Log.VERBOSE)
 {% endtabs %}
 
 {% alert important %}
-Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK, to guarantee as much logging as possible.
+Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK to guarantee as much logging as possible.
 {% endalert %}
 
 To know if your obtained logs are verbose, look for `V/Braze` somewhere in your logs. For example:
@@ -54,9 +54,9 @@ To know if your obtained logs are verbose, look for `V/Braze` somewhere in your 
 
 ### Suppressing Braze SDK logging
 
-The default Log Level for the Braze Android SDK is `INFO`.
+The default log level for the Braze Android SDK is `INFO`.
 
-To change the Braze Log Level, call [`BrazeLogger.setLogLevel()`][70] with one of the [`android.util.Log`][54] constants or `BrazeLogger.SUPPRESS`. For example:
+To change the Braze log level, call [`BrazeLogger.setLogLevel()`][70] with one of the [`android.util.Log`][54] constants or `BrazeLogger.SUPPRESS`. For example:
 
 {% tabs %}
 {% tab JAVA %}
@@ -94,7 +94,7 @@ For each relevant build variant, create a new `braze.xml` for it in `src/<build 
 
 When the build variant is compiled, it will use the new API key.
 
-To set an API key in code, please see the [runtime configuration][69] documentation.
+See the [runtime configuration][69] documentation for setting an API key in code.
 
 [3]: https://developer.android.com/studio/build/build-variants.html
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
