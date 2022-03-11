@@ -18,9 +18,9 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 
 With Intelligent Timing, you may choose the day(s) on which your message will send and, optionally, choose to send the campaign on a recurring schedule. We recommend only using Intelligent Timing when you can schedule the campaign at least 24 hours before the send date to ensure that users optimal times' have not passed when the campaign is launched. If a campaign is launched and a user's optimal time has already passed, the message goes out immediately. If it is more than an hour in the past, the message is not sent at all.
 
-To ensure every eligible user can fall into and receive your campaign at their intelligent time, we recommend launching your campaign 48hrs before the scheduled time of send. In a single day, there are approximately 48 hours that it spans. Depending on where your users reside, they may need more than 24hrs to receive their intelligent time message as their intelligent time may have already passed when the campaign launches. 
+To ensure every eligible user can fall into and receive your campaign at their intelligent time, we recommend launching your campaign 48 hours before the scheduled time of send. In a single day, there are approximately 48 hours that it spans. Depending on where your users reside, they may need more than 24hrs to receive their intelligent time message as their intelligent time may have already passed when the campaign launches. 
 
-![Optimal Send Time][1]
+![Specifying time-based scheduling options when Intelligent Timing is chosen, such as optimal send time.][1]
 
 ### Window of time
 
@@ -30,7 +30,9 @@ If a user's optimal time is calculated as being outside this window, the message
 
 ## Segment filtering
 
-When using Intelligent Timing, Braze recommends that your campaign's segment filters allow for at least a 3-day window. For example, instead of using the filters "first used more than 1 day ago" and "first used less than 3 days ago", we recommend using the filters "first used more than 1 day ago" and "first used less than 4 days ago." This is because time windows of less than 3 days may result in some users falling out of the segment before their optimal send time is reached.<br><br>![Intelligent timing filter example][3]
+When using Intelligent Timing, Braze recommends that your campaign's segment filters allow for at least a 3-day window. For example, instead of using the filters `First used more than 1 day ago` and `First used less than 3 days ago`, we recommend using the filters `First used more than 1 day ago` and `First used less than 4 days ago`. This is because time windows of less than three days may result in some users falling out of the segment before their optimal send time is reached.
+
+![][3]
 
 ## Fallback options
 
@@ -50,9 +52,9 @@ If a triggered campaign or Canvas step is activated to send a user a message wit
 
 ## Preview chart
 
-![Intelligent Timing Preview Chart][2]
-
 On the **Delivery** and **Target Users** pages in the campaign wizard, you can generate a chart to see how many users will receive the message according to Intelligent Timing in each hour of the day. 
+
+![Intelligent Timing preview chart showing estimates of the number of users who will receive the message in a specified hour, determined by their previous engagement data.][2]
 
 To do this, first, make sure to specify an audience on the **Target Users** page. Once you do that, click **Refresh Data** to see the chart on the corresponding pages. Whenever you change any settings about Intelligent Timing or the audience, you'll need to click **Refresh Data** again to view an updated chart.  
 

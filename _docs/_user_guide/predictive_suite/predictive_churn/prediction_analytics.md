@@ -20,7 +20,7 @@ __Analytics Components__<br>
 
 The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
 
-![Churn Targeting][4]{: style="max-width:90%"}
+![][4]{: style="max-width:90%"}
 
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
 
@@ -36,7 +36,7 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Prediction quality {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. To learn more about what this involves, check out [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Here's what we recommend for various ranges of Prediction Quality:
 
@@ -52,7 +52,7 @@ The Prediction will be trained again every two weeks and updated alongside the P
 
 ## Estimated results {#estimated_results}
 
-![Estimated Results][6]{: style="float:right;max-width:30%;margin-left:15px;"}
+![][6]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users on that past data, these progress bars estimate for a future potential message using the audience highlighted with the slider:
 

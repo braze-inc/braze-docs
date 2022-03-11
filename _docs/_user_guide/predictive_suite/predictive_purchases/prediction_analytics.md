@@ -30,13 +30,13 @@ The scores and the corresponding categories will be updated according to the sch
 
 The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page. Users in buckets further to the right have higher scores and are more likely to purchase. Users in buckets further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting those users.
 
-![Churn Targeting][4]{: style="max-width:90%"} 
+![][4]{: style="max-width:90%"} 
 
 As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
 
 ### Estimated results {#estimated_results}
 
-![Estimated Results][6]
+![][6]
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected above in two ways:
 

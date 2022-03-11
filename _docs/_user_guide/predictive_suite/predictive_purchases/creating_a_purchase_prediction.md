@@ -18,7 +18,7 @@ There is a limit of 3 concurrently active Purchase Predictions. Before purchasin
 
 ## Step 1: Create a new Prediction
 
-![Purchase 1][1]
+![][1]
 
 On the first page, give your new Prediction a unique name. You can also provide a description to save any relevant notes.
 
@@ -26,14 +26,13 @@ Click __Forward__ to move to the next step. Optionally, you can click __Build No
 
 ## Step 2: Specify purchase tracking
 
-On this page, specify if your users' purchases are stored in Braze as standard [purchase events](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events/) or [custom events](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/).
+On this page, specify if your users' purchases are stored in Braze as standard [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
 
 Here, you'll see if the selected Purchase method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a Prediction with the quantity of data available. If you believe you're incorrectly seeing this error, please get in touch with your CSM.
 
 #### Prediction Window
 
-Prediction Window is the time frame in which you want to predict if a user will make a purchase. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Purchase Likelihood Score indicates how likely a user is to Purchase within the number of days specified by the Prediction Window. 
-
+Prediction Window is the time frame in which you want to predict if a user will make a purchase. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Purchase Likelihood Score indicates how likely a user is to Purchase within the number of days specified by the Prediction Window.
 
 ### Step 3: Filter your Prediction Audience (optional) {#audience}
 

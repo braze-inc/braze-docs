@@ -23,13 +23,14 @@ While Predictive Churn is turned on at a company level, some app groups may not 
 {% endalert %}
 
 ### Problems with prediction audience size
-![Predicition Size][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
 
-When building out your Prediction Audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your Prediction Audience has too few users. 
+![][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
 
-If your Prediction Audience definition is too strict, you might not have a large enough pool of both historic and active users to work with. 
+When building out your Prediction Audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your Prediction Audience has too few users: 
 
-To fix this, you will need to either change the number of days and type of attributes used in this definition and/or switch up the actions that define churn. 
+"Not enough past churners availble from the selected Prediction Audience in the past 7 days to reliably build the Prediction."
+
+If your Prediction Audience definition is too strict, you might not have a large enough pool of both historic and active users to work with. To fix this, you will need to either change the number of days and type of attributes used in this definition and/or switch up the actions that define churn. 
 
 If your Prediction Audience continues to be a problem even after switching up your definitions, you may have too few users to support this optional feature. We would suggest trying to build a prediction without the extra layers and filters instead. 
 
@@ -38,14 +39,15 @@ If your Prediction Audience continues to be a problem even after switching up yo
 A Prediction Audience definition cannot exceed 100 million users. If you see a message saying your audience is too large, then we recommend adding more layers to your audience and/or changing the window of time it's based on.
 
 ### Prediction has poor quality
-![Predicition Quality][1]{: style="float:right;max-width:40%;margin-left:15px;"}
-If your model has a prediction quality of 40% and above, you are in a great place! But if your prediction quality drops to 39% and below, you may need to edit your Churn, and Prediction Audience definitions to be more specific or have different time windows. 
 
-If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a Prediction Quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
+![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% and above, you are in a great place! But if your prediction quality drops to 39% and below, you may need to edit your Churn, and Prediction Audience definitions to be more specific or have different time windows. 
+
+If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
 
 ## Timing clarifications
 
-You can look back up to 14 days for your churn prediction. Your "churn" definition and time window for any Last Made Purchase / Last Used App / Last Did Custom Event filters in the Prediction Audience definition cannot add up to more than 30 days.
+You can look back up to 14 days for your churn prediction. Your "churn" definition and time window for any `Last Made Purchase` / `Last Used App` / `Last Did Custom Event` filters in the Prediction Audience definition cannot add up to more than 30 days.
 
 For example, if you define churn as not starting a session in the past ten days, then your Prediction Audience can be based on up to 20 days of data. 
 
