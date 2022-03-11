@@ -75,7 +75,7 @@ Note: Tealium does not batch consent events (subscription preferences) or user d
 
 ### Remote commands
 
-Remote commands are a feature of the Tealium iOS and Android libraries that allows you to make calls from the Tealium SDK - through the Braze servers - to Braze using Tealium iQ tag management. The Braze remote command module will automatically install and build the required Braze libraries and handle all message rendering and analytics tracking. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
+Remote commands are a feature of the Tealium iOS and Android libraries that allows you to make calls from the Tealium SDK - through the Braze servers - to Braze. The Braze remote command module will automatically install and build the required Braze libraries and handle all message rendering and analytics tracking. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
 
 Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types, and the underlying native code is identical.
 
