@@ -152,7 +152,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 | Purchase attributes | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Track User Example]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
+![Track User Example]({% image_buster /assets/img/tealium/track_user_example.png %}){: style="max-width:80%"}
 
 {% endtab %}
 {% tab Delete User %}
