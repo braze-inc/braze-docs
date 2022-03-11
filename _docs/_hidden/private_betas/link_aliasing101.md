@@ -25,7 +25,7 @@ Clients can also update their existing Content Block. However, only a maximum of
 {% endalert %}
 
 ### Messages with Link Templates
-Messages which already had Link Templates enabled prior to Link Aliasing being enabled, will still continue to have their Link Templates applied.  For all 'live' messages, the Link Templates are still honored, however on any edit, the customer is asked to re-apply Link Templates again from the Link Management tab.  This is because the Link Template edit screen is no longer be available since it is now provided under the Link Management tab.
+Messages which already had Link Templates enabled prior to Link Aliasing being enabled, will still continue to have their Link Templates applied.  For all messages that existed prior to Link Aliasing being enabled, the Link Templates will still honored, however on any edit, the customer is asked to re-apply Link Templates again from the Link Management tab.  This is because the Link Template edit screen is no longer be available since it is now provided under the Link Management tab.
 
 ## What use cases does this potentially unlock?
 
