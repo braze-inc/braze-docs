@@ -38,7 +38,7 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 {% raw %}
 ```
 {% assign url = "https://www.examplelink.com" %}
-<a href='{{url}}'>Click this Link!</a>
+<a href='{{url}}'>Shop the collection</a>
 ```
 {% endraw %}
 {% endalert %}
