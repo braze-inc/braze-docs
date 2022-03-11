@@ -34,7 +34,7 @@ Churn Window is the time frame in which a user performs the behavior specified t
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
-![Churn Definition][1]
+![Churn Definition where a user is considered churned if they do not start a session in 7 days][1]
 
 For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the section on [Sample churn definitions](#sample-definitions) below.
 
@@ -60,7 +60,7 @@ In order to build a new Prediction immediately, only a subset of Braze segmentat
 
 For a sample list of Prediction Audience definitions, check out our sample definitions in the section on [Sample churn definitions](#sample-definitions) below.
 
-![Prediction Audience][3]
+![][3]
 
 Just like the previous page, the bottom panel will show you the estimated number of historic users that result from your Churn definition and Prediction Audience definition. These estimates must meet the minimum requirements shown in order to create a Prediction.
 
@@ -68,7 +68,7 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
-![Prediction Update Schedule][2]
+![Prediction Update Schedule set to daily at 5PM][2]
 
 {% alert note %}
 Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager. 
