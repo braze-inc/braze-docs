@@ -20,12 +20,12 @@ Visit our [documentation][9] for additional best practices.
 
 Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
 
-Within the __Application__ tab, ensure that `Toast Capable` is set to `YES`.
+Within the **Application** tab, ensure that `Toast Capable` is set to `YES`.
 
 ## Step 2: Configure the Braze dashboard
 
 1. [Find your SID and Client Secret][4]
-2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
+2. Within the **Settings** page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
 
 ## Step 3: Update for background open logging
 
@@ -72,7 +72,7 @@ Specify the string to be appended to the launch string in the “Additional Laun
 Braze also allows sending deep links through the REST API. [Windows Universal push objects][13] accept an optional `extra_launch_string` parameter.
 
 [4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID Dashboard"
+[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard"
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
 [13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/

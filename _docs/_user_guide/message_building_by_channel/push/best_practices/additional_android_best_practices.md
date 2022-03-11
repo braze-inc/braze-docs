@@ -15,15 +15,15 @@ platform: Android
 
 Android push notifications provide the option of dictating where notifications are displayed relative to other apps' notifications.  When composing the message for your push campaign, select "Notification Display Priority" in the settings tab to set a priority for your notification.
 
-![Dashboard Push Priority Location][41]
+![Dashboard push priority location][41]
 
-The provided options correspond to different priorities with which the notification will be displayed if a receiving user has multiple notifications. A more in-depth explanation of Android Push Priority and the priority options can be found [here][40].
+The provided options correspond to different priorities with which the notification will be displayed if a receiving user has multiple notifications. A more in-depth explanation of Android push priority and the priority options can be found [here][40].
 
 ## Android push category
 
 Android push notifications provide the option to specify if your notification falls into a predefined category. The Android system UI may use this Category to make ranking or filtering decisions about where to place the notification in the user's notification tray.
 
-![Dashboard Push Priority Location][52]
+![Dashboard push priority location][52]
 
 | Category       | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Android push notifications provide an optional field to determine how a notifica
 
 Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the Visibility from the push notification.
 
-![Dashboard Push Priority Location][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![Dashboard push priority location][53]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 Note that regardless of the Visibility, all notifications will be shown on the user's lock screen if the notification privacy setting on their device is *Show all content* (default setting). Likewise, notifications will not be shown on their lock screen if their notification privacy is set to *Do not show notifications*. The Visibility only has an effect if their notification privacy is set to *Hide sensitive content*. In that case, the notification will be displayed as follows:
 

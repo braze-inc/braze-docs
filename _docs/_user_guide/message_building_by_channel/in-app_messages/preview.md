@@ -134,7 +134,7 @@ We recommend uploading assets to Braze's Media Library for two reasons:
 
 To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a file _and_ add associate the file with this campaign.
 
-You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting __Add from Media Library__.
+You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting **Add from Media Library**.
 
 Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard. Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 

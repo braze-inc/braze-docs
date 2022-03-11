@@ -70,7 +70,7 @@ For instance, if you are trying to send out 75K messages with a 10K per minute r
 When sending a multichannel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
 {% endalert %}
 
-#### Rate limiting and connected content retries
+#### Rate limiting and Connected Content retries
 
 When the [Connected Content Retry][19] feature is enabled, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s think again about the 75K messages with a 10K per minute rate limit. In the first minute, the call fails or is slow and only sends 4K messages.
 
@@ -93,7 +93,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 
 Keep in mind that the per-minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
 
-#### Multi-Platform Push Campaigns
+#### Multi-platform push campaigns
 
 For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate-limit per minute will equally distribute the 10K messages across the 3 platforms.
 
@@ -160,7 +160,7 @@ This example uses the following frequency capping rules:
 - A user triggers the same campaign, `Campaign ABC` three times over the course of a week.
 - This user triggers `Campaign ABC` once on Monday, once on Wednesday, and once on Thursday.
 
-__Then, the expected behavior is that:__
+**Then, the expected behavior is that:**
 
 - This user will receive the campaign sends that triggered on Monday and Wednesday.
 - This user will not receive the third campaign send on Thursday because the user has already received two push campaign sends that week.
@@ -216,8 +216,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 | Action | Result |
 |---|---|
-| The `promotional` tag is removed from __Campaign A__ after your user received the message, but before __Campaign B has sent.__ | Your user will receive __Campaign B__.|
-| The `promotional` tag is mistakenly removed from __Campaign A__ after your user received the message. <br> The tag is added back to __Campaign A__ on Tuesday, before __Campaign B__ is sent. | Your user will not receive __Campaign B__. |
+| The `promotional` tag is removed from **Campaign A** after your user received the message, but before **Campaign B has sent.** | Your user will receive **Campaign B**.|
+| The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user will not receive **Campaign B**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Sending at large scales

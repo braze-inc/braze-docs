@@ -108,7 +108,7 @@ Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 
 ### Currents {#currents}
 
-Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+Selected choices will automatically flow through to Currents, under the [**In-App Message Click Events**][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
 
 ## Use cases
 

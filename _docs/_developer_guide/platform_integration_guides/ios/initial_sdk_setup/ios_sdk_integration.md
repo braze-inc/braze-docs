@@ -43,7 +43,7 @@ To build out your `BrazeManager.swift` file, create a new Swift file named _Braz
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
-2. Next, add a private constant variable named _apiKey_ and set it as the API key value from your app group in the Braze dashboard.
+2. Next, add a private constant variable named _apiKey_ and set it as the API key-value from your app group in the Braze dashboard.
 3. Add a private computed variable named _appboyOptions_, which will store configuration values for the SDK. It will be empty for now.
 
 {% subtabs global %}
@@ -175,7 +175,7 @@ Proceed to compile your code and run your application.<br><br>At this point, the
 
 ##### Add push certificate
 
-Navigate to your existing app group in the Braze dashboard. Under __Push Notification Settings__ upload your push certificate file to your Braze dashboard and save it. 
+Navigate to your existing app group in the Braze dashboard. Under **Push Notification Settings** upload your push certificate file to your Braze dashboard and save it. 
 
 ![Push Certificate]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
@@ -288,7 +288,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Step 2: Support remote notifications
-In the __Signing & Capabilities__ tab, add __Background Modes__ support and select __Remote notificiations__ to begin your support of remote notifications originating from Braze.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+In the **Signing & Capabilities** tab, add **Background Modes** support and select **Remote notificiations** to begin your support of remote notifications originating from Braze.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Step 3: Remote notification handling
 The Braze SDK can handle remote notifications that originate from Braze. Forward remote notifications to Braze; the SDK will automatically ignore push notifications that do not originate from Braze. Add the following method to your `BrazeManager.swift` file in the push notification extension.
@@ -430,14 +430,14 @@ Proceed to compile your code and run your application.<br><br>Try identifying us
 
 Based on the following Braze SDK `logCustomEvent` method, create a matching method. 
 
-__Braze `logCustomEvent` Reference Method__<br>
+**Braze `logCustomEvent` Reference Method**<br>
 This is by design because only the `BrazeManager.swift` file can directly access the Braze iOS SDK methods. Therefore, by creating a matching method, the result is the same and is done without the need for any direct dependencies on the Braze iOS SDK in your production code.
 
 ```
 open func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable : Any]?)
 ```
 
-__Matching Method__<br>
+**Matching Method**<br>
 Log custom events from the `Appboy` object to Braze. `Properties` is an optional parameter with a default value of nil. Custom events are not required to have properties but are required to have a name. 
 
 {% subtabs global %}
@@ -473,7 +473,7 @@ The SDK can log numerous types as custom attributes. There is no need to create 
 
 Custom attributes are logged from the `ABKUser` object. 
 
-Create __one method__ that can encompass all of the available types that can be set for an attribute. Add this method in your `BrazeManager.swift` file in the analytics extension. This can be done by filtering through the valid custom attribute types and call the method associated with the matching type.
+Create **one method** that can encompass all of the available types that can be set for an attribute. Add this method in your `BrazeManager.swift` file in the analytics extension. This can be done by filtering through the valid custom attribute types and call the method associated with the matching type.
 
 - The parameter `value` is a generic type that conforms to the `Equatable` protocol. This is explicitly done, so if the type is not what the Braze iOS SDK expects, there will be a compile-time error.
 - The parameters `key` and `value` are optional parameters that will be conditionally unwrapped in the method. This is just one way to ensure non-nil values are being passed to the Braze iOS SDK.
@@ -528,13 +528,13 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 
 Next, based on the following Braze SDK `logPurchase` method, create a matching method. 
 
-__Braze `logPurchase` Reference Method__<br>
+**Braze `logPurchase` Reference Method**<br>
 This is by design because only the `BrazeManager.swift` file can directly access the Braze iOS SDK methods. Therefore, by creating a matching method, the result is the same and is done without the need for any direct dependencies on the Braze iOS SDK in your production code. 
 
 ```
 open func logPurchase(_ productIdentifier: String, inCurrency currency: String, atPrice price: NSDecimalNumber, withoutQuantity quantity: UInt)
 ```
-__Matching Method__<br>
+**Matching Method**<br>
 Log purchases from the `Appboy` object to Braze. The SDK has multiple methods for logging purchases, and this is just one example. This method also handles creating the `NSDecimal` and `UInt` objects. How you want to handle that part is up to you, provided is just one example.
 
 {% subtabs global %}

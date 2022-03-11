@@ -39,7 +39,7 @@ If you require faster sending speeds for unknown phone numbers, reach out to you
 
 - Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
 - Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.
-- The `message_body` custom keyword value must be __lowercase__.
+- The `message_body` custom keyword value must be **lowercase**.
 
 ![picture][IMAGE2]
 

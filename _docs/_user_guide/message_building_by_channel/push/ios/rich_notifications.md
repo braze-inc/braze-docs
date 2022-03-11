@@ -24,7 +24,7 @@ tool:
 - To ensure your app can send rich notifications, please follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
 - You should also reference [Apple's documentation][2] for media limitations and specs.
 
-> As of January 2020, iOS Rich Push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+> As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
 
 - iOS will scale images to fit in the screen and will scale Rich images for the active/locked view.
 - File types that we currently support for direct uploading within our dashboard include JPG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
@@ -137,7 +137,7 @@ Add your image, GIF, audio, or video file in the **Rich Notification Asset** fie
 
 You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10, it will appear as text-only notifications without the rich content if you leave the box below unchecked.
 
-![iOS 10 Checkbox][5]{: style="max-width:70%;" }
+![iOS 10 checkbox][5]{: style="max-width:70%;" }
 
 ### Step 3: Continue creating your campaign
 
@@ -145,7 +145,7 @@ Once your rich notification content is uploaded to the dashboard, you can contin
 
 When a user receives the push notification, they can hard press on the push message to expand the image.
 
-![Rich Push Example][8]{: style="max-width:50%;" }
+![Rich push example][8]{: style="max-width:50%;" }
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

@@ -24,7 +24,7 @@ search_debug: false
 partner_api: true
 markdown_api: true
 
-# gitHub config
+# GitHub config
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/_fr'
 
 # Collections directory

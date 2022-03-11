@@ -3,7 +3,7 @@ nav_title: "Advanced Push Campaign Settings"
 article_title: Advanced Push Campaign Settings
 page_type: reference
 page_order: 6
-description: "This reference article covers several advanced Push campaign setting such as alert options, flags, sounds, expiry, and more."
+description: "This reference article covers several advanced push campaign setting such as alert options, flags, sounds, expiry, and more."
 platform: iOS
 channel:
   - push
@@ -14,7 +14,7 @@ tool:
 
 # Advanced push campaign settings
 
-> This reference article covers several advanced Push campaign setting such as Alert Options, Flags, Sounds, Expiry and more.
+> This reference article covers several advanced push campaign setting such as Alert Options, Flags, Sounds, Expiry and more.
 
 When creating push engagement, on the "Compose" step, you can select the "gear" icon to view the Advanced Settings available.
 
@@ -22,7 +22,7 @@ When creating push engagement, on the "Compose" step, you can select the "gear" 
 
 ## Alert options
 
-By clicking the checkbox here, you will notice a dropdown of key values available for adjusting how the notification will appear on devices.
+By clicking the checkbox here, you will notice a dropdown of key-values available for adjusting how the notification will appear on devices.
 
 ## Adding content-available flag
 

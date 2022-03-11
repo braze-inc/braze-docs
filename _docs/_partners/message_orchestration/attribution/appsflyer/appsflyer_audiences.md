@@ -59,7 +59,7 @@ In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, yo
 
 ### Step 4: Using AppsFlyer Audiences cohorts in Braze
 
-Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filter when defining segments in Braze by selecting the __AppsFlyer Cohorts__ filter.
+Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filter when defining segments in Braze by selecting the **AppsFlyer Cohorts** filter.
 
 ![User attributes filter "AppsFlyer Cohorts" selected.][7]
 

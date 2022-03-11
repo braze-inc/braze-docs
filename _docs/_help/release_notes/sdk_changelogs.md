@@ -7,7 +7,7 @@ description: "This page lists updates to Braze's Android SDK changelog."
 layout: dev_guide
 
 guide_top_header: "Braze SDK Changelogs"
-guide_top_text: "The changelogs for each SDK are available within Braze Docs or in their individual Github repositories linked below."
+guide_top_text: "The changelogs for each SDK are available within Braze Docs or in their individual GitHub repositories linked below."
 
 
 guide_featured_title: "Changelogs on Docs"

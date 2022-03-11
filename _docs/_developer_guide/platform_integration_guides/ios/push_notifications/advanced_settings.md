@@ -17,7 +17,7 @@ When creating push engagement, on the "Compose" step, you can select the "gear" 
 
 ## Alert options
 
-By clicking the checkbox here, you will notice a dropdown of key values available for adjusting how the notification will appear on devices.
+By clicking the checkbox here, you will notice a dropdown of key-values available for adjusting how the notification will appear on devices.
 
 ## Adding content-available flag
 

@@ -13,8 +13,8 @@ The dashboard has [improved filters]({{site.baseurl}}/user_guide/data_and_analyt
 There have been two significant changes to how certain custom attributes filters work. 
 
 The custom attribute filter changes are reflected in the filters: 
-- Less than __X__ Days Ago
-- Less than __X__ Days in the Future
+- Less than **X** Days Ago
+- Less than **X** Days in the Future
 - Day of Recurring Event<br>
 
 If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.

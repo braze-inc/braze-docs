@@ -42,13 +42,13 @@ After drafting your email message, click **Preview and Test**. From this page, s
 
 After drafting your mobile push, select the **Settings** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted message to your device.
 
-![Test Push]({% image_buster /assets/img_archive/testpush.png %})
+![Test push]({% image_buster /assets/img_archive/testpush.png %})
 
 #### Web push
 
 After creating your web push, select the **Settings** tab. Check **Send Test to Myself** and click **Send Test**.
 
-![Test Web Push]({% image_buster /assets/img_archive/testwebpush.png %})
+![Test web push]({% image_buster /assets/img_archive/testwebpush.png %})
 
 If you have already accepted push messages from the Braze dashboard, you will see the push come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
 
@@ -68,7 +68,7 @@ Directly clicking and opening the push message will send you to your app, where 
 
 #### Content card
 
-After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message. 
+After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
 ![Test Content Card]({% image_buster /assets/img/contentcard_test.png %})
 
@@ -77,7 +77,7 @@ After creating your Content Card, you can send a test Content Card to your app t
 
 #### SMS/MMS
 
-After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message. 
+After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
 ![Test Content Card]({% image_buster /assets/img/sms_test.png %})
 
@@ -86,7 +86,7 @@ After creating your SMS/MMS message, you can send a test message to your phone t
 
 #### Webhook
 
-After creating your webhook, you can do a test send to check the webhook response. Select the __test__ tab and select __send test__ to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
+After creating your webhook, you can do a test send to check the webhook response. Select the **test** tab and select **send test** to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
@@ -133,7 +133,7 @@ To send test News Feed cards, you need to target your previously created test se
 
 Finish confirming your campaign and launch it to test your News Feed cards.
 
->  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
 
 {% endtab %}
 {% endtabs %}
@@ -163,7 +163,7 @@ Testing campaigns [personalized][20] with [custom event properties][19] differs 
 Then use [action-based delivery][21] to deliver the campaign when the event occurs. 
 
 {% alert note %}
-If you're testing an iOS Push campaign, you must set the delay to 1 minute to allow yourself time to exit the app since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
+If you're testing an iOS push campaign, you must set the delay to 1 minute to allow yourself time to exit the app since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
 {% endalert %}
 
 ![Test Message Delivery][16]

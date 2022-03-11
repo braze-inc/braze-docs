@@ -16,7 +16,7 @@ A Segment Extension expands our existing segmentation capabilities by enabling y
 
 ## Step 1: Navigate to Segment Extensions
 
-From the left-hand side of the Dashboard under Engagement, expand the Segments section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
+From the left-hand side of the dashboard under **Engagement**, expand the **Segments** section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
 
 ## Step 2: Name your Segment Extension
 

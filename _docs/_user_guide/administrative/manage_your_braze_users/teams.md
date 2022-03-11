@@ -43,7 +43,7 @@ Dashboard objects can be assigned to Teams. Canvases, campaigns, cards, segments
 
 Based on the definitions applied to the Team created, when a Team filter is assigned, you automatically restrict user profiles that a dashboard object can include based on your team definition. For example, TeamA is defined as end-users from the US. When a TeamA Team filter is assigned to CampaignA, CampaignA will only include end-users from the USA, and only TeamA (other than dashboard admins) will be able to access CampaignA. 
 
-Based on assigned permissions, members of teams will only be allowed to access dashboard engagement tools that have the team filter set. Members are also able to filter Canvases, campaigns, cards, and segments by team to identify Dashboard objects relevant to them.
+Based on assigned permissions, members of teams will only be allowed to access dashboard engagement tools that have the team filter set. Members are also able to filter Canvases, campaigns, cards, and segments by team to identify dashboard objects relevant to them.
 
 ## Archiving an existing Team
 

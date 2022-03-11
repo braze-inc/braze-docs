@@ -12,7 +12,7 @@ tool: Campaigns
 
 ### How do you create a multichannel campaign?
 
-Multichannel campaigns can be created by selecting __Create Campaign__ and then __Multichannel Campaign__ within the dashboard. Once in a multichannel campaign, select __Add Messaging Channel__ within the __compose__ tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
+Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. Once in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 ### What are some ways I can start testing and optimizing campaigns?
 

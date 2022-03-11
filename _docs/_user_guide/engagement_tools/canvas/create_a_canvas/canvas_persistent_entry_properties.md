@@ -44,7 +44,7 @@ In the case that a Canvas entry property is null or blank, you can abort message
 
 To read more about aborting messages with Liquid, check out our [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages).
 
-## Global canvas entry properties
+## Global Canvas entry properties
 
 With `canvas_entry_properties`, you can set global properties that apply to all users or user-specific properties that only apply to the specified user. The user-specific property will supersede the global property for that user.
 

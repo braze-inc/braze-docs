@@ -21,9 +21,9 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | Requirement | Description |
 |---|---|
 | Radar account | A Radar account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__ |
-| Group identifier | Your group identifier can be found can be found within the __Braze Dashboard > Developer Console__ page. |
-| iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard > Manage Settings__ page. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
+| Group identifier | Your group identifier can be found can be found within the **Braze Dashboard > Developer Console** page. |
+| iOS API key<br>Android API key | These API keys can be found within the **Braze Dashboard > Manage Settings** page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -31,7 +31,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 To map data between the Braze and Radar SDKs, you must set the same user IDs in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
 To enable the integration on the [Radar integration page](https://www.onradar.com/integrations) under Braze:
-  - Set __Enabled__ to __Yes__
+  - Set **Enabled** to **Yes**
   - Set your Braze endpoint
   - Paste in your group identifier and API keys
   - Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
@@ -137,7 +137,7 @@ Bringing our use-case together, here is what the syntax of the campaign would lo
 {% raw %}
 ```
 {% connected_content https://api.radar.io/v1/search/places?radius=2000&near={{${most_recent_location}.latitude}},{{${most_recent_location}.longitude}}&chains=target,walmart&limit=5 :method get :headers {"Authorization": "<yourRadarPublishableKey>"} :content_type application/json :save nearbyplaces %}
-{% if nearbyplaces.__http_status_code__ != 200 %}
+{% if nearbyplaces.**http_status_code** != 200 %}
 {% abort_message('Connected Content returned a non-200 http status code') %}
 {% endif %}
 {% if nearbyplaces.meta.code != 200 %}

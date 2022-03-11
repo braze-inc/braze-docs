@@ -36,7 +36,7 @@ Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user
 
 ## The "Mobile push" option
 
-Mobile push incorporates Android, iOS, Windows, Kindle, and other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against Email and Web Push. 
+Mobile push incorporates Android, iOS, Windows, Kindle, and other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against email and Web push. 
 
 For example, if a user has several mobile devices, their mobile engagement rate would be represented by the highest rate exhibited across the devices. This would not, however, force the user to receive push notifications exclusively on that device. This rate is only used when comparing rates against email and web push.
 

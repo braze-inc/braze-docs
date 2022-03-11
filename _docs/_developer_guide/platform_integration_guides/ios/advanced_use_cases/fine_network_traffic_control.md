@@ -15,7 +15,7 @@ Braze allows the user the option to control network traffic using the following 
 
 ### Automatic request processing
 
-__*`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`*__
+***`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`***
 
 - This is the **default request policy** value.
 - The Braze SDK will automatically handle all server communication, including:
@@ -46,7 +46,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Manual request processing
 
-__*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
+***`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`***
 
 - This protocol is the same as Automatic Request Processing **EXCEPT**:
     - Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
