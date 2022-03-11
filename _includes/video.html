@@ -1,7 +1,17 @@
-{% if include.type == "static" and include.source == "youtube" %}
+{% if include.source == "loom" %}
+{% if include.type == "static" %}
+<div class="fixed_video">
+<iframe src="https://www.loom.com/embed/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+</div>
+{% else %}
+<iframe width="560" height="315" src="https://www.loom.com/embed/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+{% endif %}
+{% else %}
+{% if include.type == "static" %}
 <div class="fixed_video">
 <iframe src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
 </div>
 {% else %}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+{% endif %}
 {% endif %}
