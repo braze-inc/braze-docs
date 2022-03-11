@@ -68,7 +68,7 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Please select the **maximum frequency of updates** that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
-![Prediction Update Schedule set to daily at 5PM][2]
+![Prediction Update Schedule set to daily at 5pm.][2]
 
 {% alert note %}
 Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager. 
