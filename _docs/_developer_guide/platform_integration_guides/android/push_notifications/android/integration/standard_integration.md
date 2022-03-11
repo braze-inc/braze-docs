@@ -9,13 +9,13 @@ channel:
 
 ---
 
-# Overview
+# Integration
 
 ![Android inline image push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
-Check out [our help documentation][8] for push best practices.
+Check out our [help documentation][8] for push best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
 
@@ -413,12 +413,12 @@ For issues related to push analytics, see our [Troubleshooting Guide][57].
 
 If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [Messaging API][22]. You will need to replace the following fields with the correct values for your test case:
 
-- `YOUR_API_KEY` - available on the Developer Console page
-- `YOUR_EXTERNAL_USER_ID` - available on the User Profile Search Page
+- `YOUR_API_KEY` - available on the **Developer Console**
+- `YOUR_EXTERNAL_USER_ID` - available on the **User Profile Search** page
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
-```
+```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 

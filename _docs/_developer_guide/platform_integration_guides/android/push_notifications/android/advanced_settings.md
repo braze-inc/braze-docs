@@ -11,7 +11,7 @@ channel:
 
 # Advanced settings
 
-There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
+There are many advanced settings available for Android and FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![][1]
 
@@ -19,13 +19,13 @@ There are many advanced settings available for Android and Fire OS push notifica
 
 A **Notification ID** is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
 
-## Time to live (TTL) {#ttl}
-
-The **Time to Live** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are four weeks for FCM and 31 days for ADM.
-
 ## Firebase Messaging Delivery priority {#fcm-priority}
 
 The **[Firebase Messaging Delivery Priority](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message)** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging.
+
+## Time to live (TTL) {#ttl}
+
+The **Time to Live** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are four weeks for FCM and 31 days for ADM.
 
 ## Summary text {#summary-text}
 
