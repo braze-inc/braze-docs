@@ -141,11 +141,11 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ### Generate a schema using the nested object explorer {#generate-schema}
 
-You can generate a schema for your objects to build segment filters without needed to memorize nested object paths. To do so, perform the following steps.
+You can generate a schema for your objects to build segment filters without needing to memorize nested object paths. To do so, perform the following steps.
 
 #### Step 1: Generate a schema
 
-For this example, suppose we have an `acccounts` object array that we've just sent to Braze:
+For this example, suppose we have an `accounts` object array that we've just sent to Braze:
 
 ```json
 "accounts": [
