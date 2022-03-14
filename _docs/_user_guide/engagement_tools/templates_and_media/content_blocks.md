@@ -70,7 +70,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ## Archiving Content Blocks
 
-![Expanded Settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option highlighted.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Expanded Settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option is highlighted.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
 Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page.
 
