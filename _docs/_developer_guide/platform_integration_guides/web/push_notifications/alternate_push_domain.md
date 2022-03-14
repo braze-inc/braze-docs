@@ -24,6 +24,10 @@ Keep in mind that like many workarounds on the web, browsers continually evolve,
 
 To make the example below clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 
+##### **Shopify**
+Push for Shopify is uable to be implemented in this way. Shopify takes steps to remove headers that are required to deliver push.
+
+
 ## Step 1: Initiate prompting flow
 
 On `insecure.com`, open a new window to your secure domain using a URL parameter to pass the currently logged-in user's Braze external ID.
