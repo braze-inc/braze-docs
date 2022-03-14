@@ -30,12 +30,12 @@ You will need to ensure that you have the following items created and/or complet
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you are looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
-| Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>__To use Customer Match, your account must have:__<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet the above criteria, then your account is currently ineligible to use Customer Match.<br><br>Please chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
+| Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet the above criteria, then your account is currently ineligible to use Customer Match.<br><br>Please chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Implementation process
 ### Step 1: Connect Google account
-To get started, go to the **Google Ads** tab in the **Technology Partners** page and select __Connect Google Ads__. 
+To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. 
 
 ![The Google Ads technology partners page in Braze.][1]
 
@@ -50,31 +50,31 @@ Once you have successfully connected your Google Ads account, you will be taken 
 ![The updated Google Ads technology page showing the connected email account.][4]
 
 {% alert important %}
-If you plan to export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select __Add Mobile Advertising IDs__, input your iOS app ID and Android app ID (app package name), and save each.
+If you plan to export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select **Add Mobile Advertising IDs**, input your iOS app ID and Android app ID (app package name), and save each.
 
 ![The updated Google Ads technology page showing the "Add Mobile Advertising IDs" button checked, allowing you to same an iOS or Android AppID.]({% image_buster /assets/img/google_sync/google_sync5.png %})
 {% endalert %}
 
 ### Step 2: Add a Google Audience step in Canvas
 
-Add a step in your Canvas, select the dropdown at the top of the step, and select the __Google Audience__ step.
+Add a step in your Canvas, select the dropdown at the top of the step, and select the **Google Audience** step.
 
 ![Workflow of the previous steps to add a Google audience in Canvas.][6]
 
 ### Step 3: Sync setup
 
-Click on the __Custom Audience__ button to open the step editor.
+Click on the **Custom Audience** button to open the step editor.
 
-Select the desired Google ad account. Under the __Choose a New or Existing Audience__ dropdown, type in the name of a new or existing audience. 
+Select the desired Google ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
-__Create a New Audience__<br>
-Enter a name for the new custom audience, select __Add Users to Audience__ and select the first-party user field data to send to with your audience. You can choose either: 
-- __Customer Contact Info__ which will contain your users' email and/or phone numbers if they exist in Braze
-- __Mobile Advertiser ID__ which you will then need to select either iOS IDFA or Android GAID   
+**Create a New Audience**<br>
+Enter a name for the new custom audience, select **Add Users to Audience** and select the first-party user field data to send to with your audience. You can choose either: 
+- **Customer Contact Info** which will contain your users' email and/or phone numbers if they exist in Braze
+- **Mobile Advertiser ID** which you will then need to select either iOS IDFA or Android GAID   
 
-Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
+Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" checkbox is selected.]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
@@ -89,10 +89,10 @@ Given Google's Customer Match requirements, you cannot have customer contact inf
 {% endalert %}
 {% endtab %}
 {% tab Sync with an Existing Audience %}
-__Sync with an Existing Audience__<br>
-Braze also offers the ability to either add or remove users from existing Google customer lists to ensure that these audiences are up-to-date. To sync with an existing audience, select an existing custom audience to sync to and then choose whether you want to __Add to the audience__ or __Remove from the audience__. Braze will then either add or remove users in near real-time as they enter the Google Audience Step. 
+**Sync with an Existing Audience**<br>
+Braze also offers the ability to either add or remove users from existing Google customer lists to ensure that these audiences are up-to-date. To sync with an existing audience, select an existing custom audience to sync to and then choose whether you want to **Add to the audience** or **Remove from the audience**. Braze will then either add or remove users in near real-time as they enter the Google Audience Step. 
 
-Once you've configured your Google Audience step, select __Done__. Your Google Audience step will include details about the new audience.
+Once you've configured your Google Audience step, select **Done**. Your Google Audience step will include details about the new audience.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience is selected, as well as the "Add user to Audience" radio button.]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
@@ -113,19 +113,19 @@ Once a customer is close to reaching the Google Ads API rate limit, Google will 
 
 ## Understanding analytics 
 <br>
-__Entered__: Number of users who entered this step to be synced to Google.
+**Entered**: Number of users who entered this step to be synced to Google.
 
-__Proceeded to Next Step__: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
+**Proceeded to Next Step**: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
 
-__Users Synced__: Number of users who have successfully been synced to Google.
+**Users Synced**: Number of users who have successfully been synced to Google.
 
-__User Not Synced__: Number of users that have not been synced due to missing fields to match.
+**User Not Synced**: Number of users that have not been synced due to missing fields to match.
 
-__Users Errored__: Number of users who were not synced to Google due to an error, after &#126;13 hours of retries. For specific errors, like Google Ads API service disruptions, Canvas will retry the sync for up to &#126;13 hours. If the sync is still not possible at that point, the User Not Synced will be populated.
+**Users Errored**: Number of users who were not synced to Google due to an error, after &#126;13 hours of retries. For specific errors, like Google Ads API service disruptions, Canvas will retry the sync for up to &#126;13 hours. If the sync is still not possible at that point, the User Not Synced will be populated.
 
-__Users Pending__: Number of users currently being processed by Braze to sync to Google.
+**Users Pending**: Number of users currently being processed by Braze to sync to Google.
 
-__Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step.
+**Exited Canvas**: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step.
 
 ## Troubleshooting
 {% details Why am I unable to select multiple fields to match in my Google Audience Step configuration? %}
@@ -137,11 +137,11 @@ It can take anywhere between 6 to 12 hours for an audience to be synced into Goo
 {% enddetails %}
 
 {% details I've synced an audience, but the audience size in Google is zero. %}
-For privacy purposes, the user list size will show as zero until the list has at least __1,000 members__. After that, the size will be rounded to the two most significant digits.
+For privacy purposes, the user list size will show as zero until the list has at least **1,000 members**. After that, the size will be rounded to the two most significant digits.
 {% enddetails %}
 
 {% details I've synced an audience into Google, but my ads are not serving. %}
-Check that your audiences contain at least __5,000__ users to ensure that ads start serving. 
+Check that your audiences contain at least **5,000** users to ensure that ads start serving. 
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/google_sync/google_sync1.png %}

@@ -10,9 +10,9 @@ description: "This reference article addresses the data that is collected by the
 # SDK data collection options
 
 Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
-- __Personalized Integration__; integrators have the flexibility to collect data in addition to Automatically Collected Data.
-- __Automatically Collected Integration__; integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
-- __Minimum Integration__; integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze Services. 
+- **Personalized Integration**; integrators have the flexibility to collect data in addition to Automatically Collected Data.
+- **Automatically Collected Integration**; integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
+- **Minimum Integration**; integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze Services. 
 
 ## Personalized integration 
 
@@ -62,8 +62,8 @@ The Braze backend/service generates metrics calculated on SDK data (e.g., total 
 
 {% alert important %}
 If you are interested in the Minimum Integration only, and you integrate with mParticle, Segment, Tealium, or GTM, please note the following:
-- __Mobile Platforms__: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
-- __Web__: Braze integration must be done natively to allow for Minimum Integration configuration. Tag managers do not offer a way to do this through their platform. 
+- **Mobile Platforms**: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
+- **Web**: Braze integration must be done natively to allow for Minimum Integration configuration. Tag managers do not offer a way to do this through their platform. 
 
 {% endalert %} 
 

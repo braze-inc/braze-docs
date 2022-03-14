@@ -66,7 +66,7 @@ There are many different components you can include in your payload, but here as
 | `members.member.externalId` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit Github documentation][10].
+For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit GitHub documentation][10].
 
 #### Example payload
 {% raw %}

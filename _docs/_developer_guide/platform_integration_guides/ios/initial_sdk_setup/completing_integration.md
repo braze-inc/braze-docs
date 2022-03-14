@@ -64,7 +64,7 @@ Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaun
 {% endtab %}
 {% endtabs %}
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+**Note**: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% alert important %}
 Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Settings** page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
@@ -133,7 +133,7 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-__Note__: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+**Note**: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
 
 This method is called with the following parameters:
 

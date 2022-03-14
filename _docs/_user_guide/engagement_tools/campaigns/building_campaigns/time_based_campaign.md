@@ -128,7 +128,9 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 | Limit how many times each user should receive the campaign within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Frequency capping is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
+By default, frequency capping is toggled off for new Canvases. Frequency capping is applied at the step level, not at the Canvas entry level.
+
+Frequency capping is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day). 
 
 ## Conversion deadline
 

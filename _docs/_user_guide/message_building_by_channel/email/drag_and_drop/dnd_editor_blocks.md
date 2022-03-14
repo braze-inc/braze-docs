@@ -128,5 +128,5 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 | name | description |
 |---|---|
-| `Add Personalization` |  Located on the left menu. Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks, etc. | 
+| `Add Personalization` |  Located on the left menu. Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, content blocks etc. | 
 {: .reset-td-br-1 .reset-td-br-2}

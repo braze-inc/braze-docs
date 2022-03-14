@@ -11,7 +11,7 @@ tool: Canvas
 
 > This reference article explains how to archive a pre-existing Canvas and the effects of archiving a Canvas.
 
-To stop a Canvas from sending or to remove it from your Dashboard, you can archive a Canvas. Go to the **Canvas** page, click the gear icon next to the selected Canvas, and click **Archive**.
+To stop a Canvas from sending or to remove it from your dashboard, you can archive a Canvas. Go to the **Canvas** page, click the gear icon next to the selected Canvas, and click **Archive**.
 
 There are also bulk actions you can use, such as archiving multiple Canvases, by checking the boxes next to the Canvases and selecting the revelant button. 
 

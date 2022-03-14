@@ -27,7 +27,7 @@ When **Message Sent** is selected, customers will only be advanced to subsequent
 
 ## Immediately advance audience
 
-When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
+When **Immediately Advance Audience** is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - Any message is sent or the in-app message in the step becomes live
 - The webhook is not sent because the webhook causes an error or errors
@@ -63,9 +63,9 @@ There may be times when you want users to continue to advance through a Canvas e
 
 In this scenario, you can use Braze's Advancement Behavior options to ensure that users continue down the Canvas, even if they are not sent the Day 3 push.
 
-If you want all users to receive the Day 6 email, even if they didn't get the Day 3 push, you can set the **Advancement Behavior** to __Immediately Advance Audience__  for the Day 3 push.
+If you want all users to receive the Day 6 email, even if they didn't get the Day 3 push, you can set the **Advancement Behavior** to **Immediately Advance Audience**  for the Day 3 push.
 
-When you select __Immediately Advance Audience__ advancement behavior for the Day 3 push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push but will be advanced anyway.
+When you select **Immediately Advance Audience** advancement behavior for the Day 3 push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push but will be advanced anyway.
 
 {% details Previous Canvas Advancement Behavior %}
 

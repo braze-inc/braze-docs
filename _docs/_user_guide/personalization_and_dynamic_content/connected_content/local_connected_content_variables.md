@@ -20,7 +20,7 @@ You can also specify `:save your_variable_name` after the URL in order to save t
 ```
 {% endraw %}
 
-Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
+[Metaweather](https://www.metaweather.com/api/) is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only.
 
 >  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option below.
 
@@ -65,13 +65,26 @@ You can test whether or not it's raining by referencing `{{localweather.consolid
 
 The following image illustrates the type of syntax highlighting you should see in the dashboard if you're setting things up correctly. It also demonstrates how you could leverage the `connected_content` request above!
 
-![Connected Content Syntax Example][6]
+{% raw %}
+```liquid
+{% connected_content https://www.metaweather.com/api/location/search/?query={{custom_attribute.${customCity}}} :save locationjson %}
+{% connected_content https://www.metaweather.com/api/location/{{locationjson[0].woeid}}/ :save localweather %}
+
+{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Rain' %}
+It's raining! Grab an umbrella!
+{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Clouds' %}
+No sunscreen needed :)
+{% else %}
+Enjoy the weather!
+{% endif %}
+```
+{% endraw %}
 
 If the API responded with {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, the user would then receive this push.
 
-![Connected Content Push Example][17]
+![Push notification with the message "It's raining! Grab an umbrella!"][17]{:style="max-width:50%" }
 
-By default, Connected Content will set a Content-Type header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
+By default, Connected Content will set a `Content-Type` header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
 
 {% raw %}
 ```js
@@ -79,7 +92,7 @@ By default, Connected Content will set a Content-Type header on a GET HTTP reque
 ```
 {% endraw %}
 
-## HTTP post
+## HTTP POST
 
 By default, Connected Content makes an HTTP GET request to the specified URL. To make a POST request instead, specify `:method post`.
 

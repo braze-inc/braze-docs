@@ -47,7 +47,7 @@ You may create or upload an unlimited amount of geofences on the dashboard, allo
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include WiFi, GPS, and cellular towers.
 
-Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
 ### How do geofences affect battery life?
 
@@ -55,7 +55,7 @@ Our geofencing solution uses the native geofence system service on iOS and Andro
 
 ### When are geofences active?
 
-Braze geofences work even when your app is closed, at all hours of the day.
+Braze geofences work at all hours of the day, even when your app is closed.
 
 ### How often are geofences refreshed for users?
 

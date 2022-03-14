@@ -31,7 +31,7 @@ Because deduplication occurs when targeted users are included in the same dispat
 {% alert important %}
 If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times are listed in the call. This is because we assume that API calls are purposefully constructed. 
 <br><br>
-__API-Triggered Campaigns__<br>
+**API-Triggered Campaigns**<br>
 Note that API-triggered campaigns will dedupe or send duplicates depending on where the audience is defined. <br>- Deduping will occur if there are duplicate emails in a target segment or duplicate emails due to duplicate IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call. <br>- Duplicate emails will occur if you directly target separate user IDs within the recipient field of an API-triggered call. 
 {% endalert %}
 

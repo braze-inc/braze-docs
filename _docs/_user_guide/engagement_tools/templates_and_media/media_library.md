@@ -23,7 +23,7 @@ You can use the **Media Library** to:
 * Drag and drop images or folders to be uploaded
 * Delete images
 
-![Media Library Page][1]
+![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the Media Library.][1]
 
 ## Stats available
 

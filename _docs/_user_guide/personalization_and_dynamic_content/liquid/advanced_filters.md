@@ -29,7 +29,7 @@ description: "This reference article lists advanced filters, examples, and how t
 |---|---|---|---|
 | `url_escape` | Identifies all characters in a string that are not allowed in URLS, and replaces the characters with their escaped variants | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
 | `url_param_escape` | Replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
-| `url_encode` | Encodes a string that is url friendly | `{{ 'google search' | url_encode }}` | google+search |
+| `url_encode` | Encodes a string that is URL friendly | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}
@@ -38,7 +38,7 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 {% raw %}
 ```
 {% assign url = "https://www.examplelink.com" %}
-<a href='{{url}}'>Click this Link!</a>
+<a href='{{url}}'>Shop the collection</a>
 ```
 {% endraw %}
 {% endalert %}

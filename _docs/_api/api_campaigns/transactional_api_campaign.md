@@ -24,7 +24,7 @@ This reference article covers how to create a transational campaign in the Braze
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __Transactional Email__ under the __Transactional__ section.
+Navigate to the **Campaigns** page in your company Braze account and click **Create Campaign**, then select **Transactional Email** under the **Transactional** section.
 
 Now, you can move on to configuring your transactional campaign.
 
@@ -41,7 +41,7 @@ When launching a transactional campaign, Braze has simplified the campaign creat
 1. Add a descriptive title so you can find the results on our campaigns page after you've sent your messages.
 2. Compose your email or select from a template. 
 3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
-4. Click __Save Campaign__ and you're set to begin your API campaign!
+4. Click **Save Campaign** and you're set to begin your API campaign!
 
 ### Disallowed tags in Transactional Emails 
 

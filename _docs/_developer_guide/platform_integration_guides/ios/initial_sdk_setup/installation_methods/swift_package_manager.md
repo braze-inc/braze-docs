@@ -59,7 +59,7 @@ Select the package that best suits your needs and click **Finish**:
 Next, navigate to your project build settings and add the `-ObjC` flag to the **Other Linker Flags** setting. 
 
 {% alert important %}
-This flag __must be added and any [errors](https://developer.apple.com/library/archive/qa/qa1490/_index.html) resolved__ in order to further integrate the SDK.
+This flag **must be added and any [errors](https://developer.apple.com/library/archive/qa/qa1490/_index.html) resolved** in order to further integrate the SDK.
 {% endalert %}
 
 ![Swift Package Manager: Menu 5][6]

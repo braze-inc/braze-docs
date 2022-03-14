@@ -57,7 +57,7 @@ See our [class documentation][4] for more information.
 
 ### Reserved keys {#event-reserved-keys}
 
-The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
+The following keys are **RESERVED** and **CANNOT** be used as custom event properties:
 
 - `time`
 - `event_name`

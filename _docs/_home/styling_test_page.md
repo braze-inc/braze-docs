@@ -245,7 +245,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {% gallery %}
 {{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
 {{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> This is another `comment`.
-{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another __comment__.
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another **comment**.
 {{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **IMAGE TITLE** <br> This is a test to see if it will line break.
 {{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
@@ -256,7 +256,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {% gallery %}
 {{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
 {{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> This is another `comment`.
-{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another __comment__.
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another **comment**.
 {{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **IMAGE TITLE** <br> This is a test to see if it will line break.
 {{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
@@ -397,35 +397,48 @@ This is a update
 {% tab Styling %}
 #### Embedded Video/YouTube
 Defaults to youtube embedded.
-{% include video.html id="XY5uXoKIvFY" %}
+{% include video.html id="XY5uXoKIvFY" source="youtube" %}
 
 #### Embedded Video Right Align
-{% include video.html id="XY5uXoKIvFY" align="right" %}
+{% include video.html id="XY5uXoKIvFY" align="right" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 #### Embedded Video Left Align
-{% include video.html id="XY5uXoKIvFY" align="left" %}
+{% include video.html id="XY5uXoKIvFY" align="left" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
+<br /><br />
+
+#### Loom Example
+* use `source="loom"`
+{% include video.html id="c1d3199463c448e8918f046265b54eb2" source="loom" %}
 
 {% endtab %}
 {% tab Markdown %}
 
 {% raw %}
 ```html
-{% include video.html id="[youtubeid]" %}
+{% include video.html id="[youtube_id]" source="youtube" %}
 ```
 {% endraw  %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
 {% raw  %}
 ```html
-{% include video.html id="[youtubeid]" align="left" %}
+{% include video.html id="[youtube_id]" align="left" source="youtube" %}
 
-{% include video.html id="[youtubeid]" align="right" %}
+{% include video.html id="[youtube_id]" align="right" source="youtube" %}
 ```
 {% endraw  %}
+
+Loom Example:
+{% raw %}
+```html
+{% include video.html id="[loom_id]" source="loom" %}
+```
+{% endraw  %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -560,8 +573,8 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 #### Usage
 {% raw %}
-Enclose __tabs__ in a `{% tabs %}` and `{% endtabs %}`
-Enclose individual __tab__ with the Liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
+Enclose **tabs** in a `{% tabs %}` and `{% endtabs %}`
+Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
 {% endraw %}
 
 {% alert important %}

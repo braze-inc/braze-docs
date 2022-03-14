@@ -19,7 +19,7 @@ Check out the [Help section][8] for additional best practices.
 
 Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)][14].
 
->  Amazon Device Messaging (ADM) is __only__ supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
+>  Amazon Device Messaging (ADM) is **only** supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
 
 ## Step 1: Enable ADM
 
@@ -102,13 +102,13 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] in the Android push documentation for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom handling push receipts and opens][52] in the Android push documentation for more information.
 
 ## Step 5: Add Client Secret and Client ID to Braze dashboard
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
-![FireOS Dashboard][34]
+![FireOS dashboard][34]
 
 ## Manual push registration
 If you need to handle ADM registration yourself, you should do the following:

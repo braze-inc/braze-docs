@@ -11,7 +11,7 @@ channel:
 
 # Overview
 
-![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+![Android inline image push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
@@ -19,13 +19,13 @@ Check out [our help documentation][8] for push best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
 
-Push notifications for Amazon FireOS use the Amazon Device Messaging (ADM) service rather than FCM. See the [FireOS Push Integration instructions][28] for details on enabling push notifications for FireOS apps.
+Push notifications for Amazon FireOS use the Amazon Device Messaging (ADM) service rather than FCM. See the [FireOS push integration instructions][28] for details on enabling push notifications for FireOS apps.
 
-For devices without Google services installed, Braze offers the option to send push through Baidu Cloud Push. Visit [Baidu Cloud Push instructions][50] for more details.
+For devices without Google services installed, Braze offers the option to send push through Baidu Cloud push. Visit [Baidu Cloud push instructions][50] for more details.
 
 ## Registering for push
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase Push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Enable Firebase
 
@@ -145,8 +145,8 @@ If migrating from using GCM to using Firebase with Braze, visit the [GCM Migrati
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
 * On the **Settings** page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
+* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the push notification settings section.
+* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
 
 ![fcmimg][16]
 
@@ -203,7 +203,7 @@ Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `Ap
 
 **Implementation Example**
 
-- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
+- See [`AndroidManifest.xml`][70] in the Firebase push sample app.
 
 ##### Using your own Firebase Messaging Service
 
@@ -278,7 +278,7 @@ The large and small icons pictured below are examples of properly designed icons
 <drawable name="com_braze_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
 
-Setting a small notification icon is required. __If you do not set one, Braze will default to using the application icon as the small notification icon which may look suboptimal.__
+Setting a small notification icon is required. **If you do not set one, Braze will default to using the application icon as the small notification icon which may look suboptimal.**
 
 Setting a large notification icon is optional but recommended.
 
@@ -331,7 +331,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom handling push receipts and opens][52] for more information.
 
 #### Creating custom deep links
 

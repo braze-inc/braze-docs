@@ -26,8 +26,8 @@ There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the "Manage Settings" page.<br><br>
-4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the **Manage Settings** page.<br><br>
+4. [Toggle Enforcement within the Braze dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
 
 ## Server-side integration {#server-side-integration}
 
