@@ -42,7 +42,7 @@ Input a percentage for your control group and click **Save**. Once entered, Braz
 
 The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
 
-![The Global Control Group Settings with the Audience Settings set to "Assign 5& of all users to the Global Control Group".][4]
+![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
 
 ### Step 3: Assign exclusion settings
 
