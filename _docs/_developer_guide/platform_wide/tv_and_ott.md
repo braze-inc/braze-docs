@@ -89,7 +89,7 @@ Below is a list of features and messaging channels supported today.
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="push">N/A</td>
-            <td for="canvas">N/A</td>
+            <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Apple TV OS</td>
