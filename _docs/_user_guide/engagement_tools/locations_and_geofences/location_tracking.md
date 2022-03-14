@@ -13,7 +13,7 @@ Location collection captures a user's most recent location when the app was open
 
 ## Enabling location tracking
 
-To enable location collection on your app, take a look at the appropriate developer guide for the platform you are using:
+To enable location collection on your app, refer to the developer guide for the platform you're using:
 
 - [iOS][2]
 - [Android][3]
@@ -21,17 +21,17 @@ To enable location collection on your app, take a look at the appropriate develo
 
 In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's locations. 
 
-Note that the accuracy of your location tracking data may be affected by whether or not your users have wi-fi enabled on their device. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data. 
+Note that the accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their device. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data. 
 
 ## Location targeting
 
 Using location tracking data, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
 
-See [Location tracking][1] for more information on location targeting.
+Refer to [Location tracking][1] for more information on location targeting.
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute—for example: 
+You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute. An example is: 
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json

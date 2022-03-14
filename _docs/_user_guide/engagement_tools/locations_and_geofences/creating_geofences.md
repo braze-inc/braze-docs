@@ -22,7 +22,7 @@ Geofences are managed in the **Locations** page in the **Engagement** section. G
 
 From the **Locations** page, click **+ Create Geofence Set**.
 
-![Geofence Location Main Screen][1]
+![Geofence set of German airports with a user drawing a radius of two thousand meters on the map for Hamburg Airport.][1]
 
 Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
 
@@ -74,7 +74,7 @@ Once geofences have been configured, you can use them to enhance and enrich how 
 
 To use geofence data as part of campaign and Canvas triggers, choose **Action-Based Delivery** for the delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
 
-![action_based_geofence_trigger][2]
+![][2]
 
 ### Personalization
 

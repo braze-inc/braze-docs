@@ -23,9 +23,7 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.**
-
-Then, create your Content Block!
+Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
 
 ![][1]
 
@@ -62,7 +60,7 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ## Nesting Content Blocks
 
-Content Blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
+Content Blocks can be nested, but only once! You can nest Content Block A into Content Block B, but you will not be able to then nest Content Block B into Content Block C.
 
 {% alert warning %}
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
@@ -83,7 +81,7 @@ Messages using the archived Content Block will still perform as though it was th
 3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing **all** content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
 
 {% alert tip %}
-  You can save a Content Block without content in it.
+You can save a Content Block without content in it.
 {% endalert %}
 
 If you made a mistake in archiving a Content Block, you can unarchive it.  
