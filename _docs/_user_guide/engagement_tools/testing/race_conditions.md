@@ -10,13 +10,13 @@ description: "This article covers best practices to avoid race conditions from a
 
 # Race conditions
 
-A **race condition** is a concept where an outcome is dependent on the sequence or timing of other events. For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
+A race condition is a concept where an outcome is dependent on the sequence or timing of other events. For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
 
 {% include video.html id="LyJaxDoMtMs" align="right" %}
 
 ## Targeting new users
 
-In the Braze platform, one of the most common race conditions occurs with messages that target newly created users. Here, the expected order of events is: 
+In Braze, one of the most common race conditions occurs with messages that target newly created users. Here, the expected order of events is: 
 
 1. A user gets created; 
 2. The same user is immediately targeted for a message. 
@@ -25,7 +25,7 @@ However, in some cases, the second event will trigger first. This means that a m
 
 ## Using multiple API endpoints
 
-If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Please note that if you are sending a scheduled message API call, these requests **must** be separate, and a user must be created before sending the schdeuled API call.
+If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Note that if you are sending a scheduled message API call, these requests must be separate, and a user must be created before sending the schdeuled API call.
 
 {% alert note %}
 If user attributes are sent via SDK or in the same user/track call as the event, then Braze will automatically process those first before attempting to send any message.
