@@ -4,7 +4,7 @@ Braze requires an external image library to display animated GIFs with {{ includ
 
 Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
 
-**Note:** Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
+Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
 
 #### Step 1: Creating the image loader delegate
 
@@ -16,7 +16,7 @@ The Image Loader delegate must implement the following methods:
 * [`renderUrlIntoInAppMessageView()`][gifs-74]
 * [`setOffline()`][gifs-70]
 
-The integration example below is taken from the [Glide Integration Sample App][gifs-65] included with the Braze Android SDK.
+The integration example below is taken from the [Glide integration sample app][gifs-65] included with the Braze Android SDK.
 
 {% tabs %}
 {% tab JAVA %}
@@ -133,7 +133,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 #### Step 2: Setting the image loader delegate
 
-The Braze SDK will use any custom image loader set with [setBrazeImageLoader][gifs-66]. Note that we recommend setting the custom image loader in a custom application subclass.
+The Braze SDK will use any custom image loader set with [`setBrazeImageLoader`][gifs-66]. We recommend setting the custom image loader in a custom application subclass:
 
 {% tabs %}
 {% tab JAVA %}

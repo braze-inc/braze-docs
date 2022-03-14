@@ -13,19 +13,19 @@ channel:
 
 # Content Cards integration
 
-In Android, the Content Cards feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.
 
-The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's ContentCards are created on the Braze dashboard.
+The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
 ## Content Cards data model
 The Content Cards data model is available in the Android SDK.
 
 ## Card types {#card-types-for-android}
-Braze has 3 unique Content Cards card types that share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has three unique Content Cards card types that share a base model. Each card type also has additional card-specific properties, which are listed below.
 
 ### Base card {#base-card-for-android}
 
-The [Base Card][29] model provides foundational behavior for all cards.  
+The [base card][29] model provides foundational behavior for all cards.  
 
 |Property | Description |
 |---|---|
@@ -41,7 +41,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner image card {#banner-image-card-for-android}
-[Banner Image Cards][30] are clickable full-sized images. In addition to the base card properties:
+[Banner image cards][30] are clickable full-sized images. In addition to the base card properties:
 
 |Property | Description |
 |---|---|
@@ -51,31 +51,31 @@ The [Base Card][29] model provides foundational behavior for all cards.
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned image card {#captioned-image-card-for-android}
-[Captioned Image Cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
+[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
 
 |Property | Description |
 |---|---|
 |`getImageUrl()` | Returns the URL of the card’s image.|
-|`getTitle()` | Returns the title text for the card.
-|`getDescription()` | Returns the body text for the card.
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
-|`getDomain()` | Returns the link text for the property URL. 
+|`getTitle()` | Returns the title text for the card.|
+|`getDescription()` | Returns the body text for the card.|
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
+|`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Classic card {#text-Announcement-card-for-android}
-[Text Announcement Cards][32] are clickable cards containing descriptive text. [Short News Cards][41] are clickable cards that include text and images. In addition to the base card properties:
+[Text announcement cards][32] are clickable cards containing descriptive text. [Short news cards][41] are clickable cards that include text and images. In addition to the base card properties:
 
 |Property | Description |
 |---|---|
-|`getTitle()` | Returns the title text for the card.
-|`getDescription()` | Returns the body text for the card.
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
-|`getDomain()` | Returns the link text for the property URL.
-|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card.
+|`getTitle()` | Returns the title text for the card. |
+|`getDescription()` | Returns the body text for the card. |
+|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. | 
+|`getDomain()` | Returns the link text for the property URL. |
+|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Please note that a classic card without an image included will result in a Text Announcement Card. If an image is included, you will recieve a Short News Card.
+A classic card without an image included will result in a text announcement card. If an image is included, you will receive a short news card.
 {% endalert %}
 
 ## Card analytics methods
@@ -83,9 +83,9 @@ All `Card` data model objects offer the following analytics methods for logging 
 
 |Method | Description |
 |---|---|
-|`logImpression()` | Manually log an impression to Braze for a particular card.
-|`logClick()` | Manually log a click to Braze for a particular card. 
-|`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again.
+|`logImpression()` | Manually log an impression to Braze for a particular card. |
+|`logClick()` | Manually log a click to Braze for a particular card. |
+|`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html
