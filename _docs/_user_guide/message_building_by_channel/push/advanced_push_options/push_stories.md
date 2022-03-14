@@ -65,7 +65,7 @@ The analytics will look very similar to the current analytics section for push n
 
 ### I sent myself a Push Story on iOS but didn't receive the notification
 
-Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors—this includes evaluating the customers' data plan, notification size, and the customers' storage capacity. As a result, sometimes no notification will be sent to your customers.
+Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors. This includes evaluating the customers' data plan, notification size, and the customers' storage capacity. As a result, sometimes no notification will be sent to your customers.
 
 These are limitations imposed by Apple that should be considered when designing your Push Story.
 
