@@ -15,16 +15,22 @@ To integrate web push, your domain must be [secure][2], which generally means `h
 
 _If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a push prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 
-#### **Caveats**
+## Caveats
 Keep in mind that like many workarounds on the web, browsers continually evolve, and in the future, this may not work as intended.
 
 - This requires that:
   - You own a separate secure domain (`https://`) and have access to register a Service Worker on that domain.
   - Users to be logged in to your website to ensure that push tokens are tied to the same profiles.
 
+{% alert note %}
+Push for Shopify is unable to be implemented in this way. Shopify takes steps to remove headers that are required to deliver push.
+{% endalert %}
+
+## Integration
+
 To make the example below clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 
-## Step 1: Initiate prompting flow
+### Step 1: Initiate prompting flow
 
 On `insecure.com`, open a new window to your secure domain using a URL parameter to pass the currently logged-in user's Braze external ID.
 
@@ -49,7 +55,7 @@ document.getElementById("opt-in").onclick = function(){
 </script>
 ```
 
-## Step 2: Register for push
+### Step 2: Register for push
 
 At this point, `secure.com` will open a popup window in which you can initialize the Braze Web SDK for the same user ID and request the user's permission for Web push.
 
@@ -90,7 +96,7 @@ At this point, `secure.com` will open a popup window in which you can initialize
 </html>
 ```
 
-## Step 3: Communicate between domains (optional)
+### Step 3: Communicate between domains (optional)
 
 Now that users can opt-in from this workflow originating on `insecure.com`, you may want to modify your site based on if the user is already opted-in or not. There's no point in asking the user to register for push if they already are.
 

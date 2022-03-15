@@ -16,11 +16,11 @@ If you include the following text in your message: `{{${first_name}}}`, the user
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic User Information][1] (e.g. `first_name`, `last_name`, `email_address`)
-- [Custom Attributes][2]
-- [Custom Event Properties][11]
-- [Most Recently Used Device Information][39]
-- [Target Device Information][40]
+- [Basic user information][1] (e.g. `first_name`, `last_name`, `email_address`)
+- [Custom attributes][2]
+- [Custom event properties][11]
+- [Most recently used device information][39]
+- [Target device information][40]
 
 You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
 {% endraw %}
@@ -57,13 +57,13 @@ Hi Valued User, thanks for using the App!
 
 Liquid follows a specific structure, or syntax, that you'll need to keep in mind as you're crafting dynamic personalization. Here are a few basic rules to keep in mind:
 
-1. **Use straight quotes in Braze:** There is a difference between curly quotes (**‘’**) and straight quotes (**''**). Use straight quotes (**''**) in your Liquid in Braze. You may see curly quotes when copying and pasting from certain text editors, which can cause issues in your Liquid. If you're inputting quotes direclty into the Braze dashboard, you'll be fine!
+1. **Use straight quotes in Braze:** There is a difference between curly quotes (**‘ ’**) and straight quotes (**&#39; &#39;**). Use straight quotes (**&#39; &#39;**) in your Liquid in Braze. You may see curly quotes when copying and pasting from certain text editors, which can cause issues in your Liquid. If you're inputting quotes direclty into the Braze dashboard, you'll be fine!
 2. **Brackets come in pairs:** Every bracket must both open and close **{ }**. Make sure to use curly brackets!
 3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
 
 ### Inserting tags
 
-You can insert tags by typing `{{` in any message, which will trigger an auto-completion feature that will continue to update as you type. You can even select a variable from the options that appear as you type.
+You can insert tags by typing two open curly brackets `{{` in any message, which will trigger an auto-completion feature that will continue to update as you type. You can even select a variable from the options that appear as you type.
 
 If you're using a custom tag, you can copy and paste the tag into whatever message you desire.
 
@@ -85,11 +85,11 @@ If you choose to use Liquid in your email messages, be sure to:
 
 You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
 
-![Modal buttons][44]{: style="max-width:70%;"}
+![Plus buttons to insert personalization attributes on text fields that support Liquid in Braze][44]{: style="max-width:70%;"}
 
 The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified via the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
-![Modal][45]
+![Add Personalization modal that appears after clicking insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax.][45]
 
 {% endraw %}
 

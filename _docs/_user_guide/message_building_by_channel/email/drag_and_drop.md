@@ -21,6 +21,9 @@ guide_featured_list:
 - name: Editor Blocks
   link: /docs/dnd/editor_blocks/
   fa_icon: fas fa-align-left
+- name: Global Style Settings
+  link: /docs/dnd/global_style_settings/
+  fa_icon: fas fa-cogs
 
 
 ---

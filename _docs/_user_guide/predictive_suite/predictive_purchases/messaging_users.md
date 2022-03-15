@@ -16,7 +16,7 @@ Preview and Demo Predictions will not allow users to be targeted for messaging, 
 
 From the individual **Predictions** page, once you've decided what range of Purchase Likelihood Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons below the targeting sentences to create a new segment or campaign. This segment or campaign will filter for users with the Purchase Likelihood Score or Category selected with the slider.
 
-![Churn Filters][5]
+![Purchase filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.][5]
 
 You can also use filters in campaigns, Canvas, or segments to target user according to their Purchase Likelihood Score or Category, just like you use any other filter in Braze.
 
