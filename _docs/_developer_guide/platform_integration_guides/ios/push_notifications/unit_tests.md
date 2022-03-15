@@ -25,25 +25,45 @@ In your app project, go to menu "File"->"New"->"Target" and add a new "Unit Test
 
 ## Step 2: Add the Braze SDK to your unit tests
 
-Using the same method that you used to initially install the Braze SDK, make sure the SDK is also available to your unit tests target. For example, if using Cocoapods:
+Using the same method that you used initially to [install the Braze SDK][2], make sure the same installation of the SDK is also available to your unit tests target. For example, if using Cocoapods:
+
 ```
-target 'YourUnitTestsTarget' do
+target 'YourAppTarget' do
   pod 'Appboy-iOS-SDK'
+
+  target 'YourAppTargetTests' do
+    pod 'Appboy-iOS-SDK'
+  end
 end
 ```
 
 
 ## Step 3: Add OCMock to your unit tests
 
-Add [OCMock][2] to your test target via Cocoapods, Carthage, or its static library. For example, if using Cocoapods:
+Add [OCMock][3] to your test target via Cocoapods, Carthage, or its static library. For example, if using Cocoapods:
+
 ```
-target 'YourUnitTestsTarget' do
+target 'YourAppTarget' do
   pod 'Appboy-iOS-SDK'
-  pod 'OCMock'
+
+  target 'YourAppTargetTests' do
+    pod 'Appboy-iOS-SDK'
+    pod 'OCMock'
+  end
 end
 ```
 
-## Step 4: Adding push tests
+## Step 4: Finish installing the added libraries
+
+Finish installing the Braze SDK and OCMock. For example, if using Cocoapods, navigate to the directory of your Xcode app project within your terminal and run the following command:
+
+```
+pod install
+```
+
+At this point, you should be able to open the Xcode project workspace created by CocoaPods.
+
+## Step 5: Adding push tests
 
 Create a new Objective-C file in your unit tests target. 
 
@@ -239,4 +259,5 @@ Add the following contents to this new file:
 Run your app's unit tests. This can be a one-time verification step, or you can include this indefinitely in your test suite to help catch any changes.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: https://ocmock.org/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+[3]: https://ocmock.org/
