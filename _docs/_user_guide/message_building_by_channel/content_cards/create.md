@@ -65,7 +65,7 @@ To learn more about the expected behavior and look of each of these message type
 |[Banner]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Banner Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Banner Card allows you to get creative and command attention with space for images, GIFs, and other non-text based content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Step 2: Compose a Content Card
+## Step 3: Compose a Content Card
 
 You can edit all aspects of your message's content and behavior in the **Compose** tab of the message editor.
 
@@ -107,13 +107,13 @@ Content Card message fields are limited to 2KB in total size, calculated by addi
 Each user is eligible to receive up to 100 non-expired and non-dismissed Content Cards. As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
 {% endalert %}
 
-## Step 3: Configure additional settings (optional)
+## Step 4: Configure additional settings (optional)
 
 You can use [key-value pairs][19] to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
-## Step 4: Build the remainder of your campaign or Canvas
+## Step 5: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
@@ -147,7 +147,7 @@ If you haven't done so already, complete the remaining sections of your Canvas s
 {% endtab %}
 {% endtabs %}
 
-## Step 5: Review and deploy
+## Step 6: Review and deploy
 
 After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
