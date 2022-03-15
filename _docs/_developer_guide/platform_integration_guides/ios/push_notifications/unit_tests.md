@@ -214,12 +214,11 @@ Add the following contents to this new file:
   id partialMock = [OCMockObject partialMockForObject:[Appboy sharedInstance]];
   UNUserNotificationCenter *notificationCenter = UNUserNotificationCenter.currentNotificationCenter;
   UNNotificationResponse *response = OCMClassMock([UNNotificationResponse class]);
-  void (^completionHandler)(void) = ^{};
 
   // Receive notification response
   [notificationCenter.delegate userNotificationCenter:notificationCenter
                        didReceiveNotificationResponse:response
-                                withCompletionHandler:completionHandler];
+                                withCompletionHandler:^{}];
 
   // Confirm response logged to Braze
   OCMVerify([partialMock userNotificationCenter:notificationCenter
