@@ -36,7 +36,7 @@ Platforms deal with push token registration in different ways:
 
 ### Check user's push subscription state
 
-![Push Example]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their user subscription state in the Engagement tab as Subscribed to Email, and Subscribed to Push.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 There are two ways you can check a user's push subscription state with Braze:
 
@@ -60,7 +60,7 @@ When a user opens a new application, if push has been configured correctly, a ca
 
 If we want to launch a campaign, we create a campaign in Braze that generates a push payload to send to the push provider. From there, the provider delivers the push payload to the user's device and the SDK passes the messaging state to Braze.
 
-![Picture][push-process]
+![A flow chart that maps the aforementioned push process between Braze, the customer, and Apple Push Notification Service or Firebase Cloud Messaging.][push-process]
 
 | Registration steps | Messaging steps |
 | ------------------ | --------------- |

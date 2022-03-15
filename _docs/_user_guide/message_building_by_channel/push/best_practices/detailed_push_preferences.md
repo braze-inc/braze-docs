@@ -23,7 +23,7 @@ When the news app wants to create a campaign targeting only users interested in 
 
 The general stats that you see for push enabled will relate to whether the user has approved notifications with the OS. If users disable notifications on iOS they'll be automatically removed from our system since Apple won't allow the push token to be sent. Android subscribes users to notifications by default.
 
-Documentation for setting custom attributes:
+Refer to the following articles for setting custom attributes:
 
 - [iOS][4]
 - [Android][5]

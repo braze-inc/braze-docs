@@ -17,7 +17,8 @@ Push notifications are wonderful for time-sensitive calls to action, as well as 
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
-![Push message example][1]{: height="400px"}  ![Push message example][2]{: height="400px"}
+![Push message example across Apple products.][1]{: height="400px"}  
+![Push message example from Stopwatch on an iPhone home screen that reads: "Hello! This is an iOS Push".][2]{: height="400px"}
 
 To see more examples of push notifications, check out our [Case Studies][8].
 

@@ -38,7 +38,7 @@ If users taps **Turn on**, they are presented with detailed steps for how to ena
 
 ![textplus_directions][26]
 
-Another app that does a wonderful job of priming its' users to accept push notifications is Hopper. See their [Medium article][49] on how to best onboard when it comes to push.
+Another app that does a wonderful job of priming its' users to accept push notifications is Hopper. Check out their [Medium article][49] on how to best onboard when it comes to push.
 
 > If you've implemented a custom push prompt as described above in an iOS app, make sure that you're [reregistering with APNs][44] every time the app runs after they grant push permissions to your app. Apple advises this as [device tokens can change arbitrarily][45].
 
