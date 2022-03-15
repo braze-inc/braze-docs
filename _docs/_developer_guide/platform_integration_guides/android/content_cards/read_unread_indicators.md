@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators for Android/FireOS
+article_title: Content Card Read & Unread Indicators for Android and FireOS
 page_order: 3
 platform: 
   - Android

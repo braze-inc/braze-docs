@@ -1,6 +1,6 @@
 ---
 nav_title: In-App Message Delivery
-article_title: In-App Message Delivery for Android/FireOS
+article_title: In-App Message Delivery for Android and FireOS
 page_order: 3
 platform: 
   - Android

@@ -1,6 +1,6 @@
 ---
 nav_title: Sample Apps
-article_title: Sample Apps for Android/FireOS
+article_title: Sample Apps for Android and FireOS
 platform: 
   - Android
   - FireOS

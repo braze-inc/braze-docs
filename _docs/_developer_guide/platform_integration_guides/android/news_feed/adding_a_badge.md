@@ -1,6 +1,6 @@
 ---
 nav_title: Adding a Badge
-article_title: Adding a News Feed Badge for Android/FireOS
+article_title: Adding a News Feed Badge for Android and FireOS
 page_order: 6
 platform: 
   - Android
@@ -19,7 +19,7 @@ You can request the number of unread cards at any time by calling:
 getUnreadCardCount()
 ```
 
-See the [KDoc][17] for more information.
+Refer to our [KDoc][17] for more information.
 
 
 [17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.events/-feed-updated-event/get-unread-card-count.html

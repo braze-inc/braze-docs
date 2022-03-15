@@ -1,6 +1,6 @@
 ---
 nav_title: Test Your Basic Integration
-article_title: Test Your Basic Integration for Android/FireOS
+article_title: Test Your Basic Integration for Android and FireOS
 page_order: 1
 platform: 
   - Android

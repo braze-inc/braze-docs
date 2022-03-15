@@ -1,6 +1,6 @@
 ---
 nav_title: Social Data Tracking
-article_title: Social Data Tracking for Android/FireOS
+article_title: Social Data Tracking for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -9,14 +9,12 @@ description: "This reference article shows how to implement social data tracking
 
 ---
 
-# Social data tracking for Android/FireOS
+# Social data tracking for Android and FireOS
 
 Similar to the Braze iOS SDK, the Braze Android SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Android SDK as well:
 
-- Obtain social media data within your app via the Facebook SDK and Twitter APIs.
-  - [Facebook Documentation][1]
-  - [Twitter Documentation][2]
-- Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
+1. Obtain social media data within your app via the [Facebook SDK][1] and [Twitter APIs][2].
+2. Initialize Facebook and Twitter user objects with social media data and pass them to Braze.
 
 ## Social network data constructors
 
@@ -85,7 +83,7 @@ TwitterUser(
 {% endtab %}
 {% endtabs %}
 
-To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `BrazeUser.setFacebookData()`/`BrazeUser.setTwitterData()`. For example:
+To pass data retrieved from social networks to Braze, you'll create a new `FacebookUser` or `TwitterUser` and then pass them to the method `BrazeUser.setFacebookData()`/`BrazeUser.setTwitterData()`. For example:
 
 {% tabs %}
 {% tab JAVA %}

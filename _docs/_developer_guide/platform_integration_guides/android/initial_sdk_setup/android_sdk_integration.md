@@ -1,6 +1,6 @@
 ---
 nav_title: Android SDK Integration
-article_title: Android SDK Integration for Android/FireOS
+article_title: Android SDK Integration for Android and FireOS
 page_order: 0
 platform: 
   - Android
@@ -133,7 +133,7 @@ class MyApplication : Application() {
 The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
 The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
 
-See the [KDoc][63] for more information. Note that any non-standard manual session integration is not fully supported.
+See our [KDoc][63] for more information. Note that any non-standard manual session integration is not fully supported.
 
 ## Step 5: Enable location tracking
 

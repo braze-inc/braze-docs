@@ -1,6 +1,6 @@
 ---
 nav_title: Setting User IDs
-article_title: Setting User IDs for Android/FireOS
+article_title: Setting User IDs for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -9,7 +9,7 @@ description: "This article shows how to set user IDs in your Android app, sugges
 
 ---
  
-# Setting user IDs for Android/FireOS
+# Setting user IDs for Android and FireOS
  
 {% include archive/setting_user_ids/setting_user_ids.md %}
 
@@ -19,7 +19,7 @@ description: "This article shows how to set user IDs in your Android app, sugges
 
 ### Assigning a user ID
 
-You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
+You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:
 
 {% tabs %}
 {% tab JAVA %}
@@ -44,11 +44,7 @@ Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 
 Additionally, we recommend **against** changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
-Refer to the [changeUser documentation][4] for more information.
-
-**Implementation Example**
-
-Full class information can be found in the [KDocs][4].
+Refer to the [`changeUser`][4] documentation for more information.
 
 ## User ID integration best practices and notes
 

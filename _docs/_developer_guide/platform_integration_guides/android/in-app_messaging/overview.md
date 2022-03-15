@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: In-App Message Overview for Android/FireOS
+article_title: In-App Message Overview for Android and FireOS
 page_order: 0
 platform: 
   - Android

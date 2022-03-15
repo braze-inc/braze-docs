@@ -1,6 +1,6 @@
 ---
 nav_title: Multiple Feeds
-article_title: Using Multiple Content Card Feeds for Android/FireOS
+article_title: Using Multiple Content Card Feeds for Android and FireOS
 page_order: 6
 platform: 
   - Android

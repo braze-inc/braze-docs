@@ -1,6 +1,6 @@
 ---
 nav_title: Accessibility
-article_title: Accessibility for Android/FireOS
+article_title: Accessibility for Android and FireOS
 page_order: 4
 platform: 
   - Android

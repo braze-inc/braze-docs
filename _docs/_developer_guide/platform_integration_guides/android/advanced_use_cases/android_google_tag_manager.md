@@ -1,6 +1,6 @@
 ---
 nav_title: Google Tag Manager for Android
-article_title: Google Tag Manager for Android for Android/FireOS
+article_title: Google Tag Manager for Android for Android and FireOS
 platform: 
   - Android
   - FireOS

@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: News Feed Read & Unread Indicators for Android/FireOS
+article_title: News Feed Read & Unread Indicators for Android and FireOS
 page_order: 4
 platform: 
   - Android
@@ -13,20 +13,21 @@ channel:
 
 # Read and unread indicators
 
-Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
+Braze allows you to optionally toggle on unread and read indicators on News Feed cards as pictured below:
 
-![UnreadvsRead][25]
+![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or grey triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
 
 ## Enabling the indicators
 
-In order to enable this functionality add the following line to your `braze.xml` file:
+To enable this functionality add the following line to your `braze.xml` file:
 
 ```xml
 <bool name="com_braze_newsfeed_unread_visual_indicator_on">true</bool>
 ```
 
 ## Customizing the indicators
-These indicators can be customized by altering the "icon_read" and "icon_unread" drawables.
+
+These indicators can be customized by altering the `icon_read` and `icon_unread` drawables.
 
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png

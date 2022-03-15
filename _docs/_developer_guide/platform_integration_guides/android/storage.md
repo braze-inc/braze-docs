@@ -1,6 +1,6 @@
 ---
 nav_title: Storage
-article_title: Storage for Android/FireOS
+article_title: Storage for Android and FireOS
 platform: 
   - Android
   - FireOS

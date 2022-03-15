@@ -1,6 +1,6 @@
 ---
 nav_title: Font Customization
-article_title: Font Customization for Android/FireOS
+article_title: Font Customization for Android and FireOS
 platform: 
   - Android
   - FireOS

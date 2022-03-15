@@ -1,6 +1,6 @@
 ---
 nav_title: Other SDK Customizations
-article_title: Other SDK Customizations for Android/FireOS
+article_title: Other SDK Customizations for Android and FireOS
 page_order: 3
 platform: 
   - Android

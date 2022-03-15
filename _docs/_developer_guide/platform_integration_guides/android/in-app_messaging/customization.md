@@ -1,6 +1,6 @@
 ---
 nav_title: Customization
-article_title: In-App Message Customization for Android/FireOS
+article_title: In-App Message Customization for Android and FireOS
 page_order: 2
 platform: 
   - Android

@@ -1,6 +1,6 @@
 ---
 nav_title: Refreshing the Feed
-article_title: Refreshing the Content Card Feed for Android/FireOS
+article_title: Refreshing the Content Card Feed for Android and FireOS
 page_order: 4
 platform: 
   - Android

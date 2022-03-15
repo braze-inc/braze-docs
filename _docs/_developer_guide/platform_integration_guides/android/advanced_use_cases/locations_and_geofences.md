@@ -1,6 +1,6 @@
 ---
 nav_title: Locations & Geofences
-article_title: Locations & Geofences for Android/FireOS
+article_title: Locations & Geofences for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -13,7 +13,7 @@ Tool:
 
 # Locations and geofences
 
-Geofences are only available in select Braze packages. For access please create a [support ticket][support] or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/).
+[Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) are only available in select Braze packages. For access please create a [support ticket][support] or speak with your Braze Customer Success Manager.
 
 To support geofences for Android:
 
@@ -22,7 +22,7 @@ To support geofences for Android:
 
 ## Step 1: Update build.gradle
 
-Add the [Google Play Services Location package][3] to your app-level `build.gradle` using the [Google Play Services setup guide][10]:
+Add the Google Play Services [location package][3] to your app-level `build.gradle` using the Google Play Services [setup guide][10]:
 
 ```
 dependencies {
@@ -41,7 +41,7 @@ Add boot, fine location, and background location permissions to your `AndroidMan
 ```
 
 {% alert important %}
-The background location access permission was added in Android 10 and is required for Geofences to work while the app is backgrounded. This permission is required for Geofences to work properly on Android 10+ devices.
+The background location access permission was added in Android 10 and is required for Geofences to work while the app is backgrounded for all Android 10+ devices.
 {% endalert %}
 
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:
@@ -80,7 +80,7 @@ Braze geofences are enabled if Braze location collection is enabled. If you woul
 <bool name="com_braze_geofences_enabled">true</bool>
 ```
 
-## Step 4: Obtain location permissions from the end-user
+## Step 4: Obtain location permissions from the end user
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
 

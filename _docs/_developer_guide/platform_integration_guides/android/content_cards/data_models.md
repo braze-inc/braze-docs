@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: Content Card Integration for Android/FireOS
+article_title: Content Card Integration for Android and FireOS
 page_order: 1
 platform: 
   - Android
