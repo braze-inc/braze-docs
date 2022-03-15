@@ -11,7 +11,7 @@ channel:
 
 # SMS subscription groups
 
-> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS subscription states
 
@@ -38,7 +38,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown (see below). Once selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.  
 
-![picture][6]
+![SMS composer with the Subscription Group dropdown open and "Messaging Service A for SMS" highlighted by the user.][6]
 
 ## Setup process
 
@@ -48,7 +48,7 @@ During your SMS onboarding process, a Braze onboarding manager will setup Subscr
 
 In order to send an MMS message, at least one number within your Subscription Group has to be enabled to send MMS. This is indicated by a tag located next to the Subscription Group. 
 
-![picture][10]{: style="max-width:40%"}
+![Subscription Group dropdown with "Messaging Service A for SMS" highlighted. The entry is prefixed with the tag "MMS".][10]{: style="max-width:40%"}
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
