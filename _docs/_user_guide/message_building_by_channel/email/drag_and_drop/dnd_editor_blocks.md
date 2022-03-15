@@ -11,7 +11,7 @@ tool: Media
 
 # Drag & Drop Editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
+Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
 
 To use them, drag a content block inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
