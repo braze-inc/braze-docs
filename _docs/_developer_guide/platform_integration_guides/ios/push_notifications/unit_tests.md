@@ -1,5 +1,5 @@
 ---
-nav_title: Unit Tests (optional)
+nav_title: Unit Tests (Optional)
 article_title: Push Notification Unit Tests for iOS
 platform: iOS
 page_order: 29
