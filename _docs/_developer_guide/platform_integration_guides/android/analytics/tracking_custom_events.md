@@ -70,10 +70,9 @@ The following keys are reserved and cannot be used as custom event properties:
 - `time`
 - `event_name`
 
-Refer to our [KDoc][6] for more information.
+Refer to our [KDoc][2] for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
 [3]: http://developer.android.com/reference/java/util/Date.html
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
