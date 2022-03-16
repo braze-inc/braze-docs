@@ -21,7 +21,7 @@ A **Notification ID** is a unique identifier for a message category of your choo
 
 ## Firebase Messaging Delivery priority {#fcm-priority}
 
-The **[Firebase Messaging Delivery Priority](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message)** field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging.
+The [Firebase Messaging Delivery Priority](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging.
 
 ## Time to live (TTL) {#ttl}
 
