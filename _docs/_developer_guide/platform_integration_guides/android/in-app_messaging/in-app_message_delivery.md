@@ -18,7 +18,7 @@ channel:
 Our in-app message product allows you to trigger an in-app message display due to several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. Make sure to check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Delivery semantics
