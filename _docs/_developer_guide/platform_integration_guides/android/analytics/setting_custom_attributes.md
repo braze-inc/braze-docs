@@ -70,7 +70,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Custom attribute keys and values have a maximum length of 255 characters. Longer strings will be truncated to 255 characters.
 
-Full method specifications for custom attributes can be found here within the [BrazeUser class in our KDoc][2].
+Full method specifications for custom attributes can be found here within the [BrazeUser class][2] in our KDoc.
 
 ### Setting custom attribute values
 
