@@ -64,17 +64,17 @@ If you are using a version of the Android SDK less than `2.3.0`, the following m
 
 ## Step 3: Enable Braze location collection
 
-If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`.
+If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">true</bool>
 ```
 
 {% alert important %}
-Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
+Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
-Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_braze_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_braze_enable_location_collection`.
+Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_braze_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_braze_enable_location_collection`:
 
 ```xml
 <bool name="com_braze_geofences_enabled">true</bool>
@@ -238,9 +238,17 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 ## Step 5: Enable geofences on the dashboard
 
-Android only allows up to 100 geofences to be stored for a given app. Braze's Locations product will use up to 20 of these geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the dashboard.
+Android only allows up to 100 geofences to be stored for a given app. Braze's locations product will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
-For Braze's Locations product to work correctly, you should also ensure that your App is not using all available geofence spots.
+For Braze's locations product to work correctly, you should also ensure that your app is not using all available geofence spots.
+
+### Enable geofences from the locations page
+
+![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+
+### Enable geofences from the settings page
+
+![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
 ## Step 6: Manually request geofence updates (optional)
 
@@ -248,7 +256,7 @@ By default, Braze automatically retrieves the device's location and requests geo
 
 #### Part 1: Disable automatic geofence requests
 
-Automatic Braze Geofence requests can be disabled in your `braze.xml` file by setting `com_braze_automatic_geofence_requests_enabled` to `false`.
+Automatic Braze Geofence requests can be disabled in your `braze.xml` file by setting `com_braze_automatic_geofence_requests_enabled` to `false`:
 
 ```xml
 <bool name="com_braze_automatic_geofence_requests_enabled">false</bool>
@@ -279,7 +287,7 @@ Braze.configure(applicationContext, brazeConfigBuilder.build())
 
 #### Part 2: Manually request Braze geofence with GPS coordinate
 
-Braze Geofences are manually requested via the [`requestGeofences()`][11] method.
+Braze Geofences are manually requested via the [`requestGeofences()`][11] method:
 
 {% tabs %}
 {% tab JAVA %}
@@ -302,19 +310,11 @@ Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 Braze Geofences can only be requested once per session, either automatically by the SDK or manually with the above method.
 {% endalert %}
 
-##### Enable geofences from the locations page:
-
-![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
-
-##### Enable geofences from the settings page:
-
-![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
-
-## Note about push to sync
+## Push to sync
 
 Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
 
-However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom Application.onCreate() implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
+However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
