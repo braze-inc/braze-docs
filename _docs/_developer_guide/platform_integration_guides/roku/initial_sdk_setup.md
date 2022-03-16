@@ -53,7 +53,7 @@ m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```
 
-## Enable Logging (optional)
+## Enable Logging (optional) {#logging}
 
 To debug your Braze integration, you can view the Roku debug console for Braze logs. [Learn More](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md)
 
