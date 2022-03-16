@@ -134,7 +134,7 @@ Users have uninstalled the application. This will invalidate their FCM push toke
 
 The Firebase Cloud Messaging server key provided in the Braze dashboard is invalid. The sender ID provided should match the one referenced in your app's `braze.xml` file. The server key and sender ID are found here in your Firebase Console:
 
-![The Firebase platform under "Settings > Cloud Messaging" will display your server ID and server key.][20]
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][20]
 
 ### Push clicks not logged
 
