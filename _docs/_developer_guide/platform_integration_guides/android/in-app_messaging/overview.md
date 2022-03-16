@@ -63,7 +63,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 ![An HTML in-app message with the a carousel of content and interactive buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% alert important %}
-Please note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
+We currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
 {% endalert %} 
 
 {% endtab %}
