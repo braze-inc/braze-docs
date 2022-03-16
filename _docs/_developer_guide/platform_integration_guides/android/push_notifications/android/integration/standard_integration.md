@@ -174,7 +174,7 @@ After completing this section, you should be able to receive and display push no
 ### Step 1: Register Braze Firebase Messaging Service
 
 {% alert warning %}
-If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using your own firebase messaging service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using your own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
 Braze includes a service to handle push receipt and open intents. Our `BrazeFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`:
