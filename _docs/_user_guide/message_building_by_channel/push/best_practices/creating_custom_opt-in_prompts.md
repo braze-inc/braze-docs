@@ -30,17 +30,17 @@ Another example of an app that does a great job with custom opt-in prompts is te
 
 ![textplus_prompt][24]
 
-After the user taps **Next**, the user receives the real iOS push prompt. If the user doesn't enable push notifications at this stage, then he will have to enable them in Settings. textPlus makes this easier for users to do by featuring a reminder on their Inbox page.
+After a user selects **Next**, the user receives the real iOS push prompt. If the user doesn't enable push notifications at this stage, then he will have to enable them in Settings. textPlus makes this easier for users to do by featuring a reminder on their Inbox page.
 
 ![textplus_reminder][25]
 
-If users taps **Turn on**, they are presented with detailed steps for how to enable push notifications. This removes some of the effort involved in turning on push notifications
+If a user selects **Turn on**, they are presented with detailed steps for how to enable push notifications. This removes some of the effort involved in turning on push notifications
 
 ![textplus_directions][26]
 
 Another app that does a wonderful job of priming its' users to accept push notifications is Hopper. Check out their [Medium article][49] on how to best onboard when it comes to push.
 
-> If you've implemented a custom push prompt as described above in an iOS app, make sure that you're [reregistering with APNs][44] every time the app runs after they grant push permissions to your app. Apple advises this as [device tokens can change arbitrarily][45].
+> If you've implemented a custom push prompt as described above in an iOS app, make sure that you're [reregistering with APNs][44] every time the app runs after they grant push permissions to your app. Apple advises this as [device tokens][45] can change arbitrarily.
 
 For additional information, refer to our article on [Managing User Subscriptions][36].
 
