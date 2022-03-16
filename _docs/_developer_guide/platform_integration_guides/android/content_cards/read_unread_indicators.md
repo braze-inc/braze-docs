@@ -15,7 +15,7 @@ channel:
 
 Braze allows you to optionally toggle on unread and read indicators on Content Cards.
 
-![Two Content Cards displayed side by side. The card on the left has a blue stripe at the bottom, indicating it has not been seen. The card on the left does not have a blue stripe indicating it has already been seen.][1]
+![Two Content Cards displayed side by side. The card on the left has a blue stripe at the bottom, indicating it has not been seen. The card on the right does not have a blue stripe indicating it has already been seen.][1]
 
 ## Customizing the indicators {#customizing-the-indicators-for-android}
 The color of these indicators can be customized by altering the values in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
