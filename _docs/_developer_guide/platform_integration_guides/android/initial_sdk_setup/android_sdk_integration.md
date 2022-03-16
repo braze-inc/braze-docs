@@ -19,7 +19,7 @@ For optimal performance on Android 12, we recommend upgrading to [Braze Android 
 
 ## Step 1: Integrate the Braze library
 
-The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to more that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the Braze [user guide][2] for a list of the benefits of using the Braze Content Cards, News Feed, and in-app message UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards), [News Feed]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
 
 ### Basic integration
 
@@ -54,7 +54,7 @@ dependencies {
 }
 ```
 
-The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Please visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
+The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 

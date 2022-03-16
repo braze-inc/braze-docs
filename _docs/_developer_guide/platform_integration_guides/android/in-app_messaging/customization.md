@@ -115,10 +115,10 @@ For example, if you set a custom manager listener when an in-app message is rece
 
 The [`IInAppMessageManagerListener`][21] interface has in-app message view methods called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
 
-- [`beforeInAppMessageViewOpened`][92] - Called just before the in-app message is added to the actviity's view. The in-app message is not yet visible to the user at this time.
-- [`afterInAppMessageViewOpened`][93] - Called just after the in-app message is added to the actviity's view. The in-app message is now visible to the user at this time.
-- [`beforeInAppMessageViewClosed`][94] - Called just before the in-app message is removed from the actviity's view. The in-app message is still visible to the user at this time.
-- [`afterInAppMessageViewClosed`][95] - Called just after the in-app message is removed from the actviity's view. The in-app message is no longer visible to the user at this time.
+- [`beforeInAppMessageViewOpened`][92] - Called just before the in-app message is added to the activity's view. The in-app message is not yet visible to the user at this time.
+- [`afterInAppMessageViewOpened`][93] - Called just after the in-app message is added to the activity's view. The in-app message is now visible to the user at this time.
+- [`beforeInAppMessageViewClosed`][94] - Called just before the in-app message is removed from the activity's view. The in-app message is still visible to the user at this time.
+- [`afterInAppMessageViewClosed`][95] - Called just after the in-app message is removed from the activity's view. The in-app message is no longer visible to the user at this time.
 
 For further context, the time between [`afterInAppMessageViewOpened`][93] and [`beforeInAppMessageViewClosed`][94] is when the in-app message view is on screen, visible to the user.
 

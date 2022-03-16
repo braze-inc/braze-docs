@@ -141,7 +141,7 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 
 First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
 
-![The Firebase platform under "Settings > Cloud Messaging" will display your server ID and server key.][59]
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][59]
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
@@ -174,7 +174,7 @@ After completing this section, you should be able to receive and display push no
 ### Step 1: Register Braze Firebase Messaging Service
 
 {% alert warning %}
-If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using your own firebase messaging service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using your own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
 Braze includes a service to handle push receipt and open intents. Our `BrazeFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`:

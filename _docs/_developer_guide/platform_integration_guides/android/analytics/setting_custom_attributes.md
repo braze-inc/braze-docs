@@ -19,7 +19,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our [KDoc for method specifications][2]:
+Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our KDoc for [method specifications][2]:
 
 - First name
 - Last name
@@ -70,7 +70,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Custom attribute keys and values have a maximum length of 255 characters. Longer strings will be truncated to 255 characters.
 
-Full method specifications for custom attributes can be found here within the [BrazeUser class in our KDoc][2].
+Full method specifications for custom attributes can be found here within the [BrazeUser class][2] in our KDoc.
 
 ### Setting custom attribute values
 
@@ -287,7 +287,7 @@ To set up a subscription for your users (either email or push), call the functio
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. Visit our [User Guide]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
+No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. Refer to [managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
 {% endalert %}
 
 ### Setting email subscriptions
