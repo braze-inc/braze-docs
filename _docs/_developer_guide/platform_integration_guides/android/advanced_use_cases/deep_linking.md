@@ -171,7 +171,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 To deep link to the Braze News Feed from a push notification, [create a custom deep link][1] for your News Feed activity.
 
-Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed deep Link.
+Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed deep link.
 
 ## Custom WebView activity {#Custom_Webview_Activity}
 
