@@ -480,7 +480,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 {% endtab %}
 {% endtabs %}
 
-Additional relevant resources on this topic are available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
+Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
 ### Custom Content Cards click listener
 
