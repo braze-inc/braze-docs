@@ -1,6 +1,6 @@
 ---
 nav_title: Customization
-article_title: Content Card Customization for Android/FireOS
+article_title: Content Card Customization for Android and FireOS
 page_order: 2
 platform: 
   - Android
@@ -13,11 +13,11 @@ channel:
 
 # Customization
 
-Customizing Content Cards and the feed they are located in must be done during in the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
+Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
 
 ## Default styling {#default-styling-for-android}
 
-Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
+Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution:
 
 ```xml
   <!-- Content Cards Example -->
@@ -36,7 +36,7 @@ Braze in-app messages and Content Cards come with a default look and feel that m
 
 ## Overriding styles {#overriding-styles-for-android}
 
-If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
+If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
 
 ### Correct style override {#correct-style-override-for-android}
 
@@ -67,11 +67,11 @@ This section covers customization of the [ContentCardsFragment][49] whose source
 
 ### Customizing the network connection error message
 
-If the [ContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
+If the [`ContentCardsFragment`][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
+A special adapter, the [`AppboyEmptyContentCardsAdapter`][50] replaces the standard [`AppboyCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
 
-The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
+The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below:
 
 ```xml
 <style name="Braze.ContentCardsDisplay.Empty">
@@ -85,15 +85,15 @@ The style used to display this message can be found via [`Appboy.ContentCardsDis
 </style>
 ```
 
-To fully customize the network error behavior, you can extend the [ContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
+To fully customize the network error behavior, you can extend the [`ContentCardsFragment`][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
 
 ## Content Cards style elements {#content-cards-style-elements-for-android}
 
 ### Custom font {#setting-a-custom-font-for-android}
 
-Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
+Braze allows setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
-For example, to update the font on all titles for Captioned Image Cards, override the `Appboy.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
+For example, to update the font on all titles for captioned image cards, override the `Appboy.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
@@ -116,7 +116,7 @@ The `ContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to han
 
 Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
-The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
+The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations:
 
 {% tabs %}
 {% tab JAVA %}
@@ -251,7 +251,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 {% endtab %}
 {% endtabs %}
 
-> This code can also be found here, [DefaultContentCardsUpdateHandler][46].
+This code can also be found here, [DefaultContentCardsUpdateHandler][46].
 
 And here's how to use the above class:
 
@@ -280,7 +280,7 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 ### Customizing card rendering {#customizing-card-rendering-for-android}
 
-Here's information on how to change how any card is rendered in the recyclerView. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want.
+The following lists information on how to change how any card is rendered in the `recyclerView`. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want:
 
 {% tabs %}
 {% tab JAVA %}
@@ -453,7 +453,7 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 {% endtab %}
 {% endtabs %}
 
-> This code can also be found here, [DefaultContentCardsViewBindingHandler][56].
+This code can also be found here [`DefaultContentCardsViewBindingHandler`][56].
 
 And here's how to use the above class:
 
@@ -480,19 +480,13 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 {% endtab %}
 {% endtabs %}
 
-There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
+Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
 ### Custom Content Cards click listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
-#### Step 1: Implement a Content Cards click listener
-
-Create a class that implements [IContentCardsActionListener][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
-
-#### Step 2: Instruct Braze to use your Content Card click listener
-
-You can see an example of steps 1 and 2 here:
+Create a class that implements [`IContentCardsActionListener`][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Next, instruct Braze to use your Content Card click listener. The following code snippet shows an example click listener:
 
 {% tabs %}
 {% tab JAVA %}
@@ -531,13 +525,13 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 
 ### Dark theme customization
 
-By default, Content Cards views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
+By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
 
 To override this behavior, override the `values-night` values in `android-sdk-ui/src/main/res/values-night/colors.xml` and `android-sdk-ui/src/main/res/values-night/dimens.xml`.
 
 ### Fully custom Content Card display {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Content Card updates
 
@@ -622,7 +616,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 
 #### Part 2: Logging analytics
 
-When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
+When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
 
 To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
 
@@ -632,7 +626,7 @@ For campaigns using Control Cards for A/B testing, you can use [`Card.isControl(
 
 #### Manually dismissing a Content Card
 
-You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`][57].
+You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`][57].
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
@@ -642,9 +636,9 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 
 ## Key-value pairs
 
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data along with a `Card` for further handling by the application.
 
-See the [KDoc][36] for more information.
+See our [KDoc][36] for more information.
 
 {% alert note %}
 Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
@@ -653,7 +647,7 @@ Content Cards have a maximum size limit of 2 KB for content you enter in the Bra
 ## GIFs {#gifs-news-content-cards}
 
 {% alert note %}
-This section applies to integrations which use the Braze SDK's default Content Cards Fragment or Views to display Content Cards.
+This section applies to integrations that use the Braze SDK's default Content Cards fragment or views to display Content Cards.
 {% endalert %}
 
 {% include archive/android/gifs.md channel="Content Cards" %}
@@ -662,11 +656,11 @@ This section applies to integrations which use the Braze SDK's default Content C
 
 ![Sample news app showing carousel of Content Cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
-This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. In order to integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+This section covers implementing a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze’s views and default logic, but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use Braze’s views and default logic but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
-In terms of level of development effort, the key differences between the out-of-the-box implementation and the carousel implementation include:
+In terms of the level of development effort, the key differences between the out-of-the-box implementation and the carousel implementation include:
 
 - Building your own views
 - Logging Content Card analytics
@@ -693,7 +687,7 @@ The same page also details the different properties inherited from our generic C
 Follow the steps for [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/) to set key-value pairs on cards and create a Content Card update handler.
 
 {% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs which the developers build into the app logic.
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs used must match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
 For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.

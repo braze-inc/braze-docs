@@ -1,6 +1,6 @@
 ---
 nav_title: Badges
-article_title: Content Card Badges for Android/FireOS
+article_title: Content Card Badges for Android and FireOS
 page_order: 5
 platform: 
   - Android

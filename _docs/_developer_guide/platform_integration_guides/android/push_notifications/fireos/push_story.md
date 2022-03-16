@@ -8,8 +8,10 @@ description: "This page provides resources on Android Push Stories."
 
 ---
 
-# Push Stories set up for Android
+# Push Stories setup for Android
 
-No extra integration for Android Push Stories is required. It's built into Braze already! Learn more about using Push Stories on Braze [here][1].
+No extra integration for Android Push Stories is required. It's built into Braze already! 
+
+Read our [Push Stories][1] article in the user guide to learn more.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories

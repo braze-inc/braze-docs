@@ -1,6 +1,6 @@
 ---
 nav_title: Defining a News Feed Category
-article_title: Defining a News Feed Category for Android/FireOS
+article_title: Defining a News Feed Category for Android and FireOS
 page_order: 3
 platform: 
   - Android
@@ -13,9 +13,9 @@ channel:
 
 # Defining a News Feed category
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for effective integration of multiple News Feed streams within a single application. For more information on this feature see more in our [News Feed best practices][14]
+Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature, see our News Feed [best practices][14]
 
-News Feed Categories can be defined by calling the following methods as you load the News Feed:
+News Feed categories can be defined by calling the following methods as you load the News Feed:
 
 ```xml
 newsFeed.setCategories(CardCategory.ALL_CATEGORIES);

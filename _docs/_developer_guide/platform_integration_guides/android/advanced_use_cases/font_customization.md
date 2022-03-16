@@ -1,6 +1,6 @@
 ---
 nav_title: Font Customization
-article_title: Font Customization for Android/FireOS
+article_title: Font Customization for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -11,11 +11,11 @@ description: "This reference article covers font customization options such as d
 
 # Font customization
 
-Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
+Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
 
 ## Create a font family
 
-The following is an example custom font family definition using the [font family guide][2]. For this example, we use the [Bungee Shade Font][3].
+The following is an example custom font family definition using the [font family guide][2]. For this example, we use the [Bungee Shade font][3].
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -42,7 +42,7 @@ After storing the font family definition in `/res/font/bungee_font_family.xml`, 
 
 Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
 
-For example, the following styles override would use the `bungee` font family from above for _all_ Braze in-app messages and a different font family for _all_ Braze News Feed cards.
+For example, the following styles override would use the `bungee` font family from above for all Braze in-app messages and a different font family for all Braze News Feed cards.
 
 ```
 <style name="Braze.InAppMessage">
@@ -57,7 +57,7 @@ For example, the following styles override would use the `bungee` font family fr
 ```
 
 {% alert warning %}
-  Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
+Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
 {% endalert %}
 
 [1]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html

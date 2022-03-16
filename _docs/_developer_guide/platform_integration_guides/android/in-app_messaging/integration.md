@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: In-App Message Integration for Android/FireOS
+article_title: In-App Message Integration for Android and FireOS
 page_order: 1
 platform: 
   - Android
