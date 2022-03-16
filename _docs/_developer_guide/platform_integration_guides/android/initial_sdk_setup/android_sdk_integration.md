@@ -54,7 +54,7 @@ dependencies {
 }
 ```
 
-The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Please visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
+The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 
