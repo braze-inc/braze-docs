@@ -197,6 +197,10 @@ Braze data points will be used when you send data marked as optional because it 
 | `attributedSubSubPublisher3` <br>(Optional) | `airbridge_sub_id_3` | Custom User Attribute | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+## Facebook attribution data
+
+Attribution data for Facebook campaigns is not available through our partners. This media source does not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+
 ## Airbridge click tracking URLs in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
