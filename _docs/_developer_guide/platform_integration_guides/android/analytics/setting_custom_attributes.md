@@ -19,7 +19,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our [KDoc for method specifications][2]:
+Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our KDoc for [method specifications][2]:
 
 - First name
 - Last name
