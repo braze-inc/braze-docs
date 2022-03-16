@@ -25,7 +25,7 @@ Contact Cards can be created from the SMS and MMS composer. Select the **Contact
 
 Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20 character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
 
-![Contact Card Composer]({% image_buster /assets/img/sms/contact_card1.png %})
+![]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Step 2: Assign phone number
 
@@ -35,10 +35,10 @@ Note that alphanumeric codes are not compatible with two-way messaging and are n
 
 ### Step 3: Optional fields
 
-![Contact Card Options]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 **Contact Card Contact Photo**<br>
-You can upload an optional thumbnail contact photo for your Contact Card. We recommend a 240x240 jpeg or png image. Any high-resolution images uploaded will be resized to 240x240 to ensure the deliverability of your message, as MMS messages larger than 5MB may fail.
+You can upload an optional thumbnail contact photo for your Contact Card. We recommend a 240x240 JPEG or PNG image. Any high-resolution images uploaded will be resized to 240x240 to ensure the deliverability of your message, as MMS messages larger than 5MB may fail.
 
 **Other Information**<br>
 Other fields allow you to insert your name, subheader, address, and other contact information that your user may want to have handy. 

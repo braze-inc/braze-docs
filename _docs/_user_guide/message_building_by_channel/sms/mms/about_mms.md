@@ -11,7 +11,7 @@ channel:
 
 # About MMS messages
 
-![MMS][picture]{: style="float:right; max-width:30%; margin-left:15px; margin-bottom:15px; border:0"}
+![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:30%; margin-left:15px; margin-bottom:15px; border:0"}
 
 > This reference article covers what MMS message are and general use cases of the MMS channel. In addition to this article, you can also check out our [SMS & MMS](https://lab.braze.com/messaging-channels-sms) LAB course.
 
