@@ -55,7 +55,7 @@ m.Braze = getBrazeInstance(m.BrazeTask)
 
 ## Enable Logging (optional) {#logging}
 
-To debug your Braze integration, you can view the Roku debug console for Braze logs. [Learn More](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md)
+To debug your Braze integration, you can view the Roku debug console for Braze logs. Refer to [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers to learn more.
 
 ## Basic SDK integration complete
 
