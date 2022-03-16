@@ -46,7 +46,7 @@ For best practices and additional resources, refer to [Creating custom opt-in pr
 
 ## Step 3: Specify button behavior
 
-To add buttons to your in-app message, add text to the **Button 1** and **Button 2** text fields, which are the secondary and primary buttons in your in-app message, respectively. We recommend “Allow notifications” and “Not now” as starter buttons, but there are many different button prompts you could assign.
+To add buttons to your in-app message, add text to the **Button 1** and **Button 2** text fields, which are the secondary and primary buttons in your in-app message respectively. We recommend “Allow notifications” and “Not now” as starter buttons, but there are many different button prompts you could assign.
 
 After you've added button copy, specify the on-click behavior for each button:
 
@@ -55,8 +55,26 @@ After you've added button copy, specify the on-click behavior for each button:
 
 ![][4]
 
+## Step 4: Schedule delivery
+
+To set your push primer to send at a relevant time, you must schedule your in-app message as an action-based message with **Perform Custom Event** as the trigger action.
+
+While the ideal time will vary, Braze suggests waiting until a user completes some sort of [high-value action](https://www.braze.com/resources/videos/mapping-high-value-actions), indicating that they're starting to see value in your app or site, or when there's a compelling need that push notifications can address (such as after they've placed an order and you want to offer them shipping tracking information). This way, the prompt is beneficial to the customer rather than only to your brand.
+
+![][5]
+
+## Step 5: Target users
+
+Since the goal of a push primer campaign is to prompt users to opt in to push messaging, you don't want to target users who are already opted in. To do so, add a segment or filter where `Push Subscription Status is not Opted In`.
+
+Beyond that, you can decide what additional segments you feel are most appropriate. For example, you might target users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
+
+## Step 6: Conversion events
+
+Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) surrounding push primers.
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
 [4]: {% image_buster /assets/img_archive/push_primer_button_behavior.png %}
+[5]: {% image_buster /assets/img_archive/push_primer_trigger.png %}
