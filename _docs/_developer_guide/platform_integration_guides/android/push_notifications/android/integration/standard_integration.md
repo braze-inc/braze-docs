@@ -141,7 +141,7 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 
 First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
 
-![The Firebase platform under "Settings > Cloud Messaging" will display your server ID and server key.][59]
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][59]
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
