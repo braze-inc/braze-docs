@@ -4,7 +4,7 @@ article_title: Drag & Drop Editor Blocks
 alias: "/dnd/editor_blocks/"
 channel: email
 page_order: 1
-description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop editor."
+description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop Editor."
 tool: Media
 
 ---
@@ -128,5 +128,5 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 | name | description |
 |---|---|
-| `Add Personalization` |  Located on the left menu. Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, content blocks etc. | 
+| `Add Personalization` |  Located on the left menu. Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, content blocks, etc. | 
 {: .reset-td-br-1 .reset-td-br-2}

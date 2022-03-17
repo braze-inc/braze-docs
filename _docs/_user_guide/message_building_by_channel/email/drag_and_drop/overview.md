@@ -1,10 +1,10 @@
 ---
 nav_title: Overview
-article_title: Overview
+article_title: Create a Drag & Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "This reference article covers how to set global email style settings for your campaigns and Canvases."
+description: "This article covers how to set up and properly use the Drag & Drop Editor."
 tool: 
   - Campaigns
   - Canvas
@@ -12,7 +12,7 @@ tool:
 
 <br>
 
-> With the Drag & Drop Editor, you can create completely custom and personalized email messages in either Campaigns or Canvas using the drag & drop editing experience.
+> With the Drag & Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag & drop editing experience.
 
 {% include video.html id="4dTrkxe8DLo" align="right" %}
 
@@ -143,10 +143,10 @@ Next, take your generated Liquid snippet and add it to your email.
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
 [4]: {% image_buster /assets/img/dnd/dnd3.png %}
 [5]: {% image_buster /assets/img/dnd/dnd4.png %}
-[7]: {site.baseurl}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
 [8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}
 [10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {site.baseurl}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {site.baseurl}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
+[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/

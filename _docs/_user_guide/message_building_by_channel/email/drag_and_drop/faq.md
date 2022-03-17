@@ -4,7 +4,7 @@ article_title: Drag & Drop Editor FAQs
 alias: "/dnd/faq/"
 channel: email
 page_order: 5
-description: "This article covers various FAQs related to the Drag & Drop editor."
+description: "This article covers various FAQs related to the Drag & Drop Editor."
 tool: 
   - Campaigns
   - Canvas
