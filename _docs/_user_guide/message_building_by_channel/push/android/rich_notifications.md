@@ -16,8 +16,6 @@ tool:
 
 > Rich notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, referred to as an "expanded notification image".
 
-![Rich Not Blog][7]
-
 ## Requirements
 
 - Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or above. If a user's device is not running on these systems, they will not see the notification image.
@@ -56,6 +54,5 @@ Once your rich notification content is uploaded to the dashboard, you can simply
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
-[7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %}
 [8]: {% image_buster /assets/img_archive/android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
