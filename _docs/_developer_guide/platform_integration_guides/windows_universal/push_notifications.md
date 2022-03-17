@@ -8,9 +8,8 @@ channel: push
 
 ---
 
-{% include archive/windows_deprecation.md %}
-
 # Push notification integration
+{% include archive/windows_deprecation.md %}
 
 ![An example windows universal push.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 

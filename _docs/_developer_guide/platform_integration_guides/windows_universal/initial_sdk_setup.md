@@ -7,10 +7,8 @@ description: "This reference article covers the initial SDK integration steps to
 
 ---
 
-{% include archive/windows_deprecation.md %}
-
-
 # Initial SDK integration
+{% include archive/windows_deprecation.md %}
 
 The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notifications.
 
