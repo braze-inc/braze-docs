@@ -19,8 +19,9 @@ Are you currently a non-native SMS client? If so, please visit the [non-native S
 
 ## Format user phone numbers to carrier standards
 
-Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. [Learn more here.][userphone]<br>
-![e164][picture]{: style="max-width:50%;border: 0;"}
+Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. Learn more about [user phone numbers][userphone].
+
+![][picture]{: style="max-width:50%;border: 0;"}
 
 ## Update historical information on users subscription states
 
@@ -32,7 +33,7 @@ Before you begin composing SMS campaigns through Braze, you’ll need to update 
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 
-1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a '+' and a country code, e.g. +12408884782. For more information on how to import user phone numbers, check out our [documentation][userphone].
+1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a plus `+` and a country code, e.g., `+12408884782`. For more information on how to import user phone numbers, refer to [user phone numbers][userphone].
   - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
 
 2. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g. subscribed or unsubscribed) if you have this information.

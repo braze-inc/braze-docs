@@ -3,10 +3,10 @@ nav_title: Drag & Drop Editor
 article_title: Drag & Drop Editor
 alias: /dnd/
 page_order: 2
-description: "This article covers how to set up and properly use the drag & drop editor provided by Braze."
+description: "This article covers how to set up and properly use the Drag & Drop Editor provided by Braze."
 layout: featured
 guide_top_header: "Drag & Drop Editor"
-guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas using a drag & drop editing experience. Check out the articles below to learn more."
+guide_top_text: "The Drag & Drop Editor brings ease to Braze Email message building. With the drag & drop editing experience, you can create completely custom and personalized email messages without using HTML. Check out the articles below to learn more!"
 channel: email
 tool: Media
 

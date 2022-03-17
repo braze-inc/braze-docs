@@ -17,7 +17,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 <img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="An example News Feed displaying several notifications such as follow request, update notices, ads, and more." height="600" />
 
-## News Feed integration
+## Integration
 
 To toggle the display of the News Feed through the Braze Web SDK, simply call:
 
@@ -65,7 +65,7 @@ This is often used to power badges signifying how many unread News Feed cards th
 
 See the JSDocs for more information on [ab.ClassicCard][3], [ab.Banner][4], and [ab.CaptionedImage][5].
 
-## News Feed customization
+## Customization
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
 

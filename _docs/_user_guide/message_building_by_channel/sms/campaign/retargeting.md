@@ -26,44 +26,59 @@ To read more about custom keywords and how to set up two-way messaging to take a
 Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder. 
 
 **Filter by last received SMS**<br>
-![Filter 1][2]
+![Segmentation filter Last Received SMS after December 8, 2020.][2]
 
 **Filter by received messages from SMS campaign**<br>
 Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
-![Filter 2][1]
+![Segmentation filter Has received message from campaign "SMS retargeting".][1]
 
 ### Trigger messages as users receive SMS
 
-To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action. Next, select **Receive SMS** and the SMS campaign you would like to use. <br><br>
-![Trigger][3]
+To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS campaign you would like to use.
+
+![][3]
 
 ## Keyword category-specific retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
 ### Filter by recency
 
-Filter for the recency of a user responding to your SMS Program. This filter will evaluate the LAST date a user sent an inbound SMS that is within one of the keyword categories. 
+Filter for the recency of a user responding to your SMS program. This filter will evaluate the last date a user sent an inbound SMS that is within one of the keyword categories. 
 
-![picture][6]
+![Segmentation filter Last sent SMS to subscription group "Marketing SMS" with keyword "Opt-in" after August 11, 2020.][6]
 
 ### Trigger messages by keyword
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
 **Trigger by inbound keyword category**<br>
-![picture][7]{: style="margin-top:10px;"}
+![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 
 **Trigger by arbitrary keywords**<br>
 Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
-![picture][8]{: style="margin-top:10px;"}
+![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>
 When triggering a campaign or Canvas Step on an inbound SMS or MMS, you can optionally template the text and/or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
 
-![picture][16]{: style="max-width:80%;"}
-<br><br>
-![picture][17]{: style="max-width:80%;"}
+{% raw %}
+
+```liquid
+Sorry, we didn't recognize {{sms.${inbound_message_body}}}. Text HELP for help or STOP to stop.
+```
+
+```liquid
+{% if {{sms.${inbound_message_body}}} == "SNEAKERS" %}
+OK, you're subscribed to updates on all our sneaker deals!
+{% elsif {{sms.${inbound_message_body}}} == "SHIRTS" %}
+Shirt deals coming up for you!
+{% else %}
+Want to receive a specific deal? Just text us the category you're interested in. For example SHIRTS or SNEAKERS.
+{% endif %}
+```
+
+{% endraw %}
 
 [1]: {% image_buster /assets/img/sms/filter1.png %}
 [2]: {% image_buster /assets/img/sms/filter2.png %}

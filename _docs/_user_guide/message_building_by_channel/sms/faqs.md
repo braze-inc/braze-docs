@@ -44,7 +44,7 @@ The default concurrency rate and throughput enable about 360,000 messages an hou
 
 While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
-- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
+- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. For more details, refer to our [segment breakdown]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
 - Test, test, and test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
@@ -63,7 +63,7 @@ Custom keywords would be written as custom events, so you would want to create s
 
 ### How many characters does an emoji utilize?
 
-Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
 ### If a user texts "Stop" to our short code, are they unsubscribed from the subscription group?
 

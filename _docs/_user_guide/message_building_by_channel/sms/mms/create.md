@@ -36,7 +36,7 @@ Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a st
 
 Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS-enabled Subscription Group, you will have the ability to upload an image, reference an image URL, or include a Contact Card.
 
-![picture][2]
+![][2]
 
 ### Image specifications
 
@@ -48,13 +48,13 @@ File Types | PNG, JPG, GIF
 
 ## Previewing an MMS message
 
-Braze provides a preview of the image you have uploaded. 
+Braze provides a preview of the image you have uploaded in the **Preview** panel of the message composer. 
 
 {% alert note %}
 The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
 {% endalert %}
 
-![picture][3]
+![][3]
 
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/

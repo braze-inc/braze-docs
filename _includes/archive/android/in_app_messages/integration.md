@@ -6,17 +6,15 @@ In-app message display is managed by the [`BrazeInAppMessageManager`][34] class.
 
 ### Activity lifecycle callback integration (recommended)
 
-The [Activity Lifecycle Callback Integration][59] handles in-app message registration automatically, no extra integration is required. This is the recommended integration for handling in-app message registration.
+The [activity lifecycle callback integration][59] handles in-app message registration automatically; no extra integration is required. This is the recommended integration for handling in-app message registration.
 
 ### Manual in-app message registration
 
-A manual in-app message registration requires 3 steps.
-
 {% alert warning %}
-If you did the activity lifecycle integration, then you should *not* do a manual in-app message integration.
+If you did the activity lifecycle integration, you should *not* do a manual in-app message integration.
 {% endalert %}
 
-In your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEvents()`][69].
+First, in your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEvents()`][69]:
 
 {% tabs %}
 {% tab JAVA %}
@@ -35,7 +33,7 @@ BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(cont
 {% endtab %}
 {% endtabs %}
 
-In every activity where in-app messages can be shown, [`registerInAppMessageManager()`][80] should be called in that activity's `onResume()`.
+Next, in every activity where in-app messages can be shown, [`registerInAppMessageManager()`][80] should be called in that activity's `onResume()`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -65,7 +63,7 @@ public override fun onResume() {
 {% endtab %}
 {% endtabs %}
 
-In every activity where [`registerInAppMessageManager()`][80] was called, [`unregisterInAppMessageManager()`][81] should be called in that activity's `onPause()`.
+Lastly, in every activity where [`registerInAppMessageManager()`][80] was called, [`unregisterInAppMessageManager()`][81] should be called in that activity's `onPause()`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -95,9 +93,9 @@ public override fun onPause() {
 
 ## Step 2: In-app message manager blacklist (optional)
 
-In your integration, you may require that certain Activities in your app should not show in-app messages. The [Activity Lifecycle Callback Integration][59] provides an easy way to accomplish this.
+In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration][59] provides an easy way to accomplish this.
 
-The following example code adds two Activities to the in-app message registration blacklist, `SplashActivity` and `SettingsActivity`.
+The following sample code adds two activities to the in-app message registration blacklist, `SplashActivity` and `SettingsActivity`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -133,7 +131,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-> See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for more information.
+See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for more information.
 
 [34]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
 [69]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-

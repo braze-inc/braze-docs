@@ -13,7 +13,7 @@ description: "This reference article provides an overview of in-app messages, in
 
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-Check out our [Case studies][53] to see examples of in-app messages.
+Check out our [case studies][53] to see examples of in-app messages.
 
 ## In-app message types
 
@@ -37,38 +37,26 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html) in-app messages are so-named because traditionally on mobile platforms, they "slide up" or "slide down" from the top or bottom of the screen. In the Braze Web SDK, these messages are displayed as more of a Growl or Toast style notification to align with the web's dominant paradigm. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
-<br>
-
 ![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom right corner of a web page.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
-
-<br>
 
 {% endtab %}
 {% tab Modal %}
 
 [`Modal`](https://js.appboycdn.com/web-sdk/latest/doc/ab.ModalMessage.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics-enabled buttons.
 
-<br>
-
 ![A modal in-app message in the center of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the center of a web page.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-<br>
 
 {% endtab %}
 {% tab Full Screen %}
 
 [`Full`](https://js.appboycdn.com/web-sdk/latest/doc/ab.FullScreenMessage.html) in-app messages are useful for maximizing the content and impact of your user communication. On narrow browser windows (e.g., the mobile web), `full` in-app messages take up the entire browser window. On larger browser windows, `full` in-app messages appear similarly to `modal` in-app messages. The upper half of a `full` in-app message contains an image, and the lower half allows up to eight lines of text as well as up to two click action, and analytics-enabled buttons
 
-<br>
-
 ![A full screen in-app message shown across an entire phone screen displaying, "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed largely in the center of a web page.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-
-<br>
 
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) for more details.
+[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) for more details.
 
 {% alert important %}
 
