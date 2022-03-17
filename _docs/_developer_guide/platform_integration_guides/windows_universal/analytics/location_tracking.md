@@ -8,6 +8,8 @@ tool: Location
 
 ---
 
+{% include archive/windows_deprecation.md %}
+
 # Location tracking
 
 1. Ensure that within your `Package.appxmanifest` file the `location` is checked.

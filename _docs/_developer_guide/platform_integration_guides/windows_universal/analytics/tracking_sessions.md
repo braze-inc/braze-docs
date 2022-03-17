@@ -7,6 +7,8 @@ description: "This reference article covers how to track sessions on the Windows
 
 ---
 
+{% include archive/windows_deprecation.md %}
+
 # Analytics
 
 ## Session tracking

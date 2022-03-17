@@ -7,6 +7,8 @@ description: "This reference article covers how to set user ids on the Windows U
 
 ---
 
+{% include archive/windows_deprecation.md %}
+
 # Setting user IDs
 
 {% include archive/setting_user_ids/setting_user_ids.md %}

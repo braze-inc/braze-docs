@@ -7,6 +7,8 @@ description: "This reference article covers how to track custom events on the Wi
 
 ---
 
+{% include archive/windows_deprecation.md %}
+
 # Tracking custom events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
