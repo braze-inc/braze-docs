@@ -8,8 +8,8 @@ channel:
   - push
 
 ---
-
 # Baidu integration
+{% include archive/baidu_deprecation.md %}
 
 Braze can send push notifications to Android devices using [Baidu Cloud Push][14]. Note that using Baidu Cloud Push **does not** require you to distribute your apps via the Baidu App Store.
 

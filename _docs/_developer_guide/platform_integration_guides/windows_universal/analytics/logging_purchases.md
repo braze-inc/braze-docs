@@ -8,6 +8,7 @@ description: "This reference article covers how to log purchases on the Windows 
 ---
 
 # Logging purchases
+{% include archive/windows_deprecation.md %}
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 

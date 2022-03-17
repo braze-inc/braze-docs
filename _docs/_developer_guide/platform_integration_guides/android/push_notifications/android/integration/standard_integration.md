@@ -15,7 +15,7 @@ channel:
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
-Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45]. For devices without Google services installed, Braze offers the option to send push through [Baidu Cloud][50] push.
+Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
 
 Check out our [help documentation][8] for push best practices.
 
@@ -667,7 +667,6 @@ For documentation on Braze push data keys, refer to the [Android SDK](https://ap
 [45]: https://firebase.google.com/docs/cloud-messaging/
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
-[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/baidu_integration/
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
