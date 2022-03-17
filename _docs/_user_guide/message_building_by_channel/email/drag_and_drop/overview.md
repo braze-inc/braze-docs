@@ -11,9 +11,10 @@ tool:
 ---
 
 <br>
-{% include video.html id="4dTrkxe8DLo" align="right" %}
 
 > With the Drag & Drop Editor, you can create completely custom and personalized email messages in either Campaigns or Canvas using the drag & drop editing experience.
+
+{% include video.html id="4dTrkxe8DLo" align="right" %}
 
 ## Create a drag & drop email
 <br>
@@ -125,6 +126,7 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 ![Block Options for the Drag & Drop Editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
+<br><br>
 
 ### Adding Liquid 
 

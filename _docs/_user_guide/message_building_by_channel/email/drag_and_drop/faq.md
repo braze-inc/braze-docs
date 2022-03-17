@@ -34,6 +34,6 @@ The row height auto-adjusts to the content. As an alternative, we recommend that
 
 The Drag & Drop Editor currently supports two layers. You can set a row background image and customize background colors.
 
-### Can I save my Drag & Drop Email as a template after I build it within my campaign or Canvas?
+### Can I save my drag & drop email as a template after I build it within my campaign or Canvas?
 
 No, you have to recreate the email in **Email Templates** in order to save.
