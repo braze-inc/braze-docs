@@ -1,6 +1,6 @@
 ---
-nav_title: "Notification Options (iOS)"
-article_title: Push Notification Options
+nav_title: "Notification Options"
+article_title: iOS Notification Options
 page_order: 2
 page_layout: reference
 description: "This reference article covers iOS notification options like critical alerts, quiet notifications, provisional push notifications, and more."
@@ -21,13 +21,13 @@ If you want to categorize your messages and group them in your user's notificati
 
 Create your iOS push campaign, then look to the top of the **Compose** tab for the **Notification Groups** dropdown.
 
-![notificationgroupsdropdown][26]{: style="max-width:60%;" }
+![][26]{: style="max-width:60%;" }
 
 Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the app group.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
-![Manage Notification Groups][27]
+![][27]
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
@@ -80,13 +80,13 @@ Unlike a traditional iOS push token, a provisional push token acts as a "trial p
 Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
 {% endalert %}
 
-Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) (under the **Engagement** tab in their user profile, shown below).
+Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
 
-![User profile provisionally authorized]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
-You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
+You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-![Provisionally authorized segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Segment Details panel with the sample segment filter "Provisionally Authorized on iOS Stopwatch (iOS) is true" to target users.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 If users choose to "Turn Off" provisional push from you, they won't see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality!
@@ -98,7 +98,7 @@ If you utilize additional push prompts or [in-app push primers](https://www.braz
 
 #### Set up provisional push notifications
 
-Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
 The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
@@ -132,7 +132,7 @@ if (@available(iOS 12.0, *)) {
 
 ### Interruption level (iOS 15+) {#interruption-level}
 
-![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![iOS Notification Settings page that shows notifcations enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 
@@ -140,7 +140,7 @@ Apps can now specify what level of interruption a notification should include, b
 
 Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
 
-The four new Interruption Level options are:
+Refer to the following table for interruption levels and their descriptions.
 
 |Interruption Level|Description|When To Use|Break Through Focus Mode|
 |--|--|--|--|
@@ -150,17 +150,17 @@ The four new Interruption Level options are:
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-To change the Interruption Level for an iOS push notification, choose the desired level from the **Settings** tab within your message:
+To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
 
-![Interruption Level Option][28]
+![Interruption Level set to Active (Default) and expanded to show all available interruption levels: Passive, Active (Default), Time Sensitive, and Critical.][28]
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
 ### Relevance score (iOS 15+) {#relevance-score}
 
-![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![A notification summary for iOS titled "Your Evening Summary" with three notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-iOS 15 also introduces a new way for users to (optionally) schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+iOS 15 also introduces a new way for users to optionally schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
 
 Apps can specify which push notifications are most relevant by setting a **Relevance Score**. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
 
@@ -168,7 +168,7 @@ All notifications will still be accessible in the user's notification center.
 
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
-![Relevance Score Option][29]
+![][29]
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 

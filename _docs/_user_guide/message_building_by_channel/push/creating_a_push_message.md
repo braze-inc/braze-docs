@@ -61,7 +61,7 @@ Because platform selections are specific to each variant, you could try testing 
 
 For iOS and Android, select your notification type:
 
-![Select notification type][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Notification Type with Standard Push selected as an example.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 - Standard Push
 - [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
@@ -73,7 +73,7 @@ If you want to include images in your push campaign, refer to the following guid
 
 Now it's time to write your push message! The **Compose** tab allows you to edit all aspects of your message’s content and behavior.
 
-![Compose tab of creating a push notification]({% image_buster /assets/img_archive/push_compose.png %})
+![Compose tab of creating a push notification.]({% image_buster /assets/img_archive/push_compose.png %})
 
 The content of the **Compose** tab varies based on your chosen notification type in the previous step, but may include any of the following options:
 
@@ -146,7 +146,7 @@ When you view the Total Reachable Users for your filtered audience, you may noti
 
 {% enddetails %}
 
-![Reachable Users Footer]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![Table of detailed audience statistics for Reachable Users.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 Keep in mind that exact segment membership is always calculated just before the message is sent.
 
