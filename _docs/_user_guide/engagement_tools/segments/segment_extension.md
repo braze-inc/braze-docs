@@ -16,41 +16,37 @@ A Segment Extension expands our existing segmentation capabilities by enabling y
 
 ## Step 1: Navigate to Segment Extensions
 
-From the left-hand side of the dashboard under **Engagement**, expand the **Segments** section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
+From the left-hand side of the dashboard under **Engagement**, expand the **Segments** section, and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
 
 ## Step 2: Name your Segment Extension
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension Name][2]
+![Segment Extension named "Online Shoppers Extenion - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
 
 ## Step 3: Choose your criteria
 
 Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
 
-![Segment Extension Criteria][3]
+![Segment ][3]
 
 ### Event property segmentation
 
 To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
 
-![Segmenting based on string properties][12]
+![Segmenting based on numeric properties.][13]
 
-![Arrow][16]{: style="border:0;"}
+![Segmenting based on boolean properties.][14]
 
-![Segmenting based on numeric properties][13]
-
-![Segmenting based on boolean properties][14]
-
-![Segmenting based on datetime objects][15]
+![Segmenting based on datetime objects.][15]
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
-![Segmenting based on nested event properties][17]
-
 Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
 
-{% alert note %} Using event properties within Segment Extensions does not impact data point usage.  {% endalert %}
+{% alert note %} 
+Using event properties within Segment Extensions does not impact data point usage.
+{% endalert %}
 
 ### Extension regeneration
 
@@ -72,21 +68,21 @@ Once you click **Save**, your extension will begin processing. The length of tim
 
 While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
 
-![Segment Extension Processing][5]
+![][5]
 
 ## Step 5: Use your extension in a segment
 
 Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
-![Segment Extension as a Segment Filter][6]
+![][6]
 
 From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
 
-![Segment Extension as a Segment Filter][7]
+![][7]
 
 To view the extension criteria, click **View Extension Details** to show the details in a modal popup.
 
-![Segment Extension Details Modal][8]{: style="max-width:70%;"}
+![][8]{: style="max-width:70%;"}
 
 Now you can proceed as usual with [creating your segment][11].
 

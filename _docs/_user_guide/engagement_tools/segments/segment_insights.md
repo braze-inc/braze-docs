@@ -15,7 +15,7 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline. 
 
-![Segment Insights Dash][1]
+![Segment Insights dashboard.][1]
 
 The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:
 
@@ -31,13 +31,13 @@ The baseline segment can either be a specific segment you select, or a segment c
 
 You can easily share specific comparisons with your teammates using the page’s unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between app groups.
 
-![Segment Insights Expanded][2]
+![][2]
 
 ## Segment Details page
 
 Segment Insights have also been built right into the **Segment Details** view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
 
-![Segment Insights Details][3]
+![][3]
 
 ## Sample use cases {#insights-use-cases}
 
@@ -50,21 +50,21 @@ One of the best usages of Segment Insights is answering questions about the impa
 - Is a campaign engaging a certain demographic?
 - What goals should I set for a campaign aimed at a certain demographic?
 
-Segment Insights can help uncover differences between user demographics. The example below shows a comparison of an app's user base by their language, illustrating how English speakers tend to have a higher LTV and activity levels than speakers of other languages.
+Segment Insights can help uncover differences between user demographics. The following example  shows a comparison of an app's user base by their language, illustrating how English speakers tend to have a higher LTV and activity levels than speakers of other languages.
 
-![Segment Insights by Language][5]
+![][5]
 
-Notice that on average, German speakers signed up longer ago, which might explain why they're no longer as active. This could be due to a multitude of factors, for example if the app first launched in Europe but is now more popular in the U.S., where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g. if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
+In this example, German speakers signed up longer ago on average, which might explain why they're no longer as active. This could be due to a multitude of factor. For example if the app first launched in Europe but is now more popular in the US, where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g. if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
 
 To improve conversions among speakers of languages other than English, a good first step would be to [localize campaigns][10] to the user's device language and making sure that the copy of those messages is engaging users by using a [multivariate campaign][11] to test different versions of the foreign language copy.
 
 ### Understanding indicators of higher revenue
 
-Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. Below is an example charting out the impact on purchases different behaviors within an e-commerce app.
+Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an e-commerce app.
 
-![User Actions contributing to purchases][7]
+![][7]
 
-We can see that relatively few users are currently signed up for the newsletter, but these users are generally more active. To keep new users engaged, it would be a good idea to include an invitation to order the newsletter in onboarding campaigns. To re-engage lapsed users, a good plan would be to send out a typical [lapsed user campaign][9] and [target users who converted][12] with a subsequent campaign to sign up for the newsletter.
+In this case, relatively few users are currently signed up for the newsletter, but these users are generally more active. To keep new users engaged, it would be a good idea to include an invitation to order the newsletter in onboarding campaigns. To re-engage lapsed users, a good plan would be to send out a typical [lapsed user campaign][9] and target [users who converted][12] with a subsequent campaign to sign up for the newsletter.
 
 [1]: {% image_buster /assets/img_archive/segment_insights.png %}
 [2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}
