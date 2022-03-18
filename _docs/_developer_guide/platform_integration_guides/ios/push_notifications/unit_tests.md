@@ -32,7 +32,7 @@ target 'YourAppTarget' do
   pod 'Appboy-iOS-SDK'
 
   target 'YourAppTargetTests' do
-    pod 'Appboy-iOS-SDK'
+    inherit! :search_paths
   end
 end
 ```
@@ -47,7 +47,7 @@ target 'YourAppTarget' do
   pod 'Appboy-iOS-SDK'
 
   target 'YourAppTargetTests' do
-    pod 'Appboy-iOS-SDK'
+    inherit! :search_paths
     pod 'OCMock'
   end
 end
