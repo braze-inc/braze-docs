@@ -67,8 +67,7 @@ At this point, you should be able to open the Xcode project workspace created by
 
 Create a new Objective-C file in your unit tests target. 
 
-If the unit tests target is in Swift, Xcode may ask "Would you like to configure an Objective-C bridging header?" If it does, select "Create Bridging Header." 
-#TODO is this needed?
+If the unit tests target is in Swift, Xcode may ask "Would you like to configure an Objective-C bridging header?" The bridging header is optional, so you can click "Don't Create" and still run these unit tests successfully.
 
 Add the following contents to this new file:
 
