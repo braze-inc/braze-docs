@@ -133,7 +133,7 @@ Add the following contents to this new file:
  * [[Appboy sharedInstance] registerDeviceToken:deviceToken];
  * @endcode
  *
- * @seea https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
+ * @seealso https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
  */
 - (void)testDidRegisterForRemoteNotificationsWithDeviceToken {
   id partialMock = [OCMockObject partialMockForObject:[Appboy sharedInstance]];
