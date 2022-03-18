@@ -40,7 +40,7 @@ For push notifications that include images, the message text will be shown in th
 
 ## Custom URIs
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or in the **Advanced Settings** in the push composer wizard.
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer wizard.
 
 > To enable Custom URI, your app's `BroadcastReceiver` must be configured to properly handle opening the URI.  This involves parsing incoming message contents for the custom URI and navigating to it.  Our [example receiver][14] provides a sample implementation.
 
@@ -79,7 +79,7 @@ In Android O, notification sounds became a property of notification channels. Yo
 
 For devices running versions of Android before Android O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g., `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or in the **Advanced Settings** in the push composer wizard.
+Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer wizard.
 
 ![][11]
 

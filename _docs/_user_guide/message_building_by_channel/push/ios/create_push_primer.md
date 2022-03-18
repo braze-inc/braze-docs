@@ -27,7 +27,7 @@ Push primer campaigns are useful because they address the issue of the dreaded i
 
 To address this, Braze offers steps on how to set up push primer campaigns. Push primers allow you to hold off on delivering that initial disruptive push message as well as offer re-deliverability, letting you decide when and how you want to prompt your users for a push opt-in. These push primers should provide users valuable information on why notifications for your application are important.
 
-For a user to qualify to receive your push messages, they must enable push at the app-level and the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
+For a user to qualify to receive your push messages, they must enable push at the app-level and the device-level. Note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 - [iOS push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 
@@ -79,7 +79,7 @@ After your push primer message has been set up, on-click behavior must be assign
 
 Because push primer campaigns are not an out-of-the-box feature, the deep-link link that prompts the native push prompt must be set up by your developers before it becomes available. 
 
-Fore more information on push primer integrations and deep linking customization, refer to [iOS push primer integration][integrations].
+For more information on push primer integrations and deep linking customization, refer to [iOS push primer integration][integrations].
 
 ## Step 5: Selecting the delivery method
 
