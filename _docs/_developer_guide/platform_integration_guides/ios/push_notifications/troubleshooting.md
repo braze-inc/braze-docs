@@ -64,6 +64,8 @@ In addition, Braze also provides a Push Changelog on the user profile under the 
 
 ## Push registration issues
 
+To add verification for your application's push registration logic, implement Braze's push unit tests as described [here][41].
+
 ### No push registration prompt
 
 If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Make sure you have followed our [documentation][21] and correctly integrated our push registration. You can also set breakpoints in your code to ensure push registration code is running.
@@ -142,6 +144,8 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ## Issues after push delivery
 
+To add verification for your application's push handling, implement Braze's push unit tests as described [here][41] .
+
 ### Push clicks not logged {#push-clicks-not-logged}
 
  - If this is only occurring on iOS 10, make sure you have followed the push integration steps for [iOS 10][30].
@@ -172,3 +176,5 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#app-transport-security-ats
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing
+[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/
+
