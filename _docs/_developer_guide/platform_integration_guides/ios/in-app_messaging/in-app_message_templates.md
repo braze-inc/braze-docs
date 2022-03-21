@@ -90,12 +90,12 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 Next, create an in-app messaging campaign with the following:
 
 - The key-value pair `“Appstore Review” : “true”`
-- The on click behavior set to "Deep Link Into App," using the above deep link (e.g., `{YOUR-APP-SCHEME}:appstore-review`).
+- The on-click behavior set to "Deep Link Into App", using the above deep link (e.g., `{YOUR-APP-SCHEME}:appstore-review`).
 
 {% endraw %}
 
 {% alert tip %}
-Apple limits App Store review prompts to a maximum of three (3) times per year for each user, so your campaign should be [rate-limited]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#user-centric-rate-limiting) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear, or directly ask for a review.
+Apple limits App Store review prompts to a maximum of three (3) times per year for each user, so your campaign should be [rate-limited]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#user-centric-rate-limiting) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear or directly ask for a review.
 {% endalert %}
 
 [30]: #in-app-message-controller-delegate

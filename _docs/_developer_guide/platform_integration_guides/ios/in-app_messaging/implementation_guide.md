@@ -14,7 +14,7 @@ Looking for the out-of-the-box in-app message developer integration guide? Find 
 
 # In-app messaging implementation guide
 
-> This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
+> This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! This implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 
 ## Code considerations
 
@@ -22,7 +22,7 @@ The following guide offers an optional custom developer integration to use in ad
 
 ### ABKInAppMessage subclasses
 
-The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up, and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to start implementing in-app messaging subclasses.
+The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up, and modal subclasses can be implemented in captivating ways. Note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to start implementing in-app messaging subclasses.
 
 {% tabs %}
 {% tab Swift %}
@@ -220,7 +220,7 @@ Visit the [ModalPickerViewController](https://github.com/braze-inc/braze-growth-
 
 To set up a modal in-app message in the dashboard, you must provide a list of items formatted as a comma-separated string. In our example, we use Connected Content to pull a JSON list of team names and format them accordingly.
 
-![The in-app message composer shows a preview of what the in-app message will look like, but instead displayed the list of items you supplied to Braze. As the Braze UI does not display your custom in-app message UI unless sent to a phone, the preview is not indicitive of what your message will look like, so we recommend you test before sending.][4]
+![The in-app message composer shows a preview of what the in-app message will look like but instead displays the list of items you supplied to Braze. As the Braze UI does not display your custom in-app message UI unless sent to a phone, the preview is not indicative of what your message will look like, so we recommend you test before sending.][4]
 
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected value, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
 
@@ -359,7 +359,7 @@ Visit the [`FullListViewController`](https://github.com/braze-inc/braze-growth-s
 
 #### Dashboard configuration
 
-To set up a custom full in-app message in the dashboard, you will need to provide a list of your tags formatted as a comma-separated string. 
+To set up a custom full in-app message in the dashboard, you must provide a list of your tags formatted as a comma-separated string. 
 
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected values, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
 
