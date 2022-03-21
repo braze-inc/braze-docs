@@ -8,6 +8,6 @@ description: "This page lists updates to Braze's Roku SDK changelog."
 
 ---
 
-# Web SDK changelog
+# Roku SDK changelog
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-roku-sdk/master/CHANGELOG.md %}
