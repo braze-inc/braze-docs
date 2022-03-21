@@ -50,7 +50,7 @@ One of the best usages of Segment Insights is answering questions about the impa
 - Is a campaign engaging a certain demographic?
 - What goals should I set for a campaign aimed at a certain demographic?
 
-Segment Insights can help uncover differences between user demographics. The following example  shows a comparison of an app's user base by their language, illustrating how English speakers tend to have a higher LTV and activity levels than speakers of other languages.
+Segment Insights can help uncover differences between user demographics. The following example shows a comparison of an app's user base by their language, illustrating how English speakers tend to have higher LTV and activity levels than speakers of other languages.
 
 ![][5]
 
