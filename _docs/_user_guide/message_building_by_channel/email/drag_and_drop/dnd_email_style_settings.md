@@ -34,7 +34,7 @@ To add a custom font, click **Add a custom font** and enter the font's name and 
 Currently, you can only add one custom font for the global style settings. 
 
 {% alert tip %}
-When using a custom font for Gmail, check that your custom font displays correctly prior to sending your email messaging. Gmail does not support all custom fonts, so your font may display as a default system font.
+Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
 {% endalert %}
 
 ![][3]{: style="max-width:80%;"}
