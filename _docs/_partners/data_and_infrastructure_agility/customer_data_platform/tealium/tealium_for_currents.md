@@ -21,7 +21,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 | Requirement | Description |
 | ----------- | ----------- |
 | Tealium EventStream and/or Tealium AudienceStream | A [Tealium account](https://my.tealiumiq.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into mParticle, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Tealium, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | Tealium URL | These can be obtained by navigating to your Tealium dashboard and copying the ingestion URL .|
 {: .reset-td-br-1 .reset-td-br-2}
 
