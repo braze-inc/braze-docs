@@ -27,7 +27,7 @@ By default, Braze will collect the following [device-level properties](https://g
 * Push Auth Status
 * Ad Tracking Enabled
 
-{% alert note %
+{% alert note %}
 The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA to Braze by implementing Braze's `ABKIDFADelegate` protocol. Apps must obtain explicit end user opt-in to tracking through the app tracking transparency framework before passing IDFA to Braze.
 {% endalert %}
 
@@ -40,4 +40,4 @@ appboyOptions[ABKDeviceAllowlistKey] = @(ABKDeviceOptionTimezone | ABKDeviceOpti
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-To read more about the automatically collected device properties, visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article. 
+To read more about the automatically collected device properties, visit our [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
