@@ -38,7 +38,7 @@ For example, a London-based company sending a campaign at 12pm will reach users 
 
 Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
 
-To check your company’s time zone, look at your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. Click on your name in the top toolbar and then click **Company Settings**.
+You can check your company's time zone in your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. 
 
 ### How do I schedule a local time zone campaign?
 

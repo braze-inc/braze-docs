@@ -31,9 +31,9 @@ More technical details on how locale is retrieved can be accessed by platform:
 
 ## Internationalize campaigns
 
-You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in Multiple Languages][12]
+You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in multiple languages][12]
 
-Braze automatically collects the most recent location of users' devices (if location permission is granted to your app). You can use this information to run a localized campaign that is targeted at users within a specific geographic area. For more information, see [Location Targeting][13].
+Braze automatically collects the most recent location of users' devices (if location permission is granted to your app). You can use this information to run a localized campaign that is targeted at users within a specific geographic area. For more information, see [Location targeting][13].
 
 [1]: https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html
 [2]: http://developer.android.com/reference/java/util/Locale.html

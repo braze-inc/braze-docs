@@ -18,7 +18,7 @@ tool:
 
 Reaching out to already-active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
 
-You can also check out [our LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
+You can also check out our [LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
 
 ## Understanding active users
 

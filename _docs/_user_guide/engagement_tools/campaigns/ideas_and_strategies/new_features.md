@@ -20,9 +20,9 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 ## Filtering by most recent app versions
 
-Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
+Braze SDKs automatically track a user's most recent app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
 
-![App Version Filter][1]
+![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".][1]
 
 ### App version number
 
@@ -71,7 +71,7 @@ Once Braze receives data from version 2.0.0 of your app, you can target users be
 
 ### App version name
 
-Use the _App Version Name_ filter to segment users by the app's user-facing "build name". 
+Use the "App Version Name" filter to segment users by the app's user-facing "build name". 
 
 This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
