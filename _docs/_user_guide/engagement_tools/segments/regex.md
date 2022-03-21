@@ -18,12 +18,12 @@ tool:
 
 A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-In the provided video, we show you how regular expressions can be used and tested on the [Regex101][regex] site. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
+In the provided video, we show you how regular expressions can be used and tested on [Regex101][regex]. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
 
 ## Resources
 
 - [Regular expression basics](https://lab.braze.com/regular-expression-basics-for-braze) LAB course
-- <i class="fas fa-file-pdf"></i> [Regex Cheat Sheet PDF][cheatsheet]
+- <i class="fas fa-file-pdf"></i> [Regex Cheat Sheet][cheatsheet]
 - <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
 
 ## Regex debugger
@@ -160,7 +160,7 @@ We can break this regex down to the following three parts:
 
 Say you want to filter for emails ending with "@braze.com". You would use the email address filter, set it to `matches regex`, and enter "@braze.com" in the regex field. The same applies for any other email domain.
 
-![image1]({% image_buster /assets/img/regex/regeximg1.png %})
+![]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### How can I use filter number strings for values ≥ x or ≤ x?
 
@@ -186,11 +186,11 @@ Use the caret symbol (`^`) to denote what the string starts with, then enter the
 
 For example, if you're trying to target users who live in cities that start with "San", your regex would be `^San \w`. With this regex, you would successfully target users from cities like San Francisco, San Diego, San Jose, and so on.
 
-![image2]({% image_buster /assets/img/regex/regeximg2.png %})
+![]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### How do I filter for specific phone numbers?
 
-Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164 format](https://en.wikipedia.org/wiki/E.164), as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
 
 Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 
@@ -202,7 +202,7 @@ For example, let's say you wanted to filter users by phone number for a specific
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![image3]({% image_buster /assets/img/regex/regeximg3.png %})
+![]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
 [regex]: https://regex101.com/
