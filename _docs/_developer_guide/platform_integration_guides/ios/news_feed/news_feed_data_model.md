@@ -1,8 +1,8 @@
 ---
-nav_title: News Feed Data Model
+nav_title: Card Types
 article_title: News Feed Data Model for iOS
 platform: iOS
-page_order: 6
+page_order: 2
 description: "This article covers the iOS News Feed data model, different card types, and the different card-specific properties available."
 channel:
   - news feed
@@ -60,7 +60,7 @@ private func feedUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKFeedController][44].
+If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`][44].
 
 ## Base card model
 
@@ -68,12 +68,12 @@ Braze has five unique card types that share a base model. Each type of card also
 
 ## Base card model properties
 
-- `idString` (read only) - The card's ID set by Braze
-- `viewed` - This property reflects if the card is read or unread by the user
-- `created` (read only) - The property is the unix timestamp of the card's creation time from Braze dashboard
-- `updated` (read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard
-- `categories` - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`
-- `extras` - An optional NSDictionary of NSString values.
+- `idString` (Read only) - The card's ID set by Braze.
+- `viewed` - This property reflects if the card is read or unread by the user.
+- `created` (Read only) - The property is the unix timestamp of the card's creation time from Braze dashboard.
+- `updated` (Read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard.
+- `categories` - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.
+- `extras` - An optional `NSDictionary` of `NSString` values.
 
 ### Categories
 
@@ -88,8 +88,8 @@ Braze has five unique card types that share a base model. Each type of card also
 In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
-- `URL` (optional) - The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card, but is hidden in the default Braze News Feed.
+- `URL` (optional) - The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card but is hidden in the default Braze News Feed.
 
 ## Captioned image properties
 In addition to the base card properties:
@@ -97,15 +97,15 @@ In addition to the base card properties:
 - `image` (required) - This property is the URL of the card's image
 - `title` (required) - The title text for the card
 - `description` (required) - The body text for the card
-- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Text announcement (captioned image without image) properties
 In addition to the base card properties:
 
 - `title` (required) - The title text for the card
 - `description` (required) - The body text for the card
-- `url` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
+- `url` (optional) -The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Classic card properties
@@ -114,7 +114,7 @@ In addition to the base card properties:
 - `image` (required) - This property is the URL of the card's image
 - `title` (optional) - The title text for the card
 - `description` (required) - The body text for the card
-- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Card methods:

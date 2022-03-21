@@ -17,7 +17,7 @@ description: "This reference article covers iOS push notification integration fo
 
 Braze provides a native Unity solution for automating iOS push integrations.
 
-- If you would prefer to complete the integration manually by modifying your built Xcode project, please follow our [native iOS push instructions][8].
+- If you would prefer to complete the integration manually by modifying your built Xcode project, follow our [native iOS push instructions][8].
 - If you are transitioning from a manual integration to an automated one, follow the instructions on [Transitioning to an automated integration][2].
 - Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
 

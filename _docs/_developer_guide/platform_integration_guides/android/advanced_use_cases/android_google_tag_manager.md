@@ -29,7 +29,7 @@ To get started, create a trigger that looks for an "Event Name" that equals `pla
 
 ![A custom trigger in Google Tag Manager set to trigger for some events when "event name" equals "played song".][3]
 
-Next, create a new tag and enter the class path of your [custom tag provider](#adding-android-google-tag-provider) described later in this article.
+Next, create a new tag ("Function Call") and enter the class path of your [custom tag provider](#adding-android-google-tag-provider) described later in this article.
 
 This tag will be triggered when you log the `played song` event we just created.
 
