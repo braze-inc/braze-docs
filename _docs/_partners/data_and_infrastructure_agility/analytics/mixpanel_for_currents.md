@@ -42,7 +42,7 @@ In Mixpanel, navigate to **Data Management > Integrations.** Next, select the Br
 
 ### Step 3: Export a Mixpanel cohort to Braze
 
-In Mixpanel, navigate to **Data Management > Cohorts.** Select the cohort to send to Braze and then select **Export to Braze**. Lastly, select a one-time sync or dynamic sync. Selecting dynamic sync will sync your Braze cohort every two hours to match users in Mixpanel. 
+In Mixpanel, navigate to **Data Management > Cohorts.** Select the cohort to send to Braze and then select **Export to Braze**. Lastly, select a one-time sync or dynamic sync. Selecting dynamic sync will sync your Braze cohort every 15 minutes to match users in Mixpanel. 
 
 ![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
 
