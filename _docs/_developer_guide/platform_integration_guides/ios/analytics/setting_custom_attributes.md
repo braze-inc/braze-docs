@@ -231,7 +231,7 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key",
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. Refer to the [users API][3] documentation for details.
+You can also use our REST API to set user attributes. Refer to the [User API documentation][3] for details.
 
 ### Custom attribute value limits
 
