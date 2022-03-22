@@ -247,7 +247,7 @@ You can declare a category for, or directly modify, the `ABKModalWebViewControll
 
 ### Linking handling customization
 
-The `ABKURLDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
+The `ABKURLDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
 
 #### Integration example: ABKURLDelegate
 
