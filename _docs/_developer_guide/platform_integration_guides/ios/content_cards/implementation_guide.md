@@ -482,7 +482,7 @@ func addContentCardToView(with message: Message) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-**Using `class_type` for on click behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```objc
 - (void)addContentCardToView:(Message *)message {
