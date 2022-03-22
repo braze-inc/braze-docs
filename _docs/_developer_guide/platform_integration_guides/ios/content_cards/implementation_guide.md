@@ -466,7 +466,7 @@ The message center logic is driven by the `contentCardClassType` that is provide
 
 {% tabs %}
 {% tab Swift %}
-**Using `class_type` for on click behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```swift
 func addContentCardToView(with message: Message) {
