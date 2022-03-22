@@ -133,7 +133,7 @@ If you want to change the card data after it's been sent by Braze, we recommend 
 
 ## Content Card model
 
-Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class, plus has additional properties as described below.
+Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
 
 ### Base Content Card model properties - ABKContentCard
 
