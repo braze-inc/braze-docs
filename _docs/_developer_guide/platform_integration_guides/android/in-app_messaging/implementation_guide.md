@@ -234,7 +234,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(
 
 ### Custom modal in-app message
 
-An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
+An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The following example shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
 
 {% tabs %}
 {% tab Kotlin %}
