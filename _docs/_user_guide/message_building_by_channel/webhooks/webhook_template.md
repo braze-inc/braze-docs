@@ -20,7 +20,7 @@ You can access the Webhook Template Editor by first clicking the **Campaigns** t
 
 ## Step 2: Create a new template
 
-You can now create a new template, edit an existing template, or utilize one of the predesigned webhook templates that are offered.  The predesigned templates currently offered are for Twilio and Facebook Messenger.
+You can now create a new template, edit an existing template, or utilize one of the predesigned webhook templates that are offered.
 
 ## Step 3: Customize your template
 
