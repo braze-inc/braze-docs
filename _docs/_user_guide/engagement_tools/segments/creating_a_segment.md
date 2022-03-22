@@ -16,27 +16,27 @@ Your developers have integrated the SDK, and the data from your users have begun
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
-## Step 1: Navigating to the segments section
+## Step 1: Navigate to the segments section
 
-![Segments Menu][1]{: style="float:right;max-width:20%;"}
+![Engagement section with the Segments tab highlighted.][1]{: style="float:right;max-width:20%;"}
 
-From the left-hand side of the dashboard under **Engagement**, click **Segments**.
+From the left-hand side of the dashboard under **Engagement**, click **Segments**. 
 
 ## Step 2: Name your segment
 
-Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
+Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
 
 Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
 
-![Create a Segment][2]{: style="max-width:70%;"}
+![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
 
 ## Step 3: Choose your app or platform
 
 Choose which apps or platforms you'd like to target by either selecting **Include users from all apps** (default), or by clearing the checkbox. If you clear this option, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
 
-For more information on this option, refer to the section [Segment Membership Calculation](#segment-membership-calculation).
+For more information on this option, refer to the section [Segment membership calculation](#segment-membership-calculation).
 
-![Segment App Selection][5]
+![Segment Details panel with the unselected "Include users from all apps" checkbox in the Apps Used section.][5]
 
 ## Step 4: Add filters to your segment
 
@@ -46,14 +46,14 @@ Add at least one filter to your segment as depicted in the image below. You can 
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segment Filters][3]
+![Segment filters with the "OR" selected.][3]
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
 Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
 
 {% alert important %}
-Segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
+Segments already using the Segment Membership Filter cannot be further included or nested into other segments. 
 {% endalert %}
 
 ### Single-user segments
@@ -66,7 +66,7 @@ Braze has testing filters to target specific users by user ID or email address.
 
 ## Step 5: Save your segment
 
-Once you've clicked "Save" you're ready to start sending messages to your users!
+Once you've clicked **Save**, you're ready to start sending messages to your users!
 
 ## Segment membership calculation {#segment-membership-calculation}
 
@@ -74,14 +74,14 @@ Braze updates the user’s segment membership as data is sent back to our server
 
 Additionally, segment membership is calculated differently when **Include users from all apps** is selected, or when an app group has only one app. In these scenarios, segment membership includes all users—both those who have sessions logged, as well as users with no sessions and no app data (typically created via user import or REST API).
 
-If **Include users from all apps** is cleared and you have more than one app in your app group, segment membership will only include users with sessions logged in the selected apps, and excludes users with no sessions or app data. Therefore the total of individual segments with one app selected will not equal a segment with **Include users from all apps** selected.
+If **Include users from all apps** is cleared and you have more than one app in your app group, segment membership will only include users with sessions logged in the selected apps, and excludes users with no sessions or app data. Therefore, the total of individual segments with one app selected will not equal a segment with **Include users from all apps** selected.
 
 ## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
-When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will **also be archived**. You will get a warning listing which Campaigns and Canvases are about to be archived by archiving the associated segment.
+When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of its page.

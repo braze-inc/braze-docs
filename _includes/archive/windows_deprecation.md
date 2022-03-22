@@ -1,5 +1,5 @@
 {% alert warning %}
-The Braze Windows SDK is deprecated as of March 21, 2022.
+The Braze Windows SDK is deprecated as of March 23, 2022.
 
 
 * **March 23, 2022:** No new Windows apps can be created in the Braze dashboard.

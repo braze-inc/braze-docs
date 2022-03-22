@@ -11,7 +11,7 @@ channel:
 
 # Ignoring Braze's internal push notifications
 
-Braze uses silent push notifications for internal implementation of certain advanced features. For most integrations, this requires no changes on your app's behalf. However, if you integrate a Braze feature that relies on internal push notifications (i.e., uninstall tracking or geofences), you may want to update your app to ignore Braze's internal pushes.
+Braze uses silent push notifications for the internal implementation of certain advanced features. For most integrations, this requires no changes on your app's behalf. However, if you integrate a Braze feature that relies on internal push notifications (i.e., uninstall tracking or geofences), you may want to update your app to ignore Braze's internal pushes.
 
 If your app takes automatic actions on application launches or background pushes, you should consider gating that activity so that it's not triggered by Braze's internal push notifications. For example, if you have logic that calls your servers for new content upon every background push or application launch, you likely would not want Braze’s internal pushes triggering that because you would incur unnecessary network traffic. Furthermore, because Braze sends certain kinds of internal pushes to all users at approximately the same time, not gating network calls on launch from internal pushes could introduce significant server load.
 
@@ -24,8 +24,7 @@ You should check your application for automatic actions in the following places 
 
 ## Using Braze's internal push utility methods
 
-You can use the utility methods in `ABKPushUtils` to check if your app has received or was launched by a Braze internal push. `isAppboyInternalRemoteNotification:` will return `YES` on all Braze internal push notifications, while `isUninstallTrackingRemoteNotification:` and `isGeofencesSyncRemoteNotification:` will return `YES` for uninstall tracking and geofences sync notifications, respectively.
-See [`ABKPushUtils.h`][1] for method declarations.
+You can use the utility methods in `ABKPushUtils` to check if your app has received or was launched by a Braze internal push. `isAppboyInternalRemoteNotification:` will return `YES` on all Braze internal push notifications, while `isUninstallTrackingRemoteNotification:` and `isGeofencesSyncRemoteNotification:` will return `YES` for uninstall tracking and geofences sync notifications, respectively. Refer to [`ABKPushUtils.h`][1] for method declarations.
 
 ## Implementation example {#internal-push-implementation-example}
 

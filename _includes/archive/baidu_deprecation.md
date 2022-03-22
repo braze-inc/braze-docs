@@ -1,5 +1,5 @@
 {% alert warning %}
-The Braze Baidu Push Integration is deprecated as of March 21, 2022.
+The Braze Baidu Push Integration is deprecated as of March 23, 2022.
 
 
 * **March 23, 2022:** No new Baidu apps can be created in the Braze dashboard.

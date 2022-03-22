@@ -3,7 +3,7 @@ nav_title: Integration
 article_title: Content Card View Controller Integration for iOS
 platform: iOS
 page_order: 1
-description: "This article covers the the integration steps, data models, and card-specific properties available for your iOS application."
+description: "This article covers the integration steps, data models, and card-specific properties available for your iOS application."
 channel:
   - content cards
 
@@ -12,7 +12,7 @@ channel:
 
 # Content Cards view controller integration
 
-Content Cards can be integrated with two view controller contexts: Navigation or Modal.
+Content Cards can be integrated with two view controller contexts: navigation or modal.
 
 ## Navigation context
 
@@ -47,7 +47,7 @@ To customize the navigation bar's title, set the title property of the `ABKConte
 
 ## Modal context
 
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar.
+This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -72,7 +72,7 @@ self.present(contentCards, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-For examples of these view controllers, check out our [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp).
+For view controller examples, check out our [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp).
 
 {% alert note %}
 To customize the header, set the title property of the `navigationItem` belonging to the `ABKContentCardsTableViewController` instance embedded in the parent `ABKContentCardsViewController` instance.
@@ -129,26 +129,26 @@ NotificationCenter.default.addObserver(self, selector:
 {% endtab %}
 {% endtabs %}
 
-If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKContentCardsController](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
+If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data, and displaying it yourself. The cards are accessible via [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
 
 ## Content Card model
 
-Braze offers three content card types: Banner, Captioned Image and Classic. Each type inherits common properties from a base ABKContentCard class, plus has additional properties as described below.
+Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
 
 ### Base Content Card model properties - ABKContentCard
 
 |Property|Description|
 |---|---|
-|`idString` | (read only) The card's ID set by Braze. |
-| `viewed` | This property reflects if the card is viewed or not viewed by the user|
-| `created` | (read only) This property is the unix timestamp of the card's creation time from Braze. |
-| `expiresAt` | (read only) This property is the unix timestamp of the card's expiration time.|
-| `dismissible` | This property reflects if the card can be dismissed by the user.|
+|`idString` | (Read only) The card's ID set by Braze. |
+| `viewed` | This property reflects whether the user viewed the card or not.|
+| `created` | (Read only) This property is the unix timestamp of the card's creation time from Braze. |
+| `expiresAt` | (Read only) This property is the unix timestamp of the card's expiration time.|
+| `dismissible` | This property reflects if the user can dismiss the card.|
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
-| `dismissed` | This property reflects if the card has been dismissed by the user.|
-| `url` | The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.|
+| `dismissed` | This property reflects if the user has dismissed the card.|
+| `url` | The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL.|
 | `openURLInWebView` | This property determines whether the URL will be opened within the app or in an external web browser.|
-| `extras`| An optional NSDictionary of NSString values.|
+| `extras`| An optional `NSDictionary` of `NSString` values.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner Content Card properties - ABKBannerContentCard
@@ -156,7 +156,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 |Property|Description|
 |---|---|
 | `image` | This property is the URL of the card's image.|
-| `imageAspectRatio` | This property is the aspect ratio of the card's image and is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+| `imageAspectRatio` | This property is the aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned image Content Card properties - ABKCaptionedImageCard
@@ -174,10 +174,10 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 
 |Property|Description|
 |---|---|
-| `image` | (optional) This property is the URL of the card's image.|
+| `image` | (Optional) This property is the URL of the card's image.|
 | `title` | The title text for the card. |
 | `cardDescription` | The body text for the card. |
-| `domain` | The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+| `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Card methods
@@ -190,11 +190,11 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `isControlCard` | Determine if a card is the Control card for an A/B test. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more details, view the full [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
+For more details, refer to the [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
 
 ## Log Content Cards display
 
-When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
+When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the `logContentCardsDisplayed;` method on the `Appboy` interface. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
