@@ -1,7 +1,7 @@
 ---
 nav_title: Tealium for Currents
 article_title: Tealium for Currents
-page_order: 0.5
+page_order: 2.3
 alias: /partners/tealium_for_currents/
 description: "This article outlines the partnership between Braze Currents and Tealium, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
@@ -27,20 +27,20 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 ## Integration
 
-### Step 1: Create a Data Source for Braze within Tealium
+### Step 1: Create a data source for Braze within Tealium
 
-Instructions for this step are documented [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303). At the end, Tealium will provide a Data Source URL to copy, which you will use in the next step.
+Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. Once completed, Tealium will provide a data source URL to copy, which you will use in the next step.
 
 ### Step 2: Create Current
 
-In Braze, navigate to **Currents > + Create Current > Tealium Export**. Provide an integration name, contact email, and the Tealium URL from Step 1. Next, select what you want to track from the list of available events. Lastly, click **Launch Current**
-
-{% alert important %}
-It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
-{% endalert %}
+In Braze, navigate to **Currents > + Create Current > Tealium Export**. Provide an integration name, contact email, and your Tealium URL. Next, select what you want to track from the list of available events. Lastly, click **Launch Current**
 
 All events sent to Tealium will include the user's `external_user_id`. At this time, Braze does not send event data to Tealium for users who do not have their `external_user_id` set.
 
+{% alert important %}
+It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+{% endalert %}
+
 ## Integration details
 
-All data listed in the [Currents Event Glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#nav_top_dataandanalytics_brazec urrents_eventglossary), including all fields in both [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/).
+Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#nav_top_dataandanalytics_brazec urrents_eventglossary) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.
