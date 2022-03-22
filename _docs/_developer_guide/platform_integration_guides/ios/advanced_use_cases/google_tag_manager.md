@@ -34,7 +34,7 @@ This tag will be triggered when you log the `played song` event we just created.
 In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
 
 {% alert important %}
-When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 
+When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` as shown in the following example. 
 
 The custom tag provider in our example will use these keys to determine what action to take and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
