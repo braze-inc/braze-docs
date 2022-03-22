@@ -115,7 +115,7 @@ In addition to the base card properties:
 - `title` (optional) - The title text for the card
 - `description` (required) - The body text for the card
 - `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
 
 ## Card methods:
 
