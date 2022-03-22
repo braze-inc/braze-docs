@@ -243,7 +243,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 
 The open-source `ABKModalWebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Check the class's [.h file][6] and [.m file][5] for more detail.
+You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Check the class' [.h file][6] and [.m file][5] for more detail.
 
 ### Linking handling customization
 
