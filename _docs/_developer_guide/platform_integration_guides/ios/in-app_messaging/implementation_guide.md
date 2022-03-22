@@ -208,7 +208,7 @@ Adjust the respective value in `viewWillTransition()` because the subclass assum
 
 ### Custom modal in-app message
 
-![An iPhoene showing a modal in-app message that allows you to cycle through a list of sports teams and select your favorite one. At the bottom of this in-app message, there is a large blue submit button.][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![An iPhone showing a modal in-app message that allows you to cycle through a list of sports teams and select your favorite one. At the bottom of this in-app message, there is a large blue submit button.][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user attributes. The custom modal in-app message allows you to use Connected Content or any available list to display and capture attributes from a dynamic list of items. 
 
