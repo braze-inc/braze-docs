@@ -37,7 +37,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 
 ## Displaying the number of unviewed Content Cards on the app badge count
 
-In addition to serving as push notification reminders for an app, Badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based on unviewed Content Cards updates can be valuable in attracting users back to your app and increasing sessions.
+In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based on unviewed Content Cards updates can be valuable in attracting users back to your app and increasing sessions.
 
 This method records the badge count once the app is closed and the user's session ends:
 
