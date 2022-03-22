@@ -18,7 +18,7 @@ If you would like to display the number of unread Content Cards your user has, w
 - Unviewed Content Cards for the current user
 - Total Viewable Content Cards for the current user
 
-The method declarations in [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html) below describe this in detail:
+The following method declarations in [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html) describe this in detail:
 
 ```objc
 - (NSInteger)unviewedContentCardCount;
