@@ -22,7 +22,7 @@ The method declarations in [ABKContentCardsController](https://appboy.github.io/
 
 ```
 /*!
- * This method returns the number of currently active content cards that have not been viewed.
+ * This method returns the number of currently active Content Cards that have not been viewed.
  * A "view" happens when a card becomes visible in the Content Cards view.  This differentiates
  * between cards which are off-screen in the scrolling view, and those which
  * are on-screen; when a card scrolls onto the screen, it's counted as viewed.
@@ -34,7 +34,7 @@ The method declarations in [ABKContentCardsController](https://appboy.github.io/
  */
 - (NSInteger)unviewedContentCardCount;
 /*!
- * This method returns the total number of currently active content cards. Cards are
+ * This method returns the total number of currently active Content Cards. Cards are
  * counted only once even if they appear in multiple Content Cards views.
  */
 - (NSInteger)contentCardCount;

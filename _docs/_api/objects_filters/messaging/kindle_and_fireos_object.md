@@ -27,4 +27,4 @@ description: "This article explains the different components of Braze's Kindle a
 }
 ```
 
-The `priority` parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. Any values sent that outside of that integer range will default to `0`.
+The `priority` parameter will accept values from `-2` to `2`, where `-2` represents the lowest priority and `2` represents highest priority. `0` is the default value. Any values sent that outside of that integer range will default to `0`.

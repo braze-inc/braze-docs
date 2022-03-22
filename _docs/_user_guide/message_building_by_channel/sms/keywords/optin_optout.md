@@ -26,7 +26,7 @@ Braze will process the following keywords automatically and update the Subscript
 | Help | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
+Only the **exact, single-word message** will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
 
 If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
 

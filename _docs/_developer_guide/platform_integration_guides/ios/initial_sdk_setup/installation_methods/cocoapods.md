@@ -19,9 +19,9 @@ Simply run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-__Note__: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
+**Note**: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
 
-__Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+**Note**: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
 
 ## Step 2: Constructing the podfile
 
@@ -35,13 +35,13 @@ target 'YourAppTarget' do
 end
 ```
 
-__Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-iOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-iOS-SDK'` in your Podfile.
+**Note**: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-iOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-iOS-SDK'` in your Podfile.
 
 > We recommend that integrators import our full SDK as outlined above. However, if you are certain that you are only going to integrate a particular Braze feature then you have the option to import just the desired UI subspec instead of the full SDK.
 
 | Subspec | Details |
 | ------- | ------- |
-| `pod 'Appboy-iOS-SDK/InAppMessage'` | The `InAppMessage` subspec contains the Braze In-App Message UI and the Core SDK.|
+| `pod 'Appboy-iOS-SDK/InAppMessage'` | The `InAppMessage` subspec contains the Braze in-app message UI and the Core SDK.|
 | `pod 'Appboy-iOS-SDK/ContentCards'` | The `ContentCards` subspec contains the Braze Content Card UI and the Core SDK. |
 | `pod 'Appboy-iOS-SDK/NewsFeed'` | The `NewsFeed` subspec contains the Braze News Feed UI and the Core SDK. |
 | `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |

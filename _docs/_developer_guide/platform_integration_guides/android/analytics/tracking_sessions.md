@@ -1,6 +1,6 @@
 ---
 nav_title: Tracking Sessions
-article_title: Tracking Sessions for Android/FireOS
+article_title: Tracking Sessions for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -9,39 +9,37 @@ description: "This reference article shows how to subscribe to session updates f
 
 ---
 
-# Session tracking for Android/FireOS
+# Session tracking for Android and FireOS
 
-The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the below session semantics.
 
 ## Session lifecycle
 
-If you have integrated Braze using our recommended [Activity Lifecycle Callback Integration] [session_tracking_8], `openSession()` and `closeSession()` will be called automatically for each Activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds.  Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (e.g., by navigating to another Activity) in the interim.
+If you have integrated Braze using our recommended [Activity lifecycle callback integration][session_tracking_8], `openSession()` and `closeSession()` will be called automatically for each activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds. Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (e.g., by navigating to another activity) in the interim.
 
-An Android session times out after 10 seconds without any communication from the host application. This means if a user backgrounds the app and returns 9 seconds later, the same session will be continued.
+An Android session times out after 10 seconds without any communication from the host application. This means if a user backgrounds the app and returns 9 seconds later, the same session will be continued. Note that if a session closes while the user has the app backgrounded, that data may not be flushed to the server until the app is opened again.
 
-__Note:__ If a session closes while the user has the app backgrounded, that data may not be flushed to the server until the app is opened again.
-
-**Note**: If you need to force a new session, you can do so by changing users.
+{% alert note %}
+If you need to force a new session, you can do so by changing users.
+{% endalert %}
 
 ## Customizing session timeout
-To customize the session timeout, add `com_braze_session_timeout` to your [`braze.xml`][session_tracking_3] file:
+To customize the session timeout, add `com_braze_session_timeout` to your [`braze.xml`][session_tracking_3] file. The minimum value for `NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT` is 1 second.
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
 <integer name="com_braze_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ```
 
-**Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
-
 ## Testing session tracking
 
-To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
+To detect sessions via your user, find your user on the dashboard and navigate to **App Usage** on the user profile. You can confirm that session tracking is working by checking that the session metric increases when you would expect it to.
 
-![test_session] [session_tracking_7]
+![A user profile component showing how many sessions had occurred, when the app was first used, and when it was last used.][session_tracking_7]
 
 ## Subscribing to session updates
 
-The Braze SDK provides a [`subscribeToSessionUpdates`][1] subscriber to listen for session updates.
+The Braze SDK provides a [`subscribeToSessionUpdates`][1] subscriber to listen for session updates:
 
 {% tabs %}
 {% tab JAVA %}

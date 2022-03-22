@@ -37,14 +37,14 @@ Each time you want to create a cohort of Tinyclues users to use in Braze, you'll
 
 In Tinyclues, select the campaign(s) you want to export and click **Export Campaigns**. Upon export, the audience will be automatically uploaded to your Braze account.
 
-![Tinyclues dashboard][1]
+![][1]
 
 ### Step 3: Create a segment from the Tinyclues custom audience
 
 In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and select **Tinyclues Cohorts** as your filter. From here, you can choose which Tinyclues cohort you wish to include. Once created, you can select your Tinyclues cohort segment as an audience filter when creating a campaign or Canvas.
 
-![Tinyclues create segement][3]{: style="max-width:90%;"}<br><br>
-![Tinyclues select cohort][4]{: style="max-width:90%;"}
+![][3]{: style="max-width:90%;"}<br><br>
+![In the Braze segment builder, the user attributes filter "Tinyclues cohort" is set to "includes" and "Primary cohort".][4]{: style="max-width:90%;"}
 
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
@@ -52,13 +52,13 @@ Having trouble locating your cohort? Check out our [troubleshooting](#troublesho
 
 To use your Tinyclues segment, create a Braze campaign or Canvas and select the segment as your target audience. 
 
-![Tinyclues audience][5]{: style="max-width:90%;"}
+![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Tinyclues cohort".][5]{: style="max-width:90%;"}
 
 ## Troubleshooting
 
 Are you having trouble finding the right cohort within the list? In Tinyclues, view your campaign details and verify the name by checking the **Export File Name**.
 
-![Tinyclues troubleshooting][2]{: style="max-width:30%;"}
+![The bottom of the campaign details page shows your cohort name.][2]{: style="max-width:30%;"}
 
 Still having trouble retrieving your audience? Contact the [Tinyclues team](mailto:support@tinyclues.com) for additional support.
 

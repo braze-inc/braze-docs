@@ -38,7 +38,7 @@ Users receive geofence triggered notifications after performing enter or exit tr
 
 ## Frequently asked questions
 
-Visit our [Geofence FAQs][5] page for answers to frequently asked questions about geofences.
+Visit our [Geofence FAQs][5] for answers to frequently asked questions about geofences.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

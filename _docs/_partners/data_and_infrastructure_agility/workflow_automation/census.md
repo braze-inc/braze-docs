@@ -33,7 +33,7 @@ To integrate Census, in the Census platform, navigate to the **Settings** tab, a
 
 In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key.
 
-![Add service][8]{: style="max-width:60%;"}
+![][8]{: style="max-width:60%;"}
 
 ### Step 2: Create a Census sync
 
@@ -42,9 +42,9 @@ To sync customers to Braze, you must build a sync. Here, you will define where t
 1. Navigate to the **Syncs** tab and select **Add Sync**. 
 2. In the prompt that appears, under **Connection**, select your desired data warehouse.
 3. Next, select the source. This is the data model built from your data warehouse data.
-4. Configure where the model will be synced to. Select **Braze** as the connection, and the [supported object type](#supported-objects) to sync.<br>![Census sync][10]{: style="max-width:80%;"}<br><br>
+4. Configure where the model will be synced to. Select **Braze** as the connection, and the [supported object type](#supported-objects) to sync.<br>![In the "What do you want to sync" prompt, "Redshift" is selected as the connection, and "Golden Users - VIP" is set as the source. In the "Where do you want to sync data to?" prompt, "Braze" is selected as the connection, and "User" is set as the object.][10]{: style="max-width:80%;"}<br><br>
 5. Make sure **Update or Create** is selected as a syncing rule.
-6. Next, for record matching purposes, choose your desired [Braze user identifier](#supported-objects) for your Braze object type and associated model field.<br>![Census sync][9]{: style="max-width:80%;"}<br><br>
+6. Next, for record matching purposes, choose your desired [In the "How are source and destination records matched?" prompt, "External User ID" is set as "id".](#supported-objects) for your Braze object type and associated model field.<br>![In the "Which fields should be updated?" prompt, "External User ID" is set as "id", "Email" is set as "email", "First Name" is set as "first_name", and "Last Name" is set as "last_name".][9]{: style="max-width:80%;"}<br><br>
 7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
 8. Confirm details and create the sync. 
 

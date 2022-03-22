@@ -42,7 +42,7 @@ In the case of a success, any messages that were not affected by an error in the
 
 ## Queued responses {#messaging-queued}
 
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an `HTTP Accepted 202` response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
+During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an `HTTP Accepted 202` response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to the [Braze System Status](http://status.braze.com) page ahead of time.
 
 ```json
 {
@@ -62,12 +62,27 @@ Analytics are always available for campaigns. In addition, analytics are availab
 
 The provided send id can be used as a parameter for the send/data_series endpoint to pull back send specific analytics.
 
-## Fatal errors
+## Errors
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no messages will be sent.
+The status code element of a server response is a 3-digit number where the first digit of the code defines the class of response.
+
+- The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
+- The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal error chart below for a full list of 4XX error codes and descriptions.
+- The **5XX class** of status code (fatal) indicates a **server error**. When this happens, we recommend you retry your request with exponential backoff.
+
+### Fatal errors
+
+The following status codes and associated error messages will be returned if your request encounters a fatal error.
+
+{% endraw %}
+{% alert warning %}
+All of the following error codes indicate that no messages will be sent.
+{% endalert %}
+{% raw %}
 
 | Error Code | Description |
 |---|---|
+| `5XX Internal Server Error` | **You should retry your request with exponential backoff.**|
 | `400 Bad Request` | Bad syntax.|
 | `400 No Recipients` | There are no external IDs or segment IDs or no push tokens in the request.|
 | `400 Invalid Campaign ID` | No Messaging API campaign was found for the campaign ID you provided.|
@@ -89,7 +104,6 @@ The following status codes and associated error messages will be returned if you
 | `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|
 | `429 Rate Limited` | Over rate limit.|
-| `5XX Internal Server Error` | You should retry your request with exponential backoff.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}

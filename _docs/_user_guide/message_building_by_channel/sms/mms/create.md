@@ -19,12 +19,12 @@ channel:
 
 Sending MMS with Braze:
 
-- __Select your subscription group__
+- **Select your subscription group**
   - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
-- __Input message body__
+- **Input message body**
   - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
   - Only 1 image supported<br><br>
-- __Understand MMS sending__
+- **Understand MMS sending**
   - MMS are billed at a different rate vs. text-only SMS.
   - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
 
@@ -36,7 +36,7 @@ Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a st
 
 Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS-enabled Subscription Group, you will have the ability to upload an image, reference an image URL, or include a Contact Card.
 
-![picture][2]
+![][2]
 
 ### Image specifications
 
@@ -48,13 +48,13 @@ File Types | PNG, JPG, GIF
 
 ## Previewing an MMS message
 
-Braze provides a preview of the image you have uploaded. 
+Braze provides a preview of the image you have uploaded in the **Preview** panel of the message composer. 
 
 {% alert note %}
 The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
 {% endalert %}
 
-![picture][3]
+![][3]
 
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/

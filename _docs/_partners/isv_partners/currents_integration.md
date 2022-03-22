@@ -4,7 +4,7 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner custom currents connector
+# Partner custom Currents connector
 
 ## Serialization and data format
 
@@ -346,15 +346,15 @@ If our retry mechanism fails to deliver events to their endpoint for more than 2
 {% endalert %}
 
 The following HTTP status codes will be recognized by our connector client:
-- __2XX__ — Success
+- **2XX** — Success
   - Event data will not be re-sent.<br><br>
-- __5XX__ — Serverside error
+- **5XX** — Serverside error
   - Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.<br><br>
-- __400__ — Client-side error
+- **400** — Client-side error
   - Our connector somehow sent at least one malformed event. If this occurs, the event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive an additional HTTP 400 response will be dropped permanently. Partners and/or customers should be encouraged to let us know if they detect this occurring on their end.<br><br>
-- __401__ (Unauthorized) or __403__ (Forbidden)
+- **401** (Unauthorized) or **403** (Forbidden)
   - The connector was configured with invalid credentials. The connector task will halt sending, and will be marked as "Failed". Event data will be re-sent after a delay of between 2 and 5 minutes (this is handled by the Connect Task Restarter). If this issue is not resolved by the customer within 48 hours, the event data will be dropped.<br><br>
-- __413__ — Payload Too Large
+- **413** — Payload Too Large
   - Event data will be split into smaller batches and re-sent.<br><br>
-- __429__ — Too Many Requests
+- **429** — Too Many Requests
   - Indicates rate limiting. Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.

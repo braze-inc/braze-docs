@@ -23,11 +23,11 @@ The SDK requests in-app messages from Braze's servers on session start. To check
 2. Set up an in-app message campaign targeted at your user.
 3. Ensure that a [new session][troubleshooting_iams_4] occurs in your application.
 4. [Use the Event User Logs][troubleshooting_iams_3] to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
-  - If your app was meant to request triggered In-App Messages, you should see `trigger` in the Requested Responses field under Response Data.
-  - If your app was meant to request Original In-App Messages, you should see  `in_app` in the Requested Responses field under Response Data.
+  - If your app was meant to request triggered in-app messages, you should see `trigger` in the Requested Responses field under Response Data.
+  - If your app was meant to request Original in-app messages, you should see  `in_app` in the Requested Responses field under Response Data.
 5. Use the [Event User Logs][troubleshooting_iams_3] to check if the correct in-app messages are being returned in the Response Data.
 
-![In-App Message][troubleshooting_iams_5]
+![In-app message][troubleshooting_iams_5]
 
 ### Troubleshoot messages not being requested
 

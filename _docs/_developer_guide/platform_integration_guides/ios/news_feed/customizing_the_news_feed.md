@@ -12,7 +12,7 @@ channel:
 # Customization
 
 {% alert important %}
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+**Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images** within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
 ## Overriding default images

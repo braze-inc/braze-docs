@@ -25,9 +25,9 @@ When building out Content Cards, you should expose the Braze SDK via a single ma
 
 ### Content Cards as custom objects
 
-Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format already understood by your application code. Data source abstractions such as this provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data, fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
+Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format already understood by your application code. Data source abstractions provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
 
-When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze Dashboard to populate the necessary fields.
+When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze dashboard to populate the necessary fields.
 
 Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to start implementing your own custom objects.
 
@@ -35,7 +35,7 @@ Once you have a solid understanding of these code considerations, check out our 
 {% tab No Card Dependencies %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__No `Card` Dependencies__<br>
+**No `Card` dependencies**<br>
 `ContentCardData` represents the parsed out, common values of an `Card`.
 
 ```kotlin
@@ -73,7 +73,7 @@ data class ContentCardData (var contentCardId: String,
 ```
 {% endsubtab %}
 {% subtab Java %}
-__No `Card` Dependencies__<br>
+**No `Card` dependencies**<br>
 `ContentCardData` represents the parsed out, common values of an `Card`.
 
 ```java
@@ -129,7 +129,7 @@ public class ContentCardData{
 {% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__Custom Object Initializer__<br>
+**Custom object initializer**<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```kotlin
@@ -150,7 +150,7 @@ class Tile: ContentCardable {
 ```
 {% endsubtab %}
 {% subtab Java %}
-__Custom Object Initializer__<br>
+**Custom object initializer**<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```java
@@ -176,7 +176,7 @@ public class Tile extends ContentCardable {
 {% tab Identifying Types %}
 {% subtabs global %}
 {% subtab Kotlin %}
-__Identifying Types__<br>
+**Identifying types**<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```kotlin
@@ -208,7 +208,7 @@ enum class ContentCardClass{
 ```
 {% endsubtab %}
 {% subtab Java %}
-__Identifying Types__<br>
+**Identifying types**<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```java
@@ -256,23 +256,23 @@ enum ContentCardClass {
 ## Sample use cases
 
 There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
-- [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
-- [Content Cards in a Message Center](#content-cards-in-a-message-center)
+- [Content Cards as supplemental content](#content-cards-as-supplemental-content)
+- [Content Cards in a message center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
 
 ### Content Cards as supplemental content
 
-![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-The example to the right shows a `ListView` with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
+The example to the right shows a `ListView` with a hybrid list of items populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
 
 #### Dashboard configuration
 
 This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
-![Supplementary Content PNG][2]{: style="max-width:60%;"}
+![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.][2]{: style="max-width:60%;"}
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
@@ -281,7 +281,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 <br>
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
+![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Dashboard configuration
 
@@ -289,7 +289,7 @@ For the following message types, the key-value pair `class_type` should be added
 
 | Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
 | ---- | ---- |
-| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
+| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![][5] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Further explanation
@@ -298,7 +298,7 @@ The message center logic is driven by the `class_type` that is provided by the k
 
 {% tabs %}
 {% tab Kotlin %}
-__Using `class_type` for On Click Behavior__<br>
+**Using `class_type` for on click behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
 store the data.
 
@@ -347,7 +347,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 {% endtab %}
 {% tab Java %}
-__Using `class_type` for On Click Behavior__<br>
+**Using `class_type` for on click behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
 
 ```java
@@ -418,33 +418,33 @@ protected void onCreate(Bundle savedInstanceState) {
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-![Interactive Content PNG][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50% promotion appear in the botton left corner of the screen. Once clicked, a promotion will be applied to the cart.][6]{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interactive Content Cards
 <br>
-Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. 
+Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout, providing users with last-minute promotions. 
 
 Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 <br><br><br>
 #### Dashboard configuration
 
-The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
+The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and a `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
-![Interactive Content JPG][7]{: style="max-width:70%;"} 
+![][7]{: style="max-width:70%;"} 
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ## Logging impressions, clicks, and dismissals
 
-After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done by using a `ContentCardable` base class that references and provides data to the `BrazeManager`.
+After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done using a `ContentCardable` base class that references and provides data to the `BrazeManager`.
 
-#### __Implementation components__<br><br>
+#### **Implementation components**<br><br>
 
 {% tabs %}
 {% tab Kotlin %}
-__Custom Objects Call the Logging Methods__<br>
-Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
+**Custom objects call the logging methods**<br>
+Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. In this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 
 ```kotlin
 override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -454,7 +454,7 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
     }
 ```
 
-__Retrieve the Content Card from the ContentCardId__<br>
+**Retrieve the Content Card from the `ContentCardId`**<br>
 The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
 
 ```kotlin
@@ -463,8 +463,8 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
     }
 ```
 
-__Call `Card` Functions__<br>
-The [BrazeManager](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
+**Call `Card` functions**<br>
+The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```kotlin
     fun logContentCardClicked(idString: String?) {
@@ -481,7 +481,7 @@ The [BrazeManager](https://github.com/braze-inc/braze-growth-shares-android-demo
 ```
 {% endtab %}
 {% tab Java %}
-__Custom Objects Call the Logging Methods__<br>
+**Custom objects call the logging methods**<br>
 Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 ```java
 @Override
@@ -492,7 +492,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
     }
 ```
 
-__Retrieve the Content Card from the `ContentCardId`__<br>
+**Retrieve the Content Card from the `ContentCardId`**<br>
 The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
 
 ```java
@@ -503,8 +503,8 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
     }
 ```
 
-__Call `Card` Functions__<br>
-The `[BrazeManager](insert)` can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
+**Call `Card` functions**<br>
+The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```java
     public void logContentCardClicked(String idString) {
@@ -523,7 +523,7 @@ The `[BrazeManager](insert)` can reference Braze SDK dependencies such as the Co
 {% endtabs %}
 
 {% alert important %}
-For a control variant Content Card, a custom object should still be instantiated and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
+For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
 
 ## Helper files

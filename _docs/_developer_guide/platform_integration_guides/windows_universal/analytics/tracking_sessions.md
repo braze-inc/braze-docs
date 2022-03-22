@@ -8,6 +8,7 @@ description: "This reference article covers how to track sessions on the Windows
 ---
 
 # Analytics
+{% include archive/windows_deprecation.md %}
 
 ## Session tracking
 
@@ -15,17 +16,13 @@ The Braze SDK reports session data that is used by the Braze dashboard to calcul
 
 ### Session lifecycle
 
-Our Windows integration logs session opens when the app is launched and logs session closes when the application is closed.
-
-**Note**: If you need to force a new session, you can do so by changing users.
-
-**Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
+Our Windows integration logs session opens when the app is launched and logs session closes when the application is closed. The minimum value for `sessionTimeoutInSeconds` is 1 second. If you need to force a new session, you can do so by changing users.
 
 ### Testing session tracking
 
 To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
 
-![test_session] [session_tracking_7]
+![A user profile showing app usage as 25 sessions, last used two hours ago, and first used twenty days ago][session_tracking_7]
 
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml

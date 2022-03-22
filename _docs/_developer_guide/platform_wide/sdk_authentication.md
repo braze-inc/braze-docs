@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# SDK authentication
+# SDK Authentication
 
 SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JWT signature.
 
@@ -26,8 +26,8 @@ There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the "Manage Settings" page.<br><br>
-4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the **Manage Settings** page.<br><br>
+4. [Toggle Enforcement within the Braze dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
 
 ## Server-side integration {#server-side-integration}
 
@@ -345,7 +345,7 @@ In the dashboard `Settings` page, each app has three SDK Authentication states w
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Setting dashboard][8]
+![][8]
 
 The "**Optional**" setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
@@ -357,7 +357,7 @@ Each app will show a breakdown of SDK Authentication errors collected while this
 
 Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
 
-![Authentication Errors][10]
+![A chart showing the number of instances of authentication errors. Also shown are the total number of errors, error type, and adjustable date range.][10]{: style="max-width:80%"}
 
 ## Error codes {#error-codes}
 

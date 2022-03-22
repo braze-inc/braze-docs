@@ -42,7 +42,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![Kochava Image][4]{: style="max-width:90%;"}
+In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
 
 ### Step 3: Set up a postback from Kochava
 
@@ -90,7 +90,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-__This recommendation is purely optional__<br>
+**This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Kochava will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 

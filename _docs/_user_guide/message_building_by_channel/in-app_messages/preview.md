@@ -10,7 +10,7 @@ channel:
 
 # In-app messages HTML Preview
 
-Learn about the new Preview features for custom HTML In-App Messages.
+Learn about the new Preview features for custom HTML in-app messages.
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
@@ -18,9 +18,9 @@ Learn about the new Preview features for custom HTML In-App Messages.
 
 ### Interactive preview
 
-The message preview screen now shows a more realistic preview that renders the JavaScript included in your message.
+The message preview screen shows a realistic preview that renders the JavaScript included in your message.
 
-This means you can now preview _and interact_ with your custom messages (i.e. click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
+This means you can preview _and interact_ with your custom messages (i.e., click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
 ![New HTML in app preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
@@ -33,15 +33,13 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
-![New HTML In-App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+![New HTML in-app message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
 ### New asset uploader
 
-Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
+Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface. You can either upload files individually or via ZIP and copy/paste their URLs or asset file names directly into your HTML.
 
-This new workflow makes it easy to upload files and copy/paste their URLs directly into your HTML.
-
-We've also added the ability to upload newly supported file types, including:
+We've also added the ability to upload the following supported file types:
 
 | File Type | File Extension|
 |:-------- |:------------|
@@ -61,13 +59,13 @@ The code editor now includes Syntax Highlighting with a number of different colo
 
 This helps to easily spot potential code errors directly in the message composer, and better organize your code (using spaces or tabs - whichever side of that argument you're on).
 
-![New HTML In-App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
+![New HTML in-app message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
 ### Button tracking improvements
 
 You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML in-app messages are no longer limited to recording one button click event per impression.
 
 For example, to close a message and log Button 2 click, you can use:
 
@@ -79,8 +77,8 @@ You can also track new custom button names - up to 100 unique names per campaign
 
 #### Requirements
 
-* up to 100 unique button ids are allowed per campaign
-* Each Button ID can not be longer than 255 characters
+* Up to 100 unique button IDs are allowed per campaign.
+* Each button ID can not be longer than 255 characters.
 * Only alphanumeric, space, dash, and underscore characters are allowed.
 
 **Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
@@ -136,11 +134,11 @@ We recommend uploading assets to Braze's Media Library for two reasons:
 
 To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a file _and_ add associate the file with this campaign.
 
-You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting __Add from Media Library__.
+You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting **Add from Media Library**.
 
-Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
+Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard. Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
-Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+Alternatively, you can use the asset file names directly in the HTML message.
 
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!

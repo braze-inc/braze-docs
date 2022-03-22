@@ -10,11 +10,11 @@ channel: email
    
 # Managing email subscriptions
 
-Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions and targeting campaigns at users with particular subscription states][22]. These tools are critical for compliance with [anti-spam laws][23].
+Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions][22] and targeting campaigns at users with particular subscription states. These tools are critical for compliance with [anti-spam laws][23].
 
 ## Unsubscribed email addresses
 
-Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a custom footer or marks an email as spam. These users won't be targeted by future emails. To read more about how to set up your custom footer, visit this [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions) or marks an email as spam. These users won't be targeted by future emails.
 
 If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, once an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
 
@@ -31,8 +31,8 @@ Because deduplication occurs when targeted users are included in the same dispat
 {% alert important %}
 If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times are listed in the call. This is because we assume that API calls are purposefully constructed. 
 <br><br>
-__API-Triggered Campaigns__<br>
-Note that API-triggered campaigns will dedupe or send duplicates __depending on where the audience is defined__. <br>- __Deduping__ will occur if there are duplicate emails in a target segment or duplicate emails due to duplicate IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call. <br>- __Duplicate emails__ will occur if you directly target separate user IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call. 
+**API-Triggered Campaigns**<br>
+Note that API-triggered campaigns will dedupe or send duplicates depending on where the audience is defined. <br>- Deduping will occur if there are duplicate emails in a target segment or duplicate emails due to duplicate IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call. <br>- Duplicate emails will occur if you directly target separate user IDs within the recipient field of an API-triggered call. 
 {% endalert %}
 
 [22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

@@ -21,23 +21,23 @@ This article is not intended to provide, nor may it be relied upon as providing 
 
 In general, we encourage using your best judgment when approaching SMS sending. Braze, as well as our sending partners, have checks in place that prevent most SMS abuses.
 
-__There are the six rules you should follow:__
+**There are the six rules you should follow:**
 
-1. __Obtain explicit consent from users before sending them SMS.__ Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
-- __The time and date the user gave consent__
-- __The type of SMS messaging they consented to__
-- __The users' phone number__
-- __The language in which they opted-in__<br><br>
+1. **Obtain explicit consent from users before sending them SMS.** Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
+- **The time and date the user gave consent**
+- **The type of SMS messaging they consented to**
+- **The users' phone number**
+- **The language in which they opted-in**<br><br>
 
-2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
+2. **Clearly communicate the types of SMS you'll be sending**. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
 
-3. __Keep essential information updated and visible__. Ensure that the most up-to-date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
+3. **Keep essential information updated and visible**. Ensure that the most up-to-date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
 
-4. __Only send SMS to legally obtained, opted-in phone numbers__. As part of technical migration planning, ensure that your team understands the mechanism for tying opt-in statuses to each and every user profile in your customer engagement platform.<br><br>
+4. **Only send SMS to legally obtained, opted-in phone numbers**. As part of technical migration planning, ensure that your team understands the mechanism for tying opt-in statuses to each and every user profile in your customer engagement platform.<br><br>
 
-5. __Ensure SHAFT compliance in the US and other relevant regions.__ Sending SMS messages that contain language around sex, hate, alcohol, firearms, and tobacco (SHAFT) is generally considered to be illegal in the US and some other regions.<br><br>
+5. **Ensure SHAFT compliance in the US and other relevant regions.** Sending SMS messages that contain language around sex, hate, alcohol, firearms, and tobacco (SHAFT) is generally considered to be illegal in the US and some other regions.<br><br>
 
-6. __Double-check everything__. Work with your legal team to ensure that your SMS program is fully compliant with all applicable rules and regulations for the regions your brand operates in.<br><br>
+6. **Double-check everything**. Work with your legal team to ensure that your SMS program is fully compliant with all applicable rules and regulations for the regions your brand operates in.<br><br>
 
 ## Resources
 
@@ -69,7 +69,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 ### Spam and cadence
 
-Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act to ensure compliance (in the U.S.)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
+Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) to ensure compliance (in the U.S.).
 
 Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider compliance laws when planning your campaigns.
 
@@ -77,7 +77,7 @@ Some spam considerations are built into SMS capabilities in general (long and sh
 
 This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics - you may still be charged for messages that are blocked by various carriers.
 
-The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow __SHAFT Compliance__, which defines the following topics as generally "illegal" when messaging in the United States:
+The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow **SHAFT Compliance**, which defines the following topics as generally "illegal" when messaging in the United States:
 
 - Sex
 - Hate
@@ -85,7 +85,7 @@ The [CTIA](https://www.ctia.org/) (a trade association representing the wireless
 - Firearms
 - Tobacco
 
-You can [read more about the CTIA's Messaging Principles and Best Practices for 2019 here](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
+Read more about the [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
 
 ### Scheduling
 
@@ -93,6 +93,6 @@ Please ensure you comply with the [Telephone Consumer Protection Act](https://en
 
 ### International
 
-Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of u.s. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
+Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
 
 Better to be safe than sorry!

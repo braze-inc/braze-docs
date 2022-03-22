@@ -26,7 +26,7 @@ The code snippet below is a UI delegate method from the Braze SDK that determine
 
 {% tabs %}
 {% tab Swift %}
-__ABKInAppMessage Subclasses__<br>
+**ABKInAppMessage Subclasses**<br>
 
 ```swift
 extension AppboyManager: ABKInAppMessageUIDelegate {
@@ -48,7 +48,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__ABKInAppMessage Subclasses__<br> 
+**ABKInAppMessage Subclasses**<br> 
 
 ```objc
 - (ABKInAppMessageViewController *)inAppMessageViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
@@ -71,9 +71,9 @@ __ABKInAppMessage Subclasses__<br>
 ## Sample use cases
 
 There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how in-app messages may look and be used in the Braze dashboard:
-- [Custom Slide-up In-App Message](#custom-slide-up-in-app-message)
-- [Custom Modal In-App Message](#custom-modal-in-app-message)
-- [Custom Full In-App Message](#custom-full-in-app-message)
+- [Custom slide-up in-app message](#custom-slide-up-in-app-message)
+- [Custom modal in-app message](#custom-modal-in-app-message)
+- [Custom full in-app message](#custom-full-in-app-message)
 
 ### Custom slide-up in-app message
 
@@ -83,11 +83,11 @@ While building out your slide-up in-app message, you may notice you aren't able 
 
 Visit the [SlideFromBottomViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) to get started.
 
-#### __Adding additional behavior to our default UI__<br><br>
+#### Adding additional behavior to our default UI<br><br>
 
 {% tabs %}
 {% tab Swift %}
-__Update `offset` Variable__<br>
+**Update `offset` Variable**<br>
 Update the `offset` variable and set your own offset to suit your needs.
 ```swift
 func setSlideConstraint() {
@@ -107,7 +107,7 @@ override var offset: CGFloat {
 ```
 
 {% details Version 3.34.0 or earlier  %}
-__Update `slideConstraint` Variable__<br>
+**Update `slideConstraint` Variable**<br>
 The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
 ```swift
@@ -125,7 +125,7 @@ Visit the Braze Demo repository for the [`topMostViewController()`](https://gith
 {% enddetails %}
 {% endtab %}
 {% tab Objective-C %}
-__Update `offset` Variable__<br>
+**Update `offset` Variable**<br>
 Update the `offset` variable and set your own offset to suit your needs.
 ```objc
 - (void)setOffset {
@@ -143,7 +143,7 @@ Update the `offset` variable and set your own offset to suit your needs.
 }
 ```
 {% details Version 3.34.0 or earlier  %}
-__Update `slideConstraint` Variable__<br>
+**Update `slideConstraint` Variable**<br>
 The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
 ```objc
@@ -163,7 +163,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 
 {% tabs %}
 {% tab Swift %}
-__Override and Set Custom Constraint__<br>
+**Override and Set Custom Constraint**<br>
 Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constraint value to suit your needs. The original value is set in the superclass.
 
 ```swift
@@ -183,7 +183,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 {% endtab %}
 {% tab Objective-C %}
-__Override and Set Custom Constraint__<br> 
+**Override and Set Custom Constraint**<br> 
 Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constraint value to suit your needs. The original value is set in the superclass.
 
 ```objc
@@ -203,7 +203,7 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 {% endtab %}
 {% endtabs %}
 
-__Adjust Constraint for Device Orientation__<br>
+**Adjust Constraint for Device Orientation**<br>
 Adjust the respective value in `viewWillTransition()` because the subclass assumes responsibility for keeping the constraint synced during layout changes.
 
 ### Custom modal in-app message
@@ -230,7 +230,7 @@ The `extras` dictionary in the `ABKInAppMessage` object allows you to query for 
 
 {% tabs %}
 {% tab Swift %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 Query the `extras` dictionary for your `view_type` to load the desired subclassed view controller.
 
 ```swift
@@ -245,7 +245,7 @@ func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalV
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Using `view_type` for UI Display Behavior__<br>
+**Using `view_type` for UI Display Behavior**<br>
 Query the `extras` dictionary for your `view_type` to load the desired subclassed view controller.
 
 ```objc
@@ -266,7 +266,7 @@ Query the `extras` dictionary for your `view_type` to load the desired subclasse
 
 {% tabs %}
 {% tab Swift %}
-__Override and Provide Custom View__<br>
+**Override and Provide Custom View**<br>
 Override `loadView()` and set your own custom view to suit your needs.
 ```swift
 override var nibname: String{
@@ -279,7 +279,7 @@ override func loadView() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Override and Provide Custom View__<br>
+**Override and Provide Custom View**<br>
 Override `loadView()` and set your own custom view to suit your needs.
 ```objc
 - (void)loadView {
@@ -292,7 +292,7 @@ Override `loadView()` and set your own custom view to suit your needs.
 
 {% tabs %}
 {% tab Swift %}
-__Format Variables for a Dynamic List__<br>
+**Format Variables for a Dynamic List**<br>
 Before reloading the `UIPickerView` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using [`components(separatedBy: ", ")`](https://developer.apple.com/documentation/foundation/nsstring/1413214-components).
 ```swift
 override func viewDidLoad() {
@@ -304,7 +304,7 @@ override func viewDidLoad() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Format Variables for PickerView__<br>
+**Format Variables for PickerView**<br>
 Before reloading the `UIPickerView` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. For example, this can be achieved using [`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc).
 ```objc
 - (void)viewDidLoad {
@@ -319,7 +319,7 @@ Before reloading the `UIPickerView` components, the `inAppMessage` message varia
 
 {% tabs %}
 {% tab Swift %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze.
 ```swift
 @IBAction func primaryButtonTapped(_ sender: Any) {
@@ -330,7 +330,7 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Assign Custom Attribute__<br>
+**Assign Custom Attribute**<br>
 Using the subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze.
 ```objc
 - (IBAction)primaryButtonTapped:(id)sender {

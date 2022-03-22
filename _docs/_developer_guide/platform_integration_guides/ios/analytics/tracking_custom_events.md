@@ -11,7 +11,7 @@ description: "This reference article covers how to add and track custom events f
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Adding a custom event
 
@@ -59,7 +59,7 @@ See our [class documentation][4] for more information.
 
 ### Reserved keys {#event-reserved-keys}
 
-The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
+The following keys are **RESERVED** and **CANNOT** be used as custom event properties:
 
 - `time`
 - `event_name`

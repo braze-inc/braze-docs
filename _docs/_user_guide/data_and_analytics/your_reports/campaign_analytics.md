@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/email_icon.png
-  - name: In-App Messages
+  - name: In-app messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/in-app_message_icon.png
   - name: Push

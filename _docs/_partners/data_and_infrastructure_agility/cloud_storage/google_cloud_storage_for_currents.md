@@ -32,29 +32,29 @@ This can be done using the following instructions, which will walk you through c
 
 ### Step 1: Create role
 
-Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin > Roles > Create Role**.
+Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin > Roles > + Create Role**.
 
-![Google cloud storage role creation][2]
+![][2]
 
-Next, give the role a name, add `storage.buckets.get` and `storage.objects.create` permissions, and click **Create**.
+Next, give the role a name, click **+Add Permissions** and add `storage.buckets.get` and `storage.objects.create`, and click **Create**.
 
-![Google cloud storage role permissions][3]
+![][3]
 
 ### Step 2: Create a service account
 
 Create a new service account in your Google Cloud Platform Console by navigating to **IAM & admin > Service Accounts** and selecting **Create Service Account**.
 
-![Google cloud storage service account creation][4]
+![][4]
 
 Next, give the service account a name and grant it access to your newly created custom role.
 
-![Google cloud storage service account access][5]
+![In the Google Cloud Platform, on the create services page, type the name of your role in the "Select a Role" field.][5]
 
 #### Create a key
 
 At the bottom of the page, use the **Create Key** button to create a **JSON** private key to use in Braze. Once created, this key will download onto your machine.
 
-![Google cloud storage private key creation][6]
+![][6]
 
 ### Step 3: Set up Currents in Braze
 
@@ -66,7 +66,7 @@ Next, upload your JSON private key under **GCS JSON Credentials** and provide yo
 It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-![GCS Currents in Braze][7]
+![The Google Cloud Storage Currents page in Braze. On this page exist fields for integration name, contact email, GCS JSON credential, GCS bucket name, and prefix.][7]
 
 Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 

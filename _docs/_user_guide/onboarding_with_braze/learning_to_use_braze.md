@@ -43,7 +43,7 @@ Everything you should know to get started with Braze. As you’re going through 
 
 ## Adept admin
 
-Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and Dashboard Management](https://lab.braze.com/admin-dashboard-management) LAB course!
+Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and dashboard management](https://lab.braze.com/admin-dashboard-management) LAB course!
 
 | Order | Article | What You'll Learn |
 |---|---|---|

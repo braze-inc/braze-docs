@@ -15,7 +15,7 @@ tool: Campaigns
 > <br>
 > Being able to deliver messages in multiple languages allows users to interact and reach their customers in a truly personalized way. 
 
-Braze allows you to send messages in different languages from our Dashboard. When composing a campaign, our language templating feature enables you to easily create one message that appears in different languages depending on the user's phone settings.
+Braze allows you to send messages in different languages from our dashboard. When composing a campaign, our language templating feature enables you to easily create one message that appears in different languages depending on the user's phone settings.
 
 Here's how you can set up a message in multiple languages:
 
@@ -36,10 +36,10 @@ Select the languages that your message will be in. The selections offered in the
 Select the fields that you want to appear in different languages. These fields will differ depending on the message channel:
 
 - Email: Subject and body
-- Android Push: Message, Title, Summary Text, Sound, and Custom URL
-- iOS Push: Message, Sound, and Custom URL
-- In-App Message: Message
-- Windows Universal Push: Text 1, Text 2, Text 3, and Image Name
+- Android push: Message, Title, Summary Text, Sound, and Custom URL
+- iOS push: Message, Sound, and Custom URL
+- In-app message: Message
+- Windows Universal push: Text 1, Text 2, Text 3, and Image Name
 
 In addition, a warning will display if you have already entered content in any of the selected fields. You can choose to replace existing content with the templated text or insert the templated text after the existing text.
 

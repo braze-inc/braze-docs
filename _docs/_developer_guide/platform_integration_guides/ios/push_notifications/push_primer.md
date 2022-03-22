@@ -11,7 +11,7 @@ channel:
 
 # Push primer integration
 
-> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate Push Priming.
+> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate push priming.
 
 ## Step 1: Add snippet in AppDelegate.m file
 
@@ -81,7 +81,7 @@ if #available(iOS 10, *) {
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
-__Checks if a custom event needs to be fired__<br>
+**Checks if a custom event needs to be fired**<br>
 Add the following line of code to your `AppDelegate.m` in addition to the one above.
 ```objc
 if (@available(iOS 10.0, *)) {
@@ -104,7 +104,7 @@ if (@available(iOS 10.0, *)) {
 ```
 {% endtab %}
 {% tab swift %}
-__Checks if a custom event needs to be fired__<br>
+**Checks if a custom event needs to be fired**<br>
 Add the following line of code to your `AppDelegate.m` in addition to the one above.
 ```swift
 if #available(iOS 10, *) {
@@ -132,7 +132,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
-__Deep Link Handler__<br>
+**Deep Link Handler**<br>
 Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
 For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
 ```objc
@@ -156,7 +156,7 @@ For more information on deep linking check out our [documentation]({{site.baseur
 ```
 {% endtab %}
 {% tab swift %}
-__Deep Link Handler__<br>
+**Deep Link Handler**<br>
 Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
 For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings).
 ```swift

@@ -8,6 +8,6 @@ page_type: reference
 
 # Braze Support
 
-To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select __Get Help__ in the upper right corner of the page, and then __Braze Support__.
+To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select **Get Help** in the upper right corner of the page, and then **Braze Support**.
 
 ![Braze Support]({% image_buster /assets/img/braze_support.png %}){: style=";max-width:60%;"}

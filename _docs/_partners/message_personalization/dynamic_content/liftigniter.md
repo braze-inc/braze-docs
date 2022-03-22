@@ -35,11 +35,11 @@ Next, write your message, defining the content you would like to call with json.
 
 {% endraw %}
 
-![LiftIgniter composer][1]
+![An image showing a push campaign that includes LiftIgniter specific Connected Content calls. There is also Connected Content logic added to the image field.][1]
 
 Once you put this message into the composer body, you can preview your message. You can even pull in images, as seen in the example below:
 
-![LiftIgniter Image][2]
+![A preview image of what the message will look like once sent.][2]
 
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}

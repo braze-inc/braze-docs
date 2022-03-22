@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) channel type of the message (as in, "email", "ios_push", "webhook", "content_card", "in-app_message", "sms"),
-            "name": (string) name of the message in the Dashboard (eg., "Variation 1")
+            "name": (string) name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see below ...
         }
     },
@@ -139,7 +139,7 @@ The `messages` response will contain information about each message. Example mes
 ```json
 {
     "channel": "webhook",
-    "url": (string) url for webhook,
+    "url": (string) URL for webhook,
     "body": (string) payload body,
     "type": (string) body content type,
     "headers": (hash) specified request headers,
@@ -237,8 +237,9 @@ The `conversion_behaviors` array will contain information about each conversion 
     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

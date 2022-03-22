@@ -16,11 +16,11 @@ description: "This article outlines details about the List User's Subscription G
 
 Use the endpoints below to list and get the subscription groups of a certain user.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 

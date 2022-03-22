@@ -16,7 +16,7 @@ All of Braze's in-app message types are highly customizable across messages, ima
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support.
 <br><br>
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+**Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images** within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
 ## Key-value pair extras
@@ -213,7 +213,7 @@ You can customize in-app message handling by implementing this delegate method a
 
 You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
 
-For an implementation example, see our [In-App Message Sample Application][36].
+For an implementation example, see our [in-app message Sample Application][36].
 
 ### Overriding in-app messages before display
 
@@ -478,7 +478,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 {% endtab %}
 {% endtabs %}
 
-When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in the foreground.
+When the silent push is received an SDK recorded event "in-app message trigger" will be logged against the user profile. Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
 
 ### Step 2: Create a push campaign
 

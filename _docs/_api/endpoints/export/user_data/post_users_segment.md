@@ -21,7 +21,7 @@ Note that a company may run at most one export per segment using this endpoint a
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is __required__. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
 ## Rate limit
@@ -70,7 +70,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
     "segment_id" : (required, string) identifier for the segment to be exported,
-    "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
+    "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
     "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
     "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
@@ -309,7 +309,7 @@ User export object (we will include the least data possible - if a field is miss
 ```
 
 {% alert tip %}
-For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

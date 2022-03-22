@@ -11,7 +11,7 @@ page_type: reference
 
 >  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group API Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are, how they are used at Braze, their permissions and how to keep them secure. 
 
-In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, Canvases, campaigns, Content Cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
+In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API Identifier types][2].
 
 ## What is a REST API key/app group API key?
 
@@ -32,7 +32,7 @@ Prior to April 2020, API keys would be included as a part of the API request bod
 While the old way of passing API keys continues to work, after a period of time this will be permanently removed so we urge users to update API calls accordingly. 
 
 {% alert important %}
-__Looking for the `api_key` parameter in your Braze endpoints?__<br>
+**Looking for the `api_key` parameter in your Braze endpoints?**<br>
 As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see YOUR-REST-API-KEY within each endpoint Example Requests.
 <br><br>
 Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
@@ -176,8 +176,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `templates.email.create` | Create a new email template on the Dashboard. |
-| `templates.email.update` | Update an email template stored on the Dashboard. |
+| `templates.email.create` | Create a new email template on the dashboard. |
+| `templates.email.update` | Update an email template stored on the dashboard. |
 | `templates.email.info` | Query for information of a specific template. |
 | `templates.email.list` | Query for a list of email templates. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -197,7 +197,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 |---|---|---|
 | `content_blocks.info` | Query for information of a specific template. |
 | `content_blocks.list` | Query for a list of Content Blocks. |
-| `content_blocks.create` | Create a new Content Block on the Dashboard. |
+| `content_blocks.create` | Create a new Content Block on the dashboard. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -213,7 +213,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% endtab %}
 {% endtabs %}
 
-Please check [Braze documentation][5] site or our [Braze Postman documentation][6] for a full description of these API endpoints.
+For a full description of these API endpoints, refer to our [API endpoint index]({{site.baseurl}}/api/endpoints/) or our [Postman collection][6].
 
 {% alert important %}
 Once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you’ve completed your implementation, go ahead and delete the old key.
@@ -233,12 +233,12 @@ There are two ways to locate your `app_id`:
 
 1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
 
-2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
+2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 
 During SDK set up, the most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
-To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
+To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, a new Android project is configured with `debug` and `release` build types and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 
@@ -256,11 +256,10 @@ Security is of the utmost importance at Braze. Given that REST API Keys allow ac
 
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
 
-With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
+With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is **crucial** in the security of your application.
 
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
 [5]: {{site.baseurl}}/api/basics/
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types

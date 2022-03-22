@@ -45,7 +45,7 @@ Select the package that best suits your needs and click **Finish**:
   - Best suited if you plan to use UI components provided by Braze.
   - Includes `AppboyKit` automatically.
 - `AppboyKit`
-  - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
+  - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, in-app messages, etc.).
 - `AppboyPushStory`
   - Include this package if you have integrated Push Stories in your app. This is supported as of version 3.31.0.
   - In the dropdown under `Add to Target`, select your `ContentExtension` target instead of your main app's target. 
@@ -59,7 +59,7 @@ Select the package that best suits your needs and click **Finish**:
 Next, navigate to your project build settings and add the `-ObjC` flag to the **Other Linker Flags** setting. 
 
 {% alert important %}
-This flag __must be added and any [errors](https://developer.apple.com/library/archive/qa/qa1490/_index.html) resolved__ in order to further integrate the SDK.
+This flag **must be added and any [errors](https://developer.apple.com/library/archive/qa/qa1490/_index.html) resolved** in order to further integrate the SDK.
 {% endalert %}
 
 ![Swift Package Manager: Menu 5][6]

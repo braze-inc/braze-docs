@@ -1,6 +1,6 @@
 ---
 nav_title: GIFs
-article_title: News Feed GIFs for Android/FireOS
+article_title: News Feed GIFs for Android and FireOS
 page_order: 9
 platform: 
   - Android

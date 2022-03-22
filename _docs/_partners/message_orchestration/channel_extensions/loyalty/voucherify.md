@@ -10,6 +10,8 @@ search_tag: Partner
 
 # Voucherify
 
+{% include video.html id="Xh_c53cBA9w" align="right" %}
+
 > [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
 
 The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
@@ -144,7 +146,7 @@ If a user redeems the code, you’ll see the redemption details in your Voucheri
 
 ![Code redemption]({% image_buster /assets/img/voucherify-redemption.png %})
 
-### Upload Voucherify codes to Braze promo codes lists
+### Upload Voucherify codes to Braze promotion codes lists
 
 Next to the Connected Content and custom attributes, you can share Voucherify codes using Braze Promo Codes snippet.
 

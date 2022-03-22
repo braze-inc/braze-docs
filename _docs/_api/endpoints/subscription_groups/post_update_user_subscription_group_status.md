@@ -15,11 +15,11 @@ description: "This article outlines details about the Update User's Subscription
 
 Use the endpoints below to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 

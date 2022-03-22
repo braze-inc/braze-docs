@@ -22,7 +22,7 @@ The new `GroupActivities` framework released by Apple as part of the iOS 15 upda
 
 When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. Once opened, audio and video will be synced across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
-__Synced Media Playback__<br>
+**Synced Media Playback**<br>
 With synced media playback, if one person pauses the SharePlay video, it will be paused across all devices. <br><br>
 ![SharePlay][5]{: style="border:0"}
 
@@ -43,7 +43,7 @@ override var nibName: String {
   return "ModalVideoViewController"
 }
    
-/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the In-App Message
+/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the in-app message
 override func loadView() {
   Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
@@ -80,9 +80,9 @@ func configureVideoPlayer() {
 
 #### Dashboard configuration
 
-__Key-Value Pairs__: The video file must be set in the key-value pairs on the in-app message and cannot be attached to the media item itself. You can also add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
+**Key-Value Pairs**: The video file must be set in the key-value pairs on the in-app message and cannot be attached to the media item itself. You can also add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
 
-__Triggering__: The in-app message should be eligible for all users with re-eligibility enabled. This can be done by setting two triggers, a default trigger to launch the message and another to launch the message when initiated from SharePlay. Users not on iOS 15 will only be able to view messages locally. 
+**Triggering**: The in-app message should be eligible for all users with re-eligibility enabled. This can be done by setting two triggers, a default trigger to launch the message and another to launch the message when initiated from SharePlay. Users not on iOS 15 will only be able to view messages locally. 
 
 {% alert important %}
 Be mindful of any other in-app messages triggered on session start that may conflict with each other.

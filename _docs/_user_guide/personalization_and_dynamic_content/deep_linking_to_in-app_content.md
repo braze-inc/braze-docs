@@ -58,19 +58,27 @@ To include UTM tags in your deep links for push notifications, simply set the on
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![UTM Tags in Push Message][8]
+![][8]
 
 #### Attributing News Feed clicks with UTM tags
 
-News Feed items deep linking into your app can be configured to use UTM tags as well. Note that you can use `utm_content` to separate between deep links on different OSes.
+News Feed items deep linking into your app can be configured to use UTM tags as well. Note that you can use `utm_content` to separate between deep links on different operating systems.
 
-![UTM Tags in News Feed][9]
+```
+myapp://products/pizza?utm_source=my_app&utm_medium=newsfeed&utm_campaign=pizzapromosummer2021&utm_content=android_deeplink
+```
+
+![][9]
 
 #### Attributing in-app message clicks with UTM tags
 
 Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
 
-![UTM Tags in In-App Message][10]
+```
+myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
+```
+
+![][10]
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links

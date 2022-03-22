@@ -11,11 +11,11 @@ description: "This article covers customization of in-app messaging via the Braz
 
 # Customization {#in-app-message-customization}
 
-All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
+All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from within the [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
 ## Key-value pair extras
 
-In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under "Additional Message Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by your site. For example:
+In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under **Settings** when creating an in-app message campaign. These can be used to send data with an in-app message for further handling by your site. For example:
 
 ```javascript
 import braze from "@braze/web-sdk";
@@ -33,11 +33,9 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 });
 ```
 
-### In-app message default z-index
+## In-app message default z-index
 
-By default, In-App Messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
-
-**Note**: This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded in order to use this option.
+By default, in-app messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
 
 ```javascript
 import braze from "@braze/web-sdk";
@@ -47,9 +45,13 @@ braze.initialize("YOUR-API-KEY", {
 });
 ```
 
-### Custom styling
+{% alert important %}
+This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded to use this option.
+{% endalert %}
 
-Braze UI elements come with a default look and feel that create a neutral in-app message experience and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
+## Custom styling
+
+Braze UI elements come with a default look and feel that create a neutral in-app message experience and aim for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, you can customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
 
 ```css
   body .ab-in-app-message .ab-message-header {
@@ -69,7 +71,7 @@ appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
 
 ## In-app message dismissal
 
-By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to true to prevent this behavior and require an explicit button click to dismiss messages. 
+By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to `true` to prevent this behavior and require an explicit button click to dismiss messages. 
 
 ```javascript
 import braze from "@braze/web-sdk";

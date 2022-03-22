@@ -27,7 +27,7 @@ All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. T
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 
-![e164][picture]{: style="max-width:50%;border: 0;"}
+![][picture]{: style="max-width:50%;border: 0;"}
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
@@ -42,14 +42,16 @@ You can see the differences between local number formatting as well as universal
 
 ### Adding users to SMS subscription groups
 
-For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information, refer to [SMS subscription groups][1]. 
+For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal laws for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups][1]. 
 
 ### Handling invalid phone numbers
+
 When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
 A phone number is considered invalid in the following cases:
-- The phone number supplied is not a valid phone number or was incorrectly formatted.
-- The phone number is a landline.
+
+- The phone number supplied is not a valid phone number.
+- The phone number is incorrectly formatted.
 
 These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 

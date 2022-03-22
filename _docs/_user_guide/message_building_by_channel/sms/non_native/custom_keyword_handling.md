@@ -20,7 +20,7 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 | Type | Speed | Notes | 
 | ----- | ----- | ---- | 
 | Known phone numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
-| Unknown phone numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
+| Unknown phone numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how unknown phone numbers are dealt with, refer to [Short and long codes][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 If you require faster sending speeds for unknown phone numbers, reach out to your Customer Success Manager or contact support to discuss your options.
@@ -39,15 +39,16 @@ If you require faster sending speeds for unknown phone numbers, reach out to you
 
 - Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
 - Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.
-- The `message_body` custom keyword value must be __lowercase__.
+- The `message_body` custom keyword value must be **lowercase**.
 
-![picture][IMAGE2]
+![][IMAGE2]
 
-Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
+This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
+
 1. alias_label: `phone` and alias_name: `users_phone_number`
 2. Phone numbers must be in the E.164 format (e.g +19173337578). 
 
-If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.
+If using the new user alias endpoint, to ensure E.164 compliance, add a plus "+" prefix as the default phone field does not automatically include this symbol.
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}

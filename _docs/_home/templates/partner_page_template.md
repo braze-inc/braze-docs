@@ -78,7 +78,7 @@ Outline through usage of the integration - especially if it means inserting Liqu
 
 ## Customization
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+This is an **optional** section. Here, you could outline any specific ways to customize your integration between the two partners.
 
 ## Using This Integration
 

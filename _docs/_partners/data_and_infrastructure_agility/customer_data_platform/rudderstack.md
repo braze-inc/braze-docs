@@ -38,7 +38,7 @@ Now that you have your data source set up, in the RudderStack dashboard, select 
 
 In the Braze destination, provide the app key, Braze REST API key, data cluster, and native SDK option (device mode only). The native SDK option will use the Braze native SDK to send events if toggled on. 
 
-![Braze Settings][0]{: style="max-width:40%;margin-bottom:15px;"}
+![][0]{: style="max-width:40%;margin-bottom:15px;"}
 
 ## Step 3: Choose the type of integration
 

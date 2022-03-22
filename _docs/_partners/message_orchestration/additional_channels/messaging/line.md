@@ -60,7 +60,7 @@ In Braze, navigate to **Templates & Media > Content Blocks Library > + Create Co
 
 Next, paste your channel access token in the Content Block body, and save it.
 
-![Line Content Block Token][2]
+![An image the Content Block showing the Content Block name, Liquid tag, and censored channel access token.][2]
 
 Once you've set the channel access token inside a Content Block, you will be able to use the Line webhook template to send messages to users.
 
@@ -68,32 +68,32 @@ Once you've set the channel access token inside a Content Block, you will be abl
 
 From **Templates & Media**, go to **Webhook Templates** and choose one of the following Line Messenger webhook templates: 
 
-![Available templates]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
+![A selection of available predesigned webhook templates.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
 
 {% tabs %}
 {% tab Line Text %}
 The Line [text](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages) webhook template will allow you to send text-based messages that support emojis.
 
-![Text Type]({% image_buster /assets/img_archive/line_text_type.png %}){: style="max-width:70%;border:0px;"}
+![The line messaging UI with two examples of what a text message will look like on their platform.]({% image_buster /assets/img_archive/line_text_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
 {% tab Line Sticker %}
 The Line [sticker](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages) template will allow you to send sticker messages. Stickers can be used to make your bot app more expressive and engaging for your users. 
 
 To send a sticker, include the sticker's package ID and sticker ID in the message object. See the [list of available stickers](https://developers.line.biz/en/docs/messaging-api/sticker-list/) that can be sent with the Messaging API.
 
-![Sticker Type]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="max-width:70%;border:0px;"}
+![The line messaging UI with several examples of what sticker messages look like. These examples include a bear celebrating, a rabbit giving a thumbs up, and a yellow duck.]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
 {% tab Line Image %}
 The Line [image](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages) template allows you to send images to your Line users.
 
 To send images, include URLs of the original image and a smaller preview image in the message object. The preview image is displayed in the chat, and the full image is opened when the image is tapped. Note that the URLs must use HTTPS over TLS 1.2 or later.
 
-![Image Type]({% image_buster /assets/img_archive/line_image_type.png %})
+![The line messaging UI showing what an image message will look like on their platform.]({% image_buster /assets/img_archive/line_image_type.png %})
 {% endtab %}
 {% tab Line Carousel %}
 The Line [carousel](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template) template allows you to send messages with multiple column objects that users can cycle through. In addition to having buttons, you can also indicate in each column object a single action to be executed when a user taps anywhere in the image, title, or text area.
 
-![Carousel Type]({% image_buster /assets/img_archive/line_carousel_type.png %}){: style="max-width:70%;border:0px;"}
+![The line messaging UI showing a carousel message. This message includes a swipable content box that includes an image, description, a reserve button, and a call button. ]({% image_buster /assets/img_archive/line_carousel_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
 {% endtabs %}
 
@@ -107,7 +107,7 @@ The custom attribute `Line ID` should be templated in the message body's `To:` f
 
 Before you send your message, test your webhook. Make sure your Line ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
 
-![Sending a message to yourself][3]
+![Test tab in the Braze webhook builder that shows you can preview the message by sending it to an existing user.][3]
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
@@ -115,7 +115,7 @@ If you receive the message successfully, you can start to configure its delivery
 
 Once set up, use this integration to target Line users. First, [create a segment][62] for all users for whom the `Line ID` exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. 
 
-![Segment filter for Line IDs][63]
+![Segment filter "line_id" set to "is not blank".][63]
 
 If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for `Line ID` existing to avoid errors.
 
