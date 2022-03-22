@@ -17,7 +17,7 @@ But first - before using Google Tag Manager - be sure to first follow our [initi
 
 ## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 
-In this example, we’ll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for iOS, we can control which of our 3rd party vendors receive this event and create tags specific to Braze.
+In this example, we’ll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for iOS, we can control which of our third-party vendors receive this event and create tags specific to Braze.
 
 ### Custom events
 
