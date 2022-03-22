@@ -13,7 +13,7 @@ channel:
 
 The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel`, and `More`. 
 
-![A gif of a push message being pulled down to display two customizable action buttons.][13]
+![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
 To register Braze's default push categories, follow the integration instructions below:
 
