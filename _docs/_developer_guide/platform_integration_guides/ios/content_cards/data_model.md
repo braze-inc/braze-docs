@@ -177,7 +177,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `image` | (Optional) This property is the URL of the card's image.|
 | `title` | The title text for the card. |
 | `cardDescription` | The body text for the card. |
-| `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+| `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Card methods
