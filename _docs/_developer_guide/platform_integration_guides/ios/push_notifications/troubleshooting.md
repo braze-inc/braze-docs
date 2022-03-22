@@ -27,7 +27,7 @@ In developing your app, you'll need to create an SSL certificate to enable push 
 There are two types of [provisioning profiles][2] and certificates - development and distribution. We recommend just using distribution profiles and certificates to avoid any confusion. If you choose to use different profiles and certificates for development and distribution, ensure that the certificate uploaded to the dashboard matches the provisioning profile you are currently using.
 
 {% alert warning %}
-Do not change the push certificate environment (development versus production). Changing the push certificate to the wrong environment can lead to end-users having their push token accidentally removed, making them unreachable by push. 
+Do not change the push certificate environment (development versus production). Changing the push certificate to the wrong environment can lead to your users having their push token accidentally removed, making them unreachable by push. 
 {% endalert %}
 
 #### Step 2: Devices register for APNs and provide Braze with push tokens
