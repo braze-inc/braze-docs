@@ -104,6 +104,7 @@ In regards to subscription usage, custom event properties enabled for segmentati
 |Install attribution | Ad | No |
 |Miscellaneous | Random bucket number | No |
 |Canvas messages received | Canvas messages received | No |
+| Contact settings | Subscription group | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
  {% endtab %}
