@@ -29,7 +29,7 @@ For versions `3.29.0` through `3.32.0`, use the URL `https://github.com/Appboy/A
 
 ![][3]
 
-On the next screen, select the SDK version and click **Next**. Versions `3.29.0` and higher are compatible with Swift Package Manager.
+On the next screen, select the SDK version and click **Next**. Versions `3.29.0` and later are compatible with Swift Package Manager.
 
 ![][4]
 
