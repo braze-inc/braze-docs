@@ -163,7 +163,7 @@ ATS compliance is enforced for links opened within the mobile app (Braze's defau
 You can handle ATS in one of the following three ways:
 
 #### Ensure all links are ATS-compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is  to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the below-listed approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
 An SSL tool can help you pinpoint web server security issues. This [SSL server test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
 
