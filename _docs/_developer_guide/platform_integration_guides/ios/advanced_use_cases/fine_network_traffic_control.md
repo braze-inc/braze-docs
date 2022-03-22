@@ -3,7 +3,7 @@ nav_title: Fine Network Traffic Control
 article_title: Fine Network Traffic Control for iOS
 platform: iOS
 page_order: 1
-description: "This article covers how to implement fine network traffic control for your iOS application"
+description: "This article covers implementing fine network traffic control for your iOS application."
 
 ---
 
@@ -22,7 +22,7 @@ Braze allows the user the option to control network traffic using the following 
     - Flushing custom events and attributes data to Braze's servers
     - Updating the News Feed, Content Cards, and Geofences
     - Requesting new in-app messages
-- Immediate server requests are performed when user-facing data is required for any of Braze's features, such as in-app messages.
+- Immediate server requests are performed when user-facing data is required for Braze's features, such as in-app messages.
 - To minimize server load, Braze performs periodic flushes of new user data every few seconds.
 
 Data can be manually flushed to Braze's servers at any time using the following method:
@@ -48,9 +48,9 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ***`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`***
 
-- This protocol is the same as Automatic Request Processing **EXCEPT**:
-    - Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in in-app messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- This protocol is the same as automatic request processing except:
+    - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 Data can be manually flushed to Braze's servers at any time using the following method:
 
@@ -102,7 +102,7 @@ let appboyOptions: [AnyHashable: Any] = [
 
 ### Set request policy at runtime
 
-The request processing policy can also be set during runtime via the `requestProcessingPolicy` property on `Appboy`. For example:
+The request processing policy can also be set during runtime via the `requestProcessingPolicy` property on `Appboy`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -144,7 +144,7 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 {% endtab %}
 {% endtabs %}
 
-After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
+After calling this method, you must reset the request processing mode to automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
 [3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

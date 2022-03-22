@@ -13,19 +13,19 @@ channel:
 
 ## Trigger types
 
-Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
+Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events) article to learn more. 
 {% endalert %}
 
 ## Delivery semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation][45]. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, read about our [session lifecycle][45]. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
-For in-app messages that display immediately on delivery, (session start, push click) there can be some latency due to assets not being prefetched.
+There can be some latency for in-app messages that display immediately on delivery (session start, push click) due to assets not being prefetched.
 
 ## Minimum time interval between triggers
 
@@ -74,27 +74,27 @@ Users are eligible to receive an in-app message in the following situations:
 - Session start event
 - The app is opened from a push notification
 
-Triggered in-app messages are placed on top of the stack when their trigger event is fired. If multiple in-app messages are in the stack and waiting to be displayed, Braze will display the most recently received in-app message first (last in, first out).
+Triggered in-app messages are placed on the stack when their trigger event is fired. If multiple in-app messages are in the stack and waiting to be displayed, Braze will display the most recently received in-app message first (last in, first out).
 
 #### Returning in-app messages to the stack
 
-A triggered in-app message can be returned back to the stack in the following situations:
+A triggered in-app message can be returned to the stack in the following situations:
 
-- The in-app message is triggered when the app is in the background
-- Another in-app message is currently visible
-- The deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] has **NOT** been implemented, and the keyboard is currently being displayed
-- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDisplayInAppMessageLater`
+- The in-app message is triggered when the app is in the background.
+- Another in-app message is currently visible.
+- The deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] has not been implemented, and the keyboard is currently being displayed.
+- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDisplayInAppMessageLater`.
 
 #### Discarding in-app messages
 
 A triggered in-app message will be discarded in the following situations:
 
-- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDiscardInAppMessage`
-- The asset (image or zip file) of the in-app message failed to download
-- The in-app message is ready to be displayed but past the timeout duration
-- The device orientation doesn't match the triggered in-app message's orientation
-- The in-app message is a full in-app message but has no image
-- The in-app message is an image-only modal in-app message but has no image
+- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDiscardInAppMessage`.
+- The asset (image or ZIP file) of the in-app message failed to download.
+- The in-app message is ready to be displayed but past the timeout duration.
+- The device orientation doesn't match the triggered in-app message's orientation.
+- The in-app message is a full in-app message but has no image.
+- The in-app message is an image-only modal in-app message but has no image.
 
 #### Manually queue in-app message display
 
@@ -117,9 +117,9 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 {% endtab %}
 {% endtabs %}
 
-### Real time in-app message creation and display
+### Real-time in-app message creation and display
 
-In-app messages can also be locally created within the app and displayed via Braze. This is particularly useful for displaying messages that you wish to trigger within the app in real-time. Braze does not support analytics on in-app messages created locally.
+In-app messages can also be locally created within the app and displayed via Braze. This is particularly useful for displaying messages you wish to trigger within the app in real-time. Braze does not support analytics on in-app messages created locally.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

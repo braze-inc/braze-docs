@@ -127,7 +127,7 @@ By default, all fields are collected by the Braze iOS SDK.
 
 ## SDK compatibility
 
-Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, please reach out to Braze Support.
+Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, reach out to Braze Support.
 
 Additionally, the Braze iOS SDK fully supports RubyMotion apps.
 

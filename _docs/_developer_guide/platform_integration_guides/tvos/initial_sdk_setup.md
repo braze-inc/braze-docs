@@ -11,7 +11,7 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 # Initial SDK setup
 
 {% alert note %}
-Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, please open a [support ticket][support].
+Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket][support].
 {% endalert %}
 
 Installing the Braze SDK will provide you with basic analytics functionality.
@@ -22,7 +22,7 @@ The tvOS Braze SDK should be installed or updated using [CocoaPods][apple_initia
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
+Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
 
 Run the following command to get started:
 
@@ -30,8 +30,8 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-- If you are prompted to overwrite the `rake` executable, please refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
-- If you have issues regarding CocoaPods, please refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
+- If you are prompted to overwrite the `rake` executable, refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
+- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
 
 ### Step 2: Constructing the podfile
 

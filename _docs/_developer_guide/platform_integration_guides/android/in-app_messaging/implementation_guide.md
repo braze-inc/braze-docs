@@ -234,7 +234,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(
 
 ### Custom modal in-app message
 
-An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [TeamPickerView](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
+An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The following example shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
 
 {% tabs %}
 {% tab Kotlin %}
@@ -297,8 +297,8 @@ Provide a layout that mimics the standard modal in-app message, but supply your 
 
 {% tabs %}
 {% tab Kotlin %}
-**Inflate and Customize the View**<br>
-Before reloading the `Spinner` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`.
+**Inflate and customize the view**<br>
+Before reloading the `Spinner` components, the `inAppMessage` message variable is output as a string. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`.
 
 ```kotlin
 private fun getCustomView(activity: Activity, inAppMessage: IInAppMessage): TeamPickerView {
@@ -310,7 +310,7 @@ private fun getCustomView(activity: Activity, inAppMessage: IInAppMessage): Team
 ```
 {% endtab %}
 {% tab Java %}
-**Inflate and Customize the View**<br>
+**Inflate and customize the view**<br>
 Before reloading the `Spinner` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`.
 
 ```java
@@ -326,7 +326,7 @@ private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessa
 
 {% tabs %}
 {% tab Kotlin %}
-**Assign Custom Attribute**<br>
+**Assign custom attribute**<br>
 Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 ```kotlin
@@ -338,7 +338,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 ```
 {% endtab %}
 {% tab Java %}
-**Assign Custom Attribute**<br>
+**Assign custom attribute**<br>
 Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 ```java

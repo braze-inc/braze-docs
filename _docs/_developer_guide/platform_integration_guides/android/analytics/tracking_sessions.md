@@ -15,7 +15,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 
 ## Session lifecycle
 
-If you have integrated Braze using our recommended [Activity lifecycle callback integration][session_tracking_8], `openSession()` and `closeSession()` will be called automatically for each activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds. Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (e.g., by navigating to another activity) in the interim.
+If you have integrated Braze using our recommended [activity lifecycle callback integration][session_tracking_8], `openSession()` and `closeSession()` will be called automatically for each activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds. Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (e.g., by navigating to another activity) in the interim.
 
 An Android session times out after 10 seconds without any communication from the host application. This means if a user backgrounds the app and returns 9 seconds later, the same session will be continued. Note that if a session closes while the user has the app backgrounded, that data may not be flushed to the server until the app is opened again.
 
