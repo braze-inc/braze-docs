@@ -89,7 +89,7 @@ In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
 - `URL` (optional) - The URL that will be opened after the card is clicked on. It can be an http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card but is hidden in the default Braze News Feed.
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed.
 
 ## Captioned image properties
 In addition to the base card properties:
