@@ -66,7 +66,7 @@ If the application does not prompt you to register for push notifications, there
 
 #### No "push registered" users showing in the dashboard
 
-- Check that your app is prompting you to allow push notifications. Typically this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it is not appearing where it should be, then the problem is likely with the basic configuration of your app's push capabilities.
+- Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
   - Verify the steps for [push integration][21] were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (Or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
