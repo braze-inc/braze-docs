@@ -34,7 +34,6 @@ Listed below are the automatically captured data generated and received by Braze
 | Device Locale | Android, iOS | The default locale of the device. | Used to translate messages to a user’s preferred language. |
 | Device Model | Android, iOS | The specific hardware of the device. | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
 | Device Wireless Carrier | Android, iOS | The mobile carrier. | It can optionally be used for message targeting. |
-| IDFA | iOS | The advertiser identifier. | This value is only sent to Braze when (1) users opt-in, and (2) the IDFA is set in the Braze SDK integration. |
 | Country | Android, iOS, Web | Country | Identified via IP Address Geolocation. It can be used to target messages based on location. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
