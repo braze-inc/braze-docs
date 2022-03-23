@@ -39,7 +39,7 @@ description: "This article explains the different components of Braze's Email Ob
 Braze recommends that you avoid using Google Drive links for your attachment's `url`, as this can block our servers' calls to get the file and result in the email message not sending.
 {% endalert %}
 
-An `email_template_id` can be retrieved from the bottom of any Email Template created with the HTML editor. Below is an example of what this ID looks like:
+An `email_template_id` can be retrieved from the bottom of any email template created with the HTML editor. Below is an example of what this ID looks like:
 
 ![API Identifier section of an HTML email template][31]
 

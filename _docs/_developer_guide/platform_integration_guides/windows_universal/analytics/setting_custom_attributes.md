@@ -8,6 +8,7 @@ description: "This reference article covers how to set custom attributes on the 
 ---
 
 # Setting custom attributes
+{% include archive/windows_deprecation.md %}
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -113,7 +114,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 ## Managing notification subscription statuses
 
-To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both Email and Push:
+To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both email and push:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |

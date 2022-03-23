@@ -1,9 +1,9 @@
 ---
-nav_title: News Feed Integration Overview
+nav_title: Integration Overview
 article_title: News Feed Integration Overview for iOS
 platform: iOS
 page_order: 1
-description: "This article covers an overview of how to integrate the News Feed into your iOS application."
+description: "This article covers an overview of integrating the News Feed into your iOS application."
 channel:
   - news feed
 
@@ -11,7 +11,7 @@ channel:
 
 # News Feed integration overview
 
-{% alert note %}
+{% alert tip %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
@@ -19,13 +19,15 @@ Integrating the view controller `ABKNewsFeedViewController` will display the Bra
 
 You have a great deal of flexibility in how you choose to display the view controllers. There are different versions of the view controllers to accommodate different navigation structures.
 
->  The News Feed that is called by the default behavior of an in-app message click will not respect any delegates that you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`][1] and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`][2].
+{% alert note %}
+The News Feed that is called by the default behavior of an in-app message click will not respect any delegates you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates) and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks).
+{% endalert %}
 
-## News Feed view controller integration options
+## News Feed view controller integration
 
-The News Feed can be integrated with 2 view controller contexts, either in code or via a storyboard implementation.
+The News Feed can be integrated with two view controller contexts: navigation or modal.
 
-### Navigation context -- ABKFeedViewControllerNavigationContext
+### Navigation context - ABKFeedViewControllerNavigationContext
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -46,16 +48,13 @@ self.navigationController?.pushViewController(newsFeed, animated: true)
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
-To customize the navigation bar's title, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
-{% endalert %}
+To customize the navigation bar's `title`, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
 
-### Modal context -- ABKFeedViewControllerModalContext
+### Modal context - ABKFeedViewControllerModalContext
 
-- Used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar
-- Set the modal's title via the embedded `ABKNewsFeedTableViewController` instance's `navigationItem`'s `title` property
-- If a delegate __is NOT set__ the Done button will dismiss the modal view
-- If a delegate __is set__ the Done button will call the delegate, and the delegate itself will be responsible for dismissing the view
+This modal is used present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar. To customize the modal's title, set the `title` property of the `ABKNewsFeedTableViewController` instance's `navigationItem`. 
+
+If a delegate **is NOT set**, the **Done** button will dismiss the modal view. If a delegate **is set**, the **Done** button will call the delegate, and the delegate itself will be responsible for dismissing the view.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -76,7 +75,7 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
->  The [News Feed sample app][3] contains examples of the view controllers.
+For view controller examples, check out our [News Feed sample app][3].
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks

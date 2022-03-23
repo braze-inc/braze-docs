@@ -11,16 +11,17 @@ Tool:
 
 # Location tracking for iOS
 
-By default, Braze disables location tracking. We enable location tracking after the host application has opted in to location tracking and gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
+By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.
 
 {% alert important %}
-In order for location tracking to work reliably in iOS 14 for users who give Approximate Location permission, you must update your SDK version to at least `3.26.1`.
+For location tracking to work reliably in iOS 14 for users who give approximate location permission, you must update your SDK version to at least `3.26.1`.
 {% endalert %}
 
 ## Enabling automatic location tracking
+
 Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
- You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
+You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -82,7 +83,7 @@ Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitud
 {% endtab %}
 {% endtabs %}
 
-For more information, see [`ABKUser.h`][5].
+Refer to [`ABKUser.h`][5] for more information.
 
 [4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h

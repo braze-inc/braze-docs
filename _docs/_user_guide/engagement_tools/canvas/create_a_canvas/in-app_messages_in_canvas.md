@@ -38,7 +38,7 @@ When should you use this feature? Braze highly recommends that you consider usin
 
 {% tabs %}
   {% tab Promotional %}
-__Promotional Canvases__
+**Promotional Canvases**
 
 Promotions, coupons, and sales often have hard expiration dates. The Canvas outlined below should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by 2/28/2019 at 11:15 AM in the company's time zone.
 
@@ -95,7 +95,7 @@ As you can see, the in-app messages expire when the promotion expires to prevent
   {% endtab %}
   {% tab Onboarding %}
 
-__User Onboarding Canvases__
+**User Onboarding Canvases**
 
 Your first impression with a user is, perhaps, your most critical one. It can make or break future visits to your app. Your initial communications with your user should be sensibly timed and encourage frequent visits to your app to promote usage.
 

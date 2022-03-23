@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators for Android/FireOS
+article_title: Content Card Read & Unread Indicators for Android and FireOS
 page_order: 3
 platform: 
   - Android
@@ -13,12 +13,12 @@ channel:
 
 # Read and unread indicators {#read-indicators-for-android}
 
-Braze allows you to optionally toggle on an Unread/Read indicator on Content Cards.
+Braze allows you to optionally toggle on unread and read indicators on Content Cards.
 
-![Read & Unread Indicators][1]
+![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.][1]
 
 ## Customizing the indicators {#customizing-the-indicators-for-android}
-The color of these indicators can be customized by altering the values in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file.
+The color of these indicators can be customized by altering the values in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

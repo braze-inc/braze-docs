@@ -17,7 +17,7 @@ It is extremely important to always test your in-app messages before sending you
 You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
 {% alert warning %}
-In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+In **Preview**, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
 ### In-app message generation preview

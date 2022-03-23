@@ -3,15 +3,15 @@ nav_title: Editor Blocks
 article_title: Drag & Drop Editor Blocks
 alias: "/dnd/editor_blocks/"
 channel: email
-page_order: 2
-description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop editor."
+page_order: 1
+description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop Editor."
 tool: Media
 
 ---
 
 # Drag & Drop Editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
+Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
 
 To use them, drag a content block inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
@@ -128,5 +128,5 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 | name | description |
 |---|---|
-| `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks etc... | 
+| `Add Personalization` |  Located on the left menu. Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, content blocks, etc. | 
 {: .reset-td-br-1 .reset-td-br-2}

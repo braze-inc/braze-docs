@@ -79,11 +79,11 @@ Input the generated API Key as the `RelayState` parameter within your IdP, which
 
 ## SSO behavior
 
-Members who opt to use SSO will __no longer be able to use their password as they did prior__. Users who continue to use their password will be able to unless restricted by the settings below. 
+Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the settings below. 
 
 ## Restriction
 
-You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Company Settings** > **Security Settings** and select either __Enforce Google SSO only login__ or __Enforce custom SAML SSO only login__.
+You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Company Settings** > **Security Settings** and select either **Enforce Google SSO only login** or **Enforce custom SAML SSO only login**.
 
 ![Authentication Rules section of Security Settings page]({% image_buster /assets/img/sso3.png %})
 

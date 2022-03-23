@@ -9,7 +9,7 @@ description: "This reference article briefly covers the integration steps requir
 
 # Integration
 
-Integrating with Braze is a worth-while process. But you're smart. you're __here__. Clearly you already know that!
+Integrating with Braze is a worth-while process. But you're smart. you're **here**. Clearly you already know that!
 
 But what you probably don't know was that you and your engineers or developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 

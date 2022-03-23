@@ -1,6 +1,6 @@
 ---
 nav_title: Runtime Configuration
-article_title: Runtime Configuration for Android/FireOS
+article_title: Runtime Configuration for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -11,11 +11,11 @@ description: "This reference article covers how to set up runtime configuration 
 
 # Runtime configuration
 
-Runtime configuration is an optional way to configure your app at runtime in place of a `braze.xml`. The use of both runtime configuration and `braze.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `braze.xml`. If the Braze SDK can find all values in the runtime configuration, then the `braze.xml` is no longer needed and can be removed. See the full documentation [here][1].
+[Runtime configuration][1] is an optional way to configure your app at runtime in place of a `braze.xml`. The use of both runtime configuration and `braze.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `braze.xml`. If the Braze SDK can find all values in the runtime configuration, then the `braze.xml` is no longer needed and can be removed.
 
 ## Example usage
 
-The configuration uses a [builder object][2] that is then built and passed to [Braze.configure()][1]. The following example uses a subset of the runtime configuration options available, see the [KDoc][1] for a complete list of available configuration options.
+The configuration uses a [builder object][2] that is then built and passed to [`Braze.configure()`][1]. The following example uses a subset of the runtime configuration options available, see our [KDoc][1] for a complete list of options.
 
 {% tabs %}
 {% tab JAVA %}

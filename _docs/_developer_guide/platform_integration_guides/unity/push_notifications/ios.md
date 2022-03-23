@@ -17,7 +17,7 @@ description: "This reference article covers iOS push notification integration fo
 
 Braze provides a native Unity solution for automating iOS push integrations.
 
-- If you would prefer to complete the integration manually by modifying your built Xcode project, please follow our [native iOS Push instructions][8].
+- If you would prefer to complete the integration manually by modifying your built Xcode project, follow our [native iOS push instructions][8].
 - If you are transitioning from a manual integration to an automated one, follow the instructions on [Transitioning to an automated integration][2].
 - Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
 
@@ -37,7 +37,7 @@ Check **Integrate Push With Braze** to automatically register users for push not
 
 Check **Enable Background Push** if you would like to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
 
-![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate Push with Braze", and "Enable Background Push" are enabled.][29]
+![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate push with braze", and "Enable background push" are enabled.][29]
 
 ### (Optional): Disable automatic registration
 
@@ -46,7 +46,7 @@ Users who have not yet opted-in to push notifications will automatically be auth
 - If **Disable Provisional Authorization** is not checked on iOS 12 and above, the user will be provisionally (silently) authorized to receive quiet push. If checked, the user will be shown the native push prompt.
 - If you need to configure exactly when the prompt is shown at runtime, disable automatic registration from the Braze configuration editor and use `AppboyBinding.PromptUserForPushPermissions()` instead.
 
-![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate Push with Braze", and "Disable Automatic Push Registration" are enabled.][28]
+![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "integrate push with braze", and "disable automatic push registration" are enabled.][28]
 
 ## Step 3: Set push listeners
 
@@ -106,7 +106,7 @@ To receive a copy of Braze's device tokens from the OS, set a delegate using `Ap
 
 ### Other features
 
-To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS Push instructions][8].
+To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS push instructions][8].
 
 [1]: #manual-push-integration
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios

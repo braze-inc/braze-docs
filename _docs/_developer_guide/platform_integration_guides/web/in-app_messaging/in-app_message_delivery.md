@@ -13,17 +13,19 @@ description: "This article describes in-app message delivery via the Braze SDK, 
 
 ## Trigger types
 
-Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
+Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with a web app, check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK, not the REST APIs. If you're working with a web app, check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Delivery semantics
-All in-app messages that a user is eligible for are automatically downloaded to the user's device or browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
+
+All in-app messages that a user is eligible for are automatically downloaded to the user's device, or browser upon a session start event and triggered according to the message's delivery rules. Visit our [session lifecycle documentation][10] for more information about the SDK's session start semantics.
 
 ## Minimum time interval between triggers
-By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function.
+
+By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function:
 
 ```js
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
@@ -32,7 +34,9 @@ appboy.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSecond
 
 ## Manual in-app message display
 
-If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered In-App Message, where you show or don't show the message:
+If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. 
+
+First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered in-app message, where you show or don't show the message. 
 
 ```javascript
 appboy.subscribeToInAppMessage(function(inAppMessage) {
@@ -53,11 +57,11 @@ If you don't remove `appboy.display.automaticallyShowNewInAppMessages()` from yo
 
 The `inAppMessage` parameter will be an [`appboy.InAppMessage`][2] subclass or an [`appboy.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
 
->  Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second Modal or Full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the second message will not display.
+Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the second message will not display.
 
 ## Local in-app messages
 
-In-app messages can also be created within your site and displayed locally in real-time.  All customization options available on the dashboard are also available locally.  This is particularly useful for displaying messages that you wish to trigger within the app in real-time. However, analytics on these locally-created messages will not be available within the Braze dashboard.
+In-app messages can also be created within your site and displayed locally in real-time. All customization options available on the dashboard are also available locally. This is particularly useful for displaying messages you wish to trigger within the app in real-time. However, analytics on these locally-created messages will not be available within the Braze dashboard.
 
 ```javascript
   // Displays a slideup type in-app message.
@@ -68,9 +72,9 @@ In-app messages can also be created within your site and displayed locally in re
 
 ## Exit-intent messages
 
-Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users, while not interrupting their experience on your site. 
+Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users while not interrupting their experience on your site. 
 
-To be able to send these messages, first add an exit entent library, such as [this open-source library][50] to your website. Then, use the code below to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
+To send these messages, first add an exit intent library, such as this [open-source library][50] to your website. Then, use the code snippet below to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

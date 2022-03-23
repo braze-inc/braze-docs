@@ -20,7 +20,7 @@ Our slideups typically appear at the top or bottom of the app screen (you can se
 
 Slideup messages can contain up to three lines of copy before truncation with ellipses. Images in slideups will never be cropped or clipped - they will always scale down to fit within the 50X50 image container.
 
-- __All images must be less than 5MB.__
+- **All images must be less than 5MB.**
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
@@ -31,7 +31,7 @@ Slideup messages can contain up to three lines of copy before truncation with el
 | Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+You should **always** [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
 [2a]: {% image_buster /assets/img/slideup-spec.png %}
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}

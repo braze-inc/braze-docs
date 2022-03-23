@@ -1,6 +1,6 @@
 ---
 nav_title: Accessibility
-article_title: Accessibility for Android/FireOS
+article_title: Accessibility for Android and FireOS
 page_order: 4
 platform: 
   - Android
@@ -11,7 +11,7 @@ description: "This reference article covers how to implement specific Android SD
 
 # Accessibility
 
-The Braze Android SDK follows the [Android Accessibility Guidelines][1].
+The Braze Android SDK follows the [Android accessibility guidelines][1].
 
 ## In-app message talkback
 

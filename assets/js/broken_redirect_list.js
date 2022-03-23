@@ -486,3 +486,5 @@ validurls['/docs/partners/data_and_infrastructure_agility/analytics/neura_insigh
 validurls['/docs/partners/message_personalization/location/neura_actions/#neura-actions'] = '/docs/partners/neura/';
 validurls['/docs/api/basics/#api-limits'] = '/docs/api/api_limits/';
 validurls['docs/user_guide/engagement_tools/locations_and_geofences/about/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/';
+
+validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';

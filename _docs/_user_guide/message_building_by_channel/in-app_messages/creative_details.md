@@ -41,7 +41,7 @@ Our guidelines for images are more structured than those for text, as we want to
 
 In general, Braze recommends using images that fit into a 16:10 screen.
 
-- __All images must be less than 5MB.__
+- **All images must be less than 5MB.**
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
 - For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).

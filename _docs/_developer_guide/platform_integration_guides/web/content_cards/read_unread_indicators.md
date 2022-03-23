@@ -15,8 +15,8 @@ Braze provides indicators on Content Cards as pictured below:
 
 |Indicator|Example |
 |---|---|
-| Read | ![ReadContentCard][2] |
-| Unread | ![UnreadContentCard][3] |
+| Read | ![A web content card without a blue line beneath the card signifying it has been read.][2] |
+| Unread | ![A web content card with a blue line beneath the card signifying it has not been read.][3] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Changing colors

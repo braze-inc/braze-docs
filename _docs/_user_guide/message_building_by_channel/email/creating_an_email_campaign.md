@@ -20,7 +20,7 @@ Email messages are great for delivering content to your users on their terms. Th
 If this is your first time creating an email campaign, we highly recommend that you check out the following LAB courses:<br>
 
 - [Email](https://lab.braze.com/messaging-channels-email)
-- [Project: Build a Basic Email Marketing Program](https://lab.braze.com/project-build-a-basic-email-marketing-program)
+- [Project: Build a basic email marketing program](https://lab.braze.com/project-build-a-basic-email-marketing-program)
 
 {% endalert %}
 

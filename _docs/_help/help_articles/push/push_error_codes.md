@@ -42,7 +42,7 @@ This error may occur for several reasons:
 	- Check the token in the **Message Activity Log**. It should generally look like a long string of letters and numbers. (e.g `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`) If it doesn’t, check the code involved in sending Braze push token errors.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
-	- Braze only supports universal certificates for production environments. Testing Push on development environments with a universal certificate will not work. 
+	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
 	- This reporting sends bouncing in production but not development.<br><br>
 - Mismatched provisioning profile:
 	- This can happen if your certificate doesn’t match the one that was used to get the token. If this is suspected, the next steps include:

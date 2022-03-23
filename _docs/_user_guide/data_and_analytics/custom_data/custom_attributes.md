@@ -34,7 +34,7 @@ Listed below are the methods across various platforms that are used to set custo
 
 ## Custom attribute storage
 
-All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
+All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#active-users).
 
 ## Custom attribute data types
 
@@ -60,9 +60,9 @@ Boolean attributes are useful for storing simple binary data about your users, l
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the boolean value __is__ either true, false, true or not set, or false or not set | __IS__  | __TRUE__, __FALSE__, __TRUE OR NOT SET__, or __FALSE OR NOT SET__ |
-| Check if the boolean value __exists__ on a user's profile | __IS NOT BLANK__  | __N/A__ |
-| Check if the boolean value __does not exist__ on a user's profile | __IS BLANK__  | __N/A__ |
+| Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
+| Check if the boolean value **exists** on a user's profile | **IS NOT BLANK**  | **N/A** |
+| Check if the boolean value **does not exist** on a user's profile | **IS BLANK**  | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Numbers {#numbers}
@@ -79,12 +79,12 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the numeric attribute __is more than__ a __number__| __MORE THAN__ | __NUMBER__ |
-| Check if the numeric attribute __is less than__ a __number__| __LESS THAN__ | __NUMBER__ |
-| Check if the numeric attribute __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
-| Check if the numeric attribute __does not equal__ a __number__| __DOES NOT EQUAL__ | __NUMBER__ |
-| Check if the numeric attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
-| Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** |
+| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
+| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
+| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
+| Check if the numeric attribute **exists** on a user's profile | **EXISTS** | **N/A** |
+| Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Strings (alpha-numeric characters) {#strings}
@@ -93,12 +93,12 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the string attribute __exactly matches__ an inputted string| __EQUALS__ | __STRING__ |
-| Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ * | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __BLANK__ | __N/A__ |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
+| Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
+| Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -106,7 +106,7 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% endalert %}
 
 {% alert important %}
-When segmenting using the __DOES NOT MATCH REGEX__ filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
+When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
 
 More resources on regex:
 - [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
@@ -124,11 +124,11 @@ Your dashboard administrator can increase the maximum length for individual arra
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the array attribute __includes a value which exactly matches__ an inputted value| __INCLUDES VALUE__ | __STRING__ |
-| Check if the array attribute __does not include a value which exactly matches__ an inputted value| __DOESN'T INCLUDE VALUE__ | __STRING__ |
-| Check if the array attribute __contains a value which partially matches__ an inputted value __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the array attribute __has any value__ | __HAS A VALUE__ | __N/A__ |
-| Check if the array attribute __is empty__ | __IS EMPTY__ | __N/A__ |
+| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
+| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** |
+| Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
+| Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
@@ -154,14 +154,14 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the time attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
-| Check if the time attribute __is after__ a __selected date__| __AFTER__ | __CALENDAR DATE SELECTOR__ |
-| Check if the time attribute is __more than X number__ of __days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the time attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the time attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
-| Check if the time attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
-| Check if the time attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
-| Check if the time attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+| Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** |
+| Check if the time attribute **is after** a **selected date**| **AFTER** | **CALENDAR DATE SELECTOR** |
+| Check if the time attribute is **more than X number** of **days ago** | **MORE THAN** | **NUMBER OF DAYS AGO** |
+| Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** |
+| Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** |
+| Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  |
+| Check if the time attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
+| Check if the time attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Time attribute details
@@ -186,16 +186,16 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the total number of dollars spent __is greater than__ a __number__| __GREATER THAN__ | __NUMBER__ |
-| Check if the total number of dollars spent __is less than__ a __number__| __LESS THAN__ | __NUMBER__ |
-| Check if total number of dollars spent __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
-| Check if the purchase last occurred __after X date__ | __AFTER__ | __TIME__ |
-| Check if the purchase last occurred __before X date__ | __BEFORE__ | __TIME__ |
-| Check if the purchase last occurred __more than X days ago__ | __MORE THAN__ | __TIME__ |
-| Check if the purchase last occurred __less than X days ago__ | __LESS THAN__ | __TIME__ |
-| Check if the purchase occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the purchase occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
-| Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** |
+| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** |
+| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** |
+| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** |
+| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** |
+| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** |
+| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |
+| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
+| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
