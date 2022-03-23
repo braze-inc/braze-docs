@@ -76,7 +76,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
     "user_alias": "example_alias",
     "external_user_id": "external_user_identifier",
     "trigger_properties": {},
-    "canvas_entry_properties": {}
   }],
   "audience": {
     "AND": [
