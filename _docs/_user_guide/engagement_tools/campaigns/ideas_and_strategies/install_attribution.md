@@ -23,7 +23,7 @@ Once your user installs your app, you can begin segmenting them based on the fol
 
 ### Personalized onboarding
 
-Now that you have more information about your user, you can personalize their onboarding process. This could be as simple as changing the images in your messages to fit their preferences, or as complex as creating a unique user onboarding for each ad that could lead to an install. To scale out a fully comprehensive sequence of messages that can take user behavior into consideration, refer to our documentation on [Canvas][5]
+Now that you have more information about your user, you can personalize their onboarding process. This could be as simple as changing the images in your messages to fit their preferences, or as complex as creating a unique user onboarding for each ad that could lead to an install. To scale out a fully comprehensive sequence of messages that can take user behavior into consideration, refer to our documentation on [Canvas][5].
 
 ### Reference data from the ad
 

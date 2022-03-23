@@ -18,9 +18,9 @@ tool:
 
 Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards. 
 
-Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [Campaign Setup LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions) for campaign setup!
 
-![Retargeting Campaigns][1]{: style="max-width:80%;"}
+![Segment Details section with the dropdown menu for the available filters.][1]{: style="max-width:80%;"}
 
 ## Retargeting filters
 
@@ -30,7 +30,7 @@ You can use the retargeting filters in this section for your users within your c
 
 Use the filter to find users who have and have not clicked a specific News Feed card.
 
-![Clicked Card filter][2]
+![][2]
 
 ### Clicked/Opened Campaign
 
@@ -42,13 +42,11 @@ Use this filter to find users who have or have not:
 - Opened an email
 - Viewed an in-app message
 
-![Clicked/Opened Campaign filter][3]
+![][3]
 
 This can be further specified by selecting which campaign you want to retarget.
 
-### Clicked or Opened Campaign or Canvas with Tag
-
-![Clicked or opened][16]
+### Clicked or opened Campaign or Canvas with tag
 
 Use this filter to find users who have or have not interacted with campaigns or Canvases with a given tag:
 
@@ -58,13 +56,15 @@ Use this filter to find users who have or have not interacted with campaigns or 
 - Opened an email
 - Viewed an in-app message
 
+![][16]
+
 ### Converted From Campaign 
 
 Use this filter to find users who have or have not converted (based on the primary conversion) in your target campaign. 
 
 For recurring campaigns, this filter refers to whether users have converted on the most recent message from the campaign.
 
-![Converted From Campaign filter][12]
+![][12]
 
 ### Converted From Canvas 
 
@@ -72,43 +72,43 @@ Use this filter to find users who have or have not converted (based on the prima
 
 For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
 
-![Converted From Canvas filter][18]
+![][18]
 
 ### In Campaign Control Group 
 
 Use this filter to find users who are or are not in the control group of your target campaign.
 
-![Campaign Control Group][13]
+![][13]
 
 ### In Canvas Control Group 
 
 Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the drop-down.
 
-![Canvas Control Group][19]
+![][19]
 
 ### Last received message from specific campaign 
 
 Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
 
-![Last Received Specific Campaign Filter][14]
+![][14]
 
 ### Last received message from specific campaign or Canvas with tag 
 
 Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days.
 
-![Last Received Campaign with Tag][17]
+![][17]
 
 ### Received message from campaign 
 
 Use this filter to find users who have or have not received your target campaign.
 
-![Received Campaign][4]
+![][4]
 
 ### Received message from campaign or Canvas with tag 
 
 Use this filter to find users who have or have not received a campaign or Canvas that has your target tag.
 
-![Received Campaign with Tag][15]
+![][15]
 
 ## Advantages with retargeting campaigns
 

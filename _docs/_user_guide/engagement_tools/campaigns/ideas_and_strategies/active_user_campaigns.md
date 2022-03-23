@@ -30,14 +30,14 @@ If you set User IDs to identify users when a new user logs in they will be count
 
 ## Step 1: Identifying your top users
 
-Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. A sample segment to define your top users is shown below.
+Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
 
-![Define top users][1]
+![][1]
 
 Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
 
 {% alert note %}
-The example above segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
+The preceding example segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
 {% endalert %}
 
 ## Step 2: Reach out to your top users
@@ -48,7 +48,7 @@ Make your users feel appreciated by thanking them for their loyalty and dedicati
 
 Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
 
-![Congrats Push][2]
+![A campaign in the Compose step with an iOS rich notification that reads: "Thanks again for shopping with us! To show our appreciation, we're giving you free shipping on your next purchase".][2]
 
 ### Keep track of your results
 

@@ -18,11 +18,11 @@ Braze automatically collects relevant data to help you localize campaigns. Our c
 
 Braze automatically collects locale information from user devices after the SDK has been integrated. The locale contains a language and region identifier.
 
-For example, a user who has set their device to English (US) will have a language `EN`. The users' country is collected from their device IP address. These filters will be available in Braze's segmentation tool under Country and Language.
+For example, a user who has set their device to English (US) will have a language `EN`. The user's country is collected from their device IP address. These filters will be available in Braze's segmentation tool under **Country and Language**.
 
-![Filter Select Screenshot][7]
+![A list of user attributes: Age, Country, Email Available, Gender, Language, Location Available, and Push Enabled.][7]
 
-More technical details on how locale is retrieved can be accessed by platform:
+Check out the following resources for more technical details on how locale is retrieved based on your platform:
 
 - [iOS][1]
 - [Android][2]
