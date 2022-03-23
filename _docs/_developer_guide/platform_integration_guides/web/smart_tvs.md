@@ -15,7 +15,7 @@ For a complete technical reference, check out our [Javascript Documentation][3] 
 
 ## Install the Braze SDK
 
-To get started, please follow our [Initial SDK setup][4] guide for the Web SDK.
+To get started, follow our [Initial SDK setup][4] guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 

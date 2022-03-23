@@ -177,7 +177,7 @@ Proceed to compile your code and run your application.<br><br>At this point, the
 
 Navigate to your existing app group in the Braze dashboard. Under **Push Notification Settings** upload your push certificate file to your Braze dashboard and save it. 
 
-![Push Certificate]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
 {% endtab %}
 {% tab Step 2: Register for Notifications %}
@@ -430,14 +430,14 @@ Proceed to compile your code and run your application.<br><br>Try identifying us
 
 Based on the following Braze SDK `logCustomEvent` method, create a matching method. 
 
-**Braze `logCustomEvent` Reference Method**<br>
+**Braze `logCustomEvent` reference method**<br>
 This is by design because only the `BrazeManager.swift` file can directly access the Braze iOS SDK methods. Therefore, by creating a matching method, the result is the same and is done without the need for any direct dependencies on the Braze iOS SDK in your production code.
 
 ```
 open func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable : Any]?)
 ```
 
-**Matching Method**<br>
+**Matching method**<br>
 Log custom events from the `Appboy` object to Braze. `Properties` is an optional parameter with a default value of nil. Custom events are not required to have properties but are required to have a name. 
 
 {% subtabs global %}
@@ -528,13 +528,13 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 
 Next, based on the following Braze SDK `logPurchase` method, create a matching method. 
 
-**Braze `logPurchase` Reference Method**<br>
+**Braze `logPurchase` reference method**<br>
 This is by design because only the `BrazeManager.swift` file can directly access the Braze iOS SDK methods. Therefore, by creating a matching method, the result is the same and is done without the need for any direct dependencies on the Braze iOS SDK in your production code. 
 
 ```
 open func logPurchase(_ productIdentifier: String, inCurrency currency: String, atPrice price: NSDecimalNumber, withoutQuantity quantity: UInt)
 ```
-**Matching Method**<br>
+**Matching method**<br>
 Log purchases from the `Appboy` object to Braze. The SDK has multiple methods for logging purchases, and this is just one example. This method also handles creating the `NSDecimal` and `UInt` objects. How you want to handle that part is up to you, provided is just one example.
 
 {% subtabs global %}
@@ -725,7 +725,7 @@ Proceed to compile your code and run your application.<br><br>Try displaying the
 
 ## Next steps
 
-Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift)
+Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found on [Github](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
 
 Now that you have decoupled any dependencies on the Braze iOS SDK from the rest of your production code, check out some of our optional advanced implementation guides:
 - [Advanced push notification implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)

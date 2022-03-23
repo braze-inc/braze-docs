@@ -8,7 +8,7 @@ description: "This reference article covers user archival definitions."
 ---
 # User archival definitions
 
-Each week, Braze runs a process to remove Inactive Users and Dormant Users from the Braze Services.
+Each week, Braze runs a process to remove inactive users and dormant users from the Braze Services.
 
 This process ensures that Braze provides accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
 
@@ -19,9 +19,17 @@ That is, personal data processed and stored should be kept for no longer than is
 
 If you have a user profile in danger of being archived under these policies which needs to be retained, then register a single data point through our REST API for that user profile at least once every six months.
 
+## Active users
+
+Braze defines an “active user” for a given period of time as any user who has a session in that time period. 
+
+If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active—registered or unregistered.
+
+If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
+
 ## Inactive users
 
-"Inactive Users" are users that are unreachable and have likely churned. Inactive Users are those that meet all of these criteria:
+"Inactive users" are users that are unreachable and have likely churned. Inactive users are those that meet all of these criteria:
 
 - Can't receive email. For example, they do not have an email address or they are unsubscribed from all email lists.
 - Can't receive SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
@@ -34,7 +42,7 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 ## Dormant users
 
-"Dormant Users" are users who have had no activity in the last twelve months and:
+"Dormant users" are users who have had no activity in the last twelve months and:
 
 - Haven't used any mobile app or visited a website in an app group in more than 12 months.
 - Haven't received any messages from an app group in more than 12 months.

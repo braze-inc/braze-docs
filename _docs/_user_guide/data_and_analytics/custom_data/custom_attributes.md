@@ -34,7 +34,7 @@ Listed below are the methods across various platforms that are used to set custo
 
 ## Custom attribute storage
 
-All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
+All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#active-users).
 
 ## Custom attribute data types
 
@@ -160,8 +160,8 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** |
 | Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** |
 | Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  |
-| Check if the time attribute **exists** on a user's profile | **EXISTS** | **N/A** |
-| Check if the time attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
+| Check if the time attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
+| Check if the time attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Time attribute details
