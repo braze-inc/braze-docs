@@ -2,7 +2,7 @@
 nav_title: Advanced Implementation (Optional)
 article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: iOS
-page_order: 29
+page_order: 28
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 channel:
   - push

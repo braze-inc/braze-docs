@@ -2,7 +2,7 @@
 nav_title: Testing
 article_title: Testing for FireOS
 platform: FireOS
-page_order: 1
+page_order: 19
 page_type: reference
 description: "This page provides information on testing in-app messages and push notificatsion via the command line."
 channel: 
@@ -12,7 +12,7 @@ channel:
 
 # Testing from command line
 
-If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [Messaging API][22]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [messaging API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console**
 - `YOUR_EXTERNAL_USER_ID` - available on the **User Profile Search** page
