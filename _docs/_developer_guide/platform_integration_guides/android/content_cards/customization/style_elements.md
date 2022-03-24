@@ -11,7 +11,52 @@ channel:
 
 ---
 
-# Content Cards style elements {#content-cards-style-elements-for-android}
+# Custom styling {#content-cards-style-elements-for-android}
+
+Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution:
+
+```xml
+  <!-- Content Cards Example -->
+  <style name="Braze.ContentCards.CaptionedImage.Description">
+    <item name="android:textColor">@color/com_appboy_description</item>
+    <item name="android:textSize">15.0sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:paddingBottom">8.0dp</item>
+    <item name="android:layout_marginLeft">10.0dp</item>
+    <item name="android:layout_marginRight">10.0dp</item>
+    <item name="android:layout_marginTop">8.0dp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_below">@id/com_appboy_content_cards_captioned_image_card_title_container</item>
+  </style>
+```
+
+If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
+
+{% tabs local %}
+{% tab Correct style override %}
+
+```xml
+<style name="Braze.ContentCardsDisplay">
+  <item name="android:background">@color/mint</item>
+  <item name="android:cacheColorHint">@color/mint</item>
+  <item name="android:divider">@android:color/transparent</item>
+  <item name="android:dividerHeight">16.0dp</item>
+  <item name="android:paddingLeft">12.5dp</item>
+  <item name="android:paddingRight">5.0dp</item>
+  <item name="android:scrollbarStyle">outsideInset</item>
+</style>
+```
+{% endtab %}
+{% tab Incorrect style override %}
+
+```xml
+<style name="Braze.ContentCardsDisplay">
+  <item name="android:background">@color/mint</item>
+  <item name="android:cacheColorHint">@color/mint</item>
+</style>
+```
+{% endtab %}
+{% endtabs %}
 
 ## Custom font {#setting-a-custom-font-for-android}
 
@@ -34,175 +79,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
-## Customizing displayed card order {#customizing-displayed-card-order-for-android}
-
-The `ContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`ContentCardsFragment`][49].
-
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
-
-The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
-
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
-  public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
-    public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
-      return new DefaultContentCardsUpdateHandler();
-    }
-
-    public DefaultContentCardsUpdateHandler[] newArray(int size) {
-      return new DefaultContentCardsUpdateHandler[size];
-    }
-  };
-
-  @Override
-  public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
-    List<Card> sortedCards = event.getAllCards();
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
-    Collections.sort(sortedCards, new Comparator<Card>() {
-      @Override
-      public int compare(Card cardA, Card cardB) {
-        // A displays above B
-        if (cardA.getIsPinned() && !cardB.getIsPinned()) {
-          return -1;
-        }
-
-        // B displays above A
-        if (!cardA.getIsPinned() && cardB.getIsPinned()) {
-          return 1;
-        }
-
-        // At this point, both A & B are pinned or both A & B are non-pinned
-        // A displays above B since A is newer
-        if (cardA.getUpdated() > cardB.getUpdated()) {
-          return -1;
-        }
-
-        // B displays above A since A is newer
-        if (cardA.getUpdated() < cardB.getUpdated()) {
-          return 1;
-        }
-
-        // At this point, every sortable field matches so keep the natural ordering
-        return 0;
-      }
-    });
-
-    return sortedCards;
-  }
-
-  // Parcelable interface method
-  @Override
-  public int describeContents() {
-    return 0;
-  }
-
-  // Parcelable interface method
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    // No state is kept in this class so the parcel is left unmodified
-  }
-}
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
-  override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
-    val sortedCards = event.allCards
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
-    sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
-      // A displays above B
-      if (cardA.isPinned && !cardB.isPinned) {
-        return@sort -1
-      }
-
-      // B displays above A
-      if (!cardA.isPinned && cardB.isPinned) {
-        return@sort 1
-      }
-
-      // At this point, both A & B are pinned or both A & B are non-pinned
-      // A displays above B since A is newer
-      if (cardA.updated > cardB.updated) {
-        return@sort -1
-      }
-
-      // B displays above A since A is newer
-      if (cardA.updated < cardB.updated) {
-        return@sort 1
-      }
-      0
-    })
-    return sortedCards
-  }
-
-  // Parcelable interface method
-  override fun describeContents(): Int {
-    return 0
-  }
-
-  // Parcelable interface method
-  override fun writeToParcel(dest: Parcel, flags: Int) {
-    // No state is kept in this class so the parcel is left unmodified
-  }
-
-  companion object {
-    // Interface that must be implemented and provided as a public CREATOR
-    // field that generates instances of your Parcelable class from a Parcel.
-    val CREATOR: Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object : Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
-      override fun createFromParcel(`in`: Parcel): DefaultContentCardsUpdateHandler? {
-        return DefaultContentCardsUpdateHandler()
-      }
-
-      override fun newArray(size: Int): Array<DefaultContentCardsUpdateHandler?> {
-        return arrayOfNulls(size)
-      }
-    }
-  }
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-This code can also be found here, [DefaultContentCardsUpdateHandler][46].
-
-And here's how to use the above class:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-IContentCardsUpdateHandler cardUpdateHandler = new DefaultContentCardsUpdateHandler();
-
-ContentCardsFragment fragment = getMyCustomFragment();
-fragment.setContentCardUpdateHandler(cardUpdateHandler);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-val cardUpdateHandler = DefaultContentCardsUpdateHandler()
-
-val fragment = getMyCustomFragment()
-fragment.setContentCardUpdateHandler(cardUpdateHandler)
-```
-
-{% endtab %}
-{% endtabs %}
-
-## Customizing card rendering {#customizing-card-rendering-for-android}
+## Custom card rendering {#customizing-card-rendering-for-android}
 
 The following lists information on how to change how any card is rendered in the `recyclerView`. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want:
 
@@ -406,47 +283,6 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-## Custom Content Cards click listener
-
-You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
-
-Create a class that implements [`IContentCardsActionListener`][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Next, instruct Braze to use your Content Card click listener. The following code snippet shows an example click listener:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
-  @Override
-  public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
-    return false;
-  }
-
-  @Override
-  public void onContentCardDismissed(Context context, Card card) {
-
-  }
-});
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
-  override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
-    return false
-  }
-
-  override fun onContentCardDismissed(context: Context, card: Card) {
-
-  }
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
 ## Dark theme customization
 
 By default, Content Card views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
@@ -559,7 +395,7 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-content-cards-displayed.html
-[43]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html
+[42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java

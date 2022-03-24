@@ -1,6 +1,6 @@
 ---
-nav_title: Disabling Button Dismissal
-article_title: Disabling In-App Message Back Button Dismissal for Android and FireOS
+nav_title: Message Dismissal
+article_title: In-App Message Dismissal for Android and FireOS
 platform: 
   - Android
   - FireOS
@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Disabling back button dismissal
+# Message dismissal
+
+## Disabling back button dismissal
 
 By default, the hardware back button dismisses Braze in-app messages. This behavior can be disabled on a per-message basis via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 
 
@@ -61,5 +63,13 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obje
 {% alert note %}
 Note that if this functionality is disabled, the host activity's hardware back button default behavior will be used instead. This may lead to the back button closing the application instead of the displayed in-app message.
 {% endalert %}
+
+## Dismiss modal on outside tap
+
+The default and historical value is `false`, meaning clicks outside the modal will not close the modal. Setting this value to `true` will result in the modal in-app message being dismissed when the user taps outside of the in-app message. This behavior can be toggled on by calling:
+
+```java
+AppboyInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
+```
 
 [96]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html

@@ -102,7 +102,7 @@ If you choose to `DISCARD` the in-app message and replace it with your in-app me
 On Android, this is done by calling `logClick` and `logImpression` on in-app messages and `logButtonClick` on immersive in-app messages.
 
 {% alert tip %}
-Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`][98]. This method requests Braze to display the next available in-app message from the stack.
+Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#requestDisplayInAppMessage--). This method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
 
 ### Step 4: Customizing dark theme behavior (optional) {#android-in-app-message-dark-theme-customization}
