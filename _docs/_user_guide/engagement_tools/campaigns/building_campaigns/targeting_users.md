@@ -27,19 +27,19 @@ To target users that fall into multiple previously created segments, add multipl
 
 You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the screenshot below, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
 
-![Multichannel Footer][25]
+![][25]
 
 ### Target users without segments {#without-segment}
 
 To target users without adding a segment, you can use a series of filters. This means you do not need to target a campaign at a pre-existing segment, you can make an ad hoc audience during campaign creation by just using the additional filters, and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
-![Target users with only filters][26]
+![][26]
 
 ## Audience summary
 
 Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
-![Audience Summary][27]
+![][27]
 
 ## A/B testing
 
@@ -51,9 +51,9 @@ For more information and best practices, refer to [Multivariate & A/B Testing][4
 
 Braze provides detailed audience statistics of the targeted channels in the footer.
 
-![Segmenter][24]
+![][24]
 
-In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located below the stats footer.
+In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located below the statistics footer.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
