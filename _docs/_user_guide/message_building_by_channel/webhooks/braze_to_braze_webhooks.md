@@ -43,7 +43,7 @@ While the specifics of your webhook request will vary from use case to use case,
 
 With this use case, you can update a user's profile with an event, event property, or attribute as part of a campaign or Canvas. For example, a B2C website may add an attribute of `purchase_lapsers=true` to a user's profile if they don't convert from an abandoned cart campaign or Canvas to allow those users to be retargeted with subsequent messaging.
 
-Another common use case is a workaround to make event properties persist throughout a Canvas, rather than just the first step. This involves adding an event property as a custom attribute so that you can reference that event property throughout a Canvas. Note that [Canvas persistent entry properties][6] solves for this issue, and is currently in beta. Please reach out to your Braze account manager for more information.
+Another common use case is a workaround to make event properties persist throughout a Canvas, rather than just the first step. This involves adding an event property as a custom attribute so that you can reference that event property throughout a Canvas. Note that [Canvas persistent entry properties][6] solves for this issue, and is currently in beta. Reach out to your Braze account manager for more information.
 
 {% alert important %}
 In order to reference an event property throughout a Canvas, you need to add the event property to the user profile as an attribute in the first step of the Canvas. Additionally, the Canvas itself must be triggered off of that event.
@@ -171,7 +171,7 @@ Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissio
 
 #### Request body
 
-Add your `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered  delivery][9]. The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: 
+Add your `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered delivery][9]. The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: 
 
 {% raw %}
 ```json
