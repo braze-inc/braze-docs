@@ -30,7 +30,7 @@ Next, configure your copy and notifications the same way as you would normally f
 In addition to triggering the message, you can also include content with the API request to be templated into the message within the `trigger_properties` object. This content can be referenced in the body of the message. For example, you can include:
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. See the following social notification example for additional context:
 
-![The aforementioned trigger property included in the message to auto-fill the user's name followed with the text: "liked your photo! Click here to see wht they've been up to.".][38]{: style="max-width:70%;"}
+![The aforementioned trigger property included in the message to auto-fill the user's name followed with the text: "liked your photo! Click here to see what they've been up to.".][38]{: style="max-width:70%;"}
 
 ## Re-eligibility with API-triggered campaigns
 

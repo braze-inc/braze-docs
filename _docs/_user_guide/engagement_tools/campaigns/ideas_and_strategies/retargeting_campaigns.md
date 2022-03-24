@@ -18,7 +18,7 @@ tool:
 
 Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards. 
 
-Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions) for campaign setup!
+Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
 
 ![Segment Details section with the dropdown menu for the available filters.][1]{: style="max-width:80%;"}
 
