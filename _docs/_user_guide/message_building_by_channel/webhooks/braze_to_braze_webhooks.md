@@ -49,19 +49,27 @@ Another common use case is a workaround to make event properties persist through
 In order to reference an event property throughout a Canvas, you need to add the event property to the user profile as an attribute in the first step of the Canvas. Additionally, the Canvas itself must be triggered off of that event.
 {% endalert %}
 
-Follow the general steps for creating a Braze to Braze webhook, and refer to the following sections when configuring your webhook.
+Follow the general steps for creating a Braze to Braze webhook, and refer to the following when configuring your webhook:
 
-#### Webhook URL
+- **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
+- **Request Body:** Raw Text
 
-Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be as follows:
+#### Request headers and method
 
-```
-https://rest.iad-06.braze.com/users/track
-```
+Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
 
-#### Request Body
+- **Request Header:**
+  - **Authorization:** Bearer `YOUR_API_KEY`
+  - **Content-Type:** application/json
+- **HTTP Method:** POST
 
-Select **Raw Text** and add the user track request in the text field. For more details, refer to [User track][8]. The following is an example request body for this endpoint when adding an event property as a custom attribute to a user's profile:
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
+
+![][1]
+
+#### Request body
+
+Add your user track request in the request body. For more details, refer to [User track][8]. The following is an example request body for this endpoint when adding an event property as a custom attribute to a user's profile:
 
 {% raw %}
 
@@ -82,22 +90,6 @@ Select **Raw Text** and add the user track request in the text field. For more d
 Each custom event, event attribute, or attribute updated on a user's profile counts toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) consumption. 
 {% endalert %}
 
-#### HTTP Method
-
-Set the **HTTP Method** to POST.
-
-#### Request Headers
-
-Add two **Request Headers** with the following corresponding keys and values:
-
-| Key | Value |
-| --- | --- |
-| `Content-Type` | `application/json` |
-| `Authorization` | `Bearer YOUR_API_KEY`<br><br>Your API key must have `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][1]
-
 #### Additional settings
  
 For your Delivery settings, select **Action-Based Delivery**. Set the **Trigger Action** to "Perform Custom Event" and choose the action that should trigger this webhook.
@@ -108,19 +100,27 @@ This use case involves creating a custom attribute and using Liquid to count the
 
 For example, you might want to count how many times a user has seen an active in-app message campaign, and prevent them from receiving the campaign again after they've seen it three times. For more ideas on what you can do with Liquid logic in Braze, check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases).
 
-Follow the general steps for creating a Braze to Braze webhook, and refer to the following sections when configuring your webhook.
+Follow the general steps for creating a Braze to Braze webhook, and refer to the following when configuring your webhook:
 
-#### Webhook URL
+- **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
+- **Request Body:** Raw Text
 
-Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be as follows:
+#### Request headers and method
 
-```
-https://rest.iad-06.braze.com/users/track
-```
+Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
 
-#### Request Body
+- **Request Header:**
+  - **Authorization:** Bearer `YOUR_API_KEY`
+  - **Content-Type:** application/json
+- **HTTP Method:** POST
 
-Select **Raw Text** and add the user track request in the text field as well as the Liquid to assign a counter variable. For more details, refer to [User track][8]. 
+Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
+
+![][1]
+
+#### Request body
+
+Add your user track request in the request body as well as the Liquid to assign a counter variable. For more details, refer to [User track][8].
 
 The following is an example of both the required Liquid and request body for this endpoint, where `your_attribute_count` is the attribute you're using to count how many times a user has seen a message: {% raw %}
 
@@ -141,22 +141,6 @@ The following is an example of both the required Liquid and request body for thi
 Each time a custom attribute counter is updated (incremented or decremented) it will consume a [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/), which counts toward your overall consumption.
 {% endalert %}
 
-#### HTTP Method
-
-Set the **HTTP Method** to POST.
-
-#### Request Headers
-
-Add two **Request Headers** with the following corresponding keys and values:
-
-| Key | Value |
-| --- | --- |
-| `Content-Type` | `application/json` |
-| `Authorization` | `Bearer YOUR_API_KEY`<br><br>Your API key must have `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][1]
-
 ### Use case: Trigger a second Canvas from an initial Canvas
 
 For this use case, you'll create two Canvases and use a webhook to trigger the second Canvas from the first Canvas. This acts like an entry trigger for when a user reaches a certain point in another Canvas.
@@ -167,22 +151,29 @@ For this use case, you'll create two Canvases and use a webhook to trigger the s
 4. Continue building out the steps of your second Canvas, then save the Canvas.
 5. Finally, create your first Canvas. Find the step where you want to trigger the second Canvas and create a new step with a webhook. 
 
-Refer to the following sections when configuring your webhook:
+Refer to the following when configuring your webhook:
 
-#### Webhook URL
+- **Webhook URL:** Your [REST endpoint URL][7] followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **Request Body:** Raw Text
 
-Your [REST endpoint URL][7] followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be as follows:
+#### Request headers and method
 
-```
-https://rest.iad-06.braze.com/canvas/trigger/send
-```
+Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
 
-#### Request Body
+- **Request Header:**
+  - **Authorization:** Bearer `YOUR_API_KEY`
+  - **Content-Type:** application/json
+- **HTTP Method:** POST
 
-Select **Raw Text** and add the `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered  delivery][9].
+Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
 
-The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: {% raw %}
+![][1]
 
+#### Request body
+
+Add your `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered  delivery][9]. The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: 
+
+{% raw %}
 ```json
 {
       "canvas_id": "your_canvas_id",
@@ -194,22 +185,6 @@ The following is an example of the request body for this endpoint, where `your_c
 }
 ```
 {% endraw %}
-
-#### HTTP Method
-
-Set the **HTTP Method** to POST.
-
-#### Request Headers
-
-Add two **Request Headers** with the following corresponding keys and values:
-
-| Key | Value |
-| --- | --- |
-| `Content-Type` | `application/json` |
-| `Authorization` | `Bearer YOUR_API_KEY`<br><br>Your API key must have `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][1]
 
 ## Things to know
 
