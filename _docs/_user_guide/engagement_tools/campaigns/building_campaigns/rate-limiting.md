@@ -76,7 +76,7 @@ When the [Connected Content Retry][19] feature is enabled, Braze will retry call
 
 Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the "back of the queue" and add an additional minute, if necessary, to the total minutes it would take to send your message.
 
-|Minute|No Failure|6K Failure in Minute 1|
+|Minute|No Failure|6,000 Failure in Minute 1|
 |---|---|---|
 |1|10,000|4,000|
 |2|10,000|10,000|
