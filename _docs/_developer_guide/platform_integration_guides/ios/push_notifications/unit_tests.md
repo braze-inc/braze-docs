@@ -69,9 +69,7 @@ Create a new Objective-C file in your unit tests target.
 
 If the unit tests target is in Swift, Xcode may ask "Would you like to configure an Objective-C bridging header?" The bridging header is optional, so you can click "Don't Create" and still run these unit tests successfully.
 
-Add the following contents to this new file:
-
-<script src="https://gist.github.com/mattlsteinberg/7455a76978ea3d0b377df018f7935396.js"></script>
+Add the contents of the HelloSwift sample app's [`AppboyPushUnitTests.m`][4] to the new file.
 
 ## Step 5: Run test suite
 
@@ -80,3 +78,4 @@ Run your app's unit tests. This can be a one-time verification step, or you can 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
 [3]: https://ocmock.org/
+[4]: https://github.com/Appboy/AppboyKit/blob/docs-push-unit-tests-examples/Public/HelloSwift/HelloSwiftTests/AppboyPushUnitTests.m
