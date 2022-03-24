@@ -63,7 +63,7 @@ Answer the questions below to get started:
 
 ## Anatomy of Canvas
 
-Check out the anatomy of a Canvas below!
+Here's an overview of the anatomy of a Canvas:
 
 {% tabs %}
   {% tab Canvas %}
@@ -96,7 +96,7 @@ Check out the anatomy of a Canvas below!
 
 ### Name your Canvas: The “what”
 
-Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our [Mapping User Lifecycles](http://lab.braze.com/mapping-customer-lifecycles) LAB course!
+Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our [Lab course](http://lab.braze.com/mapping-customer-lifecycles) on mapping user lifecycles!
 
 ### Create starting conditions: The “when”
 
