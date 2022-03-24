@@ -25,7 +25,7 @@ To create Action Paths, add a step to your Canvas. Then, using the dropdown menu
 
 In the **Action Settings** module, you can choose how long you’d like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
 
-Within the **Action Settings**, you can also turn on the ranked order for your steps by switching the **Advance users based on ranked order** toggle to on.
+Within the **Action Settings**, you can also turn on the ranked order for your steps by switching on the **Advance users based on ranked order** toggle.
 
 ![][4]
 
