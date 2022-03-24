@@ -49,7 +49,7 @@ Within each action group settings, you also have the option to select the checkb
 
 ### Canvases with re-eligibility
 
-If users enter into an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking**status. 
+If users enter into an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking** status. 
 
 | Ranking Status | Action Path Behavior |
 |---|--------------|
