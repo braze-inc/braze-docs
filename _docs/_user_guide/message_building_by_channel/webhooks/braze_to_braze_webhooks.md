@@ -26,7 +26,6 @@ While there's a lot you can do with Braze to Braze webhooks, here are some commo
 - Reference an event property throughout a Canvas by storing the event property on the user profile as an attribute.
 - Increment an integer custom attribute for a counter when a user receives a message.
 - Trigger a second Canvas from an initial Canvas.
-- Endless "If This Then That" ([IFTTT](https://ifttt.com/about)) recipes.
 
 The example use cases on this page assume that you're already familiar with [how webhooks work][4] and how to [create a webhook][5] in Braze.
 
@@ -158,10 +157,65 @@ Add two **Request Headers** with the following corresponding keys and values:
 
 ![][1]
 
+### Use case: Trigger a second Canvas from an initial Canvas
+
+For this use case, you'll create two Canvases and use a webhook to trigger the second Canvas from the first Canvas. This acts like an entry trigger for when a user reaches a certain point in another Canvas.
+
+1. Start by creating your second Canvas—the Canvas that should be triggered by your initial Canvas. 
+2. For the Canvas **Entry Schedule**, select **API-Triggered**.
+3. Make note of your **Canvas ID**, you'll need this in a later step.
+4. Continue building out the steps of your second Canvas, then save the Canvas.
+5. Finally, create your first Canvas. Find the step where you want to trigger the second Canvas and create a new step with a webhook. 
+
+Refer to the following sections when configuring your webhook:
+
+#### Webhook URL
+
+Your [REST endpoint URL][7] followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be as follows:
+
+```
+https://rest.iad-06.braze.com/canvas/trigger/send
+```
+
+#### Request Body
+
+Select **Raw Text** and add the `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered  delivery][9].
+
+The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: {% raw %}
+
+```json
+{
+      "canvas_id": "your_canvas_id",
+      "recipients": [
+        {
+          "external_user_id": "{{${user_id}}}"
+         }
+      ]
+}
+```
+{% endraw %}
+
+#### HTTP Method
+
+Set the **HTTP Method** to POST.
+
+#### Request Headers
+
+Add two **Request Headers** with the following corresponding keys and values:
+
+| Key | Value |
+| --- | --- |
+| `Content-Type` | `application/json` |
+| `Authorization` | `Bearer YOUR_API_KEY`<br><br>Your API key must have `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+![][1]
+
 ## Things to know
 
 - Braze to Braze webhooks are subject to endpoint [rate limits]({{site.baseurl}}/api/api_limits/).
-- This method will incur additional [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count).
+- Updates to the user profile will incur additional [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count), while triggering another message through the messaging endpoints will not.
+- If you want to target [anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), you can use `braze_id` instead of `external_id` in the request body of your webhook.
 - You can save your Braze to Braze webhook as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) to be re-used again.
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
@@ -174,3 +228,4 @@ Add two **Request Headers** with the following corresponding keys and values:
 [6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
 [7]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[9]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
