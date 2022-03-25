@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Use case: Carousel view
+# Carousel view
 
 ![Sample news app showing carousel of Content Cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 

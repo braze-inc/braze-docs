@@ -1,6 +1,6 @@
 ---
-nav_title: Integration Overview
-article_title: News Feed Integration Overview for iOS
+nav_title: Integration
+article_title: News Feed Integration for iOS
 platform: iOS
 page_order: 1
 description: "This article covers an overview of integrating the News Feed into your iOS application."
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# News Feed integration overview
+# News Feed integration
 
 {% alert tip %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.

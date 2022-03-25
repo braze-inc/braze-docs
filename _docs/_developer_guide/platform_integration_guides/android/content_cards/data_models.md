@@ -1,7 +1,7 @@
 ---
 nav_title: Integration
 article_title: Content Card Integration for Android and FireOS
-page_order: 1
+page_order: 0
 platform: 
   - Android
   - FireOS
@@ -87,6 +87,113 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`logClick()` | Manually log a click to Braze for a particular card. |
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+## Custom Content Cards {#fully-custom-content-card-display-for-android}
+
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+
+### Part 1: Subscribing to Content Card updates
+
+First, declare a private variable in your custom class to hold your subscriber:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+// subscriber variable
+private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+```
+
+{% endtab %}
+{% endtabs %}
+
+Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
+    @Override
+    public void trigger(ContentCardsUpdatedEvent event) {
+        // List of all Content Cards
+        List<Card> allCards = event.getAllCards();
+
+        // Your logic below
+    }
+};
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Braze.getInstance(context).requestContentCardsRefresh(true);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
+  // List of all Content Cards
+  val allCards = event.allCards
+
+  // Your logic below
+}
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh(true)
+```
+
+{% endtab %}
+{% endtabs %}
+
+We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Part 2: Logging analytics
+
+When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
+
+To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
+
+To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
+
+For campaigns using Control Cards for A/B testing, you can use [`Card.isControl()`][55] to determine if a card will be blank, and used only for tracking purposes.
+
+### Manually dismissing a Content Card
+
+You can manually log or set a Content Card as "dismissed" to Braze for a particular card with [`setIsDismissed`][57].
+
+If a card is already marked as dismissed, it cannot be marked as dismissed again.
+
+[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
+[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
+[55]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/is-control.html
+[57]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/set-is-dismissed.html
+[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-content-cards-displayed.html
 
 [29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html
 [30]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-banner-image-card/index.html

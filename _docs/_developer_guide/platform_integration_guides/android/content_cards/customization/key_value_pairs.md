@@ -1,7 +1,7 @@
 ---
-nav_title: Overview
-article_title: Content Card Overview for Android and FireOS
-page_order: 1
+nav_title: Key-Value Pairs
+article_title: Content Card Key-Value Pairs for Android and FireOS
+page_order: 4.2
 platform: 
   - Android
   - FireOS
@@ -11,11 +11,7 @@ channel:
 
 ---
 
-# Customization
-
-Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
-
-## Key-value pairs
+# Key-value pairs
 
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data along with a `Card` for further handling by the application.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 article_title: In-App Message Troubleshooting for Android and FireOS
-page_order: 4
+page_order: 40
 platform: 
   - Android
   - FireOS

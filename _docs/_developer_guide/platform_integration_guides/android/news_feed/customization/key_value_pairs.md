@@ -1,11 +1,11 @@
 ---
 nav_title: Key-Value Pairs
 article_title: News Feed Key-Value Pairs for Android and FireOS
-page_order: 8
+page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to use key-value pairs in your News Feed for your Android application."
+description: "This reference article covers how to implement gifs in your News Feed for your Android application."
 channel:
   - news feed
 
@@ -35,5 +35,3 @@ extras: Map<String, String>
 {% endtabs %}
 
 Refer to our [KDoc][36] for more information.
-
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
