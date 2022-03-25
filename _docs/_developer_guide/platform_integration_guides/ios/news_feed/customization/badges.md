@@ -1,6 +1,6 @@
 ---
-nav_title: Customization
-article_title: News Feed Customization for iOS
+nav_title: Badges
+article_title: News Feed Badges for iOS
 platform: iOS
 page_order: 3
 description: "This reference article covers how to customize your News Feed in your iOS  application."
@@ -9,26 +9,9 @@ channel:
 
 ---
 
-# Customization
+# Badges
 
-{% alert important %}
-Integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images within iOS in-app messages, News Feed, or Content Cards.
-{% endalert %}
-
-## Overriding default images
-
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Also, be sure to upload the `@2x` and `@3x` versions of the images to accommodate different phone sizes. Images available for override in Content Cards include: Images available for an override in the News Feed include:
-
-* Read icon indicator: `Icons_Read`
-* Placeholder image: `img-noimage-lrg`
-
-{% alert important %} 
-Overriding default images is currently not supported in our Xamarin iOS integration. 
-{% endalert %}
-
-## Badges
-
-### Requesting unread card count
+## Requesting unread card count
 
 ![][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -54,7 +37,7 @@ This method returns the total number of currently active Content Cards. Cards ar
  */
  ```
 
-### Displaying the number of unread News Feed items on the app badge count
+## Displaying the number of unread News Feed items on the app badge count
 
 In addition to serving as push notification reminders for an app, badges can also denote unviewed items in the user's News Feed. Updating the badge count based on unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
 

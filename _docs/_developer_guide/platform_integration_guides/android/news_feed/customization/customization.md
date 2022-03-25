@@ -85,40 +85,4 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 </style>
 ```
 
-## Adding a badge
-
-You can request the number of unread cards at any time by calling:
-
-```java
-getUnreadCardCount()
-```
-
-Refer to our [KDoc][17] for more information.
-
-## Read and unread indicators
-
-Braze allows you to optionally toggle on unread and read indicators on News Feed cards as pictured below:
-
-![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or grey triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
-
-### Enabling the indicators
-
-To enable this functionality add the following line to your `braze.xml` file:
-
-```xml
-<bool name="com_braze_newsfeed_unread_visual_indicator_on">true</bool>
-```
-
-### Customizing the indicators
-
-These indicators can be customized by altering the `icon_read` and `icon_unread` drawables.
-
-[18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
-[19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
-[20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
-[21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.events/-feed-updated-event/get-unread-card-count.html
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
-[27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png

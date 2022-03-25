@@ -4,7 +4,7 @@ article_title: Google Play In-App Message Review Prompt for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 8
+page_order: 9
 description: "This reference article covers in-app messaging customization options for your Android application."
 channel:
   - in-app messages

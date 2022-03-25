@@ -4,7 +4,7 @@ article_title: Youtube in HTML In-App Messages for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 9
+page_order: 8
 description: "This reference article covers in-app messaging customization options for your Android application."
 channel:
   - in-app messages

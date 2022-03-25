@@ -1,7 +1,7 @@
 ---
 nav_title: Disabling Swipe to Dismiss
 article_title: Disabling Content Card Swipe to Dismiss for Android and FireOS
-page_order: 4.2
+page_order: 4.5
 platform: 
   - Android
   - FireOS

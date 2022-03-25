@@ -2,7 +2,7 @@
 nav_title: Integration
 article_title: News Feed Integration for iOS
 platform: iOS
-page_order: 1
+page_order: 0
 description: "This article covers an overview of integrating the News Feed into your iOS application."
 channel:
   - news feed
@@ -15,6 +15,144 @@ channel:
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
+## News Feed data model
+
+### Getting the data
+
+To access the News Feed data model, subscribe to News Feed update events:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// Subscribe to feed updates
+// Note: you should remove the observer where appropriate
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                         selector:@selector(feedUpdated:)
+                                             name:ABKFeedUpdatedNotification
+                                           object:nil];
+```                                           
+
+```objc
+// Called when the feed is refreshed (via `requestFeedRefresh`)
+- (void)feedUpdated:(NSNotification *)notification {
+  BOOL updateIsSuccessful = [notification.userInfo[ABKFeedUpdatedIsSuccessfulKey] boolValue];
+  // check for success
+  // get the cards using [[Appboy sharedInstance].feedController getCardsInCategories:ABKCardCategoryAll];
+}
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+// Subscribe to feed updates
+// Note: you should remove the observer where appropriate
+NotificationCenter.default.addObserver(self, selector:
+  #selector(feedUpdated),
+  name:NSNotification.Name.ABKFeedUpdated, object: nil)
+```
+
+```swift
+// Called when the feed is refreshed (via `requestFeedRefresh`)
+private func feedUpdated(_ notification: Notification) {
+  if let updateSuccessful = notification.userInfo?[ABKFeedUpdatedIsSuccessfulKey] as? Bool {
+    // check for success
+    // get the cards using Appboy.sharedInstance()?.feedController.getCardsInCategories(.all);      
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`][44].
+
+### Base card model
+
+Braze has five unique card types that share a base model. Each type of card also has additional properties that are specific to each card which are listed below.
+
+### Base card model properties
+
+- `idString` (Read only) - The card's ID set by Braze.
+- `viewed` - This property reflects if the card is read or unread by the user.
+- `created` (Read only) - The property is the unix timestamp of the card's creation time from Braze dashboard.
+- `updated` (Read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard.
+- `categories` - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.
+- `extras` - An optional `NSDictionary` of `NSString` values.
+
+#### Categories
+
+- `ABKCardCategoryNoCategory`
+- `ABKCardCategoryNews`
+- `ABKCardCategoryAdvertising`
+- `ABKCardCategoryAnnouncements`
+- `ABKCardCategorySocial`
+- `ABKCardCategoryAll`
+
+## Card Properties
+
+### Banner properties
+In addition to the base card properties:
+
+- `image` (required) - This property is the URL of the card's image
+- `URL` (optional) - The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed.
+
+### Captioned image properties
+In addition to the base card properties:
+
+- `image` (required) - This property is the URL of the card's image
+- `title` (required) - The title text for the card
+- `description` (required) - The body text for the card
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+
+### Text announcement (captioned image without image) properties
+In addition to the base card properties:
+
+- `title` (required) - The title text for the card
+- `description` (required) - The body text for the card
+- `url` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+
+### Classic card properties
+In addition to the base card properties:
+
+- `image` (required) - This property is the URL of the card's image
+- `title` (optional) - The title text for the card
+- `description` (required) - The body text for the card
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+
+## Card methods:
+
+- `logCardImpression` - Manually log an impression to Braze for a particular card.
+- `logCardClicked` - Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. All subclasses of `ABKCard` have the `url` property.
+
+## Log feed display
+
+When displaying the News Feed in your own user interface, you can manually record News Feed impressions via `- (void)logFeedDisplayed;`. For example:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance] logFeedDisplayed];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logFeedDisplayed()
+```
+
+{% endtab %}
+{% endtabs %}
+
+## News Feed view controller integration
+
 Integrating the view controller `ABKNewsFeedViewController` will display the Braze News Feed.
 
 You have a great deal of flexibility in how you choose to display the view controllers. There are different versions of the view controllers to accommodate different navigation structures.
@@ -22,8 +160,6 @@ You have a great deal of flexibility in how you choose to display the view contr
 {% alert note %}
 The News Feed that is called by the default behavior of an in-app message click will not respect any delegates you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates) and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks).
 {% endalert %}
-
-## News Feed view controller integration
 
 The News Feed can be integrated with two view controller contexts: navigation or modal.
 
@@ -80,3 +216,5 @@ For view controller examples, check out our [News Feed sample app][3].
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks
 [3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
+[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
+
