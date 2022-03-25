@@ -55,6 +55,7 @@ module JekyllAssetPipeline
           cached_md5 = YAML.safe_load(manifest).map! do |path|
             Digest::MD5.hexdigest(IO.read(File.join(source, path))).to_sym
           end
+
           # use options as another hash identifier in case it changes
           cached_md5.push(options.to_s)
           @@cached_manifest[manifest] = Digest::MD5.hexdigest(cached_md5.join('|'))
