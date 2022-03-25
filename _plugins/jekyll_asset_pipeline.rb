@@ -37,4 +37,33 @@ module JekyllAssetPipeline
       Uglifier.new(:harmony => true).compile(@content)
     end
   end
+
+  # Override Jekyll Asset Pipeline method so it uses file content instead of
+  # timestamp to determined MD5 hash value
+  class Pipeline
+    @@cached_manifest = {}
+    # rubocop:enable Metrics/ClassLength
+    def self.hash(source, manifest, options = {})
+      options = DEFAULTS.merge(options)
+      # use cache name if exist
+      if @@cached_manifest[manifest]
+        return @@cached_manifest[manifest]
+      else
+        begin
+          # read file to determine cache name. This will prevent webhost from
+          # generating new hash names when files are not changed
+          cached_md5 = YAML.safe_load(manifest).map! do |path|
+            Digest::MD5.hexdigest(IO.read(File.join(source, path))).to_sym
+          end
+          # use options as another hash identifier in case it changes
+          cached_md5.push(options.to_s)
+          @@cached_manifest[manifest] = Digest::MD5.hexdigest(cached_md5.join('|'))
+          return @@cached_manifest[manifest]
+        rescue StandardError => e
+          puts "Failed to generate hash from provided manifest: #{e.message}"
+          raise e
+        end
+      end
+    end
+  end
 end
