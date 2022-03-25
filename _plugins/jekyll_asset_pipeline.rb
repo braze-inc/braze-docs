@@ -45,12 +45,12 @@ module JekyllAssetPipeline
     # rubocop:enable Metrics/ClassLength
     def self.hash(source, manifest, options = {})
       options = DEFAULTS.merge(options)
-      # use cache name if exist
+      # use cache manifest if exist
       if @@cached_manifest[manifest]
         return @@cached_manifest[manifest]
       else
         begin
-          # read file to determine cache name. This will prevent webhost from
+          # read file to determine cache md5 manifest. This will prevent webhost from
           # generating new hash names when files are not changed
           cached_md5 = YAML.safe_load(manifest).map! do |path|
             Digest::MD5.hexdigest(IO.read(File.join(source, path))).to_sym
