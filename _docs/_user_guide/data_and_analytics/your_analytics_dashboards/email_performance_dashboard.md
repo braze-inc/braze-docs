@@ -3,7 +3,7 @@ nav_title: Email Performance Dashboard
 article_title: Email Performance Dashboard
 page_order: 2
 page_type: reference
-description: "This reference article..."
+description: "This reference article covers the Email Performance Dashboard, which allows you to view performance metrics for your entire email channel from both campaigns and Canvases."
 tool: 
   - Reports
 
