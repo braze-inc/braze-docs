@@ -1,7 +1,7 @@
 ---
 nav_title: Refreshing the Feed
 article_title: Refeshing the Content Card Feed for Web
-page_order: 3
+page_order: 2
 platform: Web
 channel: content cards
 page_type: reference
