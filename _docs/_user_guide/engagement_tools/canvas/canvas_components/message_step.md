@@ -19,9 +19,9 @@ Canvas Message Steps are currently in early access. Please contact your Braze ac
 
 ## Create a Message Step
 
-![Canvas Message Step][1]{: style="float:right;max-width:19%;margin-left:15px;"}
+![][1]{: style="float:right;max-width:19%;margin-left:15px;"}
 
-To create a Message Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select **Message**.
+To create a Message Step, add a step to your Canvas. Then, use the dropdown at the top of the new step to select **Message**.
 
 With a Message Step, all users who enter the step advance to the next step when any one of the following conditions is met:
 - Any message is sent
@@ -29,7 +29,7 @@ With a Message Step, all users who enter the step advance to the next step when 
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-![Canvas Message Step][2]{: style="max-width:75%;"} 
+![Set up Messages settings for a Canvas Message Step that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"} 
 
 The Message Step also includes settings for Intelligent Delivery and Quiet Hours overrides.
 
@@ -37,13 +37,15 @@ The Message Step allows you to enable Intelligent Timing with a fallback option 
 
 If Quiet Hours are enabled, the Message Step also allows you to override this setting.
 
-![Canvas Message Step][4]
+![The Delivery Settings tab for Message Step settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time.][4]
 
 {% alert note %} 
 For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
 {% endalert %}
 
 ## Analytics
+
+Refer to the following table for definitions of Message Step metrics: 
 
 | Metric | Description |
 | --- | --- |
@@ -55,7 +57,7 @@ For Canvas Message Steps, `event_properties` are not supported. Instead, use `ca
 | Revenue | The total revenue in dollars from campaign recipients within the set primary conversion window. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Canvas Message Step][3]{: style="max-width:20%;"}
+![][3]{: style="max-width:20%;"}
 
 
 [1]: {% image_buster /assets/img/canvas_components/message_step1.png %}
