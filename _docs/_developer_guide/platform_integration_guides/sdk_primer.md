@@ -112,7 +112,7 @@ You may either simply not integrate certain parts of the SDK, or use [`stopWebTr
 You can use [`setDeviceObjectAllowlist`][1]to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
-An empty allowlist will result in __no__ device data being sent to Braze.
+An empty allowlist will result in **no** device data being sent to Braze.
 {% endalert %}
 
 ### iOS SDK
@@ -127,7 +127,7 @@ By default, all fields are collected by the Braze iOS SDK.
 
 ## SDK compatibility
 
-Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, please reach out to Braze Support.
+Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, reach out to Braze Support.
 
 Additionally, the Braze iOS SDK fully supports RubyMotion apps.
 

@@ -28,13 +28,13 @@ Campaign alerts are available for the following campaigns:
 
 ## Setting up your campaign alert
 
-Navigate to the analytics page of your campaign to start setting up your alert. Once you hit "Set Up Alert," you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
+Navigate to the analytics page of your campaign to start setting up your alert. Once you select **Set Up Alert**, you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
+
+![Campaign Monitoring dialog box with two buttons: Cancel and Save.][2]
 
 For a scheduled recurring campaign, you can set upper and lower thresholds for the messages sent each time the campaign sends. For a triggered campaign, you can set upper and lower thresholds for the number of messages sent hourly and daily.
 
 You can set up an email alert, a webhook alert or both. Webhook alerts can be very useful, as they allow you to send an alert to a Slack channel. For more information on integrating campaign alerts with Slack, see our [documentation][1].
-
-![Setting up Campaign Alert][2]
 
 ## Campaign alert webhook payload
 

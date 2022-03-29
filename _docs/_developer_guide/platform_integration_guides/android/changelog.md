@@ -1,6 +1,6 @@
 ---
 nav_title: Changelog
-article_title: Changelog for Android/FireOS
+article_title: Changelog for Android and FireOS
 page_order: 30
 page_type: update
 platform: 

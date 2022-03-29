@@ -15,7 +15,7 @@ Once activated, you can log into the Braze app using the Okta sign in button.
 
 ## Mobile responsive email templates
 
-Braze has 16 new mobile responsive email templates that fit common email marketing needs. These include different versions of the following template themes:
+Braze has 16 new mobile responsive [email templates][97] that fit common email marketing needs. These include different versions of the following template themes:
 
 - Welcome
 - Thank You
@@ -26,8 +26,7 @@ Braze has 16 new mobile responsive email templates that fit common email marketi
 - Event
 - Information
 
-Check them out in __Templates & Media__, in the basic [Email Templates section][97]. You’ll notice that the icons representing each template will show you their layout.
-
+You’ll notice that the icons representing each template will show you their layout.
 
 
 [97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

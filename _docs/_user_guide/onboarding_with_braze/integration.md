@@ -9,7 +9,7 @@ description: "This reference article briefly covers the integration steps requir
 
 # Integration
 
-Integrating with Braze is a worth-while process. But you're smart. you're __here__. Clearly you already know that!
+Integrating with Braze is a worth-while process. But you're smart. you're **here**. Clearly you already know that!
 
 But what you probably don't know was that you and your engineers or developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
@@ -45,7 +45,7 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 
 | Channel | Details |
 |---|---|
-| In-App Messages | Requires SDK implementation as well as these channel-specific steps. |
+| In-app messages | Requires SDK implementation as well as these channel-specific steps. |
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
 | Email | This is an entirely different process. Check that out in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. |

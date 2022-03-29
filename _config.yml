@@ -52,7 +52,7 @@ markdown_api: true
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
 
-# gitHub config
+# GitHub config
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_docs/'
 github_icon: 'GitHub-Mark-32px.png'
 

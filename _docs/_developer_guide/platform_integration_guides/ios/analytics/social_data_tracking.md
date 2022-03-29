@@ -36,7 +36,7 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser
 {% endtab %}
 {% endtabs %}
 
->  In ABKFacebookUser's init method `initWithFacebookUserDictionary:numberOfFriends:likes:`, all the parameters should be dictionaries and arrays returned directly from Facebook:
+In ABKFacebookUser's init method `initWithFacebookUserDictionary:numberOfFriends:likes:`, all the parameters should be dictionaries and arrays returned directly from Facebook:
 
 | Parameter | Definition |
 | --------- | ---------- |
@@ -45,9 +45,9 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser
 | `likes` | The array of user's Facebook likes from the endpoint "/me/likes". |
 {: .reset-td-br-1 .reset-td-br-2}
 
->  For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
+Refer to the [Facebook Graph API][10] for additional information.
 
-Additionally, you can tailor what Facebook data you're sending to Braze, in case you don't want to include the entire basic profile. For example:
+Additionally, you can tailor what Facebook data you're sending to Braze if you don't want to include the entire basic profile. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -66,11 +66,11 @@ let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionar
 {% endtab %}
 {% endtabs %}
 
-For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
+Refer to the [Facebook SDK][2] for more information.
 
 ## Passing Twitter data to Braze
 
-Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
+Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected, and pass it to Braze:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

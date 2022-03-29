@@ -44,7 +44,7 @@ The default concurrency rate and throughput enable about 360,000 messages an hou
 
 While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
-- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
+- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. For more details, refer to our [segment breakdown]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
 - Test, test, and test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
@@ -55,7 +55,7 @@ While we can't promise that you won't occasionally have an overage, you could fo
 2. Ensure you (the brand) have a relationship with the customer.
 3. Make sure the content is relevant to the relationship and what the user has opted-in to receive.
 
-For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
+For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
 
 ### How do you create logic for selective opt-ins to SMS so users are in the right subscription group?
 
@@ -63,7 +63,7 @@ Custom keywords would be written as custom events, so you would want to create s
 
 ### How many characters does an emoji utilize?
 
-Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
 ### If a user texts "Stop" to our short code, are they unsubscribed from the subscription group?
 
@@ -129,3 +129,7 @@ In the US, Canada, and UK:
 
 In other countries:
 - Twilio will throw an error, and you will not be billed for the attempted SMS message. 
+
+### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
+
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout), they will receieve the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling), they will not receive the response for that keyword. 

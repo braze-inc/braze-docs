@@ -25,54 +25,49 @@ guide_featured_list:
 
 ---
 
-
 ## Apptimize
 
-_braze partnership_
-
-_Support withdrawn: August 2019_
+##### Braze partnership
+**Support withdrawn**: August 2019
 
 If you are currently using [Apptimize with Braze]({{site.baseurl}}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
-
 ## Original in-app messages
 
-_Replaced by: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)_
+##### Braze feature
 
-_Braze Feature_
+**Replaced by**: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Support completely withdrawn:** February 2019
 
-_Support completely withdrawn: February 2019_
-
-Braze has improved the look and feel of In-App Messages to adhere to the latest UX and UI best practices and no longer supports original in-app messages.
+Braze has improved the look and feel of in-app messages to adhere to the latest UX and UI best practices and no longer supports the original in-app messages.
 
 Braze moved over to a new form of in-app messages with the following SDK releases:
-
 - iOS: `2.19.0`
 - Android: `1.13.0`
 - Web: `1.3.0`
 
 Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the **Create Campaign** button on the **Campaign** page.
 
-![Choices][15]
-
+![Deprecated original in-app messages option][15]
 
 ## Feedback
 
-_braze feature_
+##### Braze feature
 
-_Support to be completely withdrawn July 1, 2019._
+**Support withdrawn**: July 1, 2019.
 
 The Braze SDK provided a feedback widget that could be added to your app to allow users to leave feedback using the submitFeedback method and pass it into either Desk.com or Zendesk and was managed on the dashboard.
 
 ## Google Cloud Messaging (GCM)
 
-_Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)_
+##### Integration
 
-_Integration_
+**Support withdrawn**: 
+- Braze removal of support: July 2018 
+- Google removal of support: May 29, 2019
+**Replaced by**: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
-_Support withdrawn: July 2018 (Braze removal of support) and May 29, 2019 (Google removal of support)._
-
-[Google has removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze removed support for GCM from the Android SDKs in July 2018, which was noted within [our Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
+Google has [removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze removed support for GCM from the Android SDKs in July 2018, which was noted within our [Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
 
 Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) may be affected by this change.
 
@@ -80,44 +75,41 @@ If you have not transitioned to FCM, all GCM push tokens registrations will fail
 
 ## Eclipse
 
-_replaced by: [android studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)_
+##### Integration
 
-_Integration_
+**Support withdrawn**: 2014-2015
+**Replaced by**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)_
 
-_Support withdrawn: 2014-2015_
+Braze has removed support for the Eclipse IDE due to [Google sunsetting support]](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) for the Eclipse Android Developer Tools (ADT) plugin. 
 
-Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{site.baseurl}}/support_contact/) for assistance.
+If you need assistance with your Eclipse integration prior to migration, contact [Support]({{site.baseurl}}/support_contact/) for assistance.
 
 ## The Raw Event Stream (RES)
 
-_Replaced by: [Currents]({{site.baseurl}}/partners/braze_currents/about/)_
+##### Braze feature
 
-_Braze Feature_
-
-_Support withdrawn: July 2018_
+**Support withdrawn**: July 2018
+**Replaced by**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
 
 The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
 
 ## Delay while idle
 
-_Replaced by: n/a_
+##### GCM Feature
 
-_GCM Feature_
-
-_Support withdrawn: November 2016_
+**Support withdrawn**: November 2016
+**Replaced by**: Not available
 
 The Delay While Idle parameter was previously a part of the [GCM push options](https://developers.google.com/cloud-messaging/http-server-ref). Google withdrew support for this option on November 15th 2016. Previously, when set to **true**, it indicated that the message should not be sent until the device becomes active.
 
 ## Custom endpoints
 
-_Replaced by: n/a_
+##### Braze feature
 
-_Braze Feature_
-
-_Support withdrawn: December 2019_
+**Support withdrawn**: December 2019
+**Replaced by**: Not available
 
 Removal of Custom Endpoints. If you have a custom endpoint, you can still continue to use it, but Braze no longer gives them out.
-
 
 
 

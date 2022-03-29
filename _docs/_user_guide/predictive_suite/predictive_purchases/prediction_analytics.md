@@ -8,9 +8,9 @@ page_order: 2
 
 # Prediction analytics
 
-Once your Prediction has been built and trained, you will have access to the __Prediction Analytics__ page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+Once your Prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
-__Analytics Components__<br>
+**Analytics Components**<br>
 &#45; [Purchase Likelihood Score](#purchase_score)<br>
 &#45; [Targeting Users](#target_users)<br>
 &#45; [Prediction Quality](#prediction_quality)<br>
@@ -24,19 +24,19 @@ Users in the Prediction Audience will be assigned a Purchase Likelihood Score be
 - Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low category. 
 - Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High likelihood categories, respectively. 
 
-The scores and the corresponding categories will be updated according to the schedule you chose in the __Prediction Creation__ page. The number of users with Purchase Likelihood Scores in each of the 20 equally sized buckets or in each of the Purchase Likelihood Categories, is displayed in the chart at the top of the page.
+The scores and the corresponding categories will be updated according to the schedule you chose in the **Prediction Creation** page. The number of users with Purchase Likelihood Scores in each of the 20 equally sized buckets or in each of the Purchase Likelihood Categories, is displayed in the chart at the top of the page.
 
 ## Audience builder {#target_users}
 
 The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page. Users in buckets further to the right have higher scores and are more likely to purchase. Users in buckets further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting those users.
 
-![Churn Targeting][4]{: style="max-width:90%"} 
+![][4]{: style="max-width:90%"} 
 
 As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
 
 ### Estimated results {#estimated_results}
 
-![Estimated Results][6]
+![][6]
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected above in two ways:
 
@@ -48,7 +48,7 @@ Using this information, we encourage you to decide how many of the purchasers yo
 
 ### Prediction quality {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be. Essentially, it's a measure of how good this Prediction is at telling apart the buyers from non-buyers. A Prediction Quality of 100 would mean it perfectly knows who will and will not purchase without error (this never happens!), and 0 meaning it's randomly guessing. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be. Essentially, it's a measure of how good this Prediction is at telling apart the buyers from non-buyers. A Prediction Quality of 100 would mean it perfectly knows who will and will not purchase without error (this never happens!), and 0 meaning it's randomly guessing. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Here’s what we recommend for various ranges of Prediction Quality:
 
@@ -62,7 +62,7 @@ Here’s what we recommend for various ranges of Prediction Quality:
 
 The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page. 
 
-When a Prediction is first created, the Prediction Quality will be based upon historical data that is queried when you click __Build Prediction__. Every two weeks thereafter, the Prediction Quality is derived by comparing prediction scores to real-world outcomes.
+When a Prediction is first created, the Prediction Quality will be based upon historical data that is queried when you click **Build Prediction**. Every two weeks thereafter, the Prediction Quality is derived by comparing prediction scores to real-world outcomes.
 
 ## Purchase correlation table {#correlation_table}
 

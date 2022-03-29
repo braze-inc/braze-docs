@@ -13,7 +13,7 @@ The recent iOS 12 release supports grouping notifications (similar to Android No
 
 ## Push story triggering
 
-You can now retarget users based on specific page clicks on push story slides. Use the additional filter for __Interacted with Campaign__.
+You can now retarget users based on specific page clicks on Push Story slides. Use the additional filter for **Interacted with Campaign**.
 
 ## S3 and Azure data events from anonymous users
 

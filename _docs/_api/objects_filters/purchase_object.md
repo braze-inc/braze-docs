@@ -47,7 +47,8 @@ A Purchase Object is an object that gets passed through the API when a purchase 
 
 ## Purchase product_id
 
-Within the purchase object, The `product_id` is an identifier for the purchase, e.g Product Name or Product Category
+Within the purchase object, The `product_id` is an identifier for the purchase (e.g, `Product Name` or `Product Category`):
+
 - Braze allows you to store a max of 5000 `product_id`s in the dashboard.
 - `product_id` max is 255 characters
 
@@ -78,13 +79,13 @@ Event property objects that contain array or object values can have an event pro
 
 ### Purchase properties
 
-[Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
+[Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) **do not** persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
 While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
 
 ### Purchase property naming conventions
 
-It is important to note that this feature is enabled __per product__, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
+It is important to note that this feature is enabled **per product**, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
 
 In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123", "transaction 046", etc. Or for example, with the purchase event 'food', properties would be best set as "cake" and "sandwich".
 
@@ -139,11 +140,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Purchase objects, event objects, and webhooks
 
-Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Ann F.__, Thanks for purchasing that __red, medium backpack__ for __$40.00__! Thanks for shopping at __Backpack Locker__!"
+Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
 
-For info on how to set up webhooks, check out our [Webhook][1] documentation.
+For information on how to set up webhooks, check out [Creating a webhook][1].
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"

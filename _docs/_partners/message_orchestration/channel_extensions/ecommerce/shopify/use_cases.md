@@ -15,8 +15,8 @@ Using nested object support for custom events, Braze Shopify customers can use L
 
 {% tabs %}
 {% tab Shopify Abandon Checkout Event %}
-__Event__: `shopify_abandoned_checkout`<br>
-__Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_abandoned_checkout`<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -40,8 +40,8 @@ __Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_d
 {% endtab %}
 {% tab Shopify Created Order Event %}
 
-__Event__: `shopify_created_order`<br>
-__Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_created_order`<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -70,8 +70,8 @@ __Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_d
 {% endtab %}
 {% tab Purchase Event %}
 
-__Event__: Purchase<br>
-__Type__: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+**Event**: Purchase<br>
+**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
 
 {% raw %}
 | Variable | Liquid Templating |

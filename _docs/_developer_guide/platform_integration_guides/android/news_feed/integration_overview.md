@@ -1,6 +1,6 @@
 ---
 nav_title: Integration Overview
-article_title: News Feed Integration Overview for Android/FireOS
+article_title: News Feed Integration Overview for Android and FireOS
 page_order: 1
 platform: 
   - Android
@@ -13,11 +13,15 @@ channel:
 
 # News Feed integration overview
 
-In Android, the News Feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
-
->  The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened (learn more about [tracking user sessions][4]).
+In Android, the News Feed is implemented as a [fragment][2] available in the Braze Android UI project. Refer to Google's documentation on [Fragments][3] for information on adding a fragment to an activity.
 
 The `AppboyFeedFragment` class will automatically refresh and display the contents of the News Feed and log usage analytics. The cards that can appear in a user's News Feed are set on the Braze dashboard.
+
+## Session analytics
+
+The Android UI fragments do not automatically track session analytics. To ensure that sessions are [tracked correctly][4], call `IAppboy.openSession()` when your app is opened.
+
+## Linking
 
 Linking to the News Feed from an in-app message must be enabled by registering the `AppboyFeedActivity` within your `AndroidManifest.xml`.
 

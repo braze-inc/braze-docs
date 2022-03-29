@@ -11,7 +11,7 @@ description: "This article explains the different components of the Braze Recipi
 
 The Recipients Object allows you to request or write information in our endpoints.
 
-Either `external_user_id` or `user_alias` is required in this object. __Requests must specify only one.__
+Either `external_user_id` or `user_alias` is required in this object. **Requests must specify only one.**
 
 The Recipients object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
@@ -28,7 +28,7 @@ The Recipients object allows you to combine the [User Alias object]({{site.baseu
 
 ## Recipient object deduping
 
-When making an API call with the Recipient Object, __if there exists a duplicated recipient targeting the same address (ie email, push), the user will be deduped__, meaning identical users will be removed, leaving one. 
+When making an API call with the Recipient Object, **if there exists a duplicated recipient targeting the same address (ie email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
 
 For example, if the same `external_user_id` is used, then only 1 message will be received. Consider making multiple API calls if you need a work-around for this behavior.
 

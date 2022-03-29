@@ -11,7 +11,6 @@ description: "This reference article covers an example user data collection use 
 
 > This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect.
 
-
 For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Uber, Lyft, etc.) wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 ## Case question #1: What is the goal?
@@ -55,7 +54,7 @@ The above characteristics could then be tagged as the following custom attribute
 Adding these attributes would afford you the ability to send campaigns to users like:
 
 1. Reminding users who haven't used the app in 7 days who have promotional credit remaining on their account that it is there and that they should come back to the app and use it!
-2. Use our message templating and [personalization features][13] to drag the unique promo code attribute into messaging directed at users.
+2. Use our message templating and [personalization features][13] to drag the unique promotion code attribute into messaging directed at users.
 
 
 {% alert important %}

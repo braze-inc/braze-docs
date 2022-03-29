@@ -12,7 +12,7 @@ description: "This article contains release notes for October 2020."
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
-The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more [here]({{site.baseurl}}/report_builder)!
+The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 
 ## iOS 14 upgrade guide
 
@@ -20,7 +20,7 @@ The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 an
 
 ## Android 11 upgrade guide
 
-The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML in-app messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
 
 ## Attribution partners - Click tracking guide
 
@@ -32,7 +32,7 @@ Users can now add descriptions to campaigns and Canvases! This new field can be 
 
 ## Canvas exception events
 
-New documention has beed added describing the expected behavior of exception events in Canvases. Visit our [documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more!
+New documention has beed added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
 
 ## User delete updates
 

@@ -36,7 +36,7 @@ The following Currents integration is supported for both [Amazon S3](#setting-up
 
 In the [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
 
-![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
+![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
 #### Step 2: Give Fivetran access to a specified S3 bucket
 
@@ -44,7 +44,7 @@ In the [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connec
 
 Open the [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) and navigate to **Policies > Create Policy**.
 
-![Amazon S3 policies]({% image_buster /assets/img/fivetran_as3_iam.png %})
+![]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
 Next, click on the **JSON** tab and paste the policy below. Make sure to replace `{your-bucket-name}` with the name of your S3 bucket.
 
@@ -76,25 +76,25 @@ Next, click on the **JSON** tab and paste the policy below. Make sure to replace
 
 Lastly, click **Review Policy** and give the policy a unique name and description. Click **Create Policy** to build your policy. 
 
-![Amazon S3 policy review button]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
+![]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 ##### Create an IAM role {#step-two}
 
 In AWS, navigate to **Roles**, then select **Create New Role**.
 
-![Amazon S3 IAM New Role]({% image_buster /assets/img/fivetran_iam_new_role.png %})
+![]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
 Select **Another AWS Account** and provide the Fivetran account ID `834469178297`. Make sure to check the **Require external ID** checkbox. Here, you will provide the external ID found in step 1.
 
-![Amazon S3 Require External ID]({% image_buster /assets/img/fivetran_another_aws_account.png %})
+![]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
 Next, click **Next: Permissions** to select the policy you just created.
 
-![Amazon S3 Select Policy]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
+![]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
 Click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**. Once created, click the role you just created, and note the Role ARN shown.
 
-![Amazon S3 IAM Role ARN]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
+![The Amazon S3 ARN listed in the role.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %}
 You can specify permissions for the Role ARN that you designate for Fivetran. Giving selective permissions to this Role will allow Fivetran to only sync what it has permissions to see.
@@ -106,7 +106,7 @@ In Fivetran, click on **+ Connector** found at the top right corner of the scree
 - `Destination schema`: A unique schema name.
 - `API URL`: Your Braze REST API endpoint.
 - `API Key`: Your Braze REST API key. 
-- `External ID`: The external ID set in [step 2](#step-two) of the currents set up directions. This ID is a fixed value.
+- `External ID`: The external ID set in [step 2](#step-two) of the Currents set up directions. This ID is a fixed value.
 - `Bucket`: Found in your Braze account by navigating to **Integration > Currents > [Your Current name] > Bucket Name**.
 - `Role ARN`: The Role ARN can be found in [step 1](#step-one) of the Current setup directions.
 
@@ -122,17 +122,17 @@ Lastly, click **Save & Test**, and Fivetran will do the rest by syncing with the
 
 In the [Fivetran dashboard](https://fivetran.com/dashboard), click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Next, select **Google Cloud storage**. Make a note of the email address that appears.
 
-![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
+![The Fivetran set up Braze connector form. The email field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 #### Step 2: Grant bucket access
 
 Navigate to your [Google Storage Console](https://console.cloud.google.com/storage/browser) and select the bucket you configured Braze Currents with, and click on **Edit bucket permissions**.
 
-![Google storage buckets]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
+![The Google Storage Console available buckets. Locate a bucket and click the vertical three dot symbol to open the drop down that allows you to edit bucket permissions.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2) by adding the email as a member. Make a note of the bucket name; you will need it in the next step to configure Fivetran.
 
-![Google storage bucket add member]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
+![]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
 #### Step 3: Complete the Fivetran connector
 

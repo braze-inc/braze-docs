@@ -18,7 +18,7 @@ This customer behavior and user events breakdown shows what type of information 
 
 ![Breakdown of a user event showing a purchase event with the listed properties grouped by user-specific properties, behavior-specific properties, and device-specific properties]({% image_buster /assets/img/customer_engagement_event.png %})
 
-Customer behavior and user events are comprised of __user-specific__ properties, __behavior-specific__ properties, and __device-specific__ properties. 
+Customer behavior and user events are comprised of **user-specific** properties, **behavior-specific** properties, and **device-specific** properties. 
 
 ### Platform values
 

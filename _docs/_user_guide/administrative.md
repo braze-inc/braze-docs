@@ -5,7 +5,7 @@ page_order: 2
 layout: featured
 
 guide_top_header: "Administrative"
-guide_top_text: "This section explains how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more.<br><br>In addition to the topics and articles included in this section, we also highly recommend checking out our <a href='https://lab.braze.com/admin-dashboard-management/'>Admin and Dashboard Management</a> LAB course, which covers how to manage user access and best practices for dashboard maintenance."
+guide_top_text: "This section explains how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more.<br><br>In addition to the topics and articles included in this section, we also highly recommend checking out our <a href='https://lab.braze.com/admin-dashboard-management/'>Admin and dashboard Management</a> LAB course, which covers how to manage user access and best practices for dashboard maintenance."
 description: "This section explains how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
 
 guide_featured_title: "Popular Topics"

@@ -16,7 +16,7 @@ Your campaign performance report will now list your campaign's details so you do
 
 ## New email Content Block API endpoints
 
-You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block), [list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
+You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block), [list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) your email Content Blocks via API!
 
 {% alert update %}
 This feature is temporarily in limited availability. Please reach out to your Braze account manager for more information.
@@ -24,10 +24,10 @@ This feature is temporarily in limited availability. Please reach out to your Br
 
 ## Custom email unsubscribe landing page update
 
-The default [custom Email Unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
+The default [custom email unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
 
 ## iOS SDK: Notched phone support improvement
 
 Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
 
-You won't see many updates in the Docs reflecting this change just yet - but they're on the way!
+You won't see many updates in Braze Docs reflecting this change just yet, but they're on the way!

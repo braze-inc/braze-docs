@@ -18,7 +18,7 @@ description: "This article outlines details about the external IDs Rename endpoi
 For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
 {% endalert %}
 
-Use this endpoint to "rename" your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. The deprecated ID can be removed using the [remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint. Having multiple external IDs allows for a migration period whereby older versions of your apps still in the wild that use the previous external ID naming schema don’t break. We highly recommend removing deprecated external IDs once your old naming schema is no longer in use.
+Use this endpoint to "rename" your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. The deprecated ID can be removed using the [External ID remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint. Having multiple external IDs allows for a migration period whereby older versions of your apps still in the wild that use the previous external ID naming schema don’t break. We highly recommend removing deprecated external IDs once your old naming schema is no longer in use.
 
 You can send up to 50 rename objects per request.
 
@@ -87,19 +87,19 @@ The `message` field will return `success` for any valid request. More specific e
 
 ## Frequently asked questions
 
-__Does this impact MAU?__
+**Does this impact MAU?**
 - No, since the number of users will stay the same, they’ll just have a new `external_id`.
 
-__Does user behavior change historically?__
+**Does user behavior change historically?**
 - No, since the user is still the same, and all their historical behavior is still connected to them.
 
-__Can it be run on dev/staging app groups?__
+**Can it be run on dev/staging app groups?**
 - Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.
 
-__Does this consume data points?__
+**Does this consume data points?**
 - This feature does not cost data points.
 
-__What is the recommended deprecation period?__
+**What is the recommended deprecation period?**
 - We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}

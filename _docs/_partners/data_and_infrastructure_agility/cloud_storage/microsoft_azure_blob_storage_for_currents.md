@@ -34,7 +34,7 @@ In Microsoft Azure, navigate to **Storage Accounts** in the sidebar and click **
 
 Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.
 
-![Azure Blob]({% image_buster /assets/img/azure-currents-step-1.png %})
+![]({% image_buster /assets/img/azure-currents-step-1.png %})
 
 ### Step 2: Get connection string
 
@@ -46,7 +46,7 @@ Microsoft provides two access keys to maintain connections using one key while r
 Braze Currents uses the connection string from this menu, not the key.
 {% endalert %}
 
-![Azure Blob]({% image_buster /assets/img/azure-currents-step-2.png %})
+![]({% image_buster /assets/img/azure-currents-step-2.png %})
 
 ### Step 3: Create a blob service container
 
@@ -54,7 +54,7 @@ Navigate to the **Blobs** menu under the **Blob Service** section of your storag
 
 Provide a name for your Blob Service Container. Other default settings will not need to be updated.
 
-![Azure Blob]({% image_buster /assets/img/azure-currents-step-3.png %})
+![]({% image_buster /assets/img/azure-currents-step-3.png %})
 
 ### Step 4: Setting up Currents in Braze
 
@@ -66,7 +66,7 @@ Next, provide your connection string, container name, and BlobStorage prefix (op
 It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-![Microsoft Azure Blob storage Currents in Braze][1]
+![The Microsoft Azure Blob storage Currents page in Braze. On this page exist fields for integration name, contact email, connection string, container name, and prefix.][1]
 
 Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 

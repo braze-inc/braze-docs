@@ -15,13 +15,13 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Data Protection Technical Assistance
 
-In recent years there has been a range of new data protection laws that regulate what organizations can do with personal data (__Data Protection Laws__), including the European Union General Data Protection Regulation (__GDPR__), the California Consumer Privacy Act (__CCPA__) along with more established laws like the Health Insurance Portability and Accountability Act (__HIPAA__). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
+In recent years there has been a range of new data protection laws that regulate what organizations can do with personal data (**Data Protection Laws**), including the European Union General Data Protection Regulation (**GDPR**), the California Consumer Privacy Act (**CCPA**) along with more established laws like the Health Insurance Portability and Accountability Act (**HIPAA**). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
 
 The Braze Platform can assist you in your compliance with these Data Protection Laws by providing technical features to facilitate certain actions required under such laws. It is up to each customer to determine which Data Protection Laws apply to their business, and to act in compliance with them. 
 
 This document provides technical instructions to enable you to manage, through the Braze Platform, requests from individuals in relation to their personal data rights.
 
-For the purposes of this document, any reference to personal data may also be understood as a reference to personal information or personally identifiable information (__Personal Data__). In the interests of simplicity, we rely on the language of the GDPR when explaining the rights of end users and how you may facilitate these. The language of the GDPR is often interchangeable or closely aligned with a defined term or concept from other Data Protection Laws. For example, the section below on “The Right To Erasure” may be equated with the “Right to Delete” under the CCPA.  
+For the purposes of this document, any reference to personal data may also be understood as a reference to personal information or personally identifiable information (**Personal Data**). In the interests of simplicity, we rely on the language of the GDPR when explaining the rights of end users and how you may facilitate these. The language of the GDPR is often interchangeable or closely aligned with a defined term or concept from other Data Protection Laws. For example, the section below on “The Right To Erasure” may be equated with the “Right to Delete” under the CCPA.  
 
 ## Legal Disclaimer
 

@@ -10,7 +10,9 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 
 # Initial SDK setup
 
-**Note**:  Our tvOS SDK currently supports analytics functionality and fetching News Feed data.  To add a tvOS app in your dashboard please open a [support ticket][support].
+{% alert note %}
+Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket][support].
+{% endalert %}
 
 Installing the Braze SDK will provide you with basic analytics functionality.
 
@@ -20,17 +22,16 @@ The tvOS Braze SDK should be installed or updated using [CocoaPods][apple_initia
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
 
-Simply run the following command to get started:
+Run the following command to get started:
 
 ```bash
 $ sudo gem install cocoapods
 ```
 
-__Note__: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
-
-__Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+- If you are prompted to overwrite the `rake` executable, refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
+- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
 
 ### Step 2: Constructing the podfile
 
@@ -44,7 +45,7 @@ target 'YourAppTarget' do
 end
 ```
 
-__Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-tvOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-tvOS-SDK'` in your Podfile.
+We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like `pod 'Appboy-tvOS-SDK' ~> Major.Minor.Build`. If you want to ,automatically integrate the latest Braze SDK version, even with major changes, you can use `pod 'Appboy-tvOS-SDK'` in your Podfile.
 
 ### Step 3: Installing the Braze SDK
 
@@ -53,9 +54,9 @@ To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app p
 pod install
 ```
 
-At this point you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
+At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
-![New Workspace][apple_initial_setup_15]
+![][apple_initial_setup_15]
 
 ### Step 4: Updating your app delegate
 
@@ -76,6 +77,8 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
      withLaunchOptions:launchOptions];
 ```
 
+Lastly, update `YOUR-API-KEY` with the correct value from your **Manage Settings** page.
+
 {% endtab %}
 {% tab swift %}
 
@@ -85,7 +88,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 import AppboyTVOSKit
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
+For more information about using Objective-C code in Swift projects, see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
@@ -93,52 +96,44 @@ In `AppDelegate.swift`, add following snippet to your `application(application: 
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+Next, update `YOUR-API-KEY` with the correct value from your **Manage Settings** page.
+
+Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
-{% endalert %}
 
 {% alert warning %}
 Be sure to initialize Braze in your application's main thread. Initializing asynchronously can lead to broken functionality.
 {% endalert %}
 
-
 ### Step 5: Specify your custom endpoint or data cluster
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
+As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
 {% endalert %}
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Compile-time endpoint configuration (recommended)
-If given a pre-exisiting custom endpoint...
+If given a pre-existing custom endpoint:
 - Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 #### Runtime endpoint configuration
-
-If given a pre-exisiting custom endpoint...
+If given a pre-exisiting custom endpoint:
 - Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
 Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has been removed in Braze iOS SDK v3.17.0. If you already use `ABKAppboyEndpointDelegate`, note that in Braze iOS SDK versions v3.14.1 to v3.16.0, any reference to `dev.appboy.com` in your `getApiEndpoint()` method must be replaced with a reference to `sdk.iad-01.braze.com`.
 {% endalert %}
 
-{% alert important %}
-To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
-{% endalert %}
-
 ### SDK integration complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
+Braze should now be collecting data from your application, and your basic integration should be complete. Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
 
 ### Updating the Braze SDK via CocoaPods
 
-To update a Cocoapod simply run the following commands within your project directory:
+To update a Cocoapod, simply run the following commands within your project directory:
 
 ```
 pod update
@@ -176,14 +171,12 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-__Note__: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above and is called with the following parameters:
 
-This method is called with the following parameters:
-
-- `YOUR-API-KEY` – Your application's API Key from the Braze dashboard
-- `application` – The current app
-- `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
-- `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
+- `YOUR-API-KEY`: Your application's API key is found under **Manage Settings** in the Braze dashboard.
+- `application`: The current app.
+- `launchOptions`: The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`.
+- `appboyOptions`: An optional `NSDictionary` with startup configuration values for Braze.
 
 See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
 
@@ -197,7 +190,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repo][1] and initialize Braze as outlined above.
 
 ## Identifying users and reporting analytics
-See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 [1]: https://github.com/appboy/appboy-ios-sdk
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/

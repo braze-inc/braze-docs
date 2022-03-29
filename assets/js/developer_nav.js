@@ -33,8 +33,8 @@ $(document).ready(function () {
       }
     }
     
-    // if no platform is selected, show all platforms
-    if (!dev_selected && !url_selected) {
+    // if no platform is selected, or in the discolure menu, show all platforms
+    if ( !dev_selected && !url_selected || (location.pathname.indexOf('disclosures') > -1) || (location.pathname.indexOf('platform_wide') > -1) ) {
       platform_objects.each(function () {
         var id = $(this).attr('id');
         show(id);

@@ -111,7 +111,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
     You can control other aspects of your Canvas' behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the Dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
+    With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
 
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -216,7 +216,7 @@ By default, Filters and Segments for **Full Steps** in Canvas are checked at sen
 
 #### Messages in Canvas
 
-Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send email, mobile, and Web push messages, and Webhooks to integrate with other systems.
 
 Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
 
@@ -235,7 +235,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 - For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-__Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
+**Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step**! 
 
 For more information on the Canvas Entry Properties Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endtab %}

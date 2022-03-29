@@ -12,74 +12,63 @@ search_tag: Partner
 
 > Transifex enables robust localization across your user base, no matter the language. 
 
-The Transifex and Braze integration leverage Connected Content, allowing you to include a source string in your messages instead of lines of language-based conditional formatting. This, in turn, automates translation and frees up your teams to focus on delivering brilliant customer experiences.
+The Braze and Transifex integration leverages Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 {% alert important %}
-As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational and relevant requests will begin to fail.
+As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. <br><br>The following integration instructions reflect this version 3 update. Please update your Connected Content calls accordingly.
 {% endalert %}
 
 ## Prerequisites
 
 | Requirement| Description|
 | ---| ---|
-|Transifex Account | A [Transifex account](https://www.transifex.com/signin/) is required to take advantage of this partnerhsip. |
+|Transifex Account | A [Transifex account](https://www.transifex.com/signin/) is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
-### Step 1: Set up basic authentication
+The Transifex integration uses Transifex's [resource translations API](https://developers.transifex.com/reference/get_resource-translations). The following cURL will allow you to see if your account has content values associated with translations. 
 
-To set up basic authentication for your account, navigate to the Braze platform, under __Manage Settings__, open the __Connected Content__ tab. Here you will provide the credentials used for all Connected Content calls to Transifex.
-
-![Basic Authentication Credential Management][34]
-
-Click __New Credential__, name your credential, and add your user name and password for your Transifex account.
-
-![Basic Authentication Credential Creation][35]{: style="max-width:35%" }
-
-### Step 2: Connected Content
-
-The Transifex integration uses Transifex's translation [strings API][31]. The following cURL will allow you to see if your Transifex account has context values associated with translations. Input the `<PROJECT_NAME>` and `<RESOURCE_NAME>` found in your Transifex account. 
+First, input the `<ORGANIZATION_NAME>`, `<PROJECT_NAME>`, and `<RESOURCE_NAME>` found in your Transifex account. Next, replace `<LANGUAGE>` with the language code you would like to filter translations by, and `<TRANSIFEX_BEARER_TOKEN>` with your Transifex [bearer token](https://developers.transifex.com/reference/api-authentication).
 
 ```
-curl -i -L --user username:password -X GET https://www.transifex.com/api/2/project/<PROJECT_NAME>/resource/<RESOURCE_NAME>/translation/en/strings
+curl --request GET \
+     --url 'https://rest.api.transifex.com/resource_translations?filter\[resource\]=o:<ORGANIZATION_NAME>:p:<PROJECT_NAME>:r:<RESOURCE_NAME>&filter\[language\]=l:<LANGUAGE>' \
+     --header 'Accept: application/vnd.api+json' \
+     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475e3d61671ac795302'
 ```
 
 For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
-An example response with a blank context field is pictured below:
-
-![Terminal response][33]{: style="max-width:60%;"}
-
 ## Connnected Content message example
 
-This example code snippet utilizes the Transifex Strings API and the user's `language` attribute. 
+This example code snippet utilizes the Transifex resource translation API and the user's `language` attribute. Based on your needs, you can then loop through the string objects and pull in the relevant content using the following Liquid: `{{strings.data[X].attributes.strings.other}}`.
 
 {% raw %}
 ```
-{% assign key = "<API_KEY>" %}
-{% assign context = "<CONTENT>" %}
-{% assign source_string = key | append: ':' | append: context %}
+{% assign organization = "<ORGANIZATION_NAME>" %}
 {% assign project = "<PROJECT_NAME>" %}
 {% assign resource = "<RESOURCE_NAME>" %}
-{% assign source_hash = source_string | md5 %}
 
 {% if {{${language}}} == "en" or {{${language}}} == "it" or {{${language}}} == "de" or {{${language}}} == "another_language_you_support"  %}
-{% connected_content https://www.transifex.com/api/2/project/{{project}}/resource/{{resource}}/translation/{{${language}}}/string/{{source_hash}}/ :basic_auth <Insert Basic Auth Credential Name Here> :save strings %}
+{% connected_content
+     https://rest.api.transifex.com/resource_translations?filter[resource]=o:{{organization}}:p:{{project}}:r:{{resource}}&filter[language]=l:{{${language}}}
+     :method GET
+     :headers {
+       "Authorization": "Bearer <TRANSIFEX_BEARER_TOKEN>"
+  }
+     :accept application/vnd.api+json
+     :save strings
+%}
 {% endif %}
 
-{% if {{strings}} != null and {{strings.translation}} != "" and {{${language}}} != null %}
-  {{strings.translation}}
+{% if {{strings}} != null and {{strings.data[0].attributes.strings.other}} != "" and {{${language}}} != null %}
+  {{strings.data[0].attributes.strings.other}}
 {% else %}
   {% abort_message('null or blank') %}
 {% endif %}
 ```
 {% endraw %}
-
-{% alert tip %}
-You can also leverage the user's {% raw %}`{{${most_recent_locale}}}`{% endraw %} if you want to include a variation based upon a user's specific version of a language such as `zh_CN` or `pt_BR`.
-{% endalert %}
-
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings

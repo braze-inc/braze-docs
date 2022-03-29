@@ -18,33 +18,33 @@ IP Warming is designed to help you establish a positive reputation with ISPs (In
 
 ## What if I don't have time to warm IPs?
 
-__IP Warming is required.__ If you fail to warm IPs appropriately, and the pattern of your email causes any suspicion, any or all of the following may happen:
+**IP Warming is required.** If you fail to warm IPs appropriately, and the pattern of your email causes any suspicion, any or all of the following may happen:
 
-1. __Your email delivery speed could be significantly throttled or slowed.__
+1. **Your email delivery speed could be significantly throttled or slowed.**
       - ISPs throttle email delivery when suspicion of spam arises so that they can protect their users. For example, if you send to 100000 users, the ISP might deliver the email only to 5000 of those users over the first hour. The ISP then monitors measures of engagement such as open rates, click rates, unsubscribes, and spam reports.
       - If a significant number of spam reports occur, they might choose to relegate the remainder of that send to the spam folder rather than delivering it to the user's inbox.
       - If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the mail is spam with more certainty.
       - If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.<br><br>
-2. __Your domain and or IP could be blacklisted by the ISPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.__
-  - If this occurs, the response codes in the __Braze Developer Console__ will contain information about what websites to visit to appeal to these ISPs to get off those lists.
+2. **Your domain and or IP could be blacklisted by the ISPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.**
+  - If this occurs, the response codes in the **Braze Developer Console** will contain information about what websites to visit to appeal to these ISPs to get off those lists.
 
 ## IP warming best practices
 
 All of the above consequences are entirely avoidable if you follow the following guidelines:
 
-1. __Start by sending small volumes of email, and increase the amount you send each day as gradually as possible.__<br>
+1. **Start by sending small volumes of email, and increase the amount you send each day as gradually as possible.**<br>
 Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. Please see the schedule below for details.<br><br>
-2. __Ensure that your first content is highly engaging and maximizes the likelihood that users click, open, and engage with your email.__<br>Always prefer well-targeted emails to indiscriminate blasts when warming IPs.<br><br>
-3. __When IP warming is complete, continue sending as consistent a cadence as possible.__<br>
+2. **Ensure that your first content is highly engaging and maximizes the likelihood that users click, open, and engage with your email.**<br>Always prefer well-targeted emails to indiscriminate blasts when warming IPs.<br><br>
+3. **When IP warming is complete, continue sending as consistent a cadence as possible.**<br>
 IPs can cool down if volume stops or significantly decreases for more than a few days.<br><br>
-4. __Spread your email sends across a day or several days.__<br>
+4. **Spread your email sends across a day or several days.**<br>
 Features like Braze's Local Time Zone delivery and [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) can help automatically spread your send across a longer timeframe, rather than sending a mass blast at a single specific time.<br><br>
-5. __Ensure that your email list is clean and doesn't have old or un-verified emails.__<br>Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.<br><br>
-6. __Carefully monitor your Sender Reputation while you conduct the IP warming process.__ <br>
+5. **Ensure that your email list is clean and doesn't have old or un-verified emails.**<br>Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.<br><br>
+6. **Carefully monitor your Sender Reputation while you conduct the IP warming process.** <br>
 The following metrics are important to watch during warming:
-- __Bounce Rates__: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
-- __Spam Reports__: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
-- __Sender Reputation Scores__: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
+- **Bounce Rates**: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
+- **Spam Reports**: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
+- **Sender Reputation Scores**: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
 
 ## IP warming schedules
 
@@ -75,7 +75,7 @@ Once warming is complete and you've reached your desired daily volume, you shoul
 
 ## How to limit sends during warming
 
-Braze's built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-5-choose-your-target-segment) step, select the __Advanced Options__ dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
+Braze's built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-5-choose-your-target-segment) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
 
 ![Limit Users][18]
 

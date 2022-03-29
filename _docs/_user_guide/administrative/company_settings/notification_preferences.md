@@ -15,7 +15,7 @@ If you would like to monitor the messaging and activity in your company account,
 |---|---|---|
 | AWS Credential Errors | When Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Email, Webhook |
 |Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
-|Newsfeed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
+|Newsfeed Card Published/Live | Notifies recipients when News Feed cards are scheduled or published. | Email, Webhook |
 |Push Credential Errors |  Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 |Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to. | Email, Webhook |
 |Scheduled Campaign Limit Met  | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |

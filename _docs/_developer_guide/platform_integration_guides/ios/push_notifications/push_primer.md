@@ -11,14 +11,14 @@ channel:
 
 # Push primer integration
 
-> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate Push Priming.
+Push primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help! This guide shows the steps developers must make to integrate push priming.
 
 ## Step 1: Add snippet in AppDelegate.m file
 
+Add the following line of code to your `AppDelegate.m` file in place of the standard integration:
+
 {% tabs %}
 {% tab OBJECTIVE-C %}
-
-Add the following line of code to your `AppDelegate.m` file in place of the standard integration:
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -49,8 +49,6 @@ if (@available(iOS 10.0, *)) {
 {% endtab %}
 {% tab swift %}
 
-Add the following line of code to your `AppDelegate.m` file in place of the standard integration:
-
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -79,10 +77,10 @@ if #available(iOS 10, *) {
 
 ## Step 2: Append custom event checker to AppDelegate.m file
 
+The following code snippet checks if a custom event needs to be fired. Add the following line of code to your `AppDelegate.m`.
+
 {% tabs %}
 {% tab OBJECTIVE-C %}
-__Checks if a custom event needs to be fired__<br>
-Add the following line of code to your `AppDelegate.m` in addition to the one above.
 ```objc
 if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -104,8 +102,6 @@ if (@available(iOS 10.0, *)) {
 ```
 {% endtab %}
 {% tab swift %}
-__Checks if a custom event needs to be fired__<br>
-Add the following line of code to your `AppDelegate.m` in addition to the one above.
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -122,19 +118,20 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
     // ...
     // fire custom event
     // ...
+  }
+}
 ```
-}
-}
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Set up deeplink handler
+## Step 3: Set up a deep link handler
+
+Place this following code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from [step 1](#step-1-add-snippet-in-appdelegatem-file).
+
+Refer to [link handling customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) for more information on deep linking.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
-__Deep Link Handler__<br>
-Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
-For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
 ```objc
   // ...
   // check that this deep link relates to the push prompt
@@ -156,9 +153,7 @@ For more information on deep linking check out our [documentation]({{site.baseur
 ```
 {% endtab %}
 {% tab swift %}
-__Deep Link Handler__<br>
-Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
-For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings).
+
 ```swift
   // ...
   // check that this deep link relates to the push prompt

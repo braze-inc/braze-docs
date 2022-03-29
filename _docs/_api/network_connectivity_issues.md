@@ -28,7 +28,7 @@ For more information about MTR, check out these resources based on your operatin
 
 ## Whitelisting Braze's API endpoint IP ranges
 
-To whitelist Braze's API endpoint through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. You can access the public list of Fastly IP ranges [here][3].
+To whitelist Braze's API endpoint through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. For a list of Fastly IP ranges, refer to their [public IP list][3].
 
 
 [1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2

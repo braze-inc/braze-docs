@@ -10,9 +10,9 @@ description: "This reference article addresses the data that is collected by the
 # SDK data collection options
 
 Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
-- __Personalized Integration__; integrators have the flexibility to collect data in addition to Automatically Collected Data.
-- __Automatically Collected Integration__; integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
-- __Minimum Integration__; integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze Services. 
+- **Personalized Integration**; integrators have the flexibility to collect data in addition to Automatically Collected Data.
+- **Automatically Collected Integration**; integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
+- **Minimum Integration**; integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze Services. 
 
 ## Personalized integration 
 
@@ -34,7 +34,6 @@ Listed below are the automatically captured data generated and received by Braze
 | Device Locale | Android, iOS | The default locale of the device. | Used to translate messages to a user’s preferred language. |
 | Device Model | Android, iOS | The specific hardware of the device. | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
 | Device Wireless Carrier | Android, iOS | The mobile carrier. | It can optionally be used for message targeting. |
-| IDFA | iOS | The advertiser identifier. | This value is only sent to Braze when (1) users opt-in, and (2) the IDFA is set in the Braze SDK integration. |
 | Country | Android, iOS, Web | Country | Identified via IP Address Geolocation. It can be used to target messages based on location. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -50,8 +49,8 @@ Listed below is the strictly necessary data generated and received by Braze when
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
 | OS and OS Version | Android, iOS, Web | Currently reported device/browser and device/browser version. | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
-| IDFV | iOS | Device identifier. | Used to identify anonymous users, differentiate users' devices, and ensure messages are sent to the correct intended device. |
-| Device ID | Android, iOS, Web | Device identifier, an out-of-the-box randomly generated string. | Used to identify anonymous users, differentiate users' devices, and ensure messages are sent to the correct intended device. |
+| IDFV | iOS | Device identifier. | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
+| Device ID | Android, iOS, Web | Device identifier, an out-of-the-box randomly generated string. | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
 | Session ID & Session Timestamp | Android, iOS, Web | Session identifier, an out-of-the-box randomly generated string and session timestamp. | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze’s servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
 | SDK Version | Android, iOS, Web | Current SDK version. | Used to ensure messages are only sent to compatible devices and to ensure no disruption of the service. |
 | App-Version-Name /<br> App-Version-Code | Android, iOS, Web | App version name. | Used to ensure messages related to app version compatibility are sent to the correct devices. It can be used to notify users of service disruption or bugs. |
@@ -62,8 +61,8 @@ The Braze backend/service generates metrics calculated on SDK data (e.g., total 
 
 {% alert important %}
 If you are interested in the Minimum Integration only, and you integrate with mParticle, Segment, Tealium, or GTM, please note the following:
-- __Mobile Platforms__: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
-- __Web__: Braze integration must be done natively to allow for Minimum Integration configuration. Tag managers do not offer a way to do this through their platform. 
+- **Mobile Platforms**: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
+- **Web**: Braze integration must be done natively to allow for Minimum Integration configuration. Tag managers do not offer a way to do this through their platform. 
 
 {% endalert %} 
 

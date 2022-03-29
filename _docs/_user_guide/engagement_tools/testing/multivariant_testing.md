@@ -17,7 +17,7 @@ An A/B test is an experiment that compares users’ responses to multiple versio
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after 1 hour of inactivity versus 1 day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Suppose you have two options for a push notification:
@@ -58,23 +58,23 @@ Multivariate and A/B testing can unveil powerful insights regarding your users. 
 
 Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
-![Create Your Campaign][160]{: style="max-width:30%" }
+![][160]{: style="max-width:30%" }
 
 ### Step 2: Compose your variants
 
-You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test. 
+You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test—an A/B test examines the effect of changing one variable, whereas a multivariate test examines two or more.
 
-For some ideas on how to get started differentiating your variants, see the section in this article on [Tips for different channels][70].
+![][170]
 
-![Compose Your Variants][170]
+For some ideas on how to get started differentiating your variants, refer to [Tips for different channels][70].
 
 ### Step 3: Schedule your campaign
 
-Test scheduling works the same as scheduling any other Braze campaign. All of Braze's standard [delivery types][175] are available.
+Test scheduling works the same as scheduling any other Braze campaign. All of Braze's standard [delivery types][175] are available. However, the option to send a winning variant automatically is only available when you schedule a campaign to deliver once for select messaging channels.
 
 ### Step 4: Choose a segment and distribute your users across variants
 
-Select segments to target, then distribute its members across your selected variants, as well as reserving a portion to send to the winning variant, if necessary.
+Select segments to target, then distribute its members across your selected variants. For push, email, and webhook campaigns scheduled to send once, you can also reserve a portion to send to the winning variant, if necessary.
 
 Decide what percentage of your target segment should receive each of your variants, be in the control group (if any), and what percentage should receive the winning variant once the A/B test is complete.
 
@@ -86,21 +86,32 @@ When viewing your results, you can compare the conversion rates of your variants
 
 The size of the control group for a campaign with [Intelligent Selection][intelselection] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have multiple variants such that each variant is sent to less than 20% of users, then the control group must become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
+![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
+
+For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
-Sending the winning variant automatically is only available for Email, Push, and Webhook campaigns scheduled to send once.
+#### Sending the winning variant
 
-![Choose a Segment][180]
+For email, push, and webhook campaigns scheduled to send once, you can reserve a portion of your audience for the "Winning Variant" group. Users in this group will receive the winning variant once the A/B test is complete.
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+![An example of the winning variant when A/B testing with email, push, or webhook campaigns.][10]
+
+Specify what percentage of your campaign audience should be assigned to the Winning Variant group, then configure the following additional send settings:
+
+- What determines the winning variant
+- When the A/B test starts
+- When the A/B test ends
+- What to do if the test results aren't statistically significant (abort message or send anyways)
 
 ### Step 5: Pick the action that determines the winner
 
-The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner does not affect what you choose for the campaign’s [conversion events][2].
+The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner does not affect what you choose for the campaign’s [conversion events][2].
 
-Keep in mind that if you’re using a control group, users in the control group can't perform `Opens` or `Clicks`, so the “performance” of the control group is guaranteed to be `0`. As a result, the control group cannot “win” the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message.
+Keep in mind that if you’re using a control group, users in the control group can't perform `Opens` or `Clicks`, so the “performance” of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message.
 
 ### Step 6: Schedule when to send the winning variant
 
@@ -130,7 +141,7 @@ If one variant outperformed all the others with better than 95% [confidence][con
 
 On the analytics page, you can also see the performance of the Winning Variant throughout the campaign (including the A/B test sends).
 
-![View Results][210]
+![][210]
 
 {% alert note %}
 Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
@@ -195,7 +206,7 @@ For instance, while active users may have equal response rates to “This deal e
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 
 {% alert tip %}
-As a crude guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
 {% endalert %}
 
 ## Recommended follow-ups {#recommended-follow-ups}
@@ -234,6 +245,7 @@ If you’re A/B testing re-engagement messages, don’t forget to compare the lo
 [175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
 [180]: {% image_buster /assets/img/ab_create_4.png %}
 [210]: {% image_buster /assets/img/ab_create_8.png %}
+[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
 [272]: #intelligent-selection
 [273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [intelselection]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/

@@ -10,7 +10,7 @@ channel:
 
 # Gmail Promotion tool
 
-Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
 ## Building the card with Braze
 
@@ -18,11 +18,11 @@ Building the card in Braze is easy!
 
 First, create your email campaign, as you normally would. Then, as you're editing the content of your email, click the **Gmail Promo** tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
 
-![Build Your Card][2]
+![GIF that shows an example of how to build a card.][2]
 
-After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the "`<head>` "section/element of your email's `HTML`.
+After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the `<head>` element of your email's HTML.
 
-![Copy Your Script][3]
+![GIF that shows how to copy your script to paste into the email's HTML body.][3]
 
 {% alert warning %}
 
@@ -34,15 +34,15 @@ The Promotions script will only appear if your email lands in the Gmail **Promot
 
 You can customize many variables for your card, which will map to the locations shown in the card layout below.
 
-![Promo Card Map][4]
+![Card layout that maps out the parameters for the company logo, sender, subject line, discount offer and discount code, and related images.][4]
 
 | Customizable Variable | Description |
 |---|---|
 | Company Logo | Logos should be a square or circle shape and should be uploaded in "`https` ", not "`http` ".|
 | Product Image (Single Image Preview)| This is a blank Canvas for you to bring in product or lifestyle images. In Gmail's preview, they show a sample image that is "`538x138` "with a "`3.9` "aspect ratio. |
 | Discount Offer (Green Deal Badge)| One or two words used to quickly highlight an offer or as a call to action, such as "Free Gift", "2 for 1", or "Limited Offer." |
-| Discount Code (Promo Code)| Use your regular promo code. Only use if there is a promo code. |
-| Expiration Date | The start date should be when your email sends or the promotion starts (if this date is in the future, your email __will not populate__ in a bundle). The end date should only be used if you have an expiring offer, and the date needs to be in the future. Old or past-due expiration dates will cause our system to see the offer as stale and will not preview your email. |
+| Discount Code (Promotion Code)| Use your regular promo code. Only use if there is a promo code. |
+| Expiration Date | The start date should be when your email sends or the promotion starts (if this date is in the future, your email **will not populate** in a bundle). The end date should only be used if you have an expiring offer, and the date needs to be in the future. Old or past-due expiration dates will cause our system to see the offer as stale and will not preview your email. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}

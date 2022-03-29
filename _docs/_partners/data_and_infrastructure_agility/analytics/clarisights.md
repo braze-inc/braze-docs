@@ -33,17 +33,17 @@ With the Braze and Clarisights integration, users can create different visualiza
 {% tab Better visibility %}
 Better visibility on overall campaigns and Canvases performance.
 
-![Better visability]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
+![A graphic showing an example of better visability in the Clarisights platform. This graphic includes statisticcs for campaign and Canvas opens, clicks, sent, converstions, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
 {% tab Granular reporting %}
 Granular reporting for campaigns and Canvases.
 
-![Granular reporting]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
+![A graphic showing granular reporting, like "overall sent by send channel" and "conversion rate".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
 {% tab Unified dashboards %}
 Unified dashboards for CMOs and CXOs.
 
-![Unified dashboards]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
+![A graphic showing an example of unified dashboards.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
 {% endtab %}
 {% endtabs %}
 
@@ -51,8 +51,8 @@ Unified dashboards for CMOs and CXOs.
 
 To sync Braze data to Clarisights, you must build a Braze connector and connect Braze app groups.
 
-1. In Clarisights, navigate to the **Integrations** page, locate the **Braze** connector, and select **+ Connect**.<br>![Image 3][6]<br><br>
-2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze app group name, and Braze REST endpoint.<br>![Image 4][7]<br><br>Before successful integration, users will see the connected app groups on the same page.<br>![Image 6][9]<br><br>
+1. In Clarisights, navigate to the **Integrations** page, locate the **Braze** connector, and select **+ Connect**.<br>![A list of avalable connectors from the Clarisights integrations marketplace.][6]<br><br>
+2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze app group name, and Braze REST endpoint.<br>![Braze app group connector in the Clarisights platform. This page has fields for Braze app group name, Braze REST API key, and Braze REST endpoint.][7]<br><br>Before successful integration, users will see the connected app groups on the same page.<br>![Within "Braze Accounts" you will find a list of connected app groups.][9]<br><br>
 
 ## Using this integration
 
@@ -60,7 +60,7 @@ To include Braze as a data source in your Clarisights reports, navigate to **Cre
 
 The data from Braze will start flowing from the time of the next scheduled data import. Reach out to your Clarisights customer success manager to request backfills for longer durations. 
 
-![Image 5][8]
+![Clarisight report settings showing fields for name and data source. For this example, "Braze" is selected as the data source.][8]
 
 Visit Clarisights for more information on available [metrics and dimensions][10] or [report creation][11].
 

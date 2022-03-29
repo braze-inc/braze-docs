@@ -18,7 +18,7 @@ Campaigns sent through the <a href="{{site.baseurl}}/api/endpoints/messaging/"> 
 
 ## Create a new campaign
 
-Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __API Campaigns__. Now, you can move on to configuring your API campaign.
+Navigate to the **Campaigns** page in your company Braze account and click **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
 
 {% alert note %}
 An [API-triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) is different from an API campaign.
@@ -33,7 +33,6 @@ To configure your campaign, perform the following steps:
 3. Optionally, You can add a conversion event to track user conversions on a specific action or campaign goal.
 4. Click **Save Campaign** and you're set to begin your API campaign!
 
-![Create API Campaigns][4]
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
-[4]: {% image_buster /assets/img/createapicampaigns.gif %} "API Campaign Creation"
+

@@ -25,7 +25,7 @@ You can now set up message close behavior for Chrome web pushes that requires th
 
 ## Email preheaders
 
-When creating an email message within Braze, you can now easily insert a preheader in the "Sending Info" section.
+When creating an email message within Braze, you can now easily insert a preheader in the **Sending Info** section.
 
 ## New API endpoint for raw event export
 

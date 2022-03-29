@@ -36,11 +36,11 @@ A site is deemed secure if it matches one of the following secure origin pattern
 - (file, *, —)
 - (chrome-extension, *, —)
 
-This is a security requirement in the open standards specification that Braze Web Push is built on, and prevents man-in-the-middle attacks.
+This is a security requirement in the open standards specification that Braze Web push is built on, and prevents man-in-the-middle attacks.
 
 ### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a working demo [here][4].
 
 ## Step 1: Configure your site's service worker
 
@@ -65,7 +65,7 @@ If you are unable to register a Service Worker in your root domain, an alternati
 
 In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This will immediately request push permission from the user. 
 
-If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze In-App Messages. 
+If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze in-app messages. 
 
 If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
 
@@ -77,13 +77,13 @@ Recent versions of Safari and Firefox require that you call this method from a s
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
-* [Generate a Safari Push Certificate following these "Registering with Apple" instructions][3]
+* [Generate a safari push certificate following these "Registering with Apple" instructions][3]
 * In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
-* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
+* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
 ## Common issues
 
-__I followed the integration instructions but I'm still not receiving any push notifications.__
+**I followed the integration instructions but I'm still not receiving any push notifications.**
 
 - Not all browsers can receive push messages. Please ensure that ```appboy.isPushSupported()``` returns true in the browser.
 - Note that if a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.
@@ -91,7 +91,7 @@ __I followed the integration instructions but I'm still not receiving any push n
 
 ## Soft push prompts
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered In-App Messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
 
 1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
   - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?")
@@ -143,6 +143,17 @@ When you wish to display the soft push prompt to the user, call `appboy.logCusto
 ```
 appboy.openSession();
 appboy.logCustomEvent("prime-for-push");
+```
+
+## Service Worker Advanced Settings
+
+Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, above importing Braze:
+
+```javascript
+self.addEventListener('install', (event) => {
+  event.stopImmediatePropagation();
+}); 
+self.importScripts('https://js.appboycdn.com/web-sdk/3.4/service-worker.js');
 ```
 
 [1]: http://www.w3.org/TR/push-api/

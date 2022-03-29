@@ -11,9 +11,9 @@ channel:
 
 # Customization
 
-Customizing Content Cards and the feed they are located in must be done during in the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
+Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these [customization approaches][1] in our user guide.
 
-It's also important to consider whether you should use a subclassing strategy versus a complete view controller customization. For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method ([below](#overriding-populated-content-cards)) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on a observer to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
+It's also important to consider whether you should use a subclassing strategy versus a complete view controller customization. For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method ([below](#overriding-populated-content-cards)) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on an observer to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
 
 ## Overriding default images
 
@@ -21,28 +21,24 @@ It's also important to consider whether you should use a subclassing strategy ve
 Integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app's image bundle. Then, rename the file with the image's name (see below) to override the default image in our library. Images available for override in Content Cards include:
+Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app's image bundle. Then, rename the file with the image's name (see below) to override the default image in our library. Also, be sure to upload the `@2x` and `@3x` versions of the images to accommodate different phone sizes. Images available for override in Content Cards include:
 
-- Placeholder image: `appboy_cc_noimage_lrg`.
-- Pinned icon image: `appboy_cc_icon_pinned`.
+- Placeholder image: `appboy_cc_noimage_lrg`
+- Pinned icon image: `appboy_cc_icon_pinned`
 
-Because Content Cards have a maximum size of 2 KB for content you enter in the dashboard (including message text, image URLs, links, and all key-value pairs), make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
+Because Content Cards have a maximum size of 2 KB for content you enter in the dashboard (including message text, image URLs, links, and all key-value pairs), check the size before sending. Exceeding this amount will prevent the card from sending.
 
-{% alert note %}
-Be sure to upload the `@2x` and `@3x` versions of the images to accommodate different phone sizes.
-{% endalert %}
-
-{% alert note %}
+{% alert important %}
 Overriding default images is currently not supported in our Xamarin iOS integration.
 {% endalert %}
 
 ## Customizing the Content Cards feed
 
-You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom Storyboard that registers the new classes. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. Alternatively, you can create a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/). In the latter case, you would need to log all view events, dismissed events, and clicks manually.
+You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom storyboard that registers the new classes. Check out the Content Cards [sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. Alternatively, you can create a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/). In the latter case, you would need to log all view events, dismissed events, and clicks manually.
 
 ### Customizing UI
 
-The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
+The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
 
 There exist two distinct ways to customize Content Card UI: 
 - Dynamic method: update card UI on a per-card basis
@@ -50,7 +46,7 @@ There exist two distinct ways to customize Content Card UI:
 
 #### Dynamic UI
 
-The Content Card `applyCard` method can reference the card object and pass it key-value pairs that will be used to update the UI.
+The Content Card `applyCard` method can reference the card object and pass it key-value pairs that will be used to update the UI:
 
 {% tabs %}
 {% tab Objective-C %}
@@ -89,7 +85,7 @@ override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
 
 #### Static UI
 
-The `setUpUI` method can assign values to the static Content Card components across all cards. 
+The `setUpUI` method can assign values to the static Content Card components across all cards:
 
 {% tabs %}
 {% tab Objective-C %}
@@ -125,9 +121,9 @@ override func setUpUI() {
 
 Custom interfaces can be provided by registering custom classes for each desired card type. 
 
-![Custom Classes]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Custom Classes]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![Custom Classes]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!" on the right.]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
@@ -160,7 +156,7 @@ override func registerTableViewCellClasses() {
 
 ### Overriding populated Content Cards
 
-Content Cards can be changed programmatically using the `populateContentCards` method.
+Content Cards can be changed programmatically using the `populateContentCards` method:
 
 {% tabs %}
 {% tab Objective-C %}
@@ -195,7 +191,7 @@ override func populateContentCards() {
 
 ## Handling clicks manually
 
-You can manually handle Content Card clicks by implementing the [ABKContentCardsTableViewControllerDelegate](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 
+You can manually handle Content Card clicks by implementing the [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. Refer to the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 
 
 {% tabs %}
 {% tab Objective-C %}
@@ -250,13 +246,13 @@ If you override the `handleCardClick:` method in `ABKContentCardsTableViewContro
 
 ## Use case: Carousel view
 
-![Sample news app showing carousel of content cards in an article]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. In order to integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze’s views and default logic, but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use Braze’s views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
-In terms of level of development effort, the key differences between the out-of-the-box implementation and the carousel implementation include:
+In terms of the level of development effort, the key differences between the out-of-the-box implementation and the carousel implementation include:
 
 - Building your own views
 - Logging Content Card analytics
@@ -282,15 +278,15 @@ The same page also details the different properties inherited from our generic C
 
 Create a [Content Card observer]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/#step-2-set-up-a-content-card-listener) that is responsible for handling the arrival of Content Cards, and implement conditional logic to display a specific number of cards in the carousel at any one time. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for.
 
-That said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array, or introduce key-value pairs (the `extras` property in the data model) to build conditional logic around.
+That said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array or introduce key-value pairs (the `extras` property in the data model) to build conditional logic around.
 
-If you're implementing a carousel as a secondary Content Cards feed, please refer to [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
+If you're implementing a carousel as a secondary Content Cards feed, refer to [Using multiple Content Card feeds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/) to ensure you sort cards into the correct feed based on key-value pairs.
 
 {% alert important %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs which the developers build into the app logic.
+It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
-For iOS-specific developer documentation on the Content Cards class, methods, and attributes, refer to the iOS [ABKContentCard Class Reference](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html).
+For iOS-specific developer documentation on the Content Cards class, methods, and attributes, refer to the iOS [`ABKContentCard` class reference](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html).
 
 ### Considerations
 

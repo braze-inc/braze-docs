@@ -21,9 +21,9 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | Requirement | Description |
 |---|---|
 | Radar account | A Radar account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard > Developer Console > REST API Key > Create New API Key__ |
-| Group identifier | Your group identifier can be found can be found within the __Braze Dashboard > Developer Console__ page. |
-| iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard > Manage Settings__ page. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key** |
+| Group identifier | Your group identifier can be found can be found within the **Braze Dashboard > Developer Console** page. |
+| iOS API key<br>Android API key | These API keys can be found within the **Braze Dashboard > Manage Settings** page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -31,7 +31,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 To map data between the Braze and Radar SDKs, you must set the same user IDs in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
 To enable the integration on the [Radar integration page](https://www.onradar.com/integrations) under Braze:
-  - Set __Enabled__ to __Yes__
+  - Set **Enabled** to **Yes**
   - Set your Braze endpoint
   - Paste in your group identifier and API keys
   - Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
@@ -50,19 +50,19 @@ You can use custom events and user attributes to build location-based segments o
 
 Send a push notification to the user with arrival instructions as they arrive at your store for a curbside pickup.
 
-![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
+![An action-based delivery campaign showing that the campaign will be delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbisde".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Build an audience segment of recent store visitors
 
 For example, target any users who have visited your store within the past 7 days, whether they made a purchase or not.
 
-![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
+![A segment where "radar_geofence_tags" includes value my_store and "radar_updated_at" was less than 7 days ago.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Connected Content
 
 The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 
-![Connected Content Example][1]{: style="float:right;max-width:30%;border:0;"}
+![An Android image of a Connected Content push message that displays "New In Store Deals, Walmart and target near you".][1]{: style="float:right;max-width:30%;border:0;"}
 
 To get started, you'll need to have your Radar publishable API key on hand to use within your request URLs.
 
@@ -137,7 +137,7 @@ Bringing our use-case together, here is what the syntax of the campaign would lo
 {% raw %}
 ```
 {% connected_content https://api.radar.io/v1/search/places?radius=2000&near={{${most_recent_location}.latitude}},{{${most_recent_location}.longitude}}&chains=target,walmart&limit=5 :method get :headers {"Authorization": "<yourRadarPublishableKey>"} :content_type application/json :save nearbyplaces %}
-{% if nearbyplaces.__http_status_code__ != 200 %}
+{% if nearbyplaces.**http_status_code** != 200 %}
 {% abort_message('Connected Content returned a non-200 http status code') %}
 {% endif %}
 {% if nearbyplaces.meta.code != 200 %}

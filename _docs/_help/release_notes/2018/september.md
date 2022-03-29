@@ -13,7 +13,7 @@ You can now access [Apple's Notification Group features]({{site.baseurl}}/user_g
 
 ## Quiet time
 
-Customers can now specify [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings) (the time during which your messages will not send) for Canvas. Just go to your __Canvas Send Settings__ and check "Enable Quiet Hours". Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
+Customers can now specify [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings) (the time during which your messages will not send) for Canvas. Just go to your **Canvas Send Settings** and check "Enable Quiet Hours". Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
 Campaigns now also use Quiet Time instead of “send this message during a specific portion of the day”.
 
@@ -27,7 +27,7 @@ Customers can now create a segment out of users who are [not included in a certa
 
 ## Canvas recipient CSV exports
 
-Customers can now [export data on the users that have entered a Canvas]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/). The CSV generated will be similar to the Campaign CSV.
+Customers can now [export data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) on the users that have entered a Canvas. The CSV generated will be similar to the Campaign CSV.
 
 ## Provisionally authorized iOS 12 segment filter
 
@@ -35,8 +35,8 @@ A [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segment
 
 ## In-app message image uploader
 
-The image uploader for in-app messages has moved from the design (paintbrush) panel to the compose (pencil) panel.
+The image uploader for in-app messages has moved from the design panel to the compose panel.
 
 ## Read-only permissions on User Profile page
 
-Prior to this release, customers were able to change the subscription status and email address in the user profile with [read-only permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). We renamed the `import_user` permission to `import_and_update_user` permission and restricted edit access to subscription status and email address. Now when a developer is read-only impersonating or lacks this permission, they cannot change the subscription status or email address.
+Prior to this release, customers were able to change the subscription status and email address in the user profile with [read-only permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). We renamed the `import_user` permission to `import_and_update_user` permission and restricted edit access to subscription status and email address. Now when a developer is read-only impersonating or lacks this permission, they cannot change the subscription status or email address.

@@ -14,12 +14,12 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
-- [Email Capture Form](#email-capture-form) - collect email addresses into Braze.
+- [Email capture form](#email-capture-form) - collect email addresses into Braze.
 - [Reusable Color profiles and CSS](#reusable-color-profiles) - save and re-use color profiles for in-app message templates.
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
+Additional customization of the appearance of your in-app messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on in-app messages for more details.
 {% endalert %}
 
 ## HTML in-app messages {#custom-html-messages}
@@ -158,7 +158,7 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
-If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
+If you choose to apply your own template, click **Apply Template** and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
 ## Email capture form {#email-capture-form}
 
@@ -195,10 +195,10 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![Select Email Capture Form][4]
+![Select email capture form][4]
 
 {% alert note %}
-To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ### Step 2: Customize the form {#customizable-features}
@@ -238,13 +238,13 @@ Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_
 
 ## Reusable message templates {#reusable-color-profiles}
 
-You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
+You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
 ### Color profile
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
-Click __Save Color Profile__ on the bottom right when you’re finished.
+Click **Save Color Profile** on the bottom right when you’re finished.
 
 #### Managing color profiles
 
@@ -252,7 +252,7 @@ You can also [duplicate][6] and [archive][7] templates! Learn more about creatin
 
 ### CSS template {#in-app-message-templates}
 
-You can customize a complete CSS template for your [Web Modal In-App Message](#web-modal-css).
+You can customize a complete CSS template for your [Web Modal in-app message](#web-modal-css).
 
 Name and tag your CSS Template, then choose whether or not it will be your default template. You can write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
 

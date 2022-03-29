@@ -41,7 +41,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% endtab %}
 {% tab iOS %}
 
-If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
 For more on these values, see our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#custom-handling-in-app-message-display).
 
@@ -100,10 +100,10 @@ ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
 Follow the steps below to test a sample in-app message.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][5] to create a new **In-App Messaging** campaign.
+2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
-![In-App Messaging Campaign Test][6]
+![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
 A sample implementation can be found in AppboyProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 

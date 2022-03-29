@@ -24,6 +24,9 @@ When Link Aliasing is enabled, expect the following behaviors to occur:
 Clients can also update their existing Content Block. However, only a maximum of 50 messages referencing that Content Block will be updated for Link Aliasing purposes.
 {% endalert %}
 
+### Messages with Link Templates
+Messages which already had Link Templates enabled prior to Link Aliasing being enabled, will still continue to have their Link Templates applied.  For all messages that existed prior to Link Aliasing being enabled, the Link Templates will still honored, however on any edit, the customer is asked to re-apply Link Templates again from the Link Management tab.  This is because the Link Template edit screen is no longer be available since it is now provided under the Link Management tab.
+
 ## What use cases does this potentially unlock?
 
 Clients can now distinguish between the same URL present in their email message by providing unique link alias names to each one (for example, "main1" and "main2", which both direct to https://www.braze.com). Clients can now retarget individual aliases that are clicked in segmentation.
@@ -58,7 +61,13 @@ Here are a few examples where Braze can safely append the `lid` query parameter:
 Currently, this feature is enabled at a company level. Please ensure your organization is aware of this change before Braze enables the feature.
 
 ## How do I track or untrack a link?
-Clients can track a link by using the checkbox located in the first column of the **Link Management** tab. Braze allows for 100 aliases to be tracked at any given time.  Each alias is considered unique to Braze, regardless of the name provided. This means even the same URL that is present in multiple variants will be considered on an individual basis.
+Clients can track a link by using the checkbox located in the first column of the **Link Management** tab. Clients can track an unlimited number of links.
+
+{% alert note %}
+Braze only tracks up to the last 100 clicked link aliases at the profile level.
+{% endalert %}
+
+Each alias is considered unique to Braze, regardless of the name provided. This means even the same URL that is present in multiple variants will be considered on an individual basis.
 
 To untrack a link, simply uncheck the checkbox or [archive the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/#archiving-campaigns).
 

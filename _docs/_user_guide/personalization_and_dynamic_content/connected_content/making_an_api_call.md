@@ -34,7 +34,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 {% alert note %}
 * Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid Syntax.
-* Connected Content calls will happen when the message is sent, except for In-App Messages, which will make this call when the message is viewed.
+* Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
 * Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
 {% endalert %}
@@ -45,11 +45,11 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones in the **Connected Content** tab of **Manage Settings**.
 
-![Basic Authentication Credential Management][34]
+![][34]
 
 To add a new credential, click **Add Credential**. Give your credential a name and enter the username and password.
 
-![Basic Authentication Credential Creation][35]{: style="max-width:30%" }
+![][35]{: style="max-width:30%" }
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 

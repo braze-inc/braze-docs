@@ -128,8 +128,8 @@ Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium 
 
 ### Side-by-side integrations resources
 
-- iOS remote command: [Tealium documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/), [Tealium Github repository](https://github.com/Tealium/tealium-ios-braze-remote-command)
-- Android remote command: [Tealium documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/), [Tealium Github repository](https://github.com/Tealium/tealium-android-braze-remote-command)
+- iOS remote command: [Tealium documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/), [Tealium GitHub repository](https://github.com/Tealium/tealium-ios-braze-remote-command)
+- Android remote command: [Tealium documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/), [Tealium GitHub repository](https://github.com/Tealium/tealium-android-braze-remote-command)
 - Web SDK tag: [Tealium documentation](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106)
 
 ## Server-to-server integration

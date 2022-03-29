@@ -6,7 +6,7 @@
 Closes #**ISSUE_NUMBER_HERE**
 
 #### Is this change associated with a Braze feature/product release?
-- [ ] Yes (__Insert Feature Release Date Here__)
+- [ ] Yes (**Insert Feature Release Date Here**)
 - [ ] No
 
 ---
