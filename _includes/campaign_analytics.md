@@ -119,13 +119,13 @@ Your Messages Sent refers to Content Cards available to be seen, while Unique Re
 Here are some key email-specific metrics that you won't see in other channels. To see the definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
 
 | Term | Definition |
-| -- | -- |
+| --- | --- |
 | Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is above 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to ensure you're messaging those that are interested in your correspondence).
 | Unique opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything above 20% is exceptional!
 | Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything above 10% is exceptional!
 | Click to open | The percentage of recipients that opened your email and then clicked on it.
-| Machine opens | Includes the proportion of "opens" that are affected by Apple iOS 15. If a user opens an email using the Mail app on an Apple device, the mail is loaded from a proxy server and will be logged as a “Machine Opens.” However, if the mail is opened on another platform (i.e. Gmail app on phone, or Gmail via desktop browser), it will be logged as an “Other opens". It’s also possible that a user opens an email (i.e. "Other opens") before a machine open is logged. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
-| Other opens | Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens".   
+| Machine opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". Additionally, if a user This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
+| Other opens | Includes emails that haven't been identified as "Machine opens". <br>For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e. the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email.
 {: .reset-td-br-1 .reset-td-br-2}
 
