@@ -79,7 +79,7 @@ Using Canvas, you can add a step that sends both a Content Card and push notific
 
 #### Multiple feeds based on categories
 
-You can separate your Content Cards into multiple feeds based on categories such as  different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guides for [Web SDK][7] and [Android SDK][8].
+You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guides for [Web SDK][7] and [Android SDK][8].
 
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}

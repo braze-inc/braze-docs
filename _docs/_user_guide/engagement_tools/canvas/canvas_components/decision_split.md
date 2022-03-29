@@ -20,7 +20,7 @@ To create a Decision Split Step, add a step to your Canvas. Then, use the drop-d
 
 ### Define your split
 
-How do you want to split your users? You can use [Segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one Segment or one Filter. You do not need to use both a Segment and a Filter.
+How do you want to split your users? You can use [segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
 ![Define Split][2]{: style="max-width:80%;"}
 
