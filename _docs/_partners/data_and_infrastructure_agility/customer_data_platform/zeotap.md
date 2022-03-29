@@ -35,7 +35,7 @@ With the Zeotap and Braze integration, you can extend the scale and reach of you
  
 1. From the Zeotap Unity platform, navigate to the **CONNECT** application.
 2. Create a segment and select the Braze destination created in step 1.
-3. Select a supported output identifier: MAID, sha56 email, or sha56 phone. Only one can be used for the Braze integration. These identifiers must be the same as the external ID set when collecting Braze SDK data.
+3. Select a supported output identifier: MAIDs, email address hashed to SHA256, or any 1P customer identifier recognized by Braze (if you want to use a custom identifier for your Braze account, please get in touch with Zeotap so that it can be enabled for your account). Only one output identifier can be used for the Braze integration. These identifiers must be the same as the external ID set when collecting Braze SDK data.
 4. Save the segment.
 
 ![][2]
