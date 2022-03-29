@@ -28,7 +28,6 @@ This means you can preview _and interact_ with your custom messages (i.e., click
 We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
 {% endalert %}
 
-
 ### Cross-channel HTML messages
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
