@@ -182,7 +182,7 @@ If Braze detects that you don't have a close or dismissal button included in you
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![Compose your in-app message][24]{: style="max-width:85%" }
+![][24]{: style="max-width:85%" }
 
 The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
@@ -305,7 +305,7 @@ Select the action you'd like to trigger your message off of, as well as the star
 Please note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
 {% endalert %}
 
-![Schedule]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Action-based campaign with the trigger action set to "Start Session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 In-app message delivery is entirely based on the following action triggers:
 
@@ -340,7 +340,7 @@ You can choose between the following message priorities:
 
 The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
 
-![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Choose users to target
 
@@ -354,7 +354,7 @@ If there's a delay on the in-app message step, segment membership will be evalua
 
 In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
 
-![Re-evaluate IAM Membership]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Audience Summary section of the Target Users step with the option to "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
 
 When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
 

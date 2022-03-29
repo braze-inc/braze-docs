@@ -41,7 +41,7 @@ We recommend an RSA Key with 2048 bits for use with the RS256 JWT algorithm.
 Remember to keep your private keys _private_. Never expose or hard-code your private key in your app or website. Anyone who knows your private key can impersonate or create users on behalf of your application.
 {% endalert %}
 
-### Create a JSON web token for the current user {#create-jwt}
+### Create a JSON Web Token for the current user {#create-jwt}
 
 Once you have your private key, your server-side application should use it to return a JWT to your app or website for the currently logged-in user.
 
@@ -89,7 +89,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 
 {% tabs %}
 {% tab Javascript %}
-When calling `initialize`, set the optional `sdkAuthentication` property to `true`.
+When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
 import braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
@@ -409,7 +409,7 @@ Instead, we use Public/Private Keys so that not even Braze Employees (let alone 
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 
-When a request is rejected because of an authentication error, the SDKs will invoke a your callback used to refresh the user's JWT signature. 
+When a request is rejected because of an authentication error, the SDKs will invoke your callback used to refresh the user's JWT signature. 
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
