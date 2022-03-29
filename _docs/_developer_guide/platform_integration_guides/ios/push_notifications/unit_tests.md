@@ -73,7 +73,7 @@ Add the contents of the HelloSwift sample app's [`AppboyPushUnitTests.m`][4] to 
 
 ## Step 5: Run test suite
 
-Run your app's unit tests. This can be a one-time verification step, or you can include this indefinitely in your test suite to help catch any changes.
+Run your app's unit tests. This can be a one-time verification step, or you can include this indefinitely in your test suite to help catch any regressions.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
