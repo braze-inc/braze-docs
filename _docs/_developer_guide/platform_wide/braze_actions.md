@@ -29,15 +29,36 @@ hidden: true
     var debouncer;
     input.oninput = function(event){
         clearTimeout(debouncer);
-        setTimeout(function(){
+        debouncer = setTimeout(function(){
             try {
-                const jsonString = toBinary(JSON.stringify(event.target.innerText));
+                const jsonString = toBinary(JSON.stringify(event.target.value));
                 output.value = `brazeActions://v1/${toBinary(jsonString)}`
             } catch(e){
                 output.value = `Invalid JSON`;
             }
         }, 100);
     }
+    output.oninput = function(event){
+        clearTimeout(debouncer);
+        debouncer = setTimeout(function(){
+            try {
+                const json = JSON.parse(fromBinary(event.target.value));
+                input.value = JSON.stringify(json, null, 4);
+            } catch(e){
+                input.value = `Invalid brazeActions:// link`;
+            }
+        }, 100);
+    }
+
+    function fromBinary(encoded) {
+        binary = atob(encoded)
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < bytes.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        return String.fromCharCode(...new Uint16Array(bytes.buffer));
+    }
+
 
     function toBinary(string) {
         const codeUnits = new Uint16Array(string.length);
