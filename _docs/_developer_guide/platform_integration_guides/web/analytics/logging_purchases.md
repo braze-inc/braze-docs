@@ -17,7 +17,7 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add the [`logPurchase()`][8] call after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
 
 ```javascript
-appboy.logPurchase(productId, price, "USD", quantity);
+braze.logPurchase(productId, price, "USD", quantity);
 ```
 
 ## Adding properties
@@ -25,7 +25,7 @@ appboy.logPurchase(productId, price, "USD", quantity);
 You can add [metadata][8] about purchases by passing an object of key-value pairs with your purchase information. Keys are `string` objects, and values can be `string`, `numeric`, `boolean`, or `Date` objects.
 
 ```javascript
-appboy.logPurchase(productId, price, "USD", quantity, {key: "value"});
+braze.logPurchase(productId, price, "USD", quantity, {key: "value"});
 ```
 
 ## REST API
@@ -34,4 +34,4 @@ You can also use our REST API to record purchases. Refer to the [users API][1] d
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logPurchase
+[8]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.logPurchase

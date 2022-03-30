@@ -40,7 +40,7 @@ Listed below are the automatically captured data generated and received by Braze
 All the above fields can be disabled to allow for a Minimum Integration: 
 - Android: [device-level fields][1], [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
 - iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/ "iOS allowlist documentation")
-- Web: [device-level fields](https://js.appboycdn.com/web-sdk/2.3/doc/module-appboy.html#toc2 "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
+- Web: [device-level fields](https://js.appboycdn.com/web-sdk/2.3/doc/module-braze.html#toc2 "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")
 
 ## Minimum integration
 

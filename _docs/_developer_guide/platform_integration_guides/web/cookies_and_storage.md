@@ -35,7 +35,7 @@ braze.initialize("API-KEY", {
 });
 ```
 
-To stop Braze tracking in general, or to clear all stored browser data, see the [`stopWebTracking`][3] and [`wipeData`][4] SDK methods, respectively. These two methods can be useful should a user revoke consent or you want to stop all Braze functionality after the SDK has already been initialized.
+To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`][3] and [`wipeData`][4] SDK methods, respectively. These two methods can be useful should a user revoke consent or you want to stop all Braze functionality after the SDK has already been initialized.
 
 ### List of cookies
 
@@ -44,7 +44,7 @@ To stop Braze tracking in general, or to clear all stored browser data, see the 
 |`ab.storage.userId.[your-api-key]`|Used to determine whether the currently logged-in user has changed and to associate events with the current user.|Based on the size of the value passed to `changeUser`|
 |`ab.storage.sessionId.[your-api-key]`|Out-of-the-box randomly generated string used to determine whether the user is starting a new or existing session to sync messages and calculate session analytics.|~200 bytes|
 |`ab.storage.deviceId.[your-api-key]`|Out-of-the-box randomly generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|~200 bytes|
-|`ab.optOut`|Used to store a user's opt-out preference when `stopWebTracking` is called|~40 bytes|
+|`ab.optOut`|Used to store a user's opt-out preference when `disableSDK` is called|~40 bytes|
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain, which allows the SDK to work properly across sub-domains.|n/a|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -75,9 +75,9 @@ By default, all fields are enabled. Note that without some properties, not all f
 To read more about the automatically collected device properties, visit [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
 
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.deviceproperties.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#stopwebtracking
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#wipedata
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initialize
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions
+[1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
+[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html
+[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata
+[5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
+[6]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

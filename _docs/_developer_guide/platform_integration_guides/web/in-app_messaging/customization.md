@@ -29,7 +29,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
       }
     }
   }
-  braze.display.showInAppMessage(inAppMessage);
+  braze.showInAppMessage(inAppMessage);
 });
 ```
 
@@ -66,7 +66,7 @@ See the [JSDocs][2] for more information.
 To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
 
 ```javascript
-appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
+braze.initialize('api-key', { openInAppMessagesInNewTab: true} );
 ```
 
 ## In-app message dismissal
@@ -83,4 +83,4 @@ braze.initialize("YOUR-API-KEY", {
 
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
 [15]: https://fontawesome.com/?from=io
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions
+[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

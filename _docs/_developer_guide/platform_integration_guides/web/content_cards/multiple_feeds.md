@@ -31,7 +31,7 @@ The following example will show the Content Cards feed for `Transactional` type 
  * @param {String} feed_type - value of the "feed_type" KVP to filter
  */
 function showCardsByFeedType(feed_type) {
-  appboy.display.showContentCards(null, function(cards) {
+  braze.showContentCards(null, function(cards) {
     return cards.filter(function(card) {
       return card.extras["feed_type"] === feed_type;
     });

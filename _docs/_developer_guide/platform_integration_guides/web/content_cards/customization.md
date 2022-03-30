@@ -33,7 +33,7 @@ body .ab-feed {
 
 ### Refreshing the feed
 
-To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method:
+To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh) method:
 
 ```javascript
 import braze from "@braze/web-sdk"

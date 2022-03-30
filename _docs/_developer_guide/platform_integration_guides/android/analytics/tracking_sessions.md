@@ -72,7 +72,7 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/subscribe-to-session-updates.html
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
+[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
 [session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
 [session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

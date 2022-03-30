@@ -43,15 +43,15 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
    const feed = document.getElementById("feed");
     
    toggle.onclick = function(){
-      appboy.display.toggleContentCards(feed);    
+      braze.toggleContentCards(feed);    
    }
     
    hide.onclick = function(){
-      appboy.display.hideContentCards();
+      braze.hideContentCards();
    }
     
    show.onclick = function(){
-      appboy.display.showContentCards(feed);    
+      braze.showContentCards(feed);    
    }
 </script>
 ```
@@ -71,13 +71,13 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 You can request the number of unread cards at any time by calling:
 
 ```javascript
-appboy.getCachedContentCards().getUnviewedCardCount();
+braze.getCachedContentCards().getUnviewedCardCount();
 ```
 
 This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
 
 {% comment %}
-Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
+Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestContentCardsRefresh();`.
 {% endcomment %}
 
 ## Control group 
@@ -90,7 +90,7 @@ Here is an example of how to determine if a Content Card is a "Control" card:
 
 ```javascript
 function isControlCard(card) {
-    return card instanceof appboy.ControlCard;
+    return card instanceof braze.ControlCard;
 }
 ```
 
@@ -102,12 +102,12 @@ function isControlCard(card) {
 
 |Method | Description | Link|
 |---|---|---|
-|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardimpressions)|
-|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardclick)|
+|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions)|
+|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardclick)|
 |`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)|
 |`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
 |`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
-|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
+|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.getCachedContentCards)|
+|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.subscribeToContentCardsUpdates)|
 |`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html#dismissCard)|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

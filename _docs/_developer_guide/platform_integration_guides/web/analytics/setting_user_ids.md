@@ -16,7 +16,7 @@ description: "This article describes how to set user IDs for each of your users,
 You should make the following call as soon as the user is identified (generally after logging in) to set the user ID:
 
 ```javascript
-appboy.changeUser(YOUR_USER_ID_STRING);
+braze.changeUser(YOUR_USER_ID_STRING);
 ```
 
 >  **Do not call `changeUser()` when a user logs out.** Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
@@ -38,5 +38,5 @@ Refer to the [`changeUser()` documentation][4] for more information.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.changeUser "Javadocs"
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.changeUser "Javadocs"
 [5]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases

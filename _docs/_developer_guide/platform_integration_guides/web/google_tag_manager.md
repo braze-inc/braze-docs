@@ -54,7 +54,7 @@ The Braze Actions Tag template lets you trigger custom events, track purchases, 
 
 #### Changing user external ID {#external-id}
 
-The **Change User** tag type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser). 
+The **Change User** tag type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). 
 
 Use this tag whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
 
@@ -64,7 +64,7 @@ Be sure to enter the current user's unique ID in the **External User ID** field,
 
 #### Log custom events {#custom-events}
 
-The **Custom Event** tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
+The **Custom Event** tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
 Use this tag to send custom events to Braze, optionally including custom event properties.
 
@@ -76,7 +76,7 @@ Use the **Add Row** button to add event properties.
 
 #### Track purchase {#purchases}
 
-The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
+The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
 
 Use this tag to track purchases to Braze, optionally including Purchase properties.
 
@@ -98,7 +98,7 @@ Custom user attributes are not available due to a limitation in Google Tag Manag
 
 ```html
 <script>
-window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute value");
+window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value");
 </script>
 ```
 
@@ -114,7 +114,7 @@ For example, the gender attribute can accept any of the following as values: `"m
 
 ```html
 <script>
-window.appboy.getUser().setGender("f")
+window.braze.getUser().setGender("f")
 </script>
 ```
 
@@ -148,4 +148,4 @@ This will help identify what values are being sent from your webpage's data laye
 [13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056
 [15]: https://tagmanager.google.com/gallery/#/?filter=braze
-[16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html
+[16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html

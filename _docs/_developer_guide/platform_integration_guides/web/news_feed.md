@@ -22,7 +22,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 To toggle the display of the News Feed through the Braze Web SDK, simply call:
 
 ``` javascript
-appboy.display.toggleFeed();
+braze.toggleFeed();
 ```
 
 This will display the most recent cached News Feed cards (kicking off a refresh if these cards are more than 1 minute stale, or if the News Feed has never been refreshed) and will automatically update the display when new cards are received from Braze servers for as long as it's on the screen.
@@ -30,17 +30,17 @@ This will display the most recent cached News Feed cards (kicking off a refresh 
 By default, the feed will be shown in a fixed-position sidebar on the right-hand side of the website (or as a full-screen overlay on mobile devices, through responsive CSS). If you wish to override this behavior and display a statically positioned News Feed inside your own parent element, provide the following element as the first argument to `showFeed`:
 
 ``` javascript
-appboy.display.toggleFeed(document.getElementById('my-news-feed-parent'));
+braze.toggleFeed(document.getElementById('my-news-feed-parent'));
 ```
 
 If you wish to display a specific static set of News Feed cards, filter the cards from the server, or provide your own refresh semantics, you can disable automatic updating and supply your own cards:
 
 ``` javascript
-appboy.subscribeToFeedUpdates(function(feed) {
+braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  appboy.display.showFeed(undefined, cards);
+  braze.showFeed(undefined, cards);
 });
-appboy.requestFeedRefresh();
+braze.requestFeedRefresh();
 ```
 
 See the [JSDocs][2] for full documentation on `showFeed`, `destroyFeed`, and `toggleFeed`.
@@ -54,10 +54,10 @@ The Braze Web SDK supports 3 unique News Feed card types, [ab.ClassicCard][3], [
 You can request the number of unread cards at any time by calling:
 
 ``` javascript
-appboy.getCachedFeed().getUnreadCardCount();
+braze.getCachedFeed().getUnreadCardCount();
 ```
 
-This is often used to power badges signifying how many unread News Feed cards there are. See the [JSDocs][17] for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestFeedRefresh();`
+This is often used to power badges signifying how many unread News Feed cards there are. See the [JSDocs][17] for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestFeedRefresh();`
 
 ### Key-value pairs
 
@@ -84,13 +84,13 @@ Instances of the Braze News Feed can be configured to only receive cards from a 
 News Feed categories can be defined by providing the third `allowedCategories` parameter to `toggleFeed`:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.NEWS]);
+braze.toggleFeed(undefined, undefined, [braze.Card.Category.NEWS]);
 ```
 
 You can also populate a feed with a combination of categories like in the following example:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
+braze.toggleFeed(undefined, undefined, [braze.Card.Category.ANNOUNCEMENTS, braze.Card.Category.NEWS]);
 ```
 
 ## Read and unread indicators

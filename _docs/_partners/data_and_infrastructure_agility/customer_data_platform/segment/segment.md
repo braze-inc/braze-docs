@@ -57,8 +57,8 @@ Next, provide the following fields in the configuration page:
 |Allow crawler activity| On/Off (True/False) | Web Crawlers are automatic programs that visit websites, read them, and collect information that might be important for a search engine index. You can either allow or disallow this from your integrated web page or app. Braze disallows this by default. |
 |Automatically send in-app messages| On/Off (True/False) | Braze automatically enables you to send push to your users upon proper integration. |
 |Do not load font awesome| On/Off (True/False) | Braze uses FontAwesome for our in-app message icons, but you may disallow this feature at any time. |
-|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).|
-|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
+|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.initialize).|
+|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-braze.html#.setLogger) console by default. |
 |Minimum interval between trigger actions in seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open in-app messages in new tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab specified in the Braze platform. |
 |Open News Feed cards in new tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |

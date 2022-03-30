@@ -46,7 +46,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 - If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.
 
-- Otherwise, if your site already registers a Service Worker, add the content below **to the Service Worker file**, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
+- Otherwise, if your site already registers a Service Worker, add the content below **to the Service Worker file**, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.initialize) when initializing the Web SDK.
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2FAppboy%2Fappboy-web-sdk%2Fblob%2Fmaster%2Fsample-build%2Fservice-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
@@ -63,11 +63,11 @@ If you are unable to register a Service Worker in your root domain, an alternati
 
 ## Step 2: Browser registration
 
-In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This will immediately request push permission from the user. 
+In order for a browser to receive push notifications, you must register it for push by calling `braze.requestPushPermission()`. This will immediately request push permission from the user. 
 
-If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze in-app messages. 
+If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with `braze.isPushSupported()`. See [below for a soft push prompt example](#soft-push-prompts) using Braze in-app messages. 
 
-If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
+If you wish to unsubscribe a user, you can do so by calling `braze.unrequestPushPermission()`.
 
 {% alert important %}
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
@@ -79,19 +79,19 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 * [Generate a safari push certificate following these "Registering with Apple" instructions][3]
 * In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
-* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
+* When you call `braze.initialize` supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
 ## Common issues
 
 **I followed the integration instructions but I'm still not receiving any push notifications.**
 
-- Not all browsers can receive push messages. Please ensure that ```appboy.isPushSupported()``` returns true in the browser.
+- Not all browsers can receive push messages. Please ensure that `braze.isPushSupported()` returns true in the browser.
 - Note that if a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.
 - Note that web push notifications require that your site be https.
 
 ## Soft push prompts
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `braze.requestPushPermission()` directly as described above, instead:
 
 1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
   - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?")
@@ -99,19 +99,19 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
   - Under the gear composer section, add a key-value pair.  Give it a key of `msg-id` and a value of `push-primer`.
   - Give the message a trigger action of the custom event 'prime-for-push' (you can create that custom event manually from the dashboard) if you need to)
 
-2. In your Braze SDK integration, find and remove any calls to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet.
+2. In your Braze SDK integration, find and remove any calls to `braze.automaticallyShowInAppMessages()` from within your loading snippet.
 
 3. Replace the removed call with the following snippet:
 
 ```javascript
 
-// Be sure to remove calls to appboy.display.automaticallyShowNewInAppMessages() 
+// Be sure to remove calls to braze.automaticallyShowInAppMessages() 
 // from your code as noted in the steps above
 
-appboy.subscribeToInAppMessage(function(inAppMessage) {
+braze.subscribeToInAppMessage(function(inAppMessage) {
   var shouldDisplay = true;
 
-  if (inAppMessage instanceof appboy.InAppMessage) {
+  if (inAppMessage instanceof braze.InAppMessage) {
     // Read the key-value pair for msg-id
     var msgId = inAppMessage.extras["msg-id"];
 
@@ -119,13 +119,13 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
     if (msgId == "push-primer") {
       // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
       // has already granted/blocked permission
-      if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
+      if (!braze.isPushSupported() || braze.isPushPermissionGranted() || braze.isPushBlocked()) {
         shouldDisplay = false;
       }
       if (inAppMessage.buttons[0] != null) {
         // Prompt the user when the first button is clicked
         inAppMessage.buttons[0].subscribeToClickedEvent(function() {
-          appboy.registerAppboyPushMessages();
+          braze.requestPushPermission();
         });
       }
     }
@@ -133,16 +133,16 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 
   // Display the message
   if (shouldDisplay) {
-    appboy.display.showInAppMessage(inAppMessage);
+    braze.showInAppMessage(inAppMessage);
   }
 });
 ```
 
-When you wish to display the soft push prompt to the user, call `appboy.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins, your code would look like:
+When you wish to display the soft push prompt to the user, call `braze.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins, your code would look like:
 
-```
-appboy.openSession();
-appboy.logCustomEvent("prime-for-push");
+```javascript
+braze.openSession();
+braze.logCustomEvent("prime-for-push");
 ```
 
 ## Service Worker Advanced Settings
@@ -153,7 +153,7 @@ Braze's service worker file will automatically call `skipWaiting` upon install. 
 self.addEventListener('install', (event) => {
   event.stopImmediatePropagation();
 }); 
-self.importScripts('https://js.appboycdn.com/web-sdk/3.4/service-worker.js');
+self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
 ```
 
 [1]: http://www.w3.org/TR/push-api/

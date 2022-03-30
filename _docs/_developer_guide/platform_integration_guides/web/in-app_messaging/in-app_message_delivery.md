@@ -29,22 +29,22 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
 
 ```js
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
-appboy.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
+braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
 ```
 
 ## Manual in-app message display
 
 If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. 
 
-First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered in-app message, where you show or don't show the message. 
+First, find and remove the call to `braze.automaticallyShowInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered in-app message, where you show or don't show the message. 
 
 ```javascript
-appboy.subscribeToInAppMessage(function(inAppMessage) {
+braze.subscribeToInAppMessage(function(inAppMessage) {
   // Display the in-app message. You could defer display here by pushing this message to code within your own application.
   // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
   
   if ( should_show_the_message_according_to_your_custom_logic ) {
-      appboy.display.showInAppMessage(inAppMessage);
+      braze.showInAppMessage(inAppMessage);
   } else {
       // do nothing
   }
@@ -52,12 +52,12 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 ```
 
 {% alert important %}
-If you don't remove `appboy.display.automaticallyShowNewInAppMessages()` from your website when also calling `appboy.display.showInAppMessage`, the message may be displayed twice.
+If you don't remove `braze.automaticallyShowInAppMessages()` from your website when also calling `braze.showInAppMessage`, the message may be displayed twice.
 {% endalert %}
 
-The `inAppMessage` parameter will be an [`appboy.InAppMessage`][2] subclass or an [`appboy.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
+The `inAppMessage` parameter will be an [`braze.InAppMessage`][2] subclass or an [`braze.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
 
-Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the second message will not display.
+Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
 
 ## Local in-app messages
 
@@ -65,9 +65,9 @@ In-app messages can also be created within your site and displayed locally in re
 
 ```javascript
   // Displays a slideup type in-app message.
-  var message = new appboy.SlideUpMessage("Welcome to Braze! This is an in-app message.");
-  message.slideFrom = appboy.InAppMessage.SlideFrom.TOP;
-  appboy.display.showInAppMessage(message);
+  var message = new braze.SlideUpMessage("Welcome to Braze! This is an in-app message.");
+  message.slideFrom = braze.InAppMessage.SlideFrom.TOP;
+  braze.showInAppMessage(message);
 ```
 
 ## Exit-intent messages
@@ -78,14 +78,14 @@ To send these messages, first add an exit intent library, such as this [open-sou
 
 ```javascript
   var _ouibounce = ouibounce(false, {
-    callback: function() { appboy.logCustomEvent('exit intent'); }
+    callback: function() { braze.logCustomEvent('exit intent'); }
   });
 ```
 
 
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
 [8]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ControlMessage.html
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
+[9]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.initialize
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
 [41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages

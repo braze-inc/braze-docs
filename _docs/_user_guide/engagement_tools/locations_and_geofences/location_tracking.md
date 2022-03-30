@@ -62,7 +62,7 @@ Check out our [Locations FAQs][11] for answers to frequently asked questions abo
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.trackLocation
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.trackLocation
 [5]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
