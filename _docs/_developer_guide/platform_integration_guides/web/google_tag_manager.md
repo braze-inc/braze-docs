@@ -19,7 +19,7 @@ There are two Google Tag Manager templates built by Braze, the [Initialization T
 
 Both tags can be added to your workspace from [Google's community gallery][15] or by searching for Braze when adding a new tag from the Community Templates.
 
-![][3]
+![image of gallery search][3]
 
 ### Initialization Tag template {#initialization-tag}
 

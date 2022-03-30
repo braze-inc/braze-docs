@@ -42,6 +42,8 @@ This is a security requirement in the open standards specification that Braze We
 
 While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a working demo [here][4].
 
+{% include archive/web-v4-rename.md %}
+
 ## Step 1: Configure your site's service worker
 
 - If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.

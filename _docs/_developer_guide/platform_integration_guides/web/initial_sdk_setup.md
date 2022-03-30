@@ -14,6 +14,7 @@ The Braze Web SDK lets you collect analytics and display rich in-app messages, p
 
 Please see our [JavaScript Documentation][9] for a complete technical reference.
 
+{% include archive/web-v4-rename.md %}
 
 ## Step 1: Install the Braze library
 
@@ -21,7 +22,6 @@ There are three easy ways to integrate the Web SDK to include analytics and mess
 
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the integration steps below.
 
-{% include archive/web-v4-rename.md %}
 
 ### Option 1: NPM or Yarn {#install-npm}
 

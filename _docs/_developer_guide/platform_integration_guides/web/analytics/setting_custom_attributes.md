@@ -31,8 +31,6 @@ Braze provides predefined methods for setting the following user attributes with
 
 ### Implementation examples
 
-{% include archive/web-v4-rename.md %}
-
 #### Setting a first name
 
 ```javascript

@@ -27,7 +27,7 @@ All in-app messages that a user is eligible for are automatically downloaded to 
 
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function:
 
-```js
+```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
 braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
 ```

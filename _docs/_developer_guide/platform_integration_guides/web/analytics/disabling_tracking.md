@@ -10,6 +10,8 @@ description: "This article covers disabling Web SDK tracking, including why, how
 
 # Disable Web SDK tracking
 
+{% include archive/web-v4-rename.md %}
+
 To comply with data privacy regulations, data tracking activity on the Web SDK can be stopped entirely using the method [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.disableSDK). This method will sync data logged before when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.enableSDK) method in the future to resume data collection.
 
 If you wish to provide users with the option to stop tracking, we recommend building a simple page with two links or buttons, one that calls `disableSDK()` when clicked, and another that calls `enableSDK()` to allow users to opt back in. You can use these controls to start or stop tracking via other data sub-processors as well.
