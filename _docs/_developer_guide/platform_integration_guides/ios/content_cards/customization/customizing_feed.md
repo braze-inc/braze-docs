@@ -3,7 +3,7 @@ nav_title: Customizing Feed
 article_title: Customizing Content Card Feed for iOS
 platform: iOS
 page_order: 2
-description: "This article covers customization options for your Content Cards in your iOS application."
+description: "This article covers Content Card feed customization options in your iOS application."
 channel:
   - content cards
 ---

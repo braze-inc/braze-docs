@@ -3,7 +3,7 @@ nav_title: Carousel View
 article_title: Content Card Carousel View for iOS
 platform: iOS
 page_order: 5
-description: "This article covers customization options for your Content Cards in your iOS application."
+description: "This article covers how to implement a Content Card carousel view use case."
 channel:
   - content cards
 ---

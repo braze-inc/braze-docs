@@ -7,82 +7,15 @@ description: "This article covers the integration steps, data models, and card-s
 channel:
   - content cards
 
-
 ---
 
-# Content Cards view controller integration
+# Content Card integration
 
-Content Cards can be integrated with two view controller contexts: navigation or modal.
-
-## Navigation context
-
-Example of pushing a `ABKContentCardsTableViewController` instance into a navigation controller:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-ABKContentCardsTableViewController *contentCards = [[ABKContentCardsTableViewController alloc] init];
-contentCards.title = @"Content Cards Title";
-contentCards.disableUnreadIndicator = YES;
-[self.navigationController pushViewController:contentCards animated:YES];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-let contentCards = ABKContentCardsTableViewController()
-contentCards.title = "Content Cards Title"
-contentCards.disableUnreadIndicator = true
-navigationController?.pushViewController(contentCards, animated: true)
-```
-
-{% endtab %}
-{% endtabs %}
-
-{% alert note %}
-To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`.
-{% endalert %}
-
-## Modal context
-
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar.
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController alloc] init];
-contentCards.contentCardsViewController.title = @"Content Cards Title";
-contentCards.contentCardsViewController.disableUnreadIndicator = YES;
-[self.navigationController presentViewController:contentCards animated:YES completion:nil];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-let contentCards = ABKContentCardsViewController()
-contentCards.contentCardsViewController.title = "Content Cards Title"
-contentCards.contentCardsViewController.disableUnreadIndicator = true
-self.present(contentCards, animated: true, completion: nil)
-```
-
-{% endtab %}
-{% endtabs %}
-
-For view controller examples, check out our [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp).
-
-{% alert note %}
-To customize the header, set the title property of the `navigationItem` belonging to the `ABKContentCardsTableViewController` instance embedded in the parent `ABKContentCardsViewController` instance.
-{% endalert %}
-
-# Content Cards data model
+## Content Cards data model
 
 The Content Cards data model is available in the iOS SDK.
 
-## Getting the data
+### Getting the data
 
 To access the Content Cards data model, subscribe to Content Cards update events:
 
@@ -131,7 +64,7 @@ NotificationCenter.default.addObserver(self, selector:
 
 If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data, and displaying it yourself. The cards are accessible via [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
 
-## Content Card model
+### Content Card model
 
 Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
 
@@ -212,3 +145,71 @@ Appboy.sharedInstance()?.logContentCardsDisplayed()
 
 {% endtab %}
 {% endtabs %}
+
+## Content Cards view controller integration
+
+Content Cards can be integrated with two view controller contexts: navigation or modal.
+
+### Navigation context
+
+Example of pushing a `ABKContentCardsTableViewController` instance into a navigation controller:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+ABKContentCardsTableViewController *contentCards = [[ABKContentCardsTableViewController alloc] init];
+contentCards.title = @"Content Cards Title";
+contentCards.disableUnreadIndicator = YES;
+[self.navigationController pushViewController:contentCards animated:YES];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+let contentCards = ABKContentCardsTableViewController()
+contentCards.title = "Content Cards Title"
+contentCards.disableUnreadIndicator = true
+navigationController?.pushViewController(contentCards, animated: true)
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`.
+{% endalert %}
+
+### Modal context
+
+This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController alloc] init];
+contentCards.contentCardsViewController.title = @"Content Cards Title";
+contentCards.contentCardsViewController.disableUnreadIndicator = YES;
+[self.navigationController presentViewController:contentCards animated:YES completion:nil];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+let contentCards = ABKContentCardsViewController()
+contentCards.contentCardsViewController.title = "Content Cards Title"
+contentCards.contentCardsViewController.disableUnreadIndicator = true
+self.present(contentCards, animated: true, completion: nil)
+```
+
+{% endtab %}
+{% endtabs %}
+
+For view controller examples, check out our [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp).
+
+{% alert note %}
+To customize the header, set the title property of the `navigationItem` belonging to the `ABKContentCardsTableViewController` instance embedded in the parent `ABKContentCardsViewController` instance.
+{% endalert %}

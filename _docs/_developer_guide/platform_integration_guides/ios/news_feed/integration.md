@@ -3,7 +3,7 @@ nav_title: Integration
 article_title: News Feed Integration for iOS
 platform: iOS
 page_order: 0
-description: "This article covers an overview of integrating the News Feed into your iOS application."
+description: "This article covers an overview of the News Feed data model, integrating the News Feed into your iOS application, and a custom view controller integration example."
 channel:
   - news feed
 
@@ -68,67 +68,70 @@ private func feedUpdated(_ notification: Notification) {
 
 If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`][44].
 
-### Base card model
+### News Feed model
 
 Braze has five unique card types that share a base model. Each type of card also has additional properties that are specific to each card which are listed below.
 
 ### Base card model properties
 
-- `idString` (Read only) - The card's ID set by Braze.
-- `viewed` - This property reflects if the card is read or unread by the user.
-- `created` (Read only) - The property is the unix timestamp of the card's creation time from Braze dashboard.
-- `updated` (Read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard.
-- `categories` - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.
-- `extras` - An optional `NSDictionary` of `NSString` values.
-
-#### Categories
-
-- `ABKCardCategoryNoCategory`
-- `ABKCardCategoryNews`
-- `ABKCardCategoryAdvertising`
-- `ABKCardCategoryAnnouncements`
-- `ABKCardCategorySocial`
-- `ABKCardCategoryAll`
-
-## Card Properties
+|Property|Description|
+|---|---|
+| `idString` | (Read only) The card's ID set by Braze. |
+| `viewed` | This property reflects if the card is read or unread by the user. |
+| `created` | (Read only) The property is the unix timestamp of the card's creation time from Braze dashboard. |
+| `updated` | (Read only) The property is the unix timestamp of the card's latest update time from Braze dashboard. |
+| `categories` | The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.<br><br>Available categories:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
+| `extras` | An optional `NSDictionary` of `NSString` values. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner properties
-In addition to the base card properties:
 
-- `image` (required) - This property is the URL of the card's image
-- `URL` (optional) - The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed.
+|Property|Description|
+|---|---|
+| `image` | (Required) This property is the URL of the card's image. |
+| `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
+| `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned image properties
-In addition to the base card properties:
 
-- `image` (required) - This property is the URL of the card's image
-- `title` (required) - The title text for the card
-- `description` (required) - The body text for the card
-- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+|Property|Description|
+|---|---|
+| `image` | (Required) This property is the URL of the card's image. |
+| `title` | (Required) The title text for the card. |
+| `description` (Required) The body text for the card. |
+| `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
+| `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Text announcement (captioned image without image) properties
-In addition to the base card properties:
 
-- `title` (required) - The title text for the card
-- `description` (required) - The body text for the card
-- `url` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+|Property|Description|
+|---|---|
+| `title` | (Required) The title text for the card. |
+| `description` | (Required) The body text for the card. |
+| `url` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
+| `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Classic card properties
-In addition to the base card properties:
 
-- `image` (required) - This property is the URL of the card's image
-- `title` (optional) - The title text for the card
-- `description` (required) - The body text for the card
-- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL
-- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card.
+|Property|Description|
+|---|---|
+| `image` | (Required) This property is the URL of the card's image. |
+| `title` | (Optional) The title text for the card. |
+| `description` | (Required) The body text for the card. |
+| `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
+| `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Card methods:
 
-- `logCardImpression` - Manually log an impression to Braze for a particular card.
-- `logCardClicked` - Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. All subclasses of `ABKCard` have the `url` property.
+|Method|Description|
+|---|---|
+| `logCardImpression` | Manually log an impression to Braze for a particular card. |
+| `logCardClicked` | Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. All subclasses of `ABKCard` have the `url` property. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Log feed display
 

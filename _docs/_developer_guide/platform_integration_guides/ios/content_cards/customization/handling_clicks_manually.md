@@ -3,7 +3,7 @@ nav_title: Handling Clicks Manually
 article_title: Handling Content Card Clicks Manually for iOS
 platform: iOS
 page_order: 3
-description: "This article covers customization options for your Content Cards in your iOS application."
+description: "This article covers how to handle Content Cards clicks manually in your iOS application."
 channel:
   - content cards
 ---
