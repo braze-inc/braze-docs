@@ -7,8 +7,8 @@ hidden: true
 ---
 
 
-<pre id="braze-actions-output"></pre>
-<pre id="braze-actions-input"></pre>
+<textarea id="braze-actions-output"></textarea>
+<textarea id="braze-actions-input"></textarea>
 <script>
 (function(){
     const input = document.getElementById('braze-actions-input');
@@ -18,8 +18,8 @@ hidden: true
         clearTimeout(debouncer);
         setTimeout(function(){
             try {
-            const jsonString = toBinary(JSON.stringify(event.target.innerText));
-            output.innerText = `brazeActions://v1/${toBinary(jsonString)}`
+                const jsonString = toBinary(JSON.stringify(event.target.innerText));
+                output.innerText = `brazeActions://v1/${toBinary(jsonString)}`
             } catch(e){
                 output.innerText = `Invalid JSON`;
             }
