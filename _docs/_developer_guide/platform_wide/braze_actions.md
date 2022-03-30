@@ -8,9 +8,13 @@ hidden: true
 
 # Braze Actions
 
-Braze Actions allow you to set up In-App Message or Content Card buttons to perform native SDK functionality.
+Braze Actions let you use "deeplinks" to perform native SDK functionality.
 
-For example, you may want a button to request push permission, log a custom event or attribute, or add/remove a user from a specific subscription group.
+The Braze dashboard includes a few out-of-the-box actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in In-App Messages and Content Cards.
+
+For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
+
+The `brazeActions://` deeplink scheme can be used within In-App Messages (non-HTML types), Content Cards, or Android/iOS Push.
 
 ## Schema
 
@@ -39,7 +43,7 @@ The Braze Actions URI scheme is `brazeActions://v1/{base64encodedJsonString}`
 The following javascript shows how to encode/decode the JSON string:
 
 ```javascript
- function decode(encoded) {
+function decode(encoded) {
     const binary = atob(encoded)
     const bytes = new Uint8Array(binary.length);
     for (let i = 0; i < bytes.length; i++) {
