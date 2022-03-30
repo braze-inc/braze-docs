@@ -2,6 +2,7 @@
 nav_title: Android 12 Upgrade Guide
 article_title: Android 12 Upgrade Guide
 page_order: 9
+hidden: true
 platform: 
   - Android
   - FireOS
