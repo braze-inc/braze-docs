@@ -7,21 +7,34 @@ hidden: true
 ---
 
 
+<div>Output:</div>
 <textarea id="braze-actions-output"></textarea>
+<div>Input:</div>
 <textarea id="braze-actions-input"></textarea>
+<style>
+    #braze-actions-input, #braze-actions-output {
+        width: 90%;
+        border: solid 1px #1f1f1f !important;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-family: courier;
+        font-size: 14px;
+        padding: 4px;
+    }
+</style>
 <script>
 (function(){
     const input = document.getElementById('braze-actions-input');
     const output = document.getElementById('braze-actions-output');
     var debouncer;
-    input.onchange = function(event){
+    input.oninput = function(event){
         clearTimeout(debouncer);
         setTimeout(function(){
             try {
                 const jsonString = toBinary(JSON.stringify(event.target.innerText));
-                output.innerText = `brazeActions://v1/${toBinary(jsonString)}`
+                output.value = `brazeActions://v1/${toBinary(jsonString)}`
             } catch(e){
-                output.innerText = `Invalid JSON`;
+                output.value = `Invalid JSON`;
             }
         }, 100);
     }
