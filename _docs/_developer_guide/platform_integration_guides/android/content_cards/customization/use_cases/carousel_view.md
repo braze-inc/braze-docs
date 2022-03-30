@@ -29,7 +29,7 @@ In terms of the level of development effort, the key differences between the out
 
 ### Step 1: Create a custom view controller
 
-To create the Content Cards carousel, create your own custom views and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android). Note that you won't be able to use Braze's default `ContentCardFragment`, as it's only able to handle our default Content Card types.
+To create the Content Cards carousel, create your own custom views and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android). Note that you won't be able to use Braze's default `ContentCardFragment`, as it's only able to handle our default Content Card types.
 
 ### Step 2: Implement analytics
 

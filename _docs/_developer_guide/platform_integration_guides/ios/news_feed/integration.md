@@ -161,7 +161,7 @@ Integrating the view controller `ABKNewsFeedViewController` will display the Bra
 You have a great deal of flexibility in how you choose to display the view controllers. There are different versions of the view controllers to accommodate different navigation structures.
 
 {% alert note %}
-The News Feed that is called by the default behavior of an in-app message click will not respect any delegates you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates) and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks).
+The News Feed that is called by the default behavior of an in-app message click will not respect any delegates you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/) and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks).
 {% endalert %}
 
 The News Feed can be integrated with two view controller contexts: navigation or modal.
@@ -216,8 +216,8 @@ self.present(newsFeed, animated: true, completion: nil)
 
 For view controller examples, check out our [News Feed sample app][3].
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks
 [3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
 

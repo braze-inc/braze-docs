@@ -9,7 +9,7 @@ channel:
 ---
 
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/).
+Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
 # In-app messaging implementation guide

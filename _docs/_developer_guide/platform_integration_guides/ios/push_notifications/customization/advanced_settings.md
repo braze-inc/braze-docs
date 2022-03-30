@@ -33,7 +33,7 @@ Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver cust
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the remote notification payload. To read more, refer to our dedicated [Badge count]({{sitea.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badge_counts) article.
+Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the remote notification payload. To read more, refer to our dedicated [Badge count]({{sitea.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/) article.
 
 ## Sounds
 

@@ -14,7 +14,7 @@ channel:
 ## Custom App Store review prompt
 
 {% alert note %}
-Once you implement this prompt, Braze stops automatically tracking impressions, and you must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks).
+Once you implement this prompt, Braze stops automatically tracking impressions, and you must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/#logging-impressions-and-clicks).
 {% endalert %}
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
