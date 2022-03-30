@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 3
-description: "This reference article covers in-app messaging customization options for your Android application."
+description: "This reference article covers custom in-app messaging listeners for your Android or FireOS application."
 channel:
   - in-app messages
 

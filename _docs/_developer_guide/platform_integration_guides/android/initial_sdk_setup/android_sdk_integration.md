@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to integrate the Android SDK into your Android application."
+description: "This reference article covers how to integrate the Android SDK into your Android or FireOS application."
 
 ---
 

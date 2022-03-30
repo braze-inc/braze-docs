@@ -5,7 +5,7 @@ page_order: 10
 platform: 
   - Android
   - FireOS
-description: "This article covers customization options for your Content Cards in your Android application."
+description: "This article covers how to implement a Content Card carousel view use case for Android and FireOS applications."
 channel:
   - content cards
 

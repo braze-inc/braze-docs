@@ -5,7 +5,7 @@ page_order: 0
 platform: Web
 channel: content cards
 page_type: reference
-description: "This article covers the content card integration for Web, including contend card types and how to request the number of unread Content Cards."
+description: "This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods."
 
 ---
 

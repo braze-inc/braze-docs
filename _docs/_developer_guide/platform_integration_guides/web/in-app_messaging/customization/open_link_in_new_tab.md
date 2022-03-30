@@ -5,7 +5,7 @@ platform: Web
 channel: in-app messages
 page_order: 3
 page_type: reference
-description: "This article covers customization of in-app messaging via the Braze SDK."
+description: "This article covers how to set your in-app message links to open in a new tab for your web application."
 
 ---
 

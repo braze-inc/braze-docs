@@ -5,7 +5,7 @@ page_order: 0
 platform: Web
 channel: content cards
 page_type: reference
-description: "This article covers how to customize the default Content Cards style within the Braze SDK."
+description: "This article covers components of creating a custom UI for your web application."
 
 ---
 

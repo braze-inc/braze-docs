@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android application."
+description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application."
 channel:
   - content cards
 
@@ -18,12 +18,14 @@ In Android, the Content Cards feed is implemented as a [fragment][2] available i
 The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
 ## Content Cards data model
+
 The Content Cards data model is available in the Android SDK.
 
-## Card types {#card-types-for-android}
-Braze has three unique Content Cards card types that share a base model. Each card type also has additional card-specific properties, which are listed below.
+## Content Card model {#card-types-for-android}
 
-### Base card {#base-card-for-android}
+Braze has three unique Content Cards card types that share a base model: banner, captioned image, and classic. Each type inherits common properties from a base model and has the following additional properties.
+
+### Base Content Card model properties {#base-card-for-android}
 
 The [base card][29] model provides foundational behavior for all cards.  
 
@@ -40,8 +42,9 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner image card {#banner-image-card-for-android}
-[Banner image cards][30] are clickable full-sized images. In addition to the base card properties:
+### Banner image card properties {#banner-image-card-for-android}
+
+[Banner image cards][30] are clickable full-sized images.
 
 |Property | Description |
 |---|---|
@@ -50,8 +53,9 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Captioned image card {#captioned-image-card-for-android}
-[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
+### Captioned image card properties {#captioned-image-card-for-android}
+
+[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text.
 
 |Property | Description |
 |---|---|
@@ -62,8 +66,9 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Classic card {#text-Announcement-card-for-android}
-[Text announcement cards][32] are clickable cards containing descriptive text. [Short news cards][41] are clickable cards that include text and images. In addition to the base card properties:
+### Classic card properties {#text-Announcement-card-for-android}
+
+A classic card without an image included will result in a [text announcement card][32]. If an image is included, you will receive a [short news card][41].
 
 |Property | Description |
 |---|---|
@@ -74,11 +79,8 @@ The [base card][29] model provides foundational behavior for all cards.
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert note %}
-A classic card without an image included will result in a text announcement card. If an image is included, you will receive a short news card.
-{% endalert %}
+## Card methods
 
-## Card analytics methods
 All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
 
 |Method | Description |

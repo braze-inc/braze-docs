@@ -5,7 +5,7 @@ page_order: 1.2
 platform: 
   - Android
   - FireOS
-description: "This article covers different News Feed card types and the different card-specific properties available."
+description: "This article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application."
 channel:
   - news feed
   
@@ -19,56 +19,72 @@ The `AppboyFeedFragment` class will automatically refresh and display the conten
 
 ## Card types
 
-Braze has five unique News Feed card types that share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has five unique card types: banner image, captioned image, text announcement, and short news. Each type inherits common properties from a base model and has the following additional properties.
 
-### Base card
+### Base card model properties
 
 The [base card][29] model provides foundational behavior for all cards.  
 
-- `getId()` - returns the card’s ID set by Braze.
-- `getViewed()` - returns a boolean that reflects if the card is read or unread by the user.
-- `getExtras()` - returns a map of key-value extras for this card.
-- `setViewed(boolean)` - sets a card's viewed field.
-- `getCreated()` - returns the unix timestamp of the card’s creation time from Braze dashboard.
-- `getUpdated()` - returns the unix timestamp of the card’s latest update time from Braze dashboard.
-- `getCategories()` - returns the list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.
-- `isInCategorySet(EnumSet)` - returns true if the card belongs to the given category set.
+|Property|Description|
+|---|---|
+| `getId()` | Returns the card’s ID set by Braze. |
+| `getViewed()` | Returns a boolean that reflects if the card is read or unread by the user. |
+| `getExtras()` | Returns a map of key-value extras for this card. |
+| `setViewed(boolean)` | Sets a card's viewed field. |
+| `getCreated()` | Returns the unix timestamp of the card’s creation time from Braze dashboard. |
+| `getUpdated()` | Returns the unix timestamp of the card’s latest update time from Braze dashboard. |
+| `getCategories()` | Returns the list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`. |
+| `isInCategorySet(EnumSet)` | Returns true if the card belongs to the given category set. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-### Banner image card
-[Banner image cards][30] are clickable full-sized images. In addition to the base card properties:
+### Banner image card properties
 
-- `getImageUrl()` - returns the URL of the card’s image.
-- `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.
-- `getDomain()` - returns link text for the property URL.
+[Banner image cards][30] are clickable full-sized images.
 
-### Captioned image card
+|Property|Description|
+|---|---|
+| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
+| `getDomain()` | Returns link text for the property URL. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
+### Captioned image card properties
 
-- `getImageUrl()` - returns the URL of the card’s image.
-- `getTitle()` - returns the title text for the card.
-- `getDescription()` - returns the body text for the card.
-- `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.
-- `getDomain()` - returns the link text for the property url.
+[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text.
 
-### Text announcement card (captioned image without image)
+|Property|Description|
+|---|---|
+| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getTitle()` | Returns the title text for the card. |
+| `getDescription()` | Returns the body text for the card. |
+| `getUrl()` | Returns the URL that will be opened after the card is clicked on.  It can be a HTTP or HTTPS URL or a protocol URL. |
+| `getDomain()` | Returns the link text for the property URL. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-[Text announcement cards][32] are clickable cards containing descriptive text. In addition to the base card properties:
+### Text announcement card (captioned image without image) properties
 
-- `getTitle()` - returns the title text for the card.
-- `getDescription()` - returns the body text for the card.
-- `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.
-- `getDomain()` - returns the link text for the property URL.
+[Text announcement cards][32] are clickable cards containing descriptive text.
 
-### Short news card
+|Property|Description|
+|---|---|
+| `getTitle()` | Returns the title text for the card. |
+| `getDescription()` | Returns the body text for the card. |
+| `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
+| `getDomain()` | Returns the link text for the property URL. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-[Short news cards][33] are clickable cards with images and accompanying descriptive text. In addition to the base card properties:
+### Short news card properties
 
-- `getImageUrl()` - returns the URL of the card’s image.
-- `getTitle()` - returns the title text for the card.
-- `getDescription()` - returns the body text for the card.
-- `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.
-- `getDomain()` - returns the link text for the property URL.
+[Short news cards][33] are clickable cards with images and accompanying descriptive text.
+
+|Property|Description|
+|---|---|
+| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getTitle()` | Returns the title text for the card. |
+| `getDescription()` | Returns the body text for the card. |
+| `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
+| `getDomain()` | Returns the link text for the property URL. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Session analytics
 
@@ -124,12 +140,10 @@ To log a display of the feed, call [`Appboy.logFeedDisplayed()`][6].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
 
-
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-
 [6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-feed-displayed.html
 [7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
 [8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html

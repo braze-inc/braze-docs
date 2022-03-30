@@ -5,7 +5,7 @@ page_order: 4.3
 platform: 
   - Android
   - FireOS
-description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
+description: "This reference article covers Android and FireOS read and unread indicators and how to implement them in your Content Cards."
 channel:
   - content cards
 

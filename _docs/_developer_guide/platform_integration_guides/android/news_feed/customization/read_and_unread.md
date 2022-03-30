@@ -5,7 +5,7 @@ page_order: 3.1
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to customize your News Feed in your Android application."
+description: "This reference article covers News Feed read and unread indicators in your Android or FireOS application."
 channel:
   - news feed
   

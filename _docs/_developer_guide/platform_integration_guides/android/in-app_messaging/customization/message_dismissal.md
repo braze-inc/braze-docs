@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 5
-description: "This reference article covers in-app messaging customization options for your Android application."
+description: "This reference article covers in-app messaging dismissal for your Android or FireOS application."
 channel:
   - in-app messages
 

@@ -5,7 +5,7 @@ platform: Web
 channel: in-app messages
 page_order: 0
 page_type: reference
-description: "This article includes resources on integrating and customizing in-app messages via the Braze SDK."
+description: "This article includes resources on in-app message types and message behavior for your web application."
 
 ---
 

@@ -4,7 +4,7 @@ article_itle: Defining a News Feed Category for Web
 platform: Web
 page_order: 3
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers how to define a News Feed category for your web application."
 channel: news feed
 
 ---

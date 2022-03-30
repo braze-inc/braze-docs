@@ -5,7 +5,7 @@ page_order: 4.5
 platform: 
   - Android
   - FireOS
-description: "This article covers customization options for your Content Cards in your Android application."
+description: "This article covers customization options for your Content Cards in your Android or FireOS application."
 channel:
   - content cards
 

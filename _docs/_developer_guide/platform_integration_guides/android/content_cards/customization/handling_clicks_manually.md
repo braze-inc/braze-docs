@@ -5,13 +5,13 @@ page_order: 4.2
 platform: 
   - Android
   - FireOS
-description: "This article covers customization options for your Content Cards in your Android application."
+description: "This article covers how to handle Content Card clicks manually in your Android ofr FireOS application."
 channel:
   - content cards
 
 ---
 
-# Custom Content Cards click listener
+# Handling clicks manually
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 

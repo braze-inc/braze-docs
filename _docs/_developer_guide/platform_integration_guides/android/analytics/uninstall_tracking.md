@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 7
-description: "This article covers how to configure uninstall tracking for your Android application."
+description: "This article covers how to configure uninstall tracking for your Android or FireOS application."
 
 ---
 

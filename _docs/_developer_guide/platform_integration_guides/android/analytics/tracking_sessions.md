@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "This reference article shows how to subscribe to session updates for your Android application."
+description: "This reference article shows how to subscribe to session updates for your Android or FireOS application."
 
 ---
 

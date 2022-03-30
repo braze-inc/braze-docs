@@ -4,7 +4,7 @@ article_title: Testing for FireOS
 platform: FireOS
 page_order: 19
 page_type: reference
-description: "This page provides information on testing in-app messages and push notificatsion via the command line."
+description: "This page provides information on testing FireOS in-app messages and push notifications via the command line."
 channel: 
 - push
 

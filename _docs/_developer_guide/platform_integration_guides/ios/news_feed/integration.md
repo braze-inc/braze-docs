@@ -68,9 +68,9 @@ private func feedUpdated(_ notification: Notification) {
 
 If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`][44].
 
-### News Feed model
+## News Feed model
 
-Braze has five unique card types that share a base model. Each type of card also has additional properties that are specific to each card which are listed below.
+Braze has five unique card types: banner image, captioned image, text announcement, and classic. Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base card model properties
 
@@ -84,7 +84,7 @@ Braze has five unique card types that share a base model. Each type of card also
 | `extras` | An optional `NSDictionary` of `NSString` values. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner properties
+### Banner image card properties
 
 |Property|Description|
 |---|---|
@@ -93,7 +93,7 @@ Braze has five unique card types that share a base model. Each type of card also
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Captioned image properties
+### Captioned image card properties
 
 |Property|Description|
 |---|---|
@@ -104,7 +104,7 @@ Braze has five unique card types that share a base model. Each type of card also
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Text announcement (captioned image without image) properties
+### Text announcement card (captioned image without image) properties
 
 |Property|Description|
 |---|---|
@@ -125,7 +125,7 @@ Braze has five unique card types that share a base model. Each type of card also
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Card methods:
+## Card methods
 
 |Method|Description|
 |---|---|

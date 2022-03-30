@@ -5,7 +5,7 @@ page_order: 4
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to implement gifs in your News Feed for your Android application."
+description: "This reference article covers how to implement gifs in your News Feed for your Android or FireOS application."
 channel:
   - news feed
 

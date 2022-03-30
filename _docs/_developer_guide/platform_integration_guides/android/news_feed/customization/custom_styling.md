@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to customize your News Feed in your Android application."
+description: "This reference article covers how to add custom News Feed styling in your Android or FireOS application."
 channel:
   - news feed
   

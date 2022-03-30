@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 3
-description: "This reference article covers how to integrate network offline mode for your Android application."
+description: "This reference article covers how to integrate network offline mode for your Android or FireOS application."
 
 ---
 

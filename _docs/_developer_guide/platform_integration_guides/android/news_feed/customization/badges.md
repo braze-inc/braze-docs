@@ -5,7 +5,7 @@ page_order: 3.2
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to customize your News Feed in your Android application."
+description: "This reference article covers how to add News Feed badges to your Android or FireOS application."
 channel:
   - news feed
   

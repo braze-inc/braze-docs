@@ -5,7 +5,7 @@ page_order: 5
 platform: 
   - Android
   - FireOS
-description: "This article covers customization options for your Content Cards in your Android application."
+description: "This article covers how to integrate GIFs into your Android or FireOS Content Cards."
 channel:
   - content cards
 

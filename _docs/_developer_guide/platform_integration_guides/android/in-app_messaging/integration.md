@@ -5,7 +5,7 @@ page_order: 1
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to integrate in-app messaging in your Android application."
+description: "This reference article covers how to integrate in-app messaging in your Android or FireOS application."
 channel:
   - in-app messages
 

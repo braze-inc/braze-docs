@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 7
-description: "This reference article covers in-app messaging customization options for your Android application."
+description: "This article covers how to integrate GIFs into your Android or FireOS in-app messages."
 channel:
   - in-app messages
 

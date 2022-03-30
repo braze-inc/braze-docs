@@ -64,7 +64,7 @@ NotificationCenter.default.addObserver(self, selector:
 
 If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data, and displaying it yourself. The cards are accessible via [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
 
-### Content Card model
+## Content Card model
 
 Braze offers three Content Card types: banner, captioned image, and classic. Each type inherits common properties from a base `ABKContentCard` class and has the following additional properties.
 

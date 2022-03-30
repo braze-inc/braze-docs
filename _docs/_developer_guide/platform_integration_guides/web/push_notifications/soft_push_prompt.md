@@ -4,7 +4,7 @@ article_title: Soft Push Prompt for Web
 platform: Web
 page_order: 19
 page_type: reference
-description: "This article covers how to integrate Braze Web Push on an alternate domain."
+description: "This article covers how to create a soft push prompt for your web application"
 channel: push
 
 ---

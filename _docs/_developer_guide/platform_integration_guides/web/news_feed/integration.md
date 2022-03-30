@@ -4,7 +4,7 @@ article_itle: News Feed Integration for Web
 platform: Web
 page_order: 0
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers News Feed card type and how to integrate the News Feed into your web application via the Braze SDK."
 channel: news feed
 
 ---

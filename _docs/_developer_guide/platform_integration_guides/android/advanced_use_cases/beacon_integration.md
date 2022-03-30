@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "This article covers how to log custom events using Gimbal Beacons for Android."
+description: "This article covers how to log custom events using Gimbal Beacons for Android or FireOS."
 
 ---
 

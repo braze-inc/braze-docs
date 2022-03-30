@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 9
-description: "This reference article covers in-app messaging customization options for your Android application."
+description: "This reference article covers Google Play in-app review prompt options for your Android or FireOS application."
 channel:
   - in-app messages
 

@@ -5,7 +5,7 @@ page_order: 4
 platform: Web
 channel: content cards
 page_type: reference
-description: "This reference article describes how to request the number of unread Content Cards."
+description: "This reference article describes how to request the number of unread Content Cards for your web application."
 
 ---
 

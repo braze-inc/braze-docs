@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This article covers Android in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
+description: "This article covers Android and FireOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages
 

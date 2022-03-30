@@ -4,7 +4,7 @@ article_itle: News Feed Custom Styling for Web
 platform: Web
 page_order: 0
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers custom News Feeds styling options for your web applciation."
 channel: news feed
 
 ---

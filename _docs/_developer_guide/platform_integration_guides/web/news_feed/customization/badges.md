@@ -4,7 +4,7 @@ article_itle: News Feed Badges for Web
 platform: Web
 page_order: 3
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers how to request the unread News Feeds card count for your web applcation."
 channel: news feed
 
 ---

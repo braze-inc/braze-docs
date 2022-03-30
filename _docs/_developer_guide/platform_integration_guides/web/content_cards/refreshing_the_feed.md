@@ -5,7 +5,7 @@ page_order: 2
 platform: Web
 channel: content cards
 page_type: reference
-description: "This reference article describes how to queue a manual refresh of your Content Cards."
+description: "This reference article describes how to queue a manual refresh of your Content Cards for your web application."
 
 ---
 

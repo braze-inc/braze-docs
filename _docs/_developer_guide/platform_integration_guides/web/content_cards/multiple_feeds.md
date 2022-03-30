@@ -5,7 +5,7 @@ page_order: 3
 platform: Web
 channel: content cards
 page_type: reference
-description: "This article describes how to set up and use multiple content card feeds."
+description: "This article describes how to set up and use multiple Content Card feeds in your web application."
 
 ---
 
