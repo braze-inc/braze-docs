@@ -42,7 +42,8 @@ hidden: true
         clearTimeout(debouncer);
         debouncer = setTimeout(function(){
             try {
-                const json = JSON.parse(fromBinary(event.target.value));
+                const base64 = event.target.value.replace(/^brazeActions:\/\/v\d+\//, '');
+                const json = JSON.parse(fromBinary(base64));
                 input.value = JSON.stringify(json, null, 4);
             } catch(e){
                 input.value = `Invalid brazeActions:// link`;
