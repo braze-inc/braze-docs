@@ -6,11 +6,64 @@ description: "Use the `brazeActions://` deeplinks to perform SDK actions within 
 hidden: true
 ---
 
+# Braze Actions
 
-<div>Output:</div>
-<textarea id="braze-actions-output"></textarea>
+Braze Actions allow you to set up In-App Message or Content Card buttons to perform native SDK functionality.
+
+For example, you may want a button to request push permission, log a custom event or attribute, or add/remove a user from a specific subscription group.
+
+## Schema
+
+Multiple action `steps` can be included within a `container` action type. A single step without a `container` is also valid.
+
+```json
+{
+    "type": "container",
+    "steps": []
+}
+```
+
+An individual `step` contains an an action `type`, and optional `args` array:
+
+```json
+{
+    "type": "logCustomEvent",
+    "args": ["event name", {"event": ["properties"]}]
+}
+```
+
+## URI 
+
+The Braze Actions URI scheme is `brazeActions://v1/{base64encodedJsonString}`
+
+The following javascript shows how to encode/decode the JSON string:
+
+```javascript
+ function decode(encoded) {
+    const binary = atob(encoded)
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < bytes.length; i++) {
+        bytes[i] = binary.charCodeAt(i);
+    }
+    return String.fromCharCode(...new Uint16Array(bytes.buffer));
+}
+
+
+function encode(string) {
+    const codeUnits = new Uint16Array(string.length);
+    for (let i = 0; i < codeUnits.length; i++) {
+        codeUnits[i] = string.charCodeAt(i);
+    }
+    return btoa(String.fromCharCode(...new Uint8Array(codeUnits.buffer))).replace(/=/g, '');
+}
+```
+
+
+
 <div>Input:</div>
 <textarea id="braze-actions-input"></textarea>
+<div>Output:</div>
+<textarea id="braze-actions-output"></textarea>
 <style>
     #braze-actions-input, #braze-actions-output {
         width: 90%;
@@ -31,7 +84,7 @@ hidden: true
         clearTimeout(debouncer);
         debouncer = setTimeout(function(){
             try {
-                const jsonString = toBinary(event.target.value.replace(/\s/g, ''));
+                const jsonString = encode(event.target.value.replace(/\s/g, ''));
                 output.value = `brazeActions://v1/${toBinary(jsonString)}`
             } catch(e){
                 output.value = `Invalid JSON`;
@@ -43,7 +96,7 @@ hidden: true
         debouncer = setTimeout(function(){
             try {
                 const base64 = event.target.value.replace(/^brazeActions:\/\/v\d+\//, '').replace(/\s/g, '');
-                const json = JSON.parse(fromBinary(base64));
+                const json = JSON.parse(decode(base64));
                 input.value = JSON.stringify(json, null, 4);
             } catch(e){
                 input.value = `Invalid brazeActions:// link`;
@@ -51,7 +104,7 @@ hidden: true
         }, 100);
     }
 
-    function fromBinary(encoded) {
+    function decode(encoded) {
         const binary = atob(encoded)
         const bytes = new Uint8Array(binary.length);
         for (let i = 0; i < bytes.length; i++) {
@@ -61,7 +114,7 @@ hidden: true
     }
 
 
-    function toBinary(string) {
+    function encode(string) {
         const codeUnits = new Uint16Array(string.length);
         for (let i = 0; i < codeUnits.length; i++) {
             codeUnits[i] = string.charCodeAt(i);
