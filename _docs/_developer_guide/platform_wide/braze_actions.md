@@ -103,8 +103,8 @@ Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `bra
         clearTimeout(debouncer);
         debouncer = setTimeout(function(){
             try {
-                const jsonString = encode(event.target.value.replace(/\s/g, ''));
-                output.value = `brazeActions://v1/${toBinary(jsonString)}`
+                const jsonString = event.target.value.replace(/\s/g, '');
+                output.value = `brazeActions://v1/${encode(jsonString)}`
             } catch(e){
                 output.value = `Invalid JSON`;
             }
