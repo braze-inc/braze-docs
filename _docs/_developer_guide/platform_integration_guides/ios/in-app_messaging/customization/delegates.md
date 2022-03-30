@@ -3,7 +3,7 @@ nav_title: Setting delegates
 article_title: Setting In-App Message Delegates for iOS
 platform: iOS
 page_order: 2
-description: "This reference article covers in-app messaging customization options for your iOS application."
+description: "This reference article covers setting in-app messaging delegates for your iOS application."
 channel:
   - in-app messages
 

@@ -3,7 +3,7 @@ nav_title: Badges
 article_title: News Feed Badges for iOS
 platform: iOS
 page_order: 3
-description: "This reference article covers how to customize your News Feed in your iOS  application."
+description: "This article covers how to implement News Feed badge counts in your iOS application."
 channel:
   - news feed
 

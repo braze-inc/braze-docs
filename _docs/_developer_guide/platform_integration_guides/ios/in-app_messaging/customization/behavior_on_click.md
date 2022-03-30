@@ -3,7 +3,7 @@ nav_title: Custom On Click Behavior
 article_title: Customizing In-App Message On Click Behavior for iOS
 platform: iOS
 page_order: 5
-description: "This reference article covers in-app messaging customization options for your iOS application."
+description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
 channel:
   - in-app messages
 ---

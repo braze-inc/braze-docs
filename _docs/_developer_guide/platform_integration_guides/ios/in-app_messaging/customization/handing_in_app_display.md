@@ -3,7 +3,7 @@ nav_title: Custom Display Handling
 article_title: Customizing In-App Message Display Handling for iOS
 platform: iOS
 page_order: 4
-description: "This reference article covers in-app messaging customization options for your iOS application."
+description: "This reference article covers in-app messaging custom display handling for your iOS application."
 channel:
   - in-app messages
 

@@ -3,7 +3,7 @@ nav_title: Key-Value Pairs
 article_title: In-App Message Key-Value Pairs for iOS
 platform: iOS
 page_order: 30
-description: "This reference article covers in-app messaging customization options for your iOS application."
+description: "This reference article covers in-app messaging key-value pairs for your iOS application."
 channel:
   - in-app messages
 

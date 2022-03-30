@@ -3,7 +3,7 @@ nav_title: Modal Dismissal
 article_title: In-App Message Modal Dismissal for iOS
 platform: iOS
 page_order: 29
-description: "This reference article covers in-app messaging customization options for your iOS application."
+description: "This reference article covers in-app messaging modal dismissal for your iOS application."
 channel:
   - in-app messages
 ---
