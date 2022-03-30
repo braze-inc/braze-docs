@@ -80,9 +80,9 @@ function encode(string) {
 Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `brazeActions://` URI to decode its JSON.
 
 <div>Input:</div>
-<textarea id="braze-actions-input"></textarea>
+<textarea id="braze-actions-input" rows="8"></textarea>
 <div>Output:</div>
-<textarea id="braze-actions-output"></textarea>
+<textarea id="braze-actions-output" rows="5"></textarea>
 <style>
     #braze-actions-input, #braze-actions-output {
         width: 90%;
