@@ -62,7 +62,7 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
   <tr>
     <td>@bre-fitzgerald</td>
-    <td>Channels<br>Ingestion<br>Intelligence<br>Reporting<br>SMB</td>
+    <td>Channels<br>FIX<br>Intelligence<br>Reporting<br>SMB</td>
   </tr>
   <tr>
     <td>@lydia-xie</td>
