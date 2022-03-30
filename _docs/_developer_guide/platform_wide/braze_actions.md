@@ -31,7 +31,7 @@ hidden: true
         clearTimeout(debouncer);
         debouncer = setTimeout(function(){
             try {
-                const jsonString = toBinary(JSON.stringify(event.target.value));
+                const jsonString = toBinary(event.target.value.replace(/\s/g, ''));
                 output.value = `brazeActions://v1/${toBinary(jsonString)}`
             } catch(e){
                 output.value = `Invalid JSON`;
@@ -42,7 +42,7 @@ hidden: true
         clearTimeout(debouncer);
         debouncer = setTimeout(function(){
             try {
-                const base64 = event.target.value.replace(/^brazeActions:\/\/v\d+\//, '');
+                const base64 = event.target.value.replace(/^brazeActions:\/\/v\d+\//, '').replace(/\s/g, '');
                 const json = JSON.parse(fromBinary(base64));
                 input.value = JSON.stringify(json, null, 4);
             } catch(e){
@@ -52,7 +52,7 @@ hidden: true
     }
 
     function fromBinary(encoded) {
-        binary = atob(encoded)
+        const binary = atob(encoded)
         const bytes = new Uint8Array(binary.length);
         for (let i = 0; i < bytes.length; i++) {
             bytes[i] = binary.charCodeAt(i);
@@ -66,7 +66,7 @@ hidden: true
         for (let i = 0; i < codeUnits.length; i++) {
             codeUnits[i] = string.charCodeAt(i);
         }
-        return btoa(String.fromCharCode(...new Uint8Array(codeUnits.buffer)));
+        return btoa(String.fromCharCode(...new Uint8Array(codeUnits.buffer))).replace(/=/g, '');
     }
 })();
 </script>
