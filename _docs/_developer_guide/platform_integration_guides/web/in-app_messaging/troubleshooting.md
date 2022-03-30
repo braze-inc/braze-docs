@@ -57,7 +57,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
 If your app is successfully requesting and receiving in-app messages, but they are not being shown, some device-side logic may be preventing display:
 
 - Triggered in-app messages are rate-limited based on the [minimum time interval between triggers][troubleshooting_iams_9], which defaults to 30 seconds.
-- If you have custom in-app message handling through `braze.subscribeToInAppMessage` or `braze.subscribeToNewInAppMessages`, check that subscription to ensure it is not affecting in-app message display.
+- If you have custom in-app message handling through `braze.subscribeToInAppMessage` or `appboy.subscribeToNewInAppMessages`, check that subscription to ensure it is not affecting in-app message display.
 
 [troubleshooting_iams_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
 [troubleshooting_iams_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
