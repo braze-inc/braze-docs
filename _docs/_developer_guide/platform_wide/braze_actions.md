@@ -58,6 +58,22 @@ function encode(string) {
 }
 ```
 
+## Supported Actions
+
+|Type|Args|
+|--|--|
+|`container`|1. An array of other actions to perform|
+|`logCustomEvent`|1. `event name`<br>2. `event properties` (optional)|
+|`setEmailNotificationSubscriptionType`|1.  `"opted_in" | "subscribed" | "unsubscribed"`|
+|`setPushNotificationSubscriptionType`|1. `"opted_in" | "subscribed" | "unsubscribed"`|
+|`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
+|`requestPushPermission`|n/a|
+|`openLink`|1. `url`<br>2. openInNewTab (`boolean`)|
+|`openLinkInWebview`|1. `url`|
+|`addToSubscriptionGroup`|1. `subscriptionGroupId`|
+|`removeFromSubscriptionGroup`|1. `subscriptionGroupId`|
+|`addToCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
+|`removeFromCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 
 
 <div>Input:</div>
