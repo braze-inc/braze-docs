@@ -75,6 +75,9 @@ function encode(string) {
 |`addToCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 |`removeFromCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 
+## JSON Encoder
+
+Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `brazeActions://` URI to decode its JSON.
 
 <div>Input:</div>
 <textarea id="braze-actions-input"></textarea>
