@@ -22,7 +22,7 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions:
 
-{% sdk_min_versions ios:5.0.0 android:18.1.0 web:4.0.0 %}
+{% sdk_min_versions ios:5.1.0 android:19.1.0 web:4.0.0 %}
 
 ## Step 1: Create an in-app message
 
