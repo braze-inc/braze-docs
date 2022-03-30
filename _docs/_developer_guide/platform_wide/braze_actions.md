@@ -63,7 +63,7 @@ function encode(string) {
 |Type|Args|
 |--|--|
 |`container`|1. An array of other actions to perform|
-|`logCustomEvent`|1. `event name`<br>2. `event properties` (optional)|
+|`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (optional)|
 |`setEmailNotificationSubscriptionType`|1.  `"opted_in" | "subscribed" | "unsubscribed"`|
 |`setPushNotificationSubscriptionType`|1. `"opted_in" | "subscribed" | "unsubscribed"`|
 |`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
