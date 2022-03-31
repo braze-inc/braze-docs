@@ -15,6 +15,22 @@ All of Braze's in-app message types are highly customizable across messages, ima
 
 {% include archive/web-v4-rename.md %}
 
+## Custom handling of in-app message display
+
+To use your own UI and instead read from the data model for each in-app message, then the following customizations are needed:
+
+1. Remove calls to `braze.automaticallyShowInAppMessages()`
+2. Add a function to handle displaying in-app messages as they are triggered
+3. Use the data models from the `message` as described in https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
+
+```
+braze.subscribeToNewInAppMessage(function(message) {
+    // use `message` here based on which message type (InAppMessage subclasses);
+    // if you want to use Braze's UIs, call: braze.showInAppMessage(message);
+    // otherwise, you can access the data model from the `message`
+});
+```
+
 ## Key-value pair extras
 
 In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under **Settings** when creating an in-app message campaign. These can be used to send data with an in-app message for further handling by your site. For example:
