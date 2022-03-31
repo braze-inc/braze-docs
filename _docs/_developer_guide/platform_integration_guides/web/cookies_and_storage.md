@@ -16,6 +16,8 @@ Before reading on, note that the Braze Web SDK will not store any data in the br
 
 Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [Javascript documentation][1] for our public API interfaces.
 
+{% include archive/web-v4-rename.md %}
+
 ## Cookies {#cookies}
 
 This section provides information on how cookies in the Braze Web SDK can be set and managed. The Braze Web SDK is built to provide you with maximum flexibility, legal compliance, and messaging relevance.
@@ -28,7 +30,7 @@ To disable all cookies, use the [`noCookies`][6] option when initializing the We
 Disabling cookies will prevent you from associating anonymous users who navigate across sub-domains and will result in a new user on each subdomain.
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
     noCookies: true
@@ -63,7 +65,7 @@ By default, Braze will collect the following device-level properties to allow de
 You can disable or specify the properties you wish to collect by setting the `devicePropertyAllowlist` initialization option to a list of [`DeviceProperties`][2]. 
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
     devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect

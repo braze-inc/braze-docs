@@ -13,6 +13,8 @@ description: "This article covers the content card integration for Web, includin
 
 The Braze Web SDK includes a Content Cards feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
+{% include archive/web-v4-rename.md %}
+
 ## Standard feed UI
 
 To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
@@ -35,7 +37,7 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
 <script>
    // we'll assume we have window.appboy
    // you can also use our npm integration instead:
-   // import braze from "@braze/web-sdk";
+   // import * as braze from"@braze/web-sdk";
     
    const toggle = document.getElementById("toggle");
    const hide = document.getElementById("hide");

@@ -20,7 +20,7 @@ All of Braze's in-app message types are highly customizable across messages, ima
 In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under **Settings** when creating an in-app message campaign. These can be used to send data with an in-app message for further handling by your site. For example:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 
 braze.subscribeToInAppMessage(function(inAppMessage) {
   if (inAppMessage instanceof braze.InAppMessage) {
@@ -40,7 +40,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 By default, in-app messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY", {
     baseUrl: "YOUR-API-ENDPOINT",
     inAppMessageZIndex: 9001
@@ -76,7 +76,7 @@ braze.initialize('api-key', { openInAppMessagesInNewTab: true} );
 By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to `true` to prevent this behavior and require an explicit button click to dismiss messages. 
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY", {
     baseUrl: "YOUR-API-ENDPOINT",
     requireExplicitInAppMessageDismissal: true

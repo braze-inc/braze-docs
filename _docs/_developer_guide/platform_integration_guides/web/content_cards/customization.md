@@ -11,6 +11,8 @@ description: "This article covers how to customize the default Content Cards sty
 
 # Content Card customization
 
+{% include archive/web-v4-rename.md %}
+
 ## Content Card data models {#data-models}
 
 The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
@@ -36,7 +38,7 @@ body .ab-feed {
 To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh) method:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from"@braze/web-sdk"
 
 function refresh(){
   braze.requestContentCardsRefresh();    
@@ -48,7 +50,7 @@ function refresh(){
 When cards are refreshed, a callback function can be subscribed to:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from"@braze/web-sdk"
 
 braze.subscribeToContentCardsUpdates(function(updates){
   const cards = updates.cards;
@@ -61,7 +63,7 @@ braze.subscribeToContentCardsUpdates(function(updates){
 Log impression events when cards are viewed by users:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from"@braze/web-sdk"
 
 braze.logCardImpressions(cards, true);
 ```
@@ -69,7 +71,7 @@ braze.logCardImpressions(cards, true);
 Log card click events when users interact with a card:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from"@braze/web-sdk"
 
 braze.logCardClick(card, true);
 ```
