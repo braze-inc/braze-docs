@@ -288,7 +288,7 @@ For example, let’s say that the value of `date_attribute` is the timestamp `20
 {% tab Input %}
 {% raw %}
 ```liquid
-{{custom_attribute.${date_attribute} | date: '%b','d'}}
+{{custom_attribute.${date_attribute} | date: '%b %d'}}
 ```
 {% endraw %}
 {% endtab %}
