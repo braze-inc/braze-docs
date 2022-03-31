@@ -29,7 +29,7 @@ Android 13 introduces a [major change][3] in how users manage apps that send pus
 
 ![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons "Allow" and "Don't allow" at the bottom of the message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
-This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user declines push (explicitly or by clicking outside of the prompt), your app cannot ask for permission again.
+This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` then your app cannot ask for permission again.
 
 Note that apps are granted a [temporary exemption][4] intended for users who previously had push notifications for that app enabled prior to updating to Android 13. These users will remain eligible to receive push from the app until (A) they explicitly decline the permission prompt when it's shown (or within system settings), or (B) the app is opened for the first time after a user upgrades to Android 13.
 
@@ -37,7 +37,9 @@ Note that apps are granted a [temporary exemption][4] intended for users who pre
 
 **Targeting Android 13**
 
-Apps targeting Android 13 can control when to request permission and show the native push prompt. If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device.
+Apps targeting Android 13 can control when to request permission and show the native push prompt. If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device. 
+
+Once your app is opened, push notifications will not be shown until you have obtained explicit consent by the user, using the new notification permission prompt.
 
 **Targeting Android 12 or below**
 
