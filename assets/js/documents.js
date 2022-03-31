@@ -236,14 +236,23 @@ $(document).ready(function() {
     }
   });
 
+  // set list role attribute for screenreader
+  var list_tabs = $('ul');
+  list_tabs.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tablist');
+  });
+  var list_tab = $('ul > li');
+  list_tab.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tab');
+  });
 
   // Footer navigation
   var parent_top = 'nav_top';
 
   var nav_active = $('#' + parent_top + ' div.nav-item.active');
   var nav_bottom = $('#bottom_page_nav');
-
-
 
   var pg_prev_div = $("#page_prev");
   var pg_next_div = $("#page_next");

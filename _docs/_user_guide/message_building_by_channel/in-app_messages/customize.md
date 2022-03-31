@@ -100,19 +100,17 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes).
 {% endalert %}
 
-To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
-
-Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
+To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or anchor element `<a>`. Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
 
 As with other URL parameters, the first parameter should begin with a question mark `?`, while subsequent parameters should be separated by an ampersand `&`.
 
-**Examples**:
+##### Examples
 
 - `https://example.com/?abButtonId=0` - Button 1 click
 - `https://example.com/?abButtonId=1` - Button 2 click
 - `https://example.com/?utm_source=braze&abButtonId=0` - Button 1 click with other existing URL parameters
 - `myApp://deep-link?page=home&abButtonId=1` - Mobile deeplink with Button 2 click
-- `<a href="https://example.com/?abButtonId=1">` - `<a>` tag with Button 2 click
+- `<a href="https://example.com/?abButtonId=1">` - Anchor element `<a>` with Button 2 click
 
 {% alert note %}
 In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
@@ -126,7 +124,7 @@ For deep linking, Braze will open your URL regardless of the value of `abExterna
 
 #### Open as deeplink (mobile only)
 
-To have Braze handle your HTTP(S) link as a deep link, set `?abDeepLink=true`.
+To have Braze handle your HTTP or HTTPS link as a deep link, set `?abDeepLink=true`.
 
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
@@ -195,7 +193,7 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![Select email capture form][4]
+![][4]
 
 {% alert note %}
 To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
@@ -212,7 +210,7 @@ Next, customize your form as needed. You can customize the following features fo
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
-![emailimage][5]
+![Composer for email capture form.][5]
 
 If you need to make further customization, choose **Custom Code** for your **Message Type**. You can use this [email capture modal template](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) from the [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub repository as your starter code.
 
