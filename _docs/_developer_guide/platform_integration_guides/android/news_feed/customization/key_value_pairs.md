@@ -33,5 +33,3 @@ extras: Map<String, String>
 
 {% endtab %}
 {% endtabs %}
-
-Refer to our [KDoc][36] for more information.

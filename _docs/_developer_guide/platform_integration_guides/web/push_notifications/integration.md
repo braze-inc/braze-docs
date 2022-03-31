@@ -7,6 +7,9 @@ page_order: 0
 page_type: reference
 description: "This article describes how to integrate Braze Web push via the Braze SDK."
 
+local_redirect: #soft-push-prompts
+  soft-push-prompts: '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/'
+
 ---
 
 # Push integration
@@ -47,7 +50,7 @@ While industry best practice is to make your whole site secure, customers who ca
 ### Step 1: Configure your site's service worker
 
 - If you don't already have a Service Worker, create a new file named `service-worker.js` with the snippet below, and place it in the root directory of your website.
-- Otherwise, if your site already registers a service worker, add the snippet below to the service worker file, and set the [`manageServiceWorkerExternally`]((https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize)) initialization option to `true` when initializing the Web SDK.
+- Otherwise, if your site already registers a service worker, add the snippet below to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) initialization option to `true` when initializing the Web SDK.
 
 ```java
 self.importScripts('https://js.appboycdn.com/web-sdk/3.5/service-worker.js');

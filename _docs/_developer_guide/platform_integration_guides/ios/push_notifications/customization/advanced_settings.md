@@ -33,7 +33,7 @@ Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver cust
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the remote notification payload. To read more, refer to our dedicated [Badge count]({{sitea.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/) article.
+Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the remote notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/) article.
 
 ## Sounds
 
@@ -49,5 +49,5 @@ Checking the **Expiry** checkbox will allow setting an expiration time for your 
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
 [4]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

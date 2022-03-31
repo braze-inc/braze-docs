@@ -165,13 +165,13 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 ```
 
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client
-[2]: #utilizing-the-push-error-log
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[16]: #custom-displaying-notifications
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
-[18]: #custom-handling-push-receipts-and-opens
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
 [22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack

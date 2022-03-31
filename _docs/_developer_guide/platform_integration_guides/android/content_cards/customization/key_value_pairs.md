@@ -22,4 +22,4 @@ Content Cards have a maximum size limit of 2 KB for content you enter in the Bra
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/#-2118252107%2FProperties%2F-1725759721

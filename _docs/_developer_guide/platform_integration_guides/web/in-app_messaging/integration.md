@@ -19,10 +19,10 @@ Check out our [case studies][53] to see examples of in-app messages.
 
 Braze currently offers the following default in-app message types: 
 
-- [`Slideup`][13]
-- [`Modal`][17]
-- [`Full`][41]
-- [`HTML`][42]
+- `Slideup`
+- `Modal`
+- `Full`
+- `HTML`
 
 Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 

@@ -37,4 +37,4 @@ There are a few reasons why this could be occurring:
 This typically occurs when users have uninstalled the application, causing their ADM Registration ID to become invalid.
 
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/fireos/advanced_settings/#notification-priority
+[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings/#notification-display-priority

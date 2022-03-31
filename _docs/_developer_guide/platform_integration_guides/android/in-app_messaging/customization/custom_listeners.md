@@ -17,11 +17,11 @@ Before customizing in-app messages with custom listeners, it's important to unde
 
 `BrazeInAppMessageManager` manages in-app message display on Android. It contains helper class instances that help it manage the lifecycle and display of in-app messages. All of these classes have standard implementations and defining custom classes is completely optional. However, doing so can add another level of control over the display and behavior of in-app messages. These customizable classes include:
 
-- [`IInAppMessageManagerListener`][21] - [Custom manage in-app message display and behavior](#setting-a-custom-manager-listener)
-- [`IInAppMessageViewFactory`][42] - [Build custom in-app message views](#setting-a-custom-view-factory)
-- [`IInAppMessageAnimationFactory`][20] - [Define custom in-app message animations](#setting-a-custom-animation-factory)
-- [`IHtmlInAppMessageActionListener`][86] - [Custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener)
-- [`IInAppMessageViewWrapperFactory`][88] - [Custom manage in-app message view hierarchy interaction](#setting-a-custom-view-wrapper-factory)
+- [`IInAppMessageManagerListener`][21] - [Custom manage in-app message display and behavior](#custom-manager-listener)
+- [`IInAppMessageViewFactory`][42] - [Build custom in-app message views](#custom-view-factory)
+- [`IInAppMessageAnimationFactory`][20] - [Define custom in-app message animations](#custom-animation-factory)
+- [`IHtmlInAppMessageActionListener`][86] - [Custom manage HTML in-app message display and behavior](#custom-html-in-app-message-action-listener)
+- [`IInAppMessageViewWrapperFactory`][88] - [Custom manage in-app message view hierarchy interaction](#custom-view-wrapper-factory)
 
 ## Custom manager listener
 
@@ -102,7 +102,7 @@ If you choose to `DISCARD` the in-app message and replace it with your in-app me
 On Android, this is done by calling `logClick` and `logImpression` on in-app messages and `logButtonClick` on immersive in-app messages.
 
 {% alert tip %}
-Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#requestDisplayInAppMessage--). This method requests Braze to display the next available in-app message from the stack.
+Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/request-display-in-app-message.html). This method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
 
 ### Step 4: Customizing dark theme behavior (optional) {#android-in-app-message-dark-theme-customization}
@@ -456,7 +456,7 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(C
 {% endtabs %}
 
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#step-1-braze-in-app-message-manager-registration
-[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/key-value_pairs/
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/customization/key_value_pairs/
 [18]: http://developer.android.com/reference/android/view/View.html
 [20]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-animation-factory/index.html
 [21]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html
@@ -466,16 +466,16 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(C
 [42]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-factory/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[83]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html#DISCARD
+[83]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html#27659854%2FClasslikes%2F-1725759721
 [86]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage.listeners/-i-html-in-app-message-action-listener/index.html
 [87]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-factory/index.html
 [88]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html
 [90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-wrapper/index.html
 [91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html
-[92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#beforeInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[93]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#afterInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[94]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#beforeInAppMessageViewClosed-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[95]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#afterInAppMessageViewClosed-com.braze.models.inappmessage.IInAppMessage-
+[92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-opened.html
+[93]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html
+[94]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html
+[95]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-closed.html
 [97]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html
 [98]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#requestDisplayInAppMessage--
 [89]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html

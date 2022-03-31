@@ -96,7 +96,7 @@ Linking to the News Feed from an in-app message must be enabled by registering t
 
 ## Custom feed integration
 
-If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 ### Part 1: Subscribing to feed updates
 

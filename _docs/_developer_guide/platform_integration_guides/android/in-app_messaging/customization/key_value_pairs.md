@@ -32,4 +32,4 @@ extras: Map<String, String>
 
 Refer to this [KDoc][44] for more information.
 
-[44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/get-extras.html
+[44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721

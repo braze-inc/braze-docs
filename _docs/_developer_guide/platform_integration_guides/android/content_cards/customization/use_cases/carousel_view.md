@@ -35,7 +35,7 @@ To create the Content Cards carousel, create your own custom views and [subscrib
 
 When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks get properly logged back to Braze's dashboard analytics.
 
-For information on the analytics methods, refer to [Card analytics methods]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/#card-analytics-methods).
+For information on the analytics methods, refer to [Card analytics methods]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#card-methods).
 
 {% alert note %}
 The same page also details the different properties inherited from our generic Content Card model class, which you may find useful during your view implementation.

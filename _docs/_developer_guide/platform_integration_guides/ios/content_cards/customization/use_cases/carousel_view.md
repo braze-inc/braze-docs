@@ -26,13 +26,13 @@ In terms of the level of development effort, the key differences between the out
 
 ### Step 1: Create a custom view controller
 
-To create the Content Cards carousel, create your own custom view controller (such as `UICollectionViewController`) and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#getting-the-data). Note that you won't be able to extend or subclass Braze's default `ABKContentCardTableViewController`, as it's only able to handle our default Content Card types.
+To create the Content Cards carousel, create your own custom view controller (such as `UICollectionViewController`) and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#getting-the-data). Note that you won't be able to extend or subclass Braze's default `ABKContentCardTableViewController`, as it's only able to handle our default Content Card types.
 
 ### Step 2: Implement analytics
 
 When creating a fully custom view controller, Content Card impressions, clicks, and dismissals are not automatically logged. You must implement the respective analytics methods to ensure impressions, dismissal events, and clicks get properly logged back to Braze's dashboard analytics.
 
-For information on the analytics methods, refer to [Card methods]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods). 
+For information on the analytics methods, refer to [Card methods]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#card-methods). 
 
 {% alert note %}
 The same page also details the different properties inherited from our generic Content Card model class, which you may find useful during your view implementation.
