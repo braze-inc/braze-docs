@@ -14,7 +14,13 @@ The Braze dashboard includes a few out-of-the-box actions (Request Push Permissi
 
 For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
 
-The `brazeActions://` deeplink scheme can be used within In-App Messages (non-HTML types), Content Cards, or Android/iOS Push.
+## SDK Support
+
+{% sdk_min_versions ios:5.1.0 android:19.1.0 web:4.0.0 %}
+
+The `brazeActions://` deeplink scheme can be used wherever a deeplink/redirect option exists within In-App Messages and Content Cards.
+
+For HTML In-App Messages, use the [`Javascript Bridge`](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) instead as deeplinks are not supported in HTML message types.
 
 ## Schema
 
