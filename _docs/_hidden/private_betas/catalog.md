@@ -8,7 +8,7 @@ hidden: true
 
 You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
 
-To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
+To do so, first import your catalog (a CSV file of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
@@ -20,38 +20,66 @@ If you'd like to share your feedback on this feature or make a request, you can 
 
 ## Creating a catalog
 
-To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV you upload will be its own distinct catalog. Each catalog has an identifier; you'll use it to reference data from that catalog in a later step.
+To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. Each catalog has an identifier; you'll use it to reference data from that catalog in a later step.
+
+{% alert note %}
+You can create up to five catalogs across your company.
+{% endalert %}
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The CSV must have one column with a header of `id`, and each item's `id` must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The CSV file must have one column with a header of `id`, and each item's `id` must be unique. Additionally, the following limitations apply to catalog CSV files:
 
-- Maximum of 1,000 items (rows)
-- Maximum of 20 fields (columns)
-- Maximum field value (cell) size of 0.5kb
-- Maximum CSV file size of 10MB
+- Maximum of 5,000 items (rows)
+- Maximum of 30 fields (columns)
+- Maximum CSV file size of 100MB
+- Maximum cell size of 
+- Only letters, numbers, hyphens, and underscores in headers
 
-For this tutorial, we're using a catalog that lists two games, their cost, and an image link:
+{% alert note %}
+Need more space to accomodate for your CSV files? Please contact your Braze Account Manager for more information about upgrading your catalogs.
+{% endalert %}
 
-![The table shows two example games with columns for id, title, price, and image_link][5]
+For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
+
+![The table shows two example games with columns for id, title, price, and image_link.][5]
 
 ### Step 2: Upload your CSV
 
 After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
 
-![Catalog CSV upload zone][1]
+![][1]
 
 ### Step 3: Take note of your catalog ID
 
 After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID—a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
 
-![Example catalog ID and associated CSV files in a list below the upload zone][2]
+![Catalog ID and associated CSV files in a list below the upload zone.][2]
+
+### Step 4: Select your data type
+
+Select one of the following data types for each column:
+- String
+- Boolean
+- Number
+
+{% alert note %}
+This data type cannot be edited once you set up your catalog.
+{% endalert %}
+
+![][9]
+
+### Step 5: Enter a catalog name
+
+Enter a unique name for your catalog. Note that you won't be able to edit this name once the catalog is created. Optionally, you can also add a description for your catalog. 
+
+![][11]
 
 ## Updating a catalog
 
 If you need to update an existing catalog, you can do so by replacing your catalog with a new version. To do so, click <i class="fas fa-sync-alt"> **Replace Catalog**</i> from the **Catalogs** page and upload your new CSV.
 
-![Replace existing catalog][8]
+![][8]
 
 When you replace a catalog, all content and headers in the catalog will be replaced, but the catalog ID will not change. This allows you to update catalog content without needing to go into your existing messages and update the referenced catalog IDs.
 
@@ -84,7 +112,7 @@ For example, let's say we want to reference the `tales_storefront` item:
 Below the `catalogs` tag, use the `item` object to reference different attributes for that item.
 
 {% alert important %}
-Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects. <br><br>If a column in your CSV has spaces, that space must also be included in your personalization syntax. For example, an `item` of `Product Name` is referenced with {% raw %}`{{item["Product Name"]}}` instead of `{{item.Product Name}}`.{% endraw %}
+Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects. <br><br>If a column in your CSV file has spaces, that space must also be included in your personalization syntax. For example, an `item` of `Product Name` is referenced with {% raw %}`{{item["Product Name"]}}` instead of `{{item.Product Name}}`.{% endraw %}
 {% endalert %}
 
 For example, to reference the title and price of the `tales_storefront` item we could add the following:
@@ -142,7 +170,7 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 
 Here's what this looks like when the Liquid is rendered:
 
-![Example iOS push notification with catalog Liquid tags rendered][4]{: style="max-width:50%" }
+![Example iOS push notification with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
 
 ### Templating catalog items
 
@@ -187,7 +215,7 @@ You can use filtered sets to define a set of criteria, and Braze will return mat
 
 For example, here is a clothing catalog with fields for availability, category, brand, price, name, and color:
 
-![The table shows 15 example clothing items with columns for id, availability, category, brand, price, name, and color][6]
+![The table shows 15 example clothing items with columns for id, availability, category, brand, price, name, and color.][6]
 
 In your message composer, first [assign variables][10] to the criteria you want to filter, sort, and limit by in your catalog. This makes it easier for you to adjust your filters later on.
 
@@ -254,7 +282,7 @@ Alternatively, you can iterate through all the `items` using:
 
 Either of the above displays as follows:
 
-![Example iOS push notification with filtered catalog items rendered][7]{: style="max-width:50%" }
+![An iOS push notification with filtered catalog items rendered.][7]{: style="max-width:50%" }
 
 {% alert note %}
 If no items meet the filter criteria, `items` will be an empty array.
@@ -279,5 +307,6 @@ The following limitations apply to using filtered sets in catalogs:
 [6]: {% image_buster /assets/img_archive/catalog_filtered_csv.png %}
 [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %}
 [8]: {% image_buster /assets/img_archive/catalog_replace.png %}
-
+[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
+[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
