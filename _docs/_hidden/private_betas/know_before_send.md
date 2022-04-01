@@ -10,7 +10,7 @@ Braze encourages customers to launch their campaigns and Canvases with confidenc
 
 STOP 
 Disclaimer: These practices are based on a collective knowledge here at Braze from supporting messaging on these channels throughout the years. As every account comes with individual nuances and the industry continues to evolve (channel regulars & security changes), this guide should be treated as additional resources, not ironclad rules. We highly recommend you continue to thoroughly test campaigns, particularly large sends, before sending in earnest.
-
+  
 General
 
 - Review Braze [API rate limits](https://www.braze.com/docs/api/basics/#api-limits) per app group. If you are looking to discuss increasing API rate limits (and are already batching requests), start a discussion with your CSM. Keep in mind that this process requires lead-time so please do this with enough time prior to a key event. If you’re thinking… What’s Rate Limiting? [Read on here](https://www.braze.com/resources/articles/whats-rate-limiting).
