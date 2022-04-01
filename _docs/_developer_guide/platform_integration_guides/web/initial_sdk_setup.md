@@ -150,7 +150,7 @@ Braze may also be compatible with other tag management solutions by following ou
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK GitHub Repository"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
-[17]: https://github.com/Appboy/appboy-web-sdk/blob/master/upgrade_guide.md
+[17]: https://github.com/Appboy/appboy-web-sdk/blob/master/UPGRADE_GUIDE.md
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/
 <!-- wesley wanted an empty line at the end -->
