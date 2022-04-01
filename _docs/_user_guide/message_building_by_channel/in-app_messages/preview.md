@@ -20,20 +20,19 @@ Learn about the new Preview features for custom HTML in-app messages.
 
 The message preview screen shows a realistic preview that renders the JavaScript included in your message.
 
-This means you can preview _and interact_ with your custom messages (i.e., click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
+This means you can preview and interact with your custom messages (i.e., click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
-![New HTML in app preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![Interacting with the HTML preview by swiping through pages.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
-We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
+We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles while previewing in the dashboard.
 {% endalert %}
-
 
 ### Cross-channel HTML messages
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
-![New HTML in-app message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+![Creating an in-app message that sends to both Mobile and Web browsers where "Message Type" is Custom Code and "Custom Type" is HTML Upload with Preview.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
 ### New asset uploader
 
@@ -59,7 +58,7 @@ The code editor now includes Syntax Highlighting with a number of different colo
 
 This helps to easily spot potential code errors directly in the message composer, and better organize your code (using spaces or tabs - whichever side of that argument you're on).
 
-![New HTML in-app message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
+![Syntax highlighting options in the "Editor Settings" dropdown when composing an HTML in-app message.]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
 ### Button tracking improvements
 
@@ -108,16 +107,14 @@ These new features require upgrading to the following Braze SDK version:
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
 {% alert warning %}
-Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
-
-Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
+Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is above the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 {% endalert %}
 
 ### New message type {#new-message-type}
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In-App Message Early Access Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
+![Selecting HTML Upload with Preview for the "Custom Type" when creating a custom code in-app message.]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. 
 

@@ -516,5 +516,6 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/'] = '/docs/developer_guide/platform_integration_guides/ios/news_feed/integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs/';
 validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
+validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
