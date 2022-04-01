@@ -133,6 +133,14 @@ Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `bra
         }, 100);
     }
 
+    input.value = JSON.stringify({
+        "type": "container",
+        "steps": [{
+            "type": "addToSubscriptionGroup",
+            "args": ["your-subscription-group-ID-here"]
+        }]
+    }, null, 4);
+
     function decode(encoded) {
         const binary = atob(encoded)
         const bytes = new Uint8Array(binary.length);
