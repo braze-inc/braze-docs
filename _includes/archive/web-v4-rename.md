@@ -1,5 +1,5 @@
 {% alert note %}
-This guide shows examples using Web SDK v4.0.0, which renamed `appboy` to `braze` in public methods and the CDN-hosted filename. 
-
-If you are upgrading to v4, please ensure you follow our [Upgrade Guide](https://github.com/Appboy/appboy-web-sdk/blob/master/upgrade_guide.md) and rename any `appboy` references to `braze` accordingly.
+This guide uses code samples from v4 of the Braze Web SDK.
+<br><br>
+If you're not yet on v4 please follow our [Upgrade Guide](https://github.com/Appboy/appboy-web-sdk/blob/master/upgrade_guide.md).
 {% endalert %}
