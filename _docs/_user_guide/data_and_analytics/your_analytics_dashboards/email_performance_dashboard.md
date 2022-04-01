@@ -13,7 +13,7 @@ tool:
 
 The email performance dashboard allows you to view aggregate performance metrics for your entire email channel from both campaigns and Canvases. 
 
-To use your email performance dashboard, go to **Overview** > **Email Performance Dashboard**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
+To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
 
 <!---Placeholder image, replace with final design--->
 
@@ -32,9 +32,9 @@ To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
 | Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
 | Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for date range) |
-| Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens is non-unique and is a sub-metric of total opens. |
+| Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven’t been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
 | Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for date range) |
-| Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens from each day in the date range) |
+| Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Empty values in your data
