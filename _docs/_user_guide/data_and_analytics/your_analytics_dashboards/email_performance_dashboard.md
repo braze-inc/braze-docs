@@ -15,8 +15,6 @@ The email performance dashboard allows you to view aggregate performance metrics
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
 
-<!---Placeholder image, replace with final design--->
-
 ![][1]
 
 ## Metrics calculations
@@ -37,6 +35,8 @@ To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+<!---Temporarily hidden until functionality is added
+
 ## Empty values in your data
 
 #### If a metric displays "0%" or "0"
@@ -51,5 +51,6 @@ This means that while Braze recorded positive counts for a particular metric for
 
 This means Braze hasn't recorded any data for that metric during the time period you selected. If you haven’t set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
 
+--->
 
 [1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
