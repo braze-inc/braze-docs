@@ -89,10 +89,10 @@ function encode(string) {
 
 Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `brazeActions://` URI to decode its JSON.
 
-<div>Input:</div>
-<textarea id="braze-actions-input" rows="8"></textarea>
-<div>Output:</div>
-<textarea id="braze-actions-output" rows="5"></textarea>
+<div>JSON Input:</div>
+<textarea id="braze-actions-input" rows="12"></textarea>
+<div>Deeplink Output:</div>
+<textarea id="braze-actions-output" rows="6"></textarea>
 <style>
     #braze-actions-input, #braze-actions-output {
         width: 90%;
@@ -139,7 +139,8 @@ Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `bra
             "type": "addToSubscriptionGroup",
             "args": ["your-subscription-group-ID-here"]
         }]
-    }, null, 4);
+    }, null, 2);
+    input.dispatchEvent(new Event("input"));
 
     function decode(encoded) {
         const binary = atob(encoded)
