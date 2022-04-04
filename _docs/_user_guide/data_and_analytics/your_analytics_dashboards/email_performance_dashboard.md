@@ -26,7 +26,7 @@ To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}
 | Metric | Type | Calculation |
 | --- | --- | ---- |
 | Sends | Count | Total number of sends across each day in the date range |
-| Delivery Rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
+| Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
 | Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
 | Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for date range) |
