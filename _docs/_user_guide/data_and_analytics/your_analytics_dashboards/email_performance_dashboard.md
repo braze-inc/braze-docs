@@ -26,7 +26,7 @@ To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}
 | Metric | Type | Calculation |
 | --- | --- | ---- |
 | Sends | Count | Total number of sends across each day in the date range |
-| Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
+| Delivery Rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
 | Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
 | Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for date range) |
@@ -34,6 +34,22 @@ To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}
 | Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for date range) |
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+## Frequently asked questions
+
+### Why is my dashboard displaying empty values?
+
+There are a few scenarios that could lead to empty values for a metric:
+
+- Braze recorded zeros for that particular metric in your selected date range.
+- You haven't sent any emails during the selected date range.
+- While there were opens, clicks, or unsubscribes for a selected date range, there were no deliveries or sends. In this case, Braze will not calculate a rate metric.
+
+To see more metrics, try expanding the date range.
+
+### Why does my dashboard display more Other Opens than Unique Opens?
+
+For the _Unique Opens_ metric, Braze will de-duplicate any repeat opens registered by a given user (whether they include _Machine Opens_ or _Other Opens_), so that only a single _Unique Open_ is incremented if a user opens multiple times. For _Other Opens_, Braze does not de-deduplicate.
 
 <!---Temporarily hidden until functionality is added
 
