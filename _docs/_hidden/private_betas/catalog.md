@@ -33,8 +33,10 @@ First, create your CSV file. The CSV file must have one column with a header of 
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum CSV file size of 100MB
-- Maximum cell size of 
-- Only letters, numbers, hyphens, and underscores in headers
+- Maximum field value (cell) size of 0.5kb
+- Only headers with letters, numbers, hyphens, and underscores
+
+We also recommend that you lowercase all text in your CSV files.
 
 {% alert note %}
 Need more space to accomodate for your CSV files? Please contact your Braze Account Manager for more information about upgrading your catalogs.
@@ -48,15 +50,9 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
 
 After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
 
-![][1]
+![][1]{: style="max-width:85%;"}
 
-### Step 3: Take note of your catalog ID
-
-After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID—a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
-
-![Catalog ID and associated CSV files in a list below the upload zone.][2]
-
-### Step 4: Select your data type
+### Step 3: Select your data type
 
 Select one of the following data types for each column:
 - String
@@ -67,13 +63,15 @@ Select one of the following data types for each column:
 This data type cannot be edited once you set up your catalog.
 {% endalert %}
 
-![][9]
+![][9]{: style="max-width:85%;"}
 
-### Step 5: Enter a catalog name
+### Step 4: Enter a catalog name
 
-Enter a unique name for your catalog. Note that you won't be able to edit this name once the catalog is created. Optionally, you can also add a description for your catalog. 
+Enter a unique name for your catalog. This name can only contain numbers, letters, hyphens, and underscores. Note that you won't be able to edit this name once the catalog is created. 
 
-![][11]
+Optionally, you can also add a description for your catalog.
+
+![][11]{: style="max-width:85%;"}
 
 ## Updating a catalog
 
@@ -85,49 +83,44 @@ When you replace a catalog, all content and headers in the catalog will be repla
 
 ## Using catalogs in a message
 
-To use your catalog in a message, you'll need the catalog ID. For our example scenario, the catalog ID for our Games catalog is `6171a881759044006998ed9a`.
+You can use catalogs in all of your messaging channels, including anywhere in the Drag & Drop Editor where Liquid is supported.
 
-### Step 1: Retrieve an item {#step-one-retrieve-item}
+### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, use the `catalogs` Liquid tag to retrieve an item:
+In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon and select **Catalogs Items** for the **Personalization Type** in the **Add Personalization** modal. Then, select your **Catalog Name**. Using our previous example, we'll select the Games catalog.
+
+![][2]
+
+We can immediately see the following Liquid preview:
 
 {% raw %}
 ```liquid
-{% catalogs /catalogs/<CATALOG_ID>/items/<ITEM_ID> %}
+{% catalogs_items Games %}
 ```
 {% endraw %}
 
-Replace `<CATALOG_ID>` with your catalog ID and `<ITEM_ID>` with an item (row) ID from the catalog. 
+### Step 2: Select catalog items
 
-For example, let's say we want to reference the `tales_storefront` item:
+Next, it's time to add your catalog items! Using the dropdown, select the catalog items and the information to display. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
 
-{% raw %}
-```liquid
-{% catalogs /catalogs/6171a881759044006998ed9a/items/tales_storefront %}
-```
-{% endraw %}
-
-### Step 2: Reference attributes for that item
-
-Below the `catalogs` tag, use the `item` object to reference different attributes for that item.
-
-{% alert important %}
-Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects. <br><br>If a column in your CSV file has spaces, that space must also be included in your personalization syntax. For example, an `item` of `Product Name` is referenced with {% raw %}`{{item["Product Name"]}}` instead of `{{item.Product Name}}`.{% endraw %}
-{% endalert %}
-
-For example, to reference the title and price of the `tales_storefront` item we could add the following:
+For example, to reference the title and price of the `tales_storefront` item, we could select the `tales_storefront` as the catalog item and `title` and `price` for the displayed information.
 
 {% raw %}
 ```liquid
-{% catalogs /catalogs/6171a881759044006998ed9a/items/tales_storefront %}
+{% catalogs_items Games tales_storefront %}
  
-Get {{ item.title }} for just {{ item.price }}!
+Get {{ items[0].title }} for just {{ items[0].price }}!
 ```
 {% endraw %}
 
 This renders as the following:
 
 > Get Tales for just 7.49 USD!
+
+{% alert important %}
+Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects. <br><br>If a column in your CSV file has spaces, that space must also be included in your personalization syntax. For example, an `item` of `Product Name` is referenced with {% raw %}`{{item["Product Name"]}}` instead of `{{item.Product Name}}`.{% endraw %}
+{% endalert %}
+
 
 ## Additional use cases
 
@@ -166,7 +159,7 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 ```
 {% endraw %}
 
-![Push message composer with catalog Liquid tag used in the Push Icon Image field][3]
+![Push message composer with catalog Liquid tag used in the Push Icon Image field.][3]
 
 Here's what this looks like when the Liquid is rendered:
 
@@ -300,7 +293,7 @@ The following limitations apply to using filtered sets in catalogs:
 
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[2]: {% image_buster /assets/img_archive/catalog_id.png %}
+[2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
