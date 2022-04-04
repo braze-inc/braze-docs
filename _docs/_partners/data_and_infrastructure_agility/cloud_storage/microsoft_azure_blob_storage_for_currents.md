@@ -26,6 +26,10 @@ The Braze and Microsoft Azure Blob Storage integration allows you to stream Curr
 
 ## Integration
 
+Option 1:
+
+Option 2 (Recommended) :
+
 To integrate with Microsoft Azure Blob Storage, you must have a storage account and a connection string to allow Braze to stream Currents data.
 
 ### Step 1: Create a storage account
