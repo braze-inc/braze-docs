@@ -58,7 +58,8 @@ Once you identify your desired attributes, you can configure them with [enrichme
 - New Visit: occurs on a new visit by a visitor.
 - Any Event: occurs on any event.
 - Visit Ended: occurs when a visit ends.
-- Set up a custom rule for when this enrichment should occur (for example, sending a cart abandoner badge 30 minutes after the visit has ended if no purchase has occurred)
+
+You can also create a custom condition, called a rule, that will determine when the enrichment will occur.
 
 #### Badges
 
@@ -104,7 +105,7 @@ You may create badges that help you classify and target your users by certain at
 
 From the Tealium home page, select **Audiences** under **AudienceStream** from the left sidebar navigation. Here, you can create an audience of users with common attributes. A user’s entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
 
-First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP cart abandoners, you could create an audience of visitors who have the **VIP badge** and **Cart Abandoner badge** assigned.
+First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP users, you could create an audience of visitors who have the **VIP badge**.
 
 Make sure to **Save / Publish** your audience once finished.
 
@@ -196,7 +197,7 @@ Select **Finish**.
 
 View the summary of the connector you created. If you would like to modify your chosen options, select **Back** to edit or **Finish** to complete.
 
-Your connector now displays in the list of connectors on your Tealium home page.
+Your connector is now displayed in the list of connectors on your Tealium home page.
 
 Make sure to **Save / Publish** your connector once finished. The actions you configured will now fire when the trigger connections are met. 
 
