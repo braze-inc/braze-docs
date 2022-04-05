@@ -59,9 +59,9 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with server and/or client-side access is required to take advantage of this partnership. | 
 | Installed source and Tealium source [libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 | Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
-| Braze app identifier key | (Side-by-side only) Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| Code version | (Side-by-side only) Corresponds to SDK version and should be in major.minor format (e.g., 3.2 not 3.0.1). The code version should be 3.0 or higher. |
-| REST API key | (Server-to-server only) A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
+| Braze app identifier key (side-by-side only) | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
+| Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (e.g., 3.2 not 3.0.1). The code version should be 3.0 or higher. |
+| REST API key (server-to-server only) | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Choose your integration type
