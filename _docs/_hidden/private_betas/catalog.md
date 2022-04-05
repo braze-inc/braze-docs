@@ -194,25 +194,25 @@ With templating, you can render a different catalog item for each user based on 
 
 ## Limitations
 
-Refer to the following table for limitations that apply to a company:
+Refer to the following table for limitations that apply at a company level:
 
-| Description | Limitation |
-|---|---|
-| Number of catalogs | By default, maximum of 5 catalogs. <br>For Catalogs Pro, maximum of 10. |
-| Size of all catalog data | By default, maximum of 100MB. <br>For Catalogs Pro, maximnum 2GB of storage. |
-| Number of all catalogs items | By default, maximum of 5,000 items. <br>For Catalogs Pro, maximum 100,000 items. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Limitation Area | Free version | Catalogs Pro |
+|---|---|---|
+| Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
+| Number of all catalogs items | Up to 5,000 items. | Up to 100,000 items. |
+| Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-The following table describes the limitations that apply on a catalog level:
+The following table describes the limitations that apply at a catalog level:
 
-| Description | Limitation |
-|---|---|
-| CSV upload size | By default, for a singular CSV upload, the maximum file size is 100MB. <br>For Catalogs Pro, this is 2GB. |
-| Number of items | By default, for a singular catalog, the maximum number of items is 5,000. <br>For Catalogs Pro, the maximum is 100,000 items. |
-| Number of columns | Maximum of 30 fields. |
-| Characters item value | Maximum of 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters item column name | For a given column name, the maximum number of characters allowed is 250. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Limitation Area | Free version | Catalogs Pro |
+|---|---|---|
+| CSV file size | Up to 100MB for a single CSV file | Up to 2GB for a single CSV file |
+| Number of items | Up to 5,000 items in a single catalog | Up to 100,000 items in a single catalog |
+| Number of fields | Up to 30 fields (columns) | Up to 30 fields (columns) |
+| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Catalogs team</a> for more informaton.
 
