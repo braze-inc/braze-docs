@@ -25,14 +25,26 @@ guide_featured_list:
 
 ---
 
-## Apptimize
+## Deprecations log
+
+### Braze Windows SDK
+
+##### Integration
+As of March 24, 2022, the Braze Windows SDK is deprecated, and no new Windows apps can be created in the Braze dashboard. 
+
+### Baidu push integration
+
+##### Integration
+As of March 24, 2022, the Braze Baidu Push Integration is deprecated, and no new Baidu apps can be created in the Braze dashboard. 
+
+### Apptimize
 
 ##### Braze partnership
 **Support withdrawn**: August 2019
 
 If you are currently using [Apptimize with Braze]({{site.baseurl}}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
-## Original in-app messages
+### Original in-app messages
 
 ##### Braze feature
 
@@ -48,9 +60,9 @@ Braze moved over to a new form of in-app messages with the following SDK release
 
 Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the **Create Campaign** button on the **Campaign** page.
 
-![Deprecated original in-app messages option][15]
+![][15]
 
-## Feedback
+### Feedback
 
 ##### Braze feature
 
@@ -58,7 +70,7 @@ Prior to these releases, Braze supported "original in-app messages." Previously,
 
 The Braze SDK provided a feedback widget that could be added to your app to allow users to leave feedback using the submitFeedback method and pass it into either Desk.com or Zendesk and was managed on the dashboard.
 
-## Google Cloud Messaging (GCM)
+### Google Cloud Messaging (GCM)
 
 ##### Integration
 
@@ -73,18 +85,18 @@ Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{s
 
 If you have not transitioned to FCM, all GCM push tokens registrations will fail. If your apps are currently supporting GCM, you’ll need to work with your development teams on [transitioning from GCM to Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
 
-## Eclipse
+### Eclipse
 
 ##### Integration
 
 **Support withdrawn**: 2014-2015
-**Replaced by**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)_
+**Replaced by**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
-Braze has removed support for the Eclipse IDE due to [Google sunsetting support]](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) for the Eclipse Android Developer Tools (ADT) plugin. 
+Braze has removed support for the Eclipse IDE due to Google [sunsetting support](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) for the Eclipse Android Developer Tools (ADT) plugin. 
 
 If you need assistance with your Eclipse integration prior to migration, contact [Support]({{site.baseurl}}/support_contact/) for assistance.
 
-## The Raw Event Stream (RES)
+### The Raw Event Stream (RES)
 
 ##### Braze feature
 
@@ -93,7 +105,7 @@ If you need assistance with your Eclipse integration prior to migration, contact
 
 The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
 
-## Delay while idle
+### Delay while idle
 
 ##### GCM Feature
 
@@ -102,7 +114,7 @@ The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners
 
 The Delay While Idle parameter was previously a part of the [GCM push options](https://developers.google.com/cloud-messaging/http-server-ref). Google withdrew support for this option on November 15th 2016. Previously, when set to **true**, it indicated that the message should not be sent until the device becomes active.
 
-## Custom endpoints
+### Custom endpoints
 
 ##### Braze feature
 
@@ -110,7 +122,6 @@ The Delay While Idle parameter was previously a part of the [GCM push options](h
 **Replaced by**: Not available
 
 Removal of Custom Endpoints. If you have a custom endpoint, you can still continue to use it, but Braze no longer gives them out.
-
 
 
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
