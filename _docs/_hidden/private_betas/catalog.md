@@ -252,7 +252,7 @@ Alternatively, you can iterate through all the `items` using:
 ```
 {% endraw %}
 
-Either of the above displays as follows:
+Either of the preceding options displays as follows:
 
 ![Example iOS push notification with filtered catalog items rendered][7]{: style="max-width:50%" }
 

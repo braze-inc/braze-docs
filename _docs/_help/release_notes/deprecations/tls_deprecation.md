@@ -44,7 +44,7 @@ Your engineering team should ensure that they aren’t using any of these cipher
 
 ### Phase 2: May 31, 2018
 
-Braze will be disabling support for TLS 1.0 and TLS 1.1 across all Braze Services on May 31, 2018—including the Braze dashboard, REST APIs, and APIs that communicate with our SDKs. We’ll also remove support for the ciphers listed above in connection with the APIs that receive SDK data. That means that all TLS 1.0 and 1.1 communication to and from Braze will not be supported by our network as of this date.
+Braze will be disabling support for TLS 1.0 and TLS 1.1 across all Braze Services on May 31, 2018—including the Braze dashboard, REST APIs, and APIs that communicate with our SDKs. We’ll also remove support for the ciphers listed in the preceding section in connection with the APIs that receive SDK data. That means that all TLS 1.0 and 1.1 communication to and from Braze will not be supported by our network as of this date.
 
 As a result of this change, some old or outdated mobile devices—likely ones running early versions of Android—may lose the ability to communicate with Braze, barring them from sending data to Braze or receiving in-app messages from Braze. However, we anticipate that the change will affect only a small number of devices. Any devices that are affected will also lose the ability to communicate with any PCI-compliant website or service a month later on June 30, 2018, the date set by the PCI DSS Council for removal of TLS 1.0 and TLS 1.1 ciphers.
 
