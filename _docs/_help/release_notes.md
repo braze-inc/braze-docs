@@ -50,6 +50,9 @@ guide_featured_list:
 
 ## May 2022
 
+### Filter by campaign or Canvas attribution
+You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
+
 ### Email performance dashboard
 With the [email performance dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/), you can view aggregate performance metrics for your entire email channel from both campaigns and Canvases for your selected date range.
 

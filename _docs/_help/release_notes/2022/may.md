@@ -8,6 +8,9 @@ description: "This article contains release notes for May 2022."
 
 # May 2022
 
+## Filter by campaign or Canvas attribution
+You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting][8].
+
 ## Email performance dashboard
 With the [email performance dashboard][1], you can view aggregate performance metrics for your entire email channel from both campaigns and Canvases for your selected date range.
 
@@ -42,3 +45,4 @@ The Braze and [Tealium][5] integration allows you to seamlessly control the flow
 [5]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/baidu_integration/
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/
