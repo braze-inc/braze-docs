@@ -18,6 +18,8 @@ This endpoint allows you to export all the users within a segment. User data is 
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Please wait for your export to complete before retrying. 
 
+This endpoint is currently not supported by Google Cloud Storage.
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
@@ -148,7 +150,6 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 - The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only contain data from the last 90 days.
 - Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
-
 
 ## Response
 
