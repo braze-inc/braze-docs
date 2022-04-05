@@ -116,17 +116,17 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! To reference multiple items from your catalog in one message, repeat the `catalogs` tag and replace the `<ITEM_ID>` with a different item from your catalog. Refer to the following as an example:
+You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Refer to the following as an example:
 
 {% raw %}
 ```liquid
-{% catalogs /catalogs/6171a881759044006998ed9a/items/tales_storefront %}
+{% catalogs_items Games tales_storefront %}
  
-Get {{ item.title }} for just {{ item.price }}!
+Get {{ items[0].title }} for just {{ items[0].price }}!
  
-{% catalogs /catalogs/6171a881759044006998ed9a/items/reformation_storefront %}
+{% catalogs_items Games reformation_storefront %}
  
-Get {{ item.title }} for just {{ item.price }}!
+Get {{ items[1].title }} for just {{ items[1].price }}!
 ```
 {% endraw %}
 
@@ -139,21 +139,21 @@ This renders as the following:
 
 You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
 
-For example, to add the `image_link` from our Games catalog to our promotional message for Tales, we can add the following to our image field:
+For example, to add the `image_link` from our Games catalog to our promotional message for Tales, select the `tales_storefront` for the **Catalog Items** field and `image_link` for the **Information to Display** field. This adds the following Liquid tags to our image field:
 
 {% raw %}
 ```liquid
 {% catalogs_items Games tales_storefront %}
 
-{{ item.image_link }}
+{{ items[0].image_link }}
 ```
 {% endraw %}
 
-![Push message composer with catalog Liquid tag used in the Push Icon Image field.][3]
+![Content Card composer with catalog Liquid tag used in the image field.][3]
 
 Here's what this looks like when the Liquid is rendered:
 
-![Example iOS push notification with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
+![Example Content Card with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
 
 ### Templating catalog items
 
@@ -170,7 +170,7 @@ You can also use templating to dynamically pull catalog items based on custom at
 }
 ```
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the `catalogs` tag to pull a specific item from the array.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
 
 {% alert tip %}
 Remember, arrays start at `0`, not `1`.
@@ -198,8 +198,6 @@ With templating, you can render a different catalog item for each user based on 
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %}
-[8]: {% image_buster /assets/img_archive/catalog_replace.png %}
 [9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
 [11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
