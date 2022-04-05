@@ -211,7 +211,7 @@ After your connector is up and running, you should test it to ensure it's workin
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.
 5. Look for the action you want to validate and view the log status. 
 
-Refer to Tealium's [trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
+Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
 
 ## Potential data point overages
 
