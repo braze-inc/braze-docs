@@ -48,6 +48,19 @@ Filter for the recency of a user responding to your SMS program. This filter wil
 
 ![Segmentation filter Last sent SMS to subscription group "Marketing SMS" with keyword "Opt-in" after August 11, 2020.][6]
 
+### Filter by campaign or Canvas attribution
+
+Filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag.
+
+**Filter by replied to a specific campaign category**<br>
+![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."][12]
+
+**Filter by replied to a campaign or Canvas with a specific tag**
+![Campaign with the filter "Has replied to SMS" for campaign or Canvas with tag "Curbside Messaging Service C".][13]
+
+**Filter by replied to a specific step**
+![Campaign with the filter "Has replied to SMS" for step "SMS Double Opt" "Step - Help".][11]
+
 ### Trigger messages by keyword
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
@@ -88,3 +101,6 @@ Want to receive a specific deal? Just text us the category you're interested in.
 [8]: {% image_buster /assets/img/sms/retargeting3.png %}
 [16]: {% image_buster /assets/img/keyword_example1.jpg %}
 [17]: {% image_buster /assets/img/keyword_example2.jpg %}
+[11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
+[12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
+[13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 
