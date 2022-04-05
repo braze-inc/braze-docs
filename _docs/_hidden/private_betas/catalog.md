@@ -33,10 +33,10 @@ First, create your CSV file. The CSV file must have one column with a header of 
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
 - Maximum CSV file size of 100MB
-- Maximum field value (cell) size of 0.5kb
+- Maximum field value (cell) size of 0.5KB
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-We also recommend that you lowercase all text in your CSV files.
+We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
 Need more space to accomodate for your CSV files? Please contact your Braze Account Manager for more information about upgrading your catalogs.
@@ -61,7 +61,7 @@ Select one of the following data types for each column:
 - Time
 
 {% alert note %}
-This data type cannot be edited once you set up your catalog.
+This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
 ![][9]{: style="max-width:85%;"}
@@ -82,7 +82,7 @@ You can use catalogs in all of your messaging channels, including anywhere in th
 
 ### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon and select **Catalogs Items** for the **Personalization Type** in the **Add Personalization** modal. Then, select your **Catalog Name**. Using our previous example, we'll select the Games catalog.
+In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the Games catalog.
 
 ![][2]
 
