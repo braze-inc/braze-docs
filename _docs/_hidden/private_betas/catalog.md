@@ -13,7 +13,7 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 {% alert important %}
-Catalogs are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.<br> To share any feedback on this feature, reach out to the <a href="mailto:catalogs-product@braze.com">Catalogs team</a>.
+Catalogs are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
 If you'd like to share your feedback on this feature or make a request, you can [book a session](https://calendly.com/d/yzvf-frpy/catalog-beta-working-session?month=2021-10) with the Braze Data Ingestion team on Calendly!
