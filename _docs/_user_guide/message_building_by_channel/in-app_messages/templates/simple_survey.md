@@ -36,7 +36,7 @@ This survey template is supported for both mobile apps and web browsers. Remembe
 
 To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear below your survey question.
 
-![Compose tab of the simple survey editor, with fields for a header, optional body, and optional helper text.]({% image_buster /assets/img/iam/iam-survey2.png %})
+![Compose tab of the simple survey editor, with fields for a header, optional body, and optional helper text.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
 
 {% alert tip %} 
 These fields can include both Liquid and emojis, so get fancy! 
@@ -46,7 +46,7 @@ These fields can include both Liquid and emojis, so get fancy!
 
 Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
 
-![Choices dropdown with "Multiple-choice selection" selected.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:70%"}
+![Choices dropdown with "Multiple-choice selection" selected.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
 
 {% alert tip %} 
 Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. 
@@ -56,19 +56,25 @@ Your **Helper text** will automatically update when you switch between **Single-
 
 Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
-![Choices dropdown with "Log attributes upon submission" selected.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
+![Choices dropdown with "Log attributes upon submission" selected.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
 
 For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
-![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
 
 You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
 {% alert important %} 
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
 {% endalert %}
+
+#### Logging responses only
+
+Alternatively, you can choose to **Log responses only (no attributes)**. When this option is selected, survey responses are logged as button clicks, but custom attributes are logged to a user's profile. This means you can still view the click metrics for each survey option (see [Analytics](#analytics)), but that choice won't be reflected on their user profile.
+
+These click metrics are not available for retargeting.
 
 ### Step 4: Choose submission behavior
 
@@ -78,11 +84,11 @@ A confirmation page is a great place to thank users for their time or provide ad
 
 Edit your button text and on-click behavior in the **Submit Button** section at the bottom of the **Survey** tab:
 
-![On-click behavior set to "Submit responses and display confirmation page".]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:70%"}
+![On-click behavior set to "Submit responses and display confirmation page".]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 If you elect to add a confirmation page, switch to the **Confirmation Page** tab to customize your message:
 
-![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:70%"}
+![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
 
 If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
 
@@ -102,7 +108,7 @@ Deleted survey choices will still appear in analytics but will not be shown as a
 
 For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
 
-![In-app message performance panel with click analytics for each choice and button on the survey.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:90%"}
+![In-app message performance panel with click analytics for each choice and button on the survey.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
 
 Check out [In-app message reporting][4] for a breakdown of your campaign metrics.
 
