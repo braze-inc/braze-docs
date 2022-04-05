@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Tealium
 
-> [Tealium](https://tealium.com/) is a universal data hub and customer data platform composed of EventStream, AudienceStream, iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
+> [Tealium](https://tealium.com/) is a universal data hub and customer data platform composed of EventStream, AudienceStream, and iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
 ![A Tealium overview graphic showing how the different Tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.][22]{: style="border:0;"}
 
