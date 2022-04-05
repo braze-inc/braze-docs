@@ -126,7 +126,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
  
 {% catalogs_items Games reformation_storefront %}
  
-Get {{ items[1].title }} for just {{ items[1].price }}!
+Get {{ items[0].title }} for just {{ items[0].price }}!
 ```
 {% endraw %}
 
