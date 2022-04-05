@@ -191,7 +191,7 @@ Braze includes a service to handle push receipt and open intents. Our `BrazeFire
 Braze's notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`][70] in the Firebase push sample app.
 
 {% alert important %}
-Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
 {% endalert %}
 
 ##### Using your own Firebase Messaging Service
@@ -411,7 +411,7 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
-The above is an example for customers on the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
+This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
 
 ## Customizing your integration
 

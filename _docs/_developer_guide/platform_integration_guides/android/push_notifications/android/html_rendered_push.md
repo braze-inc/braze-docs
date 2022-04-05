@@ -15,7 +15,7 @@ In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor te
 
 ![An Android push message "Multicolor Push test message" where the letters are different colors, italisized and given a background color.][1]{: style="max-width:40%;"}
 
-The above example is rendered with the following HTML:
+This example is rendered with the following HTML:
 
 ```html
 <p><span style="color: #99cc00;">M</span>u<span style="color: #008080;">lti</span>Colo<span style="color: #ff6600;">r</span> <span style="color: #000080;">P</span><span style="color: #00ccff;">u</span><span style="color: #ff0000;">s</span><span style="color: #808080;">h</span></p>
