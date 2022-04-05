@@ -140,7 +140,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Purchase objects, event objects, and webhooks
 
-Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
+Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
 
