@@ -199,7 +199,7 @@ Refer to the following table for limitations that apply at a company level:
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
 | Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
-| Number of all catalogs items | Up to 5,000 items. | Up to 100,000 items. |
+| Number of all catalogs items | Up to 5,000 items | Up to 100,000 items |
 | Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
