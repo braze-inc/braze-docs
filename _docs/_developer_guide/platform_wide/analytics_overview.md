@@ -97,7 +97,7 @@ Custom event properties can also be used for personalization within the messagin
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your Customer Success Manager or our support team, as this may incur additional data costs.
 
 ## Custom attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the above example for custom events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
 
 ### Custom attribute storage
 
@@ -239,7 +239,7 @@ Their goal is straightforward in that they want users to hail taxi rides via the
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following custom events:
+These actions could then be tagged as the following custom events:
 
 - Began Registration
 - Completed Registration
@@ -260,7 +260,7 @@ After implementing the events, you can now run the following campaigns:
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following custom attributes:
+These characteristics could then be tagged as the following custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Number Type)

@@ -68,6 +68,6 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey=YOUR_API_KEY&baseUrl
 >
 ```
 
-In particular, the `service-worker-URL` requires appending your `apiKey` and `baseUrl` (https://dev.appboy.com/api/v3) as query parameters as shown above. 
+In particular, the `service-worker-URL` requires appending your `apiKey` and `baseUrl` (https://dev.appboy.com/api/v3) as query parameters.
 
 You should now be configured for push subscription and unsubscription on your AMP page. 

@@ -171,7 +171,7 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above and is called with the following parameters:
+This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method and is called with the following parameters:
 
 - `YOUR-API-KEY`: Your application's API key is found under **Manage Settings** in the Braze dashboard.
 - `application`: The current app.
@@ -181,13 +181,13 @@ This method would replace the `startWithApiKey:inApplication:withLaunchOptions:`
 See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
-Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
+Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 
 ## Manual integration options
 
-You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repo][1] and initialize Braze as outlined above.
+You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repo][1] and initialize Braze as outlined in the preceding sections.
 
 ## Identifying users and reporting analytics
 See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).

@@ -43,7 +43,7 @@ Check **Enable Background Push** if you would like to enable `background mode` f
 
 Users who have not yet opted-in to push notifications will automatically be authorized for push upon opening your application. To disable this feature and manually register users for push, check **Disable Automatic Push Registration**.
 
-- If **Disable Provisional Authorization** is not checked on iOS 12 and above, the user will be provisionally (silently) authorized to receive quiet push. If checked, the user will be shown the native push prompt.
+- If **Disable Provisional Authorization** is not checked on iOS 12 or later, the user will be provisionally (silently) authorized to receive quiet push. If checked, the user will be shown the native push prompt.
 - If you need to configure exactly when the prompt is shown at runtime, disable automatic registration from the Braze configuration editor and use `AppboyBinding.PromptUserForPushPermissions()` instead.
 
 ![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "integrate push with braze", and "disable automatic push registration" are enabled.][28]

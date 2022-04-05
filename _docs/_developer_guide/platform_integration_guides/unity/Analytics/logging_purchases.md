@@ -18,13 +18,13 @@ Braze supports purchases in multiple currencies. Purchases that you report in a 
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][5].
 
-To use this feature, add this method call after a successful purchase in your app:
+To use this feature, add the following method call after a successful purchase in your app:
 
 ```csharp
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal));
 ```
 
-The above method logs a purchase with a quantity of one. If you would like to pass in a different quantity, you can call this method:
+This method logs a purchase with a quantity of one. If you would like to pass in a different quantity, you can call the following method:
 
 ```csharp
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int));

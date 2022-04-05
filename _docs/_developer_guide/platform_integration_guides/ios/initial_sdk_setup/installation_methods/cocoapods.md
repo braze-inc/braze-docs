@@ -22,7 +22,7 @@ $ sudo gem install cocoapods
 If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide][apple_initial_setup_25].
 
 {% alert note %}
-If prompted to overwrite the `rake` executable, refer to the [Getting started][apple_initial_setup_3] directions on CocoaPods.org for more details.
+If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") directions on CocoaPods.org for more details.
 {% endalert %}
 
 ## Step 2: Constructing the podfile
@@ -41,7 +41,7 @@ We suggest you version Braze so pod updates automatically grab anything smaller 
 
 #### Subspecs
 
-We recommend that integrators import our full SDK as outlined above. However, if you are certain that you are only going to integrate a particular Braze feature, you can import just the desired UI subspec instead of the full SDK.
+We recommend that integrators import our full SDK. However, if you are certain that you are only going to integrate a particular Braze feature, you can import just the desired UI subspec instead of the full SDK.
 
 | Subspec | Details |
 | ------- | ------- |
