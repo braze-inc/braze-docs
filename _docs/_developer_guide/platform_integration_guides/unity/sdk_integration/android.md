@@ -80,9 +80,9 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
     <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
     <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
       <intent-filter>
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_NOTIFICATION_OPENED" />
-        <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED" />
+        <action android:name="com.braze.push.intent.NOTIFICATION_OPENED" />
+        <action android:name="com.braze.push.intent.NOTIFICATION_RECEIVED" />
+        <action android:name="com.braze.push.intent.NOTIFICATION_DELETED" />
       </intent-filter>
     </receiver>
   </application>

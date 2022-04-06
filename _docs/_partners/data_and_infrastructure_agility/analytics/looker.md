@@ -35,7 +35,7 @@ The Braze and Looker integration allows Braze users to leverage first-party [Loo
 
 Our Looker Blocks help Braze customers quickly access a view of granular data we offer via [Currents][5]. Our blocks provide pre-made visualizations and modeling for Currents data so Braze customers can easily implement analytic patterns like retention, evaluate message deliverability, take a more detailed look at user behavior, and more.
 
-To implement the Looker Blocks, follow the instructions in the README files of the Github code.
+To implement the Looker Blocks, follow the instructions in the README files of the GitHub code.
 - [Message engagement analytics block README][2]
 - [User behavior analytics block README][3]
 

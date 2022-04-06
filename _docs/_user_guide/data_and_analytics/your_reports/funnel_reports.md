@@ -60,18 +60,18 @@ In your funnel report, you can directly compare the control group alongside the 
 
 ### Funnel report components
 
-- __Horizontal axis__: Displays the percentage of message recipients who performed those actions. 
-- __Chart__: Displays the number of received messages, the number of users that performed the prior actions as well as the action you chose, the conversion rate, and the percentage change from control.
-- __Regenerate Option__: Allows you to regenerate your report and notes when the current report was last generated. 
-- __Variants__: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the __chart__ will only show three variants. To see more, you can manually select the rest of the variants.
+- **Horizontal axis**: Displays the percentage of message recipients who performed those actions. 
+- **Chart**: Displays the number of received messages, the number of users that performed the prior actions as well as the action you chose, the conversion rate, and the percentage change from control.
+- **Regenerate Option**: Allows you to regenerate your report and notes when the current report was last generated. 
+- **Variants**: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the **chart** will only show three variants. To see more, you can manually select the rest of the variants.
 
 ![Funnel Report 4][4]
 
-__For campaigns with multiple variants__: Braze will show a table that displays metrics for each event and variant, as well as the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipients.
+**For campaigns with multiple variants**: Braze will show a table that displays metrics for each event and variant, as well as the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipients.
 
-__For campaigns with re-eligibility__: If a user receives the campaign more than once in the report time window, Braze will determine whether the user should be included in the funnel based on the actions this user took after the first time they received the campaign within the time window.
+**For campaigns with re-eligibility**: If a user receives the campaign more than once in the report time window, Braze will determine whether the user should be included in the funnel based on the actions this user took after the first time they received the campaign within the time window.
 
-__For multivariant campaigns with re-eligibility__: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count towards multiple different variants if they received multiple variants during the time window for the funnel.
+**For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count towards multiple different variants if they received multiple variants during the time window for the funnel.
 
 [1]:{% image_buster /assets/img/funnel_report/funnel_report1.jpg %}
 [2]:{% image_buster /assets/img/funnel_report/funnel_report2.png %}

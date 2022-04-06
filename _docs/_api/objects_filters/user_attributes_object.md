@@ -60,8 +60,8 @@ When importing push tokens from other systems, an `external_id` is not always av
 
 When specifying `push_token_import` as `true`:
 
-* `external_id` and `braze_id` should __not__ be specified
-* The attribute object __must__ contain a push token
+* `external_id` and `braze_id` should **not** be specified
+* The attribute object **must** contain a push token
 * If the token already exists in Braze, the request is ignored; otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals
 
 After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.

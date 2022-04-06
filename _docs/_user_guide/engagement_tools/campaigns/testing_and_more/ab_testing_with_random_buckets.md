@@ -39,19 +39,19 @@ Consider the following sample plan for creating segments of equal size for three
 
 You may want to use these types of segments if you want to run a test of three different variants (for instance, three different send times or three different combinations of message channels) and also include a control group.
 
-![Filter Selection][1]
+![][1]
 
-![Example Filter][2]
+![][2]
 
 For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
 
-## Step 2: Create your campaign variants
+## Step 2: Create your campaign variants {#campaign-variants}
 
 ### Step 2a: Create your first variant
 
-Create a campaign. On the **Target Users** page, select a segment of recipients. The segment you choose will be one that was created in the prior step.
+Create a campaign. On the **Target Users** step, select a segment of recipients. The segment you choose will be one that was created in the prior step.
 
-![Select Campaign Recipient Segment][4]
+![][4]
 
 ### Step 2b: Build additional variants
 
@@ -69,7 +69,7 @@ Control groups remain consistent if the variant percentage is unchanged. Users w
 
 ## Step 3: Build additional messages
 
-If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. 
+If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating [Step 2](#campaign-variants). One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. 
 
 Be sure to plan the workflows of your campaign series variants in advance in order to maintain the integrity of your A/B test.
 
@@ -77,11 +77,11 @@ Be sure to plan the workflows of your campaign series variants in advance in ord
 
 Because creating a [multivariate test][16] allows you to easily test content, using random buckets is best suited for testing delivery, cadence, and channel combinations.
 
-All of the below use cases can be accomplished within [Canvas][13], a tool built with these types of experiments in mind.
+All of the following use cases can be accomplished within [Canvas][13], a tool built with these types of experiments in mind.
 
 ### Delivery
 
-You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
+You can compare results between a campaign sent with [scheduled delivery][11], [action-based delivery][17] and [Intelligent Timing][12].
 
 ### Cadence
 

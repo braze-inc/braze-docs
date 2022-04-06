@@ -12,7 +12,7 @@ tool:
 
 # Campaign results data
 
-All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the Dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
+All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 
 ## Multichannel campaigns
 
@@ -78,7 +78,7 @@ In-app message campaign results contain graphs for the following analytics:
 
 ## Campaign recipients
 
-You can export user data for all the recipients of a campaign as a CSV file. To do so, click the __User Data__ button in the __Campaign Details__ block.
+You can export user data for all the recipients of a campaign as a CSV file. To do so, click the **User Data** button in the **Campaign Details** block.
 
 {% alert note %}
 Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that app group.

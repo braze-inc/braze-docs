@@ -42,7 +42,7 @@ If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze.
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will also need to set up `product_id` as a parameter for events. Visit [Adjust’s documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the __Generate API Key__ button found within the Adjust partner page in the Braze dashboard.
+If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will also need to set up `product_id` as a parameter for events. Visit [Adjust’s documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the **Generate API Key** button found within the Adjust partner page in the Braze dashboard.
 {% endalert %}
 
 ### Step 2: Get the Braze data import key
@@ -51,9 +51,9 @@ In Braze, navigate to **Technology Partners** and select **Adjust**. Here, you w
 
 ### Step 3: Configure Braze in Adjust
 
-1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
-2. Select __Braze (formerly Appboy)__ and provide the data import key and Braze REST endpoint.
-3. Click __Save & Close__.
+1. In Adjust’s dashboard, navigate to **App Settings** and navigate to **Partner Setup**, then **Add Partners**.
+2. Select **Braze (formerly Appboy)** and provide the data import key and Braze REST endpoint.
+3. Click **Save & Close**.
 
 ### Step 4: Confirm the integration
 
@@ -109,7 +109,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-__This recommendation is purely optional__<br>
+**This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 

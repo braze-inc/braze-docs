@@ -155,7 +155,7 @@ More questions you can answer with this dashboard:
 {% tab Engagement Reports %}
 **Engagement Reports**
 
-Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the Dashboard.
+Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
 
 You can export the following statistics depending on your message channel:
 

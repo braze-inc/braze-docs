@@ -40,7 +40,7 @@ tool:
 | Variant Distribution*                          |                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-*Control variant distribution may only be decreased after launch.
+_*Control variant distribution may only be decreased after launch._
 
 ## Individual step
 

@@ -35,7 +35,7 @@ Braze does not count subscription state changes against your data points, global
 
 Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states) above. You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [Email Preference Center](#email-preference-center). 
+For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
 Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a group
 
-To create a subscription group, go to the __Subscription Groups__ page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
+To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
@@ -71,13 +71,13 @@ By default, the past 30 days of state changes across all subscription groups are
 
 You can see the number of users who changed their Subscription State (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
 
-From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under __Subscription Groups__ to see the aggregate count of state changes, as submitted by your customers.
+From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
 ![Sub Group Performance][30]
 
-### Email Preference Center
+### Email preference center
 
-The Email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
 To place a link to the Preference Center in your emails, use the Preference Center Liquid tag (below) and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
@@ -164,7 +164,7 @@ You can also choose to set a custom footer for plaintext emails from the **Email
 
 When a user clicks on an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [Email Settings][10] page.
+Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [email Settings][10] page.
 
 We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 

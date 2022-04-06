@@ -11,17 +11,17 @@ channel:
 
 # Customization {#in-app-message-customization}
 
-All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
+Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from within the [dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support.
 <br><br>
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS in-app messages, News Feed, or Content Cards.
+**Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images** within iOS in-app messages, News Feed, or Content Cards.
 {% endalert %}
 
 ## Key-value pair extras
 
-`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app.
+`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down with an in-app message for further handling by your app.
 
 ## Setting delegates
 
@@ -50,7 +50,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInA
 {% endtab %}
 {% endtabs %}
 
-See our [in-app message sample app][35] for an example. Note that if you are not including Braze's UI library in your project (uncommon), this delegate is unavailable.
+Check out our in-app message [sample app][35] for an example implementation. Note that if you are not including Braze's UI library in your project (uncommon), this delegate is unavailable.
 
 ### Core in-app message delegate
 
@@ -75,7 +75,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 {% endtab %}
 {% endtabs %}
 
-You can alternatively set your core in-app message delegate at initialization time via `appboyOptions` using the key `ABKInAppMessageControllerDelegateKey`.
+You can alternatively set your core in-app message delegate at initialization time via `appboyOptions` using the key `ABKInAppMessageControllerDelegateKey`:
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
@@ -128,11 +128,11 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
 {% endtab %}
 {% endtabs %}
 
-Following this, all in-app messages will be displayed in the supported orientation, regardless of device orientation. Please note that the device orientation must also be supported by the in-app message's `orientation` property in order for the message to display. For more information, see the section below.
+Following this, all in-app messages will be displayed in the supported orientation, regardless of device orientation. Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display.
 
 ### Setting orientation per in-app message
 
-You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
+You may alternatively set orientation on a per-message basis. To do this, set an [in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -161,7 +161,9 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
 
-For *iPads*, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+{% alert note %}
+For iPads, in-app messages will appear in the user's preferred orientation style regardless of actual screen orientation.
+{% endalert %}
 
 ## Custom handling in-app message display
 
@@ -207,27 +209,28 @@ You can customize in-app message handling by implementing this delegate method a
 
 | `ABKInAppMessageDisplayChoice` | Behavior |
 | -------------------------- | -------- |
-| `ABKDisplayInAppMessageNow` | The message will be displayed immediately |
-| `ABKDisplayInAppMessageLater` | The message will be not be displayed and will be placed back on the top of the stack |
-| `ABKDiscardInAppMessage` | The message will be discarded and will not be displayed |
+| `ABKDisplayInAppMessageNow` | The message will be displayed immediately. |
+| `ABKDisplayInAppMessageLater` | The message will be not be displayed and will be placed back on the top of the stack. |
+| `ABKDiscardInAppMessage` | The message will be discarded and will not be displayed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
 
-For an implementation example, see our [in-app message Sample Application][36].
+Check out our [sample application][36] for an implementation example.
 
 ### Overriding in-app messages before display
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
-If the IAM campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the IAM campaign to display from the top of the screen even if the keyboard is being displayed.
+If the in-app message campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the in-app message campaign to display from the top of the screen even if the keyboard is being displayed.
 
 ### Hiding the status bar during display
 
-For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases, the status bar may still appear on top of the in-app message. As of version [3.21.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211) of the iOS SDK, you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.
 
 ### Logging impressions and clicks
 
-Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
+Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (i.e., you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -243,9 +246,9 @@ Logging in-app message impressions and clicks is not automatic when you implemen
 {% tab swift %}
 
 ```swift
-// Registers that a user has viewed a in-app message with the Braze server.
+// Registers that a user has viewed an in-app message with the Braze server.
 func logInAppMessageImpression()
-// Registers that a user has clicked on a in-app message with the Braze server.
+// Registers that a user has clicked on an in-app message with the Braze server.
 func logInAppMessageClicked()
 ```
 
@@ -297,9 +300,10 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 
 | `ABKInAppMessageClickActionType` | On-Click Behavior |
 | -------------------------- | -------- |
-| `ABKInAppMessageDisplayNewsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. **Note**: The `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
-| `ABKInAppMessageRedirectToURI` | The given URI will be displayed when the message is clicked, and the message will be dismissed. **Note**: The `uri` parameter cannot be nil. |
-| `ABKInAppMessageNoneClickAction` | The message will be dismissed when clicked. **Note**: The `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
+| `ABKInAppMessageDisplayNewsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
+| `ABKInAppMessageRedirectToURI` | The given URI will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter cannot be nil. |
+| `ABKInAppMessageNoneClickAction` | The message will be dismissed when clicked. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Customizing in-app message body clicks
 
@@ -324,7 +328,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ### Customizing in-app message button clicks
 
-For clicks on in-app message buttons and HTML in-app message buttons (*i.e.*, links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
+For clicks on in-app message buttons and HTML in-app message buttons (i.e., links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -384,37 +388,33 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtab %}
 {% endtabs %}
 
->  When an in-app message has buttons, the only click actions that will be executed are the ones on the ABKInAppMessageButton model. The in-app message body will not be clickable even though the ABKInAppMessage model will have the default click action ("News Feed") assigned.
+When an in-app message has buttons, the only click actions that will be executed are those on the `ABKInAppMessageButton` model. The in-app message body will not be clickable even though the `ABKInAppMessage` model will have the default click action ("News Feed") assigned.
 
 ## Dismiss modal on outside tap
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
 
-To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
-
-Example `Info.plist` contents:
+To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`, as shown below. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ```
 <key>Braze</key>
 <dict>
-	<key>DismissModalOnOutsideTap</key>
-	<boolean>YES</boolean>
+  <key>DismissModalOnOutsideTap</key>
+  <boolean>YES</boolean>
 </dict>
 ```
 
 You can also enable the feature at runtime by setting `ABKEnableDismissModalOnOutsideTapKey` to `YES` in `appboyOptions`.
 
-### Description of dismiss modal on outside tap
-
-| DismissModalOnOutsideTap | Description |
+| `DismissModalOnOutsideTap` | Description |
 |----------|-------------|
-| YES       | Modal in-app messages will be dismissed on outside tap     |
-| NO        | Default, modal in-app messages will not be dismissed on outside tap |
+| `YES`       | Modal in-app messages will be dismissed on outside tap.     |
+| `NO`        | Default, modal in-app messages will not be dismissed on outside tap. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Display in-app messages in a custom view controller
 
-In-app messages can also be displayed within a custom view controller which you pass to Braze. Braze will animate the customized in-app message in and out, as well as handle analytics of the in-app message. The view controller must meet the following requirements:
+In-app messages can also be displayed within a custom view controller, which you pass to Braze. Braze will animate the customized in-app message in and out and handle analytics of the in-app message. The view controller must meet the following requirements:
 
 - It must be a subclass or an instance of `ABKInAppMessageViewController`.
 - The view of the returned view controller should be an instance of `ABKInAppMessageView` or its subclass.
@@ -438,17 +438,16 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-All of our in-app message view controllers are open-sourced. You can use subclasses or categories to customize the display or behavior of in-app messages.
-
-See the [in-app message view controllers][37] for more details.
+Our [in-app message view controllers][37] are open-source. You can use subclasses or categories to customize the display or behavior of in-app messages.
 
 ## Custom in-app message triggering
 
-By default, in-app messages are triggered by event types that are logged by the SDK. If you would like to trigger in-app messages by server-sent events you are also able to achieve this.
+By default, in-app messages are triggered by event types logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.
 
-To enable this feature you would send a silent push to the device which allows the device to log an SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
+To enable this feature, you would send a silent push to the device, which allows the device to log an SDK-based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ### Step 1: Handle silent push and key-value pairs
+
 Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}
@@ -478,35 +477,35 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 {% endtab %}
 {% endtabs %}
 
-When the silent push is received an SDK recorded event "in-app message trigger" will be logged against the user profile. Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
+When the silent push is received, an SDK recorded event "in-app message trigger" will be logged against the user profile. Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
 
 ### Step 2: Create a push campaign
 
-Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign, refer to our article on [silent push notifications][39].
+Create a silent push campaign that is triggered via the server sent event. For details on creating a silent push campaign, refer to [silent push notifications][39].
 
-![Server Event Trigger][40]
+![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "server_event".][40]
 
-The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message:
+The push campaign must include key-value pair extras, which indicate that this push campaign is sent to log an SDK custom event. This event will be used to trigger the in-app message:
 
-![IAM Silent Push][41]
+![n action-based delivery in-app message campaign that has two key-value pairs. "CAMPAIGN_NAME" set as "In-app message name example", and "IS_SERVER_EVENT" set to "true".][41]
 
 The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
-You can alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name or as an event property when logging the custom event.
+You can alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. When logging the custom event, these extras can be used as the parameter of either the event name or as an event property.
 
 ### Step 3: Create an in-app message campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
+Create your user-visible in-app message campaign from within the Braze dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
-In the example below the specific in-app message to be trigger has been configured by sending the event property as part of the initial silent push.
+In the example below, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
-![IAM Push Trigger Example][42]
+![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "In-app message trigger" where "campaign_name" equals "In-app message name example".][42]
 
->  Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push and the above solution will not be possible.
+Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
 
 ## Method declarations
 
-For additional information see the following header files:
+For additional information, see the following header files:
 
 - [`ABKInAppMessage.h`][14]
 - [`ABKInAppMessageController.h`][15]

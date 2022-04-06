@@ -57,7 +57,7 @@ Once you provide your Braze credentials, you'll see two panels. Select the desir
 
 In the Editor mode in Crowdin, the content synced from your Braze account can be displayed to your translators as a string list or as a file preview.
 
-![An image of what the Crowdin Editor Email composer looks like with some basic translations added.][2]
+![An image of what the Crowdin Editor email composer looks like with some basic translations added.][2]
 
 ### Step 3: Add translations to Braze
 

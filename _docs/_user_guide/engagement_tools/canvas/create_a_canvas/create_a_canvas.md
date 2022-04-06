@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Step 1: Create a new Canvas 
 
-![Canvas][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
+![][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
 Go to the **Canvas** page, located under the **Engagement** section, then click **Create a New Canvas**.
 
@@ -30,7 +30,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Add Tags to Your Canvas
     - Assign Conversion Events and Choose Their Event Types and Deadlines
 
-    [Learn more about the Basics step.](#step-2a-set-up-your-canvas-basics)
+    Learn more about the [Basics step](#step-2a-set-up-your-canvas-basics).
   {% endtab %}
   {% tab Entry Schedule %}
     Here, you will decide how your users will enter your Canvas:
@@ -38,7 +38,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
 
-    [Learn more about the Entry Schedule step.](#step-2b-set-your-canvas-entry-schedule)
+    Learn more about the [Entry Schedule step](#step-2b-set-your-canvas-entry-schedule).
   {% endtab %}
   {% tab Entry Audience %}
     Here, you will select your Canvas Entry Audience:
@@ -46,7 +46,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Fine-tune Canvas Re-Entry and Entry Limits
     - See a Summary of Your Target Audience
 
-    [Learn more about the Entry Audience step.](#step-2c-set-your-target-entry-audience)
+    Learn more about the [Entry Audience step](#step-2c-set-your-target-entry-audience).
   {% endtab %}
   {% tab Send Settings %}
     Here, you will select your Canvas Send Settings:
@@ -54,12 +54,12 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Set a Send Rate Limit for Your Canvas Messages
     - Enable and Set Quiet Hours
 
-    [Learn more about the Send Settings step.](#step-2d-select-your-send-settings)
+    Learn more about the [Send Settings step](#step-2d-select-your-send-settings).
   {% endtab %}
   {% tab Build Canvas %}
     Here you will build your Canvas.
 
-    [Learn how to build your Canvas using the Canvas builder.](#step-3-build-your-canvas)
+    Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
 {% endtabs %}
 
@@ -77,7 +77,7 @@ Tag your Canvases so they’re easy to find and build reports out of. For instan
 
 Choose your Conversion Event Type, then select the conversions you would like to record.
 
-![Conversion][52]
+![][52]
 
 We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) that you set from this screen to measure the efficiency of your Canvas. 
 
@@ -93,7 +93,7 @@ You can choose one of three ways in which users can enter your Canvas:
 
 After you choose which you'll use, adjust those settings appropriately, and move on to setting your target audience.
 
-![Entry Schedule][53]
+![][53]
 
 #### Entry schedule types
 
@@ -111,7 +111,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
     You can control other aspects of your Canvas' behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the Dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
+    With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
 
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -134,7 +134,7 @@ Should the window of re-eligibility be less than the maximum duration of the Can
 
 You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
 
-![Canvas Target Audience][54]
+![][54]
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
@@ -146,7 +146,7 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
 
-![Send Settings][55]
+![][55]
 
 By turning on [Rate Limiting][6b] or [Frequency Capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
@@ -168,19 +168,19 @@ With this configuration, don't include any filters in the **Target Users** step 
 
 If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-![Quiet Hours][50]
+![][50]
 
 ## Step 3: Build your Canvas
 
 ### Adding a variant
 
-![Canvas Add Variant][11]{: style="float:right;max-width:40%;margin-left:15px;"}
+![][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Click **Add Variant** and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take, and can contain multiple steps and branches.
 
 You can add additional variants by pressing the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
-![Canvas Multiple Variants][12]
+![][12]
 
 {% alert tip %}
 By default, Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
@@ -216,36 +216,35 @@ By default, Filters and Segments for **Full Steps** in Canvas are checked at sen
 
 #### Messages in Canvas
 
-Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+Edit the messages in a Canvas Step to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaign messages, you can use certain Liquid templating to personalize your messages.
 
-Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
+![][16]
 
-![Canvas Message Edit][16]
+Select your desired **Advancement Behavior**. Learn more about [advancing your users]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) through Canvas steps.
 
-Select your desired **Advancement Behavior**. Learn more about [advancing your users through Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+![Advancement Behavior options for a Canvas Step with the option to advance the users when the message is sent or to advance the audience after a delay time of one day.][20]
 
-![Canvas Advancement Behavior][20]
-
-Click **Done** once you've finished configuring your Step.
+Click **Done** once you've finished configuring your Canvas Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-Canvas Entry Properties are the properties mapped by you when triggering or scheduling a Canvas via the API.
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API.
 {% raw %}
-- For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
+For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-__Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
+{% alert note %}
+Canvas entry properties can be referenced only in the first step of a Canvas.
+{% endalert %}
 
-For more information on the Canvas Entry Properties Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endtab %}
 
 {% tab Custom Event Properties %}
-Custom event properties are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
+[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
-Custom event properties can be referenced only in the first step of a Canvas! 
-
-For more information on custom event properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+{% alert note %}
+Custom event properties can be referenced only in the first step of a Canvas. 
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -259,13 +258,13 @@ Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas st
 
 Add more Steps by clicking the <i class="fas fa-plus-circle"></i> plus button:
 
-![Canvas More Step][17]{: style="max-width:75%;"}
+![][17]{: style="max-width:75%;"}
 
 ### Editing connections
 
 To move a connection between steps, click the arrow connecting the two steps and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
 
-![Move or break a connection between two Canvas steps][2]
+![][2]
 
 ## Step 4: Use multivariate testing using Canvas
 
@@ -275,7 +274,7 @@ Braze will track the Conversions for users who are placed into the Control Group
 
 You can adjust the distribution between your messages by double-clicking the **Variant Name** headers.
 
-![Canvas Multivariate][18]
+![][18]
 
 ### Intelligent Selection for Canvas
 
@@ -283,7 +282,7 @@ Intelligent Selection capabilities are now available within multivariate Canvase
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
-![Intelligent Selection][18b]
+![][18b]
 
 Intelligent Selection for Canvas optimizes your Canvas's results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the winning variants. 
 
@@ -291,11 +290,11 @@ For this reason, Intelligent Selection works best on Canvases that have new user
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done, press **Launch Canvas** at the bottom right to save and launch your Canvas. You can also save your Canvas as a draft if you need to come back to it.
+Once you're done creating your Canvas, press **Launch Canvas** to save and launch your Canvas. You can also save your Canvas as a draft if you need to come back to it.
 
-Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page:
+Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page.
 
-![Canvas Analytics][19]
+![][19]
 
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}

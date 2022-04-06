@@ -1,6 +1,6 @@
 ---
 nav_title: Customization
-article_title: News Feed Customization for Android/FireOS
+article_title: News Feed Customization for Android and FireOS
 page_order: 2
 platform: 
   - Android
@@ -15,7 +15,7 @@ channel:
 
 ## Default styling
 
-Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution:
 
 ```xml
   <style name="Braze"/>
@@ -35,7 +35,7 @@ Braze UI elements come with a default look and feel that matches the Android sta
 
 ## Overriding styles
 
-If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
+If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all of the attributes to be correctly set.
 
 #### Correct style override
 
@@ -62,7 +62,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 ## Feed style elements
 
-Below is a description of the themable Braze UI elements and their names for styling purposes:
+Below is a description of the themeable Braze UI elements and their names for styling purposes:
 
 {% gallery %}{% image_buster /assets/img_archive/Image27Theming.png %}
 {% image_buster /assets/img_archive/Image28Theming.png %}
@@ -71,9 +71,9 @@ Below is a description of the themable Braze UI elements and their names for sty
 
 ## Setting a custom font
 
-Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
+Braze allows setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
-For example, to update the font on all titles for Short News Cards, override the `Appboy.Cards.ShortNews.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
+For example, to update the font on all titles for short news cards, override the `Appboy.Cards.ShortNews.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
@@ -92,7 +92,7 @@ You can handle News Feed clicks manually by setting a custom News Feed click lis
 
 ### Step 1: Implement a News Feed click listener
 
-Create a class that implements [IFeedClickActionListener][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
+Create a class that implements [`IFeedClickActionListener`][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
 
 ### Step 2: Instruct Braze to use your News Feed click listener
 
@@ -138,7 +138,7 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 ### Part 2: Logging analytics
 
-When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
+When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
 
 To log a display of the feed, call [`Appboy.logFeedDisplayed()`][6].
 

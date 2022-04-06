@@ -15,14 +15,14 @@ tool:
 
 Full-screen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
 
-![Full-Screen Specs][3a]{: style="max-width: 801px; border: none;"}
+![Two full-screen in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.][3a]{: style="max-width: 801px; border: none;"}
 
 ## Images
 
 Full-screen in-app messages will fill the entire height of a device and crop horizontally (left and right sides) as needed. Image and text full-screen messages will fill 50% of the height of a device. All full-screen in-app messages will fill the status bar on "notched" devices.
 
-- __All images must be less than 5MB.__
-- We only accept `PNG`, `JPG`, and `GIF` file types.
+- All images must be less than 5MB.
+- We only accept PNG, JPG, and GIF file types.
 - We recommend that your images be 500KB.
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
@@ -47,13 +47,13 @@ Full-screen in-app messages will fill the entire height of a device and crop hor
 
 When previewing a full-screen in-app message in the Braze platform, you can enable the Image Safe Zone to the area of the message that is safe from cropping when displayed across devices. In addition to testing the Image Safe Zone in the preview pane, we recommend you [test your message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) as always.
 
-![Image Safe Zone][3c]
+![Previewing an in-app message in Braze with "Show Image Safe Zone" enabled. The image safe zone is an overlay over the image that visualizes what parts of the image will be safe from cropping.][3c]
 
 ## Larger screens
 
 On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen, as shown below.
 
-![Full-Screen Viewport][3b]{: style="max-width: 800px; border: none;"}
+![Full-screen in-app message as it would appear on a large screen. The message appears as a large modal that sits in the center of the screen.][3b]{: style="max-width: 800px; border: none;"}
 
 [3a]: {% image_buster /assets/img/full-screen-spec.png %}
 [3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}

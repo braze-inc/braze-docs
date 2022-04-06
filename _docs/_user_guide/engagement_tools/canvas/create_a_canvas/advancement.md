@@ -11,9 +11,9 @@ tool: Canvas
 
 # Advancing your users through Canvas steps
 
-Braze’s Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step.
+The **Advancement Behavior** feature allows you to choose the criteria for advancement through your Canvas step.
 
-![auto2.png][1]
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
 
 ## Advance when message sent
 
@@ -27,7 +27,7 @@ When **Message Sent** is selected, customers will only be advanced to subsequent
 
 ## Immediately advance audience
 
-When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
+When **Immediately Advance Audience** is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - Any message is sent or the in-app message in the step becomes live
 - The webhook is not sent because the webhook causes an error or errors
@@ -45,7 +45,7 @@ Users must meet the step's criteria in order to be advanced through the step.
 
 For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
 
-When sending a multichannel step with [intelligent timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a step attempts to send.
+When sending a multichannel step with [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a step attempts to send.
 
 ### Action-based Steps
 
@@ -63,18 +63,15 @@ There may be times when you want users to continue to advance through a Canvas e
 
 In this scenario, you can use Braze's Advancement Behavior options to ensure that users continue down the Canvas, even if they are not sent the Day 3 push.
 
-If you want all users to receive the Day 6 email, even if they didn't get the Day 3 push, you can set the **Advancement Behavior** to __Immediately Advance Audience__  for the Day 3 push.
+If you want all users to receive the Day 6 email, even if they didn't get the Day 3 push, you can set the **Advancement Behavior** to **Immediately Advance Audience**  for the Day 3 push.
 
-When you select __Immediately Advance Audience__ advancement behavior for the Day 3 push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push but will be advanced anyway.
+When you select **Immediately Advance Audience** advancement behavior for the Day 3 push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push but will be advanced anyway.
 
 {% details Previous Canvas Advancement Behavior %}
 
-Prior to the release of Advancement Behavior, Braze advanced users through a Canvas step once they'd been sent a message from that step. For example, if a Canvas step included an email and a push, users would not advance to the next steps of the Canvas until:
+Prior to the release of Advancement Behavior, Braze advanced users through a Canvas step once they'd been sent a message from that step. For example, if a Canvas step included an email and a push, users would not advance to the next steps of the Canvas until either Braze sent the user the push or email.
 
-- Braze sent the user the email, or
-- Braze sent the user the push.
-
-If the user wasn't sent the email or the push, they would not advance to subsequent steps in the Canvas.
+If the user wasn't sent the push or email, they would not advance to subsequent steps in the Canvas.
 
 Braze customers who did not participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps created prior to July 30th, 2019. Prior to the Advancement Behavior release, user advancement occurred when messages were sent from Canvas steps.
 

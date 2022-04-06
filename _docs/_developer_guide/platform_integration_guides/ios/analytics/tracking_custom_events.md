@@ -11,7 +11,7 @@ description: "This reference article covers how to add and track custom events f
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Adding a custom event
 
@@ -53,18 +53,19 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1
 {% endtab %}
 {% endtabs %}
 
-See our [class documentation][4] for more information.
+Refer to our [class documentation][4] for more information.
 
 ### Reserved keys {#event-reserved-keys}
 
-The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
+The following keys are reserved and cannot be used as custom event properties:
 
 - `time`
 - `event_name`
 
-**Additional Information**
+## Additional resources
 
-- See the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logCustomEvent Documentation][3] for more information.
+- See the method declaration within the `Appboy.h` [file][2]. 
+- Refer to the [`logCustomEvent`][3] documentation for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

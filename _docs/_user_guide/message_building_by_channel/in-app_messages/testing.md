@@ -17,18 +17,18 @@ It is extremely important to always test your in-app messages before sending you
 You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
 {% alert warning %}
-In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+In **Preview**, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
 ### In-app message generation preview
 
-Preview what your message will look like to a random user, a specific user, or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
+Preview what your message will look like to a random user, a specific user, or a customized user—the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
-![In-App_Message_Preview][1]
+![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.][1]
 
 Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
 
-![In-App_Messages_Generations][2]{: height="50%" width="50%"}
+![Switching between generations when previewing an in-app message.][2]{: height="50%" width="50%"}
 
 ## Test
 
@@ -40,7 +40,7 @@ Braze has three generations of in-app messages available. You can fine-tune to w
 
 You can also preview messages from the **Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
 
-![Custom_User_Preview][3]
+![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.][3]
 
 ### Test checklist
 

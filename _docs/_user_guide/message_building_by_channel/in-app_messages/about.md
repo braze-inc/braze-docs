@@ -24,7 +24,7 @@ With the rich level of content offered by in-app messages, you can leverage this
 | Use case | Explanation |
 | --- | --- |
 | Push priming | Run a [push priming][2] campaign using a rich in-app message to show your customers the benefit of opting into push for your app or site, and present them with a prompt to grant push permission.
-| Sales and promotions | Use modal in-app messages to greet customers with visually appealing media containing [promo codes][6] or offers. Incentivize them to make purchases or conversions when they otherwise wouldn't have. |
+| Sales and promotions | Use modal in-app messages to greet customers with visually appealing media containing [promotion codes][6] or offers. Incentivize them to make purchases or conversions when they otherwise wouldn't have. |
 | Encouraging feature adoption | Encourage customers to use other parts of your app or take advantage of a service. |
 | Highly personalized campaigns | Place in-app messages as the first thing your customers see when they enter your app or site. Add in some Braze personalization features, such as [Connected Content][3], to compel users to take action and therefore make your outreach more effective.
 {: .reset-td-br-1 .reset-td-br-2}
@@ -46,7 +46,7 @@ The following tabs show what it looks like for your users to open one of our out
 
 Slideups typically appear at the top and bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information.
 
-![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Slideup in-app message appearing from the bottom of the app screen. The slideup includes an icon image and a brief message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -55,7 +55,7 @@ Slideups typically appear at the top and bottom of the app screen (you can set t
 
 Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are great call-to-action These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
-![Modal Behavior]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Modal in-app message appearing in the center of an app and website as a dialog. The modal includes an image, header, message body, and two buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -64,7 +64,7 @@ Modals appear in the center of the device's screen with a screen overlay that he
 
 Full-screen messages are exactly what you'd expect—they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
 
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Full-screen in-app message taking over an app screen. The full-screen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 

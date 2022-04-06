@@ -18,25 +18,25 @@ description: "This how-to article will walk you through how to set up Location t
 
 Navigate to the **Segments** page, under **Engagement**, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
 
-![Create Segment][1]{: style="max-width:70%;"}
+![][1]{: style="max-width:70%;"}
 
 ## Step 2: Customize your location
 
 Once you have created your segment, add a **Most Recent Location** filter to target users by the last place that they used your app. You have the option of either highlighting users in a standard circular region or a customizable polygonal region.
 
-![Create Segment][2]
+![][2]
 
 ### Circular regions
 
 For circular regions, you can move the origin and adjust the location radius for your segmentation.
 
-![Circular Region][3]{: style="max-width:70%;"}
+![A circular outline of cities between New Jersey and New York.][3]{: style="max-width:70%;"}
 
 ### Polygonal regions
 
 For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
-![Polygonal Region 1][4]{: style="max-width:70%;"}
+![An outline of New York state as the selected polygonal region.][4]{: style="max-width:70%;"}
 
 {% alert tip %}
 Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/).

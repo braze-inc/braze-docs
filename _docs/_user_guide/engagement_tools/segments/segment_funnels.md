@@ -25,7 +25,7 @@ Segment funnels allow you to see how each added filter impacts your segment stat
 - Number of users that are push enabled  
 - Number of users opted in to push
 
-![Segment funnel overview][1]
+![][1]
 
 ## Best practices
 
@@ -39,20 +39,20 @@ Segment funnels allow you to see how each added filter impacts your segment stat
 
 ### Impact of a specific user action on conversions {#push-email}
 
-By analyzing the impact of a certain user action (such as adding items to a wish list) on a conversion (such as making purchases) you can answer the following questions:
+By analyzing the impact of a certain user action (such as adding items to a wish list) on a conversion (such as making purchases), you can answer the following questions:
 
 - Does the user action coincide with more purchases?
 - How prevalent is the user action? Should you create marketing campaigns that encourage more of that action?
 
-In the example below, all users who added items to a wish list also made a purchase. Since only a small percentage of users added items to a wish list, this app may want to incentivize this behavior more through marketing campaigns.
+For example, let's say you have a group where all users who added items to a wish list also made a purchase. Since only a small percentage of users added items to a wish list, this app may want to incentivize this behavior more through marketing campaigns.
 
-![Segment funnel for users][3]
+![Segment funnel example with the following filters: "Last used these apps less than 30 days ago", "Last Added Item to Waitlist less than 30 days ago", and "Last Made Purchase less than 30 days ago" to reach 4,302 users.][3]
 
 ### Compare messaging channels
 
 Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
-![Segment funnel for email][5]
+![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.][5]
 
 
 [1]: {% image_buster /assets/img_archive/segment_funnel_example.png %}

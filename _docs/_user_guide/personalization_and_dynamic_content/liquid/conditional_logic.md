@@ -111,7 +111,17 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %}
 
-![NullValues][36]
+![][36]
+
+{% raw %}
+```liquid
+{% if ${first_name} == blank %}
+We're having a sale! Hurry up and get 10% off all items today only!
+{% else %}
+Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
+{% endif %}
+```
+{% endraw %}
 
 ## Referencing custom attributes
 
@@ -119,7 +129,7 @@ After you have created [custom attributes][2] from **Manage Settings** > **Custo
 
 When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the examples listed below for each data type.
 
-![Custom Attribute Data Type][20]{: style="max-width:80%;"}
+![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.][20]{: style="max-width:80%;"}
 
 {% alert tip %}
 Strings and arrays require straight apostrophes around them, while booleans and integers will never have apostrophes.

@@ -1,6 +1,6 @@
 ---
 nav_title: Android SDK Integration
-article_title: Android SDK Integration for Android/FireOS
+article_title: Android SDK Integration for Android and FireOS
 page_order: 0
 platform: 
   - Android
@@ -11,15 +11,15 @@ description: "This reference article covers how to integrate the Android SDK int
 
 # Android SDK integration
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
+Installing the Braze SDK will provide you with basic analytics functionality and working in-app messages with which you can engage your users.
 
 {% alert note %}
-For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
+For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Step 1: Integrate the Braze library
 
-The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Please refer to the [Braze user guide][2] for the benefits of using the Braze Content Cards, News Feed, and in-app message UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards), [News Feed]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
 
 ### Basic integration
 
@@ -27,9 +27,7 @@ To access Braze's messaging features, you must integrate the UI library. Please 
 
 #### Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories`.
-
-For example:
+In your top-level project `build.gradle`, add the following as repositories under **allprojects > repositories**. For example:
 
 ```gradle
 allprojects {
@@ -56,30 +54,30 @@ dependencies {
 }
 ```
 
-The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Please visit [Braze Android SDK Releases][60] for the most up-to-date version of the Braze Android SDK.
+The example below shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
 
-![MavenScreen2][32]
+![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 
 #### Perform gradle sync
 
 Be sure to perform a Gradle Sync to build your project and incorporate the dependency additions noted above.
 
-![GradleSync][38]
+![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
 
 ## Step 2: Configure the Braze SDK in braze.xml
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
+As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
+Now that the libraries have been integrated, you must create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
->  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or open a [support ticket][support].
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, ask your Customer Success Manager or open a [support ticket][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
 <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
@@ -100,8 +98,9 @@ Now that you've added your API key, you need to add the following permissions to
 
 Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically.
 
-#### Instructions
-Add the following code to the `onCreate()` method of your Application class:
+#### Register activity lifecycle callbacks
+
+Add the following code to the `onCreate()` method of your `Application` class:
 
 {% tabs %}
 {% tab JAVA %}
@@ -134,39 +133,25 @@ class MyApplication : Application() {
 The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
 The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
 
-See the [KDoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
+See our [KDoc][63] for more information. Note that any non-standard manual session integration is not fully supported.
 
-## Step 5: Custom endpoint setup {#step-5-optional-custom-endpoint-setup}
+## Step 5: Enable location tracking
 
-{% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
-{% endalert %}
-
-Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
-
-To update the default endpoint in your integration of the Braze SDKs please add the following code to your `braze.xml`:
-
-```xml
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
-```
-
-## Step 6: Enable location tracking
-
-If you would like to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`.
+If you would like to enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">true</bool>
 ```
 
 {% alert important %}
-Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
+Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
 ## SDK integration complete
 
 Braze will now be able to collect [specified data from your application]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) and your basic integration should be complete.
 
-Please see the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Visit the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
 [2]: {{site.baseurl}}/user_guide/introduction/
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}

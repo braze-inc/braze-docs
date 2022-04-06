@@ -14,7 +14,7 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
-- [Email Capture Form](#email-capture-form) - collect email addresses into Braze.
+- [Email capture form](#email-capture-form) - collect email addresses into Braze.
 - [Reusable Color profiles and CSS](#reusable-color-profiles) - save and re-use color profiles for in-app message templates.
 - [Video](#video) - add video to a custom in-app message.
 
@@ -100,19 +100,17 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes).
 {% endalert %}
 
-To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
-
-Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
+To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or anchor element `<a>`. Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
 
 As with other URL parameters, the first parameter should begin with a question mark `?`, while subsequent parameters should be separated by an ampersand `&`.
 
-**Examples**:
+##### Examples
 
 - `https://example.com/?abButtonId=0` - Button 1 click
 - `https://example.com/?abButtonId=1` - Button 2 click
 - `https://example.com/?utm_source=braze&abButtonId=0` - Button 1 click with other existing URL parameters
 - `myApp://deep-link?page=home&abButtonId=1` - Mobile deeplink with Button 2 click
-- `<a href="https://example.com/?abButtonId=1">` - `<a>` tag with Button 2 click
+- `<a href="https://example.com/?abButtonId=1">` - Anchor element `<a>` with Button 2 click
 
 {% alert note %}
 In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
@@ -126,7 +124,7 @@ For deep linking, Braze will open your URL regardless of the value of `abExterna
 
 #### Open as deeplink (mobile only)
 
-To have Braze handle your HTTP(S) link as a deep link, set `?abDeepLink=true`.
+To have Braze handle your HTTP or HTTPS link as a deep link, set `?abDeepLink=true`.
 
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
@@ -158,7 +156,7 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
-If you choose to apply your own template, click __Apply Template__ and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
+If you choose to apply your own template, click **Apply Template** and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
 ## Email capture form {#email-capture-form}
 
@@ -195,10 +193,10 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![Select Email Capture Form][4]
+![][4]
 
 {% alert note %}
-To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ### Step 2: Customize the form {#customizable-features}
@@ -212,7 +210,7 @@ Next, customize your form as needed. You can customize the following features fo
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
-![emailimage][5]
+![Composer for email capture form.][5]
 
 If you need to make further customization, choose **Custom Code** for your **Message Type**. You can use this [email capture modal template](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) from the [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub repository as your starter code.
 
@@ -238,13 +236,13 @@ Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_
 
 ## Reusable message templates {#reusable-color-profiles}
 
-You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
+You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
 ### Color profile
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
-Click __Save Color Profile__ on the bottom right when you’re finished.
+Click **Save Color Profile** on the bottom right when you’re finished.
 
 #### Managing color profiles
 

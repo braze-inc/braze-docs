@@ -9,14 +9,14 @@ page_order: 3
 # Messaging users {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your account manager.
+Preview and Demo Predictions will not allow users to be targeted for messaging, and the **Create Segment**, and **Create Campaign** buttons will be disabled. To purchase this functionality, contact your account manager.
 {% endalert %}
 
 ## Implementing filters {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+Once you've decided what range of Churn Risk Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
 
-![Churn Filters][5]
+![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.][5]
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
@@ -24,7 +24,7 @@ You can also use filters in campaigns or segments to target the users according 
 
 Now that you've identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and campaigns? 
 
-__Here are a few ideas to consider:__
+**Here are a few ideas to consider:**
 
 - Target your predicted medium-to-high-risk users with a special discount, free merchandise (physical gift or digital credits), exclusive content, or early access to a new experience (product, app feature, level).<br><br>
 - Drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or send a message from a real person, asking for brand feedback or offering a pro tip.<br><br>

@@ -16,8 +16,8 @@ As a convenience, a summary of supported personalization tags are listed below. 
 | -------------  | ---- |
 | Default Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| Email List Attributes <br> (Learn more [here][43]) | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| SMS Attributes <br> (Learn more [here][48]) | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| [SMS Attributes][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
 | Campaign Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas Attributes | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Canvas Step Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -37,7 +37,7 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
-- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
@@ -89,7 +89,7 @@ For push notification and in-app message channels, you can template in the follo
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any logic that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device. Furthermore, for push notifications, it is possible that Braze may be unable to discern the device attached to the push notification under certain circumstances such as if the push token was imported via API, resulting in values being `null` for those messages.
 
-![Personalization][4]
+![Example of using a default value of "there" when using a first name variable in a push message.][4]
 
 In some circumstances, you may opt to use [conditional logic][17] instead of setting a default value. Conditional logic allows you to send messages that differ based on the value of a custom attribute.
 
@@ -99,22 +99,32 @@ For example, if you're sending a rewards balance notification to customers, ther
 
 In this case, there are two options that may work better than setting a default value:
 
-1. Abort the message for customers with low, null and blank balances.
+1. Abort the message for customers with low, null, and blank balances.
 
-    ![NoBalanceAbort][34]
+{% raw %}
 
+   ```liquid
+   {% if {{custom_attribute.${balance}}} > 0 %}
+   Your rewards balance is {{custom_attribute.${balance}}}
+   {% else %}
+   {% abort_message() %}
+   {% endif %}
+   ```
+
+{% endraw %}
 
 2. Send a completely different message to these customers, perhaps something along the lines of:
 
 {% raw %}
 
-```liquid
-{% if ${first_name} != blank and ${first_name} != null %}
-Hello {{${first_name} | default: 'there'}}, thanks for downloading!
-{% else %}
-Thanks for downloading!
-{% endif %}
-```
+   ```liquid
+   {% if ${first_name} != blank and ${first_name} != null %}
+   Hello {{${first_name} | default: 'there'}}, thanks for downloading!
+   {% else %}
+   Thanks for downloading!
+   {% endif %}
+   ```
+
 In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see Liquid in the event of a mistake.
 
 {% endraw %}
@@ -134,7 +144,7 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 {% abort_message('not enough points') %}
 {% endif %}
 ```
-This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more about variable tags [here][31].
+This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more in Shopify's documentation on [variable tags][31].
 
 {% endraw %}
 
@@ -173,7 +183,7 @@ In this example, we check the first five items in the sneaker brands viewed arra
 
 Then, we send the sale message when converse_viewer is true. Otherwise, we abort the message.
 
-This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information [here][32].
+This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information in Shopify's documentation on [iteration tags][32].
 
 ## HTTP status codes {#http-personalization}
 
@@ -185,9 +195,10 @@ You can utilize the HTTP status from a [Connected Content][38] call by first sav
 {% abort_message('Connected Content returned a non-200 status code') %}
 {% endif %}
 ```
+{% endraw %}
 
-{% alert tip %}
-  Be aware that this key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
+{% alert note %}
+  This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
 {% endalert %}
 
 ## Sending messages based on language, most recent locale, and time zone
@@ -195,6 +206,8 @@ You can utilize the HTTP status from a [Connected Content][38] call by first sav
 In some situations you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
 
 Here's an example of how you can use most recent locale to further localize an internationalized message.
+
+{% raw %}
 
 ```liquid
 {% if ${language} == 'en' %}

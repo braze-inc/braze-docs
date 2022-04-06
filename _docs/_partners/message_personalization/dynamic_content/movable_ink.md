@@ -60,12 +60,12 @@ Customers will need to create a data source that can either be a CSV, website im
 
 {% tabs %}
 {% tab CSV Data Source %}
-- __CSV Data Source__: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content. [Example CSV File]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+- **CSV Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content. [Example CSV File]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
 ![The fields that will show up when selecting "CSV" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
 {% tab Website Data Source %}
-- __Website Data Source__: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content.
+- **Website Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content.
   - Within this process, you'll need to map:
     - Which fields will be used as Segments
     - Which fields you want as data fields that can be dynamically personalized in the creative (ex: user attributes or custom attributes like first name, last name, city, etc.)
@@ -73,7 +73,7 @@ Customers will need to create a data source that can either be a CSV, website im
 ![The fields that will show up when selecting "Website" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
 {% tab API Integrations %}
-- __API Integrations__: Use your company's API to power content directly from an API response.
+- **API Integrations**: Use your company's API to power content directly from an API response.
 
 ![The fields that will show up when selecting "API Integration" as your data source]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
@@ -109,23 +109,23 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 #### Push notifications
 
 1. In the Braze Platform:
-	- Android Push: Paste the URL in the __Push Icon Image__ and __Expanded Notification Image__ fields.
-	- iOS Push: Paste URL in __Rich Notification Media__ link field, and directly below, denote the file format you are using.
-	- Web Push: Paste the URL in the __Push Icon Image__ and __Large Notification Image__ fields.<br><br>
+	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.
+	- iOS Push: Paste URL in **Rich Notification Media** link field, and directly below, denote the file format you are using.
+	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br><br>
 2. To make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 #### In-app messages and Content Cards
 
-1. In the Braze platform, paste the URL in the __Rich Notification Media__ field.<br><br>
+1. In the Braze platform, paste the URL in the **Rich Notification Media** field.<br><br>
 2. Provide a unique URL to help prevent caching. To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab  - this will evaluate the code and show a preview.<br><br>
 3. Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate Segment membership` option located on the "Target Users" step of a campaign. If this is option is not available, reach out to your Customer Success Manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
 
 ## Troubleshooting
 
 #### Dynamic images not showing correctly? What channel are you experiencing difficulties with?
-- __Push__: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- __In-app messages and Content Cards__: Make sure that the image URL is unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
-- __Image not loading__: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
+- **Push**: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+- **In-app messages and Content Cards**: Make sure that the image URL is unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
+- **Image not loading**: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
 #### Having trouble showing GIFs on Android?
 - Android requires GIF support in implementation. Follow the Android [in-app message customization][GIFsupport] article if you do not have this setup.

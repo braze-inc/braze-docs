@@ -13,7 +13,7 @@ channel:
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
 
-![Multicolor push example][1]{: style="max-width:30%;"}
+![An Android push message "Multicolor Push test message" where the letters are different colors, italisized and given a background color.][1]{: style="max-width:40%;"}
 
 The above example is rendered with the following HTML:
 
@@ -29,13 +29,17 @@ The above example is rendered with the following HTML:
 
 ## Implementation
 
-In your `braze.xml`:
+To render multicolor text in push notification either:
+
+Add the following in your `braze.xml`:
 
 ```xml
 <bool translatable="false" name="com_braze_push_notification_html_rendering_enabled">true</bool>
 ```
 
-Or in your [BrazeConfig][2]:
+**OR** 
+
+Add the following in your [`BrazeConfig`][2]:
 
 {% tabs %}
 {% tab JAVA %}

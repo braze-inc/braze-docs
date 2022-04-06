@@ -1,6 +1,6 @@
 ---
 nav_title: Key-Value Pairs
-article_title: News Feed Key-Value Pairs for Android/FireOS
+article_title: News Feed Key-Value Pairs for Android and FireOS
 page_order: 8
 platform: 
   - Android
@@ -13,7 +13,7 @@ channel:
 
 # Key-value pairs
 
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down with a `Card` for further handling by the application.
 
 Call the following on a `Card` object to retrieve its extras:
 
@@ -34,6 +34,6 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-See the [KDoc][36] for more information.
+Refer to our [KDoc][36] for more information.
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html

@@ -24,7 +24,7 @@ Please note that Tealium AudienceStreams and EventStreams are batched according 
 | Name | Description |
 | ---- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with both server and client-side access is required to take advantage of this partnership. |
-| REST API Key | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
+| REST API Key | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze dashboard** > **Developer Console** > **REST API Key** > **Create New API Key**|
 | [Braze REST Endpoint][6] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 

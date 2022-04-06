@@ -8,7 +8,7 @@ guide_top_text: "If you want to engage with your users with a single message ste
 
 tool: Campaigns
 page_type: landing
-description: "This landing page is home to Braze's Dashboard campaigns. Here you can find resources to create, set up, and personalize a campaign."
+description: "This landing page is home to Braze's dashboard campaigns. Here you can find resources to create, set up, and personalize a campaign."
 
 guide_featured_title: "Sections"
 guide_featured_list:

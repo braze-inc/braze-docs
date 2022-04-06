@@ -14,7 +14,7 @@ channel:
 
 You might find that some users who might send a text to your short or long code, won't yet be opted-in to your SMS subscription group. Regulations require that you obtain a user’s explicit consent before you send them any promotional or informational messaging. We highly recommend implementing a double opt-in to ensure compliance. 
 
-![picture][IMAGE1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![][IMAGE1]{: style="float:right;max-width:30%;margin-left:15px;"}
 We suggest setting a triggered entry in Canvas whenever there's an incoming event `sms_response_subscriptionGroupName_custom`.
 
 ## Step 1: Create a webhook
@@ -25,7 +25,7 @@ We first suggest creating a webhook campaign that makes a request to the [subscr
 
 Next, we recommend sending an SMS campaign a few seconds later, with clear call-to-actions along the lines of:
 
-![picture][IMAGE]{: style="border: 0"}
+![SMS message with the text "Braze: Thanks for your interest in Deal Texts! Expect three messages a month! Reply YES to join, STOP to stop, HELP for help. Message and data rates may apply."][IMAGE]{: style="border: 0"}
 
 [SSSendpoint]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [IMAGE]: {% image_buster /assets/img/sms/sms_cta.png %}

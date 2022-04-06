@@ -81,15 +81,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 You can use these objects in the [request body](#request-body) above.
 
-- [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/apple_objects/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
+- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
+- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
+- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
+- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
+- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
+- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
+- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)
 
 ## Example request
 ```

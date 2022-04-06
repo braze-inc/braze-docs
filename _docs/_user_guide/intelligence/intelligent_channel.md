@@ -12,7 +12,7 @@ description: "The Intelligent Channel filter selects the portion of your audienc
 
 The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means the channel that has the highest likelihood of engagement, given the user's history. You can select email, web push, or mobile push (including any available mobile OS or device) as a channel.
 
-![Intelligent Channel filter][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
+![][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
 
 The Intelligent Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last six months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Enagaged" for that user. 
 
@@ -26,15 +26,17 @@ For Braze to determine which channel is "best", there needs to be adequate data.
 
 If users haven't received enough messages across the channels, those users will fall into the "Not Enough Data" option of this filter. This allows you to use any of the three available messaging channels to target these users.
 
-For example, suppose you want users who prefer push messages to receive a push and users who don't have enough data to receive the same push message. In that case, you could set the Intelligent Channel filter to **Mobile** and use **OR** to add a second Intelligent Channel filter set to **Not Enough Data**. A separate campaign with the Intelligent Channel filter set to email could address users who prefer email.<br>![Intelligent Channel example][2]
+For example, suppose you want users who prefer push messages to receive a push and users who don't have enough data to receive the same push message. In that case, you could set the Intelligent Channel filter to **Mobile** and use **OR** to add a second Intelligent Channel filter set to **Not Enough Data**. A separate campaign with the Intelligent Channel filter set to email could address users who prefer email.
+
+![][2]
 
 {% alert note %}
-Campaigns and Canvas Steps that ignore [Frequency Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
+Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
 {% endalert %}
 
 ## The "Mobile push" option
 
-Mobile push incorporates Android, iOS, Windows, Kindle, and other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against Email and Web Push. 
+Mobile push incorporates Android, iOS, Windows, Kindle, and other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against email and Web push. 
 
 For example, if a user has several mobile devices, their mobile engagement rate would be represented by the highest rate exhibited across the devices. This would not, however, force the user to receive push notifications exclusively on that device. This rate is only used when comparing rates against email and web push.
 

@@ -13,7 +13,7 @@ description: "This reference article covers advanced SDK use cases for the Unity
 
 You can choose to customize and export the Braze Unity package using the provided scripts.
 
-1. Clone the [Braze Unity SDK Github project][1]:
+1. Clone the [Braze Unity SDK GitHub project][1]:
 
 	```bash
 	git clone git@github.com:Appboy/appboy-unity-sdk.git

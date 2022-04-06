@@ -24,7 +24,7 @@ These are the most engaging, but also the most intrusive since they cover your u
 
 ![Full-Screen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
-__Customizable Features__
+**Customizable Features**
 
 - Header and body text
 - A large image
@@ -38,7 +38,7 @@ These messages aren’t as intrusive as full-screen messages, as they still allo
 
 ![Modal Message]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 
-__Customizable Features__
+**Customizable Features**
 
 - Header and body text
 - An image or customizable badge icon
@@ -53,7 +53,7 @@ These are the least intrusive message type, though they can be more or less atte
 
 ![Slideup Message]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 
-__Customizable Features__
+**Customizable Features**
 
 - Body text
 - An image or customizable badge icon
@@ -70,14 +70,14 @@ __Customizable Features__
 
 This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
-{% details Email Capture Message %}
+{% details Email capture message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
-![Email Capture Message]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
+![Email capture message]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
->  To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+>  To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
-__Customizable Features__
+**Customizable Features**
 
 - Header, body, and submit button text
 - An optional image
@@ -91,13 +91,13 @@ __Customizable Features__
 
 While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
-__JavaScript Bridge (appboyBridge)__
+**JavaScript Bridge (appboyBridge)**
 
 HTML in-app messages support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following JavaScript methods are supported in Braze's HTML in-app messages:
 
 {% include archive/appboyBridge.md platform="web" %}
 
-Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
+Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the dashboard, while a link with a button id of 1 will be represented as "Button 2."
 
 >  To enable HTML in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
@@ -107,7 +107,7 @@ Additionally, for analytics tracking, any `<a>` or `<button>` elements in your H
 
 We've designed a set of HTML5 in-app messages templates to help you get started. Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize these templates for your needs.
 
-__Customizable Features__
+**Customizable Features**
 
 - Fonts
 - Styles

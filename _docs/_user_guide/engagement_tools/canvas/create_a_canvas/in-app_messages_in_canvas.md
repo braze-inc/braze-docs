@@ -17,14 +17,15 @@ channel: in-app messages
 
 Before continuing, you should have already [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and set up delay and audience options. 
 
-Now you can add an in-app message to your Canvas by selecting in-app message from **Messaging channels**. Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas step!
+Now you can add an in-app message to your Canvas by selecting in-app message from **Messaging Channels**. Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas step!
 
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
 ## In-app message expiration
 
 In the in-app message composer, you have the option to choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. Once sent, the in-app message can be viewed at most once.
-![Expire After][1]
+
+![][1]
 
 | Option | Description | Example |
 |---|---|---|
@@ -34,13 +35,13 @@ In the in-app message composer, you have the option to choose when the in-app me
 
 ### Use cases
 
-When should you use this feature? Braze highly recommends that you consider using this feature in your Promotional and Onboarding campaigns.
+When should you use this feature? Braze highly recommends that you consider using this feature in your promotional and onboarding campaigns.
 
 {% tabs %}
   {% tab Promotional %}
-__Promotional Canvases__
+**Promotional Canvases**
 
-Promotions, coupons, and sales often have hard expiration dates. The Canvas outlined below should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by 2/28/2019 at 11:15 AM in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The Canvas outlined below should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15am in the company's time zone.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -95,7 +96,7 @@ As you can see, the in-app messages expire when the promotion expires to prevent
   {% endtab %}
   {% tab Onboarding %}
 
-__User Onboarding Canvases__
+**User Onboarding Canvases**
 
 Your first impression with a user is, perhaps, your most critical one. It can make or break future visits to your app. Your initial communications with your user should be sensibly timed and encourage frequent visits to your app to promote usage.
 
@@ -163,13 +164,13 @@ In-app messages can't be triggered by events in Canvas.
 
 Steps with in-app messages have specific advancement options that allow you to specify the exact situation when your message would be sent.
 
-![iamlive.png][2]
-
 | Option | Description |
 |---|---|---|
 | Advance When In-App Message Viewed | Users will advance to the next steps of the Canvas when they view the in-app message in your application and log an in-app message impression.  <br> <br> Users who do not view the in-app message before it expires will exit the Canvas and will not advance to subsequent steps. |
 | Advance When In-App Message Live | Users will advance to the next steps in the Canvas as soon as the in-app message becomes live. In-app messages are live once the delay for the step has elapsed and the audience options for the step have been checked.  <br> <br> When this option is selected, all users who match the step's segment and filter criteria will be advanced to subsequent steps in the Canvas. Use this option when you want users to advance regardless of whether the in-app message is viewed or expires. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+![][2]
 
 {% alert important %}
   When **Advance When In-App Message Live** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -177,15 +178,15 @@ Steps with in-app messages have specific advancement options that allow you to s
 
 ### Steps with multiple channels {#steps-multiple-channels}
 
-![Push advancement behavior][3]
-
 Steps with an in-app message and another channel have the following advancement options:
 
 | Option | Description |
 |---|---|---|
-| Advance When Message Sent | Users must be sent an email/webhook/push or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email/webhook/push or viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
+| Advance When Message Sent | Users must be sent an email/webhook/push or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email, webhook, or push, or hasn't viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> Users must match the step's segment and filter criteria to advance to next steps. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+![][3]
 
 {% alert important %}
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -193,15 +194,15 @@ Steps with an in-app message and another channel have the following advancement 
 
 ## Prioritizing in-app messages
 
-A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
+A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to reorder their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
-![Step Priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
+![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
 Navigate to the **Send Settings** of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
 
 By default, Canvas step priority is set to medium, with the most recently created steps having the highest relative priority. Canvas and campaign-level priorities also default to medium, with the highest relative priority defaulting to the most recently created items.
 
-![Canvas Step Priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
 
 ## Custom event properties in a Canvas
 

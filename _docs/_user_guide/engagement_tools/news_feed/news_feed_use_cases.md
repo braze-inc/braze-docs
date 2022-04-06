@@ -16,7 +16,7 @@ At Braze, we value the customization that News Feed brings to the table. Here ar
 - Drip marketing welcome campaigns that send messages to customers over time.
 - Determining a user's willingness to pay.
   - Offering a schedule of steadily increasing discounts using targeted News Feed cards can help you see exactly how much your service is worth to different user segments.
-- Achievements and badges At Braze, we value the customization that News Feed brings to the table. Here are some of our best practices and tips to help you get the most out of our Product:
+- Achievements and badges
   - When a user completes a noteworthy task or takes a desired action after being targeted by a marketing campaign, you can isolate that segment in order to recognize their accomplishment with a News Feed card.
     - You might even want to tie a specific reward to this acknowledgment such as an in-app discount.
 - Prompting users to share to various social networks.
