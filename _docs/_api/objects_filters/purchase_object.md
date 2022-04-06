@@ -144,9 +144,9 @@ Using the example provided, we can see that someone bought a backpack with the p
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
 
-For information on how to set up webhooks, check out [Creating a webhook][1].
+For information on how to set up this type of webhook, check out [Braze to Braze webhooks][1].
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
