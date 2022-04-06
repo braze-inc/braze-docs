@@ -172,7 +172,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 | Identify with user ID | Set external ID | Segment:  `analytics.identify("dawei");`<br>Braze: `appboy.changeUser("dawei")` |
 | Identify with reserved traits | Set user attributes | Segment: `analytics.identify({email: "dawei@braze.com"});`<br> Braze: `appboy.getUser().setEmail("dawei@braze.com");`
 | Identify with custom traits | Set custom attributes | Segment: `analytics.identify({fav_cartoon: "Naruto"});`<br>Braze: `appboy.getUser().setCustomAttribute("fav_cartoon": "Naruto")`;
-| Identify with user ID and traits | Segment: Set External ID and Attribute | Combine methods above. |
+| Identify with user ID and traits | Segment: Set External ID and Attribute | Combine preceding methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}

@@ -5,7 +5,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Target specific users with our [messaging API][2] for both general and transactional messages.
 
 {% alert note %}
-If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default.
+If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default.
 {% endalert %}
 
 {% alert warning %}

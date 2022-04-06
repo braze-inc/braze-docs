@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Parameter Details
 
-This is a place for you to describe additional details for the parameters above.
+This is a place for you to describe additional details for the parameters in the request body.
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |

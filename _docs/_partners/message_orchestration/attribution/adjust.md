@@ -63,7 +63,7 @@ Note that this will not happen until we receive data about an attributed install
 
 ## Available data fields
 
-Assuming you configure your integration as suggested above, Braze will map Adjust's data to segment filters as described below.
+Assuming you configure your integration as suggested, Braze will map Adjust's data to segment filters as described in the following table.
 
 | Adjust data field | Braze segment filter |
 | --- | --- |
