@@ -18,11 +18,12 @@ Okta connects any person with any application on any device. It's an enterprise-
 
 ## Requirements
 
-| requirement | details |
+| Requirement | Details |
 | ----------- | ------- |
 | Okta turned on for your account | Reach out to your Braze Account Manager to have this turned on for your account |
 | Okta Admin Privileges | Please make sure you have Admin Privileges before setting up Okta |
 | Braze Admin Privileges | Please make sure you have Admin Privileges before setting up Okta |
+| RelayState | To enable IdP login, you will first need to create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission, and then input the generated API Key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Step 1: Configure Braze
@@ -48,25 +49,17 @@ From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) 
 
 Select **Save Changes** at the bottom of the page once completed.
 
-## Step 2: Enable the IdP-initiated flow
-
-Next, you must create your Braze API Key with `sso.saml.login` permission enabled.
-
-If you do not already have such a Braze API Key, one can be created by going to the **Developer Console** in **Settings**, then click **Create New API Key**. From there, scroll down to the SSO section and check the `sso.saml.login` option and then save the API Key.<br>
-
-![Braze API key with sso.saml.login permissions][5]
-
-## Step 3: Configure Okta
+## Step 2: Configure Okta
 
 ![Okta Default Relay State in the Sign On tab][2]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-### Step 3a: Navigate to Okta
+### Step 2a: Navigate to Okta
 
 In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**.
 
-### Step 3b: Update default relay state
+### Step 2b: Update default relay state
 
-Enter the API key with `sso.saml.login` permission you made in Step 2, in the **Default Relay State** field.
+Enter the API key with `sso.saml.login` permission in the **Default Relay State** field.
 
 Save these new settings.
 
@@ -74,7 +67,7 @@ Save these new settings.
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.
 {% endalert %}
 
-## Step 4: Log in
+## Step 3: Log in
 
 You should now be able to log in to Braze using Okta!
 

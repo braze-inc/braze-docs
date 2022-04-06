@@ -17,9 +17,10 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
-| **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
-| **Entity ID** | `braze_dashboard` |
+| Sign-On URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
+| Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
+| RelayState | To enable IdP login, you will first need to create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission, and then input the generated API Key as the `RelayState` parameter within your IdP. |
+| Entity ID | `braze_dashboard` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## SAML SSO setup
@@ -68,14 +69,6 @@ Please make sure that your certificate follows this format when adding it to the
 When you save your Security Settings and log out, you should now be able to sign in with your IdP.
 
 ![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
-
-### Create and enable a Braze API key for IdP login (optional)
-
-To enable IdP initiated login, you will first need to create an API Key in **Developer Console** > **API Settings**.
-
-![Select sso.saml.login permissions when creating an API key]({% image_buster /assets/img/sso2.png %})
-
-Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identify which company the user is trying to log into.
 
 ## SSO behavior
 

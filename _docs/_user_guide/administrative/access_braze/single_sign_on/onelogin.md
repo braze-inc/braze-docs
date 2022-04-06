@@ -19,7 +19,8 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Braze Domain** | You will need your Braze domain to set up Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br><br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
+| Braze Domain | You will need your Braze domain to set up Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br><br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
+| RelayState | To enable IdP login, you will first need to create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission, and then input the generated API Key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Service Provider (SP) initiated login within OneLogin
@@ -60,14 +61,6 @@ On this page, input the following:
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Opening Security Settings in Braze and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
-
-## Create and enable a Braze API key for IdP login (optional)
-
-To enable IdP initiated login, you will first need to create an API key in **Developer Console** > **API Settings**.
-
-![Select sso.saml.login permissions when creating an API key]({% image_buster /assets/img/sso2.png %})
-
-Input the generated API Key as the `RelayState` parameter within OneLogin under **Configuration**, which will be used to identify which company the user is trying to log into.
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.
