@@ -103,7 +103,7 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 ```
 
 {% alert important %}
-The GTM template does not support nested properties on events or purchases. You can use the above HTML to log any events or purchases that require nested properties.
+The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
 #### Default user attributes {#standard-attributes}

@@ -48,7 +48,7 @@ Whichever apps you choose to have in one app group will have their data aggregat
 - Push subscription (this becomes an all or none situation, if your users unsubscribe from one app they will be unsubscribed from all of your apps under the app group)
 - Email subscription (this becomes an all or none situation and can leave you open to compliance issues)
 
-This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.
+This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed is why we do not recommend housing substantially different apps within the same app group.
 
 ## Managing app groups when relaunching your app
 

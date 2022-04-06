@@ -113,7 +113,7 @@ The entity can be specified in two different formats:
 
 | Entity mapping option | Description |
 | --------- | ----------- |
-| Include unmapped entities in event | When remapping or moving some entities to user attributes with the above customization, this option enables you to ensure that all unmapped entities (i.e., any entities not found in the rules above) will be included in the properties object of the Braze event. |
+| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (i.e., any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: https://snowplowanalytics.com

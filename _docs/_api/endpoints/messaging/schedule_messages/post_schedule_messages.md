@@ -86,7 +86,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Available messaging objects {#available-messaging-objects}
 
-You can use these objects in the [request body](#request-body) above.
+You can use these objects in the [request body](#request-body).
 - [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
 - [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
 - [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)

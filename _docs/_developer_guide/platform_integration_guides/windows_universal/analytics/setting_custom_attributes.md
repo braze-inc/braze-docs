@@ -39,7 +39,7 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 
 ## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
+Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
 
 ### Setting custom attribute values
 

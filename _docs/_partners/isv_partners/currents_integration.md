@@ -16,7 +16,7 @@ events. The batches will be sent in the following format:
 
 i.e. There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
 
-The examples below are for _individual_ events (i.e. they'd just be part of the larger array of JSON objects as described above, with each JSON object representing a single event in the batch).
+The examples below are for _individual_ events (i.e. they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
 
 ### Campaign-Associated Events
 

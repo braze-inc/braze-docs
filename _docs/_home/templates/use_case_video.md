@@ -46,7 +46,7 @@ noindex: true
 >
 > This is where you set up the Use Case Scenario. Why would someone want to read this page? Present a gripping hypothetical to "get the reader in the mood". Perhaps... "Sally's company, a hypothetical makeup company, finds that a portion of their users have shown little to no interest in their app app, even though they open their emails. They don't click on anything, but they open them! Sally decided that they wanted to convert 20% of these people to be app users again"
 >
-> The goals of this use case are as follows (break down the scenario above):
+> The goals of this use case are as follows (break down the preceding scenario):
 > - Goal 1
 > - Goal 2
 > - Goal 3
@@ -91,7 +91,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |

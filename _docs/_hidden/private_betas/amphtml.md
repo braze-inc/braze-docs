@@ -37,7 +37,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
 
 ```json
 {
-  "app_id": (required, string) see App Identifier above,
+  "app_id": (required, string) see App Identifier,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
   "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set),
@@ -145,7 +145,7 @@ By wrapping your content around the Raw tag, the Braze processing engine will co
 Before your send your AMP email, we recommend that you test according to [Gmail's guidelines here](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 For your AMP email to be delivered to any Gmail account, the email must meet the following conditions:
-- The AMP for Email security requirements must be met (see table above).
+- The AMP for Email security requirements must be met (see [Requirements](#requirements)).
 - The AMP MIME part must contain a valid AMP document.
 - The email should include the AMP MIME part before the HTML MIME part.
 - The AMP MIME part must be smaller than 100KB.

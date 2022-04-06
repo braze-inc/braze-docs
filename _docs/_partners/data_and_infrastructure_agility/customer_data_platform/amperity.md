@@ -140,7 +140,7 @@ Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically dest
 To start processing your user attribute CSV files, we need to deploy the serverless application to handle the processing for you. This application will create the following resources automatically to deploy successfully:
 - Lambda function
 - S3 Bucket for your CSV Files that the Lambda process can read from This Lambda function will only receive notifications for `.csv` extension files.
-- Role allowing for the creation of the above
+- Role allowing for the creation of the S3 Bucket
 - Policy to allow Lambda to receive S3 upload event in the new bucket
 
 Follow the direct link to the [application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) or open the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications) and search for **braze-user-attribute-import**. You must check the **Show apps that create custom IAM roles and resource policies** checkbox to see this application. The application creates a policy for the Lambda to read from the newly created S3 bucket.

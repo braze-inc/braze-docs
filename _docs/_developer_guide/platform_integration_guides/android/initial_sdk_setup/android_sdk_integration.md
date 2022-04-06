@@ -60,7 +60,7 @@ The example below shows where to place the dependency line in your `build.gradle
 
 #### Perform gradle sync
 
-Be sure to perform a Gradle Sync to build your project and incorporate the dependency additions noted above.
+Be sure to perform a Gradle Sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
 ![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
 
