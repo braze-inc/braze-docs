@@ -50,12 +50,13 @@ The following javascript shows how to encode/decode the JSON string:
 
 ```javascript
 function decode(encoded) {
-    const binary = atob(encoded)
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < bytes.length; i++) {
-        bytes[i] = binary.charCodeAt(i);
+    const binary = window.atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
+    let bits8 = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bits8[i] = binary.charCodeAt(i);
     }
-    return String.fromCharCode(...new Uint16Array(bytes.buffer));
+    const bits16 = new Uint16Array(bits8.buffer);
+    return String.fromCharCode(...bits16);
 }
 
 /**
@@ -155,13 +156,15 @@ Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `bra
     input.dispatchEvent(new Event("input"));
 
     function decode(encoded) {
-        const binary = atob(encoded)
-        const bytes = new Uint8Array(binary.length);
-        for (let i = 0; i < bytes.length; i++) {
-            bytes[i] = binary.charCodeAt(i);
+        const binary = window.atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
+        let bits8 = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+        bits8[i] = binary.charCodeAt(i);
         }
-        return String.fromCharCode(...new Uint16Array(bytes.buffer));
+        const bits16 = new Uint16Array(bits8.buffer);
+        return String.fromCharCode(...bits16);
     }
+
 
     function encode(input) {
         const codeUnits = new Uint16Array(input.length);
