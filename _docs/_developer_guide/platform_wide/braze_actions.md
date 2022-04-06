@@ -58,13 +58,25 @@ function decode(encoded) {
     return String.fromCharCode(...new Uint16Array(bytes.buffer));
 }
 
-
-function encode(string) {
-    const codeUnits = new Uint16Array(string.length);
+/**
+ * Returns an url-safe base64 encoded string of the input.
+ * Unicode inputs are accepted.
+ * Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
+ */
+function encode(input) {
+    // Split the original 16-bit char code into two 8-bit char codes then 
+    // reconstitute a new string (of double length) using those 8-bit codes
+    // into a UTF-8 string.
+    const codeUnits = new Uint16Array(input.length);
     for (let i = 0; i < codeUnits.length; i++) {
-        codeUnits[i] = string.charCodeAt(i);
+        codeUnits[i] = input.charCodeAt(i);
     }
-    return btoa(String.fromCharCode(...new Uint8Array(codeUnits.buffer))).replace(/=/g, '');
+    const charCodes = new Uint8Array(codeUnits.buffer);
+    let utf8String = "";
+    for (let i = 0; i < charCodes.byteLength; i++) {
+        utf8String += String.fromCharCode(charCodes[i]);
+    }
+    return btoa(utf8String).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 }
 ```
 
@@ -151,13 +163,17 @@ Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `bra
         return String.fromCharCode(...new Uint16Array(bytes.buffer));
     }
 
-
-    function encode(string) {
-        const codeUnits = new Uint16Array(string.length);
+    function encode(input) {
+        const codeUnits = new Uint16Array(input.length);
         for (let i = 0; i < codeUnits.length; i++) {
-            codeUnits[i] = string.charCodeAt(i);
+            codeUnits[i] = input.charCodeAt(i);
         }
-        return btoa(String.fromCharCode(...new Uint8Array(codeUnits.buffer))).replace(/=/g, '');
+        const charCodes = new Uint8Array(codeUnits.buffer);
+        let utf8String = "";
+        for (let i = 0; i < charCodes.byteLength; i++) {
+            utf8String += String.fromCharCode(charCodes[i]);
+        }
+        return btoa(utf8String).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
     }
 })();
 </script>
