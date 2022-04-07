@@ -127,7 +127,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       intent.putExtra("app_package", context.getPackageName());
       intent.putExtra("app_uid", context.getApplicationInfo().uid);
 
-      // for Android 8 and above
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.getPackageName());
       context.startActivity(intent);
     }
@@ -154,7 +154,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       intent.putExtra("app_package", context.packageName)
       intent.putExtra("app_uid", context.applicationInfo.uid)
 
-      // for Android 8 and above
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.packageName)
       context.startActivity(intent)
     }

@@ -6,6 +6,8 @@ layout: featured
 
 platform: Web
 
+channel: content cards
+
 guide_top_header: "Web Content Card Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Web SDK Content Cards customization options."

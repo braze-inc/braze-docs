@@ -6,6 +6,9 @@ layout: featured
 
 platform: iOS
 
+channel:
+  - content cards
+
 guide_top_header: "iOS Content Card Customization"
 guide_top_text: "Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these <a href='/docs/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches'>customization approaches</a> in our user guide."
 description: "This landing page covers the Braze iOS SDK Content Card customization options."

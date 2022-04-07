@@ -74,7 +74,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |

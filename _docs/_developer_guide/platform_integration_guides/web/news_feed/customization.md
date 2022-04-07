@@ -6,6 +6,8 @@ layout: featured
 
 platform: Web
 
+channel: news feed
+
 guide_top_header: "Web News Feed Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Web SDK News Feed customization options."

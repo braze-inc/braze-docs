@@ -29,7 +29,7 @@ The `content-available` flag can be set in the Braze dashboard as well as within
 
 Silent remote notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users. 
 
-To use silent remote notifications to trigger background work, set up the `content-available` flag following the above instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings.
+To use silent remote notifications to trigger background work, set up the `content-available` flag following the preceding instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings.
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 

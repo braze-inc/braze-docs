@@ -42,7 +42,7 @@ After storing the font family definition in `/res/font/bungee_font_family.xml`, 
 
 Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
 
-For example, the following styles override would use the `bungee` font family from above for all Braze in-app messages and a different font family for all Braze News Feed cards.
+For example, the following styles override would use the `bungee` font family for all Braze in-app messages and a different font family for all Braze News Feed cards.
 
 ```
 <style name="Braze.InAppMessage">

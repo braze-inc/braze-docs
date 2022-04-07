@@ -11,6 +11,8 @@ description: "This landing page covers the Braze FireOS SDK push customization o
 platform: 
   - FireOS
 
+channel: push
+
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Advanced Settings

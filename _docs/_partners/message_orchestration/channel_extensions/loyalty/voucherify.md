@@ -182,4 +182,4 @@ To use codes from the list in a Braze campaign, copy the snippet and add it to t
 
 Once the message with the code is sent, the same code will not be reused.
 
-If you need help with any of the steps above, visit [Promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).
+If you need help with any of these steps, visit [Promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).

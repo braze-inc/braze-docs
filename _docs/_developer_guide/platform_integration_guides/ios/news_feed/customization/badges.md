@@ -60,7 +60,7 @@ func applicationDidEnterBackground(_ application: UIApplication)
 {% endtab %}
 {% endtabs %}
 
-Within the above method, implement the following code, which actively updates the badge count while the user views cards during a given session.
+Within this method, implement the following code, which actively updates the badge count while the user views cards during a given session.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

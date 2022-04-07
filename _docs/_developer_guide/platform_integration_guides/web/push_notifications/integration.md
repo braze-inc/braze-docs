@@ -88,7 +88,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Service worker advanced settings
 
-Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, above importing Braze:
+Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, preceding importing Braze:
 
 ```javascript
 self.addEventListener('install', (event) => {

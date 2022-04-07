@@ -11,6 +11,8 @@ description: "This landing page covers the Braze Android SDK push customization 
 platform: 
   - Android
 
+channel: push
+
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Android Inline Image Push

@@ -353,7 +353,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 {% endtabs %}
 
 ### Custom full in-app message
-Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined above for implementing a customized modal in-app message. In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
+Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined in the section for implementing a [customized modal in-app message](#custom-modal-in-app-message). In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
 
 {% tabs %}
 {% tab Kotlin %}

@@ -48,7 +48,7 @@ This method records the badge count once the app is closed and the user's sessio
 (void)applicationDidEnterBackground:(UIApplication *)application
 ```
 
-Within the above method, implement the following code, which actively updates the badge count while the user views cards during a given session:
+Within this method, implement the following code, which actively updates the badge count while the user views cards during a given session:
 
 ```objc
 [UIApplication sharedApplication].applicationIconBadgeNumber = [[Appboy sharedInstance].contentCardsController unviewedContentCardCount];
@@ -61,7 +61,7 @@ Within the above method, implement the following code, which actively updates th
 func applicationDidEnterBackground(_ application: UIApplication)
 ```
 
-Within the above method, implement the following code, which actively updates the badge count while the user views cards during a given session:
+Within this method, implement the following code, which actively updates the badge count while the user views cards during a given session:
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber =

@@ -28,7 +28,7 @@ To customize the session timeout, pass the `sessionTimeoutInSeconds` option to y
 appboy.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 ``` 
 
-If you have set a session timeout, then the above session semantics all extend to that customized timeout.
+If you have set a session timeout, then the session semantics all extend to that customized timeout.
 
 ## Testing session tracking
 

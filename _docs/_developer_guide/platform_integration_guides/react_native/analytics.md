@@ -71,7 +71,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
+Beyond the default user attributes, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
 String values have a maximum length of 255 characters.
 
 ```javascript

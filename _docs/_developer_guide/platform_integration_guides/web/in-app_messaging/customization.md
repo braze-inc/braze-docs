@@ -6,6 +6,8 @@ layout: featured
 
 platform: Web
 
+channel: in-app messages
+
 guide_top_header: "Web In-App Message Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Web SDK in-app message customization options."

@@ -31,7 +31,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications();
 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
->  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the above code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
+>  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the preceding code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
 
 ### Registering push tokens
 

@@ -6,6 +6,9 @@ layout: featured
 
 platform: iOS
 
+channel:
+  - push
+
 guide_top_header: "iOS Push Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze iOS SDK push customization options."

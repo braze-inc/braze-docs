@@ -97,7 +97,7 @@ If you want to send an alternative unique user identifier different from the Rev
 | `$brazeAliasLabel` | The Braze `alias_label` in the [user alias object][2] |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Both attributes are required for the [user alias object][2] to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat subscriber attribute][4]. Example code snippets are shown above.
+Both attributes are required for the [user alias object][2] to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat subscriber attribute][4]. Example code snippets are shown in step one.
 
 ### Step 2: Send RevenueCat events to Braze
 

@@ -6,6 +6,9 @@ layout: featured
 
 platform: iOS
 
+channel:
+  - news feed
+
 guide_top_header: "iOS News Feed Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze iOS SDK News Feed customization options."

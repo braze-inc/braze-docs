@@ -22,7 +22,7 @@ The Braze and Crowdin integration allows you to translate email templates and co
 | Crowdin account | A [Crowdin account](https://accounts.crowdin.com/register) is required to take advantage of this partnership. |
 | Crowdin translation project | To connect your Braze account with Crowdin or Crowdin Enterprise, you will first need to sign up and create a translation project. |
 | Braze REST API key | A Braze REST API key with all templates and content blocks permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | Your REST endpoint URL excluding the "https://". For example, if your endpoint is `https://rest.fra-01.braze.eu`, you will provide Crowdin with `rest.fra-01.braze.eu`.<br><br>Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
+| Braze SDK endpoint | Your SDK endpoint URL will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -37,7 +37,7 @@ To set up the Braze app in Crowdin, follow these steps:
 3. Open the project you created for your Braze content localization.
 4. Go to **Settings > Integrations** tab.
 5. In the **Applications** section, click on the Braze app.
-6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze REST Endpoint).
+6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze SDK Endpoint).
 7. Click **Log in with Braze Connector**. 
 
 #### Crowdin Enterprise
@@ -48,7 +48,7 @@ To set up the Braze app in Crowdin Enterprise, follow these steps:
 3. Open the project you created for your Braze content localization.
 4. Go to **Applications > Custom**.
 5. Click on the Braze app.
-6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze REST Endpoint).
+6. In the dialog, provide your Braze credentials (Braze REST API Key and Braze SDK Endpoint).
 7. Click **Log in with Braze Connector**.
 
 ### Step 2: Add your content to Crowdin/Crowdin Enterprise

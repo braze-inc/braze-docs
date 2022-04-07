@@ -8,6 +8,9 @@ platform:
   - Android
   - FireOS
 
+channel:
+  - news feed
+
 guide_top_header: "Android and FireOS News Feed Customization"
 guide_top_text: ""
 description: "This landing page covers the Braze Android and FireOS SDK News Feed customization options."

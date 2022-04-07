@@ -23,7 +23,7 @@ Open your project and navigate to your project's settings. Select the **Swift Pa
 
 ![][2]
 
-When importing SDK version `3.33.1` and above, enter the URL of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click **Next**. 
+When importing SDK version `3.33.1` or later, enter the URL of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click **Next**. 
 
 For versions `3.29.0` through `3.32.0`, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
 
