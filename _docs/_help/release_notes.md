@@ -328,6 +328,4 @@ The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/
 [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Together, the Braze and Shopify integration allows brands to connect their Shopify store seamlessly with Braze to pass select Shopify webhooks into Braze. Leverage Braze’s cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging and nudge customers to complete their purchase, or retarget users based on their previous purchases.
 
 
-<br><br>
-
 [support]: {{site.baseurl}}/support_contact/

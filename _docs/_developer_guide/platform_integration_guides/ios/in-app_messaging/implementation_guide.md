@@ -8,8 +8,9 @@ channel:
   - in-app messages
 ---
 
+<br>
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/).
+Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # In-app messaging implementation guide
@@ -121,7 +122,7 @@ private var bottomSpacing: CGFloat {
     return AppboyManager.shared.activeApplicationViewController.topMostViewController().view.safeAreaInsets.bottom
 }
 ``` 
-Visit the Braze Demo repository for the [`topMostViewController()`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/Utils/UIViewController_Util.swift#L17) function referenced above.
+Visit the Braze Demo repository for the [`topMostViewController()`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/Utils/UIViewController_Util.swift#L17) function.
 {% enddetails %}
 {% endtab %}
 {% tab Objective-C %}

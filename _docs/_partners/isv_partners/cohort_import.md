@@ -31,7 +31,7 @@ In addition to the top-level URLs being cluster-specific, each endpoint is also 
 
 ## Authentication
 
-to import cohort data into braze, there are two authentication keys required.
+To import cohort data into Braze, there are two authentication keys required.
 
 ### Partner API key
 
@@ -54,7 +54,7 @@ The Cohort Name Endpoint can be used to specify the name of a cohort based on it
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see above), so the partner will need to know the cluster to which cohorts will be written. |
+| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the partner will need to know the cluster to which cohorts will be written. |
 | `client_secret` | string | yes | Data Import Key for the client whose cohort this belongs to. |
 | `cohort_id` | string | yes | Identifier for the cohort. This identifier should be unique for the specified client. |
 | `name` | string | yes | Client-specified name for the cohort |
@@ -80,7 +80,7 @@ The User Cohort Endpoint allows for specifying which users have been added to or
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see above), so the integration will need to know the cluster to which cohorts will be written. |
+| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the integration will need to know the cluster to which cohorts will be written. |
 | `client_secret` | string | yes | Data Import Key for the client whose cohort this belongs to. |
 | `cohort_id` | string | yes | Identifier for the cohort. The identifier should be unique for the specified client. |
 | `cohort_changes` | array of objects | yes | Objects can have two fields. One, `user_ids`, is required and can be an array of `external_ids`, `device_ids`, and `aliases`. Each element is an ID for a user whose status in the cohort has changed. The second field, `should_remove`, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. At first, we will ignore any IDs that do not match the External User ID for a user, which means anonymous users cannot be added to or removed from a cohort. Max combined length of the user IDs in a single request is 1000. |

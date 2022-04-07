@@ -72,7 +72,7 @@ Appboy.SharedInstance.CloseSession();
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application. Please see the following sections on how to log attributes, events, and purchases to our SDK and how to instrument push messaging.
+Braze should now be collecting data from your application. See the following articles on how to log [attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases) to our SDK and how to instrument push messaging.
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as “AppboyPlatform.Universal.Appboy”
 

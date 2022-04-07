@@ -15,7 +15,7 @@ search_tag: Partner
 The Braze and Transifex integration leverages Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 {% alert important %}
-As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. <br><br>The following integration instructions reflect this version 3 update. Please update your Connected Content calls accordingly.
+As of April 7, 2022, Transifex has deprecated their API versions 2 and 2.5 to make way for version 3. v2 and v2.5 are no longer operational, and relevant requests will fail. <br><br>The following integration instructions reflect the version 3 update. Please update your Connected Content calls accordingly.
 {% endalert %}
 
 ## Prerequisites

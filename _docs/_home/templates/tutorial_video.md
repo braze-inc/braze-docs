@@ -75,7 +75,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |
@@ -92,7 +92,7 @@ If this step needs to be broken down into additional steps, you can either:
 1. Use numbers or bullets, or
 2. Use an H3 header.
 
-### This is also number two from above
+### This is also part of step two
 
 Please note that this sub-step will NOT appear in the TOC under the video on the right.
 

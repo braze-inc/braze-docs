@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "This article covers how to log custom events using Gimbal Beacons for Android."
+description: "This article covers how to log custom events using Gimbal Beacons for Android or FireOS."
 
 ---
 
@@ -38,4 +38,4 @@ Braze.getInstance(context).requestImmediateDataFlush()
 {% endtab %}
 {% endtabs %}
 
-The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Please note that the activity and context that you are working in may change exactly how you integrate the `logCustomEvent` and `requestImmediateDataFlush` lines. Also, note that the above will create and increment a unique custom event for each new place that the user enters. As such, if you anticipate creating more than 50 places we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
+The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Please note that the activity and context that you are working in may change exactly how you integrate the `logCustomEvent` and `requestImmediateDataFlush` lines. Also, note that this code will create and increment a unique custom event for each new place that the user enters. As such, if you anticipate creating more than 50 places we recommend you create one generic "Place Entered" custom event and include the place name as an event property.

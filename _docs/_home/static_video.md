@@ -98,7 +98,7 @@ Custom event properties can also be used for personalization within the messagin
 Custom event properties are designed to help you personalize your messaging or build granular Action-Based Delivery campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 
 ## Custom Attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the above example for custom events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
 
 ### Custom Attribute Storage
 
@@ -240,7 +240,7 @@ Their goal is straightforward in that they want users to hail taxi rides via the
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following custom events:
+These actions could then be tagged as the following custom events:
 
 - Began Registration
 - Completed Registration
@@ -261,7 +261,7 @@ After implementing the events, you can now run the following campaigns:
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following custom attributes:
+These characteristics could then be tagged as the following custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Integer Type)
@@ -277,7 +277,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 ### General Best Practices
 
-#### Don’t Over-Segment Your Tracking
+#### Don’t Over-Segment Your Tracking {#over-segmentation}
 
 - Being more generic will help you target more users and draw more useful divisions between user segments
 - For example, rather than capturing a separate event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event
@@ -297,7 +297,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [user data API][9].
 - Target specific users with our [messaging API][10] for both general and transactional messages.
 
-User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. Below are some examples of suitable and unsuitable user IDs.
+User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. Below are some examples of suitable and unsuitable user IDs.
 
 Good options for User IDs:
 
@@ -322,7 +322,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid Programmatically Generating Events
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same over-segmentation problems described above. Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segmentation). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
 ### Technical Limitations & Constraints
 Please be mindful of the following limitations and constraints when implementing custom events:

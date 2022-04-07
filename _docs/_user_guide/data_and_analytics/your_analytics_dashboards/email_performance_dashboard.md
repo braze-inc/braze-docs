@@ -19,9 +19,9 @@ To use your email performance dashboard, go to **Overview** > **Email Performanc
 
 ## Metrics calculations
 
-The calculations for different metrics in the email performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. 
+The calculations for different metrics in the email performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+Each tile (except _Sends_, which is a count metric), shows the rate metric first, followed by the count metric. For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period.
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |

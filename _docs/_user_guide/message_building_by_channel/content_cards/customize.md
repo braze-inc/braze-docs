@@ -199,6 +199,6 @@ If you want to update it for different languages, find the corresponding languag
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/

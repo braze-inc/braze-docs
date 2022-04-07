@@ -4,7 +4,7 @@ article_title: Push Integration for FireOS
 platform: FireOS
 page_order: 0
 page_type: solution
-description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
+description: "This article walks you through how to integrate Braze push notifications in your FireOS application."
 channel: push
 
 ---
@@ -13,7 +13,7 @@ channel: push
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content to re-engage them with your app.
 
-ADM (Amazon Device Messaging) is not supported on non-Amazon devices. To test Kindle push, you must have a [FireOS device][32]. Check out the [help section][8] for additional best practices.
+ADM (Amazon Device Messaging) is not supported on non-Amazon devices. To test Kindle push, you must have a [FireOS device][32]. Check out our [help article][8] for additional best practices.
 
 Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)][14].
 
@@ -150,4 +150,4 @@ If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Pus
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs

@@ -57,7 +57,7 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 ```
 {% endraw %}
 
-In the above webhook URL, you must:
+In the webhook URL, you must:
 - Set the event name. This name will appear in your Jampp dashboard.
 - Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678").
 - Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Please note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.

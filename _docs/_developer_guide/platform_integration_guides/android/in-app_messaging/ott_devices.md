@@ -5,7 +5,7 @@ page_order: 5
 platform: 
   - Android
   - FireOS
-description: "This reference article covers in-app messaging OTT display information for your Android application."
+description: "This reference article covers in-app messaging OTT display information for your Android or FireOS application."
 channel:
   - in-app messages
 

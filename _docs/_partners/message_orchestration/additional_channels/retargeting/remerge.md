@@ -50,7 +50,7 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 ```
 {% endraw %}
 
-In the above webhook URL, you must:
+In the webhook URL, you must:
 - Use the `https://remerge.events/event` API to send your webhook events.
 - Set the event name. This name will appear in your [remerge.io][65] dashboard.
 - Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678") to remerge.

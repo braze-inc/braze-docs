@@ -31,7 +31,7 @@ guide_menu_list:
     fa_icon: fab fa-apple
     nav_link: cordova
   - name: Flutter Android and iOS
-    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
+    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     fa_icon: fas fa-mobile
     nav_link: flutter
   - name: React Native

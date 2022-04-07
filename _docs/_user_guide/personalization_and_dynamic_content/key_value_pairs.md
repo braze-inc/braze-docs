@@ -165,7 +165,7 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 ![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/

@@ -24,7 +24,7 @@ There are several Braze Unity packages available for download on the [Braze Unit
     - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework is not present. This package is useful if you do not want the SDWebImage framework present in your iOS app.
 
 **iOS**: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, visit the [iOS in-app message documentation][unity-4].<br>
-**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
+**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
 
 ## Step 2: Import the package
 
@@ -79,4 +79,4 @@ To take advantage of the automated iOS integration offered in the Braze Unity SD
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
-[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
+[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/

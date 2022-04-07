@@ -36,4 +36,4 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 {% endtab %}
 {% endtabs %}
 
-The `flushDataAndProcessRequestQueue` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that the above will create and increment a unique custom event for each new place that the user enters. If you anticipate creating more than 50 places, we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
+The `flushDataAndProcessRequestQueue` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that this will create and increment a unique custom event for each new place that the user enters. If you anticipate creating more than 50 places, we recommend you create one generic "Place Entered" custom event and include the place name as an event property.

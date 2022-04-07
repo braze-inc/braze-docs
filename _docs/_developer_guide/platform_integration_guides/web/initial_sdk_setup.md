@@ -12,7 +12,7 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
-Please see our [JavaScript Documentation][9] for a complete technical reference.
+See our [JavaScript Documentation][9] for a complete technical reference.
 
 ## Step 1: Install the Braze library
 
@@ -89,7 +89,7 @@ if (isLoggedIn){
 appboy.openSession();
 ```
 
-Please see our [JavaScript reference documentation][9] for all other JavaScript methods.
+See our [JavaScript reference documentation][9] for all other JavaScript methods.
 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
@@ -116,7 +116,7 @@ appboy.toggleAppboyLogging()
 
 ## Upgrading the SDK
 
-When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/appboy.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site. 
+When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/appboy.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the examples provided) automatically when they refresh your site. 
 
 However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 

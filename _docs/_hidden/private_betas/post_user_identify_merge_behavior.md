@@ -75,7 +75,7 @@ The following attributes are not yet supported:
 - Custom event or purchase properties for segmentation
 {% endalert %}
 
-Setting the field to `none` will maintain the current functionality detailed above. 
+Setting the field to `none` will not merge any user data to the identified user profile.
 
 ## Request example
 ```

@@ -44,7 +44,7 @@ noindex: true
 >
 > This is where you set up the Use Case Scenario. Why would someone want to read this page? Present a gripping hypothetical to "get the reader in the mood". Perhaps... "Sally's company, a hypothetical makeup company, finds that a portion of their users have shown little to no interest in their app app, even though they open their emails. They don't click on anything, but they open them! Sally decided that they wanted to convert 20% of these people to be app users again"
 >
-> The goals of this use case are as follows (break down the scenario above):
+> The goals of this use case are as follows (break down the preceding scenario):
 > - Goal 1
 > - Goal 2
 > - Goal 3

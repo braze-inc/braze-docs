@@ -17,7 +17,7 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "SDWebImage/SDWebImage"
 ```
 
-Please reference the [Carthage quick start guide][1] for more instructions about importing the SDK.
+Reference the [Carthage quick start guide][1] for more instructions about importing the SDK.
 
 When migrating from a version prior to `4.4.0`, follow the [Carthage migration guide for XCFrameworks][2].
 

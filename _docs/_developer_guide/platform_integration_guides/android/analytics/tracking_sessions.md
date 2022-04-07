@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "This reference article shows how to subscribe to session updates for your Android application."
+description: "This reference article shows how to subscribe to session updates for your Android or FireOS application."
 
 ---
 
@@ -71,7 +71,7 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/subscribe-to-session-updates.html
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
-[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
+[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
 [session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}

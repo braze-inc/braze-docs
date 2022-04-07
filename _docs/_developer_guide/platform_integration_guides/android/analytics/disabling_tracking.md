@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 8
-description: "This article shows how to disable data collection for your Android application."
+description: "This article shows how to disable data collection for your Android or FireOS application."
 
 ---
 

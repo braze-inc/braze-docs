@@ -1,11 +1,11 @@
 ---
 nav_title: Multiple Feeds
 article_title: Using Multiple Content Card Feeds for Android and FireOS
-page_order: 6
+page_order: 5
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
+description: "This reference article covers how to implement multiple Content Card feeds in your Android or FireOS application."
 channel:
   - content cards
 

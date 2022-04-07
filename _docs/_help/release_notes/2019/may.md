@@ -21,9 +21,9 @@ In addition, Content Cards support more personalized features, including card pi
 Use it to create notification centers, homepage feeds, and promotion feeds.
 
 You will need to update to a supported Braze SDK version:
-- iOS: 3.8.0 or above
-- Android: 2.6.0 or above
-- Web: 2.2.0 or above
+- iOS: 3.8.0 or later
+- Android: 2.6.0 or later
+- Web: 2.2.0 or later
 
 [Learn more about Content Cards here!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
 
