@@ -8,8 +8,9 @@ channel:
   - in-app messages
 ---
 
+<br>
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/).
+Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # In-app messaging implementation guide

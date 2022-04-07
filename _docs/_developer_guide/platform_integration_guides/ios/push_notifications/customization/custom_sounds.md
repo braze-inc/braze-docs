@@ -2,7 +2,7 @@
 nav_title: Custom Sounds
 article_title: Custom Push Notification Sounds for iOS
 platform: iOS
-page_order: 2
+page_order: 3
 description: "This article covers implementing custom sounds in your iOS push notifications."
 channel:
   - push

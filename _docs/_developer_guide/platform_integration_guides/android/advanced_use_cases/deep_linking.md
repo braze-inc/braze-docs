@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings or a News Feed."
 
 ---
 
@@ -214,7 +214,7 @@ Braze.configure(this, brazeConfig)
  {% endtabs %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
 [udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html

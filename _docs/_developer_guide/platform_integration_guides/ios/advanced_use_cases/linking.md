@@ -11,7 +11,7 @@ description: "This article covers how to implement the universal deep linking de
 
 ## Deep links
 
-For more information on deep links, refer to our [FAQ section][4]. If you're looking to implement deep links for the first time, see the documentation below.
+For more information on deep links, refer to our [FAQ article][4]. If you're looking to implement deep links for the first time, see the documentation below.
 
 ### Step 1: Registering a scheme
 

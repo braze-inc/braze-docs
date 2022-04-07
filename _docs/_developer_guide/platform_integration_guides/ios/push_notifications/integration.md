@@ -99,7 +99,7 @@ If you've implemented a custom push prompt as described in our [push best practi
 If you are using the `UserNotifications` framework (recommended) introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
 {% alert important %}
-The code sample below includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) to learn more about push provisional authentication.
+The code sample below includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
 {% endalert %}
 
 {% tabs %}
@@ -349,4 +349,4 @@ Deep linking from a push into the app is automatically handled via our standard 
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: #push-action-buttons-integration
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/

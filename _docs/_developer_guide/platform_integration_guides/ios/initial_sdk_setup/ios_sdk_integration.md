@@ -18,7 +18,7 @@ This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_g
 
 ## Integration overview
 
-The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
+The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)

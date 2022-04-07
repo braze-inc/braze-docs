@@ -12,7 +12,7 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
-Please see our [JavaScript Documentation][9] for a complete technical reference.
+See our [JavaScript Documentation][9] for a complete technical reference.
 
 ## Step 1: Install the Braze library
 
@@ -89,7 +89,7 @@ if (isLoggedIn){
 appboy.openSession();
 ```
 
-Please see our [JavaScript reference documentation][9] for all other JavaScript methods.
+See our [JavaScript reference documentation][9] for all other JavaScript methods.
 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.

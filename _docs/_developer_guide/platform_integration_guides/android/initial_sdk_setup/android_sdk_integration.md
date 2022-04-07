@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to integrate the Android SDK into your Android application."
+description: "This reference article covers how to integrate the Android SDK into your Android or FireOS application."
 
 ---
 
@@ -23,7 +23,7 @@ The Braze Android SDK can optionally be integrated without UI components. Howeve
 
 ### Basic integration
 
-To access Braze's messaging features, you must integrate the UI library. Please see the following Android Studio directions to integrate the UI library depending on your IDE:
+To access Braze's messaging features, you must integrate the UI library. See the following Android Studio directions to integrate the UI library depending on your IDE:
 
 #### Add our repository
 
@@ -151,7 +151,7 @@ Starting with Braze Android SDK version 3.6.0, Braze location collection is disa
 
 Braze will now be able to collect [specified data from your application]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) and your basic integration should be complete.
 
-Visit the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Visit the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/) and the complete suite of Braze features.
 
 [2]: {{site.baseurl}}/user_guide/introduction/
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}

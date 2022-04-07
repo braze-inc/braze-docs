@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "This reference article covers how to add and track custom events for your Android application."
+description: "This reference article covers how to add and track custom events for your Android or FireOS application."
 
 ---
 

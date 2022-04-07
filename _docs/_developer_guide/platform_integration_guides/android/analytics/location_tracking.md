@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 6
-description: "This article shows how to configure location tracking for your Android application."
+description: "This article shows how to configure location tracking for your Android or FireOS application."
 Tool:
   - Location
 

@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 6
-description: "This reference article covers how to implement locations and geofences in your Android application."
+description: "This reference article covers how to implement locations and geofences in your Android or FireOS application."
 Tool:
   - Location
 

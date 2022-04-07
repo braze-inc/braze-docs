@@ -6,7 +6,7 @@ page_type: update
 platform: 
   - Android
   - FireOS
-description: "This page lists updates to Braze's Android SDK changelog."
+description: "This page lists updates to Braze's Android/FireOS SDK changelog."
 
 ---
 

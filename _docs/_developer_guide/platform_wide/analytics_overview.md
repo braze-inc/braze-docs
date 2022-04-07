@@ -8,7 +8,7 @@ description: "This reference article covers user data collection including what 
 
 # User data collection
 
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a "custom event" vs. a "custom attribute".
 
@@ -326,13 +326,13 @@ We count every attribute passed to Braze as a data point, even if the passed att
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segment). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
 ### Technical limitations and constraints
-Please be mindful of the following limitations and constraints when implementing custom events:
+Be mindful of the following limitations and constraints when implementing custom events:
 
 #### Length constraints
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
 #### Content constraints
-The following content will be trimmed programmatically from your attributes and events. Please take care not to use the following:
+The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:
 
 - Leading and trailing whitespace
 - Newlines

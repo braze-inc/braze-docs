@@ -2,7 +2,7 @@
 nav_title: Advanced Implementation (Optional)
 article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: iOS
-page_order: 29
+page_order: 28
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 channel:
   - push
@@ -15,7 +15,7 @@ Looking for the out-of-the-box push developer integration guide? Find it [here](
 
 # Push notification implementation guide
 
-> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Notification content app extensions
 
@@ -149,7 +149,7 @@ Note that the information requested here can be a wide range of things such as S
 
 #### Dashboard configuration
 
-To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/), set the notification style in your campaign to Rich Notification, and include a rich push image.
+To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_decription" set as "Certified Braze marketers drive...".][9]
 

@@ -61,7 +61,7 @@ To debug your Braze integration, you can view the Roku debug console for Braze l
 
 Braze should now be collecting data from your application with the Braze Roku SDK. 
 
-Please see the following sections on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
+See the following articles on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
 
 To learn more about in-app messaging on Roku, see our [in-app message integration guide][5].
 
