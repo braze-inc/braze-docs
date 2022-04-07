@@ -11,6 +11,9 @@ channel: in-app messages
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+- name: Buildling Accessible In-App Messages
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/accessibility
+  fa_icon: fas fa-universal-access
 - name: Prep Guide
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
   fa_icon: fas fa-book-open

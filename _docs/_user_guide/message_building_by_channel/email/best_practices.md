@@ -24,5 +24,8 @@ guide_featured_list:
   - name: "Sunset Policies"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     fa_icon: fas fa-sun
+  - name: "Building accessible emails"
+    link: /docs/user_guide/message_building_by_channel/email/best_practices/accessibility/
+    fa_icon: fas fa-universal-access
 
 ---
