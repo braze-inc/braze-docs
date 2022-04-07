@@ -13,7 +13,7 @@ channel:
 
 # Badges
 
-## Adding a badge
+## Requesting unread News Feed card counts
 
 You can request the number of unread cards at any time by calling:
 

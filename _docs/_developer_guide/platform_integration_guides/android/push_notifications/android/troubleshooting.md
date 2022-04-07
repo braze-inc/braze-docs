@@ -116,7 +116,7 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
 
 #### Firewall is blocking push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Ensure that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
 
 #### Custom notification factory returning null
 

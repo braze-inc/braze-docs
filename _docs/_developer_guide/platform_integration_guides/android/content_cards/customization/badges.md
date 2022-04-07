@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Adding a badge
+# Badges
+
+## Requesting unread Content Card counts
 
 You can [request the number of unread cards][1] at any time by calling:
 

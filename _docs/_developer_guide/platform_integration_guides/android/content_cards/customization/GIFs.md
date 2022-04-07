@@ -13,8 +13,6 @@ channel:
 
 # GIFs {#gifs-news-content-cards}
 
-{% alert note %}
-This section applies to integrations that use the Braze SDK's default Content Cards fragment or views to display Content Cards.
-{% endalert %}
+This article applies to integrations that use the Braze SDK's default Content Cards fragment or views to display Content Cards.
 
 {% include archive/android/gifs.md channel="Content Cards" %}

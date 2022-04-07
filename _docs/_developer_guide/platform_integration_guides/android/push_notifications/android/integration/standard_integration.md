@@ -320,11 +320,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] section for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ section][42].
+Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article][42].
 
 #### Adding deep links
 

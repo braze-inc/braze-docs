@@ -71,7 +71,7 @@ The following example shows a paginated HTML Full in-app message:
 
 ![An HTML in-app message with a carousel of content and interactive buttons.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
-Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing full control over message appearance and functionality. Please note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
+Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing full control over message appearance and functionality. Note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
 
 {% alert note %}
 Starting in iOS SDK version 3.19.0, the following JavaScript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.

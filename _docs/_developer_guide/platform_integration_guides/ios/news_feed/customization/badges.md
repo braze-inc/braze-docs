@@ -11,7 +11,7 @@ channel:
 
 # Badges
 
-## Requesting unread card count
+## Requesting unread News Feed card counts
 
 ![][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 

@@ -129,7 +129,7 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 
 ### SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
+Braze should now be collecting data from your application, and your basic integration should be complete. Note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
 
 ### Updating the Braze SDK via CocoaPods
 
