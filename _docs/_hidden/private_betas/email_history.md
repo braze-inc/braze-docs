@@ -7,7 +7,7 @@ hidden: true
 # Email History Tab FAQ
 
 {% alert note %}
-The **Email History** tab is an experimental feature rolled out only to select customers
+The **Email History** tab is an experimental feature rolled out only to select customers.
 {% endalert %}
 
 ## What is the Email History tab?
