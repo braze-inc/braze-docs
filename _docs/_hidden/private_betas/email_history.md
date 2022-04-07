@@ -6,13 +6,13 @@ hidden: true
 
 # Email History Tab FAQs
 
-{% alert note %}
-The **Email History** tab is an experimental feature rolled out only to select customers.
-{% endalert %}
-
 ## What is the Email History tab?
 
-The **Email History** tab of the user profile enables you to see recent email events (approximately 40) for an individual user from the past 30 days. It is currently an experimental feature rolled out only to select customers.
+The **Email History** tab of the user profile enables you to see recent email events (approximately 40) for an individual user from the past 30 days.
+
+{% alert important %}
+The **Email History** tab is an experimental feature rolled out only to select customers.
+{% endalert %}
 
 ## Which events are included in the table?
 
