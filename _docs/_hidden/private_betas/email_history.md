@@ -1,10 +1,10 @@
 ---
-nav_title: Email History Tab FAQ
+nav_title: Email History Tab FAQs
 permalink: "/email_history/"
 hidden: true
 ---
 
-# Email History Tab FAQ
+# Email History Tab FAQs
 
 {% alert note %}
 The **Email History** tab is an experimental feature rolled out only to select customers.
