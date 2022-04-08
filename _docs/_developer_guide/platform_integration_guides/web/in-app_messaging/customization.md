@@ -17,7 +17,7 @@ All of Braze's in-app message types are highly customizable across messages, ima
 
 ## Custom handling of in-app message display
 
-To use your own UI and instead read from the data model for each in-app message, then the following customizations are needed:
+To use your own UI and instead read from the data model for each in-app message, the following customizations are needed:
 
 1. Remove calls to `braze.automaticallyShowInAppMessages()`
 2. Add a function to handle displaying in-app messages as they are triggered
