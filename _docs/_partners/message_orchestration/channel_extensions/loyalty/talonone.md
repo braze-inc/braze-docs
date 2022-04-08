@@ -49,7 +49,7 @@ A custom `/braze/coupon` Talon.One endpoint must be used to convert the Talon.On
 | `ExpiryDate` | The expiry date of the coupon. |
 | `UsageLimit` | The usage limit of the coupon. 1 by default. |
 | `ValidCharacters` | The list of allowed characters to be used when generating the code. Example: ["A","B","C","1","2"]. |
-| `CouponPattern` | The coupon pattern to use. Use # to represent a random character picked in the valid character set. For example, "SUMMER-####". |
+| `CouponPattern` | The coupon pattern to use. Use # to represent a random character picked in the valid character set. Example: "SUMMER-####". |
 | `Attributes` | Object containing all the coupon attributes to set on the coupon. |
 {: .reset-td-br-1 .reset-td-br-2}
 
