@@ -8,10 +8,10 @@ permalink: /braze_faqs/
 
 Appboy has become Braze. The word Braze means to bond, to unite, or to join with considerable strength. Renaming our company to Braze is a representation of the strong, unwavering connection that our technology creates between people and the brands they love.
 
-As we move over to Braze, you have questions – and we have answers. Check out our FAQs below.
+As we move over to Braze, you have questions–and we have answers. Check out our FAQs below.
 
 ### Is the dashboard going to look different?
-**Yes!** On Thursday, November 16th, we shared our new visual brand identity and new dashboard interface.
+Yes! On Thursday, November 16, we shared our new visual brand identity and new dashboard interface.
 
 ### Do I need to change my SDK integration?
 You do not need to make any changes to your SDK integration now. However, you will need to make an update to the SDK endpoint used by your apps by June 1, 2019. We will be emailing more details about this in the months ahead, as well as updating our [documentation][1], and will ensure that you are notified.
