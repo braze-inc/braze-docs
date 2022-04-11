@@ -34,7 +34,7 @@ Please note that CDN configuration always follows after getting your DNS records
 {% endalert %}
 
 {% alert note %}
-If you are unable or do not wish to use the CDNs listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
+If you are unable or do not wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
 {% endalert %}
 
 ### CDN resources

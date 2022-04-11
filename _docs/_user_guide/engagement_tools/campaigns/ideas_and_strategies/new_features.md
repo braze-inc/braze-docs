@@ -59,7 +59,7 @@ This filter will populate values once users upgrade their apps to the supported 
 
 In the following scenario, let's assume that you first upgraded to the Braze SDKs which supports this filter in version `2.0.0` of your app.
 
-Once Braze receives data from version 2.0.0 of your app, you can target users below or above this version.
+Once Braze receives data from version 2.0.0 of your app, you can target users with earlier or later versions.
 
 | Filter  | User's App Version  | Result |
 :------------- | :----------- | :---------|

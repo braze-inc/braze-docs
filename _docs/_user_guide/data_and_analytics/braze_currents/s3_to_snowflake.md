@@ -118,7 +118,7 @@ Check the appropriate box for the object create notifications, as well as the AR
 
 ### Snowpipe setup
 
-In order for the above configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) Currents documentation.
+In order for the preceding configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) Currents documentation.
 
 It is critical that your tables are structured in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them via specific fields with specific data types (a `user_id` will always be loaded as a string and called a `user_id` in Currents data).
 

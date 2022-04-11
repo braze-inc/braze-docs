@@ -90,7 +90,7 @@ The Prediction will be rebuilt ("retrained") again every **two weeks automatical
 - “Within 1 day do uninstall.” <br>
 - “Within 14 days do not Make a Purchase.” <br>
 
-For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br>
+For the Churn definitions we outlined, there might be some corresponding Prediction Audience definitions:<br>
 - **Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago**<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
 - **Uninstallers**<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
 - **Those at Risk of Not Purchasing as a Definition of Churn**<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.

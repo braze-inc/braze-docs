@@ -133,7 +133,7 @@ In this example, a user with a blank or null first name will get the message "Th
 
 You can use the `assign` tag to create a variable in the message composer. Once you create a variable, you can reference that variable in your messaging logic or message.
 
-Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance above or equal to 100 if they made that additional purchase:
+Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance greater than or equal to 100 if they made that additional purchase:
 
 {% raw %}
 ```liquid

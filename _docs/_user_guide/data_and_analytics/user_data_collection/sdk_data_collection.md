@@ -37,7 +37,7 @@ Listed below are the automatically captured data generated and received by Braze
 | Country | Android, iOS, Web | Country | Identified via IP Address Geolocation. It can be used to target messages based on location. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-All the above fields can be disabled to allow for a Minimum Integration: 
+All these fields can be disabled to allow for a Minimum Integration: 
 - Android: [device-level fields][1], [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation")
 - iOS: [device-level fields](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181 "iOS device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/ "iOS allowlist documentation")
 - Web: [device-level fields](https://js.appboycdn.com/web-sdk/2.3/doc/module-appboy.html#toc2 "Web device-level fields"), [allowlist documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation")

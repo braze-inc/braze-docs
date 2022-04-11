@@ -74,7 +74,7 @@ There are several data types in Braze. When importing or updating user profiles 
 When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
 {% endalert %}
 
-Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the sections above for CSV templates.
+Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
 
 ### Data point considerations
 
@@ -156,7 +156,7 @@ Once the upload is complete, you will see a modal window with a table previewing
 
 You can import more than one CSV at the same time. CSV imports will run concurrently, and as such the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
 
-If Braze notices something malformed in your file during the upload, errors will be shown above the summary. A file can be imported with errors, but an import can't be canceled or rolled-back once started. Review the preview, and if you find any errors, cancel the import and modify your file. It's important to examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
+If Braze notices something malformed in your file during the upload, errors will be shown with the summary. A file can be imported with errors, but an import can't be canceled or rolled-back once started. Review the preview, and if you find any errors, cancel the import and modify your file. It's important to examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to [Troubleshooting](#troubleshooting) below.
 

@@ -28,7 +28,7 @@ Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl
 
 ### Data tracking for reporting
 
-Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method mentioned above.
+Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method.
 
 ## Create a Global Control Group
 
@@ -152,7 +152,7 @@ Two main rules to keep in mind are**:
 1. Your control group should be no smaller than 1000 users.
 2. Your control group should be no more than 10% of your entire audience.
 
-If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage above 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
+If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage higher than 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
 
 - Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you’re using your campaigns to drive engagement and conversions.
 - The ideal percentage of your total audience will depend on how large your total audience is. The bigger your total audience is, the smaller your percentage can be. If you have a small audience, however, you will need a larger percentage for your control group.

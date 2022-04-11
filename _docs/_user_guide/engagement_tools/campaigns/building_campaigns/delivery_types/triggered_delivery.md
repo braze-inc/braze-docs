@@ -129,7 +129,7 @@ Any of these things will prevent a user who has completed the trigger event from
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration` and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
-It is a best practice to ensure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. In cases where this is not possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. In the example above, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
+As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 

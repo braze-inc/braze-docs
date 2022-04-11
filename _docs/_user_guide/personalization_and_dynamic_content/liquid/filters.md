@@ -35,7 +35,7 @@ BIG SALE
 {% endtab %}
 {% endtabs %}
 
-In the example above, `Big Sale` is a string, and `upcase` is the filter being applied.
+In this example, `Big Sale` is a string, and `upcase` is the filter being applied.
 
 You can use multiple filters on one output. They are applied from left to right.
 

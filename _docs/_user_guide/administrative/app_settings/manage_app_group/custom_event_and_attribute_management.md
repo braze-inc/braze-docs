@@ -73,7 +73,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 For more information on specific filter options exposed by different data type comparisons check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
-Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard.
+Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.
 {% endalert %}
 
 

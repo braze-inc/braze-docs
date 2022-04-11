@@ -38,9 +38,9 @@ As you move the slider handles to different positions, the bar in the left half 
 
 ![][6]
 
-In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected above in two ways:
+In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected in two ways:
 
-1. How many selected users are expected to purchase<br><br> The Prediction isn't perfectly accurate, and no Prediction ever is, meaning Braze will not be able to identify every single future purchaser. The Likelihood Scores are like a set of informed and reliable predictions. The progress bar indicates how many of "actual" or "true" purchasers expected in the Prediction Audience will be targeted with the audience selected above. Note that we expect this number of users to purchase even if you don't send them a message. <br><br>
+1. How many selected users are expected to purchase<br><br> The Prediction isn't perfectly accurate, and no Prediction ever is, meaning Braze will not be able to identify every single future purchaser. The Likelihood Scores are like a set of informed and reliable predictions. The progress bar indicates how many of "actual" or "true" purchasers expected in the Prediction Audience will be targeted with the audience selected. Note that we expect this number of users to purchase even if you don't send them a message. <br><br>
 
 2. How many selected users are expected not to purchase<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the red portion is those who will be incorrectly targeted using the current slider position.
 
