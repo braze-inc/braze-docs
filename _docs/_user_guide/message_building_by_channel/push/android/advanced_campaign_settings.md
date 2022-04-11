@@ -22,7 +22,9 @@ A **"Notification ID"** is a unique identifier for a message category of your ch
 
 ## Time to live (TTL) {#ttl}
 
-The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
+The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. 
+
+For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. You could send a push alerting a user that that streak is in danger of being broken if they’ve exceeded a certain number of days. However, if a user was to reconnect their device to the game app 4 weeks later with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
 ## Firebase messaging delivery priority {#fcm-priority}
 

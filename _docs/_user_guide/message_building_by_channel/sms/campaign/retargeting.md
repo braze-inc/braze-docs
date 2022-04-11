@@ -69,7 +69,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 ![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 
 **Trigger by arbitrary keywords**<br>
-Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
+Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>
