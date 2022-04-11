@@ -31,7 +31,7 @@ For example, suppose you want users who prefer push messages to receive a push a
 ![][2]
 
 {% alert note %}
-Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
+Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements.
 {% endalert %}
 
 ## The "Mobile push" option

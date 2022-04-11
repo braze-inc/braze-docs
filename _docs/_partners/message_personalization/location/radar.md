@@ -129,7 +129,7 @@ In the example below, the Radar chain filtering is applied for Target and Walmar
 ```
 {% endraw %}
 
-As you can see from the `connect_content` tag above, the JSON object is stored into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
+As you can see from the `connect_content` tag, the JSON object is stored into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
 You can test what the output should be by referencing {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
 
 Bringing our use-case together, here is what the syntax of the campaign would look like. The code below iterates through the `nearbyplaces.places` object, extracting unique values and concatenating them with proper human-readable delimiters for the message.

@@ -156,7 +156,7 @@ If previewing as a customized user, enter text for various fields available for 
 
 ## Campaign personalized with custom event properties
 
-Testing campaigns [personalized][20] with [custom event properties][19] differs slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Testing campaigns [personalized][20] with [custom event properties][19] differs slightly from testing other types of campaigns outlined. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 
 ![Composing Test Message with Properties][15]
 
@@ -168,7 +168,7 @@ If you're testing an iOS push campaign, you must set the delay to 1 minute to al
 
 ![Test Message Delivery][16]
 
-As described above, target the users as you would for testing using either a testing filter or by targeting your own email address and finish creating the campaign.
+Target the users as you would for testing using either a testing filter or by targeting your own email address and finish creating the campaign.
 
 ![Test Message Targeting][17]
 

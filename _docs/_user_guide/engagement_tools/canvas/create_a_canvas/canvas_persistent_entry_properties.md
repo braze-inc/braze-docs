@@ -69,7 +69,7 @@ url -X POST \
     }' \
 ```
  
-In the above request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else. 
+In this request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else. 
 
 ## Use cases
 

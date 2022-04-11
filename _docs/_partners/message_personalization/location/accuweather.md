@@ -151,7 +151,7 @@ Here's an example of what AccuWeather will return as the JSON object:
 ```
 
 The "Key" ID is a useful variable as it is used in the second GET request. 
-The above JSON object can be stored into a local variable `location_info` by specifying `:save location_info` after the URL. 
+This JSON object can be stored into a local variable `location_info` by specifying `:save location_info` after the URL. 
 {% endtab %}
 {% tab Current conditions %}
 
@@ -192,11 +192,11 @@ Here is the returned JSON object:
 ]
 ```
 
-As seen in the `connected_content` tag above, the JSON object is stored into a local variable `local_weather` by adding `:save local_weather` after the URL.
+As seen in the `connected_content` tag, the JSON object is stored into a local variable `local_weather` by adding `:save local_weather` after the URL.
 
 You can test what the output of the [WeatherText](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) should be by referencing `{{local_weather[0].WeatherText}}`.
 
-If the API call responds with `{{local_weather[0].WeatherText}}` returning `Rain`, the user would then receive the push shown above. 
+If the API call responds with `{{local_weather[0].WeatherText}}` returning `Rain`, the user would then receive the push.
 
 {% endraw %}
 {% endtab %}

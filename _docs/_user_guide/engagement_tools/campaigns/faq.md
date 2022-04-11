@@ -69,11 +69,6 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
 
-For Canvas entries, refer to above. For Canvas steps, refer to the following:
-
-- Scheduled changes will only apply to users who are not already waiting to receive the step.
-- Audience changes default to apply to everyone unless you’ve selected **Evaluate At Enqueue Time**, in which case it’s similar behavior to above.
-
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
 - **One-time scheduled campaigns** can be edited up until the scheduled send time.
