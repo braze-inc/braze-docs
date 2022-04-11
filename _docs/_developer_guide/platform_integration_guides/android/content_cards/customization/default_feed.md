@@ -158,7 +158,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 
 This code can also be found here, [DefaultContentCardsUpdateHandler][46].
 
-And here's how to use the above class:
+And here's how to use this class:
 
 {% tabs %}
 {% tab JAVA %}

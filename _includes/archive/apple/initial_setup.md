@@ -164,7 +164,7 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-**Note**: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+**Note**: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method.
 
 This method is called with the following parameters:
 
@@ -176,7 +176,7 @@ This method is called with the following parameters:
 See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
-Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
+Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 
