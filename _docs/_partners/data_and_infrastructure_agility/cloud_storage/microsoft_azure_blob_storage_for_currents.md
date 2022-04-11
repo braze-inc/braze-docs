@@ -14,23 +14,19 @@ search_tag: Partner
 
 > [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is a massively scalable object storage for unstructured data offered by Microsoft as part of the Azure product suite.
 
-The Braze and Microsoft Azure Blob Storage integration allows you to stream Currents data. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
+The Braze and Microsoft Azure Blob Storage integration allows you to export data back to Azure and stream Currents data. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Microsft Azure and Azure storage account | A Microsft Azure and Azure storage account are required to take advantage of this partnership. |
-| Currents | In order to export data back into Microsoft Azure, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents (Optional) | In order to export data to Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
-Option 1:
-
-Option 2 (Recommended) :
-
-To integrate with Microsoft Azure Blob Storage, you must have a storage account and a connection string to allow Braze to stream Currents data.
+To integrate with Microsoft Azure Blob Storage, you must have a storage account and a connection string to allow Braze to either export data back to Azure or stream Currents data.
 
 ### Step 1: Create a storage account
 
@@ -47,7 +43,7 @@ Once the storage account is deployed, navigate to the **Access Keys** menu from 
 Microsoft provides two access keys to maintain connections using one key while regenerating the other. You only need the connection string from one of them.
 
 {% alert note %}
-Braze Currents uses the connection string from this menu, not the key.
+Braze uses the connection string from this menu, not the key.
 {% endalert %}
 
 ![]({% image_buster /assets/img/azure-currents-step-2.png %})
@@ -60,18 +56,29 @@ Provide a name for your Blob Service Container. Other default settings will not 
 
 ![]({% image_buster /assets/img/azure-currents-step-3.png %})
 
-### Step 4: Setting up Currents in Braze
+### Step 4: Choose an export method
 
+{% tabs %}
+{% tab Currents %}
 In Braze, navigate to **Currents > + Create Current > Azure Blob Data Export** and provide your integration name and contact email.
 
 Next, provide your connection string, container name, and BlobStorage prefix (optional).
 
-{% alert important %}
-It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
-{% endalert %}
-
-![The Microsoft Azure Blob storage Currents page in Braze. On this page exist fields for integration name, contact email, connection string, container name, and prefix.][1]
+![The Microsoft Azure Blob storage Currents page in Braze. On this page exist fields for integration name, contact email, connection string, container name, and prefix.]({% image_buster /assets/img/maz.png %})
 
 Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 
-[1]: {% image_buster /assets/img/maz.png %}
+{% endtab %}
+{% tab Azure data export %}
+In Braze, navigate to **Technology Partners** > **Microsoft Azure** and provide your connection string, Azure storage container name, and Azure storage prefix.
+
+Next, make sure the **Make this the default data export destination** box is checked, this will make sure your exported data is sent to Azure. Once completed, save your integration.
+
+![The Microsoft Azure data export page in Braze. On this page exist fields for connection string, container name, and prefix.]({% image_buster /assets/img/azure_data_export.png %})
+
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+It's important to keep your connection string up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+{% endalert %}
