@@ -1,5 +1,5 @@
 ---
-nav_title: Answers for Google Play Store Privacy Questions
+nav_title: Google Play Privacy Questionnaire
 article_title: Answers for Google Play Store Privacy Questions
 page_order: 9
 platform: 
