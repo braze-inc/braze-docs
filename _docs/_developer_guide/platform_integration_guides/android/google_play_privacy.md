@@ -15,7 +15,7 @@ table td {
 
 # Google Play Privacy Questionaire
 
-Google requires you to disclose your apps' privacy and security practices when submitting to the Google Play Consolse.
+Starting April 2022, Android developers will be required to complete the [Google Play's Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices.
 
 This guide will give you information on how Braze handles your app data to help you answer the questions. As the app developer, you are in control of what data Braze receives. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider][3]. 
 
