@@ -23,7 +23,7 @@ As the app developer, you are in control of what data you send to Braze. Data re
 
 |Questions|Answers for Braze SDK|
 |---|---|
-|Does your app collect or share any of the required user data types?|Yes, but what data is collected is configured by the app developer|
+|Does your app collect or share any of the required user data types?|Yes, the Braze Android SDK collects data as configured by the app developer|
 |Is all of the user data collected by your app encrypted in transit?|Yes|
 |Do you provide a way for users to request that their data is deleted?|Yes|
 
