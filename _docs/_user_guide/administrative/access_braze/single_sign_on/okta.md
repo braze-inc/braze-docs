@@ -21,7 +21,7 @@ Okta connects any person with any application on any device. It's an enterprise-
 | Requirement | Details |
 | ----------- | ------- |
 | Okta turned on for your account | Reach out to your Braze Account Manager to have this turned on for your account |
-| Okta admin privileges | Please make sure you have admin privileges before setting up Okta |
+| Okta admin privileges | Make sure you have admin privileges before setting up Okta |
 | Braze admin privileges | Please make sure you have admin privileges before setting up Okta |
 | RelayState API key | To enable IdP login, you will first need to create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
