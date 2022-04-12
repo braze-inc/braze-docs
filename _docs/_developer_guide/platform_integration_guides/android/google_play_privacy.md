@@ -189,7 +189,7 @@ The data collected by Braze is determined by your specific integration and the u
 </table>
 
 
-You can also see the other device data that Braze collects, along with how to disable them, that falls oustide of Google Play's Data Safety guidelines [here][2]
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's Data Safety guidelines, see our [Android Storage Overview][2] and our [SDK Data Collection Options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
 [1]: https://www.braze.com/docs/api/data_retention/
 [2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/storage
