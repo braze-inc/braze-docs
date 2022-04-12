@@ -178,7 +178,7 @@ The data collected by Braze is determined by your specific integration and the u
         </tr>
         <tr>
             <td>Other app performance data</td>
-            <td>No.</td>            
+            <td>Not collected.</td>
         </tr>
         <tr>
             <td>Device or other IDs</td>
