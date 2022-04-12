@@ -59,7 +59,7 @@ In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**.
 
 Enter the RelayState API key with `sso.saml.login` permission in the **Default Relay State** field.
 
-![Okta Default RelayState in the Sign On tab][2]{: style="max-width:75%"}
+![Okta Default RelayState in the Sign On tab.][2]{: style="max-width:75%"}
 
 Save these new settings.
 
