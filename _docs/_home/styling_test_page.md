@@ -580,7 +580,7 @@ Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab
 {% alert important %}
  Note number of tabs on the page should be consistent, otherwise tabs content might be hidden.
  For example if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
- then when somebody clicks on `C++`, the other section will show nothing. See local tabs option below for workaround.
+ then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
 {% endalert %}
 
 {% raw %}

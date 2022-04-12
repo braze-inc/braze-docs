@@ -19,7 +19,7 @@ View or download our [Postman Collection](https://www.getpostman.com/collections
 
 ## Using Braze's Postman collection
 
-If you have a Postman account (you can download macOS, Windows, and Linux versions from the [Postman website][1]), you can open our Postman documentation in your own Postman app (click the orange **Run in Postman** button below). You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available `POST` and `GET` requests to suit your own needs.
+If you have a Postman account (you can download macOS, Windows, and Linux versions from the [Postman website][1]), you can open our Postman documentation in your own Postman app by clicking the orange **Run in Postman** button. You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available `POST` and `GET` requests to suit your own needs.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0?action=collection%2Fimport)
 
@@ -35,7 +35,7 @@ To set up your own environment, perform the following steps:
 
 1. From the **Workspaces** tab, select **Environments**.
 2. Click the **+** plus button to create a new environment.
-3. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8], as pictured below.
+3. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8].
 4. Click **Save**.
 
 {% alert note %}

@@ -21,7 +21,7 @@ The change will make the filter more intuitive and more consistent with the beha
 
 ## Example
 
-The campaign shown below sends at 9pm on April 16. The audience's segmentation is “Made More than 2 Purchases in the past 3 days”.
+The following campaign shown sends at 9pm on April 16. The audience's segmentation is “Made More than 2 Purchases in the past 3 days”.
 
 ![Campaign Schedule][1]
 

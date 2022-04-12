@@ -189,7 +189,7 @@ If the [`ContentCardsFragment`][49] determines that a Content Card refresh has f
 
 A special adapter, the [`AppboyEmptyContentCardsAdapter`][50] replaces the standard [`AppboyCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
 
-The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below:
+The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced in the following code snippet:
 
 ```xml
 <style name="Braze.ContentCardsDisplay.Empty">

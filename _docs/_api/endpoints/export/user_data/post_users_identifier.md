@@ -113,7 +113,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 Please be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
-Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls. Documentation on that endpoint is below.
+Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.
 
 ## Response
 

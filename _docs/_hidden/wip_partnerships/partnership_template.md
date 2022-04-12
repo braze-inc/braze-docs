@@ -23,7 +23,7 @@ In this second paragraph, explore the relationship between your company and Braz
 This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the chart below. Be sure to adjust the descriptions and tailor them to your partnership integration. 
+The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
 
 | Requirement | Description |

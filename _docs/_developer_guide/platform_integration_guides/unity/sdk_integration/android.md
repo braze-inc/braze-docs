@@ -11,7 +11,7 @@ description: "This reference article covers the Android SDK integration for the 
 
 # SDK Android integration
 
-Follow the below instructions to get Braze running in your Unity application.
+Follow these instructions to get Braze running in your Unity application.
 
 ## Step 1: Choose your Braze Unity package
 
@@ -43,7 +43,7 @@ Android Unity projects require an [`AndroidManifest.xml`](https://docs.unity3d.c
 
 ### Configuring the AndroidManifest.xml
 
-If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
+If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any of the following missing sections are added to your existing `AndroidManifest.xml`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -116,7 +116,7 @@ implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
 implementation "androidx.recyclerview:recyclerview:+"
 ```
 
-Examples of how to add these dependencies using Unity tools are provided below:
+The following list examples of how to add these dependencies using Unity tools:
 
 ##### [Custom Gradle template](https://docs.unity3d.com/Manual/android-gradle-overview.html)
 

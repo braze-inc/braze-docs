@@ -12,7 +12,7 @@ channel:
 # Android TV push
 ![][12]{: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
-While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received. The steps to do so are detailed below. 
+While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received.
 
 ## Implementation
 

@@ -21,7 +21,7 @@ The following table lists specific API rate limits for different request types. 
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) below for more. |
+| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
 | [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20,000 requests per minute, shared between the endpoints. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |

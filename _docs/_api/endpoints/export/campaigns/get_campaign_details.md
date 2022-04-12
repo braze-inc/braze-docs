@@ -61,16 +61,16 @@ Authorization: Bearer YOUR-REST-API-KEY
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) channel type of the message (as in, "email", "ios_push", "webhook", "content_card", "in-app_message", "sms"),
             "name": (string) name of the message in the dashboard (eg., "Variation 1")
-            ... channel-specific fields for this message, see below ...
+            ... channel-specific fields for this message, see the following messages section ...
         }
     },
-    "conversion_behaviors": (array) conversion event behaviors assigned to the campaign (see below)
+    "conversion_behaviors": (array) conversion event behaviors assigned to the campaign, see the following conversions behavior section.
 }
 ```
 
 ### Messages
 
-The `messages` response will contain information about each message. Example message responses for channels are below:
+The `messages` response will contain information about each message. The following includes example message responses for each channel:
 
 #### Push channels
 
@@ -169,7 +169,7 @@ The `messages` response will contain information about each message. Example mes
 
 ### Conversion behaviors
 
-The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. Example conversion event behavior responses for are below:
+The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. The following lists example conversion event behavior responses:
 
 #### Clicks email
 

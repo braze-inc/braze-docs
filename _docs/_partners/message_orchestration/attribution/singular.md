@@ -29,7 +29,7 @@ The Braze and Singular integration allows you to import paid install attribution
 
 #### Android
 
-If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user ID to Singular. For most setups, two lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
+If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular. For most setups, two lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
 
 ```java
 @Override
@@ -73,7 +73,7 @@ To get started with Singular click tracking links, visit their [documentation](h
 
 {% tabs %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Singular SDK integration. You can include the GAID in your Singular click tracking links by utilizing the Liquid logic below:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Singular SDK integration. You can include the GAID in your Singular click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -84,7 +84,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-For iOS, both Braze and Singular automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Singular click tracking links by utilizing the Liquid logic below:
+For iOS, both Braze and Singular automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Singular click tracking links by utilizing the following Liquid logic:
 
 {% raw %}
 ```

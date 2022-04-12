@@ -7,7 +7,7 @@ page_type: reference
 
 # Migrating SDKs from Airship to Braze (iOS)
 
-> At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. Listed below, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" SDK code snippets to make your migration quick, simple, and painless.
+> At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. In this article, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" SDK code snippets to make your migration quick, simple, and painless.
 
 ## Beyond the code
 ### Token management
