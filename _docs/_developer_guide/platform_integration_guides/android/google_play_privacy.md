@@ -27,7 +27,7 @@ As the app developer, you are in control of what data you send to Braze. Data re
 |Is all of the user data collected by your app encrypted in transit?|Yes|
 |Do you provide a way for users to request that their data is deleted?|Yes|
 
-For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1]
+For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1].
 
 For the data collected by Braze, that's going to be dependent on what data you as an app developer choose to collect.  While Braze has fields for the most common data (name, email, etc), users may also use Custom Attributes in order to store any information.  
 
