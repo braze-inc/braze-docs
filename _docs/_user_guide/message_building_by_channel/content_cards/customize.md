@@ -76,7 +76,7 @@ With this approach, customization is in the hands of marketers, who determine th
 </table>
 
 {% alert tip %}
-Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned above, consider a Walk or Run approach instead.
+Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned in this section, consider a Walk or Run approach instead.
 {% endalert %}
 
 {% endtab %}

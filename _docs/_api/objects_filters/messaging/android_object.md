@@ -10,7 +10,7 @@ description: "This article lists and explains the different Android objects used
 ---
 # Android object specification
 
-These objects are used to define or request information related to Android Push and Android Push Alert content.
+The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ##  Android push object
 

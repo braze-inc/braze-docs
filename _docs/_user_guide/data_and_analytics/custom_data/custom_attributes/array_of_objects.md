@@ -172,7 +172,7 @@ The following example shows removing any object in the `pets` array that has an 
 
 ### Liquid Templating
 
-You can use this `pets` array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
+You can use this `pets` array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
 {% raw %}
 ```liquid

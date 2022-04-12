@@ -130,7 +130,7 @@ The following table includes metrics and descriptions to help you better underst
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![A Canvas tile listing the above metrics for the given step.][10]{: style="max-width:25%;"}
+![A Canvas tile listing the preceding metrics for the given step.][10]{: style="max-width:25%;"}
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.

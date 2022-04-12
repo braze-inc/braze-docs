@@ -58,7 +58,7 @@ On the **Delivery** and **Target Users** pages in the campaign wizard, you can g
 
 To do this, first, make sure to specify an audience on the **Target Users** page. Once you do that, click **Refresh Data** to see the chart on the corresponding pages. Whenever you change any settings about Intelligent Timing or the audience, you'll need to click **Refresh Data** again to view an updated chart.  
 
-The chart separately displays users who had enough data to compute an optimal time in blue and users who will receive a time according to your chosen fallback (custom fallback or most popular app time) in red. You can also toggle the data used to calculate the times by clicking the checkboxes above the chart. For multichannel campaigns, you can examine the times separately per channel by changing the selected channel in the dropdown at the top of the chart.
+The chart separately displays users who had enough data to compute an optimal time in blue and users who will receive a time according to your chosen fallback (custom fallback or most popular app time) in red. You can also toggle the calculation filters to choose what data is used to calculate the times in the chart (engagement data or most popular app time). For multichannel campaigns, you can examine the times separately per channel by changing the selected channel in the dropdown at the top of the chart.
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}
 [2]: {% image_buster /assets/img/intel-timing-preview.png %}

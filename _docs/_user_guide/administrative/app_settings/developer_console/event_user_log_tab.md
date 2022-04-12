@@ -61,6 +61,6 @@ In relation to user sessions, you can use Braze to monitor data like:
 - If the user starts a session after receiving a campaign
 - What the user’s median session duration is
 
-None of the above are impacted by the session end event being flushed on the next session.
+These behaviors are not impacted by the session end event being flushed on the next session.
 
 [10]: {% image_buster /assets/img_archive/rawlogs.png %}

@@ -60,10 +60,10 @@ Connected Content will interpret any JSON-formatted results into a local variabl
   }
 ```
 
-You can test whether or not it's raining by referencing `{{localweather.consolidated_weather[0].weather_state_name}}`, which if used on the object above would return `Clear`. If you want to also personalize with the resulting location name, `{{localweather.title}}` returns `New York`.
+You can test whether or not it's raining by referencing `{{localweather.consolidated_weather[0].weather_state_name}}`, which if used on this object would return `Clear`. If you want to also personalize with the resulting location name, `{{localweather.title}}` returns `New York`.
 {% endraw %}
 
-The following image illustrates the type of syntax highlighting you should see in the dashboard if you're setting things up correctly. It also demonstrates how you could leverage the `connected_content` request above!
+The following image illustrates the type of syntax highlighting you should see in the dashboard if you're setting things up correctly. It also demonstrates how you could leverage the example `connected_content` request!
 
 {% raw %}
 ```liquid

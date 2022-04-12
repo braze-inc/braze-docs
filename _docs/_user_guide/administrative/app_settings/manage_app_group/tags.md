@@ -24,7 +24,7 @@ The tags set on a campaign, Canvas, or segment are visible on the detail page be
 
 ![Tags shown on the Campaign Details page][3]
 
-They are also visible in the list of campaigns, Canvases, or segments as bubbles above the engagement name, along with status labels such as **Archived** and **Draft**.
+They are also visible in the list of campaigns, Canvases, or segments, along with additional tags for status labels such as **Archived** and **Draft**.
 
 ![Tags on the list of campaigns][4]{: style ="max-width:70%;" }
 

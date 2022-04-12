@@ -77,7 +77,7 @@ The local part must follow these parameters:
 - Can contain but may not start or end with the following characters: (.) (+) (&) (#) (/) or (")
 
 {% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation specified above under "All other domains".
+If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation listed in this section.
 {% endalert %}
 
 ## Host part validation rules
@@ -100,7 +100,7 @@ The domain name must follow these parameters:
 	- Contain 1 to 63 characters
 
 **Additional Validation Required:**<br>
-The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed above. It does not catch typos or addresses that don't exist.
+The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed in this section. It does not catch typos or addresses that don't exist.
 
 {% alert important %}
 Unicode is accepted only for the local part of the email address.<br>

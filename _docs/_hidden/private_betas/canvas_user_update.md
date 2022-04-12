@@ -10,7 +10,7 @@ tool: Canvas
 
 # User Update Step
 
-![Canvas User Update Step][1]{: style="float:right;max-width:45%;margin-left:15px;"}
+![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
 The Canvas User Update Step allows you to update a user’s attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
@@ -26,7 +26,7 @@ The Canvas User Update Step is currently in early access. Braze will begin to de
 
 To create a User Update Step, add a step to your Canvas. Use the drop-down menu at the top of the new step to select `User Update Step`. Then, add an attribute, event, or purchase JSON object to the JSON composer.
 
-![JSON Composer][2] 
+![][2] 
 
 {% alert note %}
 Do not include any of the following information in the JSON composer:
@@ -38,12 +38,11 @@ Do not include any of the following information in the JSON composer:
 
 As an example, users who receive the User Update Step below will have the VIP Member attribute set to `true`.
 
-![Example in JSON Composer][3]
+![][3]
 
 ### Personalization Features
 
 The User Update Step also supports the following personalization features: 
-
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) and [event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)

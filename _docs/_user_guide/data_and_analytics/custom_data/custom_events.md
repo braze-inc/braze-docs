@@ -189,7 +189,7 @@ Shown below is a `/users/track` example with an "Ordered" custom event. Once an 
 
 ##### Liquid templating
 
-The Liquid templating examples below show how to reference the nested properties saved from the above API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
+The Liquid templating examples below show how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
 
 {% tabs local %}
 {% tab Music Example %}
@@ -243,7 +243,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ##### Segmentation
 
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (described above).
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
 
 {% alert important %}
 Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.

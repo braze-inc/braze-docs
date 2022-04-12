@@ -27,7 +27,7 @@ SMS with Braze gives you the option to create keyword triggers, custom responses
 
 #### Add keyword triggers
 
-In addition to the default opt-in and opt-out keywords listed above, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
+In addition to the default opt-in and opt-out keywords, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
 
 ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups.<br><br>
@@ -100,7 +100,7 @@ To create a custom keyword category, edit the appropriate subscription group, an
 
 Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
 
-Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
+Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
 ### Lifecycle-specific keywords
 

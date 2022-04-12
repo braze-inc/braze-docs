@@ -19,7 +19,7 @@ The Braze and Talon.One integration can help take your loyalty or coupon program
 | Requirement | Description |
 | ----------- | ----------- |
 |Talon.One account | A Talon.One account is required to take advantage of this partnership. |
-|Talon.One API key | Details on generating a Talon.One API key can be found [in the Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication) |
+|Talon.One API key | In Talon.One, under **Settings** > **Developer Settings**, create a Braze 3rd party API key for the integration. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
@@ -30,72 +30,92 @@ Talon.One **_requires_** a rate limit of 500 messages per minute. This rate limi
 
 ### Step 1: Set up coupons in Talon.One
 
-On the Talon.One platform, navigate to your campaign's coupon code generator found under **Campaign > Settings > Coupon Code generator**. This generator will provide the fields necessary to include in the Talon.One `createcoupon` endpoint. 
+On the Talon.One platform, navigate to your campaign's coupon code generator found under **Campaign > Settings > Coupon Code generator**. This generator will provide the fields necessary to include in the Talon.One `/braze/coupon` endpoint. 
 
-![Talon.One Coupon Settings]({% image_buster /assets/img/talonone_coupon_settings.png %})
+![]({% image_buster /assets/img/talonone_coupon_settings.png %})
 
 #### Endpoint usage
 
-A custom `createcoupon` Talon.One endpoint must be used to convert the Talon.One data to strings. This endpoint contains the following built-in properties:
+A custom `/braze/coupon` Talon.One endpoint must be used to convert the Talon.One data to strings. This endpoint contains the following built-in properties:
 
-- `applicationID` (required)
-- `campaignID` (required)
-- `identifier` (required)
-- `integrationID`
-- `startDate`
-- `expiryDate`
+| Parameter | Description |
+| ---- | ---- |
+| `DeploymentURL` | (Required) The base URL of your Talon.One deployment. |
+| `ApplicationID` | (Required) The ID of the application in Talon.One. |
+| `CampaignID` | (Required) The ID of the campaign in Talon.One. |
+| `Identifier` | (Required) The identifier of the request. Read below for more information. Must be a string.<br><br>Providing a new value creates a new coupon. Providing an existing value retrieves the existing coupon of that id.
+| `IntegrationID` | The integration ID of the customer. When specified, only that customer will be able to use the coupon. |
+| `StartDate` | The start date of the coupon. |
+| `ExpiryDate` | The expiry date of the coupon. |
+| `UsageLimit` | The usage limit of the coupon. 1 by default. |
+| `ValidCharacters` | The list of allowed characters to be used when generating the code. Example: ["A","B","C","1","2"]. |
+| `CouponPattern` | The coupon pattern to use. Use # to represent a random character picked in the valid character set. Example: "SUMMER-####". |
+| `Attributes` | Object containing all the coupon attributes to set on the coupon. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert important %}
+`Identifier` parameter
+The `Identifier` parameter should be set to a Braze variable such as `message_api_id`, `variant_api_id`, or [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id#dispatch-id-behavior).
+{% endalert %}
 
 {% tabs %}
 {% tab Required properties %}
-#### Example 1: Only required properties
+**Example 1: Only required properties**
 
 ```bash
-curl https://demo.talon.one/v2/integration/braze/createcoupon \
+curl https://integration.talon.one/braze/coupon \
  -X POST \
- -H 'Authorization: ApiKey-v1 <YOUR_API_KEY>' \
+ -H 'Authorization: ApiKey-v1 [YOUR_API_KEY]' \
  -d '{
-        "applicationID": "1",
-        "campaignID: "1",
-        "identifier": "an-example-identifier"
-}'
-```
-{% endtab %}
-{% tab All built-in properties %}
-#### Example 2: All built-in properties
-
-```bash
-curl https://demo.talon.one/v2/integration/braze/createcoupon \
- -X POST \
- -H 'Authorization: ApiKey-v1 <YOUR_API_KEY>' \
- -d '{
-        "applicationID": "1",
-        "campaignID": "1",
-        "identifier": "an-example-identifier",
-        "integrationID": "an-example-integrationID",
-        "startDate": "2019-06-12T09:00:00Z",
-        "expiryDate": "2019-06-13T09:00:00Z"
+    "DeploymentURL": "company.talon.one",
+    "ApplicationID": 270,
+    "CampaignID": 3882,
+    "Identifier": "my_id",
 }'
 ```
 {% endtab %}
 {% tab Custom Attributes %}
-#### Example 3: Custom attributes
+**Example 2: Custom attributes**
 
-Custom attributes can also be passed directly as long as they are notated with a dot prefix and remain wrapped in a string, as shown below.
+Custom attributes can also be passed in the body.
 
 ```bash
-curl https://demo.talon.one/v2/integration/braze/createcoupon \
+curl https://integration.talon.one/braze/coupon \
  -X POST \
- -H 'Authorization: ApiKey-v1 <YOUR_API_KEY>' \
+ -H 'Authorization: ApiKey-v1 [YOUR_API_KEY]' \
  -d '{
-        "applicationID": "1",
-        "campaignID": "1",
-        "identifier": "an-example-identifier"
-        ".stringAtrrName": "examplestring",
-        ".listOfNumbers": "[1,2,3,4,5,6,7,8,9,10]",
-    }'
+    "DeploymentURL": "company.talon.one",
+    "ApplicationID": 270,
+    "CampaignID": 3882,
+    "Identifier": "my_id",
+    "StartDate": "2021-12-01T15:04:05Z",
+    "ExpiryDate": "2021-12-01T15:04:05Z",
+    "ValidCharacters": ["A","B","C","1","2"],
+    "CouponPattern": "COUPON-#####-SUMMER",
+    "Attributes":
+    {
+       "email": "john.doe@example.com"
+    }
+}'
 ```
 {% endtab %}
 {% endtabs %}
+
+**Response example**
+```bash
+{
+  "ID": 12821149,
+  "ApplicationID": 270,
+  "CampaignID": 3882,
+  "Value": "SUMMER-9LKN-3UD9",
+  "StartDate": "2021-12-01T15:04:05Z",
+  "ExpiryDate": "2021-12-01T15:04:05Z",
+  "RecipientIntegrationID": null,
+  "UsageLimit": 1,
+  "UsageCounter": 0,
+  "Attributes": {}
+}
+```
 
 ### Step 2: Create a Talon.One Connected Content call
 
@@ -103,32 +123,39 @@ Use Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dy
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
+{% capture postbody %}
+{"deploymentURL": "mycompany.europe-west1.talon.one", "applicationID":270, "campaignID":882, "identifier":"{{campaign.${dispatch_id}}}", "integrationID":"{{${user_id}}}"}
+{% endcapture %}
 
-:headers {
-  "authorization": "ApiKey-v1 <YOUR_API_KEY>"
- } 
-:method post 
-:body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
-:content_type application/json 
-:save result
+{{postbody}}
+{% connected_content https://integration.talon.one/braze/coupon
+   :headers {
+      "Authorization": "ApiKey-v1 ..."
+   }
+   :method post
+   :body {{postbody}}
+   :content_type application/json
+   :save result
 %}
 
-{{result.value}}
+Your coupon code is: {{result.Value}}
 ```
 {% endraw %}
 
-1. Add your Talon.One subdomain to the endpoint URL.<br><br>
-2. Add the authorization header and POST method of the request. Further details on generating a Talon.One API key can be found in the [Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication).<br><br>
-3. Add the coupon code details mentioned in step 1 to the request body. The **identifier** parameter is necessary to prevent the creation of multiple coupons for one message, and each parameter should be separated with an ampersand ("&").<br><br>
-4. Store the Talon.One result. Use the `save` parameter at the end to store the Talon.One response as a Braze variable. <br><br>
-5. Show the value of the code in the message. Use Liquid to show the value of the generated message.
+1. Add your authorization header Talon.One API key to the request. 
+2. Add the coupon code details mentioned in step 1 to the request body. 
+3. Store the Talon.One result. Use the `save` parameter at the end to store the Talon.One response as a Braze variable. 
+4. Show the value of the code in the message. Use Liquid to show the value of the generated message.
 
 {% alert tip %}
-You can access the coupon code with {% raw %} `{{result.value}}` {% endraw %}, which will return the generated value similar to `44D4-U4PL`.
-
-You can also access the entire response from Talon.One by accessing {% raw %} `{{result}}` {% endraw %} directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
+You can access the coupon code with {% raw %} `{{result.Value}}` {% endraw %}, which will return the generated value similar to `44D4-U4PL`. Note that the Liquid is case sensitive and the "V" must be capitalized in {% raw %} `{{result.Value}}` {% endraw %}.
 {% endalert %}
+
+## Additional resources
+
+Visit the following articles for additional resources on the Talon.One integration:
+- [Creating referrals through Braze](https://docs.talon.one/docs/dev/tutorials/creating-referrals-braze/)
+- [Fetching a loyalty ledge in Braze](https://docs.talon.one/docs/dev/tutorials/receiving-loyalty-ledger-braze)
 
 ## Troubleshooting
 
