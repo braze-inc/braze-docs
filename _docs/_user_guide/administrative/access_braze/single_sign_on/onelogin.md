@@ -20,7 +20,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Requirement | Details |
 |---|---|
 | Braze Domain | You will need your Braze domain to set up Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br><br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
-| RelayState API key | To enable IdP login, create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission. |
+| RelayState API key | To enable IdP login, create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Idp-initiated login within OneLogin
