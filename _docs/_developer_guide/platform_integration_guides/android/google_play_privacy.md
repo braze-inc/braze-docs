@@ -183,7 +183,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Device or other IDs</td>
             <td>Device or other IDs</td>
-            <td>Yes, Braze generates a random ID for your device.</td>
+            <td>Braze generates a random ID for each user's device.</td>
         </tr>
     </tbody>
 </table>
