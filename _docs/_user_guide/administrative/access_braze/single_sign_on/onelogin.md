@@ -27,7 +27,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 ### Step 1: Configure the Braze app
 
-1. Log into [OneLogin](https://app.onelogin.com/login). Click on **Administration**.<br><br>![OneLogin Administration page]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
+1. Log into [OneLogin](https://app.onelogin.com/login). Click on **Administration**.<br><br>![OneLogin Administration page.]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
 2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.<br><br>![Search results for Braze in OneLogin]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Save the Braze app to your Company.<br><br>![Add Braze app in OneLogin]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. Once saved, go to **Configuration** and add your **Braze Domain** and **RelayState** API key.<br><br>![OneLogin Configuration tab for the Braze app]({% image_buster /assets/img/onelogin_4.png %})<br><br>
