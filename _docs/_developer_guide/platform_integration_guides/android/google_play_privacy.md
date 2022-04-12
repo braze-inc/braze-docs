@@ -34,7 +34,7 @@ As the app developer, you are in control of what data you send to Braze. Data re
 
 For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1].
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, please see our [SDK Data Collection Overview](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration)
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, please see our [SDK Data Collection Overview](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
 <table id="datatypes">
     <thead>
