@@ -32,7 +32,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 3. Save the Braze app to your Company.<br><br>![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. Once saved, go to **Configuration** and add your **Braze Domain** and **RelayState** API key.<br><br>![OneLogin Configuration tab for the Braze app.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
 5. Braze expects the SAML assertions in a [specific format][1]. Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.<br><br>![Braze SAML parameters in OneLogin]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
-6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.<br><br>![Certificates to copy from the Braze app SSO tab in OneLogin]({% image_buster /assets/img/onelogin_6.jpg %})
+6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.<br><br>![Certificates to copy from the Braze app SSO tab in OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Step 2: Configure OneLogin within Braze
 
