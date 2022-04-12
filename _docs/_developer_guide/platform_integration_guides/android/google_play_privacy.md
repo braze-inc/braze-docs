@@ -13,7 +13,7 @@ description: "This article covers how to answer Google Play Privacy questions"
 
 Google requires you to disclose your apps' privacy and security practices when submitting to the Google Play Consolse.
 
-This guide will give you information on how Braze handles your app data to help you answer the questions. As the app developer, you are in control of what data Braze receives. Data received by Braze is processed in the manner you request. This is what Google classifies as a [service provider][3]. 
+This guide will give you information on how Braze handles your app data to help you answer the questions. As the app developer, you are in control of what data Braze receives. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider][3]. 
 
 |Questions|Answers for Braze SDK|
 |---|---|
