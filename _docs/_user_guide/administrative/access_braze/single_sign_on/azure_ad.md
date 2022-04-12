@@ -22,7 +22,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Sign-On URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>/auth/saml/callback` <br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard`|
-| RelayState | To enable IdP login, you will first need to create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission, and then input the generated API Key as the `RelayState` parameter within your IdP. |
+| RelayState API key | To enable IdP login, create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permission. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Service Provider (SP) initiated login within Azure AD
@@ -33,19 +33,13 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 Go to the Azure Portal and click **Azure Active Directory** in the left navigation panel.
 
-![Azure portal navigation with Azure Active Directory highlighted]({% image_buster /assets/img/azure_1.png %})
-
-#### Step 1b: Find applications
-
-Navigate to **Enterprise Applications**, then select **All applications**.
+Next, navigate to **Enterprise Applications**, then select **All applications**.
 
 ![Azure portal selecting all enterprise applications]({% image_buster /assets/img/azure_2.png %})
 
-#### Step 1c: Create a new application
+#### Step 1b: Create a new application
 
 Add a new application by clicking **+ New application** in the top of the dialog.
-
-#### Step 1d: Add Braze
 
 Search for **Braze** in the search box, then select it from the result panel, then click **Add**.
 
@@ -57,31 +51,33 @@ In your Azure Portal, go to the **Braze Application Integration** page and selec
 
 ![Azure portal navigation with Single sign-on highlighted]({% image_buster /assets/img/azure_5.png %})
 
-#### Step 2b: Select SSO method
-
-Select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.
+Next, select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.
 
 ![Azure portal select a single sign-on method dialog]({% image_buster /assets/img/azure_6.png %})
 
-#### Step 2c: Open configure dialog
+#### Step 2b: Configure dialog
 
 From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
 ![Azure portal editing basic SAML configuration]({% image_buster /assets/img/azure_7.png %})
 
-#### Step 2d: Configure in IdP mode
+###### Configure application in Idp-initated mode (required)
 
 To configure the application in IdP-initiated mode, enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
 ![Azure portal editing basic SAML configuration]({% image_buster /assets/img/azure_8.png %})
 
-#### Step 2e: Configure in SP mode
+###### Configure RelayState (required)
+
+In the RelayState box, input your RelayState generated API key.
+
+###### Configure sign on URL (optional)
 
 If you want to configure the application in SP-initiated mode, click **Set additional URLs** and enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
 
 ![Azure portal setting additional sign on URLs]({% image_buster /assets/img/azure_9.png %})
 
-#### Step 2f: Format SAML assertions
+#### Step 2c: Format SAML assertions
 
 Braze expects the SAML assertions in a specific format. Refer to the following tabs on user attributes and user claims to understand how these attributes and values must be formatted.
 
@@ -121,13 +117,13 @@ You can manage these user claims and values from the **Manage user claims** dial
 {% endtab %}
 {% endtabs %}
 
-#### Step 2g: Download certificate
+#### Step 2d: Download certificate
 
 Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
 
 ![Azure download SAML signing certificate]({% image_buster /assets/img/azure_13.png %})
 
-#### Step 2h: Copy URLs for configuration in Braze
+#### Step 2e: Copy URLs for configuration in Braze
 
 Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3-configure-braze-single-sign-on).
 
