@@ -15,7 +15,7 @@ table td {
 
 # Google Play Privacy Questionaire
 
-Starting April 2022, Android developers will be required to complete the [Google Play's Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices.
+Starting April 2022, Android developers will be required to complete [Google Play's Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices.
 
 This guide explains how Braze handles your app data and will provide information related to this new form. 
 
