@@ -167,7 +167,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="3">App info and performance</td>
             <td>Crash logs</td>
-            <td>Yes, Braze does collect crash logs for errors that occur within the SDK. This contains the user's phone model and OS level, along with a Braze specific user ID.</td>
+            <td>Braze collects crash logs for errors that occur within the SDK. This contains the user's phone model and OS level, along with a Braze specific user ID.</td>
         </tr>
         <tr>
             <td>Diagnostics</td>
