@@ -23,19 +23,21 @@ This guide will give you information on how Braze handles your app data to help 
 
 For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1]
 
+For the data collected by Braze, that's going to be dependent on what data you as an app developer choose to collect.  While Braze has fields for the most common data (name, email, etc), users may also use Custom Attributes in order to store any information.  
+
 |Data Type|Braze Usage|
-|---|---|
-|Location|If configured to do so by app configuration.|
-|Personal info|If configured to do so by app configuration.|
-|Financial info|If the app is using Braze to log purchase events, we will have purchase history.|
-|Health and fitness|If configured to do so by app configuration. ENCOURAGE HIPAA SERVER?|
-|Messages|If configured to do so by app configuration.  NOTE: Braze may generate In-App Messages and Push notification that are sent to users.|
-|Photos and videos|Braze does not store large data.|
-|Audio files|Braze does not store large data.|
-|Files and docs|Braze does not store large data.|
-|Calendar events|If configured to do so by app configuration.|
-|Contacts|If configured to do so by app configuration.|
-|App activity|If configured to do so by app configuration.|
+|----|---|
+|Location|Only data that is configured to go to us.|
+|Personal info|Only data that is configured to go to us.|
+|Financial info|Only data that is configured to go to us.|
+|Health and fitness|Only data that is configured to go to us. ENCOURAGE HIPAA SERVER?|
+|Messages|Only data that is configured to go to us.  NOTE: Braze may generate In-App Messages and Push notification that are sent to users.|
+|Photos and videos|No.|
+|Audio files|No.|
+|Files and docs|No.|
+|Calendar events|Only data that is configured to go to us.|
+|Contacts|Only data that is configured to go to us.|
+|App activity|Only data that is configured to go to us.|
 |Web browsing|No.|
 |App info and performance|Yes, app version is stored in crash reports.|
 |Crash logs|Yes, Braze does collect crash logs for errors that occur within the SDK. This contains the user's phone model and OS level, along with a Braze specific user ID.|
