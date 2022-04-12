@@ -10,6 +10,8 @@ description: "This article explains the different components of Braze's Email Ob
 
 # Email object specification
 
+The `email` object allows you to modify or create emails via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+
 ## Body
 ```json
 {

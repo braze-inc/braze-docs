@@ -11,7 +11,7 @@ description: "This article lists and explains the different Apple objects used a
 
 # Apple push object specification
 
-These objects are used to define or request information related to Apple Push and Apple Push Alert content.
+The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Apple push object
 
