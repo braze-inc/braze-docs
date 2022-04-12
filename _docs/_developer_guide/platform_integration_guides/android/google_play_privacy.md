@@ -24,6 +24,8 @@ As the app developer, you are in control of what data you send to Braze. Data re
 {% alert important %}
 **Note**:  This article provides information related to the data the Braze SDK processes as related to Google Safety Section Questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team prior to submitting any information to Google.
 {% endalert %}
+
+
 |Questions|Answers for Braze SDK|
 |---|---|
 |Does your app collect or share any of the required user data types?|Yes, the Braze Android SDK collects data as configured by the app developer|
