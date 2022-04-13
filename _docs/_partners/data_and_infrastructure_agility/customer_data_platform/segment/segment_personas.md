@@ -32,7 +32,7 @@ The Braze and Segment integration allows you to use [Personas](https://segment.c
 2. Create your computed trait or audience. A lightning bolt in the upper right corner of the page will indicate if the computation updates in real-time.
 3. Next, select **Braze** as your destination. 
 4. Preview your audience by clicking  **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
-5. In the computed trait or audience settings, adjust the connection settings based on how you would like your data sent to Braze (see below).
+5. In the computed trait or audience settings, adjust the connection settings based on how you would like your data sent to Braze.
 
 #### Computed traits and audiences
 

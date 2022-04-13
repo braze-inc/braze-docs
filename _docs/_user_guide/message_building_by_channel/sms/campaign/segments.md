@@ -19,7 +19,7 @@ channel:
 
 SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
 
-As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but **is not indicative of how your message will be split into segments and ultimately how you be charged**. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator) below.
+As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but **is not indicative of how your message will be split into segments and ultimately how you be charged**. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator).
 
 ![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
@@ -92,7 +92,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 
 <br>
 
-If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of Liquid or Connected Content.
+If you'd like to see how many segments your message will dispatch, enter your copy into the calculator. Note that this will not process or predict the output of Liquid or Connected Content.
 <style>
   .segment_data_hide {
     display: none;

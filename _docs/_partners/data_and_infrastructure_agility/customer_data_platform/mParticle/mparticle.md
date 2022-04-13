@@ -35,7 +35,7 @@ Use Braze and mParticle's partnership to configure your integration and import m
 
 #### Forwarding Audiences
 
-mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. The processing of each option is described below:
+mParticle offers three ways to set cohort membership attributes, controlled by the "[Send Segments As](#send_settings)" configuration setting. The processing of each option is described in the following list:
 
 - **Single attribute** (default): mParticle will create a single custom attribute called `SegmentMembership`. The value of this attribute is a list of mParticle audience IDs that match the user. These audience IDs can be found in the mParticle dashboard under **Audiences**. For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you will be able to segment these users by the audience ID "11036". ![mParticle segment membership][6]<br><br>
 - **One attribute per segment**: mParticle will create a custom attribute for each audience that a user belongs to. ![mParticle custom attribute][7]<br><br>

@@ -57,7 +57,7 @@ From the Braze dashboard, create a new campaign. In the email body, add the foll
 ```
 {% endraw %}
 
-After you copy the code to the email body, add your application keys and `CAMPAIGN_ID` as described below:
+After you copy the code to the email body, add your application keys and `CAMPAIGN_ID`:
 
 1. Add `VOUCHERIFY-APP-ID` and `VOUCHERIFY-APP-TOKEN` from your Voucherify project settings under **Application Keys**.<br><br>
 2. Replace `CAMPAIGN_ID`, you can find the campaign ID in the Voucherify campaign URL.<br>![VOUCHERIFY CAMPAIGN ID]({% image_buster /assets/img/voucherify-cc-campaignId.png %})<br><br>

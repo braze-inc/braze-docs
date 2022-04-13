@@ -91,7 +91,7 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 ## Adding channels to your Android push messages
 
 1. Navigate to the Android push composer on any campaign or Canvas.
-2. Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the below view, you'll need to add channels before selecting them for campaigns.
+2. Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the following view, you'll need to add channels before selecting them for campaigns.
 
 ![][10]
 

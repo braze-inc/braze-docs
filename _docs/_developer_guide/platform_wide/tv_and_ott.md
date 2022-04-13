@@ -144,7 +144,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
-- &#42; Push Notifications (Manual Integration Required, See Below)
+- &#42; Push Notifications (Manual Integration Required)
 
 For more information, visit the [Android SDK Integration Guide][2].
 

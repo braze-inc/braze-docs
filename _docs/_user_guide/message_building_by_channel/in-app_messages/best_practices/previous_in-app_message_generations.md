@@ -125,7 +125,7 @@ This will review previous information around our in-app message creative specifi
 
 ### Character and image limits
 
-For all of the in-app message types listed in the table below, the following additional guidelines apply:
+For all of the in-app message types listed in the following table, the following additional guidelines apply:
 
 - **Recommended image size:** 500KB
 - **Max image size:** 5MB

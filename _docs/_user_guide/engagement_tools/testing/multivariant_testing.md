@@ -121,7 +121,7 @@ Choose a date and time when the winning variant should be sent out.
 When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+In the dropdown found after the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
 
 #### (Optional) Designate a conversion event
 
