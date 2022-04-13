@@ -12,7 +12,7 @@ channel:
 
 # What are SMS messages?
 
-![SMS welcome message for new customers][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
+![SMS welcome message for new customers.][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
