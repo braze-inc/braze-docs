@@ -15,26 +15,27 @@ table td {
 
 # Google Play Privacy Questionaire
 
-As of April 2022, Android developers are required to complete [Google Play's Data safety form][4] to disclose privacy and security practices.
-
-This guide provides instructions on how to fill out this new form with information on how Braze handles your app data.
+As of April 2022, Android developers are required to complete Google Play's [Data safety form][4] to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data.
 
 As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider][3]. 
 
 {% alert important %}
-**Note**:  This article provides information related to the data the Braze SDK processes as related to Google Safety Section Questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team prior to submitting any information to Google.
+This article provides information related to the data the Braze SDK processes as related to Google safety section questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team prior to submitting any information to Google.
 {% endalert %}
 
+## Questions
 
 |Questions|Answers for Braze SDK|
 |---|---|
-|Does your app collect or share any of the required user data types?|Yes, the Braze Android SDK collects data as configured by the app developer|
-|Is all of the user data collected by your app encrypted in transit?|Yes|
-|Do you provide a way for users to request that their data is deleted?|Yes|
+|Does your app collect or share any of the required user data types?|Yes, the Braze Android SDK collects data as configured by the app developer. |
+|Is all of the user data collected by your app encrypted in transit?|Yes.|
+|Do you provide a way for users to request that their data be deleted?|Yes.|
 
 For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1].
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, please see our [SDK Data Collection Options][5]].
+## Data collection
+
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, see our [SDK data collection options][5].
 
 <table id="datatypes">
     <thead>
@@ -117,7 +118,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="2">Photos and videos</td>
             <td>Photos</td>
-            <td rowspan="8">No.</td>
+            <td rowspan="8">Not collected.</td>
         </tr>
         <tr>
             <td>Videos</td>
@@ -151,11 +152,11 @@ The data collected by Braze is determined by your specific integration and the u
         </tr>
         <tr>
             <td>In-app search history</td>
-            <td>No.</td>            
+            <td>Not collected.</td>            
         </tr>
         <tr>
             <td>Installed apps</td>
-            <td>No.</td>            
+            <td>Not collected.</td>            
         </tr>
         <tr>
             <td>Other user-generated content</td>
@@ -167,7 +168,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Web browsing</td>
             <td>Web browsing history</td>
-            <td>No.</td>
+            <td>Not collected.</td>
         </tr>
         <tr>
             <td rowspan="3">App info and performance</td>
@@ -185,13 +186,12 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Device or other IDs</td>
             <td>Device or other IDs</td>
-            <td>Braze generates a deviced ID to differentiate users’ devices, and ensure messages are sent to the correct intended device.</td>
+            <td>Braze generates a device ID to differentiate users’ devices, and ensure messages are sent to the correct intended device.</td>
         </tr>
     </tbody>
 </table>
 
-
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's Data Safety guidelines, see our [Android Storage Overview][2] and our [SDK Data Collection Options][5].
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview][2] and our [SDK data collection options][5].
 
 [1]: https://www.braze.com/docs/api/data_retention/
 [2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/storage
