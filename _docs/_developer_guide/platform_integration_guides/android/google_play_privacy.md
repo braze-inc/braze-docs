@@ -49,7 +49,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="2">Location</td>
             <td>Approximate location</td>
-            <td rowspan="15">Only data that is configured by you to be sent to Braze.</td>
+            <td rowspan="15">Not collected by default.</td>
         </tr>
         <tr>
             <td>Precise location</td>
@@ -98,7 +98,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="2">Health and Fitness</td>
             <td>Health info</td>
-            <td rowspan="2">Only data that is configured by you to be sent to Braze. INSERT HIPAA STUFF HERE?</td>
+            <td rowspan="2">Not collected by default.</td>
         </tr>
         <tr>
             <td>Fitness info</td>     
@@ -106,14 +106,14 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="3">Messages</td>
             <td>Emails</td>
-            <td rowspan="2">Only data that is configured by you to be sent to Braze.</td>
+            <td rowspan="2">Not collected by default.</td>
         </tr>
         <tr>
             <td>SMS or MMS</td>          
         </tr>
         <tr>
             <td>Other in-app messages</td>
-            <td>If configured by you Braze may generate In-App Messages and Push notification that are sent to users, and we store read-indicators on them.</td>
+            <td>If you send In-app messages or push notifications through Braze, we collect information on when users have opened or read these messages.</td>
         </tr>
         <tr>
             <td rowspan="2">Photos and videos</td>
@@ -148,7 +148,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td rowspan="5">App activity</td>
             <td>App interactions</td>
-            <td>Only data that is configured by you to be sent to Braze.</td>
+            <td>Braze collects session activity data by default. All other interactions and activity is determined by your app's custom integration.</td>
         </tr>
         <tr>
             <td>In-app search history</td>
@@ -160,7 +160,7 @@ The data collected by Braze is determined by your specific integration and the u
         </tr>
         <tr>
             <td>Other user-generated content</td>
-            <td rowspan="2">Only data that is configured by you to be sent to Braze.</td>            
+            <td rowspan="2">Not collected by default.</td>            
         </tr>
         <tr>
             <td>Other actions</td>
