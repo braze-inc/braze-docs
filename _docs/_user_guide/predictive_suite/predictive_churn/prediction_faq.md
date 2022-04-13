@@ -53,7 +53,7 @@ For example, if you define churn as not starting a session in the past ten days,
 
 ## Data considerations
 
-Listed below are some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
+The following lists some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
 
 - What high-value actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.

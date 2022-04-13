@@ -46,7 +46,7 @@ Open the [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) and 
 
 ![]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
-Next, click on the **JSON** tab and paste the policy below. Make sure to replace `{your-bucket-name}` with the name of your S3 bucket.
+Next, click on the **JSON** tab and paste the following policy. Make sure to replace `{your-bucket-name}` with the name of your S3 bucket.
 
 {% raw %}
 ```json

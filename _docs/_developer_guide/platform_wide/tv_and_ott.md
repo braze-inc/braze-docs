@@ -21,7 +21,7 @@ Braze offers different engagement channels for a number of different TV Operatin
 
 ## Platforms and features
 
-Below is a list of features and messaging channels supported today.
+The following lists features and messaging channels supported today.
 
 <style>
 #tv-feature-table td,

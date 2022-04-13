@@ -13,7 +13,7 @@ channel:
 
 ## SMS sending basics
 
-Messaging can be complicated, but it doesn't have to be. Listed below are the fundamentals of SMS message sending at Braze including the importance of subscription groups, the requirements for SMS segments and message bodies, as well as advanced customization options available.
+Messaging can be complicated, but it doesn't have to be. The following sections list the fundamentals of SMS message sending at Braze including the importance of subscription groups, the requirements for SMS segments and message bodies, as well as advanced customization options available.
 
 1. **Select Your Subscription Group**<br>
 SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>

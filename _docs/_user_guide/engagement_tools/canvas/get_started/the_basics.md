@@ -12,7 +12,7 @@ tool: Canvas
 
 ## Finding your strategy with the five W’s of visualization
 
-Answer the questions below to get started:
+Answer the following questions to get started:
 
 1. **What** am I trying to help the customer do or understand? (Canvas name)<br><br>
 

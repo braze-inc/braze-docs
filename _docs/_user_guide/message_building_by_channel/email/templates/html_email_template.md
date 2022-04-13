@@ -42,7 +42,7 @@ Click **Upload From File** and select your template from your computer. Refer to
 
 #### Troubleshoot uploading template errors
 
-There are several email error messages you may receive when uploading an HTML template file. If you receive an error, refer to the table below for common issues and their recommended fixes:
+There are several email error messages you may receive when uploading an HTML template file. If you receive an error, refer to the following table for common issues and their recommended fixes:
 
 | Error | Fix |
 |------|---|

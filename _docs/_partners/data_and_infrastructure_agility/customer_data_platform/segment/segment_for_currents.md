@@ -41,7 +41,7 @@ It's important to keep your Segment write key up to date. If your connector's cr
 
 ### Step 2: Export message engagement events 
 
-Next, select the message engagement events you would like to export. Reference the export events and properties table listed below. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
+Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
 ![List of all available message engagement events on the Segment Currents page in Braze.][2]
 

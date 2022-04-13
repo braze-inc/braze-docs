@@ -16,11 +16,11 @@ description: "This reference article gives an overview of the result of editing 
 
 All changes to Action-Based Delivery campaigns and API-Triggered Delivery campaigns take effect immediately for go-forward sends.
 
-If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), please refer to the guidance for Scheduled campaigns below.
+If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), please refer to the following guidance for scheduled campaigns.
 
 ## Scheduled campaigns
 
-If you need to make changes to a campaign post-launch, please take note of the items below when editing your campaign to ensure your changes have the desired effects.
+If you need to make changes to a campaign post-launch, take note of the following items when editing your campaign to ensure your changes have the desired effects.
 
 ### Message content
 
@@ -32,7 +32,7 @@ If you edit your campaign's scheduled send time or its audience, those changes a
 
 ### Send rate
 
-When using a send rate limit, Braze "schedules" your messages in minute-granularity time slots, so if you want to change the message sending rate, you should follow the process below for immediate changes.
+When using a send rate limit, Braze "schedules" your messages in minute-granularity time slots, so if you want to change the message sending rate, adhere to the following process for making immediate changes.
 
 ## Making immediate changes
 

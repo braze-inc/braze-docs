@@ -19,7 +19,7 @@ Visit our [documentation][9] for additional best practices.
 
 ## Step 1: Configure your application for push
 
-Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
+Ensure that in your `Package.appxmanifest` file, the following settings are configured:
 
 Within the **Application** tab, ensure that `Toast Capable` is set to `YES`.
 

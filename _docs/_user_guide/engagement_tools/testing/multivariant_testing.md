@@ -88,7 +88,7 @@ The size of the control group for a campaign with [Intelligent Selection][intels
 
 ![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+For best practices around choosing a segment to test with, see the following [Choosing a Segment][80] section.
 
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.

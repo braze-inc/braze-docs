@@ -8,7 +8,7 @@ description: "Because Connected Content relies on receiving data from APIs, ther
 
 # Connected Content retries
 
-Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. To enable retries, add `:retry` in the Connected Content call, as shown below:
+Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. To enable retries, add `:retry` in the Connected Content call, as shown in the following code snippet:
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}

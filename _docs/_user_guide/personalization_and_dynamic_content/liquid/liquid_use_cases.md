@@ -1160,7 +1160,7 @@ This is a message for an Android user!
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
-The example used sends a warning to users on iOS 10.0 or below that they are phasing out support for the user’s device OS.
+The example used sends a warning to users on iOS 10.0 or earlier that they are phasing out support for the user’s device OS.
 
 {% raw %}
 ```liquid
@@ -1247,7 +1247,7 @@ Option 2:
 
 This use case displays a message that includes a timestamp in their current time zone.
 
-The example provided below will display the date as YYYY-mm-dd HH:MM:SS, such as 2021-05-03 10:41:04.
+The following example provided will display the date as YYYY-mm-dd HH:MM:SS, such as 2021-05-03 10:41:04.
 
 {% raw %}
 ```liquid
@@ -1275,7 +1275,7 @@ Here's a message that will send between 8 am and 8 pm!
 
 This use case will display a message if a user's current time falls within a set window.
 
-For example, the scenario below lets a user know that a store is closed.
+For example, the following scenario lets a user know that a store is closed.
 
 {% raw %}
 ```liquid

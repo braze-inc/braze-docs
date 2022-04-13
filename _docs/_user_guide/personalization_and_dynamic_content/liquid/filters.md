@@ -97,7 +97,7 @@ Math filters allow you to perform mathematical operations. Remember—if you use
 | [at_most][4.2]    | Limits a number to a maximum value.                                                                                            | ⛔  No    |
 | [at_least][4.3]   | Limits a number to a minimum value.                                                                                            | ⛔  No    |
 | [ceil][4.4]       | Rounds an output up to the nearest integer.                                                                                    | ✅  Yes   |
-| [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the tip below to prevent rounding. | ✅  Yes   |
+| [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
 | [floor][4.6]      | Rounds an output down to the nearest integer.                                                                                  | ✅  Yes   |
 | [minus][4.7]      | Subtracts a number from an output.                                                                                             | ✅  Yes   |
 | [plus][4.8]       | Adds a number to an output.                                                                                                    | ✅  Yes   |
@@ -169,11 +169,11 @@ If you’re updating a user on their purchase, an account balance, or anything r
 ### Shopify money filter vs Braze money filter
 
 {% alert warning %}
-The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the examples below for an accurate depication of the expected behavior.
+The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depication of the expected behavior.
 {% endalert %}
 
 {% raw %}
-In the event you are inputting a custom attribute (like `account_balance`), you should always use the `money` filter to ensure that your decimals are in the proper place, and zeros are not dropped off the end of any numbers, as shown below:
+In the event you are inputting a custom attribute (like `account_balance`), you should always use the `money` filter to ensure that your decimals are in the proper place, and zeros are not dropped off the end of any numbers:
 
 ```liquid
 ${{custom_attribute.${account_balance} | money}}
@@ -269,11 +269,11 @@ The following general filters serve many different purposes, including formattin
 
 | Filter         | Description                                                                         | Supported |
 | -------------- | ----------------------------------------------------------------------------------- | :-------- |
-| [date][7.1]           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) below for more. | ✅  Yes   |
+| [date][7.1]           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) for more. | ✅  Yes   |
 | [default][7.2]        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes. | ✅  Yes   |
 | [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale. | ⛔  No    |
 | [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
-| time_zone      | Refer to [Time Zone Filter](#time-zone-filter) below for more. | ✅  Yes   |
+| time_zone      | Refer to [Time Zone Filter](#time-zone-filter) for more. | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
