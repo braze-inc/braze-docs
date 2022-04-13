@@ -277,7 +277,7 @@ Segment allows for different data types and structures, leading to issues where 
 
 Scenarios where data will not pass as expected:
 1. Arrays or nested objects in event properties.
-  - Segment allows for arrays or nested objects within the properties of their track events, which map to either Braze custom or purchase event properties. Since our properties don't support those data types, we will silently reject those calls.
+  - iOS, Android and cloud-mode connections support nested objects within event properties. Device-mode web does not yet support these. Braze is working with Segment to update the web device-mode SDK. 
 2. Passing anonymous data server-to-server.
   - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems.
 
