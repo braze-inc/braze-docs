@@ -16,7 +16,7 @@ description: "This article outlines details about the Update Email Template Braz
 
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-Use these endpoints to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference.
+Use these endpoints to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The email template creation API endpoint will also return an `email_template_id` reference.
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
