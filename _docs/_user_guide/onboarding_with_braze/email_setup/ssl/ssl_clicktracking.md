@@ -27,7 +27,7 @@ A Content Delivery Network (CDN) is a platform of servers that help ensure quick
 
 At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze cannot request or manage such certificates, this must be set up on your end through a CDN. 
 
-Below we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
+In the following sections, we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
 
 {% alert important %}
 Please note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
@@ -39,7 +39,7 @@ If you are unable or do not wish to use the CDNs listed when setting up SSL for 
 
 ### CDN resources
 
-Listed below are step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed below, you must make sure your CDN has the ability to apply SSL certificates.
+The following chart lists step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
 {% alert important %}
 Braze will be unable to help you troubleshoot your CDN configuration. You must reach out to your CDN provider to help troubleshoot your CDN configuration.

@@ -26,7 +26,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 
 ## Integration
 
-Punchh offers several endpoints available to Braze customers to help add external IDs into the Punchh platform using the Punchh API endpoints below. Once the external IDs have been added, create an adapter in Punchh, provide your Braze credentials, and select which events you'd like to sync. Next, you can take the Punchh segment ID and use it to build a Punchh webhook to trigger customer syncing in a Canvas journey.
+Punchh offers several endpoints available to Braze customers to help add external IDs into the Punchh platform using the following Punchh API endpoints. Once the external IDs have been added, create an adapter in Punchh, provide your Braze credentials, and select which events you'd like to sync. Next, you can take the Punchh segment ID and use it to build a Punchh webhook to trigger customer syncing in a Canvas journey.
 
 ### Available Events to Sync {#available-events-to-sync}
 1. Guest
@@ -61,7 +61,7 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 <br><br>
 {% tabs %}
 {% tab User signup API example %}
-This example allows you to send external identifiers with a user profile at the time of signup. This is done below by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
+This example allows you to send external identifiers with a user profile at the time of signup. This is done by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
 
 ```json
 curl --location --request POST 'https://sandbox.punchh.com/api2/mobile/users' \
@@ -88,7 +88,7 @@ curl --location --request POST 'https://sandbox.punchh.com/api2/mobile/users' \
 ```
 {% endtab %}
 {% tab User update API example %}
-This example allows you to update external identifiers with a user profile. This is done below by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
+This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
 
 ```json
 curl --location --request PUT 'https://sandbox.punchh.com/api2/mobile/users' \
@@ -127,9 +127,9 @@ comm
 
 The Braze and Punchh integration allows you to leverage Braze webhook capabilities to create Punchh segments:
 
-1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL. <br><br>For example, the page below is located at `www.dashboard.punchhtest.com/segments/11646`. The numer "11646" at the end of this link is the `custom_segment_id`.<br><br>![Punch Platform][5]<br><br>
+1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL. <br><br>For example, the following page is located at `www.dashboard.punchhtest.com/segments/11646`. The numer "11646" at the end of this link is the `custom_segment_id`.<br><br>![Punch Platform][5]<br><br>
 2. Next, navigate to **Webhook Templates** in Braze and select the Punchh template. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![Punch Platform][4]<br><br>
-3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown below:<br><br>![Punch Platform][7]
+3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown in the following screenshot:<br><br>![Punch Platform][7]
 
 For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 

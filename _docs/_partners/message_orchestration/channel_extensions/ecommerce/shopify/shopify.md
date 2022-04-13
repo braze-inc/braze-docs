@@ -66,7 +66,7 @@ That's it! The status of your integration appears in the **Data Import** section
 
 ## Shopify event processing
 
-Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the table below for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
+Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the following table for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
 
 ### Supported Shopify events
 
@@ -268,7 +268,7 @@ Braze will map the supported Shopify data to user profiles using the customer's 
 
 **Anonymous Users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
-  - For existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
+  - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 

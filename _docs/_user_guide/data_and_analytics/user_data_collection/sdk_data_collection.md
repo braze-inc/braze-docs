@@ -22,7 +22,7 @@ A personalized integration allows for customized communication that is relevant 
 
 ## Automatically collected integration
 
-Listed below are the automatically captured data generated and received by Braze when an integrator initializes the SDK; this includes properties found in the Minimum Integration table.
+The following lists the automatically captured data generated and received by Braze when an integrator initializes the SDK; this includes properties found in the Minimum Integration table.
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
@@ -44,7 +44,7 @@ All these fields can be disabled to allow for a Minimum Integration:
 
 ## Minimum integration
 
-Listed below is the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable automatically captured data. These elements are non-configurable and are essential in out-of-the-box platform functions. 
+The following lists the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable automatically captured data. These elements are non-configurable and are essential in out-of-the-box platform functions. 
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |

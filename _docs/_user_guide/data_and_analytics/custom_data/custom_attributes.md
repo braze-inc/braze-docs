@@ -23,7 +23,7 @@ To create and manage custom attributes in the dashboard, go to **Manage Settings
 
 ## Setting custom attributes
 
-Listed below are the methods across various platforms that are used to set custom attributes.
+The following lists methods across various platforms that are used to set custom attributes.
 
 {% details Expand for documentation by platform %}
 

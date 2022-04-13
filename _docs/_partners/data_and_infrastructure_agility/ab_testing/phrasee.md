@@ -26,7 +26,7 @@ The Braze and Phrasee partnership allows you to enhance customer experiences by 
 
 ## Integration
 
-With this integration, you can integrate email or push campaigns into Phrasee. The steps are detailed below for both.
+With this integration, you can integrate email or push campaigns into Phrasee. The following steps are detailed for both.
 
 {% tabs %}
 {% tab Email Campaign %}
@@ -69,7 +69,7 @@ Finalize any other settings as needed and save your campaign.
 
 Navigate back to your Phrasee campaign and click the **Braze integration** button.
 
-The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear below the campaign dropdown to ensure the times align between applications.
+The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear near the campaign dropdown to ensure the times align between applications.
 
 Launch your campaign in Braze, and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
@@ -128,7 +128,7 @@ Finalize any other settings as needed and save your campaign.
 
 Navigate back to your Phrasee campaign and click the **Braze integration** button.
 
-The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear below the campaign dropdown to ensure the times align between applications.
+The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear near the campaign dropdown to ensure the times align between applications.
 
 Launch your campaign in Braze, and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 

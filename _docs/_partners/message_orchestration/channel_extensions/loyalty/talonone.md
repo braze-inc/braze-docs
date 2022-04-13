@@ -43,7 +43,7 @@ A custom `/braze/coupon` Talon.One endpoint must be used to convert the Talon.On
 | `DeploymentURL` | (Required) The base URL of your Talon.One deployment. |
 | `ApplicationID` | (Required) The ID of the application in Talon.One. |
 | `CampaignID` | (Required) The ID of the campaign in Talon.One. |
-| `Identifier` | (Required) The identifier of the request. Read below for more information. Must be a string.<br><br>Providing a new value creates a new coupon. Providing an existing value retrieves the existing coupon of that id.
+| `Identifier` | (Required) The identifier of the request. Read more in the alert following this chart. Must be a string.<br><br>Providing a new value creates a new coupon. Providing an existing value retrieves the existing coupon of that id.
 | `IntegrationID` | The integration ID of the customer. When specified, only that customer will be able to use the coupon. |
 | `StartDate` | The start date of the coupon. |
 | `ExpiryDate` | The expiry date of the coupon. |

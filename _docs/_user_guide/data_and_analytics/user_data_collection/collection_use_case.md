@@ -11,7 +11,7 @@ description: "This reference article covers an example user data collection use 
 
 > This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect.
 
-For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Uber, Lyft, etc.) wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Uber, Lyft, etc.) wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 ## Case question #1: What is the goal?
 

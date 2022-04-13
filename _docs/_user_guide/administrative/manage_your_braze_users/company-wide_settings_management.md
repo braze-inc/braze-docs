@@ -31,7 +31,7 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 ![Notification Preferences page in the Braze dashboard][61]
 
-The table below lists available notifications:
+The following table lists available notifications:
 
 | Notification | Description | Webhook Support |
 |--------------|-------------|-----------------|

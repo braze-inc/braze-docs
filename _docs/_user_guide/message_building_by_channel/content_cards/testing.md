@@ -44,7 +44,7 @@ A common use case is trying to debug why a user can't see a particular Content C
 1. Go to the **Developer Console** and select the **Event User Log** tab.
 2. Locate and expand the SDK Request for your test user.
 3. Click **Raw Data**.
-4. Find the `id` for your session. An example excerpt is shown below:
+4. Find the `id` for your session. The following shows an example excerpt:
 
     ```json
     [

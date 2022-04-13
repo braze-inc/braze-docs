@@ -34,7 +34,7 @@ To integrate Braze and Segment, you must set [Braze as a Destination](#connectio
 
 ### Step 1: Configure Braze settings in Segment {#connection-settings}
 
-After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the chart below.
+After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the following chart.
 
 In Segment, navigate to **Destinations > Braze > Receiving from [platform]**.
 

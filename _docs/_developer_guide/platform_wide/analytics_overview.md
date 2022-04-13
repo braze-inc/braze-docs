@@ -137,7 +137,7 @@ Array attributes are good for storing related lists of information about your us
 
 Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. **Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.** For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.
 
-If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
+If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. The following lists some example code showing the array behavior in the web SDK:
 
 ```
 var abUser = appboy.getUser();
@@ -226,7 +226,7 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
 ## Taxi/ride-sharing app use case {#example-case}
-For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 **Case Question #1: What is the goal?**
 
@@ -296,7 +296,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [user data API][9].
 - Target specific users with our [messaging API][10] for both general and transactional messages.
 
-User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. Below are some examples of suitable and unsuitable user IDs.
+User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
 
 Good options for User IDs:
 
@@ -323,7 +323,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating events
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segment). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segment). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
 ### Technical limitations and constraints
 Be mindful of the following limitations and constraints when implementing custom events:

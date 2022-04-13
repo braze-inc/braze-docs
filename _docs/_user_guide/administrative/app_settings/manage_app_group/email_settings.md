@@ -17,7 +17,7 @@ Email settings can be found within the **Manage Settings** page of the dashboard
 
 ### Multiple sending emails
 
-Use the outbound email settings below to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
+Use the following outbound email settings to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
 
 Here, you may also exclude the "Reply-To" email and exclusively send replies to the "From" address.
 
@@ -119,7 +119,7 @@ SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTT
 
 ![][2]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-The three email settings listed below are features that require no additional action other than toggling it on or off by using the corresponding switch. Please read each setting for further details.
+The three email settings listed are features that require no additional action other than toggling it on or off by using the corresponding switch. Please read each setting for further details.
 
 ### Resubscribe users when their email changes
 

@@ -48,7 +48,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 ## Sending with a Subscription Group
 
-To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown (see below). Once selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.  
+To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown, as shown in the following image. Once selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.  
 
 ![Selecting a subscription group when composing an SMS message on the Braze dashboard][6]
 

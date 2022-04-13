@@ -70,7 +70,7 @@ Badges are special visitor attributes that represent valuable behavior patterns.
 {% tabs local %}
 {% tab Attribute %}
 
-Create a visitor attribute "Lifetime Order Value" that calculates the cumulative amount spent (`order_total`) by the customer for all completed orders (purchase event). To set up lifetime order value in your Tealium account, follow the instructions below:
+Create a visitor attribute "Lifetime Order Value" that calculates the cumulative amount spent (`order_total`) by the customer for all completed orders (purchase event). To set up lifetime order value in your Tealium account, adhere to the following the instructions:
 
 1. Navigate to **AudienceStream > Visitor/Visit Attributes** and click **Add Attribute**.
 2. Select the scope as **Visitor** and click **Continue**.
@@ -87,7 +87,7 @@ Now, all customers will have a lifetime order value attribute tied to them.
 {% endtab %}
 {% tab Badge %}
 
-You may create badges that help you classify and target your users by certain attributes they share. For the example below, we create a VIP Badge for users with a "Lifetime Order Value" of over $500.
+You may create badges that help you classify and target your users by certain attributes they share. For the following example, we create a VIP Badge for users with a "Lifetime Order Value" of over $500.
 
 1. Navigate to **AudienceStream > Visitor/Visit Attributes** and click **Add Attribute**.
 2. Select the scope as **Visitor** and click **Continue**.
@@ -135,7 +135,7 @@ After you have created or selected a connector to link this audience, click Done
 
 #### Action
 
-Next, name your connector action and select an action type that will send data according to the mapping you configure. Here, you will map Braze attributes to Tealium attribute names. Depending on which action type you choose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
+Next, name your connector action and select an action type that will send data according to the mapping you configure. Here, you will map Braze attributes to Tealium attribute names. Depending on which action type you choose, there will be a varied selection of fields required by Tealium. The following are examples and explanations of these fields.
 
 {% alert important %}
 Not all fields offered are required.

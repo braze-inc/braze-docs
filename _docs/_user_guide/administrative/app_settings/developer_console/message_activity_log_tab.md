@@ -41,7 +41,7 @@ For example, if you have a log entry whose message states "empty-cart_app" and y
 There are some common message types you might see, and some might even provide troubleshooting links to help you diagnose and fix issues. Refer to the following table for details.
 
 {% alert note %}
-The messages listed below are for example purposes and may not exactly match what is displayed in your log's **Message** column.
+The following messages listed are for example purposes and may not exactly match what is displayed in your log's **Message** column.
 {% endalert %}
 
 | Message Type | Sample Message | Description |

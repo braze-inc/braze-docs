@@ -149,7 +149,7 @@ This filter allows you to segment based on when was the last time the user used 
 {
   "last_used_app":
   {
-    "comparison": (String) one of the allowed comparisons listed below,
+    "comparison": (String) one of the allowed comparisons listed,
     "value": (String) the value to be compared using the provided comparison
   }
 }

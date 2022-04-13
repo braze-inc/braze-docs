@@ -32,11 +32,11 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 
 ## Summary text
 
-The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display below the body of the message in the expanded view. It also serves as a caption for notifications with images.
+The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
 
 ![][9]
 
-For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the animation below for an example of this behavior.
+For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
 
 ![Summary Text Behavior][15]
 

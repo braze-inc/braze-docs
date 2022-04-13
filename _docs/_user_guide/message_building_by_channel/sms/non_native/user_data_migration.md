@@ -15,7 +15,7 @@ Let’s run through all the considerations you’ll need to keep in mind when yo
 
 ## Format user phone numbers to carrier standards
 
-Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. Learn more about [user phone numbers][userphone].
+Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image and can have a maximum of fifteen (15) digits. Learn more about [user phone numbers][userphone].
 
 ![][picture]{: style="max-width:50%;border: 0;"}
 

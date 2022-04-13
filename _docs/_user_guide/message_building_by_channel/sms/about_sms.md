@@ -27,7 +27,7 @@ SMS, also known as Short Message Service, is used to send text messages to mobil
 
 ## Requirements
 
-Before you start sending SMS, there are some things you need. Refer to the basic chart below to learn more.
+Before you start sending SMS, there are some things you need. Refer to the following chart to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|

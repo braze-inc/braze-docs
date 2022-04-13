@@ -118,7 +118,7 @@ To add key-value pairs to your message, switch to the **Settings** tab and click
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build Content Cards.
+Build the remainder of your campaign; see the following sections for further details on how to best utilize our tools to build Content Cards.
 
 #### Choose delivery schedule or trigger
 

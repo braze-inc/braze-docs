@@ -36,7 +36,7 @@ Support for nested custom attributes is currently in early access. Please contac
 
 {% tabs local %}
 {% tab Create %}
-Shown below is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
+The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
 ```json
 {
@@ -115,7 +115,7 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 ## Liquid templating
 
-The Liquid templating example below shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
+The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
 Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
 

@@ -56,7 +56,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 ## Data export integration
 
-A full list of the events that can be exported from Braze to Mixpanel is included below(#amplitude-user-profile-api-endpoints). All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
+A full list of the events that can be exported from Braze to Mixpanel is included in the [user profile endpoints section](#amplitude-user-profile-api-endpoints). All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
 You can export two types of events to Mixpanel: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-behavior-events) including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
@@ -68,7 +68,7 @@ In your Mixpanel dashboard, click into the **Project Settings**in either a new o
 
 ### Step 2: Create Braze Current
 
-In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
+In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 

@@ -28,7 +28,7 @@ channel: email
 ### Email validation
 
 Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards.
-In addition to these standards, Braze does not accept certain characters (noted below) and recognizes them as invalid.
+In addition to these standards, Braze does not accept the following characters and recognizes them as invalid.
 
 If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
 {% details Unaccepted characters outside of RFC Standards %}
@@ -250,7 +250,7 @@ When setting your "from" addresses, make sure your "from" email domain matches y
   - On a personal level, a no-reply can appear impersonal, lazy and arrogant to recipients (suggesting “You aren’t worth my time”), and may turn them off from receiving further email from your company.
 
 - Preheader text is often used by email marketers to provide additional information on an email's contents.
-  - A preheader is the preview text displayed immediately after an email subject. In the example below, the preheader is `- Brand. New. Lounge Shorts`.
+  - A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 
 ![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts"][61]
 
@@ -343,7 +343,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Showcase only the most essential features 
 - Too much information can be overwhelming and potentially confusing if the user is still unfamiliar with your app
 - Provide links to your documentation and let users know how they can get support.
-- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple calls to action and informs users about a deal:
+- Try to always send a welcome email after a user signs up. The following is an example from LivingSocial that contains simple calls to action and informs users about a deal:
 
 ![Onboarding email sent from LivingSocial that welcomes new users.][26]{: style="max-width:70%;"}
 
@@ -382,7 +382,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 - Email can help you build up a social fanbase by directing recipients toward your Facebook, Twitter, Instagram, Pinterest, YouTube channel, etc.
 - Include links to your social media accounts within the email to make it easy for users to connect.
-- Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. Below is an email from Hailo that offers a reward for participating in photo challenges:
+- Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. The following is an email from Hailo that offers a reward for participating in photo challenges:
 
 ![Social email example from Hailo that notifies their users to participate in a photo challenge.][30]{: style="max-width:70%;"}
 

@@ -21,7 +21,7 @@ To create and manage custom events in the dashboard, go to **Manage Settings** >
 
 ## Logging custom events
 
-Listed below are the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
+The following lists the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
 
 {% details Expand for documentation by platform %}
 
@@ -139,7 +139,7 @@ This feature is generally available. However, triggering messages and segmenting
 {% tabs %}
 {% tab Music Example %}
 
-Shown below is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+The following is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -168,7 +168,7 @@ Shown below is a `/users/track` example with a "Created Playlist" custom event. 
 {% endtab %}
 {% tab Restaurant Example%}
 
-Shown below is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+The following is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
 
 ```
 ...
@@ -189,7 +189,7 @@ Shown below is a `/users/track` example with an "Ordered" custom event. Once an 
 
 ##### Liquid templating
 
-The Liquid templating examples below show how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
+The following Liquid templating examples show how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
 
 {% tabs local %}
 {% tab Music Example %}
