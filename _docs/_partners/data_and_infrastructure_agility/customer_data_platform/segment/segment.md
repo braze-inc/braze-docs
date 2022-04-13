@@ -132,7 +132,6 @@ Some [automatically captured][25] data is only available through side-by-side in
 
 Currently, Braze's server-to-server integration with Segment **does not** support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
 
-
 ### Step 3: Map methods {#methods}
 
 Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page) (web), [Identify](https://segment.com/docs/spec/identify/), and [Track](https://segment.com/docs/spec/track/), and Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports custom attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
@@ -277,7 +276,7 @@ Segment allows for different data types and structures, leading to issues where 
 
 Scenarios where data will not pass as expected:
 1. Arrays or nested objects in event properties.
-  - Segment allows for arrays or nested objects within the properties of their track events, which map to either Braze custom or purchase event properties. Since our properties don't support those data types, we will silently reject those calls.
+  - iOS, Android, and cloud-mode connections support nested objects within event properties. Device-mode web does not yet support these. Braze is working with Segment to update the web device-mode SDK. 
 2. Passing anonymous data server-to-server.
   - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems.
 
