@@ -8,7 +8,7 @@ description: "Filters can be used to reformat static or dynamic content. This re
 
 # Filters
 
-> This reference article provides an overview of filters in liquid, and covers which filters are supported by braze. Looking for ideas on how you can use these filters? Check out our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> This reference article provides an overview of filters in liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 

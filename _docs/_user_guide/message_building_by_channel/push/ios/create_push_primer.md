@@ -49,7 +49,7 @@ From the **Campaigns** pane within the dashboard, select **In-App Messaging** as
 
 Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your push primer to send to, select the message type, and pick the layout type. For your basic push primer campaign message type, we suggest either a full screen or modal message. Note that for a full-screen in-app message, an image is required.
 
-![Push primer message type][push_primer7]
+![][push_primer7]
 
 ## Step 4: Customize your message
 
