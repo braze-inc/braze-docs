@@ -15,7 +15,7 @@ table td {
 
 # Google Play Privacy Questionaire
 
-As of April 2022, Android developers are required to complete [Google Play's Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices.
+As of April 2022, Android developers are required to complete [Google Play's Data safety form][4] to disclose privacy and security practices.
 
 This guide provides instructions on how to fill out this new form with information on how Braze handles your app data.
 
@@ -34,7 +34,7 @@ As the app developer, you are in control of what data you send to Braze. Data re
 
 For more information about how to handle user requests for their data and deletion, see [Braze Data Retention Information][1].
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, please see our [SDK Data Collection Overview](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default, and how to disable certain attributes, please see our [SDK Data Collection Options][5]].
 
 <table id="datatypes">
     <thead>
@@ -185,14 +185,16 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Device or other IDs</td>
             <td>Device or other IDs</td>
-            <td>Braze generates a random ID for each user's device.</td>
+            <td>Braze generates a deviced ID to differentiate users’ devices, and ensure messages are sent to the correct intended device.</td>
         </tr>
     </tbody>
 </table>
 
 
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's Data Safety guidelines, see our [Android Storage Overview][2] and our [SDK Data Collection Options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's Data Safety guidelines, see our [Android Storage Overview][2] and our [SDK Data Collection Options][5].
 
 [1]: https://www.braze.com/docs/api/data_retention/
 [2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/storage
 [3]: https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform
+[4]: https://support.google.com/googleplay/android-developer/answer/10787469
+[5]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration
