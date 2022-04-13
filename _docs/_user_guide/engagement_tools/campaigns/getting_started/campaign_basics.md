@@ -18,10 +18,6 @@ Answer the following questions to get started:
 
 2. **When** will a user start this experience? Pick one of the following:
     * **Scheduled**: Enter users at a designated time
-      * Start a session
-      * Perform a custom event
-      * Enter a location
-      * Interact with or leave another campaign or Canvas
     * **Action-Based**: Enter user when they perform actions 
       * Make a purchase
       * Start a session
