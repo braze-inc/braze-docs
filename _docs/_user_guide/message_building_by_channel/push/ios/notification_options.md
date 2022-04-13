@@ -98,7 +98,7 @@ If you utilize additional push prompts or [in-app push primers](https://www.braz
 
 #### Set up provisional push notifications
 
-Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the following snippets as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
 The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).

@@ -24,14 +24,14 @@ Make sure to save your campaign draft after testing to avoid deleting your campa
 
 ## Channel-specific test sending
 
-For steps to send test messages, refer to the section for your channel below.
+For steps to send test messages, refer to the following section for your channel.
 
 {% tabs %}
 {% tab Email %}
 
 #### Email
 
-After drafting your email message, click **Preview and Test**. From this page, select the **test send** tab and add your email address or user ID in the **add individual users** field. When you're ready, click **send test** to send your drafted email to your inbox.
+After drafting your email message, click **Preview and Test**. From this page, select the **Test Send** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
@@ -127,7 +127,7 @@ Once you've confirmed that you're only targeting the users you want to receive t
 
 ##### Step 2: Send a test campaign
 
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
+To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
 
 ![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
 

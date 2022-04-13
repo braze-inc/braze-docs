@@ -31,7 +31,7 @@ All international numbers should start with a `+`, followed by their country cod
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
-You can see the differences between local number formatting as well as universal, `E.164` formatting in the table below:
+You can see the differences between local number formatting as well as universal, `E.164` formatting in the following table:
 
 | Country | Local | Country Code | `E.164` |
 |---|---|---|---|

@@ -36,7 +36,7 @@ Here's an example of a simple definition based on lapsing sessions in the last 7
 
 ![Churn Definition where a user is considered churned if they do not start a session in 7 days][1]
 
-For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the section on [Sample churn definitions](#sample-definitions) below.
+For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
 {% alert note %}
 For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
@@ -58,7 +58,7 @@ For filters that begin with “Last...” like Last Used App and Last Made Purch
 
 In order to build a new Prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
 
-For a sample list of Prediction Audience definitions, check out our sample definitions in the section on [Sample churn definitions](#sample-definitions) below.
+For a sample list of Prediction Audience definitions, check out our sample definitions in the following section on [Sample churn definitions](#sample-definitions).
 
 ![][3]
 

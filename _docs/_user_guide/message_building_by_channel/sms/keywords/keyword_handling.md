@@ -57,7 +57,7 @@ You are able to manage your own responses that get sent to users after they text
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. <br><br>
 2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon.<br><br> 
-3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the rules below that apply to keywords and keyword responses.<br><br>
+3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the following rules that apply to keywords and keyword responses.<br><br>
 
 ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
 

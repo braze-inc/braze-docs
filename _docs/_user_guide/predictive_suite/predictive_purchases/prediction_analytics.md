@@ -32,7 +32,7 @@ The distribution of the Purchase Likelihood Scores for the entire Prediction Aud
 
 ![][4]{: style="max-width:90%"} 
 
-As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
+As you move the slider handles to different positions, the bar in the left half of the panel will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
 
 ### Estimated results {#estimated_results}
 

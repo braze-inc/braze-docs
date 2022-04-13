@@ -88,7 +88,7 @@ The size of the control group for a campaign with [Intelligent Selection][intels
 
 ![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+For best practices around choosing a segment to test with, see the following [Choosing a Segment][80] section.
 
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -121,7 +121,7 @@ Choose a date and time when the winning variant should be sent out.
 When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+In the dropdown found after the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
 
 #### (Optional) Designate a conversion event
 

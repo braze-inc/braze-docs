@@ -4,7 +4,7 @@ article_title: Create a Campaign
 layout: dev_guide
 page_order: 0
 guide_top_header: "Create a Campaign"
-guide_top_text: "Now that you understand the basics of campaigns at Braze, check out the different <a href='/docs/user_guide/message_building_by_channel/'>messaging channels</a> available to help decide what kind of messages you'd like to send! Select a messaging channel from the list below to learn how to create and compose a single channel messaging campaign of that type, or combine types by creating a multichannel campaign.<br><br>We also highly recommend you check out our <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> LAB course!"
+guide_top_text: "Now that you understand the basics of campaigns at Braze, check out the different <a href='/docs/user_guide/message_building_by_channel/'>messaging channels</a> available to help decide what kind of messages you'd like to send! Select a messaging channel from the following list to learn how to create and compose a single channel messaging campaign of that type, or combine types by creating a multichannel campaign.<br><br>We also highly recommend you check out our <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> LAB course!"
 page_type: landing
 description: "This landing page includes links to articles on how to create campaigns for different Braze messaging channels."
 noindex: true

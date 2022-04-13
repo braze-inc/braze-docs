@@ -28,7 +28,8 @@ channel: email
 ### Email validation
 
 Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards.
-In addition to these standards, Braze does not accept certain characters and recognizes them as invalid.
+
+In addition to these standards, Braze does not accept the following characters and recognizes them as invalid.
 
 If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
 {% details Unaccepted characters outside of RFC Standards %}
@@ -251,7 +252,7 @@ When setting your "from" addresses, make sure your "from" email domain matches y
   - On a personal level, a no-reply can appear impersonal, lazy and arrogant to recipients (suggesting “You aren’t worth my time”), and may turn them off from receiving further email from your company.
 
 - Preheader text is often used by email marketers to provide additional information on an email's contents.
-  - A preheader is the preview text displayed immediately after an email subject. In the example, the preheader is `- Brand. New. Lounge Shorts`.
+  - A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 
 ![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts".][61]
 
@@ -319,7 +320,7 @@ If you are receiving this error in the editor, you likely have `base64` encoded 
 | --- | --- |
 | Subject Line Length | 35 characters maximum (for optimal mobile display) (6 to 10 words) |
 | Sender Name Length | 25 characters maximum (for optimal mobile display) |
-| Pre-Header Length | 85 characters maximum |
+| Preheader Length | 85 characters maximum |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Image size
@@ -334,7 +335,6 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 ### Deep linking
 
 A high percentage of emails are read on mobile devices. Utilizing deep linking is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. Email, on the other hand, gives no way of knowing whether recipients have the app installed. As such, providing a deep link to the app could link to an error message for these recipients who do not have the app.
-
 
 
 [25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding

@@ -11,7 +11,7 @@ description: "This reference article covers the topic of how to import users int
 There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
 
 {% alert important %}
-Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to [HTML data stripping](#html-data-stripping) below to read more.
+Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more.
 {% endalert %}
 
 ## REST API
@@ -158,7 +158,7 @@ You can import more than one CSV at the same time. CSV imports will run concurre
 
 If Braze notices something malformed in your file during the upload, errors will be shown with the summary. A file can be imported with errors, but an import can't be canceled or rolled-back once started. Review the preview, and if you find any errors, cancel the import and modify your file. It's important to examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
 
-Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to [Troubleshooting](#troubleshooting) below.
+Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
 
 ![CSV upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
 

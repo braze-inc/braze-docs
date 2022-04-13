@@ -12,7 +12,7 @@ description: "This how-to article will walk you through how to set up your IPs a
 
 {% include video.html id="iTm3yQkJ0UU" align="right"  %}
 
-> This article will walk you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze.<br><br>Though most of the setup process is done by Braze, we have outlined the requirements and materials for this setup below.
+> This article will walk you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze.<br><br>Though most of the setup process is done by Braze, we have outlined the requirements and materials for this setup.
 
 ## Step 1: Outline information
 

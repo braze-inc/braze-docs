@@ -43,7 +43,7 @@ If you choose to run a report on campaigns, you can select between a **Manual** 
 
 ![Campaign dashboard][6]{: style="max-width:80%;"}
 
-Below are the differences between these two options:
+The following are the differences between these two options:
 
 | **Action** | **Manual** | **Automated** |
 | ---- | ---------- | ------------- |

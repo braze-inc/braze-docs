@@ -204,7 +204,7 @@ Some message types do not need and therefore do not ask for headers.
 
 #### Button text {#buttons}
 
-When available for your message type, you can have up to two buttons appear below your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
+When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
@@ -295,7 +295,7 @@ You can add [key-value pairs][19] to send extra custom fields to user devices.
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further guidance on how to best use our tools to build in-app messages.
+Build the remainder of your campaign; see the following sections for further guidance on how to best use our tools to build in-app messages.
 
 #### Choose a trigger
 

@@ -54,7 +54,7 @@ noindex: true
 
 ## Suggested Metrics
 
-It's time to talk about measurement! How should the Braze User look to measure their campaign? What conversion metrics should they set up? List them below.
+It's time to talk about measurement! How should the Braze User look to measure their campaign? What conversion metrics should they set up? List them in the following chart.
 
 | Metric | Description | Data Type |
 | ------ | ----------- | --------- |

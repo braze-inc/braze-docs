@@ -98,7 +98,7 @@ Use the following attribute pairings:
 {% endtab %}
 {% tab User Claims %}
 
-On the **Set up Single Sign-On with SAML** page, click **Edit** to open the **User Attributes** dialog. Then, edit the claims according to the proper format, shown below.
+On the **Set up Single Sign-On with SAML** page, click **Edit** to open the **User Attributes** dialog. Then, edit the claims according to the proper format.
 
 ![User Attributes dialog in Azure]({% image_buster /assets/img/azure_11.png %})
 

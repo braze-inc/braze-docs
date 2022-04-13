@@ -13,13 +13,13 @@ description: "This page includes several reading paths that will enable you to b
 
 Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact—just you letting your customers know that you care about what they want from you.
 
-Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
+Because of Braze's beautiful complexity, we recommend the several reading paths that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
 
 {% alert tip %}
 Don't forget that you can always access and take [LAB courses](https://lab.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
 {% endalert %}
 
-Choose from the paths below to fit your needs and get reading!
+Choose from the following paths to fit your needs and get reading!
 
 ## Braze beginner
 
@@ -77,7 +77,7 @@ Learn how to interact with your customers in a way that feels personal and human
 
 ## Messaging maestro
 
-Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel below. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
+Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
 
 Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your Account Manager or Customer Success Manager for more information.
 

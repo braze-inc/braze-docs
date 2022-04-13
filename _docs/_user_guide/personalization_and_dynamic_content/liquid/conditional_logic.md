@@ -127,7 +127,7 @@ Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 1
 
 After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
 
-When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the examples listed below for each data type.
+When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 
 ![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.][20]{: style="max-width:80%;"}
 

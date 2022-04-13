@@ -27,14 +27,14 @@ hidden: true
 
 ## Accessing the integrations page
 
-After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu found at the top right corner of the screen as shown below.
+After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu found at the top right corner of the screen.
 
 ![NPAW drop-down]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## Configuring your integration
 
 Once you have accessed the Integration page, scroll down until you
-see the **Braze** integration option. After clicking on this, it will expand and offer a number of required parameters to fill out as shown below:
+see the **Braze** integration option. After clicking on this, it will expand and offer a number of required parameters to fill out:
 
 ![NPAW integration]({% image_buster /assets/img/npaw_integration.png %})
 

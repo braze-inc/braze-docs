@@ -60,14 +60,14 @@ With the template installed, add the Braze tag to your GTM-SS container.
 
 1. From the **Tag** tab, select **New**, then select the **Braze Tag** as your tag configuration.
 2. Select your desired trigger for the events you wish to forward to Braze.
-3. Enter the required parameters and configure your tag (more details in the Customization section below).
+3. Enter the required parameters and configure your tag (more details can be found in the following Customization section).
 4. Click **Save**.
 
 ## Customization
 
 ### Required tag parameters
 
-The table below lists the required tag parameters you must include in your Braze tag setup.
+The following table lists the required tag parameters you must include in your Braze tag setup.
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -78,7 +78,7 @@ The table below lists the required tag parameters you must include in your Braze
 
 ### Event mapping
 
-The table below lists event mapping options concerning the Snowplow event as claimed by the [Snowplow client][2].
+The following table lists event mapping options concerning the Snowplow event as claimed by the [Snowplow client][2].
 
 | Mapping option | Description |
 | --------- | ----------- |
@@ -92,7 +92,7 @@ The table below lists event mapping options concerning the Snowplow event as cla
 
 #### Event property rules
 
-If you want to include other properties from the client event and map them onto the Braze event, reference the following rules in the table below: 
+If you want to include other properties from the client event and map them onto the Braze event, reference the rules in the following table: 
 
 | Event property rules | Description |
 | --------- | ----------- |

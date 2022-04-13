@@ -32,7 +32,7 @@ The Promotions script will only appear if your email lands in the Gmail **Promot
 
 ### Customize your card
 
-You can customize many variables for your card, which will map to the locations shown in the card layout below.
+You can customize many variables for your card, which will map to the following locations shown in the card layout.
 
 ![Card layout that maps out the parameters for the company logo, sender, subject line, discount offer and discount code, and related images.][4]
 

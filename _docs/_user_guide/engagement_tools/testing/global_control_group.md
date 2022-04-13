@@ -40,7 +40,7 @@ From the dashboard, go to **Global Message Settings** under **Engagement**, and 
 
 Input a percentage for your control group and click **Save**. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
+The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
 ![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
 

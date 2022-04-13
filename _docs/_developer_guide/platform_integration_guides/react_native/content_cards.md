@@ -29,7 +29,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 ## Test displaying sample Content Card
 
-Follow the steps below to test a sample content card.
+Follow these steps to test a sample Content Card.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new Content Card campaign.

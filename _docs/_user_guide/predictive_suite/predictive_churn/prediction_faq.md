@@ -41,7 +41,7 @@ A Prediction Audience definition cannot exceed 100 million users. If you see a m
 ### Prediction has poor quality
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
-If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% and below, you may need to edit your Churn and Prediction Audience definitions to be more specific or have different time windows. 
+If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your Churn and Prediction Audience definitions to be more specific or have different time windows. 
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
 
@@ -53,7 +53,7 @@ For example, if you define churn as not starting a session in the past ten days,
 
 ## Data considerations
 
-Listed below are some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
+The following lists some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
 
 - What high-value actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.

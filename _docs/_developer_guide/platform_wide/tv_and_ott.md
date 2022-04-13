@@ -21,7 +21,7 @@ Braze offers different engagement channels for a number of different TV Operatin
 
 ## Platforms and features
 
-Below is a list of features and messaging channels supported today.
+The following lists features and messaging channels supported today.
 
 <style>
 #tv-feature-table td,
@@ -144,7 +144,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
-- &#42; Push Notifications (Manual Integration Required, See Below)
+- &#42; Push Notifications (Manual Integration Required)
 
 For more information, visit the [Android SDK Integration Guide][2].
 

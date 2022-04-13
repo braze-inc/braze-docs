@@ -11,7 +11,7 @@ tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
-glossary_filter_text: "Select Categories below to narrow the glossary:"
+glossary_filter_text: "Select a catagory to narrow the glossary:"
 
 # category to icon/fa or image mapping
 glossary_tags:

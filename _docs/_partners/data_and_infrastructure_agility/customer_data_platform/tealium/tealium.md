@@ -21,7 +21,7 @@ The Braze and Tealium integration allows you to track your users and route data 
 
 {% tabs %}
 {% tab EventStream %}
-Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).
+Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. The following are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).
 - Data sources (installation and data collection)
 - Live events (real-time data inspection)
 - Event specifications and attributes (data layer requirements and validation)
@@ -37,7 +37,7 @@ Tealium AudienceStream is an omnichannel customer segmentation and real-time act
 {% tab iQ Tag Management %}
 Tealium iQ allows you to trigger code in your apps by using a tag in the Tealium iQ Tag Management UI. This tag will collect, control, and deliver event data from mobile and web platforms, allowing you to configure a native Braze implementation without adding Braze-specific code to your apps. Users can choose to integrate Mobile Remote Commands through iQ Tag Management or JSON configuration files (recommended Tealium approach). Users using the Braze Web SDK must integrate through the web iQ tag.
 
-To learn more about the pros and cons of each method, refer to our [Tealium iQ tag manager](#mobile-remote-commands) section below.
+To learn more about the pros and cons of each method, refer to the following [Tealium iQ tag manager](#mobile-remote-commands) section.
 {% endtab %}
 {% endtabs %}
 

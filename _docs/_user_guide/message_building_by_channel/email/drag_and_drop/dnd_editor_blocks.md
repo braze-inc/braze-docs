@@ -31,7 +31,7 @@ To use them, drag a content block inside a column. It will auto-adjust to the co
 
 ## Block type properties
 
-Details for each block type are provided below.
+Details for each block type are provided in the following tables.
 
 ### Title
 
