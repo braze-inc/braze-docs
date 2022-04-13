@@ -252,7 +252,7 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The large and small icons pictured below are examples of properly designed icons:
+The following large and small icons pictured are examples of properly designed icons:
 
 ![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
@@ -540,7 +540,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - It should perform your custom logic for each of these cases. If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_braze_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
-For a detailed custom receiver example, see the code snippets below:
+For a detailed custom receiver example, see the following code snippets:
 
 {% tabs %}
 {% tab JAVA %}

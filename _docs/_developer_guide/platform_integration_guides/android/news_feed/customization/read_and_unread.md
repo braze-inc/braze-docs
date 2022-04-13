@@ -13,7 +13,7 @@ channel:
 
 # Read and unread indicators
 
-Braze allows you to optionally toggle on unread and read indicators on News Feed cards as pictured below:
+Braze allows you to optionally toggle on unread and read indicators on News Feed cards, as pictured in the following:
 
 ![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or grey triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
 

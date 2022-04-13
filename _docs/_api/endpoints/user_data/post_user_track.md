@@ -46,7 +46,7 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 ### Request parameters
 
 {% alert important %}
-For each of the request components listed below, one of `external_id`, `user_alias`, or `braze_id` is required.
+For each of the request components listed, one of `external_id`, `user_alias`, or `braze_id` is required.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |

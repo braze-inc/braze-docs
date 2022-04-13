@@ -28,7 +28,7 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 
 ## SDK integration
 
-To integrate Braze and Gimbal, you must implement the Gimbal Location SDK and create a Gimbal manager account. The integrations for Android, FireOS, and iOS below will create a unique custom event for each new place a user enters, these events can then be used for triggering and retargeting in your campaigns and Canvases.
+To integrate Braze and Gimbal, you must implement the Gimbal Location SDK and create a Gimbal manager account. The following integrations for Android, FireOS, and iOS will create a unique custom event for each new place a user enters, these events can then be used for triggering and retargeting in your campaigns and Canvases.
 
 If you anticipate creating more than 50 places, we recommend creating a generic `Places Entered` custom event and adding the place name as an event property. 
 

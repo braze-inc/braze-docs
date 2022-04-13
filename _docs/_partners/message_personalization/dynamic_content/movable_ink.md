@@ -33,7 +33,7 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 
 ## Supported Movable Ink capabilities
 
-Intelligent Creative has many offerings that Braze users can take advantage of. Below is a list of what is supported. 
+Intelligent Creative has many offerings that Braze users can take advantage of. The following list shows what capabilities are supported. 
 
 | Movable Ink Capability | Feature | Rich Push Notification | In-App Messaging / Content Cards | Details |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |
@@ -110,7 +110,7 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 1. In the Braze Platform:
 	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.
-	- iOS Push: Paste URL in **Rich Notification Media** link field, and directly below, denote the file format you are using.
+	- iOS Push: Paste URL in **Rich Notification Media** link field and denote the file format you are using.
 	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br><br>
 2. To make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 

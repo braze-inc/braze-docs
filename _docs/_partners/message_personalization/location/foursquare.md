@@ -48,7 +48,7 @@ Once the integration is set up, you can set up a campaign or Canvas that will ac
 
 To send a campaign that will send messages based on a set location:
 - Create a Braze campaign or Canvas that sends with **Action-Based Delivery**
-- For your trigger, use a custom event of `arrival` with an event property filter for `locationType` as shown below.
+- For your trigger, use a custom event of `arrival` with an event property filter for `locationType` as shown in the following screenshot.
 
 ![An action-based campaign in the delivery step showing "arrival" selected as the "perform custom event" option, where "locationType" equals "home".]({% image_buster /assets/img_archive/action-based-campaign.png %})
 

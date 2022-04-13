@@ -36,7 +36,7 @@ Do not include any of the following information in the JSON composer:
 * Fields related to push token imports
 {% endalert %}
 
-As an example, users who receive the User Update Step below will have the VIP Member attribute set to `true`.
+As an example, users who receive the following User Update Step will have the VIP Member attribute set to `true`.
 
 ![][3]
 

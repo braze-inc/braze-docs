@@ -49,8 +49,8 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ### Step 1: Configure your site's service worker
 
-- If you don't already have a Service Worker, create a new file named `service-worker.js` with the snippet below, and place it in the root directory of your website.
-- Otherwise, if your site already registers a service worker, add the snippet below to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) initialization option to `true` when initializing the Web SDK.
+- If you don't already have a Service Worker, create a new file named `service-worker.js` with the following snippet, and place it in the root directory of your website.
+- Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) initialization option to `true` when initializing the Web SDK.
 
 ```java
 self.importScripts('https://js.appboycdn.com/web-sdk/3.5/service-worker.js');

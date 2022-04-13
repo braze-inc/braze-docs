@@ -78,7 +78,7 @@ Note that this will not happen until we receive data about an attributed install
 
 #### Available data fields
 
-Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters as described below.
+Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters.
 
 | AppsFlyer data field | Braze segment filter |
 | -------------------- | --------------------- |
@@ -112,7 +112,7 @@ You can simply create your OneLink tracking URL in AppsFlyer and directly insert
 
 {% tabs %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -123,7 +123,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 
 {% raw %}
 ```

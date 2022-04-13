@@ -14,13 +14,13 @@ An API request with any fields in the Attributes Object will create or update an
 ```json
 {
   // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID below,
+  "external_id" : (optional, string) see External User ID,
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
-  // See note below regarding anonymous push token imports
+  // See note regarding anonymous push token imports
   "push_token_import" : (optional, boolean),
   // Braze User Profile Fields
   "first_name" : "Jon",

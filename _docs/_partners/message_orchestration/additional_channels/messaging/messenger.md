@@ -41,7 +41,7 @@ For those who require additional help getting your bot set up, a full Messenger 
 
 To send messages on Facebook Messenger, you need to collect your users' page-specific IDs (PSIDs) to identify your user and interact with them consistently. PSIDs are not the same as the user's Facebook ID. Facebook creates this identifier any time you message a customer or when a customer messages you.
 
-PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. Once the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID will be included in the `sender.id` property of the webhook event, so your bot can identify who took the action (shown below).
+PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. Once the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID will be included in the `sender.id` property of the webhook event, so your bot can identify who took the action.
 
 ```
 {

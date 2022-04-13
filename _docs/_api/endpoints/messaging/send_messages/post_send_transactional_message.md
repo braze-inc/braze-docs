@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_send_id": (optional, string) see external_send_id below,
+  "external_send_id": (optional, string) see the following request parameters,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
   "recipients": (required, object)
     [{
@@ -106,7 +106,7 @@ To get started using the Transactional HTTP Event Postback, navigate to **Manage
 ```json
 {
   "dispatch_id": (string, Out-of-the-box generated Unique ID of the instance of this send),
-  "status": (string, Current status of message from fields below)
+  "status": (string, Current status of message from the following message status table,
   "metadata" : (object, additional information relating to the execution of an event)
    {
      "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
@@ -123,6 +123,8 @@ To get started using the Transactional HTTP Event Postback, navigate to **Manage
    }
 }
 ```
+
+#### Message status
 
 |  Status | Description |
 | ------------ | ----------- |

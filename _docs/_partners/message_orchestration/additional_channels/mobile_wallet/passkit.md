@@ -106,14 +106,14 @@ The second code snippet you must add to your Content Block captures the URL to b
 ```
 {% endraw %}
 
-Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet, shown below. 
+Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet:
 {% raw %}
 ```liquid
 {% capture sig %}{{url | hmac_sha1: "Project_Secret"}}{% endcapture %}
 ```
 {% endraw %}
 
-Finally, append the signature to the full URL using the fifth code snippet, shown below.
+Finally, append the signature to the full URL using the fifth code snippet:
 {% raw %}
 ```liquid
 {% capture longUrl %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}{% endcapture %}
@@ -199,7 +199,7 @@ The output URL will be long. The reason for this is that it contains all the pas
 
 ## Update pass using the PassKit webhook
 
-Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the links below for information on useful PassKit endpoints. 
+Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the following links for information on useful PassKit endpoints. 
 - [Member projects][12]
 - [Coupon projects][13]
 - [Flights projects][14]

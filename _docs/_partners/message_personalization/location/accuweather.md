@@ -58,7 +58,7 @@ Enjoy the weather!
 
 ![A Connected Content push message that says "It's raining! Grab an Umbrella!" shown on an Android device][17]{: style="max-width:40%"}
 
-A breakdown of the two Connected Content calls can be found below.
+A breakdown of the two Connected Content calls can be found in the following examples.
 
 {% tabs %}
 {% tab Locations %}

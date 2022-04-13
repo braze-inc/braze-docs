@@ -56,7 +56,7 @@ Inkit requires an `HTTP Header` for authorization that includes your Inkit API k
 
 #### Request body
 
-Ensure that your Liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
+Ensure that your Liquid matches the proper custom attributes associated with the following required and optional fields. You can also add custom data fields to any request.
 
 ```json
 {% raw %}{

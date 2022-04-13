@@ -36,7 +36,7 @@ Before creating a model, you must determine your use case for this integration. 
 - Provide a list of items or search results tailored to each user, increasing engagement by showing items by relevancy to the user.
 - Find recommendations for similar items, helping users discover new things.
 
-In the guide below, we will focus on the user personalized recommendations recipe.
+In the following guide, we will focus on the user personalized recommendations recipe.
 
 {% endtab %}
 {% tab Datasets %}
@@ -103,7 +103,7 @@ Before running a Braze campaign, you must create a service that can serve these 
 ### Example Content Card campaign
 
 Let's run a Content Card campaign with the first recommended item from the list.<br><br>
-In the examples below, we are going to query
+In the following examples, we are going to query
 `GET http://<service-endpoint.com>/recommendations?user_id=user123` endpoint with a `user_id` parameter which will return a list of recommended items:
 
 ```json
