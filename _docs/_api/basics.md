@@ -24,7 +24,7 @@ The following lists a brief overview of terms you may see in the Braze REST API 
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint".
