@@ -10,7 +10,7 @@ channel: email
    
 # Managing email subscriptions
 
-Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions][22] and targeting campaigns at users with particular subscription states. These tools are critical for compliance with [anti-spam laws][23].
+Make sure you are familiar with the tools that Braze provides for [managing user email subscriptions][22] and targeting campaigns at users with particular subscription states. These tools are critical for compliance with [anti-spam laws][23].
 
 ## Unsubscribed email addresses
 
