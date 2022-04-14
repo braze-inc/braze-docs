@@ -10,7 +10,7 @@ description: "This article contains release notes for October 2017."
 
 ## Push stories
 
-On iOS and Android, you can now [create notifications][74] with multiple pages, each of which contain an image, click behavior, and an optional title and subtitle. This feature requires iOS SDK 3.2.1 and Android SDK 2.2.0. To gain access to this new product, contact your Customer Success Manager, Account Manager, or open a [support ticket][support].
+On iOS and Android, you can now [create notifications][74] with multiple pages, each of which contains an image, click behavior, and an optional title and subtitle. This feature requires iOS SDK 3.2.1 and Android SDK 2.2.0. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket][support].
 
 ## Currents
 
