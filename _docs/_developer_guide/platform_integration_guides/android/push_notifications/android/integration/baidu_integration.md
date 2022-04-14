@@ -61,7 +61,7 @@ Upon setting up your application, you will be taken to a console that displays i
 
 ![][29]
 
-On the following page, enter your app package name (e.g. `com.braze.sample`) and specify whether to cache messages and, if so, how long (in hours). This indicates to Baidu how long to continue to attempt sending messages to offline users. Click **保存设置** (save settings) to save.
+On the following page, enter your app package name (e.g., `com.braze.sample`) and specify whether to cache messages and, if so, how long (in hours). This indicates to Baidu how long to continue to attempt sending messages to offline users. Click **保存设置** (save settings) to save.
 
 ![][39]
 

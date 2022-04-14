@@ -46,7 +46,7 @@ You can choose the type of delay before the next message in your Canvas. You can
 
   The **Until a specific day of the week** option allows you to hold users in the step until a specific day of the week, at a specific time. For example, you can delay users until the next time Thursday arrives at 4pm in the company’s timezone. 
 
-  To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g. Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
+  To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g., Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
   {% endtab %}
 {% endtabs %}
 

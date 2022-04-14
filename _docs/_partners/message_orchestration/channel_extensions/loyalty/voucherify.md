@@ -78,7 +78,7 @@ If a user redeems the code, you’ll see the redemption details in your Voucheri
 ![Code redemption]({% image_buster /assets/img/voucherify-redemption.png %})
 
 {% alert important %}
--   When testing the email template, be aware of the Connected Content cache (at least 5 minutes). If you want each test preview to publish a new voucher, you can omit the cache by appending a query parameter to the URL, e.g. {%raw%}`?t=1`{%endraw%}, and increment the number with each test.<br><br>
+-   When testing the email template, be aware of the Connected Content cache (at least 5 minutes). If you want each test preview to publish a new voucher, you can omit the cache by appending a query parameter to the URL, e.g., {%raw%}`?t=1`{%endraw%}, and increment the number with each test.<br><br>
 -   While setting up publication `source_id`, you can differentiate your users by using two different variables: {%raw%}`${user_id}`{%endraw%} which is an external id (seen as source id in a customer profile in Voucherify) and {%raw%}`${braze_id}`{%endraw%} which is an internal id.  
 {% endalert %}
 

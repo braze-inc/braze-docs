@@ -13,7 +13,7 @@ page_type: reference
 
 ## What is Postman?
 
-Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g. using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
+Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g., using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
 View or download our [Postman Collection](https://www.getpostman.com/collections/29baa41d7ba930673ef0) to get started.
 
@@ -35,7 +35,7 @@ To set up your own environment, perform the following steps:
 
 1. From the **Workspaces** tab, select **Environments**.
 2. Click the **+** plus button to create a new environment.
-3. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8].
+3. Give this environment a name (e.g., "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your [Braze instance][7] and [Braze REST API Key][8].
 4. Click **Save**.
 
 {% alert note %}
