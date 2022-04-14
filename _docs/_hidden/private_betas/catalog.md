@@ -39,7 +39,7 @@ First, create your CSV file. The CSV file must have one column with a header of 
 We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
-Need more space to accomodate for your CSV files? Contact your Braze Account Manager for more information about upgrading your catalogs.
+Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
 {% endalert %}
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
