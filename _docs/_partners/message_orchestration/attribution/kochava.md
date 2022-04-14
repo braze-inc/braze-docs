@@ -50,7 +50,7 @@ In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you 
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Kochava, the status connection indicator on the Kochava technology partners page in Braze will change to green. A timestamp of the last successful request will also be included. 
+Once Braze receives attribution data from Kochava, the status connection indicator on the Kochava technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
 
 Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Kochava postback, are ignored by our API and are not counted when determining if a successful connection was established.
 

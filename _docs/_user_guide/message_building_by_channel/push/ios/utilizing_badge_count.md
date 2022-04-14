@@ -12,6 +12,7 @@ channel:
 - news feed
 
 ---
+
 # Utilizing badge count
 
 The iOS badge count displays the number of unread notifications within your application, taking the form of a red circle in the upper-right hand corner of the app icon. In recent years, badging has come to be an effective means for re-engaging app users.

@@ -59,7 +59,7 @@ In Braze, navigate to **Technology Partners** and select **Branch**. Here, you w
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze will change to green. A timestamp of the last successful request will also be included. 
+Once Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
 
 Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Branch postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
