@@ -12,7 +12,7 @@ hidden: true
 The Canvas V2 workflow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas V2, you can expect to easily view and use [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) in the Canvas builder. 
 
 {% alert important %}
-Canvas V2 is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Canvas V2 is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## What can I expect?
@@ -85,8 +85,5 @@ For Segments and filters, the Canvas V2 Message Step has a new feature called De
 
 Exception events in Canvas V2 are created using Action Paths. Action Paths only support “after a X time window” and not “in X time” or “on the next X time".
 
-## I'm interested! How do I access Canvas V2?
-
-Support for Canvas V2 is currently in early access. Contact your Braze account manager if you're interested in participating in the early access!
 
 [1]: {% image_buster /assets/img_archive/canvas_v2_experience.png %}
