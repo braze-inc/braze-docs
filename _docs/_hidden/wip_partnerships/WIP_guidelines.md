@@ -28,7 +28,7 @@ To contribute to Braze docs, you must have a GitHub account to commit changes an
 
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
 1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork** in the upper right corner of the page. <br><br>
-2. Next, within this newly forked repo, click the green **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
+2. Next, within this newly forked repo, click the **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
 3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
