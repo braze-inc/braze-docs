@@ -597,7 +597,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e. tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

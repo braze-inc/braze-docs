@@ -77,7 +77,7 @@ glossaries:
     description: Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
     calculation: Count
   - name: "Other Opens"
-    description: Includes emails that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e. the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
+    description: Includes emails that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e., the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
     calculation: Count
   - name: "Click to Open Rate"
     description: The percentage of unique emails opened that have been clicked at least once.

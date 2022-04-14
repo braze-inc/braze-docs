@@ -24,7 +24,7 @@ Use this report to answer key engagement questions, for example:
 - Which push notifications within this Canvas had the highest open rates?
 - Which steps in this group of Canvases had the most conversions?
 - Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion? Did the changes work?
-- How do different delivery methods (e.g. 3 scheduled pushes vs. 3 action-based pushes vs. 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
+- How do different delivery methods (e.g., 3 scheduled pushes vs. 3 action-based pushes vs. 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}

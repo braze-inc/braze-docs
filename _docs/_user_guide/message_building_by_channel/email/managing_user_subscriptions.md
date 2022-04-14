@@ -154,7 +154,7 @@ When creating a custom footer, Braze suggests you use attributes for personaliza
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e. ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e. ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
+Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 
 You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you choose not to write a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
@@ -166,7 +166,7 @@ When a user clicks on an unsubscribe URL in an email, they are taken to a defaul
 
 Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [email Settings][10] page.
 
-We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 

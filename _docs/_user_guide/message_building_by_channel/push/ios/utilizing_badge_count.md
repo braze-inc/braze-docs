@@ -12,6 +12,7 @@ channel:
 - news feed
 
 ---
+
 # Utilizing badge count
 
 The iOS badge count displays the number of unread notifications within your application, taking the form of a red circle in the upper-right hand corner of the app icon. In recent years, badging has come to be an effective means for re-engaging app users.
@@ -33,7 +34,7 @@ In order to optimize the re-engagement power of badging, it is crucial that you 
 ### Keep the badge count low
 Research shows that once the badge count increases past double digits, users generally lose interest in the updates and often stop using the app altogether.
 
-> There can be exceptions to this rule depending on the nature of your app (e.g. email and group messaging apps).
+> There can be exceptions to this rule depending on the nature of your app (e.g., email and group messaging apps).
 
 ### Limit the things a badge count can represent
 When badging, you want to make the notifications as clear and direct as possible. By limiting the number of things that a badge notification can represent, you can provide your users with a sense of familiarity with your app's features and updates.

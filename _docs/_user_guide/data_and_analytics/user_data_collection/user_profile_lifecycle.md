@@ -33,7 +33,7 @@ Once a user is recognizable in your app (by providing a form of user ID or email
 
 More benefits of user IDs include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g. not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
 - Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using our [User API]({{site.baseurl}}/api/endpoints/user_data/), and target users with transactional messages using our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/).
 - Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.

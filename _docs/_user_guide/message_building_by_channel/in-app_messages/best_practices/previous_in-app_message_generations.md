@@ -75,7 +75,7 @@ Email capture messages allow you to easily prompt users of your site to submit t
 
 ![Email capture message]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
->  To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+>  To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
 **Customizable Features**
 
@@ -97,7 +97,7 @@ HTML in-app messages support a JavaScript "bridge" interface to the Braze Web SD
 
 {% include archive/appboyBridge.md platform="web" %}
 
-Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the dashboard, while a link with a button id of 1 will be represented as "Button 2."
+Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g., `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g., `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the dashboard, while a link with a button id of 1 will be represented as "Button 2."
 
 >  To enable HTML in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 

@@ -14,7 +14,7 @@ description: "This article outlines details about the Users by Segment Braze end
 /users/export/segment
 {% endapimethod %}
 
-This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
+This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
 
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/get_segment/).
 
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g., ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
 
 ## Request parameters
@@ -158,7 +158,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g., 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```

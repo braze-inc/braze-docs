@@ -14,7 +14,7 @@ description: "This article outlines details about the Users in Global Control Gr
 /users/export/global_control_group
 {% endapimethod %}
 
-This endpoint allows you to export all the users within the Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
+This endpoint allows you to export all the users within the Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -62,13 +62,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
     "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-    "fields_to_export" : (required, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'],
+    "fields_to_export" : (required, array of string) name of user data fields to export, e.g., ['first_name', 'email', 'purchases'],
     "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (e.g. [‘first_name’, ‘email’, ‘custom_attributes’]).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (e.g.,[‘first_name’, ‘email’, ‘custom_attributes’]).
 {% endalert %}
 
 ## Request parameters
@@ -131,7 +131,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g.,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```

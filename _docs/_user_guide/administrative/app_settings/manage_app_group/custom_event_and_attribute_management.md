@@ -67,7 +67,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 |------------------|-------------|
 | Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
 | Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
-| Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
+| Number | Integers or Floats (i.e., `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more information on specific filter options exposed by different data type comparisons check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].

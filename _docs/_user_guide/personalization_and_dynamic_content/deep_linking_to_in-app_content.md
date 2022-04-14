@@ -20,7 +20,7 @@ There are three parts to this:
 
 Deep links are custom URIs that link to a specific part of the app and contain all three of these parts. The key is defining a custom scheme. `http:` is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs or dots. Practically speaking, there is no central registry to prevent conflicts, so it is a best practice to include your domain name in the scheme. For example, `twitter://` is the iOS URI to launch Twitter's mobile app.
 
-Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (e.g. `?foo=1&bar=2`). For the Twitter example, `twitter://user?screen_name=[id]` would be utilized to launch a specific profile in the app.
+Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (e.g., `?foo=1&bar=2`). For the Twitter example, `twitter://user?screen_name=[id]` would be utilized to launch a specific profile in the app.
 
 These deep links are a powerful tool when used in tandem with the Braze [News Feed][11]. Providing deep links as the URI within News Feed items allows you to use the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be used to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
 
@@ -34,11 +34,11 @@ Keep in mind that enabling these deep links requires some additional setup withi
 
 [UTM (Urchin Traffic Manager) tags][4] allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
 
-- `utm_source`: the identifier for the source of the traffic (e.g. `my_app`)
-- `utm_medium`: the campaign medium (e.g. `newsfeed`)
-- `utm_campaign`: the identifier for the campaign (e.g. `spring_2016_campaign`)
-- `utm_term`: identifier for a paid search term that brought the user to your app or website (e.g. `pizza`)
-- `utm_content`: an identifier for the specific link/content that the user clicked on (e.g. `toplink` or `android_iam_button2`)
+- `utm_source`: the identifier for the source of the traffic (e.g.,`my_app`)
+- `utm_medium`: the campaign medium (e.g.,`newsfeed`)
+- `utm_campaign`: the identifier for the campaign (e.g.,`spring_2016_campaign`)
+- `utm_term`: identifier for a paid search term that brought the user to your app or website (e.g.,`pizza`)
+- `utm_content`: an identifier for the specific link/content that the user clicked on (e.g.,`toplink` or `android_iam_button2`)
 
 UTM tags can be embedded into both regular HTTP (web) links and deep links and tracked using Google Analytics.
 

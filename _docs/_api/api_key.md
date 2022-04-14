@@ -51,7 +51,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `users.delete` | Delete any user. |
 | `users.alias.new` | Create a new alias for an existing user.  |
 | `users.identify` | Query for user profile information by user ID.  |
-| `users.export.ids` | Query for user profile information by identifier e.g. device_id, email_address, external_id.  |
+| `users.export.ids` | Query for user profile information by identifier e.g., device_id, email_address, external_id.  |
 | `users.export.segment` | Query for user profile information by Segment. |
 | `users.external_ids.rename` | Rename a user's existing external ID. |
 | `users.external_ids.remove` | Remove a user's deprecated external ID. |

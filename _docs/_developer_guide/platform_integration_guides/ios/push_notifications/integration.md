@@ -58,7 +58,7 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the **Enable** check box and click **Create Certificate** under the **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
-6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
+6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
 **Step 2: Export Certificate**

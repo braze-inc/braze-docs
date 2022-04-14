@@ -27,7 +27,7 @@ This integration supports iOS and Android apps.
 |---|---|
 | Jampp account | A [Jampp account](https://www.jampp.com/) is required to take advantage of this partnership. |
 | Android app ID | Your unique Braze application identifier for Android (i.e., "com.example"). |
-| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e., "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
 | Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

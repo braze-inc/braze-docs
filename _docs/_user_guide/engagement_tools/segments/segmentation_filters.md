@@ -407,7 +407,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    description: Segment your users by whether or not their email address has hard bounced (i.e., the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup

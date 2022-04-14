@@ -94,21 +94,21 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
 | `user_alias` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
 | `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias` is used |
-| `first_name` | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
-| `last_name` | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
-| `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
-| `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g. `GB`). | No |
-| `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
+| `first_name` | String | The first name of your users as they have indicated (e.g., `Jane`). | No |
+| `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
+| `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
+| `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g., `GB`). | No |
+| `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g., `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
-| `home_city` | String | The home city of your users as they have indicated (e.g. `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). <br>Refer to our [list of accepted languages][1]. | No |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g. `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
+| `home_city` | String | The home city of your users as they have indicated (e.g., `London`). | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g., `en`). <br>Refer to our [list of accepted languages][1]. | No |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g., `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.   | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user. | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
-| `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g. `America/New_York` or `Eastern Time (US & Canada)`).  | No |
-| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g. `2019-11-20T18:38:57`) | No |
+| `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
+| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g., `2019-11-20T18:38:57`) | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -232,7 +232,7 @@ Values encapsulated in single (‘’) or double (“”) quotation marks will b
 
 ### Data imported as custom attribute
 
-If you are seeing a piece of default user data (e.g. `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
+If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
 
 {% alert important %}
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).

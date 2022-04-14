@@ -221,7 +221,7 @@ Since spam filters watch for both an HTML and a plain text version of a message,
 
 ### Setting from and reply-to addresses
 
-When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e. `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e., `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
 
 ## Styling tips
 
