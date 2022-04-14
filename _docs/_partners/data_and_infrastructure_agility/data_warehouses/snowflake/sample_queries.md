@@ -19,7 +19,7 @@ A common query might be to filter events by time.
 
 You can filter them by the time of occurrence. Event tables are clustered by `time` which makes filtering by `time` performant:
 ```sql
--- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
+-- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE time > 1555354920

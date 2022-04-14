@@ -23,5 +23,5 @@ For OTT devices:
 
 * In-app messages that require touch mode (such as Slideup) are disabled on OTT.
 * The currently selected or focused item, such as a button or close button, will be highlighted.
-* Body clicks on the in-app message itself, i.e. not on a button, are not supported.
+* Body clicks on the in-app message itself, i.e., not on a button, are not supported.
 

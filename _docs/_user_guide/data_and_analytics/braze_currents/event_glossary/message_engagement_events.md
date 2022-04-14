@@ -325,7 +325,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) description of the user’s system and browser for the event,
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. 
+  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. 
 }
 ```
 #### Property details

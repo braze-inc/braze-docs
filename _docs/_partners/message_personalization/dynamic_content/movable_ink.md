@@ -102,7 +102,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink da
 
 ![The page that appears once you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e. {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
+Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e., {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e., {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Step 4: Braze experience
 

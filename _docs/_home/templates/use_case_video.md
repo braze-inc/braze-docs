@@ -65,7 +65,7 @@ It's time to talk about measurement! How should the Braze User look to measure t
 
 ## How to Build This Campaign/Canvas
 
-When you write this portion of the article, break down what they should be doing by Strategy and Step. You can make this obvious by naming the steps as follows. Don't explicitly write out the Steps (i.e. Click this button; click that button). Instead, instruct and guide them by describing steps that accomplish goals of the Use Case.
+When you write this portion of the article, break down what they should be doing by Strategy and Step. You can make this obvious by naming the steps as follows. Don't explicitly write out the Steps (i.e., Click this button; click that button). Instead, instruct and guide them by describing steps that accomplish goals of the Use Case.
 
 ### Step 1: Set Up Your Canvas for Lapsing Users (Advise on Audience)
 

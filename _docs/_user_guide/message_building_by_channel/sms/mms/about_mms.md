@@ -35,7 +35,7 @@ Most US and Canadian carriers support receiving and displaying multimedia assets
 
 ### Subscription groups
 
-A [Subscription Group][1] is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. A whitelisting provisioning process is required to enable your short-code for MMS sending capabilities. Please speak with your Braze account manager regarding enabling this feature.
+A [Subscription Group][1] is a collection of sending phone numbers (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. A whitelisting provisioning process is required to enable your short-code for MMS sending capabilities. Please speak with your Braze account manager regarding enabling this feature.
 
 ### MMS message limits and throughput
 

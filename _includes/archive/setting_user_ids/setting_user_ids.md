@@ -9,7 +9,7 @@ If such an identifier is not available, Braze will assign a unique identifier to
 {% endalert %}
 
 {% alert warning %}
-These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
+These User IDs should be private and not easily obtained (e.g., not a plain email address or username).
 
 For additional security, we recommend adding our [SDK authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication/) feature to prevent user impersonation.
 {% endalert %}

@@ -332,7 +332,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
 
 ### Enforcement options {#enforcement-options}
 
@@ -403,7 +403,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 #### Why does this feature use public/private keys instead of Shared Secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
+When using Shared Secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
 Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
 
