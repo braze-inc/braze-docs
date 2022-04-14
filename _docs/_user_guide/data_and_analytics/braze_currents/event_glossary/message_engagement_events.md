@@ -503,7 +503,7 @@ Email, Subscription
 This event occurs when the end-user has clicked “unsubscribe” from the email.
 
 {% alert important %}
-Note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, **not** when the user changes state to unsubscribed.
+Note that the `Unsubscribe` event is actually a specialized click event that is fired when your user clicks on the unsubscribe link in the email, not when the user changes state to unsubscribed.
 {% endalert %}
 
 ```json
