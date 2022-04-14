@@ -32,7 +32,7 @@ You will need to ensure that you have the following items created and/or complet
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's Business Manager.<br><br>Ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
+| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
 | Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
