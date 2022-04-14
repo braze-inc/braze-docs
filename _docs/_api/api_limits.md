@@ -72,7 +72,7 @@ Header Name             | Description
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to ensure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
-If you have questions about API limits contact your Customer Success Manager or open a [support ticket][support].
+If you have questions about API limits, contact your Customer Success Manager or open a [support ticket][support].
 
 ### Optimal delay between endpoints
 
