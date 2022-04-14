@@ -80,7 +80,7 @@ Define the ticket details like type, subject, and status in your webhook payload
 
 Your raw text will automatically highlight if it is an applicable Braze tag.
 
-Preview your request in the left-hand panel or navigate to the **Test** tab, where you can select a random user, an existing user or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 Lastly, check if the ticket has been created on the Zendesk side.
 

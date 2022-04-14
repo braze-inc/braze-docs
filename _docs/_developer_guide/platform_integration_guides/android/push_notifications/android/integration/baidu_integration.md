@@ -55,7 +55,7 @@ On the following page, enter your application name. The following two checkboxes
 
 ![][26]
 
-Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Next, click on the cloud push link in the menu on the left-hand side of the console. On the following page, click **推送设置** (set up push).
+Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Next, navigate to **云推送** (cloud push) in the sidebar. On the following page, click **推送设置** (set up push).
 
 ![][14]
 

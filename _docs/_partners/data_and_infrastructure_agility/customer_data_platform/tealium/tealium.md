@@ -144,7 +144,7 @@ If you wish to use this data and these features, consider our [side-by-side]({{s
 ### Step 1: Set up a Source
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
+1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
 2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. From the **Event Specifications** options, choose the [event specs](https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
 4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** once finished.<br>
@@ -163,7 +163,7 @@ Refer to [Data Sources](https://community.tealiumiq.com/t5/Customer-Data-Hub/Dat
 
 A connector is an integration between Tealium and another vendor used to transmit data. These connectors contain actions that represent their partner's supported APIs. 
 
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
+1. From the sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
 2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
 3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Configuration comprises three steps: source, configuration, and action.
 
@@ -238,7 +238,7 @@ Make sure to **Save / Publish** your connector once finished. The actions you co
 
 After your connector is up and running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure that you have added the Tealium Tools browser extension.
 
-1. To start a new trace, select **Trace** on the left sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
+1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
 2. Open the browser extension and enter the Trace ID into AudienceStream Trace.
 3. Examine the real-time log.
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.

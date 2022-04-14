@@ -48,9 +48,9 @@ To send test push notifications and/or in-app messages, you need to target your 
 
 Finish confirming your campaign and launch it to test your push notification and in-app messages.
 
->  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to select **Allow users to become re-eligible to receive campaign** under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
 
->  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, there is a "Send Test" button in the bottom left corner.
+>  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, click **Send Test** to send your drafted email to your inbox.
 
 ## Sending a test email message
 
