@@ -11,6 +11,10 @@ hidden: true
 
 The Canvas V2 workflow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas V2, you can expect to easily view and use [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) in the Canvas builder. 
 
+{% alert important %}
+Canvas V2 is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+{% endalert %}
+
 ## What can I expect?
 
 When using Canvas V2, you can expect the following:
@@ -25,17 +29,17 @@ To use the Canvas V2 workflow, go to **Canvas** under the **Engagement** tab. Cl
 
 ![][1]{: style="max-width:85%"}
 
-As you’re building or editing your Canvas, if you ever wanted to switch back to Canvas V1, click **Switch to Canvas V1 Workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
+As you’re building or editing your Canvas, if you ever want to switch back to Canvas V1, click **Switch to Canvas V1 Workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
 
 {% alert note %}
-Switching from Canvas V2 to V1 is allowed only if you do not use Canvas V2 features. Switching from Canvas V1 to V2 will only work if there are no full steps in your Canvas.
+Switching from Canvas V2 to V1 is allowed only if you do not use Canvas V2 features. Switching from Canvas V1 to V2 will only work if there are no Full Steps in your V1 Canvas.
 {% endalert %}
 
 ## What will happen to my Canvases that I created using Canvas V1?
 
 All of your existing Canvases and the current version of Canvas (Canvas V1) will continue to exist and be supported by Braze. Customers who choose to join Canvas V2 for early access will have the option of creating a Canvas using either the Canvas V1 or V2 workflow.
 
-## What are the main differences of Canvas V2 compared to Canvas V1?
+## What are the main differences between Canvas V2 and Canvas V1?
 
 ### Canvas Step Toolbar
 
@@ -51,19 +55,23 @@ Previously with the Canvas V1 workflow, each Full Step included delay and schedu
 
 ### Message Step advancement
 
-[Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no more requirement to specify message advancement behavior, which makes configuring the step simpler. This does mean that if you want to implement the **Advance when message sent** option, you would need to use a separate Audience Paths Step.
+[Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no more requirement to specify message advancement behavior, making configuring the step simpler. This does mean that if you want to implement the **Advance when message sent** option, you would need to use a separate Audience Paths Step.
 
 ### Delay "in" behavior
 
 [Delay Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
-Let's say we have a Delay Step where the delay is set to send your user to the next step in one day at 2pm. A user enters the step at 2:01pm on April 13. For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+Let's say on April 12 we have a Delay Step where the delay is set to send your user to the next step in one day at 2pm. A user enters the step at 2:01pm on April 13. 
+For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
+For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 ### Intelligent Timing behavior
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message Step, delays will be applied prior to Intelligent Timing calculations. 
 
-Let's say we have a Delay Step set to send a user to the next step after one day using Intelligent Timing. A user enters the step at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
+Let's say on April 12, we have a Delay Step set to send a user to the next step after one day using Intelligent Timing. A user enters the step at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. 
+For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. 
+For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
 
 ### Exception events
 
@@ -75,7 +83,7 @@ For Segments and filters, the Canvas V2 Message Step has a new feature called De
 
 #### "In" or "On the next" schedule setting
 
-Exception events in Canvas V2 are created using Action Paths. Action Paths only support “after a X time window”, and not “in X time” or “on the next X time".
+Exception events in Canvas V2 are created using Action Paths. Action Paths only support “after a X time window” and not “in X time” or “on the next X time".
 
 ## I'm interested! How do I access Canvas V2?
 
