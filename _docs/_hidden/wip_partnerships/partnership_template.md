@@ -82,7 +82,7 @@ Include code of your webhook request body.
 
 ### Step 3: Preview your request
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

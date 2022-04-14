@@ -54,7 +54,7 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 **Step 1: Generate Certificate Signing Request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
-2. Select **Identifiers > App IDs** in the left sidebar.
+2. Select **Identifiers > App IDs** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the **Enable** check box and click **Create Certificate** under the **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})

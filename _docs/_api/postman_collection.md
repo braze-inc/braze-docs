@@ -46,7 +46,7 @@ In `POST` request bodies, the `api_key` should be encapsulated in quotes: `"MY-A
 
 ### Using the pre-built requests from the collection
 
-Once you have configured your environment. You can use any of the pre-built requests in the collection as a template for building new API requests. To start using one of the pre-built requests, click on it within the **Collections** menu on the left side of Postman. This will open the request as a new tab in the main window of the Postman app.
+Once you have configured your environment. You can use any of the pre-built requests in the collection as a template for building new API requests. To start using one of the pre-built requests, click on it within the **Collections** menu of Postman. This will open the request as a new tab in the main window of the Postman app.
 
 In general, there are two types of requests that Braze's API endpoints accept - `GET` and `POST`. Depending on which `HTTP` method the endpoint uses, you'll need to edit the pre-built request differently.
 

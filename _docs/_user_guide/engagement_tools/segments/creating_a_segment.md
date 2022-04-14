@@ -20,7 +20,7 @@ Segmentation allows you to target users based upon their demographic, behavioral
 
 ![Engagement section with the Segments tab highlighted.][1]{: style="float:right;max-width:20%;"}
 
-From the left-hand side of the dashboard under **Engagement**, click **Segments**. 
+Go to the **Segments** page, located under **Engagements**.
 
 ## Step 2: Name your segment
 

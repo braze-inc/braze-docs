@@ -37,7 +37,7 @@ In general, your email will not work with Inbox Vision if your email content rel
 
 ## Code analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting <i class="fas fa-list"></i> **List view**.
 
 ![Example code analysis on the Inbox Vision preview.][2]
 

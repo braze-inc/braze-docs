@@ -83,7 +83,7 @@ The `variation` field is optional and can define which design inside the automat
 
 ### Step 2: Preview your request
 
-Next, preview your request in the left-hand panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
+Next, preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
 ![Different testing fields available in the test tab of the Braze webhook builder.][7]
 
