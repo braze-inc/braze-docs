@@ -140,7 +140,7 @@ Tealium iQ offers a basic turnkey Braze integration. To configure the integratio
 For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
 ### Other tag managers
-Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK GitHub Repository"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"

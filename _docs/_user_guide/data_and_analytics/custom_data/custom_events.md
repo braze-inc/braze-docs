@@ -70,7 +70,7 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ### Custom events analytics not showing?
 
-Please note that Segments created with custom event data cannot show previous historic data from before they were created.
+Note that Segments created with custom event data cannot show previous historic data from before they were created.
 
 ## Custom event properties
 
@@ -107,7 +107,7 @@ Custom event properties can also be used for personalization within the messagin
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
 {% endalert %}
 
-You can change the data type of your custom event property, but please be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 {% alert important %}
 When making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "`, then your users would be considered "not blank".
@@ -120,7 +120,7 @@ In regards to subscription usage, custom event properties enabled for segmentati
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
 {% alert important %}
-This feature is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+This feature is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
 {% endalert %}
 
 #### Limitations
@@ -216,7 +216,7 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
 
 {% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
 {% endalert %}
 
 {% tabs %}
@@ -246,7 +246,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
 
 {% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
 {% endalert %}
 
 #### Frequently asked questions
@@ -265,7 +265,7 @@ Custom event properties are designed to help you increase targeting precision an
 
 If you would like to segment on the values of event properties, you have two options:
 
-1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, please contact your Braze account executive or Customer Success Manager. Note that this option will impact data usage.<br><br>
+1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
 2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
 
 Braze's Success and Support teams can help recommend the best approach depending on your specific needs. 

@@ -58,7 +58,7 @@ Here are a few examples where Braze can safely append the `lid` query parameter:
 {%endraw%}
 
 ## Can I enable this only for a particular message or app group?
-Currently, this feature is enabled at a company level. Please ensure your organization is aware of this change before Braze enables the feature.
+Currently, this feature is enabled at a company level. Ensure your organization is aware of this change before Braze enables the feature.
 
 ## How do I track or untrack a link?
 Clients can track a link by using the checkbox located in the first column of the **Link Management** tab. Clients can track an unlimited number of links.
@@ -72,6 +72,6 @@ Each alias is considered unique to Braze, regardless of the name provided. This 
 To untrack a link, simply uncheck the checkbox or [archive the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/#archiving-campaigns).
 
 ## I'm interested! How do I enable Link Aliasing?
-This feature is still considered in beta, so Braze requires a beta agreement before enabling this feature. Please submit this [Link Aliasing acknowledgement form][1], and Braze will enable the feature during the next release window, which occurs weekly.
+This feature is still considered in beta, so Braze requires a beta agreement before enabling this feature. Submit this [Link Aliasing acknowledgement form][1], and Braze will enable the feature during the next release window, which occurs weekly.
 
 [1]: https://docs.google.com/forms/d/e/1FAIpQLSfoEXZ9hQfw61AykoKgp2wGtcWyFsjVGGltfTsF0HkNhdU1og/viewform

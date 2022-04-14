@@ -112,7 +112,7 @@ This is where you break down the integration into steps. Do not just write endle
 
 {% endtab %}
 {% tab References %}
-This last section is located at the very end of your document. Here, you will list all references you need to links and images you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
+This last section is located at the very end of your document. Here, you will list all references you need to links and images you want to include in your document. See the next step on best practices for adding images and links to your doc.
 ```
 [1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints
 ```
@@ -210,7 +210,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 
 The review process may take several days to a week to get approved. We understand other companies and writers may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
 
-Once our writers have approved the pull request, we will move it out of `wip_partnerships` to the correct location in our repository. Please note that we may not merge your documentation into our repository until told to do so by the Braze partnership team. Reach out to your Braze partnership contact for an anticipated release date.
+Once our writers have approved the pull request, we will move it out of `wip_partnerships` to the correct location in our repository. Note that we may not merge your documentation into our repository until told to do so by the Braze partnership team. Reach out to your Braze partnership contact for an anticipated release date.
 
 And you are done! Thanks for contributing to Braze docs! 
 

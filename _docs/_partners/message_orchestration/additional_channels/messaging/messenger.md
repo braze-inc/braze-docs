@@ -18,7 +18,7 @@ The Facebook Messenger platform is intended for “non-promotional messages that
 
 ## Prerequisites
 
-Please acknowledge the following before proceeding with integration:
+Acknowledge the following before proceeding with integration:
 - Facebook does not allow the usage of the Messenger platform to send marketing messages. 
 - You will need the user's explicit permission for messages from your page. 
 - To send messages to users who are not test users of your Facebook App, your app will need to pass Facebook's [app review](https://developers.facebook.com/docs/messenger-platform/app-review).<br><br>

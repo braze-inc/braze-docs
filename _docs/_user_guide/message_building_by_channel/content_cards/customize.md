@@ -190,7 +190,7 @@ You can change the language that appears automatically in empty Content Card fee
 ```
 "Appboy.content-cards.no-card.text" = "No Cards!!!!";
 "Appboy.content-cards.done-button.title" = "Done";
-"Appboy.content-cards.no-card.text" = "We have no updates.\nPlease check again later.";
+"Appboy.content-cards.no-card.text" = "We have no updates.\nCheck again later.";
 "Appboy.content-cards.no-connection.title" = "Connection Error";
 "Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
 ```

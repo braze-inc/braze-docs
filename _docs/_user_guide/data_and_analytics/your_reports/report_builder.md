@@ -150,7 +150,7 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
 ## Building Charts 
 
-{% alert important %} Charts are currently in early access. We will be making frequent enhancements to this feature, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, please sumit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
+{% alert important %} Charts are currently in early access. We will be making frequent enhancements to this feature, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, submit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
 
 Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
 

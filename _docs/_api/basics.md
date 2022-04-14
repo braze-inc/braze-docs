@@ -72,7 +72,7 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please open a [support ticket][support].
+If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, open a [support ticket][support].
 
 #### API IP allowlisting
 

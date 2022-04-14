@@ -365,7 +365,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - If the user recently made an out-of-app purchase, provide them with shipping confirmation and a way to ask questions about their shipment.
 - Asking users to give feedback after a purchase is a good way to solicit input without being pushy. Because you've just provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
 
-![Transactional email sent from Restaurants.com that asks users for feedback. The email reads "Tell Us All About It! We hope you enjoyed your meal and experience at REDACTED. To ensure we are doing everything we can to provide you with the best service, food, and overall experience, please take a moment to give us your feedback. Your opinion is very valuable to us and we appreciate your thoughts." The call to action reads "Take Survey".][28]{: style="max-width:80%;"}
+![Transactional email sent from Restaurants.com that asks users for feedback. The email reads "Tell Us All About It! We hope you enjoyed your meal and experience at REDACTED. To ensure we are doing everything we can to provide you with the best service, food, and overall experience, take a moment to give us your feedback. Your opinion is very valuable to us and we appreciate your thoughts." The call to action reads "Take Survey".][28]{: style="max-width:80%;"}
 
 ### Retention
 

@@ -32,7 +32,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Google SSO and SAML SSO support is available for Pro and Enterprise customers. For other customers, please contact your Braze Account Manager for more details.
+Google SSO and SAML SSO support are available for Pro and Enterprise customers. For other customers, contact your Braze account manager for more details.
 {% endalert %}
 
 <br>

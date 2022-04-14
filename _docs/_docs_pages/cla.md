@@ -35,7 +35,7 @@ b. Other Rights Reserved. Each party reserves all rights not expressly granted i
 
 10. Entire Agreement/Assignment. This Agreement is the entire agreement between the parties regarding Your Submission of any materials to any Project, and supersedes all prior and contemporaneous agreements, proposals or representations, written or oral, concerning its subject matter.  This Agreement may be assigned by Braze. <br><br>
 
-Please select one of the options below and sign as indicated. By signing, You accept and agree to the terms of this Contribution License Agreement for Your present and future Submissions to Braze.
+Select one of the options below and sign as indicated. By signing, You accept and agree to the terms of this Contribution License Agreement for Your present and future Submissions to Braze.
 
 
 

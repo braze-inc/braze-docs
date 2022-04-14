@@ -13,7 +13,7 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 {% alert important %}
-Catalogs are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Catalogs are currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
 If you'd like to share your feedback on this feature or make a request, you can [book a session](https://calendly.com/d/yzvf-frpy/catalog-beta-working-session?month=2021-10) with the Braze Data Ingestion team on Calendly!
@@ -39,7 +39,7 @@ First, create your CSV file. The CSV file must have one column with a header of 
 We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
-Need more space to accomodate for your CSV files? Please contact your Braze Account Manager for more information about upgrading your catalogs.
+Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
 {% endalert %}
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.

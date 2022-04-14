@@ -561,7 +561,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, see the [Apple Developer Docs][apple_initial_setup_19].
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 

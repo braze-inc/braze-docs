@@ -6,7 +6,7 @@ hidden: true
 ---
 
 {% alert important %}
-This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, please create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
+This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
 {% endalert %}
 
 # User Attribute CSV to Braze Import

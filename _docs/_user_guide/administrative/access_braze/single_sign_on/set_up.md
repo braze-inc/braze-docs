@@ -56,7 +56,7 @@ On this page, you, input:
 | `Certificate` | The `x.509` certificate is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Please make sure that your certificate follows this format when adding it to the dashboard:
+Make sure that your certificate follows this format when adding it to the dashboard:
 
 ```
 -----BEGIN CERTIFICATE-----

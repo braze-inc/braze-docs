@@ -99,7 +99,7 @@ Next, you must decide whether to distribute codes to Braze in manual mode or def
 Besides the unique code, you can also attach attributes like when the code was delivered, the code's value, and URLs that direct the customer to the cockpit, where all assigned codes and available rewards will be listed.
 
 {% alert important %}
-Please note that before setting up distribution, you need to add your Braze users to the Voucherify dashboard. [Go here to read more](https://support.voucherify.io/article/67-how-to-import-my-customers). 
+Note that before setting up distribution, you need to add your Braze users to the Voucherify dashboard. [Go here to read more](https://support.voucherify.io/article/67-how-to-import-my-customers). 
 {% endalert %}
 
 {% tabs %}

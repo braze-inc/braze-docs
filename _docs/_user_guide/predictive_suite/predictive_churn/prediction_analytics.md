@@ -69,7 +69,7 @@ This analysis displays any user attributes or behaviors that are correlated with
 This table is updated only when the Prediction retrains and not when user Churn Risk Scores are updated.
 
 {% alert note %}
-Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your account manager for more information.
+Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Contact your account manager for more information.
 {% endalert %}
 
 [6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %}

@@ -16,7 +16,7 @@ description: "This article outlines details about the Schedule API-Triggered Cam
 
 Use this endpoint to trigger API-triggered campaigns, which are created on the dashboard and initiated via the API. You can pass in `trigger_properties` that will be templated into the message itself.
 
-This endpoint allows you to send campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
+This endpoint allows you to send campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. Note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 

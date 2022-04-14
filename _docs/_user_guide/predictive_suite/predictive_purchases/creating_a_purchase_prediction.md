@@ -28,7 +28,7 @@ Click **Forward** to move to the next step. Optionally, you can click **Build No
 
 On this page, specify if your users' purchases are stored in Braze as standard [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
 
-Here, you'll see if the selected Purchase method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a Prediction with the quantity of data available. If you believe you're incorrectly seeing this error, please get in touch with your CSM.
+Here, you'll see if the selected Purchase method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a Prediction with the quantity of data available. If you believe you're incorrectly seeing this error, get in touch with your CSM.
 
 #### Prediction Window
 

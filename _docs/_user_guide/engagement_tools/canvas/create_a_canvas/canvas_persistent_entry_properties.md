@@ -13,7 +13,7 @@ page_order: 5
 When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
 {% alert important %}
-This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Please reach out to your Braze account manager for more information.
+This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Reach out to your Braze account manager for more information.
 {% endalert %}
 
 ## Using entry properties

@@ -82,7 +82,7 @@ The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agilit
 
 ### In-app messages for Roku
 
-Braze now supports sending in-app messages to your users on their Roku devices! Please note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
+Braze now supports sending in-app messages to your users on their Roku devices! Note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 ### Full Filter Mode for Churn Predictions and Purchase Predictions
 
@@ -101,7 +101,7 @@ Have you wondered when and how you should collect user data when you're handling
 
 ### Transifex API deprecation
 
-As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. If you are leveraging the Transifex API, please update your Connected Content calls accordingly. For more information, refer to [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/).
+As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. If you are leveraging the Transifex API, update your Connected Content calls accordingly. For more information, refer to [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/).
 
 ### New Braze partnerships
 

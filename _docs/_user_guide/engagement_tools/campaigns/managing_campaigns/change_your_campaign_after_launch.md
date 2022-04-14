@@ -16,7 +16,7 @@ description: "This reference article gives an overview of the result of editing 
 
 All changes to Action-Based Delivery campaigns and API-Triggered Delivery campaigns take effect immediately for go-forward sends.
 
-If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), please refer to the following guidance for scheduled campaigns.
+If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), refer to the following guidance for scheduled campaigns.
 
 ## Scheduled campaigns
 

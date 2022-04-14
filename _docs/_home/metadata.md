@@ -9,7 +9,7 @@ noindex: true
 
 {% alert important %}
 
-The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Please note that you **can** currently use the `platform` content tag.
+The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Note that you **can** currently use the `platform` content tag.
 
 {% endalert %}
 
@@ -21,7 +21,7 @@ These are independent. If you need to see additional optional YAML content based
 A note on capitalization... 
 <br> 
 <br> 
-Please leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
+Leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
 {% endalert %}
 
 ### Configuration Tags
@@ -66,7 +66,7 @@ key:
   - string6
 ```
 {% alert important %}
-Please note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
+Note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
 {% endalert %}
 
 ### Sample YAML

@@ -59,7 +59,7 @@ In the webhook URL, you must:
 ![The webhook URL and message preview shown in the Braze webhook builder.][67]
 
 {% alert important %}
-Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
 {% endalert %}
 
 #### Request headers and method

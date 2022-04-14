@@ -59,13 +59,13 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 
 In the webhook URL, you must:
 - Set the event name. This name will appear in your Jampp dashboard.
-- Pass your app's unique application identifier for Android (i.e., "com.example") and iOS (i.e., "012345678").
-- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Please note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
+- Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678").
+- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
 
 ![The webhook URL and message preview shown in the Braze webhook builder.][2]
 
 {% alert important %}
-Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
 {% endalert %}
 
 #### Request headers and method

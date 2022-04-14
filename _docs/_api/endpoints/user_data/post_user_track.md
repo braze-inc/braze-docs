@@ -202,7 +202,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert warning %}
-When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Please set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
+When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
 {% endalert %}
 
 ### Use cases
