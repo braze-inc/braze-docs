@@ -93,6 +93,6 @@ Ensure you comply with the [Telephone Consumer Protection Act](https://en.wikipe
 
 ### International
 
-Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, _research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
+Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, research best practices and laws in those areas. It is always best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the United States, Canada, and countries part of the European Union.
 
 Better to be safe than sorry!
