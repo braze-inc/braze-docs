@@ -62,16 +62,16 @@ Previously with the Canvas V1 workflow, each Full Step included delay and schedu
 [Delay Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
 Let's say on April 12 we have a Delay Step where the delay is set to send your user to the next step in one day at 2pm. A user enters the step at 2:01pm on April 13. 
-For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
-For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+- For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
+- For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 ### Intelligent Timing behavior
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message Step, delays will be applied prior to Intelligent Timing calculations. 
 
 Let's say on April 12, we have a Delay Step set to send a user to the next step after one day using Intelligent Timing. A user enters the step at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. 
-For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. 
-For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
+- For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. 
+- For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
 
 ### Exception events
 
