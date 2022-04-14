@@ -29,7 +29,7 @@ If you are using **Braze’s S3 bucket**, this could happen because:
 This will happen if the email was sent 4+ hours ago. Re-run the export and download it within 4 hours.
 This could also be caused by Braze no longer having access to the S3 bucket you are downloading the data to. Make sure you’ve updated your S3 credentials using these steps.
 
-#### "Looks like the file doesn't exist anymore, check to make sure nothing is deleting objects from your bucket"
+#### "Looks like the file doesn't exist anymore, please check to make sure nothing is deleting objects from your bucket"
 
 There may be a slight lag between when Braze's email with the export gets sent, and when S3 is actually ready to serve the object. If you see this error, wait a few minutes before trying again.
 
