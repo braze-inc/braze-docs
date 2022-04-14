@@ -33,7 +33,7 @@ IP Warming is designed to help you establish a positive reputation with ISPs (In
 All of these consequences are entirely avoidable if you follow the following guidelines:
 
 1. **Start by sending small volumes of email, and increase the amount you send each day as gradually as possible.**<br>
-Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. Please see the schedule below for details.<br><br>
+Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See the following schedule for details.<br><br>
 2. **Ensure that your first content is highly engaging and maximizes the likelihood that users click, open, and engage with your email.**<br>Always prefer well-targeted emails to indiscriminate blasts when warming IPs.<br><br>
 3. **When IP warming is complete, continue sending as consistent a cadence as possible.**<br>
 IPs can cool down if volume stops or significantly decreases for more than a few days.<br><br>

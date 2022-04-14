@@ -9,7 +9,7 @@ tool: Currents
 
 ---
 
-Please contact your Account Manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of message engagement event structure and platform values %}
 
@@ -325,7 +325,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) description of the user’s system and browser for the event,
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. 
+  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. 
 }
 ```
 #### Property details
@@ -503,7 +503,7 @@ Email, Subscription
 This event occurs when the end-user has clicked “unsubscribe” from the email.
 
 {% alert important %}
-Please note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, **not** when the user changes state to unsubscribed.
+Note that the `Unsubscribe` event is actually a specialized click event that is fired when your user clicks on the unsubscribe link in the email, not when the user changes state to unsubscribed.
 {% endalert %}
 
 ```json
@@ -1162,7 +1162,7 @@ Campaign, Conversion
 This event occurs when a user does an action that has been set as a conversion event in a campaign.
 
 {% alert important %}
-Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1196,7 +1196,7 @@ Canvas, Conversion
 This event occurs when a user does an action that has been set as a conversion event in canvas.
 
 {% alert important %}
-Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json

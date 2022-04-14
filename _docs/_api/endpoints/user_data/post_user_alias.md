@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_id" : (optional, string) see external user id below,
+  "external_id" : (optional, string),
   "alias_name" : (required, string),
   "alias_label" : (required, string)
 }

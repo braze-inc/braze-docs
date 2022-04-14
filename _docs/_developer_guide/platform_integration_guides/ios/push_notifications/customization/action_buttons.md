@@ -15,7 +15,7 @@ The Braze iOS SDK supports default push categories, including URL handling suppo
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
-To register Braze's default push categories, follow the integration instructions below:
+To register Braze's default push categories, follow the integration instructions:
 
 ## Step 1: Adding Braze default push categories
 

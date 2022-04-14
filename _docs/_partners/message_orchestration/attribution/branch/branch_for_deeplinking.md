@@ -18,7 +18,7 @@ The Braze and Branch integration allows you to provide better experiences to you
 
 ## Integration
 
-Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/docs/native-sdks-overview) to get up and running with your Branch integration. For additional use cases, see below.
+Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/docs/native-sdks-overview) to get up and running with your Branch integration. Refer to the following for additional use cases.
 
 ### Support iOS universal links
 

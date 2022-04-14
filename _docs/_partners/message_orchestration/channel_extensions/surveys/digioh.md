@@ -38,7 +38,7 @@ In Digioh, click the **Integrations** tab and then the **New Integration** butto
 
 Next, enter the Braze REST API key and your Braze API `/users/track/` endpoint. 
 
-Lastly, use the map fields section to map additional custom fields beyond email and name. An example payload can be found below. Once completed, select **Create Integration**.
+Lastly, use the map fields section to map additional custom fields beyond email and name. The following code snippet shows an example payload. Once completed, select **Create Integration**.
 
 ```json
 {

@@ -10,7 +10,7 @@ channel: push
 
 # Push notifications
 
-Integrating push notifications in Flutter requires setting up each native platform separately. Follow the respective guides below to finish the installation.
+Integrating push notifications in Flutter requires setting up each native platform separately. Follow the respective integration guides to finish the installation.
 
 ## Step 1: Complete native setup
 
@@ -19,7 +19,7 @@ Integrating push notifications in Flutter requires setting up each native platfo
 
 ## Step 2: Test displaying push notifications
 
-Follow the steps below to test your push integration.
+Follow these steps to test your push integration.
 
 {% alert important %}
 You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.

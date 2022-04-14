@@ -27,7 +27,7 @@ Android imposes some limitations on what components can be used to implement cus
 
 ### Personalized push notifications
 
-Push notifications can display user-specific information inside a custom view hierarchy. The example below shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
+Push notifications can display user-specific information inside a custom view hierarchy. The following example shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
 ![Personalized Push dashboard Example][1]{: style="max-width:65%;border:0"}
 
@@ -44,7 +44,7 @@ Visit the [following section](#logging-analytics) to better understand how the f
 
 ### Logging with the Braze API (recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
 ![Personalized Push dashboard Example][3]{: style="max-width:80%;"}
 

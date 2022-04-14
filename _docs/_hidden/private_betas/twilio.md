@@ -13,7 +13,7 @@ hidden: true
 # Twilio
 
 {% alert warning %}
-Please note that support for the Twilio Webhook Integration will be discontinued on January 31, 2020. If you wish to still access SMS services with Braze, please see our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/). 
+Note that support for the Twilio Webhook Integration will be discontinued on January 31, 2020. If you wish to still access SMS services with Braze, see our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/). 
 {% endalert %}
 
 For this example, we'll configure the Braze webhook channel to send SMS and MMS to your users, via Twilio's [message sending API][20]. For your convenience, a Twilio webhook template is included on the dashboard.
@@ -30,7 +30,7 @@ In our Twilio example, the webhook URL is `https://api.twilio.com/2010-04-01/Acc
 
 The Twilio API expects the request body to be URL-encoded, so we have to start by changing the request type in the Braze webhook composer to `Raw Text`. The required parameters for the body of the request are *To*, *From*, and *Body*.
 
-The screenshot below is an example of what your request might look like if you are sending an SMS to each user’s phone number, with the body "Hello from Braze!".
+The following screenshot is an example of what your request might look like if you are sending an SMS to each user’s phone number, with the body "Hello from Braze!".
 
 - You'll need to have valid phone numbers on each user profile in your target audience.
 - To meet Twilio's request format, use the `url_param_escape` Liquid filter on your message contents. This filter encodes a string so all the characters are allowed in an HTML request; for example, the plus character (`+`) in the phone number `+12125551212` is forbidden in URL-encoded data and will be converted to `%2B12125551212`.

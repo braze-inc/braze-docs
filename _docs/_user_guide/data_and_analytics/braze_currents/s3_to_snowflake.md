@@ -39,9 +39,9 @@ When you set up Currents in Braze, specify a folder path for your Currents files
 
 In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
 
-Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the example below).
+Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the following example).
 
-Then, create a Snowflake S3 Stage (called `braze_data` below):
+Then, create a Snowflake S3 Stage (called `braze_data`):
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -118,7 +118,7 @@ Check the appropriate box for the object create notifications, as well as the AR
 
 ### Snowpipe setup
 
-In order for the preceding configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) Currents documentation.
+In order for the preceding configuration to produce the correct tables, you must define the structure of the incoming data properly using the following examples and the structures determined in our [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) Currents documentation.
 
 It is critical that your tables are structured in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them via specific fields with specific data types (a `user_id` will always be loaded as a string and called a `user_id` in Currents data).
 
@@ -267,7 +267,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
   {% endtab %}
 {% endtabs %}
 
-To see the types of analytics you can perform using Braze Currents, please consult our [Looker Blocks](https://github.com/llooker?q=braze).
+To see the types of analytics you can perform using Braze Currents, consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.

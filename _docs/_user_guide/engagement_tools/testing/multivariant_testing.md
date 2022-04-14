@@ -17,7 +17,7 @@ An A/B test is an experiment that compares users’ responses to multiple versio
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Suppose you have two options for a push notification:
@@ -88,7 +88,7 @@ The size of the control group for a campaign with [Intelligent Selection][intels
 
 ![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+For best practices around choosing a segment to test with, see the following [Choosing a Segment][80] section.
 
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -121,7 +121,7 @@ Choose a date and time when the winning variant should be sent out.
 When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+In the dropdown found after the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
 
 #### (Optional) Designate a conversion event
 
@@ -182,8 +182,8 @@ What levers do you have to pull and what are the desired effects? While there ar
 
 | Channel | Aspects of Message You Can Change | Results To Look For |
 | ---------------------| --------------- | ------------- |
-| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
-| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%")  <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%") <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app Notification | Aspects listed for "push" <br> [Message format][273] | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

@@ -28,7 +28,7 @@ The `windows_phone8_push` and `windows_universal_push` objects are used to defin
 
 ## Windows Universal push object
 
-See the Windows Universal [toast template catalog][32] for details on the options for `push_type` below.
+See the Windows Universal [toast template catalog][32] for details on the options for `push_type`.
 
 ```json
 {

@@ -13,7 +13,7 @@ Once you've set up delay and audience options, you can add an in-app message to 
 You can customize when your message will [expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
 {% alert important %}
-In-app messsages for Canvas is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+In-app messsages for Canvas is currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
 ## In-app message expiration

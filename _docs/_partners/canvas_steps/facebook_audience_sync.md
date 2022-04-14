@@ -32,7 +32,7 @@ You will need to ensure that you have the following items created and/or complet
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's Business Manager.<br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
+| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
 | Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -139,7 +139,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 ## Troubleshooting
 
 {% details What should I do next if I receive an invalid token error? %}
-You can simply disconnect and reconnect your Facebook account on the Facebook partner page. Please ensure with your Facebook Business Manager Admin that you have the appropriate permissions to the ad account you wish to sync with.
+You can simply disconnect and reconnect your Facebook account on the Facebook partner page. Ensure with your Facebook Business Manager Admin that you have the appropriate permissions to the ad account you wish to sync with.
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
@@ -153,7 +153,7 @@ Facebook does not provide this information for privacy reasons.
 {% enddetails %}
 
 {% details Does Braze support value-based custom audiences? %}
-At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences please reach out to your Customer Success Manager or contact support.
+At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, reach out to your customer success manager or contact support.
 {% enddetails %}
 
 [0]: https://www.braze.com/privacy

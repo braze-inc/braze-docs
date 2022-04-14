@@ -85,7 +85,7 @@ When composing your email message, a new column will be present in the **Link Ma
 Braze only tracks up to the last 100 clicked link aliases at the profile level.
 {% endalert %}
 
-Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
+Only aliases that you have indicated to be tracked will be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
 
 ### Untracking a Link
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist but new segments cannot be created with that filter.

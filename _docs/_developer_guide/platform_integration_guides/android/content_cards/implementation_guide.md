@@ -29,7 +29,7 @@ Your own custom objects already in use in your application can be extended to ca
 
 When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze dashboard to populate the necessary fields.
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to start implementing your own custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) to start implementing your own custom objects.
 
 {% tabs local %}
 {% tab No Card Dependencies %}
@@ -279,7 +279,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ### Content Cards in a message center
 <br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 ![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 

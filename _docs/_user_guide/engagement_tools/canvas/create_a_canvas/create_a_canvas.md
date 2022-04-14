@@ -20,7 +20,7 @@ Go to the **Canvas** page, located under the **Engagement** section, then click 
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
-The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
+The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
 
 {% tabs local %}
   {% tab Basics %}

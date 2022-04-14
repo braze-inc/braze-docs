@@ -51,7 +51,7 @@ Next, select **Export Results** and select an existing integration authenticatio
 
 ![][11]{: style="max-width:80%;"}
 
-Define additional export results parameters as outlined below in the [customization section](#customization). In your export integration content, review the integration parameters.
+Define additional export results parameters as outlined in the following [customization section](#customization). In your export integration content, review the integration parameters.
 
 ![The "Export Results" page. On this page are fields for "mode", "track record type", and "pre-formatted fields". For this example, "User-Track" and "Custom Events" are set to these fields, respectively.][3]{: style="max-width:80%;"}
 

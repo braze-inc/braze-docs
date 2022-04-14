@@ -108,8 +108,8 @@ This filter allows you to segment based on a user's push subscription status.
 {
   "push_subscription_status":
   {
-    "comparison": (String) one of the two allowed comparisons listed below,
-    "value": (String) one of the three allowed values listed below
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
@@ -129,8 +129,8 @@ This filter allows you to segment based on a user's email subscription status.
 {
   "email_subscription_status":
   {
-    "comparison": (String) one of the two allowed comparisons listed below,
-    "value": (String) one of the three allowed values listed below
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
@@ -149,7 +149,7 @@ This filter allows you to segment based on when was the last time the user used 
 {
   "last_used_app":
   {
-    "comparison": (String) one of the allowed comparisons listed below,
+    "comparison": (String) one of the allowed comparisons listed,
     "value": (String) the value to be compared using the provided comparison
   }
 }

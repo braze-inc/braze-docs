@@ -61,9 +61,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ### Possible errors
-- `Modified after time is invalid.` - The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
+- `Modified after time is invalid.` - The date you have provided is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
 
-- `Modified before time is invalid.` - The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
+- `Modified before time is invalid.` - The date you have provided is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
 
 - `Modified after time must be earlier than or the same as modified before time.`
 

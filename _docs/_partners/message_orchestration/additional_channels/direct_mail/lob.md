@@ -71,7 +71,7 @@ The following is an example request body for the Lob postcards endpoint. While t
 
 ### Step 3: Preview your request
 
-At this point, your campaign should be ready to test and send. Check the Lob dashboard and the Braze developer console error message logs if you run into errors. For example, the following error below was caused by an incorrectly formatted authentication header. 
+At this point, your campaign should be ready to test and send. Check the Lob dashboard and the Braze developer console error message logs if you run into errors. For example, the following error was caused by an incorrectly formatted authentication header. 
 
 ![A message error log showing the time, app name, channel, and error message. The error message includes the message alert and the status code.][36]
 

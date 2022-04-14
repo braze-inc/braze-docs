@@ -3,7 +3,7 @@ page_order: 2.5
 nav_title: Content Cards
 layout: dev_guide
 guide_top_header: "Content Cards Help Articles"
-guide_top_text: "Check out the article below for troubleshooting Content Cards. <br><br> Read more about the multitude of ways you can integrate Content Cards in your campaigns and Canvases in the <a href='/docs/user_guide/message_building_by_channel/content_cards/'>Content Cards</a> section!"
+guide_top_text: "Check out the following article for troubleshooting Content Cards. <br><br> Read more about the multitude of ways you can integrate Content Cards in your campaigns and Canvases in the <a href='/docs/user_guide/message_building_by_channel/content_cards/'>Content Cards</a> section!"
 
 page_type: landing
 description: "This landing page is home to help articles related to Content Cards."

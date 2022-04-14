@@ -30,7 +30,7 @@ These filters have three options:
 
   3) **"Matches"** - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". You can also select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (e.g. "matches" "email1@braze.com &#124; email2@braze.com").
+These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that "matches" "@braze.com" and another filter that "does not equal" "sales@braze.com". You can also select multiple specific emails by using the "matches" option and separating the email addresses with a &#124; character (e.g., "matches" "email1@braze.com &#124; email2@braze.com").
 
 After adding the testing filters to your test segment, you can verify that you've selected only the users you intended by clicking "Preview" at the top of the segment editor or by exporting that segment's user data to CSV by clicking on the gear icon in the right-hand corner of the editor and selecting "CSV Export All User Data" from the dropdown menu.
 
@@ -42,15 +42,15 @@ Once you've confirmed that you're only targeting the users that you want to rece
 
 ## Sending a test push notification or in-app messages <a class="margin-fix" name="push-inapp-test"></a>
 
-To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
+To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
 
 ![A Braze test campaign displaying the segments available in the targeting step.][11]
 
 Finish confirming your campaign and launch it to test your push notification and in-app messages.
 
->  Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+>  Be sure to select **Allow users to become re-eligible to receive campaign** under the **Schedule** portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
 
->  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, there is a "Send Test" button in the bottom left corner.
+>  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, click **Send Test** to send your drafted email to your inbox.
 
 ## Sending a test email message
 
@@ -60,7 +60,7 @@ Clicking on this button causes a window to appear where you can enter the email 
 
 ## Testing push via cURL
 
-Alternatively, if you'd like to test push notifications via the command-line you can follow the following examples below for each platform.
+Alternatively, if you'd like to test push notifications via the command-line you can follow the following examples for each platform.
 
 ### Testing push with iOS apps via cURL
 
@@ -72,7 +72,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 - `YOUR_VALUE1` (optional)
 
 
->  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
@@ -87,7 +87,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
@@ -115,7 +115,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast_text_01\",\"toast_text1\":\"test_title\"}}}" https://rest.iad-01.braze.com/messages/send
@@ -130,7 +130,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast\",\"toast_title\":\"test_title\",\"toast_content\":\"message_goes_here\",\"toast_navigation_uri\":\"uri_goes_here\"}}}" https://rest.iad-01.braze.com/messages/send

@@ -24,7 +24,7 @@ Use this report to answer key engagement questions, for example:
 - Which push notifications within this Canvas had the highest open rates?
 - Which steps in this group of Canvases had the most conversions?
 - Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion? Did the changes work?
-- How do different delivery methods (e.g. 3 scheduled pushes vs. 3 action-based pushes vs. 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
+- How do different delivery methods (e.g., 3 scheduled pushes vs. 3 action-based pushes vs. 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}
@@ -43,7 +43,7 @@ If you choose to run a report on campaigns, you can select between a **Manual** 
 
 ![Campaign dashboard][6]{: style="max-width:80%;"}
 
-Below are the differences between these two options:
+The following are the differences between these two options:
 
 | **Action** | **Manual** | **Automated** |
 | ---- | ---------- | ------------- |
@@ -150,7 +150,7 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
 ## Building Charts 
 
-{% alert important %} Charts are currently in early access. We will be making frequent enhancements to this feature, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, please sumit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
+{% alert important %} Charts are currently in early access. We will be making frequent enhancements to this feature, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, submit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
 
 Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
 

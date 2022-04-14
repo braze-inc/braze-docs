@@ -32,11 +32,11 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 
 ## Summary text
 
-The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display below the body of the message in the expanded view. It also serves as a caption for notifications with images.
+The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
 
 ![][9]
 
-For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the animation below for an example of this behavior.
+For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
 
 ![Summary Text Behavior][15]
 
@@ -85,7 +85,7 @@ Selecting **Default** in this field will play the default notification sound on 
 
 ![][11]
 
-Next, enter the full sound resource URI (e.g. `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
+Next, enter the full sound resource URI (e.g., `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
 To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
 

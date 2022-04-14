@@ -24,14 +24,14 @@ Make sure to save your campaign draft after testing to avoid deleting your campa
 
 ## Channel-specific test sending
 
-For steps to send test messages, refer to the section for your channel below.
+For steps to send test messages, refer to the following section for your channel.
 
 {% tabs %}
 {% tab Email %}
 
 #### Email
 
-After drafting your email message, click **Preview and Test**. From this page, select the **test send** tab and add your email address or user ID in the **add individual users** field. When you're ready, click **send test** to send your drafted email to your inbox.
+After drafting your email message, click **Preview and Test**. From this page, select the **Test Send** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
@@ -115,7 +115,7 @@ These filters have the following options:
 2. **Does not equal** - Use this if you want to exclude a particular email or user ID from test campaigns.
 3. **Matches** - Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
+These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g., `matches` "email1@braze.com\|email2@braze.com").
 
 After adding the testing filters to your test segment, verify that you've selected only the users you intended by clicking **Preview** at the top of the segment editor or by exporting that segment's user data to CSV. To export segment user data, click the **User Data** dropdown and select **CSV Export All User Data**.
 
@@ -127,7 +127,7 @@ Once you've confirmed that you're only targeting the users you want to receive t
 
 ##### Step 2: Send a test campaign
 
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
+To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
 
 ![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
 

@@ -19,7 +19,7 @@ tool:
 
 ## Requirements
 
-- To ensure your app can send rich notifications, please follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
+- To ensure your app can send rich notifications, follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
 - You should also reference [Apple's documentation][2] for media limitations and specs.
 
 > As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
@@ -48,7 +48,7 @@ Your users may view push notifications in a variety of different situations, and
 <tbody>
   <tr>
     <td width="33%">This is the most common scenario.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 4 lines of text<br><b>Image:</b> square thumbnail</td>
-    <td width="33%">When a user long-presses a message.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 7 lines of text<br><b>Image:</b> 2:1 aspect ratio (recommended, see note below)</td>
+    <td width="33%">When a user long-presses a message.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 7 lines of text<br><b>Image:</b> 2:1 aspect ratio (recommended, see following note)</td>
     <td width="33%">When a user receives a push while their phone is unlocked and active.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 2 lines of text</td>
   </tr>
 </tbody>

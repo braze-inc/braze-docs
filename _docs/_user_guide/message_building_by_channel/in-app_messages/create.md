@@ -204,7 +204,7 @@ Some message types do not need and therefore do not ask for headers.
 
 #### Button text {#buttons}
 
-When available for your message type, you can have up to two buttons appear below your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
+When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
@@ -295,14 +295,14 @@ You can add [key-value pairs][19] to send extra custom fields to user devices.
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further guidance on how to best use our tools to build in-app messages.
+Build the remainder of your campaign; see the following sections for further guidance on how to best use our tools to build in-app messages.
 
 #### Choose a trigger
 
 Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
 
 {% alert important %}
-Please note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
+Note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
 {% endalert %}
 
 ![Action-based campaign with the trigger action set to "Start Session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
@@ -318,7 +318,7 @@ In-app message delivery is entirely based on the following action triggers:
 
 A start date and time must be selected; however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Online vs. offline triggering
 

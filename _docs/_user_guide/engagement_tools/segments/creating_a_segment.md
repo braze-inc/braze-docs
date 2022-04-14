@@ -12,7 +12,7 @@ tool: Segments
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow the guide below or check out our [Segmentation LAB course](https://lab.braze.com/segmentation-course)!
+Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow this guide or check out our [Segmentation LAB course](https://lab.braze.com/segmentation-course)!
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
@@ -20,7 +20,7 @@ Segmentation allows you to target users based upon their demographic, behavioral
 
 ![Engagement section with the Segments tab highlighted.][1]{: style="float:right;max-width:20%;"}
 
-From the left-hand side of the dashboard under **Engagement**, click **Segments**. 
+Go to the **Segments** page located under **Engagements**.
 
 ## Step 2: Name your segment
 
@@ -40,7 +40,7 @@ For more information on this option, refer to the section [Segment membership ca
 
 ## Step 4: Add filters to your segment
 
-Add at least one filter to your segment as depicted in the image below. You can combine as many filters as you want in order to make your segmentation more specific.
+Add at least one filter to your segment as depicted in the following image. You can combine as many filters as you want in order to make your segmentation more specific.
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.

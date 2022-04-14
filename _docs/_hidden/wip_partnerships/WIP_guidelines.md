@@ -28,7 +28,7 @@ To contribute to Braze docs, you must have a GitHub account to commit changes an
 
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
 1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork** in the upper right corner of the page. <br><br>
-2. Next, within this newly forked repo, click the green **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
+2. Next, within this newly forked repo, click the **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
 3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
@@ -91,7 +91,7 @@ In this second paragraph, explore the relationship between your company and Braz
 This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the chart below. Be sure to adjust the descriptions and tailor them to your partnership integration. 
+The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
 
 | Requirement | Description |
@@ -112,7 +112,7 @@ This is where you break down the integration into steps. Do not just write endle
 
 {% endtab %}
 {% tab References %}
-This last section is located at the very end of your document. Here, you will list all references you need to links and images you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
+This last section is located at the very end of your document. Here, you will list all references you need to links and images you want to include in your document. See the next step on best practices for adding images and links to your doc.
 ```
 [1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints
 ```
@@ -133,7 +133,7 @@ Within this new folder, create a folder to keep your partnership images in. Name
 
 ![Braze partner folder][1]{: style="max-width:70%"}
 
-To reference your images in your document, use the format listed below. 
+To reference your images in your document, use the following format listed: 
 
 {% raw %}
 ```
@@ -210,7 +210,7 @@ Within the Braze docs GitHub repository, find your branch. If your document is c
 
 The review process may take several days to a week to get approved. We understand other companies and writers may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
 
-Once our writers have approved the pull request, we will move it out of `wip_partnerships` to the correct location in our repository. Please note that we may not merge your documentation into our repository until told to do so by the Braze partnership team. Reach out to your Braze partnership contact for an anticipated release date.
+Once our writers have approved the pull request, we will move it out of `wip_partnerships` to the correct location in our repository. Note that we may not merge your documentation into our repository until told to do so by the Braze partnership team. Reach out to your Braze partnership contact for an anticipated release date.
 
 And you are done! Thanks for contributing to Braze docs! 
 

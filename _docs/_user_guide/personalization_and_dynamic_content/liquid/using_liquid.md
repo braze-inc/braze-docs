@@ -16,7 +16,7 @@ If you include the following text in your message: `{{${first_name}}}`, the user
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information][1] (e.g. `first_name`, `last_name`, `email_address`)
+- [Basic user information][1] (e.g., `first_name`, `last_name`, `email_address`)
 - [Custom attributes][2]
 - [Custom event properties][11]
 - [Most recently used device information][39]
@@ -35,7 +35,7 @@ Braze currently supports Liquid up to and including **Liquid 3 from Shopify**. W
 
 Once you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices. 
 
-In the block below, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
+In the following block, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
 
 ```liquid
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!

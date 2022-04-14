@@ -13,7 +13,7 @@ tool:
 
 ## Overview
 
-The **overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. Below are the definitions of these statistics, how we calculate them, and why they should be important to you.
+The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. The following are the definitions of these statistics, how we calculate them, and why they should be important to you.
 
 ![Dashboard Screenshot][1]
 
@@ -23,13 +23,13 @@ The **overview** page on the dashboard provides key mobile metrics for you to tr
 
 ## Lifetime users
 
-Lifetime Users is the total number of users that we have recorded using your app at any point in time. Below this number is the percentage of how many of your lifetime users are represented as Monthly Active Users (MAU) which is useful for seeing user retention over a long period of time.
+Lifetime Users is the total number of users that we have recorded using your app at any point in time. This number is the percentage of how many of your lifetime users are represented as Monthly Active Users (MAU) which is useful for seeing user retention over a long period of time.
 
 A low MAU/Lifetime User ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze's tools can help you minimize this effect by keeping users engaged longer.
 
 ## Lifetime sessions
 
-This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, please visit the cooresponding 
+This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, visit the cooresponding 
 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/) session tracking developer articles.
 
 ## Monthly active users

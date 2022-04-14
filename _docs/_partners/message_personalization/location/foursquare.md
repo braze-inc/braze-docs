@@ -48,7 +48,7 @@ Once the integration is set up, you can set up a campaign or Canvas that will ac
 
 To send a campaign that will send messages based on a set location:
 - Create a Braze campaign or Canvas that sends with **Action-Based Delivery**
-- For your trigger, use a custom event of `arrival` with an event property filter for `locationType` as shown below.
+- For your trigger, use a custom event of `arrival` with an event property filter for `locationType` as shown in the following screenshot.
 
 ![An action-based campaign in the delivery step showing "arrival" selected as the "perform custom event" option, where "locationType" equals "home".]({% image_buster /assets/img_archive/action-based-campaign.png %})
 
@@ -58,7 +58,7 @@ To retarget your users, use the Pilgrim SDK to set a `last_location` custom attr
 
 ![An action-based campaign in the target users step showing "last_location" equals "Pizza Place".]({% image_buster /assets/img_archive/last-location-segment.png %})
 
-You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, please refer to the [Foursquare developer site](https://developer.foursquare.com/).
+You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, refer to the [Foursquare developer site](https://developer.foursquare.com/).
 
 [1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}

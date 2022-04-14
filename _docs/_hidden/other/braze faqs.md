@@ -8,7 +8,7 @@ permalink: /braze_faqs/
 
 Appboy has become Braze. The word Braze means to bond, to unite, or to join with considerable strength. Renaming our company to Braze is a representation of the strong, unwavering connection that our technology creates between people and the brands they love.
 
-As we move over to Braze, you have questions–and we have answers. Check out our FAQs below.
+As we move over to Braze, you have questions–and we have answers. Check out the following FAQs.
 
 ### Is the dashboard going to look different?
 Yes! On Thursday, November 16, we shared our new visual brand identity and new dashboard interface.
@@ -35,7 +35,7 @@ You do not need to make any changes to your REST API integrations now. However, 
 **No.** Braze is the same company owned by the same people providing the same Services.  Our new name better reflects who we are and what we do.
 
 ### Where do I go for support?
-Please contact your Customer Success Manager or open a [support ticket][support].
+Contact your customer success manager or open a [support ticket][support].
 
 ### If I email Appboy, will it bounce?
 **No.** Every `appboy.com` email address will get mapped to a new `braze.com` email address.

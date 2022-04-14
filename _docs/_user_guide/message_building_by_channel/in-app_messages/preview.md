@@ -64,7 +64,7 @@ This helps to easily spot potential code errors directly in the message composer
 
 You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML in-app messages are no longer limited to recording one button click event per impression.
+This method replaces the previous automatic click tracking methods (i.e., `?abButtonId=0`) which have been removed. Additionally, HTML in-app messages are no longer limited to recording one button click event per impression.
 
 For example, to close a message and log Button 2 click, you can use:
 
@@ -80,7 +80,7 @@ You can also track new custom button names - up to 100 unique names per campaign
 * Each button ID can not be longer than 255 characters.
 * Only alphanumeric, space, dash, and underscore characters are allowed.
 
-**Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
+**Note**: This method replaces the previous automatic click tracking methods (i.e., `?abButtonId=0`) which have been removed.
 
 ## Backward incompatible changes {#backward-incompatible-changes}
 
@@ -89,7 +89,7 @@ You can also track new custom button names - up to 100 unique names per campaign
 
 2. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
 
-3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
+3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The following code examples show how to change your HTML to use our new Click Tracking javascript methods:
 
 | Before | After |
 |:-------- |:------------|
@@ -112,7 +112,7 @@ Because this message type can only be received by certain newer SDK versions, us
 
 ### New message type {#new-message-type}
 
-When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
+When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option:
 
 ![Selecting HTML Upload with Preview for the "Custom Type" when creating a custom code in-app message.]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 

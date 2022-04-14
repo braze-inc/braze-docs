@@ -14,13 +14,13 @@ An API request with any fields in the Attributes Object will create or update an
 ```json
 {
   // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID below,
+  "external_id" : (optional, string) see External User ID,
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
-  // See note below regarding anonymous push token imports
+  // See note regarding anonymous push token imports
   "push_token_import" : (optional, boolean),
   // Braze User Profile Fields
   "first_name" : "Jon",
@@ -76,7 +76,7 @@ The following data types can be stored as a custom attribute:
 
 | Data Type | Notes |
 | --- | --- |
-| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see [Arrays][6]. |
+| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see [Arrays][6]. |
 | Booleans |  |
 | Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. |
 | Floats |  |

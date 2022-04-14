@@ -19,7 +19,7 @@ With the User Update Step, updates do not count towards your users or track per 
 Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you are making, you can ensure that these updates have been completed prior to when the messages send.
 
 {% alert important %}
-The Canvas User Update Step is currently in early access. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Please contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
+The Canvas User Update Step is currently in early access. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
 {% endalert %}
 
 ## Create a User Update Step
@@ -36,7 +36,7 @@ Do not include any of the following information in the JSON composer:
 * Fields related to push token imports
 {% endalert %}
 
-As an example, users who receive the User Update Step below will have the VIP Member attribute set to `true`.
+As an example, users who receive the following User Update Step will have the VIP Member attribute set to `true`.
 
 ![][3]
 

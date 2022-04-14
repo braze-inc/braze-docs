@@ -12,7 +12,7 @@ Braze tracks author, editor, date, and status information about segments, campai
 
 ## Campaign, Canvas, and segment tags
 
-You can add tags when creating or editing a campaign, Canvas, or segment. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** below the engagement name and select an existing tag, or start typing to add a new tag.
+You can add tags when creating or editing a campaign, Canvas, or segment. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** under the engagement name and select an existing tag, or start typing to add a new tag.
 
 ![Adding tags during campaign creation][2]
 
@@ -20,7 +20,7 @@ You can also add tags to multiple campaigns, Canvases, or segments by selecting 
 
 ![Adding tags to multiple campaigns at the same time][5]
 
-The tags set on a campaign, Canvas, or segment are visible on the detail page below the engagement name.
+The tags set on a campaign, Canvas, or segment are visible on the detail page near the engagement name.
 
 ![Tags shown on the Campaign Details page][3]
 
@@ -28,7 +28,7 @@ They are also visible in the list of campaigns, Canvases, or segments, along wit
 
 ![Tags on the list of campaigns][4]{: style ="max-width:70%;" }
 
-To filter by a tag, select the tag name in the left-hand toolbar or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
+To filter by a tag, select the tag name from the list of tags or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
 
 ![Searching for all campaigns tagged as Welcome Email][6]
 
@@ -36,7 +36,7 @@ To filter by a tag, select the tag name in the left-hand toolbar or search for t
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.
 
-Below is an example of tags an eCommerce app might find useful:
+The following is an example of tags an eCommerce app might find useful:
 
 <style>
 table td {

@@ -23,16 +23,16 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "external_id" : (optional, string) External User ID,
   "user_alias" : (optional, User Alias Object), User Alias,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (required, string) see App Identifier below,
-  // Please see product_id naming conventions below for clarification.
-  "product_id" : (required, string), identifier for the purchase, e.g. Product Name or Product Category,
+  "app_id" : (required, string) see App Identifier,
+  // See the following product_id naming conventions for clarification.
+  "product_id" : (required, string), identifier for the purchase, e.g., Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
   //Revenue from a purchase object is calculated as the product of quantity and price.
-  "price" : (required, float) value in the base currency unit (e.g. Dollars for USD, Yen for JPY),
+  "price" : (required, float) value in the base currency unit (e.g., Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
   "time" : (required, datetime as string in ISO 8601), Time of purchase,
   // Properties stored here are only valid for 30 days.
-  // Please see purchase object explanation below for clarification.
+  // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
@@ -81,7 +81,7 @@ Event property objects that contain array or object values can have an event pro
 
 [Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) **do not** persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
-While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
+While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our [webhooks suggestions](#purchase-objects-event-objects-and-webhooks) to see how you can incorporate webhooks to save these properties as custom attributes.
 
 ### Purchase property naming conventions
 

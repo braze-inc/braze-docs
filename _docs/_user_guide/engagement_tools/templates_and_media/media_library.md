@@ -10,7 +10,7 @@ tool: Media
 
 # Media library
 
-> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
+> The Media Library allows you to manage your assets in a single, centralized location. To access this feature go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
 
 You can use the **Media Library** to:
 

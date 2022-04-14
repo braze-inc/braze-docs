@@ -12,16 +12,12 @@ tool: Canvas
 
 ## Finding your strategy with the five W’s of visualization
 
-Answer the questions below to get started:
+Answer the following questions to get started:
 
 1. **What** am I trying to help the customer do or understand? (Canvas name)<br><br>
 
 2. **When** will a user start this experience? Pick one of the following:
     * **Scheduled**: Enter users at a designated time
-      * Start a session
-      * Perform a custom event
-      * Enter a location
-      * Interact with or leave another campaign or Canvas
     * **Action-Based**: Enter user when they perform actions
       * Make a purchase
       * Start a session

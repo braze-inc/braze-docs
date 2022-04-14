@@ -14,7 +14,7 @@ tool: Campaigns
 Transactional Emails are those that are sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional Email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
 
 {% alert important %}
-Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
+Transactional Email is only available as part of select Braze packages. Reach out to your Braze Customer Success Manager for more details.
 {% endalert %}
 
 This reference article covers how to create a transational campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
@@ -45,7 +45,7 @@ When launching a transactional campaign, Braze has simplified the campaign creat
 
 ### Disallowed tags in Transactional Emails 
 
-Please note that the `Connected Content` and `Promotion Code` Liquid tags are currently not available within transactional email campaigns. 
+Note that the `Connected Content` and `Promotion Code` Liquid tags are currently not available within transactional email campaigns. 
 
 Using the `Connected Content` tag requires Braze to make an outbound API request during our sending process, which can slow down the message sending process if the external service we request is experiencing latency.  Similarly, the `Promotion Code` tag requires Braze to perform additional processing to evaluate the availability of a promotion before sending, which can slow the sending process should one not be available.
 

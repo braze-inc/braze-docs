@@ -135,7 +135,7 @@ Regardless of the response to the opt-in prompt, the user receives a background 
 
 In iOS 12, Apple introduced Provisional Authorization, allowing brands the option to send quiet push notifications to their users' Notification Centers before they explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
-On devices running iOS 11 or below, your users must explicitly opt-in to receive your push messages. You must request whether the user would like to receive push from you.
+On devices running iOS 11 or earlier, your users must explicitly opt-in to receive your push messages. You must request whether the user would like to receive push from you.
 
 ### Web
 

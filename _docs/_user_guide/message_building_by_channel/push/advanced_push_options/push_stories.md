@@ -48,7 +48,7 @@ The previews will be reflected and are interactive.
 ![][3]{: style="max-width:60%"}
 
 {% alert important %}
-If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
+If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
 
 ### Push Story segmentation

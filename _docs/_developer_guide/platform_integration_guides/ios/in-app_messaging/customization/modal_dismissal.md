@@ -12,7 +12,7 @@ channel:
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
 
-To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`, as shown below. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`, as shown in the following code snippet. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ```
 <key>Braze</key>

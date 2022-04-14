@@ -10,7 +10,7 @@ description: "This reference article shows how to manually integrate the Braze S
 # Manual integration
 
 {% alert tip %}
-We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process. However, if you are unable to do so, you may complete the integration manually by following the instructions below.
+We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process. However, if you are unable to do so, you may complete the integration manually by following the instructions.
 {% endalert %}
 
 ## Step 1: Downloading the Braze SDK
@@ -52,7 +52,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 6. Add the following frameworks and mark them as optional:
 	- `CoreTelephony.framework`<br><br>
 7. Select the **Build Settings** tab. In the **Linking** section, locate the **Other Linker Flags** setting and add the `-ObjC` flag.<br><br>
-8. The `SDWebImage` framework is required for the Braze News Feed, Content Cards, and in-app messaging to function properly. `SDWebImage` is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards, or in-app messages, follow the steps below.
+8. The `SDWebImage` framework is required for the Braze News Feed, Content Cards, and in-app messaging to function properly. `SDWebImage` is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards, or in-app messages, follow the SDWebImage integration steps.
 
 ### SDWebImage integration
 

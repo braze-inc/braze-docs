@@ -27,7 +27,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 ### Configure your identity provider
 
-First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the information below.
+First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information.
 
 In addition, you’ll need to set up SAML attribute mapping.
 
@@ -45,7 +45,7 @@ Braze only requires `email` in the SAML Assertion.
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
-After your Account Manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
+After your account manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
 
 On this page, you, input:
 
@@ -56,7 +56,7 @@ On this page, you, input:
 | `Certificate` | The `x.509` certificate is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Please make sure that your certificate follows this format when adding it to the dashboard:
+Make sure that your certificate follows this format when adding it to the dashboard:
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -72,7 +72,7 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ## SSO behavior
 
-Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the settings below. 
+Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the following settings. 
 
 ## Restriction
 
