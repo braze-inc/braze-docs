@@ -25,7 +25,7 @@ Aliases are necessary to be able to capture any custom events or [custom keyword
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 
+If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 

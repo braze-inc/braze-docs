@@ -174,7 +174,7 @@ We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}
 
 ### Changing push subscriptions {#changing-push-subscriptions}
 
-Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
+Braze's SDKs provide methods for changing a user's push message subscription. Refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
 
 - [iOS][12]
 - [Android and FireOS][13]

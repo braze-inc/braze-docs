@@ -115,7 +115,7 @@ Provide the following fields on the Braze configuration page:
 
 #### Server API integration
 
-This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, please follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
+This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
 
 ##### Connections settings for your Braze output
 

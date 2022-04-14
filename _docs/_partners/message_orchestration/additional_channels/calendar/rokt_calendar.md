@@ -18,7 +18,7 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 
 | Requirement  | Description |
 | ------------ | ----------- |
-| Rokt Calendar account | A client-specific Rokt Calendar account is required to take advantage of this partnership. Please contact [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) to speak with an account manager  |
+| Rokt Calendar account | A client-specific Rokt Calendar account is required to take advantage of this partnership. Contact [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) to speak with an account manager  |
 | Rokt Calendar setup | Your Rokt Calendar account manager will work with you to set up the calendar to best suit your needs, including settings like:<br>- Merge flag<br>- SubscriberID fallback flag<br>- Email capture, if needed |
 | Rokt Calendar OAuth credentials | This key provided by your Rokt Calendar account manager will enable you to connect your Braze and Rokt Calendar accounts.<br><br>This can be created in the Braze dashboard under **Manage Settings > Connected Content > +Add Credential**. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. You will need to provide this key to your Rokt Calendar account manager.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |

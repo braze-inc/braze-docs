@@ -14,7 +14,7 @@ channel:
 Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze. 
 
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration article.
+Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration article.
 {% endalert %}
 
 ## Format user phone numbers to carrier standards
@@ -25,7 +25,7 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 
+If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 

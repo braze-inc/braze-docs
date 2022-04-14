@@ -58,7 +58,7 @@ SALE
 
 {% alert important %}
 Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. 
-<br><br>If you have any questions about a filter that is not listed here, please contact Support or reach out to your Customer Success Manager.
+<br><br>If you have any questions about a filter that is not listed here, contact Support or reach out to your Customer Success Manager.
 {% endalert %}
 
 ## Array filters

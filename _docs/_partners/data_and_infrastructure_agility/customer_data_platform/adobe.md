@@ -26,7 +26,7 @@ The Braze and Adobe CDP integration allows brands to connect and map their Adobe
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Please note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep to better understand this potential data point increase.
+Note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep to better understand this potential data point increase.
 {% endalert %}
 
 ## Integration

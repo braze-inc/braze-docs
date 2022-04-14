@@ -12,7 +12,7 @@ tool: Currents
 > This page outlines and describes the generic process for integrating and configuring Braze Currents.
 
 {% alert important %}
-Currents are included with certain Braze packages. Please contact your Braze representative if you have any questions or want to gain access.
+Currents are included with certain Braze packages. Contact your Braze representative if you have any questions or want to gain access.
 {% endalert %}
 
 ## Requirements
@@ -67,5 +67,5 @@ If needed, you can learn more about our events in our [event delivery semantics]
 You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
-Please note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Note that Currents will drop events with excessively large payloads of greater than 900KB. 
 {% endalert %}

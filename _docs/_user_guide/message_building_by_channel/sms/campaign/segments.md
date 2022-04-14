@@ -79,9 +79,9 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 - **Compatible with Liquid templating, Connected Content, emojis, and links**
     - Liquid templating and Connected Content may put your message at risk of going over the character limit for your encoding type. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
     - Emojis have no standard character count across all emojis, so make sure to test that your messages are segmenting and displaying correctly.
-    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Please visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>
+    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>
 - **Testing**
-    - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Please note that test messages will count toward your message limits.
+    - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Note that test messages will count toward your message limits.
 
 ## SMS segment calculator {#segment-calculator}
 ---

@@ -58,7 +58,7 @@ To retarget your users, use the Pilgrim SDK to set a `last_location` custom attr
 
 ![An action-based campaign in the target users step showing "last_location" equals "Pizza Place".]({% image_buster /assets/img_archive/last-location-segment.png %})
 
-You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, please refer to the [Foursquare developer site](https://developer.foursquare.com/).
+You can also segment users in Braze who visited a particular type of venue based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, refer to the [Foursquare developer site](https://developer.foursquare.com/).
 
 [1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}

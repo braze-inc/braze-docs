@@ -12,7 +12,7 @@ description: "This reference article covers using an array of objects as a data 
 Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 {% alert important %}
-Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations

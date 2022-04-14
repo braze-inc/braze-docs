@@ -33,7 +33,7 @@ To give a user access to a course, lesson, or eNPS survey, and to track their pr
 {% raw %}
 ```
 Welcome to my Rickshaw App platform.
-Please access your onboarding course at:
+Access your onboarding course at:
 
 {% connected_content
   https://connect.edume.com/

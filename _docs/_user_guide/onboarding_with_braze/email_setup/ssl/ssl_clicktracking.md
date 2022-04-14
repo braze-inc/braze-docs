@@ -18,7 +18,7 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 2. Braze will provide DNS records to add to your domain registry.
 3. Braze will verify if records have been added to your registry correctly.
 4. You will then select a CDN and obtain SSL certificates from a third-party provider. 
-5. You will set up your CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
+5. You will set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Reach out to your CDN provider for help.
 6. Lastly, reach out to your COM or CSM to get SSL turned on.
 
 ## What is a CDN, and why do I need it?
@@ -30,7 +30,7 @@ At Braze, to do click and open tracking, our delivery partners transform links u
 In the following sections, we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
 
 {% alert important %}
-Please note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+Note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
 {% endalert %}
 
 {% alert note %}
@@ -69,7 +69,7 @@ Once the command is run, under `ANSWER SECTION` it should list where your CNAME 
 
 If your live email links start breaking during setup, this often means you've pointed your DNS toward your CDN without it being properly configured. This often comes up as a "Wrong Link" error.
 
-Please reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
+Reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
 
 {% endtab %}
 {% tab HTTP Messages Persisting %}

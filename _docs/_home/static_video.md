@@ -9,7 +9,7 @@ noindex: true
 
 # User Data Collection
 
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a custom event vs. a custom attribute.
 
@@ -95,7 +95,7 @@ Custom event properties can also be used for personalization within the messagin
 
 ![custom_event_properties_gaming.png][19]
 
-Custom event properties are designed to help you personalize your messaging or build granular Action-Based Delivery campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
+Custom event properties are designed to help you personalize your messaging or build granular Action-Based Delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your Customer Success Manager, as this may incur additional data costs.
 
 ## Custom Attributes
 Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
@@ -150,7 +150,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -325,13 +325,13 @@ We count every attribute passed to Braze as a data point, even if the passed att
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segmentation). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
 ### Technical Limitations & Constraints
-Please be mindful of the following limitations and constraints when implementing custom events:
+Be mindful of the following limitations and constraints when implementing custom events:
 
 #### Length Constraints
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
 #### Content Constraints
-The following content will be trimmed programmatically from your attributes and events. Please take care not to use the following:
+The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:
 
 - Leading and trailing whitespace
 - Newlines

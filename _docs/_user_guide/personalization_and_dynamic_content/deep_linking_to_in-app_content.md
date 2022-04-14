@@ -25,7 +25,7 @@ Everything after the colon within a deep link is free-form text. It's up to you 
 These deep links are a powerful tool when used in tandem with the Braze [News Feed][11]. Providing deep links as the URI within News Feed items allows you to use the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be used to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
 
 {% alert note %}
-Keep in mind that enabling these deep links requires some additional setup within your app. Please reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
+Keep in mind that enabling these deep links requires some additional setup within your app. Reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
 {% endalert %}
 
 ## UTM tags and campaign attribution

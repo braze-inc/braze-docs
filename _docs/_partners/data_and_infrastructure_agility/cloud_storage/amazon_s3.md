@@ -273,7 +273,7 @@ Click **Launch Current** to continue.
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
 
 {% alert important %}
-If you receive an “S3 credentials are invalid” error, this may be due to integrating too quickly after creating a role in AWS. Please wait and try again. 
+If you receive an “S3 credentials are invalid” error, this may be due to integrating too quickly after creating a role in AWS. Wait and try again. 
 {% endalert %}
 
 {% endtab %}

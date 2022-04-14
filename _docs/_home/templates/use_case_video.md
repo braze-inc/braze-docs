@@ -74,7 +74,7 @@ When you talk about Audience, you don't need to instruct them on how to use Segm
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>

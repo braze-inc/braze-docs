@@ -21,7 +21,7 @@ Objects can contain existing [data types][1], such as:
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
 {% alert important %}
-Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for nested custom attributes is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations

@@ -16,7 +16,7 @@ description: "This article outlines details about the Users by Segment Braze end
 
 This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Please wait for your export to complete before retrying. 
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
 
 This endpoint is currently not supported by Google Cloud Storage.
 
@@ -56,7 +56,7 @@ Example ZIP File:
 
 If you do not have S3 credentials provided but have an Azure integration set up with Braze, the data can be exported there if you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. If not, the response to the request provides an obfuscated URL where a zip file containing all the user files can be downloaded. The URL will only become a valid location once the export is ready. We strongly suggest that customers who use this endpoint set up their own S3 credentials so that customers can enforce their own S3 bucket policies on the export.
 
-Please be aware that if you do not have S3 credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you’re exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using ‘fields_to_export’ and specifying only the fields you need, in order to keep the size of the transfer lower. If you want to export all your users and are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g. create a segment where random bucket number <1000, between 1000 and 2000, etc).
+Be aware that if you do not have S3 credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you’re exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using ‘fields_to_export’ and specifying only the fields you need, in order to keep the size of the transfer lower. If you want to export all your users and are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g. create a segment where random bucket number <1000, between 1000 and 2000, etc).
 
 In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
 
