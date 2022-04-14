@@ -27,9 +27,9 @@ To use the Canvas V2 workflow, go to **Canvas** under the **Engagement** tab. Cl
 
 As you’re building or editing your Canvas, if you ever wanted to switch back to Canvas V1, click **Switch to Canvas V1 Workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
 
-{ % alert note % }
+{% alert note %}
 Switching from Canvas V2 to V1 is allowed only if you do not use Canvas V2 features. Switching from Canvas V1 to V2 will only work if there are no full steps in your Canvas.
-{ % endalert % }
+{% endalert %}
 
 ## What will happen to my Canvases that I created using Canvas V1?
 
@@ -41,27 +41,27 @@ All of your existing Canvases and the current version of Canvas (Canvas V1) will
 
 Previously with the Canvas V1 workflow, a Full Step was added by default whenever you created any step in your user journey. Now with Canvas V2, these Full Steps are replaced by different Canvas components, which gives you the benefit of increased visibility and customization for your editing experience. You can immediately see all your Canvas components from the Canvas Step Toolbar.
 
-### Canvas step branching
+### Branching
 
-Steps in Canvas V2 can branch, or split into multiple steps, only using path steps such as Audience Paths or Action Paths. These steps have a maximum branch size of seven groups and an Everyone Else group. For more than seven groups, simply create another path step connected to the Everyone Else path.
+Steps in Canvas V2 can [branch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/branching/), or split into multiple steps, only using path steps such as [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). These steps have a maximum branch size of seven groups and an Everyone Else group. For more than seven groups, simply create another path step connected to the Everyone Else path.
 
-### Canvas step behavior
+### Step behavior
 
 Previously with the Canvas V1 workflow, each Full Step included delay and schedule settings, exception events, audience filters, message configuration, and message advancement options all in one step. Moving forward, these settings will be separate, which makes your Canvas step building experience more customizable and also introduces some differences in functionality.
 
 ### Message Step advancement
 
-Message Steps advance all users who enter the step. There is no more requirement to specify message advancement behavior, which makes configuring the step simpler. This does mean that if you want to implement the **Advance when message sent** option, you would need to use a separate Audience Paths Step.
+[Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no more requirement to specify message advancement behavior, which makes configuring the step simpler. This does mean that if you want to implement the **Advance when message sent** option, you would need to use a separate Audience Paths Step.
 
 ### Delay "in" behavior
 
-Delay Steps will wait the entire delay time before proceeding to the next step. 
+[Delay Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
 Let's say we have a Delay Step where the delay is set to send your user to the next step in one day at 2pm. A user enters the step at 2:01pm on April 13. For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 ### Intelligent Timing behavior
 
-Since Intelligent Timing is stored in the Message Step, delays will be applied prior to Intelligent Timing calculations. 
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message Step, delays will be applied prior to Intelligent Timing calculations. 
 
 Let's say we have a Delay Step set to send a user to the next step after one day using Intelligent Timing. A user enters the step at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
 
@@ -69,9 +69,9 @@ Let's say we have a Delay Step set to send a user to the next step after one day
 
 #### Quiet Hours
 
-Exception event functionality in Canvas V2 is applied using Action Paths, which are separate from Message Steps. Quiet Hours are enforced in the Message Step. This means that if a user already passed the Action Path step (and was not excluded with the exception event there), then hit quiet hours when they got to the Message step, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the Exception event will no longer be applied. This use case is not common.
+Exception event functionality in Canvas V2 is applied using Action Paths, which are separate from Message Steps. Quiet Hours are enforced in the Message Step. This means that if a user already passed the Action Path Step (and was not excluded with the exception event there), then hit quiet hours when they got to the Message Step, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. This use case is not common.
 
-For Segments and Filters, the Canvas V2 Message Step has a new feature called “Delivery Validations” that allows users to configure additional segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
+For Segments and filters, the Canvas V2 Message Step has a new feature called Delivery Validations that allows users to configure additional Segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
 #### "In" or "On the next" schedule setting
 
@@ -79,6 +79,6 @@ Exception events in Canvas V2 are created using Action Paths. Action Paths only 
 
 ## I'm interested! How do I access Canvas V2?
 
-Support for Canvas V2 is currently in early access. Please contact your Braze account manager if you're interested in participating in the early access.
+Support for Canvas V2 is currently in early access. Contact your Braze account manager if you're interested in participating in the early access!
 
 [1]: {% image_buster /assets/img_archive/canvas_v2_experience.png %}
