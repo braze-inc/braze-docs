@@ -18,7 +18,7 @@ On iOS and Android, you can now [create notifications][74] with multiple pages, 
 
 ## Okta single sign-on (October 2017)
 
-Companies can use Okta to control Braze access and allow or force their fellow Braze users to log in using Okta credentials. To gain access to this new product, contact your Customer Success Manager, Account Manager, or open a [support ticket][support].
+Companies can use Okta to control Braze access and allow or force their fellow Braze users to log in using Okta credentials. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket][support].
 
 > Update: Information about how to access Okta can be found in our [May 2018 Release Notes]({{site.baseurl}}/help/release_notes/2017/august/#may-2018).
 
