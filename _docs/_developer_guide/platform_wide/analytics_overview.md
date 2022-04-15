@@ -192,7 +192,7 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 
 > Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
-The following table describes available segmentation options for numeric  attributes.
+The following table describes available segmentation options for numeric attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
