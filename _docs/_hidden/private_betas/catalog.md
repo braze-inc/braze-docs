@@ -13,7 +13,7 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 {% alert important %}
-Catalogs are currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
+Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 If you'd like to share your feedback on this feature or make a request, you can [book a session](https://calendly.com/d/yzvf-frpy/catalog-beta-working-session?month=2021-10) with the Braze Data Ingestion team on Calendly!
@@ -28,11 +28,13 @@ You can create up to five catalogs across your company.
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The CSV file must have one column with a header of `id`, and each item's `id` must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The first column of the CSV file must a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
+- Maximum field (column) name of 250 characters
 - Maximum CSV file size of 100MB
+- Maximum field value (cell) of 5,000 characters
 - Maximum field value (cell) size of 0.5KB
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
@@ -50,7 +52,16 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
 
 After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
 
+{% alert important %}
+Your CSV file can be rejected if you go above [company limitations](#limits). 
+{% endalert %}
+
 ![][1]{: style="max-width:85%;"}
+
+Give your catalog a name. Keep in mind the following limitations for your catalog name:
+- Must be unique
+- Maximum of 250 characters
+- Can only include numbers, letters, hyphens, and underscores
 
 ### Step 3: Select your data type
 
@@ -116,24 +127,9 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Refer to the following as an example:
+You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Check out this example:
 
-{% raw %}
-```liquid
-{% catalogs_items Games tales_storefront %}
- 
-Get {{ items[0].title }} for just {{ items[0].price }}!
- 
-{% catalogs_items Games reformation_storefront %}
- 
-Get {{ items[0].title }} for just {{ items[0].price }}!
-```
-{% endraw %}
 
-This renders as the following:
-
-> Get Tales for just 7.49 USD!<br>
-> Get Reformation for just 22.49 USD!
 
 ### Using images {#using-images}
 
@@ -192,7 +188,11 @@ Which will display as the following:
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
-## Limitations
+### Using Liquid
+
+You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to accouunt for this.
+
+## Limitations {#limits}
 
 Refer to the following table for limitations that apply at a company level:
 
@@ -214,7 +214,7 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Catalogs team</a> for more informaton.
+Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a> for more informaton.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
