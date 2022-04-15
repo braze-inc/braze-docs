@@ -40,7 +40,7 @@ guide_menu_list:
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
   - name: Web SDK
-    link: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     fa_icon: fas fa-globe
   - name: Windows SDK
     link: https://github.com/Appboy/appboy-windows-sdk/blob/master/CHANGELOG.md

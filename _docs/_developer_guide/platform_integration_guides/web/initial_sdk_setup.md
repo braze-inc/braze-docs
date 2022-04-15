@@ -56,7 +56,7 @@ Visit the [Google Tag Manager integration guide][18] for more information.
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2FAppboy%2Fappboy-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 
 ## Step 2: Initialize Braze
@@ -125,7 +125,7 @@ When you reference the Braze Web SDK from our content delivery network, for exam
 
 However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
-You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
+You can keep up-to-date with our latest release [following our release feed](https://github.com/braze-inc/braze-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
 - Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, or in your package manager's dependencies.
 - If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file. 
@@ -147,7 +147,7 @@ For more details or in-depth Tealium configuration support, check out our [integ
 ### Other tag managers
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
 
-[2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK GitHub Repository"
+[2]: https://github.com/braze-inc/braze-web-sdk#getting-started "Braze Web SDK GitHub Repository"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md
