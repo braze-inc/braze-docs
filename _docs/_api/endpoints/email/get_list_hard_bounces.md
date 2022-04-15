@@ -24,18 +24,18 @@ This endpoint allows you to pull a list of email addresses that have "hard bounc
 
 ## Request parameters
 
-You must provide either a `start_date` and `end_date` OR an `email`.
-
-If you provide a `start_date`, `end_date`, and an `email`, we prioritize the email(s) given and disregard the date range.
-
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Optional* | String in YYYY-MM-DD format| Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
-| `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
+| `start_date` | Optional<br>(see note) | String in YYYY-MM-DD format| Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
+| `end_date` | Optional<br>(see note) | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from |
-| `email` | Optional* | String | If provided, we will return whether or not the user has hard bounced |
+| `email` | Optional<br>(see note) | String | If provided, we will return whether or not the user has hard bounced |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+You must provide either a `start_date` and `end_date`, OR an `email`. If you provide all three, `start_date`, `end_date`, and an `email`, we prioritize the emails given and disregard the date range.
+{% endalert %}
 
 If your date range has more than the `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 

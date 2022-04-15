@@ -49,7 +49,9 @@ This filter allows you to segment based on a user's custom attribute. These filt
 }
 ```
 
-The custom attribute's type determines the comparisons that are valid for a given filter.
+#### Allowed comparisons by data type
+
+The custom attribute's data type determines the comparisons that are valid for a given filter.
 
 | Custom Attribute Type | Allowed Comparisons |
 | ---------------------| --------------- |
@@ -114,10 +116,8 @@ This filter allows you to segment based on a user's push subscription status.
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `is`, `is_not`
+- **Allowed values:** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Email subscription filter
 
@@ -135,10 +135,8 @@ This filter allows you to segment based on a user's email subscription status.
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `is`, `is_not`
+- **Allowed values:** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Last used app filter
 
@@ -155,7 +153,6 @@ This filter allows you to segment based on when was the last time the user used 
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `after`, `before` | DateTime (ISO 8601 string) |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `after`, `before`
+- **Allowed values:** DateTime (ISO 8601 string)
+

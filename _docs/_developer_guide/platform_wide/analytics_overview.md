@@ -109,6 +109,8 @@ Custom attributes are extraordinarily flexible tools that allow for great target
 #### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
+The following table describes available segmentation options for string attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
@@ -151,6 +153,8 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
+The following table describes available segmentation options for array attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
@@ -169,6 +173,8 @@ Time attributes are useful for storing the last time a specific action was taken
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
+The following table describes available segmentation options for time attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** |
@@ -183,7 +189,10 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 
 #### Numbers {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
->  Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+The following table describes available segmentation options for numeric  attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -198,6 +207,8 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 #### Booleans (true/false)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
 
+The following table describes available segmentation options for boolean attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the boolean value **is** | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
@@ -208,6 +219,8 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 ## Purchase events / revenue tracking
 
 Using our purchase methods to record in-app purchases establishes the Life-time Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+
+The following table describes available segmentation options for purchase events.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
