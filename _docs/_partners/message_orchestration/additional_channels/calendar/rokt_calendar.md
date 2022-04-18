@@ -12,13 +12,13 @@ search_tag: Partner
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) is a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications in the form of calendar events and notifications.
 
-The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers and their data to be pushed to Braze via Braze webhook. You can then use this data in Braze Canvases for journey targeting and audience segmentation using any of the custom Rokt Calendar attributes listed [below](#audience-segmentation). 
+The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers and their data to be pushed to Braze via Braze webhook. You can then use this data in Braze Canvases for journey targeting and audience segmentation using any of the following custom [Rokt Calendar attributes](#audience-segmentation). 
 
 ## Prerequisites
 
 | Requirement  | Description |
 | ------------ | ----------- |
-| Rokt Calendar account | A client-specific Rokt Calendar account is required to take advantage of this partnership. Please contact [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) to speak with an account manager  |
+| Rokt Calendar account | A client-specific Rokt Calendar account is required to take advantage of this partnership. Contact [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) to speak with an account manager  |
 | Rokt Calendar setup | Your Rokt Calendar account manager will work with you to set up the calendar to best suit your needs, including settings like:<br>- Merge flag<br>- SubscriberID fallback flag<br>- Email capture, if needed |
 | Rokt Calendar OAuth credentials | This key provided by your Rokt Calendar account manager will enable you to connect your Braze and Rokt Calendar accounts.<br><br>This can be created in the Braze dashboard under **Manage Settings > Connected Content > +Add Credential**. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. You will need to provide this key to your Rokt Calendar account manager.<br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
@@ -164,7 +164,7 @@ Rokt Calendar requires an `HTTP Header` for authorization that includes your Rok
 {% endraw %}
 {% endtab %}
 {% tab Event details %}
-Listed below is information that can be customized at the event level.
+The following fields include information that can be customized at the event level.
 
 | Field             | Definition       | Example          |
 | ----------------  | ---------------- | ---------------- |
@@ -186,7 +186,7 @@ For a list of valid time zones, see [https://roktcalendar-api.readme.io/docs/tim
 
 ### Step 3: Preview your request
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

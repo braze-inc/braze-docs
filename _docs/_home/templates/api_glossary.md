@@ -102,7 +102,7 @@ The response from this endpoint includes a field for `email_template_id`, which 
 Get,Email,Template,List,REST
 {% endapitags %}
 
-Use the endpoints below to get a list of available templates.
+Use the following endpoints to get a list of available templates.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
@@ -174,7 +174,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above)
+      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties)
     },
     ...
   ]
@@ -198,7 +198,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with canvas_entry_properties above)
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent canvas_entry_properties)
     },
     ...
   ]
@@ -243,13 +243,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {
   // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID below,
+  "external_id" : (optional, string) see External User ID,
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean),
-  // See note below regarding anonymous push token imports
+  // See note regarding anonymous push token imports
   "push_token_import" : (optional, boolean).
   // Braze User Profile Fields
   "first_name" : "Jon",

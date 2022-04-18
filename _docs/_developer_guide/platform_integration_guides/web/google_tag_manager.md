@@ -27,7 +27,7 @@ Use the Initialization Tag to add the Braze Web SDK to your website.
 
 #### Step 1: Select the Initialization Tag
 
-Search for Braze in the community template gallery, and select the **Braze Initialization Tag** as shown below.
+Search for Braze in the community template gallery, and select the **Braze Initialization Tag**.
 
 ![A dialog box showing the Braze Initialization Tag configuration settings. Settings included are "tag type", "API key", "API endpoint", "SDK version", "external user ID", and "Safari web push ID".][4]
 
@@ -103,7 +103,7 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 ```
 
 {% alert important %}
-The GTM template does not support nested properties on events or purchases. You can use the above HTML to log any events or purchases that require nested properties.
+The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
 #### Default user attributes {#standard-attributes}

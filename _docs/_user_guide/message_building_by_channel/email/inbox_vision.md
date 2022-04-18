@@ -15,7 +15,7 @@ channel:
 Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking **Preview and Test**.  It also allows you to spam test from the **Spam Test** tab.
 
 {% alert important %}
-Inbox Vision for the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) is currently in early access. Please contact your Braze account manager if you are interested in participating in early access.
+Inbox Vision for the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) is currently in early access. Contact your Braze account manager if you are interested in participating in early access.
 {% endalert %}
 
 
@@ -37,7 +37,7 @@ In general, your email will not work with Inbox Vision if your email content rel
 
 ## Code analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting <i class="fas fa-list"></i> **List view**.
 
 ![Example code analysis on the Inbox Vision preview.][2]
 
@@ -51,7 +51,7 @@ Sometimes the code analysis will show up faster than the preview for a particula
 
 ## Test accuracy
 
-All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please open a [support ticket]({{site.baseurl}}/braze_support/).
+All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %}
 [2]: {% image_buster /assets/img_archive/inboxvision2.png %}

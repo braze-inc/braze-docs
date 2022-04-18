@@ -55,13 +55,13 @@ On the following page, enter your application name. The following two checkboxes
 
 ![][26]
 
-Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Next, click on the cloud push link in the menu on the left-hand side of the console. On the following page, click **推送设置** (set up push).
+Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key. Next, navigate to **云推送** (cloud push) in the sidebar. On the following page, click **推送设置** (set up push).
 
 ![][14]
 
 ![][29]
 
-On the following page, enter your app package name (e.g. `com.braze.sample`) and specify whether to cache messages and, if so, how long (in hours). This indicates to Baidu how long to continue to attempt sending messages to offline users. Click **保存设置** (save settings) to save.
+On the following page, enter your app package name (e.g., `com.braze.sample`) and specify whether to cache messages and, if so, how long (in hours). This indicates to Baidu how long to continue to attempt sending messages to offline users. Click **保存设置** (save settings) to save.
 
 ![][39]
 

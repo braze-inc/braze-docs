@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 7
-description: "This reference article covers font customization options such as defining a font family and shows how to reference it throughout your application."
+description: "This reference article covers font customization options such as defining a font family and shows how to reference it throughout your Android or FireOS application."
 
 ---
 
@@ -42,7 +42,7 @@ After storing the font family definition in `/res/font/bungee_font_family.xml`, 
 
 Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
 
-For example, the following styles override would use the `bungee` font family from above for all Braze in-app messages and a different font family for all Braze News Feed cards.
+For example, the following styles override would use the `bungee` font family for all Braze in-app messages and a different font family for all Braze News Feed cards.
 
 ```
 <style name="Braze.InAppMessage">

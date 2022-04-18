@@ -75,7 +75,7 @@ This year, Apple has announced many updates to email tracking and privacy. For m
 
 ## Safari IP address location
 
-In iOS 15, users will be able to configure Safari to anonymize or generalize the location determined from their IP addresses. Please keep this in mind when using location-based targeting or segmentation.
+In iOS 15, users will be able to configure Safari to anonymize or generalize the location determined from their IP addresses. Keep this in mind when using location-based targeting or segmentation.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues

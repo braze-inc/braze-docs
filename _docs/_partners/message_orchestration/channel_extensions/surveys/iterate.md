@@ -61,7 +61,7 @@ As users respond, you'll see the data populate on their profiles in real-time. T
 ## Customize user attribute names
 
 By default, the user attribute created for a question is the same as the prompt. 
-In some cases, you may want to customize this. To do that, click on the **Customize user attribute names** dropdown in the **Create your Survey** step above and enter any custom names you'd like.
+In some cases, you may want to customize this. To do that, click on the **Customize user attribute names** dropdown in the **Create your Survey** step and enter any custom names you'd like.
 
 [6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
 [2]: {% image_buster /assets/img/iterate.png %}

@@ -12,7 +12,7 @@ channel:
 
 ## Global subscription states {#subscription-states}
 
-Braze has three global subscription states for email users (listed in the chart below), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
+Braze has three global subscription states for email users (listed in the following chart), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 ### Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states) above. You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
@@ -79,7 +79,7 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 The email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-To place a link to the Preference Center in your emails, use the Preference Center Liquid tag (below) and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the Preference Center in your emails, use the following Preference Center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
 {% raw %}
 ```
@@ -134,7 +134,7 @@ In the **Custom Footer** section, you can choose to turn on custom footers. Once
 {% raw %}
 You will see the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute.
 
-If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**, as indicated below.
+If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.
 
 ![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
@@ -154,7 +154,7 @@ When creating a custom footer, Braze suggests you use attributes for personaliza
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e. ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e. ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
+Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 
 You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you choose not to write a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
@@ -166,7 +166,7 @@ When a user clicks on an unsubscribe URL in an email, they are taken to a defaul
 
 Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [email Settings][10] page.
 
-We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
@@ -174,7 +174,7 @@ We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}
 
 ### Changing push subscriptions {#changing-push-subscriptions}
 
-Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
+Braze's SDKs provide methods for changing a user's push message subscription. Refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
 
 - [iOS][12]
 - [Android and FireOS][13]

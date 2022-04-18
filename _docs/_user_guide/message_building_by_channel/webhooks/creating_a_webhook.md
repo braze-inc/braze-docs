@@ -159,7 +159,7 @@ Webhooks rely on Braze's servers making requests to an external endpoint, and sy
 
 If the message body is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
 
-Like other campaigns, Braze tracks the delivery of your webhook campaigns and conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The below table summarizes the different responses the server may send, how they impact campaign analytics and whether, in the case of errors, Braze will try to redeliver the campaign:
+Like other campaigns, Braze tracks the delivery of your webhook campaigns and conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The following table summarizes the different responses the server may send, how they impact campaign analytics and whether, in the case of errors, Braze will try to redeliver the campaign:
 
 | Response code | Marked as received? | Retries? |
 |---------------|-----------|----------|
@@ -179,10 +179,10 @@ Each webhook is allowed 90 seconds before it times out.
 
 When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send webhooks from the IP ranges below. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
+Braze will send webhooks from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
 
 {% alert important %}
-If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed below, including `127.0.0.1`.
+If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |

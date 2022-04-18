@@ -49,16 +49,16 @@ As described on the Apple [developer documentation](https://help.apple.com/devel
 {% tab .p12 Certificate (Legacy) %}
 **Using a .p12 certificate (legacy)**
 
-Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process, we recommend utilizing the above-described .p8 authentication scheme instead. However, if you still wish to, you may configure and upload .p12 certificates as described below:
+Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process, we recommend utilizing the .p8 authentication scheme instead. However, if you still wish to, you may configure and upload .p12 certificates as described in the following section:
 
 **Step 1: Generate Certificate Signing Request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
-2. Select **Identifiers > App IDs** in the left sidebar.
+2. Select **Identifiers > App IDs** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the **Enable** check box and click **Create Certificate** under the **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
-6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
+6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
 **Step 2: Export Certificate**
@@ -86,7 +86,7 @@ If you have separate development and production push certificates, make sure to 
 
 ## Step 3: Register for push notifications
 
-The appropriate code sample below must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
+The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
 
@@ -99,7 +99,7 @@ If you've implemented a custom push prompt as described in our [push best practi
 If you are using the `UserNotifications` framework (recommended) introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
 {% alert important %}
-The code sample below includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) to learn more about push provisional authentication.
+The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
 {% endalert %}
 
 {% tabs %}
@@ -353,6 +353,5 @@ To add test coverage for the integration steps you've just followed, implement B
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: #push-action-buttons-integration
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/
-

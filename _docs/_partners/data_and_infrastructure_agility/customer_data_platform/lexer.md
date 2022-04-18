@@ -41,7 +41,7 @@ In Lexer, navigate to **Manage > Integration**, select the **Braze** tile, and c
 ### Choosing an AWS S3 option (Lexer-managed or self-managed)
 Using a Lexer-managed bucket is the preferred way of connecting Braze to your Lexer hub and will reduce the amount of setup needed. Lexer will provide the one-off details you will need to configure Braze.
 
-If you have already connected an S3 bucket to Braze and are using it for other purposes, you will need to instead provide Lexer access to this self-managed bucket by following the steps above.
+If you have already connected an S3 bucket to Braze and are using it for other purposes, you will need to instead provide Lexer access to this self-managed bucket by following the preceding steps.
 
 This integration works by providing Lexer with your existing API token and secrets, allowing Lexer to make these exports on your behalf. It also imports your Braze data into Lexer using these credentials and your S3 configuration to sync your data on both platforms automatically.
 

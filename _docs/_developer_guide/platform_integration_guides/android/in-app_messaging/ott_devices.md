@@ -5,7 +5,7 @@ page_order: 5
 platform: 
   - Android
   - FireOS
-description: "This reference article covers in-app messaging OTT display information for your Android application."
+description: "This reference article covers in-app messaging OTT display information for your Android or FireOS application."
 channel:
   - in-app messages
 
@@ -23,5 +23,5 @@ For OTT devices:
 
 * In-app messages that require touch mode (such as Slideup) are disabled on OTT.
 * The currently selected or focused item, such as a button or close button, will be highlighted.
-* Body clicks on the in-app message itself, i.e. not on a button, are not supported.
+* Body clicks on the in-app message itself, i.e., not on a button, are not supported.
 

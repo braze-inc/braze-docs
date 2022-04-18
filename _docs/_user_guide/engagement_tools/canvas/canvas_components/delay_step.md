@@ -15,11 +15,11 @@ Delay Steps allow you to add a stand-alone delay to a Canvas. You can add a dela
 
 You can also use Canvas Delay Steps to delay a step until an exact date, until a specific day, or until a specific day of the week.
 
-![Canvas Delay Step][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 ## Create a delay step
 
-To create a Delay Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select **Delay**.
+To create a Delay Step, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Delay**.
 
 - A Delay Step cannot have full step sibling steps. In other words, you cannot create a full step that branches into a Delay Step and a full step. This restriction exists because if there was a branch with a Delay Step and a full step, it wouldn’t be clear which branch users would go down.
 - A Delay Step can only connect to one next step.
@@ -46,7 +46,7 @@ You can choose the type of delay before the next message in your Canvas. You can
 
   The **Until a specific day of the week** option allows you to hold users in the step until a specific day of the week, at a specific time. For example, you can delay users until the next time Thursday arrives at 4pm in the company’s timezone. 
 
-  To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g. Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
+  To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g., Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
   {% endtab %}
 {% endtabs %}
 

@@ -17,7 +17,7 @@ Email settings can be found within the **Manage Settings** page of the dashboard
 
 ### Multiple sending emails
 
-Use the outbound email settings below to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
+Use the following outbound email settings to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
 
 Here, you may also exclude the "Reply-To" email and exclusively send replies to the "From" address.
 
@@ -36,7 +36,7 @@ When setting your "From" addresses, make sure your "From" email domain matches y
 The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
 {% alert important %} 
-The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billabe emails for the campaign or Canvas step since Braze will send one message to your user and one to your BCC address. Please contact your Customer Success Manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
+The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billabe emails for the campaign or Canvas step since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
 {% endalert %}
 
 ![BCC Address section of the Email Settings tab][11]
@@ -119,7 +119,7 @@ SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTT
 
 ![][2]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-The three email settings listed below are features that require no additional action other than toggling it on or off by using the corresponding switch. Please read each setting for further details.
+The three email settings listed are features that require no additional action other than toggling it on or off by using the corresponding switch. Read each setting for further details.
 
 ### Resubscribe users when their email changes
 

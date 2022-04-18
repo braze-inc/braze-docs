@@ -18,7 +18,7 @@ Using Liquid templating, you have the option to abort messages with conditional 
    {% endif %}
 ```
 
-In the example above, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
+In this example, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
 You can also specify an abort reason, which will be saved to the **Message Activity Log** in your **Developer Console**. This abort reason must be a string and cannot contain Liquid.
 

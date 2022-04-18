@@ -21,7 +21,7 @@ Objects can contain existing [data types][1], such as:
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
 {% alert important %}
-Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for nested custom attributes is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations
@@ -36,9 +36,9 @@ Support for nested custom attributes is currently in early access. Please contac
 
 {% tabs local %}
 {% tab Create %}
-Shown below is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
+The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
-```
+```json
 {
   "attributes": [
     {
@@ -62,7 +62,7 @@ Shown below is a `/users/track` example with a "Most Played Song" object. To cap
 {% tab Update %}
 To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. Deep merging ensures that all levels of an object are merged into another object instead of only the first level. In this example, we already have a `most_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `most_played_song` object.
 
-```
+```json
 {
   "attributes": [
     {
@@ -76,9 +76,9 @@ To update an existing object, send a POST to `users/track` with the `_merge_obje
 }
 ```
 
-After the above request is received, the custom attribute object will now look like this:
+After this request is received, the custom attribute object will now look like the following:
 
-```
+```json
 "most_played_song": {
     "song_name": "Solea",
     "artist_name" : "Miles Davis",
@@ -99,7 +99,7 @@ You must set `_merge_objects` to true, or your objects will be overwritten. `_me
 {% tab Delete %}
 To delete a custom attribute object, send a POST to `users/track` with the custom attribute object set to `null`.
 
-```
+```json
 {
   "attributes": [
     {
@@ -115,7 +115,7 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 ## Liquid templating
 
-The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
+The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
 Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
 
@@ -204,7 +204,7 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
-```
+```json
 {
   "attributes": [
     {

@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 6
-description: "This reference article covers how to implement locations and geofences in your Android application."
+description: "This reference article covers how to implement locations and geofences in your Android or FireOS application."
 Tool:
   - Location
 
@@ -185,7 +185,7 @@ object RuntimePermissionUtils {
 {% endtab %}
 {% endtabs %}
 
-Using the above sample code is done via:
+Using the preceding sample code is done via:
 
 {% tabs %}
 {% tab JAVA %}
@@ -307,7 +307,7 @@ Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 {% endtabs %}
 
 {% alert important %}
-Braze Geofences can only be requested once per session, either automatically by the SDK or manually with the above method.
+Braze Geofences can only be requested once per session, either automatically by the SDK or manually with this method.
 {% endalert %}
 
 ## Push to sync

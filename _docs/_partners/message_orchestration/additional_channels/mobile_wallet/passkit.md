@@ -38,7 +38,7 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 ## Connect Passkit to Braze
 
-To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s `externalId`.
+To pass data from PassKit, ensure that you have set your Braze external ID as PassKit’s `externalId`.
 
 1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
@@ -88,7 +88,7 @@ Create and name a new Content Block by navigating to `Templates & Media` within 
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Within this Content Block, we will not directly include the payload written above, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+Within this Content Block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
@@ -106,14 +106,14 @@ The second code snippet you must add to your Content Block captures the URL to b
 ```
 {% endraw %}
 
-Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet, shown below. 
+Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet:
 {% raw %}
 ```liquid
 {% capture sig %}{{url | hmac_sha1: "Project_Secret"}}{% endcapture %}
 ```
 {% endraw %}
 
-Finally, append the signature to the full URL using the fifth code snippet, shown below.
+Finally, append the signature to the full URL using the fifth code snippet:
 {% raw %}
 ```liquid
 {% capture longUrl %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}{% endcapture %}
@@ -155,7 +155,7 @@ Remember to save your Content Block before leaving the page.
 
 Once this Content Block has been made, it can be reused again in the future. 
 
-You may notice there are two variables left undefined in the above Content Block.<br> 
+You may notice there are two variables left undefined in the example Content Block.<br> 
 {% raw %}`{{passData}}`{% endraw %} - Your JSON pass data payload defined in [step 1](#passkit-integrations) <br>
 {% raw %}`{{projectUrl}}`{% endraw %} - Your project or program's URL which you find on the distribution tab of your Passkit project.
 
@@ -166,7 +166,7 @@ For example, maybe you want to change the introductory offer to include more ini
 #### Composing the message body
 
 You’ll want to capture both of these variables in your message body and then call your Content Block. 
-Capture your minified JSON payload from [step 1](#passkit-integrations) above:
+Capture your minified JSON payload from [step 1](#passkit-integrations):
 
 **Assign the project URL**
 {% raw %}
@@ -192,14 +192,14 @@ Capture your minified JSON payload from [step 1](#passkit-integrations) above:
 Your message body should look something like this:
 ![An image of the Content Block message composer with the captured JSON and Content Block reference shown.][1]{: style="max-width:70%"}
 
-The output URL for the sample above is:
+The output URL for the sample is:
 ![The output URL that includes a long, randomly generated string of letters and numbers.][2]{: style="max-width:70%"}
 
-The above output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint!
+The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint!
 
 ## Update pass using the PassKit webhook
 
-Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the links below for information on useful PassKit endpoints. 
+Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the following links for information on useful PassKit endpoints. 
 - [Member projects][12]
 - [Coupon projects][13]
 - [Flights projects][14]
@@ -251,7 +251,7 @@ To set up the webhook, fill out the new event details within the request body, i
 
 Your raw text will automatically highlight if it is an applicable Braze tag. 
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

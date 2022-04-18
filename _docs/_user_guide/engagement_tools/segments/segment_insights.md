@@ -54,7 +54,7 @@ Segment Insights can help uncover differences between user demographics. The fol
 
 ![][5]
 
-In this example, German speakers signed up longer ago on average, which might explain why they're no longer as active. This could be due to a multitude of factor. For example if the app first launched in Europe but is now more popular in the US, where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g. if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
+In this example, German speakers signed up longer ago on average, which might explain why they're no longer as active. This could be due to a multitude of factor. For example if the app first launched in Europe but is now more popular in the US, where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g., if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
 
 To improve conversions among speakers of languages other than English, a good first step would be to [localize campaigns][10] to the user's device language and making sure that the copy of those messages is engaging users by using a [multivariate campaign][11] to test different versions of the foreign language copy.
 

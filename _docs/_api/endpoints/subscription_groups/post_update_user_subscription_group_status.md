@@ -13,7 +13,7 @@ description: "This article outlines details about the Update User's Subscription
 /subscription/status/set
 {% endapimethod %}
 
-Use the endpoints below to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.
+Use these endpoints to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the **Subscription Group** page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -61,14 +61,14 @@ Authorization: Bearer YOUR-REST-API-KEY
    "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
-   // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
 \* Email subscription groups: Either `email` or `external_id` is required.
 {% endtab %}
 {% endtabs %}
 
-This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
+This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert important %}
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
@@ -81,7 +81,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 | `subscription_group_id` | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
-| `email` | Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
+| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

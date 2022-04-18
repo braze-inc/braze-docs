@@ -13,6 +13,8 @@ description: "This article explains the different components of Braze's Kindle a
 
 # Kindle and FireOS push object specification
 
+The `kindle_push` object allows you to modify or create Kindle and FireOS push notifications via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+
 ```json
 {
    "alert": (required, string) the notification message,

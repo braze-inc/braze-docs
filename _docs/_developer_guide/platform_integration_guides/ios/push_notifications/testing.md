@@ -2,7 +2,7 @@
 nav_title: Testing
 article_title: Push Notification Testing for iOS
 platform: iOS
-page_order: 5.1
+page_order: 29
 description: "This article covers command line push testing for your iOS push notifications."
 channel:
   - push

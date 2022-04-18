@@ -27,7 +27,7 @@ To prevent using up your allocated data points, we recommend setting up a progra
 
 In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your users' `session starts`, `session ends`, `events`, and `purchases`.
 
-You can find a breakdown of how Braze accumulates data points below, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
+You can find a breakdown of how Braze accumulates data points in the following sections, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
 {% alert note %} 
 Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 

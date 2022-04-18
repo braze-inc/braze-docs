@@ -4,7 +4,7 @@ article_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
-guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
+guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the following individual message type's Creative Specs or the global Creative Details."
 description: "Get creative with Content Cards! This reference article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
 
 guide_featured_title: "Message Type Creative Specs"
@@ -73,7 +73,7 @@ Content Cards come with great out-of-the-box functionality. At this time, card s
 
 ### Dismissal behavior
 
-For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown below. The `x` will appear on hover for the Web SDK only.
+For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
 
 ![Image that shows swipe or close dismissal behaviors for a card][5]{: height="70%" width="70%"}
 
@@ -85,7 +85,7 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
-| [Install Custom Image Library.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Included in integration. | Included in Integration. |
+| [Install Custom Image Library.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/gifs/) | Included in integration. | Included in Integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 <br><br>

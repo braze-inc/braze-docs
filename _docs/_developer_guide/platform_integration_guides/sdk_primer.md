@@ -52,7 +52,7 @@ These properties are collected by the Android SDK upon proper integration.
 | CARRIER | The mobile carrier. |
 | MODEL | The specific hardware of the device. | 
 | RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |
-| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g. "en_US"). |
+| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g., "en_US"). |
 | TIMEZONE <br> `time_zone` | The device time zone. |
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -97,7 +97,7 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 ## Blocking data collection
 
-It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As we stated above, not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
+It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As stated in the section [Feature set defaults](#feature-set-defaults), not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
 
 For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 

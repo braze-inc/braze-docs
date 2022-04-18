@@ -9,7 +9,7 @@ description: "This reference article shows how to subscribe to session updates f
 
 # Session tracking for iOS
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session count viewable within the Braze dashboard based on the below session semantics.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session count viewable within the Braze dashboard based on the following session semantics.
 
 ## Session lifecycle
 
@@ -49,7 +49,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-If you have set a session timeout, then the above session semantics all extend to that customized timeout.
+If you have set a session timeout, then the session semantics all extend to that customized timeout.
 
 {% alert note %}
 The minimum value for `sessionTimeoutInSeconds` is 1 second. The default value is 10 seconds.

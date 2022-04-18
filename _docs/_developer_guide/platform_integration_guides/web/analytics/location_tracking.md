@@ -4,7 +4,7 @@ article_title: Location Tracking for Web
 platform: Web
 page_order: 5
 page_type: reference
-description: "This article covers how to enable location tracking via the Braze Web SDK."
+description: "This article covers how to enable location tracking for Web."
 tool: Location
 
 ---

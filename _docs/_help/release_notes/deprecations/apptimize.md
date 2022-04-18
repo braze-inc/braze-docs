@@ -17,7 +17,7 @@ If you are currently using Apptimize with Braze, you will not experience a disru
 
 <br>
 
-Please reach out to your Braze or Apptimize representative if you have any further questions.
+Reach out to your Braze or Apptimize representative if you have any further questions.
 {% endalert %}
 
 

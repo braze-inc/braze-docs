@@ -14,7 +14,7 @@ description: "This article outlines details about the List Users' Subscription G
 /subscription/status/get
 {% endapimethod %}
 
-Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+Use these endpoints to get the subscription state of a user in a subscription group. These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 

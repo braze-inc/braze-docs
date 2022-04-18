@@ -61,16 +61,16 @@ Authorization: Bearer YOUR-REST-API-KEY
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) channel type of the message (as in, "email", "ios_push", "webhook", "content_card", "in-app_message", "sms"),
             "name": (string) name of the message in the dashboard (eg., "Variation 1")
-            ... channel-specific fields for this message, see below ...
+            ... channel-specific fields for this message, see the following messages section ...
         }
     },
-    "conversion_behaviors": (array) conversion event behaviors assigned to the campaign (see below)
+    "conversion_behaviors": (array) conversion event behaviors assigned to the campaign, see the following conversions behavior section.
 }
 ```
 
 ### Messages
 
-The `messages` response will contain information about each message. Example message responses for channels are below:
+The `messages` response will contain information about each message. The following includes example message responses for each channel:
 
 #### Push channels
 
@@ -169,14 +169,14 @@ The `messages` response will contain information about each message. Example mes
 
 ### Conversion behaviors
 
-The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. Example conversion event behavior responses for are below:
+The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. The following lists example conversion event behavior responses:
 
 #### Clicks email
 
 ```json
 {
     "type": "Clicks Email",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -185,7 +185,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Opens Email",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -194,7 +194,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Makes Any Purchase",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -203,8 +203,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Makes Specific Purchase",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "product": (string) name of the product, i.e. - "Feline Body Armor"
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "product": (string) name of the product, i.e., - "Feline Body Armor"
 }
 ```
 
@@ -213,8 +213,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Performs Custom Event",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "custom_event_name": (string) name of the event, i.e. - "Used Feline Body Armor"
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "custom_event_name": (string) name of the event, i.e., - "Used Feline Body Armor"
 }
 ```
 
@@ -223,8 +223,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Upgrades App",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array|null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 
@@ -233,8 +233,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Starts Session",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array|null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 

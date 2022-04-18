@@ -67,7 +67,7 @@ The provided send id can be used as a parameter for the send/data_series endpoin
 The status code element of a server response is a 3-digit number where the first digit of the code defines the class of response.
 
 - The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
-- The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal error chart below for a full list of 4XX error codes and descriptions.
+- The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal errors chart for a full list of 4XX error codes and descriptions.
 - The **5XX class** of status code (fatal) indicates a **server error**. When this happens, we recommend you retry your request with exponential backoff.
 
 ### Fatal errors

@@ -16,7 +16,7 @@ description: "This article outlines details about the Send Canvas Messages via A
 
 API-Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-This endpoint allows you to send Canvas messages via API-Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+This endpoint allows you to send Canvas messages via API-Triggered delivery, allowing you to decide what action should trigger the message to be sent. Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with `canvas_entry_properties` above)
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent `canvas_entry_properties`)
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }],

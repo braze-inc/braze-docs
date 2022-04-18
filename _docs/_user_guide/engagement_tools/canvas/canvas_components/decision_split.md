@@ -12,7 +12,7 @@ tool: Canvas
 # Decision Split Step
 
 Decision Split Steps in Canvas allow you to deliver personalized, real-time experiences for your users. Decision Split Steps can be used to create Canvas branches based on whether a user matches a query.
-![Decision Split Step][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a Decision Split Step
 
@@ -20,7 +20,7 @@ To create a Decision Split Step, add a step to your Canvas. Then, use the drop-d
 
 ### Define your split
 
-How do you want to split your users? You can use Segments and Filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one Segment or one Filter. You do not need to use both a Segment and a Filter.
+How do you want to split your users? You can use [segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
 ![Define Split][2]{: style="max-width:80%;"}
 
@@ -34,7 +34,7 @@ Using the Decision Split Step can help you distinguish paths for your users base
 
 Let’s say that you’re creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 
-![Use Split in Onboarding][3]{: style="max-width:60%;"}
+![][3]{: style="max-width:60%;"}
 
 If there is no step following one of the paths, users who go down that path will exit the Canvas. 
 
@@ -46,16 +46,19 @@ A filter step can only connect to one next step.
 
 ## Analytics
 
-| metric | description |
+Refer to the following table for descriptions of analytics for this step:
+
+| Metric | Description |
 |---|---|
-|Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split Step twice, two entries will be recorded. |
-|Yes | The number of entries that met the specified criteria and proceeded down the “yes” path. |
-|No | The number of entries that did not meet the specified criteria and proceeded down the “no” path. |
+| Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split Step twice, two entries will be recorded. |
+| Yes | The number of entries that met the specified criteria and proceeded down the “yes” path. |
+| No | The number of entries that did not meet the specified criteria and proceeded down the “no” path. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Decision Step Analytics][4]{: style="max-width:80%;"}
+![][4]{: style="max-width:80%;"}
 
 [1]: {% image_buster /assets/img/decision-split-1.png %}
 [2]: {% image_buster /assets/img/define-split-2.png %}
 [3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
 [4]: {% image_buster /assets/img/decision-step-analytics-4.png %}
+[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

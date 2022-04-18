@@ -28,21 +28,23 @@ To ensure higher ratings, ask only your power users to review you in the app sto
 - Used the app recently
 - Spent money and made purchases
 
-For instance, you could create the following segment:
+For instance, you could create a segment named "Power users" with the following filters:
+- Has used these apps more than 10 times in the last 14 days
+- Has spent more than 50 dollars
 
-![Segment][6]
+![][6]
 
 ### Ask at the right time
 
 Visiting the app store website takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code.
 
-Our page on [Data Opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. In addition, our [guide on user conversions][8] includes tips on associating your messaging with positive moments.
+Our article on [data opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. In addition, our guide on [user conversions][8] includes tips on associating your messaging with positive moments.
 
 ### Use non-intrusive messaging channels
 
 Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multichannel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
 
-![In-app message][9]
+![In-app message located at the bottom of a mobile device screen that reads: "If you like what you see, take a moment to rate us in the app store!".][9]
 
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}

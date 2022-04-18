@@ -2,7 +2,7 @@
 nav_title: Action Buttons
 article_title: Push Action Buttons for iOS
 platform: iOS
-page_order: 0.2
+page_order: 1
 description: "This article covers how to implement action buttons in your iOS push notifications."
 channel:
   - push
@@ -15,7 +15,7 @@ The Braze iOS SDK supports default push categories, including URL handling suppo
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
-To register Braze's default push categories, follow the integration instructions below:
+To register Braze's default push categories, follow the integration instructions:
 
 ## Step 1: Adding Braze default push categories
 

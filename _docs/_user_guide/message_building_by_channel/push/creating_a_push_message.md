@@ -126,7 +126,7 @@ Testing is arguably one of the most critical steps. After you finish composing y
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build push notifications.
+Build the remainder of your campaign; see the following sections for further details on how to best utilize our tools to build push notifications.
 
 #### Choose delivery schedule or trigger
 

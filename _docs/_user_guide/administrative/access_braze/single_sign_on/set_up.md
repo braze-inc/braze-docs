@@ -17,16 +17,17 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
-| **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
-| **Entity ID** | `braze_dashboard` |
+| Sign-On URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
+| Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
+| Entity ID | `braze_dashboard` |
+| RelayState API key | To enable IdP login, create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## SAML SSO setup
 
 ### Configure your identity provider
 
-First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the information below.
+First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the following information.
 
 In addition, you’ll need to set up SAML attribute mapping.
 
@@ -44,7 +45,7 @@ Braze only requires `email` in the SAML Assertion.
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
-After your Account Manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
+After your account manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
 
 On this page, you, input:
 
@@ -55,7 +56,7 @@ On this page, you, input:
 | `Certificate` | The `x.509` certificate is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Please make sure that your certificate follows this format when adding it to the dashboard:
+Make sure that your certificate follows this format when adding it to the dashboard:
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -69,17 +70,9 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
-### Create and enable a Braze API key for IdP login (optional)
-
-To enable IdP initiated login, you will first need to create an API Key in **Developer Console** > **API Settings**.
-
-![Select sso.saml.login permissions when creating an API key]({% image_buster /assets/img/sso2.png %})
-
-Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identify which company the user is trying to log into.
-
 ## SSO behavior
 
-Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the settings below. 
+Members who opt to use SSO will **no longer be able to use their password as they did prior**. Users who continue to use their password will be able to unless restricted by the following settings. 
 
 ## Restriction
 

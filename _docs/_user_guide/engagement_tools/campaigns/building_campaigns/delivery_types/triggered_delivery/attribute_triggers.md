@@ -22,7 +22,7 @@ Attribute triggers allow you to send action-based messages when a user's subscri
 
 To start using attribute triggers, create a campaign or Canvas step and select **Action-Based Delivery** as your delivery method. Then, select the attribute trigger that you'd like to use.
 
-![Attribute triggers][1]
+![][1]
 
 ### Update subscription status
 
@@ -69,7 +69,7 @@ Use the `Change Custom Attribute Value` trigger with the `specific value` option
 
 For example, target users when their loyalty tier changes to the best tier. For this example, say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to `Super VIP` so that you can congratulate the user on becoming a Super VIP.
 
-![Super VIP example][4]
+![][4]
 
 {% alert important %}
 - Attribute triggers for specific custom attribute values are not available for array and date custom attributes.

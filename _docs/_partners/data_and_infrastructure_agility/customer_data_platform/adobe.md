@@ -26,7 +26,7 @@ The Braze and Adobe CDP integration allows brands to connect and map their Adobe
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Please note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep to better understand this potential data point increase.
+Note that the sending of additional custom attributes may cause data points concerns. We advise speaking with your respective rep to better understand this potential data point increase.
 {% endalert %}
 
 ## Integration
@@ -63,7 +63,7 @@ Click **Create destination**. Your destination has now been created. You can cli
 ### Step 5: Activate segments
 Activate the data you have in the Adobe real-time CDP by mapping segments to the Braze destination.
 
-Listed below are the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
+The following list highlights the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
 
 1. Select and activate the Braze destination.
 2. Select applicable segments.
@@ -90,7 +90,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 |     | XDM profile schema | Braze instance |
 | --- | ------------------ | -------------- |
 | Attributes | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
-| Identities | - `Email`<br>- `Google Ad ID (GAID)`<br>- `Apple ID For Advertisers (IDFA)` | - `external_id` |
+| Identities | - `Email`<br>- Google Ad ID (`GAID`)<br>- Apple ID For Advertisers (`IDFA`) | - `external_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The correct mapping would look like this:

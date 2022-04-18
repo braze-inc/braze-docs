@@ -3,13 +3,13 @@ nav_title: Tracking Sessions
 article_title: Tracking Sessions for Web
 platform: Web
 page_order: 0
-description: "This reference article covers how to track sessions for web."
+description: "This reference article covers how to track sessions for Web."
 
 ---
 
 # Session tracking for web
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the below session semantics.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the following session semantics.
 
 ## Session lifecycle
 
@@ -28,7 +28,7 @@ To customize the session timeout, pass the `sessionTimeoutInSeconds` option to y
 appboy.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 ``` 
 
-If you have set a session timeout, then the above session semantics all extend to that customized timeout.
+If you have set a session timeout, then the session semantics all extend to that customized timeout.
 
 ## Testing session tracking
 

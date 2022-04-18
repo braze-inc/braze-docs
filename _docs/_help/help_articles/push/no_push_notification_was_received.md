@@ -58,7 +58,7 @@ A push token is an identifier that senders use to target specific devices with a
 
 ### Push notification type
 
-Check that you're using the correct type of push notification. For example, if you want to target a FireTV, then you would use a Kindle push notification, not an Android push campaign. Check out the articles below for more information on unstanding the Braze workflow for:
+Check that you're using the correct type of push notification. For example, if you want to target a FireTV, then you would use a Kindle push notification, not an Android push campaign. Check out the following articles for more information on unstanding the Braze workflow for:
 - [Apple Push Notification][10]
 - [Firebase Cloud Messaging][11]
 

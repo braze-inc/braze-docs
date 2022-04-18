@@ -7,7 +7,7 @@ page_type: reference
 
 # Migrating SDKs from Airship to Braze (iOS)
 
-> At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. Listed below, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" SDK code snippets to make your migration quick, simple, and painless.
+> At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. In this article, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" SDK code snippets to make your migration quick, simple, and painless.
 
 ## Beyond the code
 ### Token management
@@ -20,13 +20,13 @@ Braze uses Apple's device token for iOS.
 
 It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
-1. Import the tokens via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Please reach out to your COM or SA for more details!
+1. Import the tokens via the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
 3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed.
 
 If your user profiles and push tokens happen to be stored in separate locations, we recommend importing push tokens anonymously and then a subsequent migration of your existing user profiles. It is not necessary to map them together since the Braze iOS SDK will handle the token resolution upon successful integration.
 
-- We recommend migrating users via API but if there is a need to import a static list of users, it can be done via CSV. Please note that **push tokens cannot be imported via CSV** because the "push_token" object cannot be specified in the CSV. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+- We recommend migrating users via API but if there is a need to import a static list of users, it can be done via CSV. Note that **push tokens cannot be imported via CSV** because the "push_token" object cannot be specified in the CSV. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 {% alert note %}
 Push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` once users start a session with the Braze SDK.
@@ -37,7 +37,7 @@ Push tokens may show up as `subscribed` in the Braze dashboard, but will change 
 With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, you can send notifications to multiple user devices. It is also possible to configure campaigns to only send to the most recent device of a user.
 
 ## Campaign configuration
-At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
+At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools, and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
 
 ### Composition
 #### Push notifications
@@ -69,10 +69,10 @@ We recommend importing users via the [/users/track]({{site.baseurl}}/api/endpoin
 - **Filter Based on CSV User Import**<br>
 There is an option in Braze to filter specifically users who are included within a specific CSV import. This filtering option can be found during the target users step of our engagement tools under "filter users by `Updated/Imported via CSV`".
 ![CSV Import Filter][1]{: style="max-width:90%;border:0;"}
-Please note that for CSV imports, an `External ID` is required for each imported user and **segments with anonymous or alias only users will not able to be imported**. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+Note that for CSV imports, an `External ID` is required for each imported user and **segments with anonymous or alias only users will not able to be imported**. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 ## Rip and replace SDK code snippets
-To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Please visit the following topics to get started:
+To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Visit the following topics to get started:
 - [Installation](#installation)
 - [Getting and setting user ID](#userid)
 - [Handling push notifications](#pushnotifications)

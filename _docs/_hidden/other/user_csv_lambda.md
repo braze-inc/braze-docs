@@ -5,15 +5,15 @@ description: "The following article references a serverless application that all
 hidden: true
 ---
 
-{% alert important %}
-This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, please create a [github issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
-{% endalert %}
-
 # User Attribute CSV to Braze Import
 
-> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on our GitHub [here](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
+> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on [GitHub](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 
 This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. It can handle large files and uploads, but due to Lambda's time limits, the function will stop execution after 10 minutes. This process will then launch another Lambda instance to finish processing the remaining part of the file. For more details about function timing, check out the [estimated execution times](#estimated-execution-times).
+
+{% alert important %}
+This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
+{% endalert %}
 
 #### CSV User Attributes
 
@@ -79,14 +79,14 @@ To start processing your User Attribute CSV files, we need to deploy the Serverl
 
 - Lambda function
 - S3 Bucket for your CSV Files that the Lambda process can read from (_Note: this Lambda function will only receive notifications for `.csv` extension files_)
-- Role allowing for the creation of the above
+- Role allowing for the creation of the S3 Bucket
 - Policy to allow Lambda to receive S3 upload event in the new bucket
 
-Follow the direct link to the [Application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) or open the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications) and search for _braze-user-attribute-import_. Note that you must check the `Show apps that create custom IAM roles and resource policies` checkbox to see this application. The application creates a policy for the lambda to read from the newly created S3 bucket.
+Follow the direct link to the [application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) or open the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications) and search for "braze-user-attribute-import". Note that you must check the `Show apps that create custom IAM roles and resource policies` checkbox to see this application. The application creates a policy for the lambda to read from the newly created S3 bucket.
 
 Click **Deploy** and let AWS create all the necessary resources.
 
-You can watch the deployment and verify that the stack (ie. all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named _serverlessrepo-braze-user-attribute-import_. Once the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack and open **Resources** and watch the different resources being created.
+You can watch the deployment and verify that the stack (ie. all the required resources) is being created in the [CloudFormation](https://console.aws.amazon.com/cloudformation/). Find the stack named "serverlessrepo-braze-user-attribute-import". Once the **Status** turns to `CREATE_COMPLETE`, the function is ready to use. You can click on the stack and open **Resources** and watch the different resources being created.
 
 The following resources were created:
 
@@ -105,7 +105,7 @@ To make sure the function runs successfully, you can read the function's executi
 ## Estimated Execution Times
 _2048MB Lambda Function_
 
-| # of rows | Exec. Time |
+| Number of rows | Execution Time |
 | --------- | ---------- |
 | 10k       | 3s         |
 | 100k      | 30s        |
@@ -118,8 +118,8 @@ If you have already deployed the application and a new version is available in t
 
 ## Fatal Error
 
-In case of an unexpected error that prevents the further processing of the file, an event is logged (accessible through CloudWatch described in [Monitoring and Logging](#monitoring-and-logging)) that can be used to restart the Lambda from the point where the program stopped processing the file. It is important not to re-import the same data to save Data Points. You can find instructions to do this in our [Github repo](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error).
+In case of an unexpected error that prevents the further processing of the file, an event is logged (accessible through CloudWatch described in [Monitoring and Logging](#monitoring-and-logging)) that can be used to restart the Lambda from the point where the program stopped processing the file. It's important not to re-import the same data to save Data Points. You can find instructions to do this in our [GitHub repository](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error).
 
 {% alert important %}
-Visit our GitHub repo to learn more about how to deal with [fatal errors](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error) or [lambda configuration](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#lambda-configuration).
+Visit our GitHub repository to learn more about how to handle [fatal errors](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#fatal-error) or [Lambda configuration](https://github.com/braze-inc/growth-shares-lambda-user-csv-import#lambda-configuration).
 {% endalert%}

@@ -96,7 +96,7 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 {% endtab %}
 {% tab Image Example %}
 
-![Android push notification with a large image below the message text.]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Android push notification with a large image under the message text.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 Large image notifications display best when using an image of at least 600x300 pixels.
