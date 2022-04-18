@@ -28,8 +28,6 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze app identifier key | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 | App group REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
-| External identity type | This will be the identifier that syncs to Braze's `external_id`. We recommend using `customer_id`. |
-| Email identity type | This will be the identifier that syncs to Braze's email address for the user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -76,13 +74,28 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
+To remove the audience from a Braze user prior to deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option, or removes the audience id from the array format.
+
 ### Data mapping
 
 Data can be mapped to Braze by using the [embedded kit integration](#embedded-kit-integration) if you want to connect your mobile and web apps to Braze through mParticle. You can also use the [server-to-server API integration](#server-api-integration) to forward server-side data to Braze.
 
-{% alert note %}
-Regardless of which approach you choose, you must integrate the [mParticle embedded kit](#embedded-kit-integration).
-{% endalert %}
+Regardless of which approach you choose, you must setup Braze as an output:
+
+#### Configure your Braze output settings
+
+In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** once completed.
+
+| Setting name | Description |
+| ------------ | ----------- |
+| Braze app identifier key | Your Braze app identifier key can be found in the **Braze Developer Console** under **Settings**. Note that API keys will differ for each platform (iOS, Android, and Web). |
+| External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
+| Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
+| Braze instance | The cluster your Braze data will be forwarded to, this should be the same cluster your dashboard is on. |
+| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding ensure that the data you are passing to Braze will respect [rate-limits]({{site.baseurl}}/api/basics/#api-limits). |
+{: .reset-td-br-1 .reset-td-br-2}
+
+![][10]
 
 #### Embedded kit integration
 
@@ -90,7 +103,7 @@ The mParticle and Braze SDK will be present on your application through the embe
 
 These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations). 
 
-The embedded kit SDK integration allows you to take advantage of our full suite of features (Push, In-app Messages, News Feed, and all relevant message analytics tracking).
+The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, News Feed, and all relevant message analytics tracking).
 
 {% alert note %}
 For Content Cards and custom in-app message integrations call Braze’s SDK methods directly.
@@ -110,23 +123,34 @@ While the Braze SDK does not need to be directly included within your website or
 
 mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integrations/braze/event/#kit-integration) will walk you through custom mParticle and Braze alignment instructions based on your messaging needs (Push, Location Tracking, etc.).
 
-##### Step 3: Configure your mParticle dashboard to enable the Braze kit
+##### Step 3: Connections settings for your Braze output
 
-In mParticle, navigate to **Setup > Outputs > Add Output** and select **Braze** to open the Braze kit configuration. **Save** once completed. 
+In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed.
 
 ![][3]
 
-Provide the following fields on the Braze configuration page: 
+Provide the following fields on the Braze connection settings page:
+
+<!-- do not include
 - **API key**: Found in the Braze **Developer Console** under **Settings**. Note that API keys will differ for each platform (iOS, Android, and Web).
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Braze instance**: Custom
 - **Custom REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).
 - **Custom SDK endpoint**: Given to you by your Braze support or account representative (e.g., `sdk.api.braze.com`). Leave this setting blank if you were not given a custom API endpoint.
 - **Custom JavaScript endpoint**: Given to you by your Braze support or account representative. Leave this setting blank if you were not given a custom JavaScript endpoint.
+-->
 
 #### Server API integration
 
 This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, please follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
+
+{% alert important %}
+Server-to-server integration does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method. 
+
+Consider a side-by-side integration if you wish to use these features.
+
+For server-side data to be forwarded to Braze, it must include an `external_id`, anonymous users will not be forwarded.
+{% endalert %}
 
 ##### Connections settings for your Braze output
 
@@ -135,14 +159,28 @@ In mParticle, navigate to **Connections > Connect > [Your desired platform] > Co
 ![][4]
 
 Provide the following fields on the Braze output page: 
-- **App group REST API key**: A Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.
-- **Custom REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the **Custom REST endpoint** provided in [this step](#step-3-configure-your-mparticle-dashboard-to-enable-the-braze-kit).
+- **App group REST API key**: Reuired for a server-to-server connection. A Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.
+- **Braze SDK session timeout**: Braze SDK time interval for session timeout in seconds.
+- **User tags value**: Select the value to be sent to Braze for user tags. The possible values are null or `true`. When `null` and set on a user attribute, the custom attribute (key and value) on the Braze user profile will be removed.
+- **Include enriched user attributes**: Server-to-server only. If enabled, mParticle will forward enriched user attributes from the existing user profile. Braze recommends disabling this to conserve data points, for more info see potential data point overages section below.
+- **Include enriched user identities**: Server-to-server only. If enabled, mParticle will forward enriched user identities from the existing user profile. Braze recommends disabling this to conserve data points, for more info see potential data point overages section below.
+- **Send user attribute lists as arrays**: When enabled mParticle will send each user attribute list as an array, rather than a comma-separated string
+- **Forward session events**: When enabled, all session start and end events will be forwarded to Braze as separate events. 
+- **Forward screen view messages**: Not supported for server-to-server events. When enabled, all screen view messages will be forwarded to Braze as separate events.
+- **Enable API custom attribute type detection**:
+- **Enable kit custom attribute type detection**: 
 
 ##### Data mapping
 
 Not all data types that are supported on mParticle are supported by Braze.
 - [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
 - [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does not support objects or nested objects. 
+
+### Forwarding erasure requests (data subject requests)
+
+Forward erasure requests to Braze by configuring a data subject request output to Braze.
+
+## Potential data point overages
 
 [1]: https://dashboard.braze.com/app_settings/developer_console
 [2]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
@@ -152,4 +190,5 @@ Not all data types that are supported on mParticle are supported by Braze.
 [7]: {% image_buster /assets/img_archive/mparticle2.png %}
 [8]: {% image_buster /assets/img_archive/mparticle3.png %}
 [9]: {% image_buster /assets/img_archive/mparticle4.png %}
+[10]: {% image_buster /assets/img_archive/configure_settings.png %}
 [5]: #embedded-kit-integration
