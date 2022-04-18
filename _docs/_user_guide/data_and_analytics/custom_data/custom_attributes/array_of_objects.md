@@ -19,7 +19,6 @@ Support for this feature depends on [nested custom attributes]({{site.baseurl}}/
 
 - Available on custom attributes sent via API only, not supported with Braze SDKs or CSV upload.
 - Partners do not yet support arrays of objects. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects. If datetimes are included in your objects, they are stored as strings.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
