@@ -16,7 +16,7 @@ Once this information is imported, you can begin accessing it in messages in a s
 Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-If you'd like to share your feedback on this feature or make a request, contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a>!
+If you'd like to share your feedback on this feature or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com).
 
 ## Creating a catalog
 
@@ -230,7 +230,7 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a> for more information.
+Interested in upgrading your experience to Catalog Pro? Contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com) for more information.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
