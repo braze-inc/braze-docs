@@ -17,6 +17,7 @@ Objects can contain existing [data types][1], such as:
 - Strings
 - Booleans
 - Arrays
+- Time
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
@@ -28,7 +29,6 @@ Support for nested custom attributes is currently in early access. Contact your 
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
 
@@ -52,6 +52,22 @@ The following is a `/users/track` example with a "Most Played Song" object. To c
               "count": 1000,
               "top_10_listeners": true
           }
+      }
+    }
+  ]
+}
+```
+
+Here's another `/users/track` example with an "Important Dates" object to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
       }
     }
   ]

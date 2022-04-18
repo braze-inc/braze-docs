@@ -127,8 +127,23 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Check out this example:
+You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Check out this example where we add three items from the Games catalog: `title`, `price`, and `brand`.
 
+![][6]
+
+We can further personalize our message by adding some text around our Liquid:
+
+{% raw %}
+```liquid
+{% catalog_items games tales_storefront %}
+
+Buy {{ items[0].title }} for {{ items[0].price }} from {{ items[0].brand }} today!
+```
+{% endraw %}
+
+This returns as the following:
+
+> Buy Tales for 7.49 USD from Humble Bumble today!
 
 
 ### Using images {#using-images}
@@ -190,7 +205,7 @@ With templating, you can render a different catalog item for each user based on 
 
 ### Using Liquid
 
-You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to accouunt for this.
+You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
 ## Limitations {#limits}
 
@@ -214,13 +229,14 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a> for more informaton.
+Interested in upgrading your experience to Catalog Pro? Contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a> for more information.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
+[6]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
 [9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
 [11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
