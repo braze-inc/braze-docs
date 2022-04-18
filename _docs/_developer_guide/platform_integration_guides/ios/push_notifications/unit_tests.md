@@ -78,4 +78,4 @@ Run your app's unit tests. This can be a one-time verification step, or you can 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
 [3]: https://ocmock.org/
-[4]: https://github.com/Appboy/AppboyKit/blob/docs-push-unit-tests-examples/Public/HelloSwift/HelloSwiftTests/AppboyPushUnitTests.m
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftTests/AppboyPushUnitTests.m
