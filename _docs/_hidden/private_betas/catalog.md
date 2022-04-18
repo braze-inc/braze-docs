@@ -16,7 +16,7 @@ Once this information is imported, you can begin accessing it in messages in a s
 Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-If you'd like to share your feedback on this feature or make a request, you can [book a session](https://calendly.com/d/yzvf-frpy/catalog-beta-working-session?month=2021-10) with the Braze Data Ingestion team on Calendly!
+If you'd like to share your feedback on this feature or make a request, contact the <a href="mailto:catalogs-product@braze.com">Braze Catalogs team</a>!
 
 ## Creating a catalog
 
@@ -127,7 +127,9 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Check out this example where we add three items from the Games catalog: `title`, `price`, and `brand`.
+You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Note that you can add up to three catalog items only. 
+
+Check out this example where we add `tales_storefront`, `teslagrad_storefront`, and `acaratus_storefront` for **Catalog Items** and select `title` for **Information to Display**.
 
 ![][6]
 
@@ -135,15 +137,14 @@ We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-{% catalog_items games tales_storefront %}
-
-Buy {{ items[0].title }} for {{ items[0].price }} from {{ items[0].brand }} today!
+Get the ultimate trio {% catalog_items games tales_storefront teslagrad_storefront acaratus_storefront %}
+{{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
 
 This returns as the following:
 
-> Buy Tales for 7.49 USD from Humble Bumble today!
+> Get the ultimate trio Tales, Teslagrad, and Acaratus today!
 
 
 ### Using images {#using-images}
