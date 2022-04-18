@@ -18,12 +18,13 @@ Inbox Vision allows marketers to view their emails from the perspective of vario
 Inbox Vision for the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) is currently in early access. Contact your Braze account manager if you are interested in participating in early access.
 {% endalert %}
 
-
 ## Test your email
 
 To test your email message in Inbox Vision, click **Preview and Test** within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
 
-Braze will then display screenshots of a sample, rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable, to allow for better viewing. If you encounter unclear screenshots for certain email clients, click **Reprocess Screenshot** to create another screenshot.
+Braze will then display screenshots of a sample, rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable, to allow for better viewing. Note that your email must include a subject line and a valid sending domain in order to see these previews. 
+
+If you encounter unclear screenshots for certain email clients, click **Reprocess Screenshot** to create another screenshot.
 
 If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
 
