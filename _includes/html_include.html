@@ -11,7 +11,7 @@
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
   <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
-  
+
   <script type="application/ld+json">
   {
       "@context": "https://schema.org",
@@ -42,6 +42,7 @@
 
 
 {% include analytics.html %}
+{% include wovn.html %}
 
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
