@@ -1,6 +1,6 @@
 ---
 nav_title: Braze Actions Deeplinks
-article_title: Braze Actions Deeplink
+article_title: Braze Actions Deeplinks
 page_order: 100
 description: "Use the `brazeActions://` deeplinks to perform SDK actions within messaging channel buttons"
 hidden: true
@@ -10,7 +10,7 @@ hidden: true
 
 Braze Actions let you use "deeplinks" to perform native SDK functionality.
 
-The Braze dashboard includes a few out-of-the-box actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in In-App Messages and Content Cards.
+The Braze dashboard includes a few out-of-the-box on-click actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in in-app messages and Content Cards.
 
 For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
 
@@ -18,13 +18,13 @@ For all other actions, or to combine multiple actions, use this guide to constru
 
 {% sdk_min_versions ios:5.1.0 android:19.1.0 web:4.0.0 %}
 
-The `brazeActions://` deeplink scheme can be used wherever a deeplink/redirect option exists within In-App Messages and Content Cards.
+The `brazeActions://` deeplink scheme can be used wherever a deeplink or redirect option exists within in-app messages and Content Cards.
 
-For HTML In-App Messages, use the [`Javascript Bridge`](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) instead as deeplinks are not supported in HTML message types.
+For HTML in-app messages, use the [`Javascript Bridge`](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) instead, as deeplinks are not supported in HTML message types.
 
 ## Schema
 
-Multiple action `steps` can be included within a `container` action type. A single step without a `container` is also valid.
+You can include multiple action `steps` within a `container` action type. A single step without a `container` is also valid.
 
 ```json
 {
@@ -33,7 +33,7 @@ Multiple action `steps` can be included within a `container` action type. A sing
 }
 ```
 
-An individual `step` contains an an action `type`, and optional `args` array:
+An individual `step` contains an action `type` and optional `args` array:
 
 ```json
 {
@@ -44,9 +44,9 @@ An individual `step` contains an an action `type`, and optional `args` array:
 
 ## URI 
 
-The Braze Actions URI scheme is `brazeActions://v1/{base64encodedJsonString}`
+The Braze Actions URI scheme is `brazeActions://v1/{base64encodedJsonString}`.
 
-The following javascript shows how to encode/decode the JSON string:
+The following JavaScript shows how to encode and decode the JSON string:
 
 ```javascript
 function decode(encoded) {
@@ -85,16 +85,16 @@ function encode(input) {
 
 |Type|Args|
 |--|--|
-|`container`|1. An array of other actions to perform|
+|`container`|An array of other actions to perform|
 |`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (optional)|
-|`setEmailNotificationSubscriptionType`|1.  `"opted_in" | "subscribed" | "unsubscribed"`|
-|`setPushNotificationSubscriptionType`|1. `"opted_in" | "subscribed" | "unsubscribed"`|
+|`setEmailNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
+|`setPushNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
 |`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
-|`requestPushPermission`|n/a|
-|`openLink`|1. `url`<br>2. openInNewTab (`boolean`)|
-|`openLinkInWebview`|1. `url`|
-|`addToSubscriptionGroup`|1. `subscriptionGroupId`|
-|`removeFromSubscriptionGroup`|1. `subscriptionGroupId`|
+|`requestPushPermission`| N/A |
+|`openLink`|1. `url`<br>2. `openInNewTab` (boolean)|
+|`openLinkInWebview`| `url`|
+|`addToSubscriptionGroup`| `subscriptionGroupId`|
+|`removeFromSubscriptionGroup`| `subscriptionGroupId`|
 |`addToCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 |`removeFromCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 
@@ -102,9 +102,9 @@ function encode(input) {
 
 Enter a JSON string to see the resulting `brazeActions://` URI. Or, enter a `brazeActions://` URI to decode its JSON.
 
-<div>JSON Input:</div>
+<div><h4>JSON Input</h4></div>
 <textarea id="braze-actions-input" rows="12"></textarea>
-<div>Deeplink Output:</div>
+<div><h4>Deeplink Output</h4></div>
 <textarea id="braze-actions-output" rows="6"></textarea>
 <style>
     #braze-actions-input, #braze-actions-output {
