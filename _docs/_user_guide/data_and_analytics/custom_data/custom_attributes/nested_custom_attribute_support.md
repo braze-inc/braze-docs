@@ -117,12 +117,12 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
-Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
+Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object (and position in array if referencing an array of objects), followed by a dot (period), followed by the property name.
 
 {% raw %}
-`{{custom_attribute.${most_played_song}.artist_name}}` — "Miles Davis"
-<br> `{{custom_attribute.${most_played_song}.song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}.play_analytics.count}}` — "50"
+`{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
