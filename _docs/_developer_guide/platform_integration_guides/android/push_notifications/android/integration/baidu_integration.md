@@ -15,11 +15,11 @@ Braze can send push notifications to Android devices using [Baidu Cloud Push][14
 
 ## Step 1: Create a Baidu account
 
-To create a Baidu account, visit the [Baidu Portal][7] and click **登录** (Log in) among the menu options on the top right to bring up a dialog that will allow you to log in or create a new account.
+To create a Baidu account, visit the [Baidu Portal][7] and click **登录** (Log in) to bring up a dialog that will allow you to log in or create a new account.
 
 ![][33]
 
-To create a new account, in the log-in dialog, click **立即注册** (new account) directly to the bottom right of the large blue 登录 (log in) button.
+To create a new account, in the log-in dialog, click **立即注册** (new account) directly above the large blue 登录 (log in) button.
 
 ![][38]
 
@@ -37,7 +37,7 @@ On the following page, you will complete an SMS verification. Choose your countr
 
 ## Step 2: Register as a Baidu developer
 
-Next, you must register as a Baidu developer. First, visit the [Baidu developer portal][36] and open the dropdown menu in the top right of the screen. Choose **注册开发者** (create new developer account) to begin registration.
+Next, you must register as a Baidu developer. First, visit the [Baidu developer portal][36] and open the dropdown menu in the top of the screen. Choose **注册开发者** (create new developer account) to begin registration.
 
 ![][37]
 

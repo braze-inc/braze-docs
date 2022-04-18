@@ -183,7 +183,7 @@ To customize the navigation bar's title, set the title property of the `ABKConte
 
 ### Modal context
 
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar.
+This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the side of the bar.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

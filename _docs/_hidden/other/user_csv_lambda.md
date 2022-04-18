@@ -61,7 +61,7 @@ To connect with the Braze servers, you will need an API key. This unique identif
 
 To get your API key, open the dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
-To create a new one, click on `Create New API Key` on the right side of your screen. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
+To create a new one, click `Create New API Key`. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
 
 {% endtab %}
 {% endtabs %}

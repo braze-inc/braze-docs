@@ -84,7 +84,7 @@ If you no longer need or wish to retire a specific segment, you can archive it b
 When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
-You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of its page.
+You can unarchive the segment by navigating to it within Segments, then selecting Unarchive at the top of its page.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}

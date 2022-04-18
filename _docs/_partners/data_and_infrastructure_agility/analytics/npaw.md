@@ -27,7 +27,7 @@ hidden: true
 
 ## Accessing the integrations page
 
-After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu found at the top right corner of the screen.
+After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu.
 
 ![NPAW drop-down]({% image_buster /assets/img/npaw_dropdown.png %})
 
