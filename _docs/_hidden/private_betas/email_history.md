@@ -29,7 +29,7 @@ The table displays the following email events:
 
 ## Is the open event reliable?
 
-Email open tracking is error prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false postiives and false negatives. 
+Email open tracking is error prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives. 
 
 While email open statistics can be useful in aggregate, for example to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
