@@ -17,7 +17,7 @@ The **Overview** page on the dashboard provides key mobile metrics for you to tr
 
 ![Dashboard Screenshot][1]
 
-> You can click **Show Breakdown** located on the right side of all of the rows of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
+> You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
 
 ![Expand][2]
 

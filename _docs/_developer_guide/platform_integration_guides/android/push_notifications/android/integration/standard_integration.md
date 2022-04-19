@@ -254,7 +254,7 @@ A common symptom of an improper asset is the small notification icon rendering a
 
 The following large and small icons pictured are examples of properly designed icons:
 
-![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
+![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
 ### Step 3: Configure notification icons
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Defining a News Feed Category
-article_itle: Defining a News Feed Category for Web
+article_title: Defining a News Feed Category for Web
 platform: Web
 page_order: 3
 page_type: reference

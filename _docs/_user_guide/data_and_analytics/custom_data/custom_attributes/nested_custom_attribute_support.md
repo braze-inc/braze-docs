@@ -17,6 +17,7 @@ Objects can contain existing [data types][1], such as:
 - Strings
 - Booleans
 - Arrays
+- Time
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
@@ -28,7 +29,6 @@ Support for nested custom attributes is currently in early access. Contact your 
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
 
@@ -52,6 +52,22 @@ The following is a `/users/track` example with a "Most Played Song" object. To c
               "count": 1000,
               "top_10_listeners": true
           }
+      }
+    }
+  ]
+}
+```
+
+Here's another `/users/track` example with an "Important Dates" object to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
       }
     }
   ]
@@ -117,12 +133,12 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
-Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
+Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object (and position in array if referencing an array of objects), followed by a dot (period), followed by the property name.
 
 {% raw %}
-`{{custom_attribute.${most_played_song}.artist_name}}` — "Miles Davis"
-<br> `{{custom_attribute.${most_played_song}.song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}.play_analytics.count}}` — "50"
+`{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]

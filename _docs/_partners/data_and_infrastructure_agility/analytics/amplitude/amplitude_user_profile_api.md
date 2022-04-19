@@ -15,7 +15,7 @@ search_tag: Partner
 
 ## Endpoint parameters
 
-The following table lays out the parameters you can use in your calls to the user profile API, as well as the parameters you can most typically expect to see in Amplitude's responses.
+The following table lays out the parameters you can use in your calls to the user profile API.
 
 | Parameter | Required | Description |
 | --------- | -------- | ----------- |
@@ -29,6 +29,8 @@ The following table lays out the parameters you can use in your calls to the use
 | `get_computations` | Optional<br>(Defaults to false) | Return a list of all of the computations that are enabled for this user. |
 | `comp_id` | Optional | Return a single computation that might be enabled for this user. It will return a null value if it does not exist. If `get_computations` is true, all values will be fetched, including this one (unless it is archived or deleted).|
 {: .reset-td-br-1 .reset-td-br-2}
+
+The following table covers the parameters you can most typically expect to see in Amplitude's responses.
 
 | Response Parameter | Description |
 | ------------------ | ----------- |

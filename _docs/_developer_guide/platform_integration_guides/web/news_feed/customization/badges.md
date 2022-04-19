@@ -1,6 +1,6 @@
 ---
 nav_title: Badges
-article_itle: News Feed Badges for Web
+article_title: News Feed Badges for Web
 platform: Web
 page_order: 3
 page_type: reference

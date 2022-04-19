@@ -50,7 +50,7 @@ To get started, visit the Currents page in the sidebar, in the "Integrations" se
 
 ## Step 3: Add partner
 
-Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top right of the screen.
+Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top of the screen.
 
 ![Adding an integration]({% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
 

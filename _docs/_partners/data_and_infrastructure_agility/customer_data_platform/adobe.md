@@ -78,7 +78,7 @@ To correctly send your audience data from the Adobe Experience Platform to Braze
 1. In the mapping step, click **Add new mapping**.<br>![][5]{: style="max-width:50%;"}<br><br>
 2. In the source field section, click the arrow button next to the empty field; this will open the select source field window.<br>![][6]<br><br>
 3. In this window, you must select Adobe attributes to map to your Braze attributes. <br>![][7]{: style="max-width:70%;"}<br><br>Next, you must select the identity namespace. This option is used to map a platform identity namespace to a Braze namespace.<br>![][8]{: style="max-width:80%;"}<br> Choose your source fields, then click **Select**.<br><br>
-4. In the target field section, click the mapping icon to the right of the field.<br>![][9]{: style="max-width:90%;"} <br><br>
+4. In the target field section, click the mapping icon beside the field.<br>![][9]{: style="max-width:90%;"} <br><br>
 5. In the select target field window, you can choose between three categories of target fields:<br><br>• **Select attributes**: Use this option to map your Adobe XDM attributes to standard Braze Attributes.<br>• **Select identity namespace**: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• **Select custom attributes**: Use this option to map Adobe XDM attributes to custom Braze Attributes that you defined in your Braze account. <br><br>![][10]{: style="max-width:60%;"}<br><br>**You can also use this option to rename existing XDM attributes into Braze.** For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, the click **Select**.<br><br>
 6. You should now see your field mapping in the list.<br>![][11]<br><br>
 7. To add more mappings, repeat steps 1 through 6, as necessary. 
@@ -90,7 +90,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 |     | XDM profile schema | Braze instance |
 | --- | ------------------ | -------------- |
 | Attributes | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
-| Identities | - `Email`<br>- `Google Ad ID (GAID)`<br>- `Apple ID For Advertisers (IDFA)` | - `external_id` |
+| Identities | - `Email`<br>- Google Ad ID (`GAID`)<br>- Apple ID For Advertisers (`IDFA`) | - `external_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The correct mapping would look like this:

@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_itle: News Feed Integration for Web
+article_title: News Feed Integration for Web
 platform: Web
 page_order: 0
 page_type: reference

@@ -57,7 +57,7 @@ There are several email error messages you may receive when uploading an HTML te
 
 ### Step 4: Finish and save your template
 
-Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas you choose!
+Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas you choose!
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns that were created using previous versions of that template.

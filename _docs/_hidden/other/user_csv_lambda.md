@@ -5,15 +5,15 @@ description: "The following article references a serverless application that all
 hidden: true
 ---
 
-{% alert important %}
-This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
-{% endalert %}
-
 # User Attribute CSV to Braze Import
 
 > The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on [GitHub](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 
 This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. It can handle large files and uploads, but due to Lambda's time limits, the function will stop execution after 10 minutes. This process will then launch another Lambda instance to finish processing the remaining part of the file. For more details about function timing, check out the [estimated execution times](#estimated-execution-times).
+
+{% alert important %}
+This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, create a [GitHub issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
+{% endalert %}
 
 #### CSV User Attributes
 
@@ -61,7 +61,7 @@ To connect with the Braze servers, you will need an API key. This unique identif
 
 To get your API key, open the dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
-To create a new one, click on `Create New API Key` on the right side of your screen. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
+To create a new one, click `Create New API Key`. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
 
 {% endtab %}
 {% endtabs %}
@@ -105,7 +105,7 @@ To make sure the function runs successfully, you can read the function's executi
 ## Estimated Execution Times
 _2048MB Lambda Function_
 
-| # of rows | Exec. Time |
+| Number of rows | Execution Time |
 | --------- | ---------- |
 | 10k       | 3s         |
 | 100k      | 30s        |

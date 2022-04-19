@@ -287,10 +287,31 @@ Content Cards can be used in a message center format where each message is its o
 
 For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
 
-| Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
-| ---- | ---- |
-| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![][5] |
-{: .reset-td-br-1 .reset-td-br-2}
+{% tabs local %}
+{% tab Arbitrary custom view message (full page) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `Full Page`
+- `class_type` set as `message_full_page`
+
+![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% tab Webview message (HTML) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `HTML`
+- `class_type` set as `message_webview`
+- `message_title`
+
+This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
+
+![]({% image_buster /assets/img/cc_implementation/html_webview.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% endtabs %}
 
 #### Further explanation
 

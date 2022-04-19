@@ -3,7 +3,7 @@ nav_title: Transifex
 article_title: Transifex
 alias: /partners/transifex/
 description: "This article outlines the partnership between Braze and Transifex, a localization platform that allows you to automate translation freeing up your teams to focus on delivering brilliant customer experiences."
-page_tpe: partner
+page_type: partner
 search_tag: Partner
 
 ---
