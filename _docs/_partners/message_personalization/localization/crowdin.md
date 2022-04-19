@@ -53,7 +53,7 @@ To set up the Braze app in Crowdin Enterprise, follow these steps:
 
 ### Step 2: Add your content to Crowdin/Crowdin Enterprise
 
-Once you provide your Braze credentials, you'll see two panels. Select the desired content on the right panel to sync the files for translation from your Braze account and click **Sync to Crowdin**.
+Once you provide your Braze credentials, you'll see two panels. Select the desired content to sync the files for translation from your Braze account and click **Sync to Crowdin**.
 
 In the Editor mode in Crowdin, the content synced from your Braze account can be displayed to your translators as a string list or as a file preview.
 

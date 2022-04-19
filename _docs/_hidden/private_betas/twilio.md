@@ -39,7 +39,7 @@ The following screenshot is an example of what your request might look like if y
 
 ## Request Headers and Method
 
-Twilio requires two request headers, the request Content-Type and an [HTTP Basic Authentication][32] header. Add them to your webhook by clicking the gear icon on the right side of the webhook composer, then clicking *Add New Pair* twice.
+Twilio requires two request headers, the request Content-Type and an [HTTP Basic Authentication][32] header. Add them to your webhook by clicking the gear icon on beside the webhook composer, then clicking *Add New Pair* twice.
 
 Header Name | Header Value
 --- | ---
