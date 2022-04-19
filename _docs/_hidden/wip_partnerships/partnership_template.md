@@ -1,10 +1,10 @@
 ---
-nav_title: Your Partner Page
-article_title: Your Partner Page
+nav_title: Extole
+article_title: Extole
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
-alias: /partners/your_partner_name/
+description: "With the integration between Extole and Braze, you can pull valuable customer insights from your refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty."
+alias: /partners/extole/
 
 page_type: partner
 search_tag: Partner
@@ -12,94 +12,91 @@ hidden: true
 
 ---
 
-# [Partner Name]
+# Extole
 
-> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
+Marketers use Extole to turn their customers into a primary vehicle for acquisition, awareness, and activation. With Extole’s SaaS platform and experts, marketers rapidly launch programs such as refer-a-friend, influencer, and challenges, personalized to important behavioral segments. Customer-Led Growth drives revenue and generates a significant and unique source of first-party data.
 
-In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
+With the integration between Extole and Braze, you can pull valuable customer insights from your refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty. You can also dynamically pull content attributes, such as personalized share codes and links, into Braze communications to turn every customer into a brand advocate.
+
+[Learn more about Extole][1].
 
 ## Prerequisites
 
-This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
-
-{% alert important %}
-The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
-{% endalert %}
+The table below lists the prerequisites you need to complete this partnership integration.
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Partner account | A partner account is required to take advantage of this partnership. |
+| Extole Account | An Extole account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST test API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to separate a staging Braze instance. |
+| Braze Instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the API overview page. |
+| User Identity | The unique identifier for a user in Braze and Extole. This is generally the external_id. |
 
 ## Use cases
 
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+Discover typical use cases for an integration between Extole and Braze.
+- Turn every customer into an advocate by including their unique share link in all Braze communications.
+- Trigger a personalized welcome campaign when a customer opts in to receive marketing communications in an Extole-powered program.
+- Trigger a product recommendations campaign when an advocate shares a specific product with a friend.
+- Trigger a surprise and delight campaign when an advocate has driven five or more referrals. 
+- Trigger a refer a friend email, push, or SMS campaign when a customer converts.
 
 ## Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
+### Step 1: Define event names and attributes 
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+Any event that Extole tracks can be sent to Braze. Please work with your implementation or client success manager to identify the event names and user attributes that you’d like for Extole to send into Braze, or select from the default options in the tables below. Your Extole implementation or client success manager will then map and configure the event names in the Extole dashboard for you.
 
-### Step 1: Short description of step one 
+| Event Name | Description |
+| ----------- | ----------- |
+| Created Share Link | A share link is created for a customer. |
+| Shared | A customer sends a link to their friend(s) via email, SMS, or social channel. |
+| Signed Up | A customer signs up via email or SMS through the program. |
+| Converted | A customer completes a purchase. |
+| Subscribed | A customer subscribes via email or SMS. |
+| Unsubscribed | A customer unsubscribes via email or SMS. |
+| Earned Reward | A customer earns a reward. |
 
-Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
+| Attribute Name | Value |
+| ----------- | ----------- |
+| external_id (required) | The unique identifier for the customer, such as a user ID |
+| email | The customer's email address<br><br>"jsmith@yourcompany.com" |
+| phone_number | The customer's phone number, including country code<br><br>"+15555555555" |
+| share_link | The customer’s personal share link<br><br>"refer.yourcompany.com/jsmith" |
+| first_name | The customer's first name<br><br>"John" |
+| last_name | The customer's last name<br><br>"Smith" |
+| city | The customer's city, spelled out<br><br>"Boston" |
+| state | The customer's state, abbreviated<br><br>"MA" |
+| country | The customer's country, abbreviated<br><br>"US" |
+| funnel | The correct funnel type for the customer<br><br>"friend" and/or "advocate" |
 
-### Step 2: Short description of step two 
+### Step 2: Connect to your Braze account 
 
-You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
+To start sending data from your Extole programs into your Braze account, you’ll need to create a new webhook integration in Extole’s Outbound Webhook Center.
+1. Navigate to Tech Center > Outbound Webhooks in the Extole dashboard and select Create New Integration.
+2. Enter a name for the Key and select “Webhook” as the Key Type. 
+3. Add your Braze REST API key to the Partner Key ID, select HTTP_BASIC as the algorithm, and click “Create Key.”
 
-### Step 3: Short description of step three 
+![extole-outbound-webhooks][2]
 
-Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
+Work with your client success or implementation manager to create a new webhook. They will configure the webhook for you using your newly generated key and Braze instance URL. 
 
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-
-#### Request headers and method
-
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-
-{% raw %}
-- **HTTP Method**: POST
-- **Request Header**:
-  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
-{% endraw %}
-
-#### Request body
-
-Include code of your webhook request body. 
-
-### Step 3: Preview your request
-
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
-
-{% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
-{% endalert %}
-```
-{% enddetails %}
+![extole-add-new-webhook][3]
 
 ## Customization
 
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
+###Configure a staging API key for testing
+
+If you only provide one Braze REST API key to Extole, only production events will be sent from Extole to Braze. If you also want to send staging / testing events, create another Braze REST API key and configure an additional webhook integration in the Extole dashboard.
 
 ## Using this integration
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+After connecting your Braze account in the Extole dashboard, events will automatically begin flowing from Extole to Braze without any action on your part. A live view of events being sent to Braze can be found in Extole’s Outbound Webhook Center for troubleshooting. 
 
-### Step 1: Short description of step one 
+![extole-add-new-webhook][3]
 
-This set of steps will walk your users through how to use this integration in Braze.
+Once the events and attributes you and your integration or customer success manager have configured are flowing into Braze, you can use the data to generate Braze audiences and campaign segmentation.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[1]: https://www.extole.com
+[2]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
+[3]: {% image_buster /assets/img/extole/extole-create-new-webhook.png %}
