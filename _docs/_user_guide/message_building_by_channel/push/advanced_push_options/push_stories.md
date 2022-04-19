@@ -41,7 +41,7 @@ To create a page, perform the following steps:
 1. Click **Manage Pages** from the main composer.
     <br><br>![][4]{: style="max-width:70%"}<br><br>
 2. Insert an image for each page, along with the click behavior for that image.
-3. If desired, add a **Title** and **Description** for each page. If you use a title and decription for one page, they must be inserted for all pages.
+3. If desired, add a **Title** and **Description** for each page. If you use a title and description for one page, they must be inserted for all pages.
 
 The previews will be reflected and are interactive.
 

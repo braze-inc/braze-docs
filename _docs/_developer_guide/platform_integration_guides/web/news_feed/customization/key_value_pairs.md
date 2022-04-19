@@ -1,6 +1,6 @@
 ---
 nav_title: Key-Value Pairs
-article_itle: News Feed Key-Value Pairs for Web
+article_title: News Feed Key-Value Pairs for Web
 platform: Web
 page_order: 1
 page_type: reference

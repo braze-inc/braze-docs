@@ -1,6 +1,6 @@
 ---
 nav_title: Custom Styling
-article_itle: News Feed Custom Styling for Web
+article_title: News Feed Custom Styling for Web
 platform: Web
 page_order: 0
 page_type: reference
