@@ -13,7 +13,7 @@ channel:
 
 This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in Braze's [push integration instructions][1]. 
 
-If all the tests pass, generally, this means the code-based part of your push setup is functional. If a test fails, this might mean that you incorrectly followed a step, or it may result from a valid customization that doesn't precisely with Braze's default instructions.
+If all the tests pass, generally, this means the code-based part of your push setup is functional. If a test fails, this might mean that you incorrectly followed a step, or it may result from a valid customization that doesn't align precisely with Braze's default instructions.
 
 Either way, this can be a helpful approach to verify you've followed the integration steps and to help monitor for any regressions.
 
