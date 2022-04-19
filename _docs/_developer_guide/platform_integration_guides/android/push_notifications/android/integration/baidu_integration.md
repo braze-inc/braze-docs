@@ -23,7 +23,7 @@ To create a new account, at the bottom of the log in dialog, click **立即注�
 
 ![][38]{: style="max-width:70%;"}
 
-Enter your user name, phone number, password, phone number into the account creation page. Next, click the receive verifcation code button. You will now receive an SMS message from Baidu containing a verification code. Lastly, accept the license agreement and click **注册** (create account) to register. If these set up steps fail, try to register via Baidu Cloud login as described in this [login article](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
+Enter your user name, phone number, password, and phone number into the account creation page. Next, click the receive verification code button. You will now receive an SMS message from Baidu containing a verification code. Lastly, accept the license agreement and click **注册** (create account) to register. If these setup steps fail, try to register via Baidu Cloud login as described in this [login article](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
 
 ![Baidu Sign-up Page][17]{: style="max-width:80%;"}
 
