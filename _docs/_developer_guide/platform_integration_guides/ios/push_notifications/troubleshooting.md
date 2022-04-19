@@ -60,7 +60,7 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 ## Push registration issues
 
-To add verification for your application's push registration logic, implement Braze's push unit tests as described [here][41].
+To add verification for your application's push registration logic, implement Braze's [push unit testing][41].
 
 #### No push registration prompt
 
@@ -140,7 +140,7 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ## Issues after push delivery
 
-To add verification for your application's push handling, implement Braze's push unit tests as described [here][41] .
+To add verification for your application's push handling, implement Braze's [push unit tests][41] .
 
 #### Push clicks not logged {#push-clicks-not-logged}
 
