@@ -85,7 +85,7 @@ Work with your client success or implementation manager to create a new webhook.
 
 ## Customization
 
-###Configure a staging API key for testing
+### Configure a staging API key for testing
 
 If you only provide one Braze REST API key to Extole, only production events will be sent from Extole to Braze. If you also want to send staging / testing events, create another Braze REST API key and configure an additional webhook integration in the Extole dashboard.
 
