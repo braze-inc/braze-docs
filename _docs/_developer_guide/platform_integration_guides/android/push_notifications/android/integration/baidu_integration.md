@@ -19,7 +19,7 @@ To create a Baidu account, visit the [Baidu Portal][7] and click **登录** (Log
 
 ![][33]
 
-To create a new account, in the log-in dialog, click **立即注册** (new account) directly above the large blue 登录 (log in) button.
+To create a new account, in the log-in dialog, click **立即注册** (new account).
 
 ![][38]
 
