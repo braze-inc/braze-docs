@@ -8,7 +8,7 @@ description: "The AI Copywriting Assistant passes a brief product name or descri
 
 # AI copywriting assistant
 
-The AI copywriting assistant passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available out-of-the-box for all message composers in the Braze dashboard.
+The AI copywriting assistant passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available out-of-the-box for most message composers in the Braze dashboard.
 
 Launch the copywriting assistant from your message composer, then enter a product name or description in the input field and click **Generate Copy**! The response will be fetched from OpenAI and provided to you. Feel free to experiment and try variations to your heart's content.
 

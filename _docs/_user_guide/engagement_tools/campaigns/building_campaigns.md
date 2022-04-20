@@ -11,7 +11,6 @@ page_type: landing
 description: "This landing page is home to resources on building your campaigns. Here you can find resources on how to set up your campaign and the different options available."
 
 guide_featured_title: "Section Articles"
-
 guide_featured_list:
   - name: Creating a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
@@ -31,4 +30,11 @@ guide_featured_list:
   - name: Rate-Limiting and Frequency Capping
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     fa_icon: fas fa-exclamation-triangle
+
+guide_menu_title: "Additional Resources"
+guide_menu_list:
+  - name: AI Copywriting Assistant
+    link: /docs/user_guide/intelligence/ai_copywriting/
+    fa_icon: fas fa-edit
+
 ---
