@@ -16,7 +16,7 @@ hidden: true
 
 Marketers use Extole to turn their customers into a primary vehicle for acquisition, awareness, and activation. With Extole’s SaaS platform and experts, marketers rapidly launch programs such as refer-a-friend, influencer, and challenges, personalized to important behavioral segments. Customer-Led Growth drives revenue and generates a significant and unique source of first-party data.
 
-With the integration between Extole and Braze, you can pull valuable customer insights from your refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty. You can also dynamically pull content attributes, such as personalized share codes and links, into Braze communications to turn every customer into a brand advocate.
+With the integration between Extole and Braze, you can pull valuable customer insights from your refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty. You can also dynamically pull Extole content attributes, such as personalized share codes and links, into Braze communications to turn every customer into a brand advocate.
 
 [Learn more about Extole][1].
 
@@ -34,7 +34,7 @@ The table below lists the prerequisites you need to complete this partnership in
 
 ## Use cases
 
-Discover typical use cases for an integration between Extole and Braze.
+The following use cases exemplify just a few of the ways you can leverage Extole's integration with Braze. Work with your implementation and customer success managers to develop an option that fits your company's specific needs.
 - Turn every customer into an advocate by including their unique share link in all Braze communications.
 - Trigger a personalized welcome campaign when a customer opts in to receive marketing communications in an Extole-powered program.
 - Trigger a product recommendations campaign when an advocate shares a specific product with a friend.
@@ -43,9 +43,11 @@ Discover typical use cases for an integration between Extole and Braze.
 
 ## Integration
 
+Complete the following steps to quickly get your integration up and running. Your Extole integrations and customer success managers will support you through this process and answer any questions you may have.
+
 ### Step 1: Define event names and attributes 
 
-Any event that Extole tracks can be sent to Braze. Please work with your implementation or client success manager to identify the event names and user attributes that you’d like for Extole to send into Braze, or select from the default options in the tables below. Your Extole implementation or client success manager will then map and configure the event names in the Extole dashboard for you.
+Any event that Extole tracks can be sent to Braze. Please work with your implementation or client success manager to identify the event names and user attributes that you’d like Extole to send into Braze, or select from the default options in the tables below. Your Extole implementation or client success manager will then map and configure the event names in the Extole dashboard for you.
 
 | Event Name | Description |
 | ----------- | ----------- |
@@ -60,15 +62,15 @@ Any event that Extole tracks can be sent to Braze. Please work with your impleme
 | Attribute Name | Value |
 | ----------- | ----------- |
 | external_id (required) | The unique identifier for the customer, such as a user ID |
-| email | The customer's email address<br><br>"jsmith@yourcompany.com" |
-| phone_number | The customer's phone number, including country code<br><br>"+15555555555" |
-| share_link | The customer’s personal share link<br><br>"refer.yourcompany.com/jsmith" |
-| first_name | The customer's first name<br><br>"John" |
-| last_name | The customer's last name<br><br>"Smith" |
-| city | The customer's city, spelled out<br><br>"Boston" |
-| state | The customer's state, abbreviated<br><br>"MA" |
-| country | The customer's country, abbreviated<br><br>"US" |
-| funnel | The correct funnel type for the customer<br><br>"friend" and/or "advocate" |
+| email | The customer's email address<br>Ex. "jsmith@yourcompany.com" |
+| phone_number | The customer's phone number, including country code<br>Ex. "+15555555555" |
+| share_link | The customer’s personal share link<br>Ex. "refer.yourcompany.com/jsmith" |
+| first_name | The customer's first name<br>Ex. "John" |
+| last_name | The customer's last name<br>Ex. "Smith" |
+| city | The customer's city, spelled out<br>Ex. "Boston" |
+| state | The customer's state, abbreviated<br>Ex. "MA" |
+| country | The customer's country, abbreviated<br>Ex. "US" |
+| funnel | The correct funnel type for the customer<br>Ex. "friend" and/or "advocate" |
 
 ### Step 2: Connect to your Braze account 
 
@@ -89,14 +91,19 @@ Work with your client success or implementation manager to create a new webhook.
 
 If you only provide one Braze REST API key to Extole, only production events will be sent from Extole to Braze. If you also want to send staging / testing events, create another Braze REST API key and configure an additional webhook integration in the Extole dashboard.
 
+### Creating a new User Alias
+
+For certain use cases, such as a new email or SMS subscription where Extole does not have an external id (user id) for the user, Extole can check for the user's identifier using Braze's Export User by Identifier endpoint. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the User Track endpoint to create a User Alias with the user's email address as the Alias Name.
+
 ## Using this integration
 
 After connecting your Braze account in the Extole dashboard, events will automatically begin flowing from Extole to Braze without any action on your part. A live view of events being sent to Braze can be found in Extole’s Outbound Webhook Center for troubleshooting. 
 
-![extole-add-new-webhook][3]
+![extole-webhook-live-events][4]
 
 Once the events and attributes you and your integration or customer success manager have configured are flowing into Braze, you can use the data to generate Braze audiences and campaign segmentation.
 
 [1]: https://www.extole.com
 [2]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
 [3]: {% image_buster /assets/img/extole/extole-create-new-webhook.png %}
+[4]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
