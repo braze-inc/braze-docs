@@ -73,7 +73,15 @@ When you first load into the Drag & Drop Editor, you'll see the **Design and Bui
 2. Select the **Content** panel. Drag & drop the desired content tiles to the row components. 
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
 
-As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way. Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
+As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way. 
+
+{% alert tip %}
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %}){: style="max-width:85%"}
+{% endalert %}
+
+Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
 
 ### Step 3: Add sending information
 

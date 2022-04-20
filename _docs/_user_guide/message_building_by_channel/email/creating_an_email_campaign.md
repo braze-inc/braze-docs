@@ -68,11 +68,15 @@ Then, you can either select an existing [email template][10], [upload a template
 
 After you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance.
 
-{% alert tip %}
 Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email.
-{% endalert %}
 
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
+
+{% alert tip %}
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+{% endalert %}
 
 ### Step 3a: Add email headers
 
