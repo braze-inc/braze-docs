@@ -43,7 +43,7 @@ The following use cases exemplify just a few of the ways you can leverage Extole
 
 ## Integration
 
-Complete the following steps to quickly get your integration up and running. Your Extole integrations and customer success managers will support you through this process and answer any questions you may have.
+Complete the following steps to quickly get your integration up and running. Your Extole implementation and customer success managers will support you through this process and answer any questions you may have.
 
 ### Step 1: Define event names and attributes 
 
