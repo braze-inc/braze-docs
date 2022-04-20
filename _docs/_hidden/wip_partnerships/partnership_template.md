@@ -105,5 +105,5 @@ Once the events and attributes you and your integration or customer success mana
 
 [1]: https://www.extole.com
 [2]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
-[3]: {% image_buster /assets/img/extole/extole-create-new-webhook.png %}
+[3]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
 [4]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
