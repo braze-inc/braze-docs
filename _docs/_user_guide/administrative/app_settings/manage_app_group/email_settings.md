@@ -21,7 +21,7 @@ Use the following outbound email settings to change the name and email address u
 
 Here, you may also exclude the "Reply-To" email and exclusively send replies to the "From" address.
 
-![Outbound Email Settings section of the Email Settings tab][1]
+![Outbound Email Settings section of the Email Settings tab.][1]
 
 This feature allows you to:
 
@@ -36,10 +36,10 @@ When setting your "From" addresses, make sure your "From" email domain matches y
 The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
 {% alert important %} 
-The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billabe emails for the campaign or Canvas step since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
+The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas step since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
 {% endalert %}
 
-![BCC Address section of the Email Settings tab][11]
+![BCC Address section of the Email Settings tab.][11]
 
 Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas step. If you'd like to override this at the message level, you can select **No BCC** when setting up your message.
 
@@ -47,37 +47,37 @@ If you require that all email messages sent from Braze have a BCC address includ
 
 There is no need to change the existing API request to include the address. Checking the box in the Braze dashboard to require BCC will set the address at the time of sending.  
 
-![Require BCC][12]
+![][12]
 
 ### Custom footer
 
-For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group. To read more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group.
 
-![Composing a Custom Footer for emails][0]
+![][0]
 
-Requirements:
+To learn more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+
+Note the following requirements when creating a custom footer for your email messaging:
 
 - Must include an unsubscribe URL and physical mailing address.
-- Custom Footers should be less than 100KB.
+- Should be less than 100KB.
 
 To learn more about email best practices, refer to [Managing email subscriptions][7].
 
 ## Custom unsubscribe page
 
-Within the email settings, Braze lets you set a **Custom Unsubscribe Page**. This page will be viewable once a user has selected Unsubscribe from the bottom of an email. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
+Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will be viewable once a user has selected to unsubscribe from the bottom of an email. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle. 
 
-![Composing a Custom Unsubscribe page for emails][3]
+![Composing a Custom Unsubscribe page for emails.][3]
 
-Requirements:
 
-- Must provide your own HTML for this feature.
-- Unsubscribe pages should be less than 750KB.
+Note that this page should be less than 750KB.
 
 Learn more about best practices for email list management in [Managing email subscriptions][7].
 
 ## Custom opt-in page
 
-Within the email settings, Braze lets you set a Custom Opt-In Page. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
+You can create a custom opt-in page using your own HTML. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
 
 ![Composing a Custom Opt-In page for emails][4]
 
@@ -141,23 +141,25 @@ Some recipients prefer to have an Unsubscribe link available in the same place f
 
 Navigate to **Email Settings** within your AppGroup. Toggle List-Unsubscribe to **ON**.
 
-![Option to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users] [59]
+![Option to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users.] [59]
 
-When enabled, this feature will add a standard list-unsubscribe 'mailto:' header to all eligible outgoing emails.  Upon receipt of a list-unsubscribe request from an end-user, Braze will ensure the same person who was sent the email is being unsubscribed.  If there is no match, we will not process this request.
-
-> This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
-
-The header is not added for messages targeting “all users including unsubscribed users,” as these represent transactional messages which do not need an unsubscribe function.
-
-*Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature.*
+When enabled, this feature will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails.  Upon receipt of a list-unsubscribe request from an end-user, Braze will ensure the same person who was sent the email is being unsubscribed.  If there is no match, we will not process this request.
 
 {% alert note %}
-If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
+This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
+{% endalert %}
+
+The header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function.
+
+Note that currently, only Windows Live Hotmail and Gmail support this feature.
+
+{% alert note %}
+If you use Mailjet, you do not have the flexibility to choose on or off for this feature. By default, your List-Unsubscribe will be `ON`.
 {% endalert %}
 
 ### Inline CSS on new emails by default
 
-CSS inlining is a technique that automatically inlines your emails' CSS styles. For some email clients, this can improve the way that your emails render. This feature automatically inlines CSS on new emails by default.
+CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.
 
 Changing this setting will not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates.
 
