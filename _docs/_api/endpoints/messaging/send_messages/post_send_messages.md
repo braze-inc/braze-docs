@@ -155,7 +155,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
   "recipient_subscription_state": "all",
   "messages": {
     "android_push": "(optional, Android Push Object)",
-    "ios_push": "(optional, Apple Push Object)",
+    "apple_push": "(optional, Apple Push Object)",
     "content_card": "(optional, Content Card Object)",
     "email": "(optional, Email Object)",
     "kindle_push": "(optional, Kindle/FireOS Push Object)",
