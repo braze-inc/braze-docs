@@ -64,29 +64,23 @@ Note the following requirements when creating a custom footer for your email mes
 
 To learn more about email best practices, refer to [Managing email subscriptions][7].
 
-## Custom unsubscribe page
+## Custom pages
 
-Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will be viewable once a user has selected to unsubscribe from the bottom of an email. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle. 
+### Unsubscribe
 
-![Composing a Custom Unsubscribe page for emails.][3]
+Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear once a user has selected to unsubscribe from the bottom of an email.
 
+![][3]
 
-Note that this page should be less than 750KB.
+Note that this page should be less than 750KB. Learn more about best practices for email list management in [Managing email subscriptions][7].
 
-Learn more about best practices for email list management in [Managing email subscriptions][7].
-
-## Custom opt-in page
+### Opt-in
 
 You can create a custom opt-in page using your own HTML. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
 
-![Composing a Custom Opt-In page for emails][4]
+![][4]
 
-Requirements:
-
-- Must provide your own HTML for this feature.
-- Unsubscribe pages should be less than 750KB.
-
-Learn more about best practices for email list management in [Managing email subscriptions][7].
+Note that this page should be less than 750KB. Learn more about best practices for email list management in [Managing email subscriptions][7].
 
 ## Email open tracking pixel
 
@@ -129,21 +123,19 @@ Learn more about best practices for email list management in [Managing email sub
 
 ### Include a list-unsubscribe header
 
-![Unsubscribe from this mailing list link in email header][00]{: style="float:right;max-width:60%;margin-left:15px;"}
+![][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
-This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
+This feature allows you to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users. This header allows email providers to include an **Unsubscribe** button when displaying an email.
 
-#### Benefits of the list-unsubscribe header
-
-Some recipients prefer to have an Unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent Unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
+Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
 
 #### How the list-unsubscribe header works
 
-Navigate to **Email Settings** within your AppGroup. Toggle List-Unsubscribe to **ON**.
+Navigate to **Email Settings** within your app group. Toggle **List-Unsubscribe** to **ON**.
 
-![Option to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users.] [59]
+![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.] [59]
 
-When enabled, this feature will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails.  Upon receipt of a list-unsubscribe request from an end-user, Braze will ensure the same person who was sent the email is being unsubscribed.  If there is no match, we will not process this request.
+When enabled, this feature will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
 
 {% alert note %}
 This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
@@ -154,7 +146,7 @@ The header is not added for messages targeting all users including unsubscribed 
 Note that currently, only Windows Live Hotmail and Gmail support this feature.
 
 {% alert note %}
-If you use Mailjet, you do not have the flexibility to choose on or off for this feature. By default, your List-Unsubscribe will be `ON`.
+If you use Mailjet, you do not have the flexibility to choose on or off for this feature. By default, your list-unsubscribe header will be enabled.
 {% endalert %}
 
 ### Inline CSS on new emails by default
