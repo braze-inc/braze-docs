@@ -11,7 +11,7 @@ description: "This article lists and explains the different Apple objects used a
 
 # Apple push object specification
 
-The `ios_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Apple push object
 
@@ -43,7 +43,7 @@ You must include an Apple Push Object in `messages` if you want users you have t
 
 ### Apple push alert object
 
-In most cases, `alert` can be specified as a string in an `ios_push` object.
+In most cases, `alert` can be specified as a string in an `apple_push` object.
 
 ```json
 {

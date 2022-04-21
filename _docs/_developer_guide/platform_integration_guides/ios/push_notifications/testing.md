@@ -19,7 +19,17 @@ If you'd like to test in-app and push notifications via the command line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_API_KEY" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"ios_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "apple_push": {
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 

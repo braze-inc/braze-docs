@@ -59,7 +59,10 @@ This is a place for you to describe additional details for the parameters in the
 
 The following example CURL demonstrates how to unsubscribe a user from receiving email via the Braze APIs:
 
-```
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{"email":"EMAIL_TO_UNSUBSCRIBE","subscription_state":"unsubscribed"}' https://rest.iad-01.braze.com/email/status
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "email":"EMAIL_TO_UNSUBSCRIBE",
+  "subscription_state":"unsubscribed"
+}' https://rest.iad-01.braze.com/email/status
 ```
 {% endapi %}
