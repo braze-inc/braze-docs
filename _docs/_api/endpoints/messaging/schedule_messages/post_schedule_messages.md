@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "at_optimal_time": (optional, bool),
   },
   "messages": {
-    "ios_push": (optional, apple push object),
+    "apple_push": (optional, apple push object),
     "android_push": (optional, android push object),
     "windows_push": (optional, windows Phone 8 push object),
     "windows8_push": (optional, windows Universal push object),
@@ -165,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "at_optimal_time": true
   },
   "messages": {
-    "ios_push": (optional, Apple Push Object),
+    "apple_push": (optional, Apple Push Object),
     "android_push": (optional, Android Push Object),
     "windows_push": (optional, Windows Phone 8 Push Object),
     "windows8_push": (optional, Windows Universal Push Object),
