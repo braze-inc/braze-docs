@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a group
 
-To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
+To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your preference center.
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
@@ -53,7 +53,7 @@ When creating your segments, set the subscription group name as a filter. This w
 
 #### Archiving groups
 
-Archived subscription groups cannot be edited and will no longer appear in segment filters or in your Preference Center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
+Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
@@ -77,9 +77,9 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ### Email preference center
 
-The email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-To place a link to the Preference Center in your emails, use the following Preference Center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
 {% raw %}
 ```
@@ -91,15 +91,43 @@ To place a link to the Preference Center in your emails, use the following Prefe
 The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
 {% endalert %}
 
-The Preference Center is intended to be used strictly within the email channel itself. The Preference Center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom Preference Center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
+The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
 
-#### Customize your Preference Center
+#### Customize your preference center
 
-You can create and host a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
+You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28].
 
-{% alert note %}
-At this time, you can only have one Preference Center, which will list all of your current subscription groups.
+At this time, you can only have one preference center, which will list all of your current subscription groups.
+
+**Option 1: Link with string query parameters**
+
+Use query string field-value pairs in the body of the URL to pass the users ID and email category to the page so users will only need to confirm their choice to unsubscribe. This option is good for those who store a user identifier in a hashed format and do not already have a subscription center.
+
+For this option, each email category will require its own specific unsubscribe link:<br>
+`http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
+
+{% alert tip %}
+It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an md5 hash value, for example:
+{% raw %}
+```liquid
+{% assign my_string = {{${user_id}}} | md5 %}
+
+My encoded string is: {{my_string}}
+```
+{% endraw %}
 {% endalert %}
+
+**Option 2: JSON web token**
+
+Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (e.g., account preferences) that is normally behind a layer of authentication such as username and password login. This approach does not require query string value-pairs embedded in the URL as these can be passed in the JSON web token's payload, for example:
+
+```json
+{
+    “user_id”: "1234567890",
+    "name": "John Doe",
+    “category": offers
+}
+```
 
 ##### Logo
 

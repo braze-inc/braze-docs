@@ -19,25 +19,17 @@ To create a Baidu account, visit the [Baidu Portal][7] and click **登录** (Log
 
 ![][33]
 
-To create a new account, in the log-in dialog, click **立即注册** (new account).
+To create a new account, at the bottom of the login dialog, click **立即注册** (new account).
 
-![][38]
+![][38]{: style="max-width:70%;"}
 
-Enter your email address, password, and CAPTCHA on the account creation page. Next, accept the license agreement and click **注册** (create account) to register.
+Enter your username, phone number, and password into the account creation page. Next, click the receive verification code button. You will now receive an SMS message from Baidu containing a verification code. Lastly, accept the license agreement and click **注册** (create account) to register. If these setup steps fail, try to register via Baidu Cloud login as described in this [login article](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
 
-![Baidu Sign-up Page][17]
-
-You will now receive an email from Baidu containing a verification link. Make sure to follow the verification link within 48 hours.
-
-![Baidu Verification Email][34]
-
-On the following page, you will complete an SMS verification. Choose your country code (美国 in the example image denotes the United States). Enter your phone number and click **发送验证短信** (send SMS). You should receive a text message containing a six-digit number, which you will enter in the 验证码 (code). Make sure to enter your verification code within 30 minutes. Click **提交** (submit) to submit. You now have a Baidu account.
-
-![][35]
+![Baidu Sign-up Page][17]{: style="max-width:80%;"}
 
 ## Step 2: Register as a Baidu developer
 
-Next, you must register as a Baidu developer. First, visit the [Baidu developer portal][36] and open the dropdown menu in the top of the screen. Choose **注册开发者** (create new developer account) to begin registration.
+Next, you must register as a Baidu developer. First, visit the [Baidu developer portal][36] and choose **注册** (create new developer account) to begin registration.
 
 ![][37]
 
@@ -47,7 +39,7 @@ On the registration page, choose your account type (个人 for personal, 公司 
 
 ## Step 3: Register your application with Baidu
 
-To register your application with Baido, visit the [Baidu project portal][11] and click **创建工程** (create project).
+To register your application with Baidu, visit the [Baidu project portal][11] and click **创建工程** (create project).
 
 ![][10]
 

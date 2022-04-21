@@ -1,13 +1,12 @@
 ---
-nav_title: Twilio
-permalink: /partners/twilio/
+nav_title: Twilio Partnership
+alias: /partners/twilio/
 
 description: "This article outlines the partnership between Braze and Twilio."
-page_type: partner
+page_type: update
 channel: 
   - SMS
   - Webhook
-hidden: true
 ---
 
 # Twilio

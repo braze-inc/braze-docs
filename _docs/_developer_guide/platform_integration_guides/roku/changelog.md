@@ -1,6 +1,6 @@
 ---
 nav_title: Changelog
-article_title: Changlog for Roku SDK
+article_title: Changelog for Roku SDK
 page_order: 30
 page_type: update
 platform: Roku

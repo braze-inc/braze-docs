@@ -26,6 +26,9 @@ For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
+{% alert note %}
+The Canvas entry properties object has a maximum size limit of 50 KB. 
+{% endalert %}
 
 ## Updating Canvas to use entry properties
 
