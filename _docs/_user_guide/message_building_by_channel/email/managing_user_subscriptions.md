@@ -35,7 +35,7 @@ Braze does not count subscription state changes against your data points, global
 
 Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email Preference Center](#email-preference-center). 
+For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
 Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a group
 
-To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
+To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your preference center.
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
@@ -53,7 +53,7 @@ When creating your segments, set the subscription group name as a filter. This w
 
 #### Archiving groups
 
-Archived subscription groups cannot be edited and will no longer appear in segment filters or in your Preference Center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
+Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
@@ -75,11 +75,11 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ![Sub Group Performance][30]
 
-### Email Preference Center
+### Email preference center
 
-The email Preference Center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-To place a link to the Preference Center in your emails, use the following Preference Center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
 {% raw %}
 ```
@@ -91,13 +91,13 @@ To place a link to the Preference Center in your emails, use the following Prefe
 The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
 {% endalert %}
 
-The Preference Center is intended to be used strictly within the email channel itself. The Preference Center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom Preference Center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
+The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
 
-#### Customize your Preference Center
+#### Customize your preference center
 
-You can create and host on your web server a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
+You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28].
 
-At this time, you can only have one Preference Center, which will list all of your current subscription groups.
+At this time, you can only have one preference center, which will list all of your current subscription groups.
 
 **Option 1: Link with string query parameters**
 
@@ -131,7 +131,7 @@ Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate
 
 ##### Logo
 
-You can edit the logo and header of your Preference Center. Click the gear, then click **Edit** from the menu that appears.
+You can edit the logo and header of your preference center. Click the gear, then click **Edit** from the menu that appears.
 
 ### Changing email subscriptions {#changing-email-subscriptions}
 
