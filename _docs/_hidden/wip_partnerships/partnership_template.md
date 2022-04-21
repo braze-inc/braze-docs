@@ -28,18 +28,18 @@ The table below lists the prerequisites you need to complete this partnership in
 | ----------- | ----------- |
 | Extole Account | An Extole account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST test API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to separate a staging Braze instance. |
+| Braze REST test API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to a separate staging Braze instance. |
 | Braze Instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the API overview page. |
 | User Identity | The unique identifier for a user in Braze and Extole. This is generally the external_id. |
 
 ## Use cases
 
 The following use cases exemplify just a few of the ways you can leverage Extole's integration with Braze. Work with your implementation and customer success managers to develop an option that fits your company's specific needs.
-- Turn every customer into an advocate by including their unique share link in all Braze communications.
-- Trigger a personalized welcome campaign when a customer opts in to receive marketing communications in an Extole-powered program.
-- Trigger a product recommendations campaign when an advocate shares a specific product with a friend.
-- Trigger a surprise and delight campaign when an advocate has driven five or more referrals. 
-- Trigger a refer a friend email, push, or SMS campaign when a customer converts.
+- Turn every customer into an advocate by including their unique share link in all Braze communications. A personal share link is how an advocate shares your brand with their friends, family, and followers. These Extole-generated links also attribute activity from an advocate's network back to the advocate. Include a customer's personal link in any communications you have with them so that they're just a copy-and-paste away from continuing to share your brand.
+- Make opting in to receive marketing communications in Extole-powered programs more meaningful for customers by triggering a personalized welcome campaign.
+- Promote further engagement by triggering a product recommendations campaign when an advocate shares a specific product with a friend.
+- Thank advocates for bringing you new, high-quality customers by triggering a surprise and delight campaign when they have driven five or more referrals. 
+- When a customer converts, capitalize on the excitement by triggering a refer-a-friend email, push, or SMS campaign.
 
 ## Integration
 
@@ -53,8 +53,8 @@ Any event that Extole tracks can be sent to Braze. Please work with your impleme
 | ----------- | ----------- |
 | Created Share Link | A share link is created for a customer. |
 | Shared | A customer sends a link to their friend(s) via email, SMS, or social channel. |
-| Signed Up | A customer signs up via email or SMS through the program. |
-| Converted | A customer completes a purchase. |
+| Referred Signed Up | A referred customer signs up via email or SMS through the program. |
+| Referred Converted | A referred customer completes a purchase.<br><br> Note: Outcome events can be customized for your business.|
 | Subscribed | A customer subscribes via email or SMS. |
 | Unsubscribed | A customer unsubscribes via email or SMS. |
 | Earned Reward | A customer earns a reward. |
@@ -75,15 +75,15 @@ Any event that Extole tracks can be sent to Braze. Please work with your impleme
 ### Step 2: Connect to your Braze account 
 
 To start sending data from your Extole programs into your Braze account, you’ll need to create a new webhook integration in Extole’s Outbound Webhook Center.
-1. Navigate to Tech Center > Outbound Webhooks in the Extole dashboard and select Create New Integration.
+1. Navigate to Tech Center > Outbound Webhooks in the Extole dashboard and select + New Integration.
 2. Enter a name for the Key and select “Webhook” as the Key Type. 
 3. Add your Braze REST API key to the Partner Key ID, select HTTP_BASIC as the algorithm, and click “Create Key.”
 
-![extole-outbound-webhooks][2]
+![extole-outbound-webhooks][4]
 
 Work with your client success or implementation manager to create a new webhook. They will configure the webhook for you using your newly generated key and Braze instance URL. 
 
-![extole-add-new-webhook][3]
+![extole-add-new-webhook][5]
 
 ## Customization
 
@@ -93,17 +93,19 @@ If you only provide one Braze REST API key to Extole, only production events wil
 
 ### Creating a new User Alias
 
-For certain use cases, such as a new email or SMS subscription where Extole does not have an external id (user id) for the user, Extole can check for the user's identifier using Braze's Export User by Identifier endpoint. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the User Track endpoint to create a User Alias with the user's email address as the Alias Name.
+For certain use cases, such as a new email or SMS subscription where Extole does not have an external id (user id) for the user, Extole can check for the user's identifier using Braze's [Export User by Identifier endpoint][2]. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the [User Track endpoint to create a User Alias][3] with the user's email address as the Alias Name.
 
 ## Using this integration
 
 After connecting your Braze account in the Extole dashboard, events will automatically begin flowing from Extole to Braze without any action on your part. A live view of events being sent to Braze can be found in Extole’s Outbound Webhook Center for troubleshooting. 
 
-![extole-webhook-live-events][4]
+![extole-webhook-live-events][6]
 
 Once the events and attributes you and your integration or customer success manager have configured are flowing into Braze, you can use the data to generate Braze audiences and campaign segmentation.
 
 [1]: https://www.extole.com
-[2]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
-[3]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
-[4]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
+[2]: https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/
+[3]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#request-body
+[4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
+[5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
+[6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
