@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "time": "2017-05-24T20:30:36Z"
    },
   "messages": {
-     "apple_push": {
+     "ios_push": {
        "alert": "Updated Message!",
        "badge": 1
      },

@@ -58,7 +58,7 @@ Finish confirming your campaign and launch it to test your push notification and
 
 Clicking on this button causes a window to appear where you can enter the email address you would like the test email to be sent to. Click **Send Test** and your test email will be delivered shortly.
 
-## Testing push via cURL
+## Testing from the command line
 
 Alternatively, if you'd like to test push notifications via the command-line you can follow the following examples for each platform.
 
@@ -75,7 +75,17 @@ You can send a single notification through the terminal via CURL and the [Messag
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "ios_push": {
+      "alert": "Test push",
+      "extra": { 
+        "YOUR_KEY1" :"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing push with Android apps via cURL
@@ -90,7 +100,18 @@ You can send a single notification through the terminal via cURL and the [Messag
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "android_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra":{
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing push with Kindle apps via cURL
@@ -103,7 +124,18 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"kindle_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "kindle_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra":{
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing push with Windows Universal apps via cURL
@@ -112,13 +144,19 @@ You can send a single notification through the terminal via cURL and the [Messag
 
 - `YOUR_API_KEY` - available on the [Developer Console][14] page
 - `YOUR_EXTERNAL_USER_ID` - available on the [User Profile Search Page][15]
-- `YOUR_KEY1` (optional)
-- `YOUR_VALUE1` (optional)
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast_text_01\",\"toast_text1\":\"test_title\"}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "windows_push": {
+      "push_type":"toast_text_01",
+      "toast_text1":"test_title"
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing push with Windows phone apps via cURL
@@ -127,13 +165,21 @@ You can send a single notification through the terminal via cURL and the [Messag
 
 - `YOUR_API_KEY` - available on the [Developer Console][14] page
 - `YOUR_EXTERNAL_USER_ID` - available on the [User Profile Search Page][15]
-- `YOUR_KEY1` (optional)
-- `YOUR_VALUE1` (optional)
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast\",\"toast_title\":\"test_title\",\"toast_content\":\"message_goes_here\",\"toast_navigation_uri\":\"uri_goes_here\"}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "windows_push": {
+      "push_type":"toast",
+      "toast_title":"test_title",
+      "toast_content":"message_goes_here",
+      "toast_navigation_uri":"uri_goes_here"
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 [1]: {% image_buster /assets/img_archive/testmessages1.png %}
