@@ -45,7 +45,7 @@ guide_featured_list:
 
 **Support withdrawn**: June 2020
 
-Support for Amazon Moments has been discontinued as of June 2020. Amazon moments is being merged into Amazon Advertising and has deprecated their APIs and our integration.
+Support for Amazon Moments has been discontinued as of June 2020. Amazon Moments is being merged into Amazon Advertising and has deprecated their APIs and our integration.
 
 ## Factual partnership
 
