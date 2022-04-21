@@ -103,4 +103,4 @@ Note that the user needs to be in the segment for 24 hours prior to the launch. 
 
 ### Why does the number of users entering a campaign not match the expected number?
 
-The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a "change in attribute" trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.
+The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.
