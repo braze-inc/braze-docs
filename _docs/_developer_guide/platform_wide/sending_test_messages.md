@@ -78,7 +78,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
-    "ios_push": {
+    "apple_push": {
       "alert": "Test push",
       "extra": { 
         "YOUR_KEY1" :"YOUR_VALUE1"
