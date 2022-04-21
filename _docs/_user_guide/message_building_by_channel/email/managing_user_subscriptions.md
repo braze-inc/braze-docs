@@ -35,7 +35,7 @@ Braze does not count subscription state changes against your data points, global
 
 Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
+For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email Preference Center](#email-preference-center). 
 
 Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
@@ -75,9 +75,9 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ![Sub Group Performance][30]
 
-### Email preference center
+### Email Preference Center
 
-The email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email Preference Center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
 To place a link to the Preference Center in your emails, use the following Preference Center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
@@ -95,15 +95,43 @@ The Preference Center is intended to be used strictly within the email channel i
 
 #### Customize your Preference Center
 
-You can create and host a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
+You can create and host on your web server a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
 
-{% alert note %}
 At this time, you can only have one Preference Center, which will list all of your current subscription groups.
+
+**Option 1: Link with string query parameters**
+
+Use query string field-value pairs in the body of the URL to pass the users ID and email category to the page so users will only need to confirm their choice to unsubscribe. This option is good for those who store a user identifier in a hashed format and do not already have a subscription center.
+
+For this option, each email category will require its own specific unsubscribe link:<br>
+`http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
+
+{% alert tip %}
+It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an md5 hash value, for example:
+{% raw %}
+```liquid
+{% assign my_string = {{${user_id}}} | md5 %}
+
+My encoded string is: {{my_string}}
+```
+{% endraw %}
 {% endalert %}
+
+**Option 2: JSON web token**
+
+Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (e.g., account preferences) that is normally behind a layer of authentication such as username and password login. This approach does not require query string value-pairs embedded in the URL as these can be passed in the JSON web token's payload, for example:
+
+```json
+{
+    “user_id”: "1234567890",
+    "name": "John Doe",
+    “category": offers
+}
+```
 
 ##### Logo
 
-You can edit the logo and header of your preference center. Click the gear, then click **Edit** from the menu that appears.
+You can edit the logo and header of your Preference Center. Click the gear, then click **Edit** from the menu that appears.
 
 ### Changing email subscriptions {#changing-email-subscriptions}
 
