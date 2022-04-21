@@ -82,4 +82,4 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 ### Why does the number of users entering a Canvas not match the expected number?
 
-The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a "change in attribute" trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
+The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
