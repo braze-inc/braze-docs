@@ -35,11 +35,11 @@ The table below lists the prerequisites you need to complete this partnership in
 ## Use cases
 
 The following use cases exemplify just a few of the ways you can leverage Extole's integration with Braze. Work with your implementation and customer success managers to develop an option that fits your company's specific needs.
-- Turn every customer into an advocate by including their unique share link in all Braze communications. A personal share link is how an advocate shares your brand with their friends, family, and followers. These Extole-generated links also attribute activity from an advocate's network back to the advocate. Include a customer's personal link in any communications you have with them so that they're just a copy-and-paste away from continuing to share your brand.
-- Make opting in to receive marketing communications in Extole-powered programs more meaningful for customers by triggering a personalized welcome campaign.
+- Turn every customer into an advocate by including their unique share link in all Braze communications.
+- Continue the conversation with site visitors by triggering a personalized welcome campaign when they opt in to receive marketing communications in Extole-powered programs.
 - Promote further engagement by triggering a product recommendations campaign when an advocate shares a specific product with a friend.
-- Thank advocates for bringing you new, high-quality customers by triggering a surprise and delight campaign when they have driven five or more referrals. 
-- When a customer converts, capitalize on the excitement by triggering a refer-a-friend email, push, or SMS campaign.
+- Thank advocates for bringing you new, high-quality customers by triggering a surprise and delight campaign when they have driven five or more referrals.
+- Trigger a refer-a-friend email, push, or SMS campaign during any moment of customer delight, such as a purchase or positive experience with your brand.
 
 ## Integration
 
