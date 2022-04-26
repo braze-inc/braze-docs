@@ -519,3 +519,5 @@ validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messagin
 validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
+
+validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';
