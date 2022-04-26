@@ -99,10 +99,10 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
