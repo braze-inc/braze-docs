@@ -14,7 +14,7 @@ tool: Media
 The Content Blocks that are created for use exclusively in the Drag & Drop Editor are similar in funtionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
 
 {% alert important %}
-Drag & Drop Editor Content Blocks are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Drag & Drop Editor Content Blocks are currently in early access and continuing to evolve. Contact your Braze account manager if you're interested in participating in the early access. 
 {% endalert %}
 
 ## Creating a Content Block
@@ -31,7 +31,11 @@ Drag & Drop Editor Content Blocks are only available for use in email campaigns.
 
 Next, select **Drag & Drop Editor** as the Content Block type. Click **Edit Content Block** in the **Content Block Preview** panel to begin editing your Content Block. 
 
-Here, we'll make use of the [Drag & Drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a Drag & Drop Editor Content Block. First, drag and drop a format block from the **Rows** tab the editor. This will determine the layout of your Content Block. Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suite your email messaging.
+Here, we'll make use of the [Drag & Drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a Drag & Drop Editor Content Block. First, drag and drop a format block from the **Rows** tab the editor. This will determine the layout of your Content Block. 
+
+{% alert important %}
+Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suite your email messaging.
+{% endalert %}
 
 You can also add as many Drag & Drop Editor Content Blocks as needed to build out your email campaigns.
 
