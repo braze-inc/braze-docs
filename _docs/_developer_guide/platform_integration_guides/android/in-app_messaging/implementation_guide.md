@@ -32,9 +32,9 @@ The Braze SDK allows developers to override a number of defaults through custom 
 class BrazeDemoApplication : Application(){
  override fun onCreate() {
     super.onCreate()
-    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener(true, true))
-    AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
-    AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(CustomInAppMessageViewFactory())
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(true, true))
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(CustomInAppMessageViewFactory())
   }
 }
 ```
@@ -47,9 +47,9 @@ public class BrazeDemoApplication extends Application {
   @Override
   public void onCreate{
     super.onCreate();
-    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener(true, true));
-    AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
-    AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(new CustomInAppMessageViewFactory());
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(true, true));
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
+    BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory(new CustomInAppMessageViewFactory());
   }
 }
 ```

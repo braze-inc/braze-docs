@@ -101,9 +101,9 @@ There are a few reasons why this could be occurring:
 
 If you force-quit your application through your system settings, your push notifications will not be sent. Launching the app again will re-enable your device to receive push notifications.
 
-#### AppboyFirebaseMessagingService not registered
+#### BrazeFirebaseMessagingService not registered
 
-The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
+The BrazeFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
 ```xml
 <service android:name="com.braze.BrazeFirebaseMessagingService"
