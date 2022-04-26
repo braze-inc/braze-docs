@@ -14,4 +14,4 @@ description: "This article includes resources on integrating and customizing in-
 By default, in-app messages are automatically displayed as part of our recommended [integration instructions][1]. Additional customization can be done by following the steps in this guide.
 
 
-[1]: https://github.com/braze-inc/braze-web-sdk#getting-started
+[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/

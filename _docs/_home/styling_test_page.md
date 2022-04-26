@@ -319,11 +319,11 @@ public void onResume() {
 
 #### Code Test JavaScript
 ```javascript
-appboy.subscribeToFeedUpdates(function(feed) {
+braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  appboy.display.showFeed(undefined, cards);
+  braze.showFeed(undefined, cards);
 });
-appboy.requestFeedRefresh();
+braze.requestFeedRefresh();
 ```
 
 #### Pygments Test
