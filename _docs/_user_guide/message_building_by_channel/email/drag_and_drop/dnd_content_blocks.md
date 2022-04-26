@@ -41,6 +41,8 @@ You can also add as many Drag & Drop Editor Content Blocks as needed to build ou
 
 ## Using a Content Block
 
+![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
+
 To use the Content Block, navigate to your email campaign and select **Edit Email Body**. Click the <i class="fas fa-plus"></i> **Personalization** button. 
 
 In the **Add Personalization** tab, select **Content Blocks** in the **Personalization Type** dropdown. For the **Attribute** field, select the name of your Content Block. The Liquid snippet field will populate with your Content Block Liquid Tag. Next, copy and paste the Liquid snippet into a text editor block. 
@@ -55,3 +57,4 @@ To archive a Content Block, go to the **Templates & Media** page and select the 
 
 
 [1]: {% image_buster /assets/img_archive/dnd_content_block_name.png %}
+[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}
