@@ -11,7 +11,7 @@ tool: Media
 
 # Drag & Drop Editor Content Blocks
 
-The Content Blocks that are created for use exclusively in the Drag & Drop Editor are similar in funtionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
+The Content Blocks used exclusively in the Drag & Drop Editor are similar in functionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
 
 {% alert important %}
 Drag & Drop Editor Content Blocks are currently in early access and continuing to evolve. Contact your Braze account manager if you're interested in participating in the early access. 
@@ -49,7 +49,7 @@ When you preview your email messaging, the Liquid snippet will display as the Dr
 
 ## Updating Content Blocks
 
-To update an existing Content Block, you can either edit the original Content Block located in Templates & Media, or copy the HTML from the original message to your new one. Note that if you choose to update a Content Block, it will update in all email messages where the Content Block is used.
+To update an existing Content Block, you can either edit the original Content Block located in **Templates & Media**, or copy the HTML from the original message to your new one. Note that if you choose to update a Content Block, it will update in all email messages where the Content Block is used.
 
 To archive a Content Block, go to the **Templates & Media** page and select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. 
 
