@@ -1,27 +1,21 @@
 ---
 nav_title: Campaign Approval
-permalink: /camp_approval/
+permalink: /campaign_approval/
 hidden: true
 ---
 
 # Campaign Approval
 
-This feature intends to add a review process prior to launching a campaign.  Available for Campaigns only, a new set of states will be available on the Campaign Confirmation workflow step  This ensures that each confirmation is 'approved' prior to launching the message.
+Campaign approval adds a review process to your workflow before launching a campaign. Available exclusively for campaigns, this feature adds new states available in the campaign confirmation workflow step. Now, you can ensure that each confirmation is approved in order to launch the campaign. 
 
-## How it works
+In the **Review Summary** step of the campaign building workflow, there is an approval option to approve or deny your campaign's key components: **Messages**, **Delivery**, **Target Population**, and **Conversion Events**. The default state for campaign approval is **Pending Approval**. 
 
-When launching a campaign, the confirmation page now offers a new state for each pill (Messages, Delivery, Target Population, and Conversion Events).  The default state is 'pending'.  Other states include 'Approved' or 'Deny'.
-Once each pill has been approved, the launch button will now be enabled to launch the message.
+![][1]
 
-In addition, an 'Approve All' is available by hovering over the 'Launch' button.
+Once each section is approved, the **Launch** button will be enabled and you can launch your campaign! 
 
-INSERT IMAGES HERE
-
-{% alert tip%}
-Campaign Approval does not work for Canvas, or API Campaigns
+{% alert important %}
+Campaign approval is not supported in the building workflow for Canvases or API campaigns.
 {% endalert %}
 
-
- [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
- [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
- [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
+[1]: {% image_buster /assets/img_archive/campaign_approval_example.png %} 
