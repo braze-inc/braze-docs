@@ -67,7 +67,7 @@ Once the Braze Web SDK is added to your website, initialize the library with the
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 {% endalert %}
 
-For a complete list of options for `braze.initialize()` see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.initialize).
+For a complete list of options for `braze.initialize()` see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 ```javascript
 // initialize the SDK

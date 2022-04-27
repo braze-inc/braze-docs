@@ -63,8 +63,6 @@ This is often used to power badges signifying how many unread News Feed cards th
 
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Simply call `card.extras` to access these values.
 
-See the [JS Reference Docs][17] for more information on [ClassicCard][3], [Banner][4], and [CaptionedImage][5].
-
 ## Customization
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more.
