@@ -41,11 +41,7 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
     <div id="feed"></div>
 </nav>
 
-<script>
-   // we'll assume we have window.appboy
-   // you can also use our npm integration instead:
-   // import * as braze from"@braze/web-sdk";
-    
+<script> 
    const toggle = document.getElementById("toggle");
    const hide = document.getElementById("hide");
    const show = document.getElementById("show");

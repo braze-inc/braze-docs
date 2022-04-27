@@ -44,7 +44,7 @@ Choose from the optional set of additional initialization options described in t
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 
 1. Using Google Tag Manager's debug move, you should see the Braze Initialization Tag has been triggered on your configured pages or events.
-2. You should see network requests made to Braze, and the global `window.appboy` library should now be defined on your webpage.
+2. You should see network requests made to Braze, and the global `window.braze` library should now be defined on your webpage.
 
 ### Actions Tag template {#actions-tag}
 
