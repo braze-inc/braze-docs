@@ -10,7 +10,7 @@ description: "This reference article covers user data collection including what 
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
-This best practice guide will help you to understand exactly what Braze considers to be a custom event and a custom attribute.
+This best practice guide will help you understand the difference between a custom event and a custom attribute in Braze.
 
 ## Automatically collected data
 
