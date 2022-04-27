@@ -179,8 +179,6 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 
 When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
 
-To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
-
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 
 For campaigns using Control Cards for A/B testing, you can use [`Card.isControl()`][55] to determine if a card will be blank, and used only for tracking purposes.

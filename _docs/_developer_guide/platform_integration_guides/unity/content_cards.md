@@ -39,8 +39,6 @@ Parsing Content Cards requires Json parsing, see the following example for detai
 
 ```csharp
 void ExampleCallback(string message) {
-  // Example of logging a Content Card displayed event
-  AppboyBinding.LogContentCardsDisplayed();
   try {
     JSONClass json = (JSONClass)JSON.Parse(message);
 
@@ -86,7 +84,5 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 Clicks and impressions must be manually logged for Content Cards not displayed directly by Braze.
 
 Use `LogClick()` and `LogImpression()` on [ContentCard][17] to log clicks and impressions for specific cards.
-
-To log that the user viewed the feed as a whole, call `AppboyBinding.LogContentCardsDisplayed()`.
 
 [17]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
