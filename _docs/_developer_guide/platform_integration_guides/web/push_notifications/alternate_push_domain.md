@@ -38,7 +38,7 @@ On `insecure.com`, open a new window to your secure domain using a URL parameter
 ```html
 <button id="opt-in">Opt-In For Push</button>
 <script>
-// the same ID you would use with `appboy.changeUser`:
+// the same ID you would use with `braze.changeUser`:
 const user_id = getUserIdSomehow();
 // pass the user ID into the secure domain URL:
 const secure_url = `https://secure.com/push-registration.html?external_id=${user_id}`;
@@ -64,27 +64,27 @@ At this point, `secure.com` will open a popup window in which you can initialize
 <html>
     <head>
         <title>Opt-In for Push</title>
-        <script src="https://js.appboycdn.com/web-sdk/3.1/appboy.min.js"></script>
+        <script src="https://js.appboycdn.com/web-sdk/4.0/braze.min.js"></script>
     </head>
     <body>
     <button id="opt-in">Opt In For Push</button>
     <script>
         // initialize Braze
-        appboy.initialize("YOUR-API-KEY", {
+        braze.initialize("YOUR-API-KEY", {
             baseUrl: "YOUR-SDK-BASE-URL",
             enableLogging: true
         });
         // parse the `external_id` from the URL parameters
         const external_id = (location.search.substring(1).split('&').find(param => param.startsWith('external_id=')) || '').split('=')[1] || '';
         if (external_id) {
-            appboy.changeUser(external_id);
+            braze.changeUser(external_id);
         }
-        appboy.openSession();
-        appboy.display.automaticallyShowNewInAppMessages();
+        braze.automaticallyShowInAppMessages();
+        braze.openSession();
 
         // when the user click's our Opt In button, prompt for permission
         document.getElementById("opt-in").onclick = function(){
-            appboy.registerAppboyPushMessages(() => {
+            braze.requestPushPermission(() => {
                 window.alert(`You are registered for push!`);
                 window.close();
             }, () => {
@@ -128,10 +128,10 @@ function getPushStatus(event){
 **secure.com/push-status.html**
 
 ```html
-<script src="https://js.appboycdn.com/web-sdk/3.1/appboy.min.js"></script>
+<script src="https://js.appboycdn.com/web-sdk/4.0/braze.min.js"></script>
 <script>
 // initialize Braze
-appboy.initialize("YOUR-API-KEY", {
+braze.initialize("YOUR-API-KEY", {
     baseUrl: "YOUR-SDK-BASE-URL",
     enableLogging: true
 });
@@ -144,7 +144,7 @@ window.addEventListener("message", (event) => {
             // send the parent window (insecure.com) the results
             window.top.postMessage({
                 type: 'set_push_status',
-                isPushPermissionGranted: appboy.isPushPermissionGranted()
+                isPushPermissionGranted: braze.isPushPermissionGranted()
             }, event.origin);
         }
     }

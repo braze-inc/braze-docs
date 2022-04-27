@@ -26,7 +26,7 @@ Braze currently offers the following default in-app message types:
 
 Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
-All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [`appboy.SlideUpMessage`][3], [`appboy.ModalMessage`][6], [`appboy.FullScreenMessage`][7], and [`appboy.HtmlMessage`][12].
+All in-app messages inherit their prototype from [`InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7], and [`HtmlMessage`][12].
 
 ## Expected behaviors by message type
 
@@ -60,7 +60,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 {% alert important %}
 
-To enable HTML in-app messages, your SDK integration **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+To enable HTML in-app messages, your SDK integration **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 <br> <br>
 At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message; therefore, the same `allowUserSuppliedJavascript` option must be set.
 
@@ -77,7 +77,7 @@ The following example shows a paginated HTML in-app message:
 
 By default, in-app messages are automatically displayed as part of our recommended [integration instructions][1]. Additional customization can be done by following the steps in this guide.
 
-[1]: https://github.com/Appboy/appboy-web-sdk#getting-started
+[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html
 [6]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ModalMessage.html
