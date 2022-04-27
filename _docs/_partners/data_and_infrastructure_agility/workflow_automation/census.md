@@ -29,7 +29,7 @@ The Braze and Census integration allows you to dynamically import your Census pr
 
 ### Step 1: Create Braze service connection
 
-To integrate Census, in the Census platform, navigate to the **Settings** tab, and select **Add Service** to create a new Braze service connection.
+To integrate Census, in the Census platform, navigate to the **Settings** tab and select **Add Service** to create a new Braze service connection.
 
 In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key.
 
@@ -56,12 +56,16 @@ When using the Census and Braze integration, Census will only send the deltas (c
 
 ## Supported objects
 
-Census currently supports syncing of the following Braze objects:
+Census currently supports syncing of the following Braze user and event objects:
 
 | Object name | Identifiers |
 | --- | --- |
 | User | External user ID |
 | Event | Event ID |
+
+Additionally, Census supports sending [structured data](https://docs.getcensus.com/destinations/braze#supported-objects) to Braze: 
+- User push tokens: To send push tokens, your data should be structured as an array of objects with 2-3 values: `app_id`, `token`, and an optional `device_id`.
+- Nested custom attributes: Both objects and arrays are supported. As of April 2022, this feature is still in early access. You may need to contact your Braze account manager for access.
 
 [1]: https://www.getcensus.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
