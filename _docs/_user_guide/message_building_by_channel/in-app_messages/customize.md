@@ -128,18 +128,6 @@ To have Braze handle your HTTP or HTTPS link as a deep link, set `?abDeepLink=tr
 
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
-#### Custom events (mobile only)
-
-For mobile apps, you can log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter.
-
-For example, `appboy://customEvent?name=eventName` will log a custom event of `eventName`.
-
-Be sure to URL encode spaces and other special characters as you would in any other URL. For example, `appboy://customEvent?name=event%20name` sends `event name`.
-
-Additional query parameters will be passed as property key-value pairs.
-
-`appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
-
 #### News Feed (mobile only)
 
 For mobile apps, you can open the News Feed by setting a link's URL to `appboy://feed`.
@@ -148,9 +136,9 @@ For example, `<a href="appboy://feed">View Feed</a>`.
 
 #### Close in-app message (mobile only)
 
-To close an in-app message, you can set a link's URL to `appboy://close`.
+To close an in-app message, you can use the `appboyBridge.closeMessage()` javascript method.
 
-For example, `<a href="appboy://close">Close</a>` will close the in-app message.
+For example, `<a onclick="appboyBridge.closeMessage()" href="#">Close</a>` will close the in-app message.
 
 ## Modal with CSS (web only) {#web-modal-css}
 
