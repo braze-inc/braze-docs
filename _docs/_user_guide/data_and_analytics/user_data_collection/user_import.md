@@ -76,7 +76,7 @@ When importing customer data, the column headers you use must exactly match the 
 
 Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
 
-### Data point considerations
+#### Data point considerations
 
 Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point, except for external IDs and blank values. 
 
@@ -88,7 +88,7 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.
 {% endalert %}
 
-### Default user data column headers
+#### Default user data column headers
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
@@ -110,10 +110,9 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g., `2019-11-20T18:38:57`) | No |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 | `subscription_group_id` | String | The `id` of your subscription group | No |
 | `subscription_state` | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | Yes if `subscription_group_id` is used |
-
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
 While `external_id` itself is not mandatory, you **must** include one of these fields:
@@ -122,8 +121,7 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 - `user_alias` - A unique user identifier for an anonymous user
 {% endalert %}
 
-
-### Importing custom data via CSV
+### Importing custom data
 
 Any headers that do not exactly match default user data will create a custom attribute within Braze.
 
@@ -141,20 +139,19 @@ Especially for arrays, commas in your CSV file will be interpreted as a column s
 For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
 {% endalert %}
 
-### Updating Subscription Group status via CSV
+### Updating subscription group status
 
-You can add users into Email or SMS Subscription Groups via User Import. This is particularly useful for SMS, since a user must be enrolled into an SMS Subscription Group in order to be messaged via the SMS channel. For more information, refer to the page [SMS Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+You can add users into email or SMS subscription groups via user import. This is particularly useful for SMS, since a user must be enrolled into an SMS subscription group to be messaged via the SMS channel. For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
 
-If you are updating Subscription Group status, you must have the following two columns in your CSV:
+If you are updating subscription group status, you must have the following two columns in your CSV:
 
-- `subscription_group_id`: The `id` of the [Subscription Group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
+- `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
 - `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).
 
-![Subscription Group Update CSV Example][9]{: style="max-width:80%" }
-
+![Subscription group update csv example][9]{: style="max-width:80%" }
 
 {% alert important %}
-Only a single `subscription_group_id` can be set per row in the User Import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple Subscription Groups, you will need to do multiple imports.
+Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you will need to do multiple imports.
 {% endalert %}
 
 ### Importing a CSV
