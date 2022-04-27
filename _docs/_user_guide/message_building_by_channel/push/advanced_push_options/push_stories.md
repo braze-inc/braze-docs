@@ -26,7 +26,7 @@ On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a 
 
 ## Prerequisites
 
-The following SDK versions are required to receive Push Stories.
+The following SDK versions are required to receive Push Stories:
 
 {% sdk_min_versions ios:3.2.0 android:2.2.0 %}
 
