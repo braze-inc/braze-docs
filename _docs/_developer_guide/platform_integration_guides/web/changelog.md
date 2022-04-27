@@ -10,4 +10,4 @@ description: "This page lists updates to Braze's Web SDK changelog."
 
 # Web SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-web-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}

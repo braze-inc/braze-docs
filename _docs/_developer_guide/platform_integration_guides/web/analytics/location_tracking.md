@@ -14,9 +14,10 @@ tool: Location
 To set a user's current location, use the [`getCurrentPosition()`][0] method of the Geolocation API and log the location data to Braze:
 
 ```javascript
+import * as braze from "@braze/web-sdk";
 function success(position) {
   var coords = position.coords;
-  appboy.getUser().setLastKnownLocation(
+  braze.getUser().setLastKnownLocation(
     coords.latitude,
     coords.longitude,
     coords.accuracy,
@@ -41,7 +42,7 @@ If you'd like to continuously track a user's location during a page load, use th
 ```javascript
 function success(position) {
   var coords = position.coords;
-  appboy.getUser().setLastKnownLocation(
+  braze.getUser().setLastKnownLocation(
     coords.latitude,
     coords.longitude,
     coords.accuracy,

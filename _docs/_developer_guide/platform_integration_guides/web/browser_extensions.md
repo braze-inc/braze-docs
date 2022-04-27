@@ -34,25 +34,25 @@ Braze can be included in the following areas of your extension:
 
 ## Permissions
 
-No additional permissions are required in your `manifest.json` when integrating the Braze SDK (`appboy.min.js`) as a local file bundled with your extension. 
+No additional permissions are required in your `manifest.json` when integrating the Braze SDK (`braze.min.js`) as a local file bundled with your extension. 
 
 However, if you use [Google Tag Manager][8], or reference Braze's SDK from an external URL, or have set a strict Content Security Policy for your extension, you will need to adjust the [`content_security_policy`][6] setting in your `manifest.json` to allow remote script sources.
 
 ## Getting started
 
 {% alert tip %}
-Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html) for full details on all of the different SDK methods and configuration options.
+Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
 {% endalert %}
 
 To integrate Braze's Web SDK, you'll first need to download a copy of the latest Javascript library. This can be done using NPM or directly downloading it from [Braze's CDN][7].
 
 Alternatively, if you prefer to use [Google Tag Manager][8] or use an externally hosted copy of Braze's SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`][6] setting in your `manifest.json`.
 
-Once downloaded, be sure to copy the `appboy.min.js` file somewhere into your extension's directory. For example, using NPM:
+Once downloaded, be sure to copy the `braze.min.js` file somewhere into your extension's directory. For example, using NPM:
 
 ```bash
 npm install --save @braze/web-sdk;
-cp node_modules/@braze/web-sdk/appboy.min.js /path/to/extension
+cp node_modules/@braze/web-sdk/braze.min.js /path/to/extension
 ```
 
 ### Extension popups {#popup}
@@ -63,7 +63,7 @@ To add Braze to an extension popup, reference the local Javascript file in your 
 <html>
     <title>popup.html</title>
     <!-- Add the Braze library -->
-    <script src="/relative/path/to/appboy.min.js"></script>
+    <script src="/relative/path/to/braze.min.js"></script>
     <script>
     // Initialize Braze here
     </script>
@@ -72,7 +72,7 @@ To add Braze to an extension popup, reference the local Javascript file in your 
 
 ### Background script {#background-script}
 
-To use Braze within your extension's background script, add the Braze library to your `manifest.json` in the `background.scripts` array. This will make the global `appboy` variable available in your background script context.
+To use Braze within your extension's background script, add the Braze library to your `manifest.json` in the `background.scripts` array. This will make the global `braze` variable available in your background script context.
 
 
 ```json
@@ -80,7 +80,7 @@ To use Braze within your extension's background script, add the Braze library to
     "manifest_version": 2,
     "background": {
         "scripts": [
-            "relative/path/to/appboy.min.js",
+            "relative/path/to/braze.min.js",
             "background.js"
         ],
     }
@@ -98,7 +98,7 @@ Once the SDK is included, you can initialize the library as usual.
 Since cookies are not supported in browser extensions, you can disable cookies by initializing with `noCookies: true`.
 
 ```javascript
-appboy.initialize("YOUR-API-KEY-HERE", {
+braze.initialize("YOUR-API-KEY-HERE", {
     baseUrl: "",
     enableLogging: true,
     noCookies: true
@@ -115,7 +115,7 @@ Extension popup dialogs don't allow for push prompts (they don't have the URL ba
 [2]: https://developer.chrome.com/extensions/background_pages
 [3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 [6]: https://developer.chrome.com/extensions/contentSecurityPolicy
-[7]: https://js.appboycdn.com/web-sdk/latest/appboy.min.js
+[7]: https://js.appboycdn.com/web-sdk/latest/braze.min.js
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/
-[10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initialize
+[10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
 [11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
