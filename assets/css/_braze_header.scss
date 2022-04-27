@@ -8,7 +8,6 @@ $header_transition_time: 0.25s;
     border-style: solid;
   }
 
-
   min-height: $banner_height;
   @media print {
     display: none;
@@ -32,14 +31,171 @@ $header_transition_time: 0.25s;
   #braze_header_alt {
     margin-left: 0px;
     display: none;
-    @media (min-width: $window-xlarge-px) {
+    justify-content: center;
+    align-items: center;
+    @media (min-width: $window-large-px) {
       display: flex;
       display: -webkit-flex; /* Safari */
-    //  margin-left: 30px;
+    }
+    #getstarted-li {
+      @media (min-width: $window-large-px) {
+        display: none;
+      }
+      @media (min-width: $window-xlarge-px) {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+      }
     }
   }
   #braze_nav_wrapper {
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .main-header-dropdown {
+      padding: 0;
+      min-width: max-content;
+      // margin-top: 1.6rem;
+      position: absolute;
+      margin-top: 25px;
+      left: 0px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      font-size: 15pt;
+      h4 {
+        font-weight: 600;
+      }
+      h5 {
+        font-size: .875rem;
+        line-height: 1.4;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      ul {
+        margin: 0;
+        list-style-type: none;
+        font-size: .875rem;
+        line-height: 1.4;
+        padding: 2.5rem 4rem;
+      }
+      li {
+        margin-top: 16px;
+      }
+      a:hover{
+        color: #212123;
+        text-decoration: none;
+      }
+      p {
+        // font-size: .9375rem;
+        font-weight: normal;
+        text-transform: none;
+      }
+      li span{
+        font-weight: 700;
+        // font-size: .9375rem;
+        line-height: 1.6;
+        background-image: -webkit-gradient(linear,left top,right top,from(#3ed6e8),to(rgba(62,214,232,.4)));
+        background-image: linear-gradient(
+          90deg,#3ed6e8,rgba(62,214,232,.4));
+        -webkit-transition: color .1s ease-in;
+        transition: color .1s ease-in;
+        background-repeat: repeat-x;
+        background-position: 0 1.2em;
+        background-size: 100% 3px;
+        position: relative;
+        padding-bottom: 3.5px;
+        &:hover {
+          background-image: linear-gradient(90deg,#212123,#212123);
+        }
+      }
+      .bg-gradient {
+        width: 100%;
+        height: 3px;
+        --tw-gradient-stops: #3accdd,#f28986,#ffa262;
+        background-image: linear-gradient(90deg,var(--tw-gradient-stops));
+        // margin: 2rem 0;
+      }
+      .background-hover:hover {
+        background-color: #e7f9fb;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+      }
+      #dropdown-product {
+        max-width: 70vw;
+        @media (max-width: $window-large-px) {
+          max-width: 760px;
+        }
+
+      }
+      .product-opt {
+        padding: 1.5rem;
+        ul {
+          padding: 1rem;
+        }
+      }
+      #dropdown-customers {
+        max-width: 55vw;
+        @media (max-width: $window-large-px) {
+          right: 0;
+        }
+      }
+      .cust-case-studies {
+        padding: 3rem;
+        background-color: #2e3c47;
+      }
+      .case-study {
+        padding: 1rem 0;
+        img {
+          border-radius: .5rem;
+        }
+        div {
+          margin-left: 1.5rem;
+        }
+        h5 {
+          color: #ee701b;
+          margin-top: 5px;
+        }
+        span {
+          color: #fff;
+          line-height: 1.5;
+        }
+        li span{
+          color: #a8b3b8;
+          line-height: 1.5;
+          background-repeat: repeat-x;
+          background-position: 0 1.2em;
+          background-size: 100% 3px;
+          position: relative;
+          padding-bottom: 3.5px;
+          font-weight: 700;
+          color: #a8b3b8;
+          background-image: -webkit-gradient(linear,left top,right top,from(#a8b3b8),to(rgba(168,179,184,.5)));
+          background-image: linear-gradient(90deg,#a8b3b8,rgba(168,179,184,.5));
+          &:hover, &:focus {
+            color: #3ed6e8;
+          }
+        }
+      }
+      #dropdown-company {
+        padding: 1.25rem 2.5rem 2.5rem 2.5rem;
+      }
+    }
+    .border-focus {
+      color: black;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      outline: none;
+      &:hover, &:focus {
+        color: #3accdd;
+      }
+      svg {
+        vertical-align: middle;
+      }
+    }
+    .border-focus-show {
+      border-color: black;
+    }
   }
   font-family: $braze-regular;
   &.header {
@@ -50,19 +206,19 @@ $header_transition_time: 0.25s;
        @media (min-width: $window-medium-px) {
          margin-left: 15px;
        }
-       img {
-        width: 112px;
-        height: 51px;
+       svg {
+        margin-top: 6px;
       }
     }
   }
+
   @media print {
     .navbarCollapse {
       display: none;
     }
   }
   .nav-link {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #212123;
     transition: all ease $header_transition_time;
     -webkit-transition:  all ease $header_transition_time;
@@ -99,12 +255,13 @@ $header_transition_time: 0.25s;
   }
   line-height: 1;
   color: $black-shark;
-  text-transform: uppercase;
-  font-size: 11px;
+  font-size: 0.8125rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: .018em;
+  font-family: $braze-heavy;
 
   display: none;
-
-
 
   @media (min-width: $window-medium-px) {
     display: block;
@@ -122,21 +279,116 @@ $header_transition_time: 0.25s;
   @media (min-width: $window-large-px) {
     .nav-link {
       font-size: 12px;
-      padding-right: 1.25rem;
-      padding-left: 1.25rem;
       letter-spacing: .1rem;
-
-
     }
     .navbar-wrapper {
        display: flex;
        flex-grow: 1;
        padding: 0;
      }
+     .get-started-button {
+        margin-left: 24px;
+        padding: 1rem;
+        border: 2px solid #39ccdc!important;
+        border-radius: 9999px;
+        margin-left: 24px;
+        font-size: 15px;
+        padding: 16px 32px;
+        letter-spacing: normal;
+        &:hover {
+          background-color: #39ccdc;
+        }
+        a {
+          color: #212123 !important;
+        }
+      }
    }
 
+  @media (min-width: $window-xxlarge-px) {
+    .nav-link {
+      font-size: 12px;
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+      letter-spacing: .1rem;
+    }
+  }
+  #dropdown-resources-div {
+    @media (min-width: $window-medium-px) {
+      left: -455px !important;
+    }
+    @media (min-width: $window-xlarge-px) {
+      left: -65px !important;
+    }
+    @media (min-width: $window-xxlarge-px) {
+      left: 0px !important;
+    }
+  }
+  #dropdown-partners-div {
+    left: -350px !important;
+    #dropdown-partners {
+      max-width: 540px;
+      flex-direction: column;
+      .partners-col-1 {
+        flex: 1 0 0;
+        padding: 2.5rem 2.5rem 1.25rem 2.5rem;
+      }
+      .partners-col-2 {
+        flex: 1 0 0;
+        padding: 1.25rem 2.5rem 2.5rem 2.5rem;
+      }
+    }
 
+  @media (min-width: $window-large-px) {
+    left: -125px !important;
+  }
+
+   @media (min-width: $window-xlarge-px) {
+
+     #dropdown-partners {
+       flex-direction: row;
+       .partners-col-1 {
+         flex: 1 0 0;
+         padding: 1.7rem 2.5rem 1.25rem 2.5rem;
+       }
+       .partners-col-2 {
+         flex: 1 0 0
+       }
+     }
+   }
  }
+ #dropdown-company-div {
+   @media (min-width: $window-large-px) {
+     left: -35px !important;
+   }
+ }
+ #dropdown-customers-div {
+   left: -150px !important;
+   @media (min-width: $window-large-px) {
+     left: -70px !important;
+   }
+   @media (min-width: $window-xlarge-px) {
+     left: 0px !important;
+   }
+ }
+ #dropdown-solutions-div {
+   left: -110px !important;
+   @media (min-width: $window-large-px) {
+     left: -70px !important;
+   }
+   @media (min-width: $window-large-px) {
+     left: 0px !important;
+   }
+ }
+ #dropdown-product-div {
+   left: -250px !important;
+   @media (min-width: $window-large-px) {
+     left: -100px !important;
+   }
+   @media (min-width: $window-xlarge-px) {
+     left: 0px !important;
+   }
+ }
+}
 .gradient-line {
   background: $gradient-main;
   height: 2px;
