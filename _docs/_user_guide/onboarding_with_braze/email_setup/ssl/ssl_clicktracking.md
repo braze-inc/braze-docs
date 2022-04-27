@@ -18,7 +18,7 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 2. Braze will provide DNS records to add to your domain registry.
 3. Braze will verify if records have been added to your registry correctly.
 4. You will then select a CDN and obtain SSL certificates from a third-party provider. 
-5. You will set up your CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
+5. You will set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Reach out to your CDN provider for help.
 6. Lastly, reach out to your COM or CSM to get SSL turned on.
 
 ## What is a CDN, and why do I need it?
@@ -27,19 +27,19 @@ A Content Delivery Network (CDN) is a platform of servers that help ensure quick
 
 At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze cannot request or manage such certificates, this must be set up on your end through a CDN. 
 
-Below we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
+In the following sections, we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
 
 {% alert important %}
-Please note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+Note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
 {% endalert %}
 
 {% alert note %}
-If you are unable or do not wish to use the CDNs listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
+If you are unable or do not wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
 {% endalert %}
 
 ### CDN resources
 
-Listed below are step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed below, you must make sure your CDN has the ability to apply SSL certificates.
+The following chart lists step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
 {% alert important %}
 Braze will be unable to help you troubleshoot your CDN configuration. You must reach out to your CDN provider to help troubleshoot your CDN configuration.
@@ -69,7 +69,7 @@ Once the command is run, under `ANSWER SECTION` it should list where your CNAME 
 
 If your live email links start breaking during setup, this often means you've pointed your DNS toward your CDN without it being properly configured. This often comes up as a "Wrong Link" error.
 
-Please reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
+Reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
 
 {% endtab %}
 {% tab HTTP Messages Persisting %}

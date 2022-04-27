@@ -4,7 +4,7 @@ article_title: Tracking
 page_order: 5
 layout: dev_guide
 guide_top_header: "Tracking"
-guide_top_text: "You can track many action on your apps; we recommend following the articles below to implement that tracking you want."
+guide_top_text: "You can track many action on your apps; we recommend visiting the following articles to implement that tracking you want."
 
 page_type: landing
 description: "This landing page is home to resources on implementing tracking in your apps."

@@ -5,7 +5,7 @@ page_order: 1
 platform: 
   - Android
   - FireOS
-description: "This article covers how to test your basic integration for your Android application."
+description: "This article covers how to test your basic integration for your Android or FireOS application."
 
 ---
 

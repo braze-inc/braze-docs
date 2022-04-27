@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 3
-description: "This reference article shows how to set custom attributes in your Android application."
+description: "This reference article shows how to set custom attributes in your Android or FireOS application."
 
 ---
 

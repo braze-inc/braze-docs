@@ -11,7 +11,7 @@ description: "This reference article covers the Android SDK integration for the 
 
 # SDK Android integration
 
-Follow the below instructions to get Braze running in your Unity application.
+Follow these instructions to get Braze running in your Unity application.
 
 ## Step 1: Choose your Braze Unity package
 
@@ -25,7 +25,7 @@ There are several Braze Unity packages available for download on the [Braze Unit
     - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework is not present. This package is useful if you do not want the SDWebImage framework present in your iOS app.
 
 **iOS**: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, visit the [iOS in-app message documentation][unity-4].<br>
-**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
+**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
 
 ## Step 2: Import the package
 
@@ -43,7 +43,7 @@ Android Unity projects require an [`AndroidManifest.xml`](https://docs.unity3d.c
 
 ### Configuring the AndroidManifest.xml
 
-If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
+If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any of the following missing sections are added to your existing `AndroidManifest.xml`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -116,7 +116,7 @@ implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
 implementation "androidx.recyclerview:recyclerview:+"
 ```
 
-Examples of how to add these dependencies using Unity tools are provided below:
+The following list examples of how to add these dependencies using Unity tools:
 
 ##### [Custom Gradle template](https://docs.unity3d.com/Manual/android-gradle-overview.html)
 
@@ -176,4 +176,4 @@ You should now be able to package an `.apk` from the Unity IDE that is fully int
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
-[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
+[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/

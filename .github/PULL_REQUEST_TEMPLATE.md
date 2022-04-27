@@ -17,7 +17,7 @@ Closes #**ISSUE_NUMBER_HERE**
 
 - [ ] Check that all links work.
 - [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
-- [ ] Tag @Timothy-Kim and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the chart below to tag the appropriate reviewer.
+- [ ] Tag @Timothy-Kim and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the interal reviewing chart to tag the appropriate reviewer.
 - [ ] Tag others as reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `assets` > `js` > `broken_redirect_list.js`
 
@@ -39,7 +39,7 @@ Closes #**ISSUE_NUMBER_HERE**
 
 - [ ] Read our [Reviewing a PR page](https://github.com/Appboy/braze-docs/wiki/Reviewing-a-PR) for more on our reviewing suggestions.
 - [ ] Read our [Previewing Documentation page](https://github.com/braze-inc/braze-docs/wiki/Previewing-and-Testing-Documentation) to see how to check the deployment.
-  - [ ] Preview all changes in the linked Heroku environment (click `View deployment` button below, then `Docs`, this can take up to 5 minutes to load. A `502` error means the deployment is still loading, refresh the page, and try again.
+  - [ ] Preview all changes in the linked Vercel environment by clicking the preview link in the vercel-bot comment in your PR.
 </details>
 
 <details>
@@ -54,19 +54,19 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
   <tr>
     <td>@Timothy-Kim</td>
-    <td>Application Infrastructure<br>Data Infrastructure</td>
+    <td>Data Infrastructure<br>Platform Infrastructure<br>Quality Infrastructure</td>
   </tr>
   <tr>
     <td>@kelliehawks</td>
-    <td>Intelligence<br>Product Partnerships<br>SMS<br>Internal Tools</td>
+    <td>Internal Tools<br>Product Partnerships<br>SDKs<br>SMS</td>
   </tr>
   <tr>
     <td>@bre-fitzgerald</td>
-    <td>Reporting<br>Ingestion<br>Platforms and Channels<br>SMB</td>
+    <td>Channels<br>FIX<br>Intelligence<br>Reporting<br>SMB</td>
   </tr>
   <tr>
     <td>@lydia-xie</td>
-    <td>Messaging and Automation<br>Dashboard Infrastructure<br>Email</td>
+    <td>Email (Composition and Infrastructure)<br>Ingestion<br>Messaging</td>
   </tr>
 </table>
 </details>

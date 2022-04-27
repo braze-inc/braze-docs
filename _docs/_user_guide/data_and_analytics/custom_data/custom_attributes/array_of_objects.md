@@ -12,14 +12,13 @@ description: "This reference article covers using an array of objects as a data 
 Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 {% alert important %}
-Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations
 
 - Available on custom attributes sent via API only, not supported with Braze SDKs or CSV upload.
 - Partners do not yet support arrays of objects. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects. If datetimes are included in your objects, they are stored as strings.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
@@ -31,7 +30,7 @@ Updating or removing items in an array requires identifying the item by key and 
 {% tabs %}
 {% tab Create %}
 
-Shown below is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
+The following is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
 
 ```json
 {
@@ -172,7 +171,7 @@ The following example shows removing any object in the `pets` array that has an 
 
 ### Liquid Templating
 
-You can use this `pets` array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
+You can use this `pets` array to personalize a message. The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
 {% raw %}
 ```liquid

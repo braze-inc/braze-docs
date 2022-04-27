@@ -36,7 +36,7 @@ m.Braze.setFirstName("User's First Name")
 
 ## Assigning custom user attributes
 
-Beyond the default attributes above, Braze also allows you to define custom attributes using several different data types.
+Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types.
 
 ### Settings custom attribute values
 {% tabs %}

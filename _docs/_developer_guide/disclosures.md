@@ -4,7 +4,7 @@ article_title: Disclosures and Qualifications
 layout: dev_guide
 page_order: 5
 guide_top_header: "Disclosures"
-guide_top_text: "Braze has you covered! Learn how below!"
+guide_top_text: "Braze has you covered! Check out the following articles!"
 
 page_type: landing
 description: "This landing page is home to Braze's disclosures and qualifications."

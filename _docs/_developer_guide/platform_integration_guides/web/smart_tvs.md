@@ -41,6 +41,6 @@ Visit [Manual in-app message display][5] for more information on how your Smart 
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display
 [6]: https://www.npmjs.com/package/@braze/web-sdk-core
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/overview/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/overview/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
 [9]: https://github.com/Appboy/smart-tv-sample-apps

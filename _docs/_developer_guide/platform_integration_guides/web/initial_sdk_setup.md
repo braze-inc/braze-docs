@@ -12,7 +12,7 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
-Please see our [JavaScript Documentation][9] for a complete technical reference.
+See our [JavaScript Documentation][9] for a complete technical reference.
 
 {% include archive/web-v4-rename.md %}
 
@@ -20,7 +20,7 @@ Please see our [JavaScript Documentation][9] for a complete technical reference.
 
 There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push integration guide][16] if you plan to use Web push features. 
 
-If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the integration steps below.
+If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
 
 
 ### Option 1: NPM or Yarn {#install-npm}
@@ -92,7 +92,7 @@ braze.subscribeToContentCardsUpdates(function(cards){
 braze.openSession();
 ```
 
-Please see our [JavaScript reference documentation][9] for all other JavaScript methods.
+See our [JavaScript reference documentation][9] for all other JavaScript methods.
 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
@@ -155,7 +155,7 @@ Tealium iQ offers a basic turnkey Braze integration. To configure the integratio
 For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
 ### Other tag managers
-Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/

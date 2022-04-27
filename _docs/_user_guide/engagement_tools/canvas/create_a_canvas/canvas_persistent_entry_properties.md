@@ -13,7 +13,7 @@ page_order: 5
 When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
 {% alert important %}
-This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Please reach out to your Braze account manager for more information.
+This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Reach out to your Braze account manager for more information.
 {% endalert %}
 
 ## Using entry properties
@@ -26,6 +26,9 @@ For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
+{% alert note %}
+The Canvas entry properties object has a maximum size limit of 50 KB. 
+{% endalert %}
 
 ## Updating Canvas to use entry properties
 
@@ -69,7 +72,7 @@ url -X POST \
     }' \
 ```
  
-In the above request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else. 
+In this request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else. 
 
 ## Use cases
 

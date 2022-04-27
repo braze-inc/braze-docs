@@ -24,7 +24,7 @@ Once you have created your app group, you will be taken to the **Settings** page
 
 ### Step 2: Add your apps
 
-Using the form at the top right of your screen, select your platform, type in the name of your app, and click "Add App"
+Using the form at the top of your screen, select your platform, type in the name of your app, and click "Add App"
 
 - After adding your app, you will have access to its API key, which you will need to complete SDK integration.
     - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
@@ -48,7 +48,7 @@ Whichever apps you choose to have in one app group will have their data aggregat
 - Push subscription (this becomes an all or none situation, if your users unsubscribe from one app they will be unsubscribed from all of your apps under the app group)
 - Email subscription (this becomes an all or none situation and can leave you open to compliance issues)
 
-This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.
+This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed is why we do not recommend housing substantially different apps within the same app group.
 
 ## Managing app groups when relaunching your app
 

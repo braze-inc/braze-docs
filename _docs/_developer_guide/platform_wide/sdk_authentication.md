@@ -316,12 +316,13 @@ The `errorEvent` argument passed to this callback will contain the following inf
 
 ## Adding public keys {#key-management}
 
-In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the **Manage Settings** page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
-1. Choose the app in the left-hand side menu
-2. Click the **Add Public Key** button within the SDK Authentication settings
-3. Paste in the Public Key, and add an optional description
+
+1. Choose the app from the list of available apps.
+2. Under **SDK Authentication**, click **Add Public Key**.
+3. Paste in the Public Key, and add an optional description.
 4. After saving your changes, the key will appear in the list of Public Keys.
 
 To delete a key, or to promote a key to the Primary key, choose the corresponding action in the overflow menu next to each key.
@@ -332,7 +333,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
 
 ### Enforcement options {#enforcement-options}
 
@@ -403,7 +404,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 #### Why does this feature use public/private keys instead of Shared Secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
+When using Shared Secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
 Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
 

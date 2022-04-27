@@ -5,7 +5,7 @@ page_order: 7
 platform: 
   - Android
   - FireOS
-description: "This reference article shows how to refresh the News Feed in your Android application."
+description: "This reference article shows how to refresh the News Feed in your Android or FireOS application."
 channel:
   - news feed
 

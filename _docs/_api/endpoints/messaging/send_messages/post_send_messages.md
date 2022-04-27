@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "user_aliases": (optional, array of user alias object) see user alias,
    "segment_id": (optional, string) see segment identifier,
    "audience": (optional, connected audience object) see connected audience,
-   "campaign_id": (optional*, string) *required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc). see campaign identifier,
+   "campaign_id": (optional*, string) *required if you wish to track campaign stats (e.g., sends, clicks, bounces, etc). see campaign identifier,
    "send_id": (optional, string) see send identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
@@ -70,16 +70,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc) on the Braze dashboard. |
+|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (e.g., sends, clicks, bounces, etc) on the Braze dashboard. |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/) |
 |`override_frequency_capping`| Optional | Boolean | Ignore frequency_capping for campaigns, defaults to false. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
-|`messages`| Optional | Messaging objects | See [available messaging objects](#available-messaging-objects), below. |
+|`messages`| Optional | Messaging objects | See [available messaging objects](#available-messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Available messaging objects {#available-messaging-objects}
 
-You can use these objects in the [request body](#request-body) above.
+You can use these objects in the [request body](#request-body).
 
 - [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
 - [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)

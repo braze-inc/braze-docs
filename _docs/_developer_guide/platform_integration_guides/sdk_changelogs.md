@@ -3,7 +3,7 @@ page_order: 20
 nav_title: SDK Changelogs
 layout: dev_guide
 guide_top_header: "Braze SDK Changelogs"
-guide_top_text: "The changelogs for each SDK are available within Docs or in their individual GitHub repositories linked below."
+guide_top_text: "The following changelogs for each SDK are available within Docs or in their individual GitHub repositories."
 
 
 guide_featured_title: "Changelogs on Docs"

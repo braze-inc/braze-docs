@@ -86,7 +86,7 @@ In addition to the ```aps``` library payload values, you may send custom key-val
 
 ![][17]
 
-Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so please via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key.
+Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key.
 
 {% alert warning %}
 You should avoid handling a top-level key or dictionary called ab in your application.
@@ -127,7 +127,7 @@ Marketers should test that silent push notifications trigger expected behavior b
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
 {% alert note %}
-The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (uninstall tracking, geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
+The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (uninstall tracking, geofences, and Push Stories). Note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
 {% endalert %}
 
 ### Web
@@ -154,7 +154,7 @@ Note that bounced emails will not deliver key-value pairs to SendGrid.
 
 ## News Feed
 
-Key-value pairs can be added to a News Feed Card in the Braze message composer below the categories drop down-menu.
+Key-value pairs can be added to a News Feed Card in the Braze message composer under the categories dropdown.
 
 ![Key-value pairs section when composing a News Feed card in Braze.][23]
 
@@ -165,7 +165,7 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 ![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/

@@ -9,7 +9,7 @@ description: "This archived article describes how to perform an initial SDK setu
 # Initial SDK setup with Eclipse
 
 {% alert update %}
-Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{site.baseurl}}/support_contact/) for assistance.
+Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration [email Support]({{site.baseurl}}/support_contact/) for assistance.
 {% endalert %}
 
 ## Step 1

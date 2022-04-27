@@ -4,7 +4,7 @@ article_title: Onboarding Email Setup
 layout: featured
 page_order: 5
 guide_top_header: "Email Setup"
-guide_top_text: "So you want to start sending email campaigns? Braze can help you with that! Either follow our guides below or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> LAB course."
+guide_top_text: "So you want to start sending email campaigns? Braze can help you with that! Either follow our guides or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> LAB course."
 page_type: landing
 description: "This landing page includes resources on getting started with email campaigns."
 channel: email
@@ -39,7 +39,7 @@ guide_featured_list:
 
 ## Requirements
 
-Before you start sending emails, there are some things you need. Refer to the chart below to learn more.
+Before you start sending emails, there are some things you need. Refer to the following chart to learn more.
 
 |Requirement | Description | Source |
 |---|---|---|

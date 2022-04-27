@@ -561,7 +561,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, see the [Apple Developer Docs][apple_initial_setup_19].
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
@@ -580,7 +580,7 @@ Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab
 {% alert important %}
  Note number of tabs on the page should be consistent, otherwise tabs content might be hidden.
  For example if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
- then when somebody clicks on `C++`, the other section will show nothing. See local tabs option below for workaround.
+then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
 {% endalert %}
 
 {% raw %}
@@ -597,7 +597,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e. tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

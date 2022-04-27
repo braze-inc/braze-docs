@@ -30,7 +30,7 @@ Common failures may include:
 - People are registering with multiple services. We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
 ### Push bounced: NotRegistered
-`NotRegistered` usually means that the app has been deleted from the device (i.e. Braze's signal for Uninstall). This can also occur if multiple registration is happening and a second registration is invalidating the push token that Braze recieves.
+`NotRegistered` usually means that the app has been deleted from the device (i.e., Braze's signal for Uninstall). This can also occur if multiple registration is happening and a second registration is invalidating the push token that Braze recieves.
 
 {% endtab %}
 {% tab iOS %}

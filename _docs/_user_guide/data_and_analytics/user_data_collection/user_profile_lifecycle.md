@@ -33,7 +33,7 @@ Once a user is recognizable in your app (by providing a form of user ID or email
 
 More benefits of user IDs include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g. not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
 - Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using our [User API]({{site.baseurl}}/api/endpoints/user_data/), and target users with transactional messages using our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/).
 - Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
@@ -50,7 +50,7 @@ On the first instance of assigning an `external_id` to an unknown user profile, 
 An `external_id` is unchangeable once it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
 {% endalert %}
 
-For further information on how to set an `external_id` against a user profile please see our documentation ([iOS][24], [Android][30], [Web][31]).
+For further information on how to set an `external_id` against a user profile see our documentation ([iOS][24], [Android][30], [Web][31]).
 
 ## User aliases
 
@@ -68,7 +68,7 @@ If an anonymous user profile with an alias is later recognized with an `external
 
 A user alias can also be set on a known user profile to reference a known user by another externally known ID. For example, a user may have an Amplitude ID and a different BI tool ID that you wish to reference within Braze.
 
-For information on how to set a user alias please see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
+For information on how to set a user alias, see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
 
 ![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, their anonymous user data will be orphaned. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the identified user but a different alias name then has changeUser() called, the existing data is discarded and only the alias label on the identified user profile is maintained.][26]
 
@@ -89,7 +89,7 @@ Uninstalling and reinstalling an app will cause a new anonymous user ID to be ge
 Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard, refer to [Adding Test Users][28].
 
 {% alert important %}
-Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, reach out to your Braze account manager.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users

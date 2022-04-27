@@ -12,7 +12,7 @@ channel:
 
 ## Global subscription states {#subscription-states}
 
-Braze has three global subscription states for email users (listed in the chart below), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
+Braze has three global subscription states for email users (listed in the following chart), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 ### Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states) above. You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a group
 
-To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your Preference Center.
+To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your preference center.
 
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
@@ -53,7 +53,7 @@ When creating your segments, set the subscription group name as a filter. This w
 
 #### Archiving groups
 
-Archived subscription groups cannot be edited and will no longer appear in segment filters or in your Preference Center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
+Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
@@ -77,9 +77,9 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ### Email preference center
 
-The email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-To place a link to the Preference Center in your emails, use the Preference Center Liquid tag (below) and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
 {% raw %}
 ```
@@ -91,15 +91,43 @@ To place a link to the Preference Center in your emails, use the Preference Cent
 The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
 {% endalert %}
 
-The Preference Center is intended to be used strictly within the email channel itself. The Preference Center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom Preference Center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
+The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
 
-#### Customize your Preference Center
+#### Customize your preference center
 
-You can create and host a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
+You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28].
 
-{% alert note %}
-At this time, you can only have one Preference Center, which will list all of your current subscription groups.
+At this time, you can only have one preference center, which will list all of your current subscription groups.
+
+**Option 1: Link with string query parameters**
+
+Use query string field-value pairs in the body of the URL to pass the users ID and email category to the page so users will only need to confirm their choice to unsubscribe. This option is good for those who store a user identifier in a hashed format and do not already have a subscription center.
+
+For this option, each email category will require its own specific unsubscribe link:<br>
+`http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
+
+{% alert tip %}
+It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an md5 hash value, for example:
+{% raw %}
+```liquid
+{% assign my_string = {{${user_id}}} | md5 %}
+
+My encoded string is: {{my_string}}
+```
+{% endraw %}
 {% endalert %}
+
+**Option 2: JSON web token**
+
+Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (e.g., account preferences) that is normally behind a layer of authentication such as username and password login. This approach does not require query string value-pairs embedded in the URL as these can be passed in the JSON web token's payload, for example:
+
+```json
+{
+    “user_id”: "1234567890",
+    "name": "John Doe",
+    “category": offers
+}
+```
 
 ##### Logo
 
@@ -134,7 +162,7 @@ In the **Custom Footer** section, you can choose to turn on custom footers. Once
 {% raw %}
 You will see the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute and Braze's physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include ``{{${set_user_to_unsubscribed_url}}}``. You won't be able to save a custom footer without this attribute.
 
-If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**, as indicated below.
+If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**.
 
 ![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
 
@@ -154,7 +182,7 @@ When creating a custom footer, Braze suggests you use attributes for personaliza
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e. ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e. ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
+Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e., ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e., ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way, users will be able to both unsubscribe or opt-in, and you can passively collect opt-in data for a portion of your users.
 
 You can also choose to set a custom footer for plaintext emails from the **Email Settings** tab, which follows the same rules as the custom footer for HTML emails. If you choose not to write a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
@@ -166,7 +194,7 @@ When a user clicks on an unsubscribe URL in an email, they are taken to a defaul
 
 Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [email Settings][10] page.
 
-We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom unsubscribe email in the Custom Unsubscribe Page panel.][11]
 
@@ -174,7 +202,7 @@ We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}
 
 ### Changing push subscriptions {#changing-push-subscriptions}
 
-Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
+Braze's SDKs provide methods for changing a user's push message subscription. Refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
 
 - [iOS][12]
 - [Android and FireOS][13]

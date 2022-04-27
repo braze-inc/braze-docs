@@ -17,7 +17,7 @@ Currents for Data Storage is a continuous streams of data from our platform to a
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
 {% alert important %}
-Please note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, please refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+Note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
 {% endalert %}
 
 
@@ -39,7 +39,7 @@ The Braze Currents data storage integrations output data in the `.avro` format. 
 -   In the event that you desire to leave your data in S3, Avro compresses better than CSV and JSON, so you pay less for storage and potentially can use less CPU to parse the data.
 -   Avro requires schemas when data is written or read. Schemas can be evolved over time to handle the addition of fields without breaking.
 
-Currents will create a file for each event type using the format below:
+Currents will create a file for each event type using the following format:
 
 ```
 <your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
@@ -53,7 +53,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{site
 | `<cluster-identifier>` | For internal use by Braze. Will be a string such as "prod-01", "prod-02", "prod-03", or "prod-04". All files will have the same cluster identifier.|
 | `<connection-type-identifier>` | The identifier for type of connection. Options are "S3", "AzureBlob", or "GCS". |
 | `<integration-id>` | The unique ID for this Currents integration. |
-| `<event-type>` | The type of the event in the file (see event list below). |
+| `<event-type>` | The type of the event in the file. |
 | `<date>` | The hour that events are queued in our system for processing. Formatted YYYY-MM-DD-HH. |
 | `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
 | `<zone>` | For internal use by Braze. Single letter. |
@@ -86,7 +86,7 @@ From time to time, Braze may make changes to the Avro schema when fields are add
 
 #### Non-breaking changes
 
-When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
+When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e., with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
 
 {% alert important %}
 We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.

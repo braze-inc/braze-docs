@@ -9,15 +9,21 @@ description: "This reference article describes custom attributes, and explains t
 
 # Custom attributes
 
-Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
+Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
+
+When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
 {% alert tip %}
 We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes) LAB course!
 {% endalert %}
 
+## Managing custom attributes
+
+To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
+
 ## Setting custom attributes
 
-Listed below are the methods across various platforms that are used to set custom attributes.
+The following lists methods across various platforms that are used to set custom attributes.
 
 {% details Expand for documentation by platform %}
 
@@ -93,10 +99,10 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

@@ -36,7 +36,7 @@ In the default Audience Paths Step show to the right, there are already two defa
 
 ### Define audience groups
 
-Below, you are shown the layout of an expanded Audience Paths Step. Here you can define up to 8 audience groups (1 preset and 7 customizable). To define an audience group, select the group name from the Audience Paths wizard. Here, you can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
+In the following screenshot, you are shown the layout of an expanded Audience Paths Step. Here you can define up to 8 audience groups (1 preset and 7 customizable). To define an audience group, select the group name from the Audience Paths wizard. Here, you can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
 
 For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", "Loves European Cuisine", etc. 
 

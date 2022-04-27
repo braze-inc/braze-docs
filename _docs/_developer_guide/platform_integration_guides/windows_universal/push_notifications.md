@@ -19,7 +19,7 @@ Visit our [documentation][9] for additional best practices.
 
 ## Step 1: Configure your application for push
 
-Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
+Ensure that in your `Package.appxmanifest` file, the following settings are configured:
 
 Within the **Application** tab, ensure that `Toast Capable` is set to `YES`.
 
@@ -56,7 +56,7 @@ Your event handlers should have the signatures:
 
 ### Part 1: Creating deep links for your app
 
-Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a URL scheme (e.g. myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a URL of that format it transfers control to your application.
+Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a URL scheme (e.g., myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a URL of that format it transfers control to your application.
 
 WNS deep link support differs from this as it launches your application with data about where to send the user. When WNS push is created it can include a launch string that is passed through to your application's `OnLaunched` when the push is clicked and your application is opened. We already use this launch string to do campaign tracking, and we give users the ability to append their own data that can be parsed and used to navigate the user when the app is launched.
 

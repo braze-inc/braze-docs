@@ -44,14 +44,14 @@ noindex: true
 >
 > This is where you set up the Use Case Scenario. Why would someone want to read this page? Present a gripping hypothetical to "get the reader in the mood". Perhaps... "Sally's company, a hypothetical makeup company, finds that a portion of their users have shown little to no interest in their app app, even though they open their emails. They don't click on anything, but they open them! Sally decided that they wanted to convert 20% of these people to be app users again"
 >
-> The goals of this use case are as follows (break down the scenario above):
+> The goals of this use case are as follows (break down the preceding scenario):
 > - Goal 1
 > - Goal 2
 > - Goal 3
 
 ## Suggested Metrics
 
-It's time to talk about measurement! How should the Braze User look to measure their campaign? What conversion metrics should they set up? List them below.
+It's time to talk about measurement! How should the Braze User look to measure their campaign? What conversion metrics should they set up? List them in the following chart.
 
 | Metric | Description | Data Type |
 | ------ | ----------- | --------- |
@@ -62,7 +62,7 @@ It's time to talk about measurement! How should the Braze User look to measure t
 
 ## How to Build This Campaign/Canvas
 
-When you write this portion of the article, break down what they should be doing by Strategy and Step. You can make this obvious by naming the steps as follows. Don't explicitly write out the Steps (i.e. Click this button; click that button). Instead, instruct and guide them by describing steps that accomplish goals of the Use Case.
+When you write this portion of the article, break down what they should be doing by Strategy and Step. You can make this obvious by naming the steps as follows. Don't explicitly write out the Steps (i.e., Click this button; click that button). Instead, instruct and guide them by describing steps that accomplish goals of the Use Case.
 
 ### Step 1: Set Up Your Canvas for Lapsing Users (Advise on Audience)
 
@@ -97,6 +97,6 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback below or open a [support ticket][support]!
+If this article didn't help, leave feedback or open a [support ticket][support]!
 
 [support]: {{site.baseurl}}/braze_support/

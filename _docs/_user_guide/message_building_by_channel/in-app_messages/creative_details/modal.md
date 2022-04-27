@@ -40,7 +40,7 @@ Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheats
 
 ## Larger screens
 
-On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
+On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown in the following screenshot.
 
 ![Modal in-app message as it would appear on a large screen. Similarly to phone screens, the message sits in the center of the screen.][1b]{: style="max-width: 800px; border: none;"}
 

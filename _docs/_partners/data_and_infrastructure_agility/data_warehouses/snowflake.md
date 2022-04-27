@@ -95,7 +95,7 @@ Nearly every event record Braze stores includes a few fields representing users'
 The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
 ### PII and NON_PII tables - deprecated
-In the past, Braze separated columns that contained PII into separate tables that ended with `_PII`. Other columns were stored in tables that ended with `_NON_PII`. Those tables have since been deprecated in favor of tables that contain all columns associated with an event. This change obviates the need to perform additional computation to get a complete view of an event. If you used the old PII or NON_PII tables, please update your integration to use the new, unified tables.
+In the past, Braze separated columns that contained PII into separate tables that ended with `_PII`. Other columns were stored in tables that ended with `_NON_PII`. Those tables have since been deprecated in favor of tables that contain all columns associated with an event. This change obviates the need to perform additional computation to get a complete view of an event. If you used the old PII or NON_PII tables, update your integration to use the new, unified tables.
 
 ## Braze Benchmarks
 

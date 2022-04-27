@@ -16,14 +16,14 @@ tool: Dashboard
 }
 </style>
 
-Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the upper right corner of the dashboard and selecting **Manage Users** from the drop-down. 
+Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
 
 ![Account users list on the Manage Settings page][30]
 
 |Level of Access|Permissions|
 |---|---|
 |Administrator|Administrators have access to all available features.|
-|Limited|Limited users are completely customized at several levels (outlined below). When you switch a user’s permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear below the Edit User box.|
+|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user’s permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the Edit User box.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Editing user permissions
@@ -32,7 +32,7 @@ From the Manage Users page, you can edit a specific user’s permissions, either
 
 ![Selecting Administrator or Limited when editing a user][29]
 
-When you switch a user’s permissions from Admin to Limited, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear below the Edit User box. Explanations for each of these permissions can be found in the Level of Access chart at the top of this page.
+When you switch a user’s permissions from Admin to Limited, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the Edit User box. Explanations for each of these permissions can be found in the Level of Access chart at the top of this page.
 
 ## Limited and team role permissions
 

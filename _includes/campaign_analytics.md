@@ -44,7 +44,7 @@ To measure the impact of an individual Content Card, you can add a [control grou
 {% alert warning %}
 Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking to make sure variants are registered correctly in the dashboard and to enable control group accuracy in your analytics. 
 <br><br>
-Be sure to log impressions for control cards to inform our analytics of when a user would have seen the control card in its feed position. For more details, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/data_models/?redirected=true#requesting-unviewed-content-card-count) developer guides.
+Be sure to log impressions for control cards to inform our analytics of when a user would have seen the control card in its feed position. For more details, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#content-card-model), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#data-models) developer guides.
 {% endalert %}
 
 {% elsif include.channel == "SMS" %}
@@ -131,9 +131,9 @@ Here are some key email-specific metrics that you won't see in other channels. T
 
 | Term | Definition |
 | --- | --- |
-| Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is above 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to ensure you're messaging those that are interested in your correspondence).
-| Unique opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything above 20% is exceptional!
-| Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything above 10% is exceptional!
+| Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to ensure you're messaging those that are interested in your correspondence).
+| Unique opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything greater than 20% is exceptional!
+| Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything greater than 10% is exceptional!
 | Click to open | The percentage of recipients that opened your email and then clicked on it.
 | Machine opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
 | Other opens | Includes emails that haven't been identified as "Machine opens". <br>For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e. the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
@@ -165,7 +165,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | --------- | --- |
 | Bounces | The push notifications sent to these users were undeliverable. These users have been automatically unsubscribed from all future push notifications. See [Bounced push notifications](#bounced-push). |
 | Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
-| Opens | Instances including both Direct Opens (defined above) and Influenced Opens in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
+| Opens | Instances including both Direct Opens and Influenced Opens in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.

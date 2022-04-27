@@ -191,7 +191,7 @@ Braze includes a service to handle push receipt and open intents. Our `BrazeFire
 Braze's notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`][70] in the Firebase push sample app.
 
 {% alert important %}
-Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
 {% endalert %}
 
 ##### Using your own Firebase Messaging Service
@@ -252,9 +252,9 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The large and small icons pictured below are examples of properly designed icons:
+The following large and small icons pictured are examples of properly designed icons:
 
-![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
+![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
 ### Step 3: Configure notification icons
 
@@ -320,11 +320,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] section for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ section][42].
+Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article][42].
 
 #### Adding deep links
 
@@ -408,10 +408,21 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "android_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }  
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
-The above is an example for customers on the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
+This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
 
 ## Customizing your integration
 
@@ -540,7 +551,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - It should perform your custom logic for each of these cases. If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_braze_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
-For a detailed custom receiver example, see the code snippets below:
+For a detailed custom receiver example, see the following code snippets:
 
 {% tabs %}
 {% tab JAVA %}
@@ -667,17 +678,17 @@ For documentation on Braze push data keys, refer to the [Android SDK](https://ap
 [45]: https://firebase.google.com/docs/cloud-messaging/
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
+[61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/
 [62]: https://developer.android.com/preview/features/notification-channels.html
 [63]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
-[64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel
+[64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel
 [65]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()

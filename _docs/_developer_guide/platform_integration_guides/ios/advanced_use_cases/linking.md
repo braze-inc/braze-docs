@@ -11,7 +11,7 @@ description: "This article covers how to implement the universal deep linking de
 
 ## Deep links
 
-For more information on deep links, refer to our [FAQ section][4]. If you're looking to implement deep links for the first time, see the documentation below.
+For more information on deep links, refer to our [FAQ article][4]. If you're looking to implement deep links for the first time, follow these steps.
 
 ### Step 1: Registering a scheme
 
@@ -24,7 +24,7 @@ Using Xcode edit your `Info.plist` file:
 3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
 4. Set `URL Schemes` >> `Item 0` to your custom scheme.
 
-Alternatively, if you wish to edit your `info.plist` file directly, you can follow the spec below:
+Alternatively, if you wish to edit your `info.plist` file directly, you can follow this spec:
 
 ```html
 <key>CFBundleURLTypes</key>

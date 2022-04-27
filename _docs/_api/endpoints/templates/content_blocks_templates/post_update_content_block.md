@@ -14,7 +14,7 @@ description: "This article outlines details about the Update Email Content Block
 /content_blocks/update
 {% endapimethod %}
 
-Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
@@ -87,7 +87,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 - `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 
@@ -109,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 - `Content Block state must be either Active or Draft.`
 
-- `Active Content Block can not be updated to Draft. Please create a new Content Block.`
+- `Active Content Block can not be updated to Draft. Create a new Content Block.`
 
 - `Tags must be an array.`
 

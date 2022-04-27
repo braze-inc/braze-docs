@@ -48,7 +48,7 @@ channel: push
 {% endtab %}
 {% tab Image Example %}
 
-![iOS push notification with text that reads: "Hi! This is an iOS Push with an image" with an emoji. There is a small image to the right of the text.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS push notification with text that reads: "Hi! This is an iOS Push with an image" with an emoji. There is a small image beside the text.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
 ![iOS push notification on a hard push with the same text as the previous message with an expanded image preceding the text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
@@ -96,7 +96,7 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 {% endtab %}
 {% tab Image Example %}
 
-![Android push notification with a large image below the message text.]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Android push notification with a large image under the message text.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 Large image notifications display best when using an image of at least 600x300 pixels.

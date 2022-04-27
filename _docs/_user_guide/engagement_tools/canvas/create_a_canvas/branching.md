@@ -32,7 +32,7 @@ You can also have users flow between branches based upon actions that they take.
 
 ### Overlapping filters
 
-When setting up your Canvas, you should ensure that the filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example, if a user first made a purchase 7 days ago, they will be randomly slotted into one of the branches below.
+When setting up your Canvas, you should ensure that the filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example, if a user first made a purchase 7 days ago, they will be randomly slotted into one of the following branches.
 
 ![Two Delay Step branches with the overlapping filters "First made purchase less than 2 weeks ago" and "First made purchase less than 3 weeks ago".][5]
 

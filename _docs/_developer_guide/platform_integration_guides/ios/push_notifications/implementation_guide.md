@@ -2,7 +2,7 @@
 nav_title: Advanced Implementation (Optional)
 article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: iOS
-page_order: 29
+page_order: 28
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 channel:
   - push
@@ -15,7 +15,7 @@ Looking for the out-of-the-box push developer integration guide? Find it [here](
 
 # Push notification implementation guide
 
-> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Notification content app extensions
 
@@ -61,7 +61,7 @@ There are three push notification content app extension types provided. Each typ
 
 ### Interactive push notification
 
-Push notifications can respond to user actions inside a content extension. For users running iOS 12 or later, this means you can turn your push messages into fully interactive push notifications! This interactivity offers many possibilities to get your users engaged in your notifications. The example below shows a push where users are able to play a match game inside the expanded notification.
+Push notifications can respond to user actions inside a content extension. For users running iOS 12 or later, this means you can turn your push messages into fully interactive push notifications! This interactivity offers many possibilities to get your users engaged in your notifications. The following example shows a push where users are able to play a match game inside the expanded notification.
 
 ![A diagram of what the phases of a interactive push notification could look like. The images show a user pressing into a push notification that displays an interactive matching game.][12]{: style="border:0"}
 
@@ -92,7 +92,7 @@ To set up a personalized push in the dashboard, you must register the specific c
 
 #### Handling key-value pairs
 
-The method below, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
+The following method, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
 
 **Parsing Key-Value Pairs from Push Notifications**<br>
 
@@ -136,7 +136,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 
 ### Information capture push notification
 
-Push notifications can capture user information inside a content extension, allowing you to push the limits of what is possible with a push. Examining the flow shown below, the view is able to respond to state changes. Those state change components are represented in each image. 
+Push notifications can capture user information inside a content extension, allowing you to push the limits of what is possible with a push. Examining the following flow shown, the view is able to respond to state changes. Those state change components are represented in each image. 
 
 1. User receives a push notification.
 2. Push is opened and prompts the user for information.
@@ -149,9 +149,9 @@ Note that the information requested here can be a wide range of things such as S
 
 #### Dashboard configuration
 
-To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/), set the notification style in your campaign to Rich Notification, and include a rich push image.
+To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
-![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_decription" set as "Certified Braze marketers drive...".][9]
+![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_description" set as "Certified Braze marketers drive...".][9]
 
 #### Handling button actions
 
@@ -197,19 +197,19 @@ Push notifications can be automatically dismissed from an action button press. T
 Requesting user input through push notifications is an exciting opportunity that many companies do not take advantage of. In these push messages, you can not only request basic information like name, email, or number, but you could also prompt users to complete a user profile if unfinished, or even to submit feedback. 
 
 ##### Ready to log analytics?
-Visit the section below to get a better understanding of how the flow of data should look. 
+Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look. 
 
 ## Logging analytics
 
 ### Logging with the Braze API (recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_decription" set as "Certified Braze marketers drive...".][18]{: style="max-width:80%;"}
 
 ### Logging manually
 
-Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The code snippets shown below will help address this. 
+Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
 
 It's also important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, users should consider the impact and if necessary, adjust their user journey to include opening the application to address this concern. 
 
@@ -221,7 +221,7 @@ Add a capability `App Groups`. If you haven’t had any app group in your app, g
 ![][19]
 
 #### Step 2: Integrate code snippets
-The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
+The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found at the end of this guide.
 
 {% tabs local %}
 {% tab Custom Events %}

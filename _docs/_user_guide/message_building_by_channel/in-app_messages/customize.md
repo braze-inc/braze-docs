@@ -19,7 +19,7 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your in-app messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on in-app messages for more details.
+Additional customization of the appearance of your in-app messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/customization/custom_styling/), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_styling/) integration documentation on in-app messages for more details.
 {% endalert %}
 
 ## HTML in-app messages {#custom-html-messages}
@@ -196,7 +196,7 @@ To navigate to this option, you must create an in-app messaging campaign. From t
 ![][4]
 
 {% alert note %}
-To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable email capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ### Step 2: Customize the form {#customizable-features}
@@ -242,7 +242,7 @@ You can save in-app message and in-browser message templates on the dashboard to
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
-Click **Save Color Profile** on the bottom right when you’re finished.
+Click **Save Color Profile** when you’re finished.
 
 #### Managing color profiles
 
@@ -320,7 +320,7 @@ To support iOS devices, you must include the `playsinline` attribute since full 
 iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 {% endalert %}
 
-To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#youtube-in-html-in-app-messages).
+To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/).
 
 You can find other possible `<video>` options on [MDN Web Docs][9]
 

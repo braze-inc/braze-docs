@@ -11,7 +11,7 @@ description: "This glossary defines terms you'll find in your reports in your Br
 tool: Reports
 
 glossary_tag_name: Channels
-glossary_filter_text: "Select Channels below to narrow the glossary:"
+glossary_filter_text: "Select Channels to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:

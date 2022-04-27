@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Action-based delivery
 
-Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Listed below are the steps for setting up an event-based schedule:
+Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. The following lists the steps for setting up an event-based schedule:
 
 {% alert important %}
 Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). These steps must be scheduled.
@@ -93,7 +93,7 @@ Select whether the user will receive the campaign during a specific portion of t
 
 ![][27]
 
-In the case where a user completes the trigger event within the time frame, but the message delay causes the user to fall out of the time frame, you can check the box below so that these users will still receive the campaign.
+In the case where a user completes the trigger event within the time frame, but the message delay causes the user to fall out of the time frame, you can check the following box so that these users will still receive the campaign.
 
 ![][31]
 
@@ -129,7 +129,7 @@ Any of these things will prevent a user who has completed the trigger event from
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration` and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
-It is a best practice to ensure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. In cases where this is not possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. In the example above, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
+As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 

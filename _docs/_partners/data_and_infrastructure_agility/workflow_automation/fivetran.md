@@ -34,7 +34,7 @@ The following Currents integration is supported for both [Amazon S3](#setting-up
 
 #### Step 1: Locate your external ID {#step-one}
 
-In the [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
+In the [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connector** and select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
 
 ![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
@@ -46,7 +46,7 @@ Open the [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) and 
 
 ![]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
-Next, click on the **JSON** tab and paste the policy below. Make sure to replace `{your-bucket-name}` with the name of your S3 bucket.
+Next, click on the **JSON** tab and paste the following policy. Make sure to replace `{your-bucket-name}` with the name of your S3 bucket.
 
 {% raw %}
 ```json
@@ -102,7 +102,7 @@ You can specify permissions for the Role ARN that you designate for Fivetran. Gi
 
 #### Step 3: Complete the Fivetran connector
 
-In Fivetran, click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Within the form, fill the given fields with the appropriate values:
+In Fivetran, click on **+ Connector** and select the **Braze** connector to launch the setup form. Within the form, fill the given fields with the appropriate values:
 - `Destination schema`: A unique schema name.
 - `API URL`: Your Braze REST API endpoint.
 - `API Key`: Your Braze REST API key. 
@@ -120,7 +120,7 @@ Lastly, click **Save & Test**, and Fivetran will do the rest by syncing with the
 
 #### Step 1: Retrieve your Fivetran email from Google Cloud Storage {#step-one2}
 
-In the [Fivetran dashboard](https://fivetran.com/dashboard), click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Next, select **Google Cloud storage**. Make a note of the email address that appears.
+In the [Fivetran dashboard](https://fivetran.com/dashboard), click on **+ Connector** and select the **Braze** connector to launch the setup form. Next, select **Google Cloud storage**. Make a note of the email address that appears.
 
 ![The Fivetran set up Braze connector form. The email field needed for this step is located in the middle of the page in a light grey box.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
@@ -136,7 +136,7 @@ Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2
 
 #### Step 3: Complete the Fivetran connector
 
-In Fivetran, click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Within the form, fill the given fields with the appropriate values:
+In Fivetran, click on **+ Connector** and select the **Braze** connector to launch the setup form. Within the form, fill the given fields with the appropriate values:
 - `Destination schema`: A unique schema name.
 - `API URL`: Your Braze REST API endpoint.
 - `API Key`: Your Braze REST API key. 

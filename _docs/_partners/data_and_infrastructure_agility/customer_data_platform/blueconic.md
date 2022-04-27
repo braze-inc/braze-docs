@@ -15,7 +15,7 @@ search_tag: Partner
 The Braze and BlueConic integration allows users to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server. Potential goals include growth-focused initiatives, customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more. This integration supports both scheduled batch import and export. 
 
 {% alert important %}
-When using the integration, BlueConic will send deltas (changing data) on each sync. This includes any profiles that have changed since the last send and all attributes of that profile. Please monitor data point usage accordingly.
+When using the integration, BlueConic will send deltas (changing data) on each sync. This includes any profiles that have changed since the last send and all attributes of that profile. Monitor data point usage accordingly.
 {% endalert %}
 
 ## Prerequisites

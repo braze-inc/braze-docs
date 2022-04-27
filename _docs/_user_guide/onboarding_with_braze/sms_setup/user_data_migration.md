@@ -15,12 +15,12 @@ noindex: true
 Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze.
 
 {% alert important %}
-Are you currently a non-native (have not or will not switch over to Braze’s native keyword processing capability) SMS client? If so, please visit our collection of [non-native SMS](/docs/user_guide/message_building_by_channel/sms/non_native/) articles for your corresponding user data migration doc.
+Are you currently a non-native (have not or will not switch over to Braze’s native keyword processing capability) SMS client? If so, visit our collection of [non-native SMS](/docs/user_guide/message_building_by_channel/sms/non_native/) articles for your corresponding user data migration doc.
 {% endalert %}
 
 ## Format user phone numbers to carrier standards
 
-Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of 15 digits.
+Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image, and can have a maximum of 15 digits.
 
 ![E.164 format consists of a plus sign, country code, area code, and phone number][picture]{: style="max-width:50%;border: 0;"}
 
@@ -28,7 +28,7 @@ For more information, refer to [User phone numbers][userphone].
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze.
+If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze.
 
 ## Example migration steps
 

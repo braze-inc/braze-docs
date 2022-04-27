@@ -51,7 +51,7 @@ In the second paragraph, you should explore and explain the relationship between
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements are used to do.
+The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the following chart. Be sure to adjust the description so that you know what each of these requirements are used to do.
 {% endalert %}
 
 | Requirement | Origin | Access | Description |
@@ -76,7 +76,7 @@ You have the option to put images in your documentation, so we recommend you do 
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |
@@ -120,7 +120,7 @@ Just your typical step by step how to.
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>
@@ -137,7 +137,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |

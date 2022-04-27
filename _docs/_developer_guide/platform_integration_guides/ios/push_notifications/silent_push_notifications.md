@@ -29,7 +29,7 @@ The `content-available` flag can be set in the Braze dashboard as well as within
 
 Silent remote notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users. 
 
-To use silent remote notifications to trigger background work, set up the `content-available` flag following the above instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings.
+To use silent remote notifications to trigger background work, set up the `content-available` flag following the preceding instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings.
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 
@@ -58,6 +58,6 @@ Refer to Apple's [instance method][7] and [unreceived notifications][8] document
 [3]: {% image_buster /assets/img_archive/background_mode.png %} "background mode enabled"
 [4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc
 [5]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/#uninstall-tracking
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/
 [7]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application
 [8]:https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23

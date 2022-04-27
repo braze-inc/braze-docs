@@ -28,7 +28,7 @@ Optional attribution partner click tracking documentation has now been added to 
 
 ## New description field
 
-Users can now add descriptions to campaigns and Canvases! This new field can be found right under the campaign or Canvas name field when creating or editing an existing campaign or Canvas. 
+Users can now add descriptions to campaigns and Canvases! This new field can be found under the campaign or Canvas name field when creating or editing an existing campaign or Canvas. 
 
 ## Canvas exception events
 

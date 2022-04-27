@@ -25,7 +25,7 @@ To target users that fall into multiple previously created segments, add multipl
 
 ### Target users in multiple existing segments and filters {#existing_segment_filter}
 
-You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the screenshot below, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
+You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the following screenshot, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
 
 ![][25]
 
@@ -53,7 +53,7 @@ Braze provides detailed audience statistics of the targeted channels in the foot
 
 ![][24]
 
-In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located below the statistics footer.
+In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located after the statistics footer.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/

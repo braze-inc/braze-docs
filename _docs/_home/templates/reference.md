@@ -53,11 +53,11 @@ Include:
 
 ## Topic 1 Regarding this Concept
 
-This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, please check out [this link to that tutorial]({{site.baseurl}}/home/templates/tutorial_video.md).
+This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, check out [this link to that tutorial]({{site.baseurl}}/home/templates/tutorial_video.md).
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ If you're explaining a technical concept, please note that here and show a code 
 </html>
 ```
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+Make sure you define parameters or elements that users might have to adjust from the code sample. Many users will just copy and paste.
 
 | Variable | Description |
 | -------- | ----------- |
