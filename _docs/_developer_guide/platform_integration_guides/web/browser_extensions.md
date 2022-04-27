@@ -98,7 +98,7 @@ Once the SDK is included, you can initialize the library as usual.
 Since cookies are not supported in browser extensions, you can disable cookies by initializing with `noCookies: true`.
 
 ```javascript
-appboy.initialize("YOUR-API-KEY-HERE", {
+braze.initialize("YOUR-API-KEY-HERE", {
     baseUrl: "YOUR-API-ENDPOINT",
     enableLogging: true,
     noCookies: true
