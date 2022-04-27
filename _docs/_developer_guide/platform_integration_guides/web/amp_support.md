@@ -51,7 +51,7 @@ The AMP Web Push component works by creating a popup that handles the push subsc
 Create a `service-worker.js` file with the following content, and place it in the root directory of your website:
 
 ```js
-self.importScripts('https://js.appboycdn.com/web-sdk/3.5/service-worker.js');
+self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
 ```
 
 ## Step 5: Configure the AMP web push HTML element
