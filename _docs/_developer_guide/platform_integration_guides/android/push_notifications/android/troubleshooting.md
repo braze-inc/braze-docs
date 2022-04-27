@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 article_title: Push Notification Troubleshooting for Android
 platform: Android
-page_order: 16
+page_order: 30
 description: "This article covers potential troubleshooting topics for your Android push implementation."
 channel:
   - push
@@ -116,7 +116,7 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
 
 #### Firewall is blocking push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Ensure that ports `5228`, `5229`, and `5230` are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of `15169`.
 
 #### Custom notification factory returning null
 
@@ -165,13 +165,13 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 ```
 
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client
-[2]: #utilizing-the-push-error-log
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[16]: #custom-displaying-notifications
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
-[18]: #custom-handling-push-receipts-and-opens
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
 [22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack

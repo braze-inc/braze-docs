@@ -31,7 +31,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 ## Step 2: Update Unity AndroidManifest.xml
 
-If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
+If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any of the following missing sections are added to your existing `AndroidManifest.xml`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

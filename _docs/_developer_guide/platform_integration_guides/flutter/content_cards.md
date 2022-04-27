@@ -58,7 +58,7 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 
 ## Test displaying sample Content Card
 
-Follow the steps below to test a sample Content Card.
+Follow these steps to test a sample Content Card.
 
 1. Set an active user in the React application by calling `braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][3] to create a new Content Card campaign.

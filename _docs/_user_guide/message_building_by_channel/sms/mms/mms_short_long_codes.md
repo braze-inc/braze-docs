@@ -19,7 +19,7 @@ MMS is currently supported for US and Canada short codes (5-6 digit numbers) and
 
 All new short code applications will include MMS by default. Typically, short codes must be explicitly requested during the short code application, but now are included by default. Some users may not implement or use this functionality but will be available if needed at a later date.
 
-For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Please reach out to your CSM if this situation applies to you and you would like MMS enabled. 
+For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled. 
 
 ### MMS short code best practices
 

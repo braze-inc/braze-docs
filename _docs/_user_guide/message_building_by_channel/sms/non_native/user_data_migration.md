@@ -15,7 +15,7 @@ Let’s run through all the considerations you’ll need to keep in mind when yo
 
 ## Format user phone numbers to carrier standards
 
-Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. Learn more about [user phone numbers][userphone].
+Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image and can have a maximum of fifteen (15) digits. Learn more about [user phone numbers][userphone].
 
 ![][picture]{: style="max-width:50%;border: 0;"}
 
@@ -25,7 +25,7 @@ Aliases are necessary to be able to capture any custom events or [custom keyword
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 
+If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 
@@ -33,14 +33,14 @@ Before you begin composing SMS campaigns through Braze, you’ll need to update 
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 
-1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a '+' and a country code, e.g. +12408884782. For more information on how to import user phone numbers, refer to [user phone numbers][userphone].
+1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a '+' and a country code, e.g., +12408884782. For more information on how to import user phone numbers, refer to [user phone numbers][userphone].
   - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
 
 2. **Add a user alias** to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'
   - Use the [users/alias/new][2] REST API endpoint to assign an alias to existing user profiles.
   - There are also SDK methods for Aliasing Users [iOS][3] / [Android][4] / [Web][5].<br><br>
 
-3. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g. subscribed or unsubscribed) if you have this information.
+3. **Assign your user's SMS [subscription state][subscriptionstate]** (e.g.,subscribed or unsubscribed) if you have this information.
   - Use the [subscription/status/set][6] REST API endpoint to set users as subscribed or unsubscribed from your SMS Subscription Group(s).
   - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
 

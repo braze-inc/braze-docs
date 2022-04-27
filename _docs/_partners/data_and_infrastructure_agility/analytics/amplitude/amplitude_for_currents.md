@@ -62,13 +62,13 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 ## Data export integration
 
-A full list of the events that can be exported from Braze to Amplitude is shown below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
+A full list of the events and event properties that can be exported from Braze to Amplitude can be found in the following sections. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude.
 
 You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
 
-Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
+Contact your account manager or open a [support ticket][support] if you need access to additional event entitlements.
 
 ### Step 1: Configure Amplitude Integration in Braze 
 
@@ -80,7 +80,7 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 
 ### Step 2: Create Braze Current
 
-In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
+In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
 ![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})
 
@@ -90,7 +90,7 @@ Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/
 
 ## Rate limits
 
-Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. Above these thresholds, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
+Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events that are logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
 
@@ -274,7 +274,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "user_agent": (string) description of the user’s system and browser for the event (Email Click, Open, and MarkAsSpam events only),
   "link_id": (string) unique value generated by Braze for the URL (Email Click events only, and requires link aliasing to be enabled),
   "link_alias": (string) alias name set when the message was sent (Email Click events only, and requires link aliasing to be enabled),
-  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
 }
 ```
 

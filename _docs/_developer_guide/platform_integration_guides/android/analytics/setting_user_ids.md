@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 1
-description: "This article shows how to set user IDs in your Android app, suggested user ID naming conventions, and some best practices."
+description: "This article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices."
 
 ---
  

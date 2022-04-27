@@ -1,75 +1,37 @@
 ---
-nav_title: Customization
-article_title: Content Card Customization for Web
 page_order: 1
+nav_title: Customization
+article_title: Web Content Card Customization
+layout: featured
+
 platform: Web
+
 channel: content cards
-page_type: reference
-description: "This article covers how to customize the default Content Cards style within the Braze SDK."
+
+guide_top_header: "Web Content Card Customization"
+guide_top_text: ""
+description: "This landing page covers the Braze Web SDK Content Cards customization options."
+
+guide_featured_title: "Section Articles"
+guide_featured_list:
+  - name: Custom UI
+    link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/
+    fa_icon: fa fa-television
+  - name: Custom Styling
+    link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling/
+    fa_icon: fa fa-paint-brush
+  - name: Key-Value Pairs
+    link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs/
+    fa_icon: fa fa-code
+  - name: Read & Unread Indicators
+    link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/
+    fa_icon: fa fa-book
+  - name: Badges
+    link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/badges/
+    fa_icon: fa fa-id-badge
+
+
+
 
 ---
-
-# Content Card customization
-
-## Content Card data models {#data-models}
-
-The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
-
-## Customizing the default UI
-
-Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.
-
-By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. 
-
-For instance, the following is an example override that will cause Content Cards to appear 800px wide:
-
-``` css
-body .ab-feed {
-  width: 800px;
-}
-```
-
-## Create a custom UI
-
-### Refreshing the feed
-
-To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method:
-
-```javascript
-import braze from "@braze/web-sdk"
-
-function refresh(){
-  braze.requestContentCardsRefresh();    
-}
-```
-
-### Listening for card updates
-
-When cards are refreshed, a callback function can be subscribed to:
-
-```javascript
-import braze from "@braze/web-sdk"
-
-braze.subscribeToContentCardsUpdates(function(updates){
-  const cards = updates.cards;
-  // do something with the latest instance of `cards`
-});
-```
-
-### Logging analytics events
-
-Log impression events when cards are viewed by users:
-
-```javascript
-import braze from "@braze/web-sdk"
-
-braze.logCardImpressions(cards, true);
-```
-
-Log card click events when users interact with a card:
-
-```javascript
-import braze from "@braze/web-sdk"
-
-braze.logCardClick(card, true);
-```
+<br><br>

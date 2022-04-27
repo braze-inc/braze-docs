@@ -35,7 +35,7 @@ The Braze and Amperity integration offers a unified view of your customers acros
 To upload Amperity user data to Braze, you must first create a segment of existing Amperity users.
 1. Navigate to the **Segments** tab within the Amperity dashboard.<br>![][2]<br><br>
 2. Click **Create** to filter and define a segment of users to capture. Under the **Summary** tab, you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![A summary of an Amperity segment showing the revenue and reachability stats.][3] <br><br>
-3. Select the **Customers** tab, and choose which user fields you would like to include using the **Show Columns** selector on the right.<br>![The Amperity segment builder showing the available customer attributes to include.][4]<br><br>
+3. Select the **Customers** tab, and choose which user fields you would like to include using the **Show Columns** selector.<br>![The Amperity segment builder showing the available customer attributes to include.][4]<br><br>
 4. Next, click **Run Segment**.
 
 ### Step 2: Select upload method
@@ -62,7 +62,7 @@ Once the segment has run, you can either:
 
 ##### Activate segment
 
-First, you must activate the segment by selecting **Activate Segment** in the upper right corner of the page. 
+First, you must activate the segment by selecting **Activate Segment**.
 
 In the window that opens:
 - Name your destination **Braze**
@@ -140,7 +140,7 @@ Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically dest
 To start processing your user attribute CSV files, we need to deploy the serverless application to handle the processing for you. This application will create the following resources automatically to deploy successfully:
 - Lambda function
 - S3 Bucket for your CSV Files that the Lambda process can read from This Lambda function will only receive notifications for `.csv` extension files.
-- Role allowing for the creation of the above
+- Role allowing for the creation of the S3 Bucket
 - Policy to allow Lambda to receive S3 upload event in the new bucket
 
 Follow the direct link to the [application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) or open the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications) and search for **braze-user-attribute-import**. You must check the **Show apps that create custom IAM roles and resource policies** checkbox to see this application. The application creates a policy for the Lambda to read from the newly created S3 bucket.

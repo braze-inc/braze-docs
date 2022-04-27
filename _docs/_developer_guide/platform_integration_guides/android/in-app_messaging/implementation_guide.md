@@ -3,26 +3,26 @@ nav_title: Advanced Implementation (Optional)
 article_title: In-App Message Implementation Guide for Android (Optional)
 platform: Android
 page_order: 6
-description: "This advanced implementation guide covers Android in-app message code considerations, three use cases built by our team, and accompanying code snippets."
+description: "This advanced implementation guide covers Android and FireOS in-app message code considerations, three use cases built by our team, and accompanying code snippets."
 channel:
   - in-app messages
 ---
-
+<br>
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/).
+Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
 # In-app messaging implementation guide
 
-> This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Please note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
+> This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 
 ## Code considerations
 
-The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view components and factories are included as needed below with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages. There are, in some instances, multiple ways to achieve similar results. The optimal implementation will depend on the specific use case.
+The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view components and factories are included as needed with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages. There are, in some instances, multiple ways to achieve similar results. The optimal implementation will depend on the specific use case.
 
 ### Custom factories
 
-The Braze SDK allows developers to override a number of defaults through custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. In most cases, however, if you decide to override a factory, you will need to either explicitly defer to the default or reimplement the functionality provided by the Braze default. The code snippet below illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces. Once you have a solid understanding of the concepts behind overriding Braze's default factories, check out our [use cases](#sample-use-cases) below to get started implementing custom in-app messaging functionality.
+The Braze SDK allows developers to override a number of defaults through custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. In most cases, however, if you decide to override a factory, you will need to either explicitly defer to the default or reimplement the functionality provided by the Braze default. The following code snippet illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces. Once you have a solid understanding of the concepts behind overriding Braze's default factories, check out our [use cases](#sample-use-cases) to get started implementing custom in-app messaging functionality.
 
 {% tabs %}
 {% tab Kotlin %}
@@ -353,7 +353,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 {% endtabs %}
 
 ### Custom full in-app message
-Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined above for implementing a customized modal in-app message. In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
+Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined in the section for implementing a [customized modal in-app message](#custom-modal-in-app-message). In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
 
 {% tabs %}
 {% tab Kotlin %}

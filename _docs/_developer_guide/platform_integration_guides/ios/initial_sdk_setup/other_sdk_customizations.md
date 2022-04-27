@@ -11,7 +11,7 @@ page_order: 3
 
 ## Braze log level
 
-The default log level for the Braze iOS SDK is minimal, or `8` in the chart below. This level suppresses most logging so that no sensitive information is logged in a production-released application.
+The default log level for the Braze iOS SDK is minimal, or `8` in the following chart. This level suppresses most logging so that no sensitive information is logged in a production-released application.
 
 See the following list of available log levels:
 

@@ -74,7 +74,7 @@ In-app messages can also be created within your site and displayed locally in re
 
 Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users while not interrupting their experience on your site. 
 
-To send these messages, first add an exit intent library, such as this [open-source library][50] to your website. Then, use the code snippet below to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
+To send these messages, first add an exit intent library, such as this [open-source library][50] to your website. Then, use the following code snippet to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

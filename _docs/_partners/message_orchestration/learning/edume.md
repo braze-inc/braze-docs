@@ -3,7 +3,7 @@ nav_title: eduMe
 article_title: eduMe
 description: "This article outlines the partnership between Braze and eduMe, a mobile-based training tool that allows you to leverage Braze Connected Content to give your users access to eduMe courses and lessons in your Braze campaigns."
 alias: /partners/edume/
-page_tpe: partner
+page_type: partner
 search_tag: Partner
 
 ---
@@ -33,7 +33,7 @@ To give a user access to a course, lesson, or eNPS survey, and to track their pr
 {% raw %}
 ```
 Welcome to my Rickshaw App platform.
-Please access your onboarding course at:
+Access your onboarding course at:
 
 {% connected_content
   https://connect.edume.com/
@@ -51,5 +51,5 @@ Please access your onboarding course at:
   - Lesson: `getLessonLink?lessonId=25805`
   - eNPS survey: `getSurveyLink?surveyId=654`<br><br>
 3. Users who arrive at eduMe through this link will be added to an eduMe team or group of your choosing. Replace `groupId` with the relevant team ID or eduMe group ID. You will typically use the team ID except for courses that require enrollment, in which case you should use the group ID<br><br>
-4. Include an appropriate field to map the `externalUserId` field to. The above example uses the `driver_id`, though your field will likely be different. This ID will be available in eduMe reports, allowing you to correlate them with your systems.<br><br>
+4. Include an appropriate field to map the `externalUserId` field to. The example connected content call uses the `driver_id`, though your field will likely be different. This ID will be available in eduMe reports, allowing you to correlate them with your systems.<br><br>
 5. Lastly, customize and test your message as needed. We recommend you send at least one test message, access the eduMe content, complete the lesson or course, and verify the eduMe analytics are being recorded. 

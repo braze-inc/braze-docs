@@ -15,7 +15,7 @@ Link aliasing works by decorating a Braze-generated query parameter on links in 
 
 These query parameters are also added to Content Blocks, enabling link tracking for segmentation purposes. 
 
-![Link Aliasing Composer][2]
+![Link Management composer that shows the Link Alias and Full Link as well as an HTML Editor for the email body.][2]
 
 To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. Users can also set an alias that will be used to reference this link when dealing with reporting or segmentation. Aliases must be uniquely named per email campaign variant or Canvas step. You can also add link templates from the link management section. 
 
@@ -26,12 +26,13 @@ Enabling link aliasing is simple and does not require any downtime. This enablem
 ## Preconditions and Limitations
 
 ### Messages modified by HTML parser
-Your messages will be modified by an HTML parser; this could lead to the parser correcting potentially incorrect HTML. This is already the case if you use features such as pre-header input field, Liquid statements, or link templates.
+Your messages will be modified by an HTML parser, which could lead to the parser correcting potentially incorrect HTML. This is already the case if you use features such as pre-header input field, Liquid statements, or link templates.
 
 ### Partially migrated state
 You may find yourself in a partially migrated state where some messages and Content Blocks will have aliasing. Editing messages or Content Blocks prior to having the feature enabled will result in Braze editing links.
+
 ### Link Aliasing support
-Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is a best practice to include a questions mark "?" at the end of your link so Braze can append the `lid` value easily.
+Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is a best practice to include a question mark (?) at the end of your link so Braze can append the `lid` value easily.
 
 ### Updating Content Block limitations
 Adding `lid` values to an existing Content Block will only support propagating link documents to the first 50 "includers". An includer is a message variant where the Content Block is used, or another Content Block is nested.
@@ -52,11 +53,11 @@ New Content Blocks will have their links modified where Braze will append a {% r
 
 Any existing Content Blocks that were created before Braze enabled this feature will only have their links modified when the HTML in that Content Block is edited, and the Content Block is relaunched.
 
-When a Content Block that is not decorated with the `lid` value is inserted into...<br>
-&#45; a new message, the links from that Content Block are not tracked with an alias.<br>
-&#45; an old message, and that message has not been edited; the links are not tracked with any alias.
+When a Content Block that is not decorated with the `lid` value is inserted into:
+- A new message, the links from that Content Block are not tracked with an alias.
+- An old message, and that message has not been edited; the links are not tracked with any alias.
 
-When a new Content Block is inserted into an 'old' message variant, the links from that message variant will be recognized by this feature (since the variant was edited). Links from the Content Block are also recognized.
+When a new Content Block is inserted into an "old" message variant, the links from that message variant will be recognized by this feature (since the variant was edited). Links from the Content Block are also recognized.
 
 "Old" Content Blocks (not marked up) cannot nest "new" Content Blocks.
 
@@ -84,7 +85,7 @@ When composing your email message, a new column will be present in the **Link Ma
 Braze only tracks up to the last 100 clicked link aliases at the profile level.
 {% endalert %}
 
-Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
+Only aliases that you have indicated to be tracked will be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
 
 ### Untracking a Link
 Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist but new segments cannot be created with that filter.
@@ -100,13 +101,13 @@ Retarget users based on the specific alias that was clicked in a Canvas step. A 
 #### Clicked Alias in Campaign or Canvas
 Retarget users based on any alias that was clicked in the campaign or Canvas step. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
-![Segmentation Filters for Link Aliasing][5]
+![][5]
 
 ### Action Based Filters
  
 In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.
 
-![Action Based Filters for Link Aliasing][6]
+![][6]
 
 ## Tracking and Reporting
 
@@ -115,9 +116,9 @@ In addition to creating segment filters, you can also create action-based messag
 For segmentation purposes, only 100 links can be tracked per app group by default. Links within messages that are archived will automatically be untracked. If archived messages are unarchived, links will need to be tracked again.
 
 ### Link Click Reporting
-Link reporting will now be indexed by the `alias` rather than top-level domains and/or full URLs. 
+Link reporting will now be indexed by the `alias` rather than top-level domains or full URLs. 
 
-![Link Aliasing Click Table][1]
+![][1]
 
 ### Currents Event Changes
 
@@ -181,4 +182,4 @@ The following endpoints are available to extract the `alias` set in each message
 [4]: {{site.baseurl}}/get_canvas_link_alias/
 [5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
 [6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#email-clicks-events/
+[7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/

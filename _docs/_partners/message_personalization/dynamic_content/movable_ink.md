@@ -33,7 +33,7 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 
 ## Supported Movable Ink capabilities
 
-Intelligent Creative has many offerings that Braze users can take advantage of. Below is a list of what is supported. 
+Intelligent Creative has many offerings that Braze users can take advantage of. The following list shows what capabilities are supported. 
 
 | Movable Ink Capability | Feature | Rich Push Notification | In-App Messaging / Content Cards | Details |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |
@@ -102,7 +102,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink da
 
 ![The page that appears once you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e. {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
+Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (i.e., {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e., {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Step 4: Braze experience
 
@@ -110,7 +110,7 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 1. In the Braze Platform:
 	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.
-	- iOS Push: Paste URL in **Rich Notification Media** link field, and directly below, denote the file format you are using.
+	- iOS Push: Paste URL in **Rich Notification Media** link field and denote the file format you are using.
 	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br><br>
 2. To make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
@@ -133,5 +133,5 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 [1]: https://movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [support]: https://support.movableink.com/
-[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs
+[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
 [Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience

@@ -18,7 +18,7 @@ description: "This article outlines details about the Send Transactional Email M
 The send transactional email endpoint allows you to send immediate, ad-hoc messages to designated users. This endpoint is used alongside the creation of a [transactional email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding Campaign ID. 
 
 {% alert important %}
-Transactional email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
+Transactional email is currently available as part of select Braze packages. Reach out to your Braze Customer Success Manager for more details.
 {% endalert %}
 
 Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_send_id": (optional, string) see external_send_id below,
+  "external_send_id": (optional, string) see the following request parameters,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
   "recipients": (required, object)
     [{
@@ -94,7 +94,7 @@ The send transactional email endpoint will respond with the message's `dispatch_
 
 All transactional emails are complemented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
-In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze, and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
+In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze `dispatch_id` returned in the [API response](#example-response), or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze, and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
 
 To get started using the Transactional HTTP Event Postback, navigate to **Manage Settings** > **Email Settings** > **Transactional Webpush URL** in your Braze dashboard and input your desired URL to receive postbacks.
 
@@ -106,7 +106,7 @@ To get started using the Transactional HTTP Event Postback, navigate to **Manage
 ```json
 {
   "dispatch_id": (string, Out-of-the-box generated Unique ID of the instance of this send),
-  "status": (string, Current status of message from fields below)
+  "status": (string, Current status of message from the following message status table,
   "metadata" : (object, additional information relating to the execution of an event)
    {
      "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
@@ -123,6 +123,8 @@ To get started using the Transactional HTTP Event Postback, navigate to **Manage
    }
 }
 ```
+
+#### Message status
 
 |  Status | Description |
 | ------------ | ----------- |

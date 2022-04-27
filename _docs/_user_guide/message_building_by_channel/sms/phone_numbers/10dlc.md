@@ -71,7 +71,7 @@ Daily limits range from 2,000 to 200,000 messages depending on your brand trust 
 
 Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
 
-Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The tables below list standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
+Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The following tables list standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
 | Standard Use Cases | Description |
 | ------------------ | ----------- |

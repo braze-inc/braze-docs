@@ -42,7 +42,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 
 glossary_tag_name: Tags
-glossary_filter_text: "Select tags below to narrow the glossary:"
+glossary_filter_text: "Select tags to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:

@@ -41,7 +41,7 @@ When should you use this feature? Braze highly recommends that you consider usin
   {% tab Promotional %}
 **Promotional Canvases**
 
-Promotions, coupons, and sales often have hard expiration dates. The Canvas outlined below should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15am in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15am in the company's time zone.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -194,7 +194,7 @@ Steps with an in-app message and another channel have the following advancement 
 
 ## Prioritizing in-app messages
 
-A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to reorder their priority. By default, steps earlier in a Canvas variant will display before later steps.
+A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will adhere to the following priority order to determine which in-app message is displayed. Drag different Canvas steps to reorder their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 

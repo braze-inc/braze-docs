@@ -94,7 +94,7 @@ If given a pre-existing custom endpoint:
 
 ## SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. See the following sections to enable custom event tracking, push messaging, the News Feed, and the complete suite of Braze features.
+Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/), the [News Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/), and the complete suite of Braze features.
 
 ## Customizing Braze on startup
 
@@ -111,7 +111,7 @@ In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOpt
       withAppboyOptions:appboyOptions];
 ```
 
-Note that this method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+Note that this method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method.
 
 {% endtab %}
 {% tab swift %}
@@ -125,7 +125,7 @@ Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
                  withAppboyOptions:appboyOptions)
 ```
 
-Note that this method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+Note that this method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method.
 
 {% endtab %}
 {% endtabs %}
@@ -140,7 +140,7 @@ This method is called with the following parameters:
 See [Appboy.h][1] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
-Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
+Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 

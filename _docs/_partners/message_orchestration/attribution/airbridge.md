@@ -19,7 +19,7 @@ The Braze and Airbridge integration lets you pass all organic and non-organic in
 | Requirement | Description |
 |---|---|
 | Airbridge account | An Airbridge account is required to take advantage of this partnership. |
-| iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found below. |
+| iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. |
 | Airbridge SDK | In addition to the required Braze SDK, you must install the Airbridge [Android](https://developers.airbridge.io/v1.0-en-us/docs/android-sdk) or [iOS](https://developers.airbridge.io/v1.0-en-us/docs/ios-sdk) SDK. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -175,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Available data fields
 
-Airbridge can send seven types of data to Braze as listed below. This data can be viewed in the Airbridge dashboard and is used for user install attribution, custom attribution, and filtering.
+Airbridge can send seven types of data to Braze listed in the following data field chart. This data can be viewed in the Airbridge dashboard and is used for user install attribution, custom attribution, and filtering.
 
 In addition to the four basic data types (Source, Campaign, Ad Group, and Ad) provided by Braze, Airbridge offers three additional data types such as `airbridge_content`, `airbridge_sub_id`, and `airbridge_term` as a custom attribute. Among these, `airbridge_sub_id` delivers a keyword to the value when it comes from search ads.
 
@@ -209,7 +209,7 @@ To get started with Airbridge click tracking links, visit the documentation foun
 
 {% tabs %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Airbridge SDK integration. You can include the GAID in your Airbridge click tracking links by utilizing the Liquid logic below:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Airbridge SDK integration. You can include the GAID in your Airbridge click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -220,7 +220,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-For iOS, both Braze and Airbridge automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Airbridge click tracking links by utilizing the Liquid logic below:
+For iOS, both Braze and Airbridge automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Airbridge click tracking links by utilizing the following Liquid logic:
 
 {% raw %}
 ```

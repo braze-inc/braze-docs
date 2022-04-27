@@ -20,8 +20,8 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 |---|---|
 | Remerge account | A Remerge account is required to take advantage of this partnership. |
 | Remerge webhook key | This key will be provided by Remerge. |
-| Android app ID | Your unique Braze application identifier for Android (i.e. "com.example"). |
-| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| Android app ID | Your unique Braze application identifier for Android (i.e., "com.example"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e., "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -50,16 +50,16 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 ```
 {% endraw %}
 
-In the above webhook URL, you must:
+In the webhook URL, you must:
 - Use the `https://remerge.events/event` API to send your webhook events.
 - Set the event name. This name will appear in your [remerge.io][65] dashboard.
-- Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678") to remerge.
+- Pass your app's unique application identifier for Android (i.e., "com.example") and iOS (i.e., "012345678") to remerge.
 - Define a key; Remerge will provide this.
 
 ![The webhook URL and message preview shown in the Braze webhook builder.][67]
 
 {% alert important %}
-Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
 {% endalert %}
 
 #### Request headers and method

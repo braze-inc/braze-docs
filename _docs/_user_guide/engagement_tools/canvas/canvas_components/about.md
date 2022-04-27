@@ -13,7 +13,7 @@ tool: Canvas
 
 Enhance your Canvas journey with Canvas components! Canvas components and steps can be used to simplify the process of determining the effectiveness of your Canvas by replacing excessive full steps with just one. Steps in Canvas refer to the personalized user journey in your Canvas branches. 
 
-Check out use cases below for how you can make the most out of your Canvas.
+Check out the following use cases for how you can make the most out of your Canvas.
 
 ## Customizing user journeys
 

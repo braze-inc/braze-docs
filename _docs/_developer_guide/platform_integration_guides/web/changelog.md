@@ -1,6 +1,6 @@
 ---
 nav_title: Changelog
-article_title: Changlog for Web SDK
+article_title: Changelog for Web SDK
 page_order: 30
 page_type: update
 platform: Web

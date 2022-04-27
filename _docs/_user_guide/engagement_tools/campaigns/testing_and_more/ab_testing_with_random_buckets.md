@@ -28,7 +28,7 @@ Apply the filter **Random Bucket #**. Once applied, the filter label will change
 Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive).
 {% endalert %}
 
-The example below partially documents the creation of segments for a campaign with three variants and a control group. Note that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
+The following example partially documents the creation of segments for a campaign with three variants and a control group. Note that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
 
 Consider the following sample plan for creating segments of equal size for three campaign series variants and a control: 
 

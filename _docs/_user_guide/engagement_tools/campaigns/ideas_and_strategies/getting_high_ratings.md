@@ -44,7 +44,7 @@ Our article on [data opt-in][7] has more information on ways to ensure your requ
 
 Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multichannel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
 
-![In-app message located at the bottom of a mobile device screen that reads: "If you like what you see, please take a moment to rate us in the app store!".][9]
+![In-app message located at the bottom of a mobile device screen that reads: "If you like what you see, take a moment to rate us in the app store!".][9]
 
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}

@@ -65,7 +65,7 @@ The push deleted listener is fired when a user swipes away or dismisses a push n
 
 The following example implements the `BrazeCallback` game object using a callback method name of `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback`, and `PushNotificationDeletedCallback` respectively.
 
-![This implementation example graphic shows the Braze configuration options mentioned above and a C# code snippet.][63]
+![This implementation example graphic shows the Braze configuration options mentioned in the preceding sections and a C# code snippet.][63]
 
 ```csharp
 public class MainMenu : MonoBehaviour {

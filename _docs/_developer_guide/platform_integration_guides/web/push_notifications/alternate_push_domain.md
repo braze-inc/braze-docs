@@ -28,7 +28,7 @@ Push for Shopify is unable to be implemented in this way. Shopify takes steps to
 
 ## Integration
 
-To make the example below clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
+To make the following example clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 
 ### Step 1: Initiate prompting flow
 

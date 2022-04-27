@@ -18,7 +18,7 @@ This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_g
 
 ## Integration overview
 
-The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
+The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)
@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
-Next, you must initialize the SDK. As mentioned above, this guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `Info.plist` file or in `appboyOptions`.
+Next, you must initialize the SDK. This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `Info.plist` file or in `appboyOptions`.
 
 Add the `didFinishLaunchingWithOptions` method from the `AppDelegate.swift` file without a return type in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -617,10 +617,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ##### Add delegate methods
 Next, create an extension that conforms to the `ABKInAppMessageUIDelegate`.
 
-Add this snippet below the analytics section. Note that the `BrazeManager.swift` object is set as the delegate; this will be where the `BrazeManager.swift` file handles all the `ABKInAppMessageUIDelegate` methods. 
+Add the following snippet the analytics section. Note that the `BrazeManager.swift` object is set as the delegate; this will be where the `BrazeManager.swift` file handles all the `ABKInAppMessageUIDelegate` methods. 
 
 {% alert important %}
-The `ABKInAppMessageUIDelegate` does not come with any required methods, but listed below is an example of one.
+The `ABKInAppMessageUIDelegate` does not come with any required methods, but the following is an example of one.
 {% endalert %}
 
 {% subtabs global %}

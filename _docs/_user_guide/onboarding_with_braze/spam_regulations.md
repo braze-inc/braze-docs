@@ -60,7 +60,7 @@ The following types of messages are exempt from the requirements of CASL:
 - Messages providing notification of factual information about subscription, membership or account
 - Messages delivering a product or service, including product updates or upgrades
 
->  This is not the complete list of exemptions. Please view the [full text of the law][3] for more details.
+>  This is not the complete list of exemptions. View the [full text of the law][3] for more details.
 
 ### Message consent
 

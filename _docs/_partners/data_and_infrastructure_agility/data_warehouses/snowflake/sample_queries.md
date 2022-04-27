@@ -19,7 +19,7 @@ A common query might be to filter events by time.
 
 You can filter them by the time of occurrence. Event tables are clustered by `time` which makes filtering by `time` performant:
 ```sql
--- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
+-- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE time > 1555354920
@@ -58,7 +58,7 @@ Some important things to note include:
 - If you see events with `campaign_id`s but no campaign names then there is a possibility that the campaign was created with a name before Data Sharing existed as a product.
 - You can see Canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
 
-If you want to see both campaign and Canvas names, you may have to use a sub-query as shown below:
+If you want to see both campaign and Canvas names, you may have to use the following sub-query:
 ```sql
 SELECT campaign_join.*, canvas.name AS canvas_name
 FROM 
@@ -152,7 +152,7 @@ You can use this unique email clicks query to analyze the unique email click in 
   2. In each partition, order the events by time, and the first event is always a unique event.
   3. For every subsequent event, if it occurred more than seven days after its predecessor, is considered a unique event.
   
-We can use Snowflake's [windowing functions](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) to help us achieve this. The query below gives us all email clicks in the last 365 days and indicates which events are unique in the `is_unique` column:
+We can use Snowflake's [windowing functions](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) to help us achieve this. The following query gives us all email clicks in the last 365 days and indicates which events are unique in the `is_unique` column:
   
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,

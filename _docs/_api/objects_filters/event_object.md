@@ -31,14 +31,14 @@ Tracking Custom Events article:
   "external_id" : (optional, string), External User ID,
   "user_alias" : (optional, User Alias Object), User Alias Object,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
+  "app_id" : (optional, string) see App Identifier,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
   "properties" : (optional, Properties Object) properties of the event
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
-  // See note below regarding anonymous push token imports
+  // See following notes regarding anonymous push token imports
 }
 ```
 
@@ -111,7 +111,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Event objects
 
-Using the example provided above, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Beth**, Thanks for renting **The Sad Egg** by **Dan Alexander**, here are some recommended movies based on your rental..."
+Using the example provided, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Beth**, Thanks for renting **The Sad Egg** by **Dan Alexander**, here are some recommended movies based on your rental..."
 
 
 [1]: {{site.baseurl}}/developer_guide/home/

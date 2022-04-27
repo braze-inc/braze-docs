@@ -15,7 +15,7 @@ The following examples are deployed in a fully-functional example eCommerce site
 
 ## Requirements
 
-You will need to clone the [Retail Demo Store repository](https://github.com/aws-samples/retail-demo-store/) and follow the steps outlined below to deploy the workshop environment to your AWS account. An AWS account is required to complete the workshop and to run the integration code.
+You will need to clone the [Retail Demo Store repository](https://github.com/aws-samples/retail-demo-store/) and follow the steps outlined to deploy the workshop environment to your AWS account. An AWS account is required to complete the workshop and to run the integration code.
 
 ## Integration architecture
 

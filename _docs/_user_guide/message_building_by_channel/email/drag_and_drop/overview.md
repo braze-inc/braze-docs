@@ -88,7 +88,7 @@ Advanced functionality will appear in the campaign or Canvas step composer. In a
 The **Preview & Test** section allows you to preview of your emails across different email clients and devices. By previewing your email campaign as a user, you can ensure that the details are aligned across all platforms.
 
 {% alert important %}
-Inbox Vision for the Drag & Drop Editor is currently in early access. Please contact your Braze account manager if you are interested in participating in early access.
+Inbox Vision for the Drag & Drop Editor is currently in early access. Contact your Braze account manager if you are interested in participating in early access.
 {% endalert %}
 
 You can also view your email previews with these user types:

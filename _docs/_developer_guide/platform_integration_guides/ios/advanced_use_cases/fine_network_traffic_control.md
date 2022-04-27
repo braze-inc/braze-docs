@@ -75,7 +75,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Set request policy on startup
 
-These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown below:
+These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown in the following code snippet:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

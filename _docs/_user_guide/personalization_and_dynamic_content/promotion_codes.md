@@ -65,7 +65,7 @@ After the upload is complete, click **Save List** to save all the details and co
 
 ![Promo Codes 7][7]
 
-Upon clicking save, you will see that a new row appears in the **Import History** below. To refresh the table to see if your import has finished, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
+Upon clicking save, you will see that a new row appears in the **Import History**. To refresh the table to see if your import has finished, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
 
 ![Promo Codes 8][8]
 

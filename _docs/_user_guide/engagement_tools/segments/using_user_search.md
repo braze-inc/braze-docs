@@ -19,7 +19,7 @@ The **User Search** feature allows you to view user profiles. User profiles are 
 
 ![][7]
 
-You can search your user base using a user's email or user ID. Most of the time, the user search will return one result but do note that if you enter a non-unique email (i.e. an email that belongs to more than one user) into the user search, it will return more than one user profile. Once you've entered an email or user ID into the **User Search**, you'll be able to view the information that you've recorded on this user with the Braze SDK. If you do enter a non-unique email, clicking **Next** will allow you to view the other profiles that are associated with that email.
+You can search your user base using a user's email or user ID. Most of the time, the user search will return one result but do note that if you enter a non-unique email (i.e., an email that belongs to more than one user) into the user search, it will return more than one user profile. Once you've entered an email or user ID into the **User Search**, you'll be able to view the information that you've recorded on this user with the Braze SDK. If you do enter a non-unique email, clicking **Next** will allow you to view the other profiles that are associated with that email.
 
 ![][14]
 

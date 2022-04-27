@@ -8,7 +8,7 @@ description: "This reference article covers user data collection including what 
 
 # User data collection
 
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a "custom event" vs. a "custom attribute".
 
@@ -97,7 +97,7 @@ Custom event properties can also be used for personalization within the messagin
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your Customer Success Manager or our support team, as this may incur additional data costs.
 
 ## Custom attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the above example for custom events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
 
 ### Custom attribute storage
 
@@ -108,6 +108,8 @@ Custom attributes are extraordinarily flexible tools that allow for great target
 
 #### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
+
+The following table describes available segmentation options for string attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -137,7 +139,7 @@ Array attributes are good for storing related lists of information about your us
 
 Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. **Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.** For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.
 
-If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
+If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. The following lists some example code showing the array behavior in the web SDK:
 
 ```
 var abUser = appboy.getUser();
@@ -150,6 +152,8 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 ```
 
 The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+
+The following table describes available segmentation options for array attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -169,6 +173,8 @@ Time attributes are useful for storing the last time a specific action was taken
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
+The following table describes available segmentation options for time attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** |
@@ -183,7 +189,10 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 
 #### Numbers {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
->  Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+The following table describes available segmentation options for numeric attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -198,6 +207,8 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 #### Booleans (true/false)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
 
+The following table describes available segmentation options for boolean attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the boolean value **is** | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
@@ -208,6 +219,8 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 ## Purchase events / revenue tracking
 
 Using our purchase methods to record in-app purchases establishes the Life-time Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+
+The following table describes available segmentation options for purchase events.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -226,7 +239,7 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
 ## Taxi/ride-sharing app use case {#example-case}
-For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 **Case Question #1: What is the goal?**
 
@@ -239,7 +252,7 @@ Their goal is straightforward in that they want users to hail taxi rides via the
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following custom events:
+These actions could then be tagged as the following custom events:
 
 - Began Registration
 - Completed Registration
@@ -260,7 +273,7 @@ After implementing the events, you can now run the following campaigns:
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following custom attributes:
+These characteristics could then be tagged as the following custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Number Type)
@@ -276,7 +289,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 ### General best practices
 
-#### Don’t over-segment your tracking
+#### Don’t over-segment your tracking {#over-segment}
 
 - Being more generic will help you target more users and draw more useful divisions between user segments
 - For example, rather than capturing a separate event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event
@@ -296,7 +309,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [user data API][9].
 - Target specific users with our [messaging API][10] for both general and transactional messages.
 
-User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. Below are some examples of suitable and unsuitable user IDs.
+User IDs must be less than 512 characters long and should be private and not easily obtained (e.g., not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
 
 Good options for User IDs:
 
@@ -323,16 +336,16 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating events
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same over-segmentation problems described above. Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segment). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
 ### Technical limitations and constraints
-Please be mindful of the following limitations and constraints when implementing custom events:
+Be mindful of the following limitations and constraints when implementing custom events:
 
 #### Length constraints
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
 #### Content constraints
-The following content will be trimmed programmatically from your attributes and events. Please take care not to use the following:
+The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:
 
 - Leading and trailing whitespace
 - Newlines
@@ -377,7 +390,7 @@ Additionally, the following keys are reserved and cannot be used as custom event
 
 ### Parsing a generic name field
 
-If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
+If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"

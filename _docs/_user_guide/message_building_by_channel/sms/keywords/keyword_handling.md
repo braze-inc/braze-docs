@@ -11,7 +11,7 @@ channel:
 
 <br>
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
+Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
 {% endalert %}
 
 ## Two-way messaging (custom keyword responses)
@@ -27,7 +27,7 @@ SMS with Braze gives you the option to create keyword triggers, custom responses
 
 #### Add keyword triggers
 
-In addition to the default opt-in and opt-out keywords listed above, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
+In addition to the default opt-in and opt-out keywords, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
 
 ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups.<br><br>
@@ -57,7 +57,7 @@ You are able to manage your own responses that get sent to users after they text
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. <br><br>
 2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon.<br><br> 
-3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the rules below that apply to keywords and keyword responses.<br><br>
+3. In the dialogue box that pops up, edit and save your response. Be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the following rules that apply to keywords and keyword responses.<br><br>
 
 ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
 
@@ -100,7 +100,7 @@ To create a custom keyword category, edit the appropriate subscription group, an
 
 Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
 
-Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
+Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
 ### Lifecycle-specific keywords
 

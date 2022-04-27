@@ -111,9 +111,9 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-Please be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
+Be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
-Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls. Documentation on that endpoint is below.
+Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.
 
 ## Response
 
@@ -127,7 +127,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-For an example of the data that is accessible via this endpoint see the example below.
+For an example of the data that is accessible via this endpoint see the following example.
 
 ### Sample user export file output
 

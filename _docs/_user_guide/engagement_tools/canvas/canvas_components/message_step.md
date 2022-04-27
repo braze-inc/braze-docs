@@ -14,7 +14,7 @@ tool: Canvas
 Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
 {% alert important %}
-Canvas Message Steps are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Canvas Message Steps are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Create a Message Step

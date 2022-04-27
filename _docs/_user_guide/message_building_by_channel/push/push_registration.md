@@ -45,7 +45,7 @@ There are two ways you can check a user's push subscription state with Braze:
 
 ## Push token management
 
-Check out the chart below for actions that lead to push tokens changes or removal from user profiles. 
+Check out the following chart for actions that lead to push tokens changes or removal from user profiles. 
 
 | Action | Description |
 | ------ | ----------- |

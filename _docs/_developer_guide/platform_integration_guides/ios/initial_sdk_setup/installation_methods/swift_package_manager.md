@@ -19,11 +19,11 @@ tvOS is not currently available via Swift Package Manager.
 
 ### Import SDK version
 
-Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the add button (+) at the bottom left.
+Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button below the packages list.
 
 ![][2]
 
-When importing SDK version `3.33.1` and above, enter the URL of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click **Next**. 
+When importing SDK version `3.33.1` or later, enter the URL of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click **Next**. 
 
 For versions `3.29.0` through `3.32.0`, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
 

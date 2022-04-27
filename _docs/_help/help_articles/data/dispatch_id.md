@@ -19,13 +19,9 @@ This can result in two different users having different `dispatch_ids` for a sin
 
 ## Dispatch ID behavior in campaigns
 
-Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user.
+Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user. For example, two users in your scheduled campaign audience will have the same `dispatch_id`. However, two users in the audience of an API-triggered campaign will have different `dispatch_ids`.
 
-Multichannel campaigns will have the same behavior as described above.
-
-For example, if Becky and Tom are both included in your scheduled campaign audience, then they will have the same `dispatch_id`.
-
-If they are included in the audience of an API-triggered campaign, they will have different `dispatch_ids`.
+Multichannel campaigns will have the same behavior as described for their delivery type.
 
 {% alert warning %}
 Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas step will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.

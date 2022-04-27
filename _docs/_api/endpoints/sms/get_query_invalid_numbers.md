@@ -23,18 +23,18 @@ This endpoint allows you to pull a list of phone numbers that have been deemed "
 
 ## Request parameters
 
-You must provide either a `start_date` and an `end_date` OR `phone_numbers`.
-
-If you provide a `start_date`, an `end_date`, and `phone_numbers`, we prioritize the given phone numbers and disregard the date range.
-
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Optional* | String in YYYY-MM-DD format| Start date of the range to retrieve invalid phone numbers, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
-| `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API. |
+| `start_date` | Optional <br>(see note) | String in YYYY-MM-DD format| Start date of the range to retrieve invalid phone numbers, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
+| `end_date` | Optional <br>(see note) | String in YYYY-MM-DD format | End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
-| `phone_numbers` | Optional* | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
+| `phone_numbers` | Optional <br>(see note) | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+You must provide either a `start_date` and an `end_date` OR `phone_numbers`. If you provide all three, `start_date`, `end_date`, and `phone_numbers`, we prioritize the given phone numbers and disregard the date range.
+{% endalert %}
 
 If your date range has more than the `limit` number of invalid phone numbers, you will need to make multiple API calls with increasing the `offset` each time until a call returns either fewer than `limit` or zero results.
 

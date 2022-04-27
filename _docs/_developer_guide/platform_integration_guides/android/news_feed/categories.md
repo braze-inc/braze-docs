@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This reference article shows how to define a News Feed category in your Android application."
+description: "This reference article shows how to define a News Feed category in your Android or FireOS application."
 channel:
   - news feed
   
