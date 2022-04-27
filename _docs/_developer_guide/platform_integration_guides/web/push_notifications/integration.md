@@ -52,7 +52,7 @@ While industry best practice is to make your whole site secure, customers who ca
 ### Step 1: Configure your site's service worker
 
 - If you don't already have a Service Worker, create a new file named `service-worker.js` with the following snippet, and place it in the root directory of your website.
-- Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) initialization option to `true` when initializing the Web SDK.
+- Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) initialization option to `true` when initializing the Web SDK.
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsample-build%2Fservice-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
