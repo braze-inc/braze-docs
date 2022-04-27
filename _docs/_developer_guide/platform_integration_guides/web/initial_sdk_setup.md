@@ -108,7 +108,7 @@ To assist in troubleshooting, you can enable verbose logging in the SDK. This is
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
-    baseUrl: "",
+    baseUrl: "YOUR-API-ENDPOINT",
     enableLogging: true
 });
 
