@@ -382,6 +382,13 @@ You should ensure that any API campaigns with the [Android push object][63] para
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 
+The channel name and description can also be configured in `braze.xml`.
+
+```xml
+<string name="com_braze_default_notification_channel_name">Default Channel</string>
+<string name="com_braze_default_notification_channel_description">This is the default channel.</string>
+```
+
 ### Step 6: Test notification display and analytics
 
 #### Testing display
