@@ -82,6 +82,7 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 
 - External IDs uploaded via CSV will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading only external IDs, this can be done without consuming data points. If you were to add additional data like user email or phone number in your import, that would overwrite existing user data, consuming your data points.
 - Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
+- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count towards data point consumption.
 
 {% alert important %}
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.
@@ -110,6 +111,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g., `2019-11-20T18:38:57`) | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `subscription_group_id` | String | The `id` of your subscription group | No |
+| `subscription_state` | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | Yes if `subscription_group_id` is used |
 
 
 {% alert note %}
@@ -136,6 +139,22 @@ Arrays, push tokens, and custom event data types are not supported in User Impor
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
 For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
+{% endalert %}
+
+### Updating Subscription Group status via CSV
+
+You can add users into Email or SMS Subscription Groups via User Import. This is particularly useful for SMS, since a user must be enrolled into an SMS Subscription Group in order to be messaged via the SMS channel. For more information, refer to the page [SMS Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+
+If you are updating Subscription Group status, you must have the following two columns in your CSV:
+
+- `subscription_group_id`: The `id` of the [Subscription Group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
+- `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).
+
+![Subscription Group Update CSV Example][9]{: style="max-width:80%" }
+
+
+{% alert important %}
+Only a single `subscription_group_id` can be set per row in the User Import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple Subscription Groups, you will need to do multiple imports.
 {% endalert %}
 
 ### Importing a CSV
@@ -244,6 +263,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [4]: {% image_buster /assets/img/importcsv2.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
+[9]: {% image_buster /assets/img/subscription_group_import.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
