@@ -37,5 +37,5 @@ Refer to the [`changeUser()` documentation][4] for more information.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-braze.html#.changeUser "Javadocs"
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
 [5]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases
