@@ -1,0 +1,48 @@
+---
+nav_title: Video
+article_title: Video in In-App Messages
+page_order: 4
+description: ""
+channel:
+  - in-app messages
+---
+
+# Video in in-app messages {#video}
+
+To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL).
+
+To use a local video asset, be sure to include this file when uploading assets to your campaign.
+
+To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
+
+{% alert note %}
+iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+{% endalert %}
+
+To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/).
+
+You can find other possible `<video>` options on [MDN Web Docs][9]
+
+```html
+<video class="video" autoplay muted playsinline controls>
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
+  Your device does not support playing this video.
+</video>
+```
+
+{% alert warning %}
+Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
+{% endalert %}
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
+[2]: https://github.com/braze-inc/in-app-message-templates
+[4]: {% image_buster /assets/img/email_capture_config.png %}
+[5]: {% image_buster /assets/img/email_capture.png %}
+[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
+[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
+[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
+[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
+[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
+[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}
