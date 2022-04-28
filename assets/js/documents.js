@@ -116,7 +116,7 @@ $(document).ready(function() {
   $("#braze_header").click((e) => {
     setTimeout(function() {
       let hide_backdrop = false;
-      $(".nav-link.dropdown-toggle").each((eb, ea) => {
+      $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
         let itm = $(ea);
         console.log(itm.attr('id'), itm.attr('aria-expanded'),)
         if(itm.attr('aria-expanded') == 'true') {
@@ -128,8 +128,8 @@ $(document).ready(function() {
       }
     }, 100);
   });
-  $(".nav-link.dropdown-toggle").click((e) => {
-    $(".nav-link.dropdown-toggle").each((e, ea) => {
+  $("#braze_header .nav-link.dropdown-toggle").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
       ea.children[0].classList.remove("border-focus-show");
     });
     const isOpen = e.currentTarget.ariaExpanded !== "true";
@@ -138,7 +138,7 @@ $(document).ready(function() {
     $("#backdrop").toggleClass("backdrop-show", isOpen);
   });
   $("#backdrop").click((e) => {
-    $(".nav-link.dropdown-toggle").each((e, ea) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
       ea.children[0].classList.remove("border-focus-show");
     });
     e.currentTarget.classList.remove("backdrop-show");
