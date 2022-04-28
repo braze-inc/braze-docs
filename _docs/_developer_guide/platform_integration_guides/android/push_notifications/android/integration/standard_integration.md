@@ -385,8 +385,8 @@ Other than the default notification channel, Braze will not create any channels.
 The default channel name and description can also be configured in `braze.xml`.
 
 ```xml
-<string name="com_braze_default_notification_channel_name">Default Channel</string>
-<string name="com_braze_default_notification_channel_description">This is the default channel.</string>
+<string name="com_braze_default_notification_channel_name">Your channel name</string>
+<string name="com_braze_default_notification_channel_description">Your channel description</string>
 ```
 
 ### Step 6: Test notification display and analytics
