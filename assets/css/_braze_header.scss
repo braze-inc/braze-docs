@@ -275,11 +275,9 @@ $header_transition_time: 0.25s;
       left: -605px !important;
     }
     @media (min-width: $window-large-px) {
-      left: -605px !important;
+      left: -405px !important;
     }
-    @media (min-width: $window-xlarge-px) {
-      left: -465px !important;
-    }
+
     @media (min-width: $window-xxlarge-px) {
       left: -400px !important;
     }
@@ -309,23 +307,15 @@ $header_transition_time: 0.25s;
         padding-left: 0;
         font-size: 1rem;
       }
-      max-width: 740px;
-      width: 740px;
+      max-width: 700px;
+      width: 700px;
 
       @media (min-width: $window-large-px) {
-        max-width: 900px;
-        width: 900px;
         .dropdown-div {
           padding: 2.5rem 4rem;
         }
       }
-      @media (min-width: $window-xxlarge-px) {
-        width: 900px;
-        max-width: 900px;
-        .dropdown-div {
-          padding: 2.5rem 4rem;
-        }
-      }
+
     }
   }
 
