@@ -78,7 +78,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %}){: style="max-width:85%"}
+![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %}){: style="max-width:85%"}
 {% endalert %}
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
