@@ -91,7 +91,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% tab Javascript %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   enableSdkAuthentication: true,
@@ -159,14 +159,14 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 Supply the JWT Token when calling `changeUser`:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
@@ -245,7 +245,7 @@ These callback methods are a great place to add your own monitoring or error-log
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
   // TODO: optionally log to your error-reporting service
   // TODO: check if the errorEvent user matches the currently logged-in user
