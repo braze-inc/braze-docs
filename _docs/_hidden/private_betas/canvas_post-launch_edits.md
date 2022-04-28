@@ -14,7 +14,7 @@ In the Canvas V2 workflow, you can now edit your Canvases after they have launch
 - Canvas variants 
 - Connections between Canvas steps  
 
-You can edit the connections between Canvas components. by clicking the connection between Canvas components and moving it elsewhere. Need to delete a step? Click on the step's gear icon and select **Delete**.
+You can edit the connections between Canvas components by clicking the connection between Canvas components and moving it elsewhere. Need to delete a step? Click on the step's gear icon and select **Delete**.
 
 If you delete a [Delay Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), you can optionally redirect the users currently waiting in the step into another Canvas V2 step. For Delay Steps, users will remain in the step until the end of the delay period. For Action Paths Steps, users will remain in the step until the end of the evaluation window.
 
@@ -31,7 +31,7 @@ There are several things to keep in mind when editing or adding to your Canvas a
 
 Note the following details for editing Canvas steps with a time delay:
 - If you update the delay in the Delay Step or evaluation window in the Action Paths Step, only new users entering the Canvas and users that haven’t been queued for that step will receive the message at the updated time delay.
-- If you delete a step with a time delay (i.e, Delay Step or Action Paths Step) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let’s say you delete a Delay Step with a one day delay and redirect those users to a Message Step. In this case, the users will only be redirected after the one day delay has been completed.
+- If you delete a step with a time delay (i.e., Delay Step or Action Paths Step) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let’s say you delete a Delay Step with a one day delay and redirect those users to a Message Step. In this case, the users will only be redirected after the one day delay has been completed.
 
 If your Canvas contains one or more [Experiment Paths Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), deleting steps could invalidate the results of this step.
 
