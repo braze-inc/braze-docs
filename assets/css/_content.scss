@@ -694,3 +694,33 @@ blockquote {
       background-color: $grey-athens;
     }
 }
+
+
+.skip-main {
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    z-index: -999;
+    &:active, &:focus {
+        --tw-bg-opacity: 1;
+        --tw-text-opacity: 1;
+        background-color: rgba(0,0,0,var(--tw-bg-opacity));
+        color: rgba(255,255,255,var(--tw-text-opacity));
+        font-size: 1rem;
+        height: auto;
+        left: auto;
+        line-height: 1.5rem;
+        overflow: auto;
+        padding: .5rem;
+        text-align: center;
+        top: auto;
+        width: 12rem;
+        z-index: 999
+    }
+}
+
+
+
