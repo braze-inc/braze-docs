@@ -337,7 +337,7 @@ $header_transition_time: 0.25s;
       left: -465px !important;
     }
     @media (min-width: $window-xxlarge-px) {
-      left: -740px !important;
+      left: -400px !important;
     }
     #dropdown-resources {
       .dropdown-div {
@@ -374,8 +374,8 @@ $header_transition_time: 0.25s;
         }
       }
       @media (min-width: $window-xxlarge-px) {
-        width: 1200px;
-        max-width: 1200px;
+        width: 900px;
+        max-width: 900px;
         .dropdown-div {
           padding: 2.5rem 4rem;
         }
