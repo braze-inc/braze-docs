@@ -99,7 +99,7 @@ Since cookies are not supported in browser extensions, you can disable cookies b
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
-    baseUrl: "",
+    baseUrl: "YOUR-API-ENDPOINT",
     enableLogging: true,
     noCookies: true
 });
