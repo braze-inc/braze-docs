@@ -15,19 +15,19 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Custom HTML"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/
-  fa_icon: fa-rectangle-code
+  fa_icon: fas fa-code
 - name: "Web Modal with CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/modal_with_css/
-  fa_icon: fa-display-code
+  fa_icon: fa-brands fa-css3-alt
 - name: "Email Capture Form"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/email_capture_form/
-  fa_icon: envelope-open-text
+  fa_icon: fa-solid fa-envelope-open-text
 - name: "Color Profiles and CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/
-  fa_icon: fa-palette
+  fa_icon: fa-solid fa-palette
 - name: "Video"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/video/
-  fa_icon: fa-video
+  fa_icon: fa-solid fa-video
 
 ---
 <br><br>
