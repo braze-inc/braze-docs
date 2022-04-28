@@ -214,7 +214,7 @@ If you choose to only use one button, it will automatically adjust to take over 
 
 #### On-click behavior {#button-actions}
 
-When your customer clicks on a button in your in-app message, your link can either lead them deeper into your app or to another site. The following actions are available to take for button clicks:
+When your customer clicks on a button in your in-app message, the following actions are available. 
 
 | Action | Description |
 |---|---|
@@ -225,6 +225,10 @@ When your customer clicks on a button in your in-app message, your link can eith
 | Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
 | Request Push Permission | (iOS and Web only) Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for push. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
+
+{% sdk_min_versions web:4.0.1 ios:5.1.0 android:19.1.0 %}
 
 #### iOS device options
 
