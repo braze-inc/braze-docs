@@ -1,3 +1,17 @@
+---
+nav_title: Peak Partner Page
+article_title: Peak Partner
+page page_order: 1
+
+description: "Integrating Decision Intelligence from Peak’s platform to Braze platform"
+alias: /partners/Peak/
+
+page_type: partner
+search_tag: Partner, Peak, Braze, Integration, Connect, Email, Reccomender, Decision Intelligence
+hidden: true
+
+---
+
 # Peak
 
 > Peak, a Decision Intelligence platform, is an end to outcome system, where Decision Intelligence is the commercial application of AI to enhance business decision-making, to grow revenues and profits
@@ -56,14 +70,3 @@ Braze.
 
 
 [1]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/
-
----
-nav_title: Peak Partner Page article_title: Peak Partner Page page_order: 1
-
-description: "Integrating Decision Intelligence from Peak’s platform to Braze platform"
-alias: /partners/Peak/
-
-page_type: partner search_tag: Partner, Peak, Braze, Integration, Connect, Email, Reccomender, Decision Intelligence
-hidden: true
-
----
