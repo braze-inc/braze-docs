@@ -29,5 +29,11 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/video/
   fa_icon: fa-solid fa-video
 
+local_redirect: # Local hash url redirect list
+  custom-html-messages: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/'
+  web-modal-css: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/modal_with_css'
+  email-capture-form: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/email_capture_form/'
+  reusable-color-profiles: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/'
+  video: '/docs/user_guide/message_building_by_channel/in-app_messages/customize/video'
 ---
 <br><br>
