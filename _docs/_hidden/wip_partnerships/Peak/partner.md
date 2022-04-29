@@ -15,7 +15,7 @@ this generates the AI driven outputs that will subsequently be integrated into B
 | ----------- | ----------- |
 | Peak Tenant | An instance of the Peak platform, known as a Tenant, is required to host and orchestrate the integration |
 | Decision Intelligence Solution | Integration between Peak and Braze is based on AI driven outputs and thus requires a Peak or Customer deployed solution, within the above Tenant |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the ** Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 
 ## Use cases
 
