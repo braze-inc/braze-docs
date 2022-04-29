@@ -181,6 +181,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: Peak
+  url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 
