@@ -130,7 +130,7 @@ The Braze and [Wyng]({{site.baseurl}}/partners/message_personalization/dynamic_c
 
 #### Grouparoo - Workflow automation
 
-The Braze and [Grouparoo]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/) integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
+The Braze and [Grouparoo]({{site.baseurl}}/help/release_notes/deprecations/grouparoo) integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
 
 #### Lexer - Customer data platform
 

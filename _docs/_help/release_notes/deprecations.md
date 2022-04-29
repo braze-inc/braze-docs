@@ -24,10 +24,19 @@ guide_featured_list:
   - name: Twilio Webhook Integration
     link: /docs/help/release_notes/deprecations/twilio/
     fa_icon: fa fa-commenting
-
+  - name: Grouparoo Partnership
+    link: /docs/help/release_notes/deprecations/grouparoo
+    fa_icon: fa-solid fa-user-group
+    
 ---
 
 # Deprecations log
+
+## Grouparoo partnership
+
+**Support withdrawn**: April 2022
+
+Support for Grouparoo has been discontinued as of April 2022.
 
 ## Braze Windows SDK
 

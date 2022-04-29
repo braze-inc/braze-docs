@@ -30,7 +30,7 @@ There are a few reasons why this could be occurring:
 - If you force quit your application, your push notifications will not be displayed while your app is not running.
 - Make sure the [Notification Priority][15] setting is set to `HIGH` in your campaign.
 - The ADM API key in your `api_key.txt` is incorrect or contains invalid characters.
-- The `AppboyAdmReceiver` is not properly registered in `AndroidManifest.xml` with intent filters for `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` and `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
+- The `BrazeAmazonDeviceMessagingReceiver` is not properly registered in `AndroidManifest.xml` with intent filters for `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` and `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
 
 ### "Push registered" users no longer enabled after sending messages
 
