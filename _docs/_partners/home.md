@@ -179,7 +179,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-- name: Digioh
+- name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
