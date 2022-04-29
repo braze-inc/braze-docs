@@ -23,7 +23,7 @@ You can also [duplicate][6] and [archive][7] templates! Learn more about creatin
 
 ## CSS template {#in-app-message-templates}
 
-You can customize a complete CSS template for your [Web Modal in-app message](#web-modal-css).
+You can customize a complete CSS template for your [Web Modal in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/modal_with_css/).
 
 Name and tag your CSS Template, then choose whether or not it will be your default template. You can write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
 
@@ -82,14 +82,6 @@ As you can see, you can edit everything from the background color to font size a
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/braze-inc/in-app-message-templates
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
 [7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
 [8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}

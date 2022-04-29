@@ -243,12 +243,3 @@ You can also track new custom button names—up to 100 unique names per campaign
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}
