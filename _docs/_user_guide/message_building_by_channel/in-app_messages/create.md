@@ -234,7 +234,7 @@ When your customer clicks on a button in your in-app message, the following acti
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
 
-{% sdk_min_versions web:4.0.1 ios:5.1.0 android:20.0.0 %}
+{% sdk_min_versions ios:5.1.0 android:20.0.0 web:4.0.1 %}
 
 #### iOS device options
 
