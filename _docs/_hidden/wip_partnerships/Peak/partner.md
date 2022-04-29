@@ -12,7 +12,7 @@ hidden: true
 
 ---
 
-# Peak
+# [Peak](https://platform.peak.ai/)
 
 > Peak, a Decision Intelligence platform, is an end to outcome system, where Decision Intelligence is the commercial application of AI to enhance business decision-making, to grow revenues and profits
 
