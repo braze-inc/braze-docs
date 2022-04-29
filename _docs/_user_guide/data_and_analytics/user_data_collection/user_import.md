@@ -39,7 +39,11 @@ If you are uploading or updating user profiles that are alias only, you must hav
 - `user_alias_name`: A unique user identifier; an alternative to the `external_id`.
 - `user_alias_label`: A common label by which to group user aliases.
 
-![User Alias Import CSV Example][8]{: style="max-width:80%" }
+| user_alias_name | user_alias_label | last_name | email | sample_attribute |
+| --- | --- | --- | --- | --- |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
+| 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
 
@@ -148,7 +152,11 @@ If you are updating subscription group status, you must have the following two c
 - `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
 - `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).
 
-![Subscription group update csv example][9]{: style="max-width:80%" }
+| external_id | first_name | subscription_group_id | subscription_state |
+| ----------- | ---------- | --------------------- | ------------------ |
+| A8i3mkd99 | Colby | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
+| k2LNhj8Ks | Tom | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
 Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you will need to do multiple imports.
