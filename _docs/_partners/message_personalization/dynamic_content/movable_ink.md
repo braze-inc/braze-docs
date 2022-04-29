@@ -118,13 +118,13 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 1. In the Braze platform, paste the URL in the **Rich Notification Media** field.<br><br>
 2. Provide a unique URL to help prevent caching. To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab  - this will evaluate the code and show a preview.<br><br>
-3. Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate Segment membership` option located on the "Target Users" step of a campaign. If this is option is not available, reach out to your Customer Success Manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
+3. (In-app messages only) Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, reach out to your Customer Success Manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
 
 ## Troubleshooting
 
 #### Dynamic images not showing correctly? What channel are you experiencing difficulties with?
 - **Push**: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **In-app messages and Content Cards**: Make sure that the image URL is unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
+- **In-app messages and Content Cards**: Make sure that the image URL is unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [in-app and content card messages instructions][instructions]. 
 - **Image not loading**: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
 #### Having trouble showing GIFs on Android?
