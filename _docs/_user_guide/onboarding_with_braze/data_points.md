@@ -47,9 +47,9 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Profile data | Email address | Yes |
 |Profile data | Gender | Yes |
 |Profile data | Age group | Yes |
-|Profile data | Country | Yes |
+|Profile data | Country | Yes* |
 |Profile data | City | Yes |
-|Profile data | Language | Yes |
+|Profile data | Language | Yes* |
 |Profile data | Most recent device locale | Yes |
 |Profile data | Time zone | Yes |
 |Profile data | Date of birth (DOB) | Yes |
@@ -69,6 +69,8 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Amplitude cohort assignment | All assignments | Yes |
 |Mixpanel cohort assignment | All assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+<sup>*When manually collected. Does not count towards consumption when automatically collected.</sup>
 
 {% alert note %}
 In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
