@@ -13,10 +13,6 @@ tool: Canvas
 
 Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
-{% alert important %}
-Canvas Message Steps are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Create a Message Step
 
 ![][1]{: style="float:right;max-width:19%;margin-left:15px;"}
@@ -39,9 +35,7 @@ If Quiet Hours are enabled, the Message Step also allows you to override this se
 
 ![The Delivery Settings tab for Message Step settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time.][4]
 
-{% alert note %} 
-For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
-{% endalert %}
+For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`. Canvas entry properties are properties from the event that kicked off the Canvas. These properties can only be used in the first full step of a Canvas. On the other hand, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ## Analytics
 
