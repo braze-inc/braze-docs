@@ -35,7 +35,7 @@ If Quiet Hours are enabled, the Message Step also allows you to override this se
 
 ![The Delivery Settings tab for Message Step settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time.][4]
 
-For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`. Canvas entry properties are properties from the event that kicked off the Canvas. These properties can only be used in the first full step of a Canvas. On the other hand, event properties originate from an event or action that occurs as the user goes through their workflow.
+For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ## Analytics
 
