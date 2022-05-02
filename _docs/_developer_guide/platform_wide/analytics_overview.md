@@ -92,7 +92,17 @@ For example, if an eCommerce application wanted to send a message to a user when
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
-![A Liquid example of a user pulling custom event properties to set up different message options based on the time spent on a level.][19]{: style="max-width:75%;"}
+{% raw %}
+```liquid
+{% if {{event_properties.${time_spent}}} < 600 %}
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+{% elsif {{event_properties.${time_spent}}} < 1800 %}
+Don't forget to visit the town store between levels to upgrade your tools.
+{% else %}
+Talk to villagers for essential tips on how to beat levels!
+{% endif %}
+```
+{% endraw %}
 
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our support team, as this may incur additional data costs.
 
@@ -401,4 +411,3 @@ If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can
 [16]: #example-case
 [17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
