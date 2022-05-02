@@ -29,15 +29,15 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 ## Timestamps
 
-All timestamps exported by Currents are sent in the utc time zone. For some events where it is available, a time zone field is also included, which delivers the iana format of the user's local time zone at the time of the event.
+All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the iana format of the user's local time zone at the time of the event.
 
-## Avro
+## Apache Avro
 
-The Braze Currents data storage integrations output data in the `.avro` format. we chose [avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products:
+The Braze Currents data storage integrations output data in the `.avro` format. We chose [Apache Avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products: 
 
--   Avro is supported by nearly every major data warehouse.
--   In the event that you desire to leave your data in S3, Avro compresses better than CSV and JSON, so you pay less for storage and potentially can use less CPU to parse the data.
--   Avro requires schemas when data is written or read. Schemas can be evolved over time to handle the addition of fields without breaking.
+- Avro is supported by nearly every major data warehouse.
+- In the event that you desire to leave your data in S3, Avro compresses better than CSV and JSON, so you pay less for storage and potentially can use less CPU to parse the data.
+- Avro requires schemas when data is written or read. Schemas can be evolved over time to handle the addition of fields without breaking.
 
 Currents will create a file for each event type using the following format:
 
@@ -45,7 +45,9 @@ Currents will create a file for each event type using the following format:
 <your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
 ```
 
-_Can't see the code because of the scroll bar? See how to fix that [here]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)._
+{% alert tip %}
+Can't see the code because of the scroll bar? See how to fix that [here]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
+{% endalert %}
 
 |Filename Segment |Definition|
 |---|---|
@@ -54,7 +56,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{site
 | `<connection-type-identifier>` | The identifier for type of connection. Options are "S3", "AzureBlob", or "GCS". |
 | `<integration-id>` | The unique ID for this Currents integration. |
 | `<event-type>` | The type of the event in the file. |
-| `<date>` | The hour that events are queued in our system for processing. Formatted YYYY-MM-DD-HH. |
+| `<date>` | The hour that events are queued in our system for processing in the UTC time zone. Formatted YYYY-MM-DD-HH. |
 | `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
 | `<zone>` | For internal use by Braze. Single letter. |
 | `<partition>` | For internal use by Braze. Integer. |
@@ -67,7 +69,7 @@ File naming conventions may change in the future, Braze recommends searching all
 
 ### Avro write threshold
 
-Data files will be written to your storage bucket once you hit _any of the set thresholds_, whichever happens first:
+Data files will be written to your storage bucket once you hit any of the set thresholds, whichever happens first:
 
 | Partner | Write Threshold |
 |---|---|
