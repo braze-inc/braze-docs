@@ -38,13 +38,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "external_send_id": (optional, string) see the following request parameters,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
-  "recipients": (required, object)
-    [{
+  "recipient": (required, object)
+    {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User alias object) User alias of the user to receive message,
       "external_user_id": (optional, string) External identifier of user to receive message,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
-    }]
+    }
 }
 ```
 
