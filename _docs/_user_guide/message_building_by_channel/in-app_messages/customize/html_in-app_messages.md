@@ -28,7 +28,7 @@ To enable HTML in-app messages in the Web SDK, your SDK integration must supply 
 
 ## JavaScript bridge {#javascript-bridge}
 
-HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
+HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
 For example, to log a custom attribute and custom event, then close the message, you could use the following JavaScript within your HTML in-app message:
 
@@ -55,7 +55,7 @@ window.addEventListener("ab.BridgeReady", function(){
 </script>
 ```
 
-### appboyBridge methods
+### Javascript Bridge methods {#bridge}
 
 The following JavaScript methods are supported within Braze's HTML in-app messages:
 
@@ -119,7 +119,7 @@ For mobile apps, you can open the News Feed by setting a link's URL to `appboy:/
 
 For example, `<a href="appboy://feed">View Feed</a>`.
 
-### Close in-app message (mobile only)
+### Close in-app message
 
 To close an in-app message, you can use the `appboyBridge.closeMessage()` javascript method.
 
@@ -180,13 +180,16 @@ You can add new or existing assets to your campaign.
 
 To add new assets to your campaign, use the drag-and-drop section to upload a file. Assets added in this section will also be automatically added to the Media Library. To add assets that you've already uploaded to the Media Library, select **Add from Media Library**.
 
-After your assets are added, they will appear in the **Assets for this campaign** section. Hover over an asset from the list and select <i class="fas fa-copy"></i> **Copy** to copy the file's URL to your clipboard. Then paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+After your assets are added, they will appear in the **Assets for this campaign** section. 
 
-Alternatively, you can use the asset file names directly in the HTML message.
+If an asset's filename matches that of a local HTML asset it will be replaced automatically (for example `cat.png` is uploaded and `<img src="cat.png" />` exists). 
+
+Otherwise, hover over an asset from the list and select <i class="fas fa-copy"></i> **Copy** to copy the file's URL to your clipboard. Then paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+
 
 ### HTML editor
 
-Changes you make in the HTML automatically render in the preview panel as you type. Any `appboyBridge` JavaScript methods you use in your HTML won’t update user profiles while previewing in the dashboard.
+Changes you make in the HTML automatically render in the preview panel as you type. Any [`appboyBridge` JavaScript](#bridge) methods you use in your HTML won’t update user profiles while previewing in the dashboard.
 
 You can configure **Editor Settings** to toggle wrap text, change the font size, or choose a color theme. The code editor includes different color themes for syntax highlighting, which helps you spot potential code errors directly in the message composer and better organize your code (using spaces or tabs—whichever side of that argument you're on).
 
@@ -205,6 +208,7 @@ You can track performance within your custom code in-app message using the [`app
 | Button 1   | `appboyBridge.logClick("0")` |
 | Button 2   | `appboyBridge.logClick("1")` |
 | Body click | `appboyBridge.logClick()`    |
+| Custom button tracking |`appboyBridge.logClick("your custom name here")`|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
