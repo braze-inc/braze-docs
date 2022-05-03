@@ -66,7 +66,7 @@ Further instructions on object and event syncing can be found in [Hightouch docu
 ### Step 1: Get the Braze data import Key
 In Braze, navigate to **Technology Partners** and select **Hightouch**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
 
-### Step 2: Add Braze Cohorts as a Destination in Hightouch
+### Step 2: Add Braze cohorts as a Destination in Hightouch
 Navigate to the **Destination** page in your Hightouch workspace, search for **Braze Cohorts**, and click **Continue**. From there, take your REST endpoint and data import key and click **Continue**.<br><br>![][7]{: style="max-width:90%;"}
 
 ### Step 3: Sync a model (or audience) into Braze Cohorts
