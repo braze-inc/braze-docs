@@ -50,6 +50,10 @@ guide_featured_list:
 
 ## June 2022
 
+## Campaign approval
+
+Campaign approval adds a review process to your workflow before launching a campaign. Now, you can ensure that each confirmation is approved in order to launch the campaign. To learn more about the approval process, check out [Campaign approval]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/).
+
 ### Canvas Message Step
 
 Message Steps allow you to add a standalone message where you want in your Canvas Flow. Visit our [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) article to learn more.
