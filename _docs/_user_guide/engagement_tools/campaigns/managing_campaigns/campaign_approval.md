@@ -2,7 +2,7 @@
 nav_title: Approving Campaigns
 article_title: Approving Campaigns
 alias: "/campaign_approval/"
-page order: 0
+page_order: 0
 page_type: reference
 description: "This page provides an overview of the campaign approval process."
 tool: Campaigns
