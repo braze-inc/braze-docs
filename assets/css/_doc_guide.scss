@@ -279,7 +279,7 @@ $doc_transition_time : 0.25s;
 }
 
 #doc_right {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   display: -webkit-flex; /* Safari */
   flex-direction: column;
@@ -379,9 +379,9 @@ $doc_transition_time : 0.25s;
   }
 }
 #doc-main-search {
+  margin: 20px auto auto auto;
   @media (min-width:  $window-xxlarge-px) {
     max-width: 1500px;
-    margin: auto;
   }
 }
 #footer_div {

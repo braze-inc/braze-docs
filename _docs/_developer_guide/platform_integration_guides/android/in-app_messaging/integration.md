@@ -38,7 +38,7 @@ HTML full in-app messages are [`InAppMessageHtmlFull`][51] instances, which impl
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
 
-{% tabs %}
+{% tabs local %}
 {% tab Slideup %}
 [`Slideup`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
