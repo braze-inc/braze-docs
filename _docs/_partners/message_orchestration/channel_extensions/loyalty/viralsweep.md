@@ -67,7 +67,7 @@ Yes. If you run a promotion and ViralSweep passes someone to Braze, and then you
 
 If you have connected to Braze and data is not being added to your account, it may be because:
 
-- **Email Already in Braze**<br>
+- **Email already exists in Braze**<br>
 The email address entered into the promotion may already be in your Braze account, so it will not be added again; it will only be updated if new information is provided for that contact.<br><br>
 - **Email already entered into ViralSweep**<br>
 The email address entered into the promotion has already been entered previously, so it is not passed to Braze again. This can happen if you set up your Braze integration after you have already entered the promotion.
