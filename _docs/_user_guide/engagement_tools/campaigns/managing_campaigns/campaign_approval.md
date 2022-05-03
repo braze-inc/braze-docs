@@ -1,10 +1,14 @@
 ---
-nav_title: Campaign Approval
-permalink: /campaign_approval/
-hidden: true
+nav_title: Approving Campaigns
+article_title: Approving Campaigns
+alias: "/campaign_approval/"
+page order: 0
+page_type: reference
+description: "This page provides an overview of the campaign approval process."
+tool: Campaigns
 ---
 
-# Campaign approval
+# Approving campaigns
 
 Campaign approval adds a review process to your workflow before launching a campaign. Available exclusively for campaigns, this feature adds new states available in the campaign confirmation workflow step. Now, you can ensure that each confirmation is approved in order to launch the campaign. 
 
