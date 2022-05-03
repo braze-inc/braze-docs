@@ -172,13 +172,13 @@ The following file types are supported for upload:
 Braze recommends uploading assets to the Media Library for two reasons:
 
 1. Assets added to a campaign via the Media Library allow your messages to be displayed even while the user is offline, or has poor internet connection.
-2. Assets uploaded to Braze can be more easily reused across campaigns.
+2. Assets uploaded to Braze can be reused across campaigns.
 
 ##### Adding asset files
 
 You can add new or existing assets to your campaign.
 
-To add new assets to your campaign, use the drag-and-drop section to upload a file. To add assets that you've already uploaded to Braze's Media Library, select **Add from Media Library**.
+To add new assets to your campaign, use the drag-and-drop section to upload a file. Assets added in this section will also be automatically added to the Media Library. To add assets that you've already uploaded to the Media Library, select **Add from Media Library**.
 
 After your assets are added, they will appear in the **Assets for this campaign** section. Hover over an asset from the list and select <i class="fas fa-copy"></i> **Copy** to copy the file's URL to your clipboard. Then paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
@@ -186,7 +186,7 @@ Alternatively, you can use the asset file names directly in the HTML message.
 
 ### HTML editor
 
-Changes you make in the HTML automatically render in the Preview panel as you type. Any `appboyBridge` JavaScript methods you use in your HTML won’t update user profiles while previewing in the dashboard.
+Changes you make in the HTML automatically render in the preview panel as you type. Any `appboyBridge` JavaScript methods you use in your HTML won’t update user profiles while previewing in the dashboard.
 
 You can configure **Editor Settings** to toggle wrap text, change the font size, or choose a color theme. The code editor includes different color themes for syntax highlighting, which helps you spot potential code errors directly in the message composer and better organize your code (using spaces or tabs—whichever side of that argument you're on).
 
