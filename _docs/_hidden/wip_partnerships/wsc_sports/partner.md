@@ -44,7 +44,6 @@ Our actions will deliver a request to the following braze endpoints:
 | ----------- | 
 | /messages/schedule/create | 
 | /messages/send |
-{: .reset-td-br-1 }
 
 ### Step 3: Using Clipro
 
