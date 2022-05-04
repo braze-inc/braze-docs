@@ -45,6 +45,18 @@ Our actions will deliver a request to the following braze endpoints:
 | /messages/schedule/create | 
 | /messages/send |
 
+Example:
+```
+{
+  "apple_push": {
+    "alert": {
+      "body": "New Video"
+    },
+    "asset_url": "https://wsczoominnba.prod-cdn.clipro.tv/nba-editor/9109acd0-52a2-4475-8667-210fb212cd8c.mp4",
+    "asset_file_type": "mp4"
+  }
+}
+```
 ### Step 3: Using Clipro
 
 The clipro app will handle the creation of you request
