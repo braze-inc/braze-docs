@@ -111,7 +111,17 @@ To do so, switch to the **Test** tab and send a test webhook. You can test the w
 
 After sending the test webhook, a dialog will appear with the response message. If the webhook request is unsuccessful, refer to the error message for assistance in troubleshooting your webhook. The following example details the response of a webhook with an invalid webhook URL.
 
-![Webhook 404 error for an unrecognized request URL][64]
+```json
+404 Not Found
+
+{
+  "error": {
+    "message": "Unrecognized request URL. Please see https://lob.com/docs or email us at support@lob.com.",
+    "status_code": 404
+  }
+}
+
+```
 
 ## Step 5: Build the remainder of your campaign or Canvas
 
@@ -252,4 +262,3 @@ Check out:
 [26]: {% image_buster /assets/img_archive/webhook_request_header.png %}
 [42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[64]: {% image_buster /assets/img_archive/webhook_test_send.png %}

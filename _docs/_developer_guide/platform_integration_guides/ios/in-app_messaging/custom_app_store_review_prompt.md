@@ -1,17 +1,15 @@
 ---
-nav_title: In-App Message Templates
-article_title: In-App Message Templates for iOS
+nav_title: Custom App Store review prompt
+article_title: Custom App Store review prompt
 platform: iOS
 page_order: 4
-description: "This reference article shows iOS in-app message templates such as the custom App Store review prompt."
+description: "This reference article shows how to set up a custom App Store review prompt."
 channel:
   - in-app messages
 
 ---
 
-# In-app message templates
-
-## Custom App Store review prompt
+# Custom App Store review prompt
 
 {% alert note %}
 Once you implement this prompt, Braze stops automatically tracking impressions, and you must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/#logging-impressions-and-clicks).
