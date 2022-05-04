@@ -70,4 +70,4 @@ At this point, your campaign should be ready to test and send. Check the Braze d
 
 
 [1]: https://wsc-sports.com/
-[2]: {% image_buster /assets/img/wsc-sports/braze_integration.jpg %}
+[2]: {% braze /assets/img/wsc-sports/braze_integration.jpg %}
