@@ -9,7 +9,7 @@ channel:
 
 # Email capture form {#email-capture-form}
 
-Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within on their user profile for use in all your messaging campaigns.
+Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within their user profile for use in all your messaging campaigns.
 
 When an end-user enters their email address to this form, the email address will get added to their user profile.
 
@@ -38,7 +38,7 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 {% enddetails %}
 
-## Step 1: Create in-app message campaign
+## Step 1: Create an in-app message campaign
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 

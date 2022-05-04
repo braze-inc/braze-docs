@@ -2,7 +2,7 @@
 nav_title: HTML In-App Messages
 article_title: Custom HTML In-App Messages
 page_order: 0
-description: "In addition to the out-of-the-box In-App Message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
+description: "In addition to the out-of-the-box in-app message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
 channel:
   - in-app messages
 ---
@@ -171,7 +171,7 @@ The following file types are supported for upload:
 
 Braze recommends uploading assets to the Media Library for two reasons:
 
-1. Assets added to a campaign via the Media Library allow your messages to be displayed even while the user is offline, or has poor internet connection.
+1. Assets added to a campaign via the Media Library allow your messages to be displayed even while the user is offline, or has a poor internet connection.
 2. Assets uploaded to Braze can be reused across campaigns.
 
 ##### Adding asset files
@@ -182,7 +182,7 @@ To add new assets to your campaign, use the drag-and-drop section to upload a fi
 
 After your assets are added, they will appear in the **Assets for this campaign** section. 
 
-If an asset's filename matches that of a local HTML asset it will be replaced automatically (for example `cat.png` is uploaded and `<img src="cat.png" />` exists). 
+If an asset's filename matches that of a local HTML asset it will be replaced automatically (for example, `cat.png` is uploaded and `<img src="cat.png" />` exists). 
 
 Otherwise, hover over an asset from the list and select <i class="fas fa-copy"></i> **Copy** to copy the file's URL to your clipboard. Then paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
