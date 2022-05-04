@@ -62,7 +62,7 @@ End Result Example:
 
 Through internal processes, our apps will create the request body and send it to the relevant endpoints.
 Our app UI allows you to choose the segments and campaigns previously set up:
-![braze][2]
+![image_buster][2]
 
 ### Step 4: Preview your request
 
