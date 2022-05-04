@@ -20,7 +20,7 @@ With the Braze and Extole integration, you can pull customer events and attribut
 | ----------- | ----------- |
 | Extole account | An Extole account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST test API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to a separate staging Braze instance. |
+| Braze test REST API key (optional) | A test API key that can be used for testing purposes if you’d like these requests sent to a separate staging Braze instance. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview]({{site.baseurl}}/api/basics/#endpoints) page. |
 | User identity | The unique identifier for a user in Braze and Extole. This is generally the `external_id`. |
 {: .reset-td-br-1 .reset-td-br-2}
