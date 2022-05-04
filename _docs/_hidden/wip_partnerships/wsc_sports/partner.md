@@ -29,6 +29,7 @@ WSC Sports uses Braze integration to deliver rich and robust media to customers 
 ## Use cases
 
 ### Sending push notifications
+### Sending scheduled push notifications
 ### Sending rich media push notifications
 
 ## Integration
@@ -45,21 +46,23 @@ Our actions will deliver a request to the following braze endpoints:
 | /messages/schedule/create | 
 | /messages/send |
 
-Example:
+End Result Example:
 ```
 {
   "apple_push": {
     "alert": {
-      "body": "New Video"
+      "body": "Push Message Title"
     },
-    "asset_url": "https://wsczoominnba.prod-cdn.clipro.tv/nba-editor/9109acd0-52a2-4475-8667-210fb212cd8c.mp4",
+    "asset_url": "internalURI.mp4",
     "asset_file_type": "mp4"
   }
 }
 ```
-### Step 3: Using Clipro
+### Step 3: Creating the request
 
-The clipro app will handle the creation of you request
+Through internal processes, our apps will create the request body and send it to the relevant endpoints.
+Our app UI allows you to choose the segments and campaigns previously set up:
+![braze][2]
 
 ### Step 4: Preview your request
 
@@ -67,3 +70,4 @@ At this point, your campaign should be ready to test and send. Check the Braze d
 
 
 [1]: https://wsc-sports.com/
+[2]: {% image_buster /assets/img/wsc-sports/braze_integration.jpg %}
