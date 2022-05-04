@@ -85,7 +85,7 @@ Next, work with your Extole success or implementation manager to create a new we
 
 ### Configure a staging API key for testing
 
-If you only provide one Braze REST API key to Extole, only production events will be sent to Braze. If you also want to send staging/testing events, create another Braze REST API key and configure an additional webhook integration in the Extole dashboard.
+If you only provide one Braze REST API key to Extole, only production events will be sent to Braze. If you also want to send staging or testing events, create another Braze REST API key and configure an additional webhook integration in the Extole dashboard.
 
 ### Creating a new user alias
 
