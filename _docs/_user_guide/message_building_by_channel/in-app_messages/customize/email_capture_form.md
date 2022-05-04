@@ -55,7 +55,7 @@ Next, customize your form as needed. You can customize the following features fo
 - Header, body, and submit button text
 - An optional image
 - An optional "Terms of Service" link
-- Different colors for the header and body text, buttons and background
+- Different colors for the header and body text, buttons, and background
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
