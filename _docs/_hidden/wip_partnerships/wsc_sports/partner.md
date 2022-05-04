@@ -12,9 +12,9 @@ hidden: true
 
 ---
 
-# [WSC Sports]
+# WSC Sports
 
-> WSC Sports' platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
+> [WSC Sports'][2] platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
 
 WSC Sports uses Braze integration to deliver rich and robust media to customers via push notifications.
 
@@ -25,59 +25,35 @@ WSC Sports uses Braze integration to deliver rich and robust media to customers 
 | ----------- | ----------- |
 | WSC account | A WSC account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+### Sending push notifications
+### Sending rich media push notifications
 
 ## Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
+### Step 1: Segments and Campaigns
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+Set the user segements and you campaigns in the Braze developer console
 
-### Step 1: Short description of step one 
+### Step 2: Endpoint usage
 
-Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
+Our actions will deliver a request to the following braze endpoints:
+| Endpoint | Description |
+| ----------- | 
+| /messages/schedule/create | 
+| /messages/send |
+{: .reset-td-br-1 }
 
-### Step 2: Short description of step two 
+### Step 3: Using Clipro
 
-You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
+The clipro app will handle the creation of you request
 
-### Step 3: Short description of step three 
+### Step 4: Preview your request
 
-Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
-
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-
-#### Request headers and method
-
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-
-{% raw %}
-- **HTTP Method**: POST
-- **Request Header**:
-  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
-{% endraw %}
-
-#### Request body
-
-Include code of your webhook request body. 
-
-### Step 3: Preview your request
-
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+At this point, your campaign should be ready to test and send. Check the Braze developer console error message logs if you run into errors. 
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
@@ -85,16 +61,6 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 ```
 {% enddetails %}
 
-## Customization
-
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
-
-## Using this integration
-
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
-
-### Step 1: Short description of step one 
-
-This set of steps will walk your users through how to use this integration in Braze.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[2]: https://wsc-sports.com/
