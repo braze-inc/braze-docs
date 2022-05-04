@@ -113,7 +113,7 @@ Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically dest
 
 To start processing your user attribute CSV files, we need to deploy the serverless application to handle the processing for you. This application will create the following resources automatically to deploy successfully:
 - Lambda function
-- S3 Bucket for your CSV Files that the Lambda process can read from. This Lambda function will only receive notifications for `.csv` extension files.
+- S3 Bucket for your CSV files that the Lambda process can read from. This Lambda function will only receive notifications for `.csv` extension files.
 - Role allowing for the creation of the S3 Bucket
 - Policy to allow Lambda to receive S3 upload event in the new bucket
 
