@@ -345,7 +345,10 @@ validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/d
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant';
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#html-upload-with-preview';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#supported-sdk-versions'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#supported-sdk-versions';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/#upload-assets'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#asset-files';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
