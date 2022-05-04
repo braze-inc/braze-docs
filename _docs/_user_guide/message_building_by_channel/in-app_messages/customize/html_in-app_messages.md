@@ -2,7 +2,8 @@
 nav_title: HTML In-App Messages
 article_title: Custom HTML In-App Messages
 page_order: 0
-description: "In addition to the out-of-the-box in-app message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
+page_type: reference
+description: "This article provides an overview of custom code in-app messages, including JavaScript methods, button tracking, and using the interactive HTML preview in Braze."
 channel:
   - in-app messages
 ---

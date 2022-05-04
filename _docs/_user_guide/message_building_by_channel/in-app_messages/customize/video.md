@@ -2,7 +2,8 @@
 nav_title: Video
 article_title: Video in In-App Messages
 page_order: 4
-description: ""
+page_type: reference
+description: "This article describes how to embed videos into your HTML in-app messages."
 channel:
   - in-app messages
 ---

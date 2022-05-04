@@ -2,7 +2,8 @@
 nav_title: Email Capture Form
 article_title: Email Capture Form
 page_order: 3
-description: ""
+page_type: reference
+description: "This article provides an overview of email capture in-app message type."
 channel:
   - in-app messages
 ---

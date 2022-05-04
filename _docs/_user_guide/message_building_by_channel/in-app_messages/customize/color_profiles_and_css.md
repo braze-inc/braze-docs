@@ -2,7 +2,8 @@
 nav_title: Color Profiles and CSS Templates
 article_title: Color Profiles and CSS Templates for In-App Messages
 page_order: 4
-description: ""
+page_type: reference
+description: "This article provides an overview of in-app message color profiles and CSS templates."
 channel:
   - in-app messages
 ---
@@ -23,7 +24,7 @@ You can also [duplicate][6] and [archive][7] templates! Learn more about creatin
 
 ## CSS template {#in-app-message-templates}
 
-You can customize a complete CSS template for your [Web Modal in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/modal_with_css/).
+You can customize a complete CSS template for your [web modal in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/modal_with_css/).
 
 Name and tag your CSS Template, then choose whether or not it will be your default template. You can write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
 

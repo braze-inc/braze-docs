@@ -2,7 +2,8 @@
 nav_title: Modal with CSS
 article_title: In-App Message Modal with CSS
 page_order: 1
-description: ""
+page_type: reference
+description: "This article provides a brief overview of the web modal with CSS in-app message."
 channel:
   - in-app messages
 ---
