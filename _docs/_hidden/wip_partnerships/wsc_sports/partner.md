@@ -41,7 +41,7 @@ Set the user segements and you campaigns in the Braze developer console
 ### Step 2: Endpoint usage
 
 Our actions will deliver a request to the following braze endpoints:
-| Endpoint | Description |
+| Endpoint | 
 | ----------- | 
 | /messages/schedule/create | 
 | /messages/send |
