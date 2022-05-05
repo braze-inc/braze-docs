@@ -6,7 +6,7 @@ hidden: true
 
 # Cloning Canvases
 
-Moving to the Canvas V2 workflow includes benefits such as access to lightweight Canvas components, persistent entry properties, and post-launch editing. With the Canvas cloning tool, you can create a copy of your Canvas in the Canvas V2 workflow. When you clone your Canvas to the Canvas V2 workflow, your original Canvas will not be altered or deleted. 
+Moving to the Canvas V2 workflow includes benefits such as access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). With the Canvas cloning tool, you can create a copy of your Canvas in the Canvas V2 workflow. When you clone your Canvas to the Canvas V2 workflow, your original Canvas will not be altered or deleted. 
 
 {% alert note %}
 You can only clone Canvases with a **Stopped** status. After cloning, the new Canvas V2 will have a **Draft** status. 
