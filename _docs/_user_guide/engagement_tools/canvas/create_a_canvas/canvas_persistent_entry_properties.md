@@ -10,7 +10,7 @@ page_order: 5
 
 # Persistent entry properties
 
-When a Canvas is triggered by a custom event, purchase, or an API call, you can now use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas V2 workflow. 
+When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas V2 workflow. 
 
 {% alert important %}
 This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas components. Reach out to your Braze account manager for more information.
