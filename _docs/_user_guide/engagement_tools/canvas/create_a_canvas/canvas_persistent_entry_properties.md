@@ -8,17 +8,22 @@ tool: Canvas
 page_order: 5
 ---
 
-# Canvas persistent entry properties
+# Persistent entry properties
 
-When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
+When a Canvas is triggered by a custom event, purchase, or an API call, you can now use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas V2 workflow. 
 
 {% alert important %}
-This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas Components. Reach out to your Braze account manager for more information.
+This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas components. Reach out to your Braze account manager for more information.
 {% endalert %}
+
+Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
 ## Using entry properties
 
-Entry properties can be used in Action-based and API-Triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Check out our documentation to learn more about the [Canvas Entry Properties Object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), [Event Properties Object]({{site.baseurl}}/api/objects_filters/event_object/), and [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id).
+Entry properties can be used in Action-based and API-Triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+- [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
+- [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
+- [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag.
 
