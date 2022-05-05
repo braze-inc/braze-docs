@@ -16,7 +16,7 @@ For all other actions, or to combine multiple actions, use this guide to constru
 
 ## SDK Support
 
-{% sdk_min_versions ios:5.1.0 android:20.0.0 web:4.0.2 %}
+{% sdk_min_versions ios:5.1.0 android:20.0.0 web:4.0.3 %}
 
 The `brazeActions://` deeplink scheme can be used wherever a deeplink or redirect option exists within in-app messages and Content Cards.
 
