@@ -22,7 +22,7 @@ When using Canvas V2, you can expect the following:
 * [Persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to be available for message personalization throughout a user journey
 * More post-launch edit capabilities to change connections between steps, delete steps and variants, and redirect users to different steps
 * A new Canvas toolbar that shows all Canvas components
-* A cloning feature that allows you to clone existing, stopped Canvases into Canvas V2. Your existing Canvases in V1 will not be altered or deleted.
+* A [cloning tool]({{site.baseurl}}/cloning_canvases/) that allows you to clone your stopped Canvases into Canvas V2. The existing Canvases in V1 will not be altered or deleted.
 * **Coming soon:** A new way to zoom in and out between full and icon views in Canvas
 
 To use the Canvas V2 workflow, go to **Canvas** under the **Engagement** tab. Click <i class="fas fa-plus"></i> **Create Canvas**. Next, you'll have the option of building with Canvas V2 or the original Canvas experience. Select **Canvas V2 Workflow** and begin building your Canvas as you normally would!
