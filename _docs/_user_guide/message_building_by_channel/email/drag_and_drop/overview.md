@@ -45,7 +45,7 @@ The drag & drop editing experience is divided into three sections: **Sending Set
 
 Before building your email, it's important to understand the key components to help guide your email building experience.
 
-### Drag & Drop email components {#content}
+### Drag & drop email components {#content}
 
 ![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
 ![][9]{: style="float:right;max-width:25%;margin-left:10px;"}

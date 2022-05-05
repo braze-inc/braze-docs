@@ -19,7 +19,7 @@ Inbox Vision allows marketers to view their emails from the perspective of vario
 Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete. You'll see these rendered HTML previews divided into three sections: **Web Clients**, **Application Clients**, and **Mobile Clients**. Select a tile to view the preview in more detail. 
 
 {% alert note %}
-Note that your email must include a subject line and a valid sending domain in order to see these previews. 
+Your email must include a subject line and a valid sending domain in order to see these previews. 
 {% endalert %}
 
 ![Overview of Inbox Vision for the HTML editor.][1]
