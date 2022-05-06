@@ -110,6 +110,7 @@ The following dependencies are required:
 
 ```groovy
 implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
 // Both are required if using the default Content Cards Activity on Android
 implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
@@ -123,6 +124,7 @@ The following list examples of how to add these dependencies using Unity tools:
 ```groovy
 dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 }
 ```
 ##### [External dependency manager for Unity](https://github.com/googlesamples/unity-jar-resolver)
@@ -131,6 +133,7 @@ dependencies {
 <dependencies>
   <androidPackages>
     <androidPackage spec="org.jetbrains.kotlin:kotlin-stdlib:1.5.21" />
+    <androidPackage spec="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2" />
   </androidPackages>
 </dependencies>
 ```
