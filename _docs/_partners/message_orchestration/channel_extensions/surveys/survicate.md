@@ -25,7 +25,7 @@ The Braze and Survicate integration allows you to include survey links in your e
 
 ## Use cases
 
-Survicate can cover a wide range of use-cases to help uncover actionable insights to make smarter decisions and deliver a better customer experience:
+Survicate can cover a wide range of use cases to help uncover actionable insights to make smarter decisions and deliver a better customer experience:
 - Measure customer satisfaction
 - Net promoter score
 - Collect product feedback
