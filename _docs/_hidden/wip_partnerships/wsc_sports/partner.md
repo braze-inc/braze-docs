@@ -47,6 +47,9 @@ After selecting and setting the appropriate options available on our platform:
 
 ![braze_integration.jpg][2]
 
+
+![customEventProperties.png][18]
+
 Our internal processes will deliver the video as a push notification to the selected user segments, 
 using the following Braze endpoints, according to the options selected:
 
@@ -77,4 +80,5 @@ At this point, your campaign should be ready to test and send. Check the Braze d
 
 
 [1]: https://wsc-sports.com/
-[2]: {% image_buster \assets\img\wsc_sports\braze_integration.jpg %} "braze_integration.jpg"
+[2]: {% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "braze_integration.jpg"
+[18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
