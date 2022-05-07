@@ -45,7 +45,7 @@ Set up the segments and campaigns through the Braze developer console.
 Our app handles the end-to-end process, from the selection of the video to the arrival of the push notification on the end users' device.
 After selecting and setting the appropriate options available on our platform:
 
-![braze_integration.jpg][2]
+![braze_integration.JPG][2]
 
 Our internal processes will deliver the video as a push notification to the selected user segments, 
 using the following Braze endpoints, according to the options selected:
@@ -77,4 +77,4 @@ At this point, your campaign should be ready to test and send. Check the Braze d
 
 
 [1]: https://wsc-sports.com/
-[2]: {% image_buster /assets/img/wsc-sports/braze_integration.jpg %} "braze_integration.jpg"
+[2]: {% image_buster /assets/img/wsc-sports/braze_integration.JPG %} "braze_integration.JPG"
