@@ -28,25 +28,37 @@ WSC Sports uses Braze integration to deliver rich and robust media to customers 
 
 ## Use cases
 
-### Sending push notifications
-### Sending scheduled push notifications
-### Sending rich media push notifications
+- Sending push notifications
+- Sending rich media push notifications
+- Sending scheduled push notifications
 
-## Integration
+## Usage
 
-### Step 1: Segments and Campaigns
+### Setting user segments and campaigns
 
-Set the user segements and you campaigns in the Braze developer console
+Setting user segmentations and campaigns allows for large scaling messaging to specific groups of users or during specific time periods.
+Set up the segments and campaigns through the Braze developer console.
 
-### Step 2: Endpoint usage
 
-Our actions will deliver a request to the following braze endpoints:
+### Braze integration
+
+Our app handles the end-to-end process, from the selection of the video to the arrival of the push notification on the end users' device.
+After selecting and setting the appropriate options available on our platform:
+
+![braze_integration.jpg][2]
+
+Our internal processes will deliver the video as a push notification to the selected user segments, 
+using the following Braze endpoints, according to the options selected:
+
 | Endpoint | 
 | ----------- | 
 | /messages/schedule/create | 
 | /messages/send |
 
-End Result Example:
+
+### End result
+
+The resulting body of the message is as follows: 
 ```
 {
   "apple_push": {
@@ -58,11 +70,6 @@ End Result Example:
   }
 }
 ```
-### Step 3: Creating the request
-
-Through internal processes, our apps will create the request body and send it to the relevant endpoints.
-Our app UI allows you to choose the segments and campaigns previously set up:
-![image_buster][2]
 
 ### Step 4: Preview your request
 
@@ -70,4 +77,4 @@ At this point, your campaign should be ready to test and send. Check the Braze d
 
 
 [1]: https://wsc-sports.com/
-[2]: {% image_buster /assets/img/wsc-sports/braze_integration.JPG %}
+[2]: {% image_buster /assets/img/wsc-sports/braze_integration.jpg %} "braze_integration.jpg"
