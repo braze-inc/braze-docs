@@ -37,7 +37,6 @@ GEM
     eventmachine (1.2.7)
     execjs (2.8.1)
     ffi (1.15.5)
-    ffi (1.15.5-x86-mingw32)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
