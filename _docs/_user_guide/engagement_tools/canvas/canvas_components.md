@@ -4,7 +4,7 @@ article_title: Canvas Components
 page_order: 2
 layout: dev_guide
 guide_top_header: "Canvas Components"
-guide_top_text: "The following Canvas components will help you improve your process, unlock new journeys, and increase effectiveness. Check out our [Canvas LAB Playbook](https://labplaybooks.braze.com/canvas-playbooks#subpage/qpbtt) for a list of example use cases."
+guide_top_text: "The following Canvas components will help you improve your process, unlock new journeys, and increase effectiveness."
 
 page_type: landing
 description: "This landing page is home to Canvas component articles that will help you create more advanced Canvases."

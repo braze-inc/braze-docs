@@ -139,7 +139,7 @@ On devices running iOS 11 or earlier, your users must explicitly opt-in to recei
 
 ### Web
 
-The behavior for web push subscription functions similar to that of iOS. The default subscription status for web users once they've opted-in via the `appboy.registerAppboyPushMessages()` is `subscribed`. This default status is sufficient for you to send push messages to web users. The `opted in` state implies a user has explicity opted in to push notifications via web, if permittable. However, this explicit opt-in is not required to send push to web users.
+The behavior for web push subscription functions similar to that of iOS. The default subscription status for web users once they've opted-in via the `requestPushPermission()` is `subscribed`. This default status is sufficient for you to send push messages to web users. The `opted in` state implies a user has explicity opted in to push notifications via web, if permittable. However, this explicit opt-in is not required to send push to web users.
 
 To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
 
