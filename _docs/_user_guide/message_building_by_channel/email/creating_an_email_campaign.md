@@ -65,7 +65,7 @@ Braze offers two editing experiences when creating an email campaign: our [Drag 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
-We recommend selecting one editing experience per email campaign. This can help prevent errors in unsupported email components in an email editor. For example, [Content Blocks for the Drag & Drop Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/) are not supported in the HTML editor, so switching editors as you build your email campaign may cause errors.
+We recommend selecting one editing experience per email campaign. For example, choose either the HTML Classic or Block editor in a single email campaign rather than switching between editors.
 {% endalert %}
 
 ## Step 3: Compose your email
