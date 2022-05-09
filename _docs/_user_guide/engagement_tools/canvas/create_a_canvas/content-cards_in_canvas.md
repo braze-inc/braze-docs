@@ -31,13 +31,11 @@ If a sent card expires before a user has viewed it in your app, it will be remov
 
 ## Advancement Behavior options {#advancement-behavior-options}
 
-The Advancement Behavior option allows you to control when a user should advance to their next eligible step. [Steps that send only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
+The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
 
 ### Steps with Content Cards only {#steps-with-in-content-cards-only}
 
 If a step contains only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
-
-![content-card-in-canvas-single-channel.png][2]
 
 | Option | Description |
 |---|---|
@@ -45,9 +43,9 @@ If a step contains only Content Cards (and no other messaging channel), you can 
 | Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Steps with multiple channels {#steps-with-multiple-message-channels}
+![][2]
 
-![content-cards-in-canvas-multiple-channels.png][3]
+### Steps with multiple channels {#steps-with-multiple-message-channels}
 
 Canvas steps with a Content Card and another messaging channel have the following advancement options:
 
@@ -57,14 +55,15 @@ Canvas steps with a Content Card and another messaging channel have the followin
 | Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria to advance to next steps._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
+![][3]
+
 ## Reporting and analytics
 
-After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. 
-These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
+After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
+
+![][4]
 
 For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
-
-![content-card-in-canvas-analytics.png][4]
 
 ## Use cases
 
@@ -80,13 +79,13 @@ Using Canvas, you can add a step that sends both a Content Card and push notific
 
 #### Multiple feeds based on categories
 
-You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using key-value pairs:
+You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guides for [Web SDK][7] and [Android SDK][8].
 
-* [Multiple Feeds for Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
-* [Multiple Feeds for Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
 [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/

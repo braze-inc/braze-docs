@@ -14,9 +14,9 @@ Braze is not responsible for the customer registering with Google or meeting the
 
 Requirement   | Description
 --------------| -----------
-Gmail Account Enablement | [See below.](#enabling-gmail-account)
+Gmail Account Enablement | See [enabling Gmail account](#enabling-gmail-account).
 Google Sender Authentication | Gmail authenticates the sender of AMP emails with [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail), [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework), and [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC). <br> Learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication).
-AMP Email Elements | Check out the Essentials tab in the [Components](#components) section below. |
+AMP Email Elements | Check out the Essentials tab in the [Components](#components) section. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -31,13 +31,13 @@ Go into your Gmail Settings and select `Enable Dynamic Content`.
 
 ## API Usage
 
-You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown in the following:
 
 ### Email Object Specification
 
 ```json
 {
-  "app_id": (required, string) see App Identifier above,
+  "app_id": (required, string) see App Identifier,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
   "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set),
@@ -56,7 +56,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
 
 ## Writing Your AMP Email
 
-Construct your AMP email using the [components](#components) below, then use [our API](#api-usage) to send. Be sure to use `amp_body` for your AMP HTML! You can also check out [AMP's tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email) or [sample code](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73) to see how the final product should look. You can also checkout AMP's [full email components library here](https://amp.dev/documentation/components/?format=email/).
+Construct your AMP email using the [components](#components), then use [our API](#api-usage) to send. Be sure to use `amp_body` for your AMP HTML! You can also check out [AMP's tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email) or [sample code](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73) to see how the final product should look. You can also checkout AMP's [full email components library here](https://amp.dev/documentation/components/?format=email/).
 
 When you write your email for our API, we **require** a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email, in the event that your email is sent via a provider who does not yet support AMP for Email.
 
@@ -138,14 +138,14 @@ By wrapping your content around the Raw tag, the Braze processing engine will co
 | AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
 {: .reset-td-br-1 .reset-td-br-2}  
 
-- Please note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
+- Note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
 
 ### Testing & Troubleshooting
 
 Before your send your AMP email, we recommend that you test according to [Gmail's guidelines here](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 For your AMP email to be delivered to any Gmail account, the email must meet the following conditions:
-- The AMP for Email security requirements must be met (see table above).
+- The AMP for Email security requirements must be met (see [Requirements](#requirements)).
 - The AMP MIME part must contain a valid AMP document.
 - The email should include the AMP MIME part before the HTML MIME part.
 - The AMP MIME part must be smaller than 100KB.

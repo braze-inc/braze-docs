@@ -39,7 +39,7 @@ Some more specific use cases include the following:
 
 A webhook consists of the following three parts:
 
-![Example webhook broken out into HTTP method, HTTP URL, and request body][2]
+![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.][2]
 
 | Part of Webhook | Description |
 | --- | --- |

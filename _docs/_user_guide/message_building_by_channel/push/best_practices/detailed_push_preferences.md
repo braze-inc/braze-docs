@@ -12,19 +12,13 @@ channel: push
 
 Push notifications should be treated with care to target users with timely and relevant notifications. Braze will collect useful device and usage information that can be used to target relevant segments. This should be supplemented with custom events and attributes specific to your app. Using that data you can carefully target messages to increase open rates and decrease instances of users disabling push.
 
-Additionally, you can create a settings page in your app that allows users to directly tell you which notifications they want to receive. This can be set as a boolean attribute in Braze that corresponds to the app setting status. For example, a news app could have subscription settings for the following:
-
-- Breaking News
-- Sports News
-- Politics
-- Business News
+Additionally, you can create a settings page in your app that allows users to directly tell you which notifications they want to receive. This can be set as a boolean attribute in Braze that corresponds to the app setting status. For example, a news app could have subscription settings for breaking news, sports news, or politics.
 
 When the news app wants to create a campaign targeting only users interested in Politics, they simply add the 'Subscribes to Politics' attribute filter to the segment. When set to true, only users who subscribe to notifications will receive them.
 
 The general stats that you see for push enabled will relate to whether the user has approved notifications with the OS. If users disable notifications on iOS they'll be automatically removed from our system since Apple won't allow the push token to be sent. Android subscribes users to notifications by default.
 
-Documentation for setting custom attributes:
-
+Refer to the following articles for setting custom attributes based on your platform:
 - [iOS][4]
 - [Android][5]
 - [Windows Universal][6]

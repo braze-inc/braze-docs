@@ -1,11 +1,11 @@
 ---
 nav_title: Deep Linking
-article_title: Deep Linking for Android/FireOS
+article_title: Deep Linking for Android and FireOS
 platform: 
   - Android
   - FireOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings or a News Feed."
 
 ---
 
@@ -17,7 +17,7 @@ The Android SDK provides the ability to set a single delegate object to custom h
 
 Your delegate object should implement the [`IBrazeDeeplinkHandler`][udl-3] interface and be set using [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
-The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for YouTube URLs.
+The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for YouTube URLs:
 
 {% tabs %}
 {% tab JAVA %}
@@ -108,7 +108,7 @@ class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
 ## Deep linking to app settings
 
-To allow for deep links to directly open your app's settings, you'll need a custom BrazeDeeplinkHandler. In the following example, the presence of a custom key-value pair called `open_notification_page` will make the deep link open the app's settings page.
+To allow deep links to directly open your app's settings, you'll need a custom `BrazeDeeplinkHandler`. In the following example, the presence of a custom key-value pair called `open_notification_page` will make the deep link open the app's settings page:
 
 {% tabs %}
 {% tab JAVA %}
@@ -127,7 +127,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       intent.putExtra("app_package", context.getPackageName());
       intent.putExtra("app_uid", context.getApplicationInfo().uid);
 
-      // for Android 8 and above
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.getPackageName());
       context.startActivity(intent);
     }
@@ -154,7 +154,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       intent.putExtra("app_package", context.packageName)
       intent.putExtra("app_uid", context.applicationInfo.uid)
 
-      // for Android 8 and above
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.packageName)
       context.startActivity(intent)
     }
@@ -171,13 +171,13 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 To deep link to the Braze News Feed from a push notification, [create a custom deep link][1] for your News Feed activity.
 
-Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed Deep Link.
+Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed deep link.
 
 ## Custom WebView activity {#Custom_Webview_Activity}
 
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
 
-**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.APPBOY_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
+**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.BRAZE_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
 **2.** Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
 
 ```xml
@@ -186,7 +186,7 @@ By default, when website deeplinks are opened inside the app by Braze, they are 
     android:exported="false" />
 ```
 
-**3.** Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [Braze.configure()][udl-5] in your [`Application.onCreate()`][udl-7]
+**3.** Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [`Braze.configure()`][udl-5] in your [`Application.onCreate()`][udl-7]
 
 {% tabs %}
 {% tab JAVA %}
@@ -214,7 +214,7 @@ Braze.configure(this, brazeConfig)
  {% endtabs %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
 [udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html

@@ -1,8 +1,8 @@
 ---
-nav_title: Refreshing the News Feed
+nav_title: Refreshing the Feed
 article_title: Refreshing the News Feed for iOS
 platform: iOS
-page_order: 4
+page_order: 6
 description: "This reference article shows how to refresh the News Feed in your iOS application."
 channel:
   - news feed
@@ -30,7 +30,7 @@ Appboy.sharedInstance()?.requestFeedRefresh()
 {% endtab %}
 {% endtabs %}
 
-For more information see the [`Appboy.h` header file][15].
+For more information, see the `Appboy.h` [header file][15].
 
 
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File"

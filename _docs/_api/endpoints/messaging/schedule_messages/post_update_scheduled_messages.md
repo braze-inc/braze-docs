@@ -46,22 +46,22 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Required | String | The `schedule_id` to update (obtained from the response to create schedule). |
 |`schedule` | Optional | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-|`messages` | Optional | Object | See [available message objects](#available-message-objects), below. |
+|`messages` | Optional | Object | See [available message objects](#available-message-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ### Available messaging objects {#available-message-objects}
-You can use these objects in the [request body](#request-body) above.
+You can use these objects in the [request body](#request-body).
 
-- [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/apple_objects/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_object/)
+- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
+- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
+- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
+- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
+- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
+- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
+- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_object/)
 
 ## Request example
 ```

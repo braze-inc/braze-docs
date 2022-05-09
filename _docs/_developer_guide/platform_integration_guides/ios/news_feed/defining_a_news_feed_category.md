@@ -2,7 +2,7 @@
 nav_title: Defining a News Feed Category
 article_title: Defining a News Feed Category for iOS
 platform: iOS
-page_order: 2
+page_order: 4
 description: "This reference article shows how to define a News Feed category in your iOS application."
 channel:
   - news feed
@@ -11,9 +11,9 @@ channel:
 
 # Defining a News Feed category
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain "category". This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature visit our [News Feed Best Practices][40] doc.
+Instances of the Braze News Feed can be configured to only receive cards from a certain category. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature, visit our News Feed [best practices][40].
 
-News Feed Categories can be defined by calling one of the following methods as you load the News Feed:
+News Feed categories can be defined by calling one of the following methods as you load the News Feed:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

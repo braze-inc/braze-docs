@@ -28,15 +28,15 @@ If re-eligibility for a Canvas is set to shorter than the duration of the Canvas
 
 ## Campaigns
 
-To enable re-eligibility for a campaign, check **allow users to become re-eligible to receive campaign** in the **delivery controls** section of step 2.
+To enable re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section.
 
-![Delivery Controls][1]
+![][1]
 
 In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. By making users re-eligible for a triggered campaign, you are enabling them to actually receive (and not simply trigger) the message more than once.
 
-Additionally, if you are trying to send a message immediately with a re-eligibility of 0 minutes, we will always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
+Additionally, if you are trying to send a message immediately with a re-eligibility of zero minutes, we will always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
-![re-eligible][24]
+![][24]
 
 ## Re-eligibility delay calculations
 

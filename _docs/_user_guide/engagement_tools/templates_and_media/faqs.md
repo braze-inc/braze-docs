@@ -28,15 +28,15 @@ No, the Media Library doesn't support cropping GIF images.
 
 You can crop an existing image by selecting the image from the Media Library and clicking **Crop & Save New Image**. 
 
-![Media Library Crop][2]{: height="75%" width="75%"}
+![][2]{: height="75%" width="75%"}
 
 You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. Once you hit **Save**, your new image can be used!
 
-![Media Library Crop 2][3]{: height="75%" width="75%"}
+![][3]{: height="75%" width="75%"}
 
 ### My image keeps timing out when I try to upload it. What can I do about this?
 
-This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]).
+This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer such as [ImageOptim][5].
 
 Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
 

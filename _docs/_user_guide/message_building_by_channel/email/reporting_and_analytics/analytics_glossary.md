@@ -4,7 +4,7 @@ article_title: Email Analytics Glossary
 page_order: 20
 layout: glossary_page
 glossary_top_header: "Email Analytics Glossary"
-glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need in this glossary. <br><br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
 
 description: "This glossary includes the terms you will find in the analytics section of your email campaign or Canvas, post-launch. This glossary does not include Currents metrics."
 channel:
@@ -74,10 +74,10 @@ glossaries:
   - name: "Confidence"
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
   - name: "Machine Opens"
-    description: Includes the proportion of "opens" that are affected by Apple iOS 15. If a user opens an email using the Mail app on an Apple device, the mail is loaded from a proxy server and will be logged as a “Machine Opens.” However, if the mail is opened on another platform (i.e. Gmail app on phone, or Gmail via desktop browser), it will be logged as an “Other opens". It’s also possible that a user opens an email (i.e. "Other opens") before a machine open is logged. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
+    description: Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
     calculation: Count
   - name: "Other Opens"
-    description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens". 
+    description: Includes emails that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e., the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
     calculation: Count
   - name: "Click to Open Rate"
     description: The percentage of unique emails opened that have been clicked at least once.

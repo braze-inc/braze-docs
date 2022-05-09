@@ -53,11 +53,15 @@ m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```
 
+## Enable Logging (optional) {#logging}
+
+To debug your Braze integration, you can view the Roku debug console for Braze logs. Refer to [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers to learn more.
+
 ## Basic SDK integration complete
 
 Braze should now be collecting data from your application with the Braze Roku SDK. 
 
-Please see the following sections on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
+See the following articles on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
 
 To learn more about in-app messaging on Roku, see our [in-app message integration guide][5].
 

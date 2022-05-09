@@ -9,29 +9,30 @@ channel:
 
 ---
 
+<br>
 {% alert important %}
-Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
 {% endalert %}
 
 # Content Card implementation guide
 
-> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Code considerations
 
 ### Content Cards as custom objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen in the following code snippets) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
 
 The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if they were instantiated from JSON or any other source. 
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) to get started implementing your custom objects.
 
 {% tabs local %}
 {% tab ContentCardable %}
 {% subtabs global %}
 {% subtab Swift %}
-**ContentCardable Protocol**<br>
+**ContentCardable protocol**<br>
 A `ContentCardData` object that represents the `ABKContentCard` data along with a `ContentCardClassType` enum. An initializer used to instantiate custom objects with `ABKContentCard` metadata.
 ```swift
 protocol ContentCardable {
@@ -57,7 +58,7 @@ extension ContentCardable {
   }
 }
 ```
-**Content Card Data Struct**<br>
+**Content Card data struct**<br>
 `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
 ```swift
@@ -78,7 +79,7 @@ extension ContentCardData: Equatable {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-**ContentCardable Protocol**<br>
+**ContentCardable protocol**<br>
 A `ContentCardData` object that represents the `ABKContentCard` data along with a `ContentCardClassType` enum, an initializer used to instantiate custom objects with `ABKContentCard` metadata.
 ```objc
 @protocol ContentCardable <NSObject>
@@ -94,7 +95,7 @@ A `ContentCardData` object that represents the `ABKContentCard` data along with 
  
 @end
 ```
-**Content Card Data Struct**<br>
+**Content Card data struct**<br>
 `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
 ```objc
@@ -121,7 +122,7 @@ A `ContentCardData` object that represents the `ABKContentCard` data along with 
 {% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Swift %}
-**Custom Object Initializer**<br>
+**Custom object initializer**<br>
 MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```swift
@@ -141,7 +142,7 @@ extension CustomObject: ContentCardable {
 }
 ```
 
-**Identifying Types**<br>
+**Identifying types**<br>
 The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
 ```swift
@@ -166,7 +167,7 @@ enum ContentCardClassType: Hashable {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-**Custom Object Initializer**<br>
+**Custom object initializer**<br>
 MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 
@@ -192,7 +193,7 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
 }
 ```
 
-**Identifying Types**<br>
+**Identifying types**<br>
 The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
 ```objc
@@ -233,7 +234,7 @@ func loadContentCards() {
 }
 ```
 
-**Handling the Content Cards SDK Callback**<br>
+**Handling the Content Cards SDK callback**<br>
 Forward the notification callback to the helper file to parse the payload data for your custom object(s).
 ```swift
 @objc func contentCardsUpdated(_ notification: Notification) {
@@ -265,7 +266,7 @@ As long as the observer is still retained in memory, the notification callback f
 }
 ```
 
-**Handling the Content Cards SDK Callback**<br>
+**Handling the Content Cards SDK callback**<br>
 Forward the notification callback to the helper file to parse the payload data for your custom object(s).
 ```objc
 - (void)contentCardsUpdated:(NSNotification *)notification {
@@ -296,7 +297,7 @@ The `class_type` is passed in as a filter to only return Content Cards that have
 {% tab Working with Payload Data %}
 {% subtabs global %}
 {% subtab Swift %}
-**Working with Payload Data**<br>
+**Working with payload data**<br>
 Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
 
 ```swift
@@ -339,7 +340,7 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
 }
 ```
 
-**Initializing your Custom Objects from Content Card Payload Data**<br>
+**Initializing your custom objects from Content Card payload data**<br>
 The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
 
 ```swift
@@ -357,7 +358,7 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-**Working with Payload Data**<br>
+**Working with payload data**<br>
 Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
 
 ```objc
@@ -400,7 +401,7 @@ Loops through the array of Content Cards and only parses the cards with a matchi
 }
 ```
 
-**Initializing your Custom Objects from Content Card Payload Data**<br>
+**Initializing your custom objects from Content Card payload data**<br>
 The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
 
 ```obj-c
@@ -430,7 +431,7 @@ There are three sample customer use cases provided. Each use case offers a detai
 
 ### Content Cards as supplemental content
 
-![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
@@ -440,25 +441,46 @@ The example to the right shows a `UICollectionView` with a hybrid list of items 
 
 This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
-![Supplementary Content PNG][2]{: style="max-width:60%;"}
+![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.][2]{: style="max-width:60%;"}
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ### Content Cards in a message center
 <br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
+![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Dashboard configuration
 
-For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
+For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message.
 
-| Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
-| ---- | ---- |
-| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
-{: .reset-td-br-1 .reset-td-br-2}
+{% tabs local %}
+{% tab Arbitrary custom view message (full page) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `Full Page`
+- `class_type` set as `message_full_page`
+
+![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% tab Webview message (HTML) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `HTML`
+- `class_type` set as `message_webview`
+- `message_title`
+
+This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
+
+![]({% image_buster /assets/img/cc_implementation/html_webview.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% endtabs %}
 
 #### Further explanation
 
@@ -466,7 +488,7 @@ The message center logic is driven by the `contentCardClassType` that is provide
 
 {% tabs %}
 {% tab Swift %}
-**Using `class_type` for On Click Behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```swift
 func addContentCardToView(with message: Message) {
@@ -482,7 +504,7 @@ func addContentCardToView(with message: Message) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-**Using `class_type` for On Click Behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```objc
 - (void)addContentCardToView:(Message *)message {
@@ -504,7 +526,7 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-![Interactive Content PNG][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50 percent promotion appear in the botton left corner of the screen. Once clicked, a promotion will be applied to the cart.][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interactive Content Cards
 <br>
@@ -516,7 +538,7 @@ Well-placed cards like this are a great way to give users a "nudge" toward speci
 
 The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
-![Interactive Content JPG][7]{: style="max-width:70%;"} 
+![][7]{: style="max-width:70%;"} 
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
@@ -529,7 +551,7 @@ After extending your custom objects to function as Content Cards, logging valuab
 
 {% tabs %}
 {% tab Swift %}
-**Logging Analytics**<br>
+**Logging analytics**<br>
 The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
 ```swift
 customObject.logContentCardImpression()
@@ -555,7 +577,7 @@ extension BrazeManager {
 ```
 {% endtab %}
 {% tab Objective-C %}
-**Logging Analytics**<br>
+**Logging analytics**<br>
 The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
 ```objc
 [customObject logContentCardImpression];
@@ -588,7 +610,7 @@ For a control variant Content Card, a custom object should still be instantiated
 
 ## Helper files
 
-{% details ContentCardKey Helper File %}
+{% details ContentCardKey helper file %}
 {% tabs %}
 {% tab Swift %}
 ```swift

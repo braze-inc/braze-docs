@@ -11,7 +11,7 @@ tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
-glossary_filter_text: "Select Categories below to narrow the glossary:"
+glossary_filter_text: "Select a catagory to narrow the glossary:"
 
 # category to icon/fa or image mapping
 glossary_tags:
@@ -48,6 +48,7 @@ glossaries:
       - Marketing Activity
   - name: X Custom Event in Y Days
     description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    tags:
       - Custom Data
   - name: X Custom Event Property in Y Days
     description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
@@ -406,7 +407,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    description: Segment your users by whether or not their email address has hard bounced (i.e., the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
@@ -454,7 +455,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS

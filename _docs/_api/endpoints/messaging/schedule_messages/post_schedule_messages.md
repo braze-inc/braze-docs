@@ -81,21 +81,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
+| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Available messaging objects {#available-messaging-objects}
 
-You can use these objects in the [request body](#request-body) above.
-- [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/apple_objects/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
+You can use these objects in the [request body](#request-body).
+- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
+- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
+- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
+- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
+- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
+- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
+- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)
 
 ## Example request
 ```

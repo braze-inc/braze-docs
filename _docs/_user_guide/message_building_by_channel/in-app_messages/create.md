@@ -182,7 +182,7 @@ If Braze detects that you don't have a close or dismissal button included in you
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![Compose your in-app message][24]{: style="max-width:85%" }
+![][24]{: style="max-width:85%" }
 
 The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
@@ -200,25 +200,41 @@ Write anything you want! Include completely custom copy (often with custom HTML 
 
 Some message types do not need and therefore do not ask for headers.
 
-![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
+{% alert tip %}
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Launch AI Copywriter button, located in the Message field of the in-app message composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+{% endalert %}
 
 #### Button text {#buttons}
 
-When available for your message type, you can have up to two buttons appear below your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
+When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
+
+![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
-{% alert tip %}
-  If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
-{% endalert %}
+##### Choosing a primary button
 
-#### On-click behavior
+If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
 
-When your customer clicks on a button in your in-app message, your link can either lead them deeper into your app or to another site. For Android, iOS, and Web, you can choose between:
+#### On-click behavior {#button-actions}
 
-* Redirect to Web URL
-* [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)
-* None
+When your customer clicks on a button in your in-app message, the following actions are available. 
+
+| Action | Description |
+|---|---|
+| Redirect to Web URL | Open a non-native web page. |
+| [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Deep link into an existing screen in your app. |
+| Close Message | Closes the currently active message. |
+| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
+| Request Push Permission | Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for push. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
+
+{% sdk_min_versions ios:5.1.0 android:20.0.0 web:4.0.3 %}
 
 #### iOS device options
 
@@ -281,7 +297,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
 {% alert important %}
-Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets via ZIP. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
 {% endalert %}
 
 ## Step 6: Configure additional settings (optional)
@@ -295,17 +311,17 @@ You can add [key-value pairs][19] to send extra custom fields to user devices.
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further guidance on how to best use our tools to build in-app messages.
+Build the remainder of your campaign; see the following sections for further guidance on how to best use our tools to build in-app messages.
 
 #### Choose a trigger
 
 Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
 
 {% alert important %}
-Please note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
+Note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
 {% endalert %}
 
-![Schedule]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Action-based campaign with the trigger action set to "Start Session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 In-app message delivery is entirely based on the following action triggers:
 
@@ -318,7 +334,7 @@ In-app message delivery is entirely based on the following action triggers:
 
 A start date and time must be selected; however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Online vs. offline triggering
 
@@ -340,7 +356,7 @@ You can choose between the following message priorities:
 
 The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
 
-![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Choose users to target
 
@@ -354,7 +370,7 @@ If there's a delay on the in-app message step, segment membership will be evalua
 
 In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
 
-![Re-evaluate IAM Membership]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Audience Summary section of the Target Users step with the option to "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
 
 When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
 

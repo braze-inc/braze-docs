@@ -27,7 +27,7 @@ This integration supports iOS and Android apps.
 |---|---|
 | Jampp account | A [Jampp account](https://www.jampp.com/) is required to take advantage of this partnership. |
 | Android app ID | Your unique Braze application identifier for Android (i.e., "com.example"). |
-| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e., "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
 | Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -57,15 +57,15 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 ```
 {% endraw %}
 
-In the above webhook URL, you must:
+In the webhook URL, you must:
 - Set the event name. This name will appear in your Jampp dashboard.
 - Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678").
-- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Please note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
+- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
 
 ![The webhook URL and message preview shown in the Braze webhook builder.][2]
 
 {% alert important %}
-Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
 {% endalert %}
 
 #### Request headers and method

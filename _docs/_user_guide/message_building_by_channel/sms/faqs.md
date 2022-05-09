@@ -30,7 +30,7 @@ There are three common SMS use cases that Braze does not currently support:
 
 ### Do test text messages count toward limits?
 
-Yes, they do. Please keep this in mind when testing messages.
+Yes, they do. Keep this in mind when testing messages.
 
 ### Does a user need to be part of an SMS subscription group to receive SMS test messages?
 
@@ -44,7 +44,7 @@ The default concurrency rate and throughput enable about 360,000 messages an hou
 
 While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
-- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
+- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. For more details, refer to our [segment breakdown]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
 - Test, test, and test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
@@ -63,7 +63,7 @@ Custom keywords would be written as custom events, so you would want to create s
 
 ### How many characters does an emoji utilize?
 
-Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
 ### If a user texts "Stop" to our short code, are they unsubscribed from the subscription group?
 
@@ -104,7 +104,7 @@ If you stagger your users into a Canvas and have different schedule times for ea
 
 ### Will SMS event properties capture keywords in a sentence?
 
-For a keyword to be recognized within a sentence, (e.g. "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
+For a keyword to be recognized within a sentence, (e.g., "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
 
 ### Why is the Braze dashboard warning me I may be charged for additional message segments when my message is under 160(GCM-7) or 70(UCS-2) characters?
 
@@ -119,7 +119,7 @@ Your `app_id` can be found on the dashboard by navigating to **Developer Console
 ### How will I be billed for SMS?
 
 Besides the charges for short and long codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
-For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
+For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, reach out to your Braze representative.
 
 ### If a message is sent to a landline, will the message still count toward my SMS send count?
 

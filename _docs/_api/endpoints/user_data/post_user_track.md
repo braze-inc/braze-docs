@@ -46,7 +46,7 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 ### Request parameters
 
 {% alert important %}
-For each of the request components listed below, one of `external_id`, `user_alias`, or `braze_id` is required.
+For each of the request components listed in the following table, one of `external_id`, `user_alias`, or `braze_id` is required.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
@@ -56,10 +56,10 @@ For each of the request components listed below, one of `external_id`, `user_ali
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert note %}
+Keep the following nuances in mind when using the `/users/track` endpoint:
+
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
-- Updating the subscription status with this endpoint will not only update the user-specified by their `external_id` (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
-{% endalert %}
+- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
 ## Example request body for event tracking
 
@@ -202,7 +202,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert warning %}
-When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Please set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
+When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
 {% endalert %}
 
 ### Use cases

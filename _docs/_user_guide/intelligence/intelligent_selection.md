@@ -12,7 +12,7 @@ description: "Intelligent Selection is a feature that analyzes the performance o
 
 Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
-![Intelligence selection][3]
+![A/B Testing section of a campaign or Canvas with Intelligent Selection enabled.][3]
 
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward winning variants gradually.
@@ -28,7 +28,9 @@ Campaign:
 Intelligent Selection can be added to any multi-send campaign in the "Target Users" step of the Braze campaign wizard. Single send campaigns will be unable to leverage this feature.
 
 Canvas:
-When adding variants into your Canvas, click on one of the variant percentages. This will allow you to edit the variant distribution and turn on Intelligent Selection. Intelligent Selection will not be available if you have not yet added conversion events to your Canvas or if your campaign is composed of a solo variant or solo control group.<br><br>![Canvas intelligent selection][2]
+When adding variants into your Canvas, click on one of the variant percentages. This will allow you to edit the variant distribution and turn on Intelligent Selection. Intelligent Selection will not be available if you have not yet added conversion events to your Canvas or if your campaign is composed of a solo variant or solo control group.
+
+![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.][2]
 
 {% alert note %}
 We do not allow intelligent selection campaigns to have re-eligibility enabled because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.

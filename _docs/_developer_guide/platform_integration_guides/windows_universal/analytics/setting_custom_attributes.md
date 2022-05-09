@@ -8,6 +8,7 @@ description: "This reference article covers how to set custom attributes on the 
 ---
 
 # Setting custom attributes
+{% include archive/windows_deprecation.md %}
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -38,7 +39,7 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 
 ## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
+Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
 
 ### Setting custom attribute values
 
@@ -113,7 +114,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 ## Managing notification subscription statuses
 
-To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both email and push:
+To set up a subscription for your users (either email or push), you can set following the subscription statuses as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both email and push:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |

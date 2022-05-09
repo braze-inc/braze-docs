@@ -62,7 +62,7 @@ Happy seven year anniversary!
 ```
 {% endraw %}
 
-**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month, i.e. "May") and `%d` (day, i.e. "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
+**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month, i.e., "May") and `%d` (day, i.e., "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
 
 Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year, i.e., "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
 
@@ -1160,7 +1160,7 @@ This is a message for an Android user!
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
-The example used sends a warning to users on iOS 10.0 or below that they are phasing out support for the user’s device OS.
+The example used sends a warning to users on iOS 10.0 or earlier that they are phasing out support for the user’s device OS.
 
 {% raw %}
 ```liquid
@@ -1247,7 +1247,7 @@ Option 2:
 
 This use case displays a message that includes a timestamp in their current time zone.
 
-The example provided below will display the date as YYYY-mm-dd HH:MM:SS, such as 2021-05-03 10:41:04.
+The following example provided will display the date as YYYY-mm-dd HH:MM:SS, such as 2021-05-03 10:41:04.
 
 {% raw %}
 ```liquid
@@ -1275,7 +1275,7 @@ Here's a message that will send between 8 am and 8 pm!
 
 This use case will display a message if a user's current time falls within a set window.
 
-For example, the scenario below lets a user know that a store is closed.
+For example, the following scenario lets a user know that a store is closed.
 
 {% raw %}
 ```liquid

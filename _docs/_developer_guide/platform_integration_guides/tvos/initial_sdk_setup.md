@@ -11,7 +11,7 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 # Initial SDK setup
 
 {% alert note %}
-Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, please open a [support ticket][support].
+Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket][support].
 {% endalert %}
 
 Installing the Braze SDK will provide you with basic analytics functionality.
@@ -22,7 +22,7 @@ The tvOS Braze SDK should be installed or updated using [CocoaPods][apple_initia
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
+Installing the SDK via the tvOS [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
 
 Run the following command to get started:
 
@@ -30,8 +30,8 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-- If you are prompted to overwrite the `rake` executable, please refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
-- If you have issues regarding CocoaPods, please refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
+- If you are prompted to overwrite the `rake` executable, refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
+- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
 
 ### Step 2: Constructing the podfile
 
@@ -129,7 +129,7 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 
 ### SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
+Braze should now be collecting data from your application, and your basic integration should be complete. Note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.
 
 ### Updating the Braze SDK via CocoaPods
 
@@ -171,7 +171,7 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above and is called with the following parameters:
+This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method and is called with the following parameters:
 
 - `YOUR-API-KEY`: Your application's API key is found under **Manage Settings** in the Braze dashboard.
 - `application`: The current app.
@@ -181,13 +181,13 @@ This method would replace the `startWithApiKey:inApplication:withLaunchOptions:`
 See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
-Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
+Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 
 ## Manual integration options
 
-You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repo][1] and initialize Braze as outlined above.
+You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repo][1] and initialize Braze as outlined in the preceding sections.
 
 ## Identifying users and reporting analytics
 See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).

@@ -3,7 +3,7 @@ nav_title: Multiple Feeds
 article_title: Using Multiple Content Card Feeds for iOS
 platform: iOS
 page_order: 6
-description: "This reference article covers how to implement multiple Content Card feeds in your iOS application."
+description: "This reference article covers implementing multiple Content Card feeds in your iOS application."
 channel:
   - content cards
 
@@ -12,15 +12,15 @@ channel:
 
 # Using multiple Content Card feeds
 
-Content Cards can be filtered on the app to only display specific cards, which enables you to have multiple Content Card feeds for different use cases (as in having a "Transactional" feed versus a "Marketing" feed).
+Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (as in having a transactional feed versus a marketing feed).
 
 The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
 ## Step 1: Setting key-value pairs on cards
 
-When creating a Content Card campaign, key-value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
+When creating a Content Card campaign, key-value pair data can be set on each card. Our filtering logic will use this key-value pair data to categorize cards.
 
-For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
+For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, etc.
 
 ## Step 2: Set Up a content card listener
 
@@ -50,7 +50,7 @@ NotificationCenter.default.addObserver(self, selector:
 
 Add the following methods to respond to updates from the observer and filter the returned cards by type.
 
-The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case `Transactional`.
+The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case, `Transactional`.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

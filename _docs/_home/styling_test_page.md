@@ -319,11 +319,11 @@ public void onResume() {
 
 #### Code Test JavaScript
 ```javascript
-appboy.subscribeToFeedUpdates(function(feed) {
+braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  appboy.display.showFeed(undefined, cards);
+  braze.showFeed(undefined, cards);
 });
-appboy.requestFeedRefresh();
+braze.requestFeedRefresh();
 ```
 
 #### Pygments Test
@@ -397,35 +397,48 @@ This is a update
 {% tab Styling %}
 #### Embedded Video/YouTube
 Defaults to youtube embedded.
-{% include video.html id="XY5uXoKIvFY" %}
+{% include video.html id="XY5uXoKIvFY" source="youtube" %}
 
 #### Embedded Video Right Align
-{% include video.html id="XY5uXoKIvFY" align="right" %}
+{% include video.html id="XY5uXoKIvFY" align="right" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 #### Embedded Video Left Align
-{% include video.html id="XY5uXoKIvFY" align="left" %}
+{% include video.html id="XY5uXoKIvFY" align="left" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
+<br /><br />
+
+#### Loom Example
+* use `source="loom"`
+{% include video.html id="c1d3199463c448e8918f046265b54eb2" source="loom" %}
 
 {% endtab %}
 {% tab Markdown %}
 
 {% raw %}
 ```html
-{% include video.html id="[youtubeid]" %}
+{% include video.html id="[youtube_id]" source="youtube" %}
 ```
 {% endraw  %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
 {% raw  %}
 ```html
-{% include video.html id="[youtubeid]" align="left" %}
+{% include video.html id="[youtube_id]" align="left" source="youtube" %}
 
-{% include video.html id="[youtubeid]" align="right" %}
+{% include video.html id="[youtube_id]" align="right" source="youtube" %}
 ```
 {% endraw  %}
+
+Loom Example:
+{% raw %}
+```html
+{% include video.html id="[loom_id]" source="loom" %}
+```
+{% endraw  %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -548,7 +561,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, see the [Apple Developer Docs][apple_initial_setup_19].
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
@@ -567,7 +580,7 @@ Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab
 {% alert important %}
  Note number of tabs on the page should be consistent, otherwise tabs content might be hidden.
  For example if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
- then when somebody clicks on `C++`, the other section will show nothing. See local tabs option below for workaround.
+then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
 {% endalert %}
 
 {% raw %}
@@ -584,7 +597,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e. tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

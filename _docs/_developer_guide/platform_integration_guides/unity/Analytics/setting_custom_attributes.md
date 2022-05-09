@@ -54,7 +54,7 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 
 ## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
+Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
 ### Setting custom attribute values

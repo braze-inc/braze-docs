@@ -58,13 +58,17 @@ Composing an SMS is easy! Just write your message using languages and personaliz
 Before proceeding, read our guidelines for [SMS message segments and copy limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so it's a good idea to understand the nuances of how messages will be split.
 {% endalert %}
 
-![Compose SMS]({% image_buster /assets/img/sms_campaign_compose.png %})
+![SMS composer in Braze with the message "Hi first_name, we appreciate your support! Why not stop by one of our stores and show them this SMS for an exclusive discount? Reply STOP to stop receiving messages from us."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 {% alert tip %}
 {% raw %}
 If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
 {% endraw %}
 {% endalert %}
+
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Launch AI Copywriter button, located in the Message field of the SMS composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 ### Contact Cards
 
@@ -74,7 +78,7 @@ If desired, you can add a Contact Card to your SMS message to make it easy for y
 
 Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![Test SMS]({% image_buster /assets/img/sms_campaign_test.png %})
+![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 If you'd like to test how many segments your SMS may be split into, test your copy length with our [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).

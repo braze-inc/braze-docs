@@ -23,7 +23,7 @@ The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3]
 
 ## Integration
 
-In the Zapier example below, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze campaign or Canvas.
+In the following Zapier example, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze campaign or Canvas.
 
 ### Step 1: Create a Zapier trigger
 

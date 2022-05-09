@@ -12,13 +12,13 @@ tool: Campaigns
 
 Campaigns sent using time-based scheduled delivery are delivered on specified days.
 
-![Time-based][3]
+![][3]
 
 ## Option 1: Send as soon as the campaign is launched
 
 If you choose to send a message as soon as it's launched, your message will begin sending as soon as you finish creating your campaign.
 
-![Immediately][10]
+![][10]
 
 This type of schedule is designed for one-off campaigns that you wish to send immediately, such as messages about a current event. A sports app, for instance, may schedule push notifications on score updates using this option. In addition, when sending test messages aimed at just yourself or your team, this option allows you to deliver them immediately. 
 
@@ -30,7 +30,7 @@ Scheduling a campaign for a designated time allows you to specify the days and t
 
 If you select **Scheduled Delivery** and don't choose to send at user local time, your campaign will send according to the time zone specified on your **Company Settings** page.
 
-![Designated time][9]
+![][9]
 
 ### Local time zone campaigns
 
@@ -46,7 +46,7 @@ Designated time schedules are best suited for messages scheduled in advance and 
 
 [Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day. For instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10pm at the latest.
 
-![Intelligent Timing][14]
+![][14]
 
 ### Delivery rules
 

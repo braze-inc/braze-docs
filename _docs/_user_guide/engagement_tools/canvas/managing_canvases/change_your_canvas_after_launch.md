@@ -1,6 +1,6 @@
 ---
-nav_title: Changing Your Canvas After Launch
-article_title: Changing Your Canvas After Launch
+nav_title: Editing Canvases After Launch
+article_title: Editing Canvases After Launch
 page_order: 1
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
 page_type: reference
@@ -9,11 +9,28 @@ tool:
 
 ---
 
-# Changing your Canvas after launch
+# Editing Canvases after launch
 
-> This reference article covers the different aspects of a Canvas that can be changed after the initial launch.
+> This reference article covers what can be changed in a Canvas after the initial launch.
+
+## Overview
+
+There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
+
+- Users who have not yet entered the Canvas will be eligible for newly created steps.
+- Users who have already passed newly created steps will be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
+- Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps. 
+- You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
+- If you update the **Delay** or **Window** settings for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
+- If a delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
+
+{% alert note %}
+Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+{% endalert %}
 
 ## Initial conditions
+
+The following table describes what is editable and not editable after a Canvas launches.
 
 | **Editable**                     | **Not-Editable**  |
 |----------------------------------|-------------------|
@@ -31,6 +48,8 @@ tool:
 
 ## Canvas graph
 
+The following table describes what aspects of a Canvas are editable and not editable after launch.
+
 | **Editable**                                   | **Not-Editable**     |
 |------------------------------------------------|----------------------|
 | Stop / Resume Execution of All Canvas Steps    | Deleting Steps       |
@@ -40,9 +59,11 @@ tool:
 | Variant Distribution*                          |                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-*Control variant distribution may only be decreased after launch.
+_*Control variant distribution may only be decreased after launch._
 
 ## Individual step
+
+The following table describes what details for individual Canvas steps are editable and not editable after launch.
 
 | **Editable**                        | **Not-Editable**                             |
 |-------------------------------------|----------------------------------------------|
@@ -55,28 +76,13 @@ tool:
 | Delays / Windows                    |                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Making edits post launch
-
-There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
-
-- Users who have not yet entered the Canvas will be eligible for newly created steps.
-- Users who have already passed newly created steps will be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
-- Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps.
-- You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
-- If you update the Delay or Window for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
-- If a delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
-
-{% alert note %}
-Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
-{% endalert %}
-
 ## Canvas variant percentages
 
 In Canvas, if a variant percentage is modified, you will find that the users may be redistributed to other variants.
 
-Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant)—they will receive the same variant unless the variant percentages are modified.
+Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
 
-If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. 
+If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Note that for Canvases using branching with `NOT` filters with random bucket numbers, users may not receive the same branch each time in their user journey when they re-enter the Canvas.
 
 ### Control groups
 

@@ -113,6 +113,37 @@ String.prototype.sanitize = function() {
 };
 
 $(document).ready(function() {
+  $("#braze_header").click((e) => {
+    setTimeout(function() {
+      let hide_backdrop = false;
+      $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
+        let itm = $(ea);
+        console.log(itm.attr('id'), itm.attr('aria-expanded'),)
+        if(itm.attr('aria-expanded') == 'true') {
+          hide_backdrop = true;
+        }
+      });
+      if (!hide_backdrop) {
+        $("#backdrop").removeClass("backdrop-show");
+      }
+    }, 100);
+  });
+  $("#braze_header .nav-link.dropdown-toggle").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    const isOpen = e.currentTarget.ariaExpanded !== "true";
+    const borderDiv = e.currentTarget.children[0];
+    borderDiv.classList.toggle("border-focus-show", isOpen);
+    $("#backdrop").toggleClass("backdrop-show", isOpen);
+  });
+  $("#backdrop").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    e.currentTarget.classList.remove("backdrop-show");
+  });
+
   $('#toc').toc({
     headers: 'h2, h3',
     minimumHeaders: toc_minheaders
@@ -236,14 +267,23 @@ $(document).ready(function() {
     }
   });
 
+  // set list role attribute for screenreader
+  var list_tabs = $('ul');
+  list_tabs.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tablist');
+  });
+  var list_tab = $('ul > li');
+  list_tab.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tab');
+  });
 
   // Footer navigation
   var parent_top = 'nav_top';
 
   var nav_active = $('#' + parent_top + ' div.nav-item.active');
   var nav_bottom = $('#bottom_page_nav');
-
-
 
   var pg_prev_div = $("#page_prev");
   var pg_next_div = $("#page_next");

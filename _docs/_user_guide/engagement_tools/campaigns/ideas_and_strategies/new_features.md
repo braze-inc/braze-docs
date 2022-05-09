@@ -20,9 +20,9 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 ## Filtering by most recent app versions
 
-Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
+Braze SDKs automatically track a user's most recent app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
 
-![App Version Filter][1]
+![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".][1]
 
 ### App version number
 
@@ -59,25 +59,23 @@ This filter will populate values once users upgrade their apps to the supported 
 
 In the following scenario, let's assume that you first upgraded to the Braze SDKs which supports this filter in version `2.0.0` of your app.
 
-Once Braze receives data from version 2.0.0 of your app, you can target users below or above this version.
+Once Braze receives data from version 2.0.0 of your app, you can target users with earlier or later versions.
 
 | Filter  | User's App Version  | Result |
 :------------- | :----------- | :---------|
-| _Less than 2.0.0_ | 1.0.0 | User is in the segment, even though their Braze SDK did not support the App Version Number filter |
-| _Greater than 2.0.0_ | 2.5.1 | This user, and all future installs will be in the segment |
-| _Greater than 2.0.0_ | 1.9.9 | User is not in the segment |
-| _Less than or equal to 2.0.0_ | 3.0.1 | User is not in the segment |
+| Less than 2.0.0 | 1.0.0 | The user is in the segment, even though their Braze SDK did not support the "App Version Number" filter. |
+| Greater than 2.0.0 | 2.5.1 | The user and all future installs will be in the segment. |
+| Greater than 2.0.0 | 1.9.9 | The user is not in the segment. |
+| Less than or equal to 2.0.0 | 3.0.1 | The user is not in the segment. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### App version name
 
-Use the _App Version Name_ filter to segment users by the app's user-facing "build name". 
+Use the "App Version Name" filter to segment users by the app's user-facing "build name". 
 
 This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
-For Android, this version name is based on the [Package Version Name][7] for the app.
-
-For iOS, this version name is based on the [Short Version String][8] for the app.
+For Android, this version name is based on the [Package Version Name][7] for the app. For iOS, this version name is based on the [Short Version String][8] for the app.
 
 ### Have not used feature
 
@@ -87,13 +85,13 @@ When you release a new app version and introduce new features, users may not not
 
 ### Be convincing
 
-Persuading a user to update their app or change the way they use your app can be difficult.  Make sure the let them know all the benefits of the new version/features and how it will improve their experience with your app.  Let them know all of the utility they will gain, and the benefits they will miss out on if they choose not to update or engage with new features.
+Persuading a user to update their app or change the way they use your app can be difficult.  Make sure the let them know all the benefits of the new version or features and how it will improve their experience with your app.  Let them know all of the utility they will gain, and the benefits they will miss out on if they choose not to update or engage with new features.
 
 ### Send at the right time
 
 Convincing your users to update their app can be difficult as they must navigate to the app store to do so.  In general, it is best to ask users to update as soon as the app is updated, however, if they choose not to do not spam them with messages. Rather, wait until they have a positive experience within the app, for instance beating a level, redeeming a coupon, or favoriting a song.
 
-For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully, users will discover new features easily, however, if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
+For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully, users will discover new features easily. However, if users are not engaging with major features within the app, it may be best to remind them. Do this when they are engaging with your app and when the unused feature would be of use.
 
 ### Use non-intrusive channels
 

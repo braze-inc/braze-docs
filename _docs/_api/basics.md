@@ -20,14 +20,14 @@ Customers using Braze's EU database should use the `https://rest.fra-01.braze.eu
 
 ## API definitions
 
-Below is some terminology that you may see in the Braze REST API documentation and what it means.
+The following lists a brief overview of terms you may see in the Braze REST API documentation.
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
-When using endpoints for API calls, use the "REST Endpoint" located below.
+When using endpoints for API calls, use the "REST Endpoint".
 
 For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
 {% endalert %}
@@ -72,7 +72,7 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please open a [support ticket][support].
+If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, open a [support ticket][support].
 
 #### API IP allowlisting
 

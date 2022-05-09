@@ -12,16 +12,12 @@ tool: Canvas
 
 ## Finding your strategy with the five W’s of visualization
 
-Answer the questions below to get started:
+Answer the following questions to get started:
 
 1. **What** am I trying to help the customer do or understand? (Canvas name)<br><br>
 
 2. **When** will a user start this experience? Pick one of the following:
     * **Scheduled**: Enter users at a designated time
-      * Start a session
-      * Perform a custom event
-      * Enter a location
-      * Interact with or leave another campaign or Canvas
     * **Action-Based**: Enter user when they perform actions
       * Make a purchase
       * Start a session
@@ -63,7 +59,7 @@ Answer the questions below to get started:
 
 ## Anatomy of Canvas
 
-Check out the anatomy of a Canvas below!
+Here's an overview of the anatomy of a Canvas:
 
 {% tabs %}
   {% tab Canvas %}
@@ -96,7 +92,7 @@ Check out the anatomy of a Canvas below!
 
 ### Name your Canvas: The “what”
 
-Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our [Mapping User Lifecycles](http://lab.braze.com/mapping-customer-lifecycles) LAB course!
+Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our LAB course on [mapping user lifecycles](http://lab.braze.com/mapping-customer-lifecycles)!
 
 ### Create starting conditions: The “when”
 
@@ -136,7 +132,7 @@ Selecting at least one conversion event will give you the ability to understand 
 
 2. **Building steps**: A step is a marketing decision point—what is the experience you’re creating? Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
 
-3. **Determining when and how to use steps & variants:** Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right shape and structure of your Canvas. There are a couple approaches you can use:
+3. **Determining when and how to use steps & variants:** Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm will help you map out the right shape and structure of your Canvas. There are a couple approaches you can use:
     - **Work backwards**: Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
     - **Start with the status quo and add more**: Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a followup message. Look at your performance and keep optimizing by making incremental changes.
     - **Look to others**: Imitation is the highest form of flattery. Don’t reinvent in the wheel. Don’t worry, we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.

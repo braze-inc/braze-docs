@@ -41,7 +41,7 @@ glossaries:
   - name: Custom Events
     description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">custom events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.
   - name: Data Point
-    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you’re updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (e.g. email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you’re updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (e.g., email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
   - name: Deep Linking
     description: Connecting a message with a targeted piece of content within a website or mobile app. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/">Deep links</a> are used to direct customers to their next action or engagement.
   - name: Dormant Users

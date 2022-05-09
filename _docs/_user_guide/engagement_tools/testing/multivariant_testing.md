@@ -17,7 +17,7 @@ An A/B test is an experiment that compares users’ responses to multiple versio
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after 1 hour of inactivity versus 1 day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Suppose you have two options for a push notification:
@@ -27,7 +27,7 @@ Suppose you have two options for a push notification:
 
 Using an A/B test, you can see which wording results in a higher conversion rate. The next time you send a push notification about a deal, you’ll know which type of wording is more effective.
 
-The above test only examines the effect of one variable—the copy in the push notification. A multivariate test is similar, except it tests the effects of two or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing two variables (or variates—not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message—two options for the copy multiplied by two options for the emoji (present or not) equals four total message variants.
+This test only examines the effect of one variable—the copy in the push notification. A multivariate test is similar, except it tests the effects of two or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing two variables (or variates—not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message—two options for the copy multiplied by two options for the emoji (present or not) equals four total message variants.
 
 In Braze documentation, "multivariate test" is used interchangeably with "A/B test".
 
@@ -58,15 +58,15 @@ Multivariate and A/B testing can unveil powerful insights regarding your users. 
 
 Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
-![Create Your Campaign][160]{: style="max-width:30%" }
+![][160]{: style="max-width:30%" }
 
 ### Step 2: Compose your variants
 
 You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test—an A/B test examines the effect of changing one variable, whereas a multivariate test examines two or more.
 
-For some ideas on how to get started differentiating your variants, see the section in this article on [Tips for different channels][70].
+![][170]
 
-![Compose Your Variants][170]
+For some ideas on how to get started differentiating your variants, refer to [Tips for different channels][70].
 
 ### Step 3: Schedule your campaign
 
@@ -86,9 +86,9 @@ When viewing your results, you can compare the conversion rates of your variants
 
 The size of the control group for a campaign with [Intelligent Selection][intelselection] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have multiple variants such that each variant is sent to less than 20% of users, then the control group must become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
-![Choose a Segment][180]
+![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+For best practices around choosing a segment to test with, see the following [Choosing a Segment][80] section.
 
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -98,7 +98,7 @@ Using a control group when determining winner by Opens or Clicks is not recommen
 
 For email, push, and webhook campaigns scheduled to send once, you can reserve a portion of your audience for the "Winning Variant" group. Users in this group will receive the winning variant once the A/B test is complete.
 
-![Send winning variant when A/B testing with email, push, or webhook campaigns][10]
+![An example of the winning variant when A/B testing with email, push, or webhook campaigns.][10]
 
 Specify what percentage of your campaign audience should be assigned to the Winning Variant group, then configure the following additional send settings:
 
@@ -121,7 +121,7 @@ Choose a date and time when the winning variant should be sent out.
 When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+In the dropdown found after the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
 
 #### (Optional) Designate a conversion event
 
@@ -141,7 +141,7 @@ If one variant outperformed all the others with better than 95% [confidence][con
 
 On the analytics page, you can also see the performance of the Winning Variant throughout the campaign (including the A/B test sends).
 
-![View Results][210]
+![][210]
 
 {% alert note %}
 Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
@@ -155,7 +155,7 @@ A variant can do better than the control group, but the chi-squared testing chec
 
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
-Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the above example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
+Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the preceding example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
 
 In general, a confidence of at least 95% is necessary to show that your results are reflective of users’ actual preferences, and not due to chance. In rigorous scientific tests, 95% confidence (or otherwise commonly referred to as the “p” value being less than 0.05) is the common benchmark used to determine statistical significance. If you continually fail to achieve 95% confidence, try increasing your sample size or decreasing the number of variants. 
 
@@ -182,8 +182,8 @@ What levers do you have to pull and what are the desired effects? While there ar
 
 | Channel | Aspects of Message You Can Change | Results To Look For |
 | ---------------------| --------------- | ------------- |
-| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
-| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%")  <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%") <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app Notification | Aspects listed for "push" <br> [Message format][273] | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -206,7 +206,7 @@ For instance, while active users may have equal response rates to “This deal e
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 
 {% alert tip %}
-As a crude guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
 {% endalert %}
 
 ## Recommended follow-ups {#recommended-follow-ups}

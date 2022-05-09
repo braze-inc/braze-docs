@@ -49,7 +49,7 @@ In the second paragraph, you should explore and explain the relationship between
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements are used to do.
+The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the following chart. Be sure to adjust the description so that you know what each of these requirements are used to do.
 {% endalert %}
 
 | Requirement | Origin | Access | Description |

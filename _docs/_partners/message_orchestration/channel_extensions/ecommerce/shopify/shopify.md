@@ -14,18 +14,18 @@ search_tag: Partner
 The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase or retarget users based on their previous purchases. 
 
 <!--
-For some Canvas and Campaign examples, please check out our guide here. 
+For some Canvas and Campaign examples, check out our guide here. 
 -->
 
 ## Prerequisites
 
-All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Please reach out to your Account Executive for more details.
+All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Reach out to your account executive for more details.
 
-This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation](#shopify-user-syncing)). Please consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation](#shopify-user-syncing)). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Please note that at this time, you are only able to connect one Shopify store per app group. |
+| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per app group. |
 | Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
 | Nested custom event property support in segment extensions | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to filter Shopify nested custom event properties for up to 365 days within Segment Extensions. |
 | Nested custom event property support for message triggering | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to trigger campaigns and Canvases using the nested properties within Shopify customer events. |
@@ -66,7 +66,7 @@ That's it! The status of your integration appears in the **Data Import** section
 
 ## Shopify event processing
 
-Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the table below for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
+Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the following table for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
 
 ### Supported Shopify events
 
@@ -75,7 +75,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | Event Name | Braze Event Type | Triggered When... |
 | --- | --- | --- |
 | `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after **1 hour** of checkout or cart activity. |
-| `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
+| `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -268,7 +268,7 @@ Braze will map the supported Shopify data to user profiles using the customer's 
 
 **Anonymous Users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
-  - For existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
+  - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 

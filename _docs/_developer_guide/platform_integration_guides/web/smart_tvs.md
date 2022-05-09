@@ -15,7 +15,7 @@ For a complete technical reference, check out our [Javascript Documentation][3] 
 
 ## Install the Braze SDK
 
-To get started, please follow our [Initial SDK setup][4] guide for the Web SDK.
+To get started, follow our [Initial SDK setup][4] guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 
@@ -37,10 +37,10 @@ Visit [Manual in-app message display][5] for more information on how your Smart 
 
 [1]: https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html
 [2]: http://webostv.developer.lge.com/discover/discover-webos-tv/
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html
+[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display
 [6]: https://www.npmjs.com/package/@braze/web-sdk-core
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/overview/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/overview/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
 [9]: https://github.com/Appboy/smart-tv-sample-apps

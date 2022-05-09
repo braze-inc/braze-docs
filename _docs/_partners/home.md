@@ -179,13 +179,17 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: Peak
+  url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-- name: Grouparoo
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
   
+=======
+
 ---

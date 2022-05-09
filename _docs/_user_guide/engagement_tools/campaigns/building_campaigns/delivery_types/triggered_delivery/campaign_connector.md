@@ -32,7 +32,7 @@ As well as users who complete the following interactions with active News Feed C
 
 ## Delivery rules
 
-The Campaign Connector feature only works with active campaigns. In addition, you cannot use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you are a running a marketing campaign for 9 weeks and you set up a follow-on campaign that utilizes Campaign Connector at the beginning of week 4, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
+The Campaign Connector feature only works with active campaigns. In addition, you cannot use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you are a running a marketing campaign for nine weeks and you set up a follow-on campaign that utilizes Campaign Connector at the beginning of week four, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
 
 - Set up your original campaign as a draft
 - Set up and publish your follow-on campaign
@@ -54,19 +54,19 @@ You can target users who interact with an active campaign, or users who interact
 
 Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you’ll select the active campaign that you’d like to target.
 
-![Interact with Campaign][4]
+![][4]
 
 #### Targeting users who interact with a News Feed card
 
 Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then choose whether you’d like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you’d like to target.
 
-![Interact With Card][5]
+![][5]
 
 ### Step 3: Set schedule delay and add exceptions if necessary
 
-If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the email to users who did not open the original email within a week of receiving it.
+If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then, you can add "Open e-mail" as an exception. Now, you’ll resend the email to users who did not open the original email within a week of receiving it.
 
-![Schedule Delay][6]
+![][6]
 
 Exception events will only trigger while a user is waiting to receive the message it’s associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
 
@@ -82,7 +82,7 @@ For example, you might choose to target users who clicked on a promotional push 
 
 Or, you might follow up with users who clicked a deep link in an onboarding in-app message by sending them another in-app message that highlights additional features.  This way, you can target users that have demonstrated that they are interested in learning more about the features of your application and avoid annoying the users that prefer to discover these features by themselves.
 
-You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
+Campaign Connector can also target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding "Makes Purchase" and "Directly opened push notifications" as exceptions.
 
 [4]: {% image_buster /assets/img_archive/Campaign_Connector1.png %}
 [5]: {% image_buster /assets/img_archive/Campaign_Connector2.png %}

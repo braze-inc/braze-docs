@@ -38,7 +38,7 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 {% raw %}
 ```
 {% assign url = "https://www.examplelink.com" %}
-<a href='{{url}}'>Click this Link!</a>
+<a href='{{url}}'>Shop the collection</a>
 ```
 {% endraw %}
 {% endalert %}
@@ -62,7 +62,7 @@ Additionally, the property accessor filter allows you to template a custom attri
 {% endraw %}
 
 {% alert note %} 
-There is no way to instantiate a hash as a variable (i.e. expression) in Liquid within Braze. 
+There is no way to instantiate a hash as a variable (i.e., expression) in Liquid within Braze. 
 {% endalert %}
 
 {% raw %}
@@ -78,7 +78,7 @@ There is no way to instantiate a hash as a variable (i.e. expression) in Liquid 
 
 | filter name | filter description |
 |---|---|---|---|
-| `json_escape` | Escapes any special characters in a string (i.e. double quote `""` and backslash '\'). |
+| `json_escape` | Escapes any special characters in a string (i.e., double quote `""` and backslash '\'). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 This filter should always be used when personalizing a string in a JSON dictionary and is useful for webhooks in particular.

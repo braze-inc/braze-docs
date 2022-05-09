@@ -23,7 +23,7 @@ In this second paragraph, explore the relationship between your company and Braz
 This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the chart below. Be sure to adjust the descriptions and tailor them to your partnership integration. 
+The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
 
 | Requirement | Description |
@@ -82,7 +82,7 @@ Include code of your webhook request body.
 
 ### Step 3: Preview your request
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

@@ -75,7 +75,7 @@ The **View Error** section will show the error code and some additional informat
 
 ![An example error log shown in the Wyng platform.][16]{: style="max-width:80%;"}
 
-If you have any additional questions, please reach out to Wyng support ([support@wyng.com][13]) for assistance.
+If you have any additional questions, reach out to Wyng support ([support@wyng.com][13]) for assistance.
 
 [0]: https://wyng.com/
 [1]: https://wyng.com/dashboard/integrations/

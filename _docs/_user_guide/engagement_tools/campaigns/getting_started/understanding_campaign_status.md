@@ -11,7 +11,7 @@ description: "This reference article gives an overview of the various statuses a
 
 > This reference article gives an overview of the various statuses a campaign can have and what they mean.
 
-On your Braze dashboard, your campaigns are grouped by their status. Checko out the different campaign statuses and descriptions for what they mean.
+On your Braze dashboard, your campaigns are grouped by their status. Check out the different campaign statuses and descriptions for what they mean.
 
 ## Draft
 Campaigns marked as drafts are saved but not launched campaigns. Clicking on them allows you to continue editing and begin sending.
@@ -25,7 +25,7 @@ Active campaigns are in the process of sending. They can fall under one of the f
 ## Archived
 Archivced campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
-To [archive a campaign][2], click on the gear icon to the right of the campaign, or simply check it off and select **Archive Selected**.
+To [archive a campaign][2], click on the gear icon for a given campaign, or simply check it off and select **Archive Selected**.
 
 ## Inactive
 Inactive campaigns have been paused but are still editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting **Resume**.
