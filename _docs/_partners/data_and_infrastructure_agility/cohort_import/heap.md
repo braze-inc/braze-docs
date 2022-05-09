@@ -2,7 +2,7 @@
 nav_title: Heap
 article_title: Heap
 page_order: 1
-description: "This article details the integration between Braze and Heap, a digital insights platform"
+description: "This article details the integration between Braze and Heap, a digital insights platform."
 alias: /partners/heap/
 page_type: partner
 search_tag: Partner
