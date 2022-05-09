@@ -29,8 +29,8 @@ guide_menu_list:
 - name: iOS Push Notification Options
   link: /docs/user_guide/message_building_by_channel/push/ios/
   fa_icon: fab fa-apple
-- name: iOS Push Primers
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+- name: Push Primers
+  link: /docs/user_guide/message_building_by_channel/push/push_primer_messages/
   fa_icon: fas fa-mobile-alt
 - name: Push Action Buttons
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
