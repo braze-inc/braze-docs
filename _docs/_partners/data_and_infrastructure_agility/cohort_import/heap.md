@@ -32,7 +32,7 @@ The Braze and Heap integration enables you to [import Heap data to Braze](#data-
 
 ## Data import integration
 
-Use the Heap to Braze integration to automatically sync data from Braze Currents to Heap. 
+Use the Heap to Braze integration to automatically sync cohorts defined in Heap to Braze.
 
 ### Step 1: Get the Braze data import key
 
@@ -54,7 +54,7 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 ## Data export integration
 
-Use the Braze Currents to automatically sync data from a Heap segment to an equivalent Braze cohort. 
+Use Braze Currents to automatically send engagement events (e.g email sent, push sent) from Braze to Heap for analysis.
 
 ### Step 1: Get Heap credentials
 
