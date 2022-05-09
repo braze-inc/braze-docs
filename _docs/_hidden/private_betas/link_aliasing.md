@@ -32,13 +32,9 @@ The following endpoints are available to extract the `alias` set in each message
 - [Canvas Link Alias Endpoint][4]
 
 ## Link templates
-For new message variants, any existing link template can be used from the Link Management tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the Link Management tab.
+For new message variants, any existing link template can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
 
-Link templates would previously work on all `href` URLS.  This assumed that whatever the value in the `href` would accept a question mark(to distinguish query parameters) and then append the link template.  This behavior is now been changed with link aliasing.  
-
-Link templates are only applied to "known links" where Braze can safely know to append query parameters.  
-
-For example, previously link templates would apply to Liquid-generated code like this: `href={{url}}`.  With link aliasing, it would only apply if the HTML looks like this: `href={{url}}?`.  The question mark (?) would indicate to Braze that it is safe to append query parameters (in this case `lid={{placeholder}}` and then any subsequent link template. 
+Link templates are only applied to "known links" where Braze can safely know to append query parameters. For example, previously link templates would apply to Liquid-generated code like this: `href={{url}}`. With link aliasing, it would only apply if the HTML looks like this: `href={{url}}?`. The question mark (?) would indicate to Braze that it is safe to append query parameters (in this case, `lid={{placeholder}}` and then any subsequent link template. 
 
 ## Link aliasing in Content Blocks
 New Content Blocks will have their links modified where Braze will append a `lid={{placeholder}}` to each link where applicable. This placeholder value is resolved when inserted into an email message variant.
@@ -46,7 +42,7 @@ New Content Blocks will have their links modified where Braze will append a `lid
 Any existing Content Blocks created before Braze enabled this feature will only have their links modified when the HTML in that Content Block is edited and the Content Block is relaunched.  Ideally, rather than relaunching, you should duplicate the Content Block.  Many customers have added a new naming convetion after duplicating to indicate that this new Content Block supports link aliasing where (old = Content_Block_1) (new = Content_block_1_LA)
 
 When a Content Block that is not decorated with the `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias.
-When a new Content Block is inserted into an “old” (this equates to a message created prior to Link Aliasing being enabled) message variant, the links from that message variant will be recognized by this feature (since the variant was edited). Links from the Content Block are also recognized. Note that “Old” Content Blocks (not marked up) cannot nest “new” Content Blocks.
+When a new Content Block is inserted into an “old” (this equates to a message created prior to link aliasing being enabled) message variant, the links from that message variant will be recognized by this feature (since the variant was edited). Links from the Content Block are also recognized. Note that “old” Content Blocks (not marked up) cannot nest “new” Content Blocks.
 
 {% alert tip %}
 For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be achieved with bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
