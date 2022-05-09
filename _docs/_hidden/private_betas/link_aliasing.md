@@ -69,9 +69,11 @@ For Content Blocks, it is recommended to create copies of existing Content Block
 {% endtabs %}
 
 ## Link Templates
-For new message variants, any existing link template can be used from the **Link Management** tab.
+For new message variants, any existing link template can be used from the **Link Management** tab. 
 
 For any email message variation set up before this feature was enabled, the existing link templates will still be present. However, if the message variation is edited, the link templates will need to be reapplied.
+
+Note that link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as "old" Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying "old" Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL. 
 
 ## Link Segmentation
 

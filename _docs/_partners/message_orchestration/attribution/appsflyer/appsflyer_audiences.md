@@ -23,7 +23,7 @@ The Braze and AppsFlyer integration allows you to drive user engagement and incr
 | AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Cohort import integration
+## Data import integration
 
 ### Step 1: Configure the AppsFlyer SDK
 
