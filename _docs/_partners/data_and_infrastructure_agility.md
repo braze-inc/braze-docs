@@ -87,5 +87,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-
+- name: Dynamics 365 Customer Insights
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
+  
 ---
