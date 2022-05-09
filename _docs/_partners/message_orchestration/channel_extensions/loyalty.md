@@ -24,5 +24,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 - name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/  
 
 ---
