@@ -23,7 +23,7 @@ The Braze and Kubit integration allows you to import Kubit user cohorts and targ
 | Matching user IDs | Your customer data in Kubit and Braze must have matching user IDs across the two platforms. This also includes anonymous UUIDs. Visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) to read about how Braze sets user IDs. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
-## Integration
+## Data import integration
 
 ### Step 1: Get the Braze data import key
 
