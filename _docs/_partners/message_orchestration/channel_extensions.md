@@ -42,6 +42,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 
 ---
 
