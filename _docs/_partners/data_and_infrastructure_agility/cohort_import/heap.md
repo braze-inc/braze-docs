@@ -54,7 +54,7 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 ## Data export integration
 
-Use the Braze Currents to automatically sync data from a Heap segment to an equivalent Braze Cohort. 
+Use the Braze Currents to automatically sync data from a Heap segment to an equivalent Braze cohort. 
 
 ### Step 1: Get Heap credentials
 
