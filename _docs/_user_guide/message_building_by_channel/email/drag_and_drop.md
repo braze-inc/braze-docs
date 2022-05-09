@@ -24,6 +24,9 @@ guide_featured_list:
 - name: Global Style Settings
   link: /docs/dnd/global_style_settings/
   fa_icon: fas fa-cogs
+- name: Inbox Vision
+  link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
+  fa_icon: fas fa-inbox
 
 
 ---
