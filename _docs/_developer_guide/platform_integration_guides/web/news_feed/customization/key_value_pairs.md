@@ -11,7 +11,7 @@ channel: news feed
 
 # Key-value pairs
 
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Simply call `card.extras` to access these values.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
 See the JSDocs for more information on [ClassicCard][3], [Banner][4], and [CaptionedImage][5].
 
