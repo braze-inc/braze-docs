@@ -15,11 +15,9 @@ Link aliasing creates user-generated names that are available for segmentation r
 
 ## Creating a link alias
 
-To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. Users can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
 
-Aliases must be uniquely named per email campaign variant or Canvas step. You can also add link templates from the **Link Management** section.
-
-Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+Aliases must be uniquely named per email campaign variant or Canvas step. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
 ### Checking workflows
 
@@ -36,7 +34,7 @@ The following endpoints are available to extract the `alias` set in each message
 
 For new message variants, any existing link template can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
 
-Link templates are only applied to "known links" that Braze can safely know to append query parameters. For example, previously link templates would apply to Liquid-generated code like this: `href={{url}}`. With link aliasing, it would only apply if the HTML looks like this: `href={{url}}?`. The question mark (?) would indicate to Braze that it is safe to append query parameters (in this case, `lid={{placeholder}}` and then any subsequent link template. 
+Note that link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as “old” Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying “old” Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
 
 ## Link aliasing in Content Blocks
 
@@ -44,7 +42,7 @@ New Content Blocks will have their links modified where Braze will append a `lid
 
 Any existing Content Blocks created before Braze enabled this feature will only have their links modified when the HTML in that Content Block is edited and the Content Block is relaunched. Rather than relaunching, we recommend duplicating the Content Block.
 
-When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an “old” message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. “Old” Content Blocks cannot nest “new” Content Blocks.
+When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an “old” message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
 
 {% alert tip %}
 For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be done by bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
@@ -56,7 +54,7 @@ The retargeting of aliases filters allow you to create segmentation filters base
 
 ### Tracking links
 
-When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be “tracked” for segmentation purposes. You can track an unlimited number of links.
+When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be "tracked" for segmentation purposes. You can track an unlimited number of links.
 
 {% alert note %}
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
