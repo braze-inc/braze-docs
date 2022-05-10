@@ -21,4 +21,4 @@ braze.initialize("YOUR-API-KEY", {
 });
 ```
 
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions
+[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

@@ -107,7 +107,7 @@ In order to disable this functionality add the following style to your CSS:
 ```
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showFeed
+[2]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html
 [5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html

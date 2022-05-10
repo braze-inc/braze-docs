@@ -61,5 +61,4 @@ In order to send an MMS message, at least one number within your Subscription Gr
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
 [10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
-[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#addtosubscriptiongroup
-
+[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup
