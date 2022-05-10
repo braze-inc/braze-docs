@@ -11,10 +11,10 @@ channel: news feed
 
 # Key-value pairs
 
-`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Simply call `card.extras` to access these values.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
-See the JSDocs for more information on [ab.ClassicCard][3], [ab.Banner][4], and [ab.CaptionedImage][5].
+See the JSDocs for more information on [ClassicCard][3], [Banner][4], and [CaptionedImage][5].
 
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html
+[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html
+[5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html

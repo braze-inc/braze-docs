@@ -48,7 +48,7 @@ document.getElementById("show-transactional-feed").onclick = function() {
 };
 ```
 
-For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards).
+For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
 
 ## Step 3: Set key-value pairs in your campaign
 
