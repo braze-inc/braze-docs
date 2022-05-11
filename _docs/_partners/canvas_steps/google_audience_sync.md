@@ -18,7 +18,7 @@ Common use cases for syncing Custom Audiences include:
 - Creating similar audiences to acquire new users more efficiently.
 
 {% alert note %}
-This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
+This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
 {% endalert %}
 
 ## Integration
@@ -30,7 +30,7 @@ You will need to ensure that you have the following items created and/or complet
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you are looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
-| Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet this criteria, then your account is currently ineligible to use Customer Match.<br><br>Please chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
+| Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet this criteria, then your account is currently ineligible to use Customer Match.<br><br>Chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Implementation process
@@ -85,7 +85,7 @@ Users will be notified at the top of the step editor if the audience is created 
 When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience Step. 
 
 {% alert important %}
-Given Google's Customer Match requirements, you cannot have customer contact info and mobile advertiser IDs in the same customer lists. Google Customer Match will then use this information to determine who is targetable within Google Search, Google Display, YouTube, and Gmail. For more details around Google Customer Match requirements, please review their [documentation](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
+Given Google's Customer Match requirements, you cannot have customer contact info and mobile advertiser IDs in the same customer lists. Google Customer Match will then use this information to determine who is targetable within Google Search, Google Display, YouTube, and Gmail. For more details around Google Customer Match requirements, review their [documentation](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
 {% endalert %}
 {% endtab %}
 {% tab Sync with an Existing Audience %}
@@ -129,7 +129,7 @@ Once a customer is close to reaching the Google Ads API rate limit, Google will 
 
 ## Troubleshooting
 {% details Why am I unable to select multiple fields to match in my Google Audience Step configuration? %}
-Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact info (i.e., email and phone number). Please refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined) for more details. 
+Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact info (i.e., email and phone number). Refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined) for more details. 
 {% enddetails %}
 
 {% details How long will it take for my audiences to sync in Google? %} 

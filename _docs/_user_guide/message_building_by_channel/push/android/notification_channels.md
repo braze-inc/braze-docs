@@ -57,7 +57,7 @@ In this situation, all 10 campaigns with no channel selection that were previous
 
 In the event that an invalid channel ID is supplied to Braze (i.e., if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze's dashboard during development.
 
-To better understand the expected behavior for channels, please refer to the following table:
+To better understand the expected behavior for channels, refer to the following table:
 
 |Scenario |Outcome  |    
 | ---|-------------

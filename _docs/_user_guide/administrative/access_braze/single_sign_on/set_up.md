@@ -45,7 +45,7 @@ Braze only requires `email` in the SAML Assertion.
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
-After your Account Manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
+After your account manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
 
 On this page, you, input:
 
@@ -56,7 +56,7 @@ On this page, you, input:
 | `Certificate` | The `x.509` certificate is provided by your IdP.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Please make sure that your certificate follows this format when adding it to the dashboard:
+Make sure that your certificate follows this format when adding it to the dashboard:
 
 ```
 -----BEGIN CERTIFICATE-----

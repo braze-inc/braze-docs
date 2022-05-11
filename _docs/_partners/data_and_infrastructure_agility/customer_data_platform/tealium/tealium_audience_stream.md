@@ -103,7 +103,7 @@ You may create badges that help you classify and target your users by certain at
 
 ### Step 2: Create an audience
 
-From the Tealium home page, select **Audiences** under **AudienceStream** from the left sidebar navigation. Here, you can create an audience of users with common attributes. A user’s entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
+From the Tealium home page, select **Audiences** under **AudienceStream** from the sidebar navigation. Here, you can create an audience of users with common attributes. A user’s entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
 
 First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP users, you could create an audience of visitors who have the **VIP badge**.
 
@@ -113,7 +113,7 @@ Make sure to **Save / Publish** your audience once finished.
 
 A connector is an integration between Tealium and another vendor used to transmit data. These connectors contain actions that represent their partner's supported APIs. 
 
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **AudienceStream > Audience Connectors**.
+1. From the sidebar in Tealium under **Server-Side**, navigate to **AudienceStream > Audience Connectors**.
 2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
 3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. The configuration comprises three steps: source, configuration, and action.
 
@@ -205,7 +205,7 @@ Make sure to **Save / Publish** your connector once finished. The actions you co
 
 After your connector is up and running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure you have added the Tealium Tools browser extension.
 
-1. To start a new trace, select **Trace** on the left sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
+1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
 2. Open the browser extension and enter the Trace ID into AudienceStream Trace.
 3. Examine the real-time log.
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.

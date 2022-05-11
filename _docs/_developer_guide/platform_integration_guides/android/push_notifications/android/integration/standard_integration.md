@@ -254,7 +254,7 @@ A common symptom of an improper asset is the small notification icon rendering a
 
 The following large and small icons pictured are examples of properly designed icons:
 
-![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
+![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
 ### Step 3: Configure notification icons
 
@@ -382,6 +382,13 @@ You should ensure that any API campaigns with the [Android push object][63] para
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 
+The default channel name and description can also be configured in `braze.xml`.
+
+```xml
+<string name="com_braze_default_notification_channel_name">Your channel name</string>
+<string name="com_braze_default_notification_channel_description">Your channel description</string>
+```
+
 ### Step 6: Test notification display and analytics
 
 #### Testing display
@@ -408,7 +415,18 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "android_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }  
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].

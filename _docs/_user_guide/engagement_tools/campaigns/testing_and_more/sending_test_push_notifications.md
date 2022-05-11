@@ -115,7 +115,7 @@ These filters have the following options:
 2. **Does not equal** - Use this if you want to exclude a particular email or user ID from test campaigns.
 3. **Matches** - Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
+These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g., `matches` "email1@braze.com\|email2@braze.com").
 
 After adding the testing filters to your test segment, verify that you've selected only the users you intended by clicking **Preview** at the top of the segment editor or by exporting that segment's user data to CSV. To export segment user data, click the **User Data** dropdown and select **CSV Export All User Data**.
 

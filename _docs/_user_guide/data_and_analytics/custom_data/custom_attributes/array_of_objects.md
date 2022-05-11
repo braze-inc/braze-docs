@@ -12,14 +12,13 @@ description: "This reference article covers using an array of objects as a data 
 Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 {% alert important %}
-Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations
 
 - Available on custom attributes sent via API only, not supported with Braze SDKs or CSV upload.
 - Partners do not yet support arrays of objects. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects. If datetimes are included in your objects, they are stored as strings.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.

@@ -38,7 +38,7 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 ## Connect Passkit to Braze
 
-To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s `externalId`.
+To pass data from PassKit, ensure that you have set your Braze external ID as PassKit’s `externalId`.
 
 1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
@@ -251,7 +251,7 @@ To set up the webhook, fill out the new event details within the request body, i
 
 Your raw text will automatically highlight if it is an applicable Braze tag. 
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

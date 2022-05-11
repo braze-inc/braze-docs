@@ -54,11 +54,11 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 **Step 1: Generate Certificate Signing Request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
-2. Select **Identifiers > App IDs** in the left sidebar.
+2. Select **Identifiers > App IDs** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the **Enable** check box and click **Create Certificate** under the **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
-6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
+6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
 **Step 2: Export Certificate**
@@ -346,7 +346,12 @@ Appboy.sharedInstance()?.register(application,
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
 
+## Step 7: Unit tests (optional)
+
+To add test coverage for the integration steps you've just followed, implement Braze's [push unit testing][36].
+
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
+[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/

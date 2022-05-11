@@ -35,7 +35,7 @@ Go to the Azure Portal and click **Azure Active Directory** in the left navigati
 
 Next, navigate to **Enterprise Applications**, then select **All applications**.
 
-![Azure portal selecting all enterprise applications]({% image_buster /assets/img/azure_2.png %})
+![Azure portal selecting all enterprise applications.]({% image_buster /assets/img/azure_2.png %})
 
 #### Step 1b: Create a new application
 
@@ -49,23 +49,23 @@ Search for **Braze** in the search box, then select it from the result panel, th
 
 In your Azure Portal, go to the **Braze Application Integration** page and select **Single sign-on**.
 
-![Azure portal navigation with Single sign-on highlighted]({% image_buster /assets/img/azure_5.png %})
+![Azure portal navigation with Single sign-on highlighted.]({% image_buster /assets/img/azure_5.png %})
 
 Next, select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.
 
-![Azure portal select a single sign-on method dialog]({% image_buster /assets/img/azure_6.png %})
+![Azure portal select a single sign-on method dialog.]({% image_buster /assets/img/azure_6.png %})
 
 #### Step 2b: Configure dialog
 
 From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
-![Azure portal editing basic SAML configuration]({% image_buster /assets/img/azure_7.png %})
+![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_7.png %})
 
 ###### Configure application in Idp-initated mode (required)
 
 To configure the application in IdP-initiated mode, enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
-![Azure portal editing basic SAML configuration]({% image_buster /assets/img/azure_8.png %})
+![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_8.png %})
 
 ###### Configure RelayState (required)
 
@@ -75,7 +75,7 @@ In the RelayState box, input your RelayState generated API key.
 
 If you want to configure the application in SP-initiated mode, click **Set additional URLs** and enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
 
-![Azure portal setting additional sign on URLs]({% image_buster /assets/img/azure_9.png %})
+![Azure portal setting additional sign on URLs.]({% image_buster /assets/img/azure_9.png %})
 
 #### Step 2c: Format SAML assertions
 
@@ -85,7 +85,7 @@ Braze expects the SAML assertions in a specific format. Refer to the following t
 {% tab User Attributes %}
 You can manage the values of these attributes from the **User Attributes** section on the **Application Integration** page.
 
-![User Attributes section of the Application Integration page in Azure]({% image_buster /assets/img/azure_10.png %})
+![User Attributes section of the Application Integration page in Azure.]({% image_buster /assets/img/azure_10.png %})
 
 Use the following attribute pairings:
 
@@ -100,7 +100,7 @@ Use the following attribute pairings:
 
 On the **Set up Single Sign-On with SAML** page, click **Edit** to open the **User Attributes** dialog. Then, edit the claims according to the proper format.
 
-![User Attributes dialog in Azure]({% image_buster /assets/img/azure_11.png %})
+![User Attributes dialog in Azure.]({% image_buster /assets/img/azure_11.png %})
 
 Use the following claim name pairings:
 
@@ -121,19 +121,19 @@ You can manage these user claims and values from the **Manage user claims** dial
 
 Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
 
-![Azure download SAML signing certificate]({% image_buster /assets/img/azure_13.png %})
+![Azure download SAML signing certificate.]({% image_buster /assets/img/azure_13.png %})
 
 #### Step 2e: Copy URLs for configuration in Braze
 
 Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3-configure-braze-single-sign-on).
 
-![Azure URLs for configuration]({% image_buster /assets/img/azure_14.png %})
+![Azure URLs for configuration.]({% image_buster /assets/img/azure_14.png %})
 
 ### Step 3: Configure Azure AD within Braze
 
 Once you have set up Braze within your Azure AD, they will provide a Target URL (Login URL) and **x.509** certificate which you will input into your Braze account.
 
-After your Account Manager has enabled SAML SSO for your account, go to **Company Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
+After your account manager has enabled SAML SSO for your account, go to **Company Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
 
 On this page, you will add the following:
 
@@ -144,7 +144,7 @@ On this page, you will add the following:
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Opening Security Settings and adding SAML SSO details]({% image_buster /assets/img/samlsso.gif %})
+![Opening Security Settings and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.

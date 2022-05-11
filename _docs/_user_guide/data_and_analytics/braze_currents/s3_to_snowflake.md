@@ -267,7 +267,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
   {% endtab %}
 {% endtabs %}
 
-To see the types of analytics you can perform using Braze Currents, please consult our [Looker Blocks](https://github.com/llooker?q=braze).
+To see the types of analytics you can perform using Braze Currents, consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.

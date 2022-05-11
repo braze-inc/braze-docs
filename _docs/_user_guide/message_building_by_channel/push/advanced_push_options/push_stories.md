@@ -26,7 +26,10 @@ On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a 
 
 ## Prerequisites
 
-Users must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to receive Push Stories.
+The following SDK versions are required to receive Push Stories:
+
+{% sdk_min_versions ios:3.2.0 android:2.2.0 %}
+
 
 ## How to use Push Stories
 
@@ -41,14 +44,14 @@ To create a page, perform the following steps:
 1. Click **Manage Pages** from the main composer.
     <br><br>![][4]{: style="max-width:70%"}<br><br>
 2. Insert an image for each page, along with the click behavior for that image.
-3. If desired, add a **Title** and **Description** for each page. If you use a title and decription for one page, they must be inserted for all pages.
+3. If desired, add a **Title** and **Description** for each page. If you use a title and description for one page, they must be inserted for all pages.
 
 The previews will be reflected and are interactive.
 
 ![][3]{: style="max-width:60%"}
 
 {% alert important %}
-If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
+If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
 
 ### Push Story segmentation

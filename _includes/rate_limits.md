@@ -7,9 +7,9 @@ We apply the default Braze rate limit of 250,000 requests per hour to this endpo
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each request to the `/users/track` endpoint can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each for a max of 225 individual users. Each update can also belong to the same user for a max of 225 updates to a single user in a request.
+We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each request to the `/users/track` endpoint can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each for a max of 225 individual data points. Each update can also belong to the same user for a max of 225 updates to a single user in a request.
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your Customer Success Manager if you need your limit increased.
+See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 

@@ -16,7 +16,7 @@ channel:
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
 
-Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Customer Success Manager or our support team for more information.
+Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team for more information.
 
 {% alert note %}
 If you're using our News Feed tool, we recommend that you move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Content Cards are also easier to find and use in the Braze product. See our [Migration Guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
@@ -52,7 +52,7 @@ By using Content Cards, you can:
 
 This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed—a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
-![Contents Card feed that shows the three standard types of cards]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
+![Contents Card feed that shows the three standard types of cards.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
 
 {% alert note %}
 Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.

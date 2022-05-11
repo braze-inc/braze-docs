@@ -17,7 +17,7 @@ The **Overview** page on the dashboard provides key mobile metrics for you to tr
 
 ![Dashboard Screenshot][1]
 
-> You can click **Show Breakdown** located on the right side of all of the rows of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
+> You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
 
 ![Expand][2]
 
@@ -29,7 +29,7 @@ A low MAU/Lifetime User ratio may indicate that you need to diversify your messa
 
 ## Lifetime sessions
 
-This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, please visit the cooresponding 
+This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, visit the cooresponding 
 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/) session tracking developer articles.
 
 ## Monthly active users

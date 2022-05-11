@@ -8,7 +8,7 @@ description: "Filters can be used to reformat static or dynamic content. This re
 
 # Filters
 
-> This reference article provides an overview of filters in liquid, and covers which filters are supported by braze. Looking for ideas on how you can use these filters? Check out our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> This reference article provides an overview of filters in liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 
@@ -58,7 +58,7 @@ SALE
 
 {% alert important %}
 Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. 
-<br><br>If you have any questions about a filter that is not listed here, please contact Support or reach out to your Customer Success Manager.
+<br><br>If you have any questions about a filter that is not listed here, contact Support or reach out to your customer success manager.
 {% endalert %}
 
 ## Array filters

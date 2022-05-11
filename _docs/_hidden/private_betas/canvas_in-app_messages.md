@@ -4,7 +4,7 @@ permalink: "/canvas_in-app_messages/"
 hidden: true
 ---
 
-# In-app messages In Canvas
+# In-app messages in Canvas
 
 {% include video.html id="6X8E20BlblI" align="right" %}
 
@@ -13,7 +13,7 @@ Once you've set up delay and audience options, you can add an in-app message to 
 You can customize when your message will [expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
 {% alert important %}
-In-app messsages for Canvas is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+In-app messsages for Canvas is currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
 ## In-app message expiration
@@ -50,7 +50,7 @@ As you can see, the in-app messages expire when the promotion expires to prevent
   {% endtab %}
   {% tab Onboarding %}
 
-**User Onboarding Canvases**
+**User onboarding Canvases**
 
 Your first impression with a user is, perhaps, your most critical one. It can make or break future visits to your app. Your initial communications with your user should be sensibly timed and encourage frequent visits to your app to promote usage.
 

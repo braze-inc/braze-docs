@@ -14,7 +14,7 @@ layout: api_page
 Use this endpoint to identify an unidentified (alias-only) user.
 
 {% alert important %}
-Support for the `merge_behavior` field is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for the `merge_behavior` field is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. You can add up to 50 user aliases per request. 

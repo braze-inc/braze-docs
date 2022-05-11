@@ -28,7 +28,7 @@ They are also visible in the list of campaigns, Canvases, or segments, along wit
 
 ![Tags on the list of campaigns][4]{: style ="max-width:70%;" }
 
-To filter by a tag, select the tag name in the left-hand toolbar or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
+To filter by a tag, select the tag name from the list of tags or search for the tag in the search pane using the `tag:` selector. For example, to search for the `Onboarding` tag, enter "tag:Onboarding".
 
 ![Searching for all campaigns tagged as Welcome Email][6]
 

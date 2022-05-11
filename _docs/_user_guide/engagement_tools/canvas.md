@@ -33,7 +33,7 @@ guide_featured_list:
 ---
 
 {% alert note %}
-Canvas is only available to customers on annual contracts. If you are not on contract, please [contact Braze](https://www.braze.com/contact/) to learn how to get Canvas.
+Canvas is only available to customers on annual contracts. If you are not on contract, [contact Braze](https://www.braze.com/contact/) to learn how to get Canvas.
 {% endalert %}
 
 <br>

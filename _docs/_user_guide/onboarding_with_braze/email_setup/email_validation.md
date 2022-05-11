@@ -82,7 +82,7 @@ If the domain part is a Gmail address, the local part needs to be at least five 
 
 ## Host part validation rules
 
-IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
+IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g., .com, .org, .net, etc.) may not be fully numeric.
 
 The following regex is used to validate the domain:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`

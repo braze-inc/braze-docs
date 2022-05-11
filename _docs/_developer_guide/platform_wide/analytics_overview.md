@@ -10,11 +10,11 @@ description: "This reference article covers user data collection including what 
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
-This best practice guide will help you to understand exactly what Braze considers to be a "custom event" vs. a "custom attribute".
+This best practice guide will help you understand the difference between a custom event and a custom attribute in Braze.
 
 ## Automatically collected data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. Visit our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article if you wish to whitelist processes that block the default collection of certain data items (not suggested).
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. See our [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) article to whitelist processes that block the default collection of certain data items (not suggested).
 
 #### Usage information
 - First Used App (Time)
@@ -72,15 +72,15 @@ Custom events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** analytics page, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
 ![A custom event analytics graph showing stats on users who added a credit card and made a search across a period of a thirty days.][8]
 
->  [Incrementing custom attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+> [Incrementing custom attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 
 ### Custom event storage
 
-All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, contact your Braze Account Manager or Customer Success Manager.
+All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for segmentation for 30 days. If you'd like to leverage event properties for Segmentation, contact your Braze account manager or customer success manager.
 
 ### Custom event properties
 
@@ -90,24 +90,36 @@ For example, if an eCommerce application wanted to send a message to a user when
 
 ![A custom event example that will send a campaign to a user who has abandoned their cart and left the cart value at more than 100 and less than 200.][18]
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
-![A Liquid example of a user pulling custom event properties to set up different message options based on the time spent on a level.][19]{: style="max-width:75%;"}
+{% raw %}
+```liquid
+{% if {{event_properties.${time_spent}}} < 600 %}
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+{% elsif {{event_properties.${time_spent}}} < 1800 %}
+Don't forget to visit the town store between levels to upgrade your tools.
+{% else %}
+Talk to villagers for essential tips on how to beat levels!
+{% endif %}
+```
+{% endraw %}
 
-Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your Customer Success Manager or our support team, as this may incur additional data costs.
+Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our support team, as this may incur additional data costs.
 
 ## Custom attributes
 Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
 
 ### Custom attribute storage
 
-All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, contact your Braze Account Manager or Customer Success Manager.
+All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for segmentation for 30 days. If you'd like to leverage event properties for Segmentation, contact your Braze account manager or customer success manager.
 
 ### Custom attribute data types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
 #### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
+
+The following table describes available segmentation options for string attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -151,6 +163,8 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
+The following table describes available segmentation options for array attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
@@ -165,9 +179,11 @@ The maximum number of elements in custom attribute arrays defaults to 25. The ma
 #### Dates
 Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
->  The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
+> The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
+
+The following table describes available segmentation options for time attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -183,7 +199,10 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 
 #### Numbers {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
->  Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+
+The following table describes available segmentation options for numeric attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -198,6 +217,8 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 #### Booleans (true/false)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
 
+The following table describes available segmentation options for boolean attributes.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the boolean value **is** | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
@@ -208,6 +229,8 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 ## Purchase events / revenue tracking
 
 Using our purchase methods to record in-app purchases establishes the Life-time Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+
+The following table describes available segmentation options for purchase events.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -296,7 +319,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [user data API][9].
 - Target specific users with our [messaging API][10] for both general and transactional messages.
 
-User IDs must be less than 512 characters long and should be private and not easily obtained (e.g. not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
+User IDs must be less than 512 characters long and should be private and not easily obtained (e.g., not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
 
 Good options for User IDs:
 
@@ -370,14 +393,14 @@ Additionally, the following keys are reserved and cannot be used as custom event
 - `price`
 - `currency`
 
-#### Value cefinitions
+#### Value definitions
 
 - Integer values are 64 bit
 - Decimals have 15 decimal digits by default
 
 ### Parsing a generic name field
 
-If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
+If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
@@ -388,4 +411,3 @@ If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can 
 [16]: #example-case
 [17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"

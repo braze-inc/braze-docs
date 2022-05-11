@@ -13,7 +13,7 @@ Integrating with Braze is a worth-while process. But you're smart. you're **here
 
 But what you probably don't know was that you and your engineers or developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-{% alert note %} Please note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
+{% alert note %} Note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
 
 ## The technical side of the integration process
 
@@ -29,12 +29,12 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so please use the predefined SDK endpoints. If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
 {% alert warning %}
-Please ensure that you and your engineer don't unknowingly or unintentionally change the company's credentials in Braze, as this could cause issues during the implementation process or lock one or more of you out of your accounts.
+Ensure that you and your engineer don't unknowingly or unintentionally change the company's credentials in Braze, as this could cause issues during the implementation process or lock one or more of you out of your accounts.
 {% endalert %}
 
 ### Step 2: They implement your desired messaging channels

@@ -16,7 +16,7 @@ tool: Dashboard
 }
 </style>
 
-Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the upper right corner of the dashboard and selecting **Manage Users** from the drop-down. 
+Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
 
 ![Account users list on the Manage Settings page][30]
 
@@ -43,10 +43,10 @@ You can manage user permissions by group or on an individual basis using the Use
 |Permission Name|Definition/Parameters|
 |---|---|
 |Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which Limited Users are unable to do.|
-|Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create drafts of campaigns and Canvases, view drafts of News Feed, segments, templates and media, create templates, upload media, and view engagement reports. However, users with this permission cannot duplicate existing drafts or view existing live content. |
-|Send Campaigns, Canvases| Allows user to edit, archive, stop, duplicate campaigns and canvases, create campaigns, launch canvases. To launch existing content blocks, both **Send campaigns, Canvases** and **Publish Cards** permissions are required. |
+|Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, view drafts of News Feed, segments, templates and media, create templates, upload media, and view engagement reports. However, users with this permission cannot view existing live content. |
+|Send Campaigns, Canvases| Allows user to edit, archive, and stop campaigns and canvases, create campaigns, launch canvases. To launch existing content blocks, both **Send campaigns, Canvases** and **Publish Cards** permissions are required. |
 |Publish Cards| Allows user to create and edit News Feed cards. You can still view cards without this permission. To launch existing content blocks, both **Publish Cards** and **Send campaigns, Canvases** permissions are required. |
-|Edit Segments| Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
+|Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
 |View PII | Allows user to view personally identifiable information within the dashboard. Note that both email addresses and phone number will be visible. |
 |View User Profile| Allows user to access User Search page.|

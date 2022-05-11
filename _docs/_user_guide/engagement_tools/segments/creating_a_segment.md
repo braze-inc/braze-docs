@@ -20,7 +20,7 @@ Segmentation allows you to target users based upon their demographic, behavioral
 
 ![Engagement section with the Segments tab highlighted.][1]{: style="float:right;max-width:20%;"}
 
-From the left-hand side of the dashboard under **Engagement**, click **Segments**. 
+Go to the **Segments** page located under **Engagements**.
 
 ## Step 2: Name your segment
 
@@ -84,7 +84,7 @@ If you no longer need or wish to retire a specific segment, you can archive it b
 When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
-You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of its page.
+You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}

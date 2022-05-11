@@ -63,7 +63,7 @@ This will not require an SDK update.
 {% endalert %}
 
 {% alert tip %}
-Please note that `%u` and `%@` are formatting strings for the summary count and summary argument, respectively. When the summary is shown, these placeholders will be replaced with the values for `summary-count` and `summary-arg`.
+Note that `%u` and `%@` are formatting strings for the summary count and summary argument, respectively. When the summary is shown, these placeholders will be replaced with the values for `summary-count` and `summary-arg`.
 {% endalert %}
 
 Once this is set up on your app, use the summary category by checking the **Notification Buttons** box and selecting **Enter Pre-registered iOS Category**.
@@ -93,7 +93,7 @@ If users choose to "Turn Off" provisional push from you, they won't see any more
 {% endalert %}
 
 {% alert important %}
-If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), please reach out to your Braze representative for additional guidance.
+If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), reach out to your Braze representative for additional guidance.
 {% endalert %}
 
 #### Set up provisional push notifications

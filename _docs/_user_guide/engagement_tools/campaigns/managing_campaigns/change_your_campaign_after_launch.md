@@ -1,7 +1,7 @@
 ---
 nav_title: Changing Your Campaign After Launch
 article_title: Changing Your Campaign After Launch
-page_order: 0
+page_order: 1
 tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."
@@ -16,7 +16,7 @@ description: "This reference article gives an overview of the result of editing 
 
 All changes to Action-Based Delivery campaigns and API-Triggered Delivery campaigns take effect immediately for go-forward sends.
 
-If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), please refer to the following guidance for scheduled campaigns.
+If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), refer to the following guidance for scheduled campaigns.
 
 ## Scheduled campaigns
 

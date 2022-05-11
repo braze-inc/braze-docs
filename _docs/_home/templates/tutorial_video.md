@@ -41,7 +41,7 @@ noindex: true
 ---
 {% comment %}
 About this layout:
-This layout is for Quick Start guides, Product walkthroughs, and Troubleshooting walkthroughs with a video. The video will sit on the right-hand side and stay in place. Please note that the TOC will only show H2 headers, so the only steps that should be H2 should be written as such:
+This layout is for Quick Start guides, Product walkthroughs, and Troubleshooting walkthroughs with a video. The video will sit on the right-hand side and stay in place. Note that the TOC will only show H2 headers, so the only steps that should be H2 should be written as such:
 "Step 1: Whatever the step is".
 Tutorials:
 A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
@@ -58,7 +58,7 @@ Make sure you [link to other references as you need them]({{site.baseurl}}/home/
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>
@@ -94,7 +94,7 @@ If this step needs to be broken down into additional steps, you can either:
 
 ### This is also part of step two
 
-Please note that this sub-step will NOT appear in the TOC under the video on the right.
+Note that this sub-step will NOT appear in the TOC under the video on the right.
 
 {% alert important %}
 Make sure to tell your users important things as they come up. Don't wait until the end! Your users will be following along - people don't read instructions _before_ they start the tutorial.

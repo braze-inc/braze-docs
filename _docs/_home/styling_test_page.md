@@ -319,11 +319,11 @@ public void onResume() {
 
 #### Code Test JavaScript
 ```javascript
-appboy.subscribeToFeedUpdates(function(feed) {
+braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  appboy.display.showFeed(undefined, cards);
+  braze.showFeed(undefined, cards);
 });
-appboy.requestFeedRefresh();
+braze.requestFeedRefresh();
 ```
 
 #### Pygments Test
@@ -561,7 +561,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, see the [Apple Developer Docs][apple_initial_setup_19].
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
@@ -597,7 +597,7 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self-contained tabs, i.e. tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, i.e., tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
 {% raw %}
 ```liquid

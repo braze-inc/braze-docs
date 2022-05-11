@@ -176,7 +176,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Clicks Email",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -185,7 +185,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Opens Email",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -194,7 +194,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Makes Any Purchase",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours
 }
 ```
 
@@ -203,8 +203,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Makes Specific Purchase",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "product": (string) name of the product, i.e. - "Feline Body Armor"
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "product": (string) name of the product, i.e., - "Feline Body Armor"
 }
 ```
 
@@ -213,8 +213,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Performs Custom Event",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "custom_event_name": (string) name of the event, i.e. - "Used Feline Body Armor"
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "custom_event_name": (string) name of the event, i.e., - "Used Feline Body Armor"
 }
 ```
 
@@ -223,8 +223,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Upgrades App",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array|null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 
@@ -233,8 +233,8 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```json
 {
     "type": "Starts Session",
-    "window": (integer) number of seconds during which the user can convert on this event, i.e. - 86400, which is 24 hours,
-    "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
+    "window": (integer) number of seconds during which the user can convert on this event, i.e., - 86400, which is 24 hours,
+    "app_ids": (array|null) array of app ids, i.e., - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
 

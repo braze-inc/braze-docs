@@ -138,7 +138,7 @@ By wrapping your content around the Raw tag, the Braze processing engine will co
 | AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
 {: .reset-td-br-1 .reset-td-br-2}  
 
-- Please note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
+- Note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
 
 ### Testing & Troubleshooting
 

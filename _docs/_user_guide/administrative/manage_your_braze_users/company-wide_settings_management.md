@@ -11,7 +11,7 @@ description: "This reference article covers company-wide settings, like changing
 
 ## Managing your company settings
 
-The [Company Settings][1] page allows you to change the name of your company, set your time zone, and request to delete your company.
+The **[Company Settings][1]** page allows you to change the name of your company, set your time zone, and request to delete your company.
 
 {% alert note %}
 Only admins and users with explicit permissions to manage company settings will see this page.

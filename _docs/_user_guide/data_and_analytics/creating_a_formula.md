@@ -60,7 +60,7 @@ The available numerators are:
 * Segment Size (only segments that have [analytics tracking][17] enabled can be used)
 
 ## Use cases
-Formulas, especially when combined with custom events, allow you to better understand user behaviors within your app. Formulas can also lend deeper insight into segment purchasing patterns, even if your company uses paid media in conjunction with Braze, e.g. Google Ads or TV. The following are some examples of the kinds of behavior patterns that can be detected using Formulas:
+Formulas, especially when combined with custom events, allow you to better understand user behaviors within your app. Formulas can also lend deeper insight into segment purchasing patterns, even if your company uses paid media in conjunction with Braze, e.g., Google Ads or TV. The following are some examples of the kinds of behavior patterns that can be detected using Formulas:
 
 * Ride-sharing apps: If you have a custom event for when the user cancels a ride, configuring a function for Cancelled Rides / DAU can be used to find if certain user segments tend to cancel more rides than others.
 * E-commerce apps: By configuring a function for purchases of a certain product ID / MAU, you can, for example, compare the popularity of a recently promoted product between segments, even if all of the promotions couldn't be tracked using Braze.

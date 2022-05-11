@@ -85,7 +85,7 @@ Selecting **Default** in this field will play the default notification sound on 
 
 ![][11]
 
-Next, enter the full sound resource URI (e.g. `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
+Next, enter the full sound resource URI (e.g., `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
 To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
 

@@ -30,7 +30,7 @@ Braze automatically addresses an unknown number in one of three ways:
   * Braze ignores the text message and does nothing.
 
 {% alert important %}
-If you would like to enable this functionality, please contact your onboarding manager or customer success manager.
+If you would like to enable this functionality, contact your onboarding manager or customer success manager.
 {% endalert %}
 
 [ualink]: {{site.baseurl}}/api/objects_filters/user_alias_object/
