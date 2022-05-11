@@ -78,6 +78,19 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
+### Event property segmentation
+
+Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
+
+![][6]
+
+These segmentation filters include:
+- Has done custom event with property Y with value V X times in the last Y days.
+- Has made any purchases with property Y with value V X times in the last Y days.
+- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
+
+Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Mangage Properties** and used in the target step of the campaign or Canvas builder.
+
 ### Referencing purchase event properties with Liquid
 
 When you send through purchase data that includes purchase properties, you can use the `event_properties` tag to reference the purchase properties in your channel messaging.
@@ -97,3 +110,4 @@ For example, to reference the name of a product, replace `your_custom_event_prop
 [3]: {% image_buster /assets/img/purchase3.png %}
 [4]: {% image_buster /assets/img/purchase4.jpg %}
 [5]: {% image_buster /assets/img/purchase5.png %}
+[6]: {% image_buster /assets/img/nested_object3.png %}
