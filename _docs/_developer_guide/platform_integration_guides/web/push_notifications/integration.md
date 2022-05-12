@@ -22,29 +22,6 @@ Refer to our [push best practices][7] for more resources.
 
 Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers thats support web push include most versions of Chrome, Firefox, and Opera. Web push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple push notification services; Braze supports these Safari notifications.
 
-## HTTPS requirement
-
-Web standards require that the domain requesting push notification permission be secure.
-
-### What defines a secure site?
-
-A site is deemed secure if it matches one of the following secure origin patterns:
-
-- (https, , *)
-- (wss, *, *)
-- (, localhost, )
-- (, .localhost, *)
-- (, 127/8, )
-- (, ::1/128, *)
-- (file, *, —)
-- (chrome-extension, *, —)
-
-This security requirement in the open standards specification that Braze Web push is built on prevents man-in-the-middle attacks.
-
-### What if a secure site is not available?
-
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a [working demo][4].
-
 {% include archive/web-v4-rename.md %}
 
 ## Integration
@@ -55,6 +32,8 @@ While industry best practice is to make your whole site secure, customers who ca
 - Otherwise, if your site already registers a service worker, add the following snippet to the service worker file, and set the [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) initialization option to `true` when initializing the Web SDK.
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsample-build%2Fservice-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+If your service worker filename is not `service-worker.js`, you must use the `serviceWorkerLocation` [initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
 
 {% alert important %}
 Your web server must return a `Content-Type: application/javascript` when serving your service worker file. 
@@ -139,6 +118,29 @@ When you wish to display the soft push prompt to the user, call `braze.logCustom
 braze.openSession();
 braze.logCustomEvent("prime-for-push");
 ```
+
+## HTTPS requirement
+
+Web standards require that the domain requesting push notification permission be secure.
+
+### What defines a secure site?
+
+A site is deemed secure if it matches one of the following secure origin patterns:
+
+- (https, , *)
+- (wss, *, *)
+- (, localhost, )
+- (, .localhost, *)
+- (, 127/8, )
+- (, ::1/128, *)
+- (file, *, —)
+- (chrome-extension, *, —)
+
+This security requirement in the open standards specification that Braze Web push is built on prevents man-in-the-middle attacks.
+
+### What if a secure site is not available?
+
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a [working demo][4].
 
 ## Service Worker advanced settings
 
