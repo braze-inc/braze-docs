@@ -249,6 +249,19 @@ Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/s
 Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
 {% endalert %}
 
+##### Event property segmentation
+
+Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
+
+![][3]
+
+These segmentation filters include:
+- Has done custom event with property Y with value V X times in the last Y days.
+- Has made any purchases with property Y with value V X times in the last Y days.
+- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
+
+Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Mangage Properties** and used in the target step of the campaign or Canvas builder.
+
 #### Frequently asked questions
 
 ##### Does this consume additional data points?
@@ -273,6 +286,7 @@ Braze's Success and Support teams can help recommend the best approach depending
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}
+[3]: {% image_buster /assets/img/nested_object3.png %}
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"

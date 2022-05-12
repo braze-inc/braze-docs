@@ -523,3 +523,5 @@ validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filter
 validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/'] = '/docs/user_guide/message_building_by_channel/push/push_primer_messages';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
+
+validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';

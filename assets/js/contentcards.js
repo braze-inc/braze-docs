@@ -6,10 +6,10 @@ $(document).ready(function() {
     if (curcontainer.find('div').length ){
       $this.removeClass('cc_show');
       curcontainer.hide();
-      appboy.display.hideContentCards();
+      braze.hideContentCards();
     }
     else {
-      appboy.display.showContentCards(curcontainer[0]);
+      braze.showContentCards(curcontainer[0]);
       curcontainer.show();
       $this.addClass('cc_show');
       curcontainer.find('.ab-feed-buttons-wrapper .ab-close-button').on('click',function(e){
