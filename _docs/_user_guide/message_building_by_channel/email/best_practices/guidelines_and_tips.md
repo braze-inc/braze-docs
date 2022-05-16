@@ -3,18 +3,18 @@ nav_title: Email Guidelines & Tips
 article_title: Email Guidelines & Tips
 page_order: 1
 page_type: reference
-description: "This article covers content-specific, styling, and technical tips and tricks for various email use cases."
+description: "This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics."
 channel: email
 
 ---
 
 # Email guidelines and tips
 
-> This article covers technical, styling, and content-specific tips and tricks for various email use cases and topics.
+> This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics.
 
 ## General
 
-As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). Here are some quick tips when building your email content:
+As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). Here are some quick tips to keep in mind while building your content:
 
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
@@ -23,6 +23,9 @@ As you build your email campaign, it's important to keep in mind how your email 
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
+
+### Implementing alternative text
+Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user’s email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
 
 ### Email validation
 
@@ -47,6 +50,10 @@ Braze automatically adjusts inputted email addresses to trim any whitespace. Ema
 - ~
 - ,
 {% enddetails %}
+
+### Setting from and reply-to addresses
+
+When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e., `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
 ### Checking HTML details
 
@@ -215,14 +222,6 @@ Check out the following lists for HTML tags and attributes that aren't allowed i
 - `<seeksegmenttime>`
 - `<transitionend>`
 {% enddetails %}
-
-### Implementing alternative text
-
-Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. Additionally, alternative text (`alt=""`) can serve to complement and, in some cases, stand in lieu of the images in your email body that may have been filtered out by a user's email provider.
-
-### Setting from and reply-to addresses
-
-When setting your "from" addresses, make sure your "from" email domain matches your sending domain (i.e., `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
 
 [24]: http://tools.ietf.org/html/rfc2822
