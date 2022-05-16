@@ -1,6 +1,6 @@
 ---
-nav_title: Email Guidelines & Tips
-article_title: Email Guidelines & Tips
+nav_title: Email Guidelines
+article_title: Email Guidelines
 page_order: 1
 page_type: reference
 description: "This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics."
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Email guidelines and tips
+# Email guidelines
 
 > This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics.
 
@@ -31,7 +31,7 @@ Since spam filters watch for both an HTML and a plain text version of a message,
 
 Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards. In addition to these standards, Braze does not accept the following characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
 
-{% details Unaccepted characters outside of RFC Standards %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?

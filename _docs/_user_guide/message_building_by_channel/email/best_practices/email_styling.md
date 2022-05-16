@@ -1,7 +1,7 @@
 ---
 nav_title: Email Styling
 article_title: Email Styling
-page_order: 4
+page_order: 2
 page_type: reference
 description: "This article outlines email styling best practices to reference as you build your email campaigns."
 channel: email
@@ -16,7 +16,7 @@ The **Subject Line** is one of the first things that recipients will see upon re
 
 There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele. Don’t just stick with one subject line, try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
 
-The "From" field should clearly show who the sender is. Try not to use an unknown person’s name or an uncommon abbreviation, instead try using something recognizable like the company name. If using a person’s name suits your company methods of personalizing email, stay consistent and retain the same “From" name to develop a relationship with the recipient. “From” name should be no more than 25 characters to display appropriately on mobile.
+The "From" field should clearly show who the sender is. Try not to use a person’s name or an uncommon abbreviation. Instead, use a recognizable name like the company name. If using a person’s name suits your company methods of personalizing email, stay consistent to develop a relationship with the recipient. The “From” name should be no more than 25 characters to display appropriately on mobile.
 
 ## Body styling
 
@@ -24,7 +24,7 @@ Many users use **Email Previewing** in Gmail or Outlook. These preview areas gen
 
 No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
 
-Getting out of office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed). On a personal level, a no-reply can appear impersonal, lazy and arrogant to recipients (suggesting “You aren’t worth my time”), and may turn them off from receiving further email from your company.
+Getting out of office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed). On a personal level, a no-reply can appear impersonal to recipients, and may turn them away from receiving further email from your company.
 
 Preheader text is often used by email marketers to provide additional information on an email's contents. A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 

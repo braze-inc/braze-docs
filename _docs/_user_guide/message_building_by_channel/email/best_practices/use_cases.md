@@ -1,14 +1,14 @@
 ---
-nav_title: Content Tips
-article_title: Content Tips
-page_order: 2
+nav_title: Email Use Cases
+article_title: Email Use Cases
+page_order: 3
 page_type: reference
 description: "This article covers content-specific tips and tricks for various email use cases."
 channel: email
 
 ---
 
-# Content-specific tips and tricks
+# Email Use Cases
 
 As you build your email campaigns, here are some general guidelines for how to build your content depending on your use cases.
 
