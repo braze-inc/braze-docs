@@ -14,13 +14,11 @@ channel: email
 
 The **Subject Line** is one of the first things that recipients will see upon receiving your message. Keeping it to 6 to 10 words will yield the highest open rates. 
 
-There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele. Don’t just stick with one subject line, try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
+There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele. Don’t just stick with one subject line, leverage [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#what-are-multivariate-and-ab-testing/) to try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
 
 The "From" field should clearly show who the sender is. Try not to use a person’s name or an uncommon abbreviation. Instead, use a recognizable name like your brand name. If using a person’s name suits your brand's methods of personalizing email, stay consistent to develop a relationship with the recipient. The “From” name should be no more than 25 characters to display appropriately on mobile.
 
-## Body styling
-
-Many users use **Email Previewing** in Gmail or Outlook. These preview areas generally allow for around 85 characters or 300 pixels of content to be shown. Try to communicate the main point of the message efficiently within that space, engaging the reader’s interest to encourage opens.
+### No-reply addresses
 
 No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
 
@@ -31,6 +29,24 @@ Preheader text is often used by email marketers to provide additional informatio
 ![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts".][61]
 
 The amount of visible preheader text is dependent on the user's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
+
+## Preheader text
+
+The preheader text in an email communicates the main point of the message efficiently to catch the reader’s interest and encourage opens. Here are some best practices to keep in mind when writing your preheaders:
+
+1. Calls to action come into play once readers have opened your email.
+  - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
+  - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company’s brand voice and that every call to action exhibits some sort of value to the consumer.
+  - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
+
+2. Email and landing sites to which you direct your users to should be mobile optimized:
+  - No interstitial boxes
+  - Large form-fields
+  - Easy navigation
+  - Large text
+  - Generous white space
+  - Short concise body copy
+  - Clear calls to action
 
 ### Preheader character limits
 
@@ -61,33 +77,14 @@ The amount of visible preheader text is dependent on the user's email client and
   | Mail.ru                | 64      |
   {: .reset-td-br-1 .reset-td-br-2}
 
-Here are some best practices to keep in mind when writing your preheaders:
-
-1. Calls to action come into play once readers have opened your email.
-  - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
-  - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company’s brand voice and that every call to action exhibits some sort of value to the consumer.
-  - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
-
-2. Email and landing sites to which you direct your users to should be mobile optimized:
-  - No interstitial boxes
-  - Large form-fields
-  - Easy navigation
-  - Large text
-  - Generous white space
-  - Short concise body copy
-  - Clear calls to action
-
 ## Email size
 
-Make sure to limit your email size. Email bodies larger than 102KB are not only extremely taxing on Braze and SendGrid's servers, but they are also clipped by Gmail and other email clients. We recommend keeping the size of your email under 25KB for just text or 60KB with images.
-
-If you are receiving this error in the editor, you likely have `base64` encoded images that have been embedded in the email itself. However, this is not the most effective way to send emails with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by the `href`.
+Make sure to limit your email size. Email bodies larger than 102KB are not only extremely taxing on Braze and SendGrid's servers, but they are also clipped by Gmail and other email clients. Try to keep the size of your email under 25KB for just text or 60KB with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by the `href`.
 
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
 | 25KB maximum |   60KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 
 ## Text length
 
@@ -109,12 +106,11 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 | 5MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-
 ## Deep linking
 
-A high percentage of emails are read on mobile devices. Utilizing deep linking is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
+A high percentage of emails are read on mobile devices. Utilizing [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
 
-Email, on the other hand, gives no way of knowing whether recipients have the app installed. As such, providing a deep link to the app could link to an error message for these recipients who do not have the app.
+However, emails don't provide the clarity of knowing whether recipients have the app installed. So, avoiding deep linking helps prevent error messages for these email recipients who do not have the app.
 
 [25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}

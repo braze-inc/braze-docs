@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Email Use Cases
+# Email use cases
 
 As you build your email campaigns, here are some general guidelines for how to build your content depending on your use cases.
 
@@ -26,7 +26,7 @@ Your content should communicate the value of a promotion, such as the discounts 
 
 For recommending certain products, try to present them as curated, personal suggestions that the user may like. If you're promoting a limited time offer, be sure to let users know! Ideeli does a great job at conveying urgency in this email:
 
-![Promotional email sent from Ideeli that notifies users of a limited-time offer. A large banner contains the text "Ends at midnight EDT. 6-hour flash sale. Hurry! These amazing finds won't last long."][27]{: style="max-width:70%;"}
+![Promotional email sent from Ideeli that notifies users of a limited time offer. A large banner contains the text "Ends at midnight EDT. 6-hour flash sale. Hurry! These amazing finds won't last long."][27]{: style="max-width:70%;"}
 
 ## Transactional
 
