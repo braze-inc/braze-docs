@@ -16,15 +16,15 @@ The **Subject Line** is one of the first things that recipients will see upon re
 
 There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele. Don’t just stick with one subject line, try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
 
-The "From" field should clearly show who the sender is. Try not to use a person’s name or an uncommon abbreviation. Instead, use a recognizable name like the company name. If using a person’s name suits your company methods of personalizing email, stay consistent to develop a relationship with the recipient. The “From” name should be no more than 25 characters to display appropriately on mobile.
+The "From" field should clearly show who the sender is. Try not to use a person’s name or an uncommon abbreviation. Instead, use a recognizable name like your brand name. If using a person’s name suits your brand's methods of personalizing email, stay consistent to develop a relationship with the recipient. The “From” name should be no more than 25 characters to display appropriately on mobile.
 
 ## Body styling
 
-Many users use **Email Previewing** in Gmail or Outlook. These preview areas generally allow for around 300 pixels or 85 characters of content to be shown. It is recommended that the email communicate the main point of the message efficiently within that space, engaging the reader’s interest to encourage opens.
+Many users use **Email Previewing** in Gmail or Outlook. These preview areas generally allow for around 85 characters or 300 pixels of content to be shown. Try to communicate the main point of the message efficiently within that space, engaging the reader’s interest to encourage opens.
 
 No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
 
-Getting out of office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed). On a personal level, a no-reply can appear impersonal to recipients, and may turn them away from receiving further email from your company.
+Getting out-of-office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed). On a personal level, a no-reply can appear impersonal to recipients and may turn them away from receiving further emails from your company.
 
 Preheader text is often used by email marketers to provide additional information on an email's contents. A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 
@@ -32,7 +32,7 @@ Preheader text is often used by email marketers to provide additional informatio
 
 The amount of visible preheader text is dependent on the user's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
 
-## Preheader character limits
+### Preheader character limits
 
   |   Mobile Email Client  |  Limit  |
   |:----------------------:|:-------:|
@@ -91,7 +91,7 @@ If you are receiving this error in the editor, you likely have `base64` encoded 
 
 ## Text length
 
-Refer to the following table for recommended text lengths:
+Refer to the following table for recommended text lengths.
 
 | **Text Specifications** | **Recommended Properties** |
 | --- | --- |
@@ -102,7 +102,7 @@ Refer to the following table for recommended text lengths:
 
 ## Image size
 
-Refer to the following table for recommended image sizes. Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+Refer to the following table for recommended image sizes. Smaller, high-quality images will load faster, so use the smallest asset possible to achieve your desired output.
 
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |
 |:-----------:|:------------------:|:------------------:|:-------------:|
