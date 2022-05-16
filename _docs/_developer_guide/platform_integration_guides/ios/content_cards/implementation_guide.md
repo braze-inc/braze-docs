@@ -9,23 +9,24 @@ channel:
 
 ---
 
+<br>
 {% alert important %}
-Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
 {% endalert %}
 
 # Content Card implementation guide
 
-> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Code considerations
 
 ### Content Cards as custom objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen in the following code snippets) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
 
 The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if they were instantiated from JSON or any other source. 
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) to get started implementing your custom objects.
 
 {% tabs local %}
 {% tab ContentCardable %}
@@ -447,18 +448,39 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ### Content Cards in a message center
 <br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 ![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Dashboard configuration
 
-For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
+For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message.
 
-| Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
-| ---- | ---- |
-| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
-{: .reset-td-br-1 .reset-td-br-2}
+{% tabs local %}
+{% tab Arbitrary custom view message (full page) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `Full Page`
+- `class_type` set as `message_full_page`
+
+![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% tab Webview message (HTML) %}
+
+The key-value pairs for this use case include:
+
+- `message_header` set as `HTML`
+- `class_type` set as `message_webview`
+- `message_title`
+
+This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
+
+![]({% image_buster /assets/img/cc_implementation/html_webview.png %}){: style="max-width:60%;"}
+
+{% endtab %}
+{% endtabs %}
 
 #### Further explanation
 

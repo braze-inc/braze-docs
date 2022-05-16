@@ -18,7 +18,7 @@ tool:
 
 A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-In the provided video, we show you how regular expressions can be used and tested on [Regex101][regex]. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
+In the provided video, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [inhouse regex tester](#regex-debugger), a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
 
 ## Resources
 
@@ -34,7 +34,7 @@ In the provided video, we show you how regular expressions can be used and teste
 This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze automatically add the <code>gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. </p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the <code>/gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. <br><br>Regular expressions for custom event trigger properties use the <code>/g</code> modifier (case sensitive, see <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g modifier</a>).</p>
 </div></div>
 <div>
 Regex:

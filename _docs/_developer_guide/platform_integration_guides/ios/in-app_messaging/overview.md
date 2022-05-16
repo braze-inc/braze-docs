@@ -3,7 +3,7 @@ nav_title: Overview
 article_title: In-App Message Overview for iOS
 platform: iOS
 page_order: 0
-description: "This article covers iOS in-app messaging, when to best use it, and several great use cases."
+description: "This article covers iOS in-app messaging types, expected bahaviors, and several use cases."
 channel:
   - in-app messages
 
@@ -45,7 +45,7 @@ This is what it looks like for your users to open one of our out-of-the-box in-a
 
 [`Slideup`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
-![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom right corner of a web page.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom corner of a web page.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 
 {% endtab %}
@@ -71,7 +71,7 @@ The following example shows a paginated HTML Full in-app message:
 
 ![An HTML in-app message with a carousel of content and interactive buttons.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
-Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing full control over message appearance and functionality. Please note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
+Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing full control over message appearance and functionality. Note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
 
 {% alert note %}
 Starting in iOS SDK version 3.19.0, the following JavaScript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.

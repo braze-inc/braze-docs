@@ -175,7 +175,7 @@ Going through the short code application process can be a long process. However,
 
 While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
 
-Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) that you want for...
+Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) that you want for the following situations.
 
 | Flow Needed | Type | Example |
 | ----------- | ---- | ------- |
@@ -185,7 +185,7 @@ Regulations require that there are responses to all opt-in, opt-out, and help/in
 | Help | n/a | `Our company is a company that does this and that. For more info on the company, let us know here. Or, you can contact support at 1-800-111-1111.` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Depending on your situation, you may need to provide more or fewer flows like the ones listed above. You'll also have to let us know **three general examples** of messages you plan to send via SMS - feel free to ask your Braze representative for guidance.
+Depending on your situation, you may need to provide more or fewer flows like the ones listed in the preceding table. You'll also have to let us know **three general examples** of messages you plan to send via SMS - feel free to ask your Braze representative for guidance.
 
 You also must inform us, regardless of which number you use, of how many messages per month you plan to send.
 

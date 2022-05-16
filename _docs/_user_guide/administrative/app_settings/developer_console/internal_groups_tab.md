@@ -24,7 +24,7 @@ To create an Internal Group, perform the following steps:
 1. Go to the **Developer Console** and select the **Internal Groups** tab. 
 2. Click **Create Internal Group**.
 3. Give your group a meaningful name.
-4. Choose one or more group types (defined below).
+4. Choose one or more group types, as listed in the following chart.
 
 ![Creating an Internal Group in Braze][7]
 
@@ -70,7 +70,7 @@ Only groups that are tagged as Content Test Groups will be available on the prev
 
 Seed Groups are only meant for the email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API campaigns, although you can include Seed Groups via an API-triggered entry in campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical and archival purposes. 
 
-Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer, or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]`, appended to the start of the email subject line. Please note that Seed emails sent don't increment sends in dashboard analytics, and they don't update a user profile's **Campaign Received** list.
+Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer, or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]`, appended to the start of the email subject line. Note that Seed emails sent don't increment sends in dashboard analytics, and they don't update a user profile's **Campaign Received** list.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, ensure that they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders.

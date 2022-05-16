@@ -27,7 +27,7 @@ To prevent using up your allocated data points, we recommend setting up a progra
 
 In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your users' `session starts`, `session ends`, `events`, and `purchases`.
 
-You can find a breakdown of how Braze accumulates data points below, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
+You can find a breakdown of how Braze accumulates data points in the following sections, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
 {% alert note %} 
 Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 
@@ -47,9 +47,9 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Profile data | Email address | Yes |
 |Profile data | Gender | Yes |
 |Profile data | Age group | Yes |
-|Profile data | Country | Yes |
+|Profile data | Country | Yes* |
 |Profile data | City | Yes |
-|Profile data | Language | Yes |
+|Profile data | Language | Yes* |
 |Profile data | Most recent device locale | Yes |
 |Profile data | Time zone | Yes |
 |Profile data | Date of birth (DOB) | Yes |
@@ -69,6 +69,8 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Amplitude cohort assignment | All assignments | Yes |
 |Mixpanel cohort assignment | All assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+<sup>*When manually collected. Does not count towards consumption when automatically collected.</sup>
 
 {% alert note %}
 In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.

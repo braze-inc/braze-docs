@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 8
-description: "This article covers how to initalize, configure, and implement the Google Tag manager into your Android app."
+description: "This article covers how to initalize, configure, and implement the Google Tag manager into your Android or FireOS app."
 
 ---
 
@@ -36,14 +36,14 @@ This tag will be triggered when you log the `played song` event we just created.
 In our tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
 
 {% alert important %}
-When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below.
+When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the following screenshot.
 
 The custom tag provider in our example will use these key to determine what action to take, and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
 
 ![A tag in Google Tag Manager with classpath and key-value pair fields. This tag is set to trigger with the previously created "played song" trigger.][4]
 
-You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In the example tag below, we'll pass in `genre` which was defined using a tag variable in Google Tag Manager - sourced from the custom event we logged in our app.
+You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In the following example tag, we'll pass in `genre` which was defined using a tag variable in Google Tag Manager - sourced from the custom event we logged in our app.
 
 The `genre` event property is sent to Google Tag Manager as a "Firebase - Event Parameter" variable since Google Tag Manager for Android uses Firebase as the data layer.
 
@@ -162,7 +162,7 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
   private static Context sApplicationContext;
 
   /**
-   * Must be set before calling any of the below methods to
+   * Must be set before calling any of the follwing methods to
    * ensure that the proper application context is available when needed.
    *
    * Recommended to be called in your {@link Application#onCreate()}.
@@ -370,7 +370,7 @@ class BrazeGtmTagProvider : CustomTagProvider {
     private var sApplicationContext: Context? = null
 
     /**
-     * Must be set before calling any of the below methods to
+     * Must be set before calling any of the following methods to
      * ensure that the proper application context is available when needed.
      *
      * Recommended to be called in your [Application.onCreate].

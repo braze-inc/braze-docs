@@ -46,7 +46,7 @@ When composing your email template copy, do not switch back and forth between di
 {% tabs %}
 {% tab HTML Editor %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
+Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
@@ -54,7 +54,7 @@ To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending 
 <br>
 <br>
 
-To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The right panel shows a real-time preview of the email being created.
+To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The adjacent panel shows a real-time preview of the email being created.
 
 {% alert important %}
 Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
@@ -156,7 +156,7 @@ If you see any issues with your template or want to make any changes, click **Ed
 
 ### Step 5: Save your template
 
-Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas step you choose.
+Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas step you choose.
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.

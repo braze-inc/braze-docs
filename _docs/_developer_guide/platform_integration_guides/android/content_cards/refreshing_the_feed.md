@@ -5,7 +5,7 @@ page_order: 4
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to implement Content Card refreshing in your Android application."
+description: "This reference article covers how to implement Content Card refreshing in your Android or FireOS application."
 channel:
   - content cards
 

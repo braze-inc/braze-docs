@@ -14,7 +14,7 @@ Preview and Demo Predictions will not allow users to be targeted for messaging, 
 
 ## Implementing filters {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+Once you've decided what range of Churn Risk Score or Category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
 
 ![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.][5]
 

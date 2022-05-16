@@ -19,7 +19,7 @@ For example, the following message body will access the URL `http://numbersapi.c
 Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
-You can also include user profile attributes as variables in the URL string when making Connected Content requests. For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the email address attribute below.
+You can also include user profile attributes as variables in the URL string when making Connected Content requests. For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the following email address attribute.
 
 ```
 Hi, here are some articles that you might find interesting:
@@ -64,7 +64,7 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ## Using token authentication
 
-When using Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of.
+When using Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
 
 {% raw %}
 ```
@@ -89,7 +89,7 @@ Some API configurations require retrieval of an access token that can then be us
 
 ### Retrieve the access token
 
-The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+The following example illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
 {% raw %}
 ```
@@ -128,9 +128,9 @@ Now that the token is saved, it can be dynamically templated into the subsequent
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send Connected Content requests from the IP ranges below. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting. 
+Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting. 
 
-Braze has a reserved set of IPs used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center or do maintenance, Braze can do so without impacting customers. Braze may use one, a subset, or all of the IPs listed below when making Connected Content requests.
+Braze has a reserved set of IPs used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center or do maintenance, Braze can do so without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
 |---|

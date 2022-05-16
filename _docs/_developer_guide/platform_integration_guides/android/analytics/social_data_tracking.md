@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 5
-description: "This reference article shows how to implement social data tracking for your Android application."
+description: "This reference article shows how to implement social data tracking for your Android or FireOS application."
 
 ---
 

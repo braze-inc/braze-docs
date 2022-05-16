@@ -58,7 +58,7 @@ With this mode, you can send your events to Braze using the Braze SDK set up on 
 
 Set up the mappings to the RudderStack SDK for [Android](https://github.com/rudderlabs/rudder-integration-braze-android), [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios), or [React Native] on Braze's GitHub repository, as described in step 4. 
 
-To complete the device mode integration, please refer to the detailed RudderStack instructions for [adding Braze to your project](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
+To complete the device mode integration, refer to the detailed RudderStack instructions for [adding Braze to your project](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
 
 ### Step 3b: Server-to-server integration (cloud mode) {#cloud-mode}
 

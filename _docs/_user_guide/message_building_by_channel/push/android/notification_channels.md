@@ -18,7 +18,7 @@ channel:
 
 Notification channels can only be created in the code of your application and cannot be created programmatically in the Braze dashboard. We recommend your engineering team work with your marketers to ensure the desired notification channels are properly added to the dashboard.
 
-Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or above, you must use Braze SDK version 2.1.0 or higher. Your development team should define the channels that you want to use as well as suggested notification settings (e.g., importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
+Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or later, you must use Braze SDK version 2.1.0 or later. Your development team should define the channels that you want to use as well as suggested notification settings (e.g., importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
 
 {% alert note %}
 Android supports localization for channel names, so in the code of your application, you can associate one channel ID with multiple translations of a channel name.
@@ -33,7 +33,7 @@ Only users with permissions that include "manage apps" will be able to manage ch
 
 ## SDK default channel
 
-Android requires a valid channel to display push notifications on API level 26 (Android O) or above. Braze's Android SDK 2.1.0 includes a default channel called "General," which will be created and used if you do not specify additional channels in the dashboard or if you attempt to send to an invalid channel. You can rename this label in the SDK and provide a description of the channel. We recommend that you consider this to provide a better user experience.  
+Android requires a valid channel to display push notifications on API level 26 (Android O) or later. Braze's Android SDK 2.1.0 includes a default channel called "General," which will be created and used if you do not specify additional channels in the dashboard or if you attempt to send to an invalid channel. You can rename this label in the SDK and provide a description of the channel. We recommend that you consider this to provide a better user experience.  
 
 Once a channel is added to your application, you can opt to remove it. However, consumers will always be able to see the number of channels that you've [removed.][3] Braze's dashboard does not include support for programmatically creating channels - channels must be created and defined in the code of your application to provide a seamless experience.
 
@@ -57,14 +57,14 @@ In this situation, all 10 campaigns with no channel selection that were previous
 
 In the event that an invalid channel ID is supplied to Braze (i.e., if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze's dashboard during development.
 
-To better understand the expected behavior for channels, please refer to the following table:
+To better understand the expected behavior for channels, refer to the following table:
 
 |Scenario |Outcome  |    
 | ---|-------------
 |**Company ABC** updates to an SDK that supports Android O<br>**Company ABC** does not add any channels to the Braze dashboard<br>**Company ABC** does not rename their SDK default channel | Push notifications sent to Android O devices will create a channel called "General" and notifications will be sent through the "General" channel
 |**Company XYZ** updates to an SDK that supports Android O <br>**Company XYZ** does not add any channels to the Braze dashboard<br>**Company XYZ** renames their SDK default channel to "Marketing" | Push notifications sent to Android O devices will create a channel called "Marketing" and notifications will be sent through the "Marketing" channel
 |**Company LMN** updates to an SDK that supports Android O <br>**Company LMN** defines two channels in their application code, "Promotions" and "Order Updates" <br>**Company LMN** adds the channel IDs for "Promotions" and "Order Updates" to the Braze dashboard <br>**Company LMN** designates "Promotions" as the dashboard fallback channel<br>**Company LMN** renames their SDK default channel to "Marketing" | Push notifications sent to Android O devices will not create a channel<br><br>Unless the marketer explicitly specifies that notifications should send through the "Order Updates" or "Marketing" channel, all notifications created before the channels were added to the dashboard will send through the "Promotions" channel<br><br>The SDK default channel, "Marketing" is only created and used if the company attempts to send a notification through an invalid channel ID or if explicitly selected
-|**Company HIJ** updates to Android O but does not update to Braze Android SDK to 2.1.0 or higher| Notifications sent to users running Android O or above do not appear |
+|**Company HIJ** updates to Android O but does not update to Braze Android SDK to 2.1.0 or later | Notifications sent to users running Android O or later do not appear |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Adding channels to Braze's dashboard
@@ -74,7 +74,7 @@ To better understand the expected behavior for channels, please refer to the fol
 3. Click **Manage Notification Channels**. Note that any channels added here will be available globally for all campaigns and Canvases and that you must have "manage apps" permissions for your app group to manage channels.<br><br>![][6]<br><br>
 4. Click **Add Notification Channel**.
 5. Enter the name and ID of the notification channel you want to add.<br><br>![][8]<br><br>
-6. Repeat the two steps above for each notification channel that you'd like to add.
+6. Repeat steps 4 and 5 for each notification channel that you'd like to add.
 7. Press **Save** to save your changes.
 
 ## Specifying your fallback channel
@@ -91,7 +91,7 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 ## Adding channels to your Android push messages
 
 1. Navigate to the Android push composer on any campaign or Canvas.
-2. Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the below view, you'll need to add channels before selecting them for campaigns.
+2. Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the following view, you'll need to add channels before selecting them for campaigns.
 
 ![][10]
 

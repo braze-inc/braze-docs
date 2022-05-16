@@ -19,7 +19,7 @@ channel: email
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
-Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards. In addition to these standards, Braze does not accept certain characters (noted below) and recognizes them as invalid.
+Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards. In addition to these standards, Braze does not accept certain characters and recognizes them as invalid.
 
 {% details Unaccepted characters outside of RFC Standards %}
 - *
@@ -77,12 +77,12 @@ The local part must follow these parameters:
 - Can contain but may not start or end with the following characters: (.) (+) (&) (#) (/) or (")
 
 {% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation specified above under "All other domains".
+If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation listed in this section.
 {% endalert %}
 
 ## Host part validation rules
 
-IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
+IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g., .com, .org, .net, etc.) may not be fully numeric.
 
 The following regex is used to validate the domain:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
@@ -100,7 +100,7 @@ The domain name must follow these parameters:
 	- Contain 1 to 63 characters
 
 **Additional Validation Required:**<br>
-The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed above. It does not catch typos or addresses that don't exist.
+The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed in this section. It does not catch typos or addresses that don't exist.
 
 {% alert important %}
 Unicode is accepted only for the local part of the email address.<br>

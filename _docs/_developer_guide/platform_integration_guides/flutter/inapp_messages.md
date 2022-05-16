@@ -38,7 +38,7 @@ To disable automatic in-app message display, make these updates in the native la
 {% tab Android %}
 
 1. Ensure you are using the automatic integration intializer, which is enabled by default starting in version `2.2.0`.
-2. Set the in-app message operation default to `DISCARD` by adding the line below to your `braze.xml` file.
+2. Set the in-app message operation default to `DISCARD` by adding the following line to your `braze.xml` file.
 
 ```xml
 <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
@@ -47,7 +47,7 @@ To disable automatic in-app message display, make these updates in the native la
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
 
 2. Update your `beforeInAppMessageDisplayed` delegate implementation to return `ABKInAppMessageDisplayChoice.discardInAppMessage`.
 
@@ -72,7 +72,7 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
 
 2. Update your `beforeInAppMessageDisplayed` delegate implementation to call `BrazePlugin.process(inAppMessage)`.
 
@@ -90,7 +90,7 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 
 ## Test displaying a sample in-app message
 
-Follow the steps below to test a sample in-app message.
+Follow these steps to test a sample in-app message.
 
 1. Set an active user in the React application by calling `braze.changeUser('your-user-id')` method.
 2. Head to the **Campaigns** page on your dashboard and follow [this guide][1] to create a new in-app message campaign.

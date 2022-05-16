@@ -4,7 +4,7 @@ article_title: Optional Google Advertising ID for Android
 page_order: 9
 platform: 
   - Android
-description: "This article covers Google advertising IDs and how to pass this advertising information to Braze."
+description: "This article covers Google advertising IDs and how to pass this advertising information to Braze for your Android or FireOS application."
 
 ---
 

@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This article covers Android in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
+description: "This article covers Android and FireOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages
 
@@ -18,7 +18,7 @@ channel:
 Our in-app message product allows you to trigger an in-app message display due to several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/).
 {% endalert %}
 
 ## Delivery semantics
@@ -69,13 +69,13 @@ The push campaign must include key-value pair extras that indicate that this pus
 
 The [`EventBroadcastReceiver.java`][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your "in-app message trigger" event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above, the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your "in-app message trigger" event, you can achieve this by passing these in the key-value pairs of the push payload. In this example, the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
 ### Step 4: Create an in-app message campaign
 
 Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the custom [`EventBroadcastReceiver.java`][72].
 
-In the example below, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
+In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
 ![An action-based delivery campaign where an in-app message will trigger when "campaign_name" equals "IAM campaign name example."][77]
 
@@ -136,5 +136,5 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
 [77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
-[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

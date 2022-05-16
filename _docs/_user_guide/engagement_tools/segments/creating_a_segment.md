@@ -12,7 +12,7 @@ tool: Segments
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow the guide below or check out our [Segmentation LAB course](https://lab.braze.com/segmentation-course)!
+Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow this guide or check out our [Segmentation LAB course](https://lab.braze.com/segmentation-course)!
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
@@ -20,7 +20,7 @@ Segmentation allows you to target users based upon their demographic, behavioral
 
 ![Engagement section with the Segments tab highlighted.][1]{: style="float:right;max-width:20%;"}
 
-From the left-hand side of the dashboard under **Engagement**, click **Segments**. 
+Go to the **Segments** page located under **Engagements**.
 
 ## Step 2: Name your segment
 
@@ -40,7 +40,7 @@ For more information on this option, refer to the section [Segment membership ca
 
 ## Step 4: Add filters to your segment
 
-Add at least one filter to your segment as depicted in the image below. You can combine as many filters as you want in order to make your segmentation more specific.
+Add at least one filter to your segment as depicted in the following image. You can combine as many filters as you want in order to make your segmentation more specific.
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
@@ -84,7 +84,7 @@ If you no longer need or wish to retire a specific segment, you can archive it b
 When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
-You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of its page.
+You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}

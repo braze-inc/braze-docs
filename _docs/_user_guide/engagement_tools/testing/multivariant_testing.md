@@ -17,7 +17,7 @@ An A/B test is an experiment that compares users’ responses to multiple versio
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Suppose you have two options for a push notification:
@@ -27,7 +27,7 @@ Suppose you have two options for a push notification:
 
 Using an A/B test, you can see which wording results in a higher conversion rate. The next time you send a push notification about a deal, you’ll know which type of wording is more effective.
 
-The above test only examines the effect of one variable—the copy in the push notification. A multivariate test is similar, except it tests the effects of two or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing two variables (or variates—not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message—two options for the copy multiplied by two options for the emoji (present or not) equals four total message variants.
+This test only examines the effect of one variable—the copy in the push notification. A multivariate test is similar, except it tests the effects of two or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing two variables (or variates—not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message—two options for the copy multiplied by two options for the emoji (present or not) equals four total message variants.
 
 In Braze documentation, "multivariate test" is used interchangeably with "A/B test".
 
@@ -88,7 +88,7 @@ The size of the control group for a campaign with [Intelligent Selection][intels
 
 ![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][180]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+For best practices around choosing a segment to test with, see the following [Choosing a Segment][80] section.
 
 {% alert important %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -121,7 +121,7 @@ Choose a date and time when the winning variant should be sent out.
 When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+In the dropdown found after the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
 
 #### (Optional) Designate a conversion event
 
@@ -155,7 +155,7 @@ A variant can do better than the control group, but the chi-squared testing chec
 
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
-Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the above example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
+Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the preceding example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
 
 In general, a confidence of at least 95% is necessary to show that your results are reflective of users’ actual preferences, and not due to chance. In rigorous scientific tests, 95% confidence (or otherwise commonly referred to as the “p” value being less than 0.05) is the common benchmark used to determine statistical significance. If you continually fail to achieve 95% confidence, try increasing your sample size or decreasing the number of variants. 
 
@@ -182,8 +182,8 @@ What levers do you have to pull and what are the desired effects? While there ar
 
 | Channel | Aspects of Message You Can Change | Results To Look For |
 | ---------------------| --------------- | ------------- |
-| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
-| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%")  <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
+| Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g., "triple" vs. "increase by 200%") <br> Presentation of time (e.g., "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app Notification | Aspects listed for "push" <br> [Message format][273] | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

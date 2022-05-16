@@ -15,7 +15,7 @@ Two-way messaging uses short codes and keywords to deliver text messages to mobi
 
 ## Two-way messaging speeds
 
-Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
+Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. The following lists the implications of including two-way messaging:
 
 | Type | Speed | Notes | 
 | ----- | ----- | ---- | 
@@ -43,7 +43,7 @@ If you require faster sending speeds for unknown phone numbers, reach out to you
 
 ![][IMAGE2]
 
-This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
+This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the following format either through the SDK or the [new user alias endpoint][endpoint]:
 
 1. alias_label: `phone` and alias_name: `users_phone_number`
 2. Phone numbers must be in the E.164 format (e.g +19173337578). 

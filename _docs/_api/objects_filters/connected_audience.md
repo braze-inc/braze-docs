@@ -49,7 +49,9 @@ This filter allows you to segment based on a user's custom attribute. These filt
 }
 ```
 
-The custom attribute's type determines the comparisons that are valid for a given filter.
+#### Allowed comparisons by data type
+
+The custom attribute's data type determines the comparisons that are valid for a given filter.
 
 | Custom Attribute Type | Allowed Comparisons |
 | ---------------------| --------------- |
@@ -108,16 +110,14 @@ This filter allows you to segment based on a user's push subscription status.
 {
   "push_subscription_status":
   {
-    "comparison": (String) one of the two allowed comparisons listed below,
-    "value": (String) one of the three allowed values listed below
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `is`, `is_not`
+- **Allowed values:** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Email subscription filter
 
@@ -129,16 +129,14 @@ This filter allows you to segment based on a user's email subscription status.
 {
   "email_subscription_status":
   {
-    "comparison": (String) one of the two allowed comparisons listed below,
-    "value": (String) one of the three allowed values listed below
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `is`, `is_not`
+- **Allowed values:** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Last used app filter
 
@@ -149,13 +147,12 @@ This filter allows you to segment based on when was the last time the user used 
 {
   "last_used_app":
   {
-    "comparison": (String) one of the allowed comparisons listed below,
+    "comparison": (String) one of the allowed comparisons listed,
     "value": (String) the value to be compared using the provided comparison
   }
 }
 ```
 
-| Allowed Comparisons | Allowed Values |
-| ---------------------| --------------- |
-| `after`, `before` | DateTime (ISO 8601 string) |
-{: .reset-td-br-1 .reset-td-br-2}
+- **Allowed comparisons:** `after`, `before`
+- **Allowed values:** DateTime (ISO 8601 string)
+

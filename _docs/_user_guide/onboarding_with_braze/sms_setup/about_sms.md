@@ -12,7 +12,7 @@ channel:
 
 # What are SMS messages?
 
-![SMS welcome message for new customers][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
+![SMS welcome message for new customers.][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
@@ -24,12 +24,12 @@ This article shares some common use cases to draw from, requirements, and terms 
 |---|---|
 | General Marketing | SMS messages are a direct, flexible, and efficient way to communicate upcoming deals, favorable sales, and current or anticipated products to your customers. |
 | Reminders | SMS messages can be effective in notifying users who have set an appointment for a service. For example, sending an SMS message reminding a customer the day before a doctor's appointment will help minimize missed appointments, saving both you and your customers time and money. |
-| Transactional Messages | SMS messages are an efficient way to send out transactional notifications such as order confirmations and shipping information, providing them all the information they need in one convenient place. Note that legal guidelines exist that must be adhered to when sending Transactional Messages. If you are unsure of these guidelines, please reach out to your internal legal team.|
+| Transactional Messages | SMS messages are an efficient way to send out transactional notifications such as order confirmations and shipping information, providing them all the information they need in one convenient place. Note that legal guidelines exist that must be adhered to when sending Transactional Messages. If you are unsure of these guidelines, reach out to your internal legal team.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Requirements
 
-Before you start sending SMS, there are some things you need. Refer to the basic chart below to learn more.
+Before you start sending SMS, there are some things you need. Refer to the following chart to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|
@@ -42,7 +42,7 @@ Before you start sending SMS, there are some things you need. Refer to the basic
 
 - **Short Code:** A 5 to 6-digit code, that's shorter than a full phone number. This code is used to address and send SMS messages.<br><br>
 - **Long Codes:** A 10-digit code that is used to address SMS messages. Most average phone numbers are considered long codes (e.g 123-456-7891). These codes are used to address and send SMS messages.<br><br>
-- **Subscription Group:** A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.<br><br>
+- **Subscription Group:** A Subscription Group is a collection of sending phone numbers (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.<br><br>
 - **Message Segment & Character Limits:** A message segment refers to how many segments your initial SMS message will be split into. Each message has a character limit that if exceeded, will cause the message to be broken into segments. Based on what encoding standards you use (UTF-2 or GSM-7), there are varying character limits. For more information on message segments and message character limits, refer to [SMS sending basics][2].<br><br>
 - **Common SMS Campaign Metrics:** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these metrics, refer to [SMS reporting][1].
 

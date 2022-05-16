@@ -8,7 +8,7 @@ description: "This reference article covers a complete list of supported Liquid 
 
 # Supported personalization tags
 
-As a convenience, a summary of supported personalization tags are listed below. For more detail on each kind of tag and best practices, continue reading.
+As a convenience, a summary of supported personalization tags are provided. For more detail on each kind of tag and best practices, continue reading.
 
 {% raw %}
 
@@ -133,7 +133,7 @@ In this example, a user with a blank or null first name will get the message "Th
 
 You can use the `assign` tag to create a variable in the message composer. Once you create a variable, you can reference that variable in your messaging logic or message.
 
-Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance above or equal to 100 if they made that additional purchase:
+Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance greater than or equal to 100 if they made that additional purchase:
 
 {% raw %}
 ```liquid
@@ -233,7 +233,7 @@ Message in default language
 
 In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, customers with a most recent locale of 'pt_PT' will get a message in European Portuguese and customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
 
-You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
+You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See the following example for how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}

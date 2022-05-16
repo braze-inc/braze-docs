@@ -4,7 +4,7 @@ article_title: Push Troubleshooting for FireOS
 platform: FireOS
 page_order: 20
 page_type: solution
-description: "This article provides troubleshooting scenarios for possible issues you may experience with push notifications."
+description: "This article provides FireOS troubleshooting scenarios for possible issues you may experience with push notifications."
 channel: push
 
 ---
@@ -30,11 +30,11 @@ There are a few reasons why this could be occurring:
 - If you force quit your application, your push notifications will not be displayed while your app is not running.
 - Make sure the [Notification Priority][15] setting is set to `HIGH` in your campaign.
 - The ADM API key in your `api_key.txt` is incorrect or contains invalid characters.
-- The `AppboyAdmReceiver` is not properly registered in `AndroidManifest.xml` with intent filters for `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` and `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
+- The `BrazeAmazonDeviceMessagingReceiver` is not properly registered in `AndroidManifest.xml` with intent filters for `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` and `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
 
 ### "Push registered" users no longer enabled after sending messages
 
 This typically occurs when users have uninstalled the application, causing their ADM Registration ID to become invalid.
 
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/fireos/advanced_settings/#notification-priority
+[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings/#notification-display-priority

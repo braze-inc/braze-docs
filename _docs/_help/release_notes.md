@@ -4,8 +4,7 @@ article_title: Release Notes
 page_order: 4
 layout: featured
 guide_top_header: "Release Notes"
-guide_top_text: "This is where you can find all updates to the Braze platform, with the <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>, listed below. You can also
-check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
+guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>. You can also check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
 page_type: landing
 description: "This landing page is home to Braze Release Notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
 
@@ -48,11 +47,81 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+
+## June 2022
+
+### Campaign approval
+
+Campaign approval adds a review process to your workflow before launching a campaign. Now, you can ensure that each confirmation is approved in order to launch the campaign. To learn more about the approval process, check out [Campaign approval]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/).
+
+### Canvas Message Step
+
+Message Steps allow you to add a standalone message where you want in your Canvas Flow. Visit our [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) article to learn more.
+
+### AI copywriting assistant
+
+The Braze [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting#ai-copywriting-assistant) passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available out-of-the-box for most message composers in the Braze dashboard.
+
+### iOS push notification unit testing guide
+
+An [iOS unit testing guide for push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests#unit-tests) has been added to the developer guide. This guide will provide unit tests that will verify whether your app delegate is correctly set up. 
+
+### Google privacy questionnaire
+
+As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. [This guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/google_play_privacy#google-play-privacy-questionnaire) provides instructions on how to fill out this new form with information on how Braze handles your app data. 
+
+### RelayState SAML SSO
+
+Initial single sign-on set-up instructions have been updated to recommend use of a `RelayState` API key. For more information, refer to [SAML SSO setup]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) and cooresponding [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/), [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/), and [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) articles. 
+
+### Talon.One integration updates
+
+Our [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone#talonone) partnership article now has updated integration steps, endpoints, and examples. If you are leveraging the Talon.One partnership, we recommend updating your integration accordingly.
+
+### Braze Web SDK V4 released
+
+The Braze SDKs team has released Web SDK v4. For a list of breaking changes, updates, and additions, visit our Web SDK [changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md). An [upgrade guide](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md) has been created for those upgrading from V3 to V4.
+
+### Grouparoo deprecation
+
+Support for Grouparoo has been discontinued as of April 2022.
+
+## May 2022
+
+### Filter by campaign or Canvas attribution
+You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
+
+### Email performance dashboard
+With the [email performance dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/), you can view aggregate performance metrics for your entire email channel from both campaigns and Canvases for your selected date range.
+
+For more information about the analytics dashboards available within Braze, check out the [Your Analytics Dashboards]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) section.
+
+### Global style settings
+
+Introducing [global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/) for the Drag & Drop Editor! Now, you can easily personalize the look of your email campaigns and Canvases by adding a default theme, setting basic text styling, and more.
+
+### Braze to Braze webhooks
+With a Braze to Braze webhook, you can use webhooks to communicate with the Braze REST API, doing anything that our API allows you to do. Essentially, this is a webhook that is communicating from Braze to Braze. For more information, see our [Braze to Braze webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) article.
+
+### Deprecations
+
+#### Windows SDK
+As of March 24, 2022, the [Braze Windows SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/) is deprecated, and no new Windows apps can be created in the Braze dashboard. 
+
+#### Baidu push integration
+As of March 24, 2022, the [Braze Baidu Push Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/baidu_integration/) is deprecated, and no new Baidu apps can be created in the Braze dashboard. 
+
+### New Braze partnerships
+
+#### Tealium for Currents
+
+The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/) integration allows you to seamlessly control the flow of information between the two systems. Now with Currents, you can also connect data to Tealium to make it actionable across the entire growth stack.
+
 ## April 2022
 
 ### In-app messages for Roku
 
-Braze now supports sending in-app messages to your users on their Roku devices! Please note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
+Braze now supports sending in-app messages to your users on their Roku devices! Note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 ### Full Filter Mode for Churn Predictions and Purchase Predictions
 
@@ -71,7 +140,7 @@ Have you wondered when and how you should collect user data when you're handling
 
 ### Transifex API deprecation
 
-As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. If you are leveraging the Transifex API, please update your Connected Content calls accordingly. For more information, refer to [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/).
+As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. If you are leveraging the Transifex API, update your Connected Content calls accordingly. For more information, refer to [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/).
 
 ### New Braze partnerships
 
@@ -100,7 +169,7 @@ The Braze and [Wyng]({{site.baseurl}}/partners/message_personalization/dynamic_c
 
 #### Grouparoo - Workflow automation
 
-The Braze and [Grouparoo]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/) integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
+The Braze and [Grouparoo]({{site.baseurl}}/help/release_notes/deprecations/grouparoo) integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
 
 #### Lexer - Customer data platform
 
@@ -253,81 +322,5 @@ The [RevenueCat]({{site.baseurl}}/partners/data_and_infrastructure_agility/payme
 
 #### Punchh - Loyalty
 [Punchh]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#punchh) has partnered with Braze to sync data across the two platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze. 
-
-## November 2021
-
-### Data points usage dashboard
-
-Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and app group billing data. For more information, refer to [Subscriptions and Usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
-
-### Change to Segment Extension regeneration
-
-Starting on February 1, 2022, the setting to regenerate extensions daily will be automatically turned off for unused [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze defines unused extensions as ones that meet the following criteria:
-
-- Not used in any active campaigns, Canvases, or segments
-- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
-- Have not been modified in over 7 days
-
-Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
-
-### Android advanced implementation guides
-
-#### Content Cards
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/) covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals.
-
-#### In-app messaging
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
-
-#### Push notifications
-
-This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
-
-### New Braze partnerships
-
-#### Adobe - Customer Data Platform
-
-Built on the Adobe Experience Platform, Adobe’s Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
-
-The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. 
-
-#### Shopify - eCommerce
-
-[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Together, the Braze and Shopify integration allows brands to connect their Shopify store seamlessly with Braze to pass select Shopify webhooks into Braze. Leverage Braze’s cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging and nudge customers to complete their purchase, or retarget users based on their previous purchases.
-
-## October 2021
-
-### iOS 15
-
-#### Apple Mail Privacy Protection
-
-Apple’s Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released in mid-September. For users who opt-in to MPP, emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel/). To learn more about MPP and issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/).
-
-#### Push features
-
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features, including [Interruption Levels and Relevance Scores]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/).
-
-### Contact Cards
-
-Contact Cards are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. You can now upload and create Contact Cards for your SMS and MMS messages. To read more about how to build Contact Cards in our built-in Contact Card Generator, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
-
-### Out-of-the-box Content Cards customization
-
-You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/#customizing-the-content-cards-feed/). 
-
-### API rate limits
-
-[Rate limits]({{site.baseurl}}/api/basics/#api-limits/) will apply to all customers onboarded after September 16, 2021. 
-
-### Updates to Android and FireOS developer guides
-
-Android and FireOS developer guides have merged into one location. Dedicated FireOS articles will be available in this [new Android section]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/integration/).
-
-### Updates to Funnel and Retention Reports
-
-[Funnel Reports]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) and [Retention Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) are now available for SMS campaigns.
-
-<br><br>
 
 [support]: {{site.baseurl}}/support_contact/

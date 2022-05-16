@@ -4,7 +4,7 @@ article_title: Push
 page_order: 3
 layout: dev_guide
 guide_top_header: "Push"
-guide_top_text: "Push messages are a tried-and-true way to reach your customers via mobile or web. They're useful for driving a user to a specific place, but you should use them wisely! Read any article below or check out our [Push LAB course](https://lab.braze.com/messaging-channels-push) to learn about who you can send a push to, how to send it, and what advanced push capabilities Braze offers."
+guide_top_text: "Push messages are a tried-and-true way to reach your customers via mobile or web. They're useful for driving a user to a specific place, but you should use them wisely! Read any of the following articles or check out our [Push LAB course](https://lab.braze.com/messaging-channels-push) to learn about who you can send a push to, how to send it, and what advanced push capabilities Braze offers."
 description: "Push messages are a tried-and-true way to reach your customers via mobile or web. They're useful for driving a user to a specific place, but you should use them wisely!"
 channel:
   - push
@@ -29,8 +29,8 @@ guide_menu_list:
 - name: iOS Push Notification Options
   link: /docs/user_guide/message_building_by_channel/push/ios/
   fa_icon: fab fa-apple
-- name: iOS Push Primers
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+- name: Create Push Primers
+  link: /docs/user_guide/message_building_by_channel/push/push_primer_messages/
   fa_icon: fas fa-mobile-alt
 - name: Push Action Buttons
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/

@@ -70,24 +70,24 @@ Add the following code to the `onCreate()` method of your `MainApplication` clas
 {% subtabs global %}
 {% subtab JAVA %}
 ```java
-import com.appboy.AppboyLifecycleCallbackListener;
+import com.braze.BrazeActivityLifecycleCallbackListener;
 
 @Override
 public void onCreate() {
     super.onCreate();
     ...
-    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
 }
 ```
 {% endsubtab %}
 {% subtab KOTLIN %}
 ```kotlin
-import com.appboy.AppboyLifecycleCallbackListener
+import com.braze.BrazeActivityLifecycleCallbackListener
 
 override fun onCreate() {
     super.onCreate()
     ...
-    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
 }
 ```
 {% endsubtab %}

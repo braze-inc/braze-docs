@@ -35,7 +35,7 @@ API-triggered campaigns will dedupe or send dupes depending on where the audienc
 
 Typically, the “magic number” is around 95% messages delivered with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
 
-However, a rate can be above 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
+However, a rate can be higher than 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
 
 Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It’s important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don’t report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 

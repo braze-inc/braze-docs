@@ -16,7 +16,7 @@ channel:
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events) article to learn more. 
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) article to learn more. 
 {% endalert %}
 
 ## Delivery semantics
@@ -146,6 +146,6 @@ In-app messages can also be locally created within the app and displayed via Bra
 {% endtab %}
 {% endtabs %}
 
-[30]: #in-app-message-controller-delegate
-[38]: #in-app-mssage-ui-delegate
+[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate
+[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate
 [45]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle

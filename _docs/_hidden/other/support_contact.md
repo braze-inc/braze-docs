@@ -1098,7 +1098,7 @@ $( document ).ready(function() {
     $('#ticket_mainform').hide();
 
     $('#ticket_thankyou').fadeIn("slow");
-    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, please check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, please contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
+    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, Check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, Contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#ticket_issue').popover();
@@ -1238,7 +1238,7 @@ $( document ).ready(function() {
  }
 });
 </script>
-<div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
+<div id="firefox_warning" style="display:none;">For Firefox users, whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
 
 <div class="container-fluid" id="main-container">
       <div class="row">
@@ -1339,8 +1339,8 @@ $( document ).ready(function() {
                           <label for="ticket_issue" id="ticket_issue_label">     Question </label>
 
                           <textarea name="ticket_issue" class="form-control" id="ticket_issue" data-toggle="popover" data-trigger="focus" data-placement="top"
-                          data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue. "
-                          placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue.  " rows="7"></textarea>
+                          data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Also include steps to reproduce your issue. "
+                          placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Also include steps to reproduce your issue.  " rows="7"></textarea>
                       </div>
                       <!-- div class="form-group" >
 
@@ -1352,7 +1352,7 @@ $( document ).ready(function() {
                       </div -->
                       <div class="form-group">
                           <label style="font-size: 12px;">
-                         In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.
+                         In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
                           </label>
                           <label style="font-size: 12px;">
                           Braze Technical Support Hours of Operation are from 9am-5pm GMT and 8am-8pm ET, Monday - Friday, excluding Braze Recognized Holidays. For issues logged outside of these hours, you should anticipate a response on the next business day.

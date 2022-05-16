@@ -51,7 +51,7 @@ When previewing a full-screen in-app message in the Braze platform, you can enab
 
 ## Larger screens
 
-On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen, as shown below.
+On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen, as shown in the following screenshot.
 
 ![Full-screen in-app message as it would appear on a large screen. The message appears as a large modal that sits in the center of the screen.][3b]{: style="max-width: 800px; border: none;"}
 

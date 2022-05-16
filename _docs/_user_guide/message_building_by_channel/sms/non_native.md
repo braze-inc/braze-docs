@@ -5,8 +5,8 @@ page_order: 7.9
 
 layout: featured
 guide_top_header: "Non-Native SMS"
-guide_top_text: "The following docs are for clients that will not or have not yet switched over to Braze's native keyword processing capability. For these clients, please reference the native SMS user guide but be on the look for callouts that will redirect you to the appropriate version of the doc for your implementation."
-description: "The following docs are for clients that will not or have not yet switched over to Braze's native keyword processing capability. For these clients, please reference the native SMS user guide but be on the look for callouts that will redirect you to the appropriate version of the doc for your implementation."
+guide_top_text: "The following docs are for clients that will not or have not yet switched over to Braze's native keyword processing capability. For these clients, reference the native SMS user guide but be on the look for callouts that will redirect you to the appropriate version of the doc for your implementation."
+description: "The following docs are for clients that will not or have not yet switched over to Braze's native keyword processing capability. For these clients, reference the native SMS user guide but be on the look for callouts that will redirect you to the appropriate version of the doc for your implementation."
 
 guide_featured_title: "Section articles"
 guide_featured_list:

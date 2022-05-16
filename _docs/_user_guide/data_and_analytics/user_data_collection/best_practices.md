@@ -13,7 +13,7 @@ description: "The following article will help clarify different methods and best
 
 ## Overview
 
-The example below comprises an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
+The following example comprises an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
 
 Once a user provides information for you to log, we recommend you verify if the data already exists in your database and create a user-alias profile or update the existing user profile, as necessary. 
 

@@ -25,7 +25,7 @@ Hi ${first_name},
 {% endraw %}
 And the Connected Content response is {% raw %}`Your language is ${language}`{% endraw %}, the content displayed in this scenario will be `Hi Jon, your language is`. The language itself will not be templated.
 
-In order to render the Liquid passback properly, you must put the {% raw %}`${language}`{%endraw%} tag anywhere in the body, as shown below.
+In order to render the Liquid passback properly, you must put the {% raw %}`${language}`{%endraw%} tag anywhere in the body, as shown in the following code snippet.
 {%raw%}
 ```liquid
 "Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
