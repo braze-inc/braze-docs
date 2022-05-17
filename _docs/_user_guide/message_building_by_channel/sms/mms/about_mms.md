@@ -45,7 +45,7 @@ MMS throughput is one segment per second via a long code.
 
 ### Inbound MMS
 
-Braze does not support incoming MMS responses.
+When a user sends an inbound message that contains a media item, Braze will expose the URL for the media item in Currents as well as liquid through the liquid tag {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
 
 ### Accepted file types
 
