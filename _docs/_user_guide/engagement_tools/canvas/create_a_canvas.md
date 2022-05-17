@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas."
 tool: Canvas
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
@@ -30,13 +30,16 @@ guide_featured_list:
   - name: Persistent Entry Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram
- 
-guide_menu_title: "More Articles"
-guide_menu_list:
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile
   - name: Content Cards in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
     fa_icon: fas fa-columns
+ 
+guide_menu_title: "Additional Resources"
+guide_menu_list:
+  - name: AI Copywriting Assistant
+    link: /docs/user_guide/intelligence/ai_copywriting/
+    fa_icon: fas fa-edit
 ---

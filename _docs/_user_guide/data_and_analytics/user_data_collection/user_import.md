@@ -39,7 +39,11 @@ If you are uploading or updating user profiles that are alias only, you must hav
 - `user_alias_name`: A unique user identifier; an alternative to the `external_id`.
 - `user_alias_label`: A common label by which to group user aliases.
 
-![User Alias Import CSV Example][8]{: style="max-width:80%" }
+| user_alias_name | user_alias_label | last_name | email | sample_attribute |
+| --- | --- | --- | --- | --- |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
+| 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
 
@@ -76,18 +80,19 @@ When importing customer data, the column headers you use must exactly match the 
 
 Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
 
-### Data point considerations
+#### Data point considerations
 
 Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point, except for external IDs and blank values. 
 
 - External IDs uploaded via CSV will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading only external IDs, this can be done without consuming data points. If you were to add additional data like user email or phone number in your import, that would overwrite existing user data, consuming your data points.
 - Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
+- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count towards data point consumption.
 
 {% alert important %}
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.
 {% endalert %}
 
-### Default user data column headers
+#### Default user data column headers
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
@@ -109,8 +114,9 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g., `2019-11-20T18:38:57`) | No |
+| `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
+| `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
 
 {% alert note %}
 While `external_id` itself is not mandatory, you **must** include one of these fields:
@@ -119,8 +125,7 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 - `user_alias` - A unique user identifier for an anonymous user
 {% endalert %}
 
-
-### Importing custom data via CSV
+### Importing custom data
 
 Any headers that do not exactly match default user data will create a custom attribute within Braze.
 
@@ -136,6 +141,25 @@ Arrays, push tokens, and custom event data types are not supported in User Impor
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
 For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
+{% endalert %}
+
+### Updating subscription group status
+
+You can add users into email or SMS subscription groups via user import. This is particularly useful for SMS, since a user must be enrolled into an SMS subscription group to be messaged via the SMS channel. For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+
+If you are updating subscription group status, you must have the following two columns in your CSV:
+
+- `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
+- `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).
+
+| external_id | first_name | subscription_group_id | subscription_state |
+| ----------- | ---------- | --------------------- | ------------------ |
+| A8i3mkd99 | Colby | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
+| k2LNhj8Ks | Tom | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert important %}
+Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you will need to do multiple imports.
 {% endalert %}
 
 ### Importing a CSV
@@ -244,6 +268,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [4]: {% image_buster /assets/img/importcsv2.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
+[9]: {% image_buster /assets/img/subscription_group_import.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors

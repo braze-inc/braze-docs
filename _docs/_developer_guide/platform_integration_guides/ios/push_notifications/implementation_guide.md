@@ -151,7 +151,7 @@ Note that the information requested here can be a wide range of things such as S
 
 To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
-![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_decription" set as "Certified Braze marketers drive...".][9]
+![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_description" set as "Certified Braze marketers drive...".][9]
 
 #### Handling button actions
 

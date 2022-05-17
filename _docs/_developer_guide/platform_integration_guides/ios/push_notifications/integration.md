@@ -346,7 +346,12 @@ Appboy.sharedInstance()?.register(application,
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
 
+## Step 7: Unit tests (optional)
+
+To add test coverage for the integration steps you've just followed, implement Braze's [push unit testing][36].
+
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
+[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/

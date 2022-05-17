@@ -31,7 +31,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 
 ### How to check a user's SMS subscription group
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
 - **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API. 
 
 ## Sending with a subscription group
@@ -61,5 +61,4 @@ In order to send an MMS message, at least one number within your Subscription Gr
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
 [10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
-[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#addtosubscriptiongroup
-
+[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup

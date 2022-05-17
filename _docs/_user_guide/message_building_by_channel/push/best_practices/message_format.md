@@ -48,7 +48,7 @@ channel: push
 {% endtab %}
 {% tab Image Example %}
 
-![iOS push notification with text that reads: "Hi! This is an iOS Push with an image" with an emoji. There is a small image to the right of the text.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS push notification with text that reads: "Hi! This is an iOS Push with an image" with an emoji. There is a small image beside the text.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
 ![iOS push notification on a hard push with the same text as the previous message with an expanded image preceding the text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}

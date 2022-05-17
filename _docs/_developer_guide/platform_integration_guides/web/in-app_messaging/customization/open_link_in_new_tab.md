@@ -14,5 +14,5 @@ description: "This article covers how to set your in-app message links to open i
 To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
 
 ```javascript
-appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
+braze.initialize('api-key', { openInAppMessagesInNewTab: true} );
 ```

@@ -12,7 +12,7 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can do the following: 
+Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can: 
  
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
@@ -38,6 +38,8 @@ When **Advanced users based on ranked order** is enabled, this means that **Rank
 Let's say you have an action path with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Make Purchase". If **Ranking** is turned on, then all users in the action path are "held" for one day. At the end of the day, if a user has started a session and made a purchase, then they advance to the highest rank path. In this case, the user would advance to Group 1. 
 
 In the precedeing example, if **Ranking** is off and when a user performs one of the trigger events ("Start Session" or "Make Purchase"), that user is advanced in the relevant action group based on the trigger action.
+
+Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ### Action groups
 

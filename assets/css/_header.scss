@@ -497,7 +497,21 @@ $header_transition_time: 0.25s;
 }
 
 
+.backdrop {
+  position: absolute;
+  display: none;
+  background: #bfbfbf;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: $banner_height;
+  z-index: 1000;
+  opacity: 0.6;
+}
 
+.backdrop-show {
+  display: block;
+}
 
 @import 'braze_header';
 @import 'header_search';

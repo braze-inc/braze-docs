@@ -228,7 +228,8 @@ Click **Done** once you've finished configuring your Canvas Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API.
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API. Note that the Canvas entry properties object has a maximum size limit of 50 KB. 
+
 {% raw %}
 For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}

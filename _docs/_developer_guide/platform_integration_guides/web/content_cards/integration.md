@@ -13,7 +13,10 @@ description: "This article covers Content Card integration for Web, including Co
 
 ## Data models {#data-models}
 
-The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
+{% include archive/web-v4-rename.md %}
+
+## Standard feed UI
+The Braze Web SDK supports several unique Content Card card types, [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html), [Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) which share a base model, [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html).
 
 ## Content Card integration
 
@@ -38,26 +41,22 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
     <div id="feed"></div>
 </nav>
 
-<script>
-   // we'll assume we have window.appboy
-   // you can also use our npm integration instead:
-   // import braze from "@braze/web-sdk";
-    
+<script> 
    const toggle = document.getElementById("toggle");
    const hide = document.getElementById("hide");
    const show = document.getElementById("show");
    const feed = document.getElementById("feed");
     
    toggle.onclick = function(){
-      appboy.display.toggleContentCards(feed);    
+      braze.toggleContentCards(feed);    
    }
     
    hide.onclick = function(){
-      appboy.display.hideContentCards();
+      braze.hideContentCards();
    }
     
    show.onclick = function(){
-      appboy.display.showContentCards(feed);    
+      braze.showContentCards(feed);    
    }
 </script>
 ```
@@ -67,21 +66,53 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 |Parameters | Description |
 |---|---|
 |`parentNode` | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. For example, you should pass in `document.querySelector(".my-container")`.|
-|`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `ab.Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `ab.Card` objects to render for this user. If omitted, all cards will be displayed. |
+|`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `Card` objects to render for this user. If omitted, all cards will be displayed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on Content Card toggling.
+[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
+
+## Requesting unviewed Content Card count
+
+You can request the number of unread cards at any time by calling:
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
+
+{% comment %}
+Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestContentCardsRefresh();`.
+{% endcomment %}
+
+## Control group 
+
+If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
+
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen.
+
+Here is an example of how to determine if a Content Card is a "Control" card:
+
+```javascript
+function isControlCard(card) {
+    return card instanceof braze.ControlCard;
+}
+```
+
+## Key-value pairs
+
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) to access these values.
 
 ## Additional card methods
 
 |Method | Description | Link|
 |---|---|---|
-|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardimpressions)|
-|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardclick)|
-|`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)|
-|`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
-|`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
-|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
-|`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html#dismissCard)|
+|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions)|
+|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardclick)|
+|`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)|
+|`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)
+|`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)
+|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|
+|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)|
+|`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismissCard)|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

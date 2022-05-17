@@ -125,27 +125,6 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 
 For more details, refer to the [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
 
-## Log Content Cards display
-
-When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the `logContentCardsDisplayed;` method on the `Appboy` interface. For example:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] logContentCardsDisplayed];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.logContentCardsDisplayed()
-```
-
-{% endtab %}
-{% endtabs %}
-
 ## Content Cards view controller integration
 
 Content Cards can be integrated with two view controller contexts: navigation or modal.
@@ -183,7 +162,7 @@ To customize the navigation bar's title, set the title property of the `ABKConte
 
 ### Modal context
 
-This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the right side of the bar.
+This modal is used to present the view controller in a modal view, with a navigation bar on top and a **Done** button on the side of the bar.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

@@ -3,7 +3,7 @@ nav_title: eduMe
 article_title: eduMe
 description: "This article outlines the partnership between Braze and eduMe, a mobile-based training tool that allows you to leverage Braze Connected Content to give your users access to eduMe courses and lessons in your Braze campaigns."
 alias: /partners/edume/
-page_tpe: partner
+page_type: partner
 search_tag: Partner
 
 ---

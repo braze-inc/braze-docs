@@ -9,63 +9,69 @@ tool: Media
 
 ---
 
-# Drag & Drop Editor blocks
+# Editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
+Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
 
-To use them, drag a content block inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
+To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
-## Block types
+## Types
+
+The following table describes how users can use each editor block type.
 
 | name | description |
 |---|---|
-| `Title`  | Allows users to add text with H1, H2, and H3 tags for email. | 
-| `Text`  |  Allows users to enter text into their message.  A toolbar helps with font and text editing functionality. | 
-| `Image` | Allows you to insert an image from the Media Library. | 
-| `Button` |  Add a standard button.  Properties for this block allow for editing and setting links easily.  | 
-| `Divider` |  Insert a solid, dotted, or dashed line to help with spacing.|
-| `HTML` |  Insert raw HTML.  Great for advanced Liquid such as Connected Content or conditional statements. | 
-| `Menu` |  Create a flexible menu for the message you're designing. |
-| `Spacer` |  Add space, or "padding", between other blocks. |
+| `Title`  | Adds text with H1, H2, and H3 tags for email. | 
+| `Text`  |  Enters text into their message. A toolbar helps with font and text editing functionality. | 
+| `Image` | Inserts an image from the Media Library. | 
+| `Button` |  Adds a standard button. Properties for this block allow for editing and setting links easily.  | 
+| `Divider` |  Inserts a solid, dotted, or dashed line to help with spacing.|
+| `HTML` |  Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
+| `Menu` |  Creates a flexible menu for the message you're designing. |
+| `Spacer` |  Adds space, or "padding", between other blocks. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
-## Block type properties
+## Properties
 
-Details for each block type are provided in the following tables.
+Details for each editor block's properties are provided in the following tables.
 
 ### Title
 
 | properties | description |
 |---|---|
-| `Title`  | Select the heading style. Only H1, H2, or H3 are available. | 
-|`Font Family`| The style to be used for your title|
-|`Font Size`| The size of your text |
-|`Text Color`| Modifies the color of the title|
-|`Link Color`| Modifies the color of the link|
-|`Align`| Moves the title to be either left, center or right oriented|
-|`Line Height`| Modify the distance between lines of text|
-|`Line spacing`| Modify the distance in between each character|
-|`Text direction`| Default left to right, but can be edited to write right-to-left|
+| `Title`  | Selects the heading style. Only H1, H2, or H3 are available. | 
+|`Font Family`| This is the font style for your title. |
+|`Font Size`| Determines the size of your text. |
+|`Text Color`| Modifies the color of the title. |
+|`Link Color`| Modifies the color of the link. |
+|`Align`| Moves the title to be left, center or right-oriented. |
+|`Line Height`| Modifies the distance between lines of text. |
+|`Line spacing`| Modifies the distance in between each character. |
+|`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Text
 
+Refer to the following table for details on the `Text` editor block properties.
+
 | properties | description |
 |---|---|
-|`Text Color`| Modifies the color of the title|
-|`Link Color`| Modifies the color of the link|
-|`Line Height`| Modify the distance between lines of text|
-|`Line spacing`| Modify the distance in between each character|
+|`Text Color`| Modifies the color of the title. |
+|`Link Color`| Modifies the color of the link. |
+|`Line Height`| Modifies the distance between lines of text|
+|`Line spacing`| Modifies the distance in between each character|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Image
 
+Refer to the following table for details on the `Image` editor block.
+
 | properties | description |
 |---|---|
-|`Auto Width`| Modifies the px of the image|
-|`Align`| Moves the image to be either left, center or right oriented|
-|`URL`| The hosted address for your image|
-|`Alternate text`| The written copy that appears in place of an image when the image fails to load|
+|`Auto Width`| Modifies the pixels of the image. |
+|`Align`| Moves the image to be either left, center or right-oriented. |
+|`URL`| The hosted address for your image. |
+|`Alternate text`| The written copy that appears in place of an image when the image fails to load. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -76,13 +82,17 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 ### Button
 
+Refer to the following table for details on the `Button` editor block.
+
 | properties | description |
 |---|---|
-|`Link Type`| The desired action when clicking the button.  Sets the appropriate link protocol |
-|`URL`| Dynamic based on the Link Type chosen.|
+|`Link Type`| Determines the action when clicking the button and sets the appropriate link protocol. |
+|`URL`| Dynamic based on the selected `Link Type`.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Divider
+
+Refer to the following table for details on the `Divider` editor block.
 
 | properties | description |
 |---|---|
@@ -94,6 +104,8 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 ### HTML
 
+Refer to the following table for details on the `HTML` editor block.
+
 | properties | description |
 |---|---|
 |`html editor`| Enter the raw HTML |
@@ -101,23 +113,27 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 ### Menu
 
+Refer to the following table for details on the `Menu` editor block.
+
 | properties | description |
 |---|---|
-|`Configure menu items`| Add a menu item  |
-|`Font Family`| The style to be used for your menu|
-|`Font Size`| The size of your menu |
-|`Text Color`| Modifies the color of the menu|
-|`Link Color`| Modifies the color of the menu text|
-|`Align`| Moves the menu to be either left, center or right oriented|
-|`Letter spacing`| Modify the distance in between each character |
-|`Layout`| Either horizontal or vertical|
-|`Separator`| Add character(s) in between the menu options |
-|`Mobile menu`| Options to modify the icon size, color, and icon type when shown on a mobile device|
-|`Item padding`| If enabled, you can modify the padding by using either the **+** or **-** button or by inputting a specific number|
-|`All sides`| If `Item padding` is disabled, set a consistent padding number|
+|`Configure menu items`| Add a menu item. |
+|`Font Family`| The style to be used for your menu. |
+|`Font Size`| The size of your menu. |
+|`Text Color`| Modifies the color of the menu. |
+|`Link Color`| Modifies the color of the menu text. |
+|`Align`| Moves the menu to be left, center or right-oriented. |
+|`Letter spacing`| Modifies the distance in between each character. |
+|`Layout`| Determines the layout to be either horizontal or vertical. |
+|`Separator`| Add character(s) between the menu options. |
+|`Mobile menu`| Includes options to modify the icon size, color, and icon type when shown on a mobile device. |
+|`Item padding`| Modifies the padding by using either the **+** or **-** button, or by entering a specific number. |
+|`All sides`| Sets a consistent padding number if `Item padding` is disabled. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Spacer
+
+Refer to the following table for details on the `Spacer` editor block.
 
 | properties | description |
 |---|---|
@@ -126,7 +142,9 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 
 ### Add Liquid personalization
 
+Refer to the following table for details on `Add Personalization`.
+
 | name | description |
 |---|---|
-| `Add Personalization` |  Located on the left menu. Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, content blocks, etc. | 
+| `Add Personalization` | Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, Content Blocks, and more. | 
 {: .reset-td-br-1 .reset-td-br-2}
