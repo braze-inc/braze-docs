@@ -525,3 +525,5 @@ validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_pri
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
 
 validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';
+
+validurls['/docs/user_guide/message_building_by_channel/email/best_practices/templates_styling'] = '/docs/user_guide/message_building_by_channel/email/best_practices/email_styling/';
