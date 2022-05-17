@@ -439,10 +439,13 @@ $(document).ready(function() {
   $('.lang-select').on('change', function(e){
     let lang = this.value;
     WOVN.io.changeLang(lang);
-    $('.lang-select').val(lang).prop('selected', true);;
+    $('.lang-select').val(lang).prop('selected', true);
   });
   window.addEventListener('wovnApiReady', function(evt){
     let wovn_lang = WOVN.io.getCurrentLang();
-    $('.lang-select').val(wovn_lang).prop('selected', true);;
+    let wovn_lang_code = wovn_lang['code'] || 'en';
+    if (wovn_lang_code == 'ja') {
+      $('.lang-select').val(wovn_lang_code).prop('selected', true);
+    }
   });
 });
