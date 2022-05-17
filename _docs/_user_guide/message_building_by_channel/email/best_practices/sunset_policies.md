@@ -3,7 +3,7 @@ nav_title: Sunset Policies
 article_title: Sunset Policies for Email
 page_order: 8
 page_type: reference
-description: "This article covers best practices surrounding sunset policies—understanding situations when it's better to discontinue messages to disengaged users."
+description: "This article covers best practices surrounding sunset policies and understanding situations when it's better to discontinue messages to disengaged users."
 channel: email
 
 ---
@@ -19,11 +19,11 @@ Here are some things to consider when you create a sunset policy:
 - Will you deliver any special campaigns to users before excluding them from your segments?
 - Which messaging channels will your sunset policy apply to?
 
-To incorporate sunset policies into your campaigns, [create segments][19] that automatically exclude users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
+To incorporate sunset policies into your campaigns, create [segments][19] that automatically exclude users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
 
 To set up these segments, choose the "Has Marked You As Spam" and/or "Last Engaged With Message" filters, which are located under the **Marketing Activity** section in the filter dropdown.  When you apply the "Last Engaged With Message" filter, specify the type of messaging (push, email, or in-app notification) that the user has or has not interacted with, as well as the number of days it has been since the user last interacted. After you create a segment, choose to target this segment with any [messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/).
 
-![Segment Details page with the filter "Last Engaged with Message" selected][20]
+![Segment Details page with the filter "Last Engaged with Message" selected.][20]
 
 While Braze's platform automatically stops sending emails to users who have marked you as spam, the "Has Marked You As Spam" filter allows you to also send these users targeted push messages, in-app notifications, and News Feed cards.  This filter is useful for [retargeting campaigns][21]. For instance, you can send unengaged users messages or News Feed updates that remind them of the features and deals that they are missing out on when they don't open your emails.
 

@@ -4,7 +4,7 @@ permalink: "/cloning_canvases/"
 hidden: true
 ---
 
-# Cloning Canvases
+# Cloning Canvases to Canvas V2
 
 Moving to the Canvas V2 workflow includes benefits such as access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). If you have an existing Canvas you want to move to the V2 workflow, you can clone your Canvas to create a copy of it in the Canvas V2 workflow. When you clone your Canvas to the Canvas V2 workflow, your original Canvas will not be altered or deleted. 
 
@@ -32,8 +32,8 @@ If your Canvas matches any of the following details, then your Canvas can't be c
 
 - Status is **Active** 
 - Status is **Draft**
-- Contains Full Steps that have exception events and use the delay filter "in" or "on the next"
-- Contains branching past the first step
+- Has Full Steps that have exception events and use the delay filter "in" or "on the next"
+- Has a Full Step that branches out into multiple steps, and is not the first step of the Canvas
 
 For more information about the differences between Canvas V1 and Canvas V2, check out our [Canvas V2 101]({{site.baseurl}}/canvas_v2_101/#what-are-the-main-differences-between-canvas-v2-and-canvas-v1) article.
 
