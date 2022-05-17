@@ -640,10 +640,10 @@ Custom key-value pairs sent either via the dashboard or the messaging APIs will 
 
 ```java
 // intent is the Braze push intent received by your custom broadcast receiver.
-String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
+String deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY);
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
+Bundle extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
 String myExtra = extras.getString("my_key");
@@ -654,10 +654,10 @@ String myExtra = extras.getString("my_key");
 
 ```kotlin
 // intent is the Braze push intent received by your custom broadcast receiver.
-val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
+val deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY)
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
+val extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.
 val myExtra = extras.getString("my_key")
