@@ -349,6 +349,16 @@
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
+        <li class="nav-item nav-item-lang-li">
+          <div id="nav-item-lang">
+          <label for="lang_select"><i class="fa-solid fa-globe"></i>
+          </label>
+          <select class="lang-select" id="lang_select">
+            <option value="en">EN</option>
+            <option value="ja">JP</option>
+          </select>
+          </div>
+        </li>
       </ul>
 
     </div>
@@ -362,7 +372,15 @@
     {%- assign active_title =  default_title -%}
     {%- endif -%}
 
-    <div class="navbarCollapse d-block d-md-none" id="dropdown_navbar">
+    <div class="navbarCollapse d-md-none" id="dropdown_navbar">
+      <div id="dropdown_navbar_lang">
+        <label for="lang_select"><i class="fa-solid fa-globe"></i>
+        </label>
+        <select class="lang-select" id="lang_select_responsive">
+          <option value="en">EN</option>
+          <option value="ja">JP</option>
+        </select>
+      </div>
       <ul class="navbar-nav " id="dropdown_menu">
         <li class="nav-item dropdown">
 

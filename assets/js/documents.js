@@ -436,4 +436,13 @@ $(document).ready(function() {
       $this.addClass('prewrap');
     }
   });
+  $('.lang-select').on('change', function(e){
+    let lang = this.value;
+    WOVN.io.changeLang(lang);
+    $('.lang-select').val(lang).prop('selected', true);;
+  });
+  window.addEventListener('wovnApiReady', function(evt){
+    let wovn_lang = WOVN.io.getCurrentLang();
+    $('.lang-select').val(wovn_lang).prop('selected', true);;
+  });
 });
