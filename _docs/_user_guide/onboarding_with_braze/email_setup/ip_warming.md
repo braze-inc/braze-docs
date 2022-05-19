@@ -38,13 +38,17 @@ Abrupt, high-volume email campaigns are regarded with the most skepticism by ISP
 3. **When IP warming is complete, continue sending as consistent a cadence as possible.**<br>
 IPs can cool down if volume stops or significantly decreases for more than a few days.<br><br>
 4. **Spread your email sends across a day or several days.**<br>
-Features like Braze's Local Time Zone delivery and [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) can help automatically spread your send across a longer timeframe, rather than sending a mass blast at a single specific time.<br><br>
+Use our [IP warming schedule](#ip-warming-schedules) to spread your send across a longer timeframe, rather than sending a mass blast at a single specific time. Features like Braze's [local time zone delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) can help you send messages based on a user's individual time zone, so you're sending when users are more likely to be active.<br><br>
 5. **Ensure that your email list is clean and doesn't have old or un-verified emails.**<br>Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.<br><br>
 6. **Carefully monitor your Sender Reputation while you conduct the IP warming process.** <br>
 The following metrics are important to watch during warming:
 - **Bounce Rates**: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
 - **Spam Reports**: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
 - **Sender Reputation Scores**: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
+
+{% alert note %}
+Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
+{% endalert %}
 
 ## IP warming schedules
 
