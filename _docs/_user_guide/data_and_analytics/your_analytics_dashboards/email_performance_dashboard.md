@@ -35,6 +35,12 @@ Each tile (except _Sends_, which is a count metric), shows the rate metric first
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Comparison to last period
+
+The email dashboard automatically displays a comparison between the time period you have selected in the date range, versus the prior time period totaling the same number of days. For instance, if you are choosing "last 7 days" as your date range in the dashboard, then the comparison to last period will compare the metrics from the last 7 days against the 7 days prior to that. If you select a custom date range - let's say May 10 to May 15 (which is 6 days' worth of data) - then the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
+
+The comparison is the percentage change between the last period and the current period, which is calculated by taking the difference between the two periods, and dividing it by the metric from the last period.
+
 ## Frequently asked questions
 
 ### Why is my dashboard displaying empty values?
