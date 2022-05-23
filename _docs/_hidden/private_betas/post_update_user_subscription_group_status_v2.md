@@ -29,16 +29,16 @@ A rate limit is applied to requests made to this endpoint for customers who onbo
 
 ```json
 {
-    "subscription_groups":[
-      {
-        "subscription_group_id": (required, string),
-        "subscription_state": (required, string)
-        "external_ids": (required*, array of strings),
-        "emails": (required*, array of strings),
-        "phones": (required*, array of strings in E.164 format),
-        }
-      ]
+  "subscription_groups":[
+    {
+      "subscription_group_id": (required, string),
+      "subscription_state": (required, string)
+      "external_ids": (required*, array of strings),
+      "emails": (required*, array of strings),
+      "phones": (required*, array of strings in E.164 format),
     }
+  ]
+}
 ```
 
 ## Request parameters
@@ -58,22 +58,22 @@ The following example uses `external_id` to make one API call.
 ```
 {
    "subscription_groups":[
-     {
-       "subscription_group_id":"39ab6c08-d141-44ee-a39f-fb3e22c3592a",
-       "subscription_state":"subscribed",
-       "external_ids":[
-         "einfra-187","example1@email.com"
-         ]
-       },
-     {
-       "subscription_group_id":"dbad58f7-5be8-4c62-8797-56fefec099b7",
-       "subscription_state":"subscribed",
-       "external_ids":[
-         "einfra-187","example1@email.com"
-         ]
-       }
-     ]
-   }
+    {
+      "subscription_group_id":"39ab6c08-d141-44ee-a39f-fb3e22c3592a",
+      "subscription_state":"subscribed",
+      "external_ids":[
+        "einfra-187","example1@email.com"
+      ]
+    },
+    {
+      "subscription_group_id":"dbad58f7-5be8-4c62-8797-56fefec099b7",
+      "subscription_state":"subscribed",
+      "external_ids":[
+        "einfra-187","example1@email.com"
+      ]
+    }
+  ]
+ }
 ```
 
 ## Example request email
@@ -81,15 +81,15 @@ The following example uses `external_id` to make one API call.
 ```
 {
  "subscription_groups":[
-   {
+  {
      "subscription_group_id":"bcc803d1-45df-4548-8f02-c4e9e87a1f8f",
      "subscription_state":"subscribed",
      "emails":[
-       "example1@email.com","example2@email.com"
-       ]
-     }
-   ]
- }
+      "example1@email.com","example2@email.com"
+    ]
+   }
+ ]
+}
 ```
 
 ## Example request SMS
@@ -102,8 +102,10 @@ The following example uses `external_id` to make one API call.
      "subscription_state":"subscribed",
      "phones":[
        "+12223334444","+15556667777”
-       ]
-     }
-   ]
- }
+     ]
+   }
+ ]
+}
 ```
+
+{% endapi %}
