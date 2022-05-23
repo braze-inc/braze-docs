@@ -15,13 +15,15 @@ The email performance dashboard allows you to view aggregate performance metrics
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
 
-![][1]
+![Email performance dashboard displaying email channel engagement from the last seven days.][1]
 
 ## Metrics calculations
 
+![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+
 The calculations for different metrics in the email performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Each tile (except _Sends_, which is a count metric), shows the rate metric first, followed by the count metric. For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period.
+Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |
@@ -37,9 +39,9 @@ Each tile (except _Sends_, which is a count metric), shows the rate metric first
 
 ## Comparison to last period
 
-The email dashboard automatically displays a comparison between the time period you have selected in the date range, versus the prior time period totaling the same number of days. For instance, if you are choosing "last 7 days" as your date range in the dashboard, then the comparison to last period will compare the metrics from the last 7 days against the 7 days prior to that. If you select a custom date range - let's say May 10 to May 15 (which is 6 days' worth of data) - then the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
+The email dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
 
-The comparison is the percentage change between the last period and the current period, which is calculated by taking the difference between the two periods, and dividing it by the metric from the last period.
+The comparison is the percentage change between the last and current periods, calculated by taking the difference between the two periods and dividing it by the metric from the last period.
 
 ## Frequently asked questions
 
@@ -76,3 +78,4 @@ This means Braze hasn't recorded any data for that metric during the time period
 --->
 
 [1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
+[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
