@@ -484,7 +484,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
-  "user_agent": (string) description of the user’s system and browser for the event
+  "user_agent": (string) This field is no longer used in any destination for this event and will always be empty,
 }
 ```
 #### Property details
