@@ -56,6 +56,10 @@ The Drag & Drop Editor uses two key components to make email composition quick a
 
 Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
+{% alert note %}
+Due to updates to the underlying engine for the Drag & Drop Editor, you may experience code compression with the removal of whitespaces between tags. This code compression helps to improve compatibility across various email clients, so the maximum number of characters per line is 500. 
+{% endalert %}
+
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
 The **Settings** panel in the **Design and Build** section includes general settings for the email message. These settings are inherited by the **Content** and **Rows** sections. For example, the **Default Font** set in this section is used everywhere in your message except where you use a custom setting. 
@@ -103,6 +107,10 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br>
+
+{% alert note %}
+Due to updates to the underlying engine for the Drag & Drop Editor, transparent dividers will be replaced with structural padding blocks.
+{% endalert %}
 
 #### Adding Liquid 
 
