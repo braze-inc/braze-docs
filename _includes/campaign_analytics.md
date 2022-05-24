@@ -216,7 +216,7 @@ The **Historical Performance** panel allows you to view the metrics from the **M
 
 To get a day-by-day breakdown, click the <i class="fas fa-bars"></i> hamburger menu and select **Download CSV** to receive a CSV export of the report.
 
-![A graph of the Historical Performance panel with example statistics for a variant from January to April.]({% image_buster /assets/img/cc-historical-performance.png %})
+![A graph of the Historical Performance panel with example statistics for an email from February 2021 to May 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% if include.channel == "in-app message" %}
 
