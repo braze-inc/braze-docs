@@ -55,7 +55,7 @@ Previously with the Canvas V1 workflow, each Full Step included information such
 
 ### Message Step advancement
 
-[Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the step simpler. This does mean that if you want to implement the **Advance when message sent** option, you would need to use a separate Audience Paths Step. 
+[Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the step simpler. If you want to implement the **Advance when message sent** option, add a separate Audience Paths Step to filter users that didn't receive the previous step.  
 
 ### Delay "in" behavior
 
