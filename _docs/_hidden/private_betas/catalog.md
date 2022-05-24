@@ -101,7 +101,7 @@ We can immediately see the following Liquid preview:
 
 {% raw %}
 ```liquid
-{% catalogs_items Games %}
+{% catalog_items Games %}
 ```
 {% endraw %}
 
@@ -113,7 +113,7 @@ For example, to reference the title and price of the `tales_storefront` item, we
 
 {% raw %}
 ```liquid
-{% catalogs_items Games tales_storefront %}
+{% catalog_items Games tales_storefront %}
  
 Get {{ items[0].title }} for just {{ items[0].price }}!
 ```
@@ -155,7 +155,7 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 
 {% raw %}
 ```liquid
-{% catalogs_items Games tales_storefront %}
+{% catalog_items Games tales_storefront %}
 
 {{ items[0].image_link }}
 ```
@@ -193,7 +193,7 @@ For example, to let a user know that `tales_storefront` (an item in our catalog 
 {% raw %}
 ```liquid
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
-{% catalogs_items Games tales_storefront {{ wishlist[0] }} %}
+{% catalog_items Games tales_storefront {{ wishlist[0] }} %}
 
 Get {{ items[0].title }} now, for just {{ items[0].price }}!
 ```
