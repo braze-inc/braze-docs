@@ -27,8 +27,6 @@ This integration will create alias user profiles if we are unable to match Shopi
 | ----------- | ----------- |
 | Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per app group. |
 | Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
-| Nested custom event property support in segment extensions | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to filter Shopify nested custom event properties for up to 365 days within Segment Extensions. |
-| Nested custom event property support for message triggering | This will be enabled with the Shopify integration.<br><br>You will be given access to this feature to trigger campaigns and Canvases using the nested properties within Shopify customer events. |
 | Nested custom attribute support | This will be enabled with the Spotify integration.<br><br>You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -36,20 +34,19 @@ This integration will create alias user profiles if we are unable to match Shopi
 
 With Braze's turnkey Shopify integration, you can:
 - Seamlessly connect your Shopify store within Braze
-- Allow Braze to ingest and process the following Shopify webhook events:
-  - Order create
-  - Checkout update
+- Allow Braze to ingest and process Shopify user data
 - Sync Shopify user profiles into Braze
 
 ### Step 1: Locate Shopify within the dashboard
 In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
-
+> NEW IMAGE REQUIRED
 ![Shopify][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
 Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
+> NEW IMAGE REQUIRED
 <br>![Shopify][3]{: style="max-width:80%;"}
 
 #### Install Braze's Shopify application
@@ -74,9 +71,14 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Events %}
 | Event Name | Braze Event Type | Triggered When... |
 | --- | --- | --- |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after **1 hour** of checkout or cart activity. |
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The abandonment default is set to **1 hour** but is configurable within the **Advanced Settings** section on the Shopify partner page. |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
+| `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order’s payment status is changed to paid. An order is in paid status after a credit card payment has been captured, or when an order using a manually payment method is marked as paid. |
+| `shopify_partially_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Partially fulfilled order events will trigger when some of the line items in an order are fulfilled successfully. |
+| `shopify_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Fulfilled order events will trigger when the fulfillment of all of the line items in a fulfillment order is successful. |
+| `shopify_cancelled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Canceled order events will trigger when a customer creates an order but then cancels the order before fulfillment. |
+| `shopify_created_refund` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | CONTENT PENDING VERIFICATION |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
@@ -184,6 +186,265 @@ Once the app installation is complete, Braze automatically creates your webhook 
 }
 ```
 {% endsubtab %}
+{% subtab Order Paid Event %}
+```json
+{
+  "name": "shopify_paid_order",
+  "time": "2022-05-23T13:52:38-04:00",
+  "properties": {
+    "order_id": 4444596371647,
+    "line_items": [
+      {
+        "quantity": 1,
+        "product_id": 6143033344191,
+        "sku": null,
+        "title": "LED High Tops",
+        "vendor": "partners-demo",
+        "name": "LED High Tops",
+        "properties": [],
+        "price": "80.00",
+        "fulfillment_status": null
+      }
+    ],
+    "shipping": [
+      {
+        "title": "Standard",
+        "price": "0.00"
+      }
+    ],
+    "total_price": "141.54",
+    "confirmed": true,
+    "total_discounts": "0.00",
+    "discount_codes": [],
+    "order_number": 1092,
+    "order_status_url": "https://test-store.myshopify.com/",
+    "cancelled_at": null,
+    "tags": "",
+    "closed_at": null,
+    "fulfillment_status": null,
+    "fulfillments": []
+  },
+  "braze_id": "123abc123abc"
+}
+```
+{% endsubtab %}
+{% subtab Order Partially Fulfilled Event %}
+```json
+{
+  "name": "shopify_partially_fulfilled_order",
+  "time": "2022-05-23T14:43:34-04:00",
+  "properties": {
+    "order_id": 4444668657855,
+    "line_items": [
+      {
+        "quantity": 1,
+        "product_id": 6143032066239,
+        "sku": null,
+        "title": "Dark Denim Top",
+        "vendor": "partners-demo",
+        "name": "Dark Denim Top",
+        "properties": [],
+        "price": "60.00",
+        "fulfillment_status": "fulfilled"
+      }
+    ],
+    "shipping": [
+      {
+        "title": "Standard",
+        "price": "0.00"
+      }
+    ],
+    "total_price": "130.66",
+    "confirmed": true,
+    "total_discounts": "0.00",
+    "discount_codes": [],
+    "order_number": 1093,
+    "order_status_url": "https://test-store.myshopify.com/",
+    "cancelled_at": null,
+    "tags": "",
+    "closed_at": null,
+    "fulfillment_status": "partial",
+    "fulfillments": [
+      {
+        "shipment_status": null,
+        "status": "success",
+        "tracking_company": "Other",
+        "tracking_number": "123",
+        "tracking_numbers": [
+          "123"
+        ],
+        "tracking_url": "https://braze.com",
+        "tracking_urls": [
+          "https://braze.com"
+        ],
+        "line_items": [
+          {
+            "fulfillment_status": "fulfilled",
+            "name": "Dark Denim Top",
+            "price": "60.00",
+            "product_id": 6143032066239,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": null,
+            "title": "Dark Denim Top",
+            "vendor": "partners-demo"
+          }
+        ]
+      }
+    ]
+  },
+  "braze_id": "abc123abc123"
+}
+
+```
+{% endsubtab %}
+{% subtab Order Fulfilled Event %}
+```json
+{
+  "name": "shopify_fulfilled_order",
+  "time": "2022-05-23T14:44:34-04:00",
+  "properties": {
+    "order_id": 4444668657855,
+    "line_items": [
+      {
+        "quantity": 1,
+        "product_id": 6143032066239,
+        "sku": null,
+        "title": "Dark Denim Top",
+        "vendor": "partners-demo",
+        "name": "Dark Denim Top",
+        "properties": [],
+        "price": "60.00",
+        "fulfillment_status": "fulfilled"
+      }
+    ],
+    "shipping": [
+      {
+        "title": "Standard",
+        "price": "0.00"
+      }
+    ],
+    "total_price": "130.66",
+    "confirmed": true,
+    "total_discounts": "0.00",
+    "discount_codes": [],
+    "order_number": 1093,
+    "order_status_url": "https://test-store.myshopify.com/",
+    "cancelled_at": null,
+    "tags": "",
+    "closed_at": "2022-05-23T14:44:34-04:00",
+    "fulfillment_status": "fulfilled",
+    "fulfillments": [
+      {
+        "shipment_status": null,
+        "status": "success",
+        "tracking_company": "Other",
+        "tracking_number": "456",
+        "tracking_numbers": [
+          "456"
+        ],
+        "tracking_url": "https://braze.com",
+        "tracking_urls": [
+          "https://braze.com"
+        ],
+        "line_items": [
+          {
+            "fulfillment_status": "fulfilled",
+            "name": "Dark Denim Top",
+            "price": "60.00",
+            "product_id": 6143032066239,
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": null,
+            "title": "Dark Denim Top",
+            "vendor": "partners-demo"
+          }
+        ]
+      }
+    ]
+  },
+  "braze_id": "123abc123abc"
+}
+```
+{% endsubtab %}
+{% subtab Order Cancelled Event %}
+```json
+{
+  "name": "shopify_cancelled_order",
+  "time": "2022-05-23T14:40:52-04:00",
+  "properties": {
+    "order_id": 4444596371647,
+    "line_items": [
+      {
+        "quantity": 1,
+        "product_id": 6143033344191,
+        "sku": null,
+        "title": "LED High Tops",
+        "vendor": "partners-demo",
+        "name": "LED High Tops",
+        "properties": [],
+        "price": "80.00",
+        "fulfillment_status": null
+      }
+    ],
+    "shipping": [
+      {
+        "title": "Standard",
+        "price": "0.00"
+      }
+    ],
+    "total_price": "141.54",
+    "confirmed": true,
+    "total_discounts": "0.00",
+    "discount_codes": [],
+    "order_number": 1092,
+    "order_status_url": "https://test-store.myshopify.com/",
+    "cancelled_at": "2022-05-23T14:40:52-04:00",
+    "tags": "",
+    "closed_at": "2022-05-23T14:40:51-04:00",
+    "fulfillment_status": null,
+    "fulfillments": []
+  },
+  "braze_id": "123abc123abc"
+}
+
+```
+{% endsubtab %}
+{% subtab Refund Created Event %}
+```json
+{
+  "name": "shopify_created_refund",
+  "time": "2022-05-23T14:40:50-04:00",
+  "properties": {
+    "order_id": 4444596371647,
+    "note": null,
+    "line_items": [
+      {
+        "quantity": 1,
+        "product_id": 6143033344191,
+        "sku": null,
+        "title": "LED High Tops",
+        "vendor": "partners-demo",
+        "properties": [],
+        "price": "80.00"
+      },
+      {
+        "quantity": 1,
+        "product_id": 6143032852671,
+        "sku": null,
+        "title": "Chequered Red Shirt",
+        "vendor": "partners-demo",
+        "properties": [],
+        "price": "50.00"
+      }
+    ]
+  },
+  "braze_id": "abc123abc123"
+}
+
+```
+{% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
@@ -274,6 +535,22 @@ Braze will map the supported Shopify data to user profiles using the customer's 
 
 ## Using Shopify data in Braze
 Once you've completed your integration, take a look at our next Shopify [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
+
+## Shopify advanced settings
+
+### Update abandoned checkout delay
+
+By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` event to 1 hour of inactivity. You can set the **Abandoned Checkout Delay** from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
+
+> IMAGE REQUIRED
+
+### Set your preferred product identifier
+
+If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the Product ID used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
+
+You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
+
+> IMAGE REQUIRED
 
 ## Troubleshooting
 
