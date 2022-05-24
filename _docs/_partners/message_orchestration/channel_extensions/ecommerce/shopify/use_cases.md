@@ -11,7 +11,7 @@ search_tag: Partner
 
 ## Personalization
 
-Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties. The following table lists the Liquid templating variables for each event.
+Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties. The following tables list the Liquid templating variables for each event.
 
 {% tabs %}
 {% tab Shopify Abandon Checkout Event %}
@@ -54,6 +54,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Total Discounts | `{{event_properties.${total_discounts}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
 | Tags | `{{event_properties.${tags}}}` |
+| Tags | `{{event_properties.${tags}}}` |
 | Discount Codes | `{{event_properties.${discount_codes}}}` |
 | Item ID | `{{event_properties.${line_items}[0].product_id}}` |
 | Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
@@ -89,7 +90,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 
 You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
 
-![Shopify][12]{: style="max-width:80%;"}
+![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.][12]{: style="max-width:80%;"}
 
 In addition, you can also use Braze's breadth of purchase filter to create segments of users based on:
 - First/last purchase
@@ -97,9 +98,9 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 - Products they have previously purchased within the last 30 days
 - The number of purchases they made
 
-![Shopify][13]
+![Segmentation filter for users that first made a purchase after October 17, 2020.][13]
 
-![Shopify][14]
+![Searching for a specific product ID as a segmentation filter.][14]
 
 {% alert note %}
 If you are looking to segment by custom event properties, ensure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
@@ -109,11 +110,11 @@ If you are looking to segment by custom event properties, ensure that you work w
 
 With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). For example, you may create an Action-Based Canvas that triggers off of the Shopify `shopify_checkouts_abandon` event within the Canvas entry criteria. 
 
-![Shopify][5]
+![Action-based Canvas that enters users who perform the custom event "shopify_checkouts_abandon".][5]
 
 With Nested Object Support for Custom Event Properties, customers now can trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event.
 
-![Shopify][26]
+![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.][26]
 
 [5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %}  
 [12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %} 
