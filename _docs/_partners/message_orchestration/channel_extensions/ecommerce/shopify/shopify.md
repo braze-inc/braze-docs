@@ -40,26 +40,26 @@ With Braze's turnkey Shopify integration, you can:
 ### Step 1: Locate Shopify within the dashboard
 In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
 > NEW IMAGE REQUIRED
-![Shopify][2]{: style="max-width:80%;"}
+![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
 Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
 > NEW IMAGE REQUIRED
-<br>![Shopify][3]{: style="max-width:80%;"}
+<br>![Alt text required][3]{: style="max-width:80%;"}
 
 #### Install Braze's Shopify application
-<br>![Shopify][7]{: style="max-width:60%;"}
+<br>![Shopify app installation page, which lists the permissions the Braze app will have after installing.][7]{: style="max-width:60%;"}
 
 ### Step 3: Verify completion
 That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed, and the webhook creation is complete, you will be notified via email. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
 
-![Shopify][8]{: style="max-width:80%;"}
-![Arrow][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
-![Shopify][9]{: style="max-width:80%;"}
-![Arrow][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
-![Shopify][10]{: style="max-width:80%;"}
+![Data Import section showing connection pending and setup status pending.][8]{: style="max-width:80%;"}
+![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
+![Data Import section showing connection pending and setup status successful.][9]{: style="max-width:80%;"}
+![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
+![Data Import section showing successful connection. A timestamp displays when the connection was established, and there is a link to the connected storefront.][10]{: style="max-width:80%;"}
 
 ## Shopify event processing
 
