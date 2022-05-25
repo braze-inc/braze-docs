@@ -39,15 +39,14 @@ With Braze's turnkey Shopify integration, you can:
 
 ### Step 1: Locate Shopify within the dashboard
 In Braze, go to the **Technology Partners** section and then search **Shopify**. On the Shopify partner page, select **Begin Setup** to start the integration process.
-> NEW IMAGE REQUIRED
+
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
 Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
-> NEW IMAGE REQUIRED
-<br>![Alt text required][3]{: style="max-width:80%;"}
+<br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:80%;"}
 
 #### Install Braze's Shopify application
 <br>![Shopify app installation page, which lists the permissions the Braze app will have after installing.][7]{: style="max-width:60%;"}
@@ -542,7 +541,7 @@ Once you've completed your integration, take a look at our next Shopify [article
 
 By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` event to 1 hour of inactivity. You can set the **Abandoned Checkout Delay** from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
 
-> IMAGE REQUIRED
+![Option in Advanced Settings to set a rule for how long after a user leaves their cart to trigger abandoned checkout.][11]{: style="max-width:40%;"}
 
 ### Set your preferred product identifier
 
@@ -550,7 +549,7 @@ If you have included Braze purchase events within your Shopify integration setup
 
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
-> IMAGE REQUIRED
+![Option in Advanced Settings to specify a field to use as your product identifier within the Braze purchase event.][12]{: style="max-width:40%;"}
 
 ## Troubleshooting
 
@@ -590,3 +589,5 @@ Concerning personal data submitted to Braze services by or on behalf of its cust
 [8]: {% image_buster /assets/img/Shopify/shopify_integration8.png %} 
 [9]: {% image_buster /assets/img/Shopify/shopify_integration9.png %} 
 [10]: {% image_buster /assets/img/Shopify/shopify_integration10.png %} 
+[11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
+[12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 
