@@ -60,7 +60,7 @@ That's it! The status of your integration appears in the **Data Import** section
 ![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
 ![Data Import section showing successful connection. A timestamp displays when the connection was established, and there is a link to the connected storefront.][10]{: style="max-width:80%;"}
 
-## Shopify event processing
+## Shopify data processing
 
 Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the following table for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
 
