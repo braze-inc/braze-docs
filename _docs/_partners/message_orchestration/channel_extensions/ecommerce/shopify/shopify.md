@@ -70,7 +70,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Events %}
 | Event Name | Braze Event Type | Triggered When... |
 | --- | --- | --- |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The abandonment default is set to **1 hour** but is configurable within the **Advanced Settings** section on the Shopify partner page. |
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates a webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process, including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The abandonment default is set to **1 hour** but is configurable within the **Advanced Settings** section on the Shopify partner page. |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order’s payment status is changed to paid. An order is in paid status after a credit card payment has been captured, or when an order using a manually payment method is marked as paid. |
@@ -539,7 +539,7 @@ Once you've completed your integration, take a look at our next Shopify [article
 
 ### Update abandoned checkout delay
 
-By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` event to 1 hour of inactivity. You can set the **Abandoned Checkout Delay** from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
+By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` event to one hour of inactivity. You can set the **Abandoned Checkout Delay** from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
 
 ![Option in Advanced Settings to set a rule for how long after a user leaves their cart to trigger abandoned checkout.][11]{: style="max-width:40%;"}
 
