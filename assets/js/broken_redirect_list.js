@@ -527,3 +527,5 @@ validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/over
 validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/templates_styling'] = '/docs/user_guide/message_building_by_channel/email/best_practices/email_styling/';
+
+validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/'

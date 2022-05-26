@@ -118,18 +118,18 @@ To set up the Braze and Punchh integration:
 
 1. In the Punchh dashboard, navigate to **Cockpit > Dashboard > Major Features > Enable Webhook Management** and toggle on **Enable Webhook Management**.<br><br>
 2. Next, enable adapters by navigating to **Settings > Webhooks Manager > Configurations > Show Adapters Tab** and toggle on **Show Adapters Tab**.<br><br>
-3. Navigate to **Webhooks Manager** under the **Settings** tab, select the **Adapters** tab, and click **Create Adapter**. <br><br>![Punch Platform][1]<br><br>
-5. Fill in the adapter name, description, and admin email. Select **Braze** as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
-6. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync).<br><br>![Punch Platform][3]<br><br>
-7. Click **Submit** to enable the webhook.
-comm
+3. Navigate to **Webhooks Manager** under the **Settings** tab, select the **Adapters** tab, and click **Create Adapter**. <br><br>![][1]<br><br>
+4. Fill in the adapter name, description, and admin email. Select **Braze** as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
+5. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync).<br><br>![][3]<br><br>
+6. Click **Submit** to enable the webhook.
+
 ### Step 3: Create Punchh webhook in Braze
 
 The Braze and Punchh integration allows you to leverage Braze webhook capabilities to create Punchh segments:
 
-1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL. <br><br>For example, the following page is located at `www.dashboard.punchhtest.com/segments/11646`. The numer "11646" at the end of this link is the `custom_segment_id`.<br><br>![Punch Platform][5]<br><br>
-2. Next, navigate to **Webhook Templates** in Braze and select the Punchh template. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![Punch Platform][4]<br><br>
-3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown in the following screenshot:<br><br>![Punch Platform][7]
+1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL. <br><br>For example, the following page is located at `www.dashboard.punchhtest.com/segments/11646`. The number "11646" at the end of this link is the `custom_segment_id`.<br><br>![][5]<br><br>
+2. Create a webhook campaign in Braze using the Punchh endpoint for adding a user to a custom segment as the webhook URL. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![][4]<br><br>
+3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown in the following image:<br><br>![An example of syncing users using the saved webhook as a result of Braze and Punchh integration.][7]
 
 For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 

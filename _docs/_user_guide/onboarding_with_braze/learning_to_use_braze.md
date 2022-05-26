@@ -158,7 +158,7 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
-| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
+| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
 | 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
 | 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
 | 5 | [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | What user profiles are in Braze and the various ways you can identify and reference a user’s profile. |

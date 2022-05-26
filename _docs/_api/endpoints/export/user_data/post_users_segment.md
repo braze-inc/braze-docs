@@ -14,11 +14,13 @@ description: "This article outlines details about the Users by Segment Braze end
 /users/export/segment
 {% endapimethod %}
 
-This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
+This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). 
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
+Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
+
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
