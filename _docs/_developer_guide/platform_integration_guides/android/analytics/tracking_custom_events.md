@@ -28,6 +28,46 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 {% tab KOTLIN %}
 
 ```kotlin
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Refer to our [KDoc][2] for more information.
+
+### Adding properties
+
+You can add metadata about custom events by passing a [Braze properties object][4] with your custom event.
+
+Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+braze.logCustomEvent("YOUR-EVENT-NAME",
+    new BrazeProperties(new JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", new Date())
+        .put("or", new JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", new JSONObject()
+            .put("deeply", new JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+));
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
 braze.logCustomEvent("YOUR-EVENT-NAME",
     BrazeProperties()
         .addProperty("you", "can")
@@ -49,35 +89,6 @@ braze.logCustomEvent("YOUR-EVENT-NAME",
         .put("andEven", JSONObject()
             .put("deeply", JSONArray(listOf("nested", "json"))))
 )
-```
-
-{% endtab %}
-{% endtabs %}
-
-Refer to our [KDoc][2] for more information.
-
-### Adding properties
-
-You can add metadata about custom events by passing a [Braze properties object][4] with your custom event.
-
-Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-BrazeProperties eventProperties = new BrazeProperties();
-eventProperties.addProperty("key", "value");
-Braze.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-val eventProperties = BrazeProperties()
-eventProperties.addProperty("key", "value")
-Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 ```
 
 {% endtab %}
