@@ -158,7 +158,7 @@ Our average exported HTML data footprint size has been reduced, leading to faste
 
 HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
 
-- Migration from a `<div>` element-based design to a standard `<table>` layout
+- Migration from a `<div>` element-based design to a standard `<table>` formatted codebase
 - Most Content Blocks have been re-coded for conciseness
 - Final HTML code is compressed to remove whitespace between tags
 - Transparent dividers are automatically converted into content padding
