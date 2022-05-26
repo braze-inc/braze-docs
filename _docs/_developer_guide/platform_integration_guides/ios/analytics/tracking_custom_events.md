@@ -57,9 +57,9 @@ You can add metadata about custom events by passing an `NSDictionary` populated 
 {% tab swift %}
 
 ```swift
-braze.logCustomEvent(
-  name: "YOUR-EVENT-NAME",
-  properties: [
+Appboy.sharedInstance()?.logCustomEvent(
+  "YOUR-EVENT-NAME",
+  withProperties: [
     "you": "can",
     "pass": false,
     "orNumbers": 42,
@@ -67,6 +67,7 @@ braze.logCustomEvent(
     "or": ["any", "array", "here"],
     "andEven": [
       "deeply": ["nested", "json"]
+    ]
   ]
 )
 ```
