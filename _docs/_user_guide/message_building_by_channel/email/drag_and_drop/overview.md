@@ -56,10 +56,6 @@ The Drag & Drop Editor uses two key components to make email composition quick a
 
 Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
-{% alert note %}
-Due to updates to the underlying engine for the Drag & Drop Editor, you may experience code compression with the removal of whitespaces between tags. This code compression helps to improve compatibility across various email clients, so the maximum number of characters per line is 500. 
-{% endalert %}
-
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
 The **Settings** panel in the **Design and Build** section includes general settings for the email message. These settings are inherited by the **Content** and **Rows** sections. For example, the **Default Font** set in this section is used everywhere in your message except where you use a custom setting. 
@@ -108,10 +104,6 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br>
 
-{% alert note %}
-Due to updates to the underlying engine for the Drag & Drop Editor, transparent dividers will be replaced with structural padding blocks.
-{% endalert %}
-
 #### Adding Liquid 
 
 ![Options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
@@ -153,6 +145,23 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**. 
 
 After using the Drag & Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
+
+### Updated HTML engine
+
+The underlying engine that produces HTML from the Drag & Drop Editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
+
+#### File compression
+
+Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
+
+#### HTML Rendering
+
+HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
+
+- Migration from a `<div>` element-based design to a standard `<table>` layout
+- Most Content Blocks have been re-coded for conciseness
+- Final HTML code is compressed to remove whitespace between tags
+- Transparent dividers are automatically converted into content padding
 
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}
