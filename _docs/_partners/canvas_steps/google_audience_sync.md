@@ -41,11 +41,9 @@ To get started, go to the **Google Ads** tab in the **Technology Partners** page
 
 You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
-Note that Braze will only be managing your audiences. 
+![The first dialogue box prompting to select a Google account to connect to Braze.][2]{: style="max-width:38%;"}  ![The second dialogue box prompting you to allow Braze to manage your AdWords campaigns.][3]{: style="max-width:25%;"}
 
-![The first dialogue box prompting to select a Google account to connect to Braze.][2]{: style="max-width:38%;"}  ![The second dialogue box prompting you to allow Braze to manage your AdWords campaigns.][3]{: style="max-width:29%;"}
-
-Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page in Braze. 
+Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page in Braze.  You'll then be prompted to select which ad accounts you'd like to be accessed within the Braze app group.
 
 ![The updated Google Ads technology page showing the connected email account.][4]
 
