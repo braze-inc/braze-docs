@@ -143,7 +143,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 ```
 {% endtab %}
 {% tab Dart %}
-To enable SDK Authentication, follow the implementation in the native layers from the other tabs.
+Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. Once SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
 {% endtab %}
 {% endtabs %}
 
