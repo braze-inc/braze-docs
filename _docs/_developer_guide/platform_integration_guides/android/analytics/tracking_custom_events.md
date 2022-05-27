@@ -78,17 +78,6 @@ braze.logCustomEvent("YOUR-EVENT-NAME",
         .addProperty("andEven", BrazeProperties()
             .addProperty("deeply", JSONArray(listOf("nested", "json"))))
 )
-
-braze.logCustomEvent("YOUR-EVENT-NAME",
-    BrazeProperties(JSONObject()
-        .put("you", "can")
-        .put("pass", false)
-        .put("orNumbers", 42)
-        .put("orDates", Date())
-        .put("or", JSONArray(listOf("any", "array", "here")))
-        .put("andEven", JSONObject()
-            .put("deeply", JSONArray(listOf("nested", "json"))))
-)
 ```
 
 {% endtab %}
