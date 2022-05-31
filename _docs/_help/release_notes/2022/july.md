@@ -18,7 +18,7 @@ The underlying engine that produces HTML from the Drag & Drop Editor has been op
 
 ## Updated keyword category-specific retargeting
 
-You can create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses to be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, check out [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+You can create up to 25 of your own SMS keyword categories, allowing you to identify arbitrary keywords and responses to be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, check out [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
 ## Event property segmentation
 
@@ -26,7 +26,7 @@ You can create up to 25 of your own keyword categories, allowing you to identify
 
 ## Audience sync to Google
 
-The Braze Audience Sync to Google implementation process has been simplified when granting Braze access to your Google Ads account. For more information, see [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/). 
+The Braze Audience Sync to Google implementation process has been simplified allowing you to grant Braze access to multiple Google Ads accounts. For more information, see [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/). 
 
 ## New Braze partnerships
 
@@ -44,7 +44,7 @@ With the Braze and [Extole]({{site.baseurl}}/partners/message_orchestration/chan
 
 ### Heap - Cohort import
 
-The Braze and [Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/) integration enables you to import Heap data to Braze, create user cohorts, as well as export Braze data to Heap](#data-export-integration to create segments.
+The Braze and [Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/) integration enables you to import Heap data to Braze, create user cohorts, as well as export Braze data to Heap to create segments.
 
 ### Hightouch - Workflow automation
 
