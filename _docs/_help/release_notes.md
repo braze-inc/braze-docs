@@ -51,8 +51,7 @@ guide_featured_list:
 
 ### Inbox Vision
 
-With Inbox Vision, you can check that your drag & drop email campaigns are aligned across all your email clients and mobile platforms before sending. To learn more, check out [Inbox Vision]({{site.baseurl}}/https://braze-docs-21w4a4x5r-braze.vercel.app/docs/user_guide/message_building_by_channel/email/inbox_vision/).
-
+With Inbox Vision, you can check that your drag & drop email campaigns are aligned across all your email clients and mobile platforms before sending. To learn more, check out [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/).
 
 ### Updated HTML engine
 
