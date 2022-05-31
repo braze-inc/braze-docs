@@ -35,24 +35,17 @@ You will need to ensure that you have the following items created and/or complet
 
 ## Implementation process
 ### Step 1: Connect Google account
-To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. 
 
-![The Google Ads technology partners page in Braze.][1]
+To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. You’ll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
-You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
+Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page. You’ll then be prompted to select which ad accounts you would like to be accessed within the Braze App Group.
 
-Note that Braze will only be managing your audiences. 
-
-![The first dialogue box prompting to select a Google account to connect to Braze.][2]{: style="max-width:38%;"}  ![The second dialogue box prompting you to allow Braze to manage your AdWords campaigns.][3]{: style="max-width:29%;"}
-
-Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page in Braze. 
-
-![The updated Google Ads technology page showing the connected email account.][4]
+![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
 {% alert important %}
 If you plan to export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select **Add Mobile Advertising IDs**, input your iOS app ID and Android app ID (app package name), and save each.
-
-![The updated Google Ads technology page showing the "Add Mobile Advertising IDs" button checked, allowing you to same an iOS or Android AppID.]({% image_buster /assets/img/google_sync/google_sync5.png %})
+<br><br>
+![The updated Google Ads technology page showing the Ad accounts connected, allowing you to re-sync accounts and add mobile advertising IDs.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
 ### Step 2: Add a Google Audience step in Canvas
