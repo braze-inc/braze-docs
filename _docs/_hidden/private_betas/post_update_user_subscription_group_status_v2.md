@@ -17,11 +17,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-Use this endpoint to update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
-
-## Rate limit
-
-A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
+Use this endpoint to update the subscription group status of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
 ## Request body
 
