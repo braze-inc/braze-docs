@@ -54,7 +54,6 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Total Discounts | `{{event_properties.${total_discounts}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
 | Tags | `{{event_properties.${tags}}}` |
-| Tags | `{{event_properties.${tags}}}` |
 | Discount Codes | `{{event_properties.${discount_codes}}}` |
 | Item ID | `{{event_properties.${line_items}[0].product_id}}` |
 | Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
@@ -80,7 +79,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
 | Item Title  | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-|  Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 {% endraw %}
 
 {% endtab %}
