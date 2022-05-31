@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
+- name: Drag & Drop Editor
+  link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
+  fa_icon: fas fa-paint-brush
 - name: Create an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   fa_icon: fas fa-table
