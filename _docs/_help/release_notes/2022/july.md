@@ -56,7 +56,7 @@ The Braze and [Peak]({{site.baseurl}}/partners/message_personalization/dynamic_c
 
 ### Shopify - eCommerce
 
-The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) integration has been expanded to offer abandoned checkout delay, setting a preferred product identifier, and several new shopify events including `shopify_paid_order`, `shopify_partially_fulfilled_order`, `shopify_fulfilled_order`, `shopify_cancelled_order`, and `shopify_created_refund`. 
+The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) integration has been expanded to offer abandoned checkout delay, setting a preferred product identifier, and several new Shopify events including `shopify_paid_order`, `shopify_partially_fulfilled_order`, `shopify_fulfilled_order`, `shopify_cancelled_order`, and `shopify_created_refund`. 
 
 ### Survicate - Surveys
 
