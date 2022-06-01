@@ -34,7 +34,7 @@ Enabling this feature will impact the delivery speed of your messages as the S3 
 Below are references of the JSON payload delivered to your S3 bucket each time a message is sent:
 
 ### Email
-```
+```json
 {
   “version” : 1, //numerical version of the json structure
   "to": ToAddress, ("jon@braze.com")
