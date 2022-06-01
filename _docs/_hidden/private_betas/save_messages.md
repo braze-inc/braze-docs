@@ -10,7 +10,7 @@ hidden: true
 
 ## Prerequisites
 
-1. You have purchased this SKU, and your customer success manager has enabled the feature.
+1. You have purchased this feature, and your customer success manager has enabled the feature.
 2. You have connected an S3 bucket to your app group via the **Technology Partners** page.
 
 ## Overview
