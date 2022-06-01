@@ -17,7 +17,7 @@ hidden: true
 
 When this feature is enabled and you have successfully connected an S3 bucket via your app group's **Technology Partners** page, Braze will write a gzipped JSON file to your S3 bucket for each email, SMS, or push message sent to a user. Your customer success manager can enable any or all of the channels to be saved.
 
-This file will contain the fields defined under [File references](#file-reference) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
+This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 
 The file will be saved in your S3 bucket using the following key structure:<br>
 `sent_messages/Channel/(md5Ofe164PhoneOrEmailOrPushToken)/CampaignId/DispatchId.json.gz`
