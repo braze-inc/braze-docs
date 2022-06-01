@@ -37,7 +37,7 @@ guide_featured_list:
     fa_icon: fas fa-times
   - name: Flutter
     link: /docs/developer_guide/platform_integration_guides/flutter/preview/
-    fa_icon: fas fa-mobile
+    image: /assets/img/flutter_icon.png
 
 ---
 
