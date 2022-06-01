@@ -55,7 +55,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 ```
 
 ### SMS
-```
+```json
 {
   “version” : 1 //numerical version of the json structure
   "to": PhoneNumber, ("+15555555555"),
