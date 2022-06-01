@@ -70,6 +70,7 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Purchases | All purchases | Yes |
 |Amplitude cohort assignment | All assignments | Yes |
 |Mixpanel cohort assignment | All assignments | Yes |
+| Hightouch cohort assignment | All assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 <sup>*When manually collected. Does not count towards consumption when automatically collected.</sup>
