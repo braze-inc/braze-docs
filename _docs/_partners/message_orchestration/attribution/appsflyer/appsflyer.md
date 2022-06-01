@@ -31,12 +31,14 @@ The Braze and AppsFlyer integration allows you to better understand how to optim
 
 #### Android
 
-If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. The following code snippet must be included alongside all calls to `AppsFlyerLib.Instance.StartTracking`, typically in an activity's `onCreate` callback.
+If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
+
+Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId = Braze.getInstance(context).getInstallTrackingId();
-customData.put("customData", deviceId);
+String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
 
@@ -49,7 +51,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 #### Unity
 
 ```
-CopiedAppboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.GetInstallTrackingId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
 customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
 AppsFlyer.setAdditionalData(customData);
