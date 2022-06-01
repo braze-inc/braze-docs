@@ -99,7 +99,7 @@ Messages under the unassociated path are messages sent that are not tied to a ca
 Using the dispatch ID, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 
 
 ### How are retries handled? 
-Should your S3 bucket be unreachable, Braze will retry up to three times with a backoff jitter. S3 rate limit retries are automatically handled by Braze.
+Should your S3 bucket be unreachable, Braze will retry up to three times with a [backoff jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/#Jitter). S3 rate limit retries are automatically handled by Braze.
 
 ### What happens if my credentials are invalid? 
 If your S3 credentials become invalid at any point, Braze will not be able to save any messages to your S3 bucket, and those messages will be lost. We recommend configuring the [AWS credentials errors notification]({{site.baseurl}}/docs/user_guide/administrative/company_settings/notification_preferences) preference to ensure you receive alerts for any credentials issues.
