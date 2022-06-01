@@ -33,7 +33,7 @@ The Braze and AppsFlyer integration allows you to better understand how to optim
 
 If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
 
-Make sure the following lines of code are inserted at the correct place – after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
+Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
