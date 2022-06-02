@@ -27,10 +27,10 @@ Braze's Transactional Email campaign type is purpose-built for sending automated
 - Billing alerts
 - Shipping alerts
 
-In short, use transactional emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
+In short, you can use transactional emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance. 
 
-{% alert note %}
-Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) for more information.
+{% alert important %}
+Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases/) for more information.
 {% endalert %}
 
 ## Create a new campaign
