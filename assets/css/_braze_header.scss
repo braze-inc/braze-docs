@@ -30,6 +30,9 @@ $header_transition_time: 0.25s;
     @media (min-width:  $window-medium-px) {
     //  margin-left: 30px;
     }
+    .nav-link {
+      letter-spacing: normal;
+    }
   }
   #braze_header_alt {
     margin-left: 0px;
