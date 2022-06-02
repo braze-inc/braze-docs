@@ -82,7 +82,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 ### Personalized push notifications
 ![Two iPhones displayed side-by-side. The first iPhone shows the unexpanded view of the push message. The second iPhone shows the expanded version of the push message displaying a "progress" shot of how far they are through a course, the next session, and when the next session id due by.][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
-Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
+Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze Learning course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
 #### Dashboard configuration
 
