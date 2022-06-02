@@ -51,7 +51,7 @@ As a result, you'll notice several settings you may be familiar with from other 
 - The **Target Users** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
 - The **Conversions** step has been removed. Transactional Emails do not support conversion event tracking at this time.
 
-![Compose, Delivery, and Confirm workflow to create a Transactional Tmail campaign.][2]
+![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.][2]
 
 To configure your transactional email campaign, follow these general steps:
 
