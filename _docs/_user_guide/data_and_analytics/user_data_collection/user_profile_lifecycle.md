@@ -9,7 +9,7 @@ description: "This reference article describes the user profile lifecycle in Bra
 
 # User profile lifecycle
 
-> This article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced. If you're looking to better understand your customer lifecycle, check out our LAB course on [Mapping User Lifecycles](https://lab.braze.com/mapping-customer-lifecycles) instead.
+> This article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced. If you're looking to better understand your customer lifecycle, check out our Braze Learning course on [Mapping User Lifecycles](https://learning.braze.com/mapping-customer-lifecycles) instead.
 
 All persistent data associated with a user will be stored against a user profile.
 

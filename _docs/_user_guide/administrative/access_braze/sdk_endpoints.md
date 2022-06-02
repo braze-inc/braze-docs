@@ -11,7 +11,7 @@ description: "This reference article covers Braze's SDK Endpoints and their use.
 
 ## What is an SDK?
 
-A Software Development Kit (SDK) is a set of tools that can be used to develop software applications targeting a specific platform. The Braze SDK makes it possible to track your users' engagement with your app or site and allows the sending of targeted campaigns. Learn more about the Braze SDK in our LAB course, [Braze 101][85].
+A Software Development Kit (SDK) is a set of tools that can be used to develop software applications targeting a specific platform. The Braze SDK makes it possible to track your users' engagement with your app or site and allows the sending of targeted campaigns. Learn more about the Braze SDK in our Braze Learning course, [Braze 101][85].
 
 ## Braze SDK endpoints
 
@@ -44,6 +44,6 @@ To configure the Braze Web SDK to use the appropriate endpoint for your integrat
 | Web | 36KB (core), 50KB (core + UI) |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[85]: https://lab.braze.com/braze-101
+[85]: https://learning.braze.com/braze-101
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [2]: {{site.baseurl}}/api/basics/#endpoints

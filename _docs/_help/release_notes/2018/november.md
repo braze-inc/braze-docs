@@ -11,7 +11,7 @@ description: "This article contains release notes for November 2018."
 
 The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the **Campaigns** wizard. For more information, check out the steps on [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)!
 
-Want more on this new feature? Check out our [LAB course on the Entry Wizard here](https://lab.braze.com/the-new-canvas-entry-step/264889/scorm/20z5ij5ublxbk)!
+Want more on this new feature? Check out our Braze Learning course on the [Entry Wizard](https://learning.braze.com/the-new-canvas-entry-step/264889/scorm/20z5ij5ublxbk)!
 
 ### In-app message web modal CSS
 

@@ -28,7 +28,7 @@ You can create up to five catalogs across your company.
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The first column of the CSV file must a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)

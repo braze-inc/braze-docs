@@ -27,7 +27,7 @@ Android imposes some limitations on what components can be used to implement cus
 
 ### Personalized push notifications
 
-Push notifications can display user-specific information inside a custom view hierarchy. The following example shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
+Push notifications can display user-specific information inside a custom view hierarchy. The following example shows a push notification after a user has completed a specific task (Braze Learning course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
 ![Personalized Push dashboard Example][1]{: style="max-width:65%;border:0"}
 

@@ -12,7 +12,7 @@ channel:
 
 ![SMS message with the text "Welcome to Braze! We are excited to have you on board. Check out our documentation to get started. https://www.braze.com/docs/ Text HELP for help and STOP to stop."][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-> This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers. In addition to this article, you can also check out our [SMS & MMS](https://lab.braze.com/messaging-channels-sms) LAB course.
+> This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers. In addition to this article, you can also check out our [SMS & MMS](https://learning.braze.com/messaging-channels-sms) Braze Learning course.
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
