@@ -15,10 +15,10 @@ description: "This article outlines details about the Send Transactional Email M
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The send transactional email endpoint allows you to send immediate, ad-hoc messages to a designated user. This endpoint is used alongside the creation of a [transactional email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
+The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to a designated user. This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
 {% alert important %}
-Transactional email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.
+Transactional Email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.
 {% endalert %}
 
 Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by `external_user_id` or `user_alias`, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
