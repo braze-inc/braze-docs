@@ -10,7 +10,7 @@ tool: Canvas
 
 # Creating a branch
 
-> This reference article defines branching and how it can be useful for your Canvases. You can also check out our [LAB course](https://lab.braze.com/canvas-course) to learn more about branching for Canvas.
+> This reference article defines branching and how it can be useful for your Canvases. You can also check out our [Braze Learning course](https://learning.braze.com/canvas-course) to learn more about branching for Canvas.
 
 You can harness the power of Braze’s action-based delivery and powerful realtime segmentation to deliver personalized experiences for your users. To create a branch, click the <i class="fas fa-plus-circle"></i> plus button at the bottom of your step. Then, select one of the shadowed panels to create a new step.
 

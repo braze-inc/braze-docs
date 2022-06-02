@@ -164,7 +164,7 @@ For more information, refer to [CSS inlining][10].
 [3]: {% image_buster /assets/img/email_settings/custom_unsubscribe.png %}
 [4]: {% image_buster /assets/img/email_settings/custom_opt_in.png %}
 [5]: https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003
-[6]: https://lab.braze.com/email-open-tracking-pixel
+[6]: https://learning.braze.com/email-open-tracking-pixel
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/

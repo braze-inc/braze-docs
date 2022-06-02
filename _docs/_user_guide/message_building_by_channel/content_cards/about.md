@@ -10,7 +10,7 @@ channel:
 
 # About Content Cards
 
-> This reference article provides an overview of the Braze Content Card channel and common use cases. For more on this topic, check out our [Content Cards](https://lab.braze.com/messaging-channels-content-cards) LAB course!
+> This reference article provides an overview of the Braze Content Card channel and common use cases. For more on this topic, check out our [Content Cards](https://learning.braze.com/messaging-channels-content-cards) Braze Learning course!
 
 {% include video.html id="4FUPxkIq2xc" align="right" %}
 

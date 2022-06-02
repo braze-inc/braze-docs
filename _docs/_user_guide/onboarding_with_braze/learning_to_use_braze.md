@@ -16,7 +16,7 @@ Braze is a complex tool that can allow you to send an amazing range of campaigns
 Because of Braze's beautiful complexity, we recommend the several reading paths that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
 
 {% alert tip %}
-Don't forget that you can always access and take [LAB courses](https://lab.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
+Don't forget that you can always access and take [Braze Learning courses](https://learning.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
 {% endalert %}
 
 Choose from the following paths to fit your needs and get reading!
@@ -43,7 +43,7 @@ Everything you should know to get started with Braze. As you’re going through 
 
 ## Adept admin
 
-Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and dashboard management](https://lab.braze.com/admin-dashboard-management) LAB course!
+Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and dashboard management](https://learning.braze.com/admin-dashboard-management) Braze Learning course!
 
 | Order | Article | What You'll Learn |
 |---|---|---|

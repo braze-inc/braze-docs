@@ -17,10 +17,10 @@ channel:
 Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
 
 {% alert tip %}
-If this is your first time creating an email campaign, we highly recommend that you check out the following LAB courses:<br>
+If this is your first time creating an email campaign, we highly recommend that you check out the following Braze Learning courses:<br>
 
-- [Email](https://lab.braze.com/messaging-channels-email)
-- [Project: Build a basic email marketing program](https://lab.braze.com/project-build-a-basic-email-marketing-program)
+- [Email](https://learning.braze.com/messaging-channels-email)
+- [Project: Build a basic email marketing program](https://learning.braze.com/project-build-a-basic-email-marketing-program)
 
 {% endalert %}
 
