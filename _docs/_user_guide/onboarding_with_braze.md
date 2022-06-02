@@ -46,7 +46,7 @@ By the end of your onboarding, you should feel comfortable with:
 3. Using Braze as a tool to launch your campaigns, and
 4. Setting up and preparing to use email with Braze.
 
-You can follow along with this guide, or you can check out [LAB](https://learning.braze.com)! We have courses for you, as well as a [Technical Integration Toolkit](http://learning.braze.com/technical-integration-checklists-and-toolkits) and [Technical Integration Overview](http://learning.braze.com/quick-overview-technical-integration) available for your developers!
+You can follow along with this guide, or you can check out [LAB](https://learning.braze.com)! We have courses for you, as well as a [Technical Integration Toolkit](https://learning.braze.com/technical-integration-checklists-and-toolkits) and [Technical Integration Overview](https://learning.braze.com/quick-overview-technical-integration) available for your developers!
 
 Continue to the next part of the guide, [Terms to Know]({{site.baseurl}}/user_guide/onboarding_with_braze/terms_to_know/), to familiarize yourself with some common words you'll see in documentation, the product, and from the people of Braze.
 

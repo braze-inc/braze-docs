@@ -61,7 +61,7 @@ Answer the following questions to get started:
 
 ### Name your campaign: The “what”
 
-Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the campaign. For more on customer journeys, check out our [Mapping User Lifecycles](http://learning.braze.com/mapping-customer-lifecycles) Braze Learning course!
+Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the campaign. For more on customer journeys, check out our [Mapping User Lifecycles](https://learning.braze.com/mapping-customer-lifecycles) Braze Learning course!
 
 ### Create starting conditions: The “when”
 
