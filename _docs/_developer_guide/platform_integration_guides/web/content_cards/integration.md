@@ -164,6 +164,6 @@ function isControlCard(card) {
 ```
 
 {% alert note %}
-Visit the following customization articles for documention on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
+Visit the following customization articles for documentation on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
 {% endalert %}
 
