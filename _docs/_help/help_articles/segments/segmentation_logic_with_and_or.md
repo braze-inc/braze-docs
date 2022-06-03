@@ -22,30 +22,23 @@ Another way to ensure you’re building the right logic is to create your segmen
 
 ## When to apply the AND operator
 
-Use `AND` if you are interested in the intersection of two groups. This is what is similar between the two groups. For example, let’s compare two animals. What dogs `AND` cats both have in common is fur, are mammals, and are human pets.
+Use `AND` if you are interested in the intersection of two groups. This is what is similar between the two groups. If you'd like to include customers with two or more values for a particular attribute, you should use the `AND` operator. 
 
-If you'd like to include customers with two or more values for a particular attribute, you should use the `AND` operator. Let's consider the example use case for targeting customers from every country except for Canada and the United States.
-
-The statement `Country is not United States AND Country is not Canada` will only include customers who are not from the United States and who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
+Let's consider the example use case for targeting customers from every country except for Canada and the United States. The statement `Country is not United States AND Country is not Canada` will only include customers who are not from the United States and who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
 
 ## When to apply the OR operator
 
 Use `OR` if you want to target users who meet at least one condition in a group of conditions. 
 
-If you have three conditions linked together by `OR`, then one, two, or all of the conditions could be true in order for the statement to be true. For example, imagine that you want to send a message to all your users except those users on version 1.0 or 1.1 of your app. You want to target the overlap of users that are not on version 1.0 and not on version 1.1. You can create this segment in one of two ways:
-    
-1. You can use the filters `Is not 1.0` and `Is not 1.1` with the `OR` operator, which will target all users who do not have those app versions.
-2. The alternative may be a longer route. You will need to add a filter for every version of your app using the `OR` operator, making sure to exclude app versions 1.0 and 1.1.
+If you have three conditions linked together by `OR`, then one, two, or all of the conditions could be true in order for the statement to be true.
 
-In this next example, consider a promotion that is valid for both United States and Canadian customers. You want to make sure that only customers in areas where the promotion is valid receive the promotion. In this scenario, use the following statement to target your campaign: `Country is United States OR Country is Canada`
-
-With the `OR` operator, your campaign will only go to customers whose country is Canada or whose country is United States.
+As another example, imagine that you want to send a message to all your users on version 1.0 or 1.1 of your app. In order to target the users that are on version 1.0 and on version 1.1, you can use the filters `Is 1.0` and `Is 1.1` with the `OR` operator in your segment. This will target all users who are on versions 1.0 or 1.1.
 
 ### Negative OR
 
-Use the `OR` operator to create a statement that will evaluate to true if a user meets the criteria for one or more filters in the statement. 
+Use the `OR` operator to create a statement that will determine if a user meets the criteria for one or more filters in the statement. 
 
-For example, consider a promotion that is valid for both United States and Canadian customers. You want to make sure that only customers in areas where the promotion is valid receive the promotion. In this scenario, use the following statement to target your campaign: `Country is United States OR Country is Canada`
+For example, consider a promotion that is valid for both United States and Canadian customers. You want to make sure that only customers in areas where the promotion is valid receive the promotion. In this scenario, use the following statement to target your campaign: `Country is United States OR Country is Canada`.
 
 With the `OR` operator, your campaign will only go to customers whose country is Canada or whose country is United States.
 
