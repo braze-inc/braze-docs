@@ -30,11 +30,11 @@ In this next example, consider a promotion that is valid for both United States 
 
 With the `OR` operator, your campaign will only go to customers whose country is Canada or whose country is United States.
 
-### When not to apply the `OR` operator
+### When not to apply the OR operator
 
 In certain circumstances, the `OR` operator should not be used. 
 
-For example, do not use `OR`if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all customers: `Country is not United States OR Country is not Canada`.
+For example, do not use `OR` if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all customers: `Country is not United States OR Country is not Canada`.
 
 The preceeding statement targets all customers because all customers meet the criteria for one or more of the filters. Canadian customers meet the criteria for `Country is not United States`. US customers meet the criteria for `Country is not Canada`.
 
