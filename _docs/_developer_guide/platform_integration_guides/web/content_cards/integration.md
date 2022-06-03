@@ -25,7 +25,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 |Property|Description|
 |---|---|
 | `expiresAt` | The unix timestamp of the card's expiration time.|
-| `extras`| (Optional) An object of string/string key/value pairs.|
+| `extras`| (Optional) Key-value pair data formatted as a string object with a value string. |
 | `id` | (Optional) The id of the card. This will be reported back to Braze with events for analytics purposes. |
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
 | `updated` | The unix timestamp of when this card was last modified. |
