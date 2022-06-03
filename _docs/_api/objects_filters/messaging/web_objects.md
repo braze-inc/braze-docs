@@ -10,7 +10,7 @@ description: "This article lists and explains the different Web objects used at 
 ---
 # Web push object specification
 
-These objects are used to define or request information related to Web Push and Web Push Alert content.
+The `web_push` object allows you to define or request information related to Web Push and Web Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Web push object
 

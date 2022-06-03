@@ -7,9 +7,9 @@ We apply the default Braze rate limit of 250,000 requests per hour to this endpo
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each request to the `/users/track` endpoint can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each for a max of 225 individual users. Each update can also belong to the same user for a max of 225 updates to a single user in a request.
+We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each request to the `/users/track` endpoint can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each for a max of 225 individual data points. Each update can also belong to the same user for a max of 225 updates to a single user in a request.
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your Customer Success Manager if you need your limit increased.
+See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 
@@ -51,7 +51,7 @@ When specifying a segment or Connected Audience in your request, we apply a rate
 <!---/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Transactional emails are not subject to a rate limit. Depending on your chosen package, a set number of transactional email are covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
+Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of Transactional Emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
 
 <!---/sends/id/create-->
 

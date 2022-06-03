@@ -20,7 +20,7 @@ Badges are a great way to call attention to new content awaiting your users in t
 - Unread News Feed cards for the current user
 - Total viewable News Feed cards for the current user
 
-The method declarations in [`ABKFeedController`][44] below describe this in detail:
+The following method declarations in [`ABKFeedController`][44] describe this in detail:
 
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;

@@ -4,7 +4,7 @@ article_title: Locations and Geofences
 page_order: 6
 layout: featured
 guide_top_header: "Locations and Geofences"
-guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, mobile integrations, and more. <br><br>Geofences are only available in select Braze packages. For access, please reach out to your Braze representative."
+guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, mobile integrations, and more. <br><br>Geofences are only available in select Braze packages. For access, reach out to your Braze representative."
 
 page_type: landing
 tool: Location
@@ -39,5 +39,5 @@ With Braze, you can create and enhance relationships with your users based upon 
 You can gather and utilize user location data in a couple of ways:
 
 - When a user opens your app, location tracking captures their most recent locations using GPS location data. This allows you to see where your users have been and segment based on this data.
-- Geofences are defined virtual geographic areas. If a user has enabled background location tracking, you can use geofences to trigger campaigns in real-time when a user is in a geofence. Geofences are only available in select Braze packages. For access, please reach out to your Braze representative.
+- Geofences are defined virtual geographic areas. If a user has enabled background location tracking, you can use geofences to trigger campaigns in real-time when a user is in a geofence. Geofences are only available in select Braze packages. For access, reach out to your Braze representative.
 <br><br>

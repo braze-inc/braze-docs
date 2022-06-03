@@ -16,7 +16,7 @@ A Segment Extension expands our existing segmentation capabilities by enabling y
 
 ## Step 1: Navigate to Segment Extensions
 
-From the left-hand side of the dashboard under **Engagement**, expand the **Segments** section, and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
+Under **Engagements**, expand **Segments** and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
 
 ## Step 2: Name your Segment Extension
 
@@ -32,7 +32,7 @@ Select between a purchase or custom event criteria for targeting. Once you've se
 
 ### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
+To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. 
 
 ![Segmenting based on numeric properties.][13]
 

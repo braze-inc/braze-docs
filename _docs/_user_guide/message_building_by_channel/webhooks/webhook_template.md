@@ -28,7 +28,7 @@ Webhook templates can be used for many different use cases.  You can start by en
 
 ![Compose tab when creating a webhook template. Available fields are language, webhook URL, and request body.][2]{: style="max-width:80%"}
 
-If you want to see how your webhook looks before sending it out to your users, you can send a test webhook through the **Settings** tab in the top right corner.
+If you want to see how your webhook looks before sending it out to your users, you can send a test webhook through the **Settings** tab.
 
 ## Step 4: Save your template
 

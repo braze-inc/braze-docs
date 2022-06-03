@@ -13,10 +13,10 @@ description: "This article covers components of creating a custom UI for your we
 
 ## Refreshing the feed
 
-To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method:
+To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh) method:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from "@braze/web-sdk";
 
 function refresh(){
   braze.requestContentCardsRefresh();    
@@ -27,7 +27,7 @@ function refresh(){
 When cards are refreshed, a callback function can be subscribed to:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from "@braze/web-sdk";
 
 braze.subscribeToContentCardsUpdates(function(updates){
   const cards = updates.cards;
@@ -40,7 +40,7 @@ braze.subscribeToContentCardsUpdates(function(updates){
 Log impression events when cards are viewed by users:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from "@braze/web-sdk";
 
 braze.logCardImpressions(cards, true);
 ```
@@ -48,7 +48,7 @@ braze.logCardImpressions(cards, true);
 Log card click events when users interact with a card:
 
 ```javascript
-import braze from "@braze/web-sdk"
+import * as braze from "@braze/web-sdk";
 
 braze.logCardClick(card, true);
 ```
@@ -63,7 +63,7 @@ Here is an example of how to determine if a Content Card is a "Control" card:
 
 ```javascript
 function isControlCard(card) {
-    return card instanceof appboy.ControlCard;
+    return card instanceof braze.ControlCard;
 }
 ```
 

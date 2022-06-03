@@ -20,7 +20,7 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 ## SDK requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
@@ -34,7 +34,7 @@ This survey template is supported for both mobile apps and web browsers. Remembe
 
 ### Step 1: Add your survey question
 
-To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear below your survey question.
+To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear under your survey question.
 
 ![Compose tab of the simple survey editor, with fields for a header, optional body, and optional helper text.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
 

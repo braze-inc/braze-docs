@@ -20,7 +20,6 @@ You can use these additional methods to build a custom Content Cards Feed within
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `braze.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `braze.logContentCardsDisplayed()`       | Logs a Content Content feed displayed event. This is useful when using a custom UI.                                                           |
 | `braze.logContentCardClicked(contentCard)`    | Logs a click for the given Content Card object.                                                            |
 | `braze.logContentCardImpression(contentCard)` | Logs an impression for the given Content Card object.                                                      |
 | `braze.logContentCardDismissed(contentCard)`  | Logs a dismissal for the given Content Card object.                                                        |
@@ -58,7 +57,7 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 
 ## Test displaying sample Content Card
 
-Follow the steps below to test a sample Content Card.
+Follow these steps to test a sample Content Card.
 
 1. Set an active user in the React application by calling `braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][3] to create a new Content Card campaign.

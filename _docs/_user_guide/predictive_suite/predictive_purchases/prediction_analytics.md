@@ -32,17 +32,17 @@ The distribution of the Purchase Likelihood Scores for the entire Prediction Aud
 
 ![][4]{: style="max-width:90%"} 
 
-As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
+As you move the slider handles to different positions, the bar in the left half of the panel will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
 
 ### Estimated results {#estimated_results}
 
 ![][6]
 
-In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected above in two ways:
+In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected in two ways:
 
-1. How many selected users are expected to purchase<br><br> The Prediction isn't perfectly accurate, and no Prediction ever is, meaning Braze will not be able to identify every single future purchaser. The Likelihood Scores are like a set of informed and reliable predictions. The progress bar indicates how many of "actual" or "true" purchasers expected in the Prediction Audience will be targeted with the audience selected above. Note that we expect this number of users to purchase even if you don't send them a message. <br><br>
+1. How many selected users are expected to purchase<br><br> The Prediction isn't perfectly accurate, and no Prediction ever is, meaning Braze will not be able to identify every single future purchaser. The Likelihood Scores are like a set of informed and reliable predictions. The progress bar indicates how many of "actual" or "true" purchasers expected in the Prediction Audience will be targeted with the audience selected. Note that we expect this number of users to purchase even if you don't send them a message. <br><br>
 
-2. How many selected users are expected not to purchase<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the red portion is those who will be incorrectly targeted using the current slider position.
+2. How many selected users are expected not to purchase<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the filled portion is those who will be incorrectly targeted using the current slider position.
 
 Using this information, we encourage you to decide how many of the purchasers you want to capture, how many non-purchasers you can accept being targeted, and what the cost of errors is for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
 
@@ -71,7 +71,7 @@ This analysis displays user attributes or behaviors that are correlated with pur
 This table is updated only when the Prediction retrains and not when user Purchase Likelihood Scores are updated.
 
 {% alert note %}
-Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your account manager for more information.
+Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Contact your account manager for more information.
 {% endalert %}
 
 [6]: {% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %}

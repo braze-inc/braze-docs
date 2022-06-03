@@ -65,7 +65,7 @@ You can alter either the event name or event properties by sending the desired v
 
 Create your user-visible in-app message campaign from within the Braze dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
-In the example below, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
+In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
 ![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "In-app message trigger" where "campaign_name" equals "In-app message name example".][42]
 

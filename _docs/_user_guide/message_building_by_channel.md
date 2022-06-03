@@ -5,7 +5,7 @@ page_order: 5
 layout: featured
 
 guide_top_header: "Message Building by Channel"
-guide_top_text: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the sections listed below. Or check out our LAB courses on <a href='https://lab.braze.com/series/messaging-channels' target='_blank'>Messaging Channels</a>!<br><br>You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation."
+guide_top_text: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the following sections listed. Or check out our Braze Learning courses on <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Messaging Channels</a>!<br><br>You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation."
 description: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more!"
 
 guide_featured_title: "Available channels"
@@ -45,6 +45,6 @@ The following matrix illustrates the strengths and weaknesses of key messaging c
 
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-To learn more about how you can leverage this matrix, check out our LAB course on [Understanding the Messaging Matrix](https://lab.braze.com/understand-the-messaging-matrix).
+To learn more about how you can leverage this matrix, check out our Braze Learning course on [Understanding the Messaging Matrix](https://learning.braze.com/understand-the-messaging-matrix).
 
 <br><br>

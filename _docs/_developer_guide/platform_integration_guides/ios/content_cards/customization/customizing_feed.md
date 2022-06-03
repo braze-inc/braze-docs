@@ -12,7 +12,7 @@ channel:
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom storyboard that registers the new classes. Check out the Content Cards [sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. 
 
-It's also important to consider whether you should use a subclassing strategy versus a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/). For example, if you subclass the `ABKContentCardsTableViewController`, you can use the `populateContentCards` method ([below](#overriding-populated-content-cards)) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on an observer to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
+It's also important to consider whether you should use a subclassing strategy versus a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/). For example, if you subclass the `ABKContentCardsTableViewController`, you can use the [`populateContentCards` method](#overriding-populated-content-cards) to filter and order cards (recommended). However, if you use a complete view controller customization, you have more control over the card behavior—such as displaying in a carousel or adding interactive elements—but you then have to rely on an observer to implement ordering and filtering logic. You must also implement the respective analytics methods to ensure impressions, dismissal events, and clicks are properly logged.
 
 ## Customizing UI
 
@@ -99,7 +99,7 @@ override func setUpUI() {
 
 Custom interfaces can be provided by registering custom classes for each desired card type. 
 
-![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!" on the right.]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
 ![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 

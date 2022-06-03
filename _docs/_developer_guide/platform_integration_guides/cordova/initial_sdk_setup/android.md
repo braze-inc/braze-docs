@@ -58,7 +58,7 @@ See [Android Cordova plugin][2] for more details.
 
 ### Numerical preference example
 
-Due to how the Cordova 8.0.0+ framework handles preferences, entirely numerical preferences like sender IDs must be prefixed with `str_` in order to be properly read by the SDK. An example is included below:
+Due to how the Cordova 8.0.0+ framework handles preferences, entirely numerical preferences like sender IDs must be prefixed with `str_` in order to be properly read by the SDK, like in the following example:
 
 ```xml
 <platform name="android">

@@ -32,7 +32,7 @@ Funnel Reports are not available for API-triggered campaigns.
 
 ### Step 1: Select a date range
 
-You can select a time frame for your report (within the past 6 months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the example below, your funnel would look for users who received this campaign or Canvas in the last 7 days and completed the funnel within 3 days.
+You can select a time frame for your report (within the past 6 months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the following example, your funnel would look for users who received this campaign or Canvas in the last 7 days and completed the funnel within 3 days.
 
 {% alert note %}
 If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is then counted as calendar days in the company time zone.

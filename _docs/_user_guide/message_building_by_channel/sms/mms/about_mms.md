@@ -13,7 +13,7 @@ channel:
 
 ![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:30%; margin-left:15px; margin-bottom:15px; border:0"}
 
-> This reference article covers what MMS message are and general use cases of the MMS channel. In addition to this article, you can also check out our [SMS & MMS](https://lab.braze.com/messaging-channels-sms) LAB course.
+> This reference article covers what MMS message are and general use cases of the MMS channel. In addition to this article, you can also check out our [SMS & MMS](https://learning.braze.com/messaging-channels-sms) Braze Learning course.
 
 MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones. 
 
@@ -35,7 +35,7 @@ Most US and Canadian carriers support receiving and displaying multimedia assets
 
 ### Subscription groups
 
-A [Subscription Group][1] is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. A whitelisting provisioning process is required to enable your short-code for MMS sending capabilities. Please speak with your Braze Account Manager regarding enabling this feature.
+A [Subscription Group][1] is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Your subscription group requires a phone number that is enabled for MMS. A whitelisting provisioning process is required to enable your short-code for MMS sending capabilities. Speak with your Braze account manager regarding enabling this feature.
 
 ### MMS message limits and throughput
 
@@ -45,7 +45,7 @@ MMS throughput is one segment per second via a long code.
 
 ### Inbound MMS
 
-Braze does not support incoming MMS responses.
+When a user sends an inbound message that contains a media item, Braze will expose the URL for the media item in Currents as well as liquid through the liquid tag {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
 
 ### Accepted file types
 

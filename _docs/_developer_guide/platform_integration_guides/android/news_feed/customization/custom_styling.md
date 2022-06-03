@@ -61,7 +61,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 ## Feed style elements
 
-Below is a description of the themeable Braze UI elements and their names for styling purposes:
+The following is a description of the themeable Braze UI elements and their names for styling purposes:
 
 {% gallery %}{% image_buster /assets/img_archive/Image27Theming.png %}
 {% image_buster /assets/img_archive/Image28Theming.png %}

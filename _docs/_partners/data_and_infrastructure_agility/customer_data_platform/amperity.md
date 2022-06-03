@@ -16,10 +16,10 @@ search_tag: Partner
 {% include video.html id="06G0lxaSjgk" align="right" %}
 
 The Braze and Amperity integration offers a unified view of your customers across the two platforms. This integration allows you to:
-- **Sync Amperity segments**: Sync segments to map Amperity user data to Braze user accounts.
-- **Unify data**: Unify data across various Amperity supported platforms and Braze.
-- **Send Amperity data via AWS S3 buckets to Braze**: Use a serverless Lambda function to upload Amperity user segments to your AWS S3 bucket that will post user attribute data to Braze.
-- **Manually upload Amperity data to Braze**: Manually upload user CSV segments to the Braze platform through the dashboard.
+- **Sync Amperity users**: Sync user lists to map Amperity user data to Braze user accounts.
+- **Unify data**: Unify data across various Amperity-supported platforms and Braze.
+- **Send Amperity data via AWS S3 buckets to Braze**: Use a serverless Lambda function to upload Amperity user lists to your AWS S3 bucket that will post user attribute data to Braze.
+- **Manually upload Amperity data to Braze**: Manually upload user CSV lists to the Braze platform through the dashboard.
 
 ## Prerequisites
 
@@ -30,21 +30,33 @@ The Braze and Amperity integration offers a unified view of your customers acros
 
 ## Integration
 
-### Step 1: Create an Amperity user segment
+### Step 1: Create an Amperity user list
 
-To upload Amperity user data to Braze, you must first create a segment of existing Amperity users.
-1. Navigate to the **Segments** tab within the Amperity dashboard.<br>![][2]<br><br>
-2. Click **Create** to filter and define a segment of users to capture. Under the **Summary** tab, you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![A summary of an Amperity segment showing the revenue and reachability stats.][3] <br><br>
-3. Select the **Customers** tab, and choose which user fields you would like to include using the **Show Columns** selector on the right.<br>![The Amperity segment builder showing the available customer attributes to include.][4]<br><br>
-4. Next, click **Run Segment**.
+To upload Amperity user data to Braze, you must configure a destination that enables sending query results to Braze, create a query that returns a list of users, and send the results of that query to Braze using orchestration.
+
+1. Add a [Braze destination](https://docs.amperity.com/datagrid/destination_braze.html) for your tenant.
+2. Navigate to the **Queries** tab within the Amperity dashboard. 
+3. Click **Create**, and then **Select SQL Query** to define the SQL query that returns a list of users. For example:
+``` sql
+SELECT
+ amperity_id
+ ,external_id AS external_id
+ ,email AS email
+ ,given_name AS first_name
+ ,surname AS last_name
+ -- add more attributes, as desired
+FROM Merged_Customers
+```
+4. Click **Run** to validate your query. When finished, click **Activate**. <br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] <br><br>
+5. Add this query to an orchestration that is configured to [send a list of users to Braze](https://docs.amperity.com/amp360/sendto_braze.html).<br>![A summary of activating your Braze query, and then adding it to an orchestration that is configured for Braze.][10]
 
 ### Step 2: Select upload method
 
-Once the segment has run, you can either:
+Once the query has run, you can either:
 - [Set up automatic upload](#automatic-upload) - **recommended**
   - Set up a destination workflow to automatically upload Amperity user attribute data to Braze via an AWS S3 Bucket.
 - [Set up manual upload](#manual-upload)
-  - Manually upload user CSV segments to the Braze platform through the dashboard. 
+  - Manually upload user CSV lists to the Braze platform through the dashboard. 
 
 ### Automatic upload via AWS S3 bucket {#automatic-upload}
 
@@ -57,44 +69,6 @@ Once the segment has run, you can either:
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 | CSV file | Check out the [CSV formatting specifications](#csv), and use step 1 of the Amperity integration to obtain a CSV with user external IDs and attributes to update. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-#### Step 3a: Set Braze destination
-
-##### Activate segment
-
-First, you must activate the segment by selecting **Activate Segment** in the upper right corner of the page. 
-
-In the window that opens:
-- Name your destination **Braze**
-- Set the Data Template to **Default**
-- Enter your S3 bucket
-- Enter your S3 region
-- Set a file name template
-- Set the workflow query frequency
-
-![][7]{: style="max-width:60%;"}
-
-Click **Activate**.
-
-##### Set up destination
-
-Next, you must set up the Braze destination workflow by selecting the **Destination** tab and clicking **Add Destination**.
-
-In the window that opens:
-- Name your destination **Braze** and add an optional description
-- Select the **Amazon S3** plugin
-- Set the credential type to **iam-credential**
-- Name and configure the credential based on your Amazon S3 settings
-- Enter your S3 bucket
-- Enter your S3 region
-- Set encoding to **None**
-- Include header row in output files
-
-![][8]{: style="max-width:60%;"}
-
-Click **Save**.
-
-Additional Amperity documentation on configuring Amazon S3 can be found [here](https://docs.amperity.com/configure/destination_amazon_s3.html).
 
 #### Step 4a: Send data via AWS S3 bucket
 
@@ -139,7 +113,7 @@ Any values in an array (ex. `"['Value1', 'Value2']"`) will be automatically dest
 
 To start processing your user attribute CSV files, we need to deploy the serverless application to handle the processing for you. This application will create the following resources automatically to deploy successfully:
 - Lambda function
-- S3 Bucket for your CSV Files that the Lambda process can read from This Lambda function will only receive notifications for `.csv` extension files.
+- S3 Bucket for your CSV files that the Lambda process can read from. This Lambda function will only receive notifications for CSV extension files.
 - Role allowing for the creation of the S3 Bucket
 - Policy to allow Lambda to receive S3 upload event in the new bucket
 
@@ -160,21 +134,20 @@ The following resources are created:
 To run the function, drop a user attribute CSV file in the newly created S3 bucket.
 
 {% alert important %}
-To read more about different aspects of the Lambda function such as monitoring and logging, updating an existing function, fatal errors, and more, visit our [dedicated Lambda function article](https://www.braze.com/docs/user_csv_lambda/). 
+To read more about different aspects of the Lambda function, such as monitoring and logging, updating an existing function, fatal errors, and more, visit our [dedicated Lambda function article](https://www.braze.com/docs/user_csv_lambda/). 
 {% endalert %}
 
 ### Manual upload via CSV {#manual-upload}
 
 #### Step 3b: Create Amperity CSV
 
-1. Once the segment has run, click **View SQL**. This will generate a SQL query that preformats the data to work well with what is required by the Braze platform. Make sure the field names match the fields in Braze that you want to load data into. If you would like to customize it, you can convert the Segment to SQL and alias the fields. Click **Run Query** to run the SQL query.<br>![Braze demo CSV shown in the AmperitySQL query editor.][5]<br><br>
-2. Lastly, click **Download** to download a CSV version of this user segment. This is the file you'll upload to Braze.
+1. Once you've run and activated your query, you can download a CSV file of your query by clicking **Download**. This is the file you will upload to Braze.<br>![A summary of an Amperity query that has successfully created a list of users to be sent to Braze.][9] 
 
 #### Step 4b: Import CSV
 
 1. From the Braze platform, go to the **User Import** page listed under **Users**.
 2. Upload the CSV file downloaded from Amperity.
-3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity segment. 
+3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity query. 
 4. Click **Start Import**.
 
 [2]: {% image_buster /assets/img/amperity/amperity2.png %} 
@@ -183,3 +156,5 @@ To read more about different aspects of the Lambda function such as monitoring a
 [5]: {% image_buster /assets/img/amperity/amperity5.png %} 
 [7]: {% image_buster /assets/img/amperity/activate2.png %} 
 [8]: {% image_buster /assets/img/amperity/destinationconfiguration.png %} 
+[9]: {% image_buster /assets/img/amperity/amperity6.png %} 
+[10]: {% image_buster /assets/img/amperity/amperity7.png %} 

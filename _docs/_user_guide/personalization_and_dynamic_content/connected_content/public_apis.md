@@ -7,7 +7,7 @@ description: "This articles covers a list of publicly available APIs that can be
 
 # Public APIs
 
-There are a variety of publicly available APIs that can be used for Connected Content. Public APIs allow you to insert custom data in messages.  We've compiled a list below of public APIs that could be used for Connected Content. However, there are many more APIs out there, providing a wide variety of potential Connected Content uses.  
+There are a variety of publicly available APIs that can be used for Connected Content. Public APIs allow you to insert custom data in messages. We've compiled a list of public APIs that could be used for Connected Content. However, there are many more APIs out there, providing a wide variety of potential Connected Content uses.  
 
 Contact us at [success@braze.com](mailto:success@braze.com) to let us know if you have an API to share!
 

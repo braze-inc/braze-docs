@@ -31,12 +31,14 @@ The Braze and AppsFlyer integration allows you to better understand how to optim
 
 #### Android
 
-If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. The following code snippet must be included alongside all calls to `AppsFlyerLib.Instance.StartTracking`, typically in an activity's `onCreate` callback.
+If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
+
+Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId = Braze.getInstance(context).getInstallTrackingId();
-customData.put("customData", deviceId);
+String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
 
@@ -49,7 +51,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 #### Unity
 
 ```
-CopiedAppboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.GetInstallTrackingId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
 customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
 AppsFlyer.setAdditionalData(customData);
@@ -70,7 +72,7 @@ Additional information on these instructions is available in [AppsFlyer's docume
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on the AppsFlyer technology partners page in Braze will change to green. A timestamp of the last successful request will also be included. 
+Once Braze receives attribution data from AppsFlyer, the status connection indicator on the AppsFlyer technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
 
 Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the AppsFlyer postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
@@ -78,7 +80,7 @@ Note that this will not happen until we receive data about an attributed install
 
 #### Available data fields
 
-Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters as described below.
+Assuming you configure your integration as suggested, Braze will map all organic and non-organic install data to segment filters.
 
 | AppsFlyer data field | Braze segment filter |
 | -------------------- | --------------------- |
@@ -90,7 +92,7 @@ Assuming you configure your integration as suggested, Braze will map all organic
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". On the right side of the image, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
+![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
 
 Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
 
@@ -112,7 +114,7 @@ You can simply create your OneLink tracking URL in AppsFlyer and directly insert
 
 {% tabs %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -123,7 +125,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 
 {% raw %}
 ```

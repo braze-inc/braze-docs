@@ -10,7 +10,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 <br>
 
 {% alert important %}
-This guide will continue to update as new Android 13 beta versions are released. Check back here for updates related to Braze compatibility with Android 13. (Last Updated: March 29, 2022)
+This guide will continue to update as new Android 13 beta versions are released. Check back here for updates related to Braze compatibility with Android 13. (Last Updated: May 20, 2022)
 {% endalert %}
 
 # Android 13 SDK upgrade guide
@@ -39,7 +39,7 @@ Note that apps are granted a [temporary exemption][4] intended for users who pre
 
 Apps targeting Android 13 can control when to request permission and show the native push prompt. If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device.
 
-**Targeting Android 12 or below**
+**Targeting Android 12 or earlier**
 
 If your app does not yet target Android 13, then once a user upgrades to Android 13, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). 
 

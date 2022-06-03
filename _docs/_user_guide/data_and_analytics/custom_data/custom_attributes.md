@@ -14,7 +14,7 @@ Custom attributes are a collection of your users' unique traits. Custom attribut
 When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
 {% alert tip %}
-We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes) LAB course!
+We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](https://learning.braze.com/custom-events-and-attributes) Braze Learning course!
 {% endalert %}
 
 ## Managing custom attributes
@@ -23,7 +23,7 @@ To create and manage custom attributes in the dashboard, go to **Manage Settings
 
 ## Setting custom attributes
 
-Listed below are the methods across various platforms that are used to set custom attributes.
+The following lists methods across various platforms that are used to set custom attributes.
 
 {% details Expand for documentation by platform %}
 
@@ -99,10 +99,10 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -126,7 +126,11 @@ Array attributes are good for storing related lists of information about your us
 
 By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
-Your dashboard administrator can increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page.
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+
+{% alert note %}
+The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
+{% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

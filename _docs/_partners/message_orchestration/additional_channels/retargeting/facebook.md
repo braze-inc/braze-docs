@@ -29,7 +29,7 @@ If you are using this feature alongside the [Audience Sync to Facebook]({{site.b
 | Requirement | Description |
 | ----------- | ----------- |
 | [Facebook Business Manager][1] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
-| [Facebook ad account][2] | An active Facebook ad account tied to your brand's Business Manager that you want to use Braze custom audiences with.<br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you will not be able to access any Facebook ad accounts within Braze. |
+| [Facebook ad account][2] | An active Facebook ad account tied to your brand's business manager that you want to use Braze custom audiences with.<br><br>Ensure that your Facebook business manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you will not be able to access any Facebook ad accounts within Braze. |
 | [Facebook Custom Audiences Terms][3]| You must accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
 {: .reset-td-br-1 .reset-td-br-2}
 

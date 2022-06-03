@@ -18,7 +18,7 @@ The Facebook Messenger platform is intended for “non-promotional messages that
 
 ## Prerequisites
 
-Please acknowledge the following before proceeding with integration:
+Acknowledge the following before proceeding with integration:
 - Facebook does not allow the usage of the Messenger platform to send marketing messages. 
 - You will need the user's explicit permission for messages from your page. 
 - To send messages to users who are not test users of your Facebook App, your app will need to pass Facebook's [app review](https://developers.facebook.com/docs/messenger-platform/app-review).<br><br>
@@ -41,7 +41,7 @@ For those who require additional help getting your bot set up, a full Messenger 
 
 To send messages on Facebook Messenger, you need to collect your users' page-specific IDs (PSIDs) to identify your user and interact with them consistently. PSIDs are not the same as the user's Facebook ID. Facebook creates this identifier any time you message a customer or when a customer messages you.
 
-PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. Once the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID will be included in the `sender.id` property of the webhook event, so your bot can identify who took the action (shown below).
+PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. Once the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID will be included in the `sender.id` property of the webhook event, so your bot can identify who took the action.
 
 ```
 {

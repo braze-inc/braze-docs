@@ -252,9 +252,9 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The large and small icons pictured below are examples of properly designed icons:
+The following large and small icons pictured are examples of properly designed icons:
 
-![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
+![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
 ### Step 3: Configure notification icons
 
@@ -382,6 +382,13 @@ You should ensure that any API campaigns with the [Android push object][63] para
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 
+The default channel name and description can also be configured in `braze.xml`.
+
+```xml
+<string name="com_braze_default_notification_channel_name">Your channel name</string>
+<string name="com_braze_default_notification_channel_description">Your channel description</string>
+```
+
 ### Step 6: Test notification display and analytics
 
 #### Testing display
@@ -408,7 +415,18 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "android_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }  
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
@@ -540,7 +558,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - It should perform your custom logic for each of these cases. If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_braze_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
-For a detailed custom receiver example, see the code snippets below:
+For a detailed custom receiver example, see the following code snippets:
 
 {% tabs %}
 {% tab JAVA %}
@@ -622,10 +640,10 @@ Custom key-value pairs sent either via the dashboard or the messaging APIs will 
 
 ```java
 // intent is the Braze push intent received by your custom broadcast receiver.
-String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
+String deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY);
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
+Bundle extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
 String myExtra = extras.getString("my_key");
@@ -636,10 +654,10 @@ String myExtra = extras.getString("my_key");
 
 ```kotlin
 // intent is the Braze push intent received by your custom broadcast receiver.
-val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
+val deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY)
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
+val extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.
 val myExtra = extras.getString("my_key")

@@ -16,7 +16,7 @@ Silent notifications allow you to notify your app in the background when importa
 
 Silent notifications are available through the Braze [Messaging API][2]. To take advantage of them, you need to set the `send_to_sync` flag to `true` within the [Android push object][3] and ensure there are no `title` or `alert` fields set as it will cause errors when used alongside `send_to_sync`. You can, however, include data `extras` within the object.
 
-Silent notifications are also available within the dashboard. To send a silent notification, ensure the title and body fields of the notification are blank as pictured below:
+Silent notifications are also available within the dashboard. To send a silent notification, ensure the title and body fields of the notification are blank, as pictured:
 
 ![][6]
 

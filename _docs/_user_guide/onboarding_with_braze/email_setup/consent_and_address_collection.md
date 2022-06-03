@@ -16,7 +16,7 @@ Before sending out your initial emails, it's important to get permission from yo
 
 ### Subscriber states
 
-There are three email subscription states for a user: **opted in**, **subscribed**, and **unsubscribed**. To change a user's subscription state, in addition to using the methods described above, you can use our [Subscription APIs]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
+There are three email subscription states for a user: **opted in**, **subscribed**, and **unsubscribed**. To change a user's subscription state, refer to [Changing subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions) or use our [Subscription APIs]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 |Subscriber State | Description |
 |---|---|

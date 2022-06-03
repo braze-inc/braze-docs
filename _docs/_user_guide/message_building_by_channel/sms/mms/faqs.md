@@ -27,7 +27,7 @@ Braze has no control over the display order for when both a message-body and ima
 
 ### Does MMS and SMS pricing differ?
 
-MMS and SMS have different costs and are charged separately based on volume. Please reach out to the Braze Onboarding team for pricing information.
+MMS and SMS have different costs and are charged separately based on volume. Reach out to the Braze Onboarding team for pricing information.
 
 ### Does MMS require a separate onboarding process?
 

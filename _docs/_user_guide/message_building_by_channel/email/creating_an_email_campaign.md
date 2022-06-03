@@ -17,10 +17,10 @@ channel:
 Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
 
 {% alert tip %}
-If this is your first time creating an email campaign, we highly recommend that you check out the following LAB courses:<br>
+If this is your first time creating an email campaign, we highly recommend that you check out the following Braze Learning courses:<br>
 
-- [Email](https://lab.braze.com/messaging-channels-email)
-- [Project: Build a basic email marketing program](https://lab.braze.com/project-build-a-basic-email-marketing-program)
+- [Email](https://learning.braze.com/messaging-channels-email)
+- [Project: Build a basic email marketing program](https://learning.braze.com/project-build-a-basic-email-marketing-program)
 
 {% endalert %}
 
@@ -58,21 +58,29 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer.
+Braze offers two editing experiences when creating an email campaign: our [Drag & Drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
 
 ![Choosing between Drag & Drop Editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
 
-Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template.
+Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
+
+{% alert tip %}
+We recommend selecting one editing experience per email campaign. For example, choose either the HTML Classic or Block editor in a single email campaign rather than switching between editors.
+{% endalert %}
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance.
+After you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
-{% alert tip %}
-Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email.
-{% endalert %}
+Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email. 
 
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
+
+{% alert tip %}
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+{% endalert %}
 
 ### Step 3a: Add email headers
 

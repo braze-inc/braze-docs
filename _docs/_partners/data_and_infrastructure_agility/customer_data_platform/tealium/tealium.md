@@ -21,7 +21,7 @@ The Braze and Tealium integration allows you to track your users and route data 
 
 {% tabs %}
 {% tab EventStream %}
-Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).
+Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. The following are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).
 - Data sources (installation and data collection)
 - Live events (real-time data inspection)
 - Event specifications and attributes (data layer requirements and validation)
@@ -37,7 +37,7 @@ Tealium AudienceStream is an omnichannel customer segmentation and real-time act
 {% tab iQ Tag Management %}
 Tealium iQ allows you to trigger code in your apps by using a tag in the Tealium iQ Tag Management UI. This tag will collect, control, and deliver event data from mobile and web platforms, allowing you to configure a native Braze implementation without adding Braze-specific code to your apps. Users can choose to integrate Mobile Remote Commands through iQ Tag Management or JSON configuration files (recommended Tealium approach). Users using the Braze Web SDK must integrate through the web iQ tag.
 
-To learn more about the pros and cons of each method, refer to our [Tealium iQ tag manager](#mobile-remote-commands) section below.
+To learn more about the pros and cons of each method, refer to the following [Tealium iQ tag manager](#mobile-remote-commands) section.
 {% endtab %}
 {% endtabs %}
 
@@ -122,7 +122,7 @@ Braze mobile remote commands do not support all Braze methods and messaging chan
 Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883) allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
 
 1. In Tealium, navigate to **iQ [Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Tags/ta-p/5016) > Tags > + Add Tag > Braze Web SDK**.
-2. In the Tag Configuration dialogue box, enter the API Key (your Braze app identifier key), Base URL (Braze SDK endpoint), and [Braze Web SDK code version](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md). You can also enable logging to log information in the web console for debugging purposes.
+2. In the Tag Configuration dialogue box, enter the API Key (your Braze app identifier key), Base URL (Braze SDK endpoint), and [Braze Web SDK code version](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md). You can also enable logging to log information in the web console for debugging purposes.
 3. In the [Load Rules](https://community.tealiumiq.com/t5/iQ-Tag-Management/Load-Rules/ta-p/5098) dialogue box, choose "Load on All Pages" or select **Create Rule** to determine when and where to load an instance of this tag on your site.
 4. In the **[Data Mappings](https://community.tealiumiq.com/t5/iQ-Tag-Management/Data-Mappings/ta-p/10645#mapping_data_sources)** dialogue box, select **Create Mappings** to map Tealium data to Braze. The destination variables for the Braze Web SDK tag are built into the **Data Mapping** tab for the tag. The [following tables](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106#toc-hId--2077373923) list the available destination categories and describe each destination name.
 5. Select **Finish**.
@@ -144,7 +144,7 @@ If you wish to use this data and these features, consider our [side-by-side]({{s
 ### Step 1: Set up a Source
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
+1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
 2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. From the **Event Specifications** options, choose the [event specs](https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
 4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** once finished.<br>
@@ -163,7 +163,7 @@ Refer to [Data Sources](https://community.tealiumiq.com/t5/Customer-Data-Hub/Dat
 
 A connector is an integration between Tealium and another vendor used to transmit data. These connectors contain actions that represent their partner's supported APIs. 
 
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
+1. From the sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
 2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
 3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Configuration comprises three steps: source, configuration, and action.
 
@@ -238,7 +238,7 @@ Make sure to **Save / Publish** your connector once finished. The actions you co
 
 After your connector is up and running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure that you have added the Tealium Tools browser extension.
 
-1. To start a new trace, select **Trace** on the left sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
+1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
 2. Open the browser extension and enter the Trace ID into AudienceStream Trace.
 3. Examine the real-time log.
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.

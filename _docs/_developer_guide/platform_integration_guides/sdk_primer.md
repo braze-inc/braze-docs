@@ -5,7 +5,7 @@ page_order: 0
 
 # SDK 101
 
-Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://lab.braze.com/technical-integration-checklists-and-toolkits/) LAB course.
+Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
 ## App performance
 
@@ -52,7 +52,7 @@ These properties are collected by the Android SDK upon proper integration.
 | CARRIER | The mobile carrier. |
 | MODEL | The specific hardware of the device. | 
 | RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |
-| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g. "en_US"). |
+| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g., "en_US"). |
 | TIMEZONE <br> `time_zone` | The device time zone. |
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -105,7 +105,7 @@ We highly recommend fully integrating the SDKs to take full advantage of our pro
 
 ### Web SDK
 
-You may either simply not integrate certain parts of the SDK, or use [`stopWebTracking`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking) for a user. This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
+You may either simply not integrate certain parts of the SDK, or use [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) for a user. This method will sync data logged prior to when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
 
 ### Android SDK
 

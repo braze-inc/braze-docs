@@ -3,7 +3,8 @@
   "rewrites": [
     {
 			"source": "/docs/:path*", "destination": "/:path*"
-		}
+		},
+		{ "source": "/api/(.*)", "destination": "/api/404.html" }
 	],
 	"headers": [
 		{

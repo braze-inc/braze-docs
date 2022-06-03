@@ -1,7 +1,7 @@
 ---
 nav_title: Duplicating Segments, Campaigns, and Canvases
 article_title: Duplicating Segments, Campaigns, and Canvases
-page_order: 2
+page_order: 3
 page_type: reference
 description: "This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse."
 tool: 
@@ -20,7 +20,7 @@ tool:
 
 Braze allows you to duplicate pre-existing segments, campaigns, and Canvases. This can be useful in cases where you wish to create a new engagement tool that is very similar to an old one. By our cloning feature, you can create a second version of an old segment, campaign, or Canvas and make the necessary edits.
 
-For more on segments and campaigns, check out our [LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup)!
+For more on segments and campaigns, check out our [Braze Learning course](https://learning.braze.com/quick-overview-segment-and-campaign-setup)!
 
 ## Cloning a segment
 

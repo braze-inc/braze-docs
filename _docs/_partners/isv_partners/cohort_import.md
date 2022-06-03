@@ -27,7 +27,7 @@ Braze hosts our application on multiple clusters throughout the US and EU. The U
 
 ## Endpoint URLs
 
-In addition to the top-level URLs being cluster-specific, each endpoint is also partner-specific. For example, when importing to our US01 cluster, the URL would have the format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` is typically the name of the partner’s business. Specifics for each endpoint are outlined below.
+In addition to the top-level URLs being cluster-specific, each endpoint is also partner-specific. For example, when importing to our US01 cluster, the URL would have the format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` is typically the name of the partner’s business. Specifics for each endpoint are outlined in the following sections.
 
 ## Authentication
 

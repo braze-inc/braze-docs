@@ -75,7 +75,7 @@ Should you want to include any event properties to attach to your "in-app messag
 
 Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the custom [`EventBroadcastReceiver.java`][72].
 
-In the example below, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
+In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
 ![An action-based delivery campaign where an in-app message will trigger when "campaign_name" equals "IAM campaign name example."][77]
 

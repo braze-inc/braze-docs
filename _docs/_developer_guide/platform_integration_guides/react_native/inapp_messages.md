@@ -97,7 +97,7 @@ ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ## Test displaying a sample in-app message
 
-Follow the steps below to test a sample in-app message.
+Follow these steps to test a sample in-app message.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.

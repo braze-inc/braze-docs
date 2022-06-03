@@ -11,7 +11,7 @@ description: "This reference article covers Content Card read and unread indicat
 
 # Read and unread indicators
 
-Braze provides indicators on Content Cards as pictured below:
+Braze provides indicators on Content Cards as shown in the following screenshots:
 
 |Indicator|Example |
 |---|---|

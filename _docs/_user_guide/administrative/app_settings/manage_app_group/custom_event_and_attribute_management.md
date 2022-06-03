@@ -28,7 +28,7 @@ Once you have created a **Custom Event** or **Product**, you can click **Manage 
 To make these added custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you can use Braze's [APIs]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
 
 {% alert note %}
-All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze Account Manager, Customer Success Manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
+All User Profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for 30 days. If you'd like to leverage event properties for Segmentation, contact your Braze account manager, customer success manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
 ## Blocklisting custom attributes, custom events, and products
@@ -67,13 +67,13 @@ If you choose to force the data type for an attribute, any data that comes in th
 |------------------|-------------|
 | Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
 | Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
-| Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
+| Number | Integers or Floats (i.e., `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more information on specific filter options exposed by different data type comparisons check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
-Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard.
+Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.
 {% endalert %}
 
 

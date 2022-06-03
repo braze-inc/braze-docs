@@ -4,8 +4,8 @@ article_title: Email
 page_order: 1
 layout: featured
 guide_top_header: "Email"
-guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
-description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
+guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
+description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
 channel:
   - email
 
@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
+- name: Drag & Drop Editor
+  link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
+  fa_icon: fas fa-paint-brush
 - name: Create an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   fa_icon: fas fa-table

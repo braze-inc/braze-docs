@@ -16,7 +16,7 @@ Braze in-app messages support adding an alternate Dark theme to help deliver the
 
 ## How Dark Mode works
 
-Users with versions of at least Android 10 or iOS 13 and above can toggle Dark Mode on or off in their device's settings.
+Users with versions of at least Android 10 or iOS 13 and later can toggle Dark Mode on or off in their device's settings.
 
 When Dark Mode is enabled, the device's native menus and screens (push notifications, device settings, etc.) will change to a dark grey. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
 
