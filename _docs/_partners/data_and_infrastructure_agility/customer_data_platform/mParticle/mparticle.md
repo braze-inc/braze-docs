@@ -74,7 +74,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
-To remove the audience from a Braze user prior to deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
+To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
 
 ### Data mapping
 
@@ -106,7 +106,7 @@ These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-i
 The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, News Feed, and all relevant message analytics tracking).
 
 {% alert note %}
-For Content Cards and custom in-app message integrations, call Braze’s SDK methods directly.
+For Content Cards and custom in-app message integrations, call Braze's SDK methods directly.
 {% endalert %}
 
 ##### Step 1: Integrate the mParticle SDKs
@@ -165,7 +165,7 @@ Provide the following fields on the Braze output page:
 - **Braze SDK session timeout**: Braze SDK time interval for session timeout in seconds.
 - **User tags value**: Select the value to be sent to Braze for user tags. The possible values are null or `true`. When `null` and set on a user attribute, the custom attribute (key and value) on the Braze user profile will be removed.
 - **Include enriched user attributes**: Server-to-server only. If enabled, mParticle will forward enriched user attributes from the existing user profile. Braze recommends disabling this to conserve data points; see [potential data point overages](#enriched) below for more information.
-- **Include enriched user identities**: Server-to-server only. If enabled, mParticle will forward enriched user identities from the existing user profile. Braze recommends disabling this to conserve data points; see [potential data point overages](#enriched) below for more info.
+- **Include enriched user identities**: Server-to-server only. If enabled, mParticle will forward enriched user identities from the existing user profile. Braze recommends disabling this to conserve data points; see [potential data point overages](#enriched) below.
 - **Send user attribute lists as arrays**: When enabled, mParticle will send each user attribute list as an array rather than a comma-separated string
 - **Forward session events**: When enabled, all session start and end events will be forwarded to Braze as separate events. 
 - **Forward screen view messages**: Not supported for server-to-server events. When enabled, all screen view messages will be forwarded to Braze as separate events.
@@ -182,24 +182,29 @@ Not all data types are supported between both platforms.
 
 ### Forwarding erasure requests (data subject requests)
 
-Forward erasure requests to Braze by configuring a data subject request output to Braze. To forward erasure requests to Braze, follow [mParticle’s documentation](https://docs.mparticle.com/integrations/braze/forwarding-dsr/).
+Forward erasure requests to Braze by configuring a data subject request output to Braze. To forward erasure requests to Braze, follow [mParticle's documentation](https://docs.mparticle.com/integrations/braze/forwarding-dsr/).
 
 ## Potential data point overages
 
-### Enabling mParticle enrich user attributes/identities (server-to-server only) {#enriched}
-In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward enriched user attributes from the existing user profile, i.e., all available user attributes (standard attributes, custom attributes, and calculated attributes) to Braze on each logged event. This results in high consumption of data points in Braze since mParticle will send Braze the same attributes on every call, despite the value being unchanged. 
+### Enriched user attributes
 
-For example:
-A user adds first name, last name, and phone number to their profile on their first session. This updates the user profile with those values in Braze. On the user's next session, they sign up for a newsletter which triggers a newsletter sign-up event. The "User Attribute" associated with that payload is an email address.
-- If "Enriched User Attributes" are turned on (default) within the connection settings, mParticle will send Braze the newsletter sign-up event, email address, first name, last name, and phone number. Incurring five data points.
-- If "Enriched User Attributes" are turned off, mParticle will only send Braze the newsletter sign-up event, and the user attribute explicitly set for that event, email address. Incurring only the intended two data points.
+#### Enabling mParticle enrich user attributes/identities (server-to-server only) {#enriched}
 
-It should be noted that turning off this setting won't check for deltas. It will prevent the integration from sending all user attributes on the user’s profile that weren't received on the original inbound batch or explicitly set as an attribute for that event. It is important to still check that only deltas are passed to Braze.
+In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (i.e., standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
 
-### Considerations of turning off "Enriched User Attributes"
-There are a few considerations to be aware of when turning off "Include Enriched User Attributes":
-1. The server-to-server integration uses mParticle events API to send events to the Braze output. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (e.g., a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When "Enriched User Attributes" is turned off, this new attribute value that was unassociated with a specific event would not be passed to Braze.
-  - To solve this, we recommend creating a separate "User Attribute Updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note, with this approach, you are still logging an additional data point for the “User Attribute Updated” event, but data point consumption will be far less than sending all user attributes on every call with the “Include Enriched User Attributes” feature enabled.
+For example, if a user adds first name, last name, and phone number during their first session and later signs up for a newsletter adding the same information, in addition to email, triggering a newsletter sign up event:
+- If turned on (default), five data points will be incurred. (sign-up event, email address, first name, last name, and phone number)
+- If turned off, two data points will be incurred (sign-up event and email address)
+
+{% alert note %}
+Note that turning off this setting won't check for changing data. It will, however, prevent the integration from sending all user attributes on the user's profile that weren't received on the original inbound batch or explicitly set as an attribute for the event. It is important to still check that only deltas are passed to Braze.
+{% endalert %}
+
+#### Considerations of turning off enriched user attributes
+
+There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
+1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (e.g., a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
+  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point consumption will be far less than sending all user attributes on every call with the feature enabled.
 2. Calculated attributes are only passed to Braze as an enriched user attribute, so these will not be available to customers who turn off "Enriched User Attributes".
 
 ### Sending unnecessary or duplicative data to Braze
