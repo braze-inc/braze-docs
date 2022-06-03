@@ -11,12 +11,90 @@ description: "This article covers Content Card integration for Web, including Co
 
 # Content Card integration
 
-## Data models {#data-models}
-
 {% include archive/web-v4-rename.md %}
 
-## Standard feed UI
-The Braze Web SDK supports several unique Content Card card types, [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html), [Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) which share a base model, [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html).
+## Content Card data model {#data-models}
+
+The Content Cards data model is available in the Web SDK.
+
+## Content Card model
+The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
+
+### Base Content Card model properties - Card
+
+|Property|Description|
+|---|---|
+| `expiresAt` | The unix timestamp of the card's expiration time.|
+| `extras`| (Optional) An object of string/string key/value pairs.|
+| `id` | (Optional) The id of the card. This will be reported back to Braze with events for analytics purposes. |
+| `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
+| `updated` | The unix timestamp of when this card was last modified. |
+| `viewed` | This property reflects whether the user viewed the card or not.|
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Banner Content Card properties - Banner
+
+|Property|Description|
+|---|---|
+| `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+| `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
+| `clicked` | This property indicates whether this card has ever been clicked on this device. |
+| `created` | The unix timestamp of the card's creation time from Braze. |
+| `dismissed` | This property indicates if this card has been dismissed. |
+| `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
+| `imageUrl` | The URL of the card's image.|
+| `linkText` | The display text for the URL. |
+| `url` | The URL that will be opened after the card is clicked on. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Captioned image Content Card properties - CaptionedImage
+
+|Property|Description|
+|---|---|
+| `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+| `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
+| `clicked` | This property indicates whether this card has ever been clicked on this device. |
+| `created` | The unix timestamp of the card's creation time from Braze. |
+| `dismissed` | This property indicates if this card has been dismissed. |
+| `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
+| `imageUrl` | The URL of the card's image.|
+| `linkText` | The display text for the URL. |
+| `title` | The title text for this card. |
+| `url` | The URL that will be opened after the card is clicked on. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Classic Content Card properties - ClassicCard
+
+|Property|Description|
+|---|---|
+| `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+| `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
+| `clicked` | This property indicates whether this card has ever been clicked on this device. |
+| `created` | The unix timestamp of the card's creation time from Braze. |
+| `description` | The body text for this card. |
+| `dismissed` | This property indicates if this card has been dismissed. |
+| `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
+| `imageUrl` | The URL of the card's image.|
+| `linkText` | The display text for the URL. |
+| `title` | The title text for this card. |
+| `url` | The URL that will be opened after the card is clicked on. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Card methods
+
+|Method | Description | Link|
+|---|---|---|
+|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions)|
+|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardclick)|
+|`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)|
+|`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)
+|`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)
+|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|
+|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)|
+|`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismissCard)|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+For more details, refer to the [JS documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 
 ## Content Card integration
 
@@ -71,20 +149,6 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
-## Requesting unviewed Content Card count
-
-You can request the number of unread cards at any time by calling:
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html) for more information.
-
-{% comment %}
-Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestContentCardsRefresh();`.
-{% endcomment %}
-
 ## Control group 
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
@@ -99,20 +163,7 @@ function isControlCard(card) {
 }
 ```
 
-## Key-value pairs
+{% alert note %}
+Visit the following customization articles for documention on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
+{% endalert %}
 
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) to access these values.
-
-## Additional card methods
-
-|Method | Description | Link|
-|---|---|---|
-|`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions)|
-|`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardclick)|
-|`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)|
-|`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)
-|`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)
-|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)|
-|`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismissCard)|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
