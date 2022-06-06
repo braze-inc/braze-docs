@@ -149,7 +149,7 @@ To do this, use the following syntax, replacing the image URL as needed:
 {{img}}
 ```
 {% endraw %}
-This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab - this will evaluate the code and show a preview.
+This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab, which will evaluate the code and show a preview.
 
 {% endtab %}
 {% endtabs %}
