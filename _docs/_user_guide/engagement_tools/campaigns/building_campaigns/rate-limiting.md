@@ -1,6 +1,6 @@
 ---
-nav_title: Rate-Limiting and Frequency Capping
-article_title: Rate-Limiting and Frequency Capping
+nav_title: Rate Limiting and Frequency Capping
+article_title: Rate Limiting and Frequency Capping
 page_order: 6
 tool: Campaigns
 page_type: reference
@@ -8,18 +8,18 @@ description: "This reference article discusses the concept of rate limiting and 
 
 ---
 
-# Rate-limiting and frequency capping
+# Ratelimiting and frequency capping
 
 > This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
 > <br>
 > <br>
 > We all want our users to have the best experience possible. With rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
-## Rate-limiting
+## Rate limiting
 
 Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
 
-### User centric rate-limiting
+### User centric rate limiting
 
 As you create more segments, there are going to be cases where the membership of those segments overlaps. If you're sending out campaigns to those segments, you want to be sure that you are not messaging your users too often. If a user receives too many messages within a short time period, they will feel over-encumbered and either turn off push notifications or uninstall your app.
 
@@ -58,11 +58,11 @@ For in-app messages, you can control marketing pressure by setting a maximum num
 
 For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but since his device has not communicated with Braze's servers since his session start, his device is unaware that the message has met its cap and he will also receive the message. However, once an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
 
-### Delivery speed rate-limiting
+### Delivery speed rate limiting
 
 If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they are delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
 
-![Per Minute Rate Limit Example][3]
+![][3]
 
 For instance, if you are trying to send out 75,000 messages with a 10,000 per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first seven minutes, and 5,000 over the last minute. Be wary of delaying time-sensitive messages, however, with this form of rate limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
 
@@ -113,7 +113,7 @@ This time frame can be measured in minutes, days, weeks (seven days), or months,
 
 Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
-![Frequency Capping][14]
+![][14]
 
 ### Delivery rules
 
@@ -129,7 +129,7 @@ By default, new campaigns and Canvases that do not obey Frequency Caps will also
 This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages that are currently live.
 {% endalert %}
 
-![Frequency Capping Update][18]
+![][18]
 
 Different channels within a multichannel campaign will individually count towards the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push will count toward one push campaign and the email message will count toward one email message campaign. The campaign will also count toward one "campaign of any type." If users are capped to one push and one email campaign per day and a user receives this multichannel campaign, then they will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
 
