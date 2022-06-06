@@ -8,7 +8,7 @@ description: "This reference article discusses the concept of rate limiting and 
 
 ---
 
-# Ratelimiting and frequency capping
+# Rate limiting and frequency capping
 
 > This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
 > <br>
