@@ -138,7 +138,7 @@ This template will take the current time (in seconds), append it to the end of t
 
 1. In the Braze platform, paste the URL in the **Rich Notification Media** field.
 2. For mobile: Content Cards images on iOS and Android are cached upon receipt and do not refresh. 
-  - As a workaround, schedule your campaign as a daily/weekly/monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1 day expiration.
+  - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1 day expiration.
 3. To ensure that Movable Ink’s real-time images work and will not be affected by caching when the Content Card is re-templated, use Liquid to append a timestamp to the end of the Movable Ink image URL.
 
 To do this, use the following syntax, replacing the image URL as needed:
