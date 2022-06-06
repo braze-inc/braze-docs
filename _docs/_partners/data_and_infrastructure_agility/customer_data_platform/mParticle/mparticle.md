@@ -76,13 +76,13 @@ Since mParticle does not directly maintain segments in Braze, it will not delete
 
 To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. This ensures the audience membership updates in Braze to `false` for the single attribute option or removes the audience ID from the array format.
 
-### Data mapping
+## Data mapping
 
 Data can be mapped to Braze by using the [embedded kit integration](#embedded-kit-integration) if you want to connect your mobile and web apps to Braze through mParticle. You can also use the [server-to-server API integration](#server-api-integration) to forward server-side data to Braze.
 
 Regardless of which approach you choose, you must set up Braze as an output:
 
-#### Configure your Braze output settings
+### Configure your Braze output settings
 
 In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** once completed.
 
@@ -97,7 +97,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 
 ![][10]
 
-#### Embedded kit integration
+### Embedded kit integration
 
 The mParticle and Braze SDK will be present on your application through the embedded kit integration. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to Braze's SDK methods. 
 
@@ -109,7 +109,7 @@ The embedded kit SDK integration allows you to take advantage of our full suite 
 For Content Cards and custom in-app message integrations, call Braze's SDK methods directly.
 {% endalert %}
 
-##### Step 1: Integrate the mParticle SDKs
+#### Step 1: Integrate the mParticle SDKs
 
 Integrate the appropriate mParticle SDKs into your app based on your platform needs:
 
@@ -117,13 +117,13 @@ Integrate the appropriate mParticle SDKs into your app based on your platform ne
 * [mParticle for iOS](https://docs.mparticle.com/developers/sdk/ios/getting-started/)
 * [mParticle for Web](https://docs.mparticle.com/developers/sdk/web/getting-started/)
 
-##### Step 2: Complete mParticle's Braze event kit integration
+#### Step 2: Complete mParticle's Braze event kit integration
 
 While the Braze SDK does not need to be directly included within your website or app for this mParticle integration, the following mParticle Appboy Kit must be installed to forward data from your app to Braze.
 
 mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integrations/braze/event/#kit-integration) will walk you through custom mParticle and Braze alignment instructions based on your messaging needs (Push, Location Tracking, etc.).
 
-##### Step 3: Connections settings for your Braze output
+#### Step 3: Connections settings for your Braze output
 
 In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed.
 
@@ -142,7 +142,7 @@ Provide the following fields on the Braze connection settings page:
 
 Note that not all connection settings apply to all platforms and integration types. 
 
-#### Server API integration
+### Server API integration
 
 This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
 
@@ -154,7 +154,7 @@ Consider a side-by-side integration if you wish to use these features.
 For server-side data to be forwarded to Braze, it must include an `external_id`; anonymous users will not be forwarded.
 {% endalert %}
 
-##### Connections settings for your Braze output
+#### Connections settings for your Braze output
 
 In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** once completed. 
 
@@ -174,11 +174,25 @@ Provide the following fields on the Braze output page:
 
 Note that not all connection settings apply to all platforms and integration types. 
 
-##### Data mapping
+### Data mapping details
 
+#### Data types
 Not all data types are supported between both platforms.
 - [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
 - [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
+
+#### User identity mapping
+For each mParticle output, you can select the external identity type to send to Braze as the `external_id`. While the default value is customer ID, you can choose to map another ID, such as `MPID`, to send to Braze as the `external_id`. Be aware that choosing an identifier other than customer ID may influence how data is sent in Braze. 
+
+For example, mapping MPID to your Braze `external_id` will have the following affects:
+- Due to the nature of when MPID is assigned, all users will be assigned an `external_id` on session start.
+- Currents setup may require additional mapping due to differing data types between MPID and `external_id`.
+
+#### Event and purchase data mapping
+The key-value pairs passed into custom attributes object when logging an event or purchase will be passed to Braze as event properties associated with the respective event or purchase.
+
+#### Attribute data mapping
+Any user attributes key-value pairs will be mapped to Braze's standard or custom attributes.
 
 ### Forwarding erasure requests (data subject requests)
 
@@ -188,7 +202,7 @@ Forward erasure requests to Braze by configuring a data subject request output t
 
 ### Enriched user attributes
 
-#### Enabling mParticle enrich user attributes/identities (server-to-server only) {#enriched}
+#### Enabling enrich user attributes/identities (server-to-server only) {#enriched}
 
 In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (i.e., standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
 
@@ -197,7 +211,7 @@ For example, if a user adds first name, last name, and phone number during their
 - If turned off, two data points will be incurred (sign-up event and email address)
 
 {% alert note %}
-Note that turning off this setting won't check for changing data. It will, however, prevent the integration from sending all user attributes on the user's profile that weren't received on the original inbound batch or explicitly set as an attribute for the event. It is important to still check that only deltas are passed to Braze.
+Turning off this setting won't check for changing data. It will, however, prevent the integration from sending all user attributes on the user's profile that weren't received on the original inbound batch or explicitly set as an attribute for the event. It is important to still check that only deltas are passed to Braze.
 {% endalert %}
 
 #### Considerations of turning off enriched user attributes
