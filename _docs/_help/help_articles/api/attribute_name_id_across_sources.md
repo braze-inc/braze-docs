@@ -20,7 +20,7 @@ Campaign and Canvas attributes are available as Liquid tags in our dashboard {% 
 
 ### REST API
 
-Campaign and canvas attributes are also available in the [campaign details endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) or [Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/). You can use our REST API to build mappings— that is, a list of all the Canvas names and their corresponding IDs.
+Campaign and Canvas attributes are also available in the [campaign details endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) or [Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/). You can use our REST API to build mappings— that is, a list of all the Canvas names and their corresponding IDs.
 
 ### Currents
 
