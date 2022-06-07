@@ -7,12 +7,14 @@ guide_top_text: "Check out the following article for some clarification on how A
 
 page_type: landing
 description: "This landing page is home to help articles related to the Braze API."
-
 guide_menu_title: ""
 guide_menu_list:
   - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
     fa_icon: fas fa-user-times
+  - name: How campaign and Canvas attributes differ across sources
+    link: /docs/help/help_articles/api/attribute_name_id_across_sources/
+    fa_icon: fas fa-circle-info
 
 noindex: true
 ---
