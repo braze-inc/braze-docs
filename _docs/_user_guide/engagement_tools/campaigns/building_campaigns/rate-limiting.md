@@ -17,7 +17,7 @@ description: "This reference article discusses the concept of rate limiting and 
 
 ## Rate limiting
 
-Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
+Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the user, while the second takes into consideration the bandwidth of your servers.
 
 ### User centric rate limiting
 
