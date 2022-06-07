@@ -17,11 +17,8 @@ guide_menu_list:
   - name: Missing Users in Segment
     link: /docs/help/help_articles/segments/segment_showing_0_users/
     fa_icon: fas fa-users
-  - name: Segmentation Logic With And/Or
+  - name: Segmentation Logic
     link: /docs/help/help_articles/segments/segmentation_logic_with_and_or/
     fa_icon: fas fa-columns
-  - name: Segmentation Logic with Negative OR Filters
-    link: /docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/
-    fa_icon: fas fa-user-minus
 
 ---
