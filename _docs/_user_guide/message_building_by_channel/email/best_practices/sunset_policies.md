@@ -16,11 +16,13 @@ For emails, your sending IP has a reputation score that factors in engagement, s
 
 Braze's segmentation filters help prevent your messaging from appearing spammy or irrelevant by letting you easily implement sunset policies for emails, push and in-app notifications, and News Feed items. Here are some things to consider when you create a sunset policy:
 
-- What counts as an "unengaged" user?
-- Is engagement defined by clicks and opens, purchases, app usage, or a combination of these behaviors?
+- What counts as an "unengaged" user? 
+- Is engagement defined by clicks, purchases, app usage, or a combination of these behaviors? 
 - How long does the lapse in engagement need to be for you to stop sending messages?
 - Will you deliver any special campaigns to users before excluding them from your segments?
-- Which messaging channels will your sunset policy apply to?
+- Which messaging channels will your sunset policy apply to? 
+
+For example, if you have users who opt-in to [Apple's Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/), consider how this may impact your email campaigns and deliverability metrics and determine how to best structure your sunset policy.
 
 To incorporate sunset policies into your campaigns, create a [segment][19] that automatically excludes users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
 
