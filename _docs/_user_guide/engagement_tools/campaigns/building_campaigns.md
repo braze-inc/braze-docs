@@ -27,7 +27,7 @@ guide_featured_list:
   - name: Conversion Events
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
     fa_icon: fas fa-calendar-check
-  - name: Rate-Limiting and Frequency Capping
+  - name: Rate Limiting and Frequency Capping
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     fa_icon: fas fa-exclamation-triangle
 
