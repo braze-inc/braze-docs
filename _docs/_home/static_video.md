@@ -317,26 +317,26 @@ These should not be used as user IDs:
 - Random number or session ID
 - Any non-unique ID
 
-#### Give Custom Events and Attributes Readable Names
+#### Give custom events and attributes readable names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:
 
 - Do not begin a custom event with a numeric character. The drop-down list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
 - Try not to use obscure abbreviations or technical jargon where possible
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute ought be sent to Braze as `user_country` at very least to lend some clarity to a marketer using the dashboard down the line.
 
-#### Only Log Attributes When They Change
+#### Only log attributes when they change
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
-#### Avoid Programmatically Generating Events
+#### Avoid programmatically generating event names
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”). The specific data about the event should be included as an event property, not as part of the event name.
 
-### Technical Limitations & Constraints
+### Technical limitations and constraints
 Be mindful of the following limitations and constraints when implementing custom events:
 
-#### Length Constraints
+#### Length constraints
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
-#### Content Constraints
+#### Content constraints
 The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:
 
 - Leading and trailing whitespace
@@ -348,7 +348,7 @@ The following content will be trimmed programmatically from your attributes and 
 - Any invalid UTF-8 encoding values
   -  "My \x80 Field" would be condensed to "My Field"
 
-#### Reserved Keys
+#### Reserved keys
 Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
 
 - `email`
@@ -375,12 +375,12 @@ Additionally, the following keys are reserved and cannot be used as custom event
 - `price`
 - `currency`
 
-#### Value Definitions
+#### Value definitions
 
 - Integer values are 64 bit
 - Decimals have 15 decimal digits by default
 
-### Parsing a Generic Name Field
+### Parsing a generic name field
 
 If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
