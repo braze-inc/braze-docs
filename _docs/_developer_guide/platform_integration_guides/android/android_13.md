@@ -10,7 +10,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 <br>
 
 {% alert important %}
-Android 13 is now in its Platform Stability Milestone. This means all APIs have been finalized, and your app's users will soon be able to upgrade their devices.
+As of June 8, 2022 Android 13 is now in its Platform Stability Milestone. This means all APIs have been finalized, and your app's users will soon be able to upgrade their devices.
 {% endalert %}
 
 # Android 13 SDK upgrade guide
@@ -60,6 +60,8 @@ Braze automatically creates a default notification channel if one does not alrea
 It is strongly recommended that your app targets Android 13 in order to control when users are prompted for Push Permission.
 
 This will allow you to optimize your [push opt-in rates][6] by prompting users at more appropriate times and will lead to a better user experience in how and when your app asks for push permission.
+
+To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to version 20.1.0 or higher.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1900
 [2]: https://developer.android.com/about/versions/13
