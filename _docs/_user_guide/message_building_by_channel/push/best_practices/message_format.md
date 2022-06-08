@@ -1,13 +1,14 @@
 ---
 nav_title: Message Format
+article_title: Push Messsage Format
 page_order: 5
-
 page_type: reference
 description: "This article describes message and image formats for iOS, Android, and Windows push notifications."
 channel: push
-no_index: true
+
 ---
-# Message Format
+
+# Message format
 
 > This reference article describes message and image formats for iOS, Android, and Windows push notifications.
 
@@ -42,13 +43,13 @@ no_index: true
 {% endtab %}
 {% tab Text Example %}
 
-![iOS_Push]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![iOS push notification with text that reads: "Hi! This is an iOS Push".]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="align:left;"}
-![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="align:right;"}
+![iOS push notification with text that reads: "Hi! This is an iOS Push with an image" with an emoji. There is a small image beside the text.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS push notification on a hard push with the same text as the previous message with an expanded image preceding the text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -69,14 +70,14 @@ no_index: true
 {% endtab %}
 {% tab Image Sizes %}
 
-#### Push Icon
+#### Push icon
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
 | 1:1 (400x400 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-#### Expanded Notification Image
+#### Expanded notification image
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
@@ -90,12 +91,12 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 {% endtab %}
 {% tab Text Example %}
 
-![Android_Push]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Android push notification displayed on the home screen.]({% image_buster /assets/img_archive/Push_Android_2.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![Large Android Image]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Android push notification with a large image under the message text.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 Large image notifications display best when using an image of at least 600x300 pixels.
@@ -103,7 +104,6 @@ Large image notifications display best when using an image of at least 600x300 p
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Windows Universal
 
@@ -119,7 +119,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push_Window_Universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
+![Windows Universal push notification that reads: "Hey! This is a Windows Universal toast".]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,15 +138,8 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push_Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
+![Windows Phone 8 push notification that reads: "Hey! This is a Windows Phone 8 Toast".]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
 
-[27]: {% image_buster /assets/img_archive/android_push_img2.png %}
-[42]: {% image_buster /assets/img_archive/iOS_push_notification_small.png %}
-[43]: {% image_buster /assets/img_archive/Push_Android_2.png %}
-[46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
-[47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
-[54]: {% image_buster /assets/img_archive/braze_richpush1.png %}
-[55]: {% image_buster /assets/img_archive/braze_richpush2.png %}

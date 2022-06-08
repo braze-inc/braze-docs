@@ -17,6 +17,25 @@
     font-family: $braze-black;
     font-size: 16px;
     margin-bottom: 0px;
+    .glossary_share {
+      display: none;
+    }
+    &:hover .glossary_share {
+      display: inline;
+      border-bottom-width: 2px !important;
+      border-color: transparent !important;
+      margin: 0px 5px 0px 5px;
+      cursor: copy;
+      &:hover {
+        border-bottom-width: 2px !important;
+        border-color: $braze-link-color !important;
+        background-color: transparent !important;
+      }
+    }
+    span {
+      font-size: 12px;
+      color: $grey-dust;
+    }
   }
   .tags {
     display: block;
@@ -138,7 +157,7 @@
       -webkit-appearance: textfield;
       outline-offset: -2px;
       touch-action: manipulation;
-      background-image: url(/docs/assets/img/search_black_shark.svg);
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg);
       background-position: left 10px top 5px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
@@ -162,7 +181,7 @@
         font-size: 14px;
         display: inline-block;
 
-        background-image: url(/docs/assets/img/dropdown.svg);
+        background-image: url(#{$base_url}/assets/img/dropdown.svg);
         background-position: right 10px top 14px;
         background-size: 14px 14px;
         background-repeat: no-repeat;

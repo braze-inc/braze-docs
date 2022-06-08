@@ -1,11 +1,12 @@
 ---
 nav_title: Conditional Messaging Logic
+article_title: Conditional Liquid Messaging Logic
 page_order: 6
 description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
+
 ---
 
-# Conditional Messaging Logic (Tags)
-
+# Conditional messaging logic (tags)
 
 [Tags][7] allow you to include programming logic in your messaging campaigns.
 
@@ -16,12 +17,10 @@ A tag must be wrapped in `{% %}`.
 Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% alert tip %}
-To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your Liquid syntax.
-
-
+To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you've correctly formatted your Liquid syntax. Green formatting can help identiy tags, while purple formatting highlights areas that contain personalization.
+<br><br>
 If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
-
-
+<br><br>
 For example, add the following into the message field first:  
 {% raw %}
 ```liquid
@@ -31,8 +30,7 @@ For example, add the following into the message field first:
 ```
 
 Be sure it highlights in green, then replace the `X` with your chosen Liquid or Connected Content using the blue `+` in the message field corner, and the `0` with your desired value.
-
-
+<br><br>
 Then, add your message variations as you need them between the `else` conditionals:
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -44,8 +42,9 @@ Buy now! Would 5% off convince you?
 {% endraw %}
 {% endalert %}
 
-## Conditional Logic
-You can include many types of [intelligent logic within messages][1] -- one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+## Conditional logic
+
+You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -60,7 +59,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Step By Step Example
+### Step by step example
 
 In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
 
@@ -95,7 +94,7 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 {% endraw %}
 
-## Accounting For Null Attribute Values
+## Accounting for null attribute values
 
 Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
@@ -112,15 +111,25 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %}
 
-![NullValues][36]
+![][36]
 
-## Referencing Custom Attributes
+{% raw %}
+```liquid
+{% if ${first_name} == blank %}
+We're having a sale! Hurry up and get 10% off all items today only!
+{% else %}
+Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
+{% endif %}
+```
+{% endraw %}
+
+## Referencing custom attributes
 
 After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
 
-When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the examples listed below for each data type.
+When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 
-![Custom Attribute Data Type][20]{: style="max-width:80%;"}
+![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.][20]{: style="max-width:80%;"}
 
 {% alert tip %}
 Strings and arrays require straight apostrophes around them, while booleans and integers will never have apostrophes.

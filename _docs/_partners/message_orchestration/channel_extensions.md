@@ -1,11 +1,13 @@
 ---
 nav_title: Channel Extensions
-page_order: 8
+article_title: Channel Extension Partners
+page_order: 2
 
 page_type: landing
 description: "These partners allow you to expand your messaging strategy and connect or target across custom channels."
 
 layout: partner_page
+search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
@@ -30,6 +32,20 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-  
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
+- name: Shopify
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+- name: Knak
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
+- name: Extole
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
+
 ---
 

@@ -1,17 +1,17 @@
 ---
 nav_title: March
 page_order: 10
-no_index: true
+noindex: true
 page_type: update
 description: "This article contains release notes for March 2018."
 ---
 # March 2018
 
-## Link Templates
+## Link templates
 
-You can now [create templates that append parameters][91] or pre-append URI's to all links in an email message. Want to append Google Analytics query parameters to all links? Go for it!
+You can now create [templates that append parameters][91] or pre-append URI's to all links in an email message. Want to append Google Analytics query parameters to all links? Go for it!
 
-## Universal APNs Certificates for Development Builds
+## Universal APNs certificates for development builds
 
 You can now [configure your APNs certificate][90] to be used for your development environment.
 

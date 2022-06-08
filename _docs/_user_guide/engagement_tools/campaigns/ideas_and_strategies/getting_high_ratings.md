@@ -1,19 +1,15 @@
 ---
 nav_title: Getting High Ratings
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Getting High Ratings
 page_order: 5
-
 page_type: reference
 description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
 tool:
-- Segments
-- Campaigns
-channel:
-- in-app messages
-- news feed
+  - Campaigns
+  
 ---
-# Getting High Ratings
+
+# Getting high ratings
 
 > This reference article discusses best practices when using Braze to drive your customer platforms toward success.
 > <br>
@@ -22,9 +18,9 @@ channel:
 
 Getting five-star ratings in the app store is on every mobile marketer's wish list because it drives downloads and makes your app stand out among the millions. Achieving positive reviews, however, is no easy task because it requires extra work by your users. Learn how to ask users for ratings the right way.
 
-## Best Practices
+## Best practices
 
-### Target Power Users
+### Target power users
 
 To ensure higher ratings, ask only your power users to review you in the app store. They are more likely to have great things to say. Although they differ from app to app, power users tend to have:
 
@@ -32,21 +28,23 @@ To ensure higher ratings, ask only your power users to review you in the app sto
 - Used the app recently
 - Spent money and made purchases
 
-For instance, you could create the following segment:
+For instance, you could create a segment named "Power users" with the following filters:
+- Has used these apps more than 10 times in the last 14 days
+- Has spent more than 50 dollars
 
-![Segment][6]
+![][6]
 
-### Ask at the Right Time
+### Ask at the right time
 
 Visiting the app store website takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code.
 
-Our page on [Data Opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. In addition, our [guide on user conversions][8] includes tips on associating your messaging with positive moments.
+Our article on [data opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. In addition, our guide on [user conversions][8] includes tips on associating your messaging with positive moments.
 
-### Use Non-intrusive Messaging Channels
+### Use non-intrusive messaging channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multi-channel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
+Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multichannel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
 
-![In-app message][9]
+![In-app message located at the bottom of a mobile device screen that reads: "If you like what you see, take a moment to rate us in the app store!".][9]
 
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}

@@ -1,20 +1,16 @@
 ---
-nav_title: "Content Card Objects"
+nav_title: "Content Card Object"
+article_title: Content Card Messaging Object
 page_order: 4
-
 page_type: reference
-
-channel: Content Cards
-platform: API
-tool:
-  - Campaigns
-  - Canvas
-
+channel: content cards
 description: "This article explains the different components of Braze's Content Card object."
----
-# Content Card Object
 
-The Content Card Object allows you to modify or create Content Cards via our messaging endpoints.
+---
+
+# Content Card object specification
+
+The `content_card` object allows you to modify or create Content Cards via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Body
 

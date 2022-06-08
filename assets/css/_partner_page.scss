@@ -107,7 +107,7 @@
       -webkit-appearance: textfield;
       outline-offset: -2px;
       touch-action: manipulation;
-      background-image: url(/docs/assets/img/search_black_shark.svg);
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg);
       background-position: left 10px top 14px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
@@ -127,7 +127,7 @@
         font-size: 14px;
         display: inline-block;
 
-        background-image: url(/docs/assets/img/dropdown.svg);
+        background-image: url(#{$base_url}/assets/img/dropdown.svg);
         background-position: right 10px top 14px;
         background-size: 14px 14px;
         background-repeat: no-repeat;

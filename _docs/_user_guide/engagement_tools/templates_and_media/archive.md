@@ -1,27 +1,29 @@
 ---
 nav_title: Archive Templates
+article_title: Archive Templates
 page_order: 4
-
 page_type: reference
-description: "This reference article covers how to archive templates in the templates and media section of the Braze Dashboard."
+description: "This reference article covers how to archive templates in the templates and media section of the Braze dashboard."
 tool: 
-- Templates
-- Media
+  - Templates
+  - Media
+
 ---
-# How to Archive Templates in Templates & Media
+# Archive Templates in Templates & Media
 
-> Archiving templates can help better organize and manage your templates. This reference article covers how to archive templates in the **Templates & Media** section of the Braze Dashboard.
+> Archiving templates can help better organize and manage your templates. This reference article covers how to archive templates in the **Templates & Media** section of the Braze dashboard.
 
-### Archive an individual Template
-![template_archive_cog][10]{: style="float:right;max-width:20%;margin-left:15px;"}
-Archiving an individual template can be achieved by clicking the cog located on the template grid screen and selecting `Archive`.
+## Archive an individual template
 
+![Expanded settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option highlighted.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-### Archive multiple Templates
-Archiving multiple templates can be achieved by selecting the checkbox next to the template name.  Select multiple templates and then click the "Archive" button that appears.  Archived templates can be found clicking the "Archived".  
+To archive an individual template, click the settings icon on the template grid screen and select **Archive**.
 
-![archive_multiple_template][11]
+## Archive multiple templates
 
+To archive multiple templates, select the checkbox next to each template that you want to archive. After you've selected multiple templates, click **Archive Selected**. You can find your archived templates by selecting **Archived** under **Show** in the template grid.
+
+![Saved Drop & Drop Email Templates section that shows two selected templates: "Try Premium Template" and "Welcome Template". The "Archive Selected" button is highlighted by the user.][11]
 
 {% alert important %}
 Archiving is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
@@ -29,4 +31,4 @@ Archiving is not currently available for [Link Templates]({{site.baseurl}}/user_
 
 
 [10]: {% image_buster /assets/img/template_archive_cog.png %}
-[11]: {% image_buster /assets/img/archive_multiple_template.gif %}
+[11]: {% image_buster /assets/img/archive_multiple_template.png %}

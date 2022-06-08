@@ -1,24 +1,19 @@
 ---
-nav_title: "Windows Objects"
+nav_title: "Windows Object"
+article_title: Windows Messaging Object
 page_order: 14
-
 page_type: reference
-
-channel: Push
+channel: push
 platform:
-  - API
   - Windows Universal
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article lists and explains the different Windows objects used at Braze."
+
 ---
-# Windows Objects
+# Windows object specification
 
-These objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content.
+The `windows_phone8_push` and `windows_universal_push` objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
-## Windows Phone 8 Push Object
+## Windows Phone 8 push object
 
 ```json
 {
@@ -31,9 +26,9 @@ These objects are used to define or request information related to Windows Phone
 }
 ```
 
-##  Windows Universal Push Object
+## Windows Universal push object
 
-See the Windows Universal [toast template catalog][32] for details on the options for `push_type` below.
+See the Windows Universal [toast template catalog][32] for details on the options for `push_type`.
 
 ```json
 {
@@ -47,7 +42,7 @@ See the Windows Universal [toast template catalog][32] for details on the option
 }
 ```
 
-For more information on using the `extra_launch_string` parameter for deep linking, see [Deep Linking with Windows Universal.][37] For information regarding what a deep link is, please see our [FAQ Section][38].
+For more information on using the `extra_launch_string` parameter for [deep linking][38], see [Deep Linking with Windows Universal.][37]
 
 [32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app

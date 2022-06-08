@@ -1,14 +1,12 @@
 ---
 page_order: 0
 nav_title: Introduction
+article_title: Braze User Guide
 layout: user_guide
+
 user_top_header: "Braze User Guide"
-user_top_text: "Meet us at the intersection of art and science. Find us in the moment,
-or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
-we aim to create strong bonds between you and your customers or users."
-description: "Meet us at the intersection of art and science. Find us in the moment,
-or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
-we aim to create strong bonds between you and your customers or users."
+user_top_text: "Meet us at the intersection of art and science. Find us in the moment or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze, we aim to create strong bonds between you and your customers or users."
+description: "Meet us at the intersection of art and science. Find us in the moment or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze, we aim to create strong bonds between you and your customers or users."
 
 user_menu_list:
   - name: Manage Your Braze Account
@@ -32,18 +30,19 @@ popular_topic_list:
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-  - name: Braze Currents
-    link: /docs/user_guide/data_and_analytics/braze_currents/
-  - name: Customize In-App Messages
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  - name: Custom Attributes
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
   - name: Managing User Subscriptions
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/ 
+  - name: Custom Attributes
+    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+  - name: Customize In-App Messages
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+  - name: Liquid
+    link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   - name: Making an API Call
     link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   - name: Message Engagement Events
     link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
-  - name: Supported Personalization Tags
-    link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+
 ---

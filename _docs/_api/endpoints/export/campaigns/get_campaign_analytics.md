@@ -1,16 +1,15 @@
 ---
 nav_title: "GET: Campaign Analytics"
+article_title: "GET: Campaign Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Segments
 description: "This article outlines details about the Get Campaign Analytics endpoint."
+
 ---
 {% api %}
-# Campaign Analytics Endpoint
+# Campaign analytics endpoint
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}
@@ -19,7 +18,11 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -28,7 +31,7 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request 
+## Example request 
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
@@ -38,7 +41,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 
 ## Response
 
-### Multi-Channel Response
+### Multichannel response
 
 ```json
 Content-Type: application/json
@@ -57,16 +60,16 @@ Authorization: Bearer YOUR-REST-API-KEY
                       "total_opens" : (int),
                       "bounces" : (int),
                       "body_clicks" : (int)
-                      "revenue": 0,
-                      "unique_recipients": 1,
-                      "conversions": 0,
-                      "conversions_by_send_time": 0,
-                      "conversions1": 0,
-                      "conversions1_by_send_time": 0,
-                      "conversions2": 0,
-                      "conversions2_by_send_time": 0,
-                      "conversions3": 0,
-                      "conversions3_by_send_time": 0,
+                      "revenue": (optional, float),
+                      "unique_recipients": (int),
+                      "conversions": (int),
+                      "conversions_by_send_time": (optional, int),
+                      "conversions1": (optional, int),
+                      "conversions1_by_send_time": (optional, int),
+                      "conversions2": (optional, int),
+                      "conversions2_by_send_time": (optional, int),
+                      "conversions3": (optional, int),
+                      "conversions3_by_send_time": (optional, int),
                       "carousel_slide_[NUM]_[TITLE]_click": (optional, int),
                       "notif_button_[NUM]_[TITLE]_click": (optional, int)
                     }
@@ -109,6 +112,29 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "opt_out" : (int),
                     "help" : (int)
                   }
+                ],
+                "content_cards" : [
+                  { 
+                    "variation_name": "Variant 1", 
+                    "variation_api_id": (string), 
+                    "sent": (int), 
+                    "total_impressions": (int), 
+                    "unique_impressions": (int),
+                    "total_clicks": (int), 
+                    "unique_clicks": (int), 
+                    "total_dismissals": (int), 
+                    "unique_dismissals": (int), 
+                    "revenue": (optional, float), 
+                    "unique_recipients": (int), 
+                    "conversions": (int), 
+                    "conversions_by_send_time": (optional, int), 
+                    "conversions1": (optional, int), 
+                    "conversions1_by_send_time": (optional, int), 
+                    "conversions2": (optional, int), 
+                    "conversions2_by_send_time": (optional, int), 
+                    "conversions3": (optional, int), 
+                    "conversions3_by_send_time": (optional, int) 
+                  }
                 ]
               },
            "conversions_by_send_time": (optional, int),
@@ -128,7 +154,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Multivariate Response
+### Multivariate response
 
 ```json
 Content-Type: application/json
@@ -203,10 +229,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `apple_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push` above.
+Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push`.
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

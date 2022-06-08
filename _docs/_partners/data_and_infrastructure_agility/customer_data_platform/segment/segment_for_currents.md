@@ -1,52 +1,77 @@
 ---
 nav_title: Segment for Currents
+article_title: Segment for Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
 
 ---
 
-# About Segment & Currents  
+# Segment for Currents  
 
-{% include video.html id="RfOHfZ34hYM" align="right" %}
+> [Segment](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This article will give an overview of the connection between Braze Currents and Segment and describe requirements and processes for proper implementation and usage.
 
-> [Segment](https://segment.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+The Braze and Segment integration allows you to leverage Braze Currents to export your Braze events to Segment to drive deeper analytics into conversions, retention, and product usage. 
 
-To get started, find the following information from your Segment dashboard:
+## Prerequisites
 
--   Segment Write Key
+| Requirement | Description |
+| ----------- | ----------- |
+| Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
+| Braze destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Currents | In order to export data back into Segment, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-Add this information to the Segment integration page on the dashboard, and press save.
+## Integration
 
-![Segment]({% image_buster /assets/img_archive/currents-segment-edit.png %})
+### Step 1: Obtain Segment write key
 
-{% alert important %}
-It's important to keep your Segment API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+1. In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
+2. In Braze, navigate to **Currents > + Create Currents > Create Segment Export**.
+3. Next, provide an integration name, contact email, and Segment write key.
+
+![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, and API key.][1]
+
+{% alert warning %}
+It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
+### Step 2: Export message engagement events 
 
-Segment's documentation is available [here](https://segment.com/docs/sources/cloud-apps/appboy/).
+Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-## Integration Details
+![List of all available message engagement events on the Segment Currents page in Braze.][2]
+
+Lastly, select **Launch Current**.
+
+{% alert warning %}
+If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different app groups. Because the Braze Segment Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 
+{% endalert %}
+
+To read more, visit Segments [documentation](https://segment.com/docs/sources/cloud-apps/appboy/).
+
+## Data configuration
+
+{% tabs %}
+{% tab Export events %}
 
 You can export the following data from Braze to Segment:
 
-| Event Name | Description |
+| Event name | Description |
 | ----- | ----- |
 | Push Notification Sent         | A push notification was successfully sent. |
 | Push Notification Tapped       | User opened a push notification. |
 | Push Notification Bounced      | Braze was not able to send a push notification to this User. |
 | iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. |
 | Email Sent                     | An email was successfully sent. |
-| Email Delivered                | An email was successfully delivered to a User’s mail server. |
+| Email Delivered                | An email was successfully delivered to a User's mail server. |
 | Email Opened                   | User opened an email. |
 | Email Link Clicked             | User clicked a link in an email. Email click tracking must be enabled. |
-| Email Bounced                  | Braze attempted to send an email, but the User’s receiving mail server did not accept it. |
-| Email Soft Bounced             | Braze attempted to send an email, but the User’s receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) |
+| Email Bounced                  | Braze attempted to send an email, but the User's receiving mail server did not accept it. |
+| Email Soft Bounced             | Braze attempted to send an email, but the User's receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) |
 | Email Marked As Spam           | User marked an email as spam. |
 | Email Unsubscribed             | User clicked the unsubscribe link in an email. |
 | SMS Sent                       | An SMS was sent. |
@@ -73,6 +98,9 @@ You can export the following data from Braze to Segment:
 | Application Uninstalled        | User uninstalled the App. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% endtab %}
+{% tab Export properties %}
+
 The following properties will be included with all Braze Events sent to Segment:
 
 | Property Name          | Type     | Description |
@@ -87,18 +115,27 @@ The following properties will be included with all Braze Events sent to Segment:
 | `canvas_name`          | `String` | The name of the Canvas associated with the event, if applicable. |
 | `canvas_variation_id`  | `String` | The API Identifier of the Canvas Variation associated with the event, if applicable.                           |
 | `canvas_step_id`       | `String` | The API Identifier of the Canvas Step associated with the event, if applicable. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+The following properties will be included with specific Braze events sent to Segment:
+
+| Property Name          | Type     | Description |
+| ---------------------- | -------- | ----        |
 | `in_control_group`     | `String` | For Canvas Entered events, whether or not the user was enrolled in the control group - always either `true` or `false` |
 | `context.traits.email` | `String` | For Email events, the email address that the email was sent to. |
 | `link_url`             | `String` | For Email Clicked events, the URL of the link that the user clicked on. |
 | `button_id`            | `String` | For In-App Message Clicked events, the index of the button the user clicked on. |
 | `card_id`              | `String` | For News Feed Card and Content Card events, the API Identifier of the Card. |
 | `subscription_group_id` | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group. |
-| `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'. |
+| `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either `Subscribed` or `Unsubscribed`. |
+| `user_agent`  | `String` |  For Email Click and Email Open events, description of the user’s system and browser for the event. |
+| `link_id`  | `String` | For Email Click events, Unique value generated by Braze for the URL. Null unless Link Aliasing is enabled. |
+| `link_alias`  | `String` | For Email Click events, alias name set when the message was sent. Null unless Link Aliasing is enabled. |
+| `machine_open`  | `String` | For Email Open events, indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently `true` or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert update %}
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+{% endtab %}
+{% endtabs %}
 
-_Update noted in August 2019._
-{% endalert %}
-
+[1]: {% image_buster /assets/img/segment/segment_currents1.png %}
+[2]: {% image_buster /assets/img/segment/segment_currents.png %}

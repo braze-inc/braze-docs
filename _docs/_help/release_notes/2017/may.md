@@ -1,7 +1,7 @@
 ---
 nav_title: May
 page_order: 8
-no_index: true
+noindex: true
 page_type: update
 description: "This article contains release notes for May 2017."
 ---
@@ -9,45 +9,47 @@ description: "This article contains release notes for May 2017."
 # May 2017
 
 ## Update to Internal Groups
+
 We’ve added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here][43].
 
-## Update to Tags
-You can now nest your Segment Tags to help better organize your dashboard. Learn more about Segment Tags [here][42].
+## Update to tags
 
-## Update to In-App Messages Configuration
-You can now customize the dismissal of in-app messages to a specific duration of time, allowing you to further personalize your messaging to your customers. Learn more about creating in-app messages [here][41].
+You can now nest your Segment Tags to help better organize your dashboard. Learn more about [Segment Tags][42].
 
-## Update to Template Galleries
-We’ve consolidated all templates and image under the tab “Templates & Media” in Braze to streamline your marketing process. Learn more about templates [here][40].
+## Update to in-app messages configuration
 
-> Update: The Templates & Media page also houses link templates.
+You can now customize the dismissal of in-app messages to a specific duration of time, allowing you to further personalize your messaging to your customers. Learn more about [creating in-app messages][41].
 
-## Push Action Buttons
+## Update to template galleries
 
-You can now increase your engagement by using push action buttons to give your users contextual choices that simplify their busy lives. Learn more about best practices for push notifications [here][39].
+We’ve consolidated all [templates][40] and image under the tab **Templates & Media** in Braze to streamline your marketing process. The **Templates & Media** page also houses link templates.
 
-## Update to Liquid Personalization
+## Push action buttons
 
-We’ve simplified Liquid personalization with a pop up that allows you to easily insert customer data into your messages. Learn more about Liquid personalization [here][38].
+You can now increase your engagement by using push action buttons to give your users contextual choices that simplify their busy lives. Learn more about best practices for [push notifications][39].
 
-## Dashboard UI Updates
+## Update to Liquid personalization
 
-Now, you will see only the statistics that are relevant to you with a table at the bottom of your dashboard on campaign targeting and segment details pages, enabling you to better build and track who is receiving your campaigns and how they're doing. Learn more about targeting and engagement reporting [here][37].
+We’ve simplified Liquid personalization with a pop up that allows you to easily insert customer data into your messages. Learn more about [Liquid personalization][38].
 
-## New Quota Alerts for IP Warming
+## Dashboard UI updates
 
-We now have an alert to let you know when you’ve reached your quota depending on your IP warming schedule, making sure you never go off track. Learn more about IP warming [here][36].
+Now, you will see only the statistics that are relevant to you with a table at the bottom of your dashboard on campaign targeting and segment details pages, enabling you to better build and track who is receiving your campaigns and how they're doing. Learn more about [targeting and engagement reporting][37].
 
-## Canvas Data in Engagement Reports
+## New quota alerts for IP warming
 
-Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about Engagement Reports [here][35].
+We now have an alert to let you know when you’ve reached your quota depending on your IP warming schedule, making sure you never go off track. Learn more about [IP warming][36].
+
+## Canvas data in Engagement Reports
+
+Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about [Engagement Reports][35].
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
-[36]: {{site.baseurl}}/help/best_practices/email/#what-is-ip-warming
+[36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [37]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/
 [38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
-[39]: {{site.baseurl}}/help/best_practices/push/
+[39]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [40]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
 [41]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [42]: {{site.baseurl}}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags

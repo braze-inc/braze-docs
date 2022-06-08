@@ -1,82 +1,105 @@
 ---
-nav_title: Creating A Churn Prediction
-title: Creating A Churn Prediction
-description: "his article covers how to create a Churn Prediction within the Braze dashboard"
+nav_title: Creating a Churn Prediction
+article_title: Creating a Churn Prediction
+description: "This article covers how to create a Churn Prediction within the Braze dashboard"
 page_order: 1
-Tool:
-  - Dashboard
+
 ---
 
-# Creating A Churn Prediction
+# Creating a Churn Prediction
 
-### Step 1: Create a New Prediction
-On the left navigation bar of the Braze dashboard, choose the __Predictions__ page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
+## Step 1: Create a new prediction
 
-To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
+On the left navigation bar of the Braze dashboard, choose the **Predictions** page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
-{% alert note %}
-There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is 1 active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
-{% endalert %}
-
-On the Edit page, give your new Prediction a unique name.
-
-### Step 2: Define Churn
-In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
-
-To implement this example, enter 7 days in the time window at the top of the panel.
-
-![Churn 1][1]
-
-Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select "do not" and "start a session". You can combine other filters with "and" and "or" as you see fit to create the definition you need. Uninstalling, making or not making purchases, or performing or not performing particular custom events are other filters that can be included.
-
-Interested in some potential churn definitions to consider? You’ll find some inspiration [here](#sample-definitions).
-
-### Step 3: Filter Your Prediction Audience
-
-Your Prediction Audience is the group of users you want to target to keep from churning. Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
+To create a new Prediction, choose **Create Prediction** and select a new **Churn Prediction**.
 
 {% alert note %}
-The Prediction Audience cannot exceed 40 million users.
+There is a limit of three concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your account manager for details.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 30 days minus the number of days of the window specified__ in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+On the **Basics** page, give your new Prediction a unique name. You can also provide an optional description to take any notes on this particular Prediction.
 
-For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
+Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
 
-### Step 4: Choose the Update Frequency for Churn Predictions
+## Step 2: Define churn
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
+In the **Churn Definition** panel, use the provided filters to specify how you define user churn for your business. In other words, what does a user have to do in what time frame for you to consider them churned?
 
-![Churn 2][2]
+Remember, you don’t need to explain what behaviors might precede churn—only what makes a user a churned user. Think of this in terms of something a user either does once (`do`) or stops doing (`do not`) that constitutes churning. For example, you might consider users who haven’t opened your app in 7 days to be churned. You might consider uninstalling, or custom events like unsubscribing, disabling an account, or others to cause a user to become churned. 
+
+#### Churn Window
+
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+
+Here's an example of a simple definition based on lapsing sessions in the last 7 days.
+
+![Churn Definition where a user is considered churned if they do not start a session in 7 days][1]
+
+For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
 {% alert note %}
-Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager. 
+For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
 {% endalert %}
 
-### Step 5: Build Prediction
-Verify that the details you’ve provided are correct, and choose “Build Prediction.” You can also save your changes in draft form by selecting “Save As Draft” to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the Prediction has enough data to learn from.
+
+## Step 3: Filter your prediction audience
+
+Your Prediction Audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this Prediction will create Churn Risk Scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+
+{% alert note %}
+The Prediction Audience cannot exceed 100 million users.
+{% endalert %}
+
+For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+
+#### Full Filter Mode
+
+In order to build a new Prediction immediately, only a subset of Braze segmentation filters are supported. Full Filter Mode allows you to use all Braze filters but will require one Churn Window to build the Prediction. For example, if the Churn Window is set to 15 days, it will take 15 days to collect the user data and build the Prediction when using filters only supported in Full Filter Mode. Additionally, some estimates about audience sizes will not be available in Full Filter Mode.
+
+For a sample list of Prediction Audience definitions, check out our sample definitions in the following section on [Sample churn definitions](#sample-definitions).
+
+![][3]
+
+Just like the previous page, the bottom panel will show you the estimated number of historic users that result from your Churn definition and Prediction Audience definition. These estimates must meet the minimum requirements shown in order to create a Prediction.
+
+## Step 4: Choose the update frequency for Churn Predictions
+
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Select the **maximum frequency of updates** that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
+
+![Prediction Update Schedule set to daily at 5pm.][2]
+
+{% alert note %}
+Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your account manager. 
+{% endalert %}
+
+## Step 5: Build prediction
+
+Verify that the details you’ve provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. Once you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
-The Prediction will be rebuilt ("retrained") again every __two weeks automatically__ to keep it updated on the most recent data available. Note that this is a separate process from when users' Churn Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
+The Prediction will be rebuilt ("retrained") again every **two weeks automatically** to keep it updated on the most recent data available. Note that this is a separate process from when users' Churn Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
 
-## Sample Churn and Prediction Audience Definitions {#sample-definitions}
+## Sample churn and prediction audience definitions {#sample-definitions}
 
-__Sample Churn Definitions__<br>
-- “Within 7 days, did custom event ‘Subscription Cancellation’”<br>
-- “Within 14 days, did custom event ‘Trial Expired’”<br>
-- “Within 1 day did uninstall.” <br>
-- “Within 14 days did not Make a Purchase.” <br>
+**Sample Churn Definitions**<br>
+- “Within 7 days, do custom event ‘Subscription Cancellation’”<br>
+- “Within 14 days, do custom event ‘Trial Expired’”<br>
+- “Within 1 day do uninstall.” <br>
+- “Within 14 days do not Make a Purchase.” <br>
 
-For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br>
-- __Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago__<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
-- __Uninstallers__<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
-- __Those at Risk of Not Purchasing as a Definition of Churn__<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
+For the Churn definitions we outlined, there might be some corresponding Prediction Audience definitions:<br>
+- **Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago**<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
+- **Uninstallers**<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
+- **Those at Risk of Not Purchasing as a Definition of Churn**<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
 
-## Archived Predictions
+## Archived predictions
 
 Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
+[3]: {% image_buster /assets/img/churn/churn5.png %}
 

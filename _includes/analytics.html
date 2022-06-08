@@ -3,16 +3,23 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W8DKT4D');</script>
+})(window,document,'script','dataLayer','{{site.gta_tag_key}}');</script>
 {% comment %} End Google Tag Manager {% endcomment %}
 
+{% comment %} Braze Web SDK {% endcomment %}
 <script type="text/javascript">
-  +function(a,p,P,b,y){appboy={};appboyQueue=[];for(var s="initialize destroy getDeviceId toggleAppboyLogging setLogger openSession changeUser requestImmediateDataFlush requestFeedRefresh subscribeToFeedUpdates requestContentCardsRefresh subscribeToContentCardsUpdates logCardImpressions logCardClick logCardDismissal logFeedDisplayed logContentCardsDisplayed logInAppMessageImpression logInAppMessageClick logInAppMessageButtonClick logInAppMessageHtmlClick subscribeToNewInAppMessages removeSubscription removeAllSubscriptions logCustomEvent logPurchase isPushSupported isPushBlocked isPushGranted isPushPermissionGranted registerAppboyPushMessages unregisterAppboyPushMessages submitFeedback trackLocation stopWebTracking resumeWebTracking wipeData ab ab.DeviceProperties ab.User ab.User.Genders ab.User.NotificationSubscriptionTypes ab.User.prototype.getUserId ab.User.prototype.setFirstName ab.User.prototype.setLastName ab.User.prototype.setEmail ab.User.prototype.setGender ab.User.prototype.setDateOfBirth ab.User.prototype.setCountry ab.User.prototype.setHomeCity ab.User.prototype.setLanguage ab.User.prototype.setEmailNotificationSubscriptionType ab.User.prototype.setPushNotificationSubscriptionType ab.User.prototype.setPhoneNumber ab.User.prototype.setAvatarImageUrl ab.User.prototype.setLastKnownLocation ab.User.prototype.setUserAttribute ab.User.prototype.setCustomUserAttribute ab.User.prototype.addToCustomAttributeArray ab.User.prototype.removeFromCustomAttributeArray ab.User.prototype.incrementCustomUserAttribute ab.User.prototype.addAlias ab.User.prototype.setCustomLocationAttribute ab.InAppMessage ab.InAppMessage.SlideFrom ab.InAppMessage.ClickAction ab.InAppMessage.DismissType ab.InAppMessage.OpenTarget ab.InAppMessage.ImageStyle ab.InAppMessage.TextAlignment ab.InAppMessage.Orientation ab.InAppMessage.CropType ab.InAppMessage.prototype.subscribeToClickedEvent ab.InAppMessage.prototype.subscribeToDismissedEvent ab.InAppMessage.prototype.removeSubscription ab.InAppMessage.prototype.removeAllSubscriptions ab.InAppMessage.Button ab.InAppMessage.Button.prototype.subscribeToClickedEvent ab.InAppMessage.Button.prototype.removeSubscription ab.InAppMessage.Button.prototype.removeAllSubscriptions ab.SlideUpMessage ab.ModalMessage ab.FullScreenMessage ab.HtmlMessage ab.ControlMessage ab.Feed ab.Feed.prototype.getUnreadCardCount ab.ContentCards ab.ContentCards.prototype.getUnviewedCardCount ab.Card ab.ClassicCard ab.CaptionedImage ab.Banner ab.ControlCard ab.WindowUtils display display.automaticallyShowNewInAppMessages display.showInAppMessage display.showFeed display.destroyFeed display.toggleFeed display.showContentCards display.hideContentCards display.toggleContentCards sharedLib".split(" "),i=0;i<s.length;i++){for(var m=s[i],k=appboy,l=m.split("."),j=0;j<l.length-1;j++)k=k[l[j]];k[l[j]]=(new Function("return function "+m.replace(/\./g,"_")+"(){appboyQueue.push(arguments); return true}"))()}appboy.getUser=function(){return new appboy.ab.User};appboy.getCachedFeed=function(){return new appboy.ab.Feed};appboy.getCachedContentCards=function(){return new appboy.ab.ContentCards};(y=p.createElement(P)).type='text/javascript';y.src='https://js.appboycdn.com/web-sdk/2.3/appboy.min.js';y.async=1;(b=p.getElementsByTagName(P)[0]).parentNode.insertBefore(y,b)}(window,document,'script');
+  +function(a,p,P,b,y){a.braze={};a.brazeQueue=[];for(var s="BrazeSdkMetadata DeviceProperties Card Card.prototype.dismissCard Card.prototype.removeAllSubscriptions Card.prototype.removeSubscription Card.prototype.subscribeToClickedEvent Card.prototype.subscribeToDismissedEvent Card.fromContentCardsJson Banner CaptionedImage ClassicCard ControlCard ContentCards ContentCards.prototype.getUnviewedCardCount Feed Feed.prototype.getUnreadCardCount ControlMessage InAppMessage InAppMessage.SlideFrom InAppMessage.ClickAction InAppMessage.DismissType InAppMessage.OpenTarget InAppMessage.ImageStyle InAppMessage.Orientation InAppMessage.TextAlignment InAppMessage.CropType InAppMessage.prototype.closeMessage InAppMessage.prototype.removeAllSubscriptions InAppMessage.prototype.removeSubscription InAppMessage.prototype.subscribeToClickedEvent InAppMessage.prototype.subscribeToDismissedEvent InAppMessage.fromJson FullScreenMessage ModalMessage HtmlMessage SlideUpMessage User User.Genders User.NotificationSubscriptionTypes User.prototype.addAlias User.prototype.addToCustomAttributeArray User.prototype.addToSubscriptionGroup User.prototype.getUserId User.prototype.incrementCustomUserAttribute User.prototype.removeFromCustomAttributeArray User.prototype.removeFromSubscriptionGroup User.prototype.setCountry User.prototype.setCustomLocationAttribute User.prototype.setCustomUserAttribute User.prototype.setDateOfBirth User.prototype.setEmail User.prototype.setEmailNotificationSubscriptionType User.prototype.setFirstName User.prototype.setGender User.prototype.setHomeCity User.prototype.setLanguage User.prototype.setLastKnownLocation User.prototype.setLastName User.prototype.setPhoneNumber User.prototype.setPushNotificationSubscriptionType InAppMessageButton InAppMessageButton.prototype.removeAllSubscriptions InAppMessageButton.prototype.removeSubscription InAppMessageButton.prototype.subscribeToClickedEvent automaticallyShowInAppMessages destroyFeed hideContentCards showContentCards showFeed showInAppMessage toggleContentCards toggleFeed changeUser destroy getDeviceId initialize isPushBlocked isPushPermissionGranted isPushSupported logCardClick logCardDismissal logCardImpressions logContentCardsDisplayed logCustomEvent logFeedDisplayed logInAppMessageButtonClick logInAppMessageClick logInAppMessageHtmlClick logInAppMessageImpression logPurchase openSession requestPushPermission removeAllSubscriptions removeSubscription requestContentCardsRefresh requestFeedRefresh requestImmediateDataFlush enableSDK isDisabled setLogger setSdkAuthenticationSignature addSdkMetadata disableSDK subscribeToContentCardsUpdates subscribeToFeedUpdates subscribeToInAppMessage subscribeToSdkAuthenticationFailures toggleLogging unregisterPush wipeData handleBrazeAction".split(" "),i=0;i<s.length;i++){for(var m=s[i],k=a.braze,l=m.split("."),j=0;j<l.length-1;j++)k=k[l[j]];k[l[j]]=(new Function("return function "+m.replace(/\./g,"_")+"(){window.brazeQueue.push(arguments); return true}"))()}window.braze.getCachedContentCards=function(){return new window.braze.ContentCards};window.braze.getCachedFeed=function(){return new window.braze.Feed};window.braze.getUser=function(){return new window.braze.User};(y=p.createElement(P)).type='text/javascript';
+    y.src='https://js.appboycdn.com/web-sdk/4.0/braze.min.js';
+    y.async=1;(b=p.getElementsByTagName(P)[0]).parentNode.insertBefore(y,b)
+  }(window,document,'script');
+  
+(function(){
 
-appboy.initialize('{{ site.api_key }}', {
+braze.initialize('{{ site.api_key }}', {
   enableLogging: false,
   allowUserSuppliedJavascript: true,
-  sessionTimeoutInSeconds: 300
+  sessionTimeoutInSeconds: 300,
+  baseUrl: 'sdk.iad-01.braze.com'
 });
 var app_valid_paths = {
   'docs' : true
@@ -28,53 +35,53 @@ function section_replace(removestr,valid_paths){
   return removestr.replace(new RegExp(reg_str),'')
 
 }
-appboy.display.automaticallyShowNewInAppMessages();
-
+braze.automaticallyShowInAppMessages();
 
 var testfeed = true;
 
 // Fallback to show content cards upon update
-appboy.subscribeToContentCardsUpdates(function(feed) {
+braze.subscribeToContentCardsUpdates(function(feed) {
   if (feed.cards.length > 0 && testfeed) {
     $('#cc_prompt').show();
     testfeed = false;
   }
 });
 
-appboy.openSession(function() {
-  var paths = window.location.pathname.split('/');
-  if (paths.length > 2 ) {
-    var doc_base = paths[1].toLowerCase()
-    var val_path = app_valid_paths[doc_base];
-    if (val_path){
-      var section = section_replace(window.location.pathname,app_valid_paths);
-      appboy.logCustomEvent( doc_base + '_page', {
-        url: window.location.href,
-        section: section,
-        hash: window.location.hash,
-        anchor: window.location.hash.split('?')[0]
-      });
-    }
+braze.openSession();
+
+var paths = window.location.pathname.split('/');
+if (paths.length > 2 ) {
+  var doc_base = paths[1].toLowerCase();
+  var val_path = app_valid_paths[doc_base];
+  if (val_path){
+    var section = section_replace(window.location.pathname,app_valid_paths);
+    braze.logCustomEvent( doc_base + '_page', {
+      url: window.location.href,
+      section: section,
+      hash: window.location.hash,
+      anchor: window.location.hash.split('?')[0]
+    });
   }
-  // Test if there are any content cards
-  var curcards = appboy.getCachedContentCards();
-  if ('cards'  in curcards) {
-    if (curcards['cards'].length > 0  ) {
-      $('#cc_prompt').show();
-      testfeed = false;
-    }
-    // Currently no cache content card, refresh
-    else {
-      appboy.requestContentCardsRefresh();
-    }
+}
+// Test if there are any content cards
+var curcards = braze.getCachedContentCards();
+if ('cards' in curcards) {
+  if (curcards['cards'].length > 0) {
+    $('#cc_prompt').show();
+    testfeed = false;
   }
-});
+  // Currently no cache content card, refresh
+  else {
+    braze.requestContentCardsRefresh();
+  }
+}
 
-
-
-
-
+})();
 </script>
+{% comment %} End Braze Web SDK {% endcomment %}
+
+
+{% comment %} Marketo {% endcomment %}
 <script type="text/javascript">
 (function() {
   var didInit = false;
@@ -97,3 +104,4 @@ appboy.openSession(function() {
   document.getElementsByTagName('head')[0].appendChild(s);
 })();
 </script>
+{% comment %} End Marketo {% endcomment %}

@@ -3,6 +3,7 @@ nav_title: Account
 page_order: 1
 layout: dev_guide
 guide_top_header: "Account Help Articles"
+guide_top_text: "Check out the following help articles that clarify user permissions. <br><br> Looking for more information about your Braze account and dashboard administration? Read up on our articles in the <a href='/docs/user_guide/administrative/'>Administration</a> section!"
 
 page_type: landing
 description: "This landing page is home to help articles related to your Braze account."
@@ -13,5 +14,5 @@ guide_menu_list:
     link: /docs/help/help_articles/account/locked_out/
     fa_icon: fas fa-lock
 
-no_index: true
+noindex: true
 ---

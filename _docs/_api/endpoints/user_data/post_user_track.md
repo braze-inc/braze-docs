@@ -1,32 +1,32 @@
 ---
 nav_title: "POST: User Track"
+article_title: "POST: User Track"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the User Track Braze endpoint."
+
 ---
 {% api %}
-# User Track
+# User track
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/track
 {% endapimethod %}
 
 Use this endpoint to record custom events, purchases, and update user profile attributes.
 
-User Track has a base speed limit of 50,000 requests per minute for all customers. Each request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
-
-Please note that Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, check out our data point [documentation]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
+{% alert note %}
+Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='users track' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -43,7 +43,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
-### Request Parameters
+### Request parameters
+
+{% alert important %}
+For each of the request components listed in the following table, one of `external_id`, `user_alias`, or `braze_id` is required.
+{% endalert %}
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -52,16 +56,12 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert important %}
-For each of the request components listed above, one of `external_id`, `user_alias`, or `braze_id` is required.
-{% endalert %}
+Keep the following nuances in mind when using the `/users/track` endpoint:
 
-{% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
-- Updating the subscription status with this endpoint will not only update the user-specified by their `external_id` (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
-{% endalert %}
+- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
-## Example Request Body for Event Tracking
+## Example request body for event tracking
 
 ```json
 {
@@ -75,7 +75,7 @@ For each of the request components listed above, one of `external_id`, `user_ali
 }
 ```
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
@@ -119,9 +119,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Responses
 
-Upon using any of the aforementioned API requests you should receive one of the following three general responses:
+When using any of the aforementioned API requests, you should receive one of the following three general responses:
 
-### Successful Message
+### Successful message
 
 Successful messages will be met with the following response:
 
@@ -134,9 +134,9 @@ Successful messages will be met with the following response:
 }
 ```
 
-### Successful Message with Non-Fatal Errors
+### Successful message with non-fatal errors
 
-If your message is successful but has non-fatal errors such as one invalid Event Object out of a long list of events you will receive the following response:
+If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, then you will receive the following response:
 
 ```json
 {
@@ -149,9 +149,11 @@ If your message is successful but has non-fatal errors such as one invalid Event
 }
 ```
 
-### Message with Fatal Errors
+For success messages, any data that was not affected by an error in the `errors` array will still be processed. 
 
-In the case of a success, any data that was not affected by an error in the _errors_ array will still be processed. If your message has a fatal error you will receive the following response:
+### Message with fatal errors
+
+If your message has a fatal error, you will receive the following response:
 
 ```json
 {
@@ -164,9 +166,9 @@ In the case of a success, any data that was not affected by an error in the _err
 }
 ```
 
-### Fatal Error Response Codes
+### Fatal error response codes
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
+The following status codes and associated error messages will be returned if your request encounters a fatal error. The following error codes indicate that no data will be processed.
 
 | Error Code | Reason / Cause |
 | ---------------------| --------------- |
@@ -177,10 +179,37 @@ The following status codes and associated error messages will be returned if you
 | `5XX` | Internal server error, you should retry with exponential backoff. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-##  Importing Legacy User Data
+If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
+## Importing legacy user data
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.
+
+## Making bulk updates
+
+If you have a use case where you need to make batch updates to the `users/track` endpoint, we recommend adding the bulk update header so that Braze can properly identify, observe, and route your request.
+
+Refer to the following sample request with the `X-Braze-Bulk` header:
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'X-Braze-Bulk: true' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{ "attributes": [ ], "events": [ ], "purchases": [ ] }'
+```
+
+{% alert warning %}
+When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
+{% endalert %}
+
+### Use cases
+
+Consider the following use cases where you may use the bulk update header:
+
+- A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
+- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.
 
 {% endapi %}

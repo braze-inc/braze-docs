@@ -1,15 +1,16 @@
 ---
 nav_title: "Advanced Push Options"
+article_title: Advanced Push Options
 page_order: 5
 layout: featured
 
 page_type: landing
 channel: push
 
-description: "This landing page is a hub for several advanced Push options like Push stories and the Push action button."
+description: "This landing page is a hub for several advanced push options like Push Stories and push action buttons."
 
 guide_top_header: "Advanced Push Options"
-guide_top_text: "This landing page is a hub for several advanced Push options like Push stories and the Push action button."
+guide_top_text: "This landing page is a hub for several advanced push options like Push Stories and push action buttons."
 
 guide_featured_title: "Articles in this Section"
 guide_featured_list:

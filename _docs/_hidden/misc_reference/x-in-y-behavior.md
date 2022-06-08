@@ -21,15 +21,15 @@ The change will make the filter more intuitive and more consistent with the beha
 
 ## Example
 
-The campaign shown below sends at 9:00PM on April 16th. It's audience's segmentation is “Made More than 2 Purchases in the past 3 days”.
+The following campaign shown sends at 9pm on April 16. The audience's segmentation is “Made More than 2 Purchases in the past 3 days”.
 
 ![Campaign Schedule][1]
 
-9:00PM ET on April 16th is 1:00AM UTC on April 17th.
+9pm ET on April 16 is 1am UTC on April 17.
 
-April 17th would be day "0", April 16th would be day "1", April 15th would be day "2", and April 14th would be day "3".
+April 17 would be day "0", April 16 would be day "1", April 15 would be day "2", and April 14 would be day "3".
 
-The history from 12:00AM UTC on April 14th through the current time (1:00AM UTC on April 17th).
+The history from 12am UTC on April 14 through the current time (1am UTC on April 17).
 This would accumulate to a window that includes 73 hours of the user’s history.
 
 ## On Calendar Days
@@ -51,9 +51,9 @@ Calendar Days are used when you select "days" or "weeks" under `Frequency Cappin
 
 ### Company & Local Time
 
-The current Calendar Day in the company timezone counts as day `0`.
+The current Calendar Day in the company time zone counts as day `0`.
 
-`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company timezone or local timezone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
+`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company time zone or local time zone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
 
 If the Company or Local time is Pacific Time, and the user enters the Canvas step at 8:00PM PT on 4/13, Braze will schedule this Canvas step for 11:05 am PT on 4/14.
 

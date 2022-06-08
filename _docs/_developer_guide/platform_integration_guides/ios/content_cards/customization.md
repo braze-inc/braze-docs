@@ -1,36 +1,39 @@
 ---
-nav_title: Customization
-platform: iOS
 page_order: 2
-description: "This article covers customization options for your Content Cards in your iOS application."
+nav_title: Customization
+article_title: iOS Content Card Customization
+layout: featured
+
+platform: iOS
+
 channel:
   - content cards
 
+guide_top_header: "iOS Content Card Customization"
+guide_top_text: "Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. At Braze, we highlight three approaches to customization based on the associated level of effort and flexibility provided: crawl, walk, or run. Learn more about these <a href='/docs/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches'>customization approaches</a> in our user guide."
+description: "This landing page covers the Braze iOS SDK Content Card customization options."
+
+guide_featured_title: "Section Articles"
+guide_featured_list:
+  - name: Custom Styling
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
+    fa_icon: fa fa-paint-brush
+  - name: Customizing Feed
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/customizing_feed/
+    fa_icon: fa fa-cog
+  - name: Handling Clicks Manually
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
+    fa_icon: fa fa-mouse-pointer
+  - name: Read & Unread Indicators
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/
+    fa_icon: fa fa-book
+  - name: Badges
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/badges/
+    fa_icon: fa fa-id-badge
+  - name: Carousel View Use Case
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/
+    fa_icon: fa fa-arrows-h
+
+
 ---
-
-# Customization
-
-## Overriding Default Images
-
-{% alert important %}
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
-{% endalert %}
-
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in Content Cards include:
-
-- Placeholder image: `appboy_cc_noimage_lrg`.
-- Pinned icon image: `appboy_cc_icon_pinned`.
-
-Because Content Cards have a maximum size of **2kb** (including images, links, and all content) make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
-
-{% alert note %}
-Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes.
-{% endalert %}
-
-{% alert note %}
-Note that overriding default images is currently not supported in our Xamarin iOS integration.
-{% endalert %}
-
-## Customizing the Content Cards Feed
-
-You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom Storyboard that registers the new classes. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a more complete example. Alternatively, you can create a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/). In the latter case, you would need to log all view events, dismissed events, and clicks manually.
+<br><br>

@@ -1,32 +1,33 @@
 ---
 nav_title: Export Segment Data to CSV
+article_title: Export Segment Data to CSV
 page_order: 2
-
 page_type: reference
 description: "This reference article covers how to export segment data to CSV."
+
 ---
 
 # Exporting to CSV
 
-To request a CSV export of user data from a segment, click on the "User Data" button on the top-right side while editing a segment:
+To request a CSV export of user data from a segment, click the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
-![csvexport][1]
+![][1]
 
-You can also request a CSV export from the main Segments page by clicking the gear icon on the right side to access this dropdown menu:
+You can also request a CSV export from the main **Segments** page by clicking the <i class="fas fa-gear"></i> **Settings** dropdown for a segment:
 
-![csvexport2][2]
+![][2]
 
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by clicking the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
 {% alert important %} 
-Due to file size restrictions, your export may fail if your segment is too large (over 500,000 users). Consider using [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into 2 different segments, you can do so with the following filters:
+Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. If your file size is too large, consider using [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into 2 different segments, you can do so with the following filters:
 
 - Segment 1: Random bucket number is less than 5000 (includes 0-4999)
 - Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
 
 {% endalert %}
 
-If you have [linked your Amazon S3 credentials to Braze][26], then the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after 1 day of exporting and requires that you are logged into the dashboard to access it.
+If you have linked your [Amazon S3 credentials][26] to Braze, then the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after 1 day of exporting and requires that you are logged into the dashboard to access it.
 
 Data included in the exports:
 
@@ -34,7 +35,7 @@ Data included in the exports:
     - User ID
     - First Name
     - Last Name
-    - Timezone
+    - Time zone
     - City
     - Gender
     - Email Address
@@ -61,8 +62,8 @@ Data included in the exports:
     - Email Opt-in Date
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
-{% endalert %}
+For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
+{% endalert %} 
 
 [1]: {% image_buster /assets/img_archive/csvexport.png %}
 [2]: {% image_buster /assets/img_archive/csvexport2.png %}

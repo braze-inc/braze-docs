@@ -1,6 +1,6 @@
 ---
 nav_title: Custom Events
 config_only: true
-no_index: true
+noindex: true
 page_order: 3
 ---

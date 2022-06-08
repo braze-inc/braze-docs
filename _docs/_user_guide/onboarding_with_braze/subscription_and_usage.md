@@ -1,66 +1,118 @@
 ---
 nav_title: Subscriptions and Usage
+article_title: Dashboard Subscription and Usage
 alias: /subscription_and_usage/
 page_order: 4.1
-
 page_type: reference
 description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
 tool: Dashboard
+
 ---
 
-# Subscriptions and Usage
+# Subscriptions and usage
 
-The Subscriptions and Usage page can be found by selecting your account icon in the upper right corner of the Dashboard, and then selecting __Subscriptions and Usage__ from the dropdown. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
+To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
-## Subscription and Usage
+## Page contents
 
-### Usage Graphs
+### Usage graphs
 
-Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
-![Subscription and Usage][3]{: style="max-width:80%;"}
+![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
 
-Within these graphs, you will be able to find your yearly capacity for a specific type of usage, stats by month, stats by year, as well as a bar graph visualization of overall app group usage, color-coded by app group. These usage graphs also allow you to select and unselect app groups to isolate usage. Usage graphs like these are particularly helpful when trying to budget usage and get a deeper understanding of what app groups contribute to overall usage.
+Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
 
-{% alert tip %}
-Try dragging your mouse over the different color components for a data point count!
-{% endalert %}
-
-### Contract Details
+### Contract details
 
 Contract details list the start and end date of your current contract with Braze.
 
-## Most Used Data Points by App
+## Total data points dashboard
 
-The Most Used Data Points by App tab is a further breakdown of the information provided in the usage graphs. Here, you can set a time frame in the upper right to display the top 10 most heavily used data points per app group/source. Some customers may have the option to override this value, showing up to 200 of the most used data points. Within these app group breakdowns, include the data point name, the count, the percentage, as well as **Profile Attribute Collected** and **Custom Attribute Collected** data points groupings. Users are able to export and save this data as CSV by clicking **Download All Data**. 
+Your **Data Points Usage** can be found under the **Total Data Points Usage** tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
 
-![Subscription and Usage][4]{: style="max-width:90%;"}
+![Filtering Data Point Usage by weeks][2]{: style="max-width:80%;"}
 
-{% alert important %}
-Please note that custom attributes, events, and in-app purchases are italicized.
-{% endalert%}
-
-Data breakdowns like these help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren't accidentally spending data points in accidental and unnecessary ways. 
-
-## Total Data Points Dashboard
-
-Your Total Data Points Dashboard can be found under the __Total Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
-
-![Subscription and Usage][2]{: style="max-width:80%;"}
-
-### Contract Details 
+### Contract details
 
 Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
-### Current Billing Cycle - App Group Data Point Usage
+The fields in this section are defined as follows:
 
-Depending on whether you chose a time frame of weeks or months, your data here will be broken down by weeks or months. You’ll see how many data points were consumed for each time frame, and a color-coded breakdown of which apps contributed to those data points. Using this graph, you can monitor your data point usage over different periods of time and check for trends as well as outliers, such as unexpected spikes during particular time frames.
+- **Contract Type:** Billing term structure, either Annual or Multi-Year.
+- **Contract Start and End Date:** Start and end date of the entire contract.
+- **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
+- **Contract Data Point Usage:** A cumulative total of all data points consumed over the contract's lifetime, and does not reset in the next billing term.
 
-### Data Point Usage Over Time
+![Contract Details section of Total Data Point Usage tab][5]
 
-You can use this section to monitor how your data point usage is trending over time, and how close you are to hitting your contract’s allotment. One trend line shows your consumption, and the other shows your contract allotment.
+### Current billing cycle
 
-[1]: {% image_buster /assets/img/subscription_and_billing1.png %}
+This section of the dashboard displays the data point usage for the current billing cycle. This includes the following information for the current billing cycle:
+
+- Start date 
+- End date  
+- Allotted number of data points 
+- Total data point usage 
+
+![Current Billing Cycle section of Total Data Points Usage tab][6]{: style="max-width:90%;"}
+
+### Company billing data
+
+#### Usage across app groups
+
+This graph allows you to assess the total data point usage of a company by app group. This graph gives you the ability to assess how each app group is contributing to the company's data point usage.
+
+![App Group Data Point Usage graph for two app groups][7]{: style="max-width:90%;"}
+
+#### Data point usage over time
+
+This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
+
+![Data Point Usage over time contrasting current billing cycle alloted data points with running total][8]{: style="max-width:90%;"}
+
+### App group billing data
+
+{% alert note %}
+The app group billing data and app group charts only display for dates after October 1, 2021. 
+{% endalert %}
+
+#### Drill to app groups
+
+The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
+
+![Drill to app groups for billable data points][9]{: style="max-width:90%;"}
+
+The **App Group Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the app group.
+
+![App Group Level Data Point Usage by Category][10]{: style="max-width:90%;"}
+
+The **App Group Level Data Point Usage over Time** table enables you to see how that app group’s data point usage has changed throughout your billing cycle.
+
+![App Group Level Data Point Usage over Time][11]{: style="max-width:90%;"}
+
+The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your app group. You can use this table to identify which apps are driving data point consumption for the app group.
+
+![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
+
+## Most used events and attributes by app
+
+The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app’s attribute and event updates that were driven by that attribute or event. 
+
+Data breakdowns like these can help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren’t spending data points in accidental and unnecessary ways. 
+
+![Most Used Events and Attributes By App][4]
+
+
+
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing3.png %}
-[4]: {% image_buster /assets/img/subscription_and_billing4.png %}
+[4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
+[5]: {% image_buster /assets/img/contract_details.png %}
+[6]: {% image_buster /assets/img/current_billing_cycle.png %}
+[7]: {% image_buster /assets/img/appgroup_datapoint_usage.png %}
+[8]: {% image_buster /assets/img/company_data_point_usage_time.png %}
+[9]: {% image_buster /assets/img/appgroup_drilldown.png %}
+[10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %}
+[11]: {% image_buster /assets/img/appgroup_level_usage_time.png %}
+[12]: {% image_buster /assets/img/app_level_stats.png %}

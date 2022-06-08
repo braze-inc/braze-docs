@@ -8,7 +8,8 @@ $search_transition_time: 0.25s;
 
 $search_footer_height: 50px;
 $search_offset: 65px;
-
+$search_font_color: #58585A;
+$search_tag_color: $grey-athens;
 #doc-search-form_div, .algolia_overlay {
   justify-content: center;
   display: flex;
@@ -36,18 +37,18 @@ $search_offset: 65px;
     font-size: $base_font_size;
     &:focus {
       &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: $grey-ghost;
+        color: $search_font_color;
       }
       &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: $grey-ghost;
+        color: $search_font_color;
       }
 
       &::-ms-input-placeholder { /* Microsoft Edge */
-        color: $grey-ghost;
+        color: $search_font_color;
       }
       // background-color: $white;
-      color: $black-shark;
-      // border-color: $black-shark;
+      color: $search_font_color;
+      // border-color: $search_font_color;
       box-shadow: none;
       border-color: #000000;
       border-width: 2px;
@@ -58,7 +59,6 @@ $search_offset: 65px;
     box-shadow: none;
     #algolia_footer {
       height: $search_footer_height;
-      border-top: 1px solid rgba($grey-ghost,0.7);
       margin: 0 15px 0 15px;
 
       .algolia-docsearch-footer {
@@ -104,6 +104,11 @@ $search_offset: 65px;
 
     z-index: 700;
 
+  }
+
+  .lab_header {
+    font-size: 18px;
+    margin-top: 20px;
   }
   .aa-Autocomplete,
   .aa-DetachedFormContainer {
@@ -151,7 +156,7 @@ $search_offset: 65px;
     z-index: 800;
     max-width: 1048px;
     @media (min-width: $window-medium-px) {
-      top: 55px !important;
+      top: 75px !important;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border-width: 2px;
@@ -166,15 +171,10 @@ $search_offset: 65px;
     font-size: $search_font_size ;
     .aa-Item {
       hr {
-        margin-top: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
         border-width: 1px;
-        border-color: rgba($grey-ghost,0.7);
-      }
-      &:last-child  {
-        hr {
-          border-color: transparent;
-
-        }
+        border-color: rgba($search_font_color,0.7);
       }
     }
 
@@ -191,7 +191,7 @@ $search_offset: 65px;
 
     div {
       &.title {
-        font-family: $black-shark;
+        font-family: $search_font_color;
         font-size: 14px;
         color: $search_color;
         line-height: 1.5;
@@ -200,7 +200,7 @@ $search_offset: 65px;
       &.content {
         display: block;
         width: 100%;
-        color: $grey-manatee;
+        color: $search_font_color;
         font-size: 13px;
         line-height: 1.5;
       }
@@ -215,4 +215,42 @@ $search_offset: 65px;
       }
     }
   }
+}
+#search_header_labs {
+  color: $search_font_color;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  hr {
+    margin-top: 5px;
+  }
+}
+.lab_header {
+  margin-top: 20px;
+  color: $search_font_color;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.search_tags {
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 2px 10px;
+  margin-right: 5px;
+  color: $search_tag_color;
+  background-color: $search_font_color;
+}
+.search_tag_div {
+  display: block;
+  margin-bottom: 5px;
+}
+.search_tag_header_div {
+  display: inline-block;
+  margin: 0px 5px;
+}
+.article_path {
+  text-align: left;
+  font-size: 10px;
+  color: $search_font_color;
+  font-weight: bold;
+  margin: 5px 0px;
 }

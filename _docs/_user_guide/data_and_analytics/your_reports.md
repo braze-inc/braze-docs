@@ -1,5 +1,6 @@
 ---
 nav_title: Your Reports
+article_title: Your Reports
 page_order: 7
 layout: dev_guide
 guide_top_header: "Your Reports"
@@ -7,15 +8,13 @@ guide_top_text: "Your data means a lot to you, so we have the capability of seve
 
 page_type: landing
 description: "This landing page is home to articles on various reports available within Braze (not including Currents)."
+tool: Reports
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Reports Overview
     link: /docs/user_guide/data_and_analytics/your_reports/reports_overview
     fa_icon: fas fa-list
-  - name: Overview Data
-    link: /docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
-    fa_icon: fas fa-mobile
   - name: Segment Data
     link: /docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/
     fa_icon: fas fa-chart-pie
@@ -29,7 +28,7 @@ guide_featured_list:
 guide_menu_title: "More Articles"
 guide_menu_list:
   - name: Campaign Analytics
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#reporting-in-campaigns
+    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
     fa_icon: fas fa-chart-bar
   - name: Canvas Analytics
     link: /docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/

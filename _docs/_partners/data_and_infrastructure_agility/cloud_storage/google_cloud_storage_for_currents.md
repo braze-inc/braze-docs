@@ -1,11 +1,12 @@
 ---
 nav_title: Google Cloud Storage
+article_title: Google Cloud Storage
 page_order: 2
 alias: /partners/google_cloud_storage_for_currents/
-
 description: "This article outlines the partnership between Braze and Google Cloud Storage, a massively scalable object storage for unstructured data."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
 
 ---
 
@@ -13,67 +14,65 @@ tool: currents
 
 > [Google Cloud Storage](https://cloud.google.com/storage/) is massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite.
 
-After streaming data into Google Cloud Storage Storage, you can use ETL processes (Extract, Transform, Load) to transfer your data to other locations, such as Google Bigquery.
+The Braze and Google Cloud Storage integration allows you to stream Currents data to Google Cloud Storage. You can later use an ETL process (Extract, Transform, Load) to transfer your data to other locations, such as Google Bigquery.
+
+## Prerequisites
+
+| Requirement | Description |
+| ----------- | ----------- |
+| Google Cloud Storage account | A Google Cloud Storage account is required to take advantage of this partnership. |
+| Currents | In order to export data back into Google Cloud Storage, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
-Integration with Google Cloud Storage requires credentials that allow Braze to get information about the storage bucket being written to (`storage.buckets.get`) as well as the ability to create objects within that bucket (`storage.objects.create`). In order to grant those permissions in the Google Cloud Platform IAM & Admin section, you need to create a custom Role and then create a Service Account that uses that Role. Doing this will generate a downloadable key that you can then upload into Braze so that Currents events can be written to your GCS bucket.
+To integrate with Google Cloud Storage, you must set up the appropriate credentials that allow Braze to get information about the storage buckets being written to (`storage.buckets.get`) and create objects within that bucket (`storage.objects.create`). 
 
-### Step 1 - Create Role
+This can be done using the following instructions, which will walk you through creating a role and service account that will generate a private key to use in your Currents integration.
 
-Create a new Role in the **Roles** subsection of the **IAM & admin** section of your **Google Cloud Platform** console
+### Step 1: Create role
 
-![google_cloud_storage][2]
+Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin > Roles > + Create Role**.
 
-### Step 2 - Grant Role Permissions
+![][2]
 
-Give the Role a name, add the `storage.buckets.get` and `storage.objects.create` permissions to the Role, and click Create.
+Next, give the role a name, click **+Add Permissions** and add `storage.buckets.get` and `storage.objects.create`, and click **Create**.
 
-![google_cloud_storage][3]
+![][3]
 
-### Step 3 - Create a Service Account
+### Step 2: Create a service account
 
-Create a new **Service Account** for your project within the **IAM & admin** section of your **Google Cloud Platform** console.
+Create a new service account in your Google Cloud Platform Console by navigating to **IAM & admin > Service Accounts** and selecting **Create Service Account**.
 
-![google_cloud_storage][4]
+![][4]
 
-### Step 4 - Grant Access
+Next, give the service account a name and grant it access to your newly created custom role.
 
-Give the Service Account a name, and grant it access as your newly created custom Role.
+![In the Google Cloud Platform, on the create services page, type the name of your role in the "Select a Role" field.][5]
 
-![google_cloud_storage][5]
+#### Create a key
 
-### Step 5 - Create Key
+At the bottom of the page, use the **Create Key** button to create a **JSON** private key to use in Braze. Once created, this key will download onto your machine.
 
-Create a key using the JSON format. Once created, this key will download to your machine.
+![][6]
 
-![google_cloud_storage][6]
+### Step 3: Set up Currents in Braze
 
-### Step 6 - Upload Key
+In Braze, navigate to **Currents > + Create Current > Google Cloud Storage Data Export** and provide your integration name and contact email.
 
-On the **Braze Currents** integration page, upload that JSON key file as your **Credentials File**.
+Next, upload your JSON private key under **GCS JSON Credentials** and provide your CGS bucket name and GCS prefix (optional). 
 
 {% alert important %}
-It's important to keep your Credentials File up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-### Step 7 - Finish Up
+![The Google Cloud Storage Currents page in Braze. On this page exist fields for integration name, contact email, GCS JSON credential, GCS bucket name, and prefix.][7]
 
-Include your GCS bucket name in the appropriate field so we know where to stream Currents data.
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you would like to export. Once completed, launch your Current.
 
-## Customizations
-
-You can also add the following customizations, based on your needs:
-
--   Prefix (defaults to `currents`)
-
-Add this information to the Google Cloud Storage Currents page in Braze, and press **Save**.
-
-![google_cloud_storage][1]
-
-[1]: {% image_buster /assets/img/google_cloud_storage.png %}
 [2]: {% image_buster /assets/img/gcs1.png %}
 [3]: {% image_buster /assets/img/gcs2.png %}
 [4]: {% image_buster /assets/img/gcs3.png %}
 [5]: {% image_buster /assets/img/gcs4.png %}
 [6]: {% image_buster /assets/img/gcs5.png %}
+[7]: {% image_buster /assets/img/gcs6.png %}

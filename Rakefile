@@ -17,29 +17,53 @@ end
 
 task default: :serve
 
-namespace :docs do
-  task :index do
-    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
-      puts `bundle exec jekyll algolia`
-    end
+def jekyll_build(config_file = '_config.yml', lang = 'en')
+  public_folder = './public'
+  # puts `#{config_file}`
+  puts `bundle exec jekyll build --config #{config_file}`
+  if (lang != 'en')
+    index_file = File.join(public_folder, "index_#{lang}.html")
+    FileUtils.copy_file(index_file, File.join('_site', "index.html"))
   end
-  task build: [:index] do
-      puts `bundle exec jekyll build`
-  end
-  task :serve do
-    if ENV["RACK_ENV"] == 'staging'
-      pipe 'bundle exec jekyll s --port 5006'
-    else
-      # Force a clean build of the site and the pipeline assets
-      puts `rm .jekyll-metadata`
-      pipe 'bundle exec jekyll s --port 5006 --incremental --config _config.yml,_incremental_config.yml'
-    end
+end
+def jekyll_serve(config_file = '_config.yml')
+  if ENV["RACK_ENV"] == 'staging'
+    pipe "bundle exec jekyll s --port 5006 --config #{config_file}"
+  else
+    # Force a clean build of the site and the pipeline assets
+    puts `rm .jekyll-metadata`
+    pipe "bundle exec jekyll s --port 5006 --incremental --config #{config_file},_incremental_config.yml"
   end
 end
 
-namespace :success do
+namespace :docs_en do
+  config_file = './_config.yml'
+  task :index do
+    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
+      puts `bundle exec jekyll algolia --config #{config_file}`
+    end
+  end
+  task build: [:index] do
+      jekyll_build(config_file, 'en')
+  end
   task :serve do
+    jekyll_serve(config_file)
+  end
+  task :proxy_serve do
     pipe 'bundle exec ruby proxy.rb'
+  end
+end
+
+namespace :docs_fr do
+  config_file = './_config.yml,./_lang/_config_fr.yml'
+  task :build do
+    jekyll_build(config_file, 'fr')
+  end
+  task :serve do
+    jekyll_serve(config_file)
+  end
+  task :proxy_serve do
+    pipe 'bundle exec ruby proxy.rb fr'
   end
 end
 
@@ -49,6 +73,14 @@ namespace :assets do
   end
 end
 
+multitask fr: [
+  'docs_fr:serve', 'docs_fr:proxy_serve'
+]
+
+multitask en: [
+  'docs_en:serve', 'docs_en:proxy_serve'
+]
+
 multitask serve: [
-  'docs:serve', 'success:serve'
+  'docs_en:serve', 'docs_en:proxy_serve'
 ]

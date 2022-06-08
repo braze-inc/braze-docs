@@ -18,7 +18,7 @@ module Jekyll
       if @url.empty?
         embedmarkdown = false
       end
-      if ENV["SITE_URL"].to_s.downcase != 'https://www.braze.com' || ENV["RACK_ENV"].to_s.downcase != 'production'
+      if ENV["MARKDOWN_API"].to_s.downcase != 'yes'
         embedmarkdown = false
       end
       if embedmarkdown
@@ -60,7 +60,12 @@ module Jekyll
     end
 
     def fetchContent(url)
-      Net::HTTP.get_response(URI.parse(URI.encode(url.strip)))
+      link = URI.parse(url.strip)
+      http = Net::HTTP.new(link.host, link.port)
+      http.open_timeout = 60
+      http.read_timeout = 120
+      res = Net::HTTP.get_response(link)
+      return res
     end
   end
 end

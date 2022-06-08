@@ -1,37 +1,33 @@
 ---
 nav_title: "POST: Update User's Subscription Group Status"
+article_title: "POST: Update User's Subscription Group Status"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-  - SMS
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
 ---
 {% api %}
-# Update Users' Subscription Group Status
+# Update users' subscription group status
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /subscription/status/set
 {% endapimethod %}
 
-Use the endpoints below to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.
+Use these endpoints to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='subscription status set' %}
+
+## Request body
 
 {% tabs %}
 {% tab SMS %}
@@ -65,31 +61,31 @@ Authorization: Bearer YOUR-REST-API-KEY
    "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
-   // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
 \* Email subscription groups: Either `email` or `external_id` is required.
 {% endtab %}
 {% endtabs %}
 
-This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
+This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert important %}
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
 {% endalert %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `subscription_group_id` | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
-| `email` | Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). |
+| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Requests Email
+## Example requests email
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -103,7 +99,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example Requests SMS
+## Example requests SMS
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -117,7 +113,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example Successful Response
+## Example successful response
 
 Response: (status 201)
 

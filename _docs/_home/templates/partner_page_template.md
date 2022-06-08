@@ -49,13 +49,13 @@ In the second paragraph, you should explore and explain the relationship between
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements are used to do.
+The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the following chart. Be sure to adjust the description so that you know what each of these requirements are used to do.
 {% endalert %}
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
 |Braze App Group REST API Key | Braze platform | Manage Settings > Settings Page | This description should tell you what to do with the App Group REST API Key. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
+|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## [Type of Integration] Integration
@@ -78,7 +78,7 @@ Outline through usage of the integration - especially if it means inserting Liqu
 
 ## Customization
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+This is an **optional** section. Here, you could outline any specific ways to customize your integration between the two partners.
 
 ## Using This Integration
 

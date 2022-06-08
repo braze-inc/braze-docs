@@ -1,41 +1,39 @@
 ---
 nav_title: Localizing a Campaign
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Localizing a Campaign
 page_order: 3
-
 page_type: reference
 description: "This reference article goes over how user locale is retrieved and accessed by the Braze platform."
 tool:
-- Campaigns
-- Segments
+  - Campaigns
+
 ---
-# Localizing a Campaign
+# Localizing a campaign
 
 > This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience. 
 
 Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
 
-## Technical Details
+## Technical details
 
 Braze automatically collects locale information from user devices after the SDK has been integrated. The locale contains a language and region identifier.
 
-For example, a user who has set their device to English (US) will have a language `EN`. The users' country is collected from their device IP address. These filters will be available in Braze's segmentation tool under Country and Language.
+For example, a user who has set their device to English (US) will have a language `EN`. The user's country is collected from their device IP address. These filters will be available in Braze's segmentation tool under **Country and Language**.
 
-![Filter Select Screenshot][7]
+![A list of user attributes: Age, Country, Email Available, Gender, Language, Location Available, and Push Enabled.][7]
 
-More technical details on how locale is retrieved can be accessed by platform:
+Check out the following resources for more technical details on how locale is retrieved based on your platform:
 
 - [iOS][1]
 - [Android][2]
 - [Windows Store][3]
 - [Windows Phone][4]
 
-## Internationalize Campaigns
+## Internationalize campaigns
 
-You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in Multiple Languages][12]
+You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in multiple languages][12]
 
-Braze automatically collects the most recent location of users' devices (if location permission is granted to your app). You can use this information to run a localized campaign that is targeted at users within a specific geographic area. For more information, see [Location Targeting][13].
+Braze automatically collects the most recent location of users' devices (if location permission is granted to your app). You can use this information to run a localized campaign that is targeted at users within a specific geographic area. For more information, see [Location targeting][13].
 
 [1]: https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html
 [2]: http://developer.android.com/reference/java/util/Locale.html

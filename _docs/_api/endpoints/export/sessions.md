@@ -1,6 +1,6 @@
 ---
 nav_title: Sessions
 config_only: true
-no_index: true
-page_order: 7
+noindex: true
+page_order: 8
 ---

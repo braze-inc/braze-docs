@@ -1,21 +1,15 @@
 ---
 nav_title: "GET: Send Analytics"
+article_title: "GET: Send Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform:
-  - API
-
-tool:
-  - Campaign
-
-
 description: "This article outlines details about Braze's Campaign Daily Stats by Send ID endpoint."
+
 ---
 {% api %}
-# Send Analytics Endpoint
+# Send analytics endpoint
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}
@@ -26,7 +20,11 @@ Campaign conversions will be attributed towards the most recent send id that a g
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- |------------ |
@@ -36,7 +34,7 @@ Campaign conversions will be attributed towards the most recent send id that a g
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request 
+## Example request 
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id={{campaign_identifier}}&send_id={{send_identifier}}&length=30&ending_at=2014-12-10T23:59:59-05:00' \
@@ -45,7 +43,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 {% endraw %}
 
 ## Response
-### Send Analytics Endpoint API Response
+
+### Send analytics endpoint API response
 
 ```json
 Content-Type: application/json
@@ -88,8 +87,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

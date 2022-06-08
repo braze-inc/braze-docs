@@ -4,19 +4,17 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner Custom Currents Connector
+# Partner custom Currents connector
 
-## Serialization and Data Format
+## Serialization and data format
 
-The target data format will be JSON over HTTPS. Events will be grouped into batches of events,
-the size of which is configurable, and sent to the endpoint as a JSON array containing all of the
-events. The batches will be sent in the following format:
+The target data format will be JSON over HTTPS. Events will be grouped into batches of events, the size of which is configurable, and sent to the endpoint as a JSON array containing all of the events. The batches will be sent in the following format:
 
 `{"events": [event1, event2, event3, etc...]}`
 
-i.e. There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
+There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
 
-The examples below are for _individual_ events (i.e. they'd just be part of the larger array of JSON objects as described above, with each JSON object representing a single event in the batch).
+The following examples are for _individual_ events (i.e., they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
 
 ### Campaign-Associated Events
 
@@ -221,7 +219,7 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-### Other Events
+### Other events
 
 Here are some example event payloads for various other events that are not associated with either campaigns or Canvases:
 
@@ -310,7 +308,7 @@ Here are some example event payloads for various other events that are not assoc
 
 ## Authentication
 
-If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. AWS's custom auth scheme works) if we so choose in the future.
+If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g., AWS's custom auth scheme works) if we so choose in the future.
 
 As per RFC 6750, the token will be a Base64-encoded value of at least one character. (Obviously though, we must vet our partners and customers so that we know that they are unlikely to choose incredibly weak tokens.) A notable quirk of RFC 6750 is that it allows the token to contain the following characters in addition to the normal Base64 characters: '-', '.', '_', and '~'. Since the exact contents of the token make absolutely no difference to any of our systems, we won't care whether our partners decide to include these characters in their token or not.
 
@@ -337,7 +335,7 @@ Individual events will follow the same evolution rules as our existing Avro sche
 - Required fields will never be removed.
   - What is considered "required" will be specified via documentation that we will likely want to auto-generate from our Avro schemas as the central source of truth. This will require us to annotate the Avro schema fields with some metadata, and a special script that can read that metadata to generate the documentation.
 
-## Error Handling and Retry Mechanism
+## Error handling and retry mechanism
 
 In the event of an error, Braze will queue and retry the request based on the HTTP return code received.
 
@@ -346,15 +344,15 @@ If our retry mechanism fails to deliver events to their endpoint for more than 2
 {% endalert %}
 
 The following HTTP status codes will be recognized by our connector client:
-- __2XX__ — Success
+- **2XX** — Success
   - Event data will not be re-sent.<br><br>
-- __5XX__ — Serverside error
+- **5XX** — Serverside error
   - Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.<br><br>
-- __400__ — Client-side error
+- **400** — Client-side error
   - Our connector somehow sent at least one malformed event. If this occurs, the event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive an additional HTTP 400 response will be dropped permanently. Partners and/or customers should be encouraged to let us know if they detect this occurring on their end.<br><br>
-- __401__ (Unauthorized) or __403__ (Forbidden)
+- **401** (Unauthorized) or **403** (Forbidden)
   - The connector was configured with invalid credentials. The connector task will halt sending, and will be marked as "Failed". Event data will be re-sent after a delay of between 2 and 5 minutes (this is handled by the Connect Task Restarter). If this issue is not resolved by the customer within 48 hours, the event data will be dropped.<br><br>
-- __413__ — Payload Too Large
+- **413** — Payload Too Large
   - Event data will be split into smaller batches and re-sent.<br><br>
-- __429__ — Too Many Requests
+- **429** — Too Many Requests
   - Indicates rate limiting. Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.

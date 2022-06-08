@@ -1,11 +1,13 @@
 ---
 nav_title: Message Personalization
+article_title: Message Personalization Partners
 page_order: 1
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
-
 layout: partner_page
+search_tag: Partner
+
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
@@ -14,6 +16,8 @@ partner_top_header: "Message Personalization"
 valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
+- name: Worthy
+  url: /docs/partners/message_orchestration/dynamic_content/worthy/
 - name: Certona
   url: /docs/partners/message_personalization/dynamic_content/certona/
 - name: Playable
@@ -39,5 +43,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
+- name: Judo
+  url: /docs/partners/message_personalization/dynamic_content/judo/
+- name: Wyng
+  url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: WSC Sports
+  url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
+- name: Peak
+  url: /docs/partners/message_personalization/dynamic_content/peak/
 
 ---

@@ -33,7 +33,7 @@ hide_breadcrumb: true
 {% unless hide_nav %}
 <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
   <div id="nav_col" class="  ">
-  {% include left_nav_menu.html  %}
+  {% include left_nav_menu.html %}
   </div>
 </div>
 {% endunless %}
@@ -41,12 +41,12 @@ hide_breadcrumb: true
 <div class="col d-print-block " id="main_content" >
 
     <div id="dev-main">
+    <div id="content_start"></div>
 
     {%- unless hide_breadcrumb -%}
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
-
 
     <h1> {{ page.guide_top_header }} </h1>
     <p>  {{ page.guide_top_text | markdownify }} </p>
@@ -58,7 +58,7 @@ hide_breadcrumb: true
 
       {%- for menu_list in page.guide_featured_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link }}">
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
             {%- endif %}
           <div id="{{ menu_list.name | handle }}" class="guide_item">
             {%- if menu_list.fa_icon -%}
@@ -83,7 +83,7 @@ hide_breadcrumb: true
 
       {%- for menu_list in page.guide_menu_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link }}">
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
           {%- endif %}
       <div id="{{ menu_list.name | handle }}" class="guide_item">
         {%- if menu_list.fa_icon -%}

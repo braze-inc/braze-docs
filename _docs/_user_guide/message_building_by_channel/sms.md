@@ -1,5 +1,6 @@
 ---
 nav_title: SMS & MMS
+article_title: SMS & MMS
 page_order: 4
 layout: dev_guide
 channel:
@@ -7,14 +8,14 @@ channel:
   - MMS
 
 guide_top_header: "SMS & MMS"
-guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Note that SMS & MMS are __not__ available out-of-the-box and must be purchased. Check out the topics below to get started with Braze SMS or MMS!"
+guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the following topics to get started with Braze SMS or MMS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>SMS and MMS are not available out-of-the-box and must be purchased. To get started with SMS and MMS, reach out to your Account Manager or Customer Success Manager."
 description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
 
 guide_featured_title: "SMS"
 guide_featured_list:
 - name: "About SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
-  fa_icon: fas fa-paint-brush
+  fa_icon: fas fa-check
 - name: "SMS Laws & Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   fa_icon: fas fa-gavel
@@ -52,15 +53,10 @@ guide_menu_list:
 - name: "Creating a MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   fa_icon: fas fa-table
+- name: "Contact Cards"
+  link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
+  fa_icon: fas fa-user-circle
 - name: "MMS FAQs"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment
 ---
-
-<br>
-
-Not ready for any of the topics above? Head to our [SMS Set Up section]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
-
-<br>
-
-

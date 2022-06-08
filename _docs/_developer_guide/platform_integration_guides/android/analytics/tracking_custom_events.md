@@ -1,76 +1,98 @@
 ---
 nav_title: Tracking Custom Events
-platform: Android
+article_title: Tracking Custom Events for Android and FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 2
-description: "This reference article covers how to add and track custom events for your Android application."
+description: "This reference article covers how to add and track custom events for your Android or FireOS application."
 
 ---
 
-# Tracking Custom Events
+# Tracking custom events for Android and FireOS
 
-You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
+You can record custom events in Braze to learn more about your app's usage patterns and segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs purchase events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Adding A Custom Event
+## Adding a custom event
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][2] for more information.
+Refer to our [KDoc][2] for more information.
 
-### Adding Properties
+### Adding properties
 
-You can add metadata about custom events by passing a [Braze Properties][4] object with your custom event.
+You can add metadata about custom events by passing a [Braze properties object][4] with your custom event.
 
-Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
+Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-AppboyProperties eventProperties = new AppboyProperties();
-eventProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+braze.logCustomEvent("YOUR-EVENT-NAME",
+    new BrazeProperties(new JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", new Date())
+        .put("or", new JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", new JSONObject()
+            .put("deeply", new JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+));
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val eventProperties = AppboyProperties()
-eventProperties.addProperty("key", "value")
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
+braze.logCustomEvent("YOUR-EVENT-NAME",
+    BrazeProperties()
+        .addProperty("you", "can")
+        .addProperty("pass", false)
+        .addProperty("orNumbers", 42)
+        .addProperty("orDates", Date())
+        .addProperty("or", JSONArray(listOf("any", "array", "here")))
+        .addProperty("andEven", BrazeProperties()
+            .addProperty("deeply", JSONArray(listOf("nested", "json"))))
+)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-### Reserved Keys
+### Reserved keys
 
-The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
+The following keys are reserved and cannot be used as custom event properties:
 
 - `time`
 - `event_name`
 
-See the [Javadoc][6] for more information.
+Refer to our [KDoc][2] for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String) "Javadocs"
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
 [3]: http://developer.android.com/reference/java/util/Date.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String,%20com.appboy.models.outgoing.AppboyProperties)
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html

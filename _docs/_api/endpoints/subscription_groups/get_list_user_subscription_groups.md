@@ -1,37 +1,34 @@
 ---
 nav_title: "GET: List User's Subscription Groups"
+article_title: "GET: List User's Subscription Groups"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-  - SMS
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the List User's Subscription Groups Braze endpoint."
+
 ---
 {% api %}
-# Get Users' Subscription Groups
+# Get users' subscription groups
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}
 
-Use the endpoints below to list and get the subscription groups of a certain user.
+Use these endpoints to list and get the subscription groups of a certain user.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -46,7 +43,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-## Example Request 
+## Example request 
 
 {% tabs %}
 {% tab Multiple Users %}

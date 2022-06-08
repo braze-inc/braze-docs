@@ -1,5 +1,6 @@
 ---
 nav_title: mParticle
+noindex: true
 page_order: 0
 layout: featured
 guide_top_header: "mParticle"

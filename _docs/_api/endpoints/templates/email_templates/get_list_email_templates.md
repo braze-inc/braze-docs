@@ -1,21 +1,15 @@
 ---
 nav_title: "GET: List Available Email Templates"
+article_title: "GET: List Available Email Templates"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the List Available Email Templates Braze endpoint."
+
 ---
 {% api %}
-# List Available Email Templates
+# List available email templates
 {% apimethod get %}
 /templates/email/list
 {% endapimethod %}
@@ -26,7 +20,11 @@ Use the Template REST APIs to programmatically manage the email templates that y
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -36,13 +34,17 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `offset`  |  Optional | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=1&offset=0' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response 
+
+{% alert important %}
+Templates built using the Drag & Drop Editor are not provided in this response.
+{% endalert %}
 
 ```json
 Content-Type: application/json
@@ -59,6 +61,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% endapi %}
 
-{% alert important %}
-Templates built using the Drag & drop editor are not provided in this response.
-{% endalert %}
+
+

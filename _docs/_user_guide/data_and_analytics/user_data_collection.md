@@ -1,5 +1,6 @@
 ---
 nav_title: User Data Collection
+article_title: User Data Collection
 page_order: 3.5
 layout: featured
 guide_top_header: "User Data Collection"
@@ -22,6 +23,9 @@ guide_featured_list:
   - name: Data Collection Use Case Example
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
     fa_icon: fas fa-taxi
+  - name: Data Collection Best Practices
+    link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
+    fa_icon: fa fa-thumbs-up
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     fa_icon: fas fa-user
@@ -33,7 +37,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, reach out to your Braze account manager.
 {% endalert %}
 
 <br>

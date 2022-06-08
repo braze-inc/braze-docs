@@ -1,16 +1,19 @@
 ---
 nav_title: Accessibility
+article_title: Accessibility for Android and FireOS
 page_order: 4
-platform: Android
-description: "This reference article covers how to implement specific Android SDK accessibility features such as in-app message talkback into your Android application."
+platform: 
+  - Android
+  - FireOS
+description: "This reference article covers how to implement specific Android SDK accessibility features such as in-app message talkback into your Android or FireOS application."
 
 ---
 
 # Accessibility
 
-The Braze Android SDK follows the [Android Accessibility Guidelines][1].
+The Braze Android SDK follows the [Android accessibility guidelines][1].
 
-## In-App Message Talkback
+## In-app message talkback
 
 In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following SDK configuration:
 
@@ -18,7 +21,7 @@ In order to have Android Talkback/"VoiceOver" not read the contents behind an in
 {% tab braze.xml %}
 
 ```xml
-<bool name="com_appboy_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
+<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
 ```
 
 {% endtab %}

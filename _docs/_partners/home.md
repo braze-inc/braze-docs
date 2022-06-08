@@ -1,12 +1,15 @@
 ---
 page_order: 0
+article_title: Technology Partners
 alias: /partners/Partners/
 layout: partner_page
+search_tag: Partner
+
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
+
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-
 description: "This landing page includes all Braze partners. Use it to explore techncial documentation that will help implement Technology Partners into your braze SDK."
 
 valid_partner_list:
@@ -103,7 +106,7 @@ valid_partner_list:
 - name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 - name: Census
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/census/
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: AWS Personalize
@@ -134,11 +137,65 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
 - name: Phrasee
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: optilyz
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Amperity
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
-  
+- name: Hightouch
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
+- name: Tinyclues
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
+- name: Transcend
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
+- name: RevenueCat
+  url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
+- name: BlueConic
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: Judo
+  url: /docs/partners/message_personalization/dynamic_content/judo/
+- name: Shopify
+  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+- name: Adobe
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
+- name: Worthy
+  url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
+- name: Zeotap
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
+- name: Toovio
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
+- name: Lexer
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
+- name: Snowplow
+  url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
+- name: Clarisights
+  url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
+- name: Wyng
+  url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: Peak
+  url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Knak
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
+- name: WSC Sports
+  url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
+- name: Extole
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
+- name: Dynamics 365 Customer Insights
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
+- name: Heap
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
+
 ---

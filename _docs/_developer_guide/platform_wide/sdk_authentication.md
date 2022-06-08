@@ -1,22 +1,18 @@
 ---
 nav_title: SDK Authentication
+article_title: SDK Authentication
 page_order: 5
-hidden: true
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
-  - ios
-  - android
-  - web
+  - iOS
+  - Android
+  - Web
+  
 ---
-
-<br>
-{% alert important %}
-This feature is in _beta_ and only available for Android, Web, and iOS SDKs.
-{% endalert %}
 
 # SDK Authentication
 
-SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze Dashboard can be configured to reject requests with a missing or invalid JWT signature.
+SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JWT signature.
 
 When enabled, this feature will prevent unauthorized requests that use your app's SDK API Key for logged in users, including:
 - Sending custom events, attributes, purchases, and session data
@@ -24,20 +20,20 @@ When enabled, this feature will prevent unauthorized requests that use your app'
 - Updating standard user profile attributes
 - Receiving or triggering messages
 
-## Getting Started
+## Getting started
 
 There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage Settings" page.<br><br>
-4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze Dashboard on an app-by-app basis.
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the **Manage Settings** page.<br><br>
+4. [Toggle Enforcement within the Braze dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
 
-## Server-Side Integration {#server-side-integration}
+## Server-side integration {#server-side-integration}
 
-### Generate a Public/Private Key-pair {#generate-keys}
+### Generate a public/private key-pair {#generate-keys}
 
-Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze Dashboard, while the Private Key should be stored securely on your server.
+Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze dashboard, while the Private Key should be stored securely on your server.
 
 We recommend an RSA Key with 2048 bits for use with the RS256 JWT algorithm.
 
@@ -73,11 +69,11 @@ When generating the JWT, the following fields are expected:
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### JWT Libraries
+### JWT libraries
 
 To learn more about JSON Web Tokens, or to browse the [many open source libraries](https://jwt.io/#libraries-io) that simplify this signing process, check out [https://jwt.io](https://jwt.io).
 
-## SDK Integration {#sdk-integration}
+## SDK integration {#sdk-integration}
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
@@ -88,14 +84,14 @@ This feature is available as of the following [SDK versions]({{ site.baseurl }}/
 When this feature is enabled, the Braze SDK will append the current user's last known JWT to network requests made to Braze Servers.
 
 {% alert note %}
-Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard) within the Braze Dashboard.
+Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard) within the Braze dashboard.
 {% endalert %}
 
 {% tabs %}
 {% tab Javascript %}
-When calling `initialize`, set the optional `sdkAuthentication` property to `true`.
+When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   enableSdkAuthentication: true,
@@ -109,6 +105,8 @@ BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
 Braze.configure(this, brazeConfigBuilder.build());
 ```
+
+Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab KOTLIN %}
 When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
@@ -117,6 +115,8 @@ BrazeConfig.Builder brazeConfigBuilder = BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
 Braze.configure(this, brazeConfigBuilder.build())
 ```
+
+Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab Objective-C %}
 To enable SDK Authentication, add the key `EnableSDKAuthentication` to the `Braze` dictionary in your `.plist` file and set it to true.
@@ -144,7 +144,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-### Set the current user's JWT Token
+### Set the current user's JWT token
 
 Whenever your app calls the Braze `changeUser` method, also supply the JWT token that was [generated server-side][4].
 
@@ -159,14 +159,14 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 Supply the JWT Token when calling `changeUser`:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
@@ -175,13 +175,13 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```java
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```java
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
 {% tab KOTLIN %}
@@ -189,13 +189,13 @@ Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVE
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```kotlin
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```kotlin
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -232,7 +232,7 @@ Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 When this feature is set as ["Required"](#enforcement-options), the following scenarios will cause SDK requests to be rejected by Braze:
 - JWT was expired by the time is was received by the Braze API
 - JWT was empty or missing
-- JWT failed to verify for the Public Keys you uploaded to the Braze Dashboard
+- JWT failed to verify for the Public Keys you uploaded to the Braze dashboard
 
 When the SDK requests fail for one of these reasons, a callback function you supply will be invoked with a relevant [Error Code][9]. Failed requests will periodically be retried until your app supplies a new valid JWT.
 
@@ -245,7 +245,7 @@ These callback methods are a great place to add your own monitoring or error-log
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
   // TODO: optionally log to your error-reporting service
   // TODO: check if the errorEvent user matches the currently logged-in user
@@ -256,21 +256,21 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% endtab %}
 {% tab Java %}
 ```java
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
 ```
 {% endtab %}
@@ -314,29 +314,30 @@ The `errorEvent` argument passed to this callback will contain the following inf
 | `signature` | The JWT that failed.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Adding Public Keys {#key-management}
+## Adding public keys {#key-management}
 
-In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the **Manage Settings** page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
-1. Choose the app in the left-hand side menu
-2. Click the **Add Public Key** button within the SDK Authentication settings
-3. Paste in the Public Key, and add an optional description
+
+1. Choose the app from the list of available apps.
+2. Under **SDK Authentication**, click **Add Public Key**.
+3. Paste in the Public Key, and add an optional description.
 4. After saving your changes, the key will appear in the list of Public Keys.
 
 To delete a key, or to promote a key to the Primary key, choose the corresponding action in the overflow menu next to each key.
 
-## Enabling in the Braze Dashboard {#braze-dashboard}
+## Enabling in the Braze dashboard {#braze-dashboard}
 
 Once your [Server-side Integration][1] and [SDK Integration][2] are complete, you can begin to enable this feature for those specific apps.
 
-Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze Dashboard.
+Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze Dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
 
-### Enforcement Options {#enforcement-options}
+### Enforcement options {#enforcement-options}
 
-In the Dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
+In the dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
 
 | Setting| Description|
 | ------ | ---------- |
@@ -345,13 +346,21 @@ In the Dashboard `Settings` page, each app has three SDK Authentication states w
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![dashboard][8]
+![][8]
 
 The "**Optional**" setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
 Invalid JWT signatures will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new signatures.
 
-## Error Codes {#error-codes}
+## Analytics {#analytics}
+
+Each app will show a breakdown of SDK Authentication errors collected while this feature is in the **Optional** and **Required** state.
+
+Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
+
+![A chart showing the number of instances of authentication errors. Also shown are the total number of errors, error type, and adjustable date range.][10]{: style="max-width:80%"}
+
+## Error codes {#error-codes}
 
 | Error Code| Error Reason | Description |
 | --------  | ------------ | ---------  |
@@ -367,11 +376,11 @@ Invalid JWT signatures will be reported in both **Optional** and **Required** st
 | 28 | `PAYLOAD_USER_ID_MISMATCH` | Not all user ids in the request payload match as is required.|
 {: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
 
-## Frequently Asked Questions {#faq}
+## Frequently asked questions {#faq}
 
-#### Can I use this feature on only some of my apps? {#faq-app-by-app}
+#### Does this feature need to be enabled on all of my apps at the same time? {#faq-app-by-app}
 
-Yes, this feature can be enabled for specific apps and doesn't need to be used on all of your apps.
+No, this feature can be enabled for specific apps and doesn't need to be used on all of your apps, all at once.
 
 #### What happens to users who are still on older versions of my app? {#faq-sdk-backward-compatibility}
 
@@ -389,19 +398,19 @@ Should a user's token expire mid-session, the SDK has a [callback function][7] i
 
 #### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
-If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze Dashboard.
+If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze dashboard.
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
-#### Why does this feature use Public/Private keys instead of Shared Secrets? {#faq-shared-secrets}
+#### Why does this feature use public/private keys instead of Shared Secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
+When using Shared Secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
-Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to your Private Keys.
+Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 
-When a request is rejected because of an authentication error, the SDKs will invoke a your callback used to refresh the user's JWT signature. 
+When a request is rejected because of an authentication error, the SDKs will invoke your callback used to refresh the user's JWT signature. 
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
@@ -414,3 +423,4 @@ Requests will retry periodically using an exponential backoff approach. After 50
 [7]: #sdk-callback
 [8]: {% image_buster /assets/img/sdk-auth-settings.png %}
 [9]: #error-codes
+[10]: {% image_buster /assets/img/sdk-auth-analytics.png %}

@@ -1,6 +1,11 @@
 ---
 nav_title: Content Cards
-platform: Unity
+article_title: Content Cards for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
+channel: content cards
 page_order: 4
 description: "This reference article covers Content Card implementation guidelines for the Unity platform."
 
@@ -8,7 +13,7 @@ description: "This reference article covers Content Card implementation guidelin
 
 # Content Cards
 
-## Displaying Content Cards Natively {#unity-content-cards-native-ui}
+## Displaying Content Cards natively {#unity-content-cards-native-ui}
 
 You can display the default UI for Content Cards using the following call:
 
@@ -16,11 +21,13 @@ You can display the default UI for Content Cards using the following call:
 Appboy.AppboyBinding.DisplayContentCards();
 ```
 
-## Receiving Content Card Data in Unity
+## Receiving Content Card data in Unity
 
-You may register Unity Game Objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.
+You may register Unity game objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.
 
-- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.CONTENT_CARDS_UPDATED`.
+If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.CONTENT_CARDS_UPDATED`.
+
+Note, you will additionally need to make a call to `AppboyBinding.RequestContentCardsRefresh()` to start receiving data in your game object listener on iOS.
 
 ## Parsing Content Cards
 
@@ -28,12 +35,10 @@ Incoming `string` messages received in your Content Cards game object callback c
 
 Parsing Content Cards requires Json parsing, see the following example for details:
 
-##### Example Content Cards Callback
+##### Example Content Cards callback
 
 ```csharp
 void ExampleCallback(string message) {
-  // Example of logging a Content Card displayed event
-  AppboyBinding.LogContentCardsDisplayed();
   try {
     JSONClass json = (JSONClass)JSON.Parse(message);
 
@@ -79,7 +84,5 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 Clicks and impressions must be manually logged for Content Cards not displayed directly by Braze.
 
 Use `LogClick()` and `LogImpression()` on [ContentCard][17] to log clicks and impressions for specific cards.
-
-To log that the user viewed the feed as a whole, call `AppboyBinding.LogContentCardsDisplayed()`.
 
 [17]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs

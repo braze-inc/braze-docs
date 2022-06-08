@@ -1,10 +1,10 @@
-## Universal Deep Link Delegate
+## Universal deep link delegate
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
 Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using [`AppboyNavigator.setAppboyNavigator()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
-The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for Youtube URLs. 
+The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for YouTube URLs. 
 
 {% tabs %}
 {% tab JAVA %}
@@ -21,7 +21,7 @@ public class CustomNavigator implements IAppboyNavigator {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
-    // Open Youtube URLs in the Youtube app and not our app
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.setUseWebView(false);
     }
@@ -62,7 +62,7 @@ class CustomNavigator : IAppboyNavigator {
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
-    // Open Youtube URLs in the Youtube app and not our app
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.useWebView = false
     }
@@ -93,6 +93,6 @@ class CustomNavigator : IAppboyNavigator {
 {% endtab %}
 {% endtabs %}
 
-[udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
-[udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
+[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.actions/-uri-action/index.html
+[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui/-appboy-navigator/set-appboy-navigator.html
+[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-i-appboy-navigator/index.html

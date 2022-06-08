@@ -1,16 +1,15 @@
 ---
 nav_title: "GET: Canvas Details"
+article_title: "GET: Canvas Details"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Canvas
 description: "This article outlines details about the Canvas Details Endpoint."
+
 ---
 {% api %}
-# Canvas Details Endpoint
+# Canvas details endpoint
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
@@ -19,14 +18,18 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter   | Required | Data Type | Description            |
 | ----------- | -------- | --------- | ---------------------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id={{canvas_identifier}}' \
@@ -78,8 +81,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

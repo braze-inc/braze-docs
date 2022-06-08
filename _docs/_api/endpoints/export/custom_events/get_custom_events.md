@@ -1,15 +1,15 @@
 ---
 nav_title: "GET: Custom Events List"
+article_title: "GET: Custom Events List"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
 description: "This article outlines details about the Custom Events List endpoint."
+
 ---
 {% api %}
-# Get Custom Events List
+# Get custom events list
 {% apimethod get %}
 /events/list
 {% endapimethod %}
@@ -18,14 +18,18 @@ This endpoint allows you to export a list of custom events that have been record
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='events list' %}
+
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
 | `page`    | Optional | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -47,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Fatal Error Response Codes {#fatal-export}
+### Fatal error response codes {#fatal-export}
 
 The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
 
@@ -60,8 +64,7 @@ The following status codes and associated error messages will be returned if you
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
-
 
 {% endapi %}

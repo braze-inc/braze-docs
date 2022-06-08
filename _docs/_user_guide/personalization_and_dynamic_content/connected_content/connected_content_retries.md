@@ -1,14 +1,14 @@
 ---
 nav_title: Connected Content Retries
-platform: Message_Building_and_Personalization
-subplatform: Personalization
+article_title: Connected Content Retries
 page_order: 3
-description: "Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. This article covers how to go about dealing with connected content retries."
+description: "Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. This article covers how to go about dealing with Connected Content retries."
+
 ---
 
-# Connected Content Retries
+# Connected Content retries
 
-Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. To enable retries, add `:retry` in the Connected Content call, as shown below:
+Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. To enable retries, add `:retry` in the Connected Content call, as shown in the following code snippet:
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}
@@ -21,7 +21,7 @@ If the API call fails and this is enabled, Braze will retry the call while respe
 If a retried attempt succeeds, the message is sent and no further retries are attempted for that message. If the Connected Content call errors out 5 times, the message is aborted similar to if an [abort message tag][1] was triggered.
 
 {% alert note %}
-Connected Content `:retry` is not available for In-App Messages.
+Connected Content `:retry` is not available for in-app messages.
 {% endalert %}
 
 

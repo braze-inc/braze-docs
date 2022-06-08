@@ -1,22 +1,21 @@
 ---
 nav_title: "POST: External ID Remove"
+article_title: "POST: External ID Remove"
+search_tag: Endpoint
 page_order: 2
-
 layout: api_page
-
 page_type: reference
-platform: API
-
 description: "This article outlines details about the external IDs Remove endpoint."
+
 ---
 {% api %}
-# External ID Remove
+# External ID remove
 {% apimethod post %}
 /users/external_ids/remove
 {% endapimethod %}
 
 {% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
+For security purposes, this feature is disabled by default. To enable this feature, reach out to your Success Manager.
 {% endalert %}
 
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
@@ -27,7 +26,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -40,14 +39,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_ids` | Required | Array of strings | External identifiers for the users to remove. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \

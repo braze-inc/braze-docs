@@ -1,18 +1,12 @@
 ---
 nav_title: "POST: Create Content Block"
+article_title: "POST: Create Content Block"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Create Email Content Blocks Braze endpoint."
+
 ---
 {% api %}
 # Create Content Block
@@ -24,7 +18,11 @@ This endpoint will create an [Email Content Block]({{site.baseurl}}/user_guide/e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -41,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -52,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
@@ -80,14 +78,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible Errors
+### Possible errors
 - `Content cannot be blank.`
 
 - `Content must be a string.`
 
 - `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 

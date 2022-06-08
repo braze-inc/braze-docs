@@ -1,25 +1,26 @@
 ---
 nav_title: Export Campaign Results Data
+article_title: Export Campaign Results Data
 page_order: 0
-
 page_type: reference
 description: "This reference article covers how to export campaign analytics."
 tool: 
-- Campaigns
-- Reports
+  - Campaigns
+  - Reports
+  
 ---
 
-# Campaign Results Data
+# Campaign results data
 
-All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the Dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
+All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 
-## Multi-Channel Campaigns
+## Multichannel campaigns
 
 For multichannel campaigns, the data that can be exported will depend on which messaging channels were used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
 
 - Messages Sent by Date
     - Total Messages Sent
-    - Messages Sent Across Campaign's Channels (can include Push, Email and In-App Message)
+    - Messages Sent Across Campaign's Channels (can include push, email and in-app message)
 - Email Message Engagement by Date
     - Number of Emails Delivered
     - Number of Emails Sent
@@ -47,7 +48,7 @@ For multichannel campaigns, the data that can be exported will depend on which m
     - Direct Opens
     - Bounces
 
-## Multivariate Campaigns
+## Multivariate campaigns
 
 For multivariate campaigns, which use just one messaging channel, you'll be able to export data that shows how each variant performed on the specific messaging channel's analytics over time. You can view this data grouped by statistic or grouped by message variant.
 
@@ -75,15 +76,19 @@ In-app message campaign results contain graphs for the following analytics:
 - Impressions by Date for Each Variant
 - Clicks by Date for Each Variant
 
-## Campaign Recipients
+## Campaign recipients
 
-You can export user data for all the recipients of a campaign as a CSV file. To do so, click the __User Data__ button in the __Campaign Details__ block.
+You can export user data for all the recipients of a campaign as a CSV file. To do so, click the **User Data** button in the **Campaign Details** block.
 
-![Export icon][6]
+{% alert note %}
+Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that app group.
+{% endalert %}
+
+![User Data dropdown on the Campaign Details page][6]
 
 The CSV output contains user profile data for every recipient of the campaign. Braze will generate the report in the background and email it to the user who is currently logged in.
 
-If you have [linked your Amazon S3 credentials to Braze][26], then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
+If you have linked your [Amazon S3 credentials][26] to Braze, then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
 
 The exported file includes the same user data fields which are included when you [export user data for a segment][40]. In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
 
@@ -92,9 +97,9 @@ The exported file includes the same user data fields which are included when you
 - Whether user is in control group
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
 [6]: {% image_buster /assets/img/campaign_export_example.png %}
-[26]: {{site.baseurl}}//partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
+[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
 [40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data

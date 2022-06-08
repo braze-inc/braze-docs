@@ -1,20 +1,22 @@
 ---
 nav_title: Setting Custom Attributes
-platform: Windows_Universal
+article_title: Setting Custom Attributes for Windows Universal
+platform: Windows Universal
 page_order: 3
 description: "This reference article covers how to set custom attributes on the Windows Universal platform."
 
 ---
 
-# Setting Custom Attributes
+# Setting custom attributes
+{% include archive/windows_deprecation.md %}
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][7].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
-## Assigning Standard User Attributes
+## Assigning default user attributes
 
 The following attributes should be defined as properties of the `IAppboyUser`:
 
@@ -35,12 +37,11 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 ```
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
-For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
+Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
 
-### Setting Custom Attribute Values
+### Setting custom attribute values
 
 {% tabs %}
 {% tab Boolean %}
@@ -87,7 +88,7 @@ Appboy.SharedInstance.EventLogger.RemoveFromCustomAttributeArray("custom_attribu
 {% endtab %}
 {% endtabs %}
 
-### Incrementing/Decrementing Custom Attributes
+### Incrementing/decrementing custom attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
@@ -95,7 +96,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 bool IncrementCustomAttribute(STRING_KEY, INCREMENT_INTEGER_VALUE);
 ```
 
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -103,17 +104,17 @@ Custom attributes can also be unset using the following method:
 bool UnsetCustomAttribute(STRING_KEY);
 ```
 
-### Setting a Custom Attribute via the REST API
+### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
+You can also use our REST API to set user attributes. Refer to the [users API][4] documentation for details.
 
-### Custom Attribute Value Limits
+### Custom attribute value limits
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-## Managing Notification Subscription Statuses
+## Managing notification subscription statuses
 
-To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both Email and Push:
+To set up a subscription for your users (either email or push), you can set following the subscription statuses as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both email and push:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
@@ -123,11 +124,11 @@ To set up a subscription for your users (either email or push), you can set the 
 {: .reset-td-br-1 .reset-td-br-2}
 
 - `EmailNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user.
 - `PushNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user.
 
->  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`
+>  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Visit [Managing user subscriptions][10] for more details.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
 [2]: http://en.wikipedia.org/wiki/ISO_8601

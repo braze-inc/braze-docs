@@ -1,37 +1,34 @@
 ---
 nav_title: "GET: List Users' Subscription Group Status"
+article_title: "GET: List User's Subscription Group Status"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - SMS
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the List Users' Subscription Group Status Braze endpoint."
+
 ---
 {% api %}
-# Get Users' Subscription Group Status
+# Get users' subscription group status
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
 
-Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+Use these endpoints to get the subscription state of a user in a subscription group. These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
-If you want to see examples or test this endpoint for __Email Subscription Groups__:
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2 {% endapiref %}
 
-If you want to see examples or test this endpoint for __SMS Subscription Groups__:
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -46,7 +43,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 - For SMS subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 
-## Example Request 
+## Example request 
 
 {% tabs %}
 {% tab Multiple Users %}
@@ -76,7 +73,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## Response
 
-All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
+All successful responses will return `Subscribed`, `Unsubscribed`, or `Unknown` depending on status and user history with the subscription group.
 
 ```json
 Content-Type: application/json

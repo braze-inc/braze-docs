@@ -1,19 +1,21 @@
 ---
 nav_title: Amplitude User Profile API
+article_title: Amplitude User Profile API Endpoints
 page_order: 0
 alias: /partners/amplitude_api_endpoints/
 page_type: partner
 description: "Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations."
+search_tag: Partner
 
 ---
 
-# Amplitude User Profile API Endpoints
+# Amplitude user profile API endpoints
 
-> Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
+> Amplitude's user profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
 
-## Endpoint Parameters
+## Endpoint parameters
 
-The following table lays out the parameters you can use in your calls to the User Profile API, as well as the parameters you can most typically expect to see in Amplitude's responses.
+The following table lays out the parameters you can use in your calls to the user profile API.
 
 | Parameter | Required | Description |
 | --------- | -------- | ----------- |
@@ -28,6 +30,8 @@ The following table lays out the parameters you can use in your calls to the Use
 | `comp_id` | Optional | Return a single computation that might be enabled for this user. It will return a null value if it does not exist. If `get_computations` is true, all values will be fetched, including this one (unless it is archived or deleted).|
 {: .reset-td-br-1 .reset-td-br-2}
 
+The following table covers the parameters you can most typically expect to see in Amplitude's responses.
+
 | Response Parameter | Description |
 | ------------------ | ----------- |
 | `rec_id` | The recommendation id that was requested. |
@@ -38,15 +42,15 @@ The following table lays out the parameters you can use in your calls to the Use
 | `last_updated` | Timestamp of when this recommendation was last generated and synced. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Common Amplitude Endpoints
+## Common Amplitude endpoints
 
-### Get A Recommendation
+### Get a recommendation
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&get_recs=true&rec_id=testRecId`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {
@@ -74,13 +78,13 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get Multiple Recommendations
+### Get multiple recommendations
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&get_recs=true&rec_id=testRecId,testRecId2`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {
@@ -122,13 +126,13 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get User Properties
+### Get user properties
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&get_amp_props=true`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {
@@ -147,13 +151,13 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get Cohort IDs
+### Get cohort IDs
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&get_cohort_ids=true`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {
@@ -166,13 +170,13 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get a Single Computation
+### Get a single computation
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&comp_id=testCompId`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {
@@ -187,13 +191,13 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get All Computations
+### Get all computations
 
 #### Endpoint
 {% raw %}
 `https://profile-api.amplitude.com/v1/userprofile?user_id=testUser&get_computations=true`
 {% endraw %}
-#### Example Response
+#### Example response
 ```json
 {
   "userData": {

@@ -2,8 +2,6 @@
     @return unquote("\"") + unquote(str-insert($character,"\\", 1)) + unquote("\"");
 }
 
-
-
 @import 'main';
 @import 'header';
 @import 'navigation_menu';

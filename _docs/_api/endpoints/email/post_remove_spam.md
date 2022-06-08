@@ -1,20 +1,15 @@
 ---
 nav_title: "POST: Remove Email Addresses from Spam List"
+article_title: "POST: Remove Email Addresses from Spam List"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+
 ---
 {% api %}
-# Remove Email Addresses from Spam List
+# Remove email addresses from spam list
 {% apimethod post %}
 /email/spam/remove
 {% endapimethod %}
@@ -23,7 +18,11 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request body
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -35,14 +34,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| --------|------- |
 | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/spam/remove' \
 --header 'Content-Type: application/json' \

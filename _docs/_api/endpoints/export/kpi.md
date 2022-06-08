@@ -1,6 +1,6 @@
 ---
 nav_title: KPIs
 config_only: true
-no_index: true
+noindex: true
 page_order: 4
 ---

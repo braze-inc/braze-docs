@@ -1,5 +1,6 @@
 ---
 nav_title: Company Settings
+article_title: Company Settings
 page_order: 1
 layout: featured
 guide_top_header: "Company Settings"
@@ -7,7 +8,6 @@ guide_top_text: "Most features within Company Settings are only available to Bra
 
 page_type: landing
 description: "This landing page is home to articles on Company Settings. Here you can find help for configuring contact information, notifications, and security settings."
-tool: Dashboard
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -23,21 +23,16 @@ guide_featured_list:
 ---
 <br>
 
-## Additional Information
+## Additional information
 
-If you're looking for more information about your own account settings, look [here][1].
+If you're looking for more information about your own account settings, check out our collection of [Administrative][1] articles.
 
-You can get to the __Company Settings__ section by clicking on your name, then clicking `Company Settings` in the drop-down.
-
-Then, click on the tab in the top bar to navigate to the settings you want to manage.
-
-![CompanySettings][2]
+You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down. Then, select the respective tab to navigate to the settings you want to manage.
 
 {% alert warning %}
-Please note that whatever you edit in this section will apply to _every_ Braze user's account (attached to your company).
+Any edits to the **Company Settings** section will apply to every Braze user account that is attached to your company.
 {% endalert %}
 
 <br>
 
 [1]: {{site.baseurl}}/user_guide/administrative/
-[2]: {% image_buster /assets/img/navigation_co_set.gif %}"

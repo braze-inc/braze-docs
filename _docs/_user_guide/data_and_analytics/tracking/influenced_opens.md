@@ -1,13 +1,13 @@
 ---
 nav_title: Influenced Opens
+article_title: Influenced Opens
 page_order: 7
-
 page_type: reference
 description: "This reference article explains Influenced Opens and how you can track them to provide a richer level of detail into the effect of your push campaigns."
-tool: Campaigns
 channel: push
+
 ---
-# Influenced Opens
+# Influenced opens
 
 Push notifications are a good way to catch users attention and increase engagement. Often that is through direct opens when users click on the notification and are sent to the app. However, the behavior of users who do not click the message may still be influenced by your push campaigns. Braze provides data on Influenced Opens to provide a richer level of detail into the effect of your push campaigns. 
 
@@ -17,9 +17,9 @@ As an example, say you are sending a push to users of a messaging app, and you h
 
 Influenced Opens are added to the direct opens of a campaign to give a number of total opens. This can be seen on the Details page of a push campaign. Total opens and direct opens are shown in the Message Performance and Historical Performance sections. Influenced Opens are the difference between the two measures.
 
-![Details][1]
+![Influenced Opens statistics on the Campaign Details page for a campaign][1]
 
 For more information on tracking opens, check out the conversion tracking section of our [best practices for push][bp].
 
-[bp]: {{site.baseurl}}/help/best_practices/push/conversion_tracking/#conversion-tracking
+[bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}

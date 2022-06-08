@@ -1,61 +1,65 @@
 ---
-nav_title: Create an In-App Message
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+nav_title: Creating an In-App Message
+article_title: Creating an In-App Message
 page_order: 0
 description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
 channel:
   - in-app messages
 tool:
-  - Dashboard
   - Campaigns
 
 ---
 
-# Creating an In-App Message
+# Creating an in-app message
 
-You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/help/best_practices/in-app_messages/prep_guide/).
+> This article covers how to create an in-app message in Braze. Here, we'll cover steps on how to compose your message, style your content, and schedule your message delivery.
 
+You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
-## Choose Where to Build Your Message {#create-new-campaign-in-app}
+## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
-{% tabs local %}
-  {% tab Campaigns %}
-  Click __Create Campaign__ to open a new messaging wizard for in-app message campaigns. Then, follow the flow of the messaging wizard to quickly create and launch your in-app message campaign.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
-  ![Platform Picker]({% image_buster /assets/img/iam_platforms.gif %})
+{% tabs %}
+{% tab Campaign %}
 
-1. Name your campaign something clear and meaningful.
-2. Add __Teams__ and __Tags__, as necessary.
-3. Add and name as many Variants as you need for this campaign.
-  - You can choose different platforms, message types, and layouts for each of your added Variants.
+**Steps:**
 
-  {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional Variants - you will be able to choose **Copy from Variant** from the **Add Variant** dropdown.
+1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
+2. Select **In-App Message**. Note that in-app messages aren't available in multichannel campaigns.
+3. Name your campaign something clear and meaningful.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+
+{% alert tip %}
+If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
 {% endalert %}
 
- {% endtab %}
- {% tab Canvas %}
- After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
+{% endtab %}
+{% tab Canvas %}
 
-1. Name your step something clear and meaningful.
-2. Add a Delay, as necessary. Note that steps containing in-app messages cannot be action based.
-3. Filter your Audience, as necessary.
-4. Choose your advancement options, as necessary.
-5. Choose all other messaging channels which you would like to pair with your message.
+**Steps:**
+
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard.
+2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
+4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+6. Choose any other messaging channels which you would like to pair with your message.
 
 {% alert important %}
-You cannot have multiple in-app message variants in a single step.
+You can't have multiple in-app message variants in a single step.
 {% endalert %}
+
+You can find more Canvas-specific information in [In-app messages in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}
 
+## Step 2: Specify delivery platforms
 
-## Step 1: Specify Delivery Platform(s)
-Start by choosing which platform(s) should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for a campaign encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because Platform selections are specific to each variant, you could try testing message engagement per platform!
-
-Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can only be used after selecting __Web Browsers__.
+Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. For example, you might choose **Web Browsers** for an in-browser message encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform!
 
 | Platform | Message Delivery |
 |---|---|
@@ -64,107 +68,222 @@ Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can
 | Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
 {: .reset-td-br-1 .reset-td-br-2}
 
+## Step 3: Specify your message types
 
-## Step 2: Specify Your Message Types
+Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) page, or by clicking on the linked message types in the following tables.
 
-Choose a __Message Type__, __Layout__, and __Enforced Device Orientation__ as necessary.
+When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-### Message Types
+![Graphic showing a scale of less instrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
-Once you've selected a sending platform, browse the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the tables.
-
-{% tabs local %}
-{% tab In-App Message Options %}
+### Message types
 
 These in-app messages are accepted by both mobile apps and web applications.
 
-#### Message Options
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;}
+</style>
 
-| Message Type | Type Description | Available Layouts| Other Options |
-|---|---|---|
-|[Full-Screen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#full-screen)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
-|[Modal]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#modal)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
-|[Slideup]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#slideup)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+<table class="tg">
+<thead>
+  <tr>
+    <th>Message Type</th>
+    <th>Type Description</th>
+    <th>Available Layouts</th>
+    <th>Other Options</th>
+    <th>Recommended Use</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Full-Screen</a></td>
+    <td>Messages that cover the entire screen with a message block.</td>
+    <td>
+      <ul>
+      <li>Image & Text</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>Enforced Device Orientation (Portrait or Landscape)</td>
+    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>
+    <td>Messages that cover the entire screen with a screen overlay and a message block.</td>
+    <td>
+      <ul>
+      <li>Text (with Optional Image)</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>N/A</td>
+    <td>A good middle ground. Use when you need an apparent way to catch your user's attention, such as encouraging users to try a new feature or take advantage of a promotion.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup'>Slideup</a></td>
+    <td>Messages that slide into view in a designated place without blocking the rest of the screen.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Unobtrusive—takes up the least amount of screen real estate. Use when alerting users to small snippets of information, such as new features, announcements, use of cookies, etc.<br></td>
+  </tr>
+</tbody>
+</table>
 
-{% endtab %}
-{% tab Advanced %}
+### Advanced message types
 
 These in-app messages are customizable to your needs.
 
-#### Message Options
-
-| Message Type | Type Description |Available Layouts| Other Options |
-|---|---|---|
-|[Custom Web Message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or JavaScript).  |None | Must set `allowUserSuppliedJavascript` initialization option to `true` for your In-App Message to work. |
-|[Email Capture Form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `allowUserSuppliedJavascript` initialization option to `true` for your IAM to work. |
-|[Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+<table class="tg">
+<thead>
+  <tr>
+    <th>Message Type</th>
+    <th>Type Description</th>
+    <th>Available Layouts</th>
+    <th>Requirements</th>
+    <th>Recommended Use</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages'>Custom HTML Message</a></td>
+    <td>Custom messages that perform as defined in your custom code (HTML, CSS, and/or JavaScript).</td>
+    <td>N/A</td>
+    <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
+    <td>This is a good option if you want all the advantages of IAMs but need additional functionality or for the appearance to stay "on brand". You can alter every little detail of the message—font, color, shape, size, buttons, etc. <br><br>Example use cases include asking users for app feedback, email capture forms, or paginated messages</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Email Capture Form</a></td>
+    <td>Typically used to capture the viewer’s email.</td>
+    <td>N/A</td>
+    <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
+    <td>When prompting users to submit their email address.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css'>Web Modal with CSS</a></td>
+    <td>Modal messages for web with customizable CSS.</td>
+    <td>
+      <ul>
+      <li>Text (with Optional Image)</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>Web Modal with CSS is unique to the Web SDK and can only be used after selecting <b>Web Browsers</b>.</td>
+    <td>When you want to upload or write custom CSS to create beautiful, all-around custom-styled messaging. </td>
+  </tr>
+</tbody>
+</table>
 
 {% alert important %}
-If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: `<a href="appboy://close">X</a>`.
+If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: <br><br>`<a href= "appboy://close">X</a>`.
 {% endalert %}
 
-{% endtab %}
-{% endtabs %}
+## Step 4: Compose your in-app message
 
+The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-## Step 3: Compose In-App Message
+![][24]{: style="max-width:85%" }
 
-The Compose tab allows you to edit all aspects of your message’s content and behavior.
+The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
-![composeyouriam][24]
+#### Language
 
+Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
 
-The content of the Compose tab vary based on your chosen Message Options in the last step, but may include any of the options below:
+#### Image
 
-| Content | Options| Description |
-|---|---|---|
-|Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. |
-|Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
-|Button Text & On Click Behavior| Add up to two buttons. | You can create and edit custom button text and color. You can also add  Terms of Service Link within Web Email Capture forms.  |
-|Device Options | Restrict send to only iOS devices. | Click __Change__ and check the box as desired. |
-|Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the screen. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
-|Header & Body Text | Completely custom copy (often with custom HTML capabilities) with the options to include Liquid and other types of personalization. | Some message types do not need and therefore do not ask for headers. |
-|Position | __From Bottom of App Screen__ or __From Top of App Screen__. | This only exists in the Universal Slideup message builder.|
-|HTML & Assets | Completely custom via upload, URL, or copy and paste. | Copy and paste HTML into the available space and upload your assets via ZIP. |
-|Email Capture Input Placeholder | Custom copy. | This is used solely in the Web Email Capture Form and will direct your users to input the desired content into the space. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch!
 
-### Buttons
+#### Header and body
 
-When available for your message type, you can have up to two buttons appear below your body of text. By default, the button on the right (Button 2) is formatted to be more visually drawing to your user. We recommend using this button for singular or primary actions.
+Write anything you want! Include completely custom copy (often with custom HTML capabilities) with the options to include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) and other types of personalization. The faster you can get your message across and get your customer clicking—the better! We recommend clear and concise headers and message content.
 
-![Primary_Secondary][2]{: height="40%" width="40%"}
-
-If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message, instead of leaving room for an additional button.
+Some message types do not need and therefore do not ask for headers.
 
 {% alert tip %}
-  If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+
+![Launch AI Copywriter button, located in the Message field of the in-app message composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 {% endalert %}
+
+#### Button text {#buttons}
+
+When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
+
+![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
+
+If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
+
+##### Choosing a primary button
+
+If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
+
+#### On-click behavior {#button-actions}
+
+When your customer clicks on a button in your in-app message, the following actions are available. 
+
+| Action | Description |
+|---|---|
+| Redirect to Web URL | Open a non-native web page. |
+| [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Deep link into an existing screen in your app. |
+| Close Message | Closes the currently active message. |
+| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
+| Request Push Permission | Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for push. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
+
+{% sdk_min_versions ios:5.1.0 android:20.1.0 web:4.0.3 %}
+
+#### iOS device options
+
+If desired, you can restrict your in-app message to only send to iOS devices. To do so, click **Change** and select **Only send to iOS devices**.
+
+#### Message close
+
+Choose between the following options:
+ 
+- **Dismiss Automatically:** Select how many seconds the message will remain on the screen.
+- **Wait for User Swipe or Touch:** Requires a dismissal or close option.
+
+#### Slide up position
+
+This setting only applies to the Slideup message type. Choose between having your slideup appear **From Bottom of App Screen** or **From Top of App Screen**.
+
+#### HTML and assets
+
+This setting only applies to the Custom code message type. Copy and paste HTML into the available space and upload your assets via ZIP.
+
+#### Email capture input placeholder
+
+This setting only applies to the email capture form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
 
 ### Generations
 
-Braze has three Generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support, in the [Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section which composing your in-app message.
+Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which generation they support, in the [preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section while composing your in-app message.
 
-![In-App_Messages_Generations][22]{: style="max-width:50%"}
+![Switching between in-app message generations in the preview section][2]{: height="50%" width="50%"}
 
-Depending on what SDK Versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation. A Generation is defined as a collection of SDK Versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates.
+Depending on what SDK versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation.
 
-By checking __Send to all Generations that support this message__, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences, and absence of button border).
+{% details What is a generation? %}
+A Generation is defined as a collection of SDK versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates.
 
-You could uncheck the __Send to all Generations that support this message__ and select __Send only to users on Generation 3 (the latest)__ if you do not want to allow users to receive the older message styles. Users on Generation 3 will be the only ones to receive the message.
+By selecting **Send to all Generations that support this message**, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences and absence of button border).
 
+You could clear the **Send to all Generations that support this message** checkbox and select **Send only to users on Generation 3 (the latest)** if you do not want to allow users to receive the older message styles. Users on Generation 3 will be the only ones to receive the message.
+{% enddetails %}
 
-## Step 4: Style Your In-App Message
+## Step 5: Style your in-app message
 
-The Style tab allows you to adjust all visual aspects of your message. Upload an image or badge, or pick a pre-designed badge icon. Change the colors of the header and body text, buttons and background by selecting from a palette or entering a hex, RGB or HSB code.
+The **Style** tab allows you to adjust all visual aspects of your message. Upload an image or badge, or pick a pre-designed badge icon. Change the colors of the header and body text, buttons, and background by selecting from a palette or entering a hex, RGB, or HSB code.
 
-The content of the Style tab vary based on your chosen Message Options in the last step, but may include any of the options below:
+The content of the **Style** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
 | Formatting | Input | Description |
 |---|---|---|
-|Color Profile | Apply from In-App Message Templates Gallery. | Click __Apply Template__ and select from the gallery. Then, click __Save__. |
+|Color Profile | Apply from in-app message templates gallery. | Click **Apply Template** and select from the gallery. Then, click **Save**. |
 |Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
 |Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
 |Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
@@ -178,45 +297,34 @@ The content of the Style tab vary based on your chosen Message Options in the la
 Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
 {% alert important %}
-Some in-app message types do not have the option for styling beyond uploading custom HTML (and/or CSS and/or JavaScript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets via ZIP. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
 {% endalert %}
 
-## Step 5: Configure Additional Settings
+## Step 6: Configure additional settings (optional)
 
-### Key-Value Pairs
+### Key-value pairs
 
-Add [key-value pairs][19] to send extra custom fields to user devices.
+You can add [key-value pairs][19] to send extra custom fields to user devices.
 
-### Re-evaluate Campaign Eligibility and Liquid
-
-In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes, or messages that should reflect any last-minute profile changes.
-
-![Re-evaluate IAM Membership][27]
-
-When you enable this "Re-evaluate Campaign Eligibility" option, an additional request to Braze will be made to confirm that the user is still eligible for this message. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated at that moment before the message is displayed.
-
-{% alert note %}
-Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
-
-Do not use this option for messages that can be triggered while a user is offline, or when eligibility and Liquid re-evaluation are not required.
-{% endalert %}
-
-## Step 6: Build the Remainder of Your Campaign or Canvas
-
-Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages. For more information on Canvas specific in-app messaging options like expiry and steps, [check out our documentation][16].
+## Step 7: Build the remainder of your campaign or Canvas
 
 {% tabs %}
-{% tab Triggering %}
+{% tab Campaign %}
 
-### Triggering
+Build the remainder of your campaign; see the following sections for further guidance on how to best use our tools to build in-app messages.
+
+#### Choose a trigger
+
+Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
 
 {% alert important %}
-Please note that if you intend to trigger your in-app message based off a custom event, that custom event __must be sent via the SDK__.
+Note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
 {% endalert %}
 
-![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: style="max-width:70%"}
+![Action-based campaign with the trigger action set to "Start Session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
-In-app message delivery is entirely based off of of the following action triggers:
+In-app message delivery is entirely based on the following action triggers:
+
 - Making a purchase
 - Opening the app/webpage
 - Performing a custom event (only works with events sent via the SDK)
@@ -224,94 +332,92 @@ In-app message delivery is entirely based off of of the following action trigger
 - Automatically schedule campaigns to send at a certain time with respect to the local time of each of your users.
 - Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
 
-A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
+A start date and time must be selected; however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
-#### Online vs. Offline Triggering
+##### Online vs. offline triggering
 
-In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode).
+In-app messages work by sending the message and triggers to the user's device. Once the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 
 {% alert important %}
-Note that once an in-app message campaign has been stopped, there may be some users that already received the message but have not seen it because they haven’t opened your app. These users will still see your in-app message, and be counted as a unique impression—even after your campaign has been stopped.
+Once an in-app message campaign has been stopped, there may be some users that already received the message but have not seen it because they haven't opened your app. These users will still see your in-app message and be counted as a unique impression—even after your campaign has been stopped.
 {% endalert %}
 
+#### Choose a priority
+
+Finally, once you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities. 
+
+You can choose between the following message priorities:
+
+- Low priority (shown after other messages)
+- Medium priority
+- High priority (shown before other messages)
+
+The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
+
+![]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+
+#### Choose users to target
+
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+{% alert note %} 
+If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.
+{% endalert %}
+
+##### Re-evaluate campaign eligibility and Liquid
+
+In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
+
+![Audience Summary section of the Target Users step with the option to "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+
+When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
+
+{% alert note %}
+Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
+<br><br>
+Do not use this option for messages that can be triggered while a user is offline or when eligibility and Liquid re-evaluation are not required.
+{% endalert %}
+
+#### Choose conversion events
+
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+
 {% endtab %}
-{% tab Prioritize %}
+{% tab Canvas %}
 
-### Prioritize
+If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
-#### Campaigns
-Finally, once you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities.
-
-![Event Prioritization]({% image_buster /assets/img_archive/prioritization_options.png %}){: style="max-width:80%"}
-
-The high, medium and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click __Set Exact Priority__ and you will be able to drag and drop campaigns to order them with the correct priority.
-
-![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
-
-#### Canvas
-A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
-
-![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:70%"}
-
-Navigate to the “send settings” of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
-
-By default, Canvas step priority is set to medium with the most recently created steps having the highest relative priority. Canvas/campaign level priorities also default to medium with the highest relative priority defaulting to the most recently created items.
-
-![canvas_priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
-
-{% endtab %}
-{% tab Target Segment %}
-
-### Target Segment
-
-Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
-
-![Target Page]({% image_buster /assets/img_archive/target_page.png %}){: style="max-width:50%"}
-
-{% alert note %} If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session. {% endalert %}
-
-{% endtab %}
-{% tab Conversion Events %}
-
-### Conversion Events
-Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
-
-- Opens App
-- Makes Purchase
-  - This can be a generic purchase or a specific item
-- Performs specific custom event
-
-You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
-
-![Conversion Event]({% image_buster /assets/img_archive/conversion_event_selection.png %}){: style="max-width:50%"}
+For information on Canvas-specific in-app messaging options, refer to [In-app messages in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}
 
-After you've finished building the last of your campaign or Canvas, review its details, then send it!
+## Step 8: Review and deploy
 
-## Active In-App Message Campaign Limits
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), then send it!
 
-Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend __turning off__ any campaigns that are no longer adding any value to your brand.
+Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) to learn how you can access the results of your messaging campaigns.
 
-Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers.
+## Things to know
 
-This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-users’ devices, which impacts the end user’s experience.
+### Active in-app message campaign limits
 
-__We have implemented a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.__
+Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend turning off any campaigns that are no longer adding any value to your brand.
 
-The 200 count includes active IAM campaigns that have not yet reached end time and those that have no end time. Active IAM campaigns that have passed their end times will not be counted.
+Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
-The average Braze customer has a total of 26 campaigns active at once - so it is unlikely that this limitation will impact you.
+There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.
 
-[2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
+The 200 count includes active IAM campaigns that have not yet reached end time and those that have no end time. Active IAM campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
+
+
+[2]: {% image_buster /assets/img/iam-generations.gif %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/iam-generations.gif %}
-[24]: {% image_buster /assets/img/iam_compose.gif %}
+[24]: {% image_buster /assets/img_archive/iam_compose.png %}
 [25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
 [27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

@@ -1,30 +1,28 @@
 ---
 nav_title: "POST: Create Send IDs"
+article_title: "POST: Create Send IDs"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Create Send IDs Braze endpoint."
+
 ---
 {% api %}
-# Create Send IDs For Message Send Tracking
+# Create send IDs for message send tracking
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}
 
 Braze’s Send Identifier adds the ability to send messages and track message performance entirely programmatically, without campaign creation for each send. Using the Send Identifier to track and send messages is useful if you are planning to programmatically generate and send content.
 
-The daily maximum number of custom send identifiers that can be created via this endpoint for a given app group is 100. Each send id - campaign id combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='sends id create' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -38,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -46,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \

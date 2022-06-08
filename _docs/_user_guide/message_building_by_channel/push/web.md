@@ -1,28 +1,31 @@
 ---
 nav_title: "Push for Web"
+article_title: Push for Web
 page_order: 9
 page_type: reference
 description: "This reference page briefly covers web push, and links out to the necessary steps to create one."
-
 platform: Web
 channel:
   - push
 
 ---
 
-# Web Push
+# Web push
 
 > Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
 
-Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See below for a sample web push sent by Braze.
+Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification][11].
 
-![appboy-web-push][12]
+![Web push example with the same push message displayed on a laptop and phone.][12]
 
-Users of your web application need to opt-in to receive web push. See below.
+Users of your web application need to opt-in to receive web push. 
 
-![web-push-optin][13]
+![An opt-in web push example for Safari with two buttons: Don't Allow and Allow.][13]
 
-For more information on the push protocol standards and browser support, you can review resources from [Apple][3] [Mozilla][1] and [Microsoft][2]
+For more information on the push protocol standards and browser support, you can review resources based on your browser:
+- [Apple][3]
+- [Mozilla][1]
+- [Microsoft][2]
 
 {% alert important %}
 Private browsing windows do not currently support web push.

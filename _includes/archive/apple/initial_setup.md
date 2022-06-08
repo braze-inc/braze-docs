@@ -2,7 +2,7 @@ Installing the Braze SDK will provide you with basic analytics functionality{% i
 
 The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
-## {{include.platform}}  SDK CocoaPod Integration
+## {{include.platform}} SDK CocoaPod integration
 
 ### Step 1: Install CocoaPods
 
@@ -14,11 +14,11 @@ Simply run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-__Note__: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
+**Note**: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
 
-__Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+**Note**: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
 
-### Step 2: Constructing the Podfile
+### Step 2: Constructing the podfile
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
@@ -30,9 +30,9 @@ target 'YourAppTarget' do
 end
 ```
 
-__Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
+**Note**: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
 {% if include.platform == 'iOS' %}
-__Note__: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
+**Note**: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
 
 ### Step 3: Installing the Braze SDK
 
@@ -41,11 +41,11 @@ To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app p
 pod install
 ```
 
-At this point you should be able to open the new Xcode project workspace created by CocoaPods.
+At this point you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
 ![New Workspace][apple_initial_setup_15]
 
-### Step 4: Updating your App Delegate
+### Step 4: Updating your app delegate
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -81,7 +81,7 @@ In `AppDelegate.swift`, add following snippet to your `application(application: 
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+**Note**: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% endtab %}
 {% endtabs %}
@@ -95,19 +95,19 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 {% endalert %}
 
 
-### Step 5: Specify Your Custom Endpoint or Data Cluster
+### Step 5: Specify your custom endpoint or data cluster
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
 {% endalert %}
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-#### Compile-time Endpoint Configuration (Recommended)
+#### Compile-time endpoint configuration (recommended)
 If given a pre-exisiting custom endpoint...
 - Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
-#### Runtime Endpoint Configuration
+#### Runtime endpoint configuration
 
 If given a pre-exisiting custom endpoint...
 - Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
@@ -120,7 +120,7 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### SDK Integration Complete
+### SDK integration complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% else %}Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.{% endif %}
 
@@ -132,7 +132,7 @@ To update a Cocoapod simply run the following commands within your project direc
 pod update
 ```
 
-## Customizing Braze On Startup
+## Customizing Braze on startup
 
 If you wish to customize Braze on startup, you can instead use the Braze initialization method `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` and pass in an optional `NSDictionary` of Braze startup keys.
 {% tabs %}
@@ -164,11 +164,11 @@ where `appboyOptions` is a `Dictionary` of startup configuration values.
 {% endtab %}
 {% endtabs %}
 
-__Note__: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method from above.
+**Note**: This method would replace the `startWithApiKey:inApplication:withLaunchOptions:` initialization method.
 
 This method is called with the following parameters:
 
-- `YOUR-API-KEY` – Your application's API Key from the Braze Dashboard
+- `YOUR-API-KEY` – Your application's API Key from the Braze dashboard
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
@@ -176,7 +176,7 @@ This method is called with the following parameters:
 See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
-Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
+Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 

@@ -1,6 +1,7 @@
 ---
 page_order: 1
 nav_title: Segmentation Filters
+article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
 glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
@@ -10,7 +11,7 @@ tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
-glossary_filter_text: "Select Categories below to narrow the glossary:"
+glossary_filter_text: "Select a catagory to narrow the glossary:"
 
 # category to icon/fa or image mapping
 glossary_tags:
@@ -26,74 +27,75 @@ glossary_tags:
 
 glossaries:
   - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Timezone:<br>Company's Time Zone
+    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom Data
   - name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Timezone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
     tags:
       - Custom Data
   - name: First Did Custom Event
-    description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Timezone:<br>Company's Time Zone
+    description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom Data
   - name: Last Did Custom Event
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Timezone:<br>Company's Time Zone
+    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom Data
   - name: Last Received SMS
-    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    tags:
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
   - name: Date of Recurring Event
-    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Timezone&#58;<br>This filter adjusts for whatever timezones the user is in.
+    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
     tags:
       - Custom Data
   - name: First Made Purchase
-    description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>UTC
     tags:
       - User Activity
   - name: First Purchase for App
-    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Purchased Product
-    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Used App
-    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Made Purchase
-    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Purchase for App
-    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Purchased Product
-    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Used App
-    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Used Specific App
-    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Median Session Duration
@@ -181,7 +183,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Converted From Canvas
-    description: Segments your users by whether or not they have converted on a specific Canvas.
+    description: Segments your users by whether or not they have converted on a specific Canvas. This filter doesn't include users that are in the control group.
     tags:
       - Retargeting
   - name: Entered Canvas Variation
@@ -205,15 +207,15 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Campaign or Canvas With Tag
-    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Received Specific Campaign
-    description: Segments your users by when they last received a specific campaign. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by when they last received a specific campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Received Specific Canvas Step
-    description: Segments your users by selecting those who received a specific, designated Canvas Step. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by selecting those who received a specific, designated Canvas Step. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Received Campaign
@@ -237,31 +239,31 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last In-App Message Impression
-    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Email
-    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Push
-    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Webhook
-    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
+    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Viewed News Feed
@@ -289,7 +291,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Braze Segment Extension
-    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
+    description: After creating a Segment Extension in the Braze dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City
@@ -329,7 +331,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Subscription Groups
-    description: Segments your users by their Subscription Group for email. Archived Groups will not appear and cannot be used.
+    description: Segments your users by their Subscription Group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
     tags:
       - Other
   - name: Email Unsubscribed Date
@@ -369,7 +371,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled
-    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - User Attributes
   - name: Push Enabled For App
@@ -381,7 +383,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Subscription Status
-    description: Segments your users by their <a href="/docs/help/best_practices/push/push_subscription_status/#push-subscription-status">subscription status</a> for push.
+    description: Segments your users by their <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">subscription status</a> for push.
     tags:
       - User Attributes
   - name: Push Unsubscribed Date
@@ -405,7 +407,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    description: Segment your users by whether or not their email address has hard bounced (i.e., the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
@@ -453,7 +455,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS
@@ -468,4 +470,8 @@ glossaries:
     description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
     tags:
       - Testing
+  - name: Invalid Phone Number
+    description: Segments your users by whether or not their phone number is invalid.
+    tags:
+      - User Attributes
 ---

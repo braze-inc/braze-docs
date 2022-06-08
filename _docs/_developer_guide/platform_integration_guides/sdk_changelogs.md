@@ -3,7 +3,7 @@ page_order: 20
 nav_title: SDK Changelogs
 layout: dev_guide
 guide_top_header: "Braze SDK Changelogs"
-guide_top_text: "The changelogs for each SDK are available within Docs or in their individual Github repositories linked below."
+guide_top_text: "The following changelogs for each SDK are available within Docs or in their individual GitHub repositories."
 
 
 guide_featured_title: "Changelogs on Docs"
@@ -26,6 +26,9 @@ guide_featured_list:
   - name: Cordova SDK
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
     image: /assets/img/cordova-icon.png
+  - name: Roku SDK
+    link: /docs/developer_guide/platform_integration_guides/roku/changelog/
+    image: /assets/img/roku.png
 
 guide_menu_title: "Changelogs on Github"
 guide_menu_list:
@@ -36,7 +39,7 @@ guide_menu_list:
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
   - name: Web SDK
-    link: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     fa_icon: fas fa-globe
   - name: Windows SDK
     link: https://github.com/Appboy/appboy-windows-sdk/blob/master/CHANGELOG.md
@@ -47,4 +50,7 @@ guide_menu_list:
   - name: Cordova SDK
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
     image: /assets/img/cordova-icon.png
+  - name: Roku SDK
+    link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
+    image: /assets/img/roku.png
 ---

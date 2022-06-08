@@ -1,17 +1,15 @@
 ---
 nav_title: "GET: News Feed Card Analytics"
+article_title: "GET: News Feed Card Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-channel: News Feed
-platform: API
-tool: Segments
 description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+
 ---
 {% api %}
-# News Feed Card Analytics Endpoint
+# News Feed card analytics endpoint
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}
@@ -20,7 +18,11 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter   | Required | Data Type | Description |
 | ----------- | -------- | --------- | ----------- |
@@ -30,7 +32,7 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id={{card_identifier}}&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
@@ -57,8 +59,9 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

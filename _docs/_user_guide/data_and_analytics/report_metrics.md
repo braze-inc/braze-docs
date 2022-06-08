@@ -1,6 +1,7 @@
 ---
 page_order: 0
 nav_title: Report Metrics Glossary
+article_title: Report Metrics Glossary
 layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
@@ -10,7 +11,7 @@ description: "This glossary defines terms you'll find in your reports in your Br
 tool: Reports
 
 glossary_tag_name: Channels
-glossary_filter_text: "Select Channels below to narrow the glossary:"
+glossary_filter_text: "Select Channels to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:
@@ -29,7 +30,14 @@ glossaries:
     description: Variation of a campaign, differing as defined by the creator.
     calculation: Count
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Audience
     description: Percentage of users who received a particular message. This number is received from Braze.
     tags:
@@ -57,7 +65,14 @@ glossaries:
     description: The total number of messages sent in a campaign. This number is received from Braze.
     calculation: Count
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Sends to Carrier
     description: This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
     calculation: Count
@@ -131,7 +146,7 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Total Clicks
-    description: The total number (and percentage) of users who clicked within the delivered email or card. Please note that clicks on an unsubscribe link will not be counted towards total clicks.
+    description: The total number (and percentage) of users who clicked within the delivered email or card. 
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
@@ -173,24 +188,59 @@ glossaries:
   - name: Revenue
     description: The total revenue in dollars from campaign recipients within the set primary conversion window.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Primary Conversions (A) or Primary Conversion Event
     description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Conversion Rate
     description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
     calculation: (Primary Conversions) / (Unique Recipients)
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Conversions (B, C, D)
-    description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
+    description: Additional conversion events added after the <b>Primary Conversion Event</b>. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Pending Retry
     description: The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
     tags:
@@ -219,43 +269,43 @@ glossaries:
       - iOS Push
       - Android Push
       - SMS
-  - name: Total Direct Revenue
-    description: The amount of revenue generated by this campaign, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
-    tags:
-      - Email
-      - Content Cards
-      - In-App Message
-      - Web Push
-      - iOS Push
-      - Android Push
-  - name: Unique Direct Purchases
-    description: The number of users who purchased, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
-    tags:
-      - Email
-      - Content Cards
-      - In-App Message
-      - Web Push
-      - iOS Push
-      - Android Push
-  - name: Total Direct Purchases
-    description: The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
-    tags:
-      - Email
-      - Content Cards
-      - In-App Message
-      - Web Push
-      - iOS Push
-      - Android Push
-  - name: Revenue per Recipient
-    description: The total direct revenue divided by unique recipients. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.
-    calculation: (Total Direct Revenue) / (Unique Recipients)
-    tags:
-      - Email
-      - Content Cards
-      - In-App Message
-      - Web Push
-      - iOS Push
-      - Android Push
+#  - name: Total Direct Revenue
+#    description: The amount of revenue generated by this campaign, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+#    tags:
+#      - Email
+#      - Content Cards
+#      - In-App Message
+#      - Web Push
+#      - iOS Push
+#      - Android Push
+#  - name: Unique Direct Purchases
+#    description: The number of users who purchased, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+#    tags:
+#      - Email
+#      - Content Cards
+#      - In-App Message
+#      - Web Push
+#      - iOS Push
+#      - Android Push
+#  - name: Total Direct Purchases
+#    description: The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+#    tags:
+#      - Email
+#      - Content Cards
+#      - In-App Message
+#      - Web Push
+#      - iOS Push
+#      - Android Push
+#  - name: Revenue per Recipient
+#    description: The total direct revenue divided by unique recipients. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.
+#    calculation: (Total Direct Revenue) / (Unique Recipients)
+#    tags:
+#      - Email
+#      - Content Cards
+#      - In-App Message
+#      - Web Push
+#      - iOS Push
+#      - Android Push
   - name: Choices Submitted
     description: Total number of choices selected when the user clicks the submit button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
     tags: 
@@ -276,4 +326,10 @@ glossaries:
     description: Total clicks on the submit button of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
     tags:
       - In-App Message
+  - name: Click-to-Open Rate
+    description: The percentage of opened emails that were clicked. This metric is only available in the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.
+    calculation: (Unique Clicks) / (Unique Opens) (for Email)
+    tags:
+      - Email
+    
 ---

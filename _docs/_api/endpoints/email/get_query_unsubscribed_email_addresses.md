@@ -1,20 +1,15 @@
 ---
 nav_title: "GET: Query List of Unsubscribed Email Addresses"
+article_title: "GET: Query List of Unsubscribed Email Addresses"
+search_tag: Endpoint
 page_order: 1
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines the usage of and parameters for using the Get Email Unsubscribes Braze endpoint."
+
 ---
 {% api %}
-# Retrieve List of or Query Email Unsubscribes
+# Retrieve list of or query email unsubscribes
 {% apimethod get %}
 /email/unsubscribes
 {% endapimethod %}
@@ -23,23 +18,29 @@ Use the /email/unsubscribes endpoint to return emails that have unsubscribed dur
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
-## Request Parameters
+## Rate limit
 
-You must provide an `end_date`, as well as either an `email` or a `start_date` .
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ---------|------ |
-| `start_date` | Optional* | String in YYYY-MM-DD format| Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
-| `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. |
+| `start_date` | Optional <br>(see note) | String in YYYY-MM-DD format| Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
+| `end_date` | Optional <br>(see note) | String in YYYY-MM-DD format | End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
-| `offset` | Optional | Integer | Optional beginning point in the list to retrieve from |
-| `sort_direction` | Optional | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest. |
-| `email` | Optional* | String | If provided, we will return whether or not the user has unsubscribed |
+| `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
+| `sort_direction` | Optional | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If `sort_direction` is not included, the default order is newest to oldest. |
+| `email` | Optional <br>(see note) | String | If provided, we will return whether or not the user has unsubscribed. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+You must provide an `end_date`, as well as either an `email` or a `start_date`.
+{% endalert %}
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-## Example Request 
+## Example request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

@@ -1,18 +1,12 @@
 ---
 nav_title: "POST: Update Content Block"
+article_title: "POST: Update Content Block"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Update Email Content Blocks Braze endpoint."
+
 ---
 {% api %}
 # Update Content Block
@@ -20,11 +14,15 @@ description: "This article outlines details about the Update Email Content Block
 /content_blocks/update
 {% endapimethod %}
 
-Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -42,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -54,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
@@ -82,14 +80,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible Errors
+### Possible errors
 - `Content cannot be blank.`
 
 - `Content must be a string.`
 
 - `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 
@@ -111,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 - `Content Block state must be either Active or Draft.`
 
-- `Active Content Block can not be updated to Draft. Please create a new Content Block.`
+- `Active Content Block can not be updated to Draft. Create a new Content Block.`
 
 - `Tags must be an array.`
 

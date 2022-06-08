@@ -39,12 +39,11 @@ layout: default
 <div class="col d-print-block " id="main_content" >
 
     <div id="featured_main">
-
+    <div id="content_start"></div>
     {%- unless hide_breadcrumb -%}
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
-
 
     <h1> {{ page.guide_top_header }} </h1>
     <p>  {{ page.guide_top_text | markdownify }} </p>
@@ -56,7 +55,7 @@ layout: default
 
       {%- for menu_list in page.guide_featured_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link }}">
+        <a href="{{ menu_list.link | multi_lang }}">
             {%- endif %}
           <div id="{{ menu_list.name | handle }}" class="guide_item">
             {%- if menu_list.fa_icon -%}

@@ -1,11 +1,13 @@
 ---
 nav_title: Analytics
-page_order: 2
+article_title: Analytics Partners
+page_order: 1
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to gather behavioral and business insights on customer data."
 
 layout: partner_page
+search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
@@ -27,6 +29,10 @@ valid_partner_list:
 - name: Neura
   url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
   title: Insights
+- name: Snowplow
+  url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
+- name: Clarisights
+  url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
 
 
 ---

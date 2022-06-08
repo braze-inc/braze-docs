@@ -1,21 +1,15 @@
 ---
 nav_title: "GET: See Email Template Information"
+article_title: "GET: See Email Template Information"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the See Email Template Braze endpoint."
+
 ---
 {% api %}
-# See Email Template Information
+# See email template information
 {% apimethod get %}
 /templates/email/info
 {% endapimethod %}
@@ -25,22 +19,26 @@ Use to get information on your email templates.
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
 {% alert important %}
-Templates built using the Drag & drop editor are not accepted
+Templates built using the Drag & Drop Editor are not accepted
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `email_template_id`  | Required | String | See [email template API identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
+### Request components
 - [Template Identifier]({{site.baseurl}}/api/identifier_types/)
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \

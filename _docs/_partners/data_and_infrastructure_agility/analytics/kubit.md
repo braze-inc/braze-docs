@@ -1,51 +1,63 @@
 ---
 nav_title: Kubit
+article_title: Kubit
 page_order: 1
 description: "This article outlines the partnership between Braze and Kubit, a no-code, self-service analytics platform that delivers instant product insights."
 alias: /partners/kubit/
 page_type: partner
+search_tag: Partner
 
 ---
 
 # Kubit
 
-> [Kubit](https://kubit.ai/) is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/), you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. This approach provides insights into the full lifecycle of your users, without requiring any engineering efforts.
+> [Kubit](https://kubit.ai/) is a no-code, self-service analytics platform that delivers instant product insights. 
 
-## Requirements
+The Braze and Kubit integration allows you to import Kubit user cohorts and target them in the Braze messaging. In addition, through the use of [Snowflake secure data sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/), you can also integrate the raw campaign and impression data from Braze with Kubit product analytics to measure the impact of these campaigns in real-time. This approach provides insights into the full lifecycle of your users without requiring any engineering efforts.
 
-* __Kubit Enterprise__ - The Braze integration feature is only available to Kubit Enterprise customers.
-* __Braze API Key and REST Endpoint__ - This integration invokes the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function. These calls will be counted toward your Braze [API limits]({{site.baseurl}}/api/basics/#api-limits).
-* __Matching User IDs__ - Your customer data in Kubit and Braze must have matching User IDs for this integration to match customers between the two platforms. This includes Anonymous UUIDs. To read about how Braze sets user IDs, visit our documentation [here](({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/#setting-user-ids)). 
+## Prerequisites
 
-## Braze and Kubit Integration
-### Step 1: Create Braze API Key
-To begin this integration, you must create a dedicated Braze API Key with `users.track` permissions.
+| Requirement | Description |
+|---|---|
+|Kubit enterprise account | A Kubit enterprise account is required to take advantage of this partnership. |
+| Matching user IDs | Your customer data in Kubit and Braze must have matching user IDs across the two platforms. This also includes anonymous UUIDs. Visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) to read about how Braze sets user IDs. |
+{: .reset-td-br-1 .reset-td-br-2} 
 
-1. Visit your [Braze Developer Console](https://dashboard-01.braze.com/app_settings/developer_console/) on your Braze Dashboard. 
-2. Click “Create New API Key”.
-3. Enter a name for the API Key (eg “Kubit”) and only grant permission for `users.track` in the User Data section. <br><br>![Braze API Key]({% image_buster /assets/img/kubit/braze_api_key.png %}){: style="max-width:70%;"}
+## Data import integration
 
-You can also find references for these steps in [Braze API Key Documentation]({{site.baseurl}}/api/basics/#app-group-rest-api-keys). 
+### Step 1: Get the Braze data import key
 
-### Step 2: Configure Kubit
-Provide the Braze API Key created in step 1, and your Braze [endpoint location]({{site.baseurl}}/api/basics/#endpoints).
+In Braze, navigate to **Technology Partners** and select **Kubit**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kubit's dashboard.<br><br>![The Kubit technology partner page in Braze.]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
 
-![Config on Kubit]({% image_buster /assets/img/kubit/config_on_kubit.png %}){: style="max-width:30%;"}
+### Step 2: Configure Braze in Kubit
+
+Provide the Braze data import key and Braze REST endpoint to your Kubit support contact. They will configure the integration on their side and let you know when the integration is live.  
 
 ### Step 3: Import Cohorts to Braze
-1. __Create a Cohort in Kubit__<br>
-Create a Cohort in Kubit and define the criteria of yout target users.<br><br>![Create a Cohort]({% image_buster /assets/img/kubit/create_cohort.png %}){: style="max-width:80%;"}<br><br>
-2. __Import Users to Braze__<br>
-Once you have saved a Cohort in Kubit, you can import these users to Braze to be used in Braze Segments to send email or push notifications to through the use of campaigns or Canvases.<br><br>![Import to Braze]({% image_buster /assets/img/kubit/import_to_braze.png %}){: style="max-width:80%;"}<br><br>There are two import schedule modes:<br>- One-Time Import: Import once now.<br>- Scheduled Import: Import daily, weekly or monthly at a specific time. <br><br>![Import Schedule]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}<br><br>Note that each Cohort can only have one live import schedule.<br><br>
-3. __Verify Import Status__<br>
-Once an import has been completed, an email notification will be sent to the recipients(s) specified in the import schedule. You can also check a Cohort's import status under Schedule in Kubit. The schedule history will display every import execution time, outcome, and the total number of users in the Cohort who were imported to Braze.<br><br>![Import History]({% image_buster /assets/img/kubit/import_history.png %})<br><br>You can manually trigger an import by clicking on Import to Braze icon for that import schedule.
 
-### Step 4: Create Braze Segments with Kubit Cohorts
-After Cohorts are imported to Braze, you can use them as filters to create Braze Segments and include them in Braze campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
+#### Create a cohort in Kubit
+[Create a cohort](https://www.kubit.ai/doc/fundamentals#cohort) in Kubit and define the criteria of your target users.<br><br>![]({% image_buster /assets/img/kubit/create_cohort.png %}){: style="max-width:80%;"}
 
-![Segment with Kubit Cohorts]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+#### Import users to Braze
+Once you have saved your cohort, you can import them to Braze to be used in Braze segments. These segments can then be used to create targeted email or push campaigns and Canvases.
 
-### Step 5: Analyze Braze Data in Kubit (Optional)
-You can also take advantage of [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit’s Self-Service Analytics and provide you the full picture of users’ lifecycle, from attribution to behavior to engagement.  
+To do this, navigate to your existing cohort and under **Cohort Control** select **Import to Braze**.
 
-For references, here are all the [Braze tables]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ed79384e6ac6a97fe3b3d9f76852b7c2) which are available to be incorporated into Kubit analytics. The details of this step are very customer specific and require special configurations. Please talk to your Kubit Account Manager or support@kubit.ai to learn more.
+![]({% image_buster /assets/img/kubit/import_to_braze.png %}){: style="max-width:80%;"}
+
+Next, select the desired import cadence. One-time imports allow you to import once now. Scheduled imports allow you to import daily, weekly, or monthly at a specific time. Note that each cohort can only have one live import schedule. 
+
+![]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}
+
+#### Verify import status
+Once an import has been completed, an email notification will be sent to the recipients(s) specified in the import schedule. You can also check a cohort's import status under **Schedule** in Kubit. The schedule history will display every import execution time, outcome, and the total number of users in the cohort who were imported to Braze.<br><br>![]({% image_buster /assets/img/kubit/import_history.png %})<br><br>You can manually trigger an import by clicking on **Import to Braze** icon for that import schedule.
+
+### Step 4: Create Braze segments with Kubit cohorts
+After importing cohorts to Braze, you can use them as filters to create Braze segments and include them in Braze campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
+
+![In the Braze segment builder, the user attribute "Kubit cohorts" is set to "includes_value" and shows a list of available cohorts.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+
+## Analyze Braze data in Kubit (optional)
+Take advantage of [Snowflake secure data sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit’s self-service analytics, providing you a full picture of users’ lifecycle.
+
+For reference, here are all the [Braze fields]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt?ed79384e6ac6a97fe3b3d9f76852b7c2) which are available to be incorporated into Kubit analytics. The details of this step are very customer-specific and require special configurations. Talk to your Kubit account manager or [support@kubit.ai](support@kubit.ai) to learn more.

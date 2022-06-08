@@ -1,19 +1,15 @@
 ---
 nav_title: "POST: Schedule Messages"
+article_title: "POST: Schedule Messages"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Schedule Messages Braze endpoint."
+
 ---
 {% api %}
-# Create Scheduled Messages
+# Create scheduled messages
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
@@ -24,7 +20,11 @@ The create schedule endpoint allows you to schedule a campaign, Canvas, or other
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -75,29 +75,29 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
-| `campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
+| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Available Messaging Objects {#available-messaging-objects}
+### Available messaging objects {#available-messaging-objects}
 
-You can use these objects in the [request body](#request-body) above.
-- [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/apple_objects/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
+You can use these objects in the [request body](#request-body).
+- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
+- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
+- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
+- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
+- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
+- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
+- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --data-raw '{

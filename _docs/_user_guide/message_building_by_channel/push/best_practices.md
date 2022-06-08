@@ -1,14 +1,14 @@
 ---
 page_order: 20
 nav_title: Best Practices
-layout: dev_guide
+article_title: Push Best Practices
+layout: featured
 guide_top_header: "Push Best Practices"
-guide_top_text: "Being able to communicate with your users whether or not they’re “in-app” can be extremely useful, making push notifications a powerful tool. But with power comes responsibility, and used incorrectly, they can be potentially invasive. To escape being pushy, follow the best practices and use cases below to make sure your push messages inspire engagement rather than annoyance."
+guide_top_text: "Being able to communicate with your users whether or not they’re “in-app” can be extremely useful, making push notifications a powerful tool. But with power comes responsibility, and used incorrectly, they can be potentially invasive. To escape being pushy, adhere to the following best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 
 page_type: landing
 description: "This landing page is home to best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 channel: push
-no_index: true
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -28,15 +28,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/best_practices/conversion_tracking/
   fa_icon: fas fa-chart-line
 - name: Message Format
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/best_practices/message_format/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
   fa_icon: fas fa-envelope
-- name: Reporting
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/reporting
-  fa_icon: fas fa-file-alt
 - name: Push Enablement and Subscription
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/users_and_subscriptions/
+  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check
 ---
 
-Note that your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more. [Learn more]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+{% alert important %}
+Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more. Learn more about [Mobile push regulations]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#mobile-push-regulations-for-apps).
+{% endalert %}
 
+<br><br>

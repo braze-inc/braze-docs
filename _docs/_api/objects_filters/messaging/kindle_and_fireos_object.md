@@ -1,24 +1,19 @@
 ---
 nav_title: "Kindle and FireOS Push Object"
+article_title: Kindle and FireOS Push Messaging Object
 page_order: 7
-
 page_type: reference
-
-channel: Push
+channel: push
 platform:
-  - API
   - Android
   - FireOS
-  - Kindle
-
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article explains the different components of Braze's Kindle and FireOS Push Object."
+
 ---
 
-# Kindle and FireOS Push Object
+# Kindle and FireOS push object specification
+
+The `kindle_push` object allows you to modify or create Kindle and FireOS push notifications via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {
@@ -34,4 +29,4 @@ description: "This article explains the different components of Braze's Kindle a
 }
 ```
 
-The `priority` parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. Any values sent that outside of that integer range will default to `0`.
+The `priority` parameter will accept values from `-2` to `2`, where `-2` represents the lowest priority and `2` represents highest priority. `0` is the default value. Any values sent that outside of that integer range will default to `0`.

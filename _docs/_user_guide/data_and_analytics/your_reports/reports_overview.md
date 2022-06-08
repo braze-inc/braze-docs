@@ -1,32 +1,25 @@
 ---
 nav_title: Reports Overview
+article_title: Reports Overview
 page_order: 0
-
 page_type: reference
 description: "This article provides guidance on which reports and analytics you can use to answer common marketing strategy questions."
 tool: Reports
+
 ---
 
-# Reports Overview
+# Reports overview
 
 Not sure where to start with analyzing your campaigns? You're in the right place. This page provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
-## Which Variant Won?
+## Which variant won?
 
 {% tabs local %}
 {% tab Campaign Analytics %}
 **Campaign Analytics**
 
-Use Campaign Analytics to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
+Use [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
 
-{% details Expand for documentation by messaging channel %}
-
-- [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/#content-card-metrics)
-- [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_reporting/)
-- [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/)
-- [SMS & MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)
-
-{% enddetails %}
 {% endtab %}
 
 {% tab Canvas Analytics %}
@@ -74,7 +67,7 @@ More questions you can answer with this feature:
 {% endtab %}
 {% endtabs %}
 
-## Which Variant Impacted Retention the Most?
+## Which variant impacted retention the most?
 
 {% tabs local %}
 {% tab Retention Reports %}
@@ -115,7 +108,7 @@ More questions you can answer with this report:
 {% endtab %}
 {% endtabs%}
 
-## How Engaged Are My Users?
+## How engaged are my users?
 
 {% tabs local %}
 {% tab Report Builder %}
@@ -162,16 +155,16 @@ More questions you can answer with this dashboard:
 {% tab Engagement Reports %}
 **Engagement Reports**
 
-Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the Dashboard.
+Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
 
 You can export the following statistics depending on your message channel:
 
 | channel| stats available|
 | ------| --------------|
-| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Unsubscribes, Bounces, Delivered, Reported Spam |
+| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
 | Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
-| Web Push | Sends, Opens, Bounces, Body Clicks |
-| In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
+| Web push | Sends, Opens, Bounces, Body Clicks |
+| In-app message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -186,7 +179,7 @@ More questions you can answer with this report:
 {% endtab %}
 {% endtabs %}
 
-## How Do User Behaviors Differ by Segment?
+## How do user behaviors differ by segment?
 
 {% tabs local %}
 {% tab Segment Data %}
@@ -238,7 +231,7 @@ Check out this page to:
 {% endtab %}
 {% endtabs %}
 
-## Did My Campaign Provide a Return on Investment?
+## Did my campaign provide a return on investment?
 
 {% tabs local %}
 {% tab Revenue Data %}
@@ -277,7 +270,7 @@ More questions you can answer with report:
 {% endtab %}
 {% endtabs %}
 
-## What Campaigns Should I Run Next?
+## What campaigns should I run next?
 
 {% tabs local %}
 {% tab Funnel Report %}

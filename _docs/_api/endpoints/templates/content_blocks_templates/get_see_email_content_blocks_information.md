@@ -1,22 +1,15 @@
 ---
 nav_title: "GET: See Content Blocks Information"
+article_title: "GET: See Content Blocks Information"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the See Available Content Blocks Information Braze endpoint."
 ---
 
 {% api %}
-# See Content Block Information
+# See Content Block information
 {% apimethod get %}
 /content_blocks/info
 {% endapimethod %}
@@ -25,7 +18,11 @@ This endpoint will call information for your existing [Email Content Blocks]({{s
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -33,7 +30,7 @@ This endpoint will call information for your existing [Email Content Blocks]({{s
 | `include_inclusion_data`  | Optional | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=No' \
@@ -61,7 +58,7 @@ Authorization: Bearer YOUR-API-KEY-HERE
 }
 ```
 
-### Possible Errors
+### Possible errors
 - `Content Block ID cannot be blank.` - A Content Block has not been listed or is not encapsulated in quotes.
 
 - `Content Block ID is invalid for this App Group.` - This Content Block does not exist or is in a different company account or app group.

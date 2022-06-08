@@ -7,7 +7,7 @@ hidden: true
 layout: doc_guide
 custom_collection: home
 nav_title: "Documentation"
-description: "This article goes over the type of documentation you'll find on this site that goes over how to use the Braze platform."
+description: "This is the Braze documentation site landing page. Here, you can find links to the user guide, developer guide, API guide, technology partners documentation, and help articles. You can also find quick links to helpful links and popular articles."
 
 doc_top_header: "Braze Documentation"
 doc_top_text: "Meet us at the intersection of art and science. Find us in the moment, or light years ahead.
@@ -33,7 +33,7 @@ doc_menu_list:
   - name: API Guide
     bg_color: '#ff9349'
     image: /assets/img/new-icons/api.svg
-    link: /docs/developer_guide/rest_api/basics/
+    link: /docs/api/basics/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:
@@ -43,7 +43,7 @@ popular_topic_list:
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
   - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/about/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/
   - name: Personalized Messaging
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
   - name: Braze REST API
@@ -57,8 +57,10 @@ popular_topic_list:
 
 helpful_resources_list:
   - name: Innovation Statement
-    link: /docs/help/innovation_statement/
+    link: /docs/innovation_statement/
   - name: Support & Success Services Handbook
     link: /docs/handbooks/
+  - name: Data Protection Technical Assistance
+    link: /docs/dp-technical-assistance/
 ---
 

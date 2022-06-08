@@ -98,6 +98,20 @@ $nav_bottom_height: 60px;
 
   }
 
+  #dev_select_div {
+    display: inline;
+    margin-left: 300px;
+    @media (min-width: $window-medium-px) {
+      margin-left: 10px;
+    }
+    #dev_select {
+      max-width: 160px;
+      padding: 7px 6px;
+      border-radius: 5px;
+      border: solid 1px grey;
+    }
+  }
+
   padding-left: 0px;
   padding-right: 0px;
 
@@ -136,7 +150,7 @@ $nav_bottom_height: 60px;
     }
     .nav_title {
       display: inline;
-      color: $black-shark;
+      color: $left-nav;
     }
     div  {
       &.nav {
@@ -166,7 +180,7 @@ $nav_bottom_height: 60px;
 
         a {
           font-family: $braze-regular;
-          color: $black-shark;
+          color: $left-nav;
         }
         a[aria-expanded="true"] i.fas:after {
             content: icon($nav_expanded);
@@ -320,7 +334,6 @@ $nav_bottom_height: 60px;
         padding-left: 30px;
 
     }
-
 
     .input-group-append {
       i {

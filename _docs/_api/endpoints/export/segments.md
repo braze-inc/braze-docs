@@ -1,6 +1,6 @@
 ---
 nav_title: Segments
 config_only: true
-no_index: true
-page_order: 6
+noindex: true
+page_order: 7
 ---

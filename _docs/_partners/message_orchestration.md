@@ -1,11 +1,13 @@
 ---
 nav_title: Message Orchestration
+article_title: Message Orchestration Partners
 page_order: 2
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to orchestrate your messages with retargeting, email templates, promotions, attribution, and more! "
-
 layout: partner_page
+search_tag: Partner
+
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
@@ -60,8 +62,25 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
   url: /docs/partners/message_orchestration/learning/edume/
+- name: optilyz
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-  
----
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: Shopify
+  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
+- name: Knak
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
+- name: Extole
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 
+---

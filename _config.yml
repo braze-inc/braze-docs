@@ -3,10 +3,10 @@ title: Braze Documentation
 email: success@braze.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
-baseurl: "/docs" # the subpath of your site, e.g. /blog
-homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/docs" # the subpath of your site, e.g., /blog
+homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g., http://example.com
 twitter_username: Braze
-github_username:  Appboy
+github_username: braze-inc
 
 language: en
 
@@ -16,6 +16,8 @@ api_key: "5b26b83b-aa4e-4bd1-b9fa-81880aa8ac83"
 # statuspage.io Key
 status_io_key: "c947v6z63ltm"
 
+# Google Tag Key
+gta_tag_key: "GTM-W8DKT4D"
 
 # Source dir
 source: '.'
@@ -50,12 +52,11 @@ markdown_api: true
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
 
-# gitHub config
-github_baseurl: 'https://github.com/Appboy/braze-docs/blob/develop/_docs/'
+# GitHub config
+github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_docs/'
 github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]
-
 
 # Collections directory
 collections_dir: _docs
@@ -186,7 +187,8 @@ exclude: [
   'Rakefile', 'vendor', 'config','404.html','public', 'proxy.rb',
   '*.log','MigrationTool','Archive','documentation','academy',
   '.sass-cache', '.git', '.vscode', 'system.properties',
-  'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site'
+  'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site',
+  'vercel.json'
 ]
 
 # Setting for image buster
@@ -203,14 +205,18 @@ asset_pipeline:
   display_path: docs/assets
   gzip: false
 
+lab_index_name: "LABSearch"
+
 # Algolia Search index
 algolia:
   algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
   application_id: "1T770XQJ1A"
   index_name: "DocSearch" # You can replace that with whatever name you want
   nodes_to_index: "p,h1,h2,h3,h4,h5,h6,tr,pre,details"
+  max_record_size: 20000
   settings:
     attributesForFaceting:
+      - searchable(article_title)
       - searchable(collection)
       - searchable(type)
       - searchable(category)
@@ -219,15 +225,21 @@ algolia:
       - searchable(nav_title)
       - searchable(channel)
     searchableAttributes:
+      - article_title
+      - headings
+      - unordered(description)
+      - search_rank
       - nav_title
       - Path_01
-      - headings
-      - content
       - url
-      - search_rank
       - collection,tags
+      - content
       - platform
       - channel
+    customRanking:
+      - desc(article_title)
+      - desc(custom_ranking.heading)
+      - desc(custom_ranking.position)
   extensions_to_index:
     - html
     - md

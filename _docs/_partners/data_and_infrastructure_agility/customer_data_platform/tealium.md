@@ -1,5 +1,6 @@
 ---
 nav_title: Tealium
+noindex: true
 page_order: 2
 layout: featured
 guide_top_header: "Tealium"
@@ -13,5 +14,8 @@ guide_featured_list:
 - name: Tealium AudienceStream
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/
   fa_icon: fas fa-users
+- name: Tealium for Currents
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/
+  fa_icon: fas fa-warehouse
 ---
 <br>

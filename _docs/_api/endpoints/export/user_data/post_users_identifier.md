@@ -1,19 +1,15 @@
 ---
 nav_title: "POST: User Profile Export by Identifier"
+article_title: "POST: User Profile Export by Identifier"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Users by ID Braze endpoint."
+
 ---
 {% api %}
-# Users by Identifier Endpoint
+# Users by identifier endpoint
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}
@@ -22,7 +18,11 @@ This endpoint allows you to export data from any user profile by specifying a fo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='users export ids' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -41,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |-----|-----|-----|-----|
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
@@ -73,7 +73,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 }'
 ```
 
-## Fields to Export
+## Fields to export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -111,9 +111,9 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-Please be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
+Be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
-Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls. Documentation on that endpoint is below.
+Depending on the data requested, this API endpoint may not be sufficient to meet your needs due to the 2,500 requests per minute rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.
 
 ## Response
 
@@ -127,9 +127,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-For an example of the data that is accessible via this endpoint see the example below.
+For an example of the data that is accessible via this endpoint see the following example.
 
-### Sample User Export File Output
+### Sample user export file output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 
@@ -268,8 +268,9 @@ User export object (we will include the least data possible - if a field is miss
     ]
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -1,20 +1,20 @@
 //Font Variables
-$braze-light: 'Sailec W00 Light', Arial, Helvetica, sans-serif;
-$braze-light-oblique: 'Sailec W00 Light Italic', Arial, Helvetica, sans-serif;
-$braze-thin: 'Sailec W00 Thin', Arial, Helvetica, sans-serif;
-$braze-regular: 'Sailec W00 Regular', Arial, Helvetica, sans-serif;
-$braze-regular-oblique: 'Sailec W00 Italic', Arial, Helvetica, sans-serif;
-$braze-heavy: 'Sailec W00 Demi', Arial, Helvetica, sans-serif;
-$braze-heavy-oblique:'Sailec W00 Demi Italic', Arial, Helvetica, sans-serif;
-$braze-medium: 'Sailec W00 Medium', Arial, Helvetica, sans-serif;
-$braze-medium-oblique: 'Sailec W00 Medium Italic', Arial, Helvetica, sans-serif;
-$braze-black: 'Sailec W00 Bold', Arial, Helvetica, sans-serif;
-$braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
+$braze-light: 'Sailec W00 Light', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-light-oblique: 'Sailec W00 Light Italic','Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-thin: 'Sailec W00 Thin', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-regular: 'Sailec W00 Regular', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-regular-oblique: 'Sailec W00 Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-heavy: 'Sailec W00 Demi', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-heavy-oblique:'Sailec W00 Demi Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-medium: 'Sailec W00 Medium', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-medium-oblique: 'Sailec W00 Medium Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-black: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+$braze-black-oblique: 'Sailec W00 Bold Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
 
 $braze-code: 'Roboto Mono', monospace;
 
 
-$base_url : '/docs';
+$base_url: '/docs';
 
 
 $base_font_size: 16px;
@@ -40,6 +40,8 @@ $main_max_width: 940px;
 $white: #ffffff;
 $black: #000000;
 $black-shark: #212123;
+$header-nav: #D4D4D4;
+$left-nav: #212123;
 $navy-bay: #27368f;
 // Lighter versions of navy-bay
 $navy-cove: #7c86bc;
@@ -88,7 +90,7 @@ $grey-french: #c6c6cc;
 $grey-ghost: #dddde2;
 $grey-athens: #f4f4f7;
 
-$text-color: $grey-boulder;
+$text-color: #58585A;
 $header-color: $black-shark;
 
 $z-index-normal: 1;
@@ -174,3 +176,75 @@ li {
     margin-bottom: 0;
   }
 }
+
+h2.details_title {
+  margin: 15px 0 4px 0;
+  &::before {
+    content: none !important;
+    display: none !important;
+  }
+}
+details {
+  summary {
+    display: list-item;
+    cursor: pointer;
+    font-size: 16px;
+    color: $black-shark;
+    margin: 17px 0 0 0;
+    font-family: $braze-medium;
+    &::-webkit-details-marker {
+        display: none;
+        //background-color: $black-shark;
+    }
+    &::marker {
+        content: "";
+        //background-color: $black-shark;
+    }
+    &::before {
+      content:"►";
+      margin-right: 2px;
+      color: $black-shark;
+    }
+    margin-bottom: 10px;
+  }
+ &[open], &:hover,
+ &:active, &:focus  {
+    summary {
+      color: $black-shark;
+      outline: none;
+      font-size: 14px;
+      &::-webkit-details-marker {
+          color: $black-shark;
+      }
+
+      p {
+        color: $text-color;
+      }
+      &::before {
+        //background-color: $blue-scooter;
+        color: $black-shark;
+      }
+    }
+    &[open] {
+      summary {
+        &::marker {
+            content: "";
+            //background-color: $black-shark;
+        }
+        &::before {
+          content:"▼" ;
+        }
+      }
+      margin-bottom: 30px;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding: 5px 0 0 18px;
+  }
+  p, ol, ul {
+    padding: 5px 0 0 0px;
+    font-size: 14px;
+    color: $text-color;
+  }
+}
+

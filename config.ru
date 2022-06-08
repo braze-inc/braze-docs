@@ -18,5 +18,5 @@ use CacheSettings, {
 use Rack::Deflater
 
 FileUtils.touch('/tmp/app-initialized')
-system("bundle exec rake docs:build")
+system("bundle exec rake docs_en:build")
 run Rack::Jekyll.new

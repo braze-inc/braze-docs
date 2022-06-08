@@ -6,14 +6,14 @@ page_type: update
 description: "This archived article describes how to perform an initial SDK setup with Eclipse. Braze has deprecated support for the Eclipse IDE."
 ---
 
-# Initial SDK Setup with Eclipse
+# Initial SDK setup with Eclipse
 
 {% alert update %}
-Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{site.baseurl}}/support_contact/) for assistance.
+Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration [email Support]({{site.baseurl}}/support_contact/) for assistance.
 {% endalert %}
 
 ## Step 1
-In your command line, clone the [Braze Android Github Repository][03].
+In your command line, clone the [Braze Android GitHub Repository][03].
 
 ```bash
 $ git clone git@github.com:Appboy/appboy-android-sdk.git
@@ -70,7 +70,7 @@ Add final pieces.
 
   - For SDK version 1.7.0 or higher, you will need to copy "assets/fontawesome-webfont.ttf" from our library project to your application. Eclipse does not automatically include the assets folder from libraries.
 
-[03]: https://github.com/appboy/appboy-android-sdk "Appboy Android Github Repository"
+[03]: https://github.com/appboy/appboy-android-sdk "Appboy Android GitHub Repository"
 [04]: {{site.baseurl}}/assets/img_archive/file_import.png
 [05]: {{site.baseurl}}/assets/img_archive/android_import.png
 [06]: {{site.baseurl}}/assets/img_archive/click_browse.png

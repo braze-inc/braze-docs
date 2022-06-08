@@ -1,25 +1,19 @@
 ---
-nav_title: "Apple Objects"
+nav_title: "Apple Object"
+article_title: Apple Messaging Object
 page_order: 1
-
 page_type: reference
-
-channel: Push
-platform:
-  - API
-  - iOS
-tool:
-  - Campaigns
-  - Canvas
-
+channel: push
+platform: iOS
 description: "This article lists and explains the different Apple objects used at Braze."
 
 ---
-# Apple Push Objects
 
-These objects are used to define or request information related to Apple Push and Apple Push Alert content.
+# Apple push object specification
 
-## Apple Push Object
+The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+
+## Apple push object
 
 ```json
 {
@@ -29,6 +23,8 @@ These objects are used to define or request information related to Apple Push an
    "sound": (optional, string) the location of a custom notification sound within the app,
    "extra": (optional, object) additional keys and values to be sent,
    "content-available": (optional, boolean) if set, Braze will add the "content-available" flag to the push payload,
+   "interruption_level": (optional, string: "passive", "active", "time-sensitive", or "critical") specifies the interruption level passed (iOS 15+),
+   "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
    "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
@@ -45,7 +41,7 @@ These objects are used to define or request information related to Apple Push an
 
 You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
-### Apple Push Alert Object
+### Apple push alert object
 
 In most cases, `alert` can be specified as a string in an `apple_push` object.
 
@@ -61,11 +57,11 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
 }
 ```
 
-## Apple Push Action Button Object
+## Apple push action button object
 
-You _must_ include the `category` field in the Apple Push Object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use (see the table below). You can also use your own buttons if they have been registered in your app.
+You must include the `category` field in the Apple Push Object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use shown in the following table. You can also use your own buttons if they have been registered in your app.
 
-### Apple Push Action Button Object for Braze Default Buttons
+### Apple push action button object for Braze default buttons
 
 | Category Identifier   | Button Text | Button Action Identifier | Allowed Actions         |
 |-----------------------|-------------|--------------------------|-------------------------|
@@ -87,7 +83,7 @@ You _must_ include the `category` field in the Apple Push Object to use iOS push
 }
 ```
 
-### Apple Push Action Button Object for Categories Defined by Your App
+### Apple push action button object for categories defined by your app
 
 ```json
 {

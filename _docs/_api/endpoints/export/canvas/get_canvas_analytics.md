@@ -1,16 +1,15 @@
 ---
 nav_title: "GET: Canvas Data Series Analytics"
+article_title: "GET: Canvas Data Series Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Canvas
 description: "This article outlines details about the Canvas Data Series Analytics Endpoint."
+
 ---
 {% api %}
-# Canvas Data Series Analytics Endpoint
+# Canvas data series analytics endpoint
 {% apimethod get %}
 /canvas/data_series
 {% endapimethod %}
@@ -19,7 +18,11 @@ This endpoint allows you to export time series data for a Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 
-## Request Parameters
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -32,7 +35,7 @@ This endpoint allows you to export time series data for a Canvas.
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_series?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
@@ -95,8 +98,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
+
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -1,34 +1,32 @@
 ---
 nav_title: "POST: Update Email Template"
+article_title: "POST: Update Email Templates"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Update Email Template Braze endpoint."
+
 ---
 {% api %}
-# Update Existing Email Templates
+# Update existing email templates
 {% apimethod post %}
 /templates/email/update
 {% endapimethod %}
 
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-Use the endpoints below to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference.
+Use these endpoints to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The email template creation API endpoint will also return an `email_template_id` reference.
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -43,12 +41,12 @@ Authorization: Bearer YOUR-REST-API-KEY
   "body": (optional, string) the email template body that may include HTML,
   "plaintext_body": (optional, string) a plaintext version of the email template body,
   "preheader": (optional, string) the email preheader used to generate previews in some clients,
-  "tags": (optional, array of Strings) Tags must already exist
-  "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
+  "tags": (optional, array of Strings) tags must already exist,
+  "should_inline_css": (optional, Boolean) one of 'true' or 'false' is expected
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -62,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
@@ -78,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 }'
 ```
 
-## Possible Errors
+## Possible errors
 - `Template Name is required`
 
 - `Tags must be an array.`

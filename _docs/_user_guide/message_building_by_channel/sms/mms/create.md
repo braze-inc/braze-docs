@@ -1,43 +1,44 @@
 ---
 nav_title: Creating an MMS Campaign
+article_title: Creating an MMS Campaign
 page_order: 2
 description: "This reference article covers the steps involved in creating, sending, and previewing an MMS message."
 page_type: reference
 tool:
-  - Dashboard
   - Campaigns
-
 channel:
   - MMS
+  
 ---
 
-# MMS Message Sending
+# MMS message sending
 
 > This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
 
-## MMS Sending Basics
+## MMS sending basics
 
 Sending MMS with Braze:
-- __Select your subscription group__
+
+- **Select your subscription group**
   - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
-- __Input message body__
+- **Input message body**
   - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
   - Only 1 image supported<br><br>
-- __Understand MMS Sending__
+- **Understand MMS sending**
   - MMS are billed at a different rate vs. text-only SMS.
   - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
 
-#### vCard Contact Cards 
+### Contact Cards
 
-vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. vCards can be created programmatically and assigned properties found [here](https://tools.ietf.org/html/rfc6350#section-6). Some common properties included are name, phone number, birthday, address, and email. For more information on how to create vCards, visit the [Twilio vCard documentation](https://www.twilio.com/blog/send-vcard-twilio-sms).
+Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. These cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze media library or created through our built-in [Contact Card generator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
 
 ## Creating an MMS message
 
-Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS-enabled Subscription Group, you will have the ability to either upload an image or reference an image URL.
+Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS-enabled Subscription Group, you will have the ability to upload an image, reference an image URL, or include a Contact Card.
 
-![picture][2]
+![][2]
 
-### Image Specifications
+### Image specifications
 
 **Image Specifications** | **Recommended Properties**
 --- | ---
@@ -47,15 +48,17 @@ File Types | PNG, JPG, GIF
 
 ## Previewing an MMS message
 
-Braze provides a preview of the image you have uploaded. 
+Braze provides a preview of the image you have uploaded in the **Preview** panel of the message composer. 
 
 {% alert note %}
 The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
 {% endalert %}
 
-![picture][3]
+![][3]
 
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/
 [2]: {% image_buster /assets/img/sms/mms_composer.png %}
 [3]: {% image_buster /assets/img/sms/mms_preview.png %}
+[4]: {% image_buster /assets/img/sms/contact_card1.png %}
+[5]: {% image_buster /assets/img/sms/contact_card2.png %}

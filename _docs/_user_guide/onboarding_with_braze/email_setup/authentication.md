@@ -1,19 +1,20 @@
 ---
 nav_title: Email Authentication
+article_title: Email Authentication
 page_order: 1
-
 page_type: reference
 description: "This reference article covers email authentication, a collection of techniques aimed at equipping your email with verifiable information about its origin."
 channel: email
+
 ---
 
-# Email Authentication
+# Email authentication
 
 > Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.
 
 Proper authentication is crucial for ISPs to recognize you as a sender of desirable emails. It's how the ISPs know it's you and how they know to deliver your mail immediately. Without authentication, your outreach is presumed fraudulent.
 
-## Methods of Authentication
+## Methods of authentication
 
 ### Sender Policy Framework (SPF)
 

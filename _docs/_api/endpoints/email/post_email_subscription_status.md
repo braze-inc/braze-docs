@@ -1,20 +1,15 @@
 ---
 nav_title: "POST: Change Email Subscription Status"
+article_title: "POST: Change Email Subscription Status"
+search_tag: Endpoint
 page_order: 2
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines the usage of and parameters for changing a User's Subscription Status with the Post Email Subscription Status Braze endpoint."
+
 ---
 {% api %}
-# Change User's Email Subscription Status
+# Change user's email subscription status
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/status
 {% endapimethod %}
@@ -25,7 +20,11 @@ You can set the email subscription state for an email address that is not yet as
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147 {% endapiref %}
 
-## Request Body
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
+## Request body
 
 ```
 Content-Type: application/json
@@ -39,7 +38,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -47,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_state` | Required | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/status' \
 --header 'Content-Type: application/json' \

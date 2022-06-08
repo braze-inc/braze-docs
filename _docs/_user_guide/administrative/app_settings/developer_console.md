@@ -1,5 +1,6 @@
 ---
 nav_title: Developer Console
+article_title: Developer Console
 page_order: 4
 layout: dev_guide
 guide_top_header: "Developer Console"
@@ -7,7 +8,6 @@ guide_top_text: "The Developer Console is useful for both important identificati
 
 page_type: landing
 description: "This landing page is home to articles on the Developer Console. Here you can find resources on logs, API Settings, and Internal Groups."
-tool: Dashboard
 
 guide_featured_title: "Section Articles"
 

@@ -1,16 +1,19 @@
 ---
 nav_title: Network Offline Mode
-platform: Android
+article_title: Network Offline Mode for Android and FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 3
-description: "This reference article covers how to integrate network offline mode for your Android application."
+description: "This reference article covers how to integrate network offline mode for your Android or FireOS application."
 
 ---
 
-# Network Offline Mode
+# Network offline mode
 
-Network Offline Mode is an optional feature that pauses or resumes outbound network requests from the Braze SDK at any point during runtime. Events are not lost during the offline state. See the full documentation [here][1].
+[Network offline mode][1] is an optional feature that pauses or resumes outbound network requests from the Braze SDK at any point during runtime. Events are not lost during the offline state.
 
-## Example Usage
+## Example usage
 
 To enable network offline mode in the Braze SDK, see the following example:
 
@@ -18,17 +21,17 @@ To enable network offline mode in the Braze SDK, see the following example:
 {% tab JAVA %}
 
 ```java
-Appboy.setOutboundNetworkRequestsOffline(true);
+Braze.setOutboundNetworkRequestsOffline(true);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.setOutboundNetworkRequestsOffline(true)
+Braze.setOutboundNetworkRequestsOffline(true)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setOutboundNetworkRequestsOffline-boolean-
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-outbound-network-requests-offline.html

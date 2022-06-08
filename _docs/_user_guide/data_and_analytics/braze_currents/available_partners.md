@@ -1,17 +1,18 @@
 ---
 nav_title: Available Partners
+article_title: Available Currents Partners
 page_order: 2
-
 page_type: reference
 description: "This reference article outlines the data partners you can use to integrate with Braze Currents, and their use cases."
 tool: Currents
+
 ---
 
-# Available Partners
+# Available partners
 
 > This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
 
-## Data Warehouses
+## Data warehouses
 
 These partners can either act as warehouses (for flat file storage) or gateways to other data manipulation tools. This is best if you need your data to be flexible, but also do backflips, and maybe a cartwheel.
 
@@ -22,7 +23,7 @@ These partners can either act as warehouses (for flat file storage) or gateways 
 * [Microsoft Azure Blob Storage][3]
 
 
-## Customer Data
+## Customer data
 
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
 
@@ -31,7 +32,7 @@ These customer data platforms collect and route information from multiple source
 * [Segment][7]
 
 
-## Behavioral Analytics
+## Behavioral analytics
 
 These partners specialize in product analytics and business intelligence and can help you interact with your users based on their actions.
 

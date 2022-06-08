@@ -25,10 +25,125 @@ let algolia_user = Cookies.get('__algolia_user');
 if (!algolia_user){
   algolia_user = generateUUID();
 }
+
+var search_color_mapping = {
+  'endpoint': '#33C699',
+  'channel': '#FF9349',
+  'partner': '#3ACCDD',
+  'tool': '#F7918E',
+  'platform': '#27368F',
+  'search_tag': '#0759AA',
+};
+
+var custom_word_mapping = {
+  'REST': 'REST',
+  'API': 'API',
+  'APIs': 'APIs',
+  'iOS': 'iOS',
+  'ID': 'ID',
+  'IDs': 'IDs',
+  'FAQ': 'FAQ',
+  'FAQS': 'FAQs',
+  'In-App': 'In-App',
+  'GPDR': 'GPDR',
+  'mParticle': 'mParticle',
+  'SDK': 'SDK',
+  'SDKs': 'SDKs',
+  'IP': 'IP',
+  'IPs': 'IPs',
+  'SSL': 'SSL',
+  'SAML': 'SAML',
+  'SSO': 'SSO',
+  'TTL': 'TTL',
+  'A/B': 'A/B',
+  'HTML': 'HTML',
+  'GIF': 'GIF',
+  'GIFs': 'GIFs',
+  'OTT': 'OTT',
+  'TV': 'TV',
+  'KPIs': 'KPIs',
+  'S3': 'S3',
+  'FireOS': 'FireOS',
+  'tvOS': 'tvOS',
+  'macOS': 'macOS',
+  'CocoaPods': 'CocoaPods',
+  'AndroidX': 'AndroidX',
+  'JavaScript': 'JavaScript',
+  'a': 'a',
+  'the': 'the',
+  'by': 'by',
+  'with': 'with',
+  'to': 'to',
+  'from': 'from',
+  'an': 'an',
+  'SMS': 'SMS',
+  'MMS': 'MMS',
+  'Platform Wide': 'Platform Wide Features & Behaviors',
+  'lab': 'LAB',
+};
+
 // Set cookie to auto expire after 30 days of inactivity
 Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
+String.prototype.upCaseWord = function() {
+  return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+};
+String.prototype.replaceUnder = function() {
+  return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
+};
+Array.prototype.upCaseWord = function() {
+  return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
+};
+Array.prototype.replaceUnder = function() {
+  return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
+};
+String.prototype.mapReplace = function(word_map) {
+  var mstr = this;
+  for (var wd in word_map) {
+    if (word_map.hasOwnProperty(wd)) {
+        var rep = new RegExp('\\b' + wd + '\\b','gi');
+        mstr = mstr.replace(rep,word_map[wd]);
+    }
+  }
+  return mstr;
+};
+
+String.prototype.sanitize = function() {
+  return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
+};
+
 $(document).ready(function() {
+  $("#braze_header").click((e) => {
+    setTimeout(function() {
+      let hide_backdrop = false;
+      $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
+        let itm = $(ea);
+        console.log(itm.attr('id'), itm.attr('aria-expanded'),)
+        if(itm.attr('aria-expanded') == 'true') {
+          hide_backdrop = true;
+        }
+      });
+      if (!hide_backdrop) {
+        $("#backdrop").removeClass("backdrop-show");
+      }
+    }, 100);
+  });
+  $("#braze_header .nav-link.dropdown-toggle").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    const isOpen = e.currentTarget.ariaExpanded !== "true";
+    const borderDiv = e.currentTarget.children[0];
+    borderDiv.classList.toggle("border-focus-show", isOpen);
+    $("#backdrop").toggleClass("backdrop-show", isOpen);
+  });
+  $("#backdrop").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    e.currentTarget.classList.remove("backdrop-show");
+  });
+
   $('#toc').toc({
     headers: 'h2, h3',
     minimumHeaders: toc_minheaders
@@ -152,14 +267,23 @@ $(document).ready(function() {
     }
   });
 
+  // set list role attribute for screenreader
+  var list_tabs = $('ul');
+  list_tabs.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tablist');
+  });
+  var list_tab = $('ul > li');
+  list_tab.each(function(k,v){
+    var $this = $(this);
+    $this.attr('role','tab');
+  });
 
   // Footer navigation
   var parent_top = 'nav_top';
 
   var nav_active = $('#' + parent_top + ' div.nav-item.active');
   var nav_bottom = $('#bottom_page_nav');
-
-
 
   var pg_prev_div = $("#page_prev");
   var pg_next_div = $("#page_next");

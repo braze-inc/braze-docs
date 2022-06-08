@@ -1,5 +1,6 @@
 ---
 nav_title: "Types of Push Notifications"
+article_title: Types of Push Notifications
 page_order: 1
 page_type: glossary
 description: "This glossary lists the different types of Push Notifications you can use Braze to send."
@@ -7,10 +8,10 @@ channel: push
 
 layout: glossary_page
 glossary_top_header: "Types of Push Notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push Campaigns, but there are notes in the descriptions below that will indicate whether any backend configurations are needed and what those might be."
+glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push Campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
 
 glossary_tag_name: Channels
-glossary_filter_text: "Select any channel below to narrow Push Type options."
+glossary_filter_text: "Select any of the following channels to narrow Push Type options."
 
 # category to icon/fa or image mapping
 glossary_tags:
@@ -30,7 +31,7 @@ glossaries:
     tags:
       - Web
   - name: "Push Primer Campaigns"
-    description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e. notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
+    description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e., notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
     tags:
       - iOS
       - Android
@@ -55,7 +56,7 @@ glossaries:
     description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
     tags:
       - iOS
-      - Web
+      - Android
   - name: "Provisional Push Notifications for iOS"
     description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
     tags:
