@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Email and Link Template FAQs
-page_order: 5
+page_order: 10
 
 page_type: FAQ
 description: "This page covers frequently asked questions about email templates and link templates."
