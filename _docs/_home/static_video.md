@@ -287,15 +287,11 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 ### General Best Practices
 
-#### Don’t Over-Segment Your Tracking {#over-segmentation}
+#### Use Event Properties
 
-- Being more generic will help you target more users and draw more useful divisions between user segments
-- For example, rather than capturing a separate event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event
-- If you over segment your user data, your findings will lose statistical significance and won’t guide the development of your app and marketing initiatives as effectively
-    - You will “miss the forest for the trees” when evaluating user-trend data
-    - Events should be tied directly to your marketing and conversion goals
-
->  Multiple user actions within an app can be labeled with the same custom event or attribute designation. This is useful when you want to track something generically such as "played a song" rather than recording each individual song within a music app as a separate and distinct event.
+- Name a custom event something that describes an action that a user takes
+- Make generous use of custom event properties to represent important data about an event
+- For example, rather than capturing a separate custom event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event and have an event property that includes the name of the movie
 
 ### Development Best Practices
 
