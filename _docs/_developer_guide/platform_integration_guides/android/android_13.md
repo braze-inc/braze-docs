@@ -10,7 +10,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 <br>
 
 {% alert important %}
-This guide will continue to update as new Android 13 beta versions are released. Check back here for updates related to Braze compatibility with Android 13. (Last Updated: May 20, 2022)
+Android 13 is now in its Platform Stability Milestone. This means all APIs have been finalized, and your app's users will soon be able to upgrade their devices.
 {% endalert %}
 
 # Android 13 SDK upgrade guide
@@ -20,6 +20,10 @@ This guide describes relevant changes introduced in Android 13 (2022) and the re
 ![A graphic showing the anticipated release timeline for Android 13 with the final release being sometime after July 2022.]({% image_buster /assets/img/android/android_13_timeline.png %}){: style="max-width:70%;border:0"}
 
 Refer to the [Android 13 developer documentation][2] for a full migration guide.
+
+## Android 13 Braze SDK
+
+To prepare for Android 13, please upgrade your Braze SDK to the latest version (v20.1.0 or higher). Doing so will give you access to our new ["no-code" push primer feature][7].
 
 ## Changes in Android 13
 
@@ -49,9 +53,7 @@ Braze automatically creates a default notification channel if one does not alrea
 
 ## Preparing for Android 13 {#next-steps}
 
-This guide will continue to update as new Android 13 beta versions are released. Check back here for updates related to Braze compatibility with Android 13.
-
-We strongly recommend that you prepare an Android 13 compatible build in time for the [Android 13 platform stability milestone][5].
+It is strongly recommended that your app targets Android 13 in order to control when users are prompted for Push Permission.
 
 This will allow you to optimize your [push opt-in rates][6] by prompting users at more appropriate times and will lead to a better user experience in how and when your app asks for push permission.
 
@@ -61,3 +63,4 @@ This will allow you to optimize your [push opt-in rates][6] by prompting users a
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
 [5]: https://developer.android.com/about/versions/13/overview#platform_stability
 [6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
+[7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
