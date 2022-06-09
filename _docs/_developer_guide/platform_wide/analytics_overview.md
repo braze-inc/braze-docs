@@ -299,11 +299,11 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 ### General best practices
 
-#### Use Event Properties
+#### Use event properties
 
-- Name a custom event something that describes an action that a user takes
-- Make generous use of custom event properties to represent important data about an event
-- For example, rather than capturing a separate custom event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event and have an event property that includes the name of the movie
+- Name a custom event something that describes an action that a user takes.
+- Make generous use of custom event properties to represent important data about an event.
+- For example, rather than capturing a separate custom event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event and have an event property that includes the name of the movie.
 
 ### Development best practices
 
