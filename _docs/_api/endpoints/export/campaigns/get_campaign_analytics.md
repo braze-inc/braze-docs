@@ -39,7 +39,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ```
 {% endraw %}
 
-## Response
+## Responses
 
 ### Multichannel response
 
