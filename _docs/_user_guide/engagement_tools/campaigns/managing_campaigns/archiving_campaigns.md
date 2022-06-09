@@ -17,13 +17,7 @@ If you'd like to stop a campaign from sending or clear it from your dashboard, y
 
 ![][1]
 
-Archiving a campaign will accomplish the following:
-
-- No further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
-- The campaign's indicators will be removed from:
-	- The Detailed Statistics graph on the **Overview** page
-	- The Detailed Statistics graph on the **Revenue** page
-	- The Custom Events Over Time graph
+When you archive a campaign, no further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
 
 There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the relevant button.
 
