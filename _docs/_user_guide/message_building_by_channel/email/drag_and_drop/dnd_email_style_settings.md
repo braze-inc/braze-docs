@@ -39,6 +39,10 @@ Gmail does not support custom fonts, so your custom font may display as a defaul
 
 ![][3]{: style="max-width:80%;"}
 
+### Add a fallback font
+
+Fallback fonts are used for the title, header, and body text when your default font choice isn't available. You can add up to 17 fallback fonts. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
+
 ## Title styling
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
 
