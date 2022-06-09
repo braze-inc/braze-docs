@@ -37,10 +37,10 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 ```json
 {
   “version” : 1, //numerical version of the json structure
-  "to": ToAddress, ("jon@braze.com")
+  "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
-  "from_name": DisplayName ("Braze")
-  "from_address": FromAddress ("no-reply@braze.com")
+  "from_name": DisplayName ("Braze"),
+  "from_address": FromAddress ("no-reply@braze.com"),
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
@@ -93,7 +93,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 Modifications done after the message leaves Braze will not be reflected in the file saved to your S3 bucket. This will include modifications our mail delivery partners make, like wrapping links for click tracking and inserting tracking pixels. 
 
 ### What are messages under the "unassociated" value in the campaign path? 
-Messages under the unassociated path are messages sent that are not tied to a campaign. This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID. 
+When a message is sent outside of a campaign or Canvas, the CampaignId in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send? 
 Using the dispatch ID, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more. 
