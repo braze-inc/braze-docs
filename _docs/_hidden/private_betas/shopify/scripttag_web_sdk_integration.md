@@ -11,12 +11,21 @@ hidden: true
 
 # Web SDK integration via Shopify ScriptTag
 
+> [Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) is a remote JavaScript code loaded into the pages of your store or the order status page of checkout. When a store page is loaded, Shopify will check to see if any script tags need to be loaded to the site page. Within the process, the Braze Web SDK scripts will be loaded onto your Shopify store site directly.
+
 ## Prerequisites
+
+| Requirement | Description |
+| ----------- | ----------- |
+| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per app group. |
+| Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
+| Nested custom attribute support | This will be enabled with the Spotify integration.<br><br>You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## What is the Web SDK?
 The Web SDK is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data via a web/mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
 
-For more information about the Web SDK, see [here]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/).
+For more information, refer to the [Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) overview.
 
 ## What will the Web SDK on my Shopify store support?
 
@@ -24,12 +33,12 @@ The Braze Web SDK on your Shopify store will support tracking the following:
 - [Anonymous user tracking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) to track guest activity in your store
 - [Monthly active user]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) tracking as the Web SDK is capable of tracking session data from your store visitors
 - Option to collect Shopify [user data]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection) which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption
-   - To see what user data can be tracked, please refer to [user data section]
+   - To see what user data can be tracked, refer to [user data section]
 - Option to enable [in-browser messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) as a channel on your Shopify store.
 
 ## Integration
 
-Please review the following Web SDK details with your developers to prevent any issues during the integration process.
+Review the following Web SDK details with your developers to prevent any issues during the integration process.
 
 ### Braze Web SDK initialization
 
@@ -41,7 +50,7 @@ The `device_id` will also be used to reconcile user data to the anonymous user p
 
 The current version of the Braze Web SDK via Shopify ScriptTag integration is v4.0.
 
-If you have the Web SDK already installed onto your Shopify store, please see [this section]() to see how you might be impacted.
+If you have the Web SDK already installed onto your Shopify store, see the [following section](#existing) to see how you might be impacted.
 
 ### Monthly active users
 
@@ -58,13 +67,14 @@ At this time, you will not be able to customize the Shopify scripts to include m
 ## How does the Braze Web SDK get installed onto my Shopify store?
 
 ### No pre-existing Web SDK implementation
+
 [Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) is a remote JavaScript code loaded into the pages of your store or the order status page of checkout. When a store page is loaded, Shopify will check to see if any script tags need to be loaded to the site page. Within the process, the Braze Web SDK scripts will be loaded onto your Shopify store site directly.
 
 From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events and/or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
 
 After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
 
-### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store?
+### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
 
 If you already have the Web SDK installed on your Shopify store, you can still proceed with setting up the Shopify ScriptTag within the onboarding process. During the installation process, Braze will check if there are instances of the Web SDK already available on your Shopify store. 
 
