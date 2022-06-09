@@ -1,7 +1,7 @@
 ---
 nav_title: Link Templates
 article_title: Link Templates
-page_order: 4
+page_order: 5
 description: "Link templates allow users to append parameters or prepend URLs to all links in an email message. This article covers how to create different types of link templates."
 tool:
   - Templates
