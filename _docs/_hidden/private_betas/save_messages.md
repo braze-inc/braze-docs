@@ -39,8 +39,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   “version” : 1, //numerical version of the json structure
   "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
-  "from_name": DisplayName ("Braze")
-  "from_address": FromAddress ("no-reply@braze.com")
+  "from_name": DisplayName ("Braze"),
+  "from_address": FromAddress ("no-reply@braze.com"),
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
