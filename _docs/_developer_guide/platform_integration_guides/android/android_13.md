@@ -57,7 +57,7 @@ Braze automatically creates a default notification channel if one does not alrea
 
 ## Preparing for Android 13 {#next-steps}
 
-It is strongly recommended that your app targets Android 13 in order to control when users are prompted for push Pprmission.
+It is strongly recommended that your app targets Android 13 in order to control when users are prompted for push permission.
 
 This will allow you to optimize your [push opt-in rates][6] by prompting users at more appropriate times and will lead to a better user experience in how and when your app asks for push permission.
 
