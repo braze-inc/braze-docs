@@ -141,6 +141,3 @@ With Nested Object Support for Custom Event Properties, customers can now trigge
 [23]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %} 
 [14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %}   
 [26]: {% image_buster /assets/img/Shopify/shopify_integration17.png %}
-[11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
-[12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 
-[13]: {% image_buster /assets/img/Shopify/abandoned_cart_delay.png %} 
