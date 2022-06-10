@@ -75,13 +75,13 @@ As you go through the onboarding process, you will be expected to:
 4. Installation of the Braze app into your storefront
 <br><br>
 
-#### Connect Shopify store name
+### Step 2a: Connect Shopify store name
 
 When you click **Begin Setup**, you'll be prompted to input your **Shopify Store Name**. Ensure that you input your store name, not the [Shopify domain](https://help.shopify.com/en/manual/domains).
 
 ![][6]{: style="max-width:65%;"} 
 
-#### Web SDK
+#### Step 2b: Web SDK
 
 In the next step of the setup wizard, you'll be presented with information about the Braze Web SDK. The Braze Web SDK can be integrated via Shopify ScriptTag to unlock the following functionality:
 - 1-click Braze Web SDK integration onto your Shopify store
@@ -102,7 +102,7 @@ Keep in mind that when you enable the Braze Web SDK, it will begin tracking mont
 - For more general information about Braze's Web SDK, visit our [Web SDK overview]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/).
 {% endalert %}
 
-#### Select Shopify events
+### Step 2c: Select Shopify events
 
 Next, you'll be able to select which Shopify events you wish to integrate with Braze.
 
@@ -110,81 +110,17 @@ For the events denoted with an asterisk (&#42;), you will be required to integra
 
 ![][7]{: style="max-width:65%;"} 
 
-#### In-browser messages (optional)
+### Step 2d: In-browser messages (optional)
 
 Once you have selected and confirmed which Shopify events to collect, you'll have the option to include in-browser messages as part of your integration. In-browser messages allow brands to deliver rich content within their Shopify store to promote deals, collect email and SMS opt-ins, and so much more. To learn more, visit [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/#potential-use-cases).
 
 ![][5]{: style="max-width:65%;"} 
 
-#### Install Braze app in your storefront
+### Step 2e: Install Braze app in your storefront
 
 After you select your Shopify events and channels, you can confirm your integration settings within the setup wizard. Once confirmed, select **Go to Shopify** to install Braze's Shopify app. After selecting **Install App**, you will be redirected back to Braze to complete the app installation and display your integration settings.
 
 ![][8]{: style="max-width:85%;"} 
-
-
-
-
-
-
-
-
-
-## Shopify advanced settings
-
-### Update abandoned cart delay
-By default, Braze will automatically set the delay to trigger the `shopify_abandoned_cart` event to one hour of inactivity. You can set the **Abandoned Cart Delay** from 5 minutes to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
-
-![Option in Advanced Settings to set a rule for how long after a user leaves their cart to trigger abandoned cart.][13]{: style="max-width:40%;"}
-
-### Update abandoned checkout delay
-
-By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` event to one hour of inactivity. You can set the **Abandoned Checkout Delay** from 5 minutes up to 24 hours by selecting the dropdown and then selecting **Set Delay** on the Shopify partner page.
-
-![Option in Advanced Settings to set a rule for how long after a user leaves their cart to trigger abandoned checkout.][11]{: style="max-width:40%;"}
-
-### Set your preferred product identifier
-
-If you have included Braze purchase events within your Shopify integration setup, by default, Braze will set the Shopify Product ID as the Product ID used within Braze's purchase event. This will then be used when you filter for products purchased in Y days or when personalizing content in your message using Liquid.
-
-You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
-
-![Option in Advanced Settings to specify a field to use as your product identifier within the Braze purchase event.][12]{: style="max-width:40%;"}
-
-
-
-
-
-
-
-
-
-
-# User reconciliation
-
-## The Web SDK and Shopify webhooks
-### Anonymous users
-1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (i.e., anonymous), Braze will capture the `device_id` for that particular customer's session.<br><br>
-2. As the customer progresses through to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.<br><br>
-3. In this process, Braze will effectively match the user by the same `device_id` for the same session and merge all of the user data captured from both the Web SDK and Shopify webhooks into a single user profile in Braze.<br><br>Braze will also assign the Shopify customer ID as the [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) on the user profile.
-
-### Identified users
-
-## Shopify webhooks only
-Braze will map the supported Shopify data to user profiles using the customer's email address or phone number. 
-
-### Identified user profiles
-
-- If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles) Braze syncs the Shopify data to that user.
-- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.
-
-### Anonymous users
-
-- If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user.
-  - For existing alias-only profiles, we'll add the Shopify alias object for that user. 
-- If the email address or phone number is not associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object.
-  - If these alias-only user eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [users identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
-
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
 [3]: {% image_buster /assets/img/Shopify/scripttag1.png %} 
@@ -193,7 +129,3 @@ Braze will map the supported Shopify data to user profiles using the customer's 
 [6]: {% image_buster /assets/img/Shopify/scripttag4.png %} 
 [7]: {% image_buster /assets/img/Shopify/scripttag5.png %} 
 [8]: {% image_buster /assets/img/Shopify/scripttag.gif %} 
-
-[11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
-[12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 
-[13]: {% image_buster /assets/img/Shopify/abandoned_cart_delay.png %} 

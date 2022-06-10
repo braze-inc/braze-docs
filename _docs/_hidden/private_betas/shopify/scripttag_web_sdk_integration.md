@@ -15,11 +15,13 @@ hidden: true
 
 ## Prerequisites
 
+Ensure with your development team that the following is supported within your Shopify store setup. If any of the following is not supported in your Shopify store, the Braze Web SDK via Shopify ScriptTag cannot be supported.
+
 | Requirement | Description |
 | ----------- | ----------- |
-| Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per app group. |
-| Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
-| Nested custom attribute support | This will be enabled with the Spotify integration.<br><br>You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
+| [Shopify Ajax API](https://shopify.dev/api/ajax) | Possible use of the Ajax API includes:<br>- Add products to the cart and update the cart item counter.<br>- Display related product recommendations.<br>- Suggest products and collections to visitors as they type in a search field.<br><br>Braze requires the Ajax API as we will fetch product information for your product events. |
+| [Cart token management by Shopify](https://shopify.dev/api/examples/cart) | A cart contains merchandise that a customer intends to purchase and the estimated cost associated with the cart. You can use the [Storefront API](https://shopify.dev/api/storefront) to interact with a cart during a customer's session. <br><br>Braze requires cart token management through Shopify directly and not a 3rd party system to fetch the cart token ID for abandoned cart events. |
+| URL management by Shopify | Your store will need to follow the structured Shopify URL pathing, where each of the paths for collections or products follows one of the following:<br>- /collections/collectionA<br>- /collections/collectionA/products/productA<br>- /products/productB |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## What is the Web SDK?
@@ -32,13 +34,12 @@ For more information, refer to the [Web SDK]({{site.baseurl}}/user_guide/onboard
 The Braze Web SDK on your Shopify store will support tracking the following:
 - [Anonymous user tracking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) to track guest activity in your store
 - [Monthly active user]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) tracking as the Web SDK is capable of tracking session data from your store visitors
-- Option to collect Shopify [user data]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection) which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption
-   - To see what user data can be tracked, refer to [user data section]
+- Option to collect Shopify [user data]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection) which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption.
 - Option to enable [in-browser messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) as a channel on your Shopify store.
 
 ## Integration
 
-Review the following Web SDK details with your developers to prevent any issues during the integration process.
+Review the following Web SDK details with your developers to prevent issues during the integration process.
 
 ### Braze Web SDK initialization
 
@@ -64,6 +65,10 @@ You have the option to include the following events that will require the Web SD
 
 At this time, you will not be able to customize the Shopify scripts to include more event and attribute tracking.
 
+{% alert note %}
+If you do want to add more customization to the Braze Web SDK implementation via Shopify ScriptTag, you will need to engage with your development team to directly integrate with the Shopify ScriptTag API.
+{% endalert %}
+
 ## How does the Braze Web SDK get installed onto my Shopify store?
 
 ### No pre-existing Web SDK implementation
@@ -86,5 +91,6 @@ It is important to review your existing Web SDK integration for the following it
 
 If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
 
-### What if I use a Customer Data Platform like Segment or mParticle?
+### What if I use a customer data platform like Segment or mParticle?
 
+Ensure that you disable Shopify events you may have been sending through your customer data platform.

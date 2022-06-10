@@ -15,7 +15,7 @@ guide_featured_list:
 - name: Setting up Shopify
   link: /docs/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
-- name: Shopify data in Braze
+- name: Shopify Data in Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
 - name: Web SDK Integration with Shopify ScriptTag
