@@ -19,7 +19,7 @@ The Shopify and Braze integration allows brands to connect their Shopify store s
 
 All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Reach out to your account executive for more details.
 
-This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number. Refer to the following section for more information on [Shopify user reconciliation](#shopify-user-syncing). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number. Refer to the following section for more information on [Shopify user reconciliation]({{site.baseurl}}/shopify_data/#user-reconciliation). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
 
 | Requirement | Description |
 | ----------- | ----------- |
