@@ -84,7 +84,7 @@ When you click **Begin Setup**, you'll be prompted to input your **Shopify Store
 #### Step 2b: Web SDK
 
 In the next step of the setup wizard, you'll be presented with information about the Braze Web SDK. The Braze Web SDK can be integrated via Shopify ScriptTag to unlock the following functionality:
-- 1-click Braze Web SDK integration onto your Shopify store
+- One-click Braze Web SDK integration onto your Shopify store
 - Anonymous user tracking
 - Out-of-the-box tracking for top-of-funnel eCommerce events:
   - Product viewed
