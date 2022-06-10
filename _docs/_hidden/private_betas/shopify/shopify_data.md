@@ -23,7 +23,8 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 | --- | --- | --- |
 | `shopify_product_viewed` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Product views will trigger when products are fully visible on the Shopify store to the customer. |
 | `shopify_product_clicked` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Product clicks will trigger as soon as the customer clicks into the product information page. |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | As soon as a customer adds items to their cart, Braze will store the cart token ID. <br><br>The default Abandoned Cart Delay is set at 1 hour. Meaning, after 1 hour of cart abandonment where no updates have been made to the cart, Braze will then trigger the event. You can update your Abandoned Cart Delay within **Advanced Settings**. |
+| `shopify_abandoned_cart` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | As soon as a customer adds items to their cart, Braze will store the cart token ID. <br><br>The default Abandoned Cart Delay is set at 1 hour. Meaning, after 1 hour of cart abandonment where no updates have been made to the cart, Braze will then trigger the event. You can update your Abandoned Cart Delay within **Advanced Settings**. | 
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook’s trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event immediately triggers a Braze purchase event. |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order's payment status is changed to paid. An order is in paid status after a credit card payment has been captured or when an order using a manual payment method is marked as paid. |
@@ -36,7 +37,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Viewed Product Event %}
+{% subtab Viewed Product %}
 ```json
 {
   "name": "shopify_product_viewed",
@@ -52,7 +53,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Clicked Product Event %}
+{% subtab Clicked Product %}
 ```json
 {
     "name": "shopify_product_clicked",
@@ -68,7 +69,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Checkout Abandoned Event %}
+{% subtab Abandoned Cart %}
 ```json
 {
     "name" => "shopify_abandoned_cart",
@@ -90,7 +91,37 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Order Created Event %}
+{% subtab Checkout Abandoned %}
+```json
+{
+  "name": "shopify_abandoned_checkout",
+  "time": "2020-09-10T18:53:37-04:00",
+  "properties": {
+    "applied_discount": {
+      "amount": "30.00",
+      "title": "XYZPromotion",
+      "description": "Promotionalitemforblackfriday."
+    },
+    "discount_code": "30_DOLLARS_OFF",
+    "total_price": "398.00",
+    "line_items": [
+      {
+        "product_id": 632910392,
+        "quantity": 1,
+        "sku": "IPOD2008PINK",
+        "title": "IPodNano-8GB",
+        "vendor": "Apple",
+        "properties": "nil",
+        "price": "199.00"
+      }
+    ],
+    "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
+    "checkout_id": "123123123"
+  }
+}
+```
+{% endsubtab %}
+{% subtab Order Created %}
 ```json
 {
   "name": "shopify_created_order",
@@ -141,7 +172,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Purchase Event %}
+{% subtab Purchase %}
 ```json
 {
   "product_id": 632910392,
@@ -161,7 +192,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Order Paid Event %}
+{% subtab Order Paid %}
 ```json
 {
   "name": "shopify_paid_order",
@@ -203,7 +234,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Order Partially Fulfilled Event %}
+{% subtab Order Partially Fulfilled %}
 ```json
 {
   "name": "shopify_partially_fulfilled_order",
@@ -274,7 +305,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 
 ```
 {% endsubtab %}
-{% subtab Order Fulfilled Event %}
+{% subtab Order Fulfilled %}
 ```json
 {
   "name": "shopify_fulfilled_order",
@@ -343,7 +374,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Order Cancelled Event %}
+{% subtab Order Cancelled %}
 ```json
 {
   "name": "shopify_cancelled_order",
@@ -386,7 +417,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 
 ```
 {% endsubtab %}
-{% subtab Refund Created Event %}
+{% subtab Refund Created %}
 ```json
 {
   "name": "shopify_created_refund",
@@ -437,7 +468,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Shopify SMS Consent %}
+{% subtab SMS Consent %}
 ```json
 {
   "attributes": [
@@ -453,7 +484,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Shopify Accepts Marketing (Email) %}
+{% subtab Accepts Marketing (Email) %}
 ```json
 {
   "attributes": [
@@ -465,7 +496,7 @@ Braze offers a turnkey solution to support abandoned checkout, purchase, and pos
 }
 ```
 {% endsubtab %}
-{% subtab Shopify Tags %}
+{% subtab Tags %}
 ```json
 {
   "attributes": [
@@ -528,79 +559,6 @@ Braze will map the supported Shopify data to user profiles using the customer's 
 Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties. The following tables list the Liquid templating variables for each event.
 
 {% tabs %}
-{% tab Shopify Abandon Checkout Event %}
-**Event**: `shopify_abandoned_checkout`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
-
-{% raw %}
-| Variable | Liquid Templating |
-| --- | --- |
-| Checkout ID | `{{event_properties.${checkout_id}}}` |
-| Abandoned Card URL | `{{event_properties.${abandoned_checkout_url}}}` |
-| Discount Code | `{{event_properties.${discount_code}}}` |
-| Total Price | `{{event_properties.${total_price}}}` |
-| Discount Amount | `{{event_properties.${applied_discount}[0].amount}}` |
-| Discount Title | `{{event_properties.${applied_discount}[0].title}}` |
-| Discount Description | `{{event_properties.${applied_discount}[0].description}}` |
-| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
-| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
-| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title | `{{event_properties.${line_items}[0].title}}` |
-| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Propeties | `{{event_properties.${line_items}[0].properties}}` |
-| Item Price | `{{event_properties.${line_items}[0].price}}` |
-{% endraw %}
-
-{% endtab %}
-{% tab Shopify Created Order Event %}
-
-**Event**: `shopify_created_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
-
-{% raw %}
-| Variable | Liquid Templating |
-| --- | --- |
-| Order ID | `{{event_properties.${order_id}}}` |
-| Confirmed Status | `{{event_properties.${confirmed}}}` |
-| Order Status URL | `{{event_properties.${order_status_url}}}` |
-| Order Number | `{{event_properties.${order_number}}}` |
-| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
-| Total Discounts | `{{event_properties.${total_discounts}}}` |
-| Total Price | `{{event_properties.${total_price}}}` |
-| Tags | `{{event_properties.${tags}}}` |
-| Discount Codes | `{{event_properties.${discount_codes}}}` |
-| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
-| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
-| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title | `{{event_properties.${line_items}[0].title}}` |
-| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
-| Item Price | `{{event_properties.${line_items}[0].price}}` |
-| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
-| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
-
-{% endraw %}
-
-{% endtab %}
-{% tab Purchase Event %}
-
-**Event**: Purchase<br>
-**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
-
-{% raw %}
-| Variable | Liquid Templating |
-| --- | --- |
-| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
-| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
-{% endraw %}
-
-{% endtab %}
-{% endtabs %}
-
-<!--
-{% tabs %}
 {% tab Product Viewed %}
 **Event**: `shopify_product_viewed`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
@@ -608,10 +566,12 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
-| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
-| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item SKU | `{{event_properties.${id}}}` |
+| Item Title  | `{{event_properties.${title}}}` |
+| Item Price | `{{event_properties.${price}}}` |
+| Item Vendor | `{{event_properties.${vendor}}}` |
+| Item Images | `{{event_properties.${images}}}` |
+
 {% endraw %}
 {% endtab %}
 
@@ -622,10 +582,28 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Item SKU | `{{event_properties.${id}}}` |
+| Item Title  | `{{event_properties.${title}}}` |
+| Item Price | `{{event_properties.${price}}}` |
+| Item Vendor | `{{event_properties.${vendor}}}` |
+| Item Images | `{{event_properties.${images}}}` |
+{% endraw %}
+{% endtab %}
+
+{% tab Abandon Cart %}
+**Event**: `shopify_abandoned_cart`<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
 {% endraw %}
 {% endtab %}
 
@@ -648,7 +626,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
 | Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Propeties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 {% endraw %}
 
@@ -679,7 +657,6 @@ Using nested object support for custom events, Braze Shopify customers can use L
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 | Shipping Title | `{{event_properties.${shipping}[0].title}}` |
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
-
 {% endraw %}
 
 {% endtab %}
@@ -705,10 +682,24 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Discount Codes | `{{event_properties.${discount_codes}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
 {% endraw %}
 {% endtab %}
 
@@ -719,10 +710,41 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Closed Timestamp | `{{event_properties.${closed_at}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillment Shipment Status | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].status}}` |
+| Fulfillment Tracking Company | `{{event_properties.${fulfillments}[0].tracking_company}}` |
+| Fulfillment Tracking Number | `{{event_properties.${fulfillments}[0].tracking_number}}` |
+| Fulfillment Tracking Numbers | `{{event_properties.${fulfillments}[0].tracking_numbers}}` |
+| Fulfillment Tracking URL | `{{event_properties.${fulfillments}[0].tracking_url}}` |
+| Fulfillment Tracking URLs | `{{event_properties.${fulfillments}[0].tracking_urls}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Fulfillment Name | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Fulfillment Price | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| Fulfillment Product ID | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Fulfillment Quantity | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
 {% endraw %}
 {% endtab %}
 
@@ -733,10 +755,41 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Closed Timestamp | `{{event_properties.${closed_at}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillment Shipment Status | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Status | `{{event_properties.${fulfillments}[0].status}}` |
+| Fulfillment Tracking Company | `{{event_properties.${fulfillments}[0].Fulfillment tracking_company}}` |
+| Fulfillment Tracking Number | `{{event_properties.${fulfillments}[0].Fulfillment tracking_number}}` |
+| Fulfillment Tracking Numbers | `{{event_properties.${fulfillments}[0].Fulfillment tracking_numbers}}` |
+| Fulfillment Tracking URL | `{{event_properties.${fulfillments}[0].Fulfillment tracking_url}}` |
+| Fulfillment Tracking URLs | `{{event_properties.${fulfillments}[0].Fulfillment tracking_urls}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Fulfillment Name | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Fulfillment Price | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| Fulfillment Product ID | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Fulfillment Quantity | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
 {% endraw %}
 {% endtab %}
 
@@ -747,12 +800,30 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Discount Codes | `{{event_properties.${discount_codes}}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillments | `{{event_properties.${fulfillments}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Fulfillment Status | `{{event_properties.${line_items}[0].fulfillment_status}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
 {% endraw %}
 {% endtab %}
+
 
 {% tab Created Refund %}
 **Event**: `shopify_created_refund`<br>
@@ -761,14 +832,19 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Order Note | `{event_properties.${note}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
 {% endraw %}
 {% endtab %}
 {% endtabs %}
--->
 
 ## Segmentation
 
@@ -820,6 +896,10 @@ If you have included Braze purchase events within your Shopify integration setup
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
 ![Option in Advanced Settings to specify a field to use as your product identifier within the Braze purchase event.][12]{: style="max-width:40%;"}
+
+## GDPR
+
+Concerning personal data submitted to Braze services by or on behalf of its customers, Braze is the data processor, and our customers are the data controllers. Accordingly, Braze processes such personal data solely at the instruction of our customers and, when applicable, notifies our customers of data subject requests. As the data controllers, our customers respond directly to Data subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to data subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
 
 [11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
 [12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 

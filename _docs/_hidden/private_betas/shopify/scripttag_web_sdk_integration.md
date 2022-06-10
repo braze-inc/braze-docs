@@ -25,7 +25,7 @@ Ensure with your development team that the following is supported within your Sh
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## What is the Web SDK?
-The Web SDK is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data via a web/mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
+The Web SDK is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data via a web or mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
 
 For more information, refer to the [Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) overview.
 
@@ -75,7 +75,7 @@ If you do want to add more customization to the Braze Web SDK implementation via
 
 [Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) is a remote JavaScript code loaded into the pages of your store or the order status page of checkout. When a store page is loaded, Shopify will check to see if any script tags need to be loaded to the site page. Within the process, the Braze Web SDK scripts will be loaded onto your Shopify store site directly.
 
-From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events and/or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
+From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
 
 After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
 

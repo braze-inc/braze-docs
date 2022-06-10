@@ -122,6 +122,33 @@ After you select your Shopify events and channels, you can confirm your integrat
 
 ![][8]{: style="max-width:85%;"} 
 
+## Troubleshooting
+
+{% details Why is my Shopify app install still pending? %}
+Your install may still be pending for one of the following reasons: 
+  - When Braze is setting up your Shopify webhooks
+  - When Braze is communicating with Shopify
+
+If your app installation is pending for 1 hour, Braze will fail the installation and you will be prompted to Retry Setup.<br><br>
+![]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+{% details Why did my Shopify app install fail? %}
+Your install may have failed for one of the following reasons: 
+  - Braze could not reach Shopify
+  - Braze failed to process the request 
+  - Your Shopify access token is invalid 
+  - The Braze Shopify app was deleted from your Shopify admin page
+
+If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
+![]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+{% details How do I uninstall the Braze application from my Shopify store? %}
+You will need to go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application<br><br>
+![]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
 [3]: {% image_buster /assets/img/Shopify/scripttag1.png %} 
 [4]: {% image_buster /assets/img/Shopify/scripttag2.png %} 

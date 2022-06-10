@@ -31,7 +31,7 @@ Users were provided a refund, either partial or complete. This campaign lets the
 
 **Messaging example**
 
-![]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
+![Email with the text "Your order has been refunded, Sorry that you were dissapointed with your order. We've successfully sent your refund. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
 {% endtab %}
 {% tab Cancellation %}
 **Shopify cancellation event** - `shopify_cancelled_order`
@@ -42,7 +42,7 @@ Users were able to cancel their order before fulfillment. This campaign lets the
 
 **Messaging example**
 
-![]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
+![Email with the text "Your order has been cancelled, Sorry to see you go! We've successfully cancelled your order. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
 {% tab Fulfilled order %}
@@ -54,7 +54,7 @@ All line items in a user's order were fulfilled successfully. This campaign lets
 
 **Messaging example**
 
-![]({% image_buster /assets/img/Shopify/fulfilled2.png %}){: style="max-width:40%;border:0;"}
+![Text message with the text "Your order's been fulfilled! All items in your cart have been delivered! Please go into your account and confirm receipt. Bonus points for leaving feedback."]({% image_buster /assets/img/Shopify/fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
 {% tab Partially fulfilled order %}
@@ -66,7 +66,7 @@ Some line items in a user's order were fulfilled successfully. This campaign let
 
 **Messaging example**
 
-![]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
+![Text message with the text "Your order's been partially fulfilled! We've delivered some of the items in your order and the rest are on the way! We'll send you another alert when the delivery's been fully complete."]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
 {% tab Paid order %}
@@ -78,7 +78,7 @@ User pays for their order, and the order status changes to paid. This campaign l
 
 **Messaging example**
 
-![]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
+![Email with the text "We've received your Payment! Woohoo your order's been paid for! Please wait 1-2 business days for us to process the payment and prep your items. Then we'll ship it out!" and a "View Account" button.]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
 {% endtabs  %}
@@ -89,7 +89,7 @@ User pays for their order, and the order status changes to paid. This campaign l
 
 **Abandoned checkout Canvas**
 
-Users are abandoning the checkout flow and failing to complete transactions before departing. The Canvas allows you to send automated reminders to users who have not finished their transactions to bring them back into the checkout flow.
+Users are abandoning the checkout flow and failing to complete transactions before departing. This Canvas allows you to send automated reminders to users who have not finished their transactions to bring them back into the checkout flow.
 
 Action-based entry event: `shopify_abandoned_checkout`<br>
 Exception event: `shopify_created_order` or Purchase
