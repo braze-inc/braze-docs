@@ -299,15 +299,11 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 ### General best practices
 
-#### Don’t over-segment your tracking {#over-segment}
+#### Use event properties
 
-- Being more generic will help you target more users and draw more useful divisions between user segments
-- For example, rather than capturing a separate event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event
-- If you over segment your user data, your findings will lose statistical significance and won’t guide the development of your app and marketing initiatives as effectively
-    - You will “miss the forest for the trees” when evaluating user-trend data
-    - Events should be tied directly to your marketing and conversion goals
-
->  Multiple user actions within an app can be labeled with the same custom event or attribute designation. This is useful when you want to track something generically such as "played a song" rather than recording each individual song within a music app as a separate and distinct event.
+- Name a custom event something that describes an action that a user takes.
+- Make generous use of custom event properties to represent important data about an event.
+- For example, rather than capturing a separate custom event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event and have an event property that includes the name of the movie.
 
 ### Development best practices
 
@@ -345,8 +341,8 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 #### Only log attributes when they change
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
-#### Avoid programmatically generating events
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same [over-segmentation problems](#over-segment). Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
+#### Avoid programmatically generating event names
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”). The specific data about the event should be included as an event property, not as part of the event name.
 
 ### Technical limitations and constraints
 Be mindful of the following limitations and constraints when implementing custom events:

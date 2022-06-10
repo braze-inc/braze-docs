@@ -91,19 +91,19 @@ The `message` field will return `success` for any valid request. More specific e
 
 ## Frequently asked questions
 
-**Does this impact MAU?**
-- No, since the number of users will stay the same, they’ll just have a new `external_id`.
+**Does this impact MAU?**<br>
+No, since the number of users will stay the same, they’ll just have a new `external_id`.
 
-**Does user behavior change historically?**
-- No, since the user is still the same, and all their historical behavior is still connected to them.
+**Does user behavior change historically?**<br>
+No, since the user is still the same, and all their historical behavior is still connected to them.
 
-**Can it be run on dev/staging app groups?**
-- Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.
+**Can it be run on dev/staging app groups?**<br>
+Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.
 
-**Does this consume data points?**
-- This feature does not cost data points.
+**Does this consume data points?**<br>
+This feature does not cost data points.
 
-**What is the recommended deprecation period?**
-- We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
+**What is the recommended deprecation period?**<br>
+We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}

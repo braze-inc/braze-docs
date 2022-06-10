@@ -1,8 +1,12 @@
 ---
 nav_title: Link Aliasing
-permalink: /link_aliasing/
+article_title: Link Aliasing
+alias: /link_aliasing/
+page_order: 4
 description: "This article describes how link aliasing works and what your links will look like."
-hidden: true
+channel:
+  - email
+
 ---
 
 # Link aliasing
