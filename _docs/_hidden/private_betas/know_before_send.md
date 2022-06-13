@@ -5,7 +5,7 @@ permalink: /know_before_send/
 hidden: true
 ---
 
-# Know before you send - a channels guide
+# Know before you send: Channels
 
 Launch your campaigns and Canvases with confidence! After visiting our [pre-launch guide](https://labplaybooks.braze.com/canvas-playbooks#/subpage/b2rj8), refer to this final list of checks or "gotchas" for Content Cards, email, in-app messages, push, and SMS.
 
