@@ -1,11 +1,11 @@
 ---
-nav_title: Before You Send
+nav_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
 permalink: /know_before_send/
 hidden: true
 ---
 
-# Know before you send: Channels
+# Know before you send: channels
 
 Launch your campaigns and Canvases with confidence! After visiting our [pre-launch guide](https://labplaybooks.braze.com/canvas-playbooks#/subpage/b2rj8), refer to this final list of checks or "gotchas" for Content Cards, email, in-app messages, push, and SMS.
 
