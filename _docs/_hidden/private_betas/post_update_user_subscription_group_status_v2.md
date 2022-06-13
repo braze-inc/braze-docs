@@ -17,7 +17,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-Use this endpoint to update the subscription group status of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
+Use this endpoint to update the subscription group status of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
 
 ## Request body
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_group_id` | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_ids` | Required* | Array of strings | The `external_id` of the user or users,  may include up to 50 `id`s. |
-| `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
+| `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, all users that share the email address are updated with the subscription group changes. |
 | `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -65,12 +65,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"39ab6c08-d141-44ee-a39f-fb3e22c3592a",
+  {"subscription_group_id":"subscription_group_identifier",
   "subscription_state":"subscribed",
-  "external_ids":["einfra-187","example1@email.com"]},
-  {"subscription_group_id":"dbad58f7-5be8-4c62-8797-56fefec099b7",
+  "external_ids":["example-user","example1@email.com"]},
+  {"subscription_group_id":"subscription_group_identifier",
   "subscription_state":"subscribed",
-  "external_ids":["einfra-187","example1@email.com"]}
+  "external_ids":["example-user","example1@email.com"]}
   ]
 }
 ```
@@ -83,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"bcc803d1-45df-4548-8f02-c4e9e87a1f8f",
+  {"subscription_group_id":"subscription_group_identifier",
   "subscription_state":"subscribed",
   "emails":["example1@email.com","example2@email.com"]}
   ]
@@ -98,7 +98,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"4af7ba9b-13ef-4c21-b3f1-d4bfaf3dd5d8",
+  {"subscription_group_id":"subscription_group_identifier",
   "subscription_state":"subscribed",
   "phones":["+12223334444","+15556667777”]}
   ]
