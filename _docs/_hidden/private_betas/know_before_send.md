@@ -46,8 +46,6 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): In order for users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. 
 
 #### Things to know about:
-- **Expected throughput**: Braze's typical throughput for push is around 20,000 personalized messages per second, 1.2 million per minute, or 72 million per hour. Note that we do not commit to any sending speed SLAs contractually. Refer to [Building Braze job queues resiliency](https://braze.com/perspectives/article/building-braze-job-queues-resiliency) on how we ensure this resilience.
-- **Sending speed factors**: Connected Content and Liquid personalization may influence sending speeds, among other factors.
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
 ## SMS
