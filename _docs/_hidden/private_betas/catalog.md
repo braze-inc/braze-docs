@@ -12,10 +12,6 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
-{% alert important %}
-Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 If you'd like to share your feedback on this feature or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com).
 
 ## Creating a catalog
@@ -38,7 +34,7 @@ First, create your CSV file. The first column of the CSV file must be a header o
 - Maximum field value (cell) size of 0.5KB
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-We also recommend that you format all text in your CSV files as lowercase.
+Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
 Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
