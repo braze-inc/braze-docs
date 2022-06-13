@@ -30,6 +30,10 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request body
 
 ```
