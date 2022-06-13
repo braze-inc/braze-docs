@@ -14,11 +14,13 @@ description: "This article outlines details about the Users by Segment Braze end
 /users/export/segment
 {% endapimethod %}
 
-This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
+This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). 
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
+Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 This endpoint is currently not supported by Google Cloud Storage.
+
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before retrying. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -78,8 +80,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/get_segment/).
-
 {% alert warning %}
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g., ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
@@ -88,7 +88,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found in your **Developer Console** within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
 |`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as `zip` or `gzip`. Defaults to ZIP file format. |

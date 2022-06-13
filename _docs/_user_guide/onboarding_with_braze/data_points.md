@@ -13,6 +13,8 @@ At Braze, data means action: each piece of data that arrives in Braze updates se
  
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
+“Data Points” shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event or purchase recorded, as well as any attribute set on an End User profile. Data and events collected by default by the Braze Services including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are not counted as Data Points. For clarity, the setting of an End User’s profile information at one point in time shall count as a single Data Point.
+
 ## Management and usage
 
 To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select **Subscriptions and Usage**. For more information on the Data Point Dashboard components, refer to [Subscriptions and usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
@@ -68,6 +70,7 @@ Connected Content does not consume data points—using Connected Content is a gr
 |Purchases | All purchases | Yes |
 |Amplitude cohort assignment | All assignments | Yes |
 |Mixpanel cohort assignment | All assignments | Yes |
+| Hightouch cohort assignment | All assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 <sup>*When manually collected. Does not count towards consumption when automatically collected.</sup>

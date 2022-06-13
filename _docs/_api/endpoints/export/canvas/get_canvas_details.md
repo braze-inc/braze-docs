@@ -14,7 +14,7 @@ description: "This article outlines details about the Canvas Details Endpoint."
 /canvas/details
 {% endapimethod %}
 
-This endpoint allows you to export metadata about a Canvas, such as its name, when it was created, its current status, and more.
+This endpoint allows you to export metadata about a Canvas, such as the name, time created, current status, and more.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 

@@ -16,7 +16,7 @@ tool:
 
 If your audience is dwindling, it’s crucial to try wooing them back. Recognizing this necessity, Braze makes it easy to set up automated recurring re-engagement campaigns to capture lapsing users. You can choose the re-engagement timeframe and recurrence that best suits your app, but to demonstrate, we'll get started with a 14 day re-engagement plan.
 
-For more on targeting users, check out our [LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
+For more on targeting users, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
 
 ## Step 1: Segmentation
 

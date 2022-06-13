@@ -14,7 +14,7 @@ Custom attributes are a collection of your users' unique traits. Custom attribut
 When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
 {% alert tip %}
-We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes) LAB course!
+We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](https://learning.braze.com/custom-events-and-attributes) Braze Learning course!
 {% endalert %}
 
 ## Managing custom attributes
@@ -126,7 +126,11 @@ Array attributes are good for storing related lists of information about your us
 
 By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
-Your dashboard administrator can increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page.
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+
+{% alert note %}
+The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
+{% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

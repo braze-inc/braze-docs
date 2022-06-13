@@ -10,7 +10,7 @@ channel:
 
 # About Content Cards
 
-> This reference article provides an overview of the Braze Content Card channel and common use cases. For more on this topic, check out our [Content Cards](https://lab.braze.com/messaging-channels-content-cards) LAB course!
+> This reference article provides an overview of the Braze Content Card channel and common use cases. For more on this topic, check out our [Content Cards](https://learning.braze.com/messaging-channels-content-cards) Braze Learning course!
 
 {% include video.html id="4FUPxkIq2xc" align="right" %}
 
@@ -34,10 +34,6 @@ Wondering about the benefits of using Content Cards vs. having your tech team bu
 - **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
 - **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that, you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
-
-{% alert warning %}
-Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking. For more details, refer to [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/).
-{% endalert %}
 
 ### Great use cases
 

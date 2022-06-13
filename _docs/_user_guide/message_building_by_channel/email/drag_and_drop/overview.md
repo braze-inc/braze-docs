@@ -146,6 +146,23 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 
 After using the Drag & Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
 
+### Updated HTML engine
+
+The underlying engine that produces HTML from the Drag & Drop Editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
+
+#### File compression
+
+Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
+
+#### HTML Rendering
+
+HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
+
+- Migration from a `<div>` element-based design to a standard `<table>` formatted codebase
+- [Editor blocks][7] have been re-coded for conciseness
+- Final HTML code is compressed to remove whitespace between tags
+- Transparent dividers are automatically converted into content padding
+
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}

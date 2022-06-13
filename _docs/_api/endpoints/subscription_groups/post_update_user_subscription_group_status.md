@@ -13,7 +13,7 @@ description: "This article outlines details about the Update User's Subscription
 /subscription/status/set
 {% endapimethod %}
 
-Use these endpoints to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the **Subscription Group** page.
+Use these endpoints to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -93,7 +93,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 --data-raw '{
   "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "example-user",
+  "external_id": "external_identifier",
   "email": ["example1@email.com", "example2@email.com"]
 }
 '

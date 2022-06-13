@@ -28,7 +28,7 @@ You can create up to five catalogs across your company.
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The first column of the CSV file must a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
 - Maximum of 5,000 items (rows)
 - Maximum of 30 fields (columns)
@@ -101,7 +101,7 @@ We can immediately see the following Liquid preview:
 
 {% raw %}
 ```liquid
-{% catalogs_items Games %}
+{% catalog_items Games %}
 ```
 {% endraw %}
 
@@ -113,7 +113,7 @@ For example, to reference the title and price of the `tales_storefront` item, we
 
 {% raw %}
 ```liquid
-{% catalogs_items Games tales_storefront %}
+{% catalog_items Games tales_storefront %}
  
 Get {{ items[0].title }} for just {{ items[0].price }}!
 ```
@@ -155,7 +155,7 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 
 {% raw %}
 ```liquid
-{% catalogs_items Games tales_storefront %}
+{% catalog_items Games tales_storefront %}
 
 {{ items[0].image_link }}
 ```
@@ -193,7 +193,7 @@ For example, to let a user know that `tales_storefront` (an item in our catalog 
 {% raw %}
 ```liquid
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
-{% catalogs_items Games tales_storefront {{ wishlist[0] }} %}
+{% catalog_items Games tales_storefront {{ wishlist[0] }} %}
 
 Get {{ items[0].title }} now, for just {{ items[0].price }}!
 ```

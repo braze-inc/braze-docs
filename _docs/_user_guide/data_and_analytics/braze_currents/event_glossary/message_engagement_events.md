@@ -484,7 +484,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
-  "user_agent": (string) description of the user’s system and browser for the event
+  "user_agent": (string) This field is no longer used in any destination for this event and will always be empty,
 }
 ```
 #### Property details
@@ -1135,6 +1135,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
   "inbound_phone_number": (string) the phone number the message was sent to,
+  "inbound_media_urls": (string) the URLs of inbound media attachments if received, 
   "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
   "message_body" : (string) the body of the message sent by the user,
   "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,

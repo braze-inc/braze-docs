@@ -29,6 +29,8 @@ As a convenience, a summary of supported personalization tags are provided. For 
 
 {% endraw %}
 
+Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+
 {% alert important %}
 Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` is not available in in-app message campaigns).
 {% endalert %}
