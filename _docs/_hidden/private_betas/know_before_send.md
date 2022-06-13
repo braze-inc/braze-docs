@@ -58,7 +58,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 #### Things to know about:
 - **SMS message defaulting**: SMS messages are normally defaulted to be sent from the short code in the sender pool.
 - **Alphanumeric sender ID**: Two-way messaging will no longer work if you use an alphanumeric sender ID; these are now one-way only.
-- **Updated throughput in the US**: Throughput has changed in the US with US [A2P 10DLC registration](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US). Note that we do not commit to any sending speed SLAs contractually due to multiple factors such as traffic congestion, carrier issues, etc. that may impact the actual delivery rates.
+- **Updated throughput in the US**: Throughput has changed in the US with US [A2P 10DLC registration](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US). Note that we do not commit to any sending speed SLAs contractually due to multiple factors such as traffic congestion and carrier issues that may impact the actual delivery rates.
 - **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
 
 ## Content Cards
