@@ -29,7 +29,7 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 | `canvas_id` | Required | String | See [Canvas API identifier]({{site.baseurl}}/api/identifier_types/). |
 | `ending_at` | Required | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should end. Defaults to time of the request. |
 | `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should begin. <br><br>* Either `length` or `starting_at` is required. |
-| `length` | Optional* | String | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
+| `length` | Optional* | String | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
 | `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant stats (defaults to false).  |
 | `include_step_breakdown`    | Optional | Boolean | Whether or not to include step stats (defaults to false). |
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
