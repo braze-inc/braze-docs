@@ -14,7 +14,7 @@ There is no limit for the number of users (administrators or limited users) you 
 To add a new user to your Braze account, perform the following:
 
 1. Go to the **Manage Users** page under your username.<br><br>
-   ![][1]{: style="max-width:50%"}<br><br>
+   ![Manage Users option of the profile dropdown.][1]{: style="max-width:50%"}<br><br>
 2. Click **+ Add New User**.
 3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).<br><br>
    ![][2]<br><br>
