@@ -16,6 +16,9 @@ guide_featured_list:
 - name: Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   fa_icon: fas fa-server
+- name: Catalogs
+  link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+  fa_icon: fas fa-list-ul
 - name: "Deep-Linking to In-App Content"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile

@@ -1,7 +1,9 @@
 ---
 nav_title: Catalogs
-permalink: "/catalogs/"
-hidden: true
+article_title: Catalogs
+alias: "/catalogs/"
+page_order: 2
+description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
 # Catalogs
@@ -11,6 +13,10 @@ You can use catalogs to reference non-user data in your Braze campaigns through 
 To do so, first import your catalog (a CSV file of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
+
+{% alert important %}
+Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
 
 If you'd like to share your feedback on this feature or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com).
 
@@ -58,6 +64,13 @@ Give your catalog a name. Keep in mind the following limitations for your catalo
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores
+
+Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name or else the call will fail.
+{% raw %}
+```liquid
+{% catalog_items custom_attribute.${catalog} item1, item2 %}
+```
+{% endraw %}
 
 ### Step 3: Select your data type
 
