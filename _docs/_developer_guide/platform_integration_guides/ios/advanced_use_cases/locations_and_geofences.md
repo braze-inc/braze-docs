@@ -11,7 +11,7 @@ Tool:
 
 # Locations and geofences
 
-Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze Customer Success Manager.
+Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
 
 To support geofences for iOS:
 
