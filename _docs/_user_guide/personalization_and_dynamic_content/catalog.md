@@ -22,7 +22,7 @@ If you'd like to share your feedback on this feature or make a request, contact 
 
 ## Creating a catalog
 
-To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog.
+To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
 {% alert note %}
 You can create up to five catalogs across your company.
