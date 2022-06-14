@@ -2,7 +2,7 @@
 nav_title: Catalogs
 article_title: Catalogs
 alias: "/catalogs/"
-page_order: 2
+page_order: 6
 description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
