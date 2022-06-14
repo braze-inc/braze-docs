@@ -28,7 +28,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='external id migration' %}
 
 ## Request body
 
