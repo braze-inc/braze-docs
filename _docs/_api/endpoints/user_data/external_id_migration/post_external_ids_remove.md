@@ -26,6 +26,10 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='external id migration' %}
+
 ## Request body
 
 ```
@@ -52,11 +56,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "external_ids" : 
-    [
-      "existing_deprecated_external_id_string",
-      ...
-    ]
+  "external_ids" :[
+    "existing_deprecated_external_id_string",
+    ...
+  ]
 }'
 ```
 {% alert important %}

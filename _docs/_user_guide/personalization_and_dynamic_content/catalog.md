@@ -1,12 +1,14 @@
 ---
 nav_title: Catalogs
-permalink: "/catalogs/"
-hidden: true
+article_title: Catalogs
+alias: "/catalogs/"
+page_order: 4.1
+description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
 # Catalogs
 
-You can use catalogs to reference non-user data in your Braze campaigns through Liquid. 
+You can use catalogs to reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
 To do so, first import your catalog (a CSV file of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
@@ -20,7 +22,7 @@ If you'd like to share your feedback on this feature or make a request, contact 
 
 ## Creating a catalog
 
-To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog.
+To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
 {% alert note %}
 You can create up to five catalogs across your company.
@@ -38,7 +40,7 @@ First, create your CSV file. The first column of the CSV file must be a header o
 - Maximum field value (cell) size of 0.5KB
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-We also recommend that you format all text in your CSV files as lowercase.
+Ensure that you are encoding your CSV file using the UTF-8 format in order to successfully upload your CSV file in the next step. We also recommend that you format all text in your CSV files as lowercase.
 
 {% alert note %}
 Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
@@ -62,6 +64,13 @@ Give your catalog a name. Keep in mind the following limitations for your catalo
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores
+
+Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name or else the call will fail.
+{% raw %}
+```liquid
+{% catalog_items custom_attribute.${catalog} item1, item2 %}
+```
+{% endraw %}
 
 ### Step 3: Select your data type
 

@@ -23,7 +23,7 @@ Refer to the [Android 13 developer documentation][2] for a full migration guide.
 
 ## Android 13 Braze SDK
 
-To prepare for Android 13, please upgrade your Braze SDK to the latest version (v20.1.0 or higher). Doing so will give you access to our new ["no-code" push primer feature][7].
+To prepare for Android 13, please upgrade your Braze SDK to the [latest version (v21.0.0+)][1]. Doing so will give you access to our new ["no-code" push primer feature][7].
 
 ## Changes in Android 13
 
@@ -61,9 +61,9 @@ It is strongly recommended that your app targets Android 13 in order to control 
 
 This will allow you to optimize your [push opt-in rates][6] by prompting users at more appropriate times and will lead to a better user experience in how and when your app asks for push permission.
 
-To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to version 20.1.0 or higher.
+To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to the [latest version (v21.0.0+)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1900
+[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2100
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility

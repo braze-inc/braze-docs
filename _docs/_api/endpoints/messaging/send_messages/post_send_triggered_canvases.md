@@ -124,19 +124,21 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
       }
     ]
   },
-  "recipients": [{
-    "user_alias": {
-      "alias_name" : "example_name",
-      "alias_label" : "example_label"
-    },
-    "external_user_id": "user_identifier",
-    "trigger_properties": "",
-    "canvas_entry_properties": "",
-    "send_to_existing_only": true,
-    "attributes": {
-        "first_name" : "Alex"
+  "recipients": [
+    {
+      "user_alias": {
+        "alias_name" : "example_name",
+        "alias_label" : "example_label"
+      },
+      "external_user_id": "user_identifier",
+      "trigger_properties": "",
+      "canvas_entry_properties": "",
+      "send_to_existing_only": true,
+      "attributes": {
+          "first_name" : "Alex"
+      }
     }
-  }]
+  ]
 }'
 ```
 

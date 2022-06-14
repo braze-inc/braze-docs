@@ -46,22 +46,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Required | String | The `schedule_id` to update (obtained from the response to create schedule). |
 |`schedule` | Optional | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-|`messages` | Optional | Object | See [available message objects](#available-message-objects). |
+|`messages` | Optional | Object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-
-### Available messaging objects {#available-message-objects}
-You can use these objects in the [request body](#request-body).
-
-- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_object/)
 
 ## Request example
 ```
@@ -74,20 +60,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "time": "2017-05-24T20:30:36Z"
    },
   "messages": {
-     "apple_push": {
-       "alert": "Updated Message!",
-       "badge": 1
-     },
-     "android_push": {
-       "title": "Updated title!",
-       "alert": "Updated message!"
-     },
-     "sms": {  
-        "subscription_group_id": "subscription_group_identifier",
-        "message_variation_id": "message_variation_identifier",
-        "body": "This is my SMS body.",
-        "app_id": "app_identifier"
-      }
+    "apple_push": {
+      "alert": "Updated Message!",
+      "badge": 1
+    },
+    "android_push": {
+      "title": "Updated title!",
+      "alert": "Updated message!"
+    },
+    "sms": {  
+      "subscription_group_id": "subscription_group_identifier",
+      "message_variation_id": "message_variation_identifier",
+      "body": "This is my SMS body.",
+      "app_id": "app_identifier"
+    }
   }
 }'
 ```

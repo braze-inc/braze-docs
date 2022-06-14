@@ -1,0 +1,5 @@
+id,name,color,brand,price_usd,rating,image_url
+ray-ban-wayfarer,Wayfarer,Tortoise,Ray-Ban,79,4.5,https://images.ray-ban.com/is/image/RayBan/805289126591__002.png
+warby-parker-abe,Abe,Brown,Warby Parker,95,5,https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/16x9-hdm-warbyparker-014-1627481908.jpg
+oliver-peoples-sheldrake,Sheldrake,Black,Oliver Peoples,397,3,https://assets.oliverpeoples.com/is/image/OliverPeoples/827934406926_OPE_shad_qt.png
+ray-ban-aviator,Aviator,Black,Ray-Ban,195,5,https://images.ray-ban.com/is/image/RayBan/8056597328111__STD__shad__qt.png
