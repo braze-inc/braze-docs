@@ -60,20 +60,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "time": "2017-05-24T20:30:36Z"
    },
   "messages": {
-     "apple_push": {
-       "alert": "Updated Message!",
-       "badge": 1
-     },
-     "android_push": {
-       "title": "Updated title!",
-       "alert": "Updated message!"
-     },
-     "sms": {  
-        "subscription_group_id": "subscription_group_identifier",
-        "message_variation_id": "message_variation_identifier",
-        "body": "This is my SMS body.",
-        "app_id": "app_identifier"
-      }
+    "apple_push": {
+      "alert": "Updated Message!",
+      "badge": 1
+    },
+    "android_push": {
+      "title": "Updated title!",
+      "alert": "Updated message!"
+    },
+    "sms": {  
+      "subscription_group_id": "subscription_group_identifier",
+      "message_variation_id": "message_variation_identifier",
+      "body": "This is my SMS body.",
+      "app_id": "app_identifier"
+    }
   }
 }'
 ```

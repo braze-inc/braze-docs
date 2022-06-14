@@ -149,7 +149,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
     "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
     "windows_universal_push": "(optional, Windows Universal Push Object)"
   }
-}'\'''
+}'
 ```
 
 ## Response details

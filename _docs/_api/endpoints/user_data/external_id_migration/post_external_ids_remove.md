@@ -56,11 +56,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "external_ids" : 
-    [
-      "existing_deprecated_external_id_string",
-      ...
-    ]
+  "external_ids" :[
+    "existing_deprecated_external_id_string",
+    ...
+  ]
 }'
 ```
 {% alert important %}

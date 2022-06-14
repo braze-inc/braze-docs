@@ -73,10 +73,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "segment_id" : (required, string) identifier for the segment to be exported,
-    "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-    "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
-    "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
+  "segment_id" : (required, string) identifier for the segment to be exported,
+  "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
+  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+  "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
@@ -100,10 +100,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "segment_id" : "segment_identifier",
-    "callback_endpoint" : "example_endpoint",
-    "fields_to_export" : ["first_name", "email", "purchases"],
-    "output_format" : "zip"
+  "segment_id" : "segment_identifier",
+  "callback_endpoint" : "example_endpoint",
+  "fields_to_export" : ["first_name", "email", "purchases"],
+  "output_format" : "zip"
 }'
 ```
 

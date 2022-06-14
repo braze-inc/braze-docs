@@ -40,14 +40,16 @@ Authorization: Bearer YOUR-REST-API-KEY
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
-    [{
+    [
+      {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
-    }]
+    }
+  ]
 }
 ```
 
@@ -124,18 +126,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       }
     ]
   },
-  "recipients": [{
-    "user_alias": {
-      "alias_name" : "example_name",
-      "alias_label" : "example_label"
-    },
-  "external_user_id": "external_user_identifier",
-  "trigger_properties": "",
-  "send_to_existing_only": true,
-    "attributes": {
+  "recipients": [
+    {
+      "user_alias": {
+        "alias_name" : "example_name",
+        "alias_label" : "example_label"
+      },
+      "external_user_id": "external_user_identifier",
+      "trigger_properties": "",
+      "send_to_existing_only": true,
+      "attributes": {
         "first_name" : "Alex"
+      }
     }
-  }]
+  ]
 }'
 ```
 
