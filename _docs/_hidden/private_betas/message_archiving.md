@@ -1,12 +1,12 @@
 ---
-nav_title: Save Rendered Messages
-permalink: "/save_rendered_messages/"
+nav_title: Message Archiving
+permalink: "/message_archiving/"
 hidden: true
 ---
 
-# Save rendered messages
+# Message Archiving
 
-> The save rendered messages feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket. Reach out to your success manager for more information on this feature.
+> The Message Archiving feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket. Reach out to your success manager for more information on this feature.
 
 ## Prerequisites
 
