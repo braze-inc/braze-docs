@@ -166,7 +166,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                       | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Shopify money filter vs Braze money filter
+### Shopify money filter versus Braze money filter
 
 {% alert warning %}
 The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depication of the expected behavior.
