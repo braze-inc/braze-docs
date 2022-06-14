@@ -1222,7 +1222,7 @@ Time zones
 - [Insert a timestamp](#time-insert-timestamp)
 - [Only send a Canvas push during a window of time in a user's local time zone](#time-canvas-window)
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
-- [Send different messages on weekdays vs. weekends in a user's local time zone](#time-weekdays-vs-weekends)
+- [Send different messages on weekdays versus weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
 
 ### Append the CST time zone to a custom attribute {#time-append-cst}
@@ -1291,7 +1291,7 @@ Store's closed. Come back between 11 am and 9 pm!
 ```
 {% endraw %}
 
-### Send different messages on weekdays vs. weekends in a user's local time zone {#time-weekdays-vs-weekends}
+### Send different messages on weekdays versus weekends in a user's local time zone {#time-weekdays-vs-weekends}
 
 This use case will check if a user's current day of the week is Saturday or Sunday, and depending on the day, will display different messages.
 

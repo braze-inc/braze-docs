@@ -28,7 +28,7 @@ Content Cards typically sit in a feed of sorts (but not necessarily), and help y
 
 ### Advantages of using Content Cards
 
-Wondering about the benefits of using Content Cards vs. having your tech team build content into your app? Here are some advantages of using Content Cards:
+Wondering about the benefits of using Content Cards versus having your tech team build content into your app? Here are some advantages of using Content Cards:
 
 - **Easier segmentation and personalization:** Your user data lives in Braze, making it easy to define your audience and personalize your messages with Content Cards.
 - **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.
