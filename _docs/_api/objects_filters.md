@@ -6,7 +6,7 @@ description: "This landing page lists the Braze API objects and filters used in 
 
 ---
 
-# Objects and filters specifications
+# Object and filter specifications
 
 > This page lists the Braze API objects and filters used in your Braze API calls.
 
