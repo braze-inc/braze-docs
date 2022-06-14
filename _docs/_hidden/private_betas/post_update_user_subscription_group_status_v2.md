@@ -65,12 +65,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"subscription_group_identifier",
-  "subscription_state":"subscribed",
-  "external_ids":["example-user","example1@email.com"]},
-  {"subscription_group_id":"subscription_group_identifier",
-  "subscription_state":"subscribed",
-  "external_ids":["example-user","example1@email.com"]}
+    {
+      "subscription_group_id":"subscription_group_identifier",
+      "subscription_state":"subscribed",
+      "external_ids":["example-user","example1@email.com"]
+    },
+    {
+      "subscription_group_id":"subscription_group_identifier",
+      "subscription_state":"subscribed",
+      "external_ids":["example-user","example1@email.com"]
+    }
   ]
 }
 ```
@@ -83,9 +87,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"subscription_group_identifier",
-  "subscription_state":"subscribed",
-  "emails":["example1@email.com","example2@email.com"]}
+    {
+      "subscription_group_id":"subscription_group_identifier",
+    "subscription_state":"subscribed",
+    "emails":["example1@email.com","example2@email.com"]
+    }
   ]
 }
 ```
@@ -98,9 +104,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_groups":[
-  {"subscription_group_id":"subscription_group_identifier",
-  "subscription_state":"subscribed",
-  "phones":["+12223334444","+15556667777”]}
+    {
+      "subscription_group_id":"subscription_group_identifier",
+      "subscription_state":"subscribed",
+      "phones":["+12223334444","+15556667777”]
+    }
   ]
 }
 ```
