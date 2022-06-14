@@ -29,7 +29,7 @@ Check out [Introduction to Secure Data Sharing](https://docs.snowflake.net/manua
 
 ## Prerequisites
 
-If you are interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult Braze data strategy services on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze, and we'll have your views set up in no time!
+If you are interested in this integration, reach out to your Braze Account or customer success manager and ask them to consult Braze data strategy services on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze, and we'll have your views set up in no time!
 
 | Requirement | Description |
 | ----------- | ----------- |
