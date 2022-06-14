@@ -9,7 +9,7 @@ We apply the default Braze rate limit of 250,000 requests per hour to this endpo
 <!---/users/external_id/remove-->
 
 {% elsif include.endpoint == "external id migration" %}
-We apply a rate limit of 1,000 requests per hour to this endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+We apply a rate limit of 1,000 requests per minute to this endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/track-->
 
