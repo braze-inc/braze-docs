@@ -88,13 +88,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --data-raw '{
-    "broadcast": "false",
-    "external_user_ids": "external_user_identifiers",
-    "user_aliases": {
-      "alias_name" : "example_name",
-      "alias_label" : "example_label"
-    },
-    "segment_id": "segment_identifiers",
+  "broadcast": "false",
+  "external_user_ids": "external_user_identifiers",
+  "user_aliases": {
+    "alias_name" : "example_name",
+    "alias_label" : "example_label"
+  },
+  "segment_id": "segment_identifiers",
   "audience": {
     "AND": [
       {
@@ -142,9 +142,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       }
     ]
   },
-    "campaign_id": "campaign_identifier",
-    "send_id": "send_identifier",
-    "override_messaging_limits": false,
+  "campaign_id": "campaign_identifier",
+  "send_id": "send_identifier",
+  "override_messaging_limits": false,
   "recipient_subscription_state": "subscribed",
   "schedule": {
     "time": "",
@@ -162,7 +162,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "webhook": (optional, Webhook object)
     "content_card": (optional, Content Card Object)
   }
-}'\'''
+}'
 ```
 
 

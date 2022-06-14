@@ -61,10 +61,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "external_ids": ["user_identifier1", "user_identifier2"],
-  "user_aliases": [{
-    "alias_name": "example_alias",
-    "alias_label": "example_label"
-  }],
+  "user_aliases": [
+    {
+      "alias_name": "example_alias",
+      "alias_label": "example_label"
+    }
+  ],
   "device_id": "1234567",
   "braze_id": "braze_identifier",
   "email_address": "example@braze.com",
