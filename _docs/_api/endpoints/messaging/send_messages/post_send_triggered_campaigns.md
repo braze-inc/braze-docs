@@ -63,19 +63,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request components
-
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-- [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
-- [API Parameters]({{site.baseurl}}/api/parameters)
-<br><br>
 The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
-<br><br>
+
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with the `id` and attributes before sending the message.
 
 ## Example request

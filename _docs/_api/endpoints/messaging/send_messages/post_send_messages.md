@@ -74,22 +74,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/) |
 |`override_frequency_capping`| Optional | Boolean | Ignore frequency_capping for campaigns, defaults to false. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
-|`messages`| Optional | Messaging objects | See [available messaging objects](#available-messaging-objects). |
+|`messages`| Optional | Messaging objects | See [available messaging objects]({{site.baseurl}}/docs/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Available messaging objects {#available-messaging-objects}
-
-You can use these objects in the [request body](#request-body).
-
-- [Android Objects]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
-- [Apple Objects]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
-- [Content Cards Object]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object/)
-- [Email Object]({{site.baseurl}}/api/objects_filters/messaging/email_object/)
-- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/messaging/kindle_and_fireos_object/)
-- [SMS Object]({{site.baseurl}}/api/objects_filters/messaging/sms_object/)
-- [Web Objects]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)
 
 ## Example request
 ```
