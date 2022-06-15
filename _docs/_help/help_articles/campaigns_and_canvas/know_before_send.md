@@ -1,8 +1,9 @@
 ---
 nav_title: Know Before You Send
+article_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
-permalink: /know_before_send/
-hidden: true
+alias: /know_before_send/
+
 ---
 
 # Know before you send: channels

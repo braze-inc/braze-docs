@@ -43,18 +43,24 @@ guide_featured_list:
 
 guide_menu_title: "Best Practices"
 guide_menu_list:
+  - name: "Content Card Best Practices"
+    link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/
+    fa_icon: fas fa-stream
   - name: "Email Best Practices"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
     fa_icon: fas fa-envelope
   - name: "In-App Message Best Practices"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
     fa_icon: fas fa-mobile-alt
-  - name: "News Feed Best Practices"
-    link: /docs/user_guide/engagement_tools/news_feed/best_practices/
-    fa_icon: fas fa-newspaper
   - name: "Push Best Practices"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     fa_icon: fas fa-comment-alt
+  - name: "SMS Best Practices"
+    link: /docs/user_guide/message_building_by_channel/sms/best_practices/
+    fa_icon: fa-solid fa-comment-sms
+  - name: "News Feed Best Practices"
+    link: /docs/user_guide/engagement_tools/news_feed/best_practices/
+    fa_icon: fas fa-newspaper
 
 
 local_redirect: #what-does-local-time-zone-delivery-offer
