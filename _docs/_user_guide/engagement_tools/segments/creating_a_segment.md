@@ -8,11 +8,11 @@ tool: Segments
 
 ---
 
-# Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;"}Creating a segment
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow this guide or check out our [Segmentation Braze Learning course](https://learning.braze.com/segmentation-course)!
+Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users.
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 

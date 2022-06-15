@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Link templates
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;"}Link templates
 
 > This article covers how to create link templates to use for email messaging.
 

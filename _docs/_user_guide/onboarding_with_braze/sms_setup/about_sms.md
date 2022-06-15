@@ -10,13 +10,13 @@ channel:
   
 ---
 
-# What are SMS messages?
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;"}About SMS messages
 
-![SMS welcome message for new customers.][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
+> This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.![SMS message with the text "Welcome to Braze! We are excited to have you on board. Check out our documentation to get started. https://www.braze.com/docs/ Text HELP for help and STOP to stop."][picture]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
+<br>
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
-
-This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.
+<br><br>
 
 ## Potential use cases
 
@@ -50,6 +50,6 @@ Before you start sending SMS, there are some things you need. Refer to the follo
 
 For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/terms/) or our dedicated [SMS section]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) for more topics like how to create a SMS campaign, SMS campaign analytics, and SMS keyword processing.
 
-[picture]: {% image_buster /assets/img/sms/sms_about.jpg %}
+[picture]: {% image_buster /assets/img/sms/sms_about.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
 [2]: {{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_sending/

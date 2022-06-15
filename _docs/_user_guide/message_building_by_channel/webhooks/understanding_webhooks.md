@@ -8,7 +8,7 @@ description: "This reference article covers the basics of webhooks."
 
 ---
 
-# About Webhooks
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;"}About Webhooks
 
 > This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Lookings for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
 

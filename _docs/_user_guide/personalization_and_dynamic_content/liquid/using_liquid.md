@@ -6,7 +6,7 @@ description: "Liquid can elevate the personalization in your messages to impress
 
 ---
 
-# Liquid use cases and overview
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;"}Liquid use cases and overview
 
 {% raw %}
 

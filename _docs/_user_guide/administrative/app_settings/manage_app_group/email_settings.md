@@ -84,6 +84,8 @@ Note that this page should be less than 750KB. Learn more about best practices f
 
 ## Email open tracking pixel
 
+[![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;"}
+
 The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end-users have opened your email. Email open information can be very useful, helping users determine effective marketing strategies by understanding the corresponding open rates.
 
 ### Placing the tracking pixel
