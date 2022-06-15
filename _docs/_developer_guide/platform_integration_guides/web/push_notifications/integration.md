@@ -67,7 +67,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Soft push prompt
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `braze.requestPushPermission()` directly as described above, instead:
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) for a seamless user experience. Instead of calling `braze.requestPushPermission()` directly as described above, instead:
 
 1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
   - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?").
