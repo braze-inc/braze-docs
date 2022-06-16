@@ -1,8 +1,9 @@
 ---
 nav_title: Know Before You Send
+article_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
-permalink: /know_before_send/
-hidden: true
+alias: /know_before_send/
+
 ---
 
 # Know before you send: channels
@@ -43,7 +44,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## Push
 
 #### Things to check
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): In order for users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. 
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): In order for users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/) will continue to update as new Android 13 beta versions are released.
 
 #### Things to know
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).

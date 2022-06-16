@@ -27,7 +27,7 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
 | `event`      | Required      | String | The name of the custom event for which to return analytics. |
-| `length`     | Required      | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `length`     | Required      | Integer | Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `unit`       | Optional       | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 | `app_id`     | Optional       | String | App API identifier retrieved from the **Developer Console** to limit analytics to a specific app. |

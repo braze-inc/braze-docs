@@ -42,7 +42,7 @@ Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_s
 More questions you can answer with this report:
 
 - Was there statistically significant confidence?
-- How did Variant 1 perform vs. Variant 2?
+- How did Variant 1 perform versus Variant 2?
 
 {% endtab %}
 

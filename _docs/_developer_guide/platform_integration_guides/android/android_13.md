@@ -10,7 +10,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 <br>
 
 {% alert important %}
-As of June 8, 2022 Android 13 has reached its [Platform Stability Milestone][5]. This means all changes have been finalized, and app users will soon be able to upgrade their devices.
+As of June 8, 2022 Android 13 has reached its [Platform Stability Milestone](https://developer.android.com/about/versions/13/overview#platform_stability). This means all changes have been finalized, and app users will soon be able to upgrade their devices.
 {% endalert %}
 
 # Android 13 SDK upgrade guide

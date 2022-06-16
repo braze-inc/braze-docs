@@ -33,6 +33,10 @@ guide_featured_list:
 - name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check
+- name: "Know Before You Send"
+  link: /docs/know_before_send/
+  fa_icon: fa-solid fa-paper-plane
+
 ---
 
 {% alert important %}

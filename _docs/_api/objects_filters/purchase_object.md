@@ -81,7 +81,7 @@ Event property objects that contain array or object values can have an event pro
 
 [Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) **do not** persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
-While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our [webhooks suggestions](#purchase-objects-event-objects-and-webhooks) to see how you can incorporate webhooks to save these properties as custom attributes.
+While uncommon, if you require these properties to persist past the 30-day limit, contact your customer success manager, or, see our [webhooks suggestions](#purchase-objects-event-objects-and-webhooks) to see how you can incorporate webhooks to save these properties as custom attributes.
 
 ### Purchase property naming conventions
 
