@@ -171,6 +171,11 @@
         border-width: 1px;
         border-style: solid;
       }
+      .noimgborder {
+        img {
+          border: 0px;
+        }
+      }
       iframe {
         &.media_embed {
           margin-bottom: 15px;
