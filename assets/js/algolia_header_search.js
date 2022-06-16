@@ -104,13 +104,13 @@ $(document).ready(function () {
     var title = '';
     var url = '';
 
-    var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='35px' /> ";
+    var lab_image = "<img src='" + base_url + "/assets/img/braze_learning.png' width='35px' /> ";
     var result_template = '';
     if (lab_intialized) {
-      result_template = '<div class="lab_header">Learning at Braze' + lab_image + '</div>';
+      result_template = '<div class="lab_header">Braze Learning ' + lab_image + '</div>';
       lab_intialized = false;
     }
-    var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
+    var tags_list = '<span class="search_tags" style="background-color: #3accdd;">Braze Learning</span>';;
     if (item['category']) {
       var tags = item['category'];
       if (Array.isArray(tags)) {
