@@ -171,11 +171,6 @@
         border-width: 1px;
         border-style: solid;
       }
-      .noimgborder {
-        img {
-          border: 0px;
-        }
-      }
       iframe {
         &.media_embed {
           margin-bottom: 15px;
@@ -496,25 +491,6 @@ table {
   }
 }
 
-// table>tbody>tr>td, table>tbody>tr>th, table>tfoot>tr>td, table>tfoot>tr>th, table>thead>tr>td, table>thead>tr>th {
-//   padding: 8px;
-//   line-height: 1.42857143;
-//   vertical-align: top;
-//   border: 1px solid #ddd;
-// }
-// table>thead>tr>th {
-//   vertical-align: bottom;
-//   border-bottom: 2px solid #ddd;
-// }
-// table>tbody+tbody {
-//   border-top: 2px solid #ddd;
-// }
-// table>thead>tr>td, table>thead>tr>th {
-//   border-bottom-width: 2px;
-// }
-// // table>tbody>tr:nth-of-type(odd) {
-// //   background-color: #f9f9f9;
-// // }
 
 table td code.highlighter-rouge {
   background-color: transparent !important;
@@ -726,6 +702,13 @@ blockquote {
         z-index: 999
     }
 }
+
+.noimgborder {
+  img {
+    border: 0px !important;
+  }
+}
+
 
 
 
