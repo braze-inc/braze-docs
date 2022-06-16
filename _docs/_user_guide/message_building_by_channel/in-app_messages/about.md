@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;"}About in-app messages
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}About in-app messages
 
 > This article provides an overview of in-app messages, including the available message types and some potential use cases.
 

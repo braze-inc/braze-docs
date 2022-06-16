@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;"}Amplitude for Currents
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 

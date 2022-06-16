@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;"}About push notifications
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}About push notifications
 
 > This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
 

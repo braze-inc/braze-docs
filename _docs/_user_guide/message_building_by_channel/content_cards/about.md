@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;"} About Content Cards
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
 
 > This reference article provides an overview of the Braze Content Card channel and common use cases.
 

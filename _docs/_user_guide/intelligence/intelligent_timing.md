@@ -6,7 +6,7 @@ description: "When scheduling a campaign, you can use Intelligent Timing to deli
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;"}Intelligent Timing
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
 > This article covers how to implement Intelligent Timing in your campaigns and Canvases.
 

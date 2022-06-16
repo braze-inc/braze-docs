@@ -6,7 +6,7 @@ description: "The Intelligent Channel filter selects the portion of your audienc
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;"}Intelligent Channel filter
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
 
 > This article describes the Intelligent Channel filter and provides best practices to effectively use this feature.
 

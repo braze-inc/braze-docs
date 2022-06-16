@@ -8,7 +8,7 @@ tool: Segments
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;"}Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 

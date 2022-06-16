@@ -9,7 +9,7 @@ tool:
 description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;"}Segment Insights
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
 
 > This how-to article will walk you through how to use, interpret, and share Segment Insights. These insights can be used to target users and develop effective marketing campaigns.
 

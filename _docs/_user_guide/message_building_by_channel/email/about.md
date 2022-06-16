@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;"} About email
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} About email
 
 > This article provides an overview of email at Braze, including the available customizations and potential use cases.
 
