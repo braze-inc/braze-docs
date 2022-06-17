@@ -397,7 +397,8 @@ function updateSMSSplit(){
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = encoder[sms_type](sms_text);
     var smsSegments = segmenter[sms_type](unicodeinput);
-    $('#sms_length').html(sms_text.length);
+    var escCharCount = (sms_text.match(/\^|€|{|}|\[|\]|~/g) || []).length;
+    $('#sms_length').html(sms_text.length + escCharCount);
     $('#sms_segments').html(smsSegments.length);
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
     const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
