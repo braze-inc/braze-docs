@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     y.src='https://js.appboycdn.com/web-sdk/4.0/braze.min.js';
     y.async=1;(b=p.getElementsByTagName(P)[0]).parentNode.insertBefore(y,b)
   }(window,document,'script');
-  
+
 (function(){
 
 braze.initialize('{{ site.api_key }}', {
@@ -105,3 +105,20 @@ if ('cards' in curcards) {
 })();
 </script>
 {% comment %} End Marketo {% endcomment %}
+
+{% comment %} End Securitiai {% endcomment %}
+<script type="text/javascript">
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
+	s.setAttribute('data-tenant-uuid', '696dac19-dc81-444e-9540-c5e4d95b761f');
+	s.setAttribute('data-domain-uuid', '7f739ee4-116e-4f2b-b197-357452c4e49b');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+  s.setAttribute('crossorigin', 'anonymous');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+	s.addEventListener('load', function() { window.initCmp(); });
+})()
+</script>
+{% comment %} End Securitiai {% endcomment %}
