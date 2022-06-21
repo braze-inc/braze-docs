@@ -28,7 +28,7 @@ After upgrading the SDK, your mobile users must upgrade their app. You can filte
 
 ## Overview
 
-You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/).
+You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) with scheduled delivery.
 
 > TO DO: Add screenshot of UI
 
@@ -50,23 +50,6 @@ This section describes the main differences between card creation at launch vers
 - **At campaign launch:** Braze calculates audience membership and personalization when the campaign sends. Users who enter the target audience after the campaign sends won't receive the card.
 - **At first impression:** Braze calculates audience membership and personalization when the user next opens your app (starts a session). Any new users in the target audience can receive the card. Audience and personalization are not re-evaluated after this content is templated.
 
-#### Card storage
-
-- **At campaign launch:** Braze creates the card when the campaign sends and stores it until the user opens your app.
-- **At first impression:** Braze creates the card when the user opens your app. Cards are then stored until the user starts a new session.
-
-#### Campaign re-eligibility
-
-- **At campaign launch:** Users can become re-eligible for a campaign even if the same card is already in the users' feed.
-- **At first impression:** Users can only become re-eligible for a campaign if the card is expired or removed.
-
-#### Expiration window
-
-Cards created at first impression have a more accurate expiration window than those created at campaign launch.
-
-- **At campaign launch:** Expiration window is calculated from the approximate send time.
-- **At first impression:** Expiration window is calculated from the send time.
-
 #### Analytics
 
 While your reachable users and impressions will not change, you can expect a decrease in send volume (Messages Sent) when cards are created at first impression compared to if the same card was created at campaign launch. This is because of how Braze defines Message Sent for Content Cards.
@@ -84,4 +67,8 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 ### Potential processing time
 
-When cards are created at first impression, it may take 1–2 seconds for the cards to process, resulting in a slight delay before the card is visible to the user. The length of this delay depends on the current queue and the card size.
+When cards are created at first impression, it may take 1–2 seconds for the cards to process, resulting in a slight delay before the card is visible to the user. The length of this delay depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
+
+### Previous SDK versions
+
+If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the start of the user's second session. 
