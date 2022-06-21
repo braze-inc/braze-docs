@@ -21,9 +21,11 @@ The following table lists specific API rate limits for different request types. 
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
+| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your customer success manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
 | [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/external_id/rename`][20] | 1,000 requests per minute. |
+| [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
 | [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
 | [`/messages/send`][17] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
@@ -72,7 +74,7 @@ Header Name             | Description
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to ensure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
-If you have questions about API limits, contact your Customer Success Manager or open a [support ticket][support].
+If you have questions about API limits, contact your customer success manager or open a [support ticket][support].
 
 ### Optimal delay between endpoints
 
@@ -98,3 +100,5 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
+[21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/

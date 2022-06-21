@@ -66,8 +66,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "user_aliases" : 
-  [
+  "user_aliases" :[
     {
       "external_id": "external_identifier",
       "alias_name" : "example_name",

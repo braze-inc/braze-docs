@@ -32,7 +32,7 @@ Note that you must update to the latest version of Android (version 2.2.0+) and 
 
 ## Inbox vision
 
-You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Contact your Customer Success Manager or Account Manager for more information.
+You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Contact your customer success manager or account manager for more information.
 
 
 [92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management

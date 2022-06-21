@@ -531,3 +531,4 @@ validurls['/docs/user_guide/message_building_by_channel/email/best_practices/tem
 validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/';
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
+validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';

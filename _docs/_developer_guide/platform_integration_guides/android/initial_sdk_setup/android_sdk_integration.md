@@ -72,7 +72,7 @@ As of December 2019, custom endpoints are no longer given out, if you have a pre
 
 Now that the libraries have been integrated, you must create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
-The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, ask your Customer Success Manager or open a [support ticket][support].
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, ask your customer success manager or open a [support ticket][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,7 +90,7 @@ Now that you've added your API key, you need to add the following permissions to
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
->  With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
+> With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
 
 ## Step 4: Tracking user sessions in Android
 

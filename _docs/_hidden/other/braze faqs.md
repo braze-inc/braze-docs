@@ -29,7 +29,7 @@ You do not need to make any changes to your REST API integrations now. However, 
 **No.** Appboy and Braze are one and the same company. This is just a name change (a rose by any other name…). Your existing contract is still fully enforceable and you do not have to do anything.
 
 ### My legal team wants evidence that you have legally changed your name. Can I get that?
-**Yes.** You can ask your Account Manager, your Customer Success Manager, or email `generalcounsel@braze.com`.
+**Yes.** You can ask your account manager, your customer success manager, or email `generalcounsel@braze.com`.
 
 ### Does this mean you've been acquired?
 **No.** Braze is the same company owned by the same people providing the same Services.  Our new name better reflects who we are and what we do.

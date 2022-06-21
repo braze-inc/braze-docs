@@ -35,9 +35,6 @@ Templates built using the Drag & Drop Editor are not accepted
 | `email_template_id`  | Required | String | See [email template API identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request components
-- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Example request
 {% raw %}
 ```

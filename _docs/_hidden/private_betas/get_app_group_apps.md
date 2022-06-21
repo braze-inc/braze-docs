@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Possible Errors
 
 - `401: Unauthorized` — API key does not have the required permissions. Make sure your API key has `apps.get` permissions.
-- `403: Forbidden` — Feature flipper is not on for this company. Contact your Customer Success Manager for assistance.
+- `403: Forbidden` — Feature flipper is not on for this company. Contact your customer success manager for assistance.
 
 
 {% endapi %}

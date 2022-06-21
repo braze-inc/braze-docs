@@ -26,7 +26,7 @@ This endpoint allows you to retrieve a daily series of the total number of new u
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `length`    | Required      | Integer | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `length`    | Required      | Integer | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 | `app_id`    | Optional       | String | App API identifier retrieved from the **Developer Console**. If excluded, results for all apps in app group will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

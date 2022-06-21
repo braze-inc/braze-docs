@@ -81,8 +81,8 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 | `subscription_group_id` | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
-| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
-| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
+| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same app group share the same email address, then all users that share the email address are updated with the subscription group changes. |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a maximum of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example requests email
@@ -93,7 +93,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 --data-raw '{
   "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "example-user",
+  "external_id": "external_identifier",
   "email": ["example1@email.com", "example2@email.com"]
 }
 '

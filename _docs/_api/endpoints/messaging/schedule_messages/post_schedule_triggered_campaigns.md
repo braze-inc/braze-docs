@@ -72,11 +72,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 --data-raw '{
   "campaign_id": "campaign_identifier",
   "send_id": "send_identifier",
-  "recipients": [{
-    "user_alias": "example_alias",
-    "external_user_id": "external_user_identifier",
-    "trigger_properties": {}
-  }],
+  "recipients": [
+    {
+      "user_alias": "example_alias",
+      "external_user_id": "external_user_identifier",
+      "trigger_properties": {}
+    }
+  ],
   "audience": {
     "AND": [
       {
@@ -131,8 +133,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
     "in_local_time": false,
     "at_optimal_time": false
   }
-}
-'
+}'
 ```
 
 

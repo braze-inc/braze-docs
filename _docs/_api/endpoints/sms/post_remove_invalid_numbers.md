@@ -17,6 +17,10 @@ This endpoint allows you to remove "invalid" phone numbers from Braze's invalid 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request body
 
 ```
@@ -34,7 +38,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ---------|------ |
-| `phone_number` | Required | Array of Strings in e.164 format | An array of up to 50 phone numbers to modify. |
+| `phone_number` | Required | Array of strings in e.164 format | An array of up to 50 phone numbers to modify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

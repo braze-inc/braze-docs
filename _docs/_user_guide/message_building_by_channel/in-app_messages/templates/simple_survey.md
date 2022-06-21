@@ -44,7 +44,7 @@ These fields can include both Liquid and emojis, so get fancy!
 
 ### Step 2: Choose between single or multiple-choice {#single-multiple-choice}
 
-Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
+Use **Single-choice selection** or **Multiple-choice selection** to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
 
 ![Choices dropdown with "Multiple-choice selection" selected.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
 
