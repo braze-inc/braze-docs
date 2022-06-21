@@ -203,6 +203,44 @@ Or you might filter for pets that have a `type` of `dog`. Here a user has at lea
 
 ![Filter by pet type equals dog][2]
 
+#### Levels of nesting
+
+You can created a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "pets": [
+        {
+          "id": 1,
+          "type": "dog",
+          "breed": "beagle",
+          "name": "Gus",
+          "nicknames": [
+            "Gugu",
+            "Gusto"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "cat",
+          "breed": "calico",
+          "name": "Gerald",
+          "nicknames": [
+            "GeGe",
+            "Gerry"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+{% endraw %}
+
 ## Data Points
 
 Data points are consumed differently depending on whether you create, update, or remove a property.
