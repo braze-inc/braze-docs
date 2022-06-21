@@ -70,7 +70,11 @@ url -X POST \
         {
           "external_user_id": Customer_123,
           "canvas_entry_properties": {
-            "food_allergies": “dairy”
+            "food_allergies": ["dairy", "soy"],
+            "nutrition": {
+              "calories_per_serving": 200,
+              "serving_size_in_ounces": 4
+            }
           }
         }
       ]
