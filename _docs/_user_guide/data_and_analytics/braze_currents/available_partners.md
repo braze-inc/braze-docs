@@ -12,6 +12,10 @@ tool: Currents
 
 > This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
 
+{% alert note %}
+Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment is "Email Opened", while in Mixpanel, it is "Email Open".
+{% endalert %}
+
 ## Data warehouses
 
 These partners can either act as warehouses (for flat file storage) or gateways to other data manipulation tools. This is best if you need your data to be flexible, but also do backflips, and maybe a cartwheel.
@@ -21,7 +25,6 @@ These partners can either act as warehouses (for flat file storage) or gateways 
 * [Google Cloud Storage][2]
 
 * [Microsoft Azure Blob Storage][3]
-
 
 ## Customer data
 
