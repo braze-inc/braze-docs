@@ -13,12 +13,12 @@ hidden: true
 {% api %}
 # Remove a dashboard developer account
 {% apimethod delete %}
-/scim/v2/Users/user@test.com
+/scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
 This endpoint allows you to permanently delete an existing dashboard developer, similarly to deleting a user in the Manage Users section of the Braze dashboard.
 
-## Rate Limit
+## Rate limit
 
 {% include rate_limits.md endpoint='delete dashboard developer' %}
 
@@ -30,12 +30,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 ```
 
+## Request parameters
+
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | Email of |
+| `id` | Required | String | The developer's email address |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```json
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/user@test.com' \
 --header 'Content-Type: application/json' \
@@ -47,16 +49,16 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/us
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
-## Error States
+## Error states
 If a developer with this email address doesn’t exist in Braze, the endpoint will respond with:
 ```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
 {
-    "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-    "detail": "User not found",
-    "status": 404
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+  "detail": "User not found",
+  "status": 404
 }
 ```
 {% endapi %}

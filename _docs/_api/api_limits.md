@@ -35,10 +35,10 @@ The following table lists specific API rate limits for different request types. 
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 {: .reset-td-br-1 .reset-td-br-2}
 <!--
-| [`GET: /scim/v2/Users/user@test.com`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/user@test.com` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`PUT: /scim/v2/Users/user@test.com`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/user@test.com` GET, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`DELETE: /scim/v2/Users/user@test.com`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/user@test.com` PUT, GET and `/scim/v2/Users` POST endpoints. |
-| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/user@test.com` PUT, GET, and DELETE endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
+| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
 --->
 
 ## Batching API requests
