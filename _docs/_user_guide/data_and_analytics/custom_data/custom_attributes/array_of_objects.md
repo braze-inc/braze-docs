@@ -205,7 +205,7 @@ Or you might filter for pets that have a `type` of `dog`. Here a user has at lea
 
 #### Levels of nesting
 
-You can created a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
+You can create a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
 
 {% raw %}
 ```json
