@@ -20,8 +20,16 @@ For example, a request with the following could add the word `"shoes"` to a mess
 ```json
 "trigger_properties" : {
   "product_name" : "shoes",
-  "product_price" : 79.99
-  }
+  "product_price" : 79.99,
+  "details" : {
+    "color" : "red",
+    "size" : {
+      "numerical" : 10,
+      "country" : "US"
+    }
+  },
+  "related_skus": ["123", "456", "789"]
+}
 ```
 
 {% raw %}
