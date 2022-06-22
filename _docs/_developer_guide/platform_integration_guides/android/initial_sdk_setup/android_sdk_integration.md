@@ -157,7 +157,7 @@ Visit the following articles in order to enable [custom event tracking]({{site.b
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html
-[60]: https://github.com/Appboy/appboy-android-sdk/releases
+[60]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
 [63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
 [64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [support]: {{site.baseurl}}/braze_support/
