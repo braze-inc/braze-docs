@@ -16,7 +16,7 @@ hidden: true
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to look up an existing dashboard developer account by specifying their email. 
+This endpoint allows you to look up an existing dashboard developer account by specifying their email. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -34,14 +34,14 @@ This endpoint allows you to look up an existing dashboard developer account by s
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/user@test.com' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 ```
 
 ## Response
 ```json
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 {
   "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
   "id": "user@test.com",

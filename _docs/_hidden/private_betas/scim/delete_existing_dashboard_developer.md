@@ -16,7 +16,7 @@ hidden: true
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to permanently delete an existing dashboard developer, similarly to deleting a user in the Manage Users section of the Braze dashboard.
+This endpoint allows you to permanently delete an existing dashboard developer, similarly to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -26,7 +26,7 @@ This endpoint allows you to permanently delete an existing dashboard developer, 
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 ```
 
@@ -42,14 +42,14 @@ X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/user@test.com' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 ```
 ## Response
 ```json
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
-## Error states
+### Error states
 If a developer with this email address doesn’t exist in Braze, the endpoint will respond with:
 ```json
 HTTP/1.1 404 Not Found

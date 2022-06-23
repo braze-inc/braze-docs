@@ -16,7 +16,7 @@ hidden: true
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to update an existing dashboard developer account by specifying email, given and family names, entitlements (for setting permissions at the company, app group, and team level).  
+This endpoint allows you to update an existing dashboard developer account by specifying email, given and family names, entitlements (for setting permissions at the company, app group, and team level). For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -26,7 +26,7 @@ This endpoint allows you to update an existing dashboard developer account by sp
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 ```
 {
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `id` | Required | String | The developer's email address |
 | `username` | Required | String | The username that the developer will need to log into Braze (usually the same as email address) |
 | `name` | Required | JSON object | This object contains the develoepr's first name and last name |
-| `departments` | Required | String | This string declares what department this user belongs to. Available options include:<br>-"agency / third party"<br>-"bi / analytics"<br>-"C-suite"<br>-"Engineering"<br>-"Finance"<br>-"marketing / editorial"<br>-"product management" |
+| `departments` | Required | String | This string declares what department this user belongs to. Available options include:<br>- "agency / third party"<br>- "bi / analytics"<br>- "C-suite"<br>- "Engineering"<br>- "Finance"<br>- "marketing / editorial"<br>- "product management" |
 | `entitlements` | Required | JSON object | This object allows for setting the developer's permissions at a company, app group, and team level. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -181,7 +181,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Error states
+### Error states
 If a developer with this email address doesn’t exist in Braze, the endpoint will respond with:
 ```json
 HTTP/1.1 404 Not Found
