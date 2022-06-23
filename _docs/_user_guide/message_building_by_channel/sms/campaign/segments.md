@@ -393,16 +393,12 @@ auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
 }
 
 function countLength(type, s) {
-  const t = type === "auto" ? smsutil.pickencoding(s) : type;
-  console.log(s + ": " + s.length)
+  const t = (type === "auto") ? smsutil.pickencoding(s) : type;
 
-  if (t === "ucs2") {
-    console.log("UCS branch")
-    console.log(Object.values(encoder[t](s)))
-    return s.length;
-  } else {
-    console.log("GSM branch")
+  if (t === "gsm") {
     return s.length + (s.match(/\^|€|{|}|\[|\]|~|\|/g) || []).length;
+  } else {
+    return s.length;
   }
 }
 
