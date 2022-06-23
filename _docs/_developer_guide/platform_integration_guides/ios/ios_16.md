@@ -43,7 +43,7 @@ Based on the current iOS Beta, you will not need to upgrade your Braze iOS SDK. 
 
 1. Braze has launched a [new Swift SDK][3]. This brings improved performance, new features, and many improvements.
 
-2. Our Braze Swift SDK supports a new ["no-code" push primer feature][7]. Upgrade your iOS SDK to version 5.1.0 or higher to get started.
+2. Our Braze Swift SDK will soon support a new ["no-code" push primer feature][7]!
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
 [3]: https://github.com/braze-inc/braze-swift-sdk
