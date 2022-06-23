@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-   "user_aliases" : (required, array of new user alias object)
+  "user_aliases" : (required, array of new user alias object)
 }
 ```
 
