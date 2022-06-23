@@ -129,14 +129,16 @@ Authorization: Bearer YOUR-REST-API-KEY
     "familyName": "User"
   },
   "department": "finance",
+  "last_sign_in_at": "Thursday, January 1, 1970 12:00:00 AM",
   "entitlements": {
     "company": {
       "admin": false,
-      "can manage company settings": false,
-      "can add/remove app groups": false
-    },
+        "can manage company settings": false,
+        "can add/remove app groups": false
+      },
     "app_group": [
       {
+        "app_group_id": "241adcd25789fabcded",
         "app_group_name": "Test App Group",
         "admin": false,
         "access campaigns, canvases, cards, segments, media library": true,
@@ -161,6 +163,7 @@ Authorization: Bearer YOUR-REST-API-KEY
         "manage subscription groups": false,
         "team": [
           {
+            "team_id": "241adcd25789fabcded",
             "team_name": "Test Team",
             "admin": false,
             "access campaigns, canvases, cards, segments, media library": true,
