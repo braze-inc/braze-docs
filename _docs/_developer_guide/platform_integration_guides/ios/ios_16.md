@@ -17,7 +17,7 @@ iOS 16 is still in beta. Check back periodically as Apple APIs may change with f
 
 ## Changes in iOS 16
 
-This year there were no functional changes in iOS 16 that affect your Braze SDK integration. This may change as Apple releases new beta versions of iOS 16, so check back here periodically.
+As of iOS 16 Beta 1, there were no functional changes in iOS 16 that affect your Braze SDK integration. This may change as Apple releases new beta versions of iOS 16, so check back here periodically.
 
 ### Safari Web Push {#safari-web-push}
 
