@@ -1,13 +1,14 @@
 ---
 nav_title: "POST: Create New Dashboard Developer Account"
 article_title: "POST: Create New Dashboard Developer Account"
+permalink: /post_create_developer_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Create New Dashboard Developer Account Endpoint."
-permalink: /scim/post
 hidden: true
+
 ---
 
 {% api %}

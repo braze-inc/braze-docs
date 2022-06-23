@@ -1,12 +1,12 @@
 ---
 nav_title: "PUT: Update Dashboard Developer Account"
 article_title: "PUT: Update Dashboard Developer Account"
+permalink: /post_update_existing_developer_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Update Existing Dashboard Developer Account Endpoint."
-permalink: /scim/put
 hidden: true
 ---
 

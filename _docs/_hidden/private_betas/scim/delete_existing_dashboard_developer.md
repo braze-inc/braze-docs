@@ -1,12 +1,12 @@
 ---
 nav_title: "DELETE: Remove Dashboard Developer Account"
 article_title: "DELETE: Remove Dashboard Developer Account"
+permalink: /delete_existing_dashboard_developer/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Remove Existing Developer Account Endpoint."
-permalink: /scim/delete
 hidden: true
 ---
 

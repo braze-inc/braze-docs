@@ -1,12 +1,12 @@
 ---
 nav_title: "GET: See Dashboard Developer Account Information"
 article_title: "GET: See Dashboard Developer Account Information"
+permalink: /get_see_developer_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the See Dashboard Developer Account Information Endpoint."
-permalink: /scim/get
 hidden: true
 ---
 
