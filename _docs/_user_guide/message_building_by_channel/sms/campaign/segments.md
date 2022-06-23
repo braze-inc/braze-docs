@@ -127,7 +127,7 @@ If you'd like to see how many segments your message will dispatch, enter your co
   <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
   <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Auto Detect</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
   <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7 Encoding</label><br />
-  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">USC-2 Encoding</label><br />
+  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">UCS-2 Encoding</label><br />
   <br />
   Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
   SMS Segments Count: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
@@ -349,7 +349,7 @@ if(smsutil.unicodeCodePoints(s).every(function (x) {return x in unicodeToGsm})) 
   $('#auto_encoding').html("(GSM)");
   return "gsm";
 } else {
-  $('#auto_encoding').html("(USC-2)");
+  $('#auto_encoding').html("(UCS-2)");
   return "ucs2";
 }
 },
