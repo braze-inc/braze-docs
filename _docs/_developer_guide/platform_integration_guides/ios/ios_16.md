@@ -33,7 +33,7 @@ If you're already sending Web Push for Safari through Braze, no change is needed
 
 #### Mobile Web Push (iOS and iPadOS) {#ios-push}
 
-In 2023, Apple will be adding support for Web Push on iPhone and iPad devices through Safari. Previously, mobile and tablet devices did not support sending push notifications to Safari.
+In 2023, Apple will be adding support for Web Push on iPhone and iPad devices through Safari. Previously, Safari on iPhone and iPad did not support receiving push notifications.
 
 Braze will support this new iOS and iPadOS Web Push with no additional changes or upgrades required.
 
