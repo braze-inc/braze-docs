@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: iOS 15 Upgrade Guide
 article_title: iOS 15 SDK Upgrade Guide
 page_order: 7

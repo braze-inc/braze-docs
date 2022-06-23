@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Locations & Geofences
 article_title: Location & Geofences for iOS
 platform: iOS

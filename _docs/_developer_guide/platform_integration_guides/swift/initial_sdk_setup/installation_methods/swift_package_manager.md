@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Swift Package Manager
 article_title: Swift Package Manager Integration for iOS
 platform: iOS

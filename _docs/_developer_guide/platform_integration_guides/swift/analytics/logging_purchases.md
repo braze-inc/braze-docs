@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Logging Purchases
 article_title: Logging Purchases for iOS
 platform: iOS

@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: In-App Message Delivery
 article_title: In-App Message Delivery for iOS
 platform: iOS

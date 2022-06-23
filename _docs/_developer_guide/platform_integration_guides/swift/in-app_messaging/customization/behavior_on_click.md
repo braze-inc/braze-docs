@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom On Click Behavior
 article_title: Customizing In-App Message On Click Behavior for iOS
 platform: iOS

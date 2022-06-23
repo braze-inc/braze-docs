@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: "Push Primer"
 article_title: Push Primer for iOS
 page_order: 6

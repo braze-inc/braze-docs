@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Rich Notifications
 article_title: Rich Push Notifications for iOS
 platform: iOS

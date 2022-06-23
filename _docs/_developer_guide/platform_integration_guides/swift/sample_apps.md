@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Sample Apps
 article_title: Sample Apps for iOS
 platform: iOS

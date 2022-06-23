@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Action Buttons
 article_title: Push Action Buttons for iOS
 platform: iOS

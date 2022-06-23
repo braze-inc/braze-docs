@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Modal Dismissal
 article_title: In-App Message Modal Dismissal for iOS
 platform: iOS

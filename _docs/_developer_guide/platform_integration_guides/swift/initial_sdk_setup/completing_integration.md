@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Completing the Integration
 article_title: Completing the iOS SDK Integration
 platform: iOS

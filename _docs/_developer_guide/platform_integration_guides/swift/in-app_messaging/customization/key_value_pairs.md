@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Key-Value Pairs
 article_title: In-App Message Key-Value Pairs for iOS
 platform: iOS

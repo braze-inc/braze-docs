@@ -3,7 +3,7 @@ page_order: 2
 nav_title: Customization
 article_title: iOS In-App Message Customization
 layout: featured
-
+hidden: true
 platform: iOS
 
 channel:

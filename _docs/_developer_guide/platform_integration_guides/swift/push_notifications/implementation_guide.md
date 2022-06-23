@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Advanced Implementation (Optional)
 article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: iOS

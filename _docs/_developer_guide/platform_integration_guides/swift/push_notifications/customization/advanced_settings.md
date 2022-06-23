@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Advanced Settings
 article_title: Advanced Push Settings
 platform: iOS

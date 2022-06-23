@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Uninstall Tracking
 article_title: Uninstall Tracking for iOS
 platform: iOS

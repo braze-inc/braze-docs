@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Carthage
 article_title: Carthage Integration for iOS
 platform: iOS

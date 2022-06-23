@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Push Stories
 article_title: Push Stories for iOS
 platform: iOS

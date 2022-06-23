@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Manual
 article_title: Manual Integration Options for iOS
 platform: iOS

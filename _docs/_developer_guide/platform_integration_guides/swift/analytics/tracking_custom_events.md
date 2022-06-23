@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Tracking Custom Events
 article_title: Tracking Custom Events for iOS
 platform: iOS

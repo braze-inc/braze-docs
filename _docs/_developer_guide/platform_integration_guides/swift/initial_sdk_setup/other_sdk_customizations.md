@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Other SDK Customizations
 article_title: Other SDK Customizations for iOS
 platform: iOS

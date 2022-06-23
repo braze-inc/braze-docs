@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Setting User IDs
 article_title: Setting User IDs for iOS
 platform: iOS

@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes for iOS
 platform: iOS

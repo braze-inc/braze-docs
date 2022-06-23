@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Badges
 article_title: Push Notification Badge Counts for iOS
 platform: iOS

@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Setting delegates
 article_title: Setting In-App Message Delegates for iOS
 platform: iOS

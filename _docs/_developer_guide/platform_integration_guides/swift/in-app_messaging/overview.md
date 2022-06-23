@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Overview
 article_title: In-App Message Overview for iOS
 platform: iOS

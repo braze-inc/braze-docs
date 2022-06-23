@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom Display Handling
 article_title: Customizing In-App Message Display Handling for iOS
 platform: iOS

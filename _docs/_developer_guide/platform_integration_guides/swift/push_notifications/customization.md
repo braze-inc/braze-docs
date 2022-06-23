@@ -1,5 +1,6 @@
 ---
 page_order: 1
+hidden: true
 nav_title: Customization
 article_title: iOS Push Customization
 layout: featured

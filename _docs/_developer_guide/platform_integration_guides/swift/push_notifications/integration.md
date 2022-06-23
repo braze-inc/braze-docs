@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Integration
 article_title: Push Integration for iOS
 platform: iOS

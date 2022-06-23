@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Location Tracking
 article_title: Location Tracking for iOS
 platform: iOS

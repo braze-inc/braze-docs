@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Beacon Integration
 article_title: Beacon Integration for iOS
 platform: iOS

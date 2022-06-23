@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Advanced Implementation (Optional)
 article_title: In-App Message Implementation Guide for iOS (Optional)
 platform: iOS

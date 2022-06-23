@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom View Controller
 article_title: In-App Message in a Custom View Controller for iOS
 platform: iOS

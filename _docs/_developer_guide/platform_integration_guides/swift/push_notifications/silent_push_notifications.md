@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Silent Push Notifications
 article_title: Silent Push Notifications for iOS
 platform: iOS

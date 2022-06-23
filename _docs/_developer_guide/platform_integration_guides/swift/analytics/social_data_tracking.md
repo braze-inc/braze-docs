@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Social Data Tracking
 article_title: Social Data Tracking for iOS
 platform: iOS

@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: CocoaPods
 article_title: CocoaPods Integration for iOS
 platform: iOS

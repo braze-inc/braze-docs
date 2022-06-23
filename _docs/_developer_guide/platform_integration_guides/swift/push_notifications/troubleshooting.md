@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Troubleshooting
 article_title: Push Notification Troubleshooting for iOS
 platform: iOS

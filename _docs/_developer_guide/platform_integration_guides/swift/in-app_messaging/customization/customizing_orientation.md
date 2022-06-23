@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Customizing Orientation
 article_title: Customizing In-App Message Orientation for iOS
 platform: iOS

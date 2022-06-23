@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom Triggering
 article_title: Customizing In-App Message Triggering for iOS
 platform: iOS

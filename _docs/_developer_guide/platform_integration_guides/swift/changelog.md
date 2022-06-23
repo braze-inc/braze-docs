@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Changelog
 article_title: Changelog for iOS SDK
 page_order: 30

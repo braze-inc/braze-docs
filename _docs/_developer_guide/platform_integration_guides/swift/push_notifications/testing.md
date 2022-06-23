@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Testing
 article_title: Push Notification Testing for iOS
 platform: iOS

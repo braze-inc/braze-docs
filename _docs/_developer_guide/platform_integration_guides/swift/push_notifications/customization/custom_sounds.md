@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom Sounds
 article_title: Custom Push Notification Sounds for iOS
 platform: iOS

@@ -1,11 +1,11 @@
 ---
+hidden: true
 nav_title: Storage
 article_title: Storage for iOS
 platform: iOS
 page_order: 8.9
 page_type: reference
 description: "This reference article describes the device-level properties captured by the Braze iOS SDK."
-
 ---
 
 # Storage

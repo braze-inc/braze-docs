@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Google Tag Manager
 article_title: Google Tag Manager for iOS
 platform: iOS

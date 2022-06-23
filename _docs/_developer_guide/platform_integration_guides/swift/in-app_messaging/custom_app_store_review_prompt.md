@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Custom App Store review prompt
 article_title: Custom App Store review prompt
 platform: iOS

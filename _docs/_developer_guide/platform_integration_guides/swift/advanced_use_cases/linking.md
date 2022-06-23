@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Deep Linking
 article_title: Deep Linking for iOS
 platform: iOS
