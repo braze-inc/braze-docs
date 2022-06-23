@@ -7,13 +7,9 @@ description: "This reference article describes custom events and properties, the
 
 ---
 
-# Custom events
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
 Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
-
-{% alert tip %}
-For more on using custom events in your messaging strategies, check out our [Custom Events and Attributes](https://learning.braze.com/custom-events-and-attributes) Braze Learning course!
-{% endalert %}
 
 ## Managing custom events
 

@@ -10,9 +10,7 @@ search_tag: Partner
 
 ---
 
-# Amplitude for Currents
-
-{% include video.html id="7yadPjDImxQ" align="right" %}
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -85,7 +83,7 @@ In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**.
 ![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})
 
 {% tab note %}
-Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) or this Braze [Amplitude Braze Learning course](https://learning.braze.com/amplitude-integration-with-braze) to learn more. 
+Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) to learn more. 
 {% endtab %}
 
 ## Rate limits

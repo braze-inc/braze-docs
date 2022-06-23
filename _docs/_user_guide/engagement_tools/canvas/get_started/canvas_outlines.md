@@ -8,9 +8,9 @@ tool: Canvas
 
 ---
 
-# Four Canvas outlines
+# Canvas outlines
 
-The Entry Steps displayed in each of these outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+The Entry Steps displayed in each of these four outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 ## Onboarding: Restaurant reservation
 - **What**: Onboarding users to their first reservation
@@ -52,6 +52,16 @@ The Entry Steps displayed in each of these outlines shows a previous version of 
 
 <br>![Holiday Travel Journey][42]
 
+## Additional resources
+
+[![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+
+Braze Learning offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises. 
+- [Create customer journeys with Canvas](https://learning.braze.com/canvas-course)
+- [Lapsed user Canvas](https://learning.braze.com/lapsed-user-canvas)
+- [Abandoned intent Canvas](https://learning.braze.com/abandoned-intent-canvas)
+- [Use case: onboarding](https://learning.braze.com/onboarding-canvas)
+- [Canvas use cases for retail](https://learning.braze.com/canvas-use-cases-for-retail)
 
 [28]:{% image_buster /assets/img_archive/Journey_9.png %}
 [29]:{% image_buster /assets/img_archive/Journey_10.png %}

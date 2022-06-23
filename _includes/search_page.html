@@ -32,7 +32,7 @@
 
 
     <div id="search_hits"></div>
-    <div id="search_header_labs" style="display:none;"> Learning at Braze <img src='{{site.baseurl}}/assets/img/lab.png' width='45px' /><hr /></div>
+    <div id="search_header_labs" style="display:none;"> Braze Learning <img src='{{site.baseurl}}/assets/img/lab.png' width='45px' /><hr /></div>
     <div id="search_hits_labs"></div>
     <div id="search_pagination"></div>
     <div id="search_stats_lab" style="display:none; visibility:hidden;"></div>
@@ -188,7 +188,7 @@
       var title = '';
       var url = '';
       $('#search_header_labs').show();
-      var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
+      var tags_list = '<span class="search_tags" style="background-color: #3accdd;">Braze Learning</span>';;
       if (hit['category']) {
         var tags = hit['category'];
         if (Array.isArray(tags)) {
@@ -363,7 +363,7 @@
         transformItems(items) {
           var updatedItem = items.find(item => item.value === 'lab');
           if (!updatedItem) {
-            items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'lab', value: 'lab', highlighted: 'LAB'})
+            items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'lab', value: 'lab', highlighted: 'Braze Learning'})
           }
           else {
             items.find(item => item.value === 'lab')['count'] = lab_hit_cache['counts'];
