@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
 | `id` | Required | String | The developer's email address |
 | `username` | Required | String | The username that the developer will need to log into Braze (usually the same as email address) |
-| `name` | Required | JSON object | This object contains the develoepr's first name and last name |
+| `name` | Required | JSON object | This object contains the developer's first name and last name |
 | `departments` | Required | String | This string declares what department this user belongs to. Available options include:<br>- "agency / third party"<br>- "bi / analytics"<br>- "C-suite"<br>- "Engineering"<br>- "Finance"<br>- "marketing / editorial"<br>- "product management" |
 | `entitlements` | Required | JSON object | This object allows for setting the developer's permissions at a company, app group, and team level. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
