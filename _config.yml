@@ -46,8 +46,8 @@ search_debug: false
 
 # For local testing, set to false to increase build time by not pulling partner api
 # and markdown data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
-partner_api: false
-markdown_api: false
+partner_api: true
+markdown_api: true
 
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'

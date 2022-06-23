@@ -391,14 +391,28 @@ gsm: smsutil._segmentWith(160, 153, smsutil.encodeCharGsm),
 ucs2: smsutil._segmentWith(140, 134, smsutil.encodeCharUtf16),
 auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
 }
+
+function countLength(type, s) {
+  const t = type === "auto" ? smsutil.pickencoding(s) : type;
+  console.log(s + ": " + s.length)
+
+  if (t === "ucs2") {
+    console.log("UCS branch")
+    console.log(Object.values(encoder[t](s)))
+    return s.length;
+  } else {
+    console.log("GSM branch")
+    return s.length + (s.match(/\^|€|{|}|\[|\]|~|\|/g) || []).length;
+  }
+}
+
 function updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
     var sms_type = $('#sms_split input[name=sms_type]:checked').val();
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = encoder[sms_type](sms_text);
     var smsSegments = segmenter[sms_type](unicodeinput);
-    var escCharCount = sms_type === "gsm" ? (sms_text.match(/\^|€|{|}|\[|\]|~/g) || []).length : 0;
-    $('#sms_length').html(sms_text.length + escCharCount);
+    $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
     const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
