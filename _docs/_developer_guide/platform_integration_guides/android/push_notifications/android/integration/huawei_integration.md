@@ -25,11 +25,11 @@ Before getting started, you'll need to register and set up a [Huawei Developer a
 
 In the Braze dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
 
-Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform, and choose `Huawei (HMS)` as the push provider.
+Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform.
 
-![][4]
+![][4]{: style="max-width:60%;"}
 
-Once your new Braze app has been created, you will find your app identifier API key and a section for **Push Notification Settings** where you can enter your `Huawei App ID` and `Huawei App Secret`.
+Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei App ID` and `Huawei App Secret`.
 
 ![][12]
 
