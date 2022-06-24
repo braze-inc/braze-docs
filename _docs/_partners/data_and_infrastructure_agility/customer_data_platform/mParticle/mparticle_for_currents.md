@@ -86,11 +86,11 @@ You can export the following data from Braze to mParticle:
 | Email Bounces| Unbound Feed| Braze attempted to send an email, but the User’s receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Marks As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
 | Email Unsubscribes| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| SMS Sends| Unbound Feed| An SMS was sent to a user.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`|
-| SMS Carrier Sends| Unbound Feed| An SMS was set to a carrier.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number` |
-| SMS Deliveries| Unbound Feed| An SMS was delivered successfully.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number` |
-| SMS Delivery Failures| Unbound Feed| An SMS unable to be delivered successfully.                                               | `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number`, `error`, `provider_error_code` |
-| SMS Rejections| Unbound Feed| An SMS was rejected.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number`, `error`, `provider_error_code` |
+| SMS Sends| Unbound Feed| An SMS was sent to a user.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; |
+| SMS Carrier Sends| Unbound Feed| An SMS was set to a carrier.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
+| SMS Deliveries| Unbound Feed| An SMS was delivered successfully.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
+| SMS Delivery Failures| Unbound Feed| An SMS unable to be delivered successfully.                                               | `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
+| SMS Rejections| Unbound Feed| An SMS was rejected.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
 | SMS Inbound Received| Unbound Feed| An inbound SMS was received.| `inbound_phone_number`, `action`, `message_body` |
 | Subscription Group State Change| Unbound Feed| User's subscription group state changed to 'Subscribed' or 'Unsubscribed'| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Webhook Sends| Unbound Feed| A webhook message was sent on behalf of a User.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
@@ -99,6 +99,8 @@ You can export the following data from Braze to mParticle:
 | Canvas Conversions| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+&#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number (`to_phone_number`) in mParticle.
 {% endtab %}
 {% endtabs %}
 
