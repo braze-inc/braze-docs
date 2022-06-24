@@ -42,7 +42,7 @@ Liquid personalization and shortened URLs are templated on the **Test** tab afte
 
 ## Click tracking
 
-When Link Shortening is enabled, the SMS and MMS performance table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
+When Link Shortening is enabled, the SMS and MMS performance table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
 ![][4]
 
