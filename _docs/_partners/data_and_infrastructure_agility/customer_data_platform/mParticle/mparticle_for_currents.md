@@ -100,7 +100,7 @@ You can export the following data from Braze to mParticle:
 | Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-&#42; The `$mobile` attribute is used as the destination phone number.
+&#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number in mParticle.
 {% endtab %}
 {% endtabs %}
 
