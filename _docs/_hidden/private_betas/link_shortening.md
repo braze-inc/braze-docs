@@ -1,6 +1,6 @@
 ---
 nav_title: Link Shortening
-permalink: "/user_guide/message_building_by_channel/sms/campaign/link_shortening"
+permalink: /user_guide/message_building_by_channel/sms/campaign/link_shortening/
 hidden: true
 ---
 
