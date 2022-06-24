@@ -135,7 +135,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 Refer to [Apple][11] for more information.
 
 {% alert note %}
-The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See our [linking customization][26] article to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links][25] with push notifications, in-app messages, and the News Feed.
+The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See our [linking customization](#linking-handling-customization) article to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
 {% endalert%}
 
 ## App transport security (ATS)
