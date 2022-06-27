@@ -17,18 +17,18 @@ Objects can contain existing [data types][1], such as:
 - Strings
 - Booleans
 - Arrays
+- Time
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
 {% alert important %}
-Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for nested custom attributes is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Limitations
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Datetimes are not supported in objects.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
 
@@ -36,9 +36,9 @@ Support for nested custom attributes is currently in early access. Please contac
 
 {% tabs local %}
 {% tab Create %}
-Shown below is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
+The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
-```
+```json
 {
   "attributes": [
     {
@@ -58,11 +58,27 @@ Shown below is a `/users/track` example with a "Most Played Song" object. To cap
 }
 ```
 
+Here's another `/users/track` example with an "Important Dates" object to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+      }
+    }
+  ]
+}
+```
+
 {% endtab %}
 {% tab Update %}
 To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. Deep merging ensures that all levels of an object are merged into another object instead of only the first level. In this example, we already have a `most_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `most_played_song` object.
 
-```
+```json
 {
   "attributes": [
     {
@@ -76,9 +92,9 @@ To update an existing object, send a POST to `users/track` with the `_merge_obje
 }
 ```
 
-After the above request is received, the custom attribute object will now look like this:
+After this request is received, the custom attribute object will now look like the following:
 
-```
+```json
 "most_played_song": {
     "song_name": "Solea",
     "artist_name" : "Miles Davis",
@@ -99,7 +115,7 @@ You must set `_merge_objects` to true, or your objects will be overwritten. `_me
 {% tab Delete %}
 To delete a custom attribute object, send a POST to `users/track` with the custom attribute object set to `null`.
 
-```
+```json
 {
   "attributes": [
     {
@@ -115,14 +131,14 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 ## Liquid templating
 
-The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
+The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
-Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
+Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object (and position in array if referencing an array of objects), followed by a dot (period), followed by the property name.
 
 {% raw %}
-`{{custom_attribute.${most_played_song}.artist_name}}` — "Miles Davis"
-<br> `{{custom_attribute.${most_played_song}.song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}.play_analytics.count}}` — "50"
+`{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
@@ -204,7 +220,7 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
-```
+```json
 {
   "attributes": [
     {

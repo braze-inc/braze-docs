@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Looker
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
@@ -150,7 +150,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 If you're having issues with the Looker Action, add a test user to [internal groups][16] and check that the following:
 
 * The API key has the `users.track` permissions.
-* The correct REST endpoint is entered i.e. `https://rest.iad-01.braze.com`.
+* The correct REST endpoint is entered i.e., `https://rest.iad-01.braze.com`.
 * A `braze_id` tag is set in the dimension view.
 * Your query includes the Id attribute as a column.
 * Looker results are not pivoted.

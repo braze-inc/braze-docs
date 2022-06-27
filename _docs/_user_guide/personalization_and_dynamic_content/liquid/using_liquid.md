@@ -6,17 +6,17 @@ description: "Liquid can elevate the personalization in your messages to impress
 
 ---
 
-# Liquid use cases and overview
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Liquid use cases and overview
 
 {% raw %}
 
-There are a variety of user attributes that you can use to dynamically insert personal info into your messaging. 
+There are a variety of user attributes that you can use to dynamically insert personal info into your messaging.
 
 If you include the following text in your message: `{{${first_name}}}`, the user's first name (pulled from the user's profile) will be substituted when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information][1] (e.g. `first_name`, `last_name`, `email_address`)
+- [Basic user information][1] (e.g., `first_name`, `last_name`, `email_address`)
 - [Custom attributes][2]
 - [Custom event properties][11]
 - [Most recently used device information][39]
@@ -33,9 +33,9 @@ Braze currently supports Liquid up to and including **Liquid 3 from Shopify**. W
 
 {% raw %}
 
-Once you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices. 
+Once you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices.
 
-In the block below, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
+In the following block, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
 
 ```liquid
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
@@ -96,12 +96,12 @@ The modal will insert Liquid with your specified default value at the point that
 ### Assigning variables
 
 {% raw %}
-Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters. 
+Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters.
 
 For example, let's say you want to add two custom data integers together. You can't simply use:
 
 ```liquid
-{{custom_attribute.${one}}} | plus: {{custom_attribute.${two}}} 
+{{custom_attribute.${one}}} | plus: {{custom_attribute.${two}}}
 ```
 
 This Liquid doesn't work because you can't reference multiple attributes in one line; you would need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes would require two lines of Liquid: one to assign the custom attribute to a variable, and one to perform the addition.
@@ -120,7 +120,7 @@ Next, we're using the `plus` filter combine each user's gift card balance with t
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
-You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend! 
+You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 ```
 {% endraw %}
 

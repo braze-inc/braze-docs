@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 4
-description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android application."
+description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android or FireOS application."
 
 ---
 

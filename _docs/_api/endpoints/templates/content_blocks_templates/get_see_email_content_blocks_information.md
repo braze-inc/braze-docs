@@ -33,7 +33,7 @@ This endpoint will call information for your existing [Email Content Blocks]({{s
 ## Example request
 {% raw %}
 ```
-curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=No' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=false' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
@@ -59,12 +59,16 @@ Authorization: Bearer YOUR-API-KEY-HERE
 ```
 
 ### Possible errors
-- `Content Block ID cannot be blank.` - A Content Block has not been listed or is not encapsulated in quotes.
 
-- `Content Block ID is invalid for this App Group.` - This Content Block does not exist or is in a different company account or app group.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
-- `Content Block has been deleted - content not available.` - This Content Block, though it may have existed earlier, has been deleted.
+| Error | Troubleshooting |
+| --- | --- |
+| Content Block ID cannot be blank | Make sure that a Content Block is listed in your request and is encapsulated in quotes (`""`). |
+| Content Block ID is invalid for this App Group | This Content Block doesn't exist or is in a different company account or app group. |
+| Content Block has been deleted—content not available | This Content Block, though it may have existed earlier, has been deleted. |
+| Include Inclusion Data—error | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See [request parameters](#request-parameters) for details. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-- `Include Inclusion Data - error` - One of true or false is not provided.
 
 {% endapi %}

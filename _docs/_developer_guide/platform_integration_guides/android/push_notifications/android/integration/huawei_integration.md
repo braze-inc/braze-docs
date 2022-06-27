@@ -25,11 +25,11 @@ Before getting started, you'll need to register and set up a [Huawei Developer a
 
 In the Braze dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
 
-Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform, and choose `Huawei (HMS)` as the push provider.
+Click **+ Add App**, provide a name (i.e., My Huawei App), select `Android` as the platform.
 
-![][4]
+![][4]{: style="max-width:60%;"}
 
-Once your new Braze app has been created, you will find your app identifier API key and a section for **Push Notification Settings** where you can enter your `Huawei App ID` and `Huawei App Secret`.
+Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei App ID` and `Huawei App Secret`.
 
 ![][12]
 
@@ -141,7 +141,7 @@ Once your campaign has been launched, you will see analytics for your campaign o
 [7]: {% image_buster /assets/img/huawei/huawei-test-send.png %}
 [8]: {% image_buster /assets/img/huawei/huawei-segmentation.png %}
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#results-data-push
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/
 [12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
 [13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html
 [14]: https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls

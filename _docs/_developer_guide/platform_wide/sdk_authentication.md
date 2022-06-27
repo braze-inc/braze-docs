@@ -91,7 +91,7 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% tab Javascript %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   enableSdkAuthentication: true,
@@ -142,6 +142,9 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
                  withAppboyOptions:[ ABKEnableSDKAuthenticationKey : true ])
 ```
 {% endtab %}
+{% tab Dart %}
+Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. Once SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
+{% endtab %}
 {% endtabs %}
 
 ### Set the current user's JWT token
@@ -159,14 +162,14 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 Supply the JWT Token when calling `changeUser`:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
@@ -225,6 +228,20 @@ Or, when you have refreshed the user's token mid-session:
 Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 ```
 {% endtab %}
+{% tab Dart %}
+
+Supply the JWT Token when calling `changeUser`:
+
+```dart
+braze.changeUser("userId", sdkAuthSignature: "signature")
+```
+Or, when you have refreshed the user's token mid-session:
+
+```dart
+braze.setSdkAuthenticationSignature("signature")
+```
+
+{% endtab %}
 {% endtabs %}
 
 ### Register a callback function for invalid tokens {#sdk-callback}
@@ -245,10 +262,10 @@ These callback methods are a great place to add your own monitoring or error-log
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-import braze from "@braze/web-sdk";
+import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
-  // TODO: optionally log to your error-reporting service
-  // TODO: check if the errorEvent user matches the currently logged-in user
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(errorEvent);
   appboy.setSdkAuthenticationSignature(updated_jwt);
 });
@@ -257,8 +274,8 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% tab Java %}
 ```java
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
-    // TODO: optionally log to your error-reporting service
-    // TODO: check if the errorEvent user matches the currently logged-in user
+    // TODO: Optionally log to your error-reporting service
+    // TODO: Check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
@@ -267,8 +284,8 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 {% tab KOTLIN %}
 ```kotlin
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
-    // TODO: optionally log to your error-reporting service
-    // TODO: check if the errorEvent user matches the currently logged-in user
+    // TODO: Optionally log to your error-reporting service
+    // TODO: Check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
@@ -280,8 +297,8 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braze
 
 // Method to implement in delegate
 - (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
-  // TODO: optionally log to your error-reporting service
-  // TODO: check if the errorEvent user matches the currently logged-in user
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
   NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(errorEvent);
   [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
@@ -294,12 +311,23 @@ Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
 func handle(_ errorEvent: ABKSdkAuthenticationError?) {
-        // TODO: optionally log to your error-reporting service
-        // TODO: check if the errorEvent user matches the currently logged-in user
-        print("Invalid SDK Authentication signature.")
-        let newSignature = getNewSignatureSomehow(errorEvent)
-        Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
-    }
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
+  print("Invalid SDK Authentication signature.")
+  let newSignature = getNewSignatureSomehow(errorEvent)
+  Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
+}
+```
+{% endtab %}
+{% tab Dart %}
+```dart
+braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
+  print("Invalid SDK Authentication signature.")
+  let newSignature = getNewSignatureSomehow(errorEvent)
+  braze.setSdkAuthenticationSignature(newSignature);
+});
 ```
 {% endtab %}
 {% endtabs %}
@@ -316,12 +344,13 @@ The `errorEvent` argument passed to this callback will contain the following inf
 
 ## Adding public keys {#key-management}
 
-In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the **Manage Settings** page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
-1. Choose the app in the left-hand side menu
-2. Click the **Add Public Key** button within the SDK Authentication settings
-3. Paste in the Public Key, and add an optional description
+
+1. Choose the app from the list of available apps.
+2. Under **SDK Authentication**, click **Add Public Key**.
+3. Paste in the Public Key, and add an optional description.
 4. After saving your changes, the key will appear in the list of Public Keys.
 
 To delete a key, or to promote a key to the Primary key, choose the corresponding action in the overflow menu next to each key.
@@ -332,7 +361,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
 
 ### Enforcement options {#enforcement-options}
 
@@ -403,7 +432,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 #### Why does this feature use public/private keys instead of Shared Secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
+When using Shared Secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
 Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
 

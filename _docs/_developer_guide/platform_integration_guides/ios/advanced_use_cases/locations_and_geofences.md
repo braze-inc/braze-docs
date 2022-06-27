@@ -11,7 +11,7 @@ Tool:
 
 # Locations and geofences
 
-Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze Customer Success Manager.
+Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
 
 To support geofences for iOS:
 
@@ -161,6 +161,6 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
 [4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
 [support]: {{site.baseurl}}/braze_support/
 

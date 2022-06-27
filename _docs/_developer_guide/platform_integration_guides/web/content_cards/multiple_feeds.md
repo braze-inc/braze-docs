@@ -1,11 +1,11 @@
 ---
 nav_title: Multiple Feeds
 article_title: Using Multiple Content Card Feeds for Web
-page_order: 5
+page_order: 3
 platform: Web
 channel: content cards
 page_type: reference
-description: "This article describes how to set up and use multiple content card feeds."
+description: "This article describes how to set up and use multiple Content Card feeds in your web application."
 
 ---
 
@@ -31,7 +31,7 @@ The following example will show the Content Cards feed for `Transactional` type 
  * @param {String} feed_type - value of the "feed_type" KVP to filter
  */
 function showCardsByFeedType(feed_type) {
-  appboy.display.showContentCards(null, function(cards) {
+  braze.showContentCards(null, function(cards) {
     return cards.filter(function(card) {
       return card.extras["feed_type"] === feed_type;
     });
@@ -48,7 +48,7 @@ document.getElementById("show-transactional-feed").onclick = function() {
 };
 ```
 
-For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards).
+For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
 
 ## Step 3: Set key-value pairs in your campaign
 

@@ -33,7 +33,7 @@ Foreground push tokens provide the ability to send regular push notifications to
 
 When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter `Push enabled for App` to help identify these users.
 
-Note that `Push enabled for App` only considers the presence of a valid a foreground push token for the given app. However, the more generic `Push Enabled` filter considers the presence of any valid foreground push token as well as the push subscription state having a value of “subscribed” or “opted-in”.
+Note that `Push enabled for App` only considers the presence of a valid a foreground or background push token for the given app. However, the more generic `Push Enabled` filter segments users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 ### Check user's push enablement status
 
@@ -135,13 +135,13 @@ Regardless of the response to the opt-in prompt, the user receives a background 
 
 In iOS 12, Apple introduced Provisional Authorization, allowing brands the option to send quiet push notifications to their users' Notification Centers before they explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
-On devices running iOS 11 or below, your users must explicitly opt-in to receive your push messages. You must request whether the user would like to receive push from you.
+On devices running iOS 11 or earlier, your users must explicitly opt-in to receive your push messages. You must request whether the user would like to receive push from you.
 
 ### Web
 
-The behavior for web push subscription functions similar to that of iOS. The default subscription status for web users once they've opted-in via the `appboy.registerAppboyPushMessages()` is `subscribed`. This default status is sufficient for you to send push messages to web users. The `opted in` state implies a user has explicity opted in to push notifications via web, if permittable. However, this explicit opt-in is not required to send push to web users.
+The behavior for web push subscription functions similar to that of iOS. The default subscription status for web users once they've opted-in via the `requestPushPermission()` is `subscribed`. This default status is sufficient for you to send push messages to web users. The `opted in` state implies a user has explicity opted in to push notifications via web, if permittable. However, this explicit opt-in is not required to send push to web users.
 
-To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
+To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
 
 If a user disables notifications within their browser, the next push notification sent to that user will bounce and Braze will update the user's push token accordingly. This is used to manage eligibility for the push enabled filters (`Background Push Enabled`, `Push Enabled` and `Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
 

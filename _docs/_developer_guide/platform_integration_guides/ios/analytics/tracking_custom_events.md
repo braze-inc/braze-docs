@@ -7,6 +7,8 @@ description: "This reference article covers how to add and track custom events f
 
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
 # Tracking custom events for iOS
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
@@ -40,14 +42,36 @@ You can add metadata about custom events by passing an `NSDictionary` populated 
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] logCustomEvent:@"YOUR_EVENT_NAME" withProperties:@{@"key1":"value1"}];
+[[Appboy sharedInstance] logCustomEvent:@"YOUR-EVENT-NAME"
+                         withProperties:@{
+  @"you": @"can",
+  @"pass": @(NO),
+  @"orNumbers": @42,
+  @"orDates": [NSDate date],
+  @"or": @[@"any", @"array", @"here"],
+  @"andEven": @{
+    @"deeply": @[@"nested", @"json"]
+  }
+}];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1":"value1"])
+Appboy.sharedInstance()?.logCustomEvent(
+  "YOUR-EVENT-NAME",
+  withProperties: [
+    "you": "can",
+    "pass": false,
+    "orNumbers": 42,
+    "orDates": Date(),
+    "or": ["any", "array", "here"],
+    "andEven": [
+      "deeply": ["nested", "json"]
+    ]
+  ]
+)
 ```
 
 {% endtab %}

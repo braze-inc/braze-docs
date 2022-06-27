@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# About in-app messages
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}About in-app messages
 
-> This article provides an overview of in-app messages, including the available message types and some potential use cases. In addition to the content covered here, we also recommend checking out our [In-App and In-Browser Messages](https://lab.braze.com/messaging-channels-in-app-in-browser) LAB course.
+> This article provides an overview of in-app messages, including the available message types and some potential use cases.
 
 In-app messages are good for a lot of things. They're content rich and have a lower sense of urgency, as these messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages exist within your app (hence the name), come with context, and are almost never unwelcome! They're always delivered when the user is active within your app.
 

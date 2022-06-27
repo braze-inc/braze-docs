@@ -1,11 +1,11 @@
 ---
 nav_title: Troubleshooting
 article_title: In-App Message Troubleshooting for Android and FireOS
-page_order: 4
+page_order: 40
 platform: 
   - Android
   - FireOS
-description: "This reference article covers potential Android in-app message troubleshooting topics."
+description: "This reference article covers potential Android or FireOS in-app message troubleshooting topics."
 channel:
   - in-app messages
 
@@ -35,7 +35,7 @@ The SDK requests in-app messages from Braze's servers on session start. To check
 
 1. Add yourself as a [test user][troubleshooting_iams_1] on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
-3. Ensure that a [new session][troubleshooting_iams_4] occurs in your application.
+3. Ensure that a new session occurs in your application.
 4. Use the [event user logs][troubleshooting_iams_3] to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
   - If your app was meant to request triggered in-app messages, you should see `trigger` in the **Requested Responses** field under **Response Data**.
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
@@ -43,7 +43,7 @@ The SDK requests in-app messages from Braze's servers on session start. To check
 
 #### Troubleshoot messages not being requested
 
-If your in-app messages are not being requested, your app might not be [tracking sessions correctly][troubleshooting_iams_4], as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
+If your in-app messages are not being requested, your app might not be tracking sessions correctly, as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
 ![The SDK request found in the event user logs displaying a successful session start event.][troubleshooting_iams_10]
 
@@ -76,9 +76,9 @@ If your app is successfully requesting and receiving in-app messages, but they a
 [troubleshooting_iams_4]: #session-tracking
 [troubleshooting_iams_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
 [troubleshooting_iams_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[troubleshooting_iams_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/
-[troubleshooting_iams_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
-[troubleshooting_iams_9]: #minimum-time-interval-between-triggers
+[troubleshooting_iams_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+[troubleshooting_iams_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
+[troubleshooting_iams_9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
 [troubleshooting_iams_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
 [troubleshooting_iams_11]: #troubleshooting-in-app-message-delivery
 [troubleshooting_iams_12]: #troubleshooting-in-app-message-display

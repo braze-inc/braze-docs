@@ -7,6 +7,8 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
 # Swift Package Manager integration
 
 Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, ensure that you use Xcode 12 or greater.
@@ -19,7 +21,7 @@ tvOS is not currently available via Swift Package Manager.
 
 ### Import SDK version
 
-Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the add button (+) at the bottom left.
+Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button below the packages list.
 
 ![][2]
 

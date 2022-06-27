@@ -98,7 +98,7 @@ show pipes;
 
 Copy the `notification_channel` from the output of the preceding command and use that when configuring S3 bucket notifications.
 
-Manually sync from S3 to Snowflake for the pipe name given below:
+Manually sync from S3 to Snowflake for the following pipe name given:
 ```sql
 ALTER PIPE
   pipe_users_messages_email_click

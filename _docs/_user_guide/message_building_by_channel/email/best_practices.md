@@ -12,18 +12,27 @@ channel: email
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: "Guidelines & Tips"
+  - name: "Guidelines"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/
     fa_icon: fas fa-award
-  - name: "Email Services"
-    link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
-    fa_icon: fas fa-concierge-bell
+  - name: "Email Styling"
+    link: /docs/user_guide/message_building_by_channel/email/best_practices/email_styling/
+    fa_icon: fas fa-paint-brush
+  - name: "Use Cases"
+    link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
+    fa_icon: fas fa-pen-square
   - name: "Managing Email Subscriptions"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
     fa_icon: fas fa-tasks
+  - name: "Email Services"
+    link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
+    fa_icon: fas fa-concierge-bell
   - name: "Sunset Policies"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     fa_icon: fas fa-sun
+  - name: "Know Before You Send"
+    link: /docs/know_before_send/
+    fa_icon: fa-solid fa-paper-plane
   - name: "Building accessible emails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/accessibility/
     fa_icon: fas fa-universal-access

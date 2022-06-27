@@ -112,7 +112,7 @@ After you've set up the RevenueCat purchases SDK and Braze SDK to have the same 
 
 ### Step 3: Configure event names {#configure-event-names}
 
-Enter the event names that RevenueCat will send or select from the default event names by selecting **Use Default Event Names**. The events that RevenueCat supports sending are described below.
+Enter the event names that RevenueCat will send or select from the default event names by selecting **Use Default Event Names**. The events that RevenueCat supports sending are described in the following chart.
 
 | Event | Description |
 |---|---|

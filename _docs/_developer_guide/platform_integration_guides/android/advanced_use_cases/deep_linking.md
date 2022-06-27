@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings or a News Feed."
 
 ---
 
@@ -177,7 +177,7 @@ Then, as you set up your push notification campaign (either through the [dashboa
 
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
 
-**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.APPBOY_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
+**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.BRAZE_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
 **2.** Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
 
 ```xml
@@ -214,7 +214,7 @@ Braze.configure(this, brazeConfig)
  {% endtabs %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
 [udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html

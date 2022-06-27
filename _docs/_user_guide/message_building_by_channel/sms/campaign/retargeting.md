@@ -40,7 +40,7 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 
 ## Keyword category-specific retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
 ### Filter by recency
 
@@ -69,7 +69,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 ![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 
 **Trigger by arbitrary keywords**<br>
-Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
+Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the following example. 
 ![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>

@@ -12,13 +12,13 @@ channel:
 
 This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide sample integration code, you will need to add logic to handle and display triggered messages within your desired UI. 
 
-Because your code will be unique to your app, you do not need to handle all situations listed below if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
+Because your code will be unique to your app, you do not need to handle all situations listed if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
 
 ## SDK requirements {#supported-sdk-versions}
 
 In-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
-{% sdk_min_versions roku:0.1.0 %}
+{% sdk_min_versions roku:0.1.2 %}
 
 ## In-app message setup
 
@@ -39,7 +39,7 @@ end sub
 
 ## In-app message fields
 
-Listed below are the fields you will need to handle your in-app messages:
+The following lists the fields you will need to handle your in-app messages:
 
 | Fields | Description |
 | ------ | ----------- |

@@ -25,7 +25,7 @@ Sending MMS with Braze:
   - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
   - Only 1 image supported<br><br>
 - **Understand MMS sending**
-  - MMS are billed at a different rate vs. text-only SMS.
+  - MMS are billed at a different rate versus text-only SMS.
   - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
 
 ### Contact Cards

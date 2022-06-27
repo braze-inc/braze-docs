@@ -54,7 +54,7 @@ Make sure you [link to other references as you need them]({{site.baseurl}}/home/
 
 ### Code Sample
 
-If you're explaining a technical concept, please note that here and show a code sample.
+If you're explaining a technical concept, note that here and show a code sample.
 
 ```html
 <!DOCTYPE html>
@@ -113,6 +113,6 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback below or open a [support ticket][support]!
+If this article didn't help, leave feedback or open a [support ticket][support]!
 
 [support]: {{site.baseurl}}/braze_support/

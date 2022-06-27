@@ -13,13 +13,13 @@ description: "This page includes several reading paths that will enable you to b
 
 Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact—just you letting your customers know that you care about what they want from you.
 
-Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
+Because of Braze's beautiful complexity, we recommend the several reading paths that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
 
 {% alert tip %}
-Don't forget that you can always access and take [LAB courses](https://lab.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
+Don't forget that you can always access and take [Braze Learning courses](https://learning.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
 {% endalert %}
 
-Choose from the paths below to fit your needs and get reading!
+Choose from the following paths to fit your needs and get reading!
 
 ## Braze beginner
 
@@ -43,7 +43,7 @@ Everything you should know to get started with Braze. As you’re going through 
 
 ## Adept admin
 
-Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and dashboard management](https://lab.braze.com/admin-dashboard-management) LAB course!
+Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and dashboard management](https://learning.braze.com/admin-dashboard-management) Braze Learning course!
 
 | Order | Article | What You'll Learn |
 |---|---|---|
@@ -77,9 +77,9 @@ Learn how to interact with your customers in a way that feels personal and human
 
 ## Messaging maestro
 
-Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel below. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
+Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
 
-Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your Account Manager or Customer Success Manager for more information.
+Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your account manager or customer success manager for more information.
 
 ### Content Cards*
 
@@ -91,7 +91,7 @@ Some messaging channels, like Content Cards and SMS, aren't available out-of-the
 | 4 | [Testing Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | How to preview and test Content Cards before sending them to your customers. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Content cards aren't available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
+*Content cards aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
 
 ### Email
 
@@ -141,7 +141,7 @@ Before proceeding with this learning path, make sure you’ve already followed t
 | 6 | [Create an MMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) | How to create and send MMS messages in a campaign or Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*SMS and MMS messages aren't available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
+*SMS and MMS messages aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
 
 ### Webhooks
 
@@ -158,7 +158,7 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
-| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
+| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
 | 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
 | 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
 | 5 | [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | What user profiles are in Braze and the various ways you can identify and reference a user’s profile. |
@@ -175,4 +175,4 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Opt* | [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) | How to set up and use Currents to stream data to one of our many data partners. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*The Predictive Suite, Intelligence Suite, and Currents are not available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
+*The Predictive Suite, Intelligence Suite, and Currents are not available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.

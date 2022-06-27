@@ -38,7 +38,7 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 ## Connect Passkit to Braze
 
-To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s `externalId`.
+To pass data from PassKit, ensure that you have set your Braze external ID as PassKit’s `externalId`.
 
 1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
@@ -106,14 +106,14 @@ The second code snippet you must add to your Content Block captures the URL to b
 ```
 {% endraw %}
 
-Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet, shown below. 
+Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet:
 {% raw %}
 ```liquid
 {% capture sig %}{{url | hmac_sha1: "Project_Secret"}}{% endcapture %}
 ```
 {% endraw %}
 
-Finally, append the signature to the full URL using the fifth code snippet, shown below.
+Finally, append the signature to the full URL using the fifth code snippet:
 {% raw %}
 ```liquid
 {% capture longUrl %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}{% endcapture %}
@@ -199,7 +199,7 @@ The output URL will be long. The reason for this is that it contains all the pas
 
 ## Update pass using the PassKit webhook
 
-Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the links below for information on useful PassKit endpoints. 
+Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the following links for information on useful PassKit endpoints. 
 - [Member projects][12]
 - [Coupon projects][13]
 - [Flights projects][14]
@@ -251,7 +251,7 @@ To set up the webhook, fill out the new event details within the request body, i
 
 Your raw text will automatically highlight if it is an applicable Braze tag. 
 
-Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
+Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

@@ -252,9 +252,9 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The large and small icons pictured below are examples of properly designed icons:
+The following large and small icons pictured are examples of properly designed icons:
 
-![A small icon appearing in the bottom right corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
+![A small icon appearing in the bottom corner of a large icons beside a message that says "Hey I'm on my way to the bar but.."][38]
 
 ### Step 3: Configure notification icons
 
@@ -320,11 +320,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] section for more information.
+If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our [Custom handling push receipts and opens][52] article for more information.
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ section][42].
+Follow the instructions found within the [Android developer documentation][40] on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article][42].
 
 #### Adding deep links
 
@@ -382,6 +382,13 @@ You should ensure that any API campaigns with the [Android push object][63] para
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 
+The default channel name and description can also be configured in `braze.xml`.
+
+```xml
+<string name="com_braze_default_notification_channel_name">Your channel name</string>
+<string name="com_braze_default_notification_channel_description">Your channel description</string>
+```
+
 ### Step 6: Test notification display and analytics
 
 #### Testing display
@@ -408,7 +415,18 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "android_push": {
+      "title":"Test push title",
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }  
+  }
+}' https://rest.iad-01.braze.com/messages/send
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
@@ -540,7 +558,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - It should perform your custom logic for each of these cases. If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_braze_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
-For a detailed custom receiver example, see the code snippets below:
+For a detailed custom receiver example, see the following code snippets:
 
 {% tabs %}
 {% tab JAVA %}
@@ -622,10 +640,10 @@ Custom key-value pairs sent either via the dashboard or the messaging APIs will 
 
 ```java
 // intent is the Braze push intent received by your custom broadcast receiver.
-String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
+String deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY);
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
+Bundle extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
 String myExtra = extras.getString("my_key");
@@ -636,10 +654,10 @@ String myExtra = extras.getString("my_key");
 
 ```kotlin
 // intent is the Braze push intent received by your custom broadcast receiver.
-val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
+val deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY)
 
 // The extras bundle extracted from the intent contains all custom key-value pairs.
-val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
+val extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.
 val myExtra = extras.getString("my_key")
@@ -667,17 +685,17 @@ For documentation on Braze push data keys, refer to the [Android SDK](https://ap
 [45]: https://firebase.google.com/docs/cloud-messaging/
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
+[61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/
 [62]: https://developer.android.com/preview/features/notification-channels.html
 [63]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
-[64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel
+[64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel
 [65]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()

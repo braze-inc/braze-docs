@@ -31,7 +31,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 ## Step 2: Update Unity AndroidManifest.xml
 
-If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
+If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any of the following missing sections are added to your existing `AndroidManifest.xml`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -70,7 +70,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
         <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED" />
       </intent-filter>
     </receiver>
-    <receiver android:name="com.appboy.AppboyAdmReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+    <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
       <intent-filter>
           <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
           <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />

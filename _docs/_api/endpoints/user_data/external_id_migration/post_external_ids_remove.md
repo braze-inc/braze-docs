@@ -15,7 +15,7 @@ description: "This article outlines details about the external IDs Remove endpoi
 {% endapimethod %}
 
 {% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
+For security purposes, this feature is disabled by default. To enable this feature, reach out to your Success Manager.
 {% endalert %}
 
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
@@ -25,6 +25,10 @@ You can send up to 50 external IDs per request.
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
+
+## Rate limit
+
+{% include rate_limits.md endpoint='external id migration' %}
 
 ## Request body
 
@@ -52,11 +56,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "external_ids" : 
-    [
-      "existing_deprecated_external_id_string",
-      ...
-    ]
+  "external_ids" :[
+    "existing_deprecated_external_id_string",
+    ...
+  ]
 }'
 ```
 {% alert important %}

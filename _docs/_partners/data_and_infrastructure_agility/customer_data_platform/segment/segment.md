@@ -34,7 +34,7 @@ To integrate Braze and Segment, you must set [Braze as a Destination](#connectio
 
 ### Step 1: Configure Braze settings in Segment {#connection-settings}
 
-After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the chart below.
+After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the following chart.
 
 In Segment, navigate to **Destinations > Braze > Receiving from [platform]**.
 
@@ -57,8 +57,8 @@ Next, provide the following fields in the configuration page:
 |Allow crawler activity| On/Off (True/False) | Web Crawlers are automatic programs that visit websites, read them, and collect information that might be important for a search engine index. You can either allow or disallow this from your integrated web page or app. Braze disallows this by default. |
 |Automatically send in-app messages| On/Off (True/False) | Braze automatically enables you to send push to your users upon proper integration. |
 |Do not load font awesome| On/Off (True/False) | Braze uses FontAwesome for our in-app message icons, but you may disallow this feature at any time. |
-|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).|
-|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
+|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).|
+|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#setlogger) console by default. |
 |Minimum interval between trigger actions in seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open in-app messages in new tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab specified in the Braze platform. |
 |Open News Feed cards in new tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
@@ -92,21 +92,21 @@ Also called "device-mode", this integration maps Segment's SDK and [methods](#me
 
 See and set up [mappings](#methods) to Segment's SDK for [Android](https://github.com/appboy/appboy-segment-android) on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
+To complete the side-by-side integration, refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
 
 {% endtab %}
 {% tab iOS %}
 
 See and set up [mappings](#methods) to Segment's SDK for [iOS](https://github.com/appboy/appboy-segment-ios) on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
+To complete the side-by-side integration, refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
 
 {% endtab %}
 {% tab Web or Javascript %}
 
 See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) on Braze's Github.
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
+For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
 
 {% endtab %}
 {% endtabs %}
@@ -131,7 +131,6 @@ Some [automatically captured][25] data is only available through side-by-side in
 ##### Enabling push notifications
 
 Currently, Braze's server-to-server integration with Segment **does not** support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
-
 
 ### Step 3: Map methods {#methods}
 
@@ -226,7 +225,7 @@ If you use a server-to-server integration, filters related to automatically coll
 
 ## User deletion and suppression 
 
-If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment (as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
 
@@ -277,7 +276,7 @@ Segment allows for different data types and structures, leading to issues where 
 
 Scenarios where data will not pass as expected:
 1. Arrays or nested objects in event properties.
-  - Segment allows for arrays or nested objects within the properties of their track events, which map to either Braze custom or purchase event properties. Since our properties don't support those data types, we will silently reject those calls.
+  - iOS, Android, and cloud-mode connections support nested objects within event properties. Device-mode web does not yet support these. Braze is working with Segment to update the web device-mode SDK. 
 2. Passing anonymous data server-to-server.
   - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems.
 

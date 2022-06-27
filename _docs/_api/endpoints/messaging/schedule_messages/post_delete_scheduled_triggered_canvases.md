@@ -55,8 +55,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 --data-raw '{
   "canvas_id": "canvas_identifier",
   "schedule_id": "schedule_identifier"
-}
-'
+}'
 ```
 
 {% endapi %}

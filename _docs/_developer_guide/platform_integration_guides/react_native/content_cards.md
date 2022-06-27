@@ -21,7 +21,6 @@ You can use these additional methods to build a custom Content Cards Feed within
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `ReactAppboy.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
 | `ReactAppboy.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
-| `ReactAppboy.logContentCardsDisplayed()`       | Logs a Content Content feed displayed event.                                                           |
 | `ReactAppboy.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
 | `ReactAppboy.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
 | `ReactAppboy.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
@@ -29,7 +28,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 ## Test displaying sample Content Card
 
-Follow the steps below to test a sample content card.
+Follow these steps to test a sample Content Card.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new Content Card campaign.

@@ -76,7 +76,7 @@ With this approach, customization is in the hands of marketers, who determine th
 </table>
 
 {% alert tip %}
-Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned above, consider a Walk or Run approach instead.
+Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned in this section, consider a Walk or Run approach instead.
 {% endalert %}
 
 {% endtab %}
@@ -190,7 +190,7 @@ You can change the language that appears automatically in empty Content Card fee
 ```
 "Appboy.content-cards.no-card.text" = "No Cards!!!!";
 "Appboy.content-cards.done-button.title" = "Done";
-"Appboy.content-cards.no-card.text" = "We have no updates.\nPlease check again later.";
+"Appboy.content-cards.no-card.text" = "We have no updates.\nCheck again later.";
 "Appboy.content-cards.no-connection.title" = "Connection Error";
 "Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
 ```
@@ -199,6 +199,6 @@ If you want to update it for different languages, find the corresponding languag
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/

@@ -9,11 +9,11 @@ description: "This help article walks Mac users through how to resolve scroll ba
 
 # Scroll bar overlap
 
-Are you using a Mac and find that your scroll bars are overlapping content within Braze Docs like the example below?
+Are you using a Mac and find that your scroll bars are overlapping content within Braze Docs like in the following example?
 
 ![Example of scroll bar overlap][1]
 
-Check if your scroll bar overlaps the code block below:
+Check if your scroll bar overlaps the following code block:
 
 ```
 <your-bucket-prefix>/dataexport.<cluster-identifier>.S3.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.S3.integration.<integration-id>+<partition>+<offset>.avro

@@ -2,7 +2,7 @@
 nav_title: Custom Sounds
 article_title: Custom Push Notification Sounds for iOS
 platform: iOS
-page_order: 2
+page_order: 3
 description: "This article covers implementing custom sounds in your iOS push notifications."
 channel:
   - push
@@ -34,7 +34,7 @@ Custom sounds must be under 30 seconds when played. If a custom sound is over th
 
 ## Step 2: Providing the dashboard with a protocol URL for the sound
 
-Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer wizard, as pictured below:
+Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer wizard, as pictured in the following screenshot:
 
 ![][8]
 

@@ -10,19 +10,19 @@ tool:
   
 ---
 
-# Regular expressions with Braze
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions with Braze
 
-{% include video.html id="3h5Xbhl-TxE" align="right" %}
+<!--{% include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
 >  This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
 
 A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-In the provided video, we show you how regular expressions can be used and tested on [Regex101][regex]. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [inhouse regex tester](#regex-debugger), a helpful cheatsheet, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
 
 ## Resources
 
-- [Regular expression basics](https://lab.braze.com/regular-expression-basics-for-braze) LAB course
+- [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
 - <i class="fas fa-file-pdf"></i> [Regex Cheat Sheet][cheatsheet]
 - <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
 

@@ -9,7 +9,7 @@ noindex: true
 
 {% alert important %}
 
-The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Please note that you **can** currently use the `platform` content tag.
+The [content tags](#content-tags) listed on this page are currently a work in progress and cannot be applied to pages without causing errors. Check back later for the final version, when these can be safely applied! Note that you **can** currently use the `platform` content tag.
 
 {% endalert %}
 
@@ -21,7 +21,7 @@ These are independent. If you need to see additional optional YAML content based
 A note on capitalization... 
 <br> 
 <br> 
-Please leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
+Leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
 {% endalert %}
 
 ### Configuration Tags
@@ -46,7 +46,7 @@ These will assist in external and internal SEO, informing page content and forma
 | YAML Content Tag | Description  | Required? | Exclusive or can multiple be used? | Data Type | Available Values |
 | ----------------- | ----------- | --------- | ---------------------------------- | --------- | ---------------- |
 | `description` | Description of the page that will show in online searches. Encapsulate in quotes. | Yes. | Exclusive up to 160 characters. | String. | Any - the page description of a page is up to you. We recommend less than 3 sentences. <br> <br> Template: `This {page_type} {lists, describes, walks you through} {topic or task} for {platform and/or channel} using {tool}.` Though the exact phrasing can vary, it must include at least the page type, what the page aims to do (as in, it will "walk you through how to perform noted task" or "teach you how to read a certain report" or "describe the requirements of a certain Partner integration". <br> <br> Example: `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Or `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android push campaigns.` Or even `This solutions article will walk you through a custom integration.` |
-| `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types) list below. |
+| `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types). |
 | `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | No, unless on a Dev Guide page.  | Multiple values can be used. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, `API`, and any of the wrapper SDKs. |
 | `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | No, unless the content mentions a specific channel or channels. | Multiple values can be used. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
 | `tool` | Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
@@ -66,7 +66,7 @@ key:
   - string6
 ```
 {% alert important %}
-Please note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
+Note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
 {% endalert %}
 
 ### Sample YAML

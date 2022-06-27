@@ -70,7 +70,7 @@ If you need to configure your game object listener at runtime, use `AppboyBindin
 
 The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback`, respectively.
 
-![This implementation example graphic shows the Braze configuration options mentioned above and a C# code snippet.][32]
+![This implementation example graphic shows the Braze configuration options mentioned in the preceding sections and a C# code snippet.][32]
 
 ```csharp
 public class MainMenu : MonoBehaviour {

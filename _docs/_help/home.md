@@ -19,8 +19,8 @@ resources_list:
   - name: Release Notes
     link: /docs/help/release_notes/most_recent/
     image: /assets/img/notebook.png
-  - name: LAB Login
-    link: https://lab.braze.com
+  - name: Braze Learning Login
+    link: https://learning.braze.com/
     image: /assets/img/icons/icon-lab.png
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg

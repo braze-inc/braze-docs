@@ -19,7 +19,7 @@ channel:
 
 SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
 
-As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but **is not indicative of how your message will be split into segments and ultimately how you be charged**. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator) below.
+As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but **is not indicative of how your message will be split into segments and ultimately how you be charged**. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator).
 
 ![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
@@ -79,9 +79,9 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 - **Compatible with Liquid templating, Connected Content, emojis, and links**
     - Liquid templating and Connected Content may put your message at risk of going over the character limit for your encoding type. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
     - Emojis have no standard character count across all emojis, so make sure to test that your messages are segmenting and displaying correctly.
-    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Please visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>
+    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>
 - **Testing**
-    - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Please note that test messages will count toward your message limits.
+    - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Note that test messages will count toward your message limits.
 
 ## SMS segment calculator {#segment-calculator}
 ---
@@ -92,7 +92,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 
 <br>
 
-If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of Liquid or Connected Content.
+If you'd like to see how many segments your message will dispatch, enter your copy into the calculator. Note that this will not process or predict the output of Liquid or Connected Content.
 <style>
   .segment_data_hide {
     display: none;
@@ -127,7 +127,7 @@ If you'd like to see how many segments your message will dispatch, enter your co
   <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
   <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Auto Detect</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
   <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7 Encoding</label><br />
-  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">USC-2 Encoding</label><br />
+  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">UCS-2 Encoding</label><br />
   <br />
   Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
   SMS Segments Count: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
@@ -349,7 +349,7 @@ if(smsutil.unicodeCodePoints(s).every(function (x) {return x in unicodeToGsm})) 
   $('#auto_encoding').html("(GSM)");
   return "gsm";
 } else {
-  $('#auto_encoding').html("(USC-2)");
+  $('#auto_encoding').html("(UCS-2)");
   return "ucs2";
 }
 },
@@ -391,13 +391,24 @@ gsm: smsutil._segmentWith(160, 153, smsutil.encodeCharGsm),
 ucs2: smsutil._segmentWith(140, 134, smsutil.encodeCharUtf16),
 auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
 }
+
+function countLength(type, s) {
+  const t = (type === "auto") ? smsutil.pickencoding(s) : type;
+
+  if (t === "gsm") {
+    return s.length + (s.match(/\^|€|{|}|\[|\]|~|\|/g) || []).length;
+  } else {
+    return s.length;
+  }
+}
+
 function updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
     var sms_type = $('#sms_split input[name=sms_type]:checked').val();
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = encoder[sms_type](sms_text);
     var smsSegments = segmenter[sms_type](unicodeinput);
-    $('#sms_length').html(sms_text.length);
+    $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
     const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
