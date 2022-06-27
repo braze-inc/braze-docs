@@ -7,7 +7,7 @@ description: "This reference article covers how to add and track custom events f
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Tracking custom events for iOS
 

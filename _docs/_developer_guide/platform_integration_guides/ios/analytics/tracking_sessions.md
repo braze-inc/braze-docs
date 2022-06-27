@@ -7,7 +7,7 @@ description: "This reference article shows how to subscribe to session updates f
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Session tracking for iOS
 

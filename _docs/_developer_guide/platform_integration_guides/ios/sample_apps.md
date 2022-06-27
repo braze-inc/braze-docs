@@ -7,7 +7,7 @@ description: "This article covers iOS sample apps."
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Sample apps
 

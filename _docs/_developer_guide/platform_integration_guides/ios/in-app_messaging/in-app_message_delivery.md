@@ -9,7 +9,7 @@ channel:
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 
 # In-app message delivery

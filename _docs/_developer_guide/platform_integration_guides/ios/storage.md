@@ -8,7 +8,7 @@ description: "This reference article describes the device-level properties captu
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Storage
 

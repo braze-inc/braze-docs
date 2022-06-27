@@ -7,7 +7,7 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
  
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 
 # Setting user IDs for iOS

@@ -7,7 +7,7 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Setting custom attributes for iOS
 

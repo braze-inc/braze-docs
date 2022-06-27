@@ -7,7 +7,7 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 # Swift Package Manager integration
 

@@ -8,7 +8,7 @@ platform: iOS
 
 ---
 
-{% include archive/web-v4-rename.md %}
+{% include archive/ios-swift-upgrade.md %}
 
 
 # Braze iOS SDK integration guide
