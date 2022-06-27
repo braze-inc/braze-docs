@@ -25,6 +25,8 @@ local_redirect:
   
 ---
 
+{% include archive/web-v4-rename.md %}
+
 # Push integration
 
 ## Step 1: Configure push notifications

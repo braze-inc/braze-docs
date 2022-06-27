@@ -8,6 +8,8 @@ description: "This reference article describes the device-level properties captu
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
 # Storage
 
 This article describes the different device-level properties captured when using the Braze iOS SDK.

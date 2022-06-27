@@ -9,6 +9,9 @@ channel:
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
+
 # In-app message delivery
 
 ## Trigger types

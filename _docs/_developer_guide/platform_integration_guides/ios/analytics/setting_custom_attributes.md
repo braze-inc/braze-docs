@@ -7,6 +7,8 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
 # Setting custom attributes for iOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.

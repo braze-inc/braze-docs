@@ -7,6 +7,9 @@ description: "This reference article shows how to track in-app purchases and rev
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
+
 # Logging purchases for iOS
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources and segment your users by their lifetime value.

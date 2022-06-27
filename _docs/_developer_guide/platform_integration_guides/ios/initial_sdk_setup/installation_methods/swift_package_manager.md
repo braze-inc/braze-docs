@@ -7,6 +7,8 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
 # Swift Package Manager integration
 
 Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, ensure that you use Xcode 12 or greater.

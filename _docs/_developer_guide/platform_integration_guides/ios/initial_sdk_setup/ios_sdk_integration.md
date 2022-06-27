@@ -8,6 +8,9 @@ platform: iOS
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
+
 # Braze iOS SDK integration guide
 
 > This optional iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. 

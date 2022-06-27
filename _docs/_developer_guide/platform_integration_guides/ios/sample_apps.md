@@ -7,6 +7,8 @@ description: "This article covers iOS sample apps."
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
 # Sample apps
 
 Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.

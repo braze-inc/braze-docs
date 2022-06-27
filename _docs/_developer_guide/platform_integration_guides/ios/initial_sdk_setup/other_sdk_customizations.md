@@ -7,6 +7,9 @@ page_order: 3
 
 ---
 
+{% include archive/web-v4-rename.md %}
+
+
 # Other SDK customizations
 
 ## Braze log level
