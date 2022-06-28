@@ -15,14 +15,14 @@ tool:
 
 ## Overview
 
-There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
+There are a number of things to know if you plan to edit or add more components to any other component in Canvas after launching:
 
-- Users who have not yet entered the Canvas will be eligible for newly created steps.
+- Users who have not yet entered the Canvas will be eligible for newly created components.
 - Users who have already passed newly created steps will be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
 - Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps. 
-- You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
-- If you update the **Delay** or **Window** settings for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
-- If a delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
+- You cannot edit or delete existing connections nor can you insert a component between existing connected steps once a Canvas is launched.
+- If you update the **Delay** or **Window** settings for a component, only new users entering the Canvas and users that haven't been queued for that component yet will receive the message at the updated delay.
+- If a delay component is the last step in the Canvas, users who reach that component are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
 {% alert note %}
 Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
@@ -61,9 +61,9 @@ The following table describes what aspects of a Canvas are editable and not edit
 
 _*Control variant distribution may only be decreased after launch._
 
-## Individual step
+## Individual component
 
-The following table describes what details for individual Canvas steps are editable and not editable after launch.
+The following table describes what details for individual Canvas components are editable and not editable after launch.
 
 | **Editable**                        | **Not-Editable**                             |
 |-------------------------------------|----------------------------------------------|

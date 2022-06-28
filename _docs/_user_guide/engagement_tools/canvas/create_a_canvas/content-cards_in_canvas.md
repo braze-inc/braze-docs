@@ -45,14 +45,14 @@ If a step contains only Content Cards (and no other messaging channel), you can 
 
 ![][2]
 
-### Steps with multiple channels {#steps-with-multiple-message-channels}
+### Components with multiple channels {#steps-with-multiple-message-channels}
 
-Canvas steps with a Content Card and another messaging channel have the following advancement options:
+Canvas components with a Content Card and another messaging channel have the following advancement options:
 
 | Option | Description |
 |---|---|
 | Advance When Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
-| Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria to advance to next steps._ |
+| Immediately Advance Audience | When this option is selected, everyone in the component's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the components's segment and filter criteria to advance to next steps._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
@@ -75,7 +75,7 @@ Add cards to a user's feed as they qualify for specific promotions and advertise
 
 There are times when a user may dismiss a push notification or delete an email, but you want to remind them or promote the offer in case they change their mind.
 
-Using Canvas, you can add a step that sends both a Content Card and push notification to give users a persistent "inbox" of cards that align with promotional messages sent via push. 
+Using Canvas, you can add a component that sends both a Content Card and push notification to give users a persistent "inbox" of cards that align with promotional messages sent via push. 
 
 #### Multiple feeds based on categories
 

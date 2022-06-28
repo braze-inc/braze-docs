@@ -1,6 +1,6 @@
 ---
-nav_title: Action Paths Step
-article_title: Action Paths Step
+nav_title: Action Paths 
+article_title: Action Paths 
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
@@ -8,7 +8,7 @@ description: "This reference article covers Action Paths and how to use them in 
 tool: Canvas
 ---
 
-# Action Paths Step
+# Action Paths 
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -25,7 +25,7 @@ To create Action Paths, add a step to your Canvas. Then, using the dropdown menu
 
 In the **Action Settings** module, you can choose how long you’d like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
 
-Within the **Action Settings**, you can also turn on the ranked order for your steps by switching on the **Advance users based on ranked order** toggle.
+Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
 ![][4]
 

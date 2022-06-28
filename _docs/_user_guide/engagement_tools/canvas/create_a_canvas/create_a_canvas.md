@@ -71,7 +71,7 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they’re easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![Basics][51]
+![][51]
 
 #### Choose conversion events
 
@@ -104,7 +104,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
     ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    With action-based delivery, you can choose to enter users into a Canvas when they perform certain triggers. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. <br><br>Note that action-based delivery is unavailable for Canvas steps with in-app messages.
+    With action-based delivery, you can choose to enter users into a Canvas when they perform certain triggers. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. <br><br>Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
@@ -127,7 +127,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
 <a id="important-edge-case"></a>
 
 {% alert important %}
-Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. <br><br>In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
+Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one component's messages. In the edge case where a user's re-entry reaches the same component as its previous entry, Braze will deduplicate that component's messages. <br><br>In the event where a user re-enters the Canvas, reaches the same component as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% endalert %}
 
 ### Step 2c: Set your target entry audience
@@ -211,20 +211,20 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 ![Canvas Additional Engagement][15]
 
 {% alert note %} 
-By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
+By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
 {% endalert %}
 
 #### Messages in Canvas
 
-Edit the messages in a Canvas Step to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaign messages, you can use certain Liquid templating to personalize your messages.
+Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaign messages, you can use certain Liquid templating to personalize your messages.
 
 ![][16]
 
 Select your desired **Advancement Behavior**. Learn more about [advancing your users]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) through Canvas steps.
 
-![Advancement Behavior options for a Canvas Step with the option to advance the users when the message is sent or to advance the audience after a delay time of one day.][20]
+![Advancement Behavior options for a Canvas component with the option to advance the users when the message is sent or to advance the audience after a delay time of one day.][20]
 
-Click **Done** once you've finished configuring your Canvas Step.
+Click **Done** once you've finished configuring your Canvas component.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -241,7 +241,7 @@ Canvas entry properties can be referenced only in the first step of a Canvas.
 {% endtab %}
 
 {% tab Custom Event Properties %}
-[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
+[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas component rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
 {% alert note %}
 Custom event properties can be referenced only in the first step of a Canvas. 
@@ -251,19 +251,19 @@ Custom event properties can be referenced only in the first step of a Canvas.
 {% endtabs %}
 
 {% alert tip %}
-Did you know you can include Canvas step names in your messages and link templates?<br>
-Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
+Did you know you can include Canvas component names in your messages and link templates?<br>
+Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
 {% endalert %}
 
-### Adding more steps
+### Adding more components
 
-Add more Steps by clicking the <i class="fas fa-plus-circle"></i> plus button:
+Add more components by clicking the <i class="fas fa-plus-circle"></i> plus button:
 
 ![][17]{: style="max-width:75%;"}
 
 ### Editing connections
 
-To move a connection between steps, click the arrow connecting the two steps and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
+To move a connection between steps, click the arrow connecting the two components and select a different component. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
 
 ![][2]
 

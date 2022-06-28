@@ -1,6 +1,6 @@
 ---
-nav_title: Delay Step
-article_title: Delay Step
+nav_title: Delay 
+article_title: Delay 
 alias: "/delay_step/"
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ tool: Canvas
 
 ---
 
-# Delay Step
+# Delay
 
 Delay Steps allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. Delay Steps can make your Canvas cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step.
 
@@ -19,10 +19,10 @@ You can also use Canvas Delay Steps to delay a step until an exact date, until a
 
 ## Create a delay step
 
-To create a Delay Step, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Delay**.
+To create a delay, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Delay**.
 
-- A Delay Step cannot have full step sibling steps. In other words, you cannot create a full step that branches into a Delay Step and a full step. This restriction exists because if there was a branch with a Delay Step and a full step, it wouldn’t be clear which branch users would go down.
-- A Delay Step can only connect to one next step.
+- A Delay component cannot have full step sibling steps. In other words, you cannot create a full step that branches into a delay and a full step. This restriction exists because if there was a branch with a Delay Step and a full step, it wouldn’t be clear which branch users would go down.
+- A Delay component can only connect to one next step.
 
 ### Time delay options
 
@@ -60,9 +60,9 @@ You’d start by adding a full step that sends immediately after users enter the
 
 If you add a delay step to your Canvas, but there are no more steps after the delay step, any user that reaches the delay step is automatically advanced out of the Canvas. This is true even if the time of the delay step hasn't been reached yet. This means that, for users that have already reached the delay step, they will not receive any messages you add after the delay step. However, if a user has not reached the delay step and a message is added, then they would receive that message.
 
-## Delay step analytics
+## Delay analytics
 
-Delay steps have three statistics available in the analytics view of an active or previously active Canvas.
+Delays have three statistics available in the analytics view of an active or previously active Canvas.
 
 | Metric | Description |
 |---|---|
