@@ -106,7 +106,7 @@ $(document).ready(function () {
     var title = '';
     var url = '';
     var tags_list = '<span class="search_tags" style="background-color: #3accdd;">Braze Learning</span>';
-    var lab_image = "<img src='" + base_url + "/assets/img/braze_learning.png' width='45px' /> ";
+    var lab_image = "&nbsp;<img src='" + base_url + "/assets/img/braze_learning.png' height='18px' /> ";
     var result_template = '';
     if (lab_intialized) {
       result_template = '<div class="lab_header">Braze Learning ' + lab_image + '</div><hr />';

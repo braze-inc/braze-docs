@@ -47,6 +47,34 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## August 2022
+
+### Delivery validation for Canvas Message Steps
+
+You can turn on delivery validation in your Canvas [Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) to provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated.
+
+### Android 13 SDK upgrade guide
+
+As of June 8, 2022 Android 13 has reached its [Platform Stability Milestone](https://developer.android.com/about/versions/13/overview#platform_stability). This means all changes have been finalized, and app users will soon be able to upgrade their devices. To learn more about relevant changes introduced in Android 13 and the required upgrade steps for your Braze Android SDK integration, refer to our [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/).
+
+### iOS 16 SDK upgrade guide
+
+As of iOS 16 Beta 2 (June 22, 2022), there were no functional changes in iOS 16 that affected your Braze SDK integration. This may change as Apple releases new beta versions of iOS 16, so we recommend periodically checking our [iOS 16 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_16/), which describes relevant changes introduced in iOS 16.
+
+### Know before you send guide for channels
+
+Launch your campaigns and Canvases with confidence! After visiting our pre-launch guide, refer to [Know before you send: channels]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/) for a final list of checks or “gotchas” for Content Cards, email, in-app messages, push, and SMS.
+
+### How campaign and Canvas attribute names and IDs differ across sources
+
+Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our REST API, and Currents. These attributes map to the same value across all three sources, but may be named differently. This [new help article]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/) will help you draw connections between the three.
+
+### Braze Learning
+
+[Braze Learning](https://learning.braze.com/), previously Learning at Braze (LAB), offers courses for marketers, administrators, and developers on key concepts and fundamentals in Braze. Keep an eye out for the Braze Learning logo in select articles, and click the link to learn more about that topic.
+
+![Braze learning logo in the custom attributes article, which takes you to the Braze Learning course for custom attributes]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
+
 ## July 2022
 
 ### Inbox Vision
@@ -283,59 +311,5 @@ Email messages are a great way to connect with your customers. For a quick intro
 ### About in-app messages
 In-app messages deliver rich content to your users who are active within your app. You can easily engage with your active customers by creating in-app messges for personalized greetings or feature adoption. To learn about the advantages and message types, check out our new article on [About in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/).
 
-## January 2022
-
-Welcome to a new year!
-
-### Update to export users by segment endpoint
-
-Beginning December 2021, the following changes take effect for the [export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) endpoint:
-
-1. The `fields_to_export` field in this API request will be required. The option to default to all fields will be removed.
-2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will only contain data from the last 90 days.
-
-### New properties for Currents message engagement events
-
-New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
-
-- Add `LINK_ID`, `LINK_ALIAS` to:
-  - Email Click (all destinations)
-- Add `USER_AGENT` to:
-  - Email Open
-  - Email Click
-  - Email Mark As Spam
-- Add `MACHINE_OPEN` to:
-  - Email Open
-
-### New Liquid personalization tag
-
-We now support targeting users who have foreground push enabled on their device with the following Liquid tags:
-
-{% raw %}
-- `{{most_recently_used_device.${foreground_push_enabled}}}`
-- `{{targeted_device.${foreground_push_enabled}}}`
-{% endraw %}
-
-For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
-
-### About webhooks
-
-Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
-
-### Amazon Personalize
-
-Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions. 
-
-If you'd like to learn more, visit our new [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) article to understand the use cases Amazon Personalize offers, data it works with, how to configure the service, and how to integrate it with Braze.
-
-### New Braze partnerships
-
-#### Yotpo – eCommerce
-
-The [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) and Braze integration allows you to dynamically pull and display star ratings, top reviews, and visual user-generated content on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
-
-#### Zeotap – Customer data platform
-
-With the [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) and Braze integration, you can extend the scale and reach of your campaigns by syncing Zeotap customer segments to map Zeotap user data to Braze user accounts. You can then act on this data, delivering personalized target experiences to your users.
 
 [support]: {{site.baseurl}}/support_contact/

@@ -34,7 +34,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the <code>/gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. <br><br>Regular expressions for custom event trigger properties use the <code>/g</code> modifier (case sensitive, see <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g modifier</a>).</p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the <code>/gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. <br><br>Regular expressions for custom event trigger properties use the <code>/g</code> modifier (case sensitive, see <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g modifier</a>) and do not use the <code>/i</code> modifier. For case insensitivity for custom event trigger properties, use <code>(?i)</code> instead.</p>
 </div></div>
 <div>
 Regex:

@@ -165,6 +165,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 }'
 ```
 
+## Response
+
+```json
+{
+    "dispatch_id": (string),
+    "schedule_id": (string),
+    "message": "success"
+}
+```
 
 {% endapi %}
 
