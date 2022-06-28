@@ -121,7 +121,7 @@ Retarget users based on the specific alias that was clicked in a Canvas step. A 
 
 #### Clicked Alias in Campaign or Canvas
 
-Retarget users based on any alias that was clicked in the campaign or Canvas step. Aliases are unique to each message, regardless of the same alias name being used across messages. 
+Retarget users based on any alias that was clicked in the campaign or Canvas step. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
 ![][5]
 
