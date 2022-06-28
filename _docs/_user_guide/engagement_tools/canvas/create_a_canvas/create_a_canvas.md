@@ -244,7 +244,7 @@ Canvas entry properties can be referenced only in the first step of a Canvas.
 [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
 {% alert note %}
-Custom event properties can be referenced only in the first step of a Canvas. 
+Custom event properties can be referenced only in the first step of a Canvas.<br><br>Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
 {% endalert %}
 
 {% endtab %}
