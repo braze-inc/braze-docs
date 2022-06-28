@@ -121,7 +121,7 @@ Once you've finished designing and building your email message, go to **Sending 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email

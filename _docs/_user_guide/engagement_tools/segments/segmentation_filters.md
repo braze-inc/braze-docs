@@ -175,7 +175,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Clicked/Opened Step
-    description: Segments your users by whether or not they have interacted with a specific Canvas step.
+    description: Segments your users by whether or not they have interacted with a specific Canvas component.
     tags:
       - Retargeting
   - name: Converted From Campaign
@@ -191,7 +191,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or Canvas step.
+    description: Segments your users by whether or not they have received any campaign or Canvas component.
     tags:
       - Retargeting
   - name: In Campaign Control Group
@@ -215,7 +215,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Specific Canvas Step
-    description: Segments your users by selecting those who received a specific, designated Canvas Step. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by selecting those who received a specific, designated Canvas component. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Received Campaign
@@ -231,7 +231,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Received Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas step.
+    description: Segments your users by whether or not they have received a specific Canvas component.
     tags:
       - Retargeting
   - name: Has Marked You As Spam

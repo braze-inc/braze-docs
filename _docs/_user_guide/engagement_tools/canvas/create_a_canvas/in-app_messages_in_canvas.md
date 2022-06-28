@@ -17,7 +17,7 @@ channel: in-app messages
 
 Before continuing, you should have already [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and set up delay and audience options. 
 
-Now you can add an in-app message to your Canvas by selecting in-app message from **Messaging Channels**. Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas step!
+Now you can add an in-app message to your Canvas by selecting in-app message from **Messaging Channels**. Once a component's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component!
 
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
@@ -150,9 +150,9 @@ As you can see, the push messages are spaced around an in-app message to ensure 
 
 ## Advancement Behavior options
 
-Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.).
+Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.).
 
-Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas step has been sent to them.
+Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
 
 If you have multiple in-app messages within one Canvas, a user must start multiple sessions to receive each of those individual messages.
 
@@ -200,7 +200,7 @@ A customer may trigger two in-app messages within your Canvas at the same time. 
 
 Navigate to the **Send Settings** of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
 
-By default, Canvas step priority is set to medium, with the most recently created steps having the highest relative priority. Canvas and campaign-level priorities also default to medium, with the highest relative priority defaulting to the most recently created items.
+By default, Canvas component priority is set to medium, with the most recently created steps having the highest relative priority. Canvas and campaign-level priorities also default to medium, with the highest relative priority defaulting to the most recently created items.
 
 ![]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
 

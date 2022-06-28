@@ -41,9 +41,9 @@ All of your existing Canvases and the current version of Canvas (Canvas V1) will
 
 ## What are the main differences between Canvas V2 and Canvas V1?
 
-### Canvas Step Toolbar
+### Canvas Component Toolbar
 
-Previously with the Canvas V1 workflow, a Full Step was added by default whenever you created any step in your user journey. Now with Canvas V2, these Full Steps are replaced by different Canvas components, which gives you the benefit of increased visibility and customization for your editing experience. You can immediately see all your Canvas components from the Canvas Step Toolbar.
+Previously with the original Canvas editor, a Full Step was added by default whenever you created any step in your user journey. Now with Canvas V2, these Full Steps are replaced by different Canvas components, which gives you the benefit of increased visibility and customization for your editing experience. You can immediately see all your Canvas components from the Canvas Step Toolbar.
 
 ### Branching
 
@@ -51,7 +51,7 @@ Steps in Canvas V2 can [branch]({{site.baseurl}}/user_guide/engagement_tools/can
 
 ### Step behavior
 
-Previously with the Canvas V1 workflow, each Full Step included information such as delay and schedule settings, exception events, audience filters, message configuration, and message advancement options all in one step. Moving forward, these settings will be separate. This makes your Canvas step building experience more customizable and also introduces some differences in functionality.
+Previously with the Canvas V1 workflow, each Full Step included information such as delay and schedule settings, exception events, audience filters, message configuration, and message advancement options all in one component. Moving forward, these settings will be separate. This makes your Canvas component building experience more customizable and also introduces some differences in functionality.
 
 ### Message Step advancement
 
@@ -59,19 +59,19 @@ Previously with the Canvas V1 workflow, each Full Step included information such
 
 ### Delay "in" behavior
 
-[Delay Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
+[Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
-Let's say on April 12 we have a Delay Step where the delay is set to send your user to the next step in one day at 2pm. A user enters the step at 2:01pm on April 13. 
-- For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
-- For Canvas V2, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+Let's say on April 12 we have a Delay component where the delay is set to send your user to the next component in one day at 2pm. A user enters the component at 2:01pm on April 13. 
+- For Canvas V1, the user would proceed to the next component at 2pm on April 14, which is less than one day from the entry time. 
+- For Canvas V2, the user would proceed to the next component at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 ### Intelligent Timing behavior
 
-Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message Step, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the step, they may receive the message later than they would in a V1 Canvas.
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas editor.
 
-For Canvas V2, the Delay Step will first delay the message for the number of days you choose. Then, as soon as the number of days has passed, the user would start receiving messages at the set Intelligent Timing. For example, if your Delay Step is set for two days and you use Intelligent Timing, then it will take 48 hours for Intelligent Timing to apply and for messages to begin sending. For Canvas V1, if the Full Step includes a one day delay, then the message would send on the second day at the set Intelligent Timing. 
+For Canvas V2, the Delay component will first delay the message for the number of days you choose. Then, as soon as the number of days has passed, the user would start receiving messages at the set Intelligent Timing. For example, if your delay is set for two days and you use Intelligent Timing, then it will take 48 hours for Intelligent Timing to apply and for messages to begin sending. For Canvas V1, if the Full Step includes a one day delay, then the message would send on the second day at the set Intelligent Timing. 
 
-As an example, let's say on April 12, we have a Delay Step set to send a user to the next step after one day using Intelligent Timing. A user enters the step at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. 
+As an example, let's say on April 12, we have a Delay component set to send a user to the next component after one day using Intelligent Timing. A user enters the component at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. 
 - For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. 
 - For Canvas V2, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
 
@@ -79,9 +79,9 @@ As an example, let's say on April 12, we have a Delay Step set to send a user to
 
 #### Quiet Hours
 
-Exception event functionality in Canvas V2 is applied using Action Paths, which are separate from Message Steps. Quiet Hours are enforced in the Message Step. This means that if a user already passed the Action Path Step (and was not excluded with the exception event there), then hit quiet hours when they got to the Message Step, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
+Exception event functionality in Canvas V2 is applied using Action Paths, which are separate from Message Steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit quiet hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
 
-For Segments and filters, the Canvas V2 Message Step has a new feature called Delivery Validations that allows users to configure additional Segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
+For Segments and filters, the Canvas V2 Message component has a new feature called Delivery Validations that allows users to configure additional Segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
 #### "In" or "On the next" schedule setting
 

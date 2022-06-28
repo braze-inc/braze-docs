@@ -21,7 +21,7 @@ Link aliasing creates user-generated names that are available for segmentation r
 
 To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
 
-Aliases must be uniquely named per email campaign variant or Canvas step. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+Aliases must be uniquely named per email campaign variant or Canvas component. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It is best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
 ### Checking workflows
 
@@ -29,7 +29,7 @@ Braze recommends evaluating the links within the email, adding link templates, a
 
 ### Extracting Data
 
-The following endpoints are available to extract the `alias` set in each message variant in a campaign or an email Canvas step:
+The following endpoints are available to extract the `alias` set in each message variant in a campaign or an email Canvas component:
 
 - [Campaign Link Alias Endpoint][3]
 - [Canvas Link Alias Endpoint][4]
@@ -68,7 +68,7 @@ The following table provides examples of links in an email body, link aliasing r
 
 ## Link segmentation
 
-The retargeting of aliases filters allow you to create segmentation filters based on your customers clicking a specifically tracked alias from either an email campaign or Canvas step. This filter is only available for campaigns or Canvases that have tracked aliases present.
+The retargeting of aliases filters allow you to create segmentation filters based on your customers clicking a specifically tracked alias from either an email campaign or Canvas component. This filter is only available for campaigns or Canvases that have tracked aliases present.
 
 ### Tracking links
 
@@ -98,17 +98,17 @@ Retarget users based on the specific alias that was clicked in a campaign. Only 
 
 #### Clicked Alias in Canvas Step
 
-Retarget users based on the specific alias that was clicked in a Canvas step. A pipe delimited filter option displays the Canvas and Canvas step, followed by the alias within the Canvas step. Only Canvas steps with tracked aliases will be shown here.
+Retarget users based on the specific alias that was clicked in a Canvas component. A pipe delimited filter option displays the Canvas and Canvas component, followed by the alias within the Canvas component. Only Canvas steps with tracked aliases will be shown here.
 
 #### Clicked Alias in Campaign or Canvas
 
-Retarget users based on any alias that was clicked in the campaign or Canvas step. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
+Retarget users based on any alias that was clicked in the campaign or Canvas component. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
 ![][5]
 
 ### Action-based filters
  
-In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.
+In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas component.
 
 ![][6]
 

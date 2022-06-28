@@ -49,7 +49,7 @@ For example, suppose you select "Send on the next Saturday at 3:15pm". If a user
 | --- | --- |
 | Send message in a specific number of days at a specified time. | Select between **user's local time** or **company time** |
 
-Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas step is sent on Monday at 9pm, and the next step is scheduled to "Send in 1 day at 9am". That message will be delivered on Tuesday at 9am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
+Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas component is sent on Monday at 9pm, and the next step is scheduled to "Send in 1 day at 9am". That message will be delivered on Tuesday at 9am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
 
 ![][4]
 

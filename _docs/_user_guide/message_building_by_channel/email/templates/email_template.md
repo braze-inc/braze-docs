@@ -86,7 +86,7 @@ The drag & drop editing experience is divided into three sections: **Sending Set
 The **Sending Settings** section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 {% endsubtab %}
@@ -156,7 +156,7 @@ If you see any issues with your template or want to make any changes, click **Ed
 
 ### Step 5: Save your template
 
-Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas step you choose.
+Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose.
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.

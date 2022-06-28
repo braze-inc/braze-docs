@@ -20,9 +20,9 @@ After launching, analytics will allow you to track performance and see whether r
 
 ## Create an Experiment Paths
 
-To create an Experiment Paths, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Experiment Paths**.
+To create an Experiment Paths, add a component to your Canvas. Then, using the dropdown at the top of the new component, select **Experiment Paths**.
 
-In the default configuration of this step, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the Experiment Paths Step to expand the **Experiment Settings** panel, and you'll see the configuration options for the step. 
+In the default configuration of this component, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the component to expand the **Experiment Settings** panel, and you'll see the configuration options for the component. 
 
 ### Step 1: Choose the number of paths and audience distribution
 
@@ -38,7 +38,7 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 ### Step 2: Select how long to track conversions
 
-The Experiment Paths component will record users who enter each step and convert while in the assigned path. This step will track all conversion events specified in the Canvas setup. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversions (specified in Canvas setup) will be tracked for the Experiment Paths step. The per-event conversion windows specified in Canvas setup will not apply to this component's tracking. 
+The Experiment Paths component will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversions (specified in Canvas setup) will be tracked for Experiment Paths. The per-event conversion windows specified in Canvas setup will not apply to this component's tracking. 
 
 ### Step 3: Create paths
 
