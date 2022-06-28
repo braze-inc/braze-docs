@@ -106,7 +106,7 @@ The following lists features and messaging channels supported today.
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
 - N/A = Not supported by platform
 
-## integration guides
+## Integration guides
 
 ### Amazon Fire TV
 
