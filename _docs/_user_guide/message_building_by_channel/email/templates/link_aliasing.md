@@ -78,7 +78,8 @@ Check out the following link aliasing example for the recommended formatting of 
 
 ```liquid
 {% assign link1 = https://www.braze1.com %}
-{% assign link2 = https://www.braze2.com %}
+
+<a href="{{link1}}?">{{link1}}?</a>
 ```
 
 As another example, `<a href="{{link1}}">{{link1}}</a>` will not work whereas `<a href="{{link2}}?">{{link2}}?</a>` works since there's a question mark in the anchor tag.
