@@ -99,7 +99,7 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
-Note that for Canvas messaging, action-based delivery campaign event properties are ephemeral and can only be used at the time when they happen. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use `{{canvas_entry_properties.${property_name}}}` if referencing event properties in the first step.
+Note that for Canvas messaging, action-based delivery campaign event properties are ephemeral and can only be used at the time when they happen. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
 
 {% alert warning %}
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
