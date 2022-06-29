@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Looker
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 

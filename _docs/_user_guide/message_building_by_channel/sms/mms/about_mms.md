@@ -9,15 +9,16 @@ channel:
   
 ---
 
-# About MMS messages
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}About MMS messages
 
-![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:30%; margin-left:15px; margin-bottom:15px; border:0"}
+> This reference article covers what MMS message are and general use cases of the MMS channel.
 
-> This reference article covers what MMS message are and general use cases of the MMS channel. In addition to this article, you can also check out our [SMS & MMS](https://learning.braze.com/messaging-channels-sms) Braze Learning course.
+![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:23%; margin-left:15px; margin-bottom:15px; border:0"}
 
 MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones. 
 
 Like SMS, MMS is a high urgency messaging channel that allows you to communicate with customers immediately in a way you can't with any other channel. However, MMS extends the capabilities of SMS by giving you the ability to add media to otherwise text-only SMS.
+<br><br>
 
 ## Potential use cases
 
@@ -52,5 +53,5 @@ When a user sends an inbound message that contains a media item, Braze will expo
 Braze accepts JPG, GIF, PNG, and VCF files and allows you to attach a single multimedia asset to your MMS message. Future iterations of MMS at Braze will allow customers to attach up to 10 different assets as well as support a wider range of file types.
 
 
-[picture]: {% image_buster /assets/img/sms/MMS.jpg %}
+[picture]: {% image_buster /assets/img/sms/MMS.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement

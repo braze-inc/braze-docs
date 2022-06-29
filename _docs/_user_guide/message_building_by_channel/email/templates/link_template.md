@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Link templates
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Link templates
 
 > This article covers how to create link templates to use for email messaging.
 
@@ -25,7 +25,7 @@ When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalizati
 
 ## Creating a link template
 
-![][11]{: style="float:right;max-width:30%;"}
+![][11]{: style="float:right;max-width:20%;"}
 
 To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
 
@@ -44,7 +44,7 @@ If you want to add a string or URL before the links in your email message, creat
 
 A preview section is provided to give you an example of the insertion process.
 
-![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %})
+![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### Append: Create a link template that inserts after a URL {#append-link-template}
 
@@ -52,22 +52,22 @@ If you want to add query parameters after a URL in your email message, create a 
 
 You can have multiple parameters appended to the end of a URL.
 
-![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %})
+![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## Using your templates in email campaigns
 
 Once your templates are set up, you can select which template you would like to use in your email from the email editor.
 
-From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email and can add the template from there.
+From the HTML email editor, click the **Link Management** tab. From the Drag & Drop Editor, select **Content** then **Link Management**. You will see all the links present in your email and can add the template from there.
 
-![Link Templating tab with an example list of link templates.][1]
+![Link Management tab in the Drag and Drop Editor with an example list of link templates.][1]
 
 ## Managing link templates
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) link templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
-Archiving templates is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
+Archiving templates is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
 ## FAQs

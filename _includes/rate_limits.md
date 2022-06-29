@@ -4,6 +4,22 @@
 {% if include.endpoint == "default" %}
 We apply the default Braze rate limit of 250,000 requests per hour to this endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+<!---PUT /scim/v2/Users/YOUR_ID_HERE--->
+{% elsif include.endpoint == "update dashboard developer" %}
+This endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints<!--, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)--->.
+
+<!---GET /scim/v2/Users/YOUR_ID_HERE--->
+{% elsif include.endpoint == "look up dashboard developer" %}
+This endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints<!--, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)--->.
+
+<!---DELETE /scim/v2/Users/YOUR_ID_HERE--->
+{% elsif include.endpoint == "delete dashboard developer" %}
+This endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints<!--, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)--->.
+
+<!---POST /scim/v2/Users--->
+{% elsif include.endpoint == "create dashboard developer" %}
+This endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints<!--, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/)--->.
+
 
 <!---/users/external_id/rename-->
 <!---/users/external_id/remove-->

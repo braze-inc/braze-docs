@@ -7,13 +7,9 @@ description: "This reference article describes custom events and properties, the
 
 ---
 
-# Custom events
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
 Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
-
-{% alert tip %}
-For more on using custom events in your messaging strategies, check out our [Custom Events and Attributes](https://learning.braze.com/custom-events-and-attributes) Braze Learning course!
-{% endalert %}
 
 ## Managing custom events
 
@@ -102,6 +98,8 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+
+Note that for Canvas messaging, action-based delivery campaign event properties are ephemeral and can only be used at the time when they happen. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
 
 {% alert warning %}
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.

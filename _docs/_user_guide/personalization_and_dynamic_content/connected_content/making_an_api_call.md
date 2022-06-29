@@ -6,7 +6,7 @@ description: "This reference article covers how to make a Connected Content API 
 
 ---
 
-# Making an API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
 {% raw %}
 

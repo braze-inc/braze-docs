@@ -12,6 +12,8 @@ tool: Campaigns
 
 Campaign approval adds a review process to your workflow before launching a campaign. Available exclusively for campaigns, this feature adds new states available in the campaign confirmation workflow step. Now, you can ensure that each confirmation is approved in order to launch the campaign. 
 
+By default, the campaign approval setting is turned off. To enable this feature, go to **Manager Settings** > **Manage Approval Settings**.
+
 In the **Review Summary** step of the campaign building workflow, there is an approval option to approve or deny your campaign's key components: **Messages**, **Delivery**, **Target Population**, and **Conversion Events**. The default state for campaign approval is **Pending Approval**. 
 
 ![][1]
