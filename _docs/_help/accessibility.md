@@ -101,6 +101,12 @@ Depending on individual needs, these users rely on:
 
 ### Links
 
+Use links for navigation, like directing users to an external page.
+
+{% alert tip %}
+If you want something that looks and acts like a button, try to always use an actual button rather than styling a link like a button. Links and buttons may "feel" the same for average users—they can use their mouse to hover over the link or the button and click on them with their mouse—however, buttons and links have different controls (for example, buttons can be activated by pressing the <kbd>Space</kbd> key or the <kbd>Enter</kbd> key, but links can only be activated with the <kbd>Enter</kbd> key), which can lead to confusion if you style a link like a button.
+{% endalert %}
+
 Write link text that clearly describes where the link will take the user. Screen reader users often skip from link to link as a way of skimming through content, so make sure your link text can stand on its own. Avoid phrases like "click here," "more," and "click for details," as they are ambiguous when read out of context.
 
 For example, consider how you might write a link to view a weather report.
@@ -114,7 +120,9 @@ As with all content, keep it straightforward with as few extra words as possible
 
 ### Buttons
 
-> TO DO
+Use buttons for clickable actions, such as sending a form or playing a carousel.
+
+Similar to link text, write button text that clearly describes the action that will happen when a user presses it (e.g., “Read the full story” rather than “Read more”). Test to ensure your button text isn’t too long. If the button can’t display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
 
 ### Images
 
@@ -147,6 +155,11 @@ You can use the [WebAim Contrast Checker Tool](https://webaim.org/resources/cont
 
 ### Forms
 
-> TO DO
+**Chunk longer forms into smaller sections** <br>To reduce cognitive load, break long forms into smaller sections. This is known as chunking, a progressive disclosure pattern used to make the information easier to consume. This benefits all users but is especially helpful for people with cognitive disabilities.
 
+**Don't hide important content in tooltips or other hover states** <br>Content contained in hover states is less discoverable and mobile-friendly, and screen-magnifier users will struggle to view content that’s only available on hover.
+
+**Avoid blocking invalid characters in fields** <br>Don't prevent certain character types from being input in form fields. It’s better to allow users to enter whatever they want and then provide an error message as to what’s wrong. Blocking keyboard input poses a particular problem for assistive technology users, as they rely heavily on inline validation to determine if they've filled in the form correctly.
+
+**Write clear error messages** <br>A good error message is made up of three parts: what’s happened, what went wrong, and how can they fix it. Error messaging should be clear and easy to understand. Try to speak in a simple language. There’s no need for fancy jargon.
 <br>
