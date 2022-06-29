@@ -11,7 +11,9 @@ description: "This article covers logging in-app message impressions and clicks 
 
 # Logging impressions and clicks
 
-Logging in-app message [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) and [clicks](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) is performed automatically when you use `showInAppMessage`, and should only be called if you're bypassing that method and manually displaying the message in your own code:
+Logging in-app message [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) and [clicks](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) is performed automatically when you use the `automaticallyDisplayInAppMessages` or `showInAppMessage`.
+
+If you do not use either method and manually display the message using your own UI code then use the following methods to log analytics:
 
 ```javascript
 // Registers that a user has viewed an in-app message with the Braze server.
