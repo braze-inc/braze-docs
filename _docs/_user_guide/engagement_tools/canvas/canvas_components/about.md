@@ -24,7 +24,7 @@ Use [Action Paths][1] to split your user journey based on actions and engagement
 [Delay components][4] allow you to delay a single step in your Canvas.  This stand-alone delay step in your Canvas is best used for communicating messages to your users at a specific time. Additionally, Delay components may also increase your audience outreach by allowing more time for your audience to meet the component's criteria. 
 
 ## Testing
-When creating your user journeys, you may want to also test for the most effective Canvas path. With the [Experiment Paths components][5], you can test multiple Canvas paths at any step. 
+When creating your user journeys, you may want to also test for the most effective Canvas path. With [Experiment Paths][5], you can test multiple Canvas paths at any step. 
 
 ## Integration 
 Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7]. 

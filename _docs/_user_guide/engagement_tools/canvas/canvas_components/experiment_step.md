@@ -10,7 +10,7 @@ tool: Canvas
 
 # Experiment Paths 
 
-> The Experiment Paths allows you to test multiple Canvas paths against each other and a control group at any point in the user journey. These steps will enable you to track path performance to make informed decisions about your Canvas journey.
+> The Experiment Paths allows you to test multiple Canvas paths against each other and a control group at any point in the user journey. These components will enable you to track path performance to make informed decisions about your Canvas journey.
 
 A Canvas Experiment Paths will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
 
@@ -38,13 +38,13 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 ### Step 2: Select how long to track conversions
 
-The Experiment Paths component will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversions (specified in Canvas setup) will be tracked for Experiment Paths. The per-event conversion windows specified in Canvas setup will not apply to this component's tracking. 
+Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions. Note that the time window you specify here will determine how long conversions (specified in Canvas setup) will be tracked for Experiment Paths. The per-event conversion windows specified in Canvas setup will not apply to this component's tracking. 
 
 ### Step 3: Create paths
 
 Lastly, you must build your downstream paths. Select **Done** and return to the Canvas builder. Click the <i class="fas fa-plus-circle"></i> plus button under each path to begin creating journeys using the usual Canvas tools as you see fit, and launch the Canvas when you are ready. 
 
-Keep in mind that **paths and their downstream steps cannot be removed from a Canvas** once created. However, once launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your need, you can continue sending users down multiple paths.
+Keep in mind that **paths and their downstream steps cannot be removed from a Canvas** once created. However, once launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
 
 ## Tracking performance
 
