@@ -1,5 +1,5 @@
 ---
-nav_title: Changelog
+ nav_title: Changelog
 article_title: Changelog for iOS SDK
 page_order: 30
 page_type: update
