@@ -85,11 +85,11 @@ In this request, the global value for “food allergies” is “none”. For Cu
 
 ## Use cases
 
-If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
+If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 
-The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
+The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
 ![][2]{: style="border:0;margin-left:15px;"}
 
