@@ -141,11 +141,11 @@ Set up your integration by sharing the connection information with Braze through
   - User 
   - Role
 - Braze integration information
-  - App group ID: the ID of the app group where the data should be synced (you can find this ID in the URL if you go to your app group settings page). If you need help, please ask
-  - API key: submit an existing API key to use, or we can create a new one for you
+  - App group ID - The ID of the app group where the data should be synced (you can find this ID in the URL if you go to your app group settings page). If you need help, please ask
+  - API key - Submit an existing API key to use, or we can create a new one for you
 - Sync information
-  - Integration name: a label you can use to identify the integration(s) you set up with your Snowflake instance
-  - Sync schedule: to start, we will ask for a time to run the sync daily. After verifying the connection works as expected for a few days, we can increase the sync frequency.
+  - Integration name - A label you can use to identify the integration(s) you set up with your Snowflake instance
+  - Sync schedule - To start, we will ask for a time to run the sync daily. After verifying the connection works as expected for a few days, we can increase the sync frequency.
 
 ### Add public key to Snowflake user
 
