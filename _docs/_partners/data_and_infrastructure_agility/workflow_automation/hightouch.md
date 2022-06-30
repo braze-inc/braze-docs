@@ -16,6 +16,10 @@ The Braze and Hightouch integration allows you to build better campaigns on Braz
 
 This integration also allows you to [import user cohorts to Braze](#data-import-integration), sending targeted campaigns based on data that may only exist in your warehouse.
 
+<div class="video-container">
+    <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Prerequisites
 
 | Requirement | Description |
