@@ -16,10 +16,6 @@ The Braze and Hightouch integration allows you to build better campaigns on Braz
 
 This integration also allows you to [import user cohorts to Braze](#data-import-integration), sending targeted campaigns based on data that may only exist in your warehouse.
 
-<div class="video-container">
-    <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 ## Prerequisites
 
 | Requirement | Description |
@@ -81,6 +77,12 @@ In Braze, navigate to **Segments**, create a new segment, and select **Hightouch
 
 ### Using this integration
 To use your Hightouch segment, create a Braze campaign or Canvas and select the segment as your target audience.<br><br>![][10]{: style="max-width:90%;"}
+
+## Integration demo
+
+<div class="video-container">
+    <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [1]: https://hightouch.io
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
