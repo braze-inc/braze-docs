@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "email": "example@braze.com"
+  "email": ["blacklist_email1","blacklist_email2"]
 }
 ```
 
@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
-| `email` | Required | String or Array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
+| `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

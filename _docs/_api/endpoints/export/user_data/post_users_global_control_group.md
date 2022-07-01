@@ -61,9 +61,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-    "fields_to_export" : (required, array of string) name of user data fields to export, e.g., ['first_name', 'email', 'purchases'],
-    "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
+  "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
+  "fields_to_export" : (required, array of string) name of user data fields to export, e.g., ['first_name', 'email', 'purchases'],
+  "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
@@ -86,9 +86,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "callback_endpoint" : "",
-    "fields_to_export" : ["email", "braze_id"],
-    "output_format" : "zip"
+  "callback_endpoint" : "",
+  "fields_to_export" : ["email", "braze_id"],
+  "output_format" : "zip"
 }'
 ```
 

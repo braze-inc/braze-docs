@@ -9,9 +9,9 @@ tool:
 description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
 
-# Segment Insights
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
 
-> This how-to article will walk you through how to use, interpret, and share Segment Insights. These insights can be used to target users and develop effective marketing campaigns. In addition to this article, we recommend you also check out our [Segmentation Braze Learning course](https://learning.braze.com/segmentation-course).
+> This how-to article will walk you through how to use, interpret, and share Segment Insights. These insights can be used to target users and develop effective marketing campaigns.
 
 Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline. 
 

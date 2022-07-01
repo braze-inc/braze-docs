@@ -142,6 +142,9 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
                  withAppboyOptions:[ ABKEnableSDKAuthenticationKey : true ])
 ```
 {% endtab %}
+{% tab Dart %}
+Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. Once SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
+{% endtab %}
 {% endtabs %}
 
 ### Set the current user's JWT token
@@ -225,6 +228,20 @@ Or, when you have refreshed the user's token mid-session:
 Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 ```
 {% endtab %}
+{% tab Dart %}
+
+Supply the JWT Token when calling `changeUser`:
+
+```dart
+braze.changeUser("userId", sdkAuthSignature: "signature")
+```
+Or, when you have refreshed the user's token mid-session:
+
+```dart
+braze.setSdkAuthenticationSignature("signature")
+```
+
+{% endtab %}
 {% endtabs %}
 
 ### Register a callback function for invalid tokens {#sdk-callback}
@@ -247,8 +264,8 @@ These callback methods are a great place to add your own monitoring or error-log
 ```javascript
 import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
-  // TODO: optionally log to your error-reporting service
-  // TODO: check if the errorEvent user matches the currently logged-in user
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(errorEvent);
   appboy.setSdkAuthenticationSignature(updated_jwt);
 });
@@ -257,8 +274,8 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% tab Java %}
 ```java
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
-    // TODO: optionally log to your error-reporting service
-    // TODO: check if the errorEvent user matches the currently logged-in user
+    // TODO: Optionally log to your error-reporting service
+    // TODO: Check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
@@ -267,8 +284,8 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 {% tab KOTLIN %}
 ```kotlin
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
-    // TODO: optionally log to your error-reporting service
-    // TODO: check if the errorEvent user matches the currently logged-in user
+    // TODO: Optionally log to your error-reporting service
+    // TODO: Check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
@@ -280,8 +297,8 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braze
 
 // Method to implement in delegate
 - (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
-  // TODO: optionally log to your error-reporting service
-  // TODO: check if the errorEvent user matches the currently logged-in user
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
   NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(errorEvent);
   [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
@@ -294,12 +311,23 @@ Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
 func handle(_ errorEvent: ABKSdkAuthenticationError?) {
-        // TODO: optionally log to your error-reporting service
-        // TODO: check if the errorEvent user matches the currently logged-in user
-        print("Invalid SDK Authentication signature.")
-        let newSignature = getNewSignatureSomehow(errorEvent)
-        Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
-    }
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
+  print("Invalid SDK Authentication signature.")
+  let newSignature = getNewSignatureSomehow(errorEvent)
+  Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
+}
+```
+{% endtab %}
+{% tab Dart %}
+```dart
+braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
+  // TODO: Optionally log to your error-reporting service
+  // TODO: Check if the errorEvent user matches the currently logged-in user
+  print("Invalid SDK Authentication signature.")
+  let newSignature = getNewSignatureSomehow(errorEvent)
+  braze.setSdkAuthenticationSignature(newSignature);
+});
 ```
 {% endtab %}
 {% endtabs %}

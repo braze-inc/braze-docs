@@ -18,7 +18,7 @@ See our [JavaScript Documentation][9] for a complete technical reference.
 
 ## Step 1: Install the Braze library
 
-There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push integration guide][16] if you plan to use Web push features. 
+There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push integration guide][16] if you plan to use Web push features.
 
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
 
@@ -121,18 +121,60 @@ braze.toggleLogging()
 
 {% include archive/web-v4-rename.md %}
 
-When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site. 
+When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
 
 However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
 You can keep up-to-date with our latest release [following our release feed](https://github.com/braze-inc/braze-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
 - Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, or in your package manager's dependencies.
-- If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file. 
+- If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file.
 
 These two files must be updated in coordination with each other to ensure proper functionality.
 
 ## Alternative integration methods
+
+### Server-side rendering frameworks
+
+If you use a server-side rendering framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
+
+You can retain the benefits of tree-shaking when doing so by exporting the parts of the SDK that you need in a separate file and then dynamically importing that file into your component.
+
+```javascript
+// MyComponent/braze-exports.js
+// export the parts of the SDK you need here
+export { initialize, openSession } from "@braze/web-sdk";
+
+// MyComponent/MyComponent.js
+// import the functions you need from the braze exports file
+useEffect(() => {
+    import("./braze-exports.js").then(({ initialize, openSession }) => {
+        initialize("YOUR-API-KEY-HERE", {
+            baseUrl: "YOUR-SDK-ENDPOINT",
+            enableLogging: true,
+        });
+        openSession();
+    });
+}, []);
+```
+
+Alternatively, if you're using webpack to bundle your app, you can take advantage of its magic comments to dynamically import only the parts of the SDK that you need.
+
+```javascript
+// MyComponent.js
+useEffect(() => {
+    import(
+        /* webpackExports: ["initialize", "openSession"] */
+        "@braze/web-sdk"
+    ).then(({ initialize, openSession }) => {
+        initialize("YOUR-API-KEY-HERE", {
+            baseUrl: "YOUR-SDK-ENDPOINT",
+            enableLogging: true,
+        });
+        openSession();
+    });
+}, []);
+```
 
 ### AMD module loader
 
@@ -152,7 +194,7 @@ If your site uses RequireJS or another AMD module-loader, but you prefer to load
 ### Tealium iQ
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
+For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
 
 ### Other tag managers
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.

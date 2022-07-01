@@ -35,9 +35,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-   "attributes" : (optional, array of attributes object),
-   "events" : (optional, array of event object),
-   "purchases" : (optional, array of purchase object),
+  "attributes" : (optional, array of attributes object),
+  "events" : (optional, array of event object),
+  "purchases" : (optional, array of purchase object),
 }
 ```
 
@@ -82,22 +82,22 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "attributes": [ 
-  {
-    "external_id":"user_identifier",
+    {
+      "external_id":"user_identifier",
       "string_attribute": "fruit",
       "boolean_attribute_1": true,
       "integer_attribute": 25,
       "array_attribute": ["banana", "apple"]
     }
-    ],
-    "events": [
+  ],
+  "events": [
     {
       "external_id": "user_identifier",
       "app_id" : "app_identifier",
       "name": "watched_trailer",
       "time": "2013-07-16T19:20:30+1:00"
     }  
-   ],
+  ],
   "purchases": [
      {
       "external_id": "user_identifier",
@@ -111,8 +111,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
          "integer_property": 3,
          "string_property": "Russell",
          "date_property": "2014-02-02T00:00:00Z"
-       } 
-     }
+      } 
+    }
   ]
 }'
 ```

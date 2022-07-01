@@ -14,7 +14,9 @@ description: "This article outlines details about the Identify Users Braze endpo
 /users/identify
 {% endapimethod %}
 
-Use this endpoint to identify an unidentified (alias-only) user.
+Use this endpoint to identify an unidentified (alias-only) user. 
+
+Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile. To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user info is already present.
 
 {% alert note %}
 You can add up to 50 user aliases per request.
@@ -60,13 +62,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "aliases_to_identify" : 
-  [
+  "aliases_to_identify": [
     {
       "external_id": "external_identifier",
-      "user_alias" : {
-          "alias_name" : "example_alias",
-          "alias_label" : "example_label"
+      "user_alias": {
+        "alias_name" : "example_alias",
+        "alias_label" : "example_label"
       }
     }
   ]

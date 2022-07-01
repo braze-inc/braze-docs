@@ -41,26 +41,26 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "scheduled_broadcasts": [
-      # Example Canvas
-      {
-        "name" => String,
-        "id" => String,
-        "type" => "Canvas",
-        "tags" => [String tag names],
-        "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
-        "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
-      },
-      # Example Campaign
-      {
-        "name" => String,
-        "id" => String,
-        "type" => "Campaign",
-        "tags" => [String tag names],
-        "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
-        "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
-      },
-    ]
+  "scheduled_broadcasts": [
+    # Example Canvas
+    {
+      "name" => String,
+      "id" => String,
+      "type" => "Canvas",
+      "tags" => [String tag names],
+      "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
+      "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
+    },
+    # Example Campaign
+    {
+      "name" => String,
+      "id" => String,
+      "type" => "Campaign",
+      "tags" => [String tag names],
+      "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
+      "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
+    },
+  ]
 }
 ```
 

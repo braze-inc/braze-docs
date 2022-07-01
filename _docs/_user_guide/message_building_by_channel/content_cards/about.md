@@ -8,9 +8,9 @@ channel:
 
 ---
 
-# About Content Cards
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
 
-> This reference article provides an overview of the Braze Content Card channel and common use cases. For more on this topic, check out our [Content Cards](https://learning.braze.com/messaging-channels-content-cards) Braze Learning course!
+> This reference article provides an overview of the Braze Content Card channel and common use cases.
 
 {% include video.html id="4FUPxkIq2xc" align="right" %}
 
@@ -28,7 +28,7 @@ Content Cards typically sit in a feed of sorts (but not necessarily), and help y
 
 ### Advantages of using Content Cards
 
-Wondering about the benefits of using Content Cards vs. having your tech team build content into your app? Here are some advantages of using Content Cards:
+Wondering about the benefits of using Content Cards versus having your tech team build content into your app? Here are some advantages of using Content Cards:
 
 - **Easier segmentation and personalization:** Your user data lives in Braze, making it easy to define your audience and personalize your messages with Content Cards.
 - **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.

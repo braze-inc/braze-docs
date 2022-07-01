@@ -10,7 +10,7 @@ tool: Currents
 
 ---
  
-# Mixpanel for Currents
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel for Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
@@ -73,7 +73,7 @@ In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
 {% tab note %}
-Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) or this Braze [Mixpanel Braze Learning course](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2) to learn more. 
+Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) to learn more. 
 {% endtab %}
 
 ## Customer behavior events

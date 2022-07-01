@@ -234,7 +234,7 @@ When your customer clicks on a button in your in-app message, the following acti
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
 
-{% sdk_min_versions ios:5.1.0 android:20.1.0 web:4.0.3 %}
+{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
 
 #### iOS device options
 
@@ -336,7 +336,7 @@ A start date and time must be selected; however, an end date is optional. An end
 
 Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
-##### Online vs. offline triggering
+##### Online versus offline triggering
 
 In-app messages work by sending the message and triggers to the user's device. Once the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 

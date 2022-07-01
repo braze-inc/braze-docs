@@ -17,4 +17,8 @@ guide_featured_list:
 - name: Previous Generations
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/
   fa_icon: fas fa-undo
+- name: "Know Before You Send"
+  link: /docs/know_before_send/
+  fa_icon: fa-solid fa-paper-plane
+  
 ---

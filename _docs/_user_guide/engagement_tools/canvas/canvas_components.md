@@ -12,6 +12,9 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: About Canvas Components
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
+    fa_icon: fas fa-project-diagram
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
     fa_icon: fa fa-users

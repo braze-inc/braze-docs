@@ -55,8 +55,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 --data-raw '{
   "campaign_id": "campaign_identifier",
   "schedule_id": "schedule_identifier"
-}
-'
+}'
 ```
 
 {% endapi %}

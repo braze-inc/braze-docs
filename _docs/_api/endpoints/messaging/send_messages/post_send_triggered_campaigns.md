@@ -40,14 +40,16 @@ Authorization: Bearer YOUR-REST-API-KEY
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
-    [{
+    [
+      {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
-    }]
+    }
+  ]
 }
 ```
 
@@ -63,19 +65,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request components
-
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-- [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
-- [API Parameters]({{site.baseurl}}/api/parameters)
-<br><br>
 The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
-<br><br>
+
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with the `id` and attributes before sending the message.
 
 ## Example request
@@ -135,18 +126,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       }
     ]
   },
-  "recipients": [{
-    "user_alias": {
-      "alias_name" : "example_name",
-      "alias_label" : "example_label"
-    },
-  "external_user_id": "external_user_identifier",
-  "trigger_properties": "",
-  "send_to_existing_only": true,
-    "attributes": {
+  "recipients": [
+    {
+      "user_alias": {
+        "alias_name" : "example_name",
+        "alias_label" : "example_label"
+      },
+      "external_user_id": "external_user_identifier",
+      "trigger_properties": "",
+      "send_to_existing_only": true,
+      "attributes": {
         "first_name" : "Alex"
+      }
     }
-  }]
+  ]
 }'
 ```
 

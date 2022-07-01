@@ -32,6 +32,8 @@ guide_featured_list:
 
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
 <br>
 
 {% alert important %}

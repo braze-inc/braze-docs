@@ -18,7 +18,7 @@ Because your code will be unique to your app, you do not need to handle all situ
 
 In-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
-{% sdk_min_versions roku:0.1.0 %}
+{% sdk_min_versions roku:0.1.2 %}
 
 ## In-app message setup
 

@@ -73,14 +73,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "segment_id" : (required, string) identifier for the segment to be exported,
-    "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-    "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
-    "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
+  "segment_id" : (required, string) identifier for the segment to be exported,
+  "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
+  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+  "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
-
-The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/get_segment/).
 
 {% alert warning %}
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g., ['first_name', 'email', 'custom_attributes']).
@@ -90,7 +88,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/).<br><br>The `segment_id` for a given segment can be found in your **Developer Console** within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
 |`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as `zip` or `gzip`. Defaults to ZIP file format. |
@@ -102,10 +100,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "segment_id" : "segment_identifier",
-    "callback_endpoint" : "example_endpoint",
-    "fields_to_export" : ["first_name", "email", "purchases"],
-    "output_format" : "zip"
+  "segment_id" : "segment_identifier",
+  "callback_endpoint" : "example_endpoint",
+  "fields_to_export" : ["first_name", "email", "purchases"],
+  "output_format" : "zip"
 }'
 ```
 

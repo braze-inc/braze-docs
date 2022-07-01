@@ -50,8 +50,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-"campaign_id": "campaign_identifier",
-"send_id": "send_identifier"
+  "campaign_id": "campaign_identifier",
+  "send_id": "send_identifier"
 }'
 ```
 

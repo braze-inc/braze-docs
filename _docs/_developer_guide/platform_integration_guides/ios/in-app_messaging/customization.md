@@ -43,3 +43,5 @@ guide_featured_list:
 
 ---
 <br><br>
+
+{% include archive/ios-swift-upgrade.md %}

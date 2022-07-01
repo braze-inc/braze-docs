@@ -58,7 +58,7 @@ Customers will need to create a data source that can either be a CSV, website im
 
 ![Different data source options that will appear: CSV Upload, Website, or API Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
-{% tabs %}
+{% tabs local %}
 {% tab CSV Data Source %}
 - **CSV Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content. [Example CSV File]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
@@ -106,7 +106,8 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 ### Step 4: Braze experience
 
-#### Push notifications
+{% tabs local %}
+{% tab Push notification %}
 
 1. In the Braze Platform:
 	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.
@@ -114,11 +115,44 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br><br>
 2. To make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
-#### In-app messages and Content Cards
+{% endtab %}
+{% tab In-app message %}
 
-1. In the Braze platform, paste the URL in the **Rich Notification Media** field.<br><br>
-2. Provide a unique URL to help prevent caching. To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab  - this will evaluate the code and show a preview.<br><br>
-3. (In-app messages only) Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, reach out to your Customer Success Manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
+1. In the Braze platform, paste the URL in the **Rich Notification Media** field.
+2. Provide a unique URL to help prevent caching. To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL.
+
+To do this, use the following syntax, replacing the image URL as needed:
+{% raw %}
+```
+{% assign timestamp = "now" | date: "%s" %}
+{% assign img = "https://movable-ink-image-url-goes-here" | append:timestamp %}
+{{img}}
+```
+{% endraw %}
+This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab - this will evaluate the code and show a preview.
+
+**3.** Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, reach out to your customer success manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
+
+{% endtab %}
+{% tab Content Card %}
+
+1. In the Braze platform, paste the URL in the **Rich Notification Media** field.
+2. For mobile: Content Cards images on iOS and Android are cached upon receipt and do not refresh. 
+  - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1 day expiration.
+3. To ensure that Movable Ink’s real-time images work and will not be affected by caching when the Content Card is re-templated, use Liquid to append a timestamp to the end of the Movable Ink image URL.
+
+To do this, use the following syntax, replacing the image URL as needed:
+{% raw %}
+```
+{% assign timestamp = "now" | date: "%s" %}
+{% assign img = "https://movable-ink-image-url-goes-here" | append:timestamp %}
+{{img}}
+```
+{% endraw %}
+This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab, which will evaluate the code and show a preview.
+
+{% endtab %}
+{% endtabs %}
 
 ## Troubleshooting
 

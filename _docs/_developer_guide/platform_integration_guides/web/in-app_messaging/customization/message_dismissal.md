@@ -3,7 +3,7 @@ nav_title: Message Dismissal
 article_title: In-App Message Dismissal for Web
 platform: Web
 channel: in-app messages
-page_order: 3
+page_order: 2
 page_type: reference
 description: "This article covers in-app message dismissal for your web application."
 
