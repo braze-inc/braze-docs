@@ -119,7 +119,7 @@ Features include:
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - In-app messages
-  - HTML messages are not supported by Fire OS
+  - HTML messages are not supported on Fire OS
 
 For more information, visit the [Fire OS integration guide][2].
 
@@ -133,7 +133,7 @@ Features include:
 - Push Notifications
 - Content Cards
 - In-app messages
-  - HTML messages are not supported by Fire OS
+  - HTML messages are not supported on Fire OS
 
 For more information, visit the [Fire OS integration guide][2].
 
@@ -146,7 +146,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
-  - HTML messages are not supported by Fire OS
+  - HTML messages are not supported on Android TV
 - &#42; Push Notifications (Manual Integration Required)
 
 For more information, visit the [Android SDK integration guide][2].
