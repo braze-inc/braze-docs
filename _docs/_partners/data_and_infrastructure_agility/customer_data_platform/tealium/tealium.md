@@ -246,6 +246,12 @@ After your connector is up and running, you should test it to ensure it's workin
 
 Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
 
+## Integration demo
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://drive.google.com/file/d/1AdvCKuZStcsxQiD_5QalQ44Lkxas3cHn/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Potential data point overages
 
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
