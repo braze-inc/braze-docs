@@ -1,6 +1,6 @@
 ---
 nav_title: Amplitude for Currents
-article_title: Amplitude
+article_title: Amplitude for Currents
 page_order: 0
 alias: /partners/amplitude_for_currents/
 description: "This article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude integration allows you to [import Amplitude Cohorts into Braze](#data-import-integration) to create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude](#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to [sync your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/), user traits, and events into Braze as well as  leverage Braze Currents to [export your Braze events to Amplitude](#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
@@ -23,40 +23,6 @@ The Braze and Amplitude integration allows you to [import Amplitude Cohorts into
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Amplitude, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2} 
-
-## Data import integration
-
-Use Braze and Amplitude's partnership to import Amplitude cohorts directly into Braze for audience segmentation. This allows you to perform deep analysis using Amplitude and seamlessly execute your strategies using Braze.
-
-{% include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
-
-Any integration you set up will count towards your account's data point volume.
-
-### Step 1: Get the Braze data import key
-
-In Braze, navigate to **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
-
-### Step 2: Set up the Braze integration in Amplitude
-
-In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
-
-![]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
-
-### Step 3: Export an Amplitude cohort to Braze
-
-To export users from Amplitude to Braze, first create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Once you have created a cohort, click **Sync to...** to export these users to Braze.
-
-#### Scheduled cohort syncs
-
-Cohort syncs can be scheduled to be performed hours or daily. Scheduled sync will only send the updated data set deltas to minimize data point usage.
-
-### Step 4: Segment users in Braze
-
-In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Amplitude Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Amplitude. 
-
-![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
-
-Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Data export integration
 
@@ -80,6 +46,10 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 
 In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
+{% alert note %}
+Events sent from Braze Currents to Amplitude will count towards your Amplitude event volume quota.
+{% endalert %}
+
 ![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})
 
 {% tab note %}
@@ -91,10 +61,6 @@ Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/
 Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events that are logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
-
-## Amplitude user profile API endpoints
-
-To check out some of the common Amplitude API endpoints, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
 
 ## Customer behavior events
 
