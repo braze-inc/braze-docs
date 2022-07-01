@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude bi-directional integration allows you to import your Amplitude Cohorts, user traits and events into Braze as well as to create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to import your Amplitude Cohorts, user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ In Amplitude, navigate to **Sources & Destinations > [project name] > Destinatio
 
 ### Step 3: Export an Amplitude cohort to Braze
 
-To export users from Amplitude to Braze, first create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Once you have created a cohort, click **Sync to...** to export these users to Braze.
+First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
 #### Scheduled cohort syncs
 
@@ -62,11 +62,10 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Use Recommend to send user properties and computations to Braze as custom attributes. You will be able to sync user properties or computed properties for users who have been active in the last 90 days.
 
-When a user’s property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation. User properties in Amplitude will be sent as string type custom traits, while computations will be sent as numeric type custom traits.
+When a user’s property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
+
+User trait and computation syncs will create new users for user IDs that do not yet exist within Braze. Computations and user traits can only be synced using user ID.
 
 ## Amplitude user profile API endpoints
 
 To check out some of the common Amplitude API endpoints that can be used with Connected Content, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
-
-
-

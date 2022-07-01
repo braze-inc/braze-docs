@@ -2,7 +2,6 @@
 nav_title: Amplitude for Currents
 article_title: Amplitude for Currents
 page_order: 0
-alias: /partners/amplitude_for_currents/
 description: "This article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
 page_type: partner
 tool: Currents
@@ -28,7 +27,7 @@ The Braze and Amplitude bi-directional integration allows you to [sync your Ampl
 
 A full list of the events and event properties that can be exported from Braze to Amplitude can be found in the following sections. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude.
 
-You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
 
@@ -58,9 +57,9 @@ Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/
 
 ## Rate limits
 
-Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events that are logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
+Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
-Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
+Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration reports events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
 
 ## Customer behavior events
 
@@ -81,8 +80,8 @@ Devices should not report more than 30 events/second or 500K events/day under no
 ```json
 // Purchase
 {
-  "product_id": (string) id of product purchased (sent in the “productId” field of Amplitude HTTP API),
-  "price": (float) price of product (sent in the “price” field of Amplitude HTTP API),
+  "product_id": (string) id of the product purchased (sent in the “productId” field of Amplitude HTTP API),
+  "price": (float) price of the product (sent in the “price” field of Amplitude HTTP API),
   "currency": (string) three letter alpha ISO 4217 currency code,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -178,7 +177,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
+  "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
 }
@@ -238,7 +237,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "user_agent": (string) description of the user’s system and browser for the event (Email Click and Open events only),
   "link_id": (string) unique value generated by Braze for the URL (Email Click events only, and requires link aliasing to be enabled),
   "link_alias": (string) alias name set when the message was sent (Email Click events only, and requires link aliasing to be enabled),
-  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently, "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
 }
 ```
 
@@ -255,7 +254,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a scheduled message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "to_phone_number": (string) the number the message was sent to,
   "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
@@ -273,7 +272,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a scheduled message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "to_phone_number": (string) the number the message was sent to,
   "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
@@ -292,7 +291,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a scheduled message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "to_phone_number": (string) the number the message was sent to,
   "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
