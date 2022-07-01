@@ -1,6 +1,6 @@
 ---
 nav_title: Braze Cloud Ingestion 
-permalink: /snowflake_integration/
+permalink: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Ingestion and how to sync relevant user data to your Snowflake integration."
 hidden: true
 ---
