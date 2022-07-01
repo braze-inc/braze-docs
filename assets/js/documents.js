@@ -334,7 +334,7 @@ $(document).ready(function() {
       nav_bar.removeClass('hide_sidebar');
       nav_icon.removeClass('fa-bars');
       nav_icon.addClass('fa-chevron-left');
-      Cookies.remove('ln');
+      Cookies.set('ln', '', { expires: 365 });
     } else {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');

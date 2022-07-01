@@ -93,6 +93,19 @@ The retargeting of aliases filters allow you to create segmentation filters base
 
 When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be "tracked" for segmentation purposes. You can track an unlimited number of links.
 
+{% tabs local %}
+{% tab Drag-and-Drop Editor %}
+
+![Link management tab of the Drag-and-Drop email editor]({% image_buster /assets/img/link_management_dnd.png %})
+
+{% endtab %}
+{% tab HTML editor %}
+
+![Link management tab of the HTML email editor]({% image_buster /assets/img/link_management_html.png %})
+
+{% endtab %}
+{% endtabs %}
+
 {% alert note %}
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
