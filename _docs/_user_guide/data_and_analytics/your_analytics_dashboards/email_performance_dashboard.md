@@ -37,6 +37,12 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Dashboard filters
+
+You can filter the data on your dashboard using the following filter options:
+- Tag - choose up to 1 tag; once applied, your dashboard will show metrics for just your selected tag
+- Canvas - choose up to 10 Canvases; once applied, your dashboard will show metrics for just your selected Canvas(es). Note that if you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+
 ## Comparison to last period
 
 The email dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
