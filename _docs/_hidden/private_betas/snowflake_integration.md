@@ -41,7 +41,7 @@ If you want to completely remove an attribute from a user’s profile, you can s
 
 ### Create JSON string from another table
 
-If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that,  you can use a query like: 
+If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like: 
 ```json
 CREATE TABLE "PURCHASE_DATA" 
     (purchase_date datetime,
