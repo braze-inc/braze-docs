@@ -25,7 +25,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)
-- [Push motifications](#push-notifications)
+- [Push notifications](#push-notifications)
 - [Access user variables and methods](#access-user-variables-and-methods)
 - [Log analytics](#log-analytics)
 - [In-app messages (optional)](#in-app-messages)
