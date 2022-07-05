@@ -97,7 +97,7 @@ On the web, you must request explicit opt-in from users via the native browser p
 
 Unlike iOS and Android which lets your app show the permission prompt at any time, some modern browsers will only show the prompt if it was triggered off of a "user gesture" (mouse click or keystroke). If your site tries to request Push Notification permission on pageload, it will likely be ignored or silenced by the browser.
 
-As a result, you should ask for permission only when a user clicks somewhere on your website, such as a "Enable Notifications" button where the user had a clear expressed interest in notifications.
+As a result, you should ask for permission only when a user clicks somewhere on your website and not randomly when a page loads.
 
 ## Push Tokens
 
