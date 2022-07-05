@@ -126,7 +126,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 
 ## Step 3: Set up a deep link handler
 
-Place this following code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from [step 1](#step-1-add-snippet-in-appdelegatem-file).
+Place this following code snippet inside your deep link handling code. You should only execute this deep linking code for your push primer in-app message.
 
 Refer to [link handling customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) for more information on deep linking.
 
