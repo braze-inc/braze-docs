@@ -57,7 +57,7 @@ SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
 During the beta phase, onboarding to Cloud Ingestion requires some manual integration steps managed by Braze. Follow these steps to set up the integration: 
 1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
 2. Submit a form to Braze with the relevant integration information.
-3. Braze will send you a public key to [append to the Snowflake user](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) for authentication.
+3. Braze will send you a public key to [append to the Snowflake user](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) for authentication. Once authenticated, the sync will start.
 4. Sync starts.
 
 ### Set up tables or views
