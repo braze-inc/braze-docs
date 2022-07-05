@@ -87,9 +87,9 @@ Authorized Push requires explicit permission from a user prior to sending any no
 
 Prior to iOS 12 (released in 2018), all users must explicitly opt-in to receive push notifications.
 
-In iOS 12, Apple introduced [Provisional Authorization][provisional-blog], allowing brands the option to send quiet push notifications to their users' Notification Center before they explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
-
 ![A notification in the system Notification Center with a message at the bottom asking, "Keep receiving notifications from the Yachtr app?" with two buttons below to "Keep" or "Turn Off"][ios-provisional-push]{: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+
+In iOS 12, Apple introduced [Provisional Authorization][provisional-blog], allowing brands the option to send quiet push notifications to their users' Notification Center before they explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
 ### Web
 
