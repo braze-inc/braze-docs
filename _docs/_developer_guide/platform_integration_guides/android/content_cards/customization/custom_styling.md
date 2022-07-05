@@ -106,20 +106,20 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
 
   @Override
-  public ContentCardViewHolder onCreateViewHolder(Context context, List<Card> cards, ViewGroup viewGroup, int viewType) {
+  public ContentCardViewHolder onCreateViewHolder(Context context, List<? extends Card> cards, ViewGroup viewGroup, int viewType) {
     CardType cardType = CardType.fromValue(viewType);
     return getContentCardsViewFromCache(context, cardType).createViewHolder(viewGroup);
   }
 
   @Override
-  public void onBindViewHolder(Context context, List<Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
+  public void onBindViewHolder(Context context, List<? extends Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
     Card cardAtPosition = cards.get(adapterPosition);
     BaseContentCardView contentCardView = getContentCardsViewFromCache(context, cardAtPosition.getCardType());
     contentCardView.bindViewHolder(viewHolder, cardAtPosition);
   }
 
   @Override
-  public int getItemViewType(Context context, List<Card> cards, int adapterPosition) {
+  public int getItemViewType(Context context, List<? extends Card> cards, int adapterPosition) {
     Card card = cards.get(adapterPosition);
     return card.getCardType().getValue();
   }
