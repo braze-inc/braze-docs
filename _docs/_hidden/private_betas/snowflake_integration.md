@@ -27,7 +27,7 @@ Each time a sync runs, Braze looks for rows that have not previously been synced
 
 ### Data point usage 
 
-Each attribute sent for a user will consume one data point. It’s up to the customer to only send the required data. Data point tracking for Cloud Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/), for more information.
+Each attribute sent for a user will consume one data point. It’s up to you to only send the required data. Data point tracking for Cloud Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 
 ## Data setup recommendations
 
