@@ -40,8 +40,11 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 ## Dashboard filters
 
 You can filter the data on your dashboard using the following filter options:
-- Tag - choose up to 1 tag; once applied, your dashboard will show metrics for just your selected tag
-- Canvas - choose up to 10 Canvases; once applied, your dashboard will show metrics for just your selected Canvas(es). Note that if you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+
+- **Tag:** Choose one tag; once applied, your dashboard will show metrics for only your selected tag.
+- **Canvas:** Choose up to 10 Canvases; once applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+
+![Filter options on the Email Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 
 ## Comparison to last period
 
@@ -85,3 +88,4 @@ This means Braze hasn't recorded any data for that metric during the time period
 
 [1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
 [2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
+[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
