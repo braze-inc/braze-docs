@@ -28,7 +28,7 @@ First, you must create a "Prime for Push" in-app messaging campaign in the Braze
 1. Create a **Modal** in-app message and give it whatever text and styling you would like. 
 2. Next, set the on-click behavior to **Close Message**. This behavior will be customized later.
 3. Add a key-value pair to the message where the key is `msg-id`, and the value is `push-primer`.
-4. Assign a custom event trigger action "prime-for-push" to the message. You can create the custom event manually from the dashboard if needed.
+4. Assign a custom event trigger action (i.e. "prime-for-push") to the message. You can create the custom event manually from the dashboard if needed.
 
 ## Step 2: Remove calls
 
@@ -39,45 +39,48 @@ In your Braze SDK integration, find and remove any calls to `automaticallyShowIn
 Finally, replace the removed call with the following snippet:
 
 ```javascript
-
-// Be sure to remove calls to automaticallyShowInAppMessages() 
-// from your code as noted in the steps above
-
+import * as braze from "@braze/web-sdk";
+// Be sure to remove any calls to braze.automaticallyShowInAppMessages()
 braze.subscribeToInAppMessage(function(inAppMessage) {
-  if (inAppMessage instanceof braze.InAppMessage) {
-    // checks the key-value pair for a "msg-id" key
+  // check if message is not a control variant
+  if (inAppMessage instanceof braze.inAppMessage) {
+    // access the key-value pairs, defined as `extras`
     const keyValuePairs = inAppMessage.extras || {};
-
-    // If this is our push primer message
+    // check the value of our key `msg-id` defined in the Braze dashboard
     if (keyValuePairs["msg-id"] === "push-primer") {
-      if (!braze.isPushSupported() || braze.isPushPermissionGranted() || braze.isPushBlocked()) {
-        // do not show the message because user/browser is not eligible
+      // We don't want to display the soft push prompt to users on browsers
+      // that don't support push, or if the user has already granted/blocked permission
+      if (
+        braze.isPushSupported() === false ||
+        braze.isPushPermissionGranted() ||
+        braze.isPushBlocked()
+      ) {
+        // do not call `showInAppMessage`
         return;
       }
 
-      // the browser is eligible to request push permission
-      // register a callback when the left-button is clicked
-      if (inAppMessage.buttons[0] != null) {
+      // user is eligible to receive the native prompt
+      // register a click handler on one of the two buttons
+      if (inAppMessage.buttons[0]) {
         // Prompt the user when the first button is clicked
         inAppMessage.buttons[0].subscribeToClickedEvent(function() {
-          braze.requestPushPermission(function(){
-            // success!
-          }, function(){
-            // user declined
-          });
+          braze.requestPushPermission(
+            function() {
+              // success!
+            },
+            function() {
+              // user declined
+            }
+          );
         });
       }
-
-      // show the in-app message now
-      braze.showInAppMessage(inAppMessage);
     }
   }
+
+  // show the in-app message now
+  braze.showInAppMessage(inAppMessage);
 });
 ```
 
-When you wish to display the soft push prompt to the user, call `braze.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins:
 
-```
-braze.openSession();
-braze.logCustomEvent("prime-for-push");
-```
+When you wish to display the soft push prompt to the user, call `braze.logCustomEvent` - with whatever event name triggers this in-app message.
