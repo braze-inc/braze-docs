@@ -37,7 +37,7 @@ We will sync all attributes in a given row, regardless of whether they are the s
 
 ### Removing an attribute
 
-If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, you can just not send it to Braze until it’s been updated.
+If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
 
 ### Create JSON string from another table
 
