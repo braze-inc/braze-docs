@@ -104,6 +104,8 @@ Note that for original Canvas messaging, action-based delivery campaign event pr
 For Canvas Flow messaging, action-based delivery event properties that trigger Canvas entry are not ephemeral, and can be used in Liquid in any Message step. Make sure to use ``{% raw %} canvas_entry~properties${property_name} {% endraw %}`` if referencing these Canvas entry properties.
 Note that the events must be custom events or purchase events to be used this way.
 
+Note that for Canvas messaging, action-based delivery campaign event properties are ephemeral and can only be used at the time when they happen. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
+
 {% alert warning %}
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
 {% endalert %}

@@ -103,6 +103,10 @@ The following actions are available to take for Content Card links:
 | Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+**Note**: The __Log Custom Event__ and __Log Custom Attribute__ options require the following SDK Version compatibility:
+
+{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
+
 {% alert warning %}
 Content Card message fields are limited to 2KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}

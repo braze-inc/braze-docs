@@ -50,10 +50,10 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
-Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
+Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived. 
 
 {% alert important %}
-Segments already using the Segment Membership Filter cannot be further included or nested into other segments. 
+Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
 ### Single-user segments
