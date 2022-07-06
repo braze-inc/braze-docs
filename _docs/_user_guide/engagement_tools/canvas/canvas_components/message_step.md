@@ -13,11 +13,13 @@ tool: Canvas
 
 Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
+![][1]{: style="float:right;max-width:25%;margin-left:15px;"}
+
 ## Create a Message component
 
-![][1]{: style="float:right;max-width:19%;margin-left:15px;"}
+To create a Message component, first add a step to your Canvas. For Canvas Flow, drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Message**.
 
-To create a Message component, add a step to your Canvas. Then, use the dropdown at the top of the new step to select **Message**.
+### Set up messages
 
 With a Message component, all users who enter the step advance to the next step when any one of the following conditions is met:
 - Any message is sent
@@ -27,11 +29,11 @@ With a Message component, all users who enter the step advance to the next step 
 
 ![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"} 
 
-The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation.
+### Edit delivery settings
 
-The Message Step allows you to enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user’s profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message Step and the actual message sending.
+The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user’s profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message Step and the actual message sending.
 
-Select **Using Intelligent Timing** in **Delivery Settings**. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message Step also allows you to override this setting.
+Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message Step also allows you to override this setting.
 
 Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent.
 

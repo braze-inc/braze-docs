@@ -11,15 +11,13 @@ tool: Canvas
 
 # Delay
 
-Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. Delays can make your Canvas look cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step.
+Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. Delays can make your Canvas look cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week.
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
-
 ## Create a delay
 
-To create a delay, add a component to your Canvas. Then, using the dropdown at the top of the new step in your workflow, select **Delay**.
+To create a delay, first add a step to your Canvas. For Canvas Flow, drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Delay**.
 
 - A Delay component cannot have full step sibling steps. In other words, you cannot create a full step that branches into a delay and a full step. This restriction exists because if there was a branch with a Delay Step and a full step, it wouldn’t be clear which branch users would go down.
 - A Delay component can only connect to one next step.

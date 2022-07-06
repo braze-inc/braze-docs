@@ -12,15 +12,13 @@ tool: Canvas
 
 > The Experiment Paths allows you to test multiple Canvas paths against each other and a control group at any point in the user journey. These components will enable you to track path performance to make informed decisions about your Canvas journey.
 
-A Canvas Experiment Paths will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
+When you include a Experiment Paths component, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective. ![][0]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-![][0]{: style="max-width:80%"}
-
-After launching, analytics will allow you to track performance and see whether results differ across the different paths to help you determine which path should get what proportion of users (or all of them!)
+After launching, analytics will allow you to track performance and see whether results differ across the different paths to help you determine which path should get what proportion of users, or all of them!
 
 ## Create an Experiment Paths
 
-To create an Experiment Paths, add a component to your Canvas. Then, using the dropdown at the top of the new component, select **Experiment Paths**.
+To create an Experiment Paths, first add a step to your Canvas. For Canvas Flow, drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Experiment Paths**.
 
 In the default configuration of this component, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the component to expand the **Experiment Settings** panel, and you'll see the configuration options for the component. 
 
