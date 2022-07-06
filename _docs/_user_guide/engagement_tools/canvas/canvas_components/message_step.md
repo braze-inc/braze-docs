@@ -37,7 +37,9 @@ Delivery validations provide an additional check to confirm your audience meets 
 
 ![The Delivery Settings tab for Message Step settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.][4]{: style="max-width:80%;"}
 
-For Canvas Message components, `event_properties` are not supported. Instead, use `canvas_entry_properties`. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
+Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas using the original workflow. These event properties originate from an event or action that occurs as the user goes through their workflow. 
+
+Conversely, in Canvas Flow, action-based delivery event properties that trigger Canvas entry are not ephemeral, and can be used in Liquid in any Message step. For Canvas Flow, make sure to use ``{% raw %} canvas_entry~properties${property_name} {% endraw %}`` if referencing these Canvas entry properties. These events must be custom events or purchase events to be used this way in the Message component.
 
 ## Analytics
 

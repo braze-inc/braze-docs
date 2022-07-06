@@ -115,6 +115,16 @@ Switching from Canvas Flow to the original Canvas editor is allowed only if you 
 
 All of your existing Canvases and the current version of Canvas (Canvas V1) will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the Canvas V1 or Flow workflow.
 
+### Can I launch a Canvas with disconnected steps?
+
+Yes! Canvas Flow allows you to launch your Canvas with disconnected steps. You can also save Canvases post-launch with disconnected steps. 
+
+### Where do users go once they've reached a disconnected step?
+
+If a user is in a disconnected step of your Canvas Flow workflow, they will advance to the subsequent step if there is one, and the step's setting will dictate how the user should advance. This is intended to allow users to make changes to steps without having to directly connect them to the rest of the Canvas. This also gives you some room for testing before going live immediately, effectively allowing for saving a draft.
+
+We recommend checking the analytics view for users pending in a Canvas step before disconnecting a step.
+
 ### What are the main differences between Canvas Flow and the original Canvas editor?
 
 #### Canvas Component Toolbar
@@ -139,21 +149,11 @@ Let's say on April 12 we have a Delay component where the delay is set to send y
 
 #### Intelligent Timing behavior
 
-Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas editor.
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
-As an example, let's say you set a delay for two days and use Intelligent Timing. For Canvas Flow, there would be a delay step 
-
-- **Canvas V1:** 
-Full Step - Delay 1 full day (24 hours). On the second day, send at the intelligent time (e.g. 11am) within day 2
-- **Canvas Flow:** 
-Delay Step - Delay 2 full days (48 hours)
-Message Step - After the delay is up, send at the intelligent time (e.g. 11am) as soon as possible
-
-For Canvas Flow, the Delay component will first delay the message for the number of days you choose. Then, as soon as the number of days has passed, the user would start receiving messages at the set Intelligent Timing. For example, if your delay is set for two days and you use Intelligent Timing, then it will take 48 hours for Intelligent Timing to apply and for messages to begin sending. For Canvas V1, if the Full Step includes a one day delay, then the message would send on the second day at the set Intelligent Timing. 
-
-As an example, let's say on April 12, we have a Delay component set to send a user to the next component after one day using Intelligent Timing. A user enters the component at 2:01pm on April 13, and Intelligent Timing for the given message channel is 2pm. 
-- For Canvas V1, the user would receive the message at 2pm on April 14, which is less than one day from the entry time. 
-- For Canvas Flow, the user would receive the message at 2pm on April 15 instead, which is more than one day from the entry time.
+Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2pm. A user enters the Delay at 2:01pm.
+- **Canvas flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2pm.
+- **Original workflow:** The user would receive the message on the second day at 2pm.
 
 Note that if Intelligent Timing is turned on, the message will be sent within 24 hours of the user entering the Message component at the intelligent time identified (even if no Delay component is involved).
 

@@ -11,7 +11,7 @@ tool: Canvas
 
 # Decision Split 
 
-Decision Split in Canvas allows you to deliver personalized, real-time experiences for your users. This component can be used to create Canvas branches based on whether a user matches a query.
+The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. This component can be used to create Canvas branches based on whether a user matches a query.
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a Decision Split 
@@ -22,10 +22,10 @@ To create a Decision Split Step, add a step to your Canvas. Then, use the drop-d
 
 How do you want to split your users? You can use [segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
-![Define Split][2]{: style="max-width:80%;"}
+![][2]{: style="max-width:90%;"}
 
 {% alert note %} 
-By default, Filters and Segments for **Decision Split** are checked right after receiving a previous step, unless you add a delay. 
+By default, segments and filters for a Decision Split component are checked right after receiving a previous step, unless you add a delay. 
 {% endalert %} 
 
 ## Use your split

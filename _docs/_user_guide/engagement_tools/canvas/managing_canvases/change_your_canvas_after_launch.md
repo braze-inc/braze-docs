@@ -120,6 +120,14 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 
 Check out these best practices to keep in mind when editing or adding to your Canvas after it’s been launched using Canvas Flow. 
 
+### Disconnected steps
+
+You can launch your Canvas with disconnected steps and also save these Canvases post-launch. Before disconnecting a step from your workflow, we recommend checking the analytics view of the component for users pending.
+
+Let's say a user is in a disconnected step of your Canvas Flow workflow. This user will advance to the subsequent step if there is one. The step's settings will dictate how the user should advance. 
+
+By creating or editing disconnected steps, you can make changes to these independent components without having to directly connect them to the rest of your Canvas. This helps with testing your components prior to going launching your Canvas again. 
+
 ### Time delays
 
 Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.

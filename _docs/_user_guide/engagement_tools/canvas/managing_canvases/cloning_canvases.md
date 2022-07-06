@@ -41,7 +41,7 @@ If your Canvas matches any of the following details, then your Canvas can't be c
 - Has full steps that have exception events and use the delay filter "in" or "on the next"
 - Has a full step that branches out into multiple steps, and is not the first step of the Canvas
 
-For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/).
+For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
 
 [1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}

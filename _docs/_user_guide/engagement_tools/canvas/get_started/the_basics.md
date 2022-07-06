@@ -64,27 +64,27 @@ Here's an overview of the anatomy of a Canvas:
 {% tabs %}
   {% tab Canvas %}
     **Canvas** refers to the workspace and overall visualization.<br><br>
-    ![Journey]({% image_buster /assets/img/Canvas2.png %})
+    ![]({% image_buster /assets/img/Canvas2.png %})
   {% endtab %}
 
   {% tab Journey %}
     A **journey or customer journey** is an individual user's experience within the Canvas.<br><br>
-    ![Journey for New User]({% image_buster /assets/img_archive/Journey_2.png %})
+    ![]({% image_buster /assets/img_archive/Journey_2.png %})
   {% endtab %}
 
   {% tab Entry Step %}
     **The Entry Step** and **The Entry Wizard** are the first steps you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.<br><br>
-    ![Journey_3]({% image_buster /assets/img/entry-wizard.gif %})
+    ![]({% image_buster /assets/img/entry-wizard.gif %})
   {% endtab %}
 
   {% tab Variants %}
     **Variants** are the variant flows marketers build that create personalized journeys.<br><br>
-    ![Journey_3]({% image_buster /assets/img/variants.gif %})
+    ![]({% image_buster /assets/img/variants.gif %})
   {% endtab %}
 
   {% tab Steps %}
     **Steps** are individual decision points (like messages) within a variant.<br><br>
-    ![Journey_4]({% image_buster /assets/img/steps.gif %})
+    ![]({% image_buster /assets/img/steps.gif %})
   {% endtab %}
 {% endtabs %}
 
