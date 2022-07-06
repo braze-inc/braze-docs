@@ -11,9 +11,13 @@ tool: Canvas
 
 # Advancing your users through Canvas components
 
-The **Advancement Behavior** feature allows you to choose the criteria for advancement through your Canvas component.
+The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
-![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1] 
+{% alert important %}
+For components in Canvas Flow, the **Advancement Behavior** is set to always immediately advance the audience, or **Immediately Advance Audience**.
+{% endalert %}
+
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
 
 When **Advance When Message Sent** is selected, users will only be advanced to the subsequent Canvas steps when one of the following conditions occur:
 

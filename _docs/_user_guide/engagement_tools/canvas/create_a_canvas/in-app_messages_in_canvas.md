@@ -150,7 +150,7 @@ As you can see, the push messages are spaced around an in-app message to ensure 
 
 ## Advancement Behavior options
 
-Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.).
+Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
 

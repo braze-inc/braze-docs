@@ -15,7 +15,7 @@ Content Cards can be sent to your customers as part of their Canvas journey. Thi
 
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
-![Content Cards in Canvas][1]
+![][1]
 
 Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
@@ -26,12 +26,12 @@ When composing a new Content Card you have the option to choose when it should e
 If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
 
 {% alert important %}
- The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
 ## Advancement Behavior options {#advancement-behavior-options}
 
-The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
+The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.). For Content Cards in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 ### Steps with Content Cards only {#steps-with-in-content-cards-only}
 
