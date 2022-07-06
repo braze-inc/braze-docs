@@ -186,7 +186,7 @@ For Android, Braze will consider a user to be push disabled if:
 
 ### iOS
 
-Regardless of the response to the foreground push opt-in prompt, users receive a background push token if you have "Remote Notifications" enabled in Xcode. This allows you to send silent push to the device. 
+Regardless of if a user accepts the foreground push opt-in prompt, you will still be able to send background push if you have "Remote Notifications" enabled in Xcode, and your app calls [[registerForRemoteNotifications()](https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications).
 
 If your app is provisionally authorized or if the user has opted into push, they receive a foreground push token as well, allowing you to send them all types of push. Within Braze, we consider a user on iOS who is foreground push enabled to be "push enabled", either explicitly (app-level) or provisionally (device-level).
 
