@@ -40,7 +40,7 @@ The Entry Steps displayed in each of these four outlines shows a previous versio
 - **Where**: Push, Email
 - **How**: Channel, Trigger (test)
 
-<br>![Cart Abandonment Journey][29]
+<br>![][29]
 
 ## Holiday travel: Airline 
 - **What**: Educate customers on resources and prime them for good flight and airport experiences
