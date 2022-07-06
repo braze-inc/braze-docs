@@ -19,7 +19,7 @@ There are two Google Tag Manager templates built by Braze, the [Initialization T
 
 Both tags can be added to your workspace from [Google's community gallery][15] or by searching for Braze when adding a new tag from the Community Templates.
 
-![image of gallery search][3]
+![image of gallery search][gtm-community-gallery-search]
 
 ### Initialization Tag template {#initialization-tag}
 
@@ -29,7 +29,7 @@ Use the Initialization Tag to add the Braze Web SDK to your website.
 
 Search for Braze in the community template gallery, and select the **Braze Initialization Tag**.
 
-![A dialog box showing the Braze Initialization Tag configuration settings. Settings included are "tag type", "API key", "API endpoint", "SDK version", "external user ID", and "Safari web push ID".][4]
+![A dialog box showing the Braze Initialization Tag configuration settings. Settings included are "tag type", "API key", "API endpoint", "SDK version", "external user ID", and "Safari web push ID".][gtm-initialization-tag]
 
 #### Step 2. Configure settings
 
@@ -43,14 +43,14 @@ Choose from the optional set of additional initialization options described in t
 
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 
-1. Using Google Tag Manager's debug move, you should see the Braze Initialization Tag has been triggered on your configured pages or events.
+1. Using Google Tag Manager's [debugging tool][gtm-debugging-tool], you should see the Braze Initialization Tag has been triggered on your configured pages or events.
 2. You should see network requests made to Braze, and the global `window.braze` library should now be defined on your webpage.
 
 ### Actions Tag template {#actions-tag}
 
 The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop or resume tracking for privacy requirements.
 
-![][5]
+![][gtm-actions-tag]
 
 #### Changing user external ID {#external-id}
 
@@ -60,7 +60,7 @@ Use this tag whenever a user logs in or is otherwise identified with their uniqu
 
 Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
 
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".][8]
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".][gtm-change-user]
 
 #### Log custom events {#custom-events}
 
@@ -72,7 +72,7 @@ Enter the **Event Name** by either using a variable or typing an event name.
 
 Use the **Add Row** button to add event properties.
 
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".][9]
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".][gtm-custom-event]
 
 #### Track purchase {#purchases}
 
@@ -84,7 +84,7 @@ The **Product ID** and **Price** fields are required.
 
 Use the **Add Row** button to add Purchase properties.
 
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][10]
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
 
 #### Stop and resume tracking {#stop-tracking}
 
@@ -118,13 +118,37 @@ window.braze.getUser().setGender("f")
 </script>
 ```
 
+## Upgrading and Updating Templates {#upgrading}
+
+To upgrade to the latest version of the Braze Web SDK, take the following three steps in your Google Tag Manager dashboard:
+
+**1. Update Tag Template**
+
+Go to the **Templates** page within your workspace. Here you should see an icon indicating an update is available.
+
+![Templates page showing an update is available][gtm-update-available]
+
+Click that icon and after reviewing the change, click to **Accept Update**.
+
+![A screen comparing the old and new tag templates with a button to "Accept Update"][gtm-accept-update]
+
+**2. Update Version Number**
+
+Once your tag template has been updated, edit the Braze Initialization Tag, and update the SDK version to the most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].
+
+![Braze Initialization Template with an input field to change the SDK Version][gtm-version-number]
+
+**3. QA and Publish**
+
+Verify the new SDK version is working using Google Tag Manager's [debugging tool][debugging-tool] prior to publishing an update to your tag container.
+
 ## Troubleshooting steps {#troubleshooting}
 
 ### Enable tag debugging {#debugging}
 
 Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's Javascript console.
 
-![][12]
+![Google Tag Manager's Debug tool][gtm-tag-debugging]
 
 ### Enter debug mode
 
@@ -132,20 +156,25 @@ Another way to help debug your Google Tag Manager integration is using Google's 
 
 This will help identify what values are being sent from your webpage's data layer to each triggered Braze tag and will also explain which tags were or were not triggered.
 
-![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.][13]
+![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.][gtm-tag-debug-mode]
 
 
 [2]: https://support.google.com/tagmanager/answer/6103696
-[3]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
-[4]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %}
-[5]: {% image_buster /assets/img/web-gtm/gtm-actions-tag.png %}
+[gtm-community-gallery-search]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
+[gtm-initialization-tag]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %}
+[gtm-actions-tag]: {% image_buster /assets/img/web-gtm/gtm-actions-tag.png %}
 [6]: {{ site.baseurl }}/user_guide/administrative/app_settings/manage_app_group/app_group_management/#app-group-management
 [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze
-[8]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
-[9]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
-[10]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
-[12]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
-[13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
+[gtm-change-user]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
+[gtm-custom-event]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
+[gtm-purchase]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
+[gtm-tag-debugging]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
+[gtm-tag-debug-mode]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056
 [15]: https://tagmanager.google.com/gallery/#/?filter=braze
 [16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html
+[gtm-update-available]: {% image_buster /assets/img/web-gtm/gtm-update-available.png %}
+[gtm-accept-update]: {% image_buster /assets/img/web-gtm/gtm-accept-update.png %}
+[gtm-version-number]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
+[changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
+[gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
