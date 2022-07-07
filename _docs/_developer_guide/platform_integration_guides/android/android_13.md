@@ -33,7 +33,11 @@ Android 13 introduces a [major change][3] in how users manage apps that send pus
 
 ![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons "Allow" and "Don't allow" at the bottom of the message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
+<<<<<<< HEAD
+This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` then your app cannot ask for permission again.
+=======
 This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` or dismisses the prompt, your app cannot ask for permission again.
+>>>>>>> 5b0195aa4525902e02523d8fb6cf1af3e4205913
 
 Note that apps are granted a [temporary exemption][4] intended for users who previously had push notifications for that app enabled prior to updating to Android 13. These users will remain eligible to receive push from the app until (A) they explicitly decline the permission prompt when it's shown (or within system settings), or (B) the app is opened for the first time after a user upgrades to Android 13.
 
