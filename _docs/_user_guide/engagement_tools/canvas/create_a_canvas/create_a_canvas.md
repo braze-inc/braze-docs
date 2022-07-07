@@ -294,15 +294,13 @@ Click **Done** once you've finished configuring your Canvas component.
 
 [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API. Note that the Canvas entry properties object has a maximum size limit of 50 KB. 
 
-{% alert note %}
-Canvas entry properties can be referenced only in the first step of a Canvas.
-{% endalert %}
-
 {% raw %}
 For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-For Canvas Flow, make sure to use ``{% raw %} canvas_entry~properties${property_name} {% endraw %}`` if referencing these Canvas entry properties. These events must be custom events or purchase events to be used this way in the Message component.
+For the Canvases built with the original editor, Canvas entry properties can be referenced only in the first step of a Canvas.
+
+For Canvas Flow messaging, entry properties are not ephemeral, and can be used in Liquid in any Message step. So, be sure to use ``{% raw %} canvas_entry~properties${property_name} {% endraw %}`` if referencing these Canvas entry properties. Note that the events must be custom events or purchase events to be used this way.
 
 {% endtab %}
 
@@ -311,7 +309,7 @@ For Canvas Flow, make sure to use ``{% raw %} canvas_entry~properties${property_
 
 For the original Canvas editor, event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can’t reference the event property for an event that’s already happened. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use ``{% raw %} {{canvas_entry_properties.${property_name}}} {% endraw %}`` if referencing event properties in the first step.
 
-For Canvas Flow messaging, action-based delivery event properties that trigger Canvas entry are not ephemeral, and can be used in Liquid in any [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step.
+For Canvas Flow messaging, action-based delivery event properties that trigger Canvas entry are not ephemeral, and can be used in Liquid in any [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step. Be sure to use ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these Canvas entry properties.
 
 {% endtab %}
 {% endtabs %}

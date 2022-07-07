@@ -14,7 +14,7 @@ tool: Canvas
 The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
 {% alert important %}
-For components in Canvas Flow, the **Advancement Behavior** is set to always immediately advance the audience, or **Immediately Advance Audience**.
+For components in Canvas Flow, the **Advancement Behavior** is set to always immediately advance the audience, or **Immediately Advance Audience**. This will also apply to [disconnected steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
 ![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]

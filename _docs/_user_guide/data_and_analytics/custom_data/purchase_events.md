@@ -105,6 +105,8 @@ When you send through purchase data that includes purchase properties, you can u
 
 For example, to reference the name of a product, replace `your_custom_event_property` with the `product_id`.
 
+For Canvas Flow messaging, action-based delivery event properties that trigger Canvas entry are not ephemeral, and can be used in Liquid in any [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step. Be sure to use ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these Canvas entry properties. You can also further leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for personalized message refinement.
+
 [1]: {% image_buster /assets/img/purchase1.png %}
 [2]: {% image_buster /assets/img/purchase2.png %}
 [3]: {% image_buster /assets/img/purchase3.png %}
