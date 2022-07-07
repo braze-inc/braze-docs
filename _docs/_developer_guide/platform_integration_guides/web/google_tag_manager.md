@@ -118,29 +118,13 @@ window.braze.getUser().setGender("f")
 </script>
 ```
 
-## Upgrading and Updating Templates {#upgrading}
+## Upgrading and updating templates {#upgrading}
 
 To upgrade to the latest version of the Braze Web SDK, take the following three steps in your Google Tag Manager dashboard:
 
-**1. Update Tag Template**
-
-Go to the **Templates** page within your workspace. Here you should see an icon indicating an update is available.
-
-![Templates page showing an update is available][gtm-update-available]
-
-Click that icon and after reviewing the change, click to **Accept Update**.
-
-![A screen comparing the old and new tag templates with a button to "Accept Update"][gtm-accept-update]
-
-**2. Update Version Number**
-
-Once your tag template has been updated, edit the Braze Initialization Tag, and update the SDK version to the most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].
-
-![Braze Initialization Template with an input field to change the SDK Version][gtm-version-number]
-
-**3. QA and Publish**
-
-Verify the new SDK version is working using Google Tag Manager's [debugging tool][debugging-tool] prior to publishing an update to your tag container.
+1. **Update tag template**<br>Go to the **Templates** page within your workspace. Here you should see an icon indicating an update is available.<br><br>![Templates page showing an update is available][gtm-update-available]<br><br>Click that icon and after reviewing the change, click to **Accept Update**.<br><br>![A screen comparing the old and new tag templates with a button to "Accept Update"][gtm-accept-update]<br><br>
+2. **Update version number**<br>Once your tag template has been updated, edit the Braze Initialization Tag, and update the SDK version to the most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].<br><br>![Braze Initialization Template with an input field to change the SDK Version][gtm-version-number]<br><br>
+3. **QA and publish**<br>Verify the new SDK version is working using Google Tag Manager's [debugging tool][gtm-debugging-tool] prior to publishing an update to your tag container.
 
 ## Troubleshooting steps {#troubleshooting}
 
