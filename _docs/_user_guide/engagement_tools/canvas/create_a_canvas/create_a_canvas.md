@@ -194,6 +194,30 @@ By default, Canvas variant assignment is locked in when users enter the Canvas, 
 {% enddetails %}
 {% endalert %}
 
+### Adding steps
+
+{% tabs local %}
+{% tab Canvas Flow %}
+
+You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
+
+![]({% image_buster /assets/img_archive/add_components_flow.png %})
+
+{% alert tip %}
+As you begin to add more steps, you can view your entire Canvas using either the **Detailed View** or **Simplified View**. **Simplified View** shows just the component icons as a high-level visual of your user journey whereas **Detailed View** shows the expanded step details. Depending on your preferences, you can toggle between these views!
+{% endalert %}
+
+{% endtab %}
+
+{% tab Original Canvas Editor %}
+
+Add a component by clicking the <i class="fas fa-plus-circle"></i> plus button below your variant. When you add a new component to the original Canvas workflow, it will be added as a **Full Step** automatically.
+
+![]({% image_buster /assets/img_archive/Canvas_More_Step.png %})
+
+{% endtab %}
+{% endtabs %}
+
 ### Editing a step
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
@@ -211,7 +235,7 @@ Or you can quickly edit and adjust the **Action Settings** of your [Action Paths
 
 ![]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
-Canvas Flow's lightweight components allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier.
+Canvas Flow's lightweight components allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier. 
 
 {% endtab %}
 
@@ -297,25 +321,6 @@ Did you know you can include Canvas component names in your messages and link te
 Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
 {% endalert %}
 
-### Adding more components
-
-{% tabs local %}
-{% tab Canvas Flow %}
-
-For Canvas Flow, you can add more components by dragging and dropping them from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the panel.
-
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
-
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-Add more components by clicking the <i class="fas fa-plus-circle"></i> plus button. When you add a new component to the original Canvas workflow, it will be added as a **Full Step** automatically.
-
-![]({% image_buster /assets/img_archive/Canvas_More_Step.png %})
-
-{% endtab %}
-{% endtabs %}
 
 ### Editing connections
 
@@ -369,6 +374,10 @@ Once you're done creating your Canvas, press **Launch Canvas** to save and launc
 Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page.
 
 ![][19]
+
+{% alert tip %}
+Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) for more information.
+{% endalert %}
 
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
