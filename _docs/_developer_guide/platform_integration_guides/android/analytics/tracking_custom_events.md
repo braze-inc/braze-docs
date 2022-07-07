@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "This reference article covers how to add and track custom events for your Android application."
+description: "This reference article covers how to add and track custom events for your Android or FireOS application."
 
 ---
 
@@ -46,18 +46,38 @@ Properties are defined as key-value pairs. Keys are `String` objects, and values
 {% tab JAVA %}
 
 ```java
-BrazeProperties eventProperties = new BrazeProperties();
-eventProperties.addProperty("key", "value");
-Braze.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+braze.logCustomEvent("YOUR-EVENT-NAME",
+    new BrazeProperties(new JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", new Date())
+        .put("or", new JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", new JSONObject()
+            .put("deeply", new JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+));
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val eventProperties = BrazeProperties()
-eventProperties.addProperty("key", "value")
-Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
+braze.logCustomEvent("YOUR-EVENT-NAME",
+    BrazeProperties()
+        .addProperty("you", "can")
+        .addProperty("pass", false)
+        .addProperty("orNumbers", 42)
+        .addProperty("orDates", Date())
+        .addProperty("or", JSONArray(listOf("any", "array", "here")))
+        .addProperty("andEven", BrazeProperties()
+            .addProperty("deeply", JSONArray(listOf("nested", "json"))))
+)
 ```
 
 {% endtab %}

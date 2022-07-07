@@ -40,13 +40,26 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 
 ## Keyword category-specific retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
 ### Filter by recency
 
 Filter for the recency of a user responding to your SMS program. This filter will evaluate the last date a user sent an inbound SMS that is within one of the keyword categories. 
 
 ![Segmentation filter Last sent SMS to subscription group "Marketing SMS" with keyword "Opt-in" after August 11, 2020.][6]
+
+### Filter by campaign or Canvas attribution
+
+Filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag.
+
+**Filter by replied to a specific campaign category**<br>
+![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."][12]
+
+**Filter by replied to a campaign or Canvas with a specific tag**
+![Campaign with the filter "Has replied to SMS" for campaign or Canvas with tag "Curbside Messaging Service C".][13]
+
+**Filter by replied to a specific step**
+![Campaign with the filter "Has replied to SMS" for step "SMS Double Opt" "Step - Help".][11]
 
 ### Trigger messages by keyword
 
@@ -56,7 +69,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 ![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 
 **Trigger by arbitrary keywords**<br>
-Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
+Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted: Only the **exact, single-word message** will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the following example. 
 ![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>
@@ -88,3 +101,6 @@ Want to receive a specific deal? Just text us the category you're interested in.
 [8]: {% image_buster /assets/img/sms/retargeting3.png %}
 [16]: {% image_buster /assets/img/keyword_example1.jpg %}
 [17]: {% image_buster /assets/img/keyword_example2.jpg %}
+[11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
+[12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
+[13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 

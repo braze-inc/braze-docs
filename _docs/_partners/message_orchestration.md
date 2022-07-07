@@ -65,11 +65,10 @@ valid_partner_list:
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-- name: Line
+- name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
@@ -77,6 +76,11 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-
+- name: Extole
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 
 ---

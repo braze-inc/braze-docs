@@ -14,7 +14,7 @@ description: "This article covers Android sample apps."
 Braze's SDKs each come with a sample application within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and code paths within the sample applications is an excellent way to debug any problems you may run into.
 
 ## Building the Droidboy test application
-Braze's test application within the [Android SDK GitHub repository][3] is called Droidboy. Follow the instructions below to build a fully functional copy of it alongside your project.
+Braze's test application within the [Android SDK GitHub repository][3] is called Droidboy. Follow these instructions to build a fully functional copy of it alongside your project.
 
 1. Create a new [app group][25] and note the Braze API identifier key.<br><br>
 2. Copy your FCM sender ID and Braze API identifier key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named `com_braze_push_fcm_sender_id` and `com_braze_api_key`, respectively).<br><br>

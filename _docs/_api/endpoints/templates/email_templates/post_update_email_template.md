@@ -16,7 +16,7 @@ description: "This article outlines details about the Update Email Template Braz
 
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-Use the endpoints below to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference.
+Use these endpoints to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The email template creation API endpoint will also return an `email_template_id` reference.
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
@@ -77,15 +77,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 ```
 
 ## Possible errors
-- `Template Name is required`
 
-- `Tags must be an array.`
+The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
-- `All Tags must be Strings.`
-
-- `Some Tags could not be found.`
-
-- `"Invalid value for 'should_inline_css'.  One of 'true' or 'false' was expected"` - 'should_inline_css' accepts boolean characters only.  The error likely is being shown as the value is being sent as a 'string'.
-
+| Error | Troubleshooting |
+| --- | --- |
+| Template name is required |
+| Tags must be an array | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. |
+| All tags must be strings | Make sure your tags are encapsulated in quotes (`""`). |
+| Some tags could not be found | To add a tag when creating an email template, the tag must already exist in Braze. |
+| Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

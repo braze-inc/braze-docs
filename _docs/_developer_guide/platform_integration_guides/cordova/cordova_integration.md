@@ -1,5 +1,5 @@
 ---
-nav_title: Cordova Integration
+nav_title: Integration
 article_title: Cordova Integration
 platform: 
   - Cordova

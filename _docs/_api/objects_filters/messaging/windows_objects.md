@@ -11,7 +11,7 @@ description: "This article lists and explains the different Windows objects used
 ---
 # Windows object specification
 
-These objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content.
+The `windows_phone8_push` and `windows_universal_push` objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Windows Phone 8 push object
 
@@ -28,7 +28,7 @@ These objects are used to define or request information related to Windows Phone
 
 ## Windows Universal push object
 
-See the Windows Universal [toast template catalog][32] for details on the options for `push_type` below.
+See the Windows Universal [toast template catalog][32] for details on the options for `push_type`.
 
 ```json
 {

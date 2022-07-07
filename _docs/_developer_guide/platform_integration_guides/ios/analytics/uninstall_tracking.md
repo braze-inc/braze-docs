@@ -31,7 +31,7 @@ Next, send yourself a test push from the [dashboard][7]. This test push will not
 4. Check that your app does not take any unwanted automatic actions upon receiving the push.
 
 {% alert important %}
-The above steps are a proxy for sending an uninstall tracking push from Braze. If you have badge counts enabled, a badge number will be sent along with the test push, but Braze's uninstall tracking pushes will not set a badge number on your application.
+These testing steps are a proxy for sending an uninstall tracking push from Braze. If you have badge counts enabled, a badge number will be sent along with the test push, but Braze's uninstall tracking pushes will not set a badge number on your application.
 {% endalert %}
 
 ## Step 4: Enable uninstall tracking

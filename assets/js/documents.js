@@ -113,6 +113,37 @@ String.prototype.sanitize = function() {
 };
 
 $(document).ready(function() {
+  $("#braze_header").click((e) => {
+    setTimeout(function() {
+      let hide_backdrop = false;
+      $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
+        let itm = $(ea);
+        console.log(itm.attr('id'), itm.attr('aria-expanded'),)
+        if(itm.attr('aria-expanded') == 'true') {
+          hide_backdrop = true;
+        }
+      });
+      if (!hide_backdrop) {
+        $("#backdrop").removeClass("backdrop-show");
+      }
+    }, 100);
+  });
+  $("#braze_header .nav-link.dropdown-toggle").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    const isOpen = e.currentTarget.ariaExpanded !== "true";
+    const borderDiv = e.currentTarget.children[0];
+    borderDiv.classList.toggle("border-focus-show", isOpen);
+    $("#backdrop").toggleClass("backdrop-show", isOpen);
+  });
+  $("#backdrop").click((e) => {
+    $("#braze_header .nav-link.dropdown-toggle").each((e, ea) => {
+      ea.children[0].classList.remove("border-focus-show");
+    });
+    e.currentTarget.classList.remove("backdrop-show");
+  });
+
   $('#toc').toc({
     headers: 'h2, h3',
     minimumHeaders: toc_minheaders
@@ -303,7 +334,7 @@ $(document).ready(function() {
       nav_bar.removeClass('hide_sidebar');
       nav_icon.removeClass('fa-bars');
       nav_icon.addClass('fa-chevron-left');
-      Cookies.remove('ln');
+      Cookies.set('ln', '', { expires: 365 });
     } else {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');

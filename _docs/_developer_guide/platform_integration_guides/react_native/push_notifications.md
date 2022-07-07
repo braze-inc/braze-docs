@@ -10,7 +10,7 @@ channel: push
 
 # Push notifications
 
-Integrating push notifications in React Native requires setting up each native platform separately. Follow the respective guides below to finish the installation.
+Integrating push notifications in React Native requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
 ## Step 1: Complete native setup
 
@@ -19,7 +19,7 @@ Integrating push notifications in React Native requires setting up each native p
 
 ## Step 2: Test displaying push notifications
 
-At this point, you should be able to send notifications to the devices. Follow the steps below to test your push integration.
+At this point, you should be able to send notifications to the devices. Adhere to the following steps to test your push integration.
 
 {% alert important %}
 You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.

@@ -29,7 +29,7 @@ Braze provides the ability to manually export your users from the Braze Segments
 Currently available for all clusters, a new Braze Facebook Audience Export process exists, streamlining the process with simple integration steps. You will no longer need to whitelist OAuth Redirect URI's to send custom audiences or mess around within Facebook App Settings to integrate.
 
 {% alert important %}
-Please note that all clients currently using Facebook Custom Audiences, must reintegrate their Braze Segments with these new steps.
+Note that all clients currently using Facebook Custom Audiences, must reintegrate their Braze Segments with these new steps.
 {% endalert%}
 
 

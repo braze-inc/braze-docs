@@ -22,7 +22,9 @@ A **"Notification ID"** is a unique identifier for a message category of your ch
 
 ## Time to live (TTL) {#ttl}
 
-The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
+The **"Time to Live"** (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. 
+
+For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. You could send a push alerting a user that that streak is in danger of being broken if they’ve exceeded a certain number of days. However, if a user was to reconnect their device to the game app 4 weeks later with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
 ## Firebase messaging delivery priority {#fcm-priority}
 
@@ -30,11 +32,11 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 
 ## Summary text
 
-The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display below the body of the message in the expanded view. It also serves as a caption for notifications with images.
+The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
 
 ![][9]
 
-For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the animation below for an example of this behavior.
+For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
 
 ![Summary Text Behavior][15]
 
@@ -83,7 +85,7 @@ Selecting **Default** in this field will play the default notification sound on 
 
 ![][11]
 
-Next, enter the full sound resource URI (e.g. `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
+Next, enter the full sound resource URI (e.g., `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
 To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
 

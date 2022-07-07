@@ -68,7 +68,7 @@ To get started, you'll need to have your Radar publishable API key on hand to us
 
 Next, within a `connected_content` tag, make a GET request to the [Search Places API](https://radar.io/documentation/api#search-places). The search places API returns nearby locations based on [Radar Places](https://radar.io/documentation/places): a database of locations for places, chains, and categories that provides a comprehensive view of the world.
 
-Shown below is an example of what Radar will return as a JSON object from the API call:
+The following code snippet is an example of what Radar will return as a JSON object from the API call:
 
 ```json
 {
@@ -121,7 +121,7 @@ Shown below is an example of what Radar will return as a JSON object from the AP
 
 To construct the Connected Content targeted and personalized Braze message, you can leverage the Braze `most_recent_location` attribute as an input for the `near` parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
 
-In the example below, the Radar chain filtering is applied for Target and Walmart locations, and the search radius for nearby locations is set to 2 km.
+In the following example, the Radar chain filtering is applied for Target and Walmart locations, and the search radius for nearby locations is set to 2 km.
 
 {% raw %}
 ```
@@ -129,10 +129,10 @@ In the example below, the Radar chain filtering is applied for Target and Walmar
 ```
 {% endraw %}
 
-As you can see from the `connect_content` tag above, the JSON object is stored into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
+As you can see from the `connect_content` tag, the JSON object is stored into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
 You can test what the output should be by referencing {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
 
-Bringing our use-case together, here is what the syntax of the campaign would look like. The code below iterates through the `nearbyplaces.places` object, extracting unique values and concatenating them with proper human-readable delimiters for the message.
+Bringing our use-case together, here is what the syntax of the campaign would look like. The following code iterates through the `nearbyplaces.places` object, extracting unique values and concatenating them with proper human-readable delimiters for the message.
 
 {% raw %}
 ```

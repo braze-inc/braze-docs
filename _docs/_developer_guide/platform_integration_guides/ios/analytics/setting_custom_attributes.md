@@ -7,6 +7,8 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
 # Setting custom attributes for iOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
@@ -52,7 +54,7 @@ The following attributes should be set on the `ABKUser` object:
 
 ## Assigning custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
+Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
 
 ### Custom attribute with a string value
 

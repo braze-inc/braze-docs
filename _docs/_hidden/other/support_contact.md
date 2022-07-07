@@ -472,18 +472,18 @@ var ticket_lookuptable = {
         'Email' : {
           'SelectDefault': 'Select a type...',
           'Label': '*  My question is about...',
-          'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-          'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
+          'LinksTitle': ['Email best practices','Braze Learning course: Achieving High Email Deliverability'],
+          'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
           'SelectOption': {
             'Setup (whitelabeled IPs, DNS records)' : {
               'ShowSubmit': true,
-              'LinksTitle': ['LAB course: Achieving High Email Deliverability','IP warming'],
-              'Links' : ['https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming']
+              'LinksTitle': ['Braze Learning course: Achieving High Email Deliverability','IP warming'],
+              'Links' : ['https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming']
             },
             'Deliverability' :{
               'ShowSubmit': true,
-              'LinksTitle': ['IP warm','LAB course: Achieving High Email Deliverability'],
-               'Links' : ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+              'LinksTitle': ['IP warm','Braze Learning course: Achieving High Email Deliverability'],
+               'Links' : ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming','https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             },
             'IP warmup' : {
               'ShowSubmit': true,
@@ -497,8 +497,8 @@ var ticket_lookuptable = {
             },
             'Other' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-              'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+              'LinksTitle': ['Email best practices','Braze Learning course: Achieving High Email Deliverability'],
+              'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             }
           }
         },
@@ -528,8 +528,8 @@ var ticket_lookuptable = {
         'SDK issue or error' :{
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
-          'LinksTitle': ['Sending test messages','LAB course: technical integration checklists','Android: test your integration'],
-          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration'],
+          'LinksTitle': ['Sending test messages','Braze Learning course: technical integration checklists','Android: test your integration'],
+          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration','https://learning.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration'],
           'SelectOption': {
             'I\'m running into an issue during SDK integration.' :{
               'ShowSubmit': true,
@@ -543,8 +543,8 @@ var ticket_lookuptable = {
             },
             'Other' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Sending test messages','LAB course: technical integration checklists','Android: test your integration'],
-              'Links': ['{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration']
+              'LinksTitle': ['Sending test messages','Braze Learning course: technical integration checklists','Android: test your integration'],
+              'Links': ['{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages','https://learning.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration']
             }
           }
         },
@@ -628,8 +628,8 @@ var ticket_lookuptable = {
       'SelectOption' : {
         'Creating Campaigns and Canvases' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Canvas','Importing users','LAB course: Canvas','Getting started guide','Scheduling and organizing campaigns'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/']
+          'LinksTitle': ['Canvas','Importing users','Braze Learning course: Canvas','Getting started guide','Scheduling and organizing campaigns'],
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://learning.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/']
         },
         'Understanding reporting' : {
           'ShowSubmit': true,
@@ -638,8 +638,8 @@ var ticket_lookuptable = {
         },
         'Personalization, Liquid and Connected Content' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Personalization and Liquid','Connected Content','LAB course: dynamic personalization and liquid'],
-          'Links':  ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/','{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/','https://lab.braze.com/dynamic-personalization-with-liquid']
+          'LinksTitle': ['Personalization and Liquid','Connected Content','Braze Learning course: dynamic personalization and liquid'],
+          'Links':  ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/','{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/','https://learning.braze.com/dynamic-personalization-with-liquid']
         },
         'Webhooks' :  {
           'ShowSubmit': true,
@@ -672,13 +672,13 @@ var ticket_lookuptable = {
       'SelectOption' : {
         'Campaign and Canvas strategies' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Campaign ideas and strategies','LAB course: Canvas'],
-          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','https://lab.braze.com/canvas-course']
+          'LinksTitle': ['Campaign ideas and strategies','Braze Learning course: Canvas'],
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','https://learning.braze.com/canvas-course']
         },
         'Segmentation and targeting' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Creating a segment','Segment insights','LAB course: segmentation'],
-          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment','{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/#segment-insights','https://lab.braze.com/segmentation-course']
+          'LinksTitle': ['Creating a segment','Segment insights','Braze Learning course: segmentation'],
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment','{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/#segment-insights','https://learning.braze.com/segmentation-course']
         },
         'Managing push opt-ins' : {
           'ShowSubmit': true,
@@ -1098,7 +1098,7 @@ $( document ).ready(function() {
     $('#ticket_mainform').hide();
 
     $('#ticket_thankyou').fadeIn("slow");
-    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, please check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, please contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
+    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, Check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, Contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#ticket_issue').popover();
@@ -1238,7 +1238,7 @@ $( document ).ready(function() {
  }
 });
 </script>
-<div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
+<div id="firefox_warning" style="display:none;">For Firefox users, whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
 
 <div class="container-fluid" id="main-container">
       <div class="row">
@@ -1339,8 +1339,8 @@ $( document ).ready(function() {
                           <label for="ticket_issue" id="ticket_issue_label">     Question </label>
 
                           <textarea name="ticket_issue" class="form-control" id="ticket_issue" data-toggle="popover" data-trigger="focus" data-placement="top"
-                          data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue. "
-                          placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue.  " rows="7"></textarea>
+                          data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Also include steps to reproduce your issue. "
+                          placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Also include steps to reproduce your issue.  " rows="7"></textarea>
                       </div>
                       <!-- div class="form-group" >
 
@@ -1352,7 +1352,7 @@ $( document ).ready(function() {
                       </div -->
                       <div class="form-group">
                           <label style="font-size: 12px;">
-                         In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.
+                         In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
                           </label>
                           <label style="font-size: 12px;">
                           Braze Technical Support Hours of Operation are from 9am-5pm GMT and 8am-8pm ET, Monday - Friday, excluding Braze Recognized Holidays. For issues logged outside of these hours, you should anticipate a response on the next business day.
@@ -1377,7 +1377,7 @@ $( document ).ready(function() {
               <a target="" href="{{site.baseurl}}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
               <a target="" href="{{site.baseurl}}/help/home/">Help & Troubleshooting Guides</a><br />
               <a target="" href="{{site.baseurl}}/help/faqs/">FAQs</a><br />
-              <a target="" href="https://lab.braze.com/">LAB</a><br />
+              <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze dashboard</a><br />
             </div>
 

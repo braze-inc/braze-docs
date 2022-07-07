@@ -11,7 +11,7 @@
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
   <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
-  
+
   <script type="application/ld+json">
   {
       "@context": "https://schema.org",
@@ -49,6 +49,7 @@
 
 {%- css_asset_tag global -%}
 - /assets/css/application.scss
+- /assets/css/securitiai.css
 {%- endcss_asset_tag -%}
 
 {%- case site.language -%}
@@ -68,8 +69,8 @@
 - /assets/js/toc.js
 - /assets/js/documents.js
 - /assets/js/feedback.js
-
 - /assets/js/contentcards.js
+- /assets/js/securitiai.js
 {% endjavascript_asset_tag %}
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js?{{site.time | date: '%s'}}' ></script>

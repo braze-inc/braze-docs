@@ -14,14 +14,14 @@ layout: api_page
 Use this endpoint to identify an unidentified (alias-only) user.
 
 {% alert important %}
-Support for the `merge_behavior` field is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Support for the `merge_behavior` field is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. You can add up to 50 user aliases per request. 
 
 Subsequently, you can associate multiple additional user aliases with a single `external_id`. 
 - When these subsequent associations are made with the `merge_behavior` field set to `none`, only the push tokens and message history associated with the user alias are retained; any attributes, events, or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
-- When associations are made with the `merge_behavior` field set to `merge`, this endpoint will merge [specific fields](#merge) found exclusively on the anonymous user to the identified user.
+- When associations are made with the `merge_behavior` field set to `merge`, this endpoint will merge [specific fields](#merge) found on the anonymous user to the identified user.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
@@ -53,8 +53,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 #### Merge_behavior field {#merge}
 
-Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of the following fields found exclusively on the anonymous user to the identified user:
+Setting the `merge_behavior` field to `merge` sets the endpoint to merge:
 
+Any of the following fields found **exclusively** on the anonymous user to the identified user:
 - First name
 - Last name
 - Email
@@ -65,17 +66,20 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of 
 - Home city
 - Country
 - Language
-- Custom event data (excluding event properties)
-- Purchase event data (excluding purchase properties)
 - Custom attributes
+- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+
+Any of the following fields found on the anonymous user to the identified user:
+- Custom event and purchase event count and first date and last date timestamps 
+  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 {% alert warning %}
 The following attributes are not yet supported:
 - Session data 
-- Custom event or purchase properties for segmentation
 {% endalert %}
 
-Setting the field to `none` will maintain the current functionality detailed above. 
+Setting the field to `none` will not merge any user data to the identified user profile.
 
 ## Request example
 ```

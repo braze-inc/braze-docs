@@ -15,7 +15,7 @@ Before you start, read our [Analytics Overview][0] article to learn more about B
 
 ## Session tracking
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
@@ -71,7 +71,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
+Beyond the default user attributes, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
 String values have a maximum length of 255 characters.
 
 ```javascript

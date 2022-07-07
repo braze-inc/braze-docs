@@ -182,7 +182,7 @@ This data can now be sent to the Braze platform to track this user’s engagemen
 
 ### Step 2: Populate data in the action node structure
 
-Leveraging the same structure for developing action nodes as outlined above, the data collected from the user can be populated in the action node to be sent to Braze via the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+Leveraging the same structure for developing action nodes, the data collected from the user can be populated in the action node to be sent to Braze via the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 ```
 # -*- coding: utf-8 -*-

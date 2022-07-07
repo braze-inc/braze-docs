@@ -12,7 +12,7 @@ channel:
 # Android TV push
 ![][12]{: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
-While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received. The steps to do so are detailed below. 
+While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload once it is received.
 
 ## Implementation
 
@@ -45,9 +45,9 @@ For a marketing end user in Braze, launching a campaign to Android TV will be id
 The delivered and clicked response returned by FCM will follow the same convention as a mobile Android device; therefore, any errors will be visible in the message activity log.
 
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-displaying-notifications
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
 [9]: https://developer.android.com/guide/topics/ui/notifiers/toasts#CustomToastView
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/
 [11]: {% image_buster /assets/img/android_tv.png %}
 [12]: {% image_buster /assets/img/Television.png %}

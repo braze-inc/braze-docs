@@ -1,13 +1,15 @@
 ---
 nav_title: Braze Support
 article_title: Braze Support
-decription: "This page will help you locate the Braze support portal to submit Braze product feedback; this page will only accessible to Braze customers."
+description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only accessible to Braze customers."
 permalink: /braze_support/
 page_type: reference
 ---
 
-# Braze Support
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze support
 
-To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select **Get Help** in the upper right corner of the page, and then **Braze Support**.
+To contact the Braze support team, navigate to the Braze dashboard. In the dashboard, select **Get Help**, and then **Braze Support**. 
 
-![Braze Support]({% image_buster /assets/img/braze_support.png %}){: style=";max-width:60%;"}
+Depending on your Braze permissions, and if you are a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you are unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
+
+![]({% image_buster /assets/img/braze_support.png %}){: style=";max-width:60%;"}

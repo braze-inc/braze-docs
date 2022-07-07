@@ -17,7 +17,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 
 Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
 
-Use the endpoints below to create email templates on the Braze dashboard. These templates will be available on the Templates and Media page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
+Use these endpoints to create email templates on the Braze dashboard. These templates will be available on the **Templates & Media** page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -74,16 +74,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ```
 
 ## Possible errors
-- `Template Name is required`
 
-- `Tags must be an array.`
+The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
-- `All Tags must be Strings.`
-
-- `Some Tags could not be found.` - A tag was specified which doesn't exist in this environment.
-
-- `Email must have valid content block names.` - The email contains Content Blocks which do not exist in this environment.
-
-- `"Invalid value for 'should_inline_css'.  One of 'true' or 'false' was expected"` - 'should_inline_css' accepts boolean characters only.  The error likely is being shown as the value is being sent as a 'string'.
+| Error | Troubleshooting |
+| --- | --- |
+| Template name is required |
+| Tags must be an array | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. |
+| All tags must be strings | Make sure your tags are encapsulated in quotes (`""`). |
+| Some tags could not be found | To add a tag when creating an email template, the tag must already exist in Braze. |
+| Email must have valid Content Block names | The email might contain Content Blocks that don't exist in this environment. |
+| Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

@@ -38,6 +38,6 @@ You should always [preview and test your messages]({{site.baseurl}}/user_guide/m
 
 ### Larger screens
 
-On a tablet or desktop browser, a slideup in-app message will sit in the corner of the app screen as shown below (unless designated otherwise when creating the in-app message).
+On a tablet or desktop browser, a slideup in-app message will sit in the corner of the app screen as shown in the following screenshot (unless designated otherwise when creating the in-app message).
 
 ![Slideup in-app message as it appears on a larger screen. The message appears in the bottom-right corner of the screen and does not take up the full width of the screen.][2b]{: style="max-width: 800px; border: none;"}

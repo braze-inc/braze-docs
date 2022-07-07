@@ -74,7 +74,7 @@ Time to compose your News Feed card! Create a title and summary for your card an
 
 ## Step 3: Select a schedule
 
-Below the News Feed Card editor, you will find options for when to publish this item. You can choose to publish it immediately after creation or set a time in the future to publish it. You can also choose to deliver the News Feed card at a particular time in your users' local time by selecting the **Publish to Users in their Local Time Zone** checkbox.
+Under the News Feed Card editor, you will find options for when to publish this item. You can choose to publish it immediately after creation or set a time in the future to publish it. You can also choose to deliver the News Feed card at a particular time in your users' local time by selecting the **Publish to Users in their Local Time Zone** checkbox.
 
 ![][8]
 

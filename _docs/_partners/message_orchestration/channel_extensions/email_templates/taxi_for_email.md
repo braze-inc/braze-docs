@@ -35,7 +35,7 @@ Create a Taxi template on the Taxi platform. Once created, navigate to your **Or
 2. Click **Braze** to edit the Braze connector settings.
 3. Enter your Braze endpoint and your Braze API key.
 
-Your connector field will turn green once details with correct permissions are provided. If this field is not green, check that your fields align with the requirements listed above. 
+Your connector field will change colors once details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.
 
 ## Usage
 

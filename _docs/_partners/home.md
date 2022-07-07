@@ -157,7 +157,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
-- name: Line
+- name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/judo/
@@ -179,11 +179,23 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
+- name: Survicate
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
+- name: Peak
+  url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-- name: Grouparoo
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/grouparoo/
+- name: WSC Sports
+  url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
+- name: Extole
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
+- name: ViralSweep
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
+- name: Dynamics 365 Customer Insights
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
+- name: Heap
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 
 ---

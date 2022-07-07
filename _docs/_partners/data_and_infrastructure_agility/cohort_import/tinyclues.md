@@ -21,13 +21,13 @@ The Braze and Tinyclues integration offers users a path to better CRM planning a
 | Tinyclues account | A Tinyclues account is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Integration
+## Data import integration
 
 To integrate Braze and Tinyclues, you must configure the Tinyclues platform, export an existing Tinyclues campaign, and create a user cohort segment in Braze that can be used to target users in future campaigns.
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![Tinyclues][6]{: style="max-width:90%;"} 
+In Braze, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
 
 To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you once the setup is complete.
 

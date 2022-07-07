@@ -17,11 +17,7 @@ There are also bulk actions you can use, such as archiving multiple Canvases, by
 
 ![][1]
 
-When you archive a Canvas, the following will apply:
-- No further messages from the Canvas will be sent.
-- Segments associated with the archived Canvas will also be archived.
-
-You can view all previously archived Canvases in the **Archived folder** on the **Canvas** page. 
+When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases in the **Archived folder** on the **Canvas** page.
 
 ![][2]
 

@@ -9,7 +9,7 @@ page_type: reference
 
 # API rate limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. To ensure responsible user of the API, we enforce API rate limits per app group. A rate limit is the the number of requests the API can receive in a given time period. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. To ensure responsible use of the API, we enforce API rate limits per app group. A rate limit is the number of requests the API can receive in a given time period. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
 {% alert warning %}
 API rate limits and their values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
@@ -21,9 +21,11 @@ The following table lists specific API rate limits for different request types. 
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) below for more. |
+| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your customer success manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
 | [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/external_id/rename`][20] | 1,000 requests per minute. |
+| [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
 | [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
 | [`/messages/send`][17] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
@@ -32,6 +34,12 @@ The following table lists specific API rate limits for different request types. 
 | [`/sends/id/create`][18] | 100 requests per day. |
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 {: .reset-td-br-1 .reset-td-br-2}
+<!--
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
+| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
+--->
 
 ## Batching API requests
 
@@ -72,7 +80,7 @@ Header Name             | Description
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to ensure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
-If you have questions about API limits please contact your Customer Success Manager or open a [support ticket][support].
+If you have questions about API limits, contact your customer success manager or open a [support ticket][support].
 
 ### Optimal delay between endpoints
 
@@ -98,3 +106,9 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
+[21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
+[22]: {{site.baseurl}}/scim/get/
+[23]: {{site.baseurl}}/scim/post/
+[24]: {{site.baseurl}}/scim/delete/
+[25]: {{site.baseurl}}/scim/put

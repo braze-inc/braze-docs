@@ -38,11 +38,11 @@ Transactional emails are exempt from these rules with the exception of #1.
 
 On July 1, 2014, the Canadian Anti-Spam Law (CASL) goes into effect for emails sent to Canadian residents. You can read the full text of the law on the Government of Canada [Justice Laws Website][3]. The law essentially says that Canadian recipients of both email and push notifications need to provide "expressed or implied" consent to your communication with them.
 
-### CASL vs CAN-SPAM
+### CASL versus CAN-SPAM
 
 There are a couple key differences between CASL and CAN-SPAM, most notably:
 
-- CASL applies to *where* the message is received, so senders outside of Canada are affected
+- CASL applies to where the message is received, so senders outside of Canada are affected
 - Message recipients must up opt-in, instead of opt-out
 
 ### Liability
@@ -60,7 +60,7 @@ The following types of messages are exempt from the requirements of CASL:
 - Messages providing notification of factual information about subscription, membership or account
 - Messages delivering a product or service, including product updates or upgrades
 
->  This is not the complete list of exemptions. Please view the [full text of the law][3] for more details.
+>  This is not the complete list of exemptions. View the [full text of the law][3] for more details.
 
 ### Message consent
 

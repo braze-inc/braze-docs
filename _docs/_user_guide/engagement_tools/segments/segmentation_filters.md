@@ -11,7 +11,7 @@ tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
-glossary_filter_text: "Select Categories below to narrow the glossary:"
+glossary_filter_text: "Select a catagory to narrow the glossary:"
 
 # category to icon/fa or image mapping
 glossary_tags:
@@ -407,7 +407,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    description: Segment your users by whether or not their email address has hard bounced (i.e., the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
@@ -455,7 +455,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS

@@ -15,9 +15,6 @@ guide_featured_list:
   - name: Reports Overview
     link: /docs/user_guide/data_and_analytics/your_reports/reports_overview
     fa_icon: fas fa-list
-  - name: Overview Data
-    link: /docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
-    fa_icon: fas fa-mobile
   - name: Segment Data
     link: /docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/
     fa_icon: fas fa-chart-pie

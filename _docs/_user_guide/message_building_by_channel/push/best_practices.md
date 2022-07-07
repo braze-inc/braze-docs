@@ -4,7 +4,7 @@ nav_title: Best Practices
 article_title: Push Best Practices
 layout: featured
 guide_top_header: "Push Best Practices"
-guide_top_text: "Being able to communicate with your users whether or not they’re “in-app” can be extremely useful, making push notifications a powerful tool. But with power comes responsibility, and used incorrectly, they can be potentially invasive. To escape being pushy, follow the best practices and use cases below to make sure your push messages inspire engagement rather than annoyance."
+guide_top_text: "Being able to communicate with your users whether or not they’re “in-app” can be extremely useful, making push notifications a powerful tool. But with power comes responsibility, and used incorrectly, they can be potentially invasive. To escape being pushy, adhere to the following best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 
 page_type: landing
 description: "This landing page is home to best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
@@ -33,6 +33,10 @@ guide_featured_list:
 - name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check
+- name: "Know Before You Send"
+  link: /docs/know_before_send/
+  fa_icon: fa-solid fa-paper-plane
+
 ---
 
 {% alert important %}

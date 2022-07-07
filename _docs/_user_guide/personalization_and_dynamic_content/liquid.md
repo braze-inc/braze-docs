@@ -5,7 +5,7 @@ page_order: 0
 layout: featured
 
 guide_top_header: "Personalization Using Liquid Tags"
-guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://lab.braze.com/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> LAB course!"
+guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze Learning course!"
 description: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value."
 
 guide_featured_title: "Section Articles"

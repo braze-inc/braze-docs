@@ -36,7 +36,7 @@ A User may have multiple profiles, and you may need to delete multiple profiles 
 
 ## Data Retention Handled by Braze
 
-In some cases, we store certain data only for a predetermined period of time before it is automatically deleted based on certain criteria. For each type of data, we set retention timeframes outlined below.
+In some cases, we store certain data only for a predetermined period of time before it is automatically deleted based on certain criteria. For each type of data, we set the following retention timeframes:
 
 {% alert important %} The timeframes outlined in this section are not customizable. {% endalert %}
 

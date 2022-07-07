@@ -24,7 +24,7 @@ Once you have created your app group, you will be taken to the **Settings** page
 
 ### Step 2: Add your apps
 
-Using the form at the top right of your screen, select your platform, type in the name of your app, and click "Add App"
+Using the form at the top of your screen, select your platform, type in the name of your app, and click "Add App"
 
 - After adding your app, you will have access to its API key, which you will need to complete SDK integration.
     - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
@@ -48,7 +48,7 @@ Whichever apps you choose to have in one app group will have their data aggregat
 - Push subscription (this becomes an all or none situation, if your users unsubscribe from one app they will be unsubscribed from all of your apps under the app group)
 - Email subscription (this becomes an all or none situation and can leave you open to compliance issues)
 
-This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.
+This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed is why we do not recommend housing substantially different apps within the same app group.
 
 ## Managing app groups when relaunching your app
 
@@ -56,7 +56,7 @@ If users will simply have to update the app and it’s not a new app being relea
 
 By creating a new app group, all of the historical data and profiles from the older version of your app will not exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created that does not contain any of the behavioral data from the old app. Additionally, this user will exist on both the old app group and the new app group and can potentially have the same push token. If this happens, it can lead to users receiving an “upgrade now” marketing message intended for only old app group users, even if they’ve already upgraded.
 
-The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can use [Liquid to select the old app and filter the previous app version](https://www.youtube.com/watch?v=Dv__RAUwamA).
+The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can use [Liquid to select the old app and filter the previous app version](https://learning.braze.com/target-different-app-versions-with-liquid/929971).
 
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
 [4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze Settings"

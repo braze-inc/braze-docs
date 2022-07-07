@@ -8,15 +8,13 @@ hidden: true
 
 ## Serialization and data format
 
-The target data format will be JSON over HTTPS. Events will be grouped into batches of events,
-the size of which is configurable, and sent to the endpoint as a JSON array containing all of the
-events. The batches will be sent in the following format:
+The target data format will be JSON over HTTPS. Events will be grouped into batches of events, the size of which is configurable, and sent to the endpoint as a JSON array containing all of the events. The batches will be sent in the following format:
 
 `{"events": [event1, event2, event3, etc...]}`
 
-i.e. There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
+There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
 
-The examples below are for _individual_ events (i.e. they'd just be part of the larger array of JSON objects as described above, with each JSON object representing a single event in the batch).
+The following examples are for _individual_ events (i.e., they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
 
 ### Campaign-Associated Events
 
@@ -310,7 +308,7 @@ Here are some example event payloads for various other events that are not assoc
 
 ## Authentication
 
-If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. AWS's custom auth scheme works) if we so choose in the future.
+If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g., AWS's custom auth scheme works) if we so choose in the future.
 
 As per RFC 6750, the token will be a Base64-encoded value of at least one character. (Obviously though, we must vet our partners and customers so that we know that they are unlikely to choose incredibly weak tokens.) A notable quirk of RFC 6750 is that it allows the token to contain the following characters in addition to the normal Base64 characters: '-', '.', '_', and '~'. Since the exact contents of the token make absolutely no difference to any of our systems, we won't care whether our partners decide to include these characters in their token or not.
 

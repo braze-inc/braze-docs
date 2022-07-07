@@ -13,6 +13,10 @@ You can manage, segment, and communicate with multiple applications simultaneous
 
 App groups are designed to house versions of the same application across multiple platforms. Many Braze customers also use app groups to contain free and premium versions of their application on the same platform.
 
+{% alert note %}
+Looking for steps on how to create a new app group? Refer to [App group configuration]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).
+{% endalert %}
+
 ## Multiple apps in an app group
 
 There is no limit to the number of apps that can exist in a single app group. The draw to have multiple apps under one app group can be enticing, as it lets you rate limit messaging across your entire app portfolio. However, as a best practice we suggest only putting different versions of the same (or very similar) apps together under one app group.

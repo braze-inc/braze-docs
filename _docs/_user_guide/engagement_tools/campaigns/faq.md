@@ -69,11 +69,6 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
 
-For Canvas entries, refer to above. For Canvas steps, refer to the following:
-
-- Scheduled changes will only apply to users who are not already waiting to receive the step.
-- Audience changes default to apply to everyone unless you’ve selected **Evaluate At Enqueue Time**, in which case it’s similar behavior to above.
-
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
 - **One-time scheduled campaigns** can be edited up until the scheduled send time.
@@ -105,3 +100,7 @@ In order for a user to be eligible for entry, the must must be eligible for both
 - New York on August 7, 2021 at 2pm
 
 Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+
+### Why does the number of users entering a campaign not match the expected number?
+
+The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.

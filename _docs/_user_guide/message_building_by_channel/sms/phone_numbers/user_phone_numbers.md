@@ -11,7 +11,7 @@ channel:
 
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, please go to our article on [short and long codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [short and long codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
 Phone numbers are shown in the user profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
@@ -31,7 +31,7 @@ All international numbers should start with a `+`, followed by their country cod
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
-You can see the differences between local number formatting as well as universal, `E.164` formatting in the table below:
+You can see the differences between local number formatting as well as universal, `E.164` formatting in the following table:
 
 | Country | Local | Country Code | `E.164` |
 |---|---|---|---|

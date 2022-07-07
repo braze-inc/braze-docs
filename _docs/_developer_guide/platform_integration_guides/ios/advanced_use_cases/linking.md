@@ -11,7 +11,7 @@ description: "This article covers how to implement the universal deep linking de
 
 ## Deep links
 
-For more information on deep links, refer to our [FAQ section][4]. If you're looking to implement deep links for the first time, see the documentation below.
+For more information on deep links, refer to our [FAQ article][4]. If you're looking to implement deep links for the first time, follow these steps.
 
 ### Step 1: Registering a scheme
 
@@ -24,7 +24,7 @@ Using Xcode edit your `Info.plist` file:
 3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
 4. Set `URL Schemes` >> `Item 0` to your custom scheme.
 
-Alternatively, if you wish to edit your `info.plist` file directly, you can follow the spec below:
+Alternatively, if you wish to edit your `info.plist` file directly, you can follow this spec:
 
 ```html
 <key>CFBundleURLTypes</key>
@@ -134,7 +134,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 Refer to [Apple][11] for more information.
 
 {% alert note %}
-The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See our [linking customization][26] article to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links][25] with push notifications, in-app messages, and the News Feed.
+The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
 {% endalert%}
 
 ## App transport security (ATS)

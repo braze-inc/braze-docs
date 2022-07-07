@@ -20,7 +20,7 @@ A conversion event is a type of success metric that tracks whether a recipient o
 
 For example, if you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Make Purchase**, **Upgrade App**, or any of your custom events can be selected as conversion events.
 
-For more on conversions, check out our [LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
+For more on conversions, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
 
 ## Primary conversion event
 

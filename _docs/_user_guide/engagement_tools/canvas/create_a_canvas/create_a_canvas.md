@@ -10,7 +10,7 @@ tool: Canvas
 
 # Creating a Canvas
 
-> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
+> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup)!
 
 ## Step 1: Create a new Canvas 
 
@@ -20,7 +20,7 @@ Go to the **Canvas** page, located under the **Engagement** section, then click 
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
-The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
+The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the Entry Wizard steps.
 
 {% tabs local %}
   {% tab Basics %}
@@ -228,7 +228,8 @@ Click **Done** once you've finished configuring your Canvas Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API.
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you when triggering or scheduling a Canvas via the API. Note that the Canvas entry properties object has a maximum size limit of 50 KB. 
+
 {% raw %}
 For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
@@ -243,7 +244,7 @@ Canvas entry properties can be referenced only in the first step of a Canvas.
 [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
 {% alert note %}
-Custom event properties can be referenced only in the first step of a Canvas. 
+Custom event properties can be referenced only in the first step of a Canvas.<br><br>Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
 {% endalert %}
 
 {% endtab %}
