@@ -75,7 +75,7 @@ When setting up your webhook, use the following settings and provide your Braze 
 
 ### Step 5: Create a Braze campaign
 
-Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with Wordpress data by using Liquid formatting to display the information in your messages.
+Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with WordPress data by using Liquid formatting to display the information in your messages.
 
 [0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/
