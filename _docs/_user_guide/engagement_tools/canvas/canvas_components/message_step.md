@@ -37,13 +37,29 @@ Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you 
 
 Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent.
 
-![The Delivery Settings tab for Message Step settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.][4]{: style="max-width:80%;"}
+![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.][4]{: style="max-width:80%;"}
 
-Canvas entry properties are properties from the event that triggered the Canvas. These event properties originate from an event or action that occurs as the user goes through their workflow. 
+### Canvas entry properties
 
-These entry properties and custom event properties can only be used in the first full step of a Canvas using the original workflow. 
+Canvas entry properties are properties from the event that triggered the Canvas. These entry properties can only be used in the first full step of a Canvas using the original workflow. 
 
-Conversely, in Canvas Flow, action-based delivery event properties that trigger Canvas entry and custom event poroperties are not ephemeral, and can be used in Liquid in any Message step. For Canvas Flow, make sure to use ``{% raw %} canvas_entry~properties${property_name} {% endraw %}`` or `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these Canvas entry properties or custom event properties. These events must be custom events or purchase events to be used this way in the Message component.
+Conversely, in Canvas Flow, you can leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
+
+### Event properties
+
+#### Original workflow
+
+Event properties can only be used in any action-based Canvas step using the original workflow. 
+
+#### Canvas Flow
+
+{% alert important %}
+Event properties cannot be used independently of Action Paths for Canvas Flow.
+{% endalert %}
+
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these event properties. These events must be custom events or purchase events to be used this way in the Message component.
+
+In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Path or Message step) in between this Action Path and the Message step. 
 
 ## Analytics
 

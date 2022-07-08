@@ -22,7 +22,7 @@ Users will only advance to downstream Canvas steps after the relevant user updat
 User Update is currently in early access. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
 {% endalert %}
 
-## Create a User Update Step
+## Create a User Update 
 
 To create a User Update step, add a component to your Canvas and select **User Update**. Then, add an attribute, event, or purchase JSON object to the JSON composer.
 
@@ -36,7 +36,7 @@ Do not include any of the following information in the JSON composer:
 * Fields related to push token imports
 {% endalert %}
 
-As an example, users who receive the following User Update Step will have the VIP Member attribute set to `true`.
+As an example, users who receive the following User Update step will have the VIP Member attribute set to `true`.
 
 ![][3]
 
@@ -45,7 +45,7 @@ As an example, users who receive the following User Update Step will have the VI
 User Update also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
-* [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) and [event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+* [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
 * Liquid logic (including [Aborting Messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
