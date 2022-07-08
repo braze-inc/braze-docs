@@ -15,7 +15,7 @@ The email performance dashboard allows you to view aggregate performance metrics
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
 
-![Email performance dashboard displaying email channel engagement from the last seven days.][1]
+![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
 ## Metrics calculations
 
@@ -54,6 +54,8 @@ The comparison is the percentage change between the last and current periods, ca
 
 You can switch between **Show Change in Totals**—which compares the total counts (i.e., number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (i.e., delivery rate).
 
+![Radio buttons to switch between showing change in totals or change in rates for the Email Performance Dashboard.][4]
+
 ## Frequently asked questions
 
 ### Why is my dashboard displaying empty values?
@@ -91,3 +93,4 @@ This means Braze hasn't recorded any data for that metric during the time period
 [1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
 [2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
 [3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
+[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
