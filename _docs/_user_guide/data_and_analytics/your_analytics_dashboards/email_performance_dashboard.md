@@ -46,11 +46,13 @@ You can filter the data on your dashboard using the following filter options:
 
 ![Filter options on the Email Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 
-## Comparison to last period
+## Comparison to last period: Change in totals or rates
 
 The email dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
 
 The comparison is the percentage change between the last and current periods, calculated by taking the difference between the two periods and dividing it by the metric from the last period.
+
+You can switch between **Show Change in Totals**—which compares the total counts (i.e., number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (i.e., delivery rate).
 
 ## Frequently asked questions
 
