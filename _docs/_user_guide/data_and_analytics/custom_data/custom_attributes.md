@@ -53,7 +53,7 @@ The following data types may be stored as custom attributes:
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
 
 {% alert note %}
-**Coming soon!** Generally available support for object and object array data types is arriving in Spring 2022.
+**Coming soon!** Generally available support for object and object array data types is arriving in Summer 2022.
 {% endalert %}
 
 ### Booleans (true/false) {#booleans}
