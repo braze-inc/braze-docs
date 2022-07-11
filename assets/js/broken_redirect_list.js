@@ -532,3 +532,9 @@ validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_a
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
 validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/'] = '/docs/post-launch_edits';
+
+validurls['/docs/user_guide/engagement_tools/canvas/faqs/#canvas-flow/'] = '/docs/canvas_v2_101/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/about/';

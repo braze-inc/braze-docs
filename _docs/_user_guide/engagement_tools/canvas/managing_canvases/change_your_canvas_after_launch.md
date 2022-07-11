@@ -3,6 +3,7 @@ nav_title: Editing Canvases After Launch
 article_title: Editing Canvases After Launch
 page_order: 1
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
+alias: "/post-launch_edits/"
 page_type: reference
 tool:
   - Canvas
@@ -15,79 +16,132 @@ tool:
 
 ## Overview
 
-There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
+There are a number of things to know if you plan to edit or add more components to any other component in Canvas after launching based on your Canvas editor. 
 
-- Users who have not yet entered the Canvas will be eligible for newly created steps.
-- Users who have already passed newly created steps will be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
-- Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps. 
-- You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
-- If you update the **Delay** or **Window** settings for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
-- If a delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
+For Canvases launched with Canvas Flow or the original editor, you can adjust your Canvases after launch by:
+* Inserting new Canvas components into the user journey
+* Adding new variants and connections
+* Adjusting variant distribution
+* Stopping or resuming all Canvas steps
 
 {% alert note %}
-Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+Control variant distribution may only be decreased after launch.
 {% endalert %}
 
-## Initial conditions
+Keep in mind the following permissible post-launch Canvas edits depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you will need to clone to Canvas Flow first in order to perform post-launch edits.
 
-The following table describes what is editable and not editable after a Canvas launches.
+{% tabs local %}
+{% tab Canvas Flow %}
 
-| **Editable**                     | **Not-Editable**  |
-|----------------------------------|-------------------|
-| Canvas Name and Description      | Conversion Events |
-| Teams and Tags                   |                   |
-| Entry Type                       |                   |
-| Entry Schedule                   |                   |
-| Entry Controls                   |                   |
-| Subscription Status              |                   |
-| Rate Limiting                    |                   |
-| Frequency Capping                |                   |
-| Quiet Hours                      |                   |
-| Target Audience                  |                   |
-{: .reset-td-br-1 .reset-td-br-2}
+You can delete any of the following in your user journey:
 
-## Canvas graph
+- [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- Canvas variants 
+- Connections between Canvas steps
 
-The following table describes what aspects of a Canvas are editable and not editable after launch.
+If you want to edit or add more components to your Canvas user journey, the following details will apply:
 
-| **Editable**                                   | **Not-Editable**     |
-|------------------------------------------------|----------------------|
-| Stop / Resume Execution of All Canvas Steps    | Deleting Steps       |
-| Insert Canvas Steps                            | Deleting Variants    |
-| Add New Connections                            | Deleting Connections |
-| Add New Variants                               |                      |
-| Variant Distribution*                          |                      |
-{: .reset-td-br-1 .reset-td-br-2}
+- Users who haven't entered the Canvas yet are eligible for any newly created components. 
+- If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
+- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to recieve those newly added steps. 
 
-_*Control variant distribution may only be decreased after launch._
+If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) component, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 
-## Individual step
+See the [Canvas Flow](#canvas-flow) section for some best practices for specific editing use cases. 
 
-The following table describes what details for individual Canvas steps are editable and not editable after launch.
+{% endtab %}
 
-| **Editable**                        | **Not-Editable**                             |
-|-------------------------------------|----------------------------------------------|
-| Name                                | Schedule Type (change from delay to trigger) |
-| Message Content                     | Control Percentages                          |
-| Step Message Platforms (add/delete) |                                              |
-| Triggers                            |                                              |
-| Audience                            |                                              |
-| Exception Events                    |                                              |
-| Delays / Windows                    |                                              |
-{: .reset-td-br-1 .reset-td-br-2}
+{% tab Original Canvas Editor %}
 
-## Canvas variant percentages
+You can't edit or delete existing connections, and can't insert a component between existing connected steps. 
 
-In Canvas, if a variant percentage is modified, you will find that the users may be redistributed to other variants.
+If you want to edit or add more components to your Canvas user journey, the following details will apply:
 
-Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
+- Users who haven't entered the Canvas yet are eligible for any newly created components. 
+- If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
+- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to recieve those newly added steps. 
 
-If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Note that for Canvases using branching with `NOT` filters with random bucket numbers, users may not receive the same branch each time in their user journey when they re-enter the Canvas.
+If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay component is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
-### Control groups
+{% alert note %}
+Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
+
+## Canvas details
+
+You can edit these Canvas settings and information after a Canvas launches using either editor (the original or Canvas Flow): 
+* Canvas name and description
+* Teams and tags
+* Entry type, schedule, and controls
+* Subscription status
+* Rate limiting
+* Frequency capping
+* Quiet Hours
+* Target audience
+
+You can't edit conversion events after a Canvas has launched.
+
+### Individual components
+
+For individual Canvas components, you can edit the following details after launch:
+* Name
+* Message content
+* Triggers
+* Audience
+* Exception events
+* Delays
+
+You can't edit the component's schedule type or control percentages.
+
+### Canvas variant percentages
+
+If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
+
+Initially, these users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
+
+If the variant percentages change, users may be redistributed to other variants. Users will stay in these variants until percentages are modified again. Note that for Canvases using branching with `NOT` filters with random bucket numbers, users may not receive the same branch each time in their user journey when they re-enter the Canvas.
+
+#### Control groups
 
 Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
 
-## Local send time
+### Local send time
 
-Local send time Canvases can be edited up to 24 hours prior to the schedules send time. This window is called is "safe zone". Note that if you intend to make changes to your Canvas that require you to make a new Canvas entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
+Canvases scheduled to launch at a local send time can be edited up to 24 hours prior to the scheduled send time. This window is called the "safe zone". 
+
+{% alert tip %}
+If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
+{% endalert %}
+
+## Canvas Flow
+
+Check out these best practices to keep in mind when editing or adding to your Canvas after it’s been launched using Canvas Flow. 
+
+### Disconnected steps
+
+You can launch your Canvas with disconnected steps and also save these Canvases post-launch. Before disconnecting a step from your workflow, we recommend checking the analytics view of the component for users pending.
+
+Let's say a user is in a disconnected step of your Canvas Flow workflow. This user will advance to the subsequent step if there is one. The step's settings will dictate how the user should advance. 
+
+By creating or editing disconnected steps, you can make changes to these independent components without having to directly connect them to the rest of your Canvas. This helps with testing your components prior to going launching your Canvas again. 
+
+### Time delays
+
+Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.
+
+If you update the delay in a Delay component or evaluation window in the Action Paths component, only new users entering the Canvas and users that haven’t been queued for that step will receive the message at the updated time delay.
+
+If you delete a component with a time delay (i.e., Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let’s say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
+
+If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) components, deleting components could invalidate the results of this component.
+
+### Stopping Canvases
+
+Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should’ve progressed to the next component has passed, they will instead exit the Canvas. 
+
+For example, let's say you have a Canvas created using the Canvas V2 workflow set to launch at 2pm with one variant with two steps: a Delay component with a one hour delay that goes into a Message step. 
+
+A user enters this Canvas at 2:01pm and enters the Delay component at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message component) at 3:01pm. If you stop the Canvas at 2:30pm and re-enable the Canvas at 3:30pm, the user will exit the Canvas since it’s after 3:01pm. However, if you re-enable the Canvas at 2:40pm, the user will move on to the Message component as expected at 3:01pm.

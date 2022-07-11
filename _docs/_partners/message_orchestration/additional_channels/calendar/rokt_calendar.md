@@ -50,7 +50,7 @@ When Rokt Calendar creates a new user or matches an existing subscriber with a B
 | `rokt:tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Rokt Calendar will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
+Rokt Calendar will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas component.
 
 ## Integration
 

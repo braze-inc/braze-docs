@@ -60,6 +60,8 @@ To connect Braze as an output for your audience, you must provide the following 
 
 Lastly **Save** your audience. 
 
+You should begin seeing audiences syncing to Braze within a few minutes. Audience membership will only update for users with `external_ids` (i.e., not anonymous users).
+
 Check out this article for more information on creating Braze [mParticle audiences](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
 
 #### Step 2: Segment users in Braze
