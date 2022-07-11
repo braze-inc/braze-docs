@@ -87,7 +87,7 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", 'boolean value'
 // Set Integer Attribute
 braze.setIntCustomUserAttribute("custom int attribute key", 'integer value');
 // Increment Integer Attribute
-braze.incrementCustomUserAttribute("key", increment(int));
+braze.incrementCustomUserAttribute("key", integer);
 ```
 
 {% endtab %}
