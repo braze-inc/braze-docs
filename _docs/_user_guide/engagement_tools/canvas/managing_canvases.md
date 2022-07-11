@@ -12,6 +12,9 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: Cloning Canvases
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
+    fa_icon: fas fa-clone
   - name: Archiving Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
     fa_icon: fas fa-archive
@@ -19,6 +22,6 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
     fa_icon: fas fa-edit
   - name: Duplicating Canvases
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#cloning-a-canvas
+    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
     fa_icon: fas fa-copy
 ---

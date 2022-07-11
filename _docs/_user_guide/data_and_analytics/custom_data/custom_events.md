@@ -97,9 +97,7 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
-
-Note that for Canvas messaging, action-based delivery campaign event properties are ephemeral and can only be used at the time when they happen. This means that custom event properties can only be referenced in the first step of a Canvas. Make sure to use {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} if referencing event properties in the first step.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
 Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
@@ -112,6 +110,16 @@ When making API calls and using the "is blank" filter, a specific custom event p
 {% endalert %}
 
 In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
+
+### Canvas guidelines
+
+#### Original workflow
+
+Event properties can only be used in an action-based Canvas step using the original workflow. 
+
+#### Canvas Flow
+
+Custom event and purchase event properties can be used in Liquid in any [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. Make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these event properties in Canvas Flow. For more details, check out [Event properties in Message steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#event-properties).
 
 ### Nested objects {#nested-objects}
 

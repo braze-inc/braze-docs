@@ -50,7 +50,7 @@ Filter for the recency of a user responding to your SMS program. This filter wil
 
 ### Filter by campaign or Canvas attribution
 
-Filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag.
+Filter for users who have replied to a specific SMS campaign or Canvas component, keyword category, or tag.
 
 **Filter by replied to a specific campaign category**<br>
 ![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."][12]
@@ -73,7 +73,7 @@ Note when triggering a message on an "Other" keyword response, you will have the
 ![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>
-When triggering a campaign or Canvas Step on an inbound SMS or MMS, you can optionally template the text and/or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+When triggering a campaign or Canvas component on an inbound SMS or MMS, you can optionally template the text or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
 
 {% raw %}
 
