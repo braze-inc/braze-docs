@@ -35,7 +35,7 @@ Android 13 introduces a [major change][3] in how users manage apps that send pus
 
 This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` or dismisses the prompt, your app cannot ask for permission again.
 
-Note that apps are granted an [exemption][4] for users who previously had push notifications enabled prior to updating to Android 13. These users [will remain eligible][8] to receive push when they update to Android 13 without requiring permission.
+Note that apps are granted an [exemption][4] for users who previously had push notifications enabled prior to updating to Android 13. These users [will remain eligible][8] to receive push when they update to Android 13 without having to request permission.
 
 #### Permission prompt timing {#push-permission-timing}
 
