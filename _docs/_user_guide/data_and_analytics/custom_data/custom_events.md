@@ -115,7 +115,7 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 #### Original workflow
 
-Event properties can only be used in any action-based Canvas step using the original workflow. 
+Event properties can only be used in an action-based Canvas step using the original workflow. 
 
 #### Canvas Flow
 

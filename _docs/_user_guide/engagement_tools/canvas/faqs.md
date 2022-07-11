@@ -113,7 +113,7 @@ Switching from Canvas Flow to the original Canvas editor is allowed only if you 
 
 ### What will happen to my Canvases that I created using the original editor?
 
-All of your existing Canvases and the current version of Canvas (Canvas V1) will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the Canvas V1 or Flow workflow.
+All of your existing Canvases and the original Canvas editor will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the original or Flow workflow.
 
 ### Can I launch a Canvas with disconnected steps?
 
@@ -144,7 +144,7 @@ Previously, each full step included information such as delay and schedule setti
 [Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
 Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2pm. A user enters the component at 2:01pm on April 13. 
-- For Canvas V1, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
+- For the original workflow, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
 - For Canvas Flow, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 #### Intelligent Timing behavior
@@ -163,7 +163,7 @@ Note that if Intelligent Timing is turned on, the message will be sent within 24
 
 Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit quiet hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
 
-For Segments and filters, the Canvas Flow Message component has a new feature called Delivery Validations that allows users to configure additional Segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
+For segments and filters, the Canvas Flow Message component has a new feature called Delivery Validations that allows users to configure additional segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
 ##### "In" or "On the next" schedule setting
 

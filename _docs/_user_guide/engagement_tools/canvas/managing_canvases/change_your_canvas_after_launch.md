@@ -53,7 +53,7 @@ See the [Canvas Flow](#canvas-flow) section for some best practices for specific
 
 {% tab Original Canvas Editor %}
 
-You cannot edit or delete existing connections, and cannot insert a component between existing connected steps. 
+You can't edit or delete existing connections, and can't insert a component between existing connected steps. 
 
 If you want to edit or add more components to your Canvas user journey, the following details will apply:
 
@@ -64,7 +64,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay component is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
 {% alert note %}
-Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
 {% endalert %}
 
 {% endtab %}
@@ -82,7 +82,7 @@ You can edit these Canvas settings and information after a Canvas launches using
 * Quiet Hours
 * Target audience
 
-You cannot edit conversaion events after a Canvas has launched.
+You can't edit conversion events after a Canvas has launched.
 
 ### Individual components
 
@@ -94,7 +94,7 @@ For individual Canvas components, you can edit the following details after launc
 * Exception events
 * Delays
 
-You cannot edit the component's schedule type or control percentages.
+You can't edit the component's schedule type or control percentages.
 
 ### Canvas variant percentages
 

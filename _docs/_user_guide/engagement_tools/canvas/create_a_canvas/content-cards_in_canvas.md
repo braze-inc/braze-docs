@@ -26,7 +26,7 @@ When composing a new Content Card you have the option to choose when it should e
 If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
 
 {% alert important %}
-The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+The Content Card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the Content Card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
 ## Advancement Behavior options {#advancement-behavior-options}
