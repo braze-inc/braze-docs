@@ -107,7 +107,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 {% tab Date %}
 
 ```dart
-braze.setDateCustomUserAttribute("custom date attribute key");
+braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
 {% tab Array %}
