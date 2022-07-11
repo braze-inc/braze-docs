@@ -69,7 +69,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
 
 #### Things to know
-- **Eligible Content Card limits**: Each user can receive up to 100 non-expired and non-dismissed Content Cards (100 across all feeds, not per feed). As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
+- **Eligible Content Card limits**: There is no limit to display Content Cards to a user, however Braze will not remove older cards from the feeds.
 - [**Reporting terms**]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/): Review terms such as total impressions, unique impressions, and unique recipients as the definitions can sometimes cause confusion.
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 
