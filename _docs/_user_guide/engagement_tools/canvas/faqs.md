@@ -91,7 +91,11 @@ The number of users entering a Canvas may differ from your expected number becau
 
 ### What is Canvas Flow?
 
-Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas Flow, you can expect to easily view and use [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) in the Canvas builder. 
+Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas Flow, you can expect to easily view and use Canvas components in the Canvas builder. 
+
+### What's the difference between a component and a step?
+
+[A component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### What can I expect?
 When using Canvas Flow, you can expect the following:
@@ -151,9 +155,9 @@ Let's say on April 12 we have a Delay component where the delay is set to send y
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
-Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2pm. A user enters the Delay at 2:01pm.
-- **Canvas flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2pm.
-- **Original workflow:** The user would receive the message on the second day at 2pm.
+Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2pm. A user enters the Delay step at 2:01pm.
+- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2pm.
+- **Original workflow:** The user receives the message on the second day at 2pm.
 
 Note that if Intelligent Timing is turned on, the message will be sent within 24 hours of the user entering the Message component at the intelligent time identified (even if no Delay component is involved).
 
@@ -161,7 +165,7 @@ Note that if Intelligent Timing is turned on, the message will be sent within 24
 
 ##### Quiet Hours
 
-Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit quiet hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
+Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit Quiet Hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
 
 For segments and filters, the Canvas Flow Message component has a new feature called Delivery Validations that allows users to configure additional segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
