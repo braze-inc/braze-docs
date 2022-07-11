@@ -41,9 +41,9 @@ Gmail does not support custom fonts, so your custom font may display as a defaul
 
 ### Add a fallback font
 
-Fallback fonts are used for the title, header, and body text when your default font choice isn't available. By default, Braze automatically sets Arial as a fallback font when global style settings are saved.
+Fallback fonts are used for the title, header, and body text when your default font choice isn't supported by the inbox provider or operating system. By default, Braze automatically sets Arial as a fallback font when global style settings are saved.
 
-You can add up to 17 fallback fonts. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
+You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
 ## Title styling
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
