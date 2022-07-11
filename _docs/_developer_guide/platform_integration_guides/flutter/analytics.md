@@ -77,7 +77,7 @@ Beyond the default user attributes, Braze also allows you to define custom attri
 {% tab Boolean Value %}
 
 ```dart
-braze.setBoolCustomUserAttribute("custom boolean attribute key", 'boolean value');
+braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 
 {% endtab %}
@@ -85,7 +85,7 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", 'boolean value'
 
 ```dart
 // Set Integer Attribute
-braze.setIntCustomUserAttribute("custom int attribute key", 'integer value');
+braze.setIntCustomUserAttribute("custom int attribute key", integer);
 // Increment Integer Attribute
 braze.incrementCustomUserAttribute("key", integer);
 ```
@@ -93,7 +93,7 @@ braze.incrementCustomUserAttribute("key", integer);
 {% endtab %}
 {% tab Double %}
 ```dart
-braze.setDoubleCustomUserAttribute("custom double attribute key", 'double value');
+braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
