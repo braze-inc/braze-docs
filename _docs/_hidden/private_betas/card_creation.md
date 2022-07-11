@@ -14,8 +14,6 @@ You can choose when Braze evaluates audience eligibility and personalization for
 Control over card creation is currently in early access and is unavailable for use in Canvas steps. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-If you'd like to share your feedback on this feature or make a request, contact the Braze Content Cards team at ______.
-
 ## Prerequisites
 
 To take advantage of this feature, you must upgrade to the following minimum SDK versions:
@@ -71,4 +69,4 @@ When cards are created at first impression, it may take 1–2 seconds for the ca
 
 ### Previous SDK versions
 
-If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the start of the user's second session. 
+If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
