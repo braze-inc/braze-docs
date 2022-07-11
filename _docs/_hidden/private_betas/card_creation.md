@@ -26,14 +26,14 @@ After upgrading the SDK, your mobile users must upgrade their app. You can filte
 
 ## Overview
 
-You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) with scheduled delivery.
+You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign][2] with scheduled delivery.
 
-> TO DO: Add screenshot of UI
+![Content Card Controls section when editing the delivery of a scheduled Content Card.][1]
 
 The following options are available:
 
 - **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app.
-- **At first impression:** When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card.
+- **At first impression:** When the user next opens your app (that is, starts a new [session][3]), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card.
 
 {% alert note %}
 For both options, after a card is created, Braze does not recalculate audience eligibility or personalization. This information is only evaluated once when the card is first created. Fully dynamic Content Cards are coming later this year.
@@ -52,7 +52,7 @@ This section describes the main differences between card creation at launch vers
 
 While your reachable users and impressions will not change, you can expect a decrease in send volume (Messages Sent) when cards are created at first impression compared to if the same card was created at campaign launch. This is because of how Braze defines Message Sent for Content Cards.
 
-- **At campaign launch:** Messages Sent refers to the number of cards created and available to be seen and doesn't count whether users viewed the card. 
+- **At campaign launch:** Messages Sent refers to the number of cards created and available to be seen and doesn't count whether users viewed the card.
 - **At first impression:** Messages Sent refers to the number of cards displayed to users.
 
 This change, combined with the fact that eligibility is evaluated closer to when users would view the card for cards created at first impression, results in a decrease in sends.
@@ -70,3 +70,7 @@ When cards are created at first impression, it may take 1–2 seconds for the ca
 ### Previous SDK versions
 
 If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
+
+[1]: {% image_buster /assets/img_archive/card_creation.png %}
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
+[3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway
