@@ -46,7 +46,7 @@ Once the Audience Paths component has been completed, each audience group will h
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
 
-## Using audience paths
+## Using Audience Paths
 
 The true power of Audience Paths lies in the ability to assign priority. While this feature does not need to be used strategically, some marketers may find themselves pushing certain products to users such as specials or limited-edition releases. 
 

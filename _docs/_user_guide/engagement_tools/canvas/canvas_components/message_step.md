@@ -31,9 +31,9 @@ With a Message component, all users who enter the step advance to the next step 
 
 ### Edit delivery settings
 
-The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user’s profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message Step and the actual message sending.
+The Message component also includes settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation. You can enable [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) with a fallback option when a user’s profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
 
-Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message Step also allows you to override this setting.
+Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 
 Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent.
 
@@ -59,7 +59,7 @@ Event properties cannot be used independently of Action Paths for Canvas Flow.
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these event properties. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Path or Message step) in between this Action Path and the Message step. 
+In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step. 
 
 ## Analytics
 

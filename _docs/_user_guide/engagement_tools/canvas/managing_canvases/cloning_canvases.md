@@ -13,7 +13,7 @@ tool: Canvas
 By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. Your original Canvas will not be altered or deleted.
 
 {% alert note %}
-You can only clone Canvases with a **Stopped** status. After cloning, the new will have a **Draft** status. 
+You can only clone Canvases with a **Stopped** status. After cloning, the new Canvas will have a **Draft** status. 
 {% endalert %}
 
 To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** for the Canvas and select **Clone to Canvas Flow**. 

@@ -108,7 +108,7 @@ To use the Canvas Flow workflow, go to **Canvas** under the **Engagement** tab. 
 As you’re building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
 
 {% alert note %}
-Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no Full Steps in your Canvas.
+Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no full steps in your Canvas.
 {% endalert %}
 
 ### What will happen to my Canvases that I created using the original editor?
@@ -161,7 +161,7 @@ Note that if Intelligent Timing is turned on, the message will be sent within 24
 
 ##### Quiet Hours
 
-Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message Steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit quiet hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
+Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit quiet hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
 
 For Segments and filters, the Canvas Flow Message component has a new feature called Delivery Validations that allows users to configure additional Segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
