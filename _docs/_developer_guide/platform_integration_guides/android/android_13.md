@@ -35,7 +35,7 @@ Android 13 introduces a [major change][3] in how users manage apps that send pus
 
 This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` or dismisses the prompt, your app cannot ask for permission again.
 
-Note that apps are granted a [temporary exemption][4] intended for users who previously had push notifications for that app enabled prior to updating to Android 13. These users will remain eligible to receive push from the app until (A) they explicitly decline the permission prompt when it's shown (or within system settings), or (B) the app is opened for the first time after a user upgrades to Android 13.
+Note that apps are granted an [exemption][4] for users who previously had push notifications enabled prior to updating to Android 13. These users [will remain eligible][8] to receive push when they update to Android 13 without requiring permission.
 
 #### Permission prompt timing {#push-permission-timing}
 
@@ -70,3 +70,4 @@ To start using our new ["no-code" push primer feature][7], upgrade your Android 
 [5]: https://developer.android.com/about/versions/13/overview#platform_stability
 [6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
 [7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
+[8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps
