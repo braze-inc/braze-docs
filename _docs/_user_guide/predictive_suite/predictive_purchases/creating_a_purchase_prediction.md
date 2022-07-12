@@ -46,7 +46,7 @@ The Prediction Audience definition is also used to query historical data to allo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with "Last..." like "Last Used App" and "Last Made Purchase", the time window to look back for these filters **cannot exceed the Prediction Window specified in Purchase Event Tracking**. For example, if the Prediction Window is set to 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Prediction Window specified in Purchase Event Tracking**. For example, if the Prediction Window is set to 14 days, the time window for the “Last...” filters cannot exceed 14 days.
 
 #### Full Filter Mode
 

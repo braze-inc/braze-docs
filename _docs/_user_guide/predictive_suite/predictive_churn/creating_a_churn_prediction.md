@@ -52,7 +52,7 @@ Your Prediction Audience is the group of users you want to predict churn risk fo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
 
 #### Full Filter Mode
 
