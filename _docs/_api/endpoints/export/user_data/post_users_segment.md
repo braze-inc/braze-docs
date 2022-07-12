@@ -191,9 +191,9 @@ User export object (we will include the least data possible - if a field is miss
     "email" : (string),
     "dob" : (string) date for the user's date of birth,
     "home_city" : (string),
-    "country" : (string),
+    "country" : (string) ISO-3166-1 alpha-2 standard,
     "phone" : (string),
-    "language" : (string) ISO-639 two letter code,
+    "language" : (string) ISO-639-1 standard,
     "time_zone" : (string),
     "last_coordinates" : (array of float) [lon, lat],
     "gender" : (string) "M" | "F",
@@ -202,8 +202,8 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : (string),
     "attributed_adgroup" : (string),
     "attributed_ad" : (string),
-    "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
+    "push_subscribe" : (string) "opted_in" "push_opted_in_at" | "subscribed" | "unsubscribed" "push_unsubscribed_at",
+    "email_subscribe" : (string) "opted_in" "email_opted_in_at" | "subscribed" | "unsubscribed" "email_unsubscribed_at",
     "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
@@ -264,7 +264,7 @@ User export object (we will include the least data possible - if a field is miss
                 "opened_email" : (bool),
                 "opened_push" : (bool),
                 "clicked_email" : (bool),
-                "clicked_triggered_in_app_message" : (bool)
+                "clicked_in_app_message" : (bool)
             },
             "converted" : (bool),
             "api_campaign_id" : (string),
