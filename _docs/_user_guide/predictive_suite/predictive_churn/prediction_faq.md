@@ -47,7 +47,7 @@ If you are unable to meet both the audience size requirement while building your
 
 ## Timing clarifications
 
-You can look back up to 14 days for your churn prediction. Your "churn" definition and time window for any `Last Made Purchase` / `Last Used App` / `Last Did Custom Event` filters in the Prediction Audience definition cannot add up to more than 30 days.
+You can look back up to 60 days for your churn prediction. Your Prediction Window and time window for any `Last Made Purchase` / `Last Used App` / `Last Did Custom Event` filters in the Prediction Audience definition cannot add up to more than 30 days.
 
 For example, if you define churn as not starting a session in the past ten days, then your Prediction Audience can be based on up to 20 days of data. 
 
