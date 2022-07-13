@@ -11,12 +11,10 @@ hidden: true
 With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
 {% alert important %}
-This feature is currently in beta. Please reach out to your custommer success representative for access.
+This feature is currently in beta. Please reach out to your customer success representative for access.
 {% endalert %}
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
-
-> TO DO: Add video how-to
 
 Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you’ve selected where to build your message, let’s dive into the steps to create a drag & drop in-app message!
 
@@ -26,7 +24,7 @@ Messages created using the Drag and Drop editor can only be sent to users on the
 
 {% sdk_min_versions ios:3.23.0 android:8.0.0 web:2.5.0 %}
 
-If a user hasn't updated their application (that is, they're on an older SDK version) they will not receive the in-app message.
+If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
 
 ## Step 1: Specify delivery platforms
 
@@ -39,8 +37,6 @@ The drag & drop editing experience is divided into three sections: **Build**, **
 ### Drag and drop in-app message components
 
 When you open the Drag & Drop Editor, you’ll see a basic modal layout on the editing canvas, which you can use to start building your message. You can keep this layout or add, delete, and move around the Rows and Blocks. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the modal.
-
-![Replace with GIF]({% image_buster /assets/img_archive/dnd_iam_placeholderimg.png %})
 
 The Drag & Drop editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
 
@@ -55,7 +51,7 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Set default font settings
 
-You can select a default font or add a custom font to be applied across all possible in-app message text in the **Settings** tab. The default font set in this section is used everywhere in your message except where you use a custom setting.
+You can select a default font from our library of fonts or add a custom font to be applied across all possible in-app message text in the **Settings** tab. The default font set in this section is used everywhere in your message except where you use a custom setting.
 
 #### Add a custom font
 
@@ -100,4 +96,15 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
+
+## FAQs
+
+**Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
+No.
+
+**Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
+No, you have to recreate the in-app message in the Drag & Drop editor or duplicate an existing message in order to save.
+
+**How can I create a Full-Screen or Slideup in-app message?**<br>
+The Drag and Drop Editor is in beta and is limited to the Modal message type.
 

@@ -69,13 +69,3 @@ Details for each editor block's properties are provided in the following tables.
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-## FAQs
-
-**Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
-No.
-
-**Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
-No, you have to recreate the in-app message in the Drag & Drop editor or duplicate an existing message in order to save.
-
-**How can I create a Full-Screen or Slideup in-app message?**<br>
-The Drag and Drop Editor is in beta and is limited to the Modal message type.
