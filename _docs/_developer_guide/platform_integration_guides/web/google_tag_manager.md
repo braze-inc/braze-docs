@@ -74,11 +74,11 @@ Use the **Add Row** button to add event properties.
 
 ### E-Commerce Events {#ecommerce}
 
-If your site sends the standard [e-commerce event][e-commerce] to Google Tag Manager, then the "E-commerce Event" tag type can be used to track each item as a purchase in Braze.
+If your site logs purchases using the standard [e-commerce event][e-commerce] datalayer item to Google Tag Manager, then you can use the "E-commerce Purchase" tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 
-You can also specify which property names you want to include as purchase properties by adding the names to the Purchase Properties list.
+You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase Properties list.
 
-Note: Braze will look within the top level `dataLayer` object, and within the individual `item` that is being logged for any purchase properties you add to the list.
+Note: Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
 ### Track purchase {#purchases}
 
