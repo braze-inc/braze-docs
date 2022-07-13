@@ -29,7 +29,7 @@ Teams are not available on all Braze contracts. If you’d like to access this f
 
 Braze admins can assign Team Roles to their dashboard users who are limited to only read or write data available to their particular Teams. Predefined Team Roles include language and location. 
 
-To assign a Team Role, navigate to **Manage Users** and select a user you'd like to add to your team. Click <i class="fa fa-edit"></i> **Edit**, set their User Role to **Limited**, and add them to the appropriate app group. The assigned app group will populate a row of checkboxes at the bottom of the page. Next, a Team dropdown will appear, select the team you'd like to apply, and assign specific permissions using the team permission checkbox row that appears. Note that some permission are only granted via app group, these permissions will appear as "--" in the Team permissions column.
+To assign a Team Role, navigate to **Manage Users** and select a user you'd like to add to your team. Click <i class="fa fa-edit"></i> **Edit**, set their User Role to **Limited**, and add them to the appropriate app group. Next, select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column. Note that some permissions are only granted via app group, and these permissions will appear as "--" in the **Teams** permissions column.
 
 ![Assigning Team roles][2]
 
