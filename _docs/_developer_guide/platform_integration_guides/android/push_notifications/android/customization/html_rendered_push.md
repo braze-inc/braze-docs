@@ -25,7 +25,11 @@ This example is rendered with the following HTML:
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-> Android OS limits what HTML elements/tags are valid in push notifications. For example, `marquee` is not allowed.
+Android OS limits what HTML elements/tags are valid in push notifications. For example, `marquee` is not allowed.
+
+{% alert important %}
+Note that multicolor text rendering is device-specific and may not display based on Android device or version.
+{% endalert %}
 
 ## Implementation
 
