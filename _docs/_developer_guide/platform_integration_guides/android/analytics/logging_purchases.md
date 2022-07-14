@@ -10,7 +10,7 @@ description: "This reference article shows how to track in-app purchases and rev
 ---
 
 # Logging purchases for Android and FireOS
-
+ 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
@@ -53,6 +53,10 @@ If you pass in a value of `10 USD` and a quantity of `3`, that will log to the u
 {% endalert %}
 
 ### Adding properties
+
+{% alert update %}
+Braze purchase events now support [array event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects).
+{% endalert %}
 
 You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
 

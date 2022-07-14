@@ -11,7 +11,7 @@ description: "This reference article shows how to track in-app purchases and rev
 
 
 # Logging purchases for iOS
-
+ 
 Record in-app purchases so that you can track your revenue over time and across revenue sources and segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
@@ -47,6 +47,11 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - Note that if the product identifier is empty, the purchase will not be logged to Braze.
 
 ### Adding properties {#properties-purchases}
+
+{% alert update %}
+Braze purchase events now support [array event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects).
+{% endalert %}
+
 You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
 Refer to the [iOS class documentation][8] for additional details.
