@@ -54,11 +54,9 @@ If you pass in a value of `10 USD` and a quantity of `3`, that will log to the u
 
 ### Adding properties
 
-{% alert update %}
-Braze purchase events now support [array event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects).
-{% endalert %}
+You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or a [Braze Properties][4] object with your purchase information.
 
-You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
+#### Braze properties object formatting
 
 Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
 

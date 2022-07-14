@@ -48,11 +48,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 ### Adding properties {#properties-purchases}
 
-{% alert update %}
-Braze purchase events now support [array event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects).
-{% endalert %}
-
-You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
+You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
 Refer to the [iOS class documentation][8] for additional details.
 
