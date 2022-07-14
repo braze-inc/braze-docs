@@ -12,7 +12,7 @@ description: "This article covers iOS 16, SDK updates, and more."
 This guide describes relevant changes introduced in iOS 16 (2022) and the impact on your Braze iOS SDK integration. Refer to the [iOS 16 release notes][2] for a full migration guide.
 
 {% alert note %}
-iOS 16 is still in beta. Check back periodically as Apple APIs may change with future beta versions.<br>(Updated June 22, 2022)
+iOS 16 is still in beta. Check back periodically as Apple APIs may change with future beta versions.<br>(Updated July 14, 2022)
 {% endalert %}
 
 ## Changes in iOS 16

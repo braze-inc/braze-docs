@@ -47,7 +47,8 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - Note that if the product identifier is empty, the purchase will not be logged to Braze.
 
 ### Adding properties {#properties-purchases}
-You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
+
+You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
 Refer to the [iOS class documentation][8] for additional details.
 
