@@ -54,7 +54,7 @@ BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .build();
 Braze.configure(this, brazeConfig);
 ```
-
+ 
 {% endtab %}
 {% tab KOTLIN %}
 
