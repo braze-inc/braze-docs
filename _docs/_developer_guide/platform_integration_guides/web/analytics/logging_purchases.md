@@ -22,7 +22,11 @@ braze.logPurchase(productId, price, "USD", quantity);
 
 ## Adding properties
 
-You can add [metadata][8] about purchases by passing an object of key-value pairs with your purchase information. Keys are `string` objects, and values can be `string`, `numeric`, `boolean`, or `Date` objects.
+You can add [metadata][8] about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an object of key-value pairs with your purchase information. 
+
+#### Object formatting
+
+Keys are `string` objects, and values can be `string`, `numeric`, `boolean`, or `Date` objects.
 
 ```javascript
 braze.logPurchase(productId, price, "USD", quantity, {key: "value"});
