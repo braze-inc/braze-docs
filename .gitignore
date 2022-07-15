@@ -11,3 +11,7 @@ jekyll-algolia-*
 .jekyll-cache
 .vscode
 .jekyll-metadata
+
+# Jetbrains IDEs
+.idea/
+braze-docs.iml
