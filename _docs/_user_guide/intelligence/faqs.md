@@ -51,7 +51,7 @@ Braze calculates the optimal time at midnight in Samoan time, the first timezone
 
 ### Why is my intelligent timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (e.g., new users), intelligent timing may default to the app group's most popular hour on that day of the week. If there is insufficient information about the app group, we fall back to a default time of 5pm. Note that there is also an option to set a fallback time. 
+Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (e.g., new users), intelligent timing may default to the app group's most popular hour on that day of the week. If there is insufficient information about the app group, we fall back to a default time of 5 pm. Note that there is also an option to set a fallback time. 
 
 ### Why is my intelligent timing campaign sending past the scheduled date? 
 

@@ -39,7 +39,7 @@ We’ll name the campaign **Message to Lapsed Users - 2 Weeks** and select the s
 
 ![][2]
 
-Next, we'll create a recurring schedule to send our weekly message on Thursdays at 5:45pm using [local time zone delivery][4] in **Time-Based Scheduling Options**. We recommended that you look at your sessions graph to target users just prior to high-usage periods. This ensures that you attempt to re-engage people when they’re most likely to use the app. You can change this later and test your initial hypothesis.
+Next, we'll create a recurring schedule to send our weekly message on Thursdays at 5:45 pm using [local time zone delivery][4] in **Time-Based Scheduling Options**. We recommended that you look at your sessions graph to target users just prior to high-usage periods. This ensures that you attempt to re-engage people when they’re most likely to use the app. You can change this later and test your initial hypothesis.
 
 ![][3]
 
