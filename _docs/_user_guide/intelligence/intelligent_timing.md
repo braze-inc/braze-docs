@@ -26,7 +26,7 @@ To ensure every eligible user can fall into and receive your campaign at their i
 
 You may also designate a window of time during the day in which Intelligent Timing should send messages. This is useful if your campaign pertains to a specific event, sale, or promotion. 
 
-If a user's optimal time is calculated as being outside this window, the message will be scheduled at the edge of the window closest to the initially calculated optimal time. This "edge" is the time closest to the user's optimal time. For example, if the optimal time is 10pm, but the intelligent delivery is 1pm to 8pm, the given message will be sent at 8pm.
+If a user's optimal time is calculated as being outside this window, the message will be scheduled at the edge of the window closest to the initially calculated optimal time. This "edge" is the time closest to the user's optimal time. For example, if the optimal time is 10 pm, but the intelligent delivery is 1 pm to 8 pm, the given message will be sent at 8 pm.
 
 ## Segment filtering
 
@@ -42,7 +42,7 @@ For users who have insufficient data to calculate an optimal send time, there ar
 - You can specify a fallback time in users' local time zones by choosing **Custom Fallback** and entering your desired time. If the user has no time zone, the company time zone will be used instead.<br><br>If you launch a campaign with Intelligent Timing within 24 hours of the send date and enable a Custom Fallback, users whose optimal times have already passed will instead receive the campaign at the specified Custom Fallback time in their local time (or company time if they have no time zone). The message will send immediately if the specified Custom Fallback has already passed in a user's time zone.
 
 **Option 2: Choose Most Popular Time Amongst Users**
-- You can also set the fallback to be the most popular time when all other users use your app. If the most popular app usage time falls outside the delivery window you specified, the closest edge of this span will be used instead. <br><br>In the rare event that you are sending to an app where there's not enough data to calculate when the app is most used (e.g., a completely new app with no data), Intelligent Timing falls back on 5pm in the user's local time zone (or company time zone if the user has no local time).
+- You can also set the fallback to be the most popular time when all other users use your app. If the most popular app usage time falls outside the delivery window you specified, the closest edge of this span will be used instead. <br><br>In the rare event that you are sending to an app where there's not enough data to calculate when the app is most used (e.g., a completely new app with no data), Intelligent Timing falls back on 5 pm in the user's local time zone (or company time zone if the user has no local time).
 
 It's important to be aware of the limitations of using Intelligent Timing early in a user's lifecycle when limited data is available. It can, however, still be valuable, as even users with a few recorded sessions can offer insights into their behavior. Intelligent Timing will more effectively calculate the optimal send time later in a user's lifecycle. 
 

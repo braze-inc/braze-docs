@@ -240,9 +240,9 @@ You can also target users based off of their time zone. For example, send one me
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
 {% if hour_in_utc >= 19 && hour_in_utc < 20 %}
-It is between 2:00:00pm and 2:59:59pm ET!
+It is between 2:00:00 pm and 2:59:59 pm ET!
 {% elsif hour_in_utc >= 22 && hour_in_utc < 23 %}
-It is between 2:00:00pm and 2:59:59pm PT!
+It is between 2:00:00 pm and 2:59:59 pm PT!
 {% else %}
 {% abort_message %}
 {% endif %}
