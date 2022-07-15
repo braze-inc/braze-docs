@@ -119,6 +119,7 @@ Once you have created your segment, add a `Most Recent Location` filter to targe
 
 {% alert tip %}
 Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location).
+{% endalert %}
 
 ### How can I target precise lists of users based on their custom event and purchase behavior in the past 365 days?
 
@@ -150,8 +151,6 @@ You can specify whether you want this extension to represent a single snapshot i
 When you’re done, click **Save**. Your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you’re capturing, and how many days you’re looking back in history.
 
 Finally, after you've created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing `Braze Segment Extension` from the filter list under the **User Attributes** section. From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment. To view the extension criteria, click **View Extension Details**. Now you can proceed as usual with creating your segment.
-
-{% endalert %}
 
 ## Campaigns
 
@@ -207,10 +206,14 @@ If you have allowed users to become re-eligible for the campaign, then they will
 Canvases
 {% endapitags %}
 
+Content
+
 ## Analytics
 
 {% apitags %}
 Analytics
 {% endapitags %}
+
+Content
 
 {% endapi %}
