@@ -5,7 +5,7 @@ permalink: /onboarding_faq/
 excerpt_separator: ""
 page_type: glossary
 layout: onboarding_faq
-description: "This FAQ. . ."
+description: "This page contains a collection of frequently asked questions, outlined by category."
 
 ---
 
@@ -200,13 +200,135 @@ For Canvas steps, users do not need to be in the step for 24 hours to receive th
 
 If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5 pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
 
+### When do changes to local time zone campaigns take effect?
+
+Target segments for local time zone campaigns should include at least a 48-hour window for any time-based filters to guarantee delivery to the entire segment. For example, consider a segment targeting users on their second day with the following filters:
+
+- First used app more than 1 day ago
+- First used app less than 2 days ago
+
+Local time zone delivery may miss users in this segment based on the delivery time and the users’ local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
+
+### What changes can I make to scheduled campaigns ahead of launch?
+
+When the campaign is scheduled, edits to anything other than the message composition need to be made before we queue the messages to send. As per all campaigns, you can’t edit conversion events after the campaign is launched.
+
+### What is the "safe zone" before messages on a scheduled campaign are queued?
+
+- One-time scheduled campaigns can be edited up until the scheduled send time.
+- Recurring scheduled campaigns can be edited up until the scheduled send time.
+- Local send time campaigns can be edited up to 24 hours prior to the scheduled send time.
+- Optimal send time campaigns can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
+
+### What if I make an edit within the "safe zone"?
+
+Changing the send time on campaigns within this time can lead to undesired behavior, for example:
+
+- Braze will not send messages to any users that have missed the send time by more than one hour.
+- Messages that were already queued may still send at the originally queued time, rather than the adjusted time.
+
+### What should I do if the "safe zone" has already passed?
+
+To ensure campaigns operate as desired, we recommend stopping the current campaign (this will stop any queued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
+
+Make sure to re-adjust campaign schedule times to allow for time zone sending.
+
+### When does Braze evaluate users for local time zone delivery?
+
+For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
+
+- At Samoa time (UTC+13) of the scheduled day
+- At local time of the scheduled day
+
+For a user to be eligible for entry, they must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone, then targeting a user located in New York would require the following checks for eligibility:
+
+- New York on August 6, 2021 at 9 pm
+- New York on August 7, 2021 at 2 pm
+
+The user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+
+### Why does the number of users entering a campaign not match the expected number?
+
+The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute trigger]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers#change-custom-attribute-value)). This will cause users to drop out of the campaign if they aren't initially part of your selected audience before any trigger actions are evaluated.
+
 ## Canvases
 
 {% apitags %}
 Canvases
 {% endapitags %}
 
-Content
+### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
+
+We queue a job for each step—they run at around the same time, and one of them “wins”. In practice, this may be sorted somewhat evenly, but it’s likely to have at least a slight bias toward the step that was created first.
+
+Moreover, we can’t make any guarantees about exactly what that distribution will look like. If you want to ensure an even split, add a [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) filter.
+
+### What happens when you stop a Canvas?
+
+When you stop a Canvas, the following applies:
+
+- Users will be prevented from entering the Canvas.
+- No further messages will be sent out, despite where a user is in the flow.
+    - **Exception:** Email Canvases won't immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+
+{% alert note %}
+Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should’ve progressed to the next component has passed, they will instead exit the Canvas.
+{% endalert %}
+
+### When does an exception event trigger?
+
+[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
+
+If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+
+### How does editing a Canvas affect users already in the Canvas?
+
+If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
+
+For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+
+### How are user conversions tracked in a Canvas?
+
+A user can only convert once per Canvas entry.
+
+Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
+
+{% details Examples %}
+
+#### Example 1
+
+There is a Canvas path with 10 push notifications and the conversion event is "session start" ("Opens App"):
+
+- User A opens the app after entering but before receiving the first message.
+- User B opens the app after each push notification.
+
+**Result:**
+The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+
+{% alert note %}
+If Quiet Hours is active when the conversion event happens, the same rules apply.
+{% endalert %}
+
+#### Example 2
+
+There is a one-step Canvas with quiet hours:
+
+1. User enters the Canvas.
+2. First step has no delay, but is within quiet hours, so the message is suppressed.
+3. User performs the conversion event.
+
+**Result:**
+The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+
+{% enddetails %}
+
+### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
+
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
+
+### Why does the number of users entering a Canvas not match the expected number?
+
+The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
 ## Analytics
 
@@ -214,6 +336,44 @@ Content
 Analytics
 {% endapitags %}
 
-Content
+### What metrics does Braze measure?
+
+Depending on the channel, Braze measures a variety of metrics to enable you to determine a campaign’s success and inform future ones. You can find a comprehensive list in our [report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
+
+### How is revenue calculated in Braze?
+
+On the **Revenue** page, you can view data on revenue or purchases over specific periods of time, for a specific product, or your app’s total revenue or purchases. These revenue numbers are generated from the purchases made from campaign recipients within a certain conversion period.
+
+That being said, it’s important to note that Braze is a marketing tool and not a revenue management tool. Our [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) doesn't support refunds and cancellations, so you may see discrepancies when comparing data with other tools.
+
+### What reporting capabilities does Currents enable?
+
+Our Currents tool continuously streams both messaging engagement and customer behavior data to one of our many data partners, empowering you to use the unique and valuable data Braze creates to power your business intelligence and analytics efforts in other best-in-class partners.
+
+This data goes beyond messaging engagement metrics, and can also includes more complex numbers such as custom attribute and event performance. For more details, review our [currents events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events).
+
+### How can I schedule a recurring engagement report?
+
+To schedule a recurring engagement report, do the following:
+
+1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
+2. Click **+ Create New Report**.
+3. Add the [campaigns and Canvas messages]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
+4. [Add statistics]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#add-statistics-to-your-report) to your report.
+5. Select the compression and deliminator for your report.
+6. Enter the email addresses of Braze users who should receive this report.
+7. Select the [time frame]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#time-frame) from which you would like your report to run data.
+8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#data-display) at which would like to see the breakdown of your data.
+9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-at-designated-time).
+10. Run the report, then open it in your email when it arrives!
+
+### What's the difference between Engagement Reports and the Report Builder?
+
+Engagement Reports provide you with CSVs of engagement statistics for specific messages from campaigns and Canvases via a triggered email. Certain data is aggregated at the campaign or Canvas level versus at the individual variant or step level. Reports are not saved in the dashboard, and re-running the report can result in updated statistics.
+
+The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
+
+For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/).
+
 
 {% endapi %}
