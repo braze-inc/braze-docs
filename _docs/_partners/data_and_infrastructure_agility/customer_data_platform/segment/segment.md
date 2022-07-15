@@ -16,7 +16,7 @@ search_tag: Partner
 > [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to a wide variety of user analytics providers. Segment allows you to:
-- Sync [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/) (cohorts) to Braze for use in Braze campaign and Canvas segmentation.
+- Sync [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services.
 - [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
 
@@ -30,18 +30,13 @@ The Braze and Segment integration allows you to track your users and route data 
 
 ## Integration
 
-To integrate Braze and Segment, you must set [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays). Next, you must set up [mappings](#methods), and [test your integration](#step-3-test-your-integration) to ensure smooth data flow between Braze and Segment.
+To integrate Braze and Segment, you must set [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options) (connection mode). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays). Next, you must set up [mappings](#methods), and [test your integration](#step-3-test-your-integration) to ensure smooth data flow between Braze and Segment.
 
-### Step 1: Configure Braze settings in Segment {#connection-settings}
+### Step 1: Create a Braze destination {#connection-settings}
 
-After successfully setting up your Braze and Segment integrations individually, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) from Segment. You'll have many options to customize the data flow between Braze and Segment using the connection settings described in the following chart.
+After successfully setting up your sources, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) for each source. You'll have many options to customize the data flow between Braze and Segment using the connection settings.
 
-In Segment, navigate to **Destinations > Braze > Receiving from [platform]**.
-
-![]({% image_buster /assets/img/segment_destination_braze.png %})
-
-Next, provide the following fields in the configuration page:
-- **App identifer**: Previously called the API key. Found in the Braze **Developer Console** under **Settings**.
+- **App identifier**: Previously called the API key. Found in the Braze **Developer Console** under **Settings**.
 - **App group REST API key**:  Braze REST API key with `users/track` permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
 - **Braze SDK endpoint**: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
 - **Braze REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
@@ -69,14 +64,20 @@ Next, provide the following fields in the configuration page:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% enddetails %}
 
-### Step 2: Choose integration type and implement {#integration-options}
+### Step 2: Choose destination framework and nnection type {#integration-options}
+
+In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
+
+![The source setup page. This page includes settings to set desination frame work as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
 
 You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Device-mode") integration or a server-to-server ("Cloud-mode") integration.
+
+Your choice of connection mode will be determined by the type of Source the destination is being configured for.
 
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side<br>"Device-mode"](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze's REST API endpoints such as [users/track]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -309,3 +310,4 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
 [40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
+[42]: {% image_buster /assets/img/segment/setup.png %}
