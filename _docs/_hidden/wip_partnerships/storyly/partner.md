@@ -3,7 +3,7 @@ nav_title: Storyly
 article_title: Storyly | Braze
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
+description: "Braze & Storyly integration will enable app owners to target their segments and feed Braze with more first party data."
 alias: /partners/storyly/
 
 page_type: partner
@@ -14,7 +14,7 @@ hidden: true
 
 # Storyly
 
-> Storyly is a lightweight SDK that brings stories to your app or website. With an intuitive design studio, insightful analytics, and seamless connectivity, Storyly is a powerful tool for enriching your audience experience. 
+> [Storyly](https://www.storyly.io/) is a lightweight SDK that brings stories to your app or website. With an intuitive design studio, insightful analytics, and seamless connectivity, Storyly is a powerful tool for enriching the audience experience. 
 
 The Braze and Storyly integration allows you to use all your segments in Braze as an audience in Storyly platform. With this integration, you can:
 - Target your segments with specific stories
@@ -24,83 +24,43 @@ The Braze and Storyly integration allows you to use all your segments in Braze a
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Storyly Account | A partner account is required to take advantage of this partnership. |
-| Storyly SDK | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Storyly Account | A Storyly account is required to take advantage of this partnership. |
+| Storyly SDK | In addition to the required Braze SDK, you must install the [Storyly SDK](https://integration.storyly.io/) |
+| Braze REST API key | A Braze REST API key with the following permissions <br><br> `users.export.ids`<br> `users.export.segments`<br> `segments.list`<br> `segments.details` <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+With the Braze and Storyly integration, app owners can show stories to all segments in Braze and personalize the stories with user attributes.
 
-{% alert important %}
-The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
-{% endalert %}
+#### Case 1: Targeting Braze segments in Storyly
+After the integration finished, you will be able to create **Audience** based on your Braze segments. This could be demographic or behavioral segment. Users who lives in specific location, users who took a specific action on your app, users who are interested in specific products could be targeted and you can offer them specific stories to increase conversion.
+
+#### Case 2: Personalized stories with user attributes
+User attributes on Braze are also usable to generate dynamic stories on Storyly. This could be name, products on the basket or even favorited products. Every end-user will see a unique personalized story. Personalization is helpful to increase conversion rates on stories and the overall story engagement rate.
+
 
 ## Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
-
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
-
-### Step 1: Short description of step one 
-
-Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
-
-### Step 2: Short description of step two 
-
-You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
-
-### Step 3: Short description of step three 
-
-Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
-
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-
-#### Request headers and method
-
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-
-{% raw %}
-- **HTTP Method**: POST
-- **Request Header**:
-  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
-{% endraw %}
-
-#### Request body
-
-Include code of your webhook request body. 
-
-### Step 3: Preview your request
-
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+Braze Storyly integration is explained in the following [video](https://www.youtube.com/watch?v=3-OEqQs48Zw).
+<br>You can also check [Storyly](https://help.storyly.io/en/articles/6354805-connect-your-braze-audiences-with-storyly) documentation. 
 
 {% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+Please be sure that your Storyly integration holds **custom parameter**. It will be matched with Braze **external id** user property. <br>Custom parameter implementation is explained here for [iOS](https://integration.storyly.io/ios/personalization-customaudience.html), [android](https://integration.storyly.io/android/personalization-customaudience.html), [react native](https://integration.storyly.io/react-native/personalization-customaudience.html), [flutter](https://integration.storyly.io/flutter/personalization-customaudience.html) and [web](https://integration.storyly.io/web/personalization-customaudience.html) .
 {% endalert %}
-```
-{% enddetails %}
 
-## Customization
+### Step 1: Set the integration on Storyly Dashboard
 
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
+This can be created within the **Storyly Dashboard > Settings > Integrations > Connect with Braze**. 
+<br>You will need your Braze REST API Key and Braze REST endpoint. 
 
-## Using this integration
+### Step 2: Get your segments 
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+You can use Braze segments to create Storyly Audience. This can be created within the **Storyly Dashboard > Settings > Audiences > New Audience > Create Audience with Braze**.
+There will be two options:
+- One-time sync
+- Daily sync<br>For the specific campaign stories you should select **One-time sync**, for the long term stories you should select **Daily sync**.
 
-### Step 1: Short description of step one 
-
-This set of steps will walk your users through how to use this integration in Braze.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
