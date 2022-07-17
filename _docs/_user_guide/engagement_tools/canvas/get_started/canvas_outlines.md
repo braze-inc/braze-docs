@@ -20,7 +20,7 @@ The Entry Steps displayed in each of these four outlines shows a previous versio
 - **Where**: Push, Email
 - **How**: Channel, Content (test)
 
-<br>![Restaurant Onboarding][41]
+<br>![][41]
 
 ## Upsell: Music streaming
 - **What**: Upgrading active freeloaders to basic premium subscription
@@ -30,7 +30,7 @@ The Entry Steps displayed in each of these four outlines shows a previous versio
 - **Where**: Push, Email, Webhook
 - **How**: Content, Discount
 
-<br>![Music Upsell Journey][28]
+<br>![][28]
 
 ## Cart abandonment: Clothing retail
 - **What**: Reminding customers of incomplete purchases
@@ -40,7 +40,7 @@ The Entry Steps displayed in each of these four outlines shows a previous versio
 - **Where**: Push, Email
 - **How**: Channel, Trigger (test)
 
-<br>![Cart Abandonment Journey][29]
+<br>![][29]
 
 ## Holiday travel: Airline 
 - **What**: Educate customers on resources and prime them for good flight and airport experiences
@@ -50,7 +50,7 @@ The Entry Steps displayed in each of these four outlines shows a previous versio
 - **Where**: Push
 - **How**: Channel, Cadence (test)
 
-<br>![Holiday Travel Journey][42]
+<br>![][42]
 
 ## Additional resources
 

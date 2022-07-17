@@ -231,7 +231,7 @@ Here are some example event payloads for various other events that are not assoc
   "time": 1477502783,
   "user": {
     "user_id": "0123456789abcdef01234567",
-    "external_user_id": "user_id"
+    "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
     "timezone": "America/Chicago"
   },

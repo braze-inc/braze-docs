@@ -116,7 +116,7 @@ The initial industries include:
 - Transportation
 - Travel
 
-Our benchmarking data will also be available directly in the Snowflake Data Exchange.
+Our benchmarking data is also available directly in the [Snowflake Data Exchange](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
 
 > For a set of example queries to reference when setting up snowflake, check out our [sample queries][SQ] and [ETL event pipeline setup][ETL] examples.
 

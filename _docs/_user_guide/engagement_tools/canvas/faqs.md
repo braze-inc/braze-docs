@@ -2,14 +2,17 @@
 nav_title: FAQs
 article_title: Canvas FAQs
 page_order: 10
-description: "This article provides answers to frequently asked questions about Canvas."
+alias: "/canvas_v2_101/"
+description: "This article provides answers to frequently asked questions about Canvas and Canvas Flow."
 tool: Canvas
 
 ---
 
 # Canvas FAQs
 
-> This article provides answers to some frequently asked questions about Canvas.
+> This article provides answers to some frequently asked questions about Canvas and [Canvas Flow](#canvas-flow).
+
+## General
 
 ### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
 
@@ -31,7 +34,7 @@ Stopping a Canvas won't flush users who are waiting to receive messages. If you 
 
 ### When does an exception event trigger?
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas step it's associated with. If a user performs an action in advance, the exception event will not trigger.
+[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
 
 If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
@@ -83,3 +86,89 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 ### Why does the number of users entering a Canvas not match the expected number?
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
+
+## Canvas Flow
+
+### What is Canvas Flow?
+
+Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas Flow, you can expect to easily view and use Canvas components in the Canvas builder. 
+
+### What's the difference between a component and a step?
+
+[A component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+
+### What can I expect?
+When using Canvas Flow, you can expect the following:
+* Full steps to be replaced by lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+* [Persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey
+* More post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps
+* A new Canvas toolbar that shows all Canvas components
+* An ability to [clone]({{site.baseurl}}/cloning_canvases/) your stopped Canvases to Canvas Flow
+
+### How can I use Canvas Flow?
+
+To use the Canvas Flow workflow, go to **Canvas** under the **Engagement** tab. Click <i class="fas fa-plus"></i> **Create Canvas**. Next, you'll have the option of building with Canvas Flow or the original Canvas experience. Select **Canvas Flow Workflow** and begin building your Canvas as you normally would!
+
+As you’re building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
+
+{% alert note %}
+Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no full steps in your Canvas.
+{% endalert %}
+
+### What will happen to my Canvases that I created using the original editor?
+
+All of your existing Canvases and the original Canvas editor will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the original or Flow workflow.
+
+### Can I launch a Canvas with disconnected steps?
+
+Yes! Canvas Flow allows you to launch your Canvas with disconnected steps. You can also save Canvases post-launch with disconnected steps. 
+
+### Where do users go once they've reached a disconnected step?
+
+If a user is in a disconnected step of your Canvas Flow workflow, they will advance to the subsequent step if there is one, and the step's setting will dictate how the user should advance. This is intended to allow users to make changes to steps without having to directly connect them to the rest of the Canvas. This also gives you some room for testing before going live immediately, effectively allowing for saving a draft.
+
+We recommend checking the analytics view for users pending in a Canvas step before disconnecting a step.
+
+### What are the main differences between Canvas Flow and the original Canvas editor?
+
+#### Canvas Component Toolbar
+
+Previously with the original Canvas editor, a full step was added by default whenever you created any step in your user journey. Now with Canvas Flow, these full steps are replaced by different Canvas components, which gives you the benefit of increased visibility and customization for your editing experience. You can immediately see all your Canvas components from the Canvas Step Toolbar.
+
+#### Step behavior
+
+Previously, each full step included information such as delay and schedule settings, exception events, audience filters, message configuration, and message advancement options all in one component. These are separate settings in Canvas Flow to make your Canvas building experience more customizable and introduces some differences in functionality.
+
+#### Message component advancement
+
+[Message components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate Audience Paths to filter users that didn't receive the previous step.  
+
+#### Delay "in" behavior
+
+[Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
+
+Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2 pm. A user enters the component at 2:01 pm on April 13. 
+- For the original workflow, the user would proceed to the next step at 2 pm on April 14, which is less than one day from the entry time. 
+- For Canvas Flow, the user would proceed to the next step at 2 pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+
+#### Intelligent Timing behavior
+
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
+
+Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
+- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.
+- **Original workflow:** The user receives the message on the second day at 2 pm.
+
+Note that if Intelligent Timing is turned on, the message will be sent within 24 hours of the user entering the Message component at the intelligent time identified (even if no Delay component is involved).
+
+#### Exception events
+
+##### Quiet Hours
+
+Exception event functionality in Canvas Flow is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and was not excluded with the exception event there), then hit Quiet Hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
+
+For segments and filters, the Canvas Flow Message component has a new feature called Delivery Validations that allows users to configure additional segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
+
+##### "In" or "On the next" schedule setting
+
+Exception events in Canvas Flow are created using Action Paths. Action Paths only support “after a X time window” and not “in X time” or “on the next X time".
