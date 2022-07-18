@@ -37,11 +37,11 @@ $(document).ready(function(){
           feedback_config['postdate'] = dt['postdate'];
           feedback_config['params'] = dt['params'];
           // if ((res_helpful == 'Yes But') || (res_helpful == 'No') ){
-          $('#feedback_comment_div').fadeIn('slow');
+          // $('#feedback_comment_div').fadeIn('slow');
           // }
           // else {
-          //   $('#feedback_msg').html('Thanks for your response.<a href="#" onclick="$(\'#feedback_comment_div\').fadeIn(\'slow\');$(\'#feedback_msg\').fadeOut(\'slow\');return false;">Leave Feedback</a>');
-          //   $('#feedback_msg').fadeIn("slow");
+          $('#feedback_msg').html('Thanks for your response.<a href="#" onclick="$(\'#feedback_comment_div\').fadeIn(\'slow\');$(\'#feedback_msg\').fadeOut(\'slow\');return false;">Leave Feedback</a>');
+          $('#feedback_msg').fadeIn("slow");
           // }
         }
         else {
