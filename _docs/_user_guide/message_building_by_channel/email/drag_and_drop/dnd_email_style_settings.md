@@ -19,7 +19,7 @@ To edit your global style settings, go to the **Manage Settings** page and selec
 ![][1]
 
 {% alert note %}
-Updates made to the Email Global Style Settings will apply to all future email campaigns and Canvases. 
+Updates made to the global style settings will apply to all future email campaigns and Canvases. 
 {% endalert %} 
 
 ## Basic styling 
@@ -38,6 +38,12 @@ Gmail does not support custom fonts, so your custom font may display as a defaul
 {% endalert %}
 
 ![][3]{: style="max-width:80%;"}
+
+### Add a fallback font
+
+Fallback fonts are used for the title, header, and body text when your default font choice isn't supported by the inbox provider or operating system. By default, Braze automatically sets Arial as a fallback font when global style settings are saved.
+
+You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
 ## Title styling
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
