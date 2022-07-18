@@ -43,21 +43,52 @@ To override this value, set `com_braze_trigger_action_minimum_time_interval_seco
 
 By default, in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.
 
-To enable this feature, a silent push is sent to the device, which allows a custom push receiver to log an SDK-based event. This SDK event will subsequently trigger the user-facing in-app message.
+To enable this feature, a silent push is sent to the device, which allows a custom push callback to log an SDK-based event. This SDK event will subsequently trigger the user-facing in-app message.
 
-### Step 1: Register a custom BroadcastReceiver to log custom event
+### Step 1: Create a Push Callback to Receive the Silent Push
 
-Register your custom `BroadcastReceiver` to listen for a specific silent push within your `AndroidManifest.xml`. For more information on registering a custom `BroadcastReceiver` review [Braze's push documentation][78].
+Register your custom push callback to listen for a specific silent push notification. For more information, take a look at [Braze's push documentation][78].
 
-### Step 2: Create your BroadcastReceiver
+Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To ensure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 
-Your receiver will handle the intent broadcast by the silent push and log an SDK event. It will subclass `BroadcastReceiver` and override `onReceive()`. See [`EventBroadcastReceiver.java`][72] for a detailed example.
+{% tabs %}
+{% tab JAVA %}
 
-Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
+```java
+Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
+  final Bundle kvps = event.getNotificationPayload().getBrazeExtras();
+  if (kvps.containsKey("IS_SERVER_EVENT")) {
+    BrazeProperties eventProperties = new BrazeProperties();
 
-For further details on custom handling push receipts, opens, and key-value pairs, review [Braze's push documentation][78].
+    // The campaign name is a string extra that clients can include in the push
+    String campaignName = kvps.getString("CAMPAIGN_NAME");
+    eventProperties.addProperty("campaign_name", campaignName);
+    Braze.getInstance(context).logCustomEvent("IAM Trigger", eventProperties);
+  }
+});
+```
 
-### Step 3: Create a push campaign
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event ->
+    val kvps = event.notificationPayload.brazeExtras
+    if (kvps.containsKey("IS_SERVER_EVENT")) {
+        val eventProperties = BrazeProperties()
+
+        // The campaign name is a string extra that clients can include in the push
+        val campaignName = kvps.getString("CAMPAIGN_NAME")
+        eventProperties.addProperty("campaign_name", campaignName)
+        Braze.getInstance(applicationContext).logCustomEvent("IAM Trigger", eventProperties)
+    }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Create a push campaign
 
 Create a [silent push campaign][73] triggered via the server sent event.
 
@@ -67,13 +98,13 @@ The push campaign must include key-value pair extras that indicate that this pus
 
 ![Two sets of key-value pairs: IS_SERVER_EVENT set to "true", and CAMPAIGN_NAME set to "example campaign name".][76]{: style="max-width:70%;" }
 
-The [`EventBroadcastReceiver.java`][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
+The earlier push callback sample code recognizes the key-value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your "in-app message trigger" event, you can achieve this by passing these in the key-value pairs of the push payload. In this example, the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your "in-app message trigger" event, you can achieve this by passing these in the key-value pairs of the push payload. In this example, the campaign name of the subsequent in-app message has been included. Your custom push callback can then pass the value as the parameter of the event property when logging the custom event.
 
-### Step 4: Create an in-app message campaign
+### Step 3: Create an in-app message campaign
 
-Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the custom [`EventBroadcastReceiver.java`][72].
+Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within tyourhe custom push callback.
 
 In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
@@ -131,7 +162,6 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 {% endtab %}
 {% endtabs %}
 
-[72]: https://gist.github.com/robbiematthews/1d037e2c366e523b2dda5f2e053ea2a9
 [73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
