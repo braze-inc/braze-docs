@@ -26,7 +26,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose your criteria
 
-Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days.
+Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years).
 
 ![Segment ][3]
 
