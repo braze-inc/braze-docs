@@ -529,9 +529,78 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-### Custom handling for push receipts, opens, dismissals, and key-value pairs
+### Custom handling for push receipts, opens, dismissals, and key-value pairs via callback {#android-push-listener-callback}
 
-Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
+Braze provides a [`subscribeToPushNotificationEvents()`][79] callback for when push notifications are received, opened, or dismissed.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
+  final BrazeNotificationPayload parsedData = event.getNotificationPayload();
+
+  //
+  // The type of notification itself
+  //
+  final boolean isPushOpenEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_OPENED;
+  final boolean isPushReceivedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_RECEIVED;
+  // Sent when a user has dismissed a notification
+  final boolean isPushDeletedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_DELETED;
+
+  //
+  // Data about the push notification itself
+  //
+  final String pushTitle = parsedData.getTitleText();
+  final Long pushArrivalTimeMs = parsedData.getNotificationReceivedTimestampMillis();
+
+  //
+  // Custom KVP data
+  //
+  final String myCustomKvp1 = parsedData.getBrazeExtras().getString("my first kvp");
+  final String myCustomKvp2 = parsedData.getBrazeExtras().getString("my second kvp");
+});
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
+    val parsedData = event.notificationPayload
+
+    //
+    // The type of notification itself
+    //
+    val isPushOpenEvent = event.eventType == BrazePushEventType.NOTIFICATION_OPENED
+    val isPushReceivedEvent = event.eventType == BrazePushEventType.NOTIFICATION_RECEIVED
+    // Sent when a user has dismissed a notification
+    val isPushDeletedEvent = event.eventType == BrazePushEventType.NOTIFICATION_DELETED
+
+    //
+    // Data about the push notification itself
+    //
+    val pushTitle = parsedData.titleText
+    val pushArrivalTimeMs = parsedData.notificationReceivedTimestampMillis
+
+    //
+    // Custom KVP data
+    //
+    val myCustomKvp1 = parsedData.brazeExtras.getString("my first kvp")
+    val myCustomKvp2 = parsedData.brazeExtras.getString("my second kvp")
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
+{% endalert %}
+
+### Custom handling for push receipts, opens, dismissals, and key-value pairs via Broadcast Receiver {#android-push-listener-broadcast-receiver}
+
+Braze also broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
 
 #### Step 1: Register your BroadcastReceiver
 
@@ -709,3 +778,4 @@ For documentation on Braze push data keys, refer to the [Android SDK](https://ap
 [76]: https://developer.android.com/reference/android/app/Application
 [77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.push/-braze-notification-payload/index.html
 [78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-constants/index.html
+[79]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html
