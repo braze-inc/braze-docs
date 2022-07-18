@@ -73,7 +73,7 @@ Next, declare that your app uses the device's ADM feature and that your app is d
   ...
   ```
 
-Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze broadcast receiver's `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
+Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
 
 ```xml
 <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
@@ -150,4 +150,4 @@ If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Pus
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
