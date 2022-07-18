@@ -22,5 +22,4 @@ Silent notifications are also available within the dashboard. To send a silent n
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/
 [3]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [6]: {% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android"
