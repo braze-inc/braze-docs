@@ -18,7 +18,17 @@ For example, let's say you want to target users you haven't made any purchases y
 
 ![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.][1]  
 
-You can use exit criteria in combination with [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) in your Canvas user journey. Since exit criteria identifies users at the launch of a Canvas, you can use Action Paths with the option **I want this group to exit the Canvas** enabled to exit users within an action group at the end of an evaluation period.
+Additional exception events include:
+* Starting a session
+* Performing a custom event or conversion event
+* Adding an email address
+* Changing custom attribute value
+* Adding values to a custom attribute array
+* Updating subscription status or subscription group status
+* Interacting with a campaign
+* Entering a location
+* Triggering a geofence
+* Sending an SMS inbound message
 
 
 [1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 
