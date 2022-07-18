@@ -9,7 +9,7 @@ description: "This page contains a collection of frequently asked questions, out
 
 ---
 
-{% include video.html id="[keAZAlBR9zc]" source="youtube" %}
+{% include video.html id="keAZAlBR9zc" source="youtube" %}
 
 {% api %}
 
