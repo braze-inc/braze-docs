@@ -9,6 +9,8 @@ description: "This page contains a collection of frequently asked questions, out
 
 ---
 
+{% include video.html id="[keAZAlBR9zc]" source="youtube" %}
+
 {% api %}
 
 ## Users
@@ -88,6 +90,9 @@ Some additional things to note:
 - When migrating user profiles, it's also up to your team to decide which user profile of the duplicates will be kept. Braze can't decide or provide you a list of profiles to delete.  
 - Ultimately, it will be important for your team to assess the signup process from your users’ experience and make sure that you're only calling the `changeUser()` method when a user becomes identified.
 
+{% endapi %}
+{% api %}
+
 ## Segments
 
 {% apitags %}
@@ -151,6 +156,9 @@ You can specify whether you want this extension to represent a single snapshot i
 When you’re done, click **Save**. Your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you’re capturing, and how many days you’re looking back in history.
 
 Finally, after you've created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing `Braze Segment Extension` from the filter list under the **User Attributes** section. From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment. To view the extension criteria, click **View Extension Details**. Now you can proceed as usual with creating your segment.
+
+{% endapi %}
+{% api %}
 
 ## Campaigns
 
@@ -251,6 +259,9 @@ The user needs to be in the segment for 24 hours prior to the launch. If the use
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute trigger]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers#change-custom-attribute-value)). This will cause users to drop out of the campaign if they aren't initially part of your selected audience before any trigger actions are evaluated.
 
+{% endapi %}
+{% api %}
+
 ## Canvases
 
 {% apitags %}
@@ -330,6 +341,9 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
+{% endapi %}
+{% api %}
+
 ## Analytics
 
 {% apitags %}
@@ -374,6 +388,5 @@ Engagement Reports provide you with CSVs of engagement statistics for specific m
 The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
 
 For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/).
-
 
 {% endapi %}
