@@ -36,34 +36,6 @@ To integrate Braze and Segment, you must set [Braze as a Destination](#connectio
 
 After successfully setting up your sources, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) for each source. You'll have many options to customize the data flow between Braze and Segment using the connection settings.
 
-- **App identifier**: Previously called the API key. Found in the Braze **Developer Console** under **Settings**.
-- **App group REST API key**:  Braze REST API key with `users/track` permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
-- **Braze SDK endpoint**: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
-- **Braze REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
-- **Appboy datacenter**: Specify which instance your Braze data will be forwarded to.
-- **Log purchase when revenue is present**: Choose when to log purchases.
-- **Safari website push ID**: Safari requires a [website push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
-- **Braze web SDK version**: Indicate which version of the braze web SDK you have integrated. If you are unsure, reach out to your account manager or Braze [support]({{site.baseurl}}/braze_support/).
-
-{% details Additional connection settings %}
-
-|Name|Options | Description|
-|---|---|---|
-|Allow crawler activity| On/Off (True/False) | Web Crawlers are automatic programs that visit websites, read them, and collect information that might be important for a search engine index. You can either allow or disallow this from your integrated web page or app. Braze disallows this by default. |
-|Automatically send in-app messages| On/Off (True/False) | Braze automatically enables you to send push to your users upon proper integration. |
-|Do not load font awesome| On/Off (True/False) | Braze uses FontAwesome for our in-app message icons, but you may disallow this feature at any time. |
-|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).|
-|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#setlogger) console by default. |
-|Minimum interval between trigger actions in seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
-|Open in-app messages in new tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab specified in the Braze platform. |
-|Open News Feed cards in new tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
-|Session timeout in seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
-|Track all pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/) to Braze as Page Events.|
-|Track only named pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/) to Braze
-|Update existing users only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users or existing users will be updated. This defaults to `false`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-{% enddetails %}
-
 ### Step 2: Choose destination framework and nnection type {#integration-options}
 
 In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
@@ -76,8 +48,8 @@ Your choice of connection mode will be determined by the type of Source the dest
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side<br>"Device-mode"](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze's REST API endpoints such as [users/track]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Side-by-side<br>"Device-mode"](#side-by-side-sdk-integration) |Uses Segment’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
+| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -86,52 +58,61 @@ You can learn more about Segment's integration options (connection modes), inclu
 
 #### Side-by-side SDK integration
 
-Also called "device-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.
+Also called “device-mode”, this integration maps Segment’s SDK and [methods](#methods) to Braze's SDK, allowing access to all the features our SDK provides, such as push, in-app messaging, and other methods native to Braze. 
+
+{% alert note %}
+When using Segment's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment, the Segment SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
+{% endalert %}
 
 {% tabs %}
 {% tab Android %}
 
-See and set up [mappings](#methods) to Segment's SDK for [Android](https://github.com/appboy/appboy-segment-android) on Braze's Github.
+To set up Braze as a device-mode destination for your Android source choose **Classic** as the Destination framework and click **Save**. 
 
-To complete the side-by-side integration, refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
+![]({% image_buster /assets/img/segment/android.png %})
+
+To complete the side-by-side integration, please refer to Segment’s detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android) app.
+
+The source code for the [Android Device mode](https://github.com/Appboy/appboy-segment-android) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab iOS %}
 
-See and set up [mappings](#methods) to Segment's SDK for [iOS](https://github.com/appboy/appboy-segment-ios) on Braze's Github.
+To set up Braze as a device-mode destination for your iOS source choose **Classic** as the destination framework and click **Save**. 
 
-To complete the side-by-side integration, refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
+![]({% image_buster /assets/img/segment/ios.png %})
+
+To complete the side-by-side integration, refer to Segment’s detailed instructions for adding the Braze segment pod to your [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios) app.
+
+The source code for the [iOS Device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
 {% endtab %}
 {% tab Web or Javascript %}
 
-See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) on Braze's Github.
+Segment’s new Braze Web Mode (Actions) framework is recommended for setting up Braze as a Device-mode destination for your Web source. 
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
+Within the Setup UI choose **Actions** as your destination framework and **Device Mode** as your connection mode.
+
+The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment. 
+
+![]({% image_buster /assets/img/segment/website.png %})
 
 {% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
 
-Also called "Cloud-mode", this integration forwards data from Segment to Braze's REST API.
+Also called "Cloud-mode", this integration forwards data from Segment to Braze's REST APIs.
 
-This integration is **only** used in association with Segment's [server-side libraries][36], such as their Ruby or Go SDKs.
+Use Segment’s new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a Cloud-mode destination for any of your sources. 
 
-Enable the integration by setting your [app group's REST API key][39] and Braze's [REST API endpoint][40] for your corresponding data center (cluster) in your [connection settings on Segment's dashboard](#connection-settings).
+However, unlike the side-by-side integration, the server-to-server integration does not support any of Braze’s UI features, such as in-app messaging, Content Cards, or automatic push token registration.
 
-Similar to the side-by-side integration, you will need to map Segment [methods](#methods) to Braze.
+There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as device-level fields) that are not available through Cloud-mode.
 
-However, unlike the side-by-side integration, the server-to-server integration does **not** support any of Braze's UI features, such as in-app messaging, News Feed, or push notifications.
+If you wish to use this data and these features, consider using the side-by-side (Device-mode) SDK integration.
 
-Some [automatically captured][25] data is only available through side-by-side integration. The following data is **not available via the server-to-server integration**:
-- Sessions
-- First Used App
-- Last Used App
-
-##### Enabling push notifications
-
-Currently, Braze's server-to-server integration with Segment **does not** support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [user attribute object][18] of our [user data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
+The source code for the [Braze Cloud Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/destination-actions/src/destinations/braze) is maintained by Segment
 
 ### Step 3: Map methods {#methods}
 
@@ -291,6 +272,37 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% enddetails %}
 
+
+
+
+- **App identifier**: Previously called the API key. Found in the Braze **Developer Console** under **Settings**.
+- **App group REST API key**:  Braze REST API key with `users/track` permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **Braze SDK endpoint**: Your SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
+- **Braze REST endpoint**: Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).
+- **Appboy datacenter**: Specify which instance your Braze data will be forwarded to.
+- **Log purchase when revenue is present**: Choose when to log purchases.
+- **Safari website push ID**: Safari requires a [website push ID]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push) to send push.
+- **Braze web SDK version**: Indicate which version of the braze web SDK you have integrated. If you are unsure, reach out to your account manager or Braze [support]({{site.baseurl}}/braze_support/).
+
+{% details Additional connection settings %}
+
+|Name|Options | Description|
+|---|---|---|
+|Allow crawler activity| On/Off (True/False) | Web Crawlers are automatic programs that visit websites, read them, and collect information that might be important for a search engine index. You can either allow or disallow this from your integrated web page or app. Braze disallows this by default. |
+|Automatically send in-app messages| On/Off (True/False) | Braze automatically enables you to send push to your users upon proper integration. |
+|Do not load font awesome| On/Off (True/False) | Braze uses FontAwesome for our in-app message icons, but you may disallow this feature at any time. |
+|Enable HTML in-app messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).|
+|Enable logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#setlogger) console by default. |
+|Minimum interval between trigger actions in seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
+|Open in-app messages in new tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab specified in the Braze platform. |
+|Open News Feed cards in new tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
+|Session timeout in seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
+|Track all pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/) to Braze as Page Events.|
+|Track only named pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/) to Braze
+|Update existing users only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users or existing users will be updated. This defaults to `false`. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{% enddetails %}
+
 [5]: https://segment.com
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
@@ -311,3 +323,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
 [42]: {% image_buster /assets/img/segment/setup.png %}
+[43]: {% image_buster /assets/img/segment/website.png %}
+[44]: {% image_buster /assets/img/segment/ios.png %}
+[45]: {% image_buster /assets/img/segment/android.png %}
