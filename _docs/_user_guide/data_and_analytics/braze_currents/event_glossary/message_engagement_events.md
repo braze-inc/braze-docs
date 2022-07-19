@@ -329,7 +329,8 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "user_agent": (string) description of the user’s system and browser for the event,
   "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
-  "from_domain": (string) sending domain for the email
+  "from_domain": (string) sending domain for the email,
+  "is_amp": (boolean) indicates that this is an AMP event
 }
 ```
 #### Property details
