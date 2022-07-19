@@ -8,7 +8,7 @@ description: "When scheduling a campaign, you can use Intelligent Timing to deli
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> This article covers how to implement Intelligent Timing in your campaigns and Canvases.
+> This article covers how to implement Intelligent Timing in your campaigns and Canvases using the original workflow.
 
 When [scheduling a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/), you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user when Braze determines that an individual is most likely to engage (open or click).
 
