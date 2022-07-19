@@ -41,7 +41,7 @@ When should you use this feature? Braze highly recommends that you consider usin
   {% tab Promotional %}
 **Promotional Canvases**
 
-Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15am in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15 am in the company's time zone.
 
 <style type="text/css">
 .tg td{word-break:normal;}

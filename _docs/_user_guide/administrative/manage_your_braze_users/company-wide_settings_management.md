@@ -21,7 +21,7 @@ Only admins and users with explicit permissions to manage company settings will 
 
 If you choose to switch your time zone, you may experience a variety of consequences, including:
 
-- While campaigns scheduled for specific times in specific locations (i.e., 9pm Eastern Time) will run properly on schedule until edited, both campaign analytics and future campaign schedules will be affected by the change.
+- While campaigns scheduled for specific times in specific locations (i.e., 9 pm Eastern Time) will run properly on schedule until edited, both campaign analytics and future campaign schedules will be affected by the change.
 - Any card scheduling that is not assigned to local time may be affected, with active cards potentially appearing as finished (or vice versa).
 - Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in Pacific Time.
 
@@ -63,7 +63,7 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly analytics reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to five events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to five events to be included in your weekly report:
 
 ![Selecting events to be included in the Analytics Report][22]
 

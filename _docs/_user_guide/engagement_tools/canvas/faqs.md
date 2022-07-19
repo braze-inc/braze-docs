@@ -147,17 +147,17 @@ Previously, each full step included information such as delay and schedule setti
 
 [Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
-Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2pm. A user enters the component at 2:01pm on April 13. 
-- For the original workflow, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
-- For Canvas Flow, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2 pm. A user enters the component at 2:01 pm on April 13. 
+- For the original workflow, the user would proceed to the next step at 2 pm on April 14, which is less than one day from the entry time. 
+- For Canvas Flow, the user would proceed to the next step at 2 pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 #### Intelligent Timing behavior
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
-Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2pm. A user enters the Delay step at 2:01pm.
-- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2pm.
-- **Original workflow:** The user receives the message on the second day at 2pm.
+Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
+- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.
+- **Original workflow:** The user receives the message on the second day at 2 pm.
 
 Note that if Intelligent Timing is turned on, the message will be sent within 24 hours of the user entering the Message component at the intelligent time identified (even if no Delay component is involved).
 

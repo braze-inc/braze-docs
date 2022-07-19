@@ -76,15 +76,29 @@ If your site logs purchases using the standard [e-commerce event][e-commerce] da
 
 You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
+For example, let's say your e-commerce payload contains the following `items`:
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`][log-purchase] call to Braze.
+
 ### Track purchase {#purchases}
 
 The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
 
-Use this tag to track purchases to Braze, optionally including Purchase properties.
+Use this tag to track purchases to Braze, optionally including purchase properties.
 
 The **Product ID** and **Price** fields are required.
 
-Use the **Add Row** button to add Purchase properties.
+Use the **Add Row** button to add purchase properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
 
@@ -165,3 +179,4 @@ This will help identify what values are being sent from your webpage's data laye
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
 [e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
+[log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
