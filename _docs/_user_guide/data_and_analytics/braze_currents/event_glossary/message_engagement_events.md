@@ -287,8 +287,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending,
   "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
-  "from_domain": (string) sending domain for the email,
-  "is_amp": (boolean) indicates that this is an AMP event
+  "from_domain": (string) sending domain for the email
 }
 ```
 #### Property details
