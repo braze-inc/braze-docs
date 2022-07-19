@@ -88,17 +88,17 @@ items: [{
 }]
 ```
 
-If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the Purchase Properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`][log-purchase] call to Braze.
+If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`][log-purchase] call to Braze.
 
 ### Track purchase {#purchases}
 
 The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
 
-Use this tag to track purchases to Braze, optionally including Purchase properties.
+Use this tag to track purchases to Braze, optionally including purchase properties.
 
 The **Product ID** and **Price** fields are required.
 
-Use the **Add Row** button to add Purchase properties.
+Use the **Add Row** button to add purchase properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
 
