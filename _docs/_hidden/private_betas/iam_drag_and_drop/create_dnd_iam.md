@@ -6,7 +6,7 @@ permalink: "/create_dnd_iam/"
 hidden: true
 ---
 
-# Creating an in-app message with Drag and Drop
+# Creating an in-app message with Drag & Drop
 
 With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
