@@ -65,6 +65,16 @@ The default font will only apply to the current message and any duplicated messa
 
 ### Creative details
 
+#### Customizing background image
+
+You can add an image to the background of your message or individual elements within your message by expanding the **Background** field in the **Style** panel. Select the scrollable section of your message to add a background for the entire message.
+
+![]({% image_buster /assets/img_archive/dnd_iam_background.gif %}){: style="max-width:30%"}
+
+{% alert tip %}
+If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
+{% endalert %}
+
 #### Adding Liquid
 
 ![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
