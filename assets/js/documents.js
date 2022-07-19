@@ -145,8 +145,8 @@ $(document).ready(function() {
   });
 
   $('#toc').toc({
-    headers: 'h2, h3',
-    minimumHeaders: toc_minheaders
+    headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+    minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
   });
   // Use Bootstrap's "Scrollspy" plugin to dynamically expand/collapse ToC
   if ($('#toc nav').length) {
