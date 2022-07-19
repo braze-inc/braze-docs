@@ -11,15 +11,16 @@ description: "This page contains a collection of frequently asked questions, out
 
 {% include video.html id="keAZAlBR9zc" source="youtube" %}
 
+
+<!--- Users --->
+
 {% api %}
 
-## Users
+### How do I handle anonymous user data?
 
 {% apitags %}
 Users
 {% endapitags %}
-
-### How do I handle anonymous user data?
 
 Initially, when a user profile is recognized via the SDK, Braze creates an anonymous user profile with an associated `braze_id`: a unique user identifier that is set by Braze.
 
@@ -31,7 +32,14 @@ For alias users that you want to merge with identified users, you can merge any 
 
 For a full breakdown of different methods for collecting new and existing user data in Braze, check out [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/).
 
+{% endapi %}
+{% api %}
+
 ### How can I import users I have already collected and identified outside of Braze?
+
+{% apitags %}
+Users
+{% endapitags %}
 
 To import previously identified users, you can upload a CSV to Braze, or send data through the API.
 
@@ -58,7 +66,14 @@ Keep the following nuances in mind when using the `/users/track` endpoint:
 - Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
+{% endapi %}
+{% api %}
+
 ### What's the difference between the push subscription statuses?
+
+{% apitags %}
+Users
+{% endapitags %}
 
 There are three push subscription state options: subscribed, opted-in, and unsubscribed.
 
@@ -71,7 +86,14 @@ By default, for your user to receive your messages through push, their push subs
 |Unsubscribed| A user explicitly unsubscribed from push through your application or other methods your brand provides. By default, Braze push campaigns only target users that are `Subscribed` or `Opted-in` for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% endapi %}
+{% api %}
+
 ### What if I've identified duplicated users?
+
+{% apitags %}
+Users
+{% endapitags %}
 
 If you have identified duplicate users, you will need to clean up those user profiles. You can do so through the following steps:
 
@@ -93,13 +115,13 @@ Some additional things to note:
 {% endapi %}
 {% api %}
 
-## Segments
+<!-- Segments -->
+
+### How do I create a segment when I import a group of users through CSV?
 
 {% apitags %}
 Segments
 {% endapitags %}
-
-### How do I create a segment when I import a group of users through CSV?
 
 To import your CSV file, navigate to the **User Import** page under the Users section. The **Recent Imports** table lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
@@ -109,11 +131,25 @@ Select **Import Users in this CSV and also make it possible to retarget this spe
 
 To download a CSV template, refer to [user import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
+{% endapi %}
+{% api %}
+
 ### What types of filters can I use when creating a segment?
+
+{% apitags %}
+Segments
+{% endapitags %}
 
 Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based on specific features and attributes. You can use the [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary to search or narrow these filters by Filter Category (Custom Data, User Activity, Retargeting, Marketing Activity, User Attributes, Install Attribution, Social Activity, Testing, Other).
 
+{% endapi %}
+{% api %}
+
 ### How do I set up location targeting so that I can segment users by their most recent location and use it in my location-based campaigns and strategies?
+
+{% apitags %}
+Segments
+{% endapitags %}
 
 Navigate to the **Segments** page, under Engagement, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
 
@@ -126,7 +162,14 @@ Once you have created your segment, add a `Most Recent Location` filter to targe
 Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location).
 {% endalert %}
 
+{% endapi %}
+{% api %}
+
 ### How can I target precise lists of users based on their custom event and purchase behavior in the past 365 days?
+
+{% apitags %}
+Segments
+{% endapitags %}
 
 You can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)! Segment Extensions enable you to target a more precise list of users than you otherwise could with a regular segment.
 
@@ -149,7 +192,14 @@ Segment Extensions rely on long term storage of event properties and don’t hav
 Using event properties within Segment Extensions does not impact data point usage.
 {% endalert %}
 
+{% endapi %}
+{% api %}
+
 #### Keeping Segment Extensions up to date
+
+{% apitags %}
+Segments
+{% endapitags %}
 
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select **Regenerate Extension Daily** and the regeneration will begin processing at around midnight each day in your company’s time zone.
 
@@ -160,39 +210,74 @@ Finally, after you've created an extension, you can use it as a filter when crea
 {% endapi %}
 {% api %}
 
-## Campaigns
+<!-- Campaigns -->
+
+### How do you create a multichannel campaign?
 
 {% apitags %}
 Campaigns
 {% endapitags %}
 
-### How do you create a multichannel campaign?
-
 To create a multichannel campaigns, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. Once in a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
+
+{% endapi %}
+{% api %}
 
 ### What are some ways I can start testing and optimizing campaigns?
 
+{% apitags %}
+Campaigns
+{% endapitags %}
+
 Creating multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for testing entire workflows.
 
+{% endapi %}
+{% api %}
+
 ### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 One potential explanation for this difference could be due to the campaign or Canvas having re-eligibility turned on. By having this on, users who qualify for the segment and delivery settings will be able to receive the message more than once. If re-eligibility is not turned on, then the probable explanation for the difference between sends and unique recipients may be due to users having multiple devices across platforms associated with their profiles.
 
 For example, should you have a Canvas that has both iOS and web push notifications, a given user with both mobile and desktop devices could receive more than one message.
 
+{% endapi %}
+{% api %}
+
 ### What does local time zone delivery offer?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 Local time zone delivery allows you to deliver messaging campaigns to a segment based on a user’s individual time zone. Without local time zone delivery, campaigns will be scheduled based on your company’s time zone settings in Braze.
 
 For example, a London-based company sending a campaign at 12pm will reach users on the west coast of America at 4am. If your app is only available in certain countries, this may not be a risk for you, otherwise, we highly recommend avoiding sending early morning push notifications to your user base!
 
+{% endapi %}
+{% api %}
+
 ### How does Braze recognize a user's time zone?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK.
 
 You can check your company’s time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/).
 
+{% endapi %}
+{% api %}
+
 ### How do I schedule a local time zone campaign?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 When scheduling a campaign, you need to choose to send it at a designated time, and then select **Send campaign to users in their local time zone**.
 
@@ -208,7 +293,14 @@ For Canvas steps, users do not need to be in the step for 24 hours to receive th
 
 If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5 pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
 
+{% endapi %}
+{% api %}
+
 ### When do changes to local time zone campaigns take effect?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 Target segments for local time zone campaigns should include at least a 48-hour window for any time-based filters to guarantee delivery to the entire segment. For example, consider a segment targeting users on their second day with the following filters:
 
@@ -217,31 +309,66 @@ Target segments for local time zone campaigns should include at least a 48-hour 
 
 Local time zone delivery may miss users in this segment based on the delivery time and the users’ local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
 
+{% endapi %}
+{% api %}
+
 ### What changes can I make to scheduled campaigns ahead of launch?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we queue the messages to send. As per all campaigns, you can’t edit conversion events after the campaign is launched.
 
+{% endapi %}
+{% api %}
+
 ### What is the "safe zone" before messages on a scheduled campaign are queued?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 - One-time scheduled campaigns can be edited up until the scheduled send time.
 - Recurring scheduled campaigns can be edited up until the scheduled send time.
 - Local send time campaigns can be edited up to 24 hours prior to the scheduled send time.
 - Optimal send time campaigns can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
 
+{% endapi %}
+{% api %}
+
 ### What if I make an edit within the "safe zone"?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 Changing the send time on campaigns within this time can lead to undesired behavior, for example:
 
 - Braze will not send messages to any users that have missed the send time by more than one hour.
 - Messages that were already queued may still send at the originally queued time, rather than the adjusted time.
 
+{% endapi %}
+{% api %}
+
 ### What should I do if the "safe zone" has already passed?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will stop any queued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Make sure to re-adjust campaign schedule times to allow for time zone sending.
 
+{% endapi %}
+{% api %}
+
 ### When does Braze evaluate users for local time zone delivery?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
 
@@ -255,26 +382,40 @@ For a user to be eligible for entry, they must be eligible for both checks. For 
 
 The user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
 
+{% endapi %}
+{% api %}
+
 ### Why does the number of users entering a campaign not match the expected number?
+
+{% apitags %}
+Campaigns
+{% endapitags %}
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute trigger]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers#change-custom-attribute-value)). This will cause users to drop out of the campaign if they aren't initially part of your selected audience before any trigger actions are evaluated.
 
 {% endapi %}
 {% api %}
 
-## Canvases
+<!-- Canvases -->
+
+### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
 
 {% apitags %}
 Canvases
 {% endapitags %}
 
-### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
-
 We queue a job for each step—they run at around the same time, and one of them “wins”. In practice, this may be sorted somewhat evenly, but it’s likely to have at least a slight bias toward the step that was created first.
 
 Moreover, we can’t make any guarantees about exactly what that distribution will look like. If you want to ensure an even split, add a [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) filter.
 
+{% endapi %}
+{% api %}
+
 ### What happens when you stop a Canvas?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 When you stop a Canvas, the following applies:
 
@@ -286,19 +427,40 @@ When you stop a Canvas, the following applies:
 Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should’ve progressed to the next component has passed, they will instead exit the Canvas.
 {% endalert %}
 
+{% endapi %}
+{% api %}
+
 ### When does an exception event trigger?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 [Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
 
 If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
+{% endapi %}
+{% api %}
+
 ### How does editing a Canvas affect users already in the Canvas?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
 
 For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
+{% endapi %}
+{% api %}
+
 ### How are user conversions tracked in a Canvas?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 A user can only convert once per Canvas entry.
 
@@ -333,40 +495,75 @@ The user will count as converted in the overall Canvas variant, but not the step
 
 {% enddetails %}
 
+{% endapi %}
+{% api %}
+
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
 
+{% endapi %}
+{% api %}
+
 ### Why does the number of users entering a Canvas not match the expected number?
+
+{% apitags %}
+Canvases
+{% endapitags %}
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
 {% endapi %}
 {% api %}
 
-## Analytics
+<!-- Analytics -->
+
+### What metrics does Braze measure?
 
 {% apitags %}
 Analytics
 {% endapitags %}
 
-### What metrics does Braze measure?
-
 Depending on the channel, Braze measures a variety of metrics to enable you to determine a campaign’s success and inform future ones. You can find a comprehensive list in our [report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
 
+{% endapi %}
+{% api %}
+
 ### How is revenue calculated in Braze?
+
+{% apitags %}
+Analytics
+{% endapitags %}
 
 On the **Revenue** page, you can view data on revenue or purchases over specific periods of time, for a specific product, or your app’s total revenue or purchases. These revenue numbers are generated from the purchases made from campaign recipients within a certain conversion period.
 
 That being said, it’s important to note that Braze is a marketing tool and not a revenue management tool. Our [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) doesn't support refunds and cancellations, so you may see discrepancies when comparing data with other tools.
 
+{% endapi %}
+{% api %}
+
 ### What reporting capabilities does Currents enable?
+
+{% apitags %}
+Analytics
+{% endapitags %}
 
 Our Currents tool continuously streams both messaging engagement and customer behavior data to one of our many data partners, empowering you to use the unique and valuable data Braze creates to power your business intelligence and analytics efforts in other best-in-class partners.
 
 This data goes beyond messaging engagement metrics, and can also includes more complex numbers such as custom attribute and event performance. For more details, review our [currents events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events).
 
+{% endapi %}
+{% api %}
+
 ### How can I schedule a recurring engagement report?
+
+{% apitags %}
+Analytics
+{% endapitags %}
 
 To schedule a recurring engagement report, do the following:
 
@@ -381,7 +578,14 @@ To schedule a recurring engagement report, do the following:
 9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
 
+{% endapi %}
+{% api %}
+
 ### What's the difference between Engagement Reports and the Report Builder?
+
+{% apitags %}
+Analytics
+{% endapitags %}
 
 Engagement Reports provide you with CSVs of engagement statistics for specific messages from campaigns and Canvases via a triggered email. Certain data is aggregated at the campaign or Canvas level versus at the individual variant or step level. Reports are not saved in the dashboard, and re-running the report can result in updated statistics.
 
