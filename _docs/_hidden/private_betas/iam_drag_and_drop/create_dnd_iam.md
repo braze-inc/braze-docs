@@ -1,6 +1,6 @@
 ---
 nav_title: Creating an In-App Message
-article_title: "Creating an in-app message with Drag and Drop"
+article_title: "Creating an in-app message with Drag & Drop"
 description: "With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience."
 permalink: "/create_dnd_iam/"
 hidden: true
@@ -20,7 +20,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 ## Prerequisites
 
-Messages created using the Drag and Drop editor can only be sent to users on the following minimum SDK versions:
+Messages created using the Drag & Drop Editor can only be sent to users on the following minimum SDK versions:
 
 {% sdk_min_versions ios:3.23.0 android:8.0.0 web:2.5.0 %}
 
@@ -38,7 +38,7 @@ The drag & drop editing experience is divided into three sections: **Build**, **
 
 When you open the Drag & Drop Editor, you’ll see a basic modal layout on the editing canvas, which you can use to start building your message. You can keep this layout or add, delete, and move around the Rows and Blocks. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the modal.
 
-The Drag & Drop editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
+The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_rows_blocks.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
@@ -113,7 +113,7 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 No.
 
 **Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
-No, you have to recreate the in-app message in the Drag & Drop editor or duplicate an existing message in order to save.
+No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
 **How can I create a Full-Screen or Slideup in-app message?**<br>
 The Drag and Drop Editor is in beta and is limited to the Modal message type.

@@ -1,7 +1,7 @@
 ---
 nav_title: Editor Blocks
 article_title: "Editor Blocks"
-description: "This reference article describes the editor blocks available in the Drag and Drop editor for in-app messages."
+description: "This reference article describes the editor blocks available in the Drag and Drop Editor for in-app messages."
 permalink: "/editor_blocks_dnd_iam/"
 hidden: true
 ---
