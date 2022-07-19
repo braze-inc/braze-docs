@@ -48,7 +48,9 @@ It's important to be aware of the limitations of using Intelligent Timing early 
 
 ## Triggered campaigns and Canvases
 
-If a triggered campaign or Canvas component is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or component was triggered. In this case, the message will send immediately.
+If a triggered campaign or Canvas component in the original Canvas workflow is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or component was triggered. In this case, the message will send immediately.
+
+For Canvas Flow, refer to the [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs#intelligent-timing-behavior) for the Intelligent Timing behavior.
 
 ## Preview chart
 
