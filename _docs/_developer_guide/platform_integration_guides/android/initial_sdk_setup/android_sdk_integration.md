@@ -46,7 +46,7 @@ Alternatively, you can directly find the artifact AAR files on our [maven reposi
 
 #### Add Braze dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`:
+Add the `android-sdk-ui` dependency to your app's `build.gradle`. If you're using a non-native Android SDK (e.g. Flutter, Cordova, Unity, etc), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
 
 ```gradle
 dependencies {
