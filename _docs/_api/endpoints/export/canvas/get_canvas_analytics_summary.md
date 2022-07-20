@@ -52,33 +52,33 @@ Authorization: Bearer YOUR-REST-API-KEY
   "data": {
     "name": (string) Canvas name,
     "total_stats": {
-      "revenue": (float),
-      "conversions": (int),
-      "conversions_by_entry_time": (int),
-      "entries": (int)
+      "revenue": (float) the number of dollars of revenue (USD),
+      "conversions": (int) the number of conversions,
+      "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
+      "entries": (int) the number of entries
     },
     "variant_stats": (optional) {
       "00000000-0000-0000-0000-0000000000000": (API identifier for variant) {
         "name": (string) name of variant,
-        "revenue": (float),
-        "conversions": (int),
-        "entries": (int)
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "entries": (int) the number of entries
       },
       ... (more variants)
     },
     "step_stats": (optional) {
       "00000000-0000-0000-0000-0000000000000": (API identifier for step) {
         "name": (string) name of step,
-        "revenue": (float),
-        "conversions": (int),
-        "conversions_by_entry_time": (int),
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
         "messages": {
           "android_push": (name of channel) [
             {
-              "sent": (int),
-              "opens": (int),
-              "influenced_opens": (int),
-              "bounces": (int)
+              "sent": (int) the number of sends,
+              "opens": (int) the number of opens,
+              "influenced_opens": (int) the number of influenced opens,
+              "bounces": (int) the number of bounces
               ... (more stats for channel)
             }
           ],

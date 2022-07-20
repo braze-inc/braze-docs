@@ -63,25 +63,25 @@ Authorization: Bearer YOUR-REST-API-KEY
             "unique_recipients": (int) the number of unique recipients,
             "conversions": (int) the number of conversions,
             "conversions_by_send_time": (int) the number of conversions,
-            "conversions1": (int, optional) the number of conversions for the second conversion event,
-            "conversions1_by_send_time": (int, optional) the number of conversions for the second conversion event by send time,
-            "conversions2": (int, optional) the number of conversions for the third conversion event,
-            "conversions2_by_send_time": (int, optional) the number of conversions for the third conversion event by send time,
-            "conversions3": (int, optional) the number of conversions for the fourth conversion event,
-            "conversions3_by_send_time": (int, optional) the number of conversions for the fourth conversion event by send time
+            "conversions1": (optional, int) the number of conversions for the second conversion event,
+            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+            "conversions2": (optional, int) the number of conversions for the third conversion event,
+            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+            "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
           }
         ]
       },
-      "conversions_by_send_time": 0,
-      "conversions1_by_send_time": 0,
-      "conversions2_by_send_time": 0,
-      "conversions3_by_send_time": 0,
-      "conversions": 0,
-      "conversions1": 0,
-      "conversions2": 0,
-      "conversions3": 0,
-      "unique_recipients": 1,
-      "revenue": 0
+      "conversions_by_send_time": (optional, int),
+      "conversions1_by_send_time": (optional, int),
+      "conversions2_by_send_time": (optional, int),
+      "conversions3_by_send_time": (optional, int),
+      "conversions": (int),
+      "conversions1": (optional, int),
+      "conversions2": (optional, int),
+      "conversions3": (optional, int),
+      "unique_recipients": (int),
+      "revenue": (optional, float)
     }
   ],
   "message": "success"

@@ -55,34 +55,34 @@ Authorization: Bearer YOUR-REST-API-KEY
       {
         "time": (string) date as ISO 8601 date,
         "total_stats": {
-          "revenue": (float),
-          "conversions": (int),
-          "conversions_by_entry_time": (int),
-          "entries": (int)
+          "revenue": (float) the number of dollars of revenue (USD),
+          "conversions": (int) the number of conversions,
+          "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
+          "entries": (int) the number of entries
         },
         "variant_stats": (optional) {
           "00000000-0000-0000-0000-0000000000000": (API identifier for variant) {
             "name": (string) name of variant,
-            "revenue": (int),
-            "conversions": (int),
-            "conversions_by_entry_time": (int),
-            "entries": (int)
+            "revenue": (float) the number of dollars of revenue (USD),
+            "conversions": (int) the number of conversions,
+            "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
+            "entries": (int) the number of entries
           },
           ... (more variants)
         },
         "step_stats": (optional) {
           "00000000-0000-0000-0000-0000000000000": (API identifier for step) {
             "name": (string) name of step,
-            "revenue": (float),
-            "conversions": (int),
-            "conversions_by_entry_time": (int),
+            "revenue": (float) the number of dollars of revenue (USD),
+            "conversions": (int) the number of conversions,
+            "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
             "messages": {
               "email": [
                 {
-                  "sent": (int),
-                  "opens": (int),
-                  "unique_opens": (int),
-                  "clicks": (int),
+                  "sent": (int) the number of sends,
+                  "opens": (int) the number of opens,
+                  "unique_opens": (int) the number of unique opens,
+                  "clicks": (int) the number of clicks
                   ... (more stats)
                 }
               ],
