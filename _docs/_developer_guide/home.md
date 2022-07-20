@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
-guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/api/basics/'>REST API Guide</a>."
+guide_top_text: "This is where developers can find all the integrations available with Braze.<br>For updates, additional resources, and to join the Braze developer community, visit the <a href='https://developer.braze.com'>Braze developer portal</a>."
 article_title: Braze Developer Guide
 
 guide_featured_title: "Featured Integrations"
@@ -24,11 +24,11 @@ guide_menu_title: "All Integrations"
 guide_menu_list:
   - name: Cordova Android
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-    fa_icon: fab fa-android
+    image: /assets/img/cordova.png
     nav_link: cordova
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    fa_icon: fab fa-apple
+    image: /assets/img/cordova.png
     nav_link: cordova
   - name: Flutter Android and iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
@@ -48,11 +48,11 @@ guide_menu_list:
     nav_link: macos
   - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    fa_icon: fab fa-android  
+    image: /assets/img/unity.png
     nav_link: unity
   - name: Unity iOS
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    fa_icon: fab fa-apple
+    image: /assets/img/unity.png
     nav_link: unity
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
@@ -60,15 +60,15 @@ guide_menu_list:
     nav_link: windowsuniversal
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    fa_icon: fas fa-times
+    image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: Roku
     link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    fa_icon: fas fa-tv
+    image: /assets/img/roku.png
     nav_link: roku
   - name: Unreal Engine
     link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
-    fa_icon: fas fa-gamepad
+    image: /assets/img/unreal.png
     nav_link: unrealengine
 
 guide_footer_header: " "

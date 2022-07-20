@@ -9,20 +9,20 @@ user_top_text: "Meet us at the intersection of art and science. Find us in the m
 description: "Meet us at the intersection of art and science. Find us in the moment or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze, we aim to create strong bonds between you and your customers or users."
 
 user_menu_list:
-  - name: Manage Your Braze Account
-    image: /assets/img/dashboard.png
-    bg_color: '#27368f'
+  - name: Manage Your Account
+    image: /assets/img/gear.svg
+    bg_color: '#9ee6ef'
     link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
     description: Manage your company settings, users, and more!
   - name: Logging Into Braze
-    image: /assets/img/sign-in.png
-    bg_color: '#ff9349'
+    image: /assets/img/arrow.svg
+    bg_color: '#ffc9a5'
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
     description: Log into our platform!
   - name: Create a Canvas
-    bg_color: '#f7918e'
+    bg_color: '#fbc8c7'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    image: /assets/img/canvas.png
+    image: /assets/img/diagram.svg
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:

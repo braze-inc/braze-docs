@@ -56,6 +56,8 @@ popular_topic_list:
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
 
 helpful_resources_list:
+  - name: Braze Developer Portal
+    link: https://developer.braze.com
   - name: Innovation Statement
     link: /docs/innovation_statement/
   - name: Support & Success Services Handbook
