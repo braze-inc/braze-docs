@@ -105,7 +105,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "IPodNano-8GB",
         "vendor": "Apple",
         "properties": "nil",
-        "price": "199"
+        "price": 199
       }
     ],
     "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
