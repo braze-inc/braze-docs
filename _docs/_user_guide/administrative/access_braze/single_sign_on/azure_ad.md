@@ -91,7 +91,7 @@ Use the following attribute pairings:
 
 - `givenname` = `user.givenname`
 - `surname`= `user.surname`
-- `emailaddress` = `user.userprincipalname`
+- `emailaddress` = `user.mail`
 - `name` = `user.userprincipalname`
 - `Unique User Identifier` = `user.userprincipalname`
 
