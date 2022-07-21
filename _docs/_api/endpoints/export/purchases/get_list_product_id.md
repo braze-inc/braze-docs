@@ -26,7 +26,7 @@ This endpoint returns paginated lists of product IDs.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `page`  | Optional | String | The page of your product list that you would like to view. |
+| `page` | Optional | String | The page of your product list that you would like to view. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -44,14 +44,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
-    "5499334426779",
-    "5499334819995",
-    "5499335442587",
-    "5499335835803",
-    "Calendula Face Mask Peel",
-    "Dior Lip Gloss",
-    "Rice Bowl",
-    "product_name"
+    "product_name" (string), the name of the product
   ],
   "message": "success"
 }

@@ -47,11 +47,11 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "campaigns" : [
         {
-            "id" : (string) Campaign API Identifier,
+            "id" : (string) the Campaign API identifier,
             "last_edited": (ISO 8601 string) the last edited time for the message 
-            "name" : (string) campaign name,
+            "name" : (string) the campaign name,
             "is_api_campaign" : (boolean) whether the campaign is an API campaign,
-            "tags" : (array) tag names associated with the campaign
+            "tags" : (array) the tag names associated with the campaign formatted as strings
         },
         ...
     ]

@@ -26,7 +26,7 @@ This endpoint allows you to export a list of segments, each of which will includ
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `page` | Optional | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100). |
+| `page` | Optional | Integer | The page of segments to return, defaults to 0 (returns the first set of up to 100). |
 | `sort_direction` | Optional | String | - Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -45,10 +45,10 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "segments" : [
         {
-            "id" : (string) Segment API Identifier,
+            "id" : (string) the Segment API identifier,
             "name" : (string) segment name,
             "analytics_tracking_enabled" : (boolean) whether the segment has analytics tracking enabled,
-            "tags" : (array) tag names associated with the segment
+            "tags" : (array) the tag names associated with the segment formatted as strings
         },
         ...
     ]

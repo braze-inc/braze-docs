@@ -51,15 +51,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "email_template_id": (string) your email template's API Identifier,
   "template_name": (string) the name of your email template,
-  "description": (string) email template description,
+  "description": (string) the email template description,
   "subject": (string) the email template subject line,
   "preheader": (optional, string) the email preheader used to generate previews in some clients),
   "body": (optional, string) the email template body that may include HTML,
   "plaintext_body": (optional, string) a plaintext version of the email template body,
   "should_inline_css": (optional, boolean) whether there is inline CSS in the body of the template - defaults to the css inlining value for the App Group,
   "tags": (string) tag names,
-  "created_at": (string, in ISO 8601),
-  "updated_at": (string, in ISO 8601)
+  "created_at": (string) the time the email was created at in ISO 8601,
+  "updated_at": (string) the time the email was updated in ISO 8601
 }
 ```
 

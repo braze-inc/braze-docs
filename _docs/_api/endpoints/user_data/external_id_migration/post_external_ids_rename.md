@@ -78,11 +78,9 @@ The response will confirm all successful renames, as well as unsuccessful rename
 
 ```
 {
-
   "message" : (string) status message,
-  "external_ids" : (array of successful Rename Operations),
-  "rename_errors": (array of any <minor error message>)
-
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 

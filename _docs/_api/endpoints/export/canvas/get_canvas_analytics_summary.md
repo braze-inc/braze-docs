@@ -50,7 +50,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
-    "name": (string) Canvas name,
+    "name": (string) the Canvas name,
     "total_stats": {
       "revenue": (float) the number of dollars of revenue (USD),
       "conversions": (int) the number of conversions,
@@ -58,8 +58,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       "entries": (int) the number of entries
     },
     "variant_stats": (optional) {
-      "00000000-0000-0000-0000-0000000000000": (API identifier for variant) {
-        "name": (string) name of variant,
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the variant {
+        "name": (string) the name of variant,
         "revenue": (float) the number of dollars of revenue (USD),
         "conversions": (int) the number of conversions,
         "entries": (int) the number of entries
@@ -67,8 +67,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       ... (more variants)
     },
     "step_stats": (optional) {
-      "00000000-0000-0000-0000-0000000000000": (API identifier for step) {
-        "name": (string) name of step,
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
+        "name": (string) the name of step,
         "revenue": (float) the number of dollars of revenue (USD),
         "conversions": (int) the number of conversions,
         "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,

@@ -50,11 +50,11 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
         {
-            "time" : (string) date as ISO 8601 date,
+            "time" : (string) the date as ISO 8601 date,
             "messages" : {
                 "ios_push" : [
                     {
-                      "variation_name": (string) name of the message in the dashboard (eg., "iOS_Push"),
+                      "variation_name": (string) the name of the message in the dashboard (eg., "iOS_Push"),
                       "sent" : (int) the number of sends,
                       "direct_opens" : (int) the number of direct opens,
                       "total_opens" : (int) the number of total opens,
@@ -115,7 +115,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                 ],
                 "content_cards" : [
                   { 
-                    "variation_name": (string) variation name, 
+                    "variation_name": (string) the variation name, 
                     "variation_api_id": (string) the variation API identifier, 
                     "sent": (int) the number of sends, 
                     "total_impressions": (int) the number of total impressions, 
@@ -162,13 +162,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {
-            "time" : (string) date as ISO 8601 date,
+            "time" : (string) the date as ISO 8601 date,
             "conversions" : (int) the number of conversions,
             "revenue": (float) the number of dollars of revenue (USD),
             "conversions_by_send_time": (int) the number of conversions,
             "messages" : {
                "trigger_in_app_message": [{
-                    "variation_name": (optional, string) variation name,
+                    "variation_name": (optional, string) the variation name,
                     "impressions": (int) the number of impressions,
                     "clicks": (int) the number of clicks,
                     "first_button_clicks": (int) the number of first button clicks,
@@ -184,7 +184,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
                     "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
       			}, {
-      				"variation_name": (optional, string) variation name,
+      				"variation_name": (optional, string) the variation name,
       				"impressions": (int) the number of impressions,
       				"clicks": (int) the number of clicks,
       				"first_button_clicks": (int) the number of first button clicks,
@@ -200,7 +200,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
                     "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
       			}, {
-      				"variation_name": (optional, string) variation name,
+      				"variation_name": (optional, string) the variation name,
       				"revenue": (float) the number of dollars of revenue (USD),
       				"unique_recipients": (int) the number of unique recipients,
       				"conversions": (int) the number of conversions,

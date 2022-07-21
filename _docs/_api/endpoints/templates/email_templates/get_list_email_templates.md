@@ -50,12 +50,12 @@ Templates built using the Drag & Drop Editor are not provided in this response.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "count": number of templates returned
+  "count": the number of templates returned
   "templates": [template with the following properties]:
     "email_template_id": (string) your email template's API Identifier,
     "template_name": (string) the name of your email template,
-    "created_at": (string, in ISO 8601),
-    "updated_at": (string, in ISO 8601),
+    "created_at": (string) the time the email was created at in ISO 8601,
+    "updated_at": (string) the time the email was updated in ISO 8601,
     "tags": (array of strings) tags appended to the template
 }
 ```
