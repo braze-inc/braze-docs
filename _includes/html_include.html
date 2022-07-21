@@ -133,7 +133,8 @@
   var algolia_debug = {{ site.search_debug }};
   var base_url = '{{site.baseurl}}';
 
-  var toc_minheaders = {{ page.toc_minheaders }};
+  var toc_minheaders = {{ page.toc_minheaders  | default: 2 }} ;
+  var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
   var algolia_doc_index = '{{ site.algolia.index_name }}';
   var algolia_lab_index = '{{ site.lab_index_name }}';
 
