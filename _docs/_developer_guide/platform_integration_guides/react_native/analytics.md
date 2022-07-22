@@ -20,7 +20,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
 ```javascript
-ReactAppboy.changeUser("user_id");
+Braze.changeUser("user_id");
 ```
 
 ## Logging custom events
@@ -28,13 +28,13 @@ ReactAppboy.changeUser("user_id");
 You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
 
 ```javascript
-ReactAppboy.logCustomEvent("react_native_custom_event");
+Braze.logCustomEvent("react_native_custom_event");
 ```
 
 You can add metadata about the event by passing a properties object with your custom event.
 
 ```javascript
-reactAppboy.logCustomEvent("custom_event_with_properties", {
+Braze.logCustomEvent("custom_event_with_properties", {
     key1: "value1",
     key2: ["value2", "value3"],
     key3: false,
@@ -50,7 +50,7 @@ Braze provides methods for assigning attributes to users. You’ll be able to fi
 To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
 
 ```javascript
-ReactAppboy.setFirstName("Name");
+Braze.setFirstName("Name");
 ```
 
 The following attributes are supported:
@@ -75,7 +75,7 @@ Beyond the default user attributes, Braze also allows you to define custom attri
 String values have a maximum length of 255 characters.
 
 ```javascript
-ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(){
+Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
     // optional onResult callback
 });
 ```
@@ -83,7 +83,7 @@ ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(
 #### Unsetting a custom attribute
 
 ```javascript
-ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
+Braze.unsetCustomUserAttribute("attribute_key", function(){
     // optional onResult callback
 });
 ```
@@ -95,13 +95,13 @@ Record in-app purchases so that you can track your revenue over time and across 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
 ```javascript
-ReactAppboy.logPurchase(productId, price, currencyCode, quantity, properties);
+Braze.logPurchase(productId, price, currencyCode, quantity, properties);
 ```
 
 For example:
 
 ```javascript
-ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, {
+Braze.logPurchase("product_id", 9.99, "USD", 1, {
     key1: "value"
 });
 ```

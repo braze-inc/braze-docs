@@ -119,7 +119,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Step 2.2a: Install pods
+#### Step 2.1: Install pods
 
 Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
 
@@ -129,7 +129,7 @@ From the root folder of the project:
 cd ios && pod install
 ```
 
-#### Step 2.2b: Configure the Braze SDK
+#### Step 2.2: Configure the Braze SDK
 
 
 Add Appboy SDK import at the top of the `AppDelegate.m` file:
@@ -148,7 +148,7 @@ In the same file, add the following snippet within the `application:didFinishLau
 Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
-2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). 
+2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
 
 Otherwise, add the following elements to the file:
 
@@ -161,6 +161,66 @@ Otherwise, add the following elements to the file:
 ```
 
 {% endtab %}
+{% tab Expo}
+
+#### Step 2.1: Install the Braze Expo plugin
+
+Ensure that your version of the Braze React Native SDK is at least 1.37.0. Then, install the Braze Expo plugin.
+
+```bash
+expo install @braze/expo-plugin
+```
+
+#### Step 2.2: Add the plugin to your app.json
+
+In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
+
+| Method                              | Type     | Description                                                                                                                                            |
+| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `apiKey`                            | string   |  Required. The API key for your application.                                                                                                           |
+| `customEndpoint`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
+| `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
+| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
+| `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
+| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
+| `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
+| `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
+| `enableAutomaticGeofenceRequests`   | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
+| `dismissModalOnOutsideTap`          | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+Example configuration:
+
+```javascript
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "apiKey": "YOUR-API-KEY",
+          "customEndpoint": "YOUR-SDK-ENDPOINT",
+          "sessionTimeout": 60,
+          "enableGeofence": true
+        }
+      ],
+    ]
+  }
+}
+```
+
+#### Step 2.3: Build and run your application
+
+Prebuilding your application will generate the native files necessary for the Braze SDK to work.
+
+```bash
+expo prebuild
+```
+
+Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Note that making any changes to the configuration options will require you to prebuild and run the application again.
+
+{% endtab %}
 {% endtabs %}
 
 ## Step 3: Usage
@@ -168,7 +228,7 @@ Otherwise, add the following elements to the file:
 Once installed, you can `import` the library in your React Native code:
 
 ```javascript
-import ReactAppboy from "react-native-appboy-sdk";
+import Braze from "react-native-appboy-sdk";
 ```
 
 ## Test your basic integration
@@ -178,18 +238,18 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can open a session for a particular user by calling the following code in your app.
 
 ```javascript
-ReactAppboy.changeUser("user-id");
+Braze.changeUser("user-id");
 ```
 
 For example, you can assign the user ID at the startup of the app:
 
 ```javascript
 import React, { useEffect } from "react";
-import ReactAppboy from "react-native-appboy-sdk";
+import Braze from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {
-    ReactAppboy.changeUser("some-user-id");
+    Braze.changeUser("some-user-id");
   }, []);
 
   return (

@@ -15,10 +15,31 @@ Native in-app messages display automatically on Android and iOS when using React
 
 ## Accessing in-app message data
 
+If you want to access the in-app message data in the Javascript layer, call the `Braze.subscribeToInAppMessage()` method to have the SDKs to publish an `inAppMessageReceived` event when an in-app message is triggered. You can pass a callback to this method or set a listener for this event to perform a callback when the in-app message is triggered.
+
+This method takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in Javascript.
+
+```javascript
+import Braze from "react-native-appboy-sdk";
+
+Braze.subscribeToInAppMessage(false, (event) => {
+  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
+});
+
+// You can also set a listener for the event directly
+DeviceEventEmitter.addListener("inAppMessageReceived", (event) => {
+  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
+});
+```
+
+## Advanced customization
+
+If you would like to include more advanced logic to determine whether or not to show an in-app message using the built-in UI, you should implement in-app messages through the native layer.
+
 {% tabs %}
 {% tab Android %}
 
-If you want to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our Android article on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+Implement the `IInAppMessageManagerListener` as described in our Android article on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
 For more on these values, see our [Android documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/).
 
@@ -41,7 +62,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% endtab %}
 {% tab iOS %}
 
-If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
 For more on these values, see our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/).
 
@@ -69,12 +90,12 @@ For more on these values, see our [iOS documentation]({{site.baseurl}}/developer
 {% endtab %}
 {% endtabs %}
 
-## Receiving in-app message in JavaScript
+### Receiving in-app message in JavaScript
 
 On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
 ```javascript
 DeviceEventEmitter.addListener("inAppMessageReceived", (event) => {
-    const inAppMessage = new ReactAppboy.BrazeInAppMessage(event.inAppMessage);
+  const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
 });
 ```
 
@@ -88,18 +109,18 @@ To log analytics using your `BrazeInAppMessage`, pass the instance into the desi
 For example:
 ```js
 // Log a click
-ReactAppboy.logInAppMessageClicked(inAppMessage);
+Braze.logInAppMessageClicked(inAppMessage);
 // Log an impression
-ReactAppboy.logInAppMessageImpression(inAppMessage);
+Braze.logInAppMessageImpression(inAppMessage);
 // Log button index `0` being clicked
-ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
+Braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
 ## Test displaying a sample in-app message
 
 Follow these steps to test a sample in-app message.
 
-1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
+1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
