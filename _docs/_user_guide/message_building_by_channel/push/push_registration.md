@@ -39,7 +39,7 @@ Platforms deal with push token registration and push permissions in different wa
   - **Android 12 and later**:<br>All users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.<br><br>
 - **iOS**: Not automatically registered for push.
     - **iOS 12 (with Provisional Authorization)**: <br>Your app can request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) or authorized push. Authorized push requires explicit permission from a user before sending any notifications (recieves a token once permission is granted by user), whereas [provisional push][provisional-blog] lets you send notifications __quietly__, directly to the notification center without any sound or alert.
-    - **iOS 11 and later & iOS 12 (without Provisional Authorization)**: <br>All users must explicitly opt-in to receive push notifications. Will recieve a token once opted-in.
+    - **iOS 11 and later & iOS 12 (without Provisional Authorization)**: <br>All users must explicitly opt-in to receive push notifications. Will recieve a token once opted-in.<br><br>
 - **Web:** You must request explicit opt-in from users via the native browser permission dialog, will recieve a token once opt-ed in.  Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
 
 | Get a push token | Send a push token |
@@ -107,11 +107,13 @@ Unfortunately, APNs and FCM don't really define this. Push tokens can expire whe
 
 To account for that ambiguity, our SDK push integrations always register and flush tokens on session start to ensure we have the most up-to-date token.
 
-
 [errors]: {{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
 [push-process]: {% image_buster /assets/img/push_process.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
 [2]: {% image_buster /assets/img/push_changelog.png %}
+[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
+[3]: {% image_buster /assets/img/push_example.png %}
+
 
