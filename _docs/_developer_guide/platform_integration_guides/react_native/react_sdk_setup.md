@@ -192,7 +192,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 
 Example configuration:
 
-```javascript
+```json
 {
   "expo": {
     "plugins": [
