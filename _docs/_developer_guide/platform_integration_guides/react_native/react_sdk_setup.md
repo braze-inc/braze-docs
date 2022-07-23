@@ -161,7 +161,7 @@ Otherwise, add the following elements to the file:
 ```
 
 {% endtab %}
-{% tab Expo}
+{% tab Expo %}
 
 #### Step 2.1: Install the Braze Expo plugin
 
