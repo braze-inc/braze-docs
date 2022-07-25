@@ -439,14 +439,16 @@ $(document).ready(function() {
   $('.lang-select').on('change', function(e){
     let lang = this.value;
     let wovn_lang = WOVN.io.getCurrentLang();
-    if (wovn_lang != lang) {
+    let wovn_lang_code = wovn_lang['code'] || 'en';
+    if (wovn_lang != wovn_lang_code) {
       WOVN.io.changeLang(lang);
     }
   });
   window.addEventListener('wovnApiReady', function(evt){
     let wovn_lang = WOVN.io.getCurrentLang();
     let wovn_lang_code = wovn_lang['code'] || 'en';
-    if (wovn_lang_code == 'ja') {
+    let current_lang = $('.lang-select').val();
+    if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
       $('.lang-select').val(wovn_lang_code).prop('selected', true);
     }
   });
