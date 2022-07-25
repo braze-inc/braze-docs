@@ -27,7 +27,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 });
 
 // You can also set a listener for the event directly
-DeviceEventEmitter.addListener("inAppMessageReceived", (event) => {
+Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
   const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
 });
 ```
@@ -94,7 +94,7 @@ For more on these values, see our [iOS documentation]({{site.baseurl}}/developer
 
 On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
 ```javascript
-DeviceEventEmitter.addListener("inAppMessageReceived", (event) => {
+Braze.addListener(Braze.Events.IN_APP_MESSAGE_RECEIVED, (event) => {
   const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
 });
 ```
