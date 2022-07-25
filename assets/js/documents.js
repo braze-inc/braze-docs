@@ -438,8 +438,10 @@ $(document).ready(function() {
   });
   $('.lang-select').on('change', function(e){
     let lang = this.value;
-    WOVN.io.changeLang(lang);
-    $('.lang-select').val(lang).prop('selected', true);
+    let wovn_lang = WOVN.io.getCurrentLang();
+    if (wovn_lang != lang) {
+      WOVN.io.changeLang(lang);
+    }
   });
   window.addEventListener('wovnApiReady', function(evt){
     let wovn_lang = WOVN.io.getCurrentLang();
