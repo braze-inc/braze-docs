@@ -48,6 +48,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 
 #### Things to know
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+- **Targeting a singular app**: Review the [differences in segmentation]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#targeting-a-singular-app) to target a singular app and its users.
 
 ## SMS
 
