@@ -582,7 +582,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
     val isPushDeletedEvent = event.eventType == BrazePushEventType.NOTIFICATION_DELETED
 
     //
-    // Data about the push notification itself
+    // Notification data
     //
     val pushTitle = parsedData.titleText
     val pushArrivalTimeMs = parsedData.notificationReceivedTimestampMillis
