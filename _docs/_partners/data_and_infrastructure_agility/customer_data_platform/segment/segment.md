@@ -26,11 +26,11 @@ The Braze and Segment integration allows you to track your users and route data 
 | ----------- | ----------- |
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Installed source and Segment source [libraries](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful `Source > Destination` flow. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
-To integrate Braze and Segment, you must set [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options) (connection mode). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays). Next, you must set up [mappings](#methods), and [test your integration](#step-3-test-your-integration) to ensure smooth data flow between Braze and Segment.
+To integrate Braze and Segment, you must set [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options) (connection mode). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays). Next, you must set up [mappings](#methods) and [test your integration](#step-3-test-your-integration) to ensure smooth data flow between Braze and Segment.
 
 ### Step 1: Create a Braze destination {#connection-settings}
 
@@ -40,7 +40,7 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
 
-![The source setup page. This page includes settings to set desination frame work as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
+![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
 
 You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Device-mode") integration or a server-to-server ("Cloud-mode") integration.
 
@@ -49,7 +49,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side<br>"Device-mode"](#side-by-side-sdk-integration) |Uses Segment’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server<br>"Cloud-mode"](#server-to-server-integration) | Forwards data from Segment to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -67,7 +67,7 @@ When using Segment's device-mode, you do not need to integrate the Braze SDK dir
 {% tabs %}
 {% tab Android %}
 
-To set up Braze as a device-mode destination for your Android source choose **Classic** as the Destination framework and click **Save**. 
+To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
@@ -78,7 +78,7 @@ The source code for the [Android Device mode](https://github.com/Appboy/appboy-s
 {% endtab %}
 {% tab iOS %}
 
-To set up Braze as a device-mode destination for your iOS source choose **Classic** as the destination framework and click **Save**. 
+To set up Braze as a device-mode destination for your iOS source, choose **Classic** as the destination framework and click **Save**. 
 
 ![]({% image_buster /assets/img/segment/ios.png %})
 
@@ -91,7 +91,7 @@ The source code for the [iOS Device mode](https://github.com/Appboy/appboy-segme
 
 Segment’s new Braze Web Mode (Actions) framework is recommended for setting up Braze as a Device-mode destination for your Web source. 
 
-Within the Setup UI choose **Actions** as your destination framework and **Device Mode** as your connection mode.
+Within the setup UI, choose **Actions** as your destination framework and **Device Mode** as your connection mode.
 
 The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment. 
 
@@ -106,7 +106,7 @@ Also called "Cloud-mode", this integration forwards data from Segment to Braze's
 
 Use Segment’s new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a Cloud-mode destination for any of your sources. 
 
-However, unlike the side-by-side integration, the server-to-server integration does not support any of Braze’s UI features, such as in-app messaging, Content Cards, or automatic push token registration.
+However, unlike the side-by-side integration, the server-to-server integration does not support Braze’s UI features, such as in-app messaging, Content Cards, or automatic push token registration.
 
 There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as device-level fields) that are not available through Cloud-mode.
 
@@ -114,7 +114,66 @@ If you wish to use this data and these features, consider using the side-by-side
 
 The source code for the [Braze Cloud Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/destination-actions/src/destinations/braze) is maintained by Segment
 
-### Step 3: Map methods {#methods}
+### Step 3: Settings
+
+| Setting | Description | Applicable destination type |
+| ------- | ----------- | --------------------------- |
+| App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | All |
+| REST API key | (string) This can be found in your Braze dashboard under **Developer Console > API Settings**. | Cloud Actions |
+| Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (i.e., sdk.iad-01.braze.com) | Web<br>Mobile |
+| Endpoint region | Your Braze instance (i.e., US 01, US 02, EU 01, etc.) | Mobile |
+| Log purchase when revenue is present | When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | Classic framework web device mode<br>Segment recommends migrating to the Web Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping). |
+| Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | Cloud Actions |
+| Safari website push ID | If you support Safari push, you must specify this option with the website push ID that you provided to Apple when creating your Safari push certificate (starts with "web", e.g., "web.com.example.domain"). | Web |
+| Braze Web SDK version | The version of the Braze Web SDK you would like to use | Web |
+| Enable automatic in-app message registration | Defaults to `TRUE`.<br><br>Disable this if you want to manually register in-app messages. | Mobile |
+| Automatically send in-app messages | Defaults to `TRUE`.<br><br>By default, all in-app messages a user is eligible for are automatically delivered to the user. Disable this if you would like to manually display in-app messages. | Web |
+| Do not load font awesome | Defaults to `FALSE`.<br><br>Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (e.g., because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise in-app messages may not render correctly. | Web |
+| Enable HTML in-app messages | Defaults to `FALSE`.<br><br>Enabling this option will allow Braze dashboard users to use HTML in-app messages. | Web |
+| Open in-app messages in new tab | Defaults to `FALSE`.<br><br>By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. | Web | 
+| In-app message z index | Provide a value for this option to override Braze's default z-indexes. | Web (Web Actions only) |
+| Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |  Web (Web Actions only) |
+| Minimum interval between trigger actions in seconds | Defaults to 30.<br><br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.<br>By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. | Web |
+| Disable push token maintenance | By default, users who have already granted web push permission will sync their push token with the Braze backend automatically on a new session to ensure deliverability. To disable this behavior, set this option to `FALSE`. | Web (Web Actions only) |
+| Manage service worker externally | If you have your own service worker that you register and control the lifecycle of, set this option to `TRUE`, and the Braze SDK will not register or unregister a service worker. If you set this option to `TRUE`, for push to function correctly, you must register the service worker yourself before calling `requestPushPermission` and ensure that it contains Braze's service worker code, either with `self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` or by including the content of that file directly. When this option is `TRUE`, the `serviceWorkerLocation` option is irrelevant and is ignored. | Web (Web Actions only) |
+| Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. | Web (Web Actions only) |
+| Allow crawler activity | Defaults to `FALSE`.<br><br>By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. | Web | 
+| Enable logging | Defaults to `FALSE`.<br><br>Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the javascript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
+| Open News Feed cards in a new tab (open cards in new tab) | Defaults to `FALSE`.<br><br>By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window.| Web |
+| Allow user-supplied Javascript | By default, the Braze Web SDK does not allow user-supplied Javascript click actions, as it allows Braze dashboard users to run Javascript on your site. To indicate that you trust the Braze dashboard users to write non-malicious Javascript click actions, set this property to `TRUE`. If `enableHtmlInAppMessages` is `TRUE`, this option will also be set to `TRUE`. | Web (Web Actions only) |
+| App version| If you provide a value for this option, user events sent to Braze will be associated with the given version, which can be used for user segmentation. | Web (Web Actions only) |
+| Session timeout in seconds | Defaults to 30.<br><br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | Web |
+| Device property allowlist | By default, the Braze SDK automatically detects and collects all device properties in `DeviceProperties`. To override this behavior, provide an array of `DeviceProperties`. Note that without some properties, not all features will function properly. For instance, local timezone delivery will not function without the time zone. | Web (Web Actions only) |
+| Localization | By default, any SDK-generated user-visible messages will be displayed in the user's browser language. Provide a value for this option to override that behavior and force a specific language. The value for this option should be an ISO 639-1 language code. | Web (Web Actions only)
+| No cookies | By default, the Braze SDK will store small amounts of data (user ids, session ids) in cookies. This is done to allow Braze to recognize users and sessions across different subdomains of your site. If this presents a problem for you, pass `TRUE` for this option to disable cookie storage and rely entirely on HTML 5 localStorage to identify users and sessions. | Web (Web Actions only) |
+| Only track known users | Defaults to `FALSE`.<br><br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | Classic framework web device mode<br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping). |
+| Update existing users only | Defaults to `FALSE`.<br><br>Determines whether to update existing users only. | Classic framework Cloud Mode<br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping). |
+| Track all pages | Defaults to `FALSE`.<br><br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. | Classic framework web device mode<br>Segment recommends migrating to the Web Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping). |
+| Track only named pages | Defaults to `FALSE`.<br><br>This will send only page calls to Braze with a name associated with them. | Classic framework web device mode<br>Segment recommends migrating to the Web Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+
+#### Classic framework web device mode
+Segment recommends migrating to the Web Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).
+
+| Setting | Description |
+| ------- | ----------- | 
+| Log purchase when revenue is present | When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
+| Only track known users | Defaults to `FALSE`.<br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
+| Track all pages | Defaults to `FALSE`.<br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
+| Track only named pages | Defaults to `FALSE`.<br>This will send only page calls to Braze with a name associated with them. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+#### Classic framework cloud mode
+Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).
+
+| Setting | Description |
+| ------- | ----------- | 
+| Update existing users only | Defaults to `FALSE`.<br>Determines whether to update existing users only. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+
+### Step 4: Map methods {#methods}
 
 Braze supports the [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page) (web), [Identify](https://segment.com/docs/spec/identify/), and [Track](https://segment.com/docs/spec/track/), and Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports custom attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
 
@@ -157,7 +216,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment.
 {% endalert %}
 {% endtab %}
 
@@ -195,7 +254,7 @@ When you call _group_ in Segment, we will record a [custom attributes]({{site.ba
 
 Most of your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
-You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's **Custom Events** page allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
+You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
 If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
@@ -248,7 +307,7 @@ Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK
 | Braze REST endpoint | Custom REST API endpoint |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The proper format must be followed to ensure that you input your Braze SDK Endpoint correctly. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with invalid endpoint `https://https://sdk.iad-03.braze.com`.
+The proper format must be followed to ensure that you input your Braze SDK Endpoint correctly. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with an invalid endpoint `https://https://sdk.iad-03.braze.com`.
 
 {% enddetails %}
 
@@ -266,7 +325,7 @@ Scenarios where data will not pass as expected:
 
 {% details Customization of Braze initialization. %}
 
-There are several different ways that Braze can be customized: [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/), [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/), [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/), and initialization. With a side-by-side integration you can still customize push, in-app messages, and Content Cards as you would with a direct Braze integration.
+There are several different ways that Braze can be customized: [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/), [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/), [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/), and initialization. With a side-by-side integration, you can still customize push, in-app messages, and Content Cards as you would with a direct Braze integration.
 
 However, customizing when the Braze SDK is integrated or specifying initialization configurations may be difficult and sometimes not possible. This is because Segment will initialize the Braze SDK for you when the Segment initialization occurs.
 
