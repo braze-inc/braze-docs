@@ -553,7 +553,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
   final boolean isPushDeletedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_DELETED;
 
   //
-  // Data about the push notification itself
+  // Notification data
   //
   final String pushTitle = parsedData.getTitleText();
   final Long pushArrivalTimeMs = parsedData.getNotificationReceivedTimestampMillis();
