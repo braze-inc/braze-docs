@@ -12,9 +12,13 @@ After creating your [Content Blocks for your drag & drop email campaigns]({{site
 This preview feature for the Drag & Drop Editor Content Blocks is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-To preview your Content Blocks, go to the **Content** section > **Design and Build**. Click the **Rows** tab, and select **Content Blocks** in the dropdown. 
+To preview your Content Blocks, go to the **Content** section > **Design and Build**. Click the **Rows** tab, and select **Content Blocks** in the dropdown. Here, you can see your Drag & Drop Editor Content Blocks display as they would in your email campaign. 
 
-Here, you can see your Drag & Drop Editor Content Blocks display as they would in your email campaign. Once you've dragged and dropped the Content Block into your email campaign, you can make changes to any and all content in the Content Block. 
+{% alert note %}
+Only Content Blocks used exclusively in the Drag & Drop Editor are viewable under the **Row** tab.
+{% endalert %}
+
+Once you've dragged and dropped the Content Block into your email campaign, you can make changes to any and all content in the Content Block. Note that if a Content Block contains Liquid, you'll see the Liquid in the **Preview & Test** section.
 
 ![The Rows tab in the Content section of the Drag and Drop Editor, showing the Content Blocks option selected. There are two Content Block previews available for use as an email header for MyDealz and ArtNight.][1]{: style="max-width:50%" }
 
