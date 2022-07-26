@@ -24,7 +24,7 @@ function refresh(){
 ```
 ## Listening for card updates
 
-A callback function can be registered for when cards are refreshed. 
+A callback function can be registered to subscribe for updates when cards are refreshed. 
 
 {% alert important %}
 Content Cards will only refresh on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. You can always manually refresh Content Cards using `requestContentCardsRefresh()`.
