@@ -15,7 +15,7 @@ This preview feature for the Drag & Drop Editor Content Blocks is currently in e
 To preview your Content Blocks, go to the **Content** section > **Design and Build**. Click the **Rows** tab, and select **Content Blocks** in the dropdown. Here, you can see your Drag & Drop Editor Content Blocks display as they would in your email campaign. 
 
 {% alert note %}
-Only Content Blocks used exclusively in the Drag & Drop Editor are viewable under the **Row** tab.
+Only Content Blocks used exclusively in the Drag & Drop Editor are viewable under the **Rows** tab.
 {% endalert %}
 
 Once you've dragged and dropped the Content Block into your email campaign, you can make changes to any and all content in the Content Block. Note that if a Content Block contains Liquid, you'll see the Liquid in the **Preview & Test** section.
