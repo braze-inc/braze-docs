@@ -59,6 +59,14 @@ When users enter this Audience Paths component, they will first be evaluated if 
 
 You can also see the performance of this component using [Canvas analytics][5].
 
+### Audience Paths and random bucket numbers
+
+If your Canvas uses a [rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (such as limiting the total number of users who will receive the Canvas), Braze recommends that you don't use random bucket numbers to segment your Audience Paths. 
+
+A [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) is a user attribute that can be used to create uniformly distributed segments of random users. Braze uses the random bucket number to group users during the segmentation phase of Canvas entry, and each group is processed separately. Depending on which groups finish processing first, some users may be capped at entry due to the rate limit, which could cause an uneven distribution of users when they reach the Audience Paths step.
+
+In this scenario, try using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) instead.
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}

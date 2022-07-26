@@ -46,10 +46,19 @@ Yes, you can insert as many templates as you would like in your email messages. 
 
 ### How do I preview my links with all of the tags applied?
 
-Once you have applied the [Link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send yourself a [test email]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) to view all the links. Additionally, you can open the links from the preview pane in a new tab to view the links. Lastly, you can hover over the links in the preview pane and see them at the bottom of your browser.
+There are several ways to preview your links. Once you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) to yourself to view all the links. 
+
+From the preview pane in a new tab, you can also open the links to view the links. Lastly, you can hover over the links in the preview pane and see them at the bottom of your browser.
 
 ### How does link templating work with Liquid?
 
-Link templates are expanded and added to the each URL prior to any Liquid expansion happening. 
+Link templates are expanded and added to the each URL prior to any Liquid expansion happening. If part of your URL is generated using a Liquid snippet, we recommended that the URL base and question mark (?) is hardcoded for link templates to be expanded correctly. 
 
-As a best practice, if part of your URL is generated using a Liquid snippet, we recommended that the URL base and question mark (?) is hardcoded for link templates to be expanded correctly. Refrain from adding the question mark (?) to your Liquid as this will cause link templates to first add a question mark (?), and then later the Liquid expansion process will add a second question mark (?).
+Avoid adding the question mark (?) to your Liquid as this will cause link templates to first add a question mark (?), and then later the Liquid expansion process will add a second question mark (?).
+
+## Link aliasing
+
+### How will enabling link aliasing impact my Content Blocks and link templates?
+
+For all new Content Blocks that are created, link aliasing is applied across app groups since this is a company-level feature. Existing Content Blocks won't be modified when link aliasing is enabled. While existing link templates won't be modified, the existing link template section in a message will be removed. Check out [Link aliasing in Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#link-aliasing-in-content-blocks) for more information.
+
