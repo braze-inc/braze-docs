@@ -24,7 +24,11 @@ function refresh(){
 ```
 ## Listening for card updates
 
-When cards are refreshed, a callback function can be subscribed to:
+A callback function can be registered for when cards are refreshed. 
+
+{% alert important %}
+Content Cards will only refresh on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. You can always manually refresh Content Cards using `requestContentCardsRefresh()`.
+{% endalert %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -33,6 +37,8 @@ braze.subscribeToContentCardsUpdates(function(updates){
   const cards = updates.cards;
   // do something with the latest instance of `cards`
 });
+
+braze.openSession();
 ```
 
 ## Logging events
@@ -42,7 +48,7 @@ Log impression events when cards are viewed by users:
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logCardImpressions(cards, true);
+braze.logCardImpressions([card1, card2, card3], true);
 ```
 
 Log card click events when users interact with a card:
