@@ -25,7 +25,7 @@ For more on this, check out [Braze Perspectives](https://www.braze.com/perspecti
 
 _Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018, and renewed as of July 15, 2022. Expires December 16, 2024._
 
-Any third party wishing to independently verify the status of Braze's certification may query the [Schellman certificate directory][5], [read our report][7], or [see our certificate here][6].
+Any third party wishing to independently verify the status of Braze's certification may query the [Schellman certificate directory][5] or [see our certificate here][6].
 
 ## SOC 2 examination
 
