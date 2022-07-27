@@ -56,13 +56,17 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 {% endtab %}
 {% endtabs %}
 
-## Method 1: In-app message data callback
+## Receiving in-app message data
+
+To receive in-app message data in your Flutter app, `BrazePlugin` supports 2 methods for receiving in-app message data. The first method uses a data callback and the second method uses [Streams](https://dart.dev/tutorials/language/streams) (Preferred).
+
+The `BrazeInAppMessage` object supports a subset of fields available in the native model objects, including `uri`, `message`, `header`, `buttons`, `extras`, and more.
+
+### Method 1: In-app message data callback
 
 You can set a callback in Dart to receive Braze in-app message data in the Flutter host app.
 
 To set the callback, call `BrazePlugin.setBrazeInAppMessageCallback()` from your Flutter app with a function that takes a `BrazeInAppMessage` instance.
-
-The `BrazeInAppMessage` object supports a subset of fields available in the native model objects, including `uri`, `message`, `header`, `buttons`, `extras`, and more.
 
 {% tabs %}
 {% tab Android %}
@@ -81,13 +85,13 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 {% endtab %}
 {% endtabs %}
 
-### Replaying the callback for in-app messages
+#### Replaying the callback for in-app messages
 
 To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
-## Method 2: In-app message data streams (Preferred)
+### Method 2: In-app message data streams (Preferred)
 
 You can set a data stream listener in Dart to receive in-app message data in the Flutter host app.
 
