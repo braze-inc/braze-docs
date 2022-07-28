@@ -54,7 +54,7 @@ If you have events or attributes that you want to keep when you merge user profi
 
 ### Option 2: Overwrite anonymous data and maintain the alias-only profile
 
-Make a Braze API request to the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint to identify any users that match a given user alias. If any exist, Braze will migrate the user alias data to the identified user profile. To prevent a race condition, we strongly recommend implementing a 5 minute delay. Next, call `changeUser()`.
+Make a Braze API request to the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint to identify any users that match a given user alias. If any exist, Braze will migrate the user alias data to the identified user profile. To prevent a race condition, we strongly recommend implementing a 5-minute delay. Next, call `changeUser()`.
 
 By calling `changeUser()` after hitting the `/users/identify` endpoint, Braze will merge and preserve all data associated with the alias-only profile but "orphan" any anonymous user data.
 
