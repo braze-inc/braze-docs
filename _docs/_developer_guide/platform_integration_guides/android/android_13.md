@@ -43,9 +43,9 @@ Note that apps are granted an [exemption][4] for users who previously had push n
 
 Apps targeting Android 13 can control when to request permission and show the native push prompt. 
 
-If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device.
+If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, the system automatically pre-grants the new notification permission to all eligible apps. In other words, these apps can continue to send notifications to users, and users don't see a runtime permission prompt.
 
-Once your app is opened, push notifications will not be shown to these upgraded users until you have obtained explicit consent by the user, using the new notification permission prompt.
+For more details on this see Android's Developer Documentation for [effects on updates to existing apps][8].
 
 **Targeting Android 12 or earlier**
 
