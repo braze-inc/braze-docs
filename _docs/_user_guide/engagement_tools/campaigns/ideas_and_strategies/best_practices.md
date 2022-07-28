@@ -39,13 +39,13 @@ Getting five-star ratings in the app store is on every mobile marketer's wish li
 
 ### Targeting power users
 
-To ensure higher ratings, ask only your power users to review you in the app store. They are more likely to have great things to say. Although they differ from app to app, power users tend to have:
+Power users can be the advocates for your app. Often, they interact with your app consistently and can provide feedback to improve your app. Although they differ from app to app, power users tend to have:
 
 - Logged many sessions
 - Used the app recently
 - Spent money and made purchases
 
-For example, you could create a segment named "Power users" with these filters:
+To ensure higher ratings, ask your power users to review your app in the app store as they're more likely to have great things to say. For example, you could create a segment named "Power users" with these filters:
 - Has used these apps more than 10 times in the last 14 days
 - Has spent more than 50 dollars
 
