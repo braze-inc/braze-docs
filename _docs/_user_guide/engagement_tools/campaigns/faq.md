@@ -14,9 +14,21 @@ tool: Campaigns
 
 Multichannel campaigns can be created by selecting **Create Campaign** and then **Multichannel Campaign** within the dashboard. Once in a multichannel campaign, select **Add Messaging Channel** within the **compose** tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
+### Can I add a control group to my multichannel campaign?
+
+No, control groups in campaigns are intended for single-channel messaging, such as Email A versus Email B. As an alternative, try using [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas) for testing different channels, messaging content, and delivery timing. 
+
 ### What are some ways I can start testing and optimizing campaigns?
 
 Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for tsting entire workflows.
+
+### Why did the open rate for my campaign decrease?
+
+Low open rates aren't always correlated to a technical issue. There may be issues with email clipping, which results in a missing tracking pixel. However, it's also possible that fewer users are opening their emails due to the content or changes in audience size. 
+
+### How are campaign audiences evaluated?
+
+By default, campaigns will check audience filters at entry time. For action-based campaigns with a delay, there will be an option to re-evaluate segment criteria at the send time to ensure users are still part of the target audience when the message is sent. 
 
 ### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
 
