@@ -23,13 +23,13 @@ It's also important to understand your [active users]({{site.baseurl}}/user_guid
 
 ### Feature awareness
 
-If your goal is to draw your users towards a new feature or app version, be sure to use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][6] cards are generally less disruptive if a user doesn’t wish to update immediately. Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
+If your goal is to draw your users towards a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][6] are generally less disruptive if a user doesn’t wish to update immediately. Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
 
-Persuading a user to update their app or change the way they use your app can be difficult. So, make sure the let them know all the benefits of the new version or features and how it will improve their experience with your app. 
+Persuading a user to update their app or change the way they use your app can be difficult, so let them know about all the benefits of the new version or features and how it will improve their experience with your app. 
 
 ### Send timing
 
-Timing is key! When your goal is to convince users to update their app, wait until they have a positive experience within the app to ask users. To keep you audience engaged, avoid repetitive messaging that may appear intrusive.
+Timing is key! When your goal is to convince users to update their app, wait until they have a positive experience within the app to ask users. To keep your audience engaged, avoid repetitive messaging that may appear intrusive.
 
 Over time, your users may forget certain features or not notice new features. When new features are added, be sure to let your users know with [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). If users aren't engaging with major features within the app, it may be best to remind them when they're engaging with your app and when this new feature would be of use. Our article on [data opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. 
 
@@ -45,7 +45,7 @@ To ensure higher ratings, ask only your power users to review you in the app sto
 - Used the app recently
 - Spent money and made purchases
 
-For instance, you could create a segment named "Power users" with these filters:
+For example, you could create a segment named "Power users" with these filters:
 - Has used these apps more than 10 times in the last 14 days
 - Has spent more than 50 dollars
 

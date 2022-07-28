@@ -13,8 +13,8 @@ tool: Canvas
 
 Dive into the what, who, and why!
 - What are you trying to help the users accomplish?
-- Who are the users we're trying to reach?
-- Why are we building this Canvas?
+- Who are the users you're trying to reach?
+- Why are you building this Canvas?
 
 ## Mix and match
 

@@ -77,7 +77,7 @@ For Android, this version name is based on the [Package Version Name][7] for the
 
 ### Have not used feature
 
-When you release a new app version and introduce new features, users may not notice new content.  Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action. You can use this attribute (or event) to segment users that you want to send the campaign to.
+When you release a new app version and introduce new features, users may not notice new content. Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so, you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action. You can use this attribute (or event) to segment the users you want to send the campaign to.
 
 {% alert tip %}
 Looking to retarget a specific portion of your audience? Check out [Retargeting Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) to learn how to retarget campaigns by leveraging your user's previous actions.
