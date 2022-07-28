@@ -46,7 +46,7 @@ Properties are defined as key-value pairs. Keys are `String` objects, and values
 {% tab JAVA %}
 
 ```java
-braze.logCustomEvent("YOUR-EVENT-NAME",
+Braze.logCustomEvent("YOUR-EVENT-NAME",
     new BrazeProperties(new JSONObject()
         .put("you", "can")
         .put("pass", false)
@@ -68,7 +68,7 @@ braze.logCustomEvent("YOUR-EVENT-NAME",
 {% tab KOTLIN %}
 
 ```kotlin
-braze.logCustomEvent("YOUR-EVENT-NAME",
+Braze.logCustomEvent("YOUR-EVENT-NAME",
     BrazeProperties()
         .addProperty("you", "can")
         .addProperty("pass", false)
