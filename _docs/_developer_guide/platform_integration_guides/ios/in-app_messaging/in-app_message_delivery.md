@@ -24,7 +24,7 @@ Triggered in-app messages only work with custom events logged through the SDK an
 
 ## Delivery semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on session start. In the case of 2 in-app messages being triggered by 1 event the in-app message with the higher priority will be shown. For more information about the SDK's session start semantics, read about our [session lifecycle][45]. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on session start. In the case of two in-app messages being triggered by one event, the in-app message with the higher priority will be shown. For more information about the SDK's session start semantics, read about our [session lifecycle][45]. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
