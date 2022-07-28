@@ -1,7 +1,7 @@
 ---
 nav_title: Active User Campaigns
 article_title: Active User Campaigns
-page_order: 0
+page_order: 0.5
 page_type: tutorial
 description: "This how-to article describes active user campaigns within the Braze dashboard and the steps to create and set up one."
 tool: 
