@@ -16,9 +16,9 @@ Inbox Vision allows marketers to view their emails from the perspective of vario
 
 ![][3]{: style="max-width:80%;"}
 
-Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete. You'll see these rendered HTML previews divided into three sections: **Web Clients**, **Application Clients**, and **Mobile Clients**. Select a tile to view the preview in more detail. 
+Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete. You'll see these rendered HTML previews divided into three sections: **Web Clients**, **Application Clients**, and **Mobile Clients**. 
 
-Your email must include a subject line and a valid sending domain in order to see these previews. 
+Select a tile to view the preview in more detail. Your email must include a subject line and a valid sending domain in order to see these previews. Be mindful of how your email can render different on the desktop versus on mobile devices. As you view these previews, you can identify any edits to make to ensure that your email content is displaying as intended.
 
 {% alert tip %}
 Use Inbox Vision to test for differences across dark and light modes to ensure you get your emails just right!
