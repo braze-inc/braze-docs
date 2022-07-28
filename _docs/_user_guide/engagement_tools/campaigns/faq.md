@@ -28,7 +28,7 @@ Low open rates aren't always correlated to a technical issue. There may be issue
 
 ### How are campaign audiences evaluated?
 
-By default, campaigns will check audience filters at entry time. For action-based campaigns with a delay, there will be an option to re-evaluate segment criteria at the send time to ensure users are still part of the target audience when the message is sent. 
+By default, campaigns check audience filters at entry time. For action-based campaigns with a delay, there is an option to re-evaluate segment criteria at the send time to ensure users are still part of the target audience when the message is sent. 
 
 ### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
 
