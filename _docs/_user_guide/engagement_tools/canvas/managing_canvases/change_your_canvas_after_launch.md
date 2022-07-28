@@ -59,7 +59,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 - Users who haven't entered the Canvas yet are eligible for any newly created components. 
 - If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
-- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to recieve those newly added steps. 
+- Users who are currently in a launched Canvas, but haven't reached the newly added steps in the user journey, are eligible to receive those newly added steps.
 
 If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay component is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
