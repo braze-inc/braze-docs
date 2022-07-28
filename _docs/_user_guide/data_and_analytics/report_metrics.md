@@ -329,5 +329,6 @@ glossaries:
   - name: Click-to-Open Rate
     description: The percentage of opened emails that were clicked. This metric is only available in the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.
     calculation: (Unique Clicks) / (Unique Opens) (for Email)
-    tags:       
+    tags:    
+      - Email       
 ---
