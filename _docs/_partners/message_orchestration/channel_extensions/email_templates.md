@@ -25,5 +25,5 @@ valid_partner_list:
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: IAM Studio
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_stuio/
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 ---

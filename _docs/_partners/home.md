@@ -198,5 +198,5 @@ valid_partner_list:
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 - name: IAM Studio
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_stuio/
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 ---

@@ -83,5 +83,5 @@ valid_partner_list:
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: IAM Studio
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_stuio/
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 ---
