@@ -539,3 +539,6 @@ validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/change_you
 validurls['/docs/user_guide/engagement_tools/canvas/faqs/#canvas-flow/'] = '/docs/canvas_v2_101/';
 
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/about/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
+
