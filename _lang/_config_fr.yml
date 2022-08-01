@@ -37,15 +37,15 @@ collections:
   home:
     title: Documentation
   user_guide:
-    title: User Guide
+    title: Guide de l’utilisateur
   developer_guide:
-    title: Developer Guide
+    title: Guide du développeur
   api:
     title: API
   partners:
     title: Technology Partners
   help:
-    title: Help
+    title: Aide
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
   docs_pages: # Site specific pages. ie main redirects and search
@@ -58,7 +58,7 @@ asset_pipeline:
 
 # Algolia Search index
 algolia:
-  index_name: "DocSearch_French" 
+  index_name: "DocSearch_French"
   files_to_exclude:
     - _lang/fr/_hidden/*
     - _lang/fr/_hidden/*/* #exclude hidden subdirectories from indexing

@@ -166,9 +166,9 @@ valid_partner_list:
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+  url: /docs/partners/message_personalization/dynamic_content/worthy/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
 - name: Toovio
@@ -193,7 +193,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: Dynamics 365 Customer Insights 
+- name: Dynamics 365 Customer Insights
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
