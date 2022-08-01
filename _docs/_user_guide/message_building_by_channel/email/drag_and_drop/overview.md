@@ -110,7 +110,7 @@ To adjust padding, scroll down to **Block Options**, and toggle **More Options**
 
 Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
-Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
+Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! 
 
 Next, take your generated Liquid snippet and add it to your email.
 
