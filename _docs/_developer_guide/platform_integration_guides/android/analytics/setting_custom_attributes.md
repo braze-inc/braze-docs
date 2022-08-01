@@ -15,9 +15,11 @@ Braze provides methods for assigning attributes to users. You'll be able to filt
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Assigning default user attributes
+## Assigning user attributes
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
+
+### Standard user attributes
 
 Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our KDoc for [method specifications][2]:
 
@@ -35,7 +37,7 @@ Braze provides predefined methods for setting the following user attributes with
 
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 
-### Setting default attributes
+#### Setting standard attribute value
 
 {% tabs %}
 {% tab JAVA %}
@@ -54,25 +56,7 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-## Assigning custom user attributes
-
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
-
-- Strings
-- Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
-- Integers
-- Booleans
-- Dates
-- Longs
-- Floats
-- Doubles
-
-Custom attribute keys and values have a maximum length of 255 characters. Longer strings will be truncated to 255 characters.
-
-Full method specifications for custom attributes can be found here within the [BrazeUser class][2] in our KDoc.
-
-### Setting custom attribute values
+#### Setting custom attribute values
 
 {% tabs local %}
 {% tab String %}
@@ -250,7 +234,7 @@ Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_att
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a custom attribute
+#### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -271,7 +255,7 @@ Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute
 {% endtab %}
 {% endtabs %}
 
-### Custom attribute via the REST API
+#### Custom attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so, refer to the [User API documentation][4].
 

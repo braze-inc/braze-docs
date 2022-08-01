@@ -122,9 +122,9 @@ window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value
 The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
-### Default user attributes {#standard-attributes}
+### Standard user attributes {#standard-attributes}
 
-Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for default attributes match the expected format specified in the [User class][16] documentation.
+Standard user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for standard attributes match the expected format specified in the [User class][16] documentation.
 
 For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
 
