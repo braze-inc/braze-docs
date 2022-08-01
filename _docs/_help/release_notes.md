@@ -47,7 +47,7 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
-## 7/26/2022 release
+## 7/26/2022 Release
 
 ### Canvas Flow
 The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#editing-a-step) has been released. With Canvas Flow you get access to lightweight [Canvas components](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing](https://www.braze.com/docs/post-launch_edits).
@@ -90,7 +90,7 @@ The following SDK updates have been released. Breaking updates are listed below;
   - Replaced `IAppboyNotificationFactory` with `IBrazeNotificationFactory`.
   - Removed `com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener`. Use `com.braze.ui.inappmessage.listeners.IHtmlInAppMessageActionListener` instead.
 
-## 6/28/2022 release
+## 6/28/2022 Release
 
 ### Delivery validation for Canvas Message Steps
 
@@ -118,7 +118,7 @@ Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our
 
 ![Braze learning logo in the custom attributes article, which takes you to the Braze Learning course for custom attributes]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
 
-## 5/31/2022 release
+## 5/31/2022 Release
 
 ### Inbox Vision
 
@@ -178,7 +178,7 @@ The Braze and [Survicate]({{site.baseurl}}/partners/message_orchestration/channe
 
 The Braze and [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstake or contest entry information into Braze to use in campaigns or Canvases. 
 
-## 5/3/2022 release
+## 5/3/2022 Release
 
 ### Campaign approval
 
@@ -216,7 +216,7 @@ The Braze SDKs team has released Web SDK v4. For a list of breaking changes, upd
 
 Support for Grouparoo has been discontinued as of April 2022.
 
-## 4/5/2022 release
+## 4/5/2022 Release
 
 ### Filter by campaign or Canvas attribution
 You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
@@ -247,7 +247,7 @@ As of March 24, 2022, the [Braze Baidu Push Integration]({{site.baseurl}}/develo
 
 The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/) integration allows you to seamlessly control the flow of information between the two systems. Now with Currents, you can also connect data to Tealium to make it actionable across the entire growth stack.
 
-## 3/8/2022 release
+## 3/8/2022 Release
 
 ### In-app messages for Roku
 
@@ -309,7 +309,7 @@ The Braze and [Lexer]({{site.baseurl}}/partners/data_and_infrastructure_agility/
 
 The Braze and [Knak]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/knak/) integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding.
 
-## 2/8/2022 release
+## 2/8/2022 Release
 
 ### Canvas Action Paths
 
