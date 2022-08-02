@@ -50,7 +50,7 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 
 ### Step 2: Add a Google Audience step in Canvas Flow
 
-Add a component in your Canvas and select the **Google Audience** component.
+Add a component in your Canvas and select **Google Audience**.
 
 ![Workflow of the previous steps to add a Google audience in Canvas Flow.][6]
 

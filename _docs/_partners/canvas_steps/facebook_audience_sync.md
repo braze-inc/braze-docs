@@ -66,7 +66,7 @@ For customers who have previously undergone the Facebook App Review process for 
 
 ### Step 2: Add a Facebook Audience component in Canvas Flow
 
-Add a component in your Canvas and select **Facebook Audience Step**.
+Add a component in your Canvas and select **Facebook Audience**.
 
 ![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
 
