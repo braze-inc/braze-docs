@@ -54,7 +54,7 @@ Next, replace the images, text, and buttons with your desired content.
 
 ### Step 3: Export the template
 
-Once all editing has been completed, export the template by clicking **Export**. After exporting,  the in-app message HTML code will be generated. Copy this code by clicking the **Copy code** button. 
+Once all editing has been completed, export the template by clicking **Export**. After exporting, the in-app message HTML code will be generated. Copy this code by clicking the **Copy code** button. 
 
 ![][2]{: style="max-width:45%;"}
 
