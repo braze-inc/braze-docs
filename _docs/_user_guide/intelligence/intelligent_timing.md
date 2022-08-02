@@ -8,7 +8,7 @@ description: "When scheduling a campaign, you can use Intelligent Timing to deli
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> This article covers how to implement Intelligent Timing in your campaigns and Canvases.
+> This article covers how to implement Intelligent Timing in your campaigns and Canvases using the original workflow.
 
 When [scheduling a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/), you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user when Braze determines that an individual is most likely to engage (open or click).
 
@@ -48,7 +48,9 @@ It's important to be aware of the limitations of using Intelligent Timing early 
 
 ## Triggered campaigns and Canvases
 
-If a triggered campaign or Canvas component is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or component was triggered. In this case, the message will send immediately.
+If a triggered campaign or Canvas component in the original Canvas workflow is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or component was triggered. In this case, the message will send immediately.
+
+For Canvas Flow, refer to the [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs#intelligent-timing-behavior) for the Intelligent Timing behavior.
 
 ## Preview chart
 
