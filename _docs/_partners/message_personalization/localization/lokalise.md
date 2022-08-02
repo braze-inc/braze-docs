@@ -5,7 +5,7 @@ description: "This article outlines the partnership between Braze and Lokalise, 
 alias: /partners/lokalise/
 page_type: partner
 search_tag: Partner
-
+hidden: true
 ---
 
 # Lokalise
