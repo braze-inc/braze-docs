@@ -1,0 +1,180 @@
+---
+nav_title: Quikly
+article_title: Quikly
+page_order: 1
+
+description: "Integrate Braze with Quikly's urgency marketing platform to motivate consumers and immediately increase response around key marketing initiatives."
+alias: /partners/quikly/
+
+page_type: partner
+search_tag: Partner
+hidden: true
+
+---
+
+# Quikly
+
+> Consumers are more distracted and empowered with their purchase decisions than ever before, making it all too easy to tune out even their favorite brands. [Quikly’s urgency marketing platform][1] helps. The technology leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
+
+Quikly helps to accelerate conversions on events within a Braze customer journey. It does this by using urgency psychology to motivate consumers in fun — and instant — ways. For example, brands can use Quikly to immediately acquire new email and SMS subscribers directly into Braze, or to motivate other key marketing objectives like downloading your mobile app.
+
+## Prerequisites
+
+| Requirement | Description |
+| ----------- | ----------- |
+| Quikly Account | A [Quikly][1] brand partner account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Quikly API key | (Optional) A Quikly API key provided by your client success manager, only required for webhook integrations. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Use cases
+
+Quikly allows brands to accelerate email or SMS acquisition and motivate existing subscribers to provide first-party data directly within Braze. You can also use Braze to target lapsed customers with a Quikly activation that will reactivate and retain that audience. Additionally, using this integration, marketers can incentivize specific events in the customer journey with unique reward structures. For example:
+ - Build hype, anticipation and engagement over days as consumers opt in for a chance to claim exciting rewards with [Quikly Hype][3]. First-party data is automatically pushed to Braze.
+ - Accelerate acquisition of new email and SMS subscribers using unique, real-time offers based on a consumer's speed of response, rank against others, randomly, or before time or quantities run out with [Quikly Swap][4].
+ - Motivate specific steps in the customer journey with unique reward structures using webhooks.
+ - Apply custom attributes or events to the user's profile upon participating in a Quikly activation.
+
+## Integration
+
+Outlined below are four different available integrations: Email Acquisition, SMS Acquisition, Custom Attributes, and Webhooks. The integration you choose will depend on your Quikly activation and use-case.
+
+{% tabs %}
+{% tab Email Acquisition %}
+
+### Email Acquisition
+If your Quikly activations collect customer email addresses or profile data, the only required step is to provide Quikly with your REST API key and endpoint. Quikly will configure your brand account to pass this data to Braze. If there are additional user attributes you'd like included, be sure to mention this when you provide the API credentials.
+
+Here is an outline of how Quikly executes this workflow.
+1. Upon participating in a Quikly activation, Quikly schedules a user lookup using the [export api](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) to see if a user exists with a given `email_address`.
+2. Log or update user.
+    - If the user exists:
+        - Do not create a new profile.
+        - If desired, Quikly can log a custom attribute on the user's profile to indicate that the user participated in the activation.
+    - If the user does not exist:
+        - Quikly creates an alias-only profile via Braze's [user/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint, setting the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+        - If desired, Quikly can log custom events to indicate this profile participated in Quikly activation.
+
+{% details Detailed /users/track Request %}
+#### Request Headers
+```
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+```
+
+#### Request Body
+```
+{
+  "attributes": [{
+    "_update_existing_only": false,
+    "user_alias:": {
+      "alias_name": "email@example.com",
+      "alias_label: "email"
+    },
+    "email": "email@example.com"
+  }]
+}
+```
+
+{% enddetails %}
+
+{% endtab %}
+{% tab SMS Acquisition %}
+
+### SMS Subscriptions
+Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group’s subscription_group_id by navigating to the *Subscription Group* page.
+
+Quikly will perform a subscription lookup using the customer's phone number and automatically credit them in the activation if an SMS subscription already exists. Otherwise, a new subscription will be initiated and once the subscription status is verified, the customer will be credited.
+
+Here is the complete workflow when a customer provides their mobile number and consent via Quikly:
+1. Quikly performs a subscription lookup using the [subscription group status](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to see if a given `phone` is subscribed to a `subscription_group_id`. If a subscription exists, credit the user in the Quikly activation. No further action is necessary.
+2. Quikly performs a user lookup using the [export api](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) to see if an user profile exists with a given `email_address`. If no users exists, create an alias-only profile via Braze's [user/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint, setting the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+3. Update the subscription status using the [update user subscription group status](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint.
+
+To support existing double-opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the workflow above. In that case, rather than updating the subscription status directly, the [custom event triggers the double-opt-in process](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
+
+{% alert important %}
+Braze advises that when creating new users via the /users/track endpoint, there should be a delay of about 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
+{% endalert %}
+
+{% details Detailed /subscription/status/set Request %}
+#### Request Headers
+```
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+```
+
+#### Request Body
+```
+{
+  "subscription_group_id": "the-id-of-the-subscription-group",
+    "subscription_status": "subscribed",
+    "phone": "+13135551212"
+  }]
+}
+```
+
+{% enddetails %}
+
+
+{% endtab %}
+{% tab Custom Attributes %}
+### Custom Attributes
+
+Depending on your Braze implementation, you may want events within Quikly activation to cascade through Braze for further processing. For example, you may wish to apply a custom user attribute based on what level or incentive was achieved in Quikly activation, allowing you to display the relevant content card when they open your app or log in to your website. Quikly will work with you directly to implement these integrations.
+
+{% endtab %}
+{% tab Webhooks %}
+### Webhooks
+Use webhooks to trigger incentives for specific events in the customer journey. For example, if you have a Braze event for when a user logs into your app, turns on push notifications, or uses your store locator, you can use a Webhook to trigger a custom offer to that user based on the configuration of a specific Quikly activation. Example tactics include rewarding the first X number of who perform an action (i.e. logging into your app) with a custom offer, or providing an offer that decreases in value as more time elapses to motivate an immediate response.
+
+### Create a Quikly webhook in Braze
+
+To create a Quikly webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off Quikly webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+
+Select the Blank Template. Enter the following for the Webhook URL and Request Body:
+- **Webhook URL**: https://api.quikly.com/webhook/braze
+- **Request Body**: JSON Key/Value Pairs
+
+#### Request headers and method
+
+Quikly requires an `HTTP Header` for authorization.
+
+- **HTTP Method**: POST
+- **Request Header**:
+  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
+  - **Request Body**: application/json
+
+#### Request body
+
+Select *JSON Key/Value Pairs* and add the following pairs:
+{% raw %}
+```
+"q_scope": "your-activations-scope-id"
+"event": "your-event-identifier"
+"email": {{${email_address}}
+```
+{% endraw %}
+
+### Step 3: Preview your request
+
+Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+
+{% alert important %}
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
+{% endalert %}
+
+
+{% endtab %}
+{% endtabs %}
+
+
+## Support ##
+Please reach out to your client success manager at Quikly with any questions.
+
+
+[1]: https://www.quikly.com
+[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[3]: https://www.quikly.com/urgency-marketing/platform/product-overview/hype
+[4]: https://www.quikly.com/urgency-marketing/platform/product-overview/swap
