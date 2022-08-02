@@ -25,6 +25,8 @@ local_redirect:
   
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
 # Push integration
 
 ## Step 1: Configure push notifications

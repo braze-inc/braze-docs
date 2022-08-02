@@ -20,15 +20,15 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 ## Prerequisites
 
-This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions:
+This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions. Note that some of these SDKs may not be released yet. Visit the following links to check the current version:
 
 {% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message][2] as you usually would. You can choose to send to mobile apps, web browsers, or both, however the button on-click behavior to request push permissions is only available for iOS and Web. 
+[Create an in-app message][2] as you usually would.
 
-Next, select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a full-screen in-app message, an image is required. 
+Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a full-screen in-app message, an image is required. 
 
 ## Step 2: Build your message
 

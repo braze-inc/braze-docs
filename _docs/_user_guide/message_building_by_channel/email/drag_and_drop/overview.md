@@ -110,7 +110,7 @@ To adjust padding, scroll down to **Block Options**, and toggle **More Options**
 
 Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
-Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
+Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! 
 
 Next, take your generated Liquid snippet and add it to your email.
 
@@ -121,7 +121,7 @@ Once you've finished designing and building your email message, go to **Sending 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email

@@ -8,9 +8,9 @@ tool: Canvas
 
 ---
 
-# Four Canvas outlines
+# Canvas outlines
 
-The Entry Steps displayed in each of these outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+The Entry Steps displayed in each of these four outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 ## Onboarding: Restaurant reservation
 - **What**: Onboarding users to their first reservation
@@ -20,7 +20,7 @@ The Entry Steps displayed in each of these outlines shows a previous version of 
 - **Where**: Push, Email
 - **How**: Channel, Content (test)
 
-<br>![Restaurant Onboarding][41]
+<br>![][41]
 
 ## Upsell: Music streaming
 - **What**: Upgrading active freeloaders to basic premium subscription
@@ -30,7 +30,7 @@ The Entry Steps displayed in each of these outlines shows a previous version of 
 - **Where**: Push, Email, Webhook
 - **How**: Content, Discount
 
-<br>![Music Upsell Journey][28]
+<br>![][28]
 
 ## Cart abandonment: Clothing retail
 - **What**: Reminding customers of incomplete purchases
@@ -40,7 +40,7 @@ The Entry Steps displayed in each of these outlines shows a previous version of 
 - **Where**: Push, Email
 - **How**: Channel, Trigger (test)
 
-<br>![Cart Abandonment Journey][29]
+<br>![][29]
 
 ## Holiday travel: Airline 
 - **What**: Educate customers on resources and prime them for good flight and airport experiences
@@ -50,8 +50,18 @@ The Entry Steps displayed in each of these outlines shows a previous version of 
 - **Where**: Push
 - **How**: Channel, Cadence (test)
 
-<br>![Holiday Travel Journey][42]
+<br>![][42]
 
+## Additional resources
+
+[![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+
+Braze Learning offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises. 
+- [Create customer journeys with Canvas](https://learning.braze.com/canvas-course)
+- [Lapsed user Canvas](https://learning.braze.com/lapsed-user-canvas)
+- [Abandoned intent Canvas](https://learning.braze.com/abandoned-intent-canvas)
+- [Use case: onboarding](https://learning.braze.com/onboarding-canvas)
+- [Canvas use cases for retail](https://learning.braze.com/canvas-use-cases-for-retail)
 
 [28]:{% image_buster /assets/img_archive/Journey_9.png %}
 [29]:{% image_buster /assets/img_archive/Journey_10.png %}

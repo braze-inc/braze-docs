@@ -19,7 +19,7 @@ To edit your global style settings, go to the **Manage Settings** page and selec
 ![][1]
 
 {% alert note %}
-Updates made to the Email Global Style Settings will apply to all future email campaigns and Canvases. 
+Updates made to the global style settings will apply to all future email campaigns and Canvases. 
 {% endalert %} 
 
 ## Basic styling 
@@ -28,16 +28,26 @@ In the **Basic Styling** dropdown, you can set your default email and content ba
 
 ![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.][2]
 
-### Add a custom font
-To add a custom font, click **Add a custom font** and enter the font's name and source file URL. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
+### Custom font
+With custom fonts, you can manually add a web font for branding consistency across various email platforms. Currently, you can only add one custom font for the global style settings.
 
-Currently, you can only add one custom font for the global style settings. 
+To add a custom font, click **Add a custom font** and enter the font's name and source file URL. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
 
 {% alert tip %}
 Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
 {% endalert %}
 
 ![][3]{: style="max-width:80%;"}
+
+### Fallback font
+
+{% alert important %}
+Fallback fonts are currently in early access. Contact your Braze account manager if you're interested in participating in the early access. 
+{% endalert %}
+
+Fallback fonts are used for the title, header, and body text when your default font choice isn't supported by the inbox provider or operating system. By default, Braze automatically sets Arial as a fallback font when global style settings are saved.
+
+You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
 ## Title styling
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 

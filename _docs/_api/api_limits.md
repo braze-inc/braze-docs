@@ -9,7 +9,7 @@ page_type: reference
 
 # API rate limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. To ensure responsible user of the API, we enforce API rate limits per app group. A rate limit is the the number of requests the API can receive in a given time period. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. To ensure responsible use of the API, we enforce API rate limits per app group. A rate limit is the number of requests the API can receive in a given time period. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
 {% alert warning %}
 API rate limits and their values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
@@ -34,6 +34,12 @@ The following table lists specific API rate limits for different request types. 
 | [`/sends/id/create`][18] | 100 requests per day. |
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 {: .reset-td-br-1 .reset-td-br-2}
+<!--
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
+| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
+--->
 
 ## Batching API requests
 
@@ -102,3 +108,7 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
 [21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
+[22]: {{site.baseurl}}/scim/get/
+[23]: {{site.baseurl}}/scim/post/
+[24]: {{site.baseurl}}/scim/delete/
+[25]: {{site.baseurl}}/scim/put

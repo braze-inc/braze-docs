@@ -521,6 +521,7 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/push_notificati
 validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
 validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/'] = '/docs/user_guide/message_building_by_channel/push/push_primer_messages';
+validurls['/docs/day-of-custom-attribute-behavior'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#time';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
 
@@ -532,3 +533,12 @@ validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_a
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
 validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/'] = '/docs/post-launch_edits';
+
+validurls['/docs/user_guide/engagement_tools/canvas/faqs/#canvas-flow/'] = '/docs/canvas_v2_101/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/about/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
+

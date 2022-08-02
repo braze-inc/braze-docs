@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/docs/api/objects_filters/#messaging-objects). |
+| `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -165,6 +165,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 }'
 ```
 
+## Response
+
+```json
+{
+    "dispatch_id": (string),
+    "schedule_id": (string),
+    "message": "success"
+}
+```
 
 {% endapi %}
 

@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Snowflake
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
@@ -116,7 +116,7 @@ The initial industries include:
 - Transportation
 - Travel
 
-Our benchmarking data will also be available directly in the Snowflake Data Exchange.
+Our benchmarking data is also available directly in the [Snowflake Data Exchange](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
 
 > For a set of example queries to reference when setting up snowflake, check out our [sample queries][SQ] and [ETL event pipeline setup][ETL] examples.
 

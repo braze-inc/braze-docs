@@ -3,7 +3,7 @@ nav_title: Custom Styling
 article_title: In-App Message Custom Styling for Web
 platform: Web
 channel: in-app messages
-page_order: 3
+page_order: 1
 page_type: reference
 description: "This article covers in-app messaging custom styling for your web applciation."
 

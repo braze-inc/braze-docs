@@ -119,8 +119,9 @@ Features include:
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - In-app messages
+  - HTML and Slideup messages are not supported on non-touch devices
 
-For more information, visit the [Fire OS Integration Guide][2].
+For more information, visit the [Fire OS integration guide][2].
 
 ### Kindle Fire
 
@@ -133,7 +134,7 @@ Features include:
 - Content Cards
 - In-app messages
 
-For more information, visit the [Fire OS Integration Guide][2].
+For more information, visit the [Fire OS integration guide][2].
 
 ### Android TV
 
@@ -144,11 +145,16 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
+  - HTML and Slideup messages are not supported on non-touch devices
 - &#42; Push Notifications (Manual Integration Required)
 
-For more information, visit the [Android SDK Integration Guide][2].
+For more information, visit the [Android SDK integration guide][2].
 
 Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
+
+{% alert note %}
+Make sure to create a new Android app in the dashboard for your Android OTT integration.
+{% endalert %}
 
 ### LG webOS
 
@@ -160,7 +166,7 @@ Features include:
 - Content Cards (via Custom UI)
 - In-app messages (via Custom UI)
 
-For more information, visit the [Web Smart TV Integration Guide][8].
+For more information, visit the [Web Smart TV integration guide][8].
 
 ### Samsung Tizen
 
@@ -172,7 +178,7 @@ Features include:
 - Content Cards (via Custom UI)
 - In-app messages (via Custom UI)
 
-For more information, visit the [Web Smart TV Integration Guide][8].
+For more information, visit the [Web Smart TV integration guide][8].
 
 ### Roku
 
@@ -183,18 +189,25 @@ Features include:
 - Data and analytics collection for cross-channel engagement
 - In-app messages (via Custom UI)
 
-For more information, visit the [Roku Integration Guide][3].
+For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS
 
 Use Braze's iOS SDK to collect data and analytics on your TV OS users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
 
-For more information, visit the [iOS SDK Integration Guide][4].
+For more information, visit the [iOS SDK integration guide][4].
+
+## App targeting
+
+To target OTT apps for messaging, we recommend creating a segment specific to your OTT app.
+
+![A segment created using the Android OTT app.][1]
 
 ## In-app message with custom UI
 
 For platforms that support in-app messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native in-app message templates into your existing app designs.
 
+[1]: {% image_buster /assets/img/android_ott.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/

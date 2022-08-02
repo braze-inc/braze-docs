@@ -8,11 +8,11 @@ tool: Segments
 
 ---
 
-# Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow this guide or check out our [Segmentation Braze Learning course](https://learning.braze.com/segmentation-course)!
+Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users.
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
@@ -50,10 +50,10 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
-Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
+Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived. 
 
 {% alert important %}
-Segments already using the Segment Membership Filter cannot be further included or nested into other segments. 
+Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
 ### Single-user segments
@@ -81,7 +81,7 @@ If **Include users from all apps** is cleared and you have more than one app in 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
-When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
+When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas component) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.

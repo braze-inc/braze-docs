@@ -35,7 +35,7 @@ Android 13 introduces a [major change][3] in how users manage apps that send pus
 
 This new permission follows a similar pattern to iOS and Web push, where you only have one attempt to obtain permission. If a user chooses `Don't Allow` or dismisses the prompt, your app cannot ask for permission again.
 
-Note that apps are granted a [temporary exemption][4] intended for users who previously had push notifications for that app enabled prior to updating to Android 13. These users will remain eligible to receive push from the app until (A) they explicitly decline the permission prompt when it's shown (or within system settings), or (B) the app is opened for the first time after a user upgrades to Android 13.
+Note that apps are granted an [exemption][4] for users who previously had push notifications enabled prior to updating to Android 13. These users [will remain eligible][8] to receive push when they update to Android 13 without having to request permission.
 
 #### Permission prompt timing {#push-permission-timing}
 
@@ -43,13 +43,13 @@ Note that apps are granted a [temporary exemption][4] intended for users who pre
 
 Apps targeting Android 13 can control when to request permission and show the native push prompt. 
 
-If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device.
+If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, the system automatically pre-grants the new notification permission to all eligible apps. In other words, these apps can continue to send notifications to users, and users don't see a runtime permission prompt.
 
-Once your app is opened, push notifications will not be shown to these upgraded users until you have obtained explicit consent by the user, using the new notification permission prompt.
+For more details on this see Android's Developer Documentation for [effects on updates to existing apps][8].
 
 **Targeting Android 12 or earlier**
 
-If your app does not yet target Android 13, then once a user upgrades to Android 13, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). 
+If your app does not yet target Android 13, then a new user on Android 13 installs your app, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). Users who already have your app installed and then upgrade to Android 13 are never shown a prompt and are automatically granted push permission.
 
 {% alert note %}
 Braze automatically creates a default notification channel if one does not already exist when a push notification is received. If you don't target Android 13, this will cause the push permission prompt to be shown, which is required to show the notification.
@@ -70,3 +70,4 @@ To start using our new ["no-code" push primer feature][7], upgrade your Android 
 [5]: https://developer.android.com/about/versions/13/overview#platform_stability
 [6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
 [7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
+[8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps
