@@ -14,7 +14,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 
 | Personalization Tag Type | Tags |
 | -------------  | ---- |
-| Default Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
+| Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | [SMS Attributes][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
@@ -40,7 +40,7 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
 - `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
+- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas component name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
 ## Most recently used device information
@@ -240,9 +240,9 @@ You can also target users based off of their time zone. For example, send one me
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
 {% if hour_in_utc >= 19 && hour_in_utc < 20 %}
-It is between 2:00:00pm and 2:59:59pm ET!
+It is between 2:00:00 pm and 2:59:59 pm ET!
 {% elsif hour_in_utc >= 22 && hour_in_utc < 23 %}
-It is between 2:00:00pm and 2:59:59pm PT!
+It is between 2:00:00 pm and 2:59:59 pm PT!
 {% else %}
 {% abort_message %}
 {% endif %}

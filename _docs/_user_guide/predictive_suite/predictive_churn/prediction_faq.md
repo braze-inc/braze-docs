@@ -45,12 +45,6 @@ If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
 
-## Timing clarifications
-
-You can look back up to 14 days for your churn prediction. Your "churn" definition and time window for any `Last Made Purchase` / `Last Used App` / `Last Did Custom Event` filters in the Prediction Audience definition cannot add up to more than 30 days.
-
-For example, if you define churn as not starting a session in the past ten days, then your Prediction Audience can be based on up to 20 days of data. 
-
 ## Data considerations
 
 The following lists some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.

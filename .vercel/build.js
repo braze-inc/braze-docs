@@ -7,7 +7,7 @@ let vercel_env = process.env.VERCEL_ENV || 'preview';
 if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
 	// For staging, check if it's a build from a language branch
 	// Cancel if it doesn't match expected branch
-	if (branch_check.includes('l10n_') || branch_commit.includes('l10n_')) {
+	if (branch_check.includes('i18n_') || branch_commit.includes('i18n_')) {
 		build_app = 0;
 		if (branch_check && (vercel_env == 'preview')) {
 			if (branch_commit == branch_check) {

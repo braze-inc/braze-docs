@@ -199,5 +199,11 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-  
+- name: IAM Studio
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
+- name: Storyly
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
+- name: Lokalise
+  url: /docs/partners/message_personalization/localization/lokalise/
+
 ---

@@ -24,9 +24,9 @@ This is a great place to get a high-level overview to check if your Canvas is pe
 
 ## Performance visualization
 
-As you move down the **Canvas Details** page, you can see the performance for each step. These metrics include sends, unique recipients, conversion count, and revenue generated. You can click on a step to further breakdown your data and see channel-specific performance.
+As you move down the **Canvas Details** page, you can see the performance for each component. These metrics include sends, unique recipients, conversion count, and revenue generated. You can click on a component to further breakdown your data and see channel-specific performance.
 
-![Two examples of performance details for Canvas Steps. On the left shows the performance details for a user path with one Canvas Step. On the right shows performance details for an expanded Canvas step and for the nested Step 1, Step 2, and Step 3.][25]
+![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and for the nested Step 1, Step 2, and Step 3.][25]
 
 ## Performance breakdown by variant
 
@@ -53,8 +53,8 @@ Basic metrics include the following:
 - **Total Revenue:** The total revenue in dollars from Canvas recipients within the set primary conversion window.
 
 {% alert note %}
-Like conversions, revenue is technically tracked at the Canvas level, but is attributed to the most recent step and most recent variant from which the user has received a message (or entered, if they haven't received a message yet).<br><br>
-For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second step, and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first step, that revenue is attributed to the variant they entered, but not to any step.
+Like conversions, revenue is technically tracked at the Canvas level, but is attributed to the most recent component and most recent variant from which the user has received a message (or entered, if they haven't received a message yet).<br><br>
+For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second component, and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first Canvas component, that revenue is attributed to the variant they entered, but not to any component.
 {% endalert %}
 
 Beyond that, you can see a more explicit breakdown of [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), including the following:

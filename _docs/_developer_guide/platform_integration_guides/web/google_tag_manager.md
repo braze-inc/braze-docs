@@ -9,11 +9,7 @@ description: "This article covers how to use Google Tag Manager to deploy Braze 
 
 # Google Tag Manager
 
-This article provides a step-by-step guide on how to add the Braze Web SDK to your website using the Google Tag Manager.
-
-[Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
-
-## Braze tag templates
+> This article provides a step-by-step guide on how to add the Braze Web SDK to your website using the Google Tag Manager. [Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
 
 There are two Google Tag Manager templates built by Braze, the [Initialization Tag](#initialization-tag) and the [Actions Tag](#actions-tag).
 
@@ -21,38 +17,38 @@ Both tags can be added to your workspace from [Google's community gallery][15] o
 
 ![image of gallery search][gtm-community-gallery-search]
 
-### Initialization Tag template {#initialization-tag}
+## Initialization Tag template {#initialization-tag}
 
 Use the Initialization Tag to add the Braze Web SDK to your website.
 
-#### Step 1: Select the Initialization Tag
+### Step 1: Select the Initialization Tag
 
 Search for Braze in the community template gallery, and select the **Braze Initialization Tag**.
 
 ![A dialog box showing the Braze Initialization Tag configuration settings. Settings included are "tag type", "API key", "API endpoint", "SDK version", "external user ID", and "Safari web push ID".][gtm-initialization-tag]
 
-#### Step 2. Configure settings
+### Step 2. Configure settings
 
 Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page.
 
-#### Step 3. Choose initialization options
+### Step 3. Choose initialization options
 
 Choose from the optional set of additional initialization options described in the [Initial setup][7] guide.
 
-#### Step 4: Verify and QA
+### Step 4: Verify and QA
 
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 
 1. Using Google Tag Manager's [debugging tool][gtm-debugging-tool], you should see the Braze Initialization Tag has been triggered on your configured pages or events.
 2. You should see network requests made to Braze, and the global `window.braze` library should now be defined on your webpage.
 
-### Actions Tag template {#actions-tag}
+## Actions Tag template {#actions-tag}
 
 The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop or resume tracking for privacy requirements.
 
 ![][gtm-actions-tag]
 
-#### Changing user external ID {#external-id}
+### Changing user external ID {#external-id}
 
 The **Change User** tag type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). 
 
@@ -62,7 +58,7 @@ Be sure to enter the current user's unique ID in the **External User ID** field,
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".][gtm-change-user]
 
-#### Log custom events {#custom-events}
+### Log custom events {#custom-events}
 
 The **Custom Event** tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
@@ -74,25 +70,45 @@ Use the **Add Row** button to add event properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".][gtm-custom-event]
 
-#### Track purchase {#purchases}
+### E-Commerce events {#ecommerce}
+
+If your site logs purchases using the standard [e-commerce event][e-commerce] datalayer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+
+You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
+
+For example, let's say your e-commerce payload contains the following `items`:
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`][log-purchase] call to Braze.
+
+### Track purchase {#purchases}
 
 The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
 
-Use this tag to track purchases to Braze, optionally including Purchase properties.
+Use this tag to track purchases to Braze, optionally including purchase properties.
 
 The **Product ID** and **Price** fields are required.
 
-Use the **Add Row** button to add Purchase properties.
+Use the **Add Row** button to add purchase properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
 
-#### Stop and resume tracking {#stop-tracking}
+### Stop and resume tracking {#stop-tracking}
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
 Use the **Disable Tracking** or **Resume Tracking** tag type to disable or re-enable web tracking, respectively.
 
-#### Custom user attributes {#custom-attributes}
+### Custom user attributes {#custom-attributes}
 
 Custom user attributes are not available due to a limitation in Google Tag Manager's scripting language. To log custom attributes, create a Custom HTML tag with the following content:
 
@@ -106,9 +122,9 @@ window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value
 The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
-#### Default user attributes {#standard-attributes}
+### Standard user attributes {#standard-attributes}
 
-Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for default attributes match the expected format specified in the [User class][16] documentation.
+Standard user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for standard attributes match the expected format specified in the [User class][16] documentation.
 
 For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
 
@@ -162,3 +178,5 @@ This will help identify what values are being sent from your webpage's data laye
 [gtm-version-number]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
+[e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
+[log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase

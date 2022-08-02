@@ -93,5 +93,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-    
+- name: Storyly
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/  
+
 ---

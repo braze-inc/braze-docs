@@ -91,8 +91,11 @@ Use the following attribute pairings:
 
 - `givenname` = `user.givenname`
 - `surname`= `user.surname`
-- `emailaddress` = `user.userprincipalname`
+- `emailaddress` = `user.mail`
 - `name` = `user.userprincipalname`
+- `email` = `user.userprincipalname`
+- `first_name` = `user.givenname`
+- `last_name` = `user.surname`
 - `Unique User Identifier` = `user.userprincipalname`
 
 {% endtab %}

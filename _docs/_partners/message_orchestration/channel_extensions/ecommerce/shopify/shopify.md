@@ -91,12 +91,12 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "time": "2020-09-10T18:53:37-04:00",
   "properties": {
     "applied_discount": {
-      "amount": "30.00",
+      "amount": 30,
       "title": "XYZPromotion",
       "description": "Promotionalitemforblackfriday."
     },
     "discount_code": "30_DOLLARS_OFF",
-    "total_price": "398.00",
+    "total_price": 398,
     "line_items": [
       {
         "product_id": 632910392,
@@ -105,14 +105,13 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "IPodNano-8GB",
         "vendor": "Apple",
         "properties": "nil",
-        "price": "199.00"
+        "price": 199
       }
     ],
     "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
     "checkout_id": "123123123"
   }
 }
-
 ```
 {% endsubtab %}
 {% subtab Order Created Event %}
@@ -121,8 +120,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "name": "shopify_created_order",
   "time": "2020-09-10T18:53:45-04:00",
   "properties": {
-    "total_discounts": "5.00",
-    "total_price": "403.00",
+    "total_discounts": 5,
+    "total_price": 403,
     "discount_codes": [],
     "line_items": [
       {
@@ -133,7 +132,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "nil",
         "name": "IPodNano-8GB",
         "properties": [],
-        "price": "199.00"
+        "price": 199.00
       },
       {
         "product_id": 632910392,
@@ -143,7 +142,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "nil",
         "name": "IPodNano-8GB",
         "properties": [],
-        "price": "199.00"
+        "price": 199.00
       }
     ],
     "order_id": 820982911946154500,
@@ -154,11 +153,11 @@ Once the app installation is complete, Braze automatically creates your webhook 
     "shipping": [
       {
         "title": "Standard",
-        "price": "10.00"
+        "price": 10
       },
       {
         "title": "Expedited",
-        "price": "25.00"
+        "price": 25
       }
     ],
     "tags": "heavy"
@@ -171,7 +170,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {
   "product_id": 632910392,
   "currency": "USD",
-  "price": "199.00",
+  "price": 199,
   "time": "2020-09-10T18:53:45-04:00",
   "quantity": 1,
   "source": "shopify",
@@ -202,19 +201,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
-        "price": "80.00",
+        "price": 80,
         "fulfillment_status": null
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
     "total_price": "141.54",
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1092,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -244,19 +243,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
-        "price": "60.00",
+        "price": 60,
         "fulfillment_status": "fulfilled"
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "130.66",
+    "total_price": 130.66,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1093,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -281,7 +280,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
           {
             "fulfillment_status": "fulfilled",
             "name": "Dark Denim Top",
-            "price": "60.00",
+            "price": 60,
             "product_id": 6143032066239,
             "properties": [],
             "quantity": 1,
@@ -315,19 +314,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
-        "price": "60.00",
+        "price": 60,
         "fulfillment_status": "fulfilled"
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "130.66",
+    "total_price": 130.66,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1093,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -352,7 +351,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
           {
             "fulfillment_status": "fulfilled",
             "name": "Dark Denim Top",
-            "price": "60.00",
+            "price": 60,
             "product_id": 6143032066239,
             "quantity": 1,
             "requires_shipping": true,
@@ -384,19 +383,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
-        "price": "80.00",
+        "price": 80,
         "fulfillment_status": null
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "141.54",
+    "total_price": 141.54,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1092,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -427,7 +426,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "LED High Tops",
         "vendor": "partners-demo",
         "properties": [],
-        "price": "80.00"
+        "price": 80
       },
       {
         "quantity": 1,
@@ -436,7 +435,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "Chequered Red Shirt",
         "vendor": "partners-demo",
         "properties": [],
-        "price": "50.00"
+        "price": 50
       }
     ]
   },

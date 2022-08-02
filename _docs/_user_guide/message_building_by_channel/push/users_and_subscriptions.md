@@ -41,7 +41,7 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 There are three ways a user's Push Subscription State can be updated:
 
 1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state. For example, you can add a settings page to your app where users can turn on or off push notifications for their profile.<br>To do this, use the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#afb2c11d1889fd08537f90ee64c94efb3).<br><br>
-2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the `push_subscribe` attribute for a given user.<br><br>
+2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`push_subscribe`][user_attributes_object] attribute for a given user.<br><br>
 3. **Automatically during opt-in** <br>When a user accepts the native OS push permission prompt, Braze will automatically change that user's subscription state to `Opted In`.
 
 ## Push permission
@@ -114,17 +114,9 @@ The Push Enabled filter takes into account the following:
 
 A user is considered "push enabled" or "push registered" if they have an active foreground push token for an app within your app group, meaning push enablement status is app-specific. 
 
-### Checking push registration status
-
-On the **Engagement** tab in a user's profile, you will see **Push Registered For** followed by an app name. If no app information exists for that device, you will see two dashes (**&#45;&#45;**). There will be an entry for every device that belongs to the user.
-
-If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
-
-![Push Changelog with an example push token.][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
-
-On the other hand, if the device entry's app name is prefixed by `Background:`, the app is only authorized to receive [background push]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) and cannot display user-visible notifications on that device. This usually indicates the user has disabled notifications for the app on that device.
-
-If a push token is moved to a different user on the same device, that first user will no longer be push registered.
+{% alert note %}
+For information on how to check push registration state, visit [push registration status]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#checking-push-registration-status)
+{% endalert %}
 
 ### Checking push subscription state
 
@@ -213,4 +205,5 @@ Web platforms do not allow background or silent push.
 [push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
 [provisional-blog]: https://www.braze.com/resources/articles/mastering-provisional-push
-[users-track]: https://www.braze.com/docs/api/objects_filters/user_attributes_object
+[user_attributes_object]: https://www.braze.com/docs/api/objects_filters/user_attributes_object
+[users-track]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/

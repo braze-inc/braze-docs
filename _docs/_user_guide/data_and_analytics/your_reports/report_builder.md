@@ -68,7 +68,7 @@ You can also toggle calculations for the **Average** of any rate or numerical me
 
 ### Step 3: Choose a time period
 
-You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas step does not have any data for your selected time period, the results for that row will be blank. 
+You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas component does not have any data for your selected time period, the results for that row will be blank. 
 
 ![Campaign numerical metric][4]{: style="max-width:60%;"}
 
