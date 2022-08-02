@@ -12,7 +12,7 @@ hidden: true
 
 ---
 
-# [Lokalise]
+# Lokalise
 
 > [Lokalise](https://lokalise.com) a translation management service for agile teams.
 
