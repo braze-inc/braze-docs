@@ -48,11 +48,11 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 ![The updated Google Ads technology page showing the Ad accounts connected, allowing you to re-sync accounts and add mobile advertising IDs.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
-### Step 2: Add a Google Audience step in Canvas
+### Step 2: Add a Google Audience step in Canvas Flow
 
-Add a component in your Canvas, select the dropdown at the top of the component, and select the **Google Audience** component.
+Add a component in your Canvas and select the **Google Audience** component.
 
-![Workflow of the previous steps to add a Google audience in Canvas.][6]
+![Workflow of the previous steps to add a Google audience in Canvas Flow.][6]
 
 ### Step 3: Sync setup
 

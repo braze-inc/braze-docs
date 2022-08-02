@@ -64,11 +64,11 @@ For customers who have previously undergone the Facebook App Review process for 
 <br><br>The Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Step 2: Add a Facebook Audience component in Canvas
+### Step 2: Add a Facebook Audience component in Canvas Flow
 
-Add a component in your Canvas, select the dropdown at the top of the component, and select **Facebook Audience Step**.
+Add a component in your Canvas and select **Facebook Audience Step**.
 
-![Workflow of the previous steps to add a Facebook Audience component in Canvas.][11]{:style="max-width:70%"}
+![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
 
 ### Step 3: Sync setup
 
