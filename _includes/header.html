@@ -1,5 +1,22 @@
 <a class="skip-main" href="#content_start">Skip to content</a>
 
+{% comment %} End Securitiai {% endcomment %}
+<script type="text/javascript">
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
+	s.setAttribute('data-tenant-uuid', '696dac19-dc81-444e-9540-c5e4d95b761f');
+	s.setAttribute('data-domain-uuid', '919e1189-1359-4a37-bf88-4267da5dbe71');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+  s.setAttribute('crossorigin', 'anonymous');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+	s.addEventListener('load', function() { window.initCmp(); });
+})()
+</script>
+{% comment %} End Securitiai {% endcomment %}
+
 {%- assign hide_nav = page.hide_nav -%}
 {%- unless hide_nav -%}
 {%- assign hide_nav = layout.hide_nav -%}
@@ -238,7 +255,7 @@
                           <a class="link dropdown-div-link" href="https://www.braze.com/customer-community" target="_blank">Braze User Community</a>
                         </li>
                         <li>
-                          <a class="link dropdown-div-link" href="https://www.braze.com/resources/learning-at-braze" target="_blank">Learning at Braze</a>
+                          <a class="link dropdown-div-link" href="https://www.braze.com/resources/learning-at-braze" target="_blank">Braze Learning</a>
                         </li>
                         <li>
                           <a class="link dropdown-div-link" href="https://www.braze.com/resources/articles/glossary" target="_blank">Glossary</a>
@@ -349,6 +366,16 @@
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
+        <li class="nav-item nav-item-lang-li">
+          <div id="nav-item-lang">
+          <label for="lang_select"><i class="fa-solid fa-globe"></i>
+          </label>
+          <select class="lang-select" id="lang_select">
+            <option value="en">EN</option>
+            <option value="ja">JP</option>
+          </select>
+          </div>
+        </li>
       </ul>
 
     </div>
@@ -362,7 +389,15 @@
     {%- assign active_title =  default_title -%}
     {%- endif -%}
 
-    <div class="navbarCollapse d-block d-md-none" id="dropdown_navbar">
+    <div class="navbarCollapse d-md-none" id="dropdown_navbar">
+      <div id="dropdown_navbar_lang">
+        <label for="lang_select"><i class="fa-solid fa-globe"></i>
+        </label>
+        <select class="lang-select" id="lang_select_responsive">
+          <option value="en">EN</option>
+          <option value="ja">JP</option>
+        </select>
+      </div>
       <ul class="navbar-nav " id="dropdown_menu">
         <li class="nav-item dropdown">
 

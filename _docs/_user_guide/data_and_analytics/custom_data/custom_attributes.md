@@ -7,15 +7,11 @@ description: "This reference article describes custom attributes, and explains t
 
 ---
 
-# Custom attributes
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
 
 Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
 When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
-
-{% alert tip %}
-We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](https://learning.braze.com/custom-events-and-attributes) Braze Learning course!
-{% endalert %}
 
 ## Managing custom attributes
 
@@ -57,7 +53,7 @@ The following data types may be stored as custom attributes:
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
 
 {% alert note %}
-**Coming soon!** Generally available support for object and object array data types is arriving in Spring 2022.
+**Coming soon!** Generally available support for object and object array data types is arriving in Summer 2022.
 {% endalert %}
 
 ### Booleans (true/false) {#booleans}

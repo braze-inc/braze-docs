@@ -35,9 +35,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-   "attributes" : (optional, array of attributes object),
-   "events" : (optional, array of event object),
-   "purchases" : (optional, array of purchase object),
+  "attributes" : (optional, array of attributes object),
+  "events" : (optional, array of event object),
+  "purchases" : (optional, array of purchase object),
 }
 ```
 

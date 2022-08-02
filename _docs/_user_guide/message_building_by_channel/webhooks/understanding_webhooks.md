@@ -8,7 +8,7 @@ description: "This reference article covers the basics of webhooks."
 
 ---
 
-# About Webhooks
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}About Webhooks
 
 > This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Lookings for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
 
@@ -62,7 +62,7 @@ The following table describes the four different HTTP methods you can specify in
 
 ## Webhooks in Braze
 
-In Braze, you can create a webhook as a webhook campaign, API campaign, or Canvas step.
+In Braze, you can create a webhook as a webhook campaign, API campaign, or Canvas component.
 
 {% tabs %}
 {% tab Webhook Campaign %}
@@ -83,10 +83,10 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
-{% tab Canvas Step %}
+{% tab Canvas Component %}
 
-1. In your Canvas, create a new step.
-2. In the **Message** section of your step, select **Webhook**.
+1. In your Canvas, create a new component.
+2. In the **Message** section of your component, select **Webhook**.
 
 Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 

@@ -29,6 +29,7 @@ The following table describes how users can use each editor block type.
 | `HTML` |  Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
 | `Menu` |  Creates a flexible menu for the message you're designing. |
 | `Spacer` |  Adds space, or "padding", between other blocks. |
+| `Social Icon` | Inserts social media platform icon. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
@@ -146,5 +147,5 @@ Refer to the following table for details on `Add Personalization`.
 
 | name | description |
 |---|---|
-| `Add Personalization` | Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, Content Blocks, and more. | 
+| `Add Personalization` | Allows you to lookup standard Liquid snippets such as standard (default) attributes, custom attributes, Content Blocks, and more. | 
 {: .reset-td-br-1 .reset-td-br-2}

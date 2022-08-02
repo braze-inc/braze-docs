@@ -36,13 +36,13 @@ When should you use this feature? Braze highly recommends that you consider usin
   {% tab Promotional %}
 **Promotional Canvases**
 
-Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by 2/28/2019 at 11:15am in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by 2/28/2019 at 11:15 am in the company's time zone.
 
 | Canvas Step | Delay | Audience | Channel | Expiration | Advancement | Details |
 |---|---|---|
 | Day 1: 50% Off | None | All from Entry | Push | N/A | Entire Audience after Delay | Initial push that alerts your users of the promotion. <br>  <br> This is intended to drive users to your app to take advantage of the promotion. |
-| In-App: 50% Off | None | All from Entry | In-app Message | Expires by: <br> 2/28/2019 <br> 11:15 AM <br> Company Time | In-app Message Viewed | The user has now opened the app and will receive this message whether or not that was because of the push message before. |
-| 50% Off Reminder | 1 Day <br> After the user receives the previous step. | All from Entry <br> _Filter: Last made a purchase more than one week ago._ | In-app Message |  Expires by: <br> 2/28/2019 <br> 11:15 AM <br> Company Time  | None. <br> Last message in Canvas. | The user has received the in-app message in the previous step, but has not made a purchase despite being in the app.  <br>  <br> This message is meant to further draw the user to make a purchase using the promotion. |
+| In-App: 50% Off | None | All from Entry | In-app Message | Expires by: <br> 2/28/2019 <br> 11:15 am <br> Company Time | In-app Message Viewed | The user has now opened the app and will receive this message whether or not that was because of the push message before. |
+| 50% Off Reminder | 1 Day <br> After the user receives the previous step. | All from Entry <br> _Filter: Last made a purchase more than one week ago._ | In-app Message |  Expires by: <br> 2/28/2019 <br> 11:15 am <br> Company Time  | None. <br> Last message in Canvas. | The user has received the in-app message in the previous step, but has not made a purchase despite being in the app.  <br>  <br> This message is meant to further draw the user to make a purchase using the promotion. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 As you can see, the in-app messages expire when the promotion expires to prevent any discrepancies between the messaging and the customer experience.

@@ -9,11 +9,7 @@ description: "This reference article covers using an array of objects as a data 
 
 # Array of objects
 
-Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
-
-{% alert important %}
-Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+Use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 ## Limitations
 
@@ -202,6 +198,44 @@ For example, if you want to filter the `pets` array of objects based on the `typ
 Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog so that user qualifies into the segment of "any user who has at least one pet of type dog".
 
 ![Filter by pet type equals dog][2]
+
+#### Levels of nesting
+
+You can create a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "pets": [
+        {
+          "id": 1,
+          "type": "dog",
+          "breed": "beagle",
+          "name": "Gus",
+          "nicknames": [
+            "Gugu",
+            "Gusto"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "cat",
+          "breed": "calico",
+          "name": "Gerald",
+          "nicknames": [
+            "GeGe",
+            "Gerry"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+{% endraw %}
 
 ## Data Points
 

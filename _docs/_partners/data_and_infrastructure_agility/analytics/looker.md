@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Looker
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
@@ -93,7 +93,7 @@ Note the following limitations:
 - Attributes will only be sent if it's **included as a field within the look**.
 - Supported types are `Strings`, `Boolean`, `Numbers`, and `Dates`.
 - Attribute names are case-sensitive.
-- Default attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
+- Standard attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
 - The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
 - Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
 

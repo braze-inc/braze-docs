@@ -7,6 +7,9 @@ page_order: 3
 
 ---
 
+{% include archive/ios-swift-upgrade.md %}
+
+
 # Other SDK customizations
 
 ## Braze log level

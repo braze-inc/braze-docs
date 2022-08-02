@@ -30,7 +30,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "phone_numbers": ["12183095514","14255551212"]
+  "phone_numbers": (required, array of string in e.164 format)
 }
 ```
 
