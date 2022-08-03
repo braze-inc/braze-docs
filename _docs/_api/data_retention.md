@@ -42,9 +42,9 @@ Each week, Braze runs a process to remove Inactive and Dormant Users from the Br
 
 {% alert note %} Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. {% endalert %}
 
-#### Braze Troubleshooting
+#### Braze Servers: Short-term Retention for Recovery Purposes
 
-Braze may delete data where necessary as part of the resolution to a technical issue or incident, for example, for de-duplication of data.
+Data sent from the Braze Services to Braze’s Snowflake Data Lake via Braze servers is retained in such Braze servers for up to 90 days for recovery purposes.
 
 #### Braze Data Lake Data Retention
 
