@@ -6,7 +6,7 @@ description: "actionable.me is a proprietary software and processes to help you 
 alias: /partners/actionableme/
 page_type: partner
 search_tag: Partner
-
+hidden: true
 ---
 
 # actionable.me
