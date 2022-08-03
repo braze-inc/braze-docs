@@ -16,8 +16,6 @@ By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas
 You can only clone Canvases with a **Stopped** status. After cloning, the new Canvas will have a **Draft** status. 
 {% endalert %}
 
-To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** for the Canvas and select **Clone to Canvas Flow**. 
-
 To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
 
 ![][1]{: style="max-width:25%;"}
