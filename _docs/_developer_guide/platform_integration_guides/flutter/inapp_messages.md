@@ -58,7 +58,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 
 ## Receiving in-app message data
 
-To receive in-app message data in your Flutter app, `BrazePlugin` supports two methods for receiving in-app message data. The first method uses Dart [Streams](https://dart.dev/tutorials/language/streams) **(Recommended)** and the second method uses a data callback **(Legacy)**.
+To receive in-app message data in your Flutter app, the `BrazePlugin` supports receiving in-app message data using Dart [Streams](https://dart.dev/tutorials/language/streams) **(Recommended)** or by using a data callback **(Legacy)**.
 
 The `BrazeInAppMessage` object supports a subset of fields available in the native model objects, including `uri`, `message`, `header`, `buttons`, `extras`, and more.
 
