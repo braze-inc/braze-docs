@@ -45,10 +45,6 @@ For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/admini
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Company secret explanation
-
-The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
-
 ### App group REST API keys
 
 {% alert note %}
