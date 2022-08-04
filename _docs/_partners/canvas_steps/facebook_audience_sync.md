@@ -64,13 +64,18 @@ For customers who have previously undergone the Facebook App Review process for 
 <br><br>The Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Step 2: Add a Facebook Audience component in Canvas Flow
+### Step 2: Accept custom audiences terms of service
+
+Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
+`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
+
+### Step 3: Add a Facebook Audience component in Canvas Flow
 
 Add a component in your Canvas and select **Facebook Audience**.
 
 ![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
 
-### Step 3: Sync setup
+### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -101,7 +106,7 @@ It's important to note that Facebook prohibits removing users from custom audien
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 5: Launch Canvas
 
 Once you have configured your Facebook Audience component, simply launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience component will be passed into this custom audience on Facebook. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
