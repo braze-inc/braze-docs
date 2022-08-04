@@ -120,7 +120,7 @@ For more information, refer to the following article based on your platform:
 
 - [Setting User IDs - iOS][9]
 - [Setting User IDs - Android][10]
-- [Setting User IDs - Windows Universal][13]
+- [Setting User IDs - Web][13]
 
 ## API limits
 
@@ -143,7 +143,7 @@ This client library is currently in beta. Want to help us make this library bett
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [support]: {{site.baseurl}}/braze_support/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
