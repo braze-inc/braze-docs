@@ -25,11 +25,35 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `braze.logContentCardDismissed(contentCard)`  | Logs a dismissal for the given Content Card object.                                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Content Card data callback
+## Receiving content card data
+
+To receive content card data in your Flutter app, the `BrazePlugin` supports receiving content card data using Dart [Streams](https://dart.dev/tutorials/language/streams) **(Recommended)** or by using a data callback **(Legacy)**.
+
+The `BrazeContentCard` object supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
+
+### Method 1: Content card data streams (Recommended)
+
+You can set a data stream listener in Dart to receive content card data in the Flutter host app.
+
+To begin listening to the stream, use the code below to create a `StreamSubscription` in your Flutter app and call the `listen()` method with a function that takes a `List<BrazeContentCard>` instance. Remember to `cancel()` the stream subscription when it is no longer needed.
+```dart
+// Create stream subscription
+StreamSubscription contentCardsStreamSubscription;
+
+contentCardsStreamSubscription = _braze.contentCardsStreamController.stream.listen((contentCards) {
+  // Function to handle content cards
+}
+
+// Cancel stream subscription
+contentCardsStreamSubscription.cancel();
+```
+For an example, see [main.dart](https://github.com/Appboy/flutter-sdk/blob/develop/braze_plugin/example/lib/main.dart) in our sample app.
+
+### Method 2: Content cards data callback (Legacy)
 
 You may set a callback in Dart to receive Braze Content Card data in the Flutter host app.
 
-To set the callback, call `braze.setBrazeContentCardsCallback()` from your Flutter app with a function that takes a `List<BrazeContentCard>` instance. The `BrazeContentCard` object supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
+To set the callback, call `braze.setBrazeContentCardsCallback()` from your Flutter app with a function that takes a `List<BrazeContentCard>` instance.
 
 {% tabs %}
 {% tab Android %}
@@ -48,7 +72,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 {% endtab %}
 {% endtabs %}
 
-### Replaying the callback for Content Cards
+#### Replaying the callback for Content Cards
 
 To store any Content Cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
 ```dart
