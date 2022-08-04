@@ -82,7 +82,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% tab Manual registration %}
 
-To manually register your tokens, we recommended you call [`Braze.registerAppboyPushMessages()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
+To manually register your tokens, we recommended you call [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
 
 {% subtabs local %}
 {% subtab JAVA %}
