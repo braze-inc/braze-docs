@@ -9,11 +9,11 @@ channel:
 
 ---
 
-### Custom handling for push receipts, opens, dismissals, and key-value pairs via Broadcast Receiver {#android-push-listener-broadcast-receiver}
+# Custom handling for push receipts, opens, dismissals, and key-value pairs via Broadcast Receiver {#android-push-listener-broadcast-receiver}
 
 Braze also broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
 
-#### Step 1: Register your BroadcastReceiver
+## Step 1: Register your BroadcastReceiver
 
 Register your custom `BroadcastReceiver` to listen for Braze push opened and received intents in your [`AndroidManifest.xml`][71]:
 
@@ -27,7 +27,7 @@ Register your custom `BroadcastReceiver` to listen for Braze push opened and rec
 </receiver>
 ```
 
-#### Step 2: Create Your BroadcastReceiver
+## Step 2: Create Your BroadcastReceiver
 
 Your receiver should handle intents broadcast by Braze and launch your activity with them:
 
@@ -111,7 +111,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-#### Step 3: Access custom key-value pairs
+## Step 3: Access custom key-value pairs
 
 Custom key-value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
 
