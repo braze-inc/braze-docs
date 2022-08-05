@@ -1,12 +1,16 @@
 ---
 nav_title: Message Archiving
-permalink: "/message_archiving/"
-hidden: true
+article_title: Message Archiving
+alias: "/message_archiving/"
+page_order: 0
+page_type: reference
+description: "This reference article covers Message Archiving, a feature that allows you to save a copy of messages sent to users."
+
 ---
 
 # Message Archiving
 
-> The Message Archiving feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket. Reach out to your success manager for more information on this feature.
+> The Message Archiving feature lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
 
 ## Prerequisites
 

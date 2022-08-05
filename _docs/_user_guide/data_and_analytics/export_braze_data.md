@@ -49,5 +49,8 @@ guide_menu_list:
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     fa_icon: far fa-question-circle
+  - name: Message Archiving
+    link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/
+    fa_icon: fa-solid fa-clock-rotate-left
 ---
 
