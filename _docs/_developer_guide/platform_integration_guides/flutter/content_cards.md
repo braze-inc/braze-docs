@@ -35,12 +35,12 @@ The `BrazeContentCard` object supports a subset of fields available in the nativ
 
 You can set a data stream listener in Dart to receive content card data in the Flutter host app.
 
-To begin listening to the stream, use the code below to create a `StreamSubscription` in your Flutter app and call the `listen()` method with a function that takes a `List<BrazeContentCard>` instance. Remember to `cancel()` the stream subscription when it is no longer needed.
+To begin listening to the stream, use the code below to create a `StreamSubscription` in your Flutter app and call the `subscribeToContentCards()` method with a function that takes a `List<BrazeContentCard>` instance. Remember to `cancel()` the stream subscription when it is no longer needed.
 ```dart
 // Create stream subscription
 StreamSubscription contentCardsStreamSubscription;
 
-contentCardsStreamSubscription = _braze.contentCardsStreamController.stream.listen((contentCards) {
+contentCardsStreamSubscription = _braze.subscribeToContentCards((contentCards) {
   // Function to handle content cards
 }
 
