@@ -1156,7 +1156,7 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### Target only iOS devices with a specific OS version {#platform-target-ios-version}
+### Target only devices with a specific OS version {#platform-target-ios-version}
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
