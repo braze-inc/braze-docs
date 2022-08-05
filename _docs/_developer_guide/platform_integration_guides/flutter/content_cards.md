@@ -51,7 +51,7 @@ contentCardsStreamSubscription.cancel();
 ```
 For an example, see [main.dart](https://github.com/Appboy/flutter-sdk/blob/develop/braze_plugin/example/lib/main.dart) in our sample app.
 
-### Method 2: Content cards data callback (Legacy)
+### Method 2: Content card data callback (Legacy)
 
 You may set a callback in Dart to receive Braze Content Card data in the Flutter host app.
 
