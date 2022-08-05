@@ -221,6 +221,7 @@ $(document).ready(function() {
 
     // Scrolled pass banner, adjust status monitor status
     if (y_cord > (bzheader_height * 1/3)) {
+      $('#braze_developer').hide();
       $('#header_nav').addClass('scrollnav');
       $('#nav_bar' ).addClass('scrollnav');
       $('#contentcards' ).addClass('scrollnav');
@@ -230,6 +231,7 @@ $(document).ready(function() {
         $('#toc_col' ).addClass('scrollbottom');
       }
       else {
+        $('#braze_developer').show();
         $('#toc_col' ).removeClass('scrollbottom');
       }
       //$('#nav_bottom').height(nav_bottom_height);
