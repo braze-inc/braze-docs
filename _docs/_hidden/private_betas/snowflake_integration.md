@@ -8,7 +8,7 @@ hidden: true
 # Braze Cloud Ingestion - Snowflake integration
 
 {% alert important %}
-Braze Cloud Ingestion is currently in Early Access. Contact your Braze account manager if you are interested in participating in the Early Access.
+Braze Cloud Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the Early Access.
 {% endalert %}
 
 ## What is Braze Cloud Ingestion?
@@ -54,7 +54,7 @@ SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
 
 ## Product setup
 
-During the EA phase, onboarding to Cloud Ingestion requires some manual integration steps managed by Braze. Follow these steps to set up the integration: 
+During the early access phase, onboarding to Cloud Ingestion requires some manual integration steps managed by Braze. Follow these steps to set up the integration: 
 1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
 2. Submit a form to Braze with the relevant integration information.
 3. Braze will send you a public key to [append to the Snowflake user](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) for authentication. Once authenticated, the sync will start.
@@ -178,6 +178,6 @@ Note that if you reuse the same user and role across integrations, you will not 
 | Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
 | Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
 | Data type | Currently, the product only supports user attributes. In the future, you’ll also be able to sync events and purchases. |
-| Braze region | The EA product is available to customers in any Braze region. |
+| Braze region | This early access product is available to customers in any Braze region. |
 | Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
 {: .reset-td-br-1 .reset-td-br-2}
