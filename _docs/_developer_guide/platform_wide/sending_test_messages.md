@@ -184,7 +184,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 
 ## Limitations of test messages
 
-There are a few situations where test messages don't have complete feature parity with launching a campaign or canvas to a real set of users. In these instances, to validate this behavior you should launch the campaign or canvas to a limited set of test users.
+There are a few situations where test messages don't have complete feature parity with launching a campaign or Canvas to a real set of users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
 
 - Viewing the Braze [preference center][16] from **Test Messages** will cause the submit button to be grayed out
 - The list-unsubscribe header is not included in emails sent by the test message functionality
