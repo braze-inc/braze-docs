@@ -201,4 +201,4 @@ There are a few situations where test messages don't have complete feature parit
 [14]: https://dashboard-01.braze.com/app_settings/api_settings/
 [15]: https://dashboard-01.braze.com/users/user_search/user-search/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[16]: https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
+[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
