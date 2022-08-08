@@ -36,7 +36,7 @@ popular_topic_list:
     link: /docs/user_guide/data_and_analytics/braze_currents/ 
   - name: Attributs personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-  - name: Personnaliser les messages in-app
+  - name: Personnaliser les messages In-App
     link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   - name: Liquid
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/
