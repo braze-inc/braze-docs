@@ -12,7 +12,7 @@ tool: Canvas
 
 > Cet article de référence aborde les étapes nécessaires à la création, à la gestion et aux essais d’un Canvas. Suivez ce guide ou consultez notre [Cours d’apprentissage Braze Canvas](https://learning.braze.com/quick-overview-canvas-setup) !
 
-## Étape 1 : Créer un Canvas 
+## Étape 1 : Créer un Canvas
 
 ![][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
@@ -79,7 +79,7 @@ Sélectionnez votre type d’événement de conversion puis sélectionnez les co
 
 ![][52]
 
-Nous utiliserons l’[événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) que vous définissez dans cet écran pour mesurer l’efficacité de votre Canvas. 
+Nous utiliserons l’[événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) que vous définissez dans cet écran pour mesurer l’efficacité de votre Canvas.
 
 Si votre Canvas a plusieurs variantes ou un groupe de contrôle, Braze utilisera cet événement de conversion pour déterminer la meilleure variation pour atteindre cet objectif de conversion. À l’aide de la même logique, vous pouvez créer plusieurs événements de conversion.
 
@@ -228,8 +228,8 @@ Vous pouvez également appliquer des **Filtres** à chaque étape d’un Canvas.
 
 ![Engagement supplémentaire Canvas][15]
 
-{% alert note %} 
-Par défaut, les filtres et segments pour des **Étapes complètes** dans Canvas sont cochés à l’heure de l’envoi. Cependant, pour les [Étapes de fractionnement des décisions]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), une évaluation d’audience est effectuée dès réception de l’étape précédente ou après un délai (si vous en avez configuré un). 
+{% alert note %}
+Par défaut, les filtres et segments pour des **Étapes complètes** dans Canvas sont cochés à l’heure de l’envoi. Cependant, pour les [Étapes de fractionnement des décisions]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), une évaluation d’audience est effectuée dès réception de l’étape précédente ou après un délai (si vous en avez configuré un).
 {% endalert %}
 
 #### Messages dans Canvas
@@ -246,7 +246,7 @@ Cliquez sur **Effectué** une fois que vous avez terminé la configuration de vo
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-Les [Propriétés d’entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) désignent les propriétés que vous mappez, lorsque vous déclenchez ou planifiez un Canvas via l’API. Notez que l’objet des propriétés d’entrée Canvas a une taille maximale limite de 50 KB. 
+Les [Propriétés d’entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) désignent les propriétés que vous mappez, lorsque vous déclenchez ou planifiez un Canvas via l’API. Notez que l’objet des propriétés d’entrée Canvas a une taille maximale limite de 50 KB.
 
 {% raw %}
 Par exemple, une requête avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` pourrait inclure le terme \"chaussures\"à un message en ajoutant Liquid `{{canvas_entry_properties.${product_name}}}`
@@ -264,7 +264,7 @@ Les [propriétés d’événement personnalisé]({{site.baseurl}}/user_guide/dat
 Les propriétés de l’événement ne sont pas définitives, donc si vous planifiez une Canvas Step plutôt que d’utiliser une livraison par événement, vous ne pourrez pas utiliser une propriété de l’événement (car nous n’archivons pas ces données). Vous ne pouvez pas référencer la propriété d’événement pour un événement qui s’est déjà produit.
 
 {% alert note %}
-Les propriétés d’événement personnalisées peuvent être référencées uniquement dans la première étape d’un Canvas. 
+Les propriétés d’événement personnalisées peuvent être référencées uniquement dans la première étape d’un Canvas.
 {% endalert %}
 
 {% endtab %}
@@ -290,9 +290,9 @@ Pour déplacer une connexion entre des étapes, cliquez sur la flèche reliant l
 
 ## Étape 4 Utiliser le test multivarié via Canvas.
 
-Vous pouvez ajouter un groupe de contrôle à votre Canvas en cliquant sur le bouton <i class="fas fa-plus-circle"></i> plus pour ajouter une nouvelle variante. 
+Vous pouvez ajouter un groupe de contrôle à votre Canvas en cliquant sur le bouton <i class="fas fa-plus-circle"></i> plus pour ajouter une nouvelle variante.
 
-Braze effectuera un suivi des conversions pour les utilisateurs figurant dans le groupe de contrôle, même s’ils ne recevront pas de messages. Pour conserver un test précis, nous effectuerons un suivi du numéro de conversions pour vos variantes et le groupe de contrôle pendant exactement le même laps de temps, comme décrit à l’écran de sélection Événement de conversion. 
+Braze effectuera un suivi des conversions pour les utilisateurs figurant dans le groupe de contrôle, même s’ils ne recevront pas de messages. Pour conserver un test précis, nous effectuerons un suivi du numéro de conversions pour vos variantes et le groupe de contrôle pendant exactement le même laps de temps, comme décrit à l’écran de sélection Événement de conversion.
 
 Vous pouvez ajuster la répartition entre vos messages en double-cliquant dans les en-têtes **Nom de variante**.
 
@@ -306,7 +306,7 @@ N’oubliez pas que les Canvas multivariés vous permettent plutôt de tester qu
 
 ![][18b]
 
-La sélection intelligente pour Canvas optimise vos résultats Canvas en effectuant des ajustements progressifs en temps réel sur la répartition des utilisateurs triés dans chaque variante. Lorsque l’algorithme statistique détermine un élément pertinent parmi vos variantes, il éliminera les variantes peu performantes et reliera tous les futurs destinataires éligibles du Canvas aux variantes pertinentes. 
+La sélection intelligente pour Canvas optimise vos résultats Canvas en effectuant des ajustements progressifs en temps réel sur la répartition des utilisateurs triés dans chaque variante. Lorsque l’algorithme statistique détermine un élément pertinent parmi vos variantes, il éliminera les variantes peu performantes et reliera tous les futurs destinataires éligibles du Canvas aux variantes pertinentes.
 
 En ce sens, la sélection intelligente fonctionne mieux sur des Canvas auxquels de nouveaux utilisateurs accèdent fréquemment.
 
@@ -337,7 +337,7 @@ Une fois que vous avez lancé votre Canvas, vous pourrez voir les éléments ana
 [20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
 [51]: {% image_buster /assets/img/Basics1.gif %}
-[52]: {% image_buster /assets/img/Conversions-canvas-1.gif %}
+[52]: {% image_buster /assets/img/add_canvas_conversions.png %}
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
