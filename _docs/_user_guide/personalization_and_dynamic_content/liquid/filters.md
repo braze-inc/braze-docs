@@ -70,13 +70,17 @@ Array filters are used to change the output of arrays.
 | [join][1.1]    | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
 | [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the most recently added value.         | ✅  Yes   |
 | [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the oldest added value.                 | ✅  Yes   |
-| [concat][1.4]  | Combines an array with another array.                                                                              | ⛔  No    |
-| [index][1.5]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
-| [map][1.6]     | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
-| [reverse][1.7] | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
-| [size][1.8]    | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
-| [sort][1.9]    | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
-| [uniq][1.10]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
+| [compact][1.4]  | Removes any `nil` items from an array.                                                                              | ✅  Yes    |
+| [concat][1.5]  | Combines an array with another array.                                                                              | ✅  Yes    |
+| [index][1.6]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
+| [map][1.7]     | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
+| [reverse][1.8] | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
+| [size][1.9]    | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
+| [sort][1.10]    | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
+| [sort_natural][1.11]    | Sorts the items in an array in case-insensitive alphabetical order.                                    | ✅  Yes   |
+| [uniq][1.12]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
+| [where][1.13]   | Filters an array to only include items with a specific property value.                                                           | ✅  Yes   |
+
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Color filters
@@ -94,8 +98,8 @@ Math filters allow you to perform mathematical operations. Remember—if you use
 | Filter            | Definition                                                                                                                     | Supported |
 | :---------------- | :----------------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [abs][4.1]        | Returns the absolute value of a number.                                                                                        | ✅  Yes   |
-| [at_most][4.2]    | Limits a number to a maximum value.                                                                                            | ⛔  No    |
-| [at_least][4.3]   | Limits a number to a minimum value.                                                                                            | ⛔  No    |
+| [at_most][4.2]    | Limits a number to a maximum value.                                                                                            | ✅  Yes    |
+| [at_least][4.3]   | Limits a number to a minimum value.                                                                                            | ✅  Yes   |
 | [ceil][4.4]       | Rounds an output up to the nearest integer.                                                                                    | ✅  Yes   |
 | [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
 | [floor][4.6]      | Rounds an output down to the nearest integer.                                                                                  | ✅  Yes   |
@@ -368,13 +372,16 @@ You can also use the reserved variable `now` to access the current date and time
 [1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
 [1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
 [1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.4]: https://shopify.dev/api/liquid/filters#compact
+[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
+[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
+[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
+[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
+[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
+[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
+[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
+[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.13]: https://shopify.dev/api/liquid/filters#where
 
 [2.1]: https://shopify.dev/api/liquid/filters/color-filters
 [3.1]: https://shopify.dev/api/liquid/filters/font-filters
