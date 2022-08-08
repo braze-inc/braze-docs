@@ -1,7 +1,6 @@
 ---
 nav_title: "POST: Update User's Subscription Group Status V2"
-permalink: /post_update_user_subscription_group_status_v2/
-hidden: true
+alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Update User's Subscription Group Status Braze V2 endpoint."
@@ -12,7 +11,7 @@ channel:
 ---
 
 {% api %}
-# Update users' subscription group status
+# Update user's subscription group status
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}

@@ -46,7 +46,7 @@ table td {
 
 | Method | Endpoints |
 | --- | --- |
-| POST | [/subscription/status/set][/subscription/status/set] |
+| POST | [/subscription/status/set][/subscription/status/set]<br>[/v2/subscription/status/set][/v2/subscription/status/set] |
 | GET | [/subscription/status/get][/subscription/status/get]<br>[/subscription/user/status][/subscription/user/status] |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -158,6 +158,7 @@ table td {
 [/subscription/status/set]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [/subscription/status/get]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [/subscription/user/status]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[/v2/subscription/status/set]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
 
 <!--- Links for email and email templates ---->
 [/email/blacklist]: {{site.baseurl}}/api/endpoints/email/post_blacklist/
