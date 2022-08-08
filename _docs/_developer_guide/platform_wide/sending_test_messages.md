@@ -182,13 +182,13 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-## Limititations of Test Messages
+## Limitations of test messages
 
-There are a few situations where Test Messages don't have complete feature parity with launching a campaign/canvas to a real set of users. In these instances to validate this behaviour you should launch the campaign/canvas to a limited set of test users.
+There are a few situations where test messages don't have complete feature parity with launching a campaign or canvas to a real set of users. In these instances, to validate this behavior you should launch the campaign or canvas to a limited set of test users.
 
-- Viewing the Braze [preference centre](16) from Test Messages will cause the submit button to be greayed out
-- The list-unsubscribe header is not included in emails sent by the Test Message functionality
-- For in-app messages and content cards the target user must have a push token for the target device
+- Viewing the Braze [preference center][16] from **Test Messages** will cause the submit button to be grayed out
+- The list-unsubscribe header is not included in emails sent by the test message functionality
+- For in-app messages and Content Cards, the target user must have a push token for the target device
 
 [1]: {% image_buster /assets/img_archive/testmessages1.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids
