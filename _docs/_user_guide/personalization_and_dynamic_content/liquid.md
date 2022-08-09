@@ -63,7 +63,7 @@ Braze has updated support to Liquid up to and including **Liquid 5 from Shopify*
 
 For new Braze users, Liquid 5 is generally available. For existing Braze users, Liquid 5 is in early access. If you have product feedback, submit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/).
 
-{% end alert %}
+{% endalert %}
 
 Liquid implementation now supports syntax and theme personalization tag types and whitespace control. For more information on specific tags, refer to [syntax tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags) and [theme tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#theme-tags). 
 
