@@ -80,7 +80,6 @@ Array filters are used to change the output of arrays.
 | [sort_natural][1.11]    | Sorts the items in an array in case-insensitive alphabetical order.                                    | ✅  Yes   |
 | [uniq][1.12]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
 | [where][1.13]   | Filters an array to only include items with a specific property value.                                                           | ✅  Yes   |
-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Color filters
