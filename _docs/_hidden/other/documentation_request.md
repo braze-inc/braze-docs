@@ -335,7 +335,7 @@ hide_toc: true
 
                 <label for="doc_description" id="doc_description_label">   * Describe your request. </label>
 
-                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation." placeholder="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation."
+                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation." placeholder="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images, relevant Slack threads, and Confluence articles. Include links to existing documentation that need to be repaired, as well as links that might need to be included in the documentation."
                   rows="7"></textarea>
               </div>
 
@@ -343,9 +343,12 @@ hide_toc: true
 
                 <label for="doc_snippet" id="doc_snippet_label">   * Insert relevant code snippets with context.</label>
 
-                <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="This is useful if you're a developer. Make sure it's clear which language this is written in, too. " placeholder="This is useful if you're a developer. Make sure it's clear which language this is written in, too. "
+                <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="This is useful if you're a developer. Make sure it's clear which language this is written in, too. " placeholder="This is useful if you're a developer. Make sure it's clear which language code snippets are written in."
                   rows="7"></textarea>
               </div>
+
+              <p class="subhead">Please wait up to ten seconds after submitting for your request to process.</p>
+
               <button type="submit" name="Submit Question" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> Send </button>
 
             </div>
