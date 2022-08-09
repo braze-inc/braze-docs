@@ -256,7 +256,7 @@ hide_toc: true
     $(document).ready(function() {
       $('#doc_form').submit(function(e) {
         $('#doc_thankyou').fadeIn("slow");
-        $('#doc_thankyou_msg').html('<h3>Your request is being processed.</h3>');
+        $('#doc_thankyou_msg').html('<h3>Please wait, your request is being processed.</h3>');
 
         var mform = $(this);
         e.preventDefault();
