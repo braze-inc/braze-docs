@@ -191,6 +191,8 @@ This is a simple example of how iteration tags can be used in Braze's message co
 
 Syntax tags can be used to control how Liquid is rendered. You can use the `echo` tag to return an expression. This is the same as wrapping an expression using curly brackets, except you can use this tag within Liquid tags. You can also use the `liquid` tag to have a block of Liquid without any delimiters on each tag. Each tag has to be in its own line when using the `liquid` tag. Check out Shopify's documentation on [syntax tags][33] for more information and examples.
 
+With [whitespace control][49], you can remove whitespaces around your tags, helping you further control what the Liquid output looks like.
+
 ## Theme tags
 
 Theme tags can assign content that is a part of your theme. Braze currently supports the `render` tag, which allows you to render a snippet or app block. For more information, check out Shopify's documentation on [`render` tags][30].
@@ -271,3 +273,4 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 [43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
 [47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
+[49]: https://shopify.github.io/liquid/basics/whitespace/
