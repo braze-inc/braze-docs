@@ -89,7 +89,7 @@ The retargeting of aliases filters allow you to create segmentation filters base
 
 When composing your email message, a new column will be present in the **Link Management** tab. Here, you can indicate to Braze which alias you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
-While you can track an unlimited number of links, Braze only allows retargeting at a user-level on the last 100 links that were clicked. For example, if Company A tracks 500 links and a user clicks on all 500 of them, Company A will only be able to retarget or create segments that based on the 100 links that are most recently clicked.
+While you can track an unlimited number of links, Braze only allows retargeting at a user level on the last 100 links that were clicked. For example, if Company A tracks 500 links and a user clicks on all 500 of them, Company A will only be able to retarget or create segments based on the 100 links that are most recently clicked.
 
 {% tabs local %}
 {% tab Drag-and-Drop Editor %}
