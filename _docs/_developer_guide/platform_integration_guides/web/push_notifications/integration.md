@@ -45,6 +45,10 @@ By default, a service worker can only be used within the same directory it is re
 
 If you cannot register a service worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP header when serving your service worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the service worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory.
 
+#### Can I create a service worker using a Tag Manager?
+
+No, service workers must be hosted on your website's server and can't be loaded via Tag Manager.
+
 ### Step 2: Browser registration
 
 For a browser to receive push notifications, you must register it for push by calling `braze.requestPushPermission()`. This will immediately request push permission from the user. 
