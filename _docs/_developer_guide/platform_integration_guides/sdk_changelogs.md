@@ -22,10 +22,10 @@ guide_featured_list:
     fa_icon: fab fa-windows
   - name: Unity SDK
     link: /docs/developer_guide/platform_integration_guides/unity/changelog/
-    image: /assets/img/unity-icon.png
+    image: /assets/img/unity.png
   - name: Cordova SDK
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
-    image: /assets/img/cordova-icon.png
+    image: /assets/img/cordova.png
   - name: Roku SDK
     link: /docs/developer_guide/platform_integration_guides/roku/changelog/
     image: /assets/img/roku.png
@@ -46,10 +46,10 @@ guide_menu_list:
     fa_icon: fab fa-windows
   - name: Unity SDK
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/unity-icon.png
+    image: /assets/img/unity.png
   - name: Cordova SDK
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/cordova-icon.png
+    image: /assets/img/cordova.png
   - name: Roku SDK
     link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
     image: /assets/img/roku.png

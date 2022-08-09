@@ -1156,11 +1156,11 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### Target only iOS devices with a specific OS version {#platform-target-ios-version}
+### Target only devices with a specific OS version {#platform-target-ios-version}
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
-The example used sends a warning to users on iOS 10.0 or earlier that they are phasing out support for the user’s device OS.
+The example used sends a warning to users on an OS version 10.0 or earlier that they are phasing out support for the user’s device OS.
 
 {% raw %}
 ```liquid

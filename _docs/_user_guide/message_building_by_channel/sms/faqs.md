@@ -96,7 +96,7 @@ Braze will use the following flow to determine the recipient profile:
 - If neither had received SMS up to 7 days ago, send to the user who has a user alias of "phone" that matches the phone number.
 - If neither exists, send to a random profile between the ones available. 
 
-If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed.
+If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed. This also applies to API state changes. For example, if multiple profiles with different external IDs have the same phone numbers, a subscription group state change via the API will update all profiles with that phone number, even if only one external ID is specified.
 
 {% alert important %} 
 If you stagger your users into a Canvas and have different schedule times for each Canvas component, you can send a user with the same email or phone duplicate messages. 
