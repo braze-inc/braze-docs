@@ -177,7 +177,8 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 
 | Method                              | Type     | Description                                                                                                                                            |
 | ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `apiKey`                            | string   |  Required. The API key for your application.                                                                                                           |
+| `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
+| `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
 | `customEndpoint`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
 | `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
