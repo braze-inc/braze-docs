@@ -347,7 +347,7 @@ hide_toc: true
                   rows="7"></textarea>
               </div>
 
-              <p class="subhead">Please wait ten seconds after submitting for your request to process.</p>
+              <p class="subhead">Please wait up to ten seconds after submitting for your request to process.</p>
 
               <button type="submit" name="Submit Question" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> Send </button>
 
