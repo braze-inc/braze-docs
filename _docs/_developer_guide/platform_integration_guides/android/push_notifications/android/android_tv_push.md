@@ -20,8 +20,8 @@ While not a native feature, Android TV push integration is made possible by leve
 First, you must integrate the [Braze Android SDK][6] (If not already completed).<br><br>
 2. **Integrate push notifications**<br>
 Next, you must integrate [Android Push Notifications][10] (If not already completed).<br><br>
-1. **Create a custom toast view**<br>
-Next, you will need to create a [custom toast view][9] for the app to display your notifications.<br><br>
+3. **Create a custom toast view**<br>
+Next, create a custom view in your app to display your notifications.<br><br>
 4. **Create a custom notification factory**<br>
 Lastly, you must create a [custom notification factory][8]. This will override the default SDK behavior and allow you to manually display the notifications. By returning `null`, this will prevent the SDK from processing and will require custom code to display the notification. Once these steps have been completed, you can start sending push to Android TV!<br><br>
 5. **Set up click analytics tracking (optional)**<br>
