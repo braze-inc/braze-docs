@@ -106,6 +106,10 @@ When composing your email message, a new column will be present in the **Link Ma
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
 
+To view all of your tracked linked aliases, go to the **Manage Settings** page under the **Settings** section. Next, select **Email Settings > Link Aliasing Settings**. On the **Tracked Link Aliases** page, you can also turn off tracking as well as search and sort your aliases.
+
+![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
+
 Only aliases you have indicated to be tracked will be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
 ### Untracking links
@@ -186,3 +190,4 @@ _Update noted in August 2019._
 [5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
 [6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
 [7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/
+[8]: {% image_buster /assets/img/tracked_aliases.png %}
