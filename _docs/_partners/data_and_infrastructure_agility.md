@@ -94,6 +94,8 @@ valid_partner_list:
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
 - name: Storyly
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/  
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
+- name: DataGrail
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/  
 
 ---
