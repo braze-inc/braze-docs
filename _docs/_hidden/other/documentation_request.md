@@ -255,12 +255,13 @@ hide_toc: true
   <script type="text/javascript">
     $(document).ready(function() {
       $('#doc_form').submit(function(e) {
+        $('#doc_thankyou').fadeIn("slow");
+        $('#doc_thankyou_msg').html('<h3>Your request is being processed.</h3>');
+
         var mform = $(this);
         e.preventDefault();
         $('#doc_div').hide();
         var url = 'https://script.google.com/macros/s/AKfycbzDu2Q-VK18apU8-UAMEQFGteT-MuD5b648QWiE-MvmN99XfyBm/exec';
-        //console.log(mform.serializeObject());
-        //console.log(mform.serialize());
 
         var jqxhr = $.ajax({
           url: url,
@@ -268,10 +269,11 @@ hide_toc: true
           dataType: "json",
           data: mform.serializeObject()
         }).done(function() {
-          $('#doc_thankyou').fadeIn("slow");
-          $('#doc_thankyou_msg').html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.');
-
+          $('#doc_thankyou_msg').fadeTo(1600,0,function(){
+              $(this).html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.').fadeTo(1600,1);
+          });
         });
+
       });
     });
   </script>
