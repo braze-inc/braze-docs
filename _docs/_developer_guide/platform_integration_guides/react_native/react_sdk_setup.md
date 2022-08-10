@@ -237,7 +237,7 @@ import Braze from "react-native-appboy-sdk";
 
 At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
 
-You can open a session for a particular user by calling the following code in your app.
+You can start a session for a particular user by calling the following code in your app.
 
 ```javascript
 Braze.changeUser("user-id");
