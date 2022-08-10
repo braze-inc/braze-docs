@@ -54,10 +54,23 @@ Within the purchase object, The `product_id` is an identifier for the purchase (
 
 ### Product ID naming conventions
 
-At Braze, we offer some general naming conventions for the purchase object `product_id`.
-When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
+At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
 This helps make products easy to identify for segmentation and triggering.
+
+### Log purchases at the order level
+
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (e.g., Online Order or Completed Order).
+
+For example, to log purchases at the order level in the Web SDK: 
+```javascript
+braze.logPurchase("Completed Order", price, "USD", quantity, {
+  "products": [
+    { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
+    { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+  ]
+});
+```
 
 ## Purchase properties object
 

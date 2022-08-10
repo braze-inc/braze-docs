@@ -105,6 +105,8 @@ When you send through purchase data that includes purchase properties, you can u
 
 For example, to reference the name of a product, replace `your_custom_event_property` with the `product_id`.
 
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 #### Canvas Flow
 

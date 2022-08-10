@@ -7,7 +7,7 @@ page_type: reference
 description: "This article describes how to log purchases for Web."
 
 ---
-
+ 
 # Logging purchases for web
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value. Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
@@ -17,7 +17,7 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add the [`logPurchase()`][8] call after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
 
 ```javascript
-braze.logPurchase(productId, price, "USD", quantity);
+braze.logPurchase(product_id, price, "USD", quantity);
 ```
 
 ## Adding properties
@@ -29,8 +29,11 @@ You can add [metadata][8] about purchases by either passing an [event property a
 Keys are `string` objects, and values can be `string`, `numeric`, `boolean`, or `Date` objects.
 
 ```javascript
-braze.logPurchase(productId, price, "USD", quantity, {key: "value"});
+braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
 ```
+
+#### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ## REST API
 
