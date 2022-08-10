@@ -91,24 +91,35 @@ These segmentation filters include:
 
 Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Mangage Properties** and used in the target step of the campaign or Canvas builder.
 
-### Referencing purchase event properties with Liquid
+### Canvas entry properties and event properties
 
-When you send through purchase data that includes purchase properties, you can use the `event_properties` tag to reference the purchase properties in your channel messaging.
+You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
+
+{% tabs local %}
+{% tab Canvas Entry Properties %}
+
+[`canvas_entry_properties`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties mapped by you for Canvases that are action-based or API triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
 {% raw %}
-
-```liquid
-{{event_properties.${your_custom_event_property}}}
-```
-
+For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-For example, to reference the name of a product, replace `your_custom_event_property` with the `product_id`.
+For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
 
+For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. So, be sure to use ``{% raw %} canvas_entry_properties${property_name} {% endraw %}`` if referencing these `canvas_entry_properties`. Note that the events must be custom events or purchase events to be used this way.
 
-#### Canvas Flow
+{% endtab %}
 
-Custom event and purchase event properties can be used in Liquid in any [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. Make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these event properties in Canvas Flow. For more details, check out [Event properties in Message steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#event-properties).
+{% tab Custom Event Properties %}
+[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
+
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use `{{event_properties.${property_name}}}` if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+
+In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+
+{% endtab %}
+{% endtabs %}
+
 
 [1]: {% image_buster /assets/img/purchase1.png %}
 [2]: {% image_buster /assets/img/purchase2.png %}

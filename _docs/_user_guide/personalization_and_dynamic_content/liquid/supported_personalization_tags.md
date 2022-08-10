@@ -24,6 +24,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
+| Canvas Entry Properties| `{{canvas_entry_properties}}` |
 | Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 

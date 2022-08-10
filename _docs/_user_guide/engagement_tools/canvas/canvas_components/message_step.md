@@ -41,25 +41,39 @@ Delivery validations provide an additional check to confirm your audience meets 
 
 ### Canvas entry properties
 
-Canvas entry properties are properties from the event that triggered the Canvas. These entry properties can only be used in the first full step of a Canvas using the original workflow. 
+`canvas_entry_properties` are properties from the event that triggered the Canvas. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
-Conversely, in Canvas Flow, you can leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
+#### Original workflow
+
+For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first Full Step of a Canvas.
+
+#### Canvas Flow
+
+For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. So, be sure to use ``{% raw %} canvas_entry_properties${property_name} {% endraw %}`` if referencing these `canvas_entry_properties`. Note that the events must be custom events or purchase events to be used this way. 
+
+You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
+
+{% raw %}
+For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
+{% endraw %}
 
 ### Event properties
 
 #### Original workflow
 
-Event properties can only be used in any action-based Canvas step using the original workflow. 
+`event_properties` can only be used in any action-based Canvas step using the original workflow. 
 
 #### Canvas Flow
 
 {% alert important %}
-Event properties cannot be used independently of Action Paths for Canvas Flow.
+`event_properties` cannot be used independently of Action Paths for Canvas Flow.
 {% endalert %}
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these event properties. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step. 
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step. 
+
+For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
 
 ## Analytics
 
