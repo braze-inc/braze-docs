@@ -8,7 +8,7 @@ article_title: Braze Developer Guide
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
 - name: Android and FireOS
-  fa_icon: fab fa-android
+  image: /assets/img/android.png
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: iOS
@@ -36,15 +36,15 @@ guide_menu_list:
     nav_link: flutter
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
-    fa_icon: fab fa-react
+    image: /assets/img/reactnative_icon.png
     nav_link: reactnative
   - name: tvOS
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
-    fa_icon: fab fa-apple
+    image: /assets/img/tvos_icon.png
     nav_link: tvos  
   - name: MacOS
     link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
-    fa_icon: fas fa-desktop  
+    image: /assets/img/macOS_icon.png 
     nav_link: macos
   - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
@@ -56,7 +56,7 @@ guide_menu_list:
     nav_link: unity
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
-    fa_icon: fab fa-windows
+    image: /assets/img/windows_universal_icon.png
     nav_link: windowsuniversal
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
