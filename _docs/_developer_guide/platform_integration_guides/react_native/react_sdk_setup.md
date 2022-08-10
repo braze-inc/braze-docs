@@ -28,6 +28,67 @@ npm install react-native-appboy-sdk
 ## Step 2: Complete native setup
 
 {% tabs %}
+{% tab Expo %}
+
+#### Step 2.1: Install the Braze Expo plugin
+
+Ensure that your version of the Braze React Native SDK is at least 1.37.0. Then, install the Braze Expo plugin.
+
+```bash
+expo install @braze/expo-plugin
+```
+
+#### Step 2.2: Add the plugin to your app.json
+
+In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
+
+| Method                              | Type     | Description                                                                                                                                            |
+| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
+| `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
+| `customEndpoint`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
+| `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
+| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
+| `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
+| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
+| `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
+| `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
+| `enableAutomaticGeofenceRequests`   | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
+| `dismissModalOnOutsideTap`          | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+Example configuration:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "apiKey": "YOUR-API-KEY",
+          "customEndpoint": "YOUR-SDK-ENDPOINT",
+          "sessionTimeout": 60,
+          "enableGeofence": true
+        }
+      ],
+    ]
+  }
+}
+```
+
+#### Step 2.3: Build and run your application
+
+Prebuilding your application will generate the native files necessary for the Braze SDK to work.
+
+```bash
+expo prebuild
+```
+
+Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Note that making any changes to the configuration options will require you to prebuild and run the application again.
+
+{% endtab %}
 {% tab Android %}
 
 #### Step 2.1a: Add our repository
@@ -159,67 +220,6 @@ Otherwise, add the following elements to the file:
     <string>sdk.your-endpoint.com</string>
   </dict>
 ```
-
-{% endtab %}
-{% tab Expo %}
-
-#### Step 2.1: Install the Braze Expo plugin
-
-Ensure that your version of the Braze React Native SDK is at least 1.37.0. Then, install the Braze Expo plugin.
-
-```bash
-expo install @braze/expo-plugin
-```
-
-#### Step 2.2: Add the plugin to your app.json
-
-In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
-
-| Method                              | Type     | Description                                                                                                                                            |
-| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
-| `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
-| `customEndpoint`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
-| `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
-| `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
-| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
-| `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
-| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
-| `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
-| `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
-| `enableAutomaticGeofenceRequests`   | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
-| `dismissModalOnOutsideTap`          | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-Example configuration:
-
-```json
-{
-  "expo": {
-    "plugins": [
-      [
-        "@braze/expo-plugin",
-        {
-          "apiKey": "YOUR-API-KEY",
-          "customEndpoint": "YOUR-SDK-ENDPOINT",
-          "sessionTimeout": 60,
-          "enableGeofence": true
-        }
-      ],
-    ]
-  }
-}
-```
-
-#### Step 2.3: Build and run your application
-
-Prebuilding your application will generate the native files necessary for the Braze SDK to work.
-
-```bash
-expo prebuild
-```
-
-Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Note that making any changes to the configuration options will require you to prebuild and run the application again.
 
 {% endtab %}
 {% endtabs %}
