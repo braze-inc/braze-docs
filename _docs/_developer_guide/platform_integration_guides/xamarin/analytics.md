@@ -9,7 +9,7 @@ page_order: 4
 description: "This article covers iOS, Android, and FireOS analytics for the Xamarin platform."
 
 ---
-
+ 
 # Xamarin analytics
 
 ## Setting user IDs
@@ -58,7 +58,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogPurchase("YOUR_PURCHASE_NAME", 100);
+Braze.getInstance(context).LogPurchase("product_id", 100);
 ```
 
 See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) for an in-depth discussion of revenue tracking best practices and interfaces.
@@ -66,7 +66,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% tab iOS %}
 ```csharp
 // C#
-Appboy.SharedInstance ().LogPurchase ("myProduct", "USD", new NSDecimalNumber("10"));
+Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("10"));
 ```
 
 **Implementation Example** - You can see user properties being set in the sample application's `EventsAndPurchasesButtonHandler` method inside `AppboySampleViewController.cs`.
@@ -74,6 +74,9 @@ Appboy.SharedInstance ().LogPurchase ("myProduct", "USD", new NSDecimalNumber("1
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
+
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ## Setting custom attributes
 {% tabs %}

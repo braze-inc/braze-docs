@@ -115,11 +115,13 @@ For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in an
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use `{{event_properties.${property_name}}}` if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
 
 {% endtab %}
 {% endtabs %}
 
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 [1]: {% image_buster /assets/img/purchase1.png %}
 [2]: {% image_buster /assets/img/purchase2.png %}
