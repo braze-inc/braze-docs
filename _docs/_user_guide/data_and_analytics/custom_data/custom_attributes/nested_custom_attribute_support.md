@@ -30,7 +30,7 @@ Objects can contain existing [data types][1], such as:
 
 ## API request body
 
-{% tabs local %}
+{% tabs %}
 {% tab Create %}
 The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
