@@ -89,7 +89,7 @@ Amazon will not recognize your key if `api_key.txt` contains any white space cha
 
 In your `mainTemplate.gradle` file, add the following:
 
-```
+```gradle
 task copyAmazon(type: Copy) {
     def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
     from unityProjectPath + '/Assets/api_key.txt'
