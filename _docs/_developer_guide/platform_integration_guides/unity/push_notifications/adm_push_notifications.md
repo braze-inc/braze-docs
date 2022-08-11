@@ -83,9 +83,21 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
 ## Step 3: Store your ADM API key
 
-First, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder. Next, [obtain an ADM API Key for your app][11].
+First, [obtain an ADM API Key for your app][11].  Next, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/`][54] folder.
 
 Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
+
+In your `mainTemplate.gradle` file, add the following:
+
+```
+task copyAmazon(type: Copy) {
+    def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+    from unityProjectPath + '/Assets/api_key.txt'
+    into new File(projectDir, 'src/main/assets')
+}
+
+preBuild.dependsOn(copyAmazon)
+```
 
 ## Step 4: Add ADM Jar
 
