@@ -26,6 +26,10 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 ![][3]
 
+{% alert note %}
+Non-ASCII characters in URLs are currently not supported.
+{% endalert %}
+
 ## Testing
 
 We always recommend that you preview and test your message before launching a campaign or Canvas. 
