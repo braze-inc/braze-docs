@@ -50,7 +50,7 @@ guide_featured_list:
 ## July 26, 2022 release
 
 ### Canvas Flow
-The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#editing-a-step) has been released. With Canvas Flow you get access to lightweight [Canvas components](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing](https://www.braze.com/docs/post-launch_edits).
+The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#editing-a-step) has been released. With Canvas Flow you get access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits).
 
 ![]({% image_buster /assets/img/canvas_flow.png %})
 
