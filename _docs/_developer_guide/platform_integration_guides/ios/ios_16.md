@@ -49,4 +49,4 @@ Based on the current iOS beta, you will not need to upgrade your Braze iOS SDK. 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
 [3]: https://github.com/braze-inc/braze-swift-sdk
 [2]: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes
-[7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/

@@ -100,8 +100,8 @@ After connecting your Braze account to the Extole dashboard, events will automat
 Once the events and attributes you have configured are flowing into Braze, you can use the data to generate Braze audiences and campaign segmentation.
 
 [1]: https://www.extole.com
-[2]: https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/
-[3]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#request-body
+[2]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#request-body
 [4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
 [5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
 [6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
