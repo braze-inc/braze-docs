@@ -44,6 +44,5 @@ Note that you'll still have access to `event_properties` if your Message step is
 [3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
 [4]: ({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)
 [5]: ({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-[6]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
-[7]: {% image_buster /assets/img_archive/canvas_entry_properties2.png %}
+[7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
 [8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
