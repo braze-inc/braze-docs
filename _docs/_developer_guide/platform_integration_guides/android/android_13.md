@@ -69,5 +69,5 @@ To start using our new ["no-code" push primer feature][7], upgrade your Android 
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
 [5]: https://developer.android.com/about/versions/13/overview#platform_stability
 [6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
-[7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps
