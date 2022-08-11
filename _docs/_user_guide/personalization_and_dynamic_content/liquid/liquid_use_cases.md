@@ -174,7 +174,7 @@ Has language - Default language
 **Explanation:** Here, we're using two grouped `if` statements, nested. The first `if` statement checks to see if the user has started a session by checking if the `last_used_app_date` is `nil`. This is because `{{${language}}}` is auto-collected by the SDK when a user logs a session. If the user hasn't logged a session, we won't have their language yet, so this checks if any language-related custom attributes have been saved, and based on that information, will display a message in that language, if possible. 
 {% endraw %}
 
-The second `if` statement just checks for the default attribute because the user doesn't have `nil` for the `last_used_app_date`, which means they've logged a session, and we have their language.
+The second `if` statement just checks for the standard (default) attribute because the user doesn't have `nil` for the `last_used_app_date`, which means they've logged a session, and we have their language.
 
 {% alert note %}
 [`Nil`](https://shopify.github.io/liquid/basics/types/#nil) is a reserved variable that is returned when Liquid code has no results. `Nil` is treated as `false` in an `if` block.
@@ -1156,11 +1156,11 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### Target only iOS devices with a specific OS version {#platform-target-ios-version}
+### Target only devices with a specific OS version {#platform-target-ios-version}
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
-The example used sends a warning to users on iOS 10.0 or earlier that they are phasing out support for the user’s device OS.
+The example used sends a warning to users on an OS version 10.0 or earlier that they are phasing out support for the user’s device OS.
 
 {% raw %}
 ```liquid

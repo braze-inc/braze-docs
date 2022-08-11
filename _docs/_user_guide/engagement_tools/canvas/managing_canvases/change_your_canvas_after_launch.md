@@ -59,7 +59,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 - Users who haven't entered the Canvas yet are eligible for any newly created components. 
 - If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
-- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to recieve those newly added steps. 
+- Users who are currently in a launched Canvas, but haven't reached the newly added steps in the user journey, are eligible to receive those newly added steps.
 
 If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay component is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
@@ -142,6 +142,6 @@ If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_gui
 
 Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should’ve progressed to the next component has passed, they will instead exit the Canvas. 
 
-For example, let's say you have a Canvas created using the Canvas V2 workflow set to launch at 2pm with one variant with two steps: a Delay component with a one hour delay that goes into a Message step. 
+For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay component with a one hour delay that goes into a Message step. 
 
-A user enters this Canvas at 2:01pm and enters the Delay component at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message component) at 3:01pm. If you stop the Canvas at 2:30pm and re-enable the Canvas at 3:30pm, the user will exit the Canvas since it’s after 3:01pm. However, if you re-enable the Canvas at 2:40pm, the user will move on to the Message component as expected at 3:01pm.
+A user enters this Canvas at 2:01 pm and enters the Delay component at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message component) at 3:01 pm. If you stop the Canvas at 2:30 pm and re-enable the Canvas at 3:30 pm, the user will exit the Canvas since it’s after 3:01 pm. However, if you re-enable the Canvas at 2:40 pm, the user will move on to the Message component as expected at 3:01 pm.

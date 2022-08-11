@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Canvas FAQs
-page_order: 10
+page_order: 11
 alias: "/canvas_v2_101/"
 description: "This article provides answers to frequently asked questions about Canvas and Canvas Flow."
 tool: Canvas
@@ -79,13 +79,21 @@ The user will count as converted in the overall Canvas variant, but not the step
 
 {% enddetails %}
 
+### How can I view analytics for each of my Canvas components?
+
+To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
+
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
 
-The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.
 
 ### Why does the number of users entering a Canvas not match the expected number?
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
+
+### How are Canvas audiences evaluated? 
+
+By default, filters and segments for full steps in the Canvas are checked at send time. For Canvas Flow, the Decision Split component performs an evaluation right after receiving a previous step (or before a delay).
 
 ## Canvas Flow
 
@@ -95,7 +103,7 @@ Canvas Flow is the new and improved editing experience that simplifies how marke
 
 ### What's the difference between a component and a step?
 
-[A component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### What can I expect?
 When using Canvas Flow, you can expect the following:
@@ -147,17 +155,17 @@ Previously, each full step included information such as delay and schedule setti
 
 [Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
-Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2pm. A user enters the component at 2:01pm on April 13. 
-- For the original workflow, the user would proceed to the next step at 2pm on April 14, which is less than one day from the entry time. 
-- For Canvas Flow, the user would proceed to the next step at 2pm on April 15. Note that this is the same time, but more than one day from the entry time. 
+Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2 pm. A user enters the component at 2:01 pm on April 13. 
+- For the original workflow, the user would proceed to the next step at 2 pm on April 14, which is less than one day from the entry time. 
+- For Canvas Flow, the user would proceed to the next step at 2 pm on April 15. Note that this is the same time, but more than one day from the entry time. 
 
 #### Intelligent Timing behavior
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
-Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2pm. A user enters the Delay step at 2:01pm.
-- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2pm.
-- **Original workflow:** The user receives the message on the second day at 2pm.
+Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
+- **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.
+- **Original workflow:** The user receives the message on the second day at 2 pm.
 
 Note that if Intelligent Timing is turned on, the message will be sent within 24 hours of the user entering the Message component at the intelligent time identified (even if no Delay component is involved).
 

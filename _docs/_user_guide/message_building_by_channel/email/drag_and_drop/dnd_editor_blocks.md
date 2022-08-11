@@ -147,5 +147,5 @@ Refer to the following table for details on `Add Personalization`.
 
 | name | description |
 |---|---|
-| `Add Personalization` | Allows you to lookup standard Liquid snippets such as default attributes, custom attributes, Content Blocks, and more. | 
+| `Add Personalization` | Allows you to lookup standard Liquid snippets such as standard (default) attributes, custom attributes, Content Blocks, and more. | 
 {: .reset-td-br-1 .reset-td-br-2}

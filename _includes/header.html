@@ -366,6 +366,16 @@
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
+        <li class="nav-item nav-item-lang-li">
+          <div id="nav-item-lang">
+          <label for="lang_select"><i class="fa-solid fa-globe"></i>
+          </label>
+          <select class="lang-select" id="lang_select">
+            <option value="en">EN</option>
+            <option value="ja">JP</option>
+          </select>
+          </div>
+        </li>
       </ul>
 
     </div>
@@ -379,7 +389,15 @@
     {%- assign active_title =  default_title -%}
     {%- endif -%}
 
-    <div class="navbarCollapse d-block d-md-none" id="dropdown_navbar">
+    <div class="navbarCollapse d-md-none" id="dropdown_navbar">
+      <div id="dropdown_navbar_lang">
+        <label for="lang_select"><i class="fa-solid fa-globe"></i>
+        </label>
+        <select class="lang-select" id="lang_select_responsive">
+          <option value="en">EN</option>
+          <option value="ja">JP</option>
+        </select>
+      </div>
       <ul class="navbar-nav " id="dropdown_menu">
         <li class="nav-item dropdown">
 
@@ -428,3 +446,27 @@
       {% endunless %}
   </nav>
 </header>
+<style type="text/css">
+	#braze_developer {
+		width: 100%;
+		text-align: center;
+		background-image: linear-gradient(to right, rgb(59, 204, 222), rgb(253, 222, 221), rgb(255, 148, 74));
+		padding: 10px;
+		height: 45px;
+		position: sticky;
+		z-index: 10;
+	}
+	@media (max-width: 576px) {
+		#braze_developer {
+			height: 70px;
+		}
+	}
+	#braze_developer a {
+	  color: #27368F;
+	  text-decoration: none;
+	}
+	#braze_developer a:hover{
+	  color: #27368F;
+	}
+</style>
+<div id="braze_developer" ><i class="fa-solid fa-code"></i> Check out our new <a href="https://www.braze.com/dev-portal" target="_blank">developer portal</a> and join the Braze developer community!</div>

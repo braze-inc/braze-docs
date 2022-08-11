@@ -12,13 +12,7 @@ tool: Canvas
 
 By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. Your original Canvas will not be altered or deleted.
 
-{% alert note %}
-You can only clone Canvases with a **Stopped** status. After cloning, the new Canvas will have a **Draft** status. 
-{% endalert %}
-
-To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** for the Canvas and select **Clone to Canvas Flow**. 
-
-To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
+To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. You can clone Canvases with a **Draft**, **Active**, or **Stopped** status. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
 
 ![][1]{: style="max-width:25%;"}
 
@@ -36,10 +30,8 @@ You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can
 
 If your Canvas matches any of the following details, then your Canvas can't be cloned to Canvas Flow:
 
-- Status is **Active** 
-- Status is **Draft**
-- Has full steps that have exception events and use the delay filter "in" or "on the next"
-- Has a full step that branches out into multiple steps, and is not the first step of the Canvas
+- Has Full Steps that have exception events or use the delay filter "in" or "on the next"
+- Has a Full Step that branches out into multiple steps, and is not the first step of the Canvas
 
 For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 

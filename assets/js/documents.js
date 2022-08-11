@@ -145,8 +145,8 @@ $(document).ready(function() {
   });
 
   $('#toc').toc({
-    headers: 'h2, h3',
-    minimumHeaders: toc_minheaders
+    headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+    minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
   });
   // Use Bootstrap's "Scrollspy" plugin to dynamically expand/collapse ToC
   if ($('#toc nav').length) {
@@ -221,6 +221,7 @@ $(document).ready(function() {
 
     // Scrolled pass banner, adjust status monitor status
     if (y_cord > (bzheader_height * 1/3)) {
+      $('#braze_developer').hide();
       $('#header_nav').addClass('scrollnav');
       $('#nav_bar' ).addClass('scrollnav');
       $('#contentcards' ).addClass('scrollnav');
@@ -230,6 +231,7 @@ $(document).ready(function() {
         $('#toc_col' ).addClass('scrollbottom');
       }
       else {
+        $('#braze_developer').show();
         $('#toc_col' ).removeClass('scrollbottom');
       }
       //$('#nav_bottom').height(nav_bottom_height);
@@ -434,6 +436,22 @@ $(document).ready(function() {
     var lines = $this.text().split("\n");
     if (lines.length <= 2) {
       $this.addClass('prewrap');
+    }
+  });
+  $('.lang-select').on('change', function(e){
+    let lang = this.value;
+    let wovn_lang = WOVN.io.getCurrentLang();
+    let wovn_lang_code = wovn_lang['code'] || 'en';
+    if (wovn_lang != wovn_lang_code) {
+      WOVN.io.changeLang(lang);
+    }
+  });
+  window.addEventListener('wovnApiReady', function(evt){
+    let wovn_lang = WOVN.io.getCurrentLang();
+    let wovn_lang_code = wovn_lang['code'] || 'en';
+    let current_lang = $('.lang-select').val();
+    if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
+      $('.lang-select').val(wovn_lang_code).prop('selected', true);
     }
   });
 });

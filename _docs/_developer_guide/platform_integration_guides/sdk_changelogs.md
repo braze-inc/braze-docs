@@ -10,7 +10,7 @@ guide_featured_title: "Changelogs on Docs"
 guide_featured_list:
   - name: Android SDK
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
-    fa_icon: fab fa-android
+    image: /assets/img/android.png
   - name: iOS SDK
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/
     fa_icon: fab fa-apple
@@ -19,13 +19,13 @@ guide_featured_list:
     fa_icon: fas fa-globe
   - name: Windows SDK
     link: /docs/developer_guide/platform_integration_guides/windows_universal/changelog/
-    fa_icon: fab fa-windows
+    image: /assets/img/windows_universal_icon.png
   - name: Unity SDK
     link: /docs/developer_guide/platform_integration_guides/unity/changelog/
-    image: /assets/img/unity-icon.png
+    image: /assets/img/unity.png
   - name: Cordova SDK
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
-    image: /assets/img/cordova-icon.png
+    image: /assets/img/cordova.png
   - name: Roku SDK
     link: /docs/developer_guide/platform_integration_guides/roku/changelog/
     image: /assets/img/roku.png
@@ -34,7 +34,7 @@ guide_menu_title: "Changelogs on Github"
 guide_menu_list:
   - name: Android SDK
     link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-android
+    image: /assets/img/android.png
   - name: iOS SDK
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
@@ -43,13 +43,13 @@ guide_menu_list:
     fa_icon: fas fa-globe
   - name: Windows SDK
     link: https://github.com/Appboy/appboy-windows-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-windows
+    image: /assets/img/windows_universal_icon.png
   - name: Unity SDK
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/unity-icon.png
+    image: /assets/img/unity.png
   - name: Cordova SDK
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/cordova-icon.png
+    image: /assets/img/cordova.png
   - name: Roku SDK
     link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
     image: /assets/img/roku.png

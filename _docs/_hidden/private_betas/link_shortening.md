@@ -26,11 +26,15 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 ![][3]
 
+{% alert note %}
+Non-ASCII characters in URLs are currently not supported.
+{% endalert %}
+
 ## Testing
 
 We always recommend that you preview and test your message before launching a campaign or Canvas. 
 
-Navigate to the **Test** tab to preview and send an SMS to [content test groups](https://www.braze.com/docs/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. The preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
+Navigate to the **Test** tab to preview and send an SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. The preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
 
 Make sure to save the campaign or Canvas before sending a test message to receive the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
 

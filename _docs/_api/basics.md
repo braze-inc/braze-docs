@@ -45,10 +45,6 @@ For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/admini
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Company secret explanation
-
-The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
-
 ### App group REST API keys
 
 {% alert note %}
@@ -120,7 +116,7 @@ For more information, refer to the following article based on your platform:
 
 - [Setting User IDs - iOS][9]
 - [Setting User IDs - Android][10]
-- [Setting User IDs - Windows Universal][13]
+- [Setting User IDs - Web][13]
 
 ## API limits
 
@@ -143,7 +139,7 @@ This client library is currently in beta. Want to help us make this library bett
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [support]: {{site.baseurl}}/braze_support/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
