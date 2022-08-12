@@ -30,7 +30,7 @@ The Braze and Segment integration allows you to track your users and route data 
 
 ## Integration
 
-To integrate Braze and Segment, you must set [Braze as a destination](#connection-settings) in accordance with [your chosen integration type](#integration-options) (connection mode). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment replays](#segment-replays). Next, you must set up [mappings](#methods) and [test your integration](#step-3-test-your-integration) to ensure smooth data flow between Braze and Segment.
+To integrate Braze and Segment, you must set [Braze as a destination](#connection-settings) in accordance with [your chosen integration type](#integration-options) (connection mode). If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment replays](#segment-replays). Next, you must set up [mappings](#methods) and [test your integration](#step-4-test-your-integration) to ensure smooth data flow between Braze and Segment.
 
 ### Step 1: Create a Braze destination {#connection-settings}
 
@@ -191,7 +191,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [identify user action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the create alias action to merge an alias-only user with an `external_id` once one becomes available for the user. 
+The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` once one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user’s `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment’s documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -227,10 +227,10 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 | Identify with user ID and traits | Segment: Set External ID and Attribute | Combine preceding methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the update user profile action.
+In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment’s open-source Middleware tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment’s open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% endalert %}
 {% endtab %}
@@ -255,7 +255,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-In the [web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the track purchase action.
+In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the Track Purchase Action.
 
 {% endtab %}
 
@@ -264,7 +264,7 @@ In the [web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 The group call will record a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) with the name `ab_segment_group_<groupId>`, where `groupId` is the group's ID in the method's parameters. For example, if the group's ID is `1234`, then the custom attribute name will be `ab_segment_group_1234`. The value of the custom attribute will be set to `true`.
 
-In the [web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile-1) and [cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the group event type is a default trigger for the update user profile action; however, this mapping can be customized. In addition, a group call can be used to trigger custom actions. 
+In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile-1) and [cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the group event type is a default trigger for the update user profile action; however, this mapping can be customized. In addition, a group call can be used to trigger custom Actions. 
 
 {% endtab %}
 {% tab Page %}
@@ -277,7 +277,7 @@ This event type can be used as a trigger in the Web Mode Actions and Cloud Actio
 
 {% endtabs %}
 
-### Step 4: Test your integration
+### Step 5: Test your integration
 
 When using the side-by-side (device-mode) integration, your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
 
@@ -359,7 +359,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment’s open-source Middleware tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points towards your allotment. For client-side sources, use Segment’s open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% enddetails %}
 
