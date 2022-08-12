@@ -29,7 +29,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 To receive Content Card data in your Flutter app, the `BrazePlugin` supports receiving Content Card data using Dart [Streams](https://dart.dev/tutorials/language/streams) **(Recommended)** or by using a data callback **(Legacy)**.
 
-The `BrazeContentCard` object supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
+The `BrazeContentCard` [object](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
 
 {% alert note %} The legacy data callback method will soon be deprecated. Note that Content Cards can be added to both data streams and data callbacks. If you have already integrated data callbacks and wish to use data streams, remove any callback logic to ensure that Content Cards are processed exactly once. {% endalert %}
 
