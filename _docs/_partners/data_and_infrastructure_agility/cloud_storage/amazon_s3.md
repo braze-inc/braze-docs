@@ -242,7 +242,7 @@ Give the role a name and a description, and click **Create Role**.
 
 You should now see your newly created Role on the list.
 
-### Step 4: Link to braze AWS {#role-arn-4}
+### Step 4: Link to Braze AWS {#role-arn-4}
 
 In the AWS Console, find your newly created role in the list. Click the name to open up the details of that role.
 
