@@ -5,7 +5,7 @@ description: "The Braze and Storyly integration enables app owners to target the
 alias: /partners/storyly/
 page_type: partner
 search_tag: Partner
-hidden: true
+
 ---
 
 # Storyly
