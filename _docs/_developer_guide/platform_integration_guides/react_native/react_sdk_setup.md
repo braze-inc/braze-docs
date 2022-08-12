@@ -46,7 +46,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
 | `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
-| `customEndpoint`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `baseUrl`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
 | `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
 | `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
@@ -69,7 +69,7 @@ Example configuration:
         {
           "androidApiKey": "YOUR-ANDROID-API-KEY",
           "iosApiKey": "YOUR-IOS-API-KEY",
-          "customEndpoint": "YOUR-SDK-ENDPOINT",
+          "baseUrl": "YOUR-SDK-ENDPOINT",
           "sessionTimeout": 60,
           "enableGeofence": true
         }
