@@ -43,13 +43,13 @@ Note that apps are granted an [exemption][4] for users who previously had push n
 
 Apps targeting Android 13 can control when to request permission and show the native push prompt. 
 
-If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, you'll have [temporary permission][4] to show notifications until the user opens your app again after upgrading the device.
+If your user upgrades from Android 12 to 13, your app was previously installed, and you were already sending push, the system automatically pre-grants the new notification permission to all eligible apps. In other words, these apps can continue to send notifications to users, and users don't see a runtime permission prompt.
 
-Once your app is opened, push notifications will not be shown to these upgraded users until you have obtained explicit consent by the user, using the new notification permission prompt.
+For more details on this see Android's Developer Documentation for [effects on updates to existing apps][8].
 
 **Targeting Android 12 or earlier**
 
-If your app does not yet target Android 13, then once a user upgrades to Android 13, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). 
+If your app does not yet target Android 13, then a new user on Android 13 installs your app, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). Users who already have your app installed and then upgrade to Android 13 are never shown a prompt and are automatically granted push permission.
 
 {% alert note %}
 Braze automatically creates a default notification channel if one does not already exist when a push notification is received. If you don't target Android 13, this will cause the push permission prompt to be shown, which is required to show the notification.
@@ -69,5 +69,5 @@ To start using our new ["no-code" push primer feature][7], upgrade your Android 
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
 [5]: https://developer.android.com/about/versions/13/overview#platform_stability
 [6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
-[7]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_primer_messages/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps

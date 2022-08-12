@@ -15,7 +15,7 @@ description: "This landing page is home to campaign testing and tips. Here you c
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Sending Test Messages
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     fa_icon: fas fa-envelope
   - name: A/B Testing with Random Buckets
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/

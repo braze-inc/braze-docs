@@ -17,7 +17,7 @@ vCards, also known as Virtual Contact Files (VCF), are a standardized file forma
 
 ## Updates to user delete
 
-In October 2020, we made [improvements](https://www.braze.com/docs/help/release_notes/2020/october/) to how our user delete handles data subject's phone number or email address. 
+In October 2020, we made [improvements]({{site.baseurl}}/help/release_notes/2020/october/) to how our user delete handles data subject's phone number or email address. 
 
 ## New Braze partnerships
 

@@ -35,8 +35,6 @@ For push notifications that include images, the message text will be shown in th
 
 The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API][13] or our dashboard under **Advanced Settings** in the push composer wizard as pictured:
 
-> To enable Custom URI, your app's `BroadcastReceiver` must be configured to properly handle opening the URI. This involves parsing incoming message contents for the custom URI and navigating to it. Our [example receiver][14] provides a sample implementation.
-
 ![The deep linking advanced setting in the Braze push composer.][12]
 
 ## Notification display priority
@@ -82,7 +80,6 @@ To message your full userbase with a specific sound, we recommend that you indir
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link.png %}
 [13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels

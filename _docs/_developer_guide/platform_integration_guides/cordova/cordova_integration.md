@@ -10,7 +10,7 @@ page_type: reference
 description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
 
 ---
-
+ 
 # Cordova integration
 
 ## Setting a custom API endpoint
@@ -75,8 +75,11 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 ```javascript
 var properties = {};
 properties["KeyOne"] = "ValueOne";
-AppboyPlugin.logPurchase("testPurchaseWithNullCurrency", 10, null, 5, properties);
+AppboyPlugin.logPurchase("product_id_with_null_currency", 10, null, 5, properties);
 ```
+
+#### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ## News Feed
 

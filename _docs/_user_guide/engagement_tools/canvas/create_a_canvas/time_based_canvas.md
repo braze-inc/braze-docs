@@ -41,7 +41,7 @@ The following information applies to the original Canvas workflow. For time-base
 | Send message on the next specified day of the week, at a selected time of day.  | Select between **user's local time** or **company time** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For example, suppose you select "Send on the next Saturday at 3:15pm". If a user enters the Canvas on a Saturday, they would receive that message on the next Saturday in seven days. If they enter on a Friday, the next Saturday would be in one day.
+For example, suppose you select "Send on the next Saturday at 3:15 pm". If a user enters the Canvas on a Saturday, they would receive that message on the next Saturday in seven days. If they enter on a Friday, the next Saturday would be in one day.
 
 ![][3]
 
@@ -51,7 +51,7 @@ For example, suppose you select "Send on the next Saturday at 3:15pm". If a user
 | --- | --- |
 | Send message in a specific number of days at a specified time. | Select between **user's local time** or **company time** |
 
-Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas component is sent on Monday at 9pm, and the next step is scheduled to "Send in 1 day at 9am". That message will be delivered on Tuesday at 9am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
+Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas component is sent on Monday at 9 pm, and the next step is scheduled to "Send in 1 day at 9 am". That message will be delivered on Tuesday at 9 am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9 am`.
 
 ![][4]
 
@@ -71,7 +71,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 | Limit how many times each user should receive the Canvas within a certain time frame, which can be measured in minutes, days, weeks (seven days), and months. | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[Frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
+[Frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11 pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
 
 ![Frequency Capping][6]
 

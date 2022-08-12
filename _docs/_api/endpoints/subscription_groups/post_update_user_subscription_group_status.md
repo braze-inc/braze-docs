@@ -8,7 +8,7 @@ page_type: reference
 description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
 ---
 {% api %}
-# Update users' subscription group status
+# Update user's subscription group status
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /subscription/status/set
 {% endapimethod %}

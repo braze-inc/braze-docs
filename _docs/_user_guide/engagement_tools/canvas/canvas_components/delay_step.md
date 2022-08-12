@@ -42,7 +42,7 @@ You can choose the type of delay before the next message in your Canvas. You can
   {% endtab %}
   {% tab Until a specific day of the week %}
 
-  The **Until a specific day of the week** option allows you to hold users in the step until a specific day of the week, at a specific time. For example, you can delay users until the next time Thursday arrives at 4pm in the company’s timezone. 
+  The **Until a specific day of the week** option allows you to hold users in the step until a specific day of the week, at a specific time. For example, you can delay users until the next time Thursday arrives at 4 pm in the company’s timezone. 
 
   To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g., Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
   {% endtab %}
@@ -50,9 +50,9 @@ You can choose the type of delay before the next message in your Canvas. You can
 
 ## Using delay steps
 
-Let’s say that it’s June 10. On June 11, you’d like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3pm local time. At 3pm local time on June 17, you want to send users a reminder message about the promotion.
+Let’s say that it’s June 10. On June 11, you’d like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3 pm local time. At 3 pm local time on June 17, you want to send users a reminder message about the promotion.
 
-You’d start by adding a full step that sends immediately after users enter the Canvas on June 11. Then, you’d create a delay step that holds users in the step until 3pm local time on June 17. After that, you’d link the delay step to a full step that sends its message immediately.
+You’d start by adding a full step that sends immediately after users enter the Canvas on June 11. Then, you’d create a delay step that holds users in the step until 3 pm local time on June 17. After that, you’d link the delay step to a full step that sends its message immediately.
 
 ### Delay components at the end of a Canvas {#delay-as-last-step}
 

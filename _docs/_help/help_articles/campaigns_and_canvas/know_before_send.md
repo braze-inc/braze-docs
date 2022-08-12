@@ -25,7 +25,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Canvas rate limits**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards
-  - Global frequency capping is scheduled based on the user’s time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11pm in their local time zone, and they would be eligible to receive another message an hour later.
+  - Global frequency capping is scheduled based on the user’s time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
 ## Email
 
@@ -48,6 +48,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 
 #### Things to know
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+- **Targeting a singular app**: Review the [differences in segmentation]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#targeting-a-singular-app) to target a singular app and its users.
 
 ## SMS
 

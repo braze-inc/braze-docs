@@ -176,7 +176,7 @@ CSV imports are case sensitive. This means capital letters in CSV imports will w
 
 ![CSV Import][3]
 
-Once the upload is complete, you will see a modal window with a table previewing the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, default attributes will be written in normal text, while custom attributes will be italicized and have their type noted in parentheses. There will also be a short summary of your file at the top of the pop-up.
+Once the upload is complete, you will see a modal window with a table previewing the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes will be written in normal text, while custom attributes will be italicized and have their type noted in parentheses. There will also be a short summary of your file at the top of the pop-up.
 
 You can import more than one CSV at the same time. CSV imports will run concurrently, and as such the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
 

@@ -31,9 +31,9 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 
 1. In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 2. In Braze, navigate to **Currents > + Create Currents > Create Segment Export**.
-3. Next, provide an integration name, contact email, and Segment write key.
+3. Next, provide an integration name, contact email, Segment write key, and Segment region.
 
-![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, and API key.][1]
+![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
 
 {% alert warning %}
 It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
@@ -139,3 +139,4 @@ The following properties will be included with specific Braze events sent to Seg
 
 [1]: {% image_buster /assets/img/segment/segment_currents1.png %}
 [2]: {% image_buster /assets/img/segment/segment_currents.png %}
+[3]: {% image_buster /assets/img/segment/segment.png %}

@@ -162,7 +162,7 @@ $header_transition_time: 0.25s;
 
   &.scrollnav {
     #nav_logo {
-        display: inline-block;;
+        display: inline-block;
     }
   }
 
@@ -280,101 +280,26 @@ $header_transition_time: 0.25s;
     }
   }
 
-
-  // .navbar-nav .nav-link:hover {
-  //   color: $white;
-  //   @media (min-width:  $window-medium-px) {
-  //     width: fit-content;
-  //   }
-  //   transition: all ease $header_transition_time;
-  //   -webkit-transition:  all ease $header_transition_time;
-  //   -moz-transition:  all ease $header_transition_time;
-  //   border-bottom-width: 2px;
-  //   border-color: $blue-scooter;
-  //   // &:after {
-  //   //   content: "";
-  //   //   display: block;
-  //   //   width: calc(100%);
-  //   //   height: 2px;
-  //   //   margin: 3px auto 0px auto;
-  //   //   background-color: $blue-scooter;
-  //   //   position: relative;
-  //   //
-  //   //   left: 50%;
-  //   //   transform: translateX(-50%);
-  //   // }
-  // }
-  // .navbar-nav .active .nav-link {
-  //   color: $white;
-  //   border-bottom-width: 2px;
-  //   border-color: transparent;
-  //   // &:after {
-  //   //   content: "";
-  //   //   display: block;
-  //   //   width: calc(100%);
-  //   //   height: 2px;
-  //   //   margin: 3px auto 0px auto;
-  //   //   background-color: $blue-scooter;
-  //   //   position: relative;
-  //   //
-  //   //   left: 50%;
-  //   //   transform: translateX(-50%);
-  //   // }
-  //
-  //
-  // }
-  // transition: flex $header_transition_time,margin $header_transition_time,width $header_transition_time,-ms-flex $header_transition_time, font-size .05s,;
-  // -webkit-transition: flex $header_transition_time,margin $header_transition_time,width $header_transition_time,-ms-flex $header_transition_time,font-size .05s;
-  // -moz-transition: flex $header_transition_time,margin $header_transition_time,width $header_transition_time,-ms-flex $header_transition_time, font-size .05s;
-  // $menu_max: 10;
-  // $menu_item_offset: 150px;
-  // $menu_window_offset:  $window-small-px - 175px;
-
-  // @for $i from 0 through $menu_max  {
-  //   @media (min-width: $window-small-px) {
-  //     @media (max-width: $window-medium-px) {
-  //       .menu_item_#{$i} {
-  //         display: none;
-  //       }
-  //       .dropdown_item_#{$i} {
-  //         display: block;
-  //       }
-  //     }
-  //   }
-  //   @media (min-width:  $window-medium-px) {
-  //
-  //     @media screen and (max-width: $menu_window_offset + ($i * $menu_item_offset)) {
-  //       .dropdown-divider-menu {
-  //         display: block;
-  //       }
-  //       .menu_item_#{$i} {
-  //         display: none;
-  //       }
-  //       .dropdown_item_#{$i} {
-  //         display: block !important;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // @media (min-width: $window-small-px) {
-  //   transition: all 0.4s ease-in-out;
-  //   -webkit-transition: all 0.4s ease-in-out;
-  //   -moz-transition: all 0.4s ease-in-out;
-  //   &.shrink {
-  //     height: 40px;
-  //     @media (min-width: $window-large-px) {
-  //       a.navbar-brand{
-  //         img {
-  //           height: 30px;
-  //         }
-  //       }
-  //     }
-  //     nav{
-  //       min-height: 0px ;
-  //     }
-  //   }
-  // }
+  #nav-item-lang {
+    min-width: 70px;
+    border: 1px solid $grey-stardust;
+    padding: 5px 6px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    label {
+      margin-bottom: 0px;
+    }
+  }
+  .lang-select {
+    background-color: transparent;
+    color: $header-nav;
+    &:focus, &:focus-visible {
+      outline: none;
+    }
+  }
+  .nav-item-lang-li {
+    padding-top: 0px;
+  }
   #dropdown_navbar {
     .nav-link {
       div {
@@ -389,11 +314,18 @@ $header_transition_time: 0.25s;
       }
     }
     font-size: 16px;
-
+    display: flex;
     font-family: $braze-medium;
     @media (max-width: $window-mobile-px){
       //max-width: 100px;
       font-size: $header_nav_font_size ;
+    }
+    #dropdown_navbar_lang {
+      margin-top: 10px;
+      color: $white;
+      .lang-select {
+        color: $white;
+      }
     }
     #dropdown_menu {
       flex-direction: row;

@@ -83,9 +83,21 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
 ## Step 3: Store your ADM API key
 
-First, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder. Next, [obtain an ADM API Key for your app][11].
+First, [obtain an ADM API Key for your app][11].  Next, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/`][54] folder.
 
 Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
+
+In your `mainTemplate.gradle` file, add the following:
+
+```gradle
+task copyAmazon(type: Copy) {
+    def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+    from unityProjectPath + '/Assets/api_key.txt'
+    into new File(projectDir, 'src/main/assets')
+}
+
+preBuild.dependsOn(copyAmazon)
+```
 
 ## Step 4: Add ADM Jar
 
@@ -107,6 +119,5 @@ Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2]
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://docs.unity3d.com/Manual/AndroidJARPlugins.html
 [54]: https://docs.unity3d.com/Manual/AndroidAARPlugins.html
