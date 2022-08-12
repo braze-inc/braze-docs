@@ -21,7 +21,7 @@ You can import phone numbers by uploading a [CSV]({{site.baseurl}}/user_guide/da
 
 ### Formatting
 
-As a best practice, the best way to import a phone number is in [`E.164`](https://en.wikipedia.org/wiki/e.164) format. However, braze will attempt to interpret or convert any U.S. number to the best of our ability.
+As a best practice, the best way to import a phone number is in [`E.164`](https://en.wikipedia.org/wiki/e.164) format. However, Braze will attempt to interpret or convert any U.S. number to the best of our ability.
 
 All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be input without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
 
