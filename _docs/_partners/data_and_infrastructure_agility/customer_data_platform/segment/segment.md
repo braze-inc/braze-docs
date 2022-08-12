@@ -69,16 +69,24 @@ When using a device-mode connection, similar to integrating the Braze SDK native
 {% tabs local %}
 {% tab Android %}
 
+{% alert important %}
+The Braze (Classic) Destination is the correct destination to use for Mobile device-mode integrations.<br><br>The source code for the [Android device mode](https://github.com/Appboy/appboy-segment-android) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+{% endalert %}
+
 To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
 To complete the side-by-side integration, refer to Segment’s detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android) app.
 
-The source code for the [Android device mode](https://github.com/Appboy/appboy-segment-android) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment. 
 
 {% endtab %}
 {% tab iOS %}
+
+{% alert important %}
+The Braze (Classic) Destination is the correct destination to use for Mobile device-mode integrations.<br><br>The source code for the [iOS device mode](https://github.com/Appboy/appboy-segment-ios) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
+{% endalert %}
 
 To set up Braze as a device-mode destination for your iOS source, choose **Classic** as the Destination framework and click **Save**. 
 
@@ -94,8 +102,6 @@ The source code for the [iOS device mode](https://github.com/Appboy/appboy-segme
 Segment’s new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
 
 Within the setup UI, choose **Actions** as your destination framework and **Device Mode** as your Connection mode.
-
-The source code for the [Braze Web Mode (Actions) destination](https://github.com/segmentio/action-destinations/tree/main/packages/browser-destinations/src/destinations/braze) is maintained by Segment. 
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
