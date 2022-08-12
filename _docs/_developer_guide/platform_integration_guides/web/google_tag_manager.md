@@ -114,6 +114,8 @@ Custom user attributes are not available due to a limitation in Google Tag Manag
 
 ```html
 <script>
+  // note: if using SDK version 3.x or below, use `window.appboy` instead of `window.braze`
+  // version 4 or greater should use `window.braze`
 window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value");
 </script>
 ```
