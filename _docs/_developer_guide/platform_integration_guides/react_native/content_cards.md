@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards
 
-The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 ## Customization
 
@@ -19,18 +19,18 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `ReactAppboy.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `ReactAppboy.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
-| `ReactAppboy.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
-| `ReactAppboy.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
-| `ReactAppboy.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
+| `Braze.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
+| `Braze.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `Braze.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
+| `Braze.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
+| `Braze.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Test displaying sample Content Card
 
 Follow these steps to test a sample Content Card.
 
-1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
+1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new Content Card campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch a Content Card on your device shortly.
 
