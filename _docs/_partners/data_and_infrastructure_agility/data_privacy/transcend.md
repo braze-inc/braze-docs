@@ -1,7 +1,6 @@
 ---
 nav_title: Transcend
 article_title: Transcend
-page_order: 1
 description: "Transcend, a data privacy infrastructure platform, helps Braze users automate fulfillment of data subject requests. This allows you to programmatically access, erase, and opt users out of communication in the Braze platform in accordance with data privacy regulations."
 alias: /partners/transcend/
 page_type: partner
