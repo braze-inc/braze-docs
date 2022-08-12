@@ -25,7 +25,7 @@ At this point, you should be able to send notifications to the devices. Adhere t
 You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
 {% endalert %}
 
-1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
+1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should receive the notification on your device shortly.
 
@@ -34,4 +34,3 @@ You can't test push notification related app behavior on an iOS simulator becaus
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [3]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
-
