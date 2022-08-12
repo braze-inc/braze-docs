@@ -5,7 +5,7 @@ description: "The Braze and DataGrail integration allows you to detect consumer 
 alias: /partners/datagrail/
 page_type: partner
 search_tag: Partner
-
+hidden: true
 ---
 
 # DataGrail
