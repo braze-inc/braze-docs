@@ -66,7 +66,7 @@ When using Segment's device-mode, you do not need to integrate the Braze SDK dir
 
 When using a device-mode connection, similar to integrating the Braze SDK natively, Braze’s SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 
 To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
@@ -116,7 +116,8 @@ The source code for the [Braze Cloud Mode (Actions) destination](https://github.
 
 Define the settings for your destination. Not at all settings will apply to all destination types.
 
-#### Mobile
+{% tabs local %}
+{% tab Mobile Device-Mode %}
 
 | Setting | Description |
 | ------- | ----------- |
@@ -126,7 +127,8 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Enable automatic in-app message registration | Disable this if you want to manually register in-app messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Web
+{% endtab %}
+{% tab Web Device-Mode %}
 
 | Setting | Description |
 | ------- | ----------- |
@@ -137,59 +139,42 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Automatically send in-app messages | By default, all in-app messages a user is eligible for are automatically delivered to the user. Disable this if you would like to manually display in-app messages. |
 | Do not load font awesome | Braze uses Font Awesome for in-app message icons. By default, Braze will automatically load FontAwesome from the FontAwesome CDN. To disable this behavior (e.g., because your site uses a customized version of FontAwesome), set this option to `TRUE`. Note that if you do this, you are responsible for ensuring that FontAwesome is loaded on your site - otherwise, in-app messages may not render correctly. |
 | Enable HTML in-app messages | Enabling this option will allow Braze dashboard users to use HTML in-app messages. | 
-| Open in-app messages in a new tab | By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. |  
-| Minimum interval between trigger actions in seconds | Defaults to 30.<br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.<br>By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
-| Allow crawler activity | By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. |
-| Open News Feed cards in a new tab (open cards in new tab) | By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window.|
-| Session timeout in seconds | Defaults to 30.<br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | 
-| Enable logging | Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the javascript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-#### Web (Web Actions only)
-
-| Setting | Description |
-| ------- | ----------- |
-| App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
+| Open in-app messages in a new tab | By default, links from in-app message clicks load in the current tab or a new tab as specified in the dashboard on a message-by-message basis. Set this option to `TRUE` to force all links from in-app message clicks open in a new tab or window. |
 | In-app message z index | Provide a value for this option to override Braze's default z-indexes. | 
 | Require explicit in-app message dismissal | By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Set this option to true to prevent this behavior and require an explicit button click to dismiss messages. |
+| Minimum interval between trigger actions in seconds | Defaults to 30.<br>By default, a trigger action will only fire if at least 30 seconds have elapsed since the last trigger action. Provide a value for this configuration option to override that default with a value of your own. We do not recommend making this value any smaller than 10 to avoid spamming the user with notifications.|
+| Service worker location | By default, when registering users for web push notifications, Braze will look for the required service worker file in the root directory of your web server at `/service-worker.js`. If you want to host your service worker at a different path on that server, provide a value for this option that is the absolute path to the file. (e.g., `/mycustompath/my-worker.js`). Note that setting a value here limits the scope of push notifications on your site. For instance, in the above example, because the service worker file is located within the `/mycustompath/` directory, `requestPushPermission` may only be called from web pages that start with `http://yoursite.com/mycustompath/`. |
 | Disable push token maintenance | By default, users who have already granted web push permission will sync their push token with the Braze backend automatically on new sessions to ensure deliverability. To disable this behavior, set this option to `FALSE`. |
 | Manage service worker externally | If you have your own service worker that you register and control the lifecycle of, set this option to `TRUE`, and the Braze SDK will not register or unregister a service worker. If you set this option to `TRUE`, for push to function correctly, you must register the service worker yourself before calling `requestPushPermission` and ensure that it contains Braze's service worker code, either with `self.importScripts('https://js.appboycdn.com/web-sdk-develop/4.1/service-worker.js');` or by including the content of that file directly. When this option is `TRUE`, the `serviceWorkerLocation` option is irrelevant and is ignored. |
 | Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. |
+| Allow crawler activity | By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. |
+| Enable logging | Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the javascript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
+| Open News Feed cards in a new tab (open cards in new tab) | By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window.|
 | Allow user-supplied Javascript | By default, the Braze Web SDK does not allow user-supplied Javascript click actions, as it allows Braze dashboard users to run Javascript on your site. To indicate that you trust the Braze dashboard users to write non-malicious Javascript click actions, set this property to `TRUE`. If `enableHtmlInAppMessages` is `TRUE`, this option will also be set to `TRUE`. |
 | App version| If you provide a value for this option, user events sent to Braze will be associated with the given version, which can be used for user segmentation. |
+| Session timeout in seconds | Defaults to 30.<br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | 
 | Device property allowlist | By default, the Braze SDK automatically detects and collects all device properties in `DeviceProperties`. To override this behavior, provide an array of `DeviceProperties`. Note that without some properties, not all features will function properly. For instance, local timezone delivery will not function without the time zone. |
 | Localization | By default, any SDK-generated user-visible messages will be displayed in the user's browser language. Provide a value for this option to override that behavior and force a specific language. The value for this option should be an ISO 639-1 language code. |
 | No cookies | By default, the Braze SDK will store small amounts of data (user ids, session ids) in cookies. This is done to allow Braze to recognize users and sessions across different subdomains of your site. If this presents a problem for you, pass `TRUE` for this option to disable cookie storage and rely entirely on HTML 5 localStorage to identify users and sessions. |
+| Track all pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
+| Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send only page calls to Braze with a name associated with them. |
+| Log purchase when revenue is present | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
+| Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Cloud Actions
+{% endtab %}
+{% tab Cloud-Mode %}
 
 | Setting | Description |
 | ------- | ----------- |
 | App identifier | The app identifier used to reference the specific app. This can be found in the Braze dashboard under **Manage Settings** | 
 | REST API key | This can be found in your Braze dashboard under **Developer Console > API Settings**. | 
 | Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (i.e., rest.iad-01.braze.com) | 
+| Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Classic framework web device mode
-Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).
-
-| Setting | Description |
-| ------- | ----------- | 
-| Log purchase when revenue is present | When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
-| Only track known users | If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
-| Track all pages | This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
-| Track only named pages | This will send only page calls to Braze with a name associated with them. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-#### Classic framework cloud mode
-Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).
-
-| Setting | Description |
-| ------- | ----------- | 
-| Update existing users only | Determines whether to update existing users only. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
+{% endtab %}
+{% endtabs %}
 
 ### Step 4: Map methods {#methods}
 
