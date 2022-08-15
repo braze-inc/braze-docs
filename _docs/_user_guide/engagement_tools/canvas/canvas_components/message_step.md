@@ -41,7 +41,7 @@ Delivery validations provide an additional check to confirm your audience meets 
 
 ### Canvas entry properties
 
-`canvas_entry_properties` are properties from the event that triggered the Canvas. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
 #### Original workflow
 
@@ -71,7 +71,7 @@ For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, make sure to use `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step. 
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
 
 For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
 

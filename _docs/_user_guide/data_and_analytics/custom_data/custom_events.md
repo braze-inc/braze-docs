@@ -130,14 +130,12 @@ For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in an
 
 {% endtab %}
 
-{% tab Custom Event Properties %}
-[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
+{% tab Event Properties %}
+[Event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
-{% raw %}
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use ``{{event_properties.${property_name}}}`` if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
-{% endraw %}
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. These event properties can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
 
 {% endtab %}
 {% endtabs %}
