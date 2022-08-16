@@ -24,6 +24,28 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
 
+### Note for Development Teams
+
+When implementing push notifications for the first time it is common to include the below, or simillar, in app startup code. For this push priming process to work as expected, it is important you do not implement any push registration code. The implementation is handled by the Braze SDK.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+```
+[sharedApplication registerForRemoteNotifications];
+```
+{% endtab %}
+{% tab swift %}
+```
+UIApplication.shared.registerForRemoteNotifications()
+```
+{% endtab %}
+{% tab JavaScript %}
+```
+braze.requestPushPermission()
+```
+{% endtab %}
+{% endtabs %}
+
 ## Step 1: Create an in-app message
 
 [Create an in-app message][2] as you usually would.
