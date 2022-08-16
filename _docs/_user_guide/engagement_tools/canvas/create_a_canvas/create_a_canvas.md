@@ -294,20 +294,20 @@ Click **Done** once you've finished configuring your Canvas component.
 
 The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
-{% raw %}
-For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid ``{{canvas_entry_properties.${product_name}}}``.
-{% endraw %}
-
 For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first Full Step of a Canvas.
 
-For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. So, be sure to use {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %} if referencing these Canvas entry properties. Note that the events must be custom events or purchase events to be used this way.
+For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+
+{% raw %}
+For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.
+{% endraw %}
 
 {% endtab %}
 
 {% tab Event Properties %}
 Event properties are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
 
