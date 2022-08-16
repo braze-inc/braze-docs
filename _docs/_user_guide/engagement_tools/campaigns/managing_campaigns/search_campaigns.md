@@ -21,7 +21,7 @@ Enter the name of a campaign, or search for keywords in a campaign name, descrip
 
 ## Filters
 
-Use the filters in the side menu to group results by creator, editor, send dates, or channel, or select **Only Show Mine** to limit the results of your search to campaigns you've created. You can also filter by status and tags to further narrow down your results.
+Use the filters in the side menu to group results by creator, editor, send dates, or channel, or select **Only Show Mine** to limit the results of your search to campaigns you've created. You can also filter by status and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) to further narrow down your results.
 
 ![][2]
 
