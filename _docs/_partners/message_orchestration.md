@@ -82,6 +82,9 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
+- name: Quikly
+  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: IAM Studio
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
+
 ---

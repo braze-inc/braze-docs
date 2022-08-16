@@ -202,7 +202,7 @@ For example, to let a user know that `tales_storefront` (an item in our catalog 
 {% raw %}
 ```liquid
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
-{% catalog_items Games tales_storefront {{ wishlist[0] }} %}
+{% catalog_items Games {{ wishlist[0] }} %}
 
 Get {{ items[0].title }} now, for just {{ items[0].price }}!
 ```

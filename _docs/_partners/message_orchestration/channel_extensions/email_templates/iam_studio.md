@@ -5,7 +5,7 @@ description: "This article outlines the partnership between Braze and IAM Studio
 alias: /partners/iam_studio/
 page_type: partner
 search_tag: Partner
-hidden: true
+
 ---
 
 # IAM Studio
