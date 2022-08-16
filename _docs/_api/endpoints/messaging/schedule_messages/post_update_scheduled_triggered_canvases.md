@@ -54,11 +54,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request example
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update' \
+curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "campaign_id": "campaign_identifier",
+  "canvas_id": "canvas_identifier",
   "schedule_id": "schedule_identifier",
   "schedule": {
     "time": "2017-05-24T21:30:00Z",
