@@ -74,7 +74,8 @@ You can find your campaign ID one of two ways:
 - Grab high-level aggregate stats on campaign performance
 - Grab details on a specific campaign
 - With Currents to bring in user-level data for a "bigger picture" approach to campaigns
-- With API trigger delivery in order to collect statistics for transactional messages
+- With API-triggered delivery in order to collect statistics for transactional messages
+- To [search for a specific campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/#search-syntax) on the **Campaigns** page using the filter `api_id:YOUR_API_ID`
 
 <br>
 {% endtab %}
