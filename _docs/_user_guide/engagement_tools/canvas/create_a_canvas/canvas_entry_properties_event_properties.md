@@ -19,10 +19,10 @@ Check out this table for a summary of differences between `canvas_entry_properti
 
 | | Canvas Entry Properties | Event Properties
 |----|----|----|
-| Liquid | `canvas_entry_properties` | `event_properties` |
-| Persistence | Can be referenced by all [Message][1] steps for the duration of a Canvas for Canvas Flow only. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
-| Original Canvas behavior | Can only reference `canvas_entry_properties` in the first Full Step of a Canvas. The Canvas must be action-based or API triggered. | You can reference `event_properties` in any Full Step that uses action-based delivery in a Canvas. However, if a user is using a [Canvas component][2] in the original Canvas editor, the behavior follows the Canvas Flow rules for `event_properties`. |
-| Canvas Flow behavior | Can reference `canvas_entry_properties` in any step of a Canvas. | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Path and Message Step. If one of these non-Message Canvas components is an Action Paths step, the user can go through that Action Paths' Everyone Else path. | 
+| **Liquid** | `canvas_entry_properties` | `event_properties` |
+| **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas for Canvas Flow only. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
+| **Original Canvas behavior** | Can only reference `canvas_entry_properties` in the first Full Step of a Canvas. The Canvas must be action-based or API triggered. | You can reference `event_properties` in any Full Step that uses action-based delivery in a Canvas. However, if a user is using a [Canvas component][2] in the original Canvas editor, the behavior follows the Canvas Flow rules for `event_properties`. |
+| **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Path and Message Step. If one of these non-Message Canvas components is an Action Paths step, the user can go through that Action Paths' Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Example
@@ -37,7 +37,7 @@ In this Canvas, we have a user journey that begins at an Action Paths step to de
 
 If a user doesn't add an item to their wishlist, they go through the Everyone Else path, so the `event_properties` can't be referenced and will reflect an invalid settings error.
 
-Note that you’ll only have access to `event_properties` if your Message Step can be traced back to a non-Everyone Else path in an Action Path step. If the Message Step is connected to an Everyone Else path but can be traced back to an Action Paths step, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
+Note that you’ll only have access to `event_properties` if your Message Step can be traced back to a non-Everyone Else path in an Action Path step. If the Message Step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
 
 Note that you’ll only have access to event_properties if your Message Step can be traced back to a non-Everyone Else path in an Action Path step.
 
