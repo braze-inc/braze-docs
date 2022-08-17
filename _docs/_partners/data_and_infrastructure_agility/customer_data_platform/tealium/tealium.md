@@ -86,13 +86,12 @@ Tealium offers two ways to integrate Mobile Remote Command, there is no loss of 
 | **JSON configuration file**<br>([Recommended](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption.<br><br>The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. It will also allow you to track location and social data on Twitter and Facebook - like the number of followers or friends a user has. Refer to the following chart for corresponding Braze methods.
+Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. Refer to the following chart for corresponding Braze methods.
 
 | Remote command | Braze method |
 | -------------- | ------------ |
 | appendcustomarrayattribute | addToCustomAttributeArrayWithKey()|
 | emailnotification | setEmailNotificationSubscriptionType() |
-| facebookuser | facebookUser() |
 | incrementcustomattribute | incrementCustomAttribute() |
 | Initalize | startWithApiKey() |
 | logcustomevent | logCustomEvent() |
@@ -102,7 +101,6 @@ Use Braze mobile remote command data mappings to set default user attributes and
 | setcustomattribute | setCustomAttributeArrayWithKey() |
 | setcustomarrayattribute | setCustomAttributeArrayWithKey() |
 | setlastknownlocation | setLastKnownLocationWithLatitude() |
-| twitteruser | twitterUser() |
 | unsetcustomattribute | unsetCustomAttributeWithKey() |
 | useralias | addAlias() |
 | userattribute | ABKUser() |

@@ -32,8 +32,6 @@ Braze provides predefined methods for setting the following user attributes with
 - Gender
 - Home city
 - Phone number
-- Facebook data
-- Twitter data
 
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 
