@@ -12,14 +12,14 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-The Canvas User Update component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
+The User Update component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
-With User Update, updates do not count towards your users or track per minute rate limit. Instead, updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook.
+With User Update, updates don't count towards your users or track per minute rate limit. Instead, updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook.
 
 Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you are making, you can ensure that these updates have been completed prior to when the messages send.
 
 {% alert important %}
-User Update is currently in early access. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
+User Update is currently in early access and only supported in Canvas Flow. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
 {% endalert %}
 
 ## Create a User Update 
