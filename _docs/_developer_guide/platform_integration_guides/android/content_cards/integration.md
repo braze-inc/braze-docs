@@ -198,6 +198,6 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 [31]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-captioned-image-card/index.html
 [32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-text-announcement-card/index.html
 [41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-short-news-card/index.html
-[2]: http://developer.android.com/guide/components/fragments.html
+[2]: https://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html

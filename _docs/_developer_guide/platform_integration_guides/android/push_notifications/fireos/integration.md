@@ -123,7 +123,7 @@ Next, use [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-and
 {% tab Java %}
 
 ```java
-Braze.getInstance(context).Braze.setRegisteredPushToken(registration_id);
+Braze.getInstance(context).setRegisteredPushToken(registration_id);
 ```
 
 {% endtab %}
