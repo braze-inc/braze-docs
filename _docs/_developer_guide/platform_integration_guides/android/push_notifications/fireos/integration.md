@@ -119,9 +119,22 @@ Braze does not recommend using manual registration, but if you need to handle AD
 ```
 Next, use [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) to pass your user's ADM `registration_id` to Braze:
 
+{% tabs local %}
+{% tab Java %}
+
 ```java
 Braze.getInstance(context).Braze.setRegisteredPushToken(registration_id);
 ```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+Braze.getInstance(context).registeredPushToken = registration_id
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## ADM extras
 
