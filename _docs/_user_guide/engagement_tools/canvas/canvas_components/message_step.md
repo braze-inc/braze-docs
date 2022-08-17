@@ -67,13 +67,19 @@ Event properties refer to the properties that you set for custom events and purc
 
 #### Canvas Flow
 
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, use this Liquid `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+
 {% alert important %}
 `event_properties` cannot be used independently of Action Paths for Canvas Flow.
 {% endalert %}
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, use this Liquid `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
-
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
+
+{% alert important %}
+
+For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
+
+{% endalert %}
 
 For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
 
