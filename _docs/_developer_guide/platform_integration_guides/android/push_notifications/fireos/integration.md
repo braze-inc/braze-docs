@@ -117,11 +117,24 @@ Braze does not recommend using manual registration, but if you need to handle AD
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Next, use [registerPushToken][37] to pass your user's ADM `registration_id` to Braze:
+Next, use [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) to pass your user's ADM `registration_id` to Braze:
+
+{% tabs local %}
+{% tab Java %}
 
 ```java
-Braze.getInstance(context).registerPushToken(registration_id);
+Braze.getInstance(context).setRegisteredPushToken(registration_id);
 ```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+Braze.getInstance(context).registeredPushToken = registration_id
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## ADM extras
 
@@ -149,5 +162,4 @@ If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Pus
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback

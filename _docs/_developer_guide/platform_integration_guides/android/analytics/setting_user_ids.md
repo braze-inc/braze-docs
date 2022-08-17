@@ -54,6 +54,6 @@ Refer to the [`changeUser`][4] documentation for more information.
 
 {% include archive/setting_user_ids/aliasing.md platform="Android" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/change-user.html
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html
