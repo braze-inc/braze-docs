@@ -265,6 +265,11 @@ By default, filters and segments for full steps in Canvas are checked at send ti
 
 Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaign messages, you can use certain Liquid templating to personalize your messages.
 
+{% alert tip %}
+Did you know you can include Canvas component names in your messages and link templates?<br>
+Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
+{% endalert %}
+
 {% tabs local %}
 {% tab Canvas Flow %}
 
@@ -314,11 +319,10 @@ In the first Message step following an Action Path, you can use `event_propertie
 {% endtab %}
 {% endtabs %}
 
-For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
+{% alert important %}
 
-{% alert tip %}
-Did you know you can include Canvas component names in your messages and link templates?<br>
-Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
+For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
+
 {% endalert %}
 
 
