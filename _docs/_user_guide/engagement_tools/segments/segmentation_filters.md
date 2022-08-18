@@ -21,7 +21,6 @@ glossary_tags:
   - name: Marketing Activity
   - name: User Attributes
   - name: Install Attribution
-  - name: Social Activity
   - name: Testing
   - name: Other
 
@@ -422,22 +421,6 @@ glossaries:
     description: Segments your users by the source that their install was attributed to.
     tags:
       - Install Attribution
-  - name: Connected to Facebook
-    description: Segments your users who have granted Facebook account access within your app.
-    tags:
-      - Social Activity
-  - name: Connected to Twitter
-    description: Segments your users who have granted Twitter account access within your app.
-    tags:
-      - Social Activity
-  - name: Number of Facebook Friends Using App
-    description: Segments your users by the number of friends that they have on Facebook that are using your app.
-    tags:
-      - Social Activity
-  - name: Number of Twitter Followers
-    description: Segments your users by the number of followers that they have on Twitter.
-    tags:
-      - Social Activity
   - name: Device IDFA
     description: Allows you to designate your campaign recipients by IDFA for testing.
     tags:

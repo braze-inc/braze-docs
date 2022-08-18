@@ -192,7 +192,6 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [apple_initial_setup_32]: {{ site.baseurl }}/support_contact/
