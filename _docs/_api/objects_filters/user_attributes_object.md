@@ -137,7 +137,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
-      "push_tokens": [{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]
+      "push_tokens": [{"app_id": "Your App Identifier", "token": "abcd", "device_id": "optional_field_value"}]
 
     },
     {
