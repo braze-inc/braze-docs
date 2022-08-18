@@ -105,4 +105,4 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-purchase.html
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

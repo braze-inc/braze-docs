@@ -13,7 +13,7 @@ description: "This article explains the different components of a purchase objec
 
 ## What is a purchase object?
 
-A Purchase Object is an object that gets passed through the API when a purchase has been made. Each Purchase Object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
+A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
 
 ### Purchase object
 
@@ -63,13 +63,27 @@ This helps make products easy to identify for segmentation and triggering.
 If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (e.g., Online Order or Completed Order).
 
 For example, to log purchases at the order level in the Web SDK: 
-```javascript
-braze.logPurchase("Completed Order", price, "USD", quantity, {
-  "products": [
-    { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
-    { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+```html
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+{
+  "purchases" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "Completed Order",
+      "currency" : "USD",
+      "price" : 219.98,
+      "time" : "2013-07-16T19:20:30+01:00",
+      "properties" : {
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        ]
+      }
+    }
   ]
-});
+}
 ```
 
 ## Purchase properties object

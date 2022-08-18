@@ -95,6 +95,12 @@ Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/se
 
 You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
 
+{% alert important %}
+
+For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+
+{% endalert %}
+
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 

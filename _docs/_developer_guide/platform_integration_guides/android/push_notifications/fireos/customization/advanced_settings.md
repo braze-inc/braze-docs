@@ -79,7 +79,7 @@ To message your full userbase with a specific sound, we recommend that you indir
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link.png %}
-[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[13]: {{site.baseurl}}/api/endpoints/messaging
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels

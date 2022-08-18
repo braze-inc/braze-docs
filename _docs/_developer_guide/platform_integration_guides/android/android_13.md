@@ -9,15 +9,9 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 ---
 <br>
 
-{% alert important %}
-As of June 8, 2022 Android 13 has reached its [Platform Stability Milestone](https://developer.android.com/about/versions/13/overview#platform_stability). This means all changes have been finalized, and app users will soon be able to upgrade their devices.
-{% endalert %}
-
 # Android 13 SDK upgrade guide
 
 This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
-
-![A graphic showing the anticipated release timeline for Android 13 with the final release being sometime after July 2022.]({% image_buster /assets/img/android/android_13_timeline.png %}){: style="max-width:70%;border:0"}
 
 Refer to the [Android 13 developer documentation][2] for a full migration guide.
 
@@ -29,7 +23,7 @@ To prepare for Android 13, please upgrade your Braze SDK to the [latest version 
 
 ### Push permission {#push-permission}
 
-Android 13 introduces a [major change][3] in how users manage apps that send push notifications. In Android 13, apps will be required to obtain permission before push notifications can be shown. 
+Android 13 introduces a [major change][3] in how users manage apps that send push notifications. In Android 13, apps are required to obtain permission before push notifications can be shown. 
 
 ![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons "Allow" and "Don't allow" at the bottom of the message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
@@ -52,7 +46,7 @@ For more details on this see Android's Developer Documentation for [effects on u
 If your app does not yet target Android 13, then a new user on Android 13 installs your app, they will automatically see a push permission prompt when your app creates its first notification channel (via `notificationManager.createNotificationChannel`). Users who already have your app installed and then upgrade to Android 13 are never shown a prompt and are automatically granted push permission.
 
 {% alert note %}
-Braze automatically creates a default notification channel if one does not already exist when a push notification is received. If you don't target Android 13, this will cause the push permission prompt to be shown, which is required to show the notification.
+Braze SDK v23.0.0 automatically creates a default notification channel if one does not already exist when a push notification is received. If you don't target Android 13, this will cause the push permission prompt to be shown, which is required to show the notification.
 {% endalert %}
 
 ## Preparing for Android 13 {#next-steps}
