@@ -19,7 +19,7 @@ With User Update, updates don't count towards your users or track per minute rat
 Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you are making, you can ensure that these updates have been completed prior to when the messages send.
 
 {% alert important %}
-User Update is currently in early access and only supported in Canvas Flow. Braze will begin to deprecate Braze-to-Braze webhooks once this feature is generally available. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access.
+User Update is currently in early access and only supported in Canvas Flow. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access. <br><br>Braze will begin to deprecate Braze-to-Braze webhooks that target the `/users/track` endpoint once this feature is generally available. We'll let you know about the full deprecation process and timeline when the User Update component is generally available so that you have the time and support from Braze to make the switch.
 {% endalert %}
 
 ## Create a User Update 
