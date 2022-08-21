@@ -106,7 +106,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
     {
       "subscription_group_id":"subscription_group_identifier",
       "subscription_state":"subscribed",
-      "phones":["+12223334444","+15556667777”]
+      "phones":["+12223334444","+15556667777"]
     }
   ]
 }
