@@ -33,7 +33,7 @@ Braze has three generations of in-app messages available. You can fine-tune to w
 ## Test
 
 {% alert warning %}
-  To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
+To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. <br><br>For example, you must have push enabled on your iOS device in order to tap the notification before the test message displays.
 {% endalert %}
 
 ### Preview message as user
