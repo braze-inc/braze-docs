@@ -1,13 +1,13 @@
 ---
-nav_title: "POST: Catalog Items Bulk Patch"
+nav_title: "PATCH: Catalog Items Bulk Patch"
 permalink: /catalogs_items_patch/
 hidden: true
 layout: api_page
 
 ---
 {% api %}
-# Catalog items bulk patch
-{% apimethod post %}
+# Edit catalog items in bulk
+{% apimethod patch %}
 /catalogs/catalog_name/items
 {% endapimethod %}
 
