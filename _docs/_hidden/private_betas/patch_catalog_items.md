@@ -19,7 +19,7 @@ Support for the this endpoint is currently in early access. Contact your Braze a
 
 ## Rate limit
 
-We apply the default Braze rate limit of **X** requests per hour to this endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 100 requests per hour.
 
 ## Request body
 
@@ -71,6 +71,7 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+| catalog-not-found | Check that the catalog name is valid. |
 | invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | ids-too-large | Item IDs can't be more than 250 characters. |
 | referenced-same-id-multiple-times | Item IDs must be unique in the request. |
