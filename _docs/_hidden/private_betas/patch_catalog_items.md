@@ -19,7 +19,7 @@ Support for the this endpoint is currently in early access. Contact your Braze a
 
 ## Rate limit
 
-This endpoint has a rate limit of 100 requests per hour.
+This endpoint has a rate limit of 100 requests per minute.
 
 ## Request body
 
