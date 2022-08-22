@@ -321,13 +321,14 @@ Good options for User IDs:
 
 - Hashed email address or unique username
 - Unique database identifier
-- Facebook ID
 
 These should not be used as user IDs:
 
 - Device ID
 - Random number or session ID
 - Any non-unique ID
+- Email address
+- Another 3rd party vendor's User ID
 
 {% include sdk_auth_alert.md %}
 
@@ -366,8 +367,6 @@ The following content will be trimmed programmatically from your attributes and 
 Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
 
 - `email`
-- `facebook`
-- `twitter`
 - `first_name`
 - `last_name`
 - `dob`
