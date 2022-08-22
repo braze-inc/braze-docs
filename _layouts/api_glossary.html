@@ -62,7 +62,7 @@ hide_breadcrumb: false
   {%- endif -%}
   {%- capture glossary_list -%}
   {{ glossary_list }}
-  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | slugify | downcase | replace: '"', '\\"' }}","{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}","{{ glossary['metric'] | replace: '"', '\\"' }}","{{ glossary['calculation'] | replace: '"', '\\"' }}","{{ glossary['field'] | replace: '"', '\\"' }}",
+  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | slugify | downcase | replace: '"', '\\"' }}","{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}",
   {%- endcapture -%}
   {%- assign glossary_tag = '' -%}
   {%- assign glossary_list = glossary_list | append: '['  -%}
@@ -84,11 +84,8 @@ var glossary_map = {
   'id': 0,
   'name': 1,
   'description': 2,
-  'metric': 3,
-  'calculation': 4,
-  'field': 5,
-  'tags': 6,
-  'glossary_tags': 7,
+  'tags': 3,
+  'glossary_tags': 4,
 }
 $(document).ready(function() {
   function string_to_slug(str) {
@@ -276,38 +273,20 @@ $(document).ready(function() {
     </div>
 
     <div id="glossary_list" class="flex mx-auto">
-
+      <div class="d-flex" style="width: 100%;">
+        <div class="col-3" style="background-color: #CDCDCD;color: #333333;font-weight:bold;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Title</div>
+        <div class="col-9" style="background-color: #CDCDCD;color: #333333;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Description</div>
+      </div>
       {%- assign glossary_sorted = page.glossaries | sort: 'name' -%}
       {%- for glossary in glossary_sorted -%}
       {%- assign glossary_id = glossary['name'] | slugify | downcase -%}
-        <span id="filter_{{ glossary_id }}" class="term">
+        <div id="filter_{{ glossary_id }}" class="term flex">
           <h2 id="{{ glossary_id }}"></h2>
-          <div class="content"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
-            {%- if glossary['image'] -%}
-            <img src="{{ glossary['image'] }}" />
-            {%- endif -%}
-            <p class="desc">{{ glossary['description'] }}</p>
-            {%- if glossary['metric'] -%}
-            <div class="metric">Metric: {{ glossary['metric'] }}</div>
-            {%- endif -%}
-            {%- if glossary['calculation'] -%}
-            <div class="caclulation">Calculation: {{ glossary['calculation'] }}</div>
-            {%- endif -%}
-            {%- if glossary['field'] -%}
-            <div class="field">Field: {{ glossary['field'] }}</div>
-            {%- endif -%}
-            {%- if glossary.tags.size > 0 -%}
-            <div class="tags">
-              <div class="tag">Filter Category:&nbsp;{%- if glossary.tags contains 'All' -%}
-                {{ glossary_tags }}
-              {%- else -%}
-                {{ glossary.tags | join: ", "}}
-              {%- endif -%}
-              </div>
-            </div>
-            {%- endif -%}
+          <div class="col-3" style="word-break: break-all;"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
           </div>
-        </span>
+          <div class="col-9">{{ glossary['description'] }}
+          </div>
+        </div>
         {%- endfor -%}
     </div>
     <div id="results_msg"></div>
