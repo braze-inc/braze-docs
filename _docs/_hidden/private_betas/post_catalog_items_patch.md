@@ -54,7 +54,9 @@ Authorization: Bearer YOUR-REST-API-KEY
     {
       "id": "catalog-not-found",
       "message": "Could not find catalog",
-      "parameter": "catalog_name",
+      "parameters": [
+        "catalog_name"
+      ],
       "parameter_values": [
         "catalog_name"
       ]
@@ -71,9 +73,11 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | ids-too-large | Item IDs can't be more than 250 characters. |
-| referenced-same-id-multiple-times | Your item IDs must be unique in the request. |
-| fields-do-not-match | Check that the updated fields match the fields in the catalog. |
-| items-too-large | Check that your item values don't exceed 5,000 characters. |
+| referenced-same-id-multiple-times | Item IDs must be unique in the request. |
+| request-includes-too-many-items | Your request has too many items. The maximum is 50.
+| fields-do-not-match | Updated fields must match the fields in the catalog. |
+| items-too-large | Item values can't exceed 5,000 characters. |
+| unable-to-coerce | Item types can be converted. |
 | aribitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
