@@ -79,7 +79,7 @@ The following table lists possible returned errors and their associated troubles
 | fields-do-not-match | Updated fields must match the fields in the catalog. |
 | items-too-large | Item values can't exceed 5,000 characters. |
 | unable-to-coerce | Item types can be converted. |
-| aribitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| arbitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
