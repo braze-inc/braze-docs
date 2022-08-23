@@ -143,19 +143,19 @@
         padding: 6px 15px;
         display: inline-block;
         &.post {
-          background-color: #49cc90;
+          background-color: #008760;
         }
         &.get {
-          background-color: #61affe;
+          background-color: #005CC7;
         }
         &.put {
-          background-color: #fca130;
+          background-color: #EA6D2E;
         }
         &.delete {
-          background-color: #f93e3e;
+          background-color: #D32F4C;
         }
         &.patch {
-          background-color: #d7a8d1;
+          background-color: #A81897;
         }
         margin-right: 15px;
       }
