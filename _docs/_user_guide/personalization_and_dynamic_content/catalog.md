@@ -239,7 +239,7 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com) for more information.
+Interested in upgrading your experience to Catalog Pro? Contact your account manager to get started.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

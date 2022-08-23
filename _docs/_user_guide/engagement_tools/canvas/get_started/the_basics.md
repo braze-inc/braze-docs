@@ -64,8 +64,7 @@ Answer the following questions to get started:
   * Retargeting
   * Marketing Activity
   * User Attributes
-  * Install Attribution
-  * Social Activity<br><br>
+  * Install Attribution<br><br>
 
 4. **Why** am I creating this Canvas?
   * **Start Session**: I want them coming back and engaging with the app.
@@ -115,7 +114,6 @@ Who are you trying to reach? Here you can use a pre-defined segment and add furt
 | Marketing Activity | Marketing filters segment customers based on universal behaviors like last engagement or received campaigns. |
 | User Attributes | User attribute filters segment customers by their constant attributes and characteristics. |
 | Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad. |
-| Social Activity | Social activity filters segment customers by their social media activity namely through connection to Facebook and Twitter. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Only the users who match these target audience criteria can enter the journey.

@@ -104,23 +104,8 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 - Android: See the [Android integration instructions][2] for information on how to support location tracking.
 - iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
-
-## Social data tracking (Android only)
-
-You can see the Xamarin binding accessing these interfaces in the `HomeFragment.cs` of our sample app.  The sample code logs a social share and populates the Braze user with data from the social networks.
-
-```csharp
-// Record Facebook Data
-FacebookUser facebookUser = new FacebookUser("708379", "Test", "User", "test@braze.com", "Test", "Testtown", Gender.Male, new Java.Lang.Integer(100), new String[]{"Cats", "Dogs"}, "06/17/1987");
-Braze.getInstance(context).CurrentUser.SetFacebookData(facebookUser);
-
-// Record Twitter Data
-TwitterUser twitterUser = new TwitterUser(6253282, "Test", "User", "Tester",  new Java.Lang.Integer(100), new Java.Lang.Integer(100), new Java.Lang.Integer(100), "https://si0.twimg.com/profile_images/2685532587/fa47382ad67a0135acc62d4c6b49dbdc_bigger.jpeg");
-Braze.getInstance(context).CurrentUser.SetTwitterData(twitterUser);
 ```
-See the [Android integration instructions][6] for an in-depth discussion of social data best practices and interfaces.
 
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/

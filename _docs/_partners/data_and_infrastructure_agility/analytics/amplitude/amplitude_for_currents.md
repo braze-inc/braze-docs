@@ -159,7 +159,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -173,7 +175,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -189,7 +193,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -203,7 +209,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the bounce occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -226,10 +234,12 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
@@ -311,10 +321,12 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "email_address": (string) email address for this event,
   "subscription_group_id": (string) id of the subscription group,
@@ -333,7 +345,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -349,7 +363,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -369,7 +385,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
 ```
@@ -386,7 +404,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
 ```
@@ -404,7 +424,9 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
@@ -463,12 +485,14 @@ Devices should not report more than 30 events/second or 500K events/day under no
 }
 // Canvas Conversion Event
 {
-  "canvas_id": (string) id of the Canvas,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) id of the last step the user was sent before the conversion
+  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior
 }
 ```
 
@@ -477,9 +501,12 @@ Devices should not report more than 30 events/second or 500K events/day under no
 ```json
 // Canvas Entry
 {
-  "canvas_id": (string) id of the Canvas,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```

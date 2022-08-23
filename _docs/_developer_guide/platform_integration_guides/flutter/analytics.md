@@ -64,8 +64,6 @@ The following attributes are supported:
 - Phone Number
 - Language
 - Email
-- Twitter Data
-- Facebook Data
 
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 
