@@ -46,14 +46,16 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
 | `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
-| `baseUrl`                    | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
-| `fcmSenderID`                       | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
+| `baseUrl`                           | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `useBrazeIosPush`                   | boolean  |  iOS only. Whether to use Braze to handle push notifications. Note that setting this to `true` may interfere with the `expo-notifications` package.    |
+| `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications.                                                                         |
+| `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
 | `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
 | `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
-| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
 | `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
 | `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
+| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
 | `enableAutomaticGeofenceRequests`   | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
 | `dismissModalOnOutsideTap`          | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
