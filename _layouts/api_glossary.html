@@ -201,7 +201,7 @@ $(document).ready(function() {
 
     }
     if (!result_cnt) {
-      $('#results_msg').html('<p>No glossarys matching these filters</p>');
+      $('#results_msg').html('<p>No endpoints found matching these key words.</p>');
       $('#results_msg').show();
     }
 
@@ -252,16 +252,38 @@ $(document).ready(function() {
 {% endunless %}
 
 <div class="col d-print-block " id="main_content" >
-
     <div id="glossary-main">
 
     <div id="content_start"></div>
     <h1> {{ page.glossary_top_header }} </h1>
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
+    <div id="guide_featured_list">
 
+      {%- for menu_list in page.guide_featured_list  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+            {%- endif %}
+          <div id="{{ menu_list.name | handle }}" class="guide_item">
+            {%- if menu_list.fa_icon -%}
+            <i class="{{menu_list.fa_icon}}"></i>
+            {%- else -%}
+              {%- if menu_list.image -%}
+              <img src="{{site.baseurl}}{{ menu_list.image}} " />
+              {%- endif -%}
+            {%- endif -%}
+            <div class="menu_description">
+                {{ menu_list.name }}
+              </div>
+          </div>
+            {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    <p class="glossary_text">  {{ page.glossary_mid_text }} </p>
     <div id="glossary_filter">
         <input id="glossary_search" type="search" placeholder="Search" />
-        <div id="glossary_filter_title">{{ page.glossary_filter_text }}</div>
+        <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
           <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
