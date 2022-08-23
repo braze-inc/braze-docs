@@ -55,7 +55,7 @@ Connect, learn, and get inspired with other developers building with Braze. Chec
 
 ### Message archiving
 
-[Message Archiving]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/message_archiving/) is an add on feature that lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
+[Message Archiving]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/message_archiving/) is an add-on feature that lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
 
 ### Canvas entry properties and event properties
 
