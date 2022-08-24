@@ -44,6 +44,8 @@ UIApplication.shared.registerForRemoteNotifications()
 {% tab JavaScript %}
 ```javascript
 braze.requestPushPermission()
+// or
+appboy.registerAppboyPushMessages()
 ```
 {% endtab %}
 {% endtabs %}
