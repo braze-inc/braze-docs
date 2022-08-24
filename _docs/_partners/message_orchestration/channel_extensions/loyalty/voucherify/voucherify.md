@@ -1,0 +1,37 @@
+---
+nav_title: Voucherify
+article_title: Voucherify
+page_order: 1
+alias: /partners/voucherify/voucherify/
+description: "This article outlines the partnership between Braze and Voucherify, an all-in-one promotional platform that allows users to automatically send personalized coupons, gift cards, loyalty cards, referral codes, and more – all through their Braze account while tracking redemptions and campaign growth at every step."
+page_type: partner
+search_tag: Partner
+
+---
+
+# Voucherify
+
+{% include video.html id="Xh_c53cBA9w" align="right" %}
+
+> [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
+
+The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
+
+- [Connected Content]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content): Add unique codes to Braze campaigns via Braze’s Connected Content. With this feature, you can use Voucherify discount coupons, gift card campaigns, loyalty cards, and referral codes.
+- [Custom Attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes): Custom attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users' profiles in Braze. As a result, you can send attached codes and attributes in email campaigns and share them with your users.
+- [Promotion Codes Lists]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list): Use Voucherify generated promotion codes and upload them into Braze.
+
+## Prerequisites
+
+| Requirement | Description |
+| ----------- | ----------- |
+|Voucherify account | A Voucherify account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Integration
+
+Visit the following articles for additional resources on the Voucherify integration:
+- [Fetching Data through Braze Connected Content]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content)
+- [Distribution with Braze Custom Attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes)
+- [Using Braze Promotion Codes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list)
