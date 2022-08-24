@@ -47,9 +47,9 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
 | `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
 | `baseUrl`                           | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
-| `enableBrazeIosPush`                | boolean  |  iOS only. Whether to use Braze to handle push notifications.                                                                                          |
-| `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications.                                                                         |
-| `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
+| `enableBrazeIosPush`                | boolean  |  iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                    |
+| `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
+| `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
 | `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
 | `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
