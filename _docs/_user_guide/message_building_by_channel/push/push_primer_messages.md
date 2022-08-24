@@ -42,7 +42,7 @@ UIApplication.shared.registerForRemoteNotifications()
 ```
 {% endtab %}
 {% tab JavaScript %}
-```
+```javascript
 braze.requestPushPermission()
 ```
 {% endtab %}
