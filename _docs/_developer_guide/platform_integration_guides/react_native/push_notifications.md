@@ -53,7 +53,7 @@ Follow the [iOS integration instructions]({{site.baseurl}}/developer_guide/platf
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Request Push Notifications Permission
+## Step 2: Request push notifications permission
 
 Use the `Braze.requestPushPermission()` method (available on v1.38.0 and up) to request permission for push notifications from the user on iOS and Android 13+. For Android 12 and below, this method is a no-op.
 
