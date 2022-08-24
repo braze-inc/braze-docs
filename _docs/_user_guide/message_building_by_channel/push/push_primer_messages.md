@@ -26,7 +26,9 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 ### Note for Development Teams
 
-When implementing push notifications for the first time it is common to include the below, or simillar, in app startup code. For this push priming process to work as expected, it is important you do not implement any push registration code. The implementation is handled by the Braze SDK.
+This new no-code Push Primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
+
+You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
