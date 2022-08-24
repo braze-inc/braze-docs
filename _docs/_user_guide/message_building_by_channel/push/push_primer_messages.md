@@ -37,7 +37,7 @@ You should remove any manual push permission code from your app to avoid request
 ```
 {% endtab %}
 {% tab swift %}
-```
+```swift
 UIApplication.shared.registerForRemoteNotifications()
 ```
 {% endtab %}
