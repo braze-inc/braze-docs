@@ -15,6 +15,23 @@ The Braze SDKs include a default card feed to get you started with Content Cards
 
 ## Customization
 
+To build your own UI, you can get a list of available cards, and listen for updates to cards:
+
+```javascript
+// set initial cards
+const [cards, setCards] = useState(await Braze.getContentCards());
+
+// listen for updates as a result of card refreshes
+Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, async (update) => {
+    const updatedCards = await Braze.getContentCards();
+    setCards(updatedCards);
+});
+```
+
+{% alert important %}
+If you choose to build your own UI to display cards, you must call `logContentCardImpression` in order to receive analytics for those cards.
+{% endalert %}
+
 You can use these additional methods to build a custom Content Cards Feed within your app:
 
 | Method                                         | Description                                                                                            |
