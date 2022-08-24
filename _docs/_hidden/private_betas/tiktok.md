@@ -21,6 +21,10 @@ Using the Braze Audience Sync to TikTok, brands can elect to add user data from 
 
 This feature gives brands the option to control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
+{% alert important %}
+Audience Sync to TikTok is currently in beta. Contact your Braze account manager if you're interested in participating in the beta
+{% endalert %}
+
 ## Integration requirements 
 
 You will need to ensure that you have the following items created and completed before setting up your TikTok Audience Step in Canvas. 
