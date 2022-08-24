@@ -32,7 +32,7 @@ You should remove any manual push permission code from your app to avoid request
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
-```
+```objc
 [sharedApplication registerForRemoteNotifications];
 ```
 {% endtab %}
