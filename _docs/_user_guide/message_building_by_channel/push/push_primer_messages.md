@@ -24,10 +24,9 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
 
-### Note for Development Teams
-
-This new no-code Push Primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
-
+#### Note for development teams
+This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
+<br><br>
 You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
 
 {% tabs %}
