@@ -17,7 +17,7 @@ Integrating push notifications in React Native requires setting up each native p
 {% tabs %}
 {% tab Expo %}
 
-Set the `useBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable push for iOS and Android, respectively.
+Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable push for iOS and Android, respectively.
 
 For Android, you will also need to supply your `firebaseCloudMessagingSenderId`. See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) for instructions on retrieving your sender ID.
 
@@ -30,7 +30,7 @@ For Android, you will also need to supply your `firebaseCloudMessagingSenderId`.
         {
           "androidApiKey": "YOUR-ANDROID-API-KEY",
           "iosApiKey": "YOUR-IOS-API-KEY",
-          "useBrazeIosPush": true,
+          "enableBrazeIosPush": true,
           "enableFirebaseCloudMessaging": true,
           "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID"
         }

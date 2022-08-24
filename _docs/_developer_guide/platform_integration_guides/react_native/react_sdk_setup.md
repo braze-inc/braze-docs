@@ -47,7 +47,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
 | `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
 | `baseUrl`                           | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
-| `useBrazeIosPush`                   | boolean  |  iOS only. Whether to use Braze to handle push notifications. Note that setting this to `true` may interfere with the `expo-notifications` package.    |
+| `enableBrazeIosPush`                | boolean  |  iOS only. Whether to use Braze to handle push notifications.                                                                                          |
 | `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications.                                                                         |
 | `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID.                                                                                                |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
