@@ -14,10 +14,12 @@ Version history for Canvas Flow is currently in early access. Contact your Braze
 
 ![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-To access the version history, go to your Canvas details and select **# Versions**. Here, you have access to the **Version history** sidebar. Select any of the Canvas versions to view and compare Canvas details. 
+To access the version history, navigate to your Canvas details at the top of your Canvas and select **# Versions**. Here, you have access to the **Version history** sidebar. Select any of the Canvas versions to view and compare Canvas details. The Canvases listed under **Version history** are view-only. These previous versions can't be restored or deleted.
 
-You can toggle between the Canvas analytics and the Canvas setup by clicking **View Analytics** or **View Canvas**. When you create a new version of a Canvas, you can still access past versions by clicking **# Versions** in the changelog.
+You can toggle between the Canvas analytics and the Canvas setup by clicking **View Analytics** or **View Canvas** at the bottom toolbar. When you create a new version of a Canvas, you can still access all past versions by going to the version history sidebar.
 
-As you edit and refine your Canvas, you can choose to overwrite the Canvas directly or to create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version. Note that the Canvases listed under **Version history** are view-only. These previous versions can't be restored or deleted.
+As you edit and refine your Canvas, you can choose to overwrite the Canvas directly or to create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version.
+
+You can still view analytics for any date range by adjusting the date picker. In the Canvas version view, the data will populate for the entire date range, not just the date range of that version. However, at the step level, analytics will only be shown for steps that existed while that version was active. 
 
 [1]: {% image_buster /assets/img_archive/canvas_version_history.png %} 
