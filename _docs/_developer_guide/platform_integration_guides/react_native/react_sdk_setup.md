@@ -73,7 +73,16 @@ Example configuration:
           "iosApiKey": "YOUR-IOS-API-KEY",
           "baseUrl": "YOUR-SDK-ENDPOINT",
           "sessionTimeout": 60,
-          "enableGeofence": true
+          "enableGeofence": false,
+          "enableBrazeIosPush": false,
+          "enableFirebaseCloudMessaging": false,
+          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "enableSdkAuthentication": false,
+          "logLevel": 0,
+          "minimumTriggerIntervalInSeconds": 0,
+          "enableAutomaticLocationCollection": false,
+          "enableAutomaticGeofenceRequests": false,
+          "dismissModalOnOutsideTap": true,
         }
       ],
     ]
