@@ -148,7 +148,7 @@ To add a key-value pair to an in-app message, select the **Settings** tab in the
 
 #### API-triggered campaigns
 
-Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## Emails
 
