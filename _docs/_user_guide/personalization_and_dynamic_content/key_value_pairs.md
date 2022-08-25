@@ -16,6 +16,8 @@ Braze enables you to send extra data payloads to user devices via key-value pair
 
 ## Push notifications
 
+Key-value pairs can also be added to Android, iOS, and web push notifications. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
+
 ### iOS
 
 Apple Push Notification service (APNs) supports setting alert preferences and sending custom data using key-value pairs. APNs makes use of the Apple-reserved ```aps``` library, which includes predetermined keys and values that govern alert properties.
@@ -82,7 +84,7 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 
 ##### Custom key-value pairs
 
-In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
+In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
 
 ![][17]
 
@@ -98,19 +100,27 @@ Apple advises clients to avoid including customer information or any sensitive d
 If you are using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. The legacy binary interface, which will soon be depreciated, only supports a payload size of 2048 bytes.
 {% endalert %}
 
+###### API-triggered campaigns
+
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
+
 ### Android
 
 Braze allows you to send send additional data payloads in push notifications using key-value pairs.
 
 ##### Data payload
 
-Similar to iOS push, you may send custom key-value pairs to a user’s device. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
+Similar to iOS push, you may send custom key-value pairs to a user’s device.
 
 Some use cases for custom key-value pairs include internal metrics keeping and setting the context for the user interface, but they may be used for whatever purpose you choose.
 
 {% alert important %}
 Your app's backend must be able to process custom key-value pairs for the data payload to function properly.
 {% endalert %}
+
+###### API-triggered campaigns
+
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ##### FCM messaging options
 
@@ -130,17 +140,15 @@ Upon campaign launch, you should check that you have not received any visible pu
 The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (uninstall tracking, geofences, and Push Stories). Note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
 {% endalert %}
 
-### Web
-
-Key-value pairs can also be added to web push notifications. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
-
-![][20]
-
 ## In-app messages
 
 To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, click **Add New Pair**, and specify your key-value pairs.
 
 ![][21]
+
+#### API-triggered campaigns
+
+Braze allows you to send custom-defined string key-value pairs, known as `extras`. To access your extras in API-triggered and scheduled API-triggered campaigns, in the dashboard set a key as "example_key", and a value as {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. This will result in a dev console output of `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ## Emails
 
