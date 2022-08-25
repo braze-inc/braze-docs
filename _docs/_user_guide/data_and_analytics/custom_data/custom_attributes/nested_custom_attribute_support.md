@@ -215,6 +215,10 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
+### Regenerate schemas {#regenerate-schema}
+
+After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
+
 ## Data Points
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
