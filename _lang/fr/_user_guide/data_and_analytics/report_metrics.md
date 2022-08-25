@@ -4,7 +4,7 @@ nav_title: Glossaire de métriques de rapport
 article_title: Glossaire de métriques de rapport
 layout: glossary_page
 glossary_top_header: "Glossaire de métriques de rapport"
-glossary_top_text: "Voici des termes que vous trouverez dans vos rapports sur votre compte Braze. Recherchez les métriques dont vous avez besoin ou filtrez par canal. <br>   <br>  Ce glossaire n’inclut pas nécessairement les mesures que vous pouvez voir dans Currents ou d’autres rapports téléchargés en dehors de votre compte Braze."
+glossary_top_text: "Voici des termes que vous trouverez dans vos rapports sur votre compte Braze. Recherchez les métriques dont vous avez besoin ou filtrez par canal. <br>  <br> Ce glossaire n’inclut pas nécessairement les mesures que vous pouvez voir dans Currents ou d’autres rapports téléchargés en dehors de votre compte Braze."
 
 page_type: glossary
 description: "Ce glossaire définit les termes que vous trouverez dans vos rapports sur votre compte Braze."
@@ -93,7 +93,7 @@ glossaries:
     tags:
       - SMS
   - name: Bounces
-    description: Nombre total de messages qui ont échoué. Cela peut se produire parce qu’il n’y a pas de jeton de notification push valide, que les adresses e-mail étaient incorrectes ou désactivées, ou que l’utilisateur s’est désabonné une fois la campagne lancée. <br>  <i> Pour les clients utilisant Sendgrid, les rebonds d’e-mail regroupent les hard bounces, les spams et les e-mails envoyés à des adresses non valides. </i>
+    description: Nombre total de messages qui ont échoué. Cela peut se produire parce qu’il n’y a pas de jeton de notification push valide, que les adresses e-mail étaient incorrectes ou désactivées, ou que l’utilisateur s’est désabonné une fois la campagne lancée. <br> <i> Pour les clients utilisant Sendgrid, les rebonds d’e-mail regroupent les hard bounces, les spams et les e-mails envoyés à des adresses non valides. </i>
     calculation: (Bounces) / (Envois)
     tags:
       - Toutes les notifications push
@@ -101,7 +101,7 @@ glossaries:
       - Notification push Web
       - Notification push iOS
   - name: Rejets
-    description: Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment : filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS.
+    description: Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment &colon; filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS.
     calculation: Total
     tags:
       - SMS
@@ -236,7 +236,7 @@ glossaries:
       - Cartes de contenu
       - E-mail
       - Message in-app
-      - Notification push Web 
+      - Notification push Web
       - Notification push iOS
       - Notification push Android
       - Webhook
@@ -260,7 +260,7 @@ glossaries:
     tags:
       - E-mail
   - name: Reçu
-    description: Cartes de contenu -Reçu lorsque les utilisateurs voient la carte dans l’application.<br> Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br> E-mail -Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d'e-mail.<br> SMS/MMS -« Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br> Message In-App -Reçu au moment de l’affichage en fonction de l’action de déclenchement définie. 
+    description: Cartes de contenu -Reçu lorsque les utilisateurs voient la carte dans l’application.<br>Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br>E-mail -Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d'e-mail.<br>SMS/MMS -« Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br>Message In-App -Reçu au moment de l’affichage en fonction de l’action de déclenchement définie. 
     tags:
       - E-mail
       - Cartes de contenu
@@ -270,7 +270,7 @@ glossaries:
       - Notification push Android
       - SMS
 #  - Nom : Total des revenus directs
-#    Description : Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br> <br> *L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br>  1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br>  2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -279,7 +279,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
 #  - Nom : Achats directs uniques
-#    Description : Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br> <br> *L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br>  1. Être la dernière campagne que l’utilisateur a cliqué avant l’achat, et <br>  2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -288,7 +288,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
 #  - Nom : Total des achats directs
-#    Description : Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cette mesure peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br> <br> *L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br>  1. Être la dernière campagne que l’utilisateur a cliqué avant l’achat, et <br>  2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cette mesure peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu

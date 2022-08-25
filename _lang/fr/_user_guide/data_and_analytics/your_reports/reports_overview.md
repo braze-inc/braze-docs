@@ -34,7 +34,6 @@ Utilisez []({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/meas
 - Audience total estimée
 
 <br>
-
 **Performance par variante**
 
 [Analyser les variantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) dans un Canvas en cours pour voir automatiquement les taux de conversion calculés pour chaque événement de conversion. Vous verrez également des calculs de l’uplift et de la confiance pour chaque variante et événement de conversion dans un tableau qui permet facilement de comparer..
@@ -106,7 +105,7 @@ Autres questions auxquelles ce rapport répond : 
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
-{ % endtabs %}
+{% endtabs%}
 
 ## Quel est le degré d’engagement de mes utilisateurs ?
 
@@ -114,7 +113,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Report Builder %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas sur une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
@@ -276,17 +275,17 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Funnel Report %}
 **Rapport d’entonnoir**
 
-Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements natifs ou personnalisés inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
+Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements personnalisés ou natifs inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
 
 Consultez ce rapport pour :
 
-- Comprendre où s'arrêtent les utilisateurs dans l’entonnoir de conversion, et identifier les opportunités de ré-engagement.
-- Afficher les conversions pour un événement qui n’a pas été initialement inclus comme événement de conversion lors de la configuration de la campagne.
-- Analysez l’entonnoir d’achat en utilisant une série d’actions (par exemple : « Quel pourcentage de clients a reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
+- Comprendre où se trouvent les utilisateurs dans l’entonnoir de conversion et identifier les opportunités de ré-engagement.
+- Afficher les conversions pour un événement qui n’a pas été initialement inclus en tant qu’événement de conversion lors de la configuration de la campagne.
+- Analyser l’entonnoir d’achat en utilisant une série d’actions (comme « Quel pourcentage de clients ont reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
 
 Autres questions auxquelles ce rapport répond : 
 
-- A quelle étape du parcours vers la conversion mes clients s’arrêtent-ils le plus souvent ?
+- Où est-ce que mes clients quittent le chemin vers la conversion ?
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
@@ -306,13 +305,13 @@ Autres questions auxquelles cette fonction répond :
 {% tab Report Builder %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas en une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
 - Créer un rapport sur les campagnes et Canvas pour la semaine ou le mois écoulé, calculer et partager les mesures critiques.
-- Comparer les performances à travers les variantes pour les tests multivariés et les Canvas.
-- Déterminer quel canal de messagerie a la plus grande conversion ou le plus fort engagement pour une campagne ou un Canvas spécifique.
+- Comparer les performances des variantes pour les tests multivariés et les Canvas.
+- Déterminer quel canal de messagerie a la plus grande conversion ou le meilleur engagement pour une campagne ou un Canvas spécifique.
 - Suivre les tendances générales de performance d’un groupe de campagnes ou de Canvas (comme tous les messages avec une balise « newsletters »).
 
 Autres questions auxquelles cette fonction répond :
