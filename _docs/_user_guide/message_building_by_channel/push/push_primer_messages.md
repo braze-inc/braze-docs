@@ -24,6 +24,31 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 %}
 
+#### Note for development teams
+This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
+<br><br>
+You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+```objc
+[sharedApplication registerForRemoteNotifications];
+```
+{% endtab %}
+{% tab swift %}
+```swift
+UIApplication.shared.registerForRemoteNotifications()
+```
+{% endtab %}
+{% tab JavaScript %}
+```javascript
+braze.requestPushPermission()
+// or
+appboy.registerAppboyPushMessages()
+```
+{% endtab %}
+{% endtabs %}
+
 ## Step 1: Create an in-app message
 
 [Create an in-app message][2] as you usually would.
