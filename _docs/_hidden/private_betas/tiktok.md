@@ -31,8 +31,8 @@ You will need to ensure that you have the following items created and completed 
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps).<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
-| TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account. |
+| TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps). |
+| TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration 
@@ -94,6 +94,10 @@ Braze also offers the ability to add users to existing TikTok audiences to ensur
 
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+At this time, TikTok does not have the ability to remove users from audiences. In addition, the TikTok team is also working on providing the ability to share multiple user fields to match within a single request.
+{% endalert %}
 
 ### Step 4: Launch Canvas
 Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
