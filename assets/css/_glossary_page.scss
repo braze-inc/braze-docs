@@ -84,6 +84,79 @@
       }
     }
   }
+
+  #guide_list, #guide_featured_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .guide_item {
+
+      width: 100%;
+      padding: 20px;
+
+      display: inline-flex;
+      vertical-align: top;
+      text-align: left;
+      font-size: 16px;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-family: $braze-regular;
+      height: 80px;
+      overflow: hidden;
+      align-items: center;
+      img {
+       max-height: 80%;
+       vertical-align: middle;
+       display: flex;
+       display: -webkit-flex; /* Safari */
+       margin-right: 20px;
+       margin: auto 15px auto 0;
+       max-width: 40px;
+      }
+      i {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 24px;
+        margin: auto 20px auto 0;
+        max-width: 30px;
+      }
+      .menu_description {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        vertical-align: middle;
+        color: $text-color;
+
+        line-height: 1.8;
+        display: inline-block;
+      }
+
+    }
+    a {
+      border: 1px solid $grey-ghost;
+      box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
+      border-radius: 2px;
+      margin-bottom: 2%;
+
+      flex: 0 0 100%;
+
+      @media (min-width:  $window-medium-px) {
+        flex: 0 0 46%;
+        margin-right: 2%;
+      }
+      @media (min-width:  $window-large-px) {
+        flex: 0 1 30.3%;
+        margin-right: 3%;
+      }
+      color: $black-shark;
+      text-decoration: none;
+      background-color: inherit;
+      &:hover {
+        background-color: transparent;
+        border-color: $braze-link-color;
+      }
+    }
+
+  }
   .glossary_search_icon {
     left: 0;
 
@@ -167,6 +240,12 @@
       width: 100%;
       flex: 1 0 100%;
       margin-top: 15px;
+    }
+    #glossary_filter_titlev2 {
+      width: 100%;
+      flex: 1 0 100%;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
 
     .select {

@@ -14,7 +14,7 @@ description: "This article outlines details about the News Feed Card Details end
 /feed/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on the card, which can be identified by the `card_id`.
+Use this endpoint to retrieve relevant information on a card, which can be identified by the `card_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 

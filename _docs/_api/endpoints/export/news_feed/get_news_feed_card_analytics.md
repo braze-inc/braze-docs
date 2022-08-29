@@ -14,7 +14,7 @@ description: "This article outlines details about and using the Segments List en
 /feed/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of engagement stats for a card over time.
+Use this endpoint to retrieve a daily series of engagement stats for a card over time.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 

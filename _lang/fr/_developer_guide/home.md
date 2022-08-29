@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Guide du développeur Braze"
-guide_top_text: "Les développeurs peuvent trouver ici toutes les intégrations disponibles pour Braze. Vous pouvez également utiliser le <a href='/docs/api/basics/'>Guide de l’API REST</a>."
+guide_top_text: "Les développeurs peuvent trouver ici toutes les intégrations disponibles pour Braze. Vous pouvez également utiliser le <a href='/docs/api/home/'>Guide de l’API REST</a>."
 article_title: Guide du développeur Braze
 
 guide_featured_title: "Intégrations disponibles"

@@ -14,7 +14,7 @@ description: "This article outlines details about the Custom Events Analytics en
 /events/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
+Use this endpoint to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
