@@ -11,6 +11,6 @@ description: "This page lists updates to Braze's Xamarin SDK changelog."
 
 ---
 
-# Windows SDK changelog
+# Xamarin SDK changelog
 
 {% markdown_embed https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md %}
