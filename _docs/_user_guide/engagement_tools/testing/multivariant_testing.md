@@ -8,7 +8,9 @@ description: "This reference article explains Multivariate and A/B Testing and t
 ---
 # Multivariate and A/B testing
 
-This page explains what multivariate and A/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to [Creating multivariate and A/B tests with Braze]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/). Multivariate and A/B Testing can be quickly utilized using our [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
+> This page explains what multivariate and A/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to [Creating multivariate and A/B tests with Braze]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/). 
+
+Multivariate and A/B testing can be quickly utilized using [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 
 ## What are multivariate and A/B testing?
 
