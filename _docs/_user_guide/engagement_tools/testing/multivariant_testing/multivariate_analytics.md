@@ -8,13 +8,92 @@ description: "This article explains how to view and interpret the results of a m
 
 # Multivariate and A/B test analytics
 
-After your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. When the testing campaign is complete, you can see a summary of how all the variants performed and whether or not there was a winner during the test.
+After your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. 
 
-If one variant outperformed all the others with better than 95% [confidence][confidence], Braze marks that variant with a “Winner” banner. If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the “best” performing variant will still be sent out and indicated with a label that reads “Sent as Winning Variant”.
+## Analytics by optimization option
 
-On the analytics page, you can also see the performance of the Winning Variant throughout the campaign (including the A/B test sends).
+Your analytics view will vary depending on if you selected an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) during your initial setup.
 
-![][210]
+### No optimization
+
+If you selected **No optimization** when setting up your campaign, your analytics view will stay the same. The **Campaign Analytics** page of your campaign will show the performance of your variants against your control group, if you included one.
+
+![]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+
+For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) article for your messaging channel.
+
+### Winning variant
+
+If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. You can access this tab after the winning variant is sent to the remaining users in your test.
+
+The **A/B Test Result** is divided into two tabs: **Initial Test** and **Winning Variant**.
+
+{% tabs local %}
+{% tab Initial Test %}
+
+The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment. You can see a summary of how all the variants performed and whether or not there was a winner during the test.
+
+> ADD IMAGE OF ENOUGH CONFIDENCE
+
+If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence), Braze marks that variant with a “Winner” banner. 
+
+If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the “best” performing variant will still be sent out and indicated with a label that reads “Sent as Winning Variant”.
+
+> ADD IMAGE OF INSUFFICIENT CONFIDENCE
+
+{% endtab %}
+{% tab Winning Variant %}
+
+The **Winning Variant** tab shows the results of the second send, where each remaining user was sent the best performing variant from the initial test. Your **Audience %** will add up to the percentage of the target segment you reserved for the winning variant group.
+
+> ADD IMAGE OF WINNING VARIANT TAB
+
+{% endtab %}
+{% endtabs %}
+
+If you want to see the performance of the winning variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
+
+### Personalized variant
+
+After personalized variants are sent to the remaining users, you can access analytics for your campaign in the **A/B Test Result** tab of your campaign analytics.
+
+{% tabs local %}
+{% tab Initial Test %}
+
+The Initial Test tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment.
+
+> ADD IMAGE OF METRICS
+
+This page also contains a breakdown of users' preferred variants based on a combination of certain characteristics. These characteristics are:
+
+- **Recency:** When they last had a session
+- **Frequency:** How often they have sessions
+- **Tenure:** How long they have been a user
+
+For example, the test may find that most users prefer Variant A, but users who had a session about 16–20 hours ago, have a long time between sessions, and were created in the last few months tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send.
+
+> ADD IMAGE OF USER CHARACTERISTICS
+
+{% endtab %}
+{% tab Personalized Variant %}
+
+The **Personalized Variant** tab shows the results of the second send, where each user was sent the variant they were most likely to engage with.
+
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead.
+
+- **Projected lift:** The improvement in your selected optimization metric for this send due to using personalized variants instead of a standard A/B test (if the remaining users only received the winning variant).
+- **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
+- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead. 
+
+> ADD IMAGE OF CARDS
+
+The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** will add up to the percentage of the target segment you reserved for the personalized variant group.
+
+> ADD IMAGE OF TABLE
+
+{% endtab %}
+{% endtabs %}
+
 
 {% alert note %}
 Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
@@ -23,6 +102,7 @@ This is a separate test from the confidence score, which only describes the perf
 {% endalert %}
 
 A variant can do better than the control group, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
+
 
 ## Understanding confidence {#understanding-confidence}
 
@@ -87,4 +167,3 @@ If you’re A/B testing re-engagement messages, don’t forget to compare the lo
 [272]: #intelligent-selection
 [273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [intelselection]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

@@ -10,11 +10,11 @@ description: "This article explains how to create multivariate and A/B tests wit
 
 You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
+![][160]{: style="max-width:25%;float:right;margin-left:15px;" }
+
 ## Step 1: Create your campaign
 
 Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
-
-![][160]{: style="max-width:30%" }
 
 ## Step 2: Compose your variants
 
@@ -111,6 +111,8 @@ This only affects the test if you chose **Primary Conversion Rate** in the previ
 
 On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
+## Things to know
+
 ### Tips for different channels {#tips-different-channels}
 
 Depending on which channel you select, you’ll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
@@ -121,7 +123,7 @@ What levers do you have to pull and what are the desired effects? While there ar
 | ---------------------| --------------- | ------------- |
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g., "triple" versus "increase by 200%")  <br> Presentation of time (e.g., "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g., "triple" versus "increase by 200%") <br> Presentation of time (e.g., "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
-| In-app Notification | Aspects listed for "push" <br> [Message format][273] | Click <br> Conversion Rate |
+| In-app message | Aspects listed for "push" <br> [Message format][273] | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
