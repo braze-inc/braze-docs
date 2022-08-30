@@ -111,7 +111,7 @@ No. In Canvas Flow, Full Steps are replaced with lightweight [Canvas components]
 
 ### How do I convert an existing Canvas into Canvas Flow?
 
-You can [clone]({{site.baseurl}}/cloning_canvases/) your  Canvases to Canvas Flow. This creates a copy of your original Canvas in the Canvas Flow workflow.
+You can [clone your Canvas to Canvas Flow]({{site.baseurl}}/cloning_canvases/). This creates a copy of your original Canvas in the Canvas Flow workflow.
 
 ### Can I revert back to the original Canvas editor?
 
