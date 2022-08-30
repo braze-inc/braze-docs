@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 
-The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase or retarget users based on their previous purchases. 
+The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
 
 <!--
 For some Canvas and Campaign examples, check out our guide here. 
@@ -520,7 +520,14 @@ Braze will only update supported Shopify custom attributes, and Braze standard a
 
 ## Shopify user syncing
 
-Braze will map the supported Shopify data to user profiles using the customer's email address or phone number. 
+Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations being captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
+
+- Customer creates an account
+- Customer email or phone is collected in a Shopify pop-up form
+- Customer email is collected on your store’s website footer
+- Customer email or phone number is collected through a third-party tool connected to Shopify
+
+Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
 
 **Identified User Profiles**<br>
 - If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user.
@@ -531,6 +538,12 @@ Braze will map the supported Shopify data to user profiles using the customer's 
   - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+
+If Braze does not find a match for the email address or phone number, we will then create a new user profile with the supported Shopify data.
+
+{% alert important %}
+Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/) for more information.
+{% endalert %}
 
 ## Using Shopify data in Braze
 Once you've completed your integration, take a look at our next Shopify [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
