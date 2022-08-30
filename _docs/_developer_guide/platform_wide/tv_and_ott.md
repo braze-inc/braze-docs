@@ -163,8 +163,8 @@ Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lg
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI][#custom-ui])
-- In-app messages (via [Custom UI][#custom-ui])
+- Content Cards (via [Custom UI](#custom-ui))
+- In-app messages (via [Custom UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
 
@@ -175,8 +175,8 @@ Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI][#custom-ui])
-- In-app messages (via [Custom UI][#custom-ui])
+- Content Cards (via [Custom UI](#custom-ui))
+- In-app messages (via [Custom UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
 
@@ -187,7 +187,7 @@ Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/doc
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- In-app messages (via [Custom UI][#custom-ui])
+- In-app messages (via [Custom UI](#custom-ui))
 
 For more information, visit the [Roku integration guide][3].
 
@@ -200,8 +200,8 @@ For more information, visit the [iOS Swift SDK integration guide][4].
 Features include:
 
 - Data and Analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI][#custom-ui])
-- In-app messages (via [Custom UI][#custom-ui])
+- Content Cards (via [Custom UI](#custom-ui))
+- In-app messages (via [Custom UI](#custom-ui))
 - Silent Push Notifications
 
 ## App targeting
