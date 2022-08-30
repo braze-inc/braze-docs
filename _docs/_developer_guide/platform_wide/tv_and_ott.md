@@ -232,7 +232,7 @@ Read more about custom handling messaging:
 [1]: {% image_buster /assets/img/android_ott.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
-[4]: [{{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/](https://github.com/braze-inc/braze-swift-sdk)
+[4]: https://github.com/braze-inc/braze-swift-sdk
 [5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
