@@ -8,6 +8,8 @@ description: "This article explains how to view and interpret the results of a m
 
 # Multivariate and A/B test analytics
 
+> This article explains how to view the results of a multivariate or A/B test. If you haven't set up your test yet, refer to [Creating multivariate and A/B tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for steps.
+
 After your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. 
 
 ## Analytics by optimization option
@@ -33,36 +35,38 @@ The **A/B Test Result** is divided into two tabs: **Initial Test** and **Winning
 
 The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment. You can see a summary of how all the variants performed and whether or not there was a winner during the test.
 
+If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence), Braze marks that variant with a “Winner” label.
+
 > ADD IMAGE OF ENOUGH CONFIDENCE
 
-If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence), Braze marks that variant with a “Winner” banner. 
+If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the best performing variant will still be sent out and indicated with the label "Winner".
 
-If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the “best” performing variant will still be sent out and indicated with a label that reads “Sent as Winning Variant”.
-
-> ADD IMAGE OF INSUFFICIENT CONFIDENCE
+![]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 {% endtab %}
 {% tab Winning Variant %}
 
 The **Winning Variant** tab shows the results of the second send, where each remaining user was sent the best performing variant from the initial test. Your **Audience %** will add up to the percentage of the target segment you reserved for the winning variant group.
 
-> ADD IMAGE OF WINNING VARIANT TAB
+![]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
 
 If you want to see the performance of the winning variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
 
-### Personalized variant
+### Personalized variant (early access) {#personalized-variant}
 
-After personalized variants are sent to the remaining users, you can access analytics for your campaign in the **A/B Test Result** tab of your campaign analytics.
+If you selected **Personalized Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. This tab is available after personalized variants are sent to the remaining users in your test.
+
+The **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
 
 {% tabs local %}
 {% tab Initial Test %}
 
-The Initial Test tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment.
+The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment.
 
-> ADD IMAGE OF METRICS
+![]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 This page also contains a breakdown of users' preferred variants based on a combination of certain characteristics. These characteristics are:
 
@@ -70,14 +74,14 @@ This page also contains a breakdown of users' preferred variants based on a comb
 - **Frequency:** How often they have sessions
 - **Tenure:** How long they have been a user
 
-For example, the test may find that most users prefer Variant A, but users who had a session about 16–20 hours ago, have a long time between sessions, and were created in the last few months tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send.
+For example, the test may find that most users prefer Variant A, but users who had a session about 16–20 hours ago, have a long time between sessions, and were created in the last few months tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
-> ADD IMAGE OF USER CHARACTERISTICS
+![]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 {% endtab %}
 {% tab Personalized Variant %}
 
-The **Personalized Variant** tab shows the results of the second send, where each user was sent the variant they were most likely to engage with.
+The **Personalized Variant** tab shows the results of the second send, where each remaining user was sent the variant they were most likely to engage with.
 
 The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead.
 
@@ -85,24 +89,22 @@ The three cards on this page show your projected lift, overall results, and the 
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
 - **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead. 
 
-> ADD IMAGE OF CARDS
+![]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
-The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** will add up to the percentage of the target segment you reserved for the personalized variant group.
+The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
 
-> ADD IMAGE OF TABLE
+![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
 {% endtab %}
 {% endtabs %}
 
+## How variants are tested
 
-{% alert note %}
 Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
-<br><br>
+
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
-{% endalert %}
 
 A variant can do better than the control group, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
-
 
 ## Understanding confidence {#understanding-confidence}
 
@@ -114,7 +116,7 @@ In general, a confidence of at least 95% is necessary to show that your results 
 
 Confidence does not describe whether one variant is better than the others. It is purely a measure of how sure we are that the two (or more) conversion rates are actually different than each other. This is only a function of the sample size and the differences between the apparent conversion rates. Whether the overall rates are high or low does not affect the strength of the confidence measure. It's possible for one variant to have a very different conversion rate from another and yet not have a 95% or higher confidence. It's also possible for two sets of variants to have similar conversion/uplift rates, and yet different confidence.
 
-{% details Statistically insignificant results %}
+### Statistically insignificant results
 
 A test that doesn’t have a confidence of 95% can still hold important insights. Here are a few things you can learn from a test with statistically insignificant results:
 
@@ -123,47 +125,40 @@ A test that doesn’t have a confidence of 95% can still hold important insights
 - Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.
 - While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
 
-Whether or not your test has a clear winner, it can be helpful to run follow-up test to confirm your results or apply your findings to a slightly different scenario.
-
-{% enddetails %}
+Whether or not your test has a clear winner, it can be helpful to run a [follow-up test](#recommended-follow-ups) to confirm your results or apply your findings to a slightly different scenario.
 
 ## Recommended follow-ups {#recommended-follow-ups}
 
 One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include the following:
 
-**Change your messaging strategy based on test results**<br>
+#### Change your messaging strategy based on test results
+
 Your multivariate results may lead you to change the way you word or format your messaging.
 
-**Change the way you understand your users**<br>
+#### Change the way you understand your users
+
 Each test will shed light on your users’ behaviors, how users respond to different messaging channels, and the differences (and similarities) among your segments.
 
-**Improve the way you structure future tests**<br>
+#### Improve the way you structure future tests
+
 Was your sample size too small? Were the differences between your variants too subtle? Each test provides an opportunity to learn how to improve future tests. If your confidence is low, your sample size is too small and should be enlarged for future tests.  If you find no clear difference between how your variants performed, it’s possible that the differences were too subtle to have a discernible effect on users' responses.
 
-**Run a follow-up test with a larger sample size**<br>
+#### Run a follow-up test with a larger sample size
+
 Larger samples will increase the chances of detecting small differences between variants.
 
-**Run a follow-up test using a different messaging channel**<br>
+#### Run a follow-up test using a different messaging channel
+
 If you find that a particular strategy is very effective in one channel, you may want to test that strategy in other channels.  If one type of message is effective in one channel but not effective in another, you may be able to conclude that certain channels are more conducive to certain types of messages.  Or, perhaps there is a difference between users who are more likely to enable push notifications and those who are more likely to pay attention to in-app messages.  Ultimately, running this sort of test will help you learn about how your audience interacts with your different communication channels.
 
-**Run a follow-up test on a different segment of users**<br>
+#### Run a follow-up test on a different segment of users
+
 To do this, create another test with the same messaging channel and variants, but choose a different segment of users.  For instance, if one type of messaging was extremely effective for engaged users, it may be useful to investigate its effect on lapsed users. It’s possible that the lapsed users will respond similarly, or they may prefer another one of the other variants.  This sort of test will help you learn more about your different segments and how they respond to different sorts of messages.  Why make assumptions about your segments when you can base your strategy on data?
 
-**Run a follow-up test based on insights from a previous test**<br>
+#### Run a follow-up test based on insights from a previous test
+
 Use the insights you gather from past tests to guide your future ones. Does a previous test hint at one messaging technique being more effective? Are you unsure about what specific aspect of a variant made it better? Running follow-up tests based on these questions will help you generate insightful findings about your users.
 
-**Compare the long-term impact of different variants**<br>
-If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants via [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there’s uplift.
+#### Compare the long-term impact of different variants
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligent-selection
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
+If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants using [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there is uplift.

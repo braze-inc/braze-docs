@@ -19,7 +19,7 @@ An A/B test is an experiment that compares users’ responses to multiple versio
 The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after one hour of inactivity versus one day of inactivity), refer to our section on [setting up a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Suppose you have two options for a push notification:
@@ -76,7 +76,7 @@ Including a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing
 [80]: #choosing-a-segment
 [160]: {% image_buster /assets/img/ab_create_1.png %}
 [170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [180]: {% image_buster /assets/img/ab_create_4.png %}
 [210]: {% image_buster /assets/img/ab_create_8.png %}
 [10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
