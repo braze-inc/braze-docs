@@ -29,7 +29,7 @@ When you stop a Canvas, the following applies:
 - **Exception:** Email Canvases will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 {% alert note %}
-Stopping a Canvas won't exit users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
 ### When does an exception event trigger?
@@ -57,8 +57,7 @@ There is a Canvas path with 10 push notifications and the conversion event is "s
 - User A opens the app after entering but before receiving the first message.
 - User B opens the app after each push notification.
 
-**Result:**
-The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+**Result:** The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
 
 {% alert note %}
 If Quiet Hours is active when the conversion event happens, the same rules apply.
@@ -72,14 +71,13 @@ There is a one-step Canvas with Quiet Hours enabled:
 2. The first step doesn't have a delay, but is within the set Quiet Hours, so the message is suppressed.
 3. User performs the conversion event.
 
-**Result:**
-The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+**Result:** The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
 
 {% enddetails %}
 
 ### How can I view analytics for each of my Canvas components?
 
-To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
+To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
 
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
 
@@ -97,7 +95,7 @@ By default, filters and segments for full steps in the Canvas are checked at sen
 
 ### What is Canvas Flow?
 
-Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas Flow, you can expect to easily view and use Canvas components in the Canvas builder. You also have access to more post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps.
+Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. You can expect to easily view and use Canvas components in the Canvas builder. You also have access to more post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps.
 
 ### How can I use Canvas Flow?
 
@@ -109,7 +107,7 @@ A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_compone
 
 ### Can I use Full Steps in Canvas Flow?
 
-No. In Canvas Flow, Full Steps have been replaced with lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey.
+No. In Canvas Flow, Full Steps are replaced with lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey.
 
 ### How do I convert an existing Canvas into Canvas Flow?
 
