@@ -119,7 +119,7 @@ Features include:
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - In-app messages
-  - HTML and Slideup messages are not supported on non-touch devices
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 
 For more information, visit the [Fire OS integration guide][2].
 
@@ -145,7 +145,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
-  - HTML and Slideup messages are not supported on non-touch devices
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 - &#42; Push Notifications (Manual Integration Required)
 
 For more information, visit the [Android SDK integration guide][2].
@@ -241,3 +241,4 @@ Read more about custom handling messaging:
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
+[android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310
