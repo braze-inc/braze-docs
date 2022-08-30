@@ -214,7 +214,7 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 
 ## Custom UI {#custom-ui}
 
-For platforms that support in-app messages or content cards via Custom UI, Braze will deliver a data model (i.e. JSON) that your app can read and use within a UI your app controls. These platforms don't include any out-of-the-box UI or View.
+For platforms that support in-app messages or Content Cards via Custom UI, Braze will deliver a data model (i.e. JSON) that your app can read and use within a UI your app controls. These platforms don't include any out-of-the-box UI or Views.
 
 This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
 
