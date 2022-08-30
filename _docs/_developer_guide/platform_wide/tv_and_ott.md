@@ -220,13 +220,15 @@ This data will contain the fields configured in the dashboard (title, body, butt
 
 Read more about custom handling messaging:
 
-**Android SDK**<br>
+**Android SDK**
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)
 - [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)
-**Swift SDK**<br>
+
+**Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
 - [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
-**Web SDK**<br>
+
+**Web SDK**
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
 - [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
  
