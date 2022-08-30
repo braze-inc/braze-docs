@@ -550,14 +550,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 #### Shopify webhooks only
 
-Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations being captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
-
-- Customer creates an account
-- Customer email or phone is collected in a Shopify pop-up form
-- Customer email is collected on your store’s website footer
-- Customer email or phone number is collected through a third-party tool connected to Shopify
-
-Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
+Braze will map the supported Shopify data to user profiles using the customer's email address or phone number. 
 
 ##### Identified user profiles
 
@@ -570,12 +563,6 @@ Braze will first attempt to map the supported Shopify data to any existing user 
   - For existing alias-only profiles, we'll add the Shopify alias object for that user. 
 - If the email address or phone number is not associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object.
   - If these alias-only user eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [users identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
-
-If Braze does not find a match for the email address or phone number, we will then create a new user profile with the supported Shopify data.
-
-{% alert important %}
-Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/) for more information.
-{% endalert %}
 
 ## Personalization
 
