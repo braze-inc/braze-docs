@@ -33,7 +33,7 @@ doc_menu_list:
   - name: Guide de l’API
     bg_color: '#ff9349'
     image: /assets/img/new-icons/api.svg
-    link: /docs/api/basics/
+    link: /docs/api/home/
     description: "Braze fournit une API REST haute performance qui vous permet de suivre vos utilisateurs, d’envoyer des messages, d’exporter des données et plus encore."
 
 popular_topic_list:
@@ -47,7 +47,7 @@ popular_topic_list:
   - name: Messages personnalisés
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
   - name: API REST Braze
-    link: /docs/developer_guide/rest_api/basics/
+    link: /docs/developer_guide/api/home/
   - name: Attributs personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
   - name: Événements personnalisés

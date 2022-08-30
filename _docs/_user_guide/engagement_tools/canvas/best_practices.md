@@ -21,7 +21,7 @@ Dive into the what, who, and why!
 Unlock new combinations of user journeys with [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components).
 - Split your users with [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) and build different workflows.
 - Space out your user journeys with a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) step.
-- Add [standalone messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow.
+- Add [standalone messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow. 
 
 ## Create richer messages
 
@@ -34,7 +34,9 @@ Reel in your users with richer messages.
 
 Determine the impact of your Canvas messaging by incorporating control groups. This way, you can build an understanding of how your Canvas was received!
 
+- Name each step of your Canvas to identify your user journey.
 - Leverage the [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) component in your user journey to randomly assign users to different paths you create. 
 - Diversify your user journeys with Delay and Message steps to help uncover what path is most effective.
 - Check [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to see the performance of each component in your user journey.
+- [Edit your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) after the initial launch.
 

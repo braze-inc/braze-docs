@@ -67,10 +67,10 @@ This method takes in a required parameter that specifies which permissions the S
 
 ```javascript
 const permissionOptions = {
-  "alert": true,
-  "sound": true,
-  "banner": true,
-  "provisional": false
+  alert: true,
+  sound: true,
+  badge: true,
+  provisional: false
 };
 
 Braze.requestPushPermission(permissionOptions);

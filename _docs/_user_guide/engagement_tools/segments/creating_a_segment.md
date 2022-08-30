@@ -81,7 +81,9 @@ If **Include users from all apps** is cleared and you have more than one app in 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
-When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas component) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
+When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.
+
+You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment. 
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.

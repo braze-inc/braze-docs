@@ -14,7 +14,7 @@ description: "This article outlines details about the Users by Segment Braze end
 /users/export/segment
 {% endapimethod %}
 
-This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). 
+Use this endpoint to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line). 
 
 Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 

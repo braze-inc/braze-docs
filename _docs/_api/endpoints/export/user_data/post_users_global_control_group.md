@@ -14,7 +14,7 @@ description: "This article outlines details about the Users in Global Control Gr
 /users/export/global_control_group
 {% endapimethod %}
 
-This endpoint allows you to export all the users within the Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
+Use this endpoint to export all users within a Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e., one JSON object per line).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 

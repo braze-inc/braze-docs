@@ -17,15 +17,24 @@ guide_featured_list:
   - name: Web SDK
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
     fa_icon: fas fa-globe
-  - name: Windows SDK
-    link: /docs/developer_guide/platform_integration_guides/windows_universal/changelog/
-    image: /assets/img/windows_universal_icon.png
-  - name: Unity SDK
-    link: /docs/developer_guide/platform_integration_guides/unity/changelog/
-    image: /assets/img/unity.png
   - name: Cordova SDK
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
     image: /assets/img/cordova.png
+  - name: Flutter SDK
+    link: /docs/developer_guide/platform_integration_guides/flutter/changelog/
+    image: /assets/img/flutter_icon.png
+  - name: React Native
+    link: /docs/developer_guide/platform_integration_guides/react_native/changelog/
+    image: /assets/img/reactnative_icon.png
+  - name: Unity SDK
+    link: /docs/developer_guide/platform_integration_guides/unity/changelog/
+    image: /assets/img/unity.png
+  - name: Windows Universal
+    link: /docs/developer_guide/platform_integration_guides/windows_universal/changelog/
+    image: /assets/img/windows_universal_icon.png
+  - name: Xamarin
+    link: /docs/developer_guide/platform_integration_guides/xamarin/changelog/
+    image: /assets/img/xamarin.png  
   - name: Roku SDK
     link: /docs/developer_guide/platform_integration_guides/roku/changelog/
     image: /assets/img/roku.png
@@ -41,15 +50,24 @@ guide_menu_list:
   - name: Web SDK
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     fa_icon: fas fa-globe
-  - name: Windows SDK
-    link: https://github.com/Appboy/appboy-windows-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/windows_universal_icon.png
-  - name: Unity SDK
-    link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/unity.png
   - name: Cordova SDK
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
     image: /assets/img/cordova.png
+  - name: Flutter SDK
+    link: https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md
+    image: /assets/img/flutter_icon.png
+  - name: React Native
+    link: https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md
+    image: /assets/img/reactnative_icon.png
+  - name: Unity SDK
+    link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
+    image: /assets/img/unity.png
+  - name: Windows Universal
+    link: https://raw.githubusercontent.com/Appboy/appboy-windows-sdk/master/CHANGELOG.md
+    image: /assets/img/windows_universal_icon.png
+  - name: Xamarin
+    link: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md
+    image: /assets/img/xamarin.png  
   - name: Roku SDK
     link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
     image: /assets/img/roku.png

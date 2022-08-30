@@ -11,7 +11,7 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 # Initial SDK setup
 
 {% alert note %}
-Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket][support].
+Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
 Installing the Braze SDK will provide you with basic analytics functionality.
