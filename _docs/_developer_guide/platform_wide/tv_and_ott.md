@@ -204,7 +204,9 @@ Features include:
 - In-app messages (via [Custom UI](#custom-ui))
 - Silent Push Notifications
 
-## App targeting
+**Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+
+## App targeting {#app-targeting}
 
 To target OTT apps for messaging, we recommend creating a segment specific to your OTT app.
 
