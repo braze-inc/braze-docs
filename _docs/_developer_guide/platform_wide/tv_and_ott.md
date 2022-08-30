@@ -97,7 +97,7 @@ The following lists features and messaging channels supported today.
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>  
-            <td for="canvas">N/A</td>
+            <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
     </tbody>
 </table>
