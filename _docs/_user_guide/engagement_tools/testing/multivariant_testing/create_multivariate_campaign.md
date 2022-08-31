@@ -62,7 +62,7 @@ For email, push, and webhook campaigns scheduled to send once, you can select an
 Personalized variants are in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Both options work by sending an initial test to a percentage of your target segment. After the test ends, the remaining users in your audience are sent either the best performing variant (Winning Variant) or the variant they're most likely to engage with (Personalized Variant).
 

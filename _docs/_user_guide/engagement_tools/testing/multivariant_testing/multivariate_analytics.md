@@ -20,7 +20,7 @@ Your analytics view will vary depending on if you selected an [optimization]({{s
 
 If you selected **No optimization** when setting up your campaign, your analytics view will stay the same. The **Campaign Analytics** page of your campaign will show the performance of your variants against your control group, if you included one.
 
-![]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![Performance section of the Campaign Analytics for an email campaign with multiple variants. The table lists various performance metrics for each variant, such as recipients, bounces, clicks, and conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) article for your messaging channel.
 
@@ -41,14 +41,14 @@ If one variant outperformed all the others with better than 95% [confidence]({{s
 
 If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the best performing variant will still be sent out and indicated with the label "Winner".
 
-![]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Results of an initial test sent to determine the winning variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 {% endtab %}
 {% tab Winning Variant %}
 
 The **Winning Variant** tab shows the results of the second send, where each remaining user was sent the best performing variant from the initial test. Your **Audience %** will add up to the percentage of the target segment you reserved for the winning variant group.
 
-![]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Results of the winning variant sent to the Winning Variant group.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -66,7 +66,7 @@ The **A/B Test Result** is divided into two tabs: **Initial Test** and **Persona
 
 The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment.
 
-![]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 This page also contains a breakdown of users' preferred variants based on a combination of certain characteristics. These characteristics are:
 
@@ -76,7 +76,7 @@ This page also contains a breakdown of users' preferred variants based on a comb
 
 For example, the test may find that most users prefer Variant A, but users who had a session about 16–20 hours ago, have a long time between sessions, and were created in the last few months tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
-![]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. Each bucket can have a different contribution at a different "strength" for each message variant. 
 
@@ -93,7 +93,7 @@ The three cards on this page show your projected lift, overall results, and the 
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
 - **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead. 
 
-![]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![Personalized Variant tab for a campaign optimized for unique opens. The cards show the Projected Lift, Overall Unique Opens (with Personalized Variant), and Projected Unique Opens (with Winning Variant).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
 
