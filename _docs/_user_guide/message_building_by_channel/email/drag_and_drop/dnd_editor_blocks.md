@@ -29,7 +29,7 @@ The following table describes how users can use each editor block type.
 | `HTML` |  Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
 | `Menu` |  Creates a flexible menu for the message you're designing. |
 | `Spacer` |  Adds space, or "padding", between other blocks. |
-| `Social Icon` | Inserts social media platform icon. |
+| `Social Icon` | Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
