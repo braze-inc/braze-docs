@@ -127,7 +127,7 @@ Similar to Liquid, AMP supports a scripting language for more advanced use cases
 
 By wrapping your content around the `raw` tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
 
-### Metrics and Analytics
+### Metrics
 
 | Metric | Details |
 |---|---|
@@ -139,7 +139,7 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 Note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and Plaintext only). AMP specific clicks are attributed to the `amp_click` metric.
 
-### Testing & Troubleshooting
+### Testing your AMP email
 
 Before your send your AMP email, we recommend that you test according to [Gmail's guidelines](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
