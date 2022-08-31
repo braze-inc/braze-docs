@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Multivariate and A/B Tests
+nav_title: Creating Tests
 article_title: Creating multivariate and A/B tests
 page_order: 1
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Multivariate and A/B Test Analytics
+nav_title: Analytics
 article_title: Multivariate and A/B test analytics
 page_order: 2
 page_type: reference
@@ -76,9 +76,11 @@ This page also contains a breakdown of users' preferred variants based on a comb
 
 For example, the test may find that most users prefer Variant A, but users who had a session about 16–20 hours ago, have a long time between sessions, and were created in the last few months tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
-Note that any individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets as illustrated in the table. Each bucket can have a different contribution at a different "strength" for each message variant. The table with highlighted buckets only summarizes which variant each bucket tends to select for, however it does not guarantee that the "strength" of any one bucket will dominate the others. So, the outcome for an individual user will depend on the sum of the effects of the three buckets in which they are located (one for each characteristic).
-
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+
+An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. Each bucket can have a different contribution at a different "strength" for each message variant. 
+
+This table only summarizes which variant each bucket tends to engage with. It does not guarantee that the "strength" of any one bucket will dominate the others. Therefore a user's personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% endtab %}
 {% tab Personalized Variant %}
