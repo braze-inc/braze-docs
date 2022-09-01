@@ -66,6 +66,10 @@ No. Currently, only static URLs are shortened.
 
 If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. 
 
+#### Does the Braze SDK need to be installed in order to shorten links?
+
+No, Link Shortening will work without any SDK integration.
+
 #### Can I specify my own custom Link Shortening domain?
 
 Not yet, though we plan to provide more customization options in the future.
