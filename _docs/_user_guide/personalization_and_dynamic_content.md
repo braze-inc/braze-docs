@@ -24,13 +24,13 @@ guide_featured_list:
   fa_icon: fas fa-mobile
 - name: "Key-Value Pairs"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
-  fa_icon: far fa-dot-circle
+  fa_icon: fa-solid fa-key
 - name: Content Blocks
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
   fa_icon: fas fa-columns
 - name: Promotion Codes
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
-  fa_icon: fas fa-server
+  fa_icon: fa-solid fa-tag
 - name: Canvas Persistent Entry Properties
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
   fa_icon: fas fa-project-diagram

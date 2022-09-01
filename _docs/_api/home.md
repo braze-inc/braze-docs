@@ -13,21 +13,21 @@ glossary_filter_text: "Select endpoint type to narrow the glossary:"
 
 glossary_mid_text: "<h2>Braze Endpoint Search</h2>"
 guide_featured_list:
-- name: Endpoints
-  fa_icon: fa-solid fa-laptop-code
-  link: /docs/api/endpoints/
-- name: Objects & Filters
-  link: /docs/api/objects_filters/
-  fa_icon: fa-solid fa-gear
 - name: API Overview
   fa_icon: fa-solid fa-info
   link: /docs/api/basics/
 - name: API Identifier Types
   link: /docs/api/identifier_types/
   fa_icon: fa-solid fa-clipboard-list
+- name: Objects & Filters
+  link: /docs/api/objects_filters/
+  fa_icon: fa-solid fa-gear
 - name: Errors & Responses
   link: /docs/api/errors/
   fa_icon: fa-solid fa-list-check
+- name: Data Retention
+  link: /docs/api/data_retention/
+  fa_icon: fa-solid fa-laptop-code
 - name: Rate Limits
   link: /docs/api/api_limits/
   fa_icon: fa-solid fa-hand
