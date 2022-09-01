@@ -89,6 +89,12 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    b {
+      color: $black-shark;
+      font-family: $braze-medium;
+      font-size: 30px;
+    }
+
     .guide_item {
 
       width: 100%;
@@ -101,7 +107,7 @@
       margin-top: auto;
       margin-bottom: auto;
       font-family: $braze-regular;
-      height: 80px;
+      height: 60px;
       overflow: hidden;
       align-items: center;
       img {
@@ -135,7 +141,7 @@
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
       border-radius: 2px;
-      margin-bottom: 2%;
+      margin-bottom: 30px;
 
       flex: 0 0 100%;
 

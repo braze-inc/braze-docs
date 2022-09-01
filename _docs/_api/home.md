@@ -11,7 +11,7 @@ glossary_tag_name: Endpoint Type
 
 glossary_filter_text: "Select endpoint type to narrow the glossary:"
 
-glossary_mid_text: "<h2>Braze Endpoint Search</h2>"
+glossary_mid_text: "Endpoint Search"
 guide_featured_list:
 - name: API Overview
   fa_icon: fa-solid fa-info
