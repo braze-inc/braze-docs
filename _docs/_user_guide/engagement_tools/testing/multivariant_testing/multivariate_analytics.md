@@ -43,6 +43,14 @@ If no variant beats all the others with 95% confidence and you chose to send the
 
 ![Results of an initial test sent to determine the winning variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
+#### How the winning variant is selected
+
+Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
+
+This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
+
+A variant can do better than the control group, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
+
 {% endtab %}
 {% tab Winning Variant %}
 
@@ -78,6 +86,8 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 ![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
+#### How personalized variants are selected
+
 An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. Each bucket can have a different contribution at a different "strength" for each message variant. 
 
 This table only summarizes which variant each bucket tends to engage with. It does not guarantee that the "strength" of any one bucket will dominate the others. Therefore a user's personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
@@ -101,14 +111,6 @@ The table on this page shows the metrics for each variant from the personalized 
 
 {% endtab %}
 {% endtabs %}
-
-## How variants are tested
-
-Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
-
-This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
-
-A variant can do better than the control group, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
 
 ## Understanding confidence {#understanding-confidence}
 
