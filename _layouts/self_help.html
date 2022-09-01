@@ -53,9 +53,13 @@ hide_breadcrumb: true
           {%- endif %}
       <div id="{{ help_list.name | handle }}" class="help_item">
         <div class="help_img" >
-        {%- if help_list.image -%}
-        <img src="{{site.baseurl}}{{ help_list.image}} " />
-        {%- endif -%}
+          {%- if help_list.fa_icon -%}
+          <i class="{{help_list.fa_icon}}"></i>
+          {%- else -%}
+            {%- if help_list.image -%}
+            <img src="{{site.baseurl}}{{ help_list.image}} " />
+            {%- endif -%}
+          {%- endif -%}
         </div>
         <div class="help_info">
           <div class="help_name">

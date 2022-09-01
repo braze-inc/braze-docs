@@ -12,26 +12,25 @@ guide_featured_title: "Available channels"
 guide_featured_list:
 - name: Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/
-  image: /assets/img/cc_icon.png
+  fa_icon: fa-solid fa-table-list
 - name: Email Messaging
   link: /docs/user_guide/message_building_by_channel/email/
-  image: /assets/img/email_icon.png
+  fa_icon: fa-solid fa-envelope
 - name: "In-App Messaging"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
-  image: /assets/img/in-app_message_icon.png
+  fa_icon: fa-regular fa-comment-dots
 - name: News Feed
   link: /docs/user_guide/engagement_tools/news_feed/
-  image: /assets/img/nf_icon.png
+  fa_icon: fa-solid fa-newspaper
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
-  image: /assets/img/push_icon.png
+  fa_icon: fa-solid fa-mobile-screen-button
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
-  image: /assets/img/sms_icon.png
+  fa_icon: fa-solid fa-comment-sms
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
-  image: /assets/img/webhook_icon.png
-
+  fa_icon: fa-solid fa-arrows-spin
 ---
 
 ## Choosing a message channel
