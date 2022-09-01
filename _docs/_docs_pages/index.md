@@ -39,7 +39,6 @@ doc_menu_list:
 popular_topic_list:
   - name: "Canvas: The Basics"
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
   - name: Locations and Geofences
@@ -56,12 +55,12 @@ popular_topic_list:
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
 
 helpful_resources_list:
-  - name: Braze Developer Portal
-    link: https://developer.braze.com
   - name: Innovation Statement
     link: /docs/innovation_statement/
   - name: Support & Success Services Handbook
     link: /docs/handbooks/
+  - name: Data Retention
+    link: /docs/api/data_retention/
   - name: Data Protection Technical Assistance
     link: /docs/dp-technical-assistance/
 ---
