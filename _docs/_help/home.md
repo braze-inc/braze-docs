@@ -1,6 +1,6 @@
 ---
 page_order: 0
-nav_title: Help
+nav_title: Home
 article_title: Braze Help
 layout: self_help
 help_top_header: "Braze Help"
