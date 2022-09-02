@@ -311,6 +311,8 @@ Segment will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoin
 {% alert important %}
 
 If users do not have an external ID, they will not be imported into Braze. Our users/track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
+
+Note that all identifiers supported in the Cloud Mode Actions destination are supported as part of Segment Replays.
 {% endalert %}
 
 ## Best practices
