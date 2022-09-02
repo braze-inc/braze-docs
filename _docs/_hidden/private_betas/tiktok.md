@@ -57,9 +57,7 @@ Your TikTok connection will be applied at the Braze app group level. If your Tik
 
 Add a component in your Canvas and select **TikTok Audience**.
 
-<!--
-![][]{: style="max-width:75%;"}
---->
+![][8]
 
 ### Step 3: Sync setup
 
@@ -73,15 +71,11 @@ Select the desired TikTok ad account. Under the Choose a **New or Existing Audie
 **Create a New Audience**<br>
 Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with TikTok. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-<!--
-![][]{: style="max-width:75%;"}
---->
+![]({% image_buster /assets/img/tiktok/tiktok7.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-<!--
-![][]{: style="max-width:75%;"}
---->
+![]({% image_buster /assets/img/tiktok/tiktok6.png %})
 
 When you launch a Canvas with a new audience, Braze will create the new audience upon launching the Canvas and subsequently sync users in near real-time as they enter the TikTok Audience Step.
 {% endtab %}
@@ -152,3 +146,6 @@ TikTok does not provide this information for their data privacy policies.
 [3]: {% image_buster /assets/img/tiktok/tiktok3.png %}
 [4]: {% image_buster /assets/img/tiktok/tiktok4.png %}
 [5]: {% image_buster /assets/img/tiktok/tiktok5.png %}
+[6]: {% image_buster /assets/img/tiktok/tiktok6.png %}
+[7]: {% image_buster /assets/img/tiktok/tiktok7.png %}
+[8]: {% image_buster /assets/img/tiktok/tiktok8.png %}
