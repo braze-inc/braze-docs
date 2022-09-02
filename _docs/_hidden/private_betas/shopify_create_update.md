@@ -555,7 +555,7 @@ By default, Braze will automatically set the delay to trigger the `shopify_aband
 
 ### Set your preferred product identifier
 
-If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the Product ID used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
+If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the `product_id` used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
 
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
