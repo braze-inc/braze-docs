@@ -536,7 +536,7 @@ Braze will first attempt to map the supported Shopify data to any existing user 
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
-If Braze does not find a match for the email address or phone number, we will then create a new user profile with the supported Shopify data.
+If Braze does not find a match for the email address or phone number, we will create a new user profile with the supported Shopify data.
 
 {% alert important %}
 Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/) for more information.
