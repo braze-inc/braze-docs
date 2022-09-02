@@ -584,7 +584,7 @@ If this happens, you will be able to select **Retry Setup** and start the instal
 {% enddetails %}
 
 {% details How do I uninstall the Braze application from my Shopify store? %}
-You will need to go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application<br><br>
+Go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application.<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
