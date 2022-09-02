@@ -15,7 +15,7 @@ user_menu_list:
     link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
     description: Manage your company settings, users, and more!
   - name: Logging Into Braze
-    image: /assets/img/new-icons/right-arrow.svg
+    image: /assets/img/new-icons/right-arrow2.svg
     bg_color: '#fce0df'
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
     description: Log into our platform!
