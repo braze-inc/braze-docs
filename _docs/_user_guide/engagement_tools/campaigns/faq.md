@@ -50,7 +50,25 @@ For example, a London-based company sending a campaign at 12 pm will reach users
 
 Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
 
-You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. 
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard.
+
+### When does Braze evaluate users for local time zone delivery?
+
+For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
+
+- At Samoa time (UTC+13) of the scheduled day
+- At local time of the scheduled day
+
+For a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone, then targeting a user located in New York would require the following checks for eligibility:
+
+- New York on August 6, 2021 at 9 pm
+- New York on August 7, 2021 at 2 pm
+
+Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+
+For example, if a campaign is scheduled to be delivered at 7 PM UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not that we send the campaign out. If users then don't match any filters when we check eligibility, they won't fall in the target audience.
+
+As another example, say you want to create two campaigns scheduled to send on the same day—one in the morning and one in the evening—and add a filter that users can only receive the second campaign if they've already received the first. With local time zone delivery, some users may not receive the second campaign. This is because we check eligibility when the user's time zone is identified, so if the scheduled time hasn't occured in their time zone yet, they haven't received the first campaign. Therefore they won't be eligible for the second campaign.
 
 ### How do I schedule a local time zone campaign?
 
@@ -100,18 +118,6 @@ Changing the send time on campaigns within this time can lead to undesired behav
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Make sure to re-adjust campaign schedule times to allow for time zone sending.
-
-### When does Braze evaluate users for local time zone delivery?
-
-For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
-- At Samoa time (UTC+13) of the scheduled day
-- At local time of the scheduled day
-
-In order for a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone,  then targeting a user located in New York would require the following checks for eligibility:
-- New York on August 6, 2021 at 9 pm
-- New York on August 7, 2021 at 2 pm
-
-Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
 
 ### Why does the number of users entering a campaign not match the expected number?
 
