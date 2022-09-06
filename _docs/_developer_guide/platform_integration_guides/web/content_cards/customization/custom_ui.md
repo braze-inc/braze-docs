@@ -61,7 +61,7 @@ braze.logCardClick(card, true);
 
 ## Handling changes in users
 
-Handling changeUser() and fetching the latest content cards for the new user.
+Handling `changeUser()` and fetching the latest content cards for the new user.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
