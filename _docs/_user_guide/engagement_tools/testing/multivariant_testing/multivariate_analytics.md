@@ -37,8 +37,6 @@ The **Initial Test** tab shows the metrics for each variant from the initial A/B
 
 If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence), Braze marks that variant with a “Winner” label.
 
-> ADD IMAGE OF ENOUGH CONFIDENCE
-
 If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the best performing variant will still be sent out and indicated with the label "Winner".
 
 ![Results of an initial test sent to determine the winning variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
