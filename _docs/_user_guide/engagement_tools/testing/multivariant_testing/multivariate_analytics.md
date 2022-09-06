@@ -127,7 +127,7 @@ A test that doesn’t have a confidence of 95% can still hold important insights
 - It’s possible that all of your variants had roughly the same effect. Knowing this saves you the time you would’ve spent making these changes. Sometimes, you may find that conventional marketing tactics, such as repeating your call to action, don’t necessarily work for your audience.
 - While your results may have been due to chance, they can inform the hypothesis for your next test. If multiple variants appear to have roughly the same results, run some of them again alongside new variants to see if you can find a more effective alternative. If one variant does better, but not by a significant amount, you can perform another test in which this variant’s difference is more exaggerated.
 - Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.
-- While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
+- While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect. This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
 
 Whether or not your test has a clear winner, it can be helpful to run a [follow-up test](#recommended-follow-ups) to confirm your results or apply your findings to a slightly different scenario.
 
@@ -145,7 +145,7 @@ Each test will shed light on your users’ behaviors, how users respond to diffe
 
 #### Improve the way you structure future tests
 
-Was your sample size too small? Were the differences between your variants too subtle? Each test provides an opportunity to learn how to improve future tests. If your confidence is low, your sample size is too small and should be enlarged for future tests.  If you find no clear difference between how your variants performed, it’s possible that the differences were too subtle to have a discernible effect on users' responses.
+Was your sample size too small? Were the differences between your variants too subtle? Each test provides an opportunity to learn how to improve future tests. If your confidence is low, your sample size is too small and should be enlarged for future tests. If you find no clear difference between how your variants performed, it’s possible that the differences were too subtle to have a discernible effect on users' responses.
 
 #### Run a follow-up test with a larger sample size
 
@@ -153,11 +153,11 @@ Larger samples will increase the chances of detecting small differences between 
 
 #### Run a follow-up test using a different messaging channel
 
-If you find that a particular strategy is very effective in one channel, you may want to test that strategy in other channels.  If one type of message is effective in one channel but not effective in another, you may be able to conclude that certain channels are more conducive to certain types of messages.  Or, perhaps there is a difference between users who are more likely to enable push notifications and those who are more likely to pay attention to in-app messages.  Ultimately, running this sort of test will help you learn about how your audience interacts with your different communication channels.
+If you find that a particular strategy is very effective in one channel, you may want to test that strategy in other channels. If one type of message is effective in one channel but not effective in another, you may be able to conclude that certain channels are more conducive to certain types of messages. Or, perhaps there is a difference between users who are more likely to enable push notifications and those who are more likely to pay attention to in-app messages. Ultimately, running this sort of test will help you learn about how your audience interacts with your different communication channels.
 
 #### Run a follow-up test on a different segment of users
 
-To do this, create another test with the same messaging channel and variants, but choose a different segment of users.  For instance, if one type of messaging was extremely effective for engaged users, it may be useful to investigate its effect on lapsed users. It’s possible that the lapsed users will respond similarly, or they may prefer another one of the other variants.  This sort of test will help you learn more about your different segments and how they respond to different sorts of messages.  Why make assumptions about your segments when you can base your strategy on data?
+To do this, create another test with the same messaging channel and variants, but choose a different segment of users. For instance, if one type of messaging was extremely effective for engaged users, it may be useful to investigate its effect on lapsed users. It’s possible that the lapsed users will respond similarly, or they may prefer another one of the other variants. This test will help you learn more about your different segments and how they respond to different types of messages. Why make assumptions about your segments when you can base your strategy on data?
 
 #### Run a follow-up test based on insights from a previous test
 
