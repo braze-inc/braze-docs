@@ -521,7 +521,7 @@ Braze will update existing user profiles or create new ones for leads, sign-ups,
 
 - Customer creates an account
 - Customer email or phone is collected in a Shopify pop-up form
-- Customer email is collected on your store’s via Shopify's footer
+- Customer email is collected on your store from Shopify's footer
 - Customer email or phone number is collected through a third-party tool connected to Shopify
 
 Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
