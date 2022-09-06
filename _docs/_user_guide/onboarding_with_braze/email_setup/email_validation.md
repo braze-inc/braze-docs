@@ -65,7 +65,7 @@ The Microsoft address local part must follow these parameters:
 - Can contain the following characters: (.) or (-) or (+)
 - Cannot start with a period (.) or hyphen (-)
 - Cannot contain two or more consecutive periods (.)
-- Cannot end with a period (.)
+- Cannot end with a period (.) or plus symbol (+)
 
 Note that the validation test checks if the local part, preceding the "+", matches the regex.
 
