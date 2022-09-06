@@ -1,17 +1,17 @@
 ---
-nav_title: Testing Canvases
-article_title: Testing Canvases
+nav_title: Sending Test Canvases
+article_title: Sending Test Canvases
 page_order: 1
 description: "This reference article covers how to test a Canvas before launch."
 page_type: reference
 tool: Canvas
 ---
 
-# Testing Canvases
+# Sending test Canvases
 
 After [creating your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
 
-## Creating your test plan
+## Step 1: Create your test plan
 
 When possible, Braze recommends testing a Canvas before launching. This test will typically take place in your Braze environment. Testing your Canvas can involve duplicating it, taking test users through the user journey, and checking if the user behavior aligns with what you have outlined in your Canvas. 
 
@@ -28,49 +28,38 @@ As you create your testing plan, consider the following questions:
 
 Once the test plan has been completed, duplicate the Canvas, and when ready, launch the test Canvas. Once the test Canvas is live, the JSON payloads can be sent to Braze from Postman so users start moving through the relevant Canvas branches. 
 
-## Creating a test user
+## Step 2: Create a test user
 
-## Reducing time delays
+In order to test users through the Canvas steps without actually sending messages to your intended users, the best practice is to create a test user. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes.
 
-To run tests effectively, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. 
+## Step 3: Set up your Canvas
 
-**Payload examples**
+Next, it's time to test your Canvas! Create a duplicate of your Canvas for testing purposes. This will help keep your original Canvas and test Canvas information organized. 
 
-```json
-{
-        ""attributes"": [ 
-         {
-           ""external_id"":""test_user_123A"",
-    ""email_address"":""test_user_123@company.com"",
-      ""L1_category_browsed"": ""shoes""
-    }
-    ],
-    ""events"": [
-    {
-      ""external_id"": ""test_user_123A"",
-      ""name"": ""browsed_category"",
-      ""time"": ""2021-08-10T18:20:30+0:00""
-    }  
-   ]
-}
-```
+![][1]
 
-```json
-{
-        ""attributes"": [ 
-         {
-           ""external_id"":""test_user_123B"",
-    ""email_address"":""test_user_123B@company.com"",
-      ""L1_category_browsed"": ""shoes""
-    }
-    ],
-    ""events"": [
-    {
-      ""external_id"": ""test_user_123B"",
-      ""name"": ""browsed_category"",
-      ""time"": ""2021-08-10T18:20:30+0:00""
-    }  
-   ]
-}
-```
+Edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. In the example below, we've limited the Canvas to allow two test users that have first used the app less than 3 days ago.
 
+![][2]
+
+## Step 4: Launch your test
+
+Launch your test Canvas to allow users to start entering. Next, complete the user behaviors on your application that would send users through the respective Canvas journey.
+
+Verify that your test users are receiving the intended messages from your Canvas steps. Note that your test users may not receive a message due to reasons not limited to:
+
+- Not eligible for the global control group
+- Frequency capping limitations
+- Mismatched segment membership
+- Aborted messages
+- Push tokens associated with different users
+
+Continue to iterate Canvas testing to ensure your Canvas performs as intended.
+
+### Reducing time delays
+
+To run tests succinctly, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
+
+
+[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
+[2]: {% image_buster /assets/img_archive/canvas_test2.png %}
