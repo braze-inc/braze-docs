@@ -26,7 +26,7 @@ For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/
 
 ### Winning variant
 
-If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. You can access this tab after the winning variant is sent to the remaining users in your test.
+If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After the winning variant is sent to the remaining users in your test, this tab shows the results of that send.
 
 The **A/B Test Result** is divided into two tabs: **Initial Test** and **Winning Variant**.
 
@@ -63,7 +63,7 @@ If you want to see the performance of the winning variant throughout the campaig
 
 ### Personalized variant (early access) {#personalized-variant}
 
-If you selected **Personalized Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. This tab is available after personalized variants are sent to the remaining users in your test.
+If you selected **Personalized Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After personalized variants are sent to the remaining users in your test, this tab shows the results of that send.
 
 The **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
 
