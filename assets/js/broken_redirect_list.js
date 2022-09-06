@@ -542,3 +542,9 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/doc
 
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
+
+
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#creating-tests'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewing-results-of-a-multivariate-campaign'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
