@@ -29,7 +29,7 @@ The basic schema of the script looks as follows:
 ```
 {% endraw %}
 
-Visit the Voucherify [Github repository](https://github.com/voucherifyio/braze-connected-content) to see examples of Connected Content scripts.
+Visit the Voucherify [GitHub repository](https://github.com/voucherifyio/braze-connected-content) to see examples of Connected Content scripts.
 
 ## Security settings
 
