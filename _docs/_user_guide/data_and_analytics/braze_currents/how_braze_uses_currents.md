@@ -32,7 +32,12 @@ Snowflake isn't your only warehouse option. You can also choose [Redshift](https
 
 ### Snowflake Reader Accounts
 
-Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled by Braze. To learn more, reach out to your customer success manager.
+Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze. 
+
+To learn more, reach out to your customer success manager.
+
+**Additional resources**<br>
+For helpful usage monitoring resources, check out Snowflake's [Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors.html) and [Viewing Warehouse Credit Usage](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account) articles.
 
 ## Step 4: Use a BI tool to manipulate your data
 
