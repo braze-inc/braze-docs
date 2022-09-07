@@ -277,8 +277,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Extension
-    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
+  - name: Amplitude Cohorts
+    description: Clients who use Amplitude can supplement their segments by choosing and importing their cohorts in Amplitude.
     tags:
       - User Attributes
   - name: Background Push Enabled
