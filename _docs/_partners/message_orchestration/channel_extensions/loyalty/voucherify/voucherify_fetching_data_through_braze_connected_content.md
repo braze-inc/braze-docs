@@ -29,7 +29,7 @@ The basic schema of the script looks as follows:
 ```
 {% endraw %}
 
-Head over to our [Github Repository](https://github.com/voucherifyio/braze-connected-content) to see examples of connected content scripts.
+Visit the Voucherify [Github repository](https://github.com/voucherifyio/braze-connected-content) to see examples of Connected Content scripts.
 
 ## Security settings
 
@@ -139,7 +139,7 @@ Keep in mind that all examples below use Voucherify publication source id and Br
 - It isn't possible to publish and send different codes to the same customer in a single Braze campaign.
 - If your Voucherify campaign uses the _join only once feature_, you need to remove `source_id` from the Connected Content body as described in the join-once tab above.
 
-Head over to our [Github Repository](https://github.com/voucherifyio/braze-connected-content) to see examples of connected content scripts.
+Visit the Voucherify [Github repository](https://github.com/voucherifyio/braze-connected-content) to see examples of Connected Content scripts.
 
 ### Publish and send unique coupon code
 
