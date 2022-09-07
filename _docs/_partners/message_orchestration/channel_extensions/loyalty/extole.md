@@ -75,7 +75,7 @@ Any event that Extole tracks can be sent to Braze. Work with your Extole impleme
 
 To start sending data from your Extole programs into Braze, create a new webhook integration in Extole’s outbound webhook center.
 
-1. Navigate to Tech Center > Outbound Webhooks in the Extole dashboard and click on the + New Integration button.
+1. Navigate to Tech Center > Outbound Webhooks in your My Extole account and click on the + New Integration button.
 2. Enter a Key Name (i.e., how you'd like to refer to the key in Extole) and select “Webhook” as the Key Type. 
 3. In the Partner Key ID field, add a value that you will recognize for this credential (e.g., your account ID, email address, or user ID).
 4. Select "PASSWORD" from the Algorithm drop down.
