@@ -37,13 +37,13 @@ module Jekyll
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/web/changelog/##{@web_changelog_ref}' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa fa-desktop'></i> &nbsp; Web: #{@original_web}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_ios.nil?
-          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/##{@ios_changelog_ref}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS: #{@original_ios}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/##{@ios_changelog_ref}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS: #{@original_ios}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_ios2.nil?
-          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/##{@ios_changelog_ref2}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Swift: #{@original_ios2}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/##{@ios_changelog_ref2}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Swift: #{@original_ios2}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_ios3.nil?
-          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/##{@ios_changelog_ref3}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Objective-C: #{@original_ios3} &nbsp;<i class='fa fa-external-link'></i></a>"
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/##{@ios_changelog_ref3}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Objective-C: #{@original_ios3} &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_android.nil?
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/android/changelog/##{@android_changelog_ref}' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa fa-android'></i> &nbsp; Android: #{@original_android}+ &nbsp;<i class='fa fa-external-link'></i></a>"

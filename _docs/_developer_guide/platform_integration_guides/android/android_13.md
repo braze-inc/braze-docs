@@ -55,9 +55,9 @@ It is strongly recommended that your app targets Android 13 in order to control 
 
 This will allow you to optimize your [push opt-in rates][6] by prompting users at more appropriate times and will lead to a better user experience in how and when your app asks for push permission.
 
-To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to the [latest version (v21.0.0+)][1].
+To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to the [latest version (v23.0.0+)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2100
+[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
