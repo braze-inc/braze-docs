@@ -36,7 +36,7 @@ Visit [Manual in-app message display][5] for more information on how your Smart 
 
 
 [1]: https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html
-[2]: http://webostv.developer.lge.com/discover/discover-webos-tv/
+[2]: https://webostv.developer.lge.com/discover
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display
