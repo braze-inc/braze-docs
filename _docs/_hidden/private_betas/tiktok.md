@@ -102,7 +102,7 @@ You can view the audience in TikTok by going into your ads manager account and t
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting TikTok's Marketing API rate limits. This means that Braze will try to batch and process as many users every 5 seconds before sending these users to TikTok.
+As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting TikTok's Marketing API rate limits. This means that Braze will try to batch and process as many users every 5 seconds before sending these users to TikTok.
 
 TikTok's Segment API rate limit states no more than 50 queries per second and 10k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
