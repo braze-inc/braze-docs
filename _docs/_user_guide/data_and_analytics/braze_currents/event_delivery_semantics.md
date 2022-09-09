@@ -58,9 +58,9 @@ Can't see the code because of the scroll bar? See how to fix that [here]({{site.
 | `<event-type>` | The type of the event in the file. |
 | `<date>` | The hour that events are queued in our system for processing in the UTC time zone. Formatted YYYY-MM-DD-HH. |
 | `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
-| `<zone>` | For internal use by Braze. Single letter. |
+| `<zone>` | For internal use by Braze. |
 | `<partition>` | For internal use by Braze. Integer. |
-| `<offset>`| For internal use by Braze. Integer. |
+| `<offset>`| For internal use by Braze. Integer. Note that different files sent within the same hour will have a different `<offset>` parameter. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
