@@ -16,7 +16,7 @@ You only get one chance to ask users for push permission, so optimizing your pus
 
 To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
-To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS or Web.
+To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS, Android or Web.
 
 ## Prerequisites
 
