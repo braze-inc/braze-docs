@@ -287,33 +287,6 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 
 {% endapi %}
 {% api %}
-## Uninstall events
-
-{% apitags %}
-Uninstall
-{% endapitags %}
-
-This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app.
-
-{% alert important %}
-Note that this is not fired when the user actually uninstalls the app - that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
-{% endalert %}
-
-```json
-// Uninstall Event: users.behaviors.Uninstall
-{
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "device_id": (string) id of the device on which the session occurred
-}
-```
-
-{% endapi %}
-
-{% api %}
 
 ## Attribution events
 
