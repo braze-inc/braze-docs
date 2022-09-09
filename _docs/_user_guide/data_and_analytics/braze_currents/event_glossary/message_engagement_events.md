@@ -1296,3 +1296,29 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
+{% api %}
+## Uninstall events
+
+{% apitags %}
+Uninstall
+{% endapitags %}
+
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+
+{% alert important %}
+This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
+{% endalert %}
+
+```json
+// Uninstall Event: users.behaviors.Uninstall
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
+}
+```
+
+{% endapi %}
