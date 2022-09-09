@@ -22,7 +22,7 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions. Note that some of these SDKs may not be released yet. Visit the following links to check the current version:
 
-{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:swift:5.4.0 %}
 
 #### Note for development teams
 This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
