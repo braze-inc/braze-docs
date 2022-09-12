@@ -17,7 +17,8 @@ description: "This article outlines the usage of and parameters for blacklisting
 
 {% alert important %}
 
-Braze has released a [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. It is recommended to use `/email/blocklist`
+Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. It is recommended to use the `/email/blocklist`
+endpoint instead.
 
 {% endalert %}
 
