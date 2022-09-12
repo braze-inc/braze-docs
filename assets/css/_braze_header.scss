@@ -26,6 +26,8 @@ $header_transition_time: 0.25s;
     padding: .5rem 1rem 0rem 1rem;
   }
   #braze_header_main {
+    display: flex;
+    flex-grow: 1;
     margin-left: 0px;
     @media (min-width:  $window-medium-px) {
     //  margin-left: 30px;
@@ -52,7 +54,47 @@ $header_transition_time: 0.25s;
         display: -webkit-flex; /* Safari */
       }
     }
+
   }
+
+  @media (min-width: $window-medium-px) {
+    #nav-item-lang {
+      min-width: 50px;
+      border: 1px solid $grey-stardust;
+      padding: 2px 3px;
+      border-radius: 3px;
+      label {
+        margin-bottom: 0px;
+      }
+    }
+    .nav-item-lang-li {
+      padding-top: 0px;
+      background-color: #f3f4f5;
+      margin-bottom: 5px;
+      select {
+        background-color: transparent;
+        font-size: 0.525rem;
+        font-weight: 700;
+        font-family: $braze-heavy;
+
+      }
+    }
+  }
+  @media (min-width: $window-large-px) {
+    #nav-item-lang {
+      min-width: 70px;
+      padding: 5px 6px;
+      border-radius: 5px;
+
+    }
+    .nav-item-lang-li {
+      select {
+        font-size: 0.825rem;
+      }
+    }
+  }
+
+
   #braze_nav_wrapper {
     flex-wrap: wrap;
     justify-content: center;
