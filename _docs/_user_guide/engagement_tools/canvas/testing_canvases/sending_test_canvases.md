@@ -11,14 +11,14 @@ tool: Canvas
 
 After [creating your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
 
-## Step 1: Create your test plan
-
 When possible, Braze recommends testing a Canvas before launching. This test will typically take place in your Braze environment. Testing your Canvas can involve duplicating it, taking test users through the user journey, and checking if the user behavior aligns with what you have outlined in your Canvas. 
 
 When you're testing a Canvas with multiple branches that target users based on different attributes and events, follow this testing plan:
 
 1. For each branch, identify the attributes and events that the user must have to be included in the Canvas journey.
 2. Build those into JSON payload to be posted using the [User Track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+
+## Step 1: Create your test plan
 
 As you create your testing plan, consider the following questions:
 - Has at least one user been created for each Canvas branch and path?
@@ -38,13 +38,15 @@ Next, it's time to test your Canvas! Create a duplicate of your Canvas for testi
 
 ![][1]
 
-Edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. In the example below, we've limited the Canvas to allow two test users that have first used the app less than 3 days ago.
+Edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
+
+In the example below, we've limited the Canvas to allow two test users that have first used the app less than 3 days ago.
 
 ![][2]
 
 ## Step 4: Launch your test
 
-Launch your test Canvas to allow users to start entering. Next, complete the user behaviors on your application that would send users through the respective Canvas journey.
+Launch your test Canvas to allow users to start entering. Next, complete the user behaviors on your application that would send users through the respective Canvas journey. 
 
 Verify that your test users are receiving the intended messages from your Canvas steps. Note that your test users may not receive a message due to reasons not limited to:
 
@@ -56,10 +58,17 @@ Verify that your test users are receiving the intended messages from your Canvas
 
 Continue to iterate Canvas testing to ensure your Canvas performs as intended.
 
-### Reducing time delays
+### General tips
 
-To run tests succinctly, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
+#### Reduce time delays
 
+To run tests efficiently, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
+
+#### Use Postman and the user track endpoint
+
+You can run tests with Postman and the [Braze Postman Collection]({{site.baseurl}}/api/postman_collection/). Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to record and track custom events and purchases for your test users.
+
+Note that sending data to the user track API can only be done with an external ID. So, test users may need to be added as test users within an internal group in the Braze dashboard so specific errors can be further investigated. 
 
 [1]: {% image_buster /assets/img_archive/canvas_test1.png %}
 [2]: {% image_buster /assets/img_archive/canvas_test2.png %}
