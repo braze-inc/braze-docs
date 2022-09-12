@@ -12,8 +12,8 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Testing Canvases
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
+  - name: Sending Test Canvases
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     fa_icon: fas fa-check-square
   - name: Cloning Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/

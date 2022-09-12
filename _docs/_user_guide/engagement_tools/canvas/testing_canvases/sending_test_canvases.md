@@ -35,7 +35,7 @@ Next, it's time to test your Canvas! Create a duplicate of your Canvas for testi
 
 Edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
 
-In the example below, we've limited the Canvas to allow two test users that have first used the app less than 3 days ago.
+In the example below, we've limited the Canvas to two test users that have first used the app less than 3 days ago.
 
 ![][2]
 
