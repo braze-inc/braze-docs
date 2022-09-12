@@ -5,7 +5,6 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-alias: /blocklist/
 description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blocklist Emails Braze endpoint."
 
 ---
