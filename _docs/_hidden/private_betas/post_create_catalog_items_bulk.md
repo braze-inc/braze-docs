@@ -7,7 +7,7 @@ layout: api_page
 ---
 {% api %}
 # Create catalog items in bulk
-{% apimethod patch %}
+{% apimethod post %}
 /catalogs/catalog_name/items
 {% endapimethod %}
 
@@ -60,10 +60,6 @@ Authorization: Bearer YOUR-REST-API-KEY
     {
       "id": "catalog-not-found",
       "message": "Could not find catalog"
-    },
-    {
-      "id": "item-not-found",
-      "message": "Could not find item"
     }
   ]
 }
