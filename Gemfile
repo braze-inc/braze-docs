@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '~> 2.7.x'
+ruby '2.7.0'
 gem "jekyll", "~> 4.2.2"
 
 gem 'sassc'
