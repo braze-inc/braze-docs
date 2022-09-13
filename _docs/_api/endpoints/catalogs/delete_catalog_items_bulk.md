@@ -23,7 +23,7 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
-This endpoint has a rate limit of 100 requests per minute.
+This endpoint has a shared rate limit of 100 requests per minute between all bulk endpoints.
 
 ## Request body
 
@@ -43,11 +43,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name`  | Required | String | Name of the imported catalog.|
+{: .reset-td-br-1}
+
 ## Example error response 
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {
@@ -71,11 +76,9 @@ The following table lists possible returned errors and their associated troubles
 | catalog-not-found | Check that the catalog name is valid. |
 | invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | ids-too-large | Item IDs can't be more than 250 characters. |
-| items-too-large | Item values can't exceed 5,000 characters. |
-| referenced-same-id-multiple-times | Item IDs must be unique in the request. |
+| ids-not-unique | Item IDs must be unique in the request. |
 | request-includes-too-many-items | Your request has too many items. The maximum is 50.
 | fields-do-not-match | Updated fields must match the fields in the catalog. |
-| unable-to-coerce | Item types can be converted. |
 | arbitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -23,14 +23,14 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
-This endpoint has a rate limit of 100 requests per minute.
+This endpoint has a rate limit of 50 requests per minute.
 
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_item`  | Required | String | Name of the catalog.|
-| `item_id `  |  Required | String | The item ID of the catalog item. |
+| `catalog_item`  | Required | String | Name of the imported catalog.|
+| `item_id `  |  Required | String | The item ID of the imported catalog item. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Response

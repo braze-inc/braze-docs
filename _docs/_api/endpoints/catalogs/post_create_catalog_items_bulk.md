@@ -23,7 +23,7 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
-This endpoint has a rate limit of 100 requests per minute.
+This endpoint has a shared rate limit of 100 requests per minute between all bulk endpoints.
 
 ## Request body
 
@@ -57,8 +57,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ## Example error response 
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {
@@ -79,7 +77,7 @@ The following table lists possible returned errors and their associated troubles
 | invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | ids-too-large | Item IDs can't be more than 250 characters. |
 | items-too-large | Item values can't exceed 5,000 characters. |
-| referenced-same-id-multiple-times | Item IDs must be unique in the request. |
+| ids-not-unique | Item IDs must be unique in the request. |
 | request-includes-too-many-items | Your request has too many items. The maximum is 50.
 | fields-do-not-match | Updated fields must match the fields in the catalog. |
 | unable-to-coerce | Item types can be converted. |
