@@ -317,6 +317,14 @@ glossaries:
     description: Segments your users by their mobile phone’s operating system.
     tags:
       - User Attributes
+  - name: Opened email (machine opens)
+    description: The proportion of opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15.
+    tags:
+      - Retargeting
+  - name: Opened email (other opens)
+    description:  Emails that haven’t been identified as “Machine opens”. For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an “Other opens”.
+    tags:
+      - Retargeting
   - name: Email Available
     description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
     tags:
