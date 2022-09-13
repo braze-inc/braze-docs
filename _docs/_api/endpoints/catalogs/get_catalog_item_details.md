@@ -31,7 +31,7 @@ This endpoint has a rate limit of 50 requests per minute.
 |---|---|---|---|
 | `catalog_item`  | Required | String | Name of the imported catalog.|
 | `item_id `  |  Required | String | The item ID of the imported catalog item. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Response
 

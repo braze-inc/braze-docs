@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the imported catalog.|
-{: .reset-td-br-1}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example error response 
 
