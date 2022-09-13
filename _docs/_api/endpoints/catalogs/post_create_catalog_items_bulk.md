@@ -1,20 +1,24 @@
 ---
 nav_title: "POST: Create Multiple Catalog Items"
-permalink: /catalogs_bulk_create/
-hidden: true
+article_title: "POST: Create Multiple Catalog Items"
+search_tag: Endpoint
+page_order: 5
+
 layout: api_page
+page_type: reference
+description: "This article outlines details about the create multiple catalog items Braze endpoint."
 
 ---
 {% api %}
-# Create catalog items in bulk
+# Create multiple catalog items
 {% apimethod post %}
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to bulk create items in your catalog. Each request can support up to 50 items.
+Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items.
 
 {% alert important %}
-Support for the this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit

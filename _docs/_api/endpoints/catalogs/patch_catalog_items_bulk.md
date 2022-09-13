@@ -1,20 +1,25 @@
 ---
-nav_title: "PATCH: Catalog Items Bulk Patch"
-permalink: /catalogs_items_patch/
-hidden: true
+nav_title: "PATCH: Edit Multiple Catalog Items"
+article_title: "PATCH: Edit Multiple Catalog Items"
+alias: /catalogs_items_patch/
+search_tag: Endpoint
+page_order: 4
+
 layout: api_page
+page_type: reference
+description: "This article outlines details about the edit multiple catalog items Braze endpoint."
 
 ---
 {% api %}
-# Edit catalog items in bulk
+# Edit multiple catalog items
 {% apimethod patch %}
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to bulk edit items in your catalog. Each request can support up to 50 items.
+Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items.
 
 {% alert important %}
-Support for the this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit

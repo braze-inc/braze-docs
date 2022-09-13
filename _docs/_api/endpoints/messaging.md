@@ -2,7 +2,7 @@
 nav_title: Messaging
 article_title: Messaging Endpoints
 search_tag: Endpoint
-page_order: 2
+page_order: 3
 local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
   parameter-definitions: '/docs/api/parameters/'
   app-group-rest-api-key: '/docs/api/parameters/'

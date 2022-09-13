@@ -1,12 +1,16 @@
 ---
-nav_title: "GET: Catalog item details"
-permalink: /get_catalog_item_details/
-hidden: true
+nav_title: "GET: List Catalog Item Details"
+article_title: "GET: List Catalog Item Details"
+search_tag: Endpoint
+page_order: 1
+
 layout: api_page
+page_type: reference
+description: "This article outlines details about the list catalog item details Braze endpoint."
 
 ---
 {% api %}
-# Catalog item details
+# List catalog item details
 {% apimethod get %}
 /catalogs/catalog_name/items/item_id
 {% endapimethod %}
@@ -14,7 +18,7 @@ layout: api_page
 Use this endpoint to return a catalog item and its content.
 
 {% alert important %}
-Support for the this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit
