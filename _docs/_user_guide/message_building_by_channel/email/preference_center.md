@@ -27,13 +27,9 @@ The Braze endpoints used to create a preference center are currently in early ac
 
 ## Step 1: Create a preference center via API
 
-Let's begin building a preference center using the [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/) endpoint. To customize your preference center, you can include HTML that aligns with your branding for the `preference_center_page_html` field and `confirmation_page_html` field.
+Let's begin building a preference center using the [`/preference_center/v1`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/) endpoint. To customize your preference center, you can include HTML that aligns with your branding for the `preference_center_page_html` field and `confirmation_page_html` field.
 
-## Step 2: Create a preference center URL
-
-{%raw%}
-
-After creating your preference center, create a URL for it by using the [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) endpoint. This allows you to use this Liquid tag ```{{preference_center.${preference_center_name}}}}``` to reference the preference center URL in an email campaign. 
+The [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) endpoint allows you to grab the preference center URL for a specific user outside of an email that is sent through Braze.
 
 ## Step 3: Include in email campaign
 
