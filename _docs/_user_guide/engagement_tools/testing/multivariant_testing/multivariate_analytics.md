@@ -86,9 +86,9 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 #### How personalized variants are selected
 
-An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. Each bucket can have a different contribution at a different "strength" for each message variant. 
+An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The extent or width of each bucket is determined by the data for users in each individual campaign and will therefore change from campaign to campaign. 
 
-This table only summarizes which variant each bucket tends to engage with. It does not guarantee that the "strength" of any one bucket will dominate the others. Therefore a user's personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution at a different "strength" for each message variant. This table only summarizes which variant users in each bucket tends to engage with. It does not guarantee that the "strength" of any one bucket will dominate the others. Therefore a user's personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% endtab %}
 {% tab Personalized Variant %}
