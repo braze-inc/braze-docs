@@ -37,4 +37,16 @@ Next, edit your preference center using the PUT endpoint by passing through the 
 
 If your update is successful, you'll see the following response:
 
-## Step 4: Generate a preference center URL
+## Step 4: Create a preference center URL
+
+To create a preference center URL, include this Liquid: ```{{preference_center.${preference_center_name}}}}``` in an email campaign that's ready to be launched. For example, you can include this HTML combined with the Liquid tag at the bottom of your email to allow your users to edit their preferences.
+
+```<a href="{{preference_center.${preference_center_name_example}}}">Edit your preferences</a>```
+
+
+### General tips
+
+
+### Troubleshooting
+
+
