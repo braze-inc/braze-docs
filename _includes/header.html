@@ -38,7 +38,8 @@
     <span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse navbarCollapse " id="braze_header_nav">
       <div class="navbar-wrapper" id="braze_nav_wrapper">
-        <ul class="navbar-nav mr-auto" id="braze_header_main">
+				<div class="mr-auto"  id="braze_header_main">
+        <ul class="navbar-nav mr-auto" style="margin-left:0px;">
           <!-- Why Braze -->
           <li class="nav-item">
             <div class="dropdown show">
@@ -290,7 +291,22 @@
               </div>
             </div>
           </li>
+					<!-- Language Select -->
+
         </ul>
+				<ul class="navbar-nav " id="braze_header_lang">
+					<li class="nav-item nav-item-lang-li">
+						<div id="nav-item-lang">
+						<label for="lang_select"><i class="fa-solid fa-globe"></i>
+						</label>
+						<select class="lang-select" id="lang_select">
+							<option value="en">EN</option>
+							<option value="ja">JP</option>
+						</select>
+						</div>
+					</li>
+				</ul>
+				</div>
         <ul class="navbar-nav" id="braze_header_alt">
           <li class="nav-item">
             <div class="dropdown show">
@@ -366,16 +382,7 @@
             {%- endunless -%}
           {%- endif -%}
         {%- endfor -%}
-        <li class="nav-item nav-item-lang-li">
-          <div id="nav-item-lang">
-          <label for="lang_select"><i class="fa-solid fa-globe"></i>
-          </label>
-          <select class="lang-select" id="lang_select">
-            <option value="en">EN</option>
-            <option value="ja">JP</option>
-          </select>
-          </div>
-        </li>
+
       </ul>
 
     </div>
