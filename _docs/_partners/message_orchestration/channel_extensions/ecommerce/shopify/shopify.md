@@ -543,7 +543,7 @@ Braze will first attempt to map the supported Shopify data to any existing user 
 If Braze does not find a match for the email address or phone number, we will create a new user profile with the supported Shopify data.
 
 {% alert important %}
-Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/) for more information.
+Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 {% endalert %}
 
 ## Using Shopify data in Braze
