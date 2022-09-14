@@ -1,5 +1,5 @@
 ---
-nav_title: Regex reference sheet
+nav_title: Regex Reference Sheet
 permalink: /regex_cheat_sheet/
 hidden: true
 ---
