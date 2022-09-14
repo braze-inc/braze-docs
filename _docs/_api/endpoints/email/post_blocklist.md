@@ -1,26 +1,18 @@
 ---
-nav_title: "POST: Blacklist Emails"
-article_title: "POST: Blacklist Emails"
+nav_title: "POST: Blocklist Emails"
+article_title: "POST: Blocklist Emails"
 search_tag: Endpoint
-page_order: 10
+page_order: 5
 layout: api_page
 page_type: reference
-alias: /blacklist/
-description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blacklist Emails Braze endpoint."
+description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blocklist Emails Braze endpoint."
 
 ---
 {% api %}
-# Blacklist emails
+# Blocklist emails
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
-/email/blacklist
+/email/blocklist
 {% endapimethod %}
-
-{% alert important %}
-
-Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. It is recommended to use the `/email/blocklist`
-endpoint instead.
-
-{% endalert %}
 
 Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
 
@@ -39,7 +31,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "email": ["blacklist_email1","blacklist_email2"]
+  "email": ["blocklist_email1","blocklist_email2"]
 }
 ```
 
@@ -47,19 +39,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
-| `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
+| `email` | Required | String or array | String email address to blocklist, or an array of up to 50 email addresses to blocklist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
+curl --location --request POST 'https://rest.iad-01.braze.com/email/blocklist' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "email": ["blacklist_email1","blacklist_email2"]
+  "email": ["blocklist_email1","blocklist_email2"]
 }'
 ```
 
 {% endapi %}
-
-

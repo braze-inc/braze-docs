@@ -118,7 +118,6 @@ $(document).ready(function() {
       let hide_backdrop = false;
       $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
         let itm = $(ea);
-        console.log(itm.attr('id'), itm.attr('aria-expanded'),)
         if(itm.attr('aria-expanded') == 'true') {
           hide_backdrop = true;
         }
@@ -438,20 +437,28 @@ $(document).ready(function() {
       $this.addClass('prewrap');
     }
   });
+
   $('.lang-select').on('change', function(e){
     let lang = this.value;
     let wovn_lang = WOVN.io.getCurrentLang();
     let wovn_lang_code = wovn_lang['code'] || 'en';
+    $('.lang-select').each(function(ind) {
+      $(this).val(lang).prop('selected', true);
+    });
     if (wovn_lang != wovn_lang_code) {
       WOVN.io.changeLang(lang);
     }
   });
+
   window.addEventListener('wovnApiReady', function(evt){
     let wovn_lang = WOVN.io.getCurrentLang();
     let wovn_lang_code = wovn_lang['code'] || 'en';
-    let current_lang = $('.lang-select').val();
-    if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
-      $('.lang-select').val(wovn_lang_code).prop('selected', true);
-    }
+    $('.lang-select').each(function(ind) {
+      let $this = $(this);
+      let current_lang = $this.val();
+      if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
+        $this.val(wovn_lang_code).prop('selected', true);
+      }
+    });
   });
 });

@@ -36,6 +36,7 @@ guide_featured_list:
 glossary_tags:
   - name: Campaign
   - name: Canvas
+  - name: Catalogs
   - name: Content Blocks
   - name: Custom Events
   - name: Email List
@@ -313,4 +314,20 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+    description: Delete multiple items in your catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+    description: List a catalog item and its details.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Edit multiple items in your catalog.
+    tags: 
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Create multiple items in your catalog.
+    tags:
+      - Catalogs
 ---
