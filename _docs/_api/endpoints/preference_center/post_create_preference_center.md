@@ -49,7 +49,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request example
-```json
+{% raw %}
+```
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
@@ -96,5 +97,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 </html>",
 }'
 ```
+{% endraw %}
 
 {% endapi %}
