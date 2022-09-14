@@ -13,16 +13,16 @@ guide_top_text: "Use the Braze Catalogs Endpoints to manage your catalogs and it
 
 guide_featured_list:
   - name: "DELETE: Delete Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/delete_catalogs_items_bulk/
+    link: /docs/api/endpoints/catalogs/delete_catalog_items_bulk/
     fa_icon: fas fa-clipboard-list
   - name: "GET: List Catalog Item Details"
     link: /docs/api/endpoints/catalogs/get_catalog_item_details/
     fa_icon: fas fa-check-square
   - name: "PATCH: Edit Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/patch_catalogs_items_bulk/
+    link: /docs/api/endpoints/catalogs/patch_catalog_items_bulk/
     fa_icon: fas fa-pen-square
   - name: "POST: Create Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/post_create_catalog_itmes_bulk/
+    link: /docs/api/endpoints/catalogs/post_create_catalog_items_bulk/
     fa_icon: fas fa-check
 ---
 
