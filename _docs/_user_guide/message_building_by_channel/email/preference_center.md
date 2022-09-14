@@ -25,29 +25,31 @@ The Braze endpoints used to create a preference center are currently in early ac
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Developer Console** > **API Settings** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Step 1: Create the preference center via API
+## Step 1: Create a preference center via API
 
-Let's begin building a preference center using the Create a preference center Braze endpoint. 
+Let's begin building a preference center using the [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/) endpoint. To customize your preference center, you can include HTML that aligns with your branding for the `preference_center_page_html` field and `confirmation_page_html` field.
 
-Here's an request body example that includes HTML.
-
-This confirms that your preference center has been created.  
-
-## Step 3: Update preference center details 
-
-Next, edit your preference center using the PUT endpoint by passing through the following parameters:
-
-If your update is successful, you'll see the following response:
-
-## Step 4: Create a preference center URL
+## Step 2: Create a preference center URL
 
 {%raw%}
 
-To create a preference center URL, include this Liquid: ```{{preference_center.${preference_center_name}}}}``` in an email campaign that's ready to be launched. For example, you can include this HTML combined with the Liquid tag at the bottom of your email to allow your users to edit their preferences.
+After creating your preference center, create a URL for it by using the [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) endpoint. This allows you to use this Liquid tag ```{{preference_center.${preference_center_name}}}}``` to reference the preference center URL in an email campaign. 
+
+## Step 3: Include in email campaign
+
+Next, include insert your preference center into your email campaign by using a combination of HTML that includes Liquid. Here's an example of what you could include at an email footer to indicate to your users that they can edit their preferences. 
 
 ```html
 <a href="{{preference_center.${preference_center_name_example}}}">Edit your preferences</a>
 ```
-
 {%endraw%}
 
+## Editing a preference center
+
+You can edit and update your preference center by using the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/) endpoint. 
+
+## Identifying preference centers and details
+
+To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) endpoint to return related information such as the a last updated timestamp, the preference center ID, and more.
+
+`

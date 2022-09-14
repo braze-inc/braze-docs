@@ -2,7 +2,7 @@
 nav_title: "POST: Create Preference Center"
 article_title: "POST: Create Preference Center"
 search_tag: Endpoint
-page_order: 2
+page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Create a preference center Braze endpoint."
@@ -22,6 +22,7 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
+This endpoint has a rate limit of 10 requests per minute, per app group.
 
 ## Request body
 
@@ -48,22 +49,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request example
-{% raw %}
-```
+```json
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "name": "Example Preference Center",
   "preference_center_page_html": "<html>
-    <head>
-    </head>
+  <head></head>
     <body>
-Email Subscription Group A (Marketing) Status: {% subscribed_state :email_subscription_group XXX %}
+    Email Subscription Group A (Marketing) Status: {% subscribed_state :email_subscription_group XXX %}
     <br />
-Email Subscription Group B (Math Games) Status: {% subscribed_state :email_subscription_group XXX %}
+    Email Subscription Group B (Math Games) Status: {% subscribed_state :email_subscription_group XXX %}
     <br />
-Global email subscription state: {% subscribed_state :email_global_state %}
+    Global email subscription state: {% subscribed_state :email_global_state %}
     <br />
     <form method=\"post\" action=\"{{ preference_center_submit_url }}\">
       <select id=\"sg-a\" name = \"{% form_field_name :email_subscription_group XXX %}\" >
@@ -97,6 +96,5 @@ Global email subscription state: {% subscribed_state :email_global_state %}
 </html>",
 }'
 ```
-{% endraw %}
 
 {% endapi %}

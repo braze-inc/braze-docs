@@ -2,7 +2,7 @@
 nav_title: "GET: Generate Preference Center URL"
 article_title: "GET: Generate Preference Center URL"
 search_tag: Endpoint
-page_order: 4
+page_order: 1
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Generate preference center URL Braze endpoint."
@@ -14,7 +14,7 @@ description: "This article outlines details about the Generate preference center
 /preference_center/v1/{preferenceCenterExternalId}/url/{userId}
 {% endapimethod %}
 
-Use this endpoint to list preference centers.
+Use this endpoint to generate a URL for a preference center.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -22,20 +22,13 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
+This endpoint has a rate limit of 1,000 requests per minute, per app group.
 
-## Request body
+## Example request
 
 ```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
-
-```json
-{
-  "name": "string",
-  "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
-}
+curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v1/$preference_center_external_id/url/$user_external_id' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ## Request parameters
@@ -43,22 +36,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`name`| Required | String | The name of the preference center. |
-|`preference_center_page_html`| Optional | String | The HTML for the preference center page. |
-|`confirmation_page_html`| Optional | String | The HTML for the confirmation page. |
+|`preference_center_page_html`| Required | String | The HTML for the preference center page. |
+|`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
-{% raw %}
-```
-curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{
-  "name": "Example Preference Center",
-  "preference_center_page_html": "HTML for preference center"
-  "confirmation_page_html": "HTML here with a message to users."
+## Response 
 
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+{
+  "preference_center_url": "https://www.example.com/preferences"
+}
 ```
-{% endraw %}
 
 {% endapi %}

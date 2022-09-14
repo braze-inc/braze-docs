@@ -2,7 +2,7 @@
 nav_title: "PUT: Update Preference Center"
 article_title: "PUT: Update Preference Center"
 search_tag: Endpoint
-page_order: 3
+page_order: 5
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Update a preference center Braze endpoint."
@@ -22,6 +22,7 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 ## Rate limit
 
+This endpoint has a rate limit of 10 requests per minute, per app group.
 
 ## Request body
 
@@ -30,7 +31,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
-```json
+```
 {
   "name": "string",
   "preference_center_page_html": "string",
@@ -50,13 +51,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 ## Request example
 {% raw %}
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1' \
+curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1/{preferenceCenterExternalId}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "name": "Example Preference Center",
-  "preference_center_page_html": "HTML for preference center"
-  "confirmation_page_html": "HTML here with a message to users."
+  "name": "Example",
+  "preference_center_page_html": "HTML for preference center here"
+  "confirmation_page_html": "HTML here with a message to users here"
 
 ```
 {% endraw %}
