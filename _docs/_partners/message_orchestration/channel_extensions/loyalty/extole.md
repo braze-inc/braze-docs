@@ -106,6 +106,6 @@ Once the events and attributes you have configured are flowing into Braze, you c
 [1]: https://www.extole.com
 [2]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#request-body
-[4]: {% image_buster /assets/img/extole/extole-create-new-key.png %}
+[4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
 [5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
 [6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
