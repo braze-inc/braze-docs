@@ -26,10 +26,6 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 ![][3]
 
-{% alert note %}
-Non-ASCII characters in URLs are currently not supported.
-{% endalert %}
-
 ## Testing
 
 We always recommend that you preview and test your message before launching a campaign or Canvas. 
@@ -65,6 +61,10 @@ No. Currently, only static URLs are shortened.
 #### Are the links I receive when test sending real URLs?
 
 If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. 
+
+#### Does the Braze SDK need to be installed in order to shorten links?
+
+No, Link Shortening will work without any SDK integration.
 
 #### Can I specify my own custom Link Shortening domain?
 

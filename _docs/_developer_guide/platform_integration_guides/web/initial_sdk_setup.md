@@ -78,15 +78,15 @@ braze.initialize('YOUR-API-KEY-HERE', {
 // optionally show all in-app messages without custom handling
 braze.automaticallyShowInAppMessages();
 
-// optionally set the current user's External ID
-if (isLoggedIn){
-    braze.changeUser(userIdentifier);
-}
-
 // if you use Content Cards
 braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
+
+// optionally set the current user's External ID
+if (isLoggedIn){
+    braze.changeUser(userIdentifier);
+}
 
 // Be sure to call `openSession` after `automaticallyShowInAppMessages`
 braze.openSession();

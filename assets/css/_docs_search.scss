@@ -155,8 +155,13 @@ $search_tag_color: $grey-athens;
   .aa-Panel {
     z-index: 800;
     max-width: 1048px;
+    top: 0px !important;
+    @media (min-width: 681px) {
+      top: 125px !important;
+    }
+
     @media (min-width: $window-medium-px) {
-      top: 75px !important;
+      top: 100px !important;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border-width: 2px;

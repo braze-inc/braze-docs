@@ -20,7 +20,9 @@ Next, enter the name for your new Canvas and click **Clone to Canvas Flow**.
 
 ![][2]{: style="max-width:70%;"}
 
-Now, you’ll have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas will still have a **Stopped** status, and the cloned Canvas will have a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
+Now, you’ll have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas will still have its original status, and the cloned Canvas will have a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
+
+Note that if you clone an active Canvas, Braze will continue to send users through the original Canvas. We recommend stopping a Canvas before cloning to avoid sending duplicate messages to users from both Canvases.
 
 ![Canvas dashboard with two Canvases listed: V2 Copy of Canvas V1 and Canvas V1. The V2 Copy of Canvas V1 has an icon that indicates it is using the Canvas Flow workflow.][3]
 
@@ -30,7 +32,7 @@ You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can
 
 If your Canvas matches any of the following details, then your Canvas can't be cloned to Canvas Flow:
 
-- Has Full Steps that have exception events or use the delay filter "in" or "on the next"
+- Has Full Steps that have exception events and use the delay filter "in" or "on the next"
 - Has a Full Step that branches out into multiple steps, and is not the first step of the Canvas
 
 For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).

@@ -40,7 +40,7 @@ For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/admini
 
 ### API limits
 
-For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across our customer base. For details, refer to [API rate limits]({{site.baseurl}}/docs/api/api_limits/)
+For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across our customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/)
 
 ### User IDs 
 

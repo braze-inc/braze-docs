@@ -29,7 +29,8 @@ The following table describes how users can use each editor block type.
 | `HTML` |  Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
 | `Menu` |  Creates a flexible menu for the message you're designing. |
 | `Spacer` |  Adds space, or "padding", between other blocks. |
-| `Social Icon` | Inserts social media platform icon. |
+| `Social Icon` | Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
+| `Video` | Inserts a preview image for a video. The image links to a YouTube or Vimeo URL. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
@@ -139,6 +140,27 @@ Refer to the following table for details on the `Spacer` editor block.
 | properties | description |
 |---|---|
 |`height`| Adjusts the height of the spacer block. The default is 60px.|
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Social icon
+
+Refer to the following table for details on the `Social Icon` editor block.
+
+| properties | description |
+|---|---|
+|`Select icon collection`| The style of your icon collection. |
+|`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Video
+
+Refer to the following table for details on the `Video` editor block.
+
+| properties | description |
+|---|---|
+|`Video url`| The YouTube or Vimeo URL that generates a preview image. |
+|`Padding`| Modifies the padding of the preview image. |
+|`Hide on`| Option to hide the content on mobile or desktop views. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Add Liquid personalization
