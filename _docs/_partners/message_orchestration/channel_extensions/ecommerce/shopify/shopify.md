@@ -45,15 +45,30 @@ In Braze, go to the **Technology Partners** section and then search **Shopify**.
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
-Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Events** (ingestion begins once the integration is connected), [configure email and SMS consent collection], and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
 <br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:80%;"}
 
-#### Install Braze's Shopify application
+### Collect email or SMS subscribers
+
+At this step, selet whether you want to collect email and SMS opt-ins from yout Shopify store to sync over to Braze.
+
+- Collect email subscribers<br>If enabled, Braze will update the global email subscription state on the profile to `subscribed` so you can send emails to your users. You can also optionally add one or more [subscription groups]({{site.baseurl}}/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) to automatically assign email subscribers to when they opt-in. 
+- Collect SMS subscribers<br>If enabled, Braze will update the selected [SMS subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) on the profile to `subscribed` so you can send messages to your users. If you are collecting SMS opt-ins, you must select one subscription group. If no subscription group exists, or you would like to create a new subscription group, reach out to your Braze representative for support. 
+
+If there is an existing global subscription state on a user profile within Braze that's different from Shopify, you have the option to enable **Override existing global subscription state for users**. This will override the Braze state to ensure it matches with Shopify.
+
+{% alert important %}
+If you do not override global subscription states, existing user's states may not match those found in Shopify, This can lead to unrecieved and unintended messages.
+{% endalert %}
+
+![][77]{: style="max-width:60%;"}
+
+### Step 4: Install Braze's Shopify application
 <br>![Shopify app installation page, which lists the permissions the Braze app will have after installing.][7]{: style="max-width:60%;"}
 
-### Step 3: Verify completion
+### Step 5: Verify completion
 That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed, and the webhook creation is complete, you will be notified via email. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
 
 ![Data Import section showing connection pending and setup status pending.][8]{: style="max-width:80%;"}
@@ -454,42 +469,12 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | This custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
-| `shopify_sms_consent` | This custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
 | `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Shopify SMS Consent %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_sms_consent": {
-        "state": "subscribed",
-        "opt_in_level": "single_opt_in",
-        "collected_from": "other"
-      }
-    }
-  ]
-}
-```
-{% endsubtab %}
-{% subtab Shopify Accepts Marketing (Email) %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_accepts_marketing": true
-    }
-  ]
-}
-```
-{% endsubtab %}
 {% subtab Shopify Tags %}
 ```json
 {
