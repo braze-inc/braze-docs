@@ -30,10 +30,15 @@ You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can
 
 ## Limitations
 
-If your Canvas matches any of the following details, then your Canvas can't be cloned to Canvas Flow:
+If a Canvas has Full Steps that have exception events and uses the delay filter "in" or "on the next", then it can't be cloned to Canvas Flow. 
 
-- Has Full Steps that have exception events and use the delay filter "in" or "on the next"
-- Has a Full Step that branches out into multiple steps, and is not the first step of the Canvas
+In order for a Canvas with branching to be cloned to Canvas Flow, all of the following has to be true:
+- Delay conditions of the branch are the same
+- Audience section is not empty
+- No exception events are used
+- The variant branches into multiple Full Steps (no Full Steps branch into multiple steps)
+
+Otherwise if a Canvas has branching and the aforementioned conditions are not meant, the Canvas can't be cloned to Canvas Flow.
 
 For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
