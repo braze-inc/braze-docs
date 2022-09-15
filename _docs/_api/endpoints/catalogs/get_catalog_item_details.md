@@ -21,6 +21,8 @@ Use this endpoint to return a catalog item and its content.
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
+If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Rate limit
 
 This endpoint has a rate limit of 50 requests per minute.

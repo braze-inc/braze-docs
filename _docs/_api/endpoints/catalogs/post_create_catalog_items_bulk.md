@@ -21,6 +21,8 @@ Use this endpoint to create multiple items in your catalog. Each request can sup
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
+If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 100 requests per minute between all bulk endpoints.
