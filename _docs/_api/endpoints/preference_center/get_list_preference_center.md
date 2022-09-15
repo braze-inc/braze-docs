@@ -33,13 +33,11 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 
 ## Response
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "preference_centers":
     {
       "name": "Example",
-      "preference_center_api_id": "preference_center_external_id",
+      "preference_center_api_id": "preference_center_api_id",
       "created_at": "example_time_created",
       "updated_at": "example_time_updated"
     }

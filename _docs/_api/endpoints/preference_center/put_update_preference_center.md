@@ -44,8 +44,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`name`| Required | String | The name of the preference center. |
-|`preference_center_page_html`| Optional | String | The HTML for the preference center page. |
-|`confirmation_page_html`| Optional | String | The HTML for the confirmation page. |
+|`preference_center_page_html`| Required | String | The HTML for the preference center page. |
+|`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request example
