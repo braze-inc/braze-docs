@@ -30,7 +30,7 @@ You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can
 
 ## Limitations
 
-If a Canvas has Full Steps that have exception events and uses the delay filter "in" or "on the next", then it can't be cloned to Canvas Flow. 
+If a Canvas has full steps that have exception events and uses the delay filter "in" or "on the next", then it can't be cloned to Canvas Flow. 
 
 In order for a Canvas with branching to be cloned to Canvas Flow, all of the following has to be true:
 - Delay conditions of the branch are the same
