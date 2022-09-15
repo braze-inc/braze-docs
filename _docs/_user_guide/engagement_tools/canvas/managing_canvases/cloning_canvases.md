@@ -36,7 +36,7 @@ In order for a Canvas with branching to be cloned to Canvas Flow, all of the fol
 - Delay conditions of the branch are the same
 - Audience section is not empty
 - No exception events are used
-- The variant branches into multiple Full Steps (no Full Steps branch into multiple steps)
+- The variant branches into multiple full steps (no full steps branch into multiple steps)
 
 Otherwise if a Canvas has branching and the aforementioned conditions are not meant, the Canvas can't be cloned to Canvas Flow.
 
