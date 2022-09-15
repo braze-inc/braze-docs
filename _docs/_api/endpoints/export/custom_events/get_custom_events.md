@@ -26,7 +26,7 @@ Use this endpoint to export a list of custom events that have been recorded for 
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `page`    | Optional | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250). |
+| `page` | Optional | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -43,9 +43,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [
-        "Event A",
-        "Event B",
-        "Event C",
+        "Event A", (string) the event name,
+        "Event B", (string) the event name,
+        "Event C", (string) the event name,
         ...
     ]
 }
