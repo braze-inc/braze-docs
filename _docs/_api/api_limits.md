@@ -84,7 +84,9 @@ If you have questions about API limits, contact your customer success manager or
 
 ### Optimal delay between endpoints
 
-> We recommend that you allow for a 5-minute delay between subsequent calls to minimize the probability of error.
+{% alert note %}
+We recommend that you allow for a 5-minute delay between consecutive endpoint calls to minimize errors.
+{% endalert %}
 
 Understanding the optimal delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our `/user/alias/new` endpoint, and then hitting that alias to send a custom event via our `/users/track` endpoint, how long should you wait?
 

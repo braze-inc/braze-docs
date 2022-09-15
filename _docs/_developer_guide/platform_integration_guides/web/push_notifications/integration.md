@@ -45,6 +45,10 @@ By default, a service worker can only be used within the same directory it is re
 
 If you cannot register a service worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP header when serving your service worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the service worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory.
 
+#### Can I create a service worker using a Tag Manager?
+
+No, service workers must be hosted on your website's server and can't be loaded via Tag Manager.
+
 ### Step 2: Browser registration
 
 For a browser to receive push notifications, you must register it for push by calling `braze.requestPushPermission()`. This will immediately request push permission from the user. 
@@ -67,7 +71,9 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Soft push prompt
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) for a seamless user experience. Instead of calling `braze.requestPushPermission()` directly as described above, instead:
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.
+
+This can be done by implementing the standard [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). Alternatively, if you would like to include special custom handling, use Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
 
 1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
   - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?").

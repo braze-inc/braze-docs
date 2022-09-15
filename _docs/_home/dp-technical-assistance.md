@@ -109,7 +109,7 @@ Data Subjects may have the right to ‘block’ or suppress the processing of ce
 
 ### Braze Recommendation
 
-The Braze Services do not support the restriction of processing of individual categories of Personal Data. If you have been asked by a Data Subject to restrict processing of certain subsets of that Data Subject’s Personal Data, you should use the [Braze APIs](https://www.braze.com/docs/api/basics/) to export that end user’s entire profile(s) and then [delete](https://www.braze.com/docs/api/endpoints/user_data/#user-delete-endpoint) it from Braze. Braze’s APIs can be used to re-import this data in the event that the end user subsequently allows you to process those particular subsets of its Personal Data.
+The Braze Services do not support the restriction of processing of individual categories of Personal Data. If you have been asked by a Data Subject to restrict processing of certain subsets of that Data Subject’s Personal Data, you should use the [Braze APIs](https://www.braze.com/docs/api/home/) to export that end user’s entire profile(s) and then [delete](https://www.braze.com/docs/api/endpoints/user_data/#user-delete-endpoint) it from Braze. Braze’s APIs can be used to re-import this data in the event that the end user subsequently allows you to process those particular subsets of its Personal Data.
 
 ## The Right to Data Portability
 
@@ -128,7 +128,7 @@ Individuals may have the right to object to:
 
 ### Braze Recommendation
 
-Braze provides the ability to mark a User Profile as being unsubscribed from SMS, emails or push notifications via both our [REST APIs](https://www.braze.com/docs/api/basics/) and via the [iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/), and [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/) SDKs. If you receive objections from Data Subjects to receiving such messages, you can use Braze’s APIs to unsubscribe those end users.
+Braze provides the ability to mark a User Profile as being unsubscribed from SMS, emails or push notifications via both our [REST APIs](https://www.braze.com/docs/api/home/) and via the [iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/), and [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/) SDKs. If you receive objections from Data Subjects to receiving such messages, you can use Braze’s APIs to unsubscribe those end users.
 
 If that is not sufficient, to avoid processing of end user Personal Data by Braze, the end user profile should be deleted in the same manner as specified under the ‘Right to Erasure’.
 

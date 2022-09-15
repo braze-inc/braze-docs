@@ -1,0 +1,339 @@
+---
+layout: default
+hide_toc: true
+hide_bottom_nav: false
+hide_breadcrumb: false
+---
+
+
+
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+
+
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- assign hide_toc = page.hide_toc -%}
+
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+{%- unless hide_toc -%}
+{%- assign hide_toc = layout.hide_toc -%}
+{%- endunless -%}
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+
+{% unless hide_nav %}
+<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
+   <i class="fas"></i>
+</button -->
+
+<script type="text/javascript">
+
+{%- comment -%} Tag list allows for name and icon or image.{%- endcomment -%}
+{%- assign glossary_tags = "" -%}
+
+{%- for tag in page.glossary_tags -%}
+  {%- if glossary_tags != '' -%}
+    {%- assign glossary_tags = glossary_tags | append: ','  -%}
+  {%- endif -%}
+
+
+  {%- capture glossary_tags -%}
+  {{ glossary_tags }} {{ tag['name'] }}
+  {%- endcapture -%}
+{% endfor %}
+
+
+{%- comment -%} Data order: 0 name, 1 description,2 metric,3 calculation,4 field, 5 tags {%- endcomment -%}
+{%- assign glossary_list = '' -%}
+{%- for glossary in page.glossaries -%}
+  {%- if glossary_list != '' -%}
+    {%- assign glossary_list = glossary_list | append: ','  -%}
+  {%- endif -%}
+  {%- capture glossary_list -%}
+  {{ glossary_list }}
+  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | slugify | downcase | replace: '"', '\\"' }}","{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}",
+  {%- endcapture -%}
+  {%- assign glossary_tag = '' -%}
+  {%- assign glossary_list = glossary_list | append: '['  -%}
+  {%- for tag in glossary.tags -%}
+    {%- if glossary_tag != '' -%}
+      {%- assign glossary_tag = glossary_tag | append: ','  -%}
+    {%- endif -%}
+    {%- assign gtag = tag | replace: '"', '\\"' -%}
+    {%- assign glossary_tag = glossary_tag | append: '"' | append: gtag  | append: '"' -%}
+  {%- endfor -%}
+  {%- assign glossary_list = glossary_list | append: glossary_tag | append: ']]'  -%}
+{% endfor %}
+
+var glossaries_list = {
+  {{ glossary_list }}
+};
+
+var glossary_map = {
+  'id': 0,
+  'name': 1,
+  'description': 2,
+  'tags': 3,
+  'glossary_tags': 4,
+}
+$(document).ready(function() {
+  function string_to_slug(str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // trim
+    str = str.toLowerCase();
+
+    // remove accents, swap ñ for n, etc
+    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+    var to   = "aaaaeeeeiiiioooouuuunc------";
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    str = str.replace(/[\(\)]/g, '') // remove parenthsis
+        .replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-');  // collapse dashes
+
+    return str;
+  }
+
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  var glossary_div = $('#glossary_list');
+
+  var alltags = []
+  $.each("{{ glossary_tags }}".split(','),function(k,v){
+    alltags.push(v.replace(/^\s+|\s+$/gm,''));
+  });
+
+
+  function matchterms(searchterm, items) {
+    var found = false;
+    if (Array.isArray(items)) {
+      for (var i = 0; i < items.length; i++ ) {
+        if (Array.isArray(searchterm)) {
+          for (var j = 0; j < searchterm.length; j++ ) {
+            if (items[i].toLowerCase() == searchterm[j].toLowerCase()) {
+              found = true
+            }
+          }
+        }
+        else {
+          if (items[i].toLowerCase() == searchterm.toLowerCase()) {
+            found = true
+          }
+        }
+      }
+    }
+    else {
+      if (Array.isArray(searchterm)) {
+        for (var j = 0; j < searchterm.length; j++ ) {
+          if (items.toLowerCase() == searchterm[j].toLowerCase()) {
+            found = true
+          }
+        }
+      }
+      else {
+        if (items.toLowerCase().indexOf(searchterm.trim().toLowerCase()) > -1) {
+          found = true
+        }
+      }
+    }
+    return found;
+  }
+
+  function generate_glossarys(glossary_hash) {
+    var result_cnt = 0;
+    $('#results_msg').hide();
+    for (var i = 0; i < glossary_hash['sorted'].length;i++){
+      var cur_glossary = glossary_hash['data'][glossary_hash['sorted'][i]];
+      var cur_filter_text = glossary_hash['search'][glossary_hash['sorted'][i]];
+      var toappend = true;
+      var filtered = true;
+      var selected_vals = [];
+      $('.glossary_filter_div input[type="checkbox"]:checked').each(function(k,v){
+       selected_vals.push($(this).val());
+      })
+      if (selected_vals.length) {
+         toappend = false;
+         // Don't filter if item is set to all tags
+         if (matchterms('all',cur_glossary[glossary_map['tags']])) {
+           filtered = true;
+         }
+         else if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
+           filtered = false;
+         }
+       }
+
+        var search_str = $('#glossary_search').val().toLowerCase();
+        if (search_str.length ) {
+         toappend = false;
+         if (!matchterms(search_str, cur_filter_text)) {
+           filtered = false;
+         }
+        }
+
+        if (filtered) {
+         toappend = true;
+        }
+        if (toappend ) {
+         $('#filter_' + cur_glossary[glossary_map['id']]).show();
+         result_cnt++;
+        }
+        else {
+         $('#filter_' + cur_glossary[glossary_map['id']]).hide();
+        }
+
+    }
+    if (!result_cnt) {
+      $('#results_msg').html('<p>No endpoints found matching these key words.</p>');
+      $('#results_msg').show();
+    }
+
+  };
+  var glossary_hash = {'data':{},'search': {}, 'sorted': []};
+
+  $.each(glossaries_list,function(k,v) {
+    glossary_hash['data'][k] = v;
+    glossary_hash['search'][k] = v.join(' ').toLowerCase();
+    if (matchterms('all', v[glossary_map['tags']]) ) {
+      glossary_hash['search'][k] += ' ' + alltags.join(' ');
+    }
+    glossary_hash['sorted'].push(k);
+  })
+  glossary_hash['sorted'].sort();
+
+  generate_glossarys(glossary_hash);
+  var query_str = getUrlParameter('tags').toLowerCase().split(',');
+  $('.glossary_filter_div input[type="checkbox"]').each(function(e){
+    $(this).on('click', function(e){
+      generate_glossarys(glossary_hash);
+    });
+    if (matchterms($(this).val(), query_str)) {
+      $(this).prop('checked',true);
+    }
+  });
+  if (query_str.length) {
+    generate_glossarys(glossary_hash);
+  }
+
+  $('#glossary_search').on('keyup',function(e){
+    generate_glossarys(glossary_hash);
+  });
+  if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
+    // Scroll to generated hash
+    $('html, body').animate({
+      scrollTop: $(location.hash).offset().top
+    });
+  }
+});
+</script>
+
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html  %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+    <div id="glossary-main">
+
+    <div id="content_start"></div>
+    <h1> {{ page.glossary_top_header }} </h1>
+    <p class="glossary_text">  {{ page.glossary_top_text }} </p>
+    <div id="guide_featured_list">
+
+      {%- for menu_list in page.guide_featured_list  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+            {%- endif %}
+          <div id="{{ menu_list.name | handle }}" class="guide_item">
+            {%- if menu_list.fa_icon -%}
+            <i class="{{menu_list.fa_icon}}"></i>
+            {%- else -%}
+              {%- if menu_list.image -%}
+              <img src="{{site.baseurl}}{{ menu_list.image}} " />
+              {%- endif -%}
+            {%- endif -%}
+            <div class="menu_description">
+                {{ menu_list.name }}
+              </div>
+          </div>
+            {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+      <b class="glossary_text">  {{ page.glossary_mid_text }} </b>
+    </div>
+    <div id="glossary_filter">
+        <input id="glossary_search" type="search" placeholder="Search" />
+        <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
+        {%- for tag in page.glossary_tags -%}
+        <div class="glossary_filter_div">
+          <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
+            {{tag.name}}
+          </label>
+        </div>
+        {%- endfor -%}
+
+    </div>
+
+    <div id="glossary_list" class="flex mx-auto">
+      <div class="d-flex" style="width: 100%;">
+        <div class="col-3" style="background-color: #CDCDCD;color: #333333;font-weight:bold;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Endpoint</div>
+        <div class="col-9" style="background-color: #CDCDCD;color: #333333;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Description</div>
+      </div>
+      {%- assign glossary_sorted = page.glossaries | sort: 'name' -%}
+      {%- for glossary in glossary_sorted -%}
+      {%- assign glossary_id = glossary['name'] | slugify | downcase -%}
+        <div id="filter_{{ glossary_id }}" class="term flex">
+          <h2 id="{{ glossary_id }}"></h2>
+          <div class="col-3" style="word-break: break-all;"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
+          </div>
+          <div class="col-9">{{ glossary['description'] }}
+          </div>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div id="results_msg"></div>
+
+
+  </div>
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+      <!-- div class="gradient-line" ></div -->
+      <div id="bottom_page_nav">
+        <a id="page_prev_link"><div id="page_prev" ></div></a>
+        <a id="page_next_link"><div id="page_next" ></div></a>
+      </div>
+    </div>
+
+    {%- endunless -%}
+
+    {% include footer.html class="footer_glossary" %}
+</div>
+{%- unless hide_toc -%}
+<div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
+  <div id="toc" ></div>
+</div>
+{%- endunless -%}
+

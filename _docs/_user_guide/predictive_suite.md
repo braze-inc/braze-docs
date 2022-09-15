@@ -15,7 +15,7 @@ guide_featured_list:
   fa_icon: fas fa-cogs
 - name: Predictive Purchases
   link: /docs/user_guide/predictive_suite/predictive_purchases/
-  fa_icon: fas fa-cogs
+  fa_icon: fa-solid fa-cart-shopping
 ---
 
 <br><br>

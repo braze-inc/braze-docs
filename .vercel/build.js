@@ -2,16 +2,24 @@ let build_app = 1;
 let branch_commit = process.env.VERCEL_GIT_COMMIT_REF || '';
 let branch_check = process.env.BRANCH_CHECK || '';
 let vercel_env = process.env.VERCEL_ENV || 'preview';
+let vercel_lang = process.env.LANGUAGE || 'en';
 
 // For develop and master branches, always build to make sure everything is updated
 if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
-	// For staging, check if it's a build from a language branch
-	// Cancel if it doesn't match expected branch
-	if (branch_check.includes('l10n_') || branch_commit.includes('l10n_')) {
+	// For preview, if language is english project, then don't build if it's an language branch
+	// if language is not english, then check if it's a language branch
+	if (vercel_lang == 'en') {
+		if (branch_check.includes('i18n_') || branch_commit.includes('i18n_')) {
+			build_app = 0;
+		}
+	}
+	else{
 		build_app = 0;
-		if (branch_check && (vercel_env == 'preview')) {
-			if (branch_commit == branch_check) {
-				build_app = 1;
+		if (branch_check.includes('i18n_') || branch_commit.includes('i18n_')) {
+			if (branch_check && (vercel_env == 'preview')) {
+				if (branch_commit == branch_check) {
+					build_app = 1;
+				}
 			}
 		}
 	}

@@ -12,16 +12,16 @@ guide_featured_title: "Popular Topics"
 guide_featured_list:
 - name: Access Braze
   link: /docs/user_guide/administrative/access_braze/
-  fa_icon: fas fa-user-circle
+  fa_icon: fa-solid fa-arrow-right-to-bracket
 - name: Company Settings
   link: /docs/user_guide/administrative/company_settings/
-  fa_icon: fas fa-table
+  fa_icon: fa-regular fa-building
 - name: Manage Your Braze Users
   link: /docs/user_guide/administrative/manage_your_braze_users/
-  fa_icon: fas fa-street-view
+  fa_icon: fa-solid fa-users
 - name: Settings
   link: /docs/user_guide/administrative/app_settings/
-  fa_icon: fas fa-mobile
+  fa_icon: fa-solid fa-gears
 ---
 
 <br> 

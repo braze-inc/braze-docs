@@ -14,7 +14,7 @@ description: "This article outlines details about the News Feed Cards List Endpo
 /feed/list
 {% endapimethod %}
 
-This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+Use this endpoint to export a list of News Feed cards, each of which will include its name and card API identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 

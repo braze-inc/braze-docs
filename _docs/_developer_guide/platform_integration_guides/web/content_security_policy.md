@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### connect-src {#connect-src}
 
 - `connect-src https://sdk.iad-01.braze.com`: allows the SDK to communicate with Braze APIs.
-  - Change this URL to match your `baseUrl` initialization option's [API SDK endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/).
+  - Change this URL to match your `baseUrl` initialization option's [API SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### script-src {#script-src}
 

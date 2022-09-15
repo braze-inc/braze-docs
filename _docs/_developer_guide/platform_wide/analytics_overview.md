@@ -161,7 +161,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. If you’d like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 The following table describes available segmentation options for array attributes.
 
@@ -321,13 +321,14 @@ Good options for User IDs:
 
 - Hashed email address or unique username
 - Unique database identifier
-- Facebook ID
 
 These should not be used as user IDs:
 
 - Device ID
 - Random number or session ID
 - Any non-unique ID
+- Email address
+- Another 3rd party vendor's User ID
 
 {% include sdk_auth_alert.md %}
 
@@ -366,8 +367,6 @@ The following content will be trimmed programmatically from your attributes and 
 Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
 
 - `email`
-- `facebook`
-- `twitter`
 - `first_name`
 - `last_name`
 - `dob`

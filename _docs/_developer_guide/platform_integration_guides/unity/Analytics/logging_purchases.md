@@ -9,7 +9,7 @@ page_order: 3
 description: "This reference article covers how to log purchases on Unity platform."
 
 ---
-
+ 
 # Logging purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
@@ -21,20 +21,23 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add the following method call after a successful purchase in your app:
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
 This method logs a purchase with a quantity of one. If you would like to pass in a different quantity, you can call the following method:
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int));
 ```
 
 Quantity must be less than or equal to one hundred. Braze also supports adding metadata about purchases by passing a `Dictionary` of purchase properties:
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
 ```
+
+## Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ## Currency codes
 

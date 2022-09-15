@@ -14,9 +14,7 @@ description: "This article outlines details about the List Available Email Templ
 /templates/email/list
 {% endapimethod %}
 
-Use this endpoint to get a list of available templates in your Braze account.
-
-Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
+Use this endpoint to get a list of available email templates in your Braze account.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 

@@ -22,4 +22,4 @@ Braze.requestFeedRefresh()
 Refer to our [KDoc][16] for more information.
 
 
-[16]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-feed-refresh.html
+[16]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html

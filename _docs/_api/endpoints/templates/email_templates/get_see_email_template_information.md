@@ -14,9 +14,7 @@ description: "This article outlines details about the See Email Template Braze e
 /templates/email/info
 {% endapimethod %}
 
-Use to get information on your email templates.
-
-Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
+Use this endpoint to get information on your email templates.
 
 {% alert important %}
 Templates built using the Drag & Drop Editor are not accepted

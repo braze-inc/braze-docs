@@ -21,7 +21,6 @@ glossary_tags:
   - name: Marketing Activity
   - name: User Attributes
   - name: Install Attribution
-  - name: Social Activity
   - name: Testing
   - name: Other
 
@@ -110,8 +109,8 @@ glossaries:
     description: Segments your users by the latest version of your app that they have used.
     tags:
       - User Activity
-  - name: App Version Code
-    description: "App Version Code filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager."
+  - name: App Version Number
+    description: Filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. For Android, this version number is based on the <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> for the app. For iOS, this version number is based on the <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> for the app. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
     tags:
       - User Activity
   - name: Most Recent Location
@@ -278,8 +277,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Extension
-    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
+  - name: Amplitude Cohorts
+    description: Clients who use Amplitude can supplement their segments by choosing and importing their cohorts in Amplitude.
     tags:
       - User Attributes
   - name: Background Push Enabled
@@ -422,22 +421,6 @@ glossaries:
     description: Segments your users by the source that their install was attributed to.
     tags:
       - Install Attribution
-  - name: Connected to Facebook
-    description: Segments your users who have granted Facebook account access within your app.
-    tags:
-      - Social Activity
-  - name: Connected to Twitter
-    description: Segments your users who have granted Twitter account access within your app.
-    tags:
-      - Social Activity
-  - name: Number of Facebook Friends Using App
-    description: Segments your users by the number of friends that they have on Facebook that are using your app.
-    tags:
-      - Social Activity
-  - name: Number of Twitter Followers
-    description: Segments your users by the number of followers that they have on Twitter.
-    tags:
-      - Social Activity
   - name: Device IDFA
     description: Allows you to designate your campaign recipients by IDFA for testing.
     tags:

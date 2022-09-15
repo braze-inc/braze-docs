@@ -14,7 +14,7 @@ description: "This article outlines details about Braze's Campaign Daily Stats b
 /sends/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
+Use this endpoint to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
 
 Campaign conversions will be attributed towards the most recent send id that a given user has received from the campaign.
 

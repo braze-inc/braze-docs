@@ -114,6 +114,8 @@ Custom user attributes are not available due to a limitation in Google Tag Manag
 
 ```html
 <script>
+  // note: if using SDK version 3.x or below, use `window.appboy` instead of `window.braze`
+  // version 4 or greater should use `window.braze`
 window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value");
 </script>
 ```
@@ -122,9 +124,9 @@ window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value
 The GTM template does not support nested properties on events or purchases. You can use the preceding HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
-### Default user attributes {#standard-attributes}
+### Standard user attributes {#standard-attributes}
 
-Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for default attributes match the expected format specified in the [User class][16] documentation.
+Standard user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Ensure the values you're passing in for standard attributes match the expected format specified in the [User class][16] documentation.
 
 For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
 
@@ -158,6 +160,13 @@ This will help identify what values are being sent from your webpage's data laye
 
 ![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.][gtm-tag-debug-mode]
 
+### Enable verbose logging
+
+To allow Braze technical support to access logs while testing, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+
+In your Google Tag Manager integration, navigate to your Braze Initialization Tag and select **Enable Web SDK Logging**.
+
+![The Braze Initialization Tag summary page with the option to Enable Web SDK Logging turned on.][gtm-verbose-logging]
 
 [2]: https://support.google.com/tagmanager/answer/6103696
 [gtm-community-gallery-search]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
@@ -180,3 +189,4 @@ This will help identify what values are being sent from your webpage's data laye
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
 [e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
+[gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}

@@ -16,11 +16,11 @@ For all other actions, or to combine multiple actions, use this guide to constru
 
 ## SDK Support
 
-{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
 The `brazeActions://` deeplink scheme can be used wherever a deeplink or redirect option exists within in-app messages and Content Cards.
 
-For HTML in-app messages, use the [`Javascript Bridge`](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) instead, as deeplinks are not supported in HTML message types.
+For HTML in-app messages, use the [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) instead, as deeplinks are not supported in HTML message types.
 
 ## Schema
 

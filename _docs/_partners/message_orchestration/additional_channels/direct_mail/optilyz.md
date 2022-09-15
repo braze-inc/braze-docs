@@ -93,7 +93,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/webhook_template/
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/
 [5]: {% image_buster /assets/img/optilyz/optilyz_compose.png %}
 [6]: {% image_buster /assets/img/optilyz/optilyz_settings.png %}
 [7]: {% image_buster /assets/img/optilyz/optilyz_testing.png %}

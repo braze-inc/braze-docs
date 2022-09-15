@@ -68,4 +68,4 @@ Here, select **Add Integration**, choose your desired integration, and **Save**.
 [3]: {% image_buster /assets/img/digioh/3.png %}
 [4]: {% image_buster /assets/img/digioh/4.png %}
 [5]: {% image_buster /assets/img/digioh/pref_pop_examples.png %}
-[6]: https://www.braze.com/docs/api/basics/#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints

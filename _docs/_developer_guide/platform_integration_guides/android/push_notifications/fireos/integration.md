@@ -73,7 +73,7 @@ Next, declare that your app uses the device's ADM feature and that your app is d
   ...
   ```
 
-Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze broadcast receiver's `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
+Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from ADM within your Braze `AndroidManifest.xml` file. Immediately after `amazon:enable-feature`, add the following elements:
 
 ```xml
 <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
@@ -101,7 +101,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens][52] in the Android push documentation for more information.
+If you would like to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens][52] in the Android push documentation for more information.
 
 ## Step 5: Add Client Secret and Client ID to Braze dashboard
 
@@ -117,11 +117,24 @@ Braze does not recommend using manual registration, but if you need to handle AD
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Next, use [registerPushToken][37] to pass your user's ADM `registration_id` to Braze:
+Next, use [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) to pass your user's ADM `registration_id` to Braze:
+
+{% tabs local %}
+{% tab Java %}
 
 ```java
-Braze.getInstance(context).registerPushToken(registration_id);
+Braze.getInstance(context).setRegisteredPushToken(registration_id);
 ```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+Braze.getInstance(context).registeredPushToken = registration_id
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## ADM extras
 
@@ -149,5 +162,4 @@ If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Pus
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback

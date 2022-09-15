@@ -14,9 +14,9 @@ description: "This article outlines details about the Schedule API-Triggered Can
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to trigger API-Triggered Canvases, which are created on the dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+Use this endpoint to schedule Canvas messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
 
-This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API-Triggered delivery, allowing you to decide what action should trigger the message to be sent. Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
@@ -57,7 +57,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|Required|String| See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
-| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |

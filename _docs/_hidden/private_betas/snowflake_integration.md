@@ -8,7 +8,7 @@ hidden: true
 # Braze Cloud Ingestion - Snowflake integration
 
 {% alert important %}
-Braze Cloud Ingestion is currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
+Braze Cloud Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the Early Access.
 {% endalert %}
 
 ## What is Braze Cloud Ingestion?
@@ -54,7 +54,7 @@ SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
 
 ## Product setup
 
-During the beta phase, onboarding to Cloud Ingestion requires some manual integration steps managed by Braze. Follow these steps to set up the integration: 
+During the early access phase, onboarding to Cloud Ingestion requires some manual integration steps managed by Braze. Follow these steps to set up the integration: 
 1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
 2. Submit a form to Braze with the relevant integration information.
 3. Braze will send you a public key to [append to the Snowflake user](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) for authentication. Once authenticated, the sync will start.
@@ -115,18 +115,20 @@ After this step, you will share connection information with Braze and receive a 
 
 #### Step 5: Allow Braze IPs in Snowflake network policy (optional)
 
-Allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies). 
+Allow the following IP addresses in your Snowflake network policy. You should whitelist all IPs from the below list that correspond to the region of your Braze dashboard. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies). 
 
-| Braze IPs |
-| -------- |
-| 23.21.118.191 |
-| 34.206.23.173 |
-| 50.16.249.9 |
-| 52.4.160.214 |
-| 54.87.8.34 |
-| 54.156.35.251 |
-| 52.54.89.238 |
-| 18.205.178.15 |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: | For Instances `EU-01` and `EU-02`: |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
+
 
 ### Share connection information with Braze 
 
@@ -176,6 +178,6 @@ Note that if you reuse the same user and role across integrations, you will not 
 | Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
 | Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
 | Data type | Currently, the product only supports user attributes. In the future, you’ll also be able to sync events and purchases. |
-| Braze region | The beta product is only available to Braze customers in the US region (Dashboard is in one of `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`)
+| Braze region | This early access product is available to customers in any Braze region. |
 | Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
 {: .reset-td-br-1 .reset-td-br-2}

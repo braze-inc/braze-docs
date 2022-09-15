@@ -25,7 +25,7 @@ Tealium AudienceStreams and EventStreams offer both batch and non-batch connecto
 | ---- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with server-side access is required. We recommend also using the client-side integrations to take advantage of this partnership. |
 | REST API key | A Braze REST API key with `users.track`, `users.delete`, and `subscription.status.set` permissions.<br><br>This can be created within **Braze dashboard > Developer Console > REST API Key > Create New API Key**|
-| [Braze REST endpoint][6] | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
+| [Braze REST endpoint][6] | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration

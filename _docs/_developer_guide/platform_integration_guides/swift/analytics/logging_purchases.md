@@ -24,7 +24,7 @@ To use this feature, add this method call after a successful purchase in your ap
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] logPurchase:@"your product ID"
+[[Appboy sharedInstance] logPurchase:@"product_id"
 inCurrency:@"USD"
 atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
@@ -33,7 +33,7 @@ atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
+Appboy.sharedInstance()?.logPurchase("product_id", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
 ```
 
 {% endtab %}
@@ -62,7 +62,7 @@ Refer to the [iOS class documentation][7] for additional details.
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] logPurchase:@"your product ID"
+[[Appboy sharedInstance] logPurchase:@"product_id"
 inCurrency:@"USD"
 atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]
 withProperties:@{@"key1":"value1"}];
@@ -72,7 +72,7 @@ withProperties:@{@"key1":"value1"}];
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
+Appboy.sharedInstance()?.logPurchase("product_id", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
 ```
 
 {% endtab %}
@@ -81,6 +81,9 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 {% alert tip %}
 If you pass in a value of 10 USD and a quantity of 3, that will log to the user's profile as three purchases of 10 dollars for a total of 30 dollars.
 {% endalert %}
+
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### Reserved keys
 

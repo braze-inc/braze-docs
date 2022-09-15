@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Canvas FAQs
-page_order: 10
+page_order: 11
 alias: "/canvas_v2_101/"
 description: "This article provides answers to frequently asked questions about Canvas and Canvas Flow."
 tool: Canvas
@@ -29,7 +29,7 @@ When you stop a Canvas, the following applies:
 - **Exception:** Email Canvases will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 {% alert note %}
-Stopping a Canvas won't flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
 ### When does an exception event trigger?
@@ -46,9 +46,7 @@ For more information on what you can or can't edit after launch, check out [Chan
 
 ### How are user conversions tracked in a Canvas?
 
-A user can only convert once per Canvas entry.
-
-Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
+A user can only convert once per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
 
 {% details Examples %}
 
@@ -59,8 +57,7 @@ There is a Canvas path with 10 push notifications and the conversion event is "s
 - User A opens the app after entering but before receiving the first message.
 - User B opens the app after each push notification.
 
-**Result:**
-The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+**Result:** The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
 
 {% alert note %}
 If Quiet Hours is active when the conversion event happens, the same rules apply.
@@ -68,50 +65,59 @@ If Quiet Hours is active when the conversion event happens, the same rules apply
 
 #### Example 2
 
-There is a one-step Canvas with quiet hours:
+There is a one-step Canvas with Quiet Hours enabled:
 
 1. User enters the Canvas.
-2. First step has no delay, but is within quiet hours, so the message is suppressed.
+2. The first step doesn't have a delay, but is within the set Quiet Hours, so the message is suppressed.
 3. User performs the conversion event.
 
-**Result:**
-The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+**Result:** The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
 
 {% enddetails %}
 
+### How can I view analytics for each of my Canvas components?
+
+To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
+
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
 
-The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.
 
 ### Why does the number of users entering a Canvas not match the expected number?
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
+### How are Canvas audiences evaluated? 
+
+By default, filters and segments for full steps in the Canvas are checked at send time. For Canvas Flow, the Decision Split component performs an evaluation right after receiving a previous step (or before a delay).
+
 ## Canvas Flow
 
 ### What is Canvas Flow?
 
-Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. With Canvas Flow, you can expect to easily view and use Canvas components in the Canvas builder. 
-
-### What's the difference between a component and a step?
-
-[A component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
-
-### What can I expect?
-When using Canvas Flow, you can expect the following:
-* Full steps to be replaced by lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
-* [Persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey
-* More post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps
-* A new Canvas toolbar that shows all Canvas components
-* An ability to [clone]({{site.baseurl}}/cloning_canvases/) your stopped Canvases to Canvas Flow
+Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. You can expect to easily view and use Canvas components in the Canvas builder. You also have access to more post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps.
 
 ### How can I use Canvas Flow?
 
 To use the Canvas Flow workflow, go to **Canvas** under the **Engagement** tab. Click <i class="fas fa-plus"></i> **Create Canvas**. Next, you'll have the option of building with Canvas Flow or the original Canvas experience. Select **Canvas Flow Workflow** and begin building your Canvas as you normally would!
 
+### What's the difference between a component and a step?
+
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+
+### Can I use Full Steps in Canvas Flow?
+
+No. In Canvas Flow, Full Steps are replaced with lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey.
+
+### How do I convert an existing Canvas into Canvas Flow?
+
+You can [clone your Canvas to Canvas Flow]({{site.baseurl}}/cloning_canvases/). This creates a copy of your original Canvas in the Canvas Flow workflow.
+
+### Can I revert back to the original Canvas editor?
+
 As you’re building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
 
-{% alert note %}
+{% alert important %}
 Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no full steps in your Canvas.
 {% endalert %}
 
