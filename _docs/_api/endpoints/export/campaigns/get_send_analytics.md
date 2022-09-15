@@ -62,13 +62,13 @@ Authorization: Bearer YOUR-REST-API-KEY
             "revenue": (float) the number of dollars of revenue (USD),
             "unique_recipients": (int) the number of unique recipients,
             "conversions": (int) the number of conversions,
-            "conversions_by_send_time": (int) the number of conversions,
+            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
             "conversions1": (optional, int) the number of conversions for the second conversion event,
-            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
             "conversions2": (optional, int) the number of conversions for the third conversion event,
-            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
             "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
           }
         ]
       },

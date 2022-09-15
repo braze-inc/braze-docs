@@ -63,13 +63,13 @@ Authorization: Bearer YOUR-REST-API-KEY
                       "revenue": (float) the number of dollars of revenue (USD),
                       "unique_recipients": (int) the number of unique recipients,
                       "conversions": (int) the number of conversions,
-                      "conversions_by_send_time": (int) the number of conversions,
+                      "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
                       "conversions1": (optional, int) the number of conversions for the second conversion event,
-                      "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+                      "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
                       "conversions2": (optional, int) the number of conversions for the third conversion event,
-                      "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+                      "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
                       "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-                      "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+                      "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
                       "carousel_slide_[NUM]_[TITLE]_click": (optional, int) the number of carousel slide clicks,
                       "notif_button_[NUM]_[TITLE]_click": (optional, int) the number of notification button clicks
                     }
@@ -127,13 +127,13 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "revenue": (float) the number of dollars of revenue (USD),
                     "unique_recipients": (int) the number of unique recipients,
                     "conversions": (int) the number of conversions,
-                    "conversions_by_send_time": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
                     "conversions1": (optional, int) the number of conversions for the second conversion event,
-                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
                     "conversions2": (optional, int) the number of conversions for the third conversion event,
-                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
                   }
                 ]
               },
@@ -165,7 +165,7 @@ Authorization: Bearer YOUR-REST-API-KEY
             "time" : (string) the date as ISO 8601 date,
             "conversions" : (int) the number of conversions,
             "revenue": (float) the number of dollars of revenue (USD),
-            "conversions_by_send_time": (int) the number of conversions,
+            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
             "messages" : {
                "trigger_in_app_message": [{
                     "variation_name": (optional, string) the variation name,
@@ -176,13 +176,13 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "revenue": (float) the number of dollars of revenue (USD),
                     "unique_recipients": (int) the number of unique recipients,
                     "conversions": (int) the number of conversions,
-                    "conversions_by_send_time": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
                     "conversions1": (optional, int) the number of conversions for the second conversion event,
-                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
                     "conversions2": (optional, int) the number of conversions for the third conversion event,
-                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
       			}, {
       				"variation_name": (optional, string) the variation name,
       				"impressions": (int) the number of impressions,
@@ -192,25 +192,25 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "revenue": (float) the number of dollars of revenue (USD),
                     "unique_recipients": (int) the number of unique recipients,
                     "conversions": (int) the number of conversions,
-                    "conversions_by_send_time": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
                     "conversions1": (optional, int) the number of conversions for the second conversion event,
-                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
                     "conversions2": (optional, int) the number of conversions for the third conversion event,
-                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
       			}, {
       				"variation_name": (optional, string) the variation name,
       				"revenue": (float) the number of dollars of revenue (USD),
       				"unique_recipients": (int) the number of unique recipients,
       				"conversions": (int) the number of conversions,
-                    "conversions_by_send_time": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
                     "conversions1": (optional, int) the number of conversions for the second conversion event,
-                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event by send time,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
                     "conversions2": (optional, int) the number of conversions for the third conversion event,
-                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event by send time,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
                     "conversions3": (optional, int) the number of conversions for the fourth conversion event,
-                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event by send time
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
       				"enrolled": (optional, int) the number of enrolled users
       			}]
       		},
@@ -218,7 +218,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       		"conversions1_by_send_time": (optional, int),
       		"conversions2_by_send_time": (optional, int),
       		"conversions3_by_send_time": (optional, int),
-      		"conversions": (optional, int,
+      		"conversions": (optional, int),
       		"conversions1": (optional, int),
       		"conversions2": (optional, int),
       		"conversions3": (optional, int),
