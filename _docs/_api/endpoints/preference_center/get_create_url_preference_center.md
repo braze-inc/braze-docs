@@ -35,7 +35,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`name`| Required | String | The name of the preference center. |
 |`preference_center_api_id`| Required | String | The ID for your preference center. |
 |`external_id`| Required | String | The external ID for a user. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
