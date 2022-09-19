@@ -26,7 +26,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose your criteria
 
-Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years).
+Select between purchase, message engagement, or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years).
 
 ![Segment ][3]
 
@@ -53,7 +53,7 @@ Using event properties within Segment Extensions does not impact data point usag
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.
 
 {% alert important %}
-Starting on February 1, 2022, the setting to regenerate extensions daily will be automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
+The setting to regenerate extensions daily is automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
 - Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments

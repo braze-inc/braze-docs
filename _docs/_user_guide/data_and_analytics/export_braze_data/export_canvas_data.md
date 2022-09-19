@@ -10,15 +10,19 @@ tool:
 
 ---
 
-# Canvas results data
+# Exporting Canvas data
 
-User data can be exported to a CSV. This data can be exported for your entire Canvas or a particular Canvas component.
+User data can be exported to a CSV. This data can be exported for your entire Canvas or a specific Canvas component.
 
-**Export user data for the entire Canvas:**<br>From the Canvas page of the Dashboard, select the Canvas you wish to view. Then, click the **User Data** dropdown in the **Canvas Details** section. Select the option that fits your needs best.
+## Entire Canvas
 
-**Export user data for individual Canvas components:**<br>Canvas results can also be exported on an individual component basis. To do this, select the component you would like, then click the **User Data** dropdown in the **Canvas Step Details** page. 
+From the **Canvas** page of the Braze dashboard, select your Canvas. Then, click the **User Data** dropdown in the **Canvas Details** section. There are two options: **CSV Export User Data** and **CSV Export Email Address**. Select the option that fits your needs best.
 
-![User Data dropdown on the Canvas Details page][1]
+## Individual component (original workflow only)
+
+Canvas results can also be exported on an individual component basis for the original Canvas workflow. To do this, select the specific component, then click the **User Data** dropdown in the **Canvas Step Details** page. 
+
+![User Data dropdown on the Canvas Details page.][1]
 
 {% alert tip %}
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.

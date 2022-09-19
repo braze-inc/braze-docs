@@ -10,19 +10,19 @@ description: "Meet us at the intersection of art and science. Find us in the mom
 
 user_menu_list:
   - name: Manage Your Account
-    image: /assets/img/gear2.png
-    bg_color: '#75dbe7'
+    image: /assets/img/new-icons/gears.svg
+    bg_color: '#e3f8fa'
     link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
     description: Manage your company settings, users, and more!
   - name: Logging Into Braze
-    image: /assets/img/arrow.png
-    bg_color: '#f9b2b0'
+    image: /assets/img/new-icons/right-arrow2.svg
+    bg_color: '#fce0df'
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
     description: Log into our platform!
   - name: Create a Canvas
-    bg_color: '#ffb380'
+    bg_color: '#ffe1cc'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    image: /assets/img/diagram.png
+    image: /assets/img/new-icons/users2.svg
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:

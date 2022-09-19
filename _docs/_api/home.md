@@ -11,23 +11,23 @@ glossary_tag_name: Endpoint Type
 
 glossary_filter_text: "Select endpoint type to narrow the glossary:"
 
-glossary_mid_text: "<h2>Braze Endpoint Search</h2>"
+glossary_mid_text: "Endpoint Search"
 guide_featured_list:
-- name: Endpoints
-  fa_icon: fa-solid fa-laptop-code
-  link: /docs/api/endpoints/
-- name: Objects & Filters
-  link: /docs/api/objects_filters/
-  fa_icon: fa-solid fa-gear
 - name: API Overview
   fa_icon: fa-solid fa-info
   link: /docs/api/basics/
 - name: API Identifier Types
   link: /docs/api/identifier_types/
   fa_icon: fa-solid fa-clipboard-list
+- name: Objects & Filters
+  link: /docs/api/objects_filters/
+  fa_icon: fa-solid fa-gear
 - name: Errors & Responses
   link: /docs/api/errors/
   fa_icon: fa-solid fa-list-check
+- name: Data Retention
+  link: /docs/api/data_retention/
+  fa_icon: fa-solid fa-laptop-code
 - name: Rate Limits
   link: /docs/api/api_limits/
   fa_icon: fa-solid fa-hand
@@ -36,6 +36,7 @@ guide_featured_list:
 glossary_tags:
   - name: Campaign
   - name: Canvas
+  - name: Catalogs
   - name: Content Blocks
   - name: Custom Events
   - name: Email List
@@ -313,4 +314,20 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+    description: Delete multiple items in your catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+    description: List a catalog item and its details.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Edit multiple items in your catalog.
+    tags: 
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Create multiple items in your catalog.
+    tags:
+      - Catalogs
 ---
