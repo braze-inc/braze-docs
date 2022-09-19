@@ -3,7 +3,7 @@ nav_title: "GET: [Endpoint Name]"
 article_title: "GET: [Endpoint Name]"
 search_tag: Endpoint
 
-page_order:
+page_order: 1
 
 layout: api_page
 page_type: reference
