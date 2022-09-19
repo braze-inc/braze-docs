@@ -13,7 +13,7 @@ tool:
 
 Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and push.
 
-## Email Performance Dashboard
+## Email performance dashboard
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
