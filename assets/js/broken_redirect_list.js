@@ -542,3 +542,4 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/doc
 
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
+validurls['/docs/view_pii/'] = '/docs/user_guide/administrative/company_settings/security_settings/#view-pii';
