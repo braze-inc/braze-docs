@@ -39,7 +39,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## SMS Performance Dashboard
+## SMS performance dashboard
 
 To use your email performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
 
