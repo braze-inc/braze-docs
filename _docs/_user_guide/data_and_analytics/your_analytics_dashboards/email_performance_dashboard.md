@@ -15,7 +15,7 @@ Channel performance dashboards allow you to view aggregate performance metrics f
 
 ## Email Performance Dashboard
 
-To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past.
+To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
@@ -23,7 +23,7 @@ To use your email performance dashboard, go to **Overview** > **Email Performanc
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the email performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period).
 
@@ -41,7 +41,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 ## SMS Performance Dashboard
 
-To use your email performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data for. Your date range can be up to one year in the past. 
+To use your email performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
 
 ### Metrics calculations
 
