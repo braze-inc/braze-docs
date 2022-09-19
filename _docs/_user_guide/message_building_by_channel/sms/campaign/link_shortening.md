@@ -1,7 +1,13 @@
 ---
 nav_title: Link Shortening
-permalink: /user_guide/message_building_by_channel/sms/campaign/link_shortening/
-hidden: true
+article_title: Link Shortening
+page_order: 5
+description: "This reference article covers how to enable link shortening in your SMS messages and some frequently asked questions."
+page_type: reference
+tool:
+  - Campaigns
+channel:
+  - SMS
 ---
 
 # Link Shortening
