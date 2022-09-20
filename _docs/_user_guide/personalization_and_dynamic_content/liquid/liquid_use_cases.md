@@ -242,7 +242,7 @@ This use case adds a specific number of days to the current date to reference an
 
 {% raw %}
 ```liquid
-{{ “now” | date:‘%s’ | plus:259200 | date:“%F” }}
+{{ "now" | date:'%s' | plus:259200 | date:"%F" }}
 ```
 {% endraw %}
 
