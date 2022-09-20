@@ -43,7 +43,11 @@ There are two ways to add the Content Block to your email.
 
 ### Rows
 
-First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. 
+First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. \
+
+{% alert note %}
+Once the Content Block is added into the email editor, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**.
+{% endalert %}
 
 ### Liquid
 
@@ -52,6 +56,10 @@ Navigate to your email campaign and select **Edit Email Body**. Click the <i cla
 In the **Add Personalization** tab, select **Content Blocks** in the **Personalization Type** dropdown. For the **Attribute** field, select the name of your Content Block. The Liquid snippet field will populate with your Content Block Liquid Tag. Next, copy and paste the Liquid snippet into a text editor block. 
 
 When you preview your email messaging, the Liquid snippet will display as the Drag & Drop Editor Content Block. 
+
+{% alert important %}
+When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means that edits cannot be made directly to the Content Block that is added into the email editor.
+{% endalert %}
 
 ## Updating Content Blocks
 
