@@ -1,10 +1,11 @@
 ---
 nav_title: Shopify
 article_title: "Shopify"
-description: "This article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases, or retarget users based on their previous purchases."
+description: "This article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases or retarget users based on their previous purchases."
 page_type: partner
 search_tag: Partner
-alias: /shopify_create_update/
+hidden: true
+permalink: /shopify_subscription_states/
 
 ---
 
@@ -12,7 +13,7 @@ alias: /shopify_create_update/
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 
-The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
+The Shopify and Braze integration allows brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
 
 <!--
 For some Canvas and Campaign examples, check out our guide here. 
@@ -45,16 +46,31 @@ In Braze, go to the **Technology Partners** section and then search **Shopify**.
 ![Data Import and Web SDK Installation section of the Shopify partner page in Braze.][2]{: style="max-width:80%;"}
 
 ### Step 2: Shopify setup
-Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Webhook Events** (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your **Shopify Store Name**, review the **Shopify Events** (ingestion begins once the integration is connected), [configure email and SMS consent collection](#collect-email-or-sms-subscribers), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard.
 
 #### Shopify setup within Braze
 <br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:80%;"}
 
-#### Install Braze's Shopify application
+#### Collect email or SMS subscribers
+
+At this step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
+
+![][77]{: style="max-width:60%;"}
+
+- **Collect email subscribers**<br>If enabled, Braze will update the global email subscription state on the profile to `subscribed` so you can send emails to your users. You can also optionally add one or more [subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) to automatically assign email subscribers to when they opt-in. 
+- **Collect SMS subscribers**<br>If enabled, Braze will update the selected [SMS subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) on the profile to `subscribed` so you can send messages to your users. If you are collecting SMS opt-ins, you must select one subscription group. If no subscription group exists, or you would like to create a new subscription group, reach out to your Braze representative for support. 
+
+If there is an existing global subscription state on a user profile within Braze that's different from Shopify, you can enable **Override existing global subscription state for users**. This will override the Braze state to ensure it matches with Shopify.
+
+{% alert important %}
+If you do not override global subscription states, existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
+{% endalert %}
+
+### Step 4: Install Braze's Shopify application
 <br>![Shopify app installation page, which lists the permissions the Braze app will have after installing.][7]{: style="max-width:60%;"}
 
-### Step 3: Verify completion
-That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed, and the webhook creation is complete, you will be notified via email. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
+### Step 5: Verify completion
+That's it! The status of your integration appears in the **Data Import** section of the Shopify partner page. Once the Braze app has been successfully installed and the webhook creation is complete, you will be notified via email. In addition, the **Connection Pending** status will be updated to **Connected** and will display the timestamp of when the connection was established.
 
 ![Data Import section showing connection pending and setup status pending.][8]{: style="max-width:80%;"}
 ![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
@@ -75,7 +91,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates a webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process, including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The abandonment default is set to **1 hour** but is configurable within the **Advanced Settings** section on the Shopify partner page. |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify Product ID._ |
-| `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order’s payment status is changed to paid. An order is in paid status after a credit card payment has been captured, or when an order using a manually payment method is marked as paid. |
+| `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order’s payment status is changed to paid. An order is in paid status after a credit card payment has been captured, or when an order using a manual payment method is marked as paid. |
 | `shopify_partially_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Partially fulfilled order events will trigger when some of the line items in an order are fulfilled successfully. |
 | `shopify_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Fulfilled order events will trigger when the fulfillment of all of the line items in a fulfillment order is successful. |
 | `shopify_cancelled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Canceled order events will trigger when a customer creates an order but then cancels the order before fulfillment. |
@@ -454,42 +470,12 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | This custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
-| `shopify_sms_consent` | This custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
 | `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Shopify SMS Consent %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_sms_consent": {
-        "state": "subscribed",
-        "opt_in_level": "single_opt_in",
-        "collected_from": "other"
-      }
-    }
-  ]
-}
-```
-{% endsubtab %}
-{% subtab Shopify Accepts Marketing (Email) %}
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "shopify_accepts_marketing": true
-    }
-  ]
-}
-```
-{% endsubtab %}
 {% subtab Shopify Tags %}
 ```json
 {
@@ -521,7 +507,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 ## Shopify user syncing
 
-Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations being captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
+Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
 
 - Customer creates an account
 - Customer email or phone is collected in a Shopify pop-up form
@@ -559,7 +545,7 @@ By default, Braze will automatically set the delay to trigger the `shopify_aband
 
 ### Set your preferred product identifier
 
-If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the `product_id` used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
+If you have included Braze purchase events within your Shopify integration setup, by default, Braze will set the Shopify Product ID as the `product_id` used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
 
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
@@ -572,7 +558,7 @@ Your install may still be pending for one of the following reasons:
   - When Braze is setting up your Shopify webhooks
   - When Braze is communicating with Shopify
 
-If your app installation is pending for 1 hour, Braze will fail the installation and you will be prompted to Retry Setup.<br><br>
+If your app installation is pending for 1 hour, Braze will fail the installation, and you will be prompted to Retry Setup.<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
@@ -605,3 +591,4 @@ Concerning personal data submitted to Braze services by or on behalf of its cust
 [10]: {% image_buster /assets/img/Shopify/shopify_integration10.png %} 
 [11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
 [12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 
+[77]: {% image_buster /assets/img/Shopify/shopify_integration77.png %}
