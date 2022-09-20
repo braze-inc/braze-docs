@@ -71,59 +71,9 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Soft push prompt
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.
+A soft push prompt (also known as a "push primer") helps optimize your opt-in rate when it comes to asking for permission.
 
-This can be done by implementing the standard [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). Alternatively, if you would like to include special custom handling, use Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
-
-1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
-  - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?").
-  - Give the in-app message a Button 1 Text value of "OK" (or whatever affirmative text you wish), and set the on-click behavior to "Close Message." You'll customize that behavior later.
-  - Under the gear composer section, add a key-value pair. Give it a key of `msg-id` and a value of `push-primer`.
-  - Give the message a trigger action of the custom event 'prime-for-push' (you can create that custom event manually from the dashboard if you need to).<br><br>
-2. In your Braze SDK integration, find and remove any calls to `braze.automaticallyShowInAppMessages()` from within your loading snippet.<br><br>
-3. Replace the removed call with the following snippet:
-
-```javascript
-
-// Be sure to remove calls to braze.automaticallyShowInAppMessages() 
-// from your code as noted in the steps above
-
-braze.subscribeToInAppMessage(function(inAppMessage) {
-  var shouldDisplay = true;
-
-  if (inAppMessage instanceof braze.InAppMessage) {
-    // Read the key-value pair for msg-id
-    var msgId = inAppMessage.extras["msg-id"];
-
-    // If this is our push primer message
-    if (msgId == "push-primer") {
-      // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
-      // has already granted/blocked permission
-      if (!braze.isPushSupported() || braze.isPushPermissionGranted() || braze.isPushBlocked()) {
-        shouldDisplay = false;
-      }
-      if (inAppMessage.buttons[0] != null) {
-        // Prompt the user when the first button is clicked
-        inAppMessage.buttons[0].subscribeToClickedEvent(function() {
-          braze.requestPushPermission();
-        });
-      }
-    }
-  }
-
-  // Display the message
-  if (shouldDisplay) {
-    braze.showInAppMessage(inAppMessage);
-  }
-});
-```
-
-When you wish to display the soft push prompt to the user, call `braze.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins, your code would look like:
-
-```javascript
-braze.openSession();
-braze.logCustomEvent("prime-for-push");
-```
+Visit [Soft push prompt][push-primer] to learn more about setting up a soft push prompt.
 
 ## HTTPS requirement
 
@@ -152,12 +102,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 Braze's service worker file will automatically call `skipWaiting` upon install. If you'd like to avoid this, add the following code to your service worker file, preceding importing Braze:
 
-```javascript
-self.addEventListener('install', (event) => {
-  event.stopImmediatePropagation();
-}); 
-self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Troubleshooting
 
@@ -172,3 +117,4 @@ self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
+[push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/

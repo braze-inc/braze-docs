@@ -37,7 +37,7 @@ npm install --save @braze/web-sdk
 
 Once installed, you can `import` or `require` the library in the typical fashion:
 
-```javascript
+```typescript
 import * as braze from "@braze/web-sdk";
 // or, using `require`
 const braze = require("@braze/web-sdk");
@@ -189,7 +189,9 @@ require(['path/to/braze.min.js'], function(braze) {
 ```
 ### Alternative No AMD installation
 
-If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library is available at https://js.appboycdn.com/web-sdk/4.0/braze.no-amd.min.js.
+If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
+
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
