@@ -69,7 +69,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 A soft push prompt (also known as a "push primer") helps optimize your opt-in rate when it comes to asking for permission.
 
-To learn more about setting up a Soft Push Prompt, [click here][push-primer].
+Visit [Soft push prompt][push-primer] to learn more about setting up a soft push prompt.
 
 ## HTTPS requirement
 
