@@ -507,7 +507,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 ## Shopify user syncing
 
-Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
+Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations captured in your Shopify store. User profile data can be collected from, but is not limited to, the following methods in Shopify:
 
 - Customer creates an account
 - Customer email or phone is collected in a Shopify pop-up form
