@@ -27,17 +27,10 @@ The Braze and Amplitude bi-directional integration allows you to [sync your Ampl
 
 A full list of the events and event properties that can be exported from Braze to Amplitude can be found in the following sections. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude.
 
-Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. For anonymous users, you will need to sync your Amplitude device ID with the Braze device ID in the SDK. For guidance on setting device
-
-
-
-
-
-When we send anonymous users to Amplitude via Currents, we match on device_id (because no external_user_id). In order for that to work, customers need to sync their Amplitude device ID with the Braze device ID in the SDK. This isn't currently called out in the docs. We should add a note to that effect and be sure to call it out, and add in a code sample for how to set the Braze Device ID.
-Snippet: Code samples should already be present elsewhere in the docs - please either reference them or copy in the snippets. Please reach out to David Bielik for any code samples not already available.
-
-
-
+Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. For the anonymous users, you will need to sync your Amplitude device ID with the Braze device ID in the SDK. For example:
+```java
+amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
+```
 
 You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
