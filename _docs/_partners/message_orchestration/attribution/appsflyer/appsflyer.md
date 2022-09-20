@@ -37,7 +37,7 @@ Make sure the following lines of code are inserted at the correct place—after 
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
 customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
@@ -51,9 +51,9 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 #### Unity
 
 ```
-Appboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.getDeviceId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
-customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
+customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
 
