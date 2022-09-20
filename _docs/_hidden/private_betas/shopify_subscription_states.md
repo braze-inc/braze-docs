@@ -533,7 +533,7 @@ Some of the user data and events collected by the Shopify integration will count
 {% endalert %}
 
 ## Using Shopify data in Braze
-Once you've completed your integration, take a look at our next Shopify [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
+Once you've completed your integration, take a look at our [next Shopify article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
 
 ## Shopify advanced settings
 
