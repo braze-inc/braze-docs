@@ -16,19 +16,44 @@ You only get one chance to ask users for push permission, so optimizing your pus
 
 To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
-To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS or Web.
+To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS, Android or Web.
 
 ## Prerequisites
 
 This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions. Note that some of these SDKs may not be released yet. Visit the following links to check the current version:
 
-{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
+
+#### Note for development teams
+This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
+<br><br>
+You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+```objc
+[sharedApplication registerForRemoteNotifications];
+```
+{% endtab %}
+{% tab swift %}
+```swift
+UIApplication.shared.registerForRemoteNotifications()
+```
+{% endtab %}
+{% tab JavaScript %}
+```javascript
+braze.requestPushPermission()
+// or
+appboy.registerAppboyPushMessages()
+```
+{% endtab %}
+{% endtabs %}
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message][2] as you usually would. You can choose to send to mobile apps, web browsers, or both, however the button on-click behavior to request push permissions is only available for iOS and Web. 
+[Create an in-app message][2] as you usually would.
 
-Next, select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a full-screen in-app message, an image is required. 
+Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a full-screen in-app message, an image is required. 
 
 ## Step 2: Build your message
 

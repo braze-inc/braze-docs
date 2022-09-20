@@ -46,7 +46,7 @@ Properties are defined as key-value pairs. Keys are `String` objects, and values
 {% tab JAVA %}
 
 ```java
-braze.logCustomEvent("YOUR-EVENT-NAME",
+Braze.logCustomEvent("YOUR-EVENT-NAME",
     new BrazeProperties(new JSONObject()
         .put("you", "can")
         .put("pass", false)
@@ -68,7 +68,7 @@ braze.logCustomEvent("YOUR-EVENT-NAME",
 {% tab KOTLIN %}
 
 ```kotlin
-braze.logCustomEvent("YOUR-EVENT-NAME",
+Braze.logCustomEvent("YOUR-EVENT-NAME",
     BrazeProperties()
         .addProperty("you", "can")
         .addProperty("pass", false)
@@ -93,6 +93,6 @@ The following keys are reserved and cannot be used as custom event properties:
 Refer to our [KDoc][2] for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-custom-event.html
 [3]: http://developer.android.com/reference/java/util/Date.html
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html

@@ -43,16 +43,10 @@ You can click on the **Engagement** tab to view information about the user's Con
 
 ![][9]
 
-## Social tab {#social-tab}
-
-The **Social** tab allows you to see the social accounts that a user has connected to the app. You're also able to view a user's activity on these connected social accounts.
-
-![][11]
 
 [7]: {% image_buster /assets/img_archive/user_search2.png %}
 [8]: {% image_buster /assets/img_archive/user_profile2.png %}
 [9]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
-[11]: {% image_buster /assets/img_archive/User_Profile_Social.png %}
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [14]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

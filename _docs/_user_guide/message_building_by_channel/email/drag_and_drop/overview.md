@@ -104,15 +104,19 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br>
 
+#### Content background
+
+You can add a background image to your row configuration, allowing you to incorporate more design and content in your email campaign.
+
 #### Adding Liquid 
 
 ![Options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
+Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! Next, take your generated Liquid snippet and add it to your email.
 
-Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
+##### Dynamic images
 
-Next, take your generated Liquid snippet and add it to your email.
+You can choose to incorporate dynamic images into your email messaging with Liquid. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image.
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
 
@@ -121,7 +125,7 @@ Once you've finished designing and building your email message, go to **Sending 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email

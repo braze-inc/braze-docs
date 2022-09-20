@@ -12,6 +12,12 @@ module Jekyll
         @original_ios = get_full_version(text, 'ios')
         @ios_changelog_ref = get_changelog_ref(@original_ios)
 
+        @original_ios2 = get_full_version(text, 'swift')
+        @ios_changelog_ref2 = get_changelog_ref(@original_ios2)
+
+        @original_ios3 = get_full_version(text, 'objc')
+        @ios_changelog_ref3 = get_changelog_ref(@original_ios3)
+
         @original_web = get_full_version(text, 'web')
         @web_changelog_ref = get_changelog_ref(@original_web)
 
@@ -31,7 +37,13 @@ module Jekyll
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/web/changelog/##{@web_changelog_ref}' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa fa-desktop'></i> &nbsp; Web: #{@original_web}+ &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_ios.nil?
-          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/##{@ios_changelog_ref}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS: #{@original_ios}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/##{@ios_changelog_ref}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS: #{@original_ios}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+        end
+        if !@original_ios2.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/##{@ios_changelog_ref2}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Swift: #{@original_ios2}+ &nbsp;<i class='fa fa-external-link'></i></a>"
+        end
+        if !@original_ios3.nil?
+          render_html += "<a href='/docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/##{@ios_changelog_ref3}' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa fa-apple'></i> &nbsp; iOS Objective-C: #{@original_ios3} &nbsp;<i class='fa fa-external-link'></i></a>"
         end
         if !@original_android.nil?
           render_html += "<a href='/docs/developer_guide/platform_integration_guides/android/changelog/##{@android_changelog_ref}' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa fa-android'></i> &nbsp; Android: #{@original_android}+ &nbsp;<i class='fa fa-external-link'></i></a>"
@@ -47,7 +59,7 @@ module Jekyll
       private 
 
       def get_full_version(text, platform)
-        query = /.*#{platform}:([\w\.]+) .*/
+        query = /.*#{platform}:([\w\.\-]+) .*/
         match = text.match(query)
         if match.nil?
           return nil

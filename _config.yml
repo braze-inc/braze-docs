@@ -83,7 +83,7 @@ collections:
   api:
     title: API
     output: true
-    default_nav_url: basics/
+    default_nav_url: home/
     page_order: 4
   partners:
     title: Technology Partners
@@ -117,6 +117,7 @@ defaults:
       default_nav_url: home/
       search_rank: 0
       toc_minheaders: 2
+      toc_headers: "h2, h3"
   -
     scope:
       path: ""

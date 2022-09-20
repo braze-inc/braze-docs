@@ -13,7 +13,7 @@ channel:
 
 # News Feed integration
 
-In Android, the News Feed is implemented as a [fragment][2] available in the Braze Android UI project. Refer to Google's documentation on [Fragments][3] for information on adding a fragment to an activity.
+In Android, the News Feed is implemented as a [fragment][2] available in the Braze Android UI project. Refer to [Google's documentation on fragments][3] for information on adding a fragment to an activity.
 
 The `AppboyFeedFragment` class will automatically refresh and display the contents of the News Feed and log usage analytics. The cards that can appear in a user's News Feed are set on the Braze dashboard.
 
@@ -136,15 +136,15 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
 
-To log a display of the feed, call [`Appboy.logFeedDisplayed()`][6].
+To log a display of the feed, call [`Braze.logFeedDisplayed()`][6].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
+[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-feed-displayed.html
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
 [7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
 [8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types

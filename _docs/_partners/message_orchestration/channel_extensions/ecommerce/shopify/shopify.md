@@ -4,6 +4,7 @@ article_title: "Shopify"
 description: "This article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases, or retarget users based on their previous purchases."
 page_type: partner
 search_tag: Partner
+alias: /shopify_create_update/
 
 ---
 
@@ -11,7 +12,7 @@ search_tag: Partner
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 
-The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase or retarget users based on their previous purchases. 
+The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
 
 <!--
 For some Canvas and Campaign examples, check out our guide here. 
@@ -28,6 +29,7 @@ This integration will create alias user profiles if we are unable to match Shopi
 | Shopify store | You must have an active [Shopify](https://www.shopify.com) store.<br><br>Note that at this time, you are only able to connect one Shopify store per app group. |
 | Event property segmentation enabled | To ensure you can segment your Shopify events properties, you must work with your customer success manager or [Braze support]({{site.baseurl}}/braze_support/) to confirm that you have event property segmentation enabled for your dashboard. |
 | Nested custom attribute support | This will be enabled with the Spotify integration.<br><br>You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
+| User permissions | You have to be either a:<br>• Store owner<br> • Staff<br>• Member with all **General** and **Online Store** settings, as well as these additional admin permissions selected:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• View apps developed by staff and collaborators<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage and install apps and channels |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -72,7 +74,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | --- | --- | --- |
 | `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates a webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process, including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The abandonment default is set to **1 hour** but is configurable within the **Advanced Settings** section on the Shopify partner page. |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
-| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
+| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify Product ID._ |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order’s payment status is changed to paid. An order is in paid status after a credit card payment has been captured, or when an order using a manually payment method is marked as paid. |
 | `shopify_partially_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Partially fulfilled order events will trigger when some of the line items in an order are fulfilled successfully. |
 | `shopify_fulfilled_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Fulfilled order events will trigger when the fulfillment of all of the line items in a fulfillment order is successful. |
@@ -90,12 +92,12 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "time": "2020-09-10T18:53:37-04:00",
   "properties": {
     "applied_discount": {
-      "amount": "30.00",
+      "amount": 30,
       "title": "XYZPromotion",
       "description": "Promotionalitemforblackfriday."
     },
     "discount_code": "30_DOLLARS_OFF",
-    "total_price": "398.00",
+    "total_price": 398,
     "line_items": [
       {
         "product_id": 632910392,
@@ -104,14 +106,13 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "IPodNano-8GB",
         "vendor": "Apple",
         "properties": "nil",
-        "price": "199.00"
+        "price": 199
       }
     ],
     "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
     "checkout_id": "123123123"
   }
 }
-
 ```
 {% endsubtab %}
 {% subtab Order Created Event %}
@@ -120,8 +121,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "name": "shopify_created_order",
   "time": "2020-09-10T18:53:45-04:00",
   "properties": {
-    "total_discounts": "5.00",
-    "total_price": "403.00",
+    "total_discounts": 5,
+    "total_price": 403,
     "discount_codes": [],
     "line_items": [
       {
@@ -132,7 +133,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "nil",
         "name": "IPodNano-8GB",
         "properties": [],
-        "price": "199.00"
+        "price": 199.00
       },
       {
         "product_id": 632910392,
@@ -142,7 +143,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "nil",
         "name": "IPodNano-8GB",
         "properties": [],
-        "price": "199.00"
+        "price": 199.00
       }
     ],
     "order_id": 820982911946154500,
@@ -153,11 +154,11 @@ Once the app installation is complete, Braze automatically creates your webhook 
     "shipping": [
       {
         "title": "Standard",
-        "price": "10.00"
+        "price": 10
       },
       {
         "title": "Expedited",
-        "price": "25.00"
+        "price": 25
       }
     ],
     "tags": "heavy"
@@ -170,7 +171,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {
   "product_id": 632910392,
   "currency": "USD",
-  "price": "199.00",
+  "price": 199,
   "time": "2020-09-10T18:53:45-04:00",
   "quantity": 1,
   "source": "shopify",
@@ -201,19 +202,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
-        "price": "80.00",
+        "price": 80,
         "fulfillment_status": null
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
     "total_price": "141.54",
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1092,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -243,19 +244,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
-        "price": "60.00",
+        "price": 60,
         "fulfillment_status": "fulfilled"
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "130.66",
+    "total_price": 130.66,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1093,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -280,7 +281,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
           {
             "fulfillment_status": "fulfilled",
             "name": "Dark Denim Top",
-            "price": "60.00",
+            "price": 60,
             "product_id": 6143032066239,
             "properties": [],
             "quantity": 1,
@@ -314,19 +315,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
-        "price": "60.00",
+        "price": 60,
         "fulfillment_status": "fulfilled"
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "130.66",
+    "total_price": 130.66,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1093,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -351,7 +352,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
           {
             "fulfillment_status": "fulfilled",
             "name": "Dark Denim Top",
-            "price": "60.00",
+            "price": 60,
             "product_id": 6143032066239,
             "quantity": 1,
             "requires_shipping": true,
@@ -383,19 +384,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
-        "price": "80.00",
+        "price": 80,
         "fulfillment_status": null
       }
     ],
     "shipping": [
       {
         "title": "Standard",
-        "price": "0.00"
+        "price": 0
       }
     ],
-    "total_price": "141.54",
+    "total_price": 141.54,
     "confirmed": true,
-    "total_discounts": "0.00",
+    "total_discounts": 0,
     "discount_codes": [],
     "order_number": 1092,
     "order_status_url": "https://test-store.myshopify.com/",
@@ -426,7 +427,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "LED High Tops",
         "vendor": "partners-demo",
         "properties": [],
-        "price": "80.00"
+        "price": 80
       },
       {
         "quantity": 1,
@@ -435,7 +436,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "title": "Chequered Red Shirt",
         "vendor": "partners-demo",
         "properties": [],
-        "price": "50.00"
+        "price": 50
       }
     ]
   },
@@ -515,12 +516,19 @@ Once the app installation is complete, Braze automatically creates your webhook 
 - Country
 
 {% alert note %}
-Braze will only update supported Shopify custom attributes, and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and the customer will not be charged a data point.
+Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and the customer will not be charged a data point.
 {% endalert %}
 
 ## Shopify user syncing
 
-Braze will map the supported Shopify data to user profiles using the customer's email address or phone number. 
+Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations being captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
+
+- Customer creates an account
+- Customer email or phone is collected in a Shopify pop-up form
+- Customer email is collected on your store from Shopify's footer
+- Customer email or phone number is collected through a third-party tool connected to Shopify
+
+Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
 
 **Identified User Profiles**<br>
 - If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user.
@@ -531,6 +539,12 @@ Braze will map the supported Shopify data to user profiles using the customer's 
   - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+
+If Braze does not find a match for the email address or phone number, we will create a new user profile with the supported Shopify data.
+
+{% alert important %}
+Some of the user data and events collected by the Shopify integration will count towards your data point usage. Refer to our [data point policy]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
+{% endalert %}
 
 ## Using Shopify data in Braze
 Once you've completed your integration, take a look at our next Shopify [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) to learn how to use Shopify data in Braze for personalization and segmentation in your campaigns and Canvases.
@@ -545,7 +559,7 @@ By default, Braze will automatically set the delay to trigger the `shopify_aband
 
 ### Set your preferred product identifier
 
-If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the Product ID used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
+If you have included Braze purchase events within your Shopify integration setup, by default Braze will set the Shopify Product ID as the `product_id` used within Braze’s purchase event. This will then be used when you filter for products purchased in Y days, or when personalizing content in your message using Liquid.
 
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
@@ -574,7 +588,7 @@ If this happens, you will be able to select **Retry Setup** and start the instal
 {% enddetails %}
 
 {% details How do I uninstall the Braze application from my Shopify store? %}
-You will need to go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application<br><br>
+Go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application.<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
 {% enddetails %}
 

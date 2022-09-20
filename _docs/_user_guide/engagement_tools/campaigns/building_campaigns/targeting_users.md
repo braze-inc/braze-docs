@@ -37,7 +37,7 @@ To target users without adding a segment, you can use a series of filters. This 
 
 ## Audience summary
 
-Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
+Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
 ![][27]
 

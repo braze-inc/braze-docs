@@ -10,11 +10,7 @@ page_order: 5
 
 # Persistent entry properties
 
-When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas V2 workflow. 
-
-{% alert important %}
-This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas components. Reach out to your Braze account manager for more information.
-{% endalert %}
+When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas Flow workflow. 
 
 Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
@@ -70,7 +66,11 @@ url -X POST \
         {
           "external_user_id": Customer_123,
           "canvas_entry_properties": {
-            "food_allergies": “dairy”
+            "food_allergies": ["dairy", "soy"],
+            "nutrition": {
+              "calories_per_serving": 200,
+              "serving_size_in_ounces": 4
+            }
           }
         }
       ]

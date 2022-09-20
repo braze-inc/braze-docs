@@ -32,7 +32,7 @@ The Braze and Adjust integration lets you import non-organic install attribution
 If you have an Android app, you will need to pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addSessionPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.onCreate.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getInstallTrackingId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS 

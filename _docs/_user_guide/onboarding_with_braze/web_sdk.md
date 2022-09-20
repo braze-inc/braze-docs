@@ -24,7 +24,7 @@ You can send web messages to engage with users directly in their web/mobile brow
 
 ## Web push
 
-![Push displayed on a web browser versus mobile device][12]{: style="float:right;max-width:60%;margin-left:15px;border:0;"}
+![Push displayed on a web browser][12]{: style="float:right;max-width:60%;margin-left:20px;border:0;"}
 
 Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. 
 
@@ -60,5 +60,5 @@ This will allow you to target users based on their behavior on the web only. If 
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
-[13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
+[12]: {% image_buster /assets/img_archive/web_push_macbook.png %}
+[13]: {% image_buster /assets/img_archive/web_push_prompt.png %}

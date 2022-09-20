@@ -9,11 +9,11 @@ description: "This article explains the different components of the Braze Recipi
 
 # Recipients object specification
 
-The Recipients Object allows you to request or write information in our endpoints.
+The recipients object allows you to request or write information in our endpoints.
 
 Either `external_user_id` or `user_alias` is required in this object. **Requests must specify only one.**
 
-The Recipients object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+The recipients object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object body
 

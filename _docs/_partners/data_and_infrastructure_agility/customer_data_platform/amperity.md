@@ -74,7 +74,7 @@ Once the query has run, you can either:
 
 ##### Lambda function 
 
-The following [Lambda function](https://github.com/braze-inc/growth-shares-lambda-user-csv-import) is a serverless application that allows you to easily post user attribute data from an Amperity CSV file directly to Braze through the Braze users/track/ endpoint. This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. To read more, visit our [dedicated Lambda function article](https://www.braze.com/docs/user_csv_lambda/).
+The following [Lambda function](https://github.com/braze-inc/growth-shares-lambda-user-csv-import) is a serverless application that allows you to easily post user attribute data from an Amperity CSV file directly to Braze through the Braze users/track/ endpoint. This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. To read more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/).
 
 The Lambda function can handle large files and uploads, but the function will stop execution after 10 minutes due to Lambda's time limits. This process will then launch another Lambda instance to finish processing the remaining part of the file.
 
@@ -134,7 +134,7 @@ The following resources are created:
 To run the function, drop a user attribute CSV file in the newly created S3 bucket.
 
 {% alert important %}
-To read more about different aspects of the Lambda function, such as monitoring and logging, updating an existing function, fatal errors, and more, visit our [dedicated Lambda function article](https://www.braze.com/docs/user_csv_lambda/). 
+To read more about different aspects of the Lambda function, such as monitoring and logging, updating an existing function, fatal errors, and more, visit our [dedicated Lambda function article]({{site.baseurl}}/user_csv_lambda/). 
 {% endalert %}
 
 ### Manual upload via CSV {#manual-upload}

@@ -93,8 +93,8 @@ validurls['/docs/api/objects_filters/webhook_object/'] = '/docs/api/objects_filt
 validurls['/docs/api/objects_filters/windows_objects/'] = '/docs/api/objects_filters/messaging/windows_objects/';
 validurls['/docs/api/objects_filters/content_cards_object/'] = '/docs/api/objects_filters/messaging/content_cards_object/';
 
-validurls['/docs/rest_api/'] = '/docs/api/basics/';
-validurls['/docs/rest_apis/'] = '/docs/api/basics/';
+validurls['/docs/rest_api/'] = '/docs/api/home/';
+validurls['/docs/rest_apis/'] = '/docs/api/home/';
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/home/';
 validurls['/docs/home/'] = '/docs/user_guide/introduction/';
@@ -521,6 +521,7 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/push_notificati
 validurls['/docs/developer_guide/platform_integration_guides/web/in-app_messaging/overview/'] = '/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration/';
 validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/'] = '/docs/user_guide/message_building_by_channel/push/push_primer_messages';
+validurls['/docs/day-of-custom-attribute-behavior'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#time';
 
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/overview/'] = '/docs/user_guide/message_building_by_channel/email/drag_and_drop/';
 
@@ -532,3 +533,20 @@ validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_a
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
 validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/'] = '/docs/post-launch_edits';
+
+validurls['/docs/user_guide/engagement_tools/canvas/faqs/#canvas-flow/'] = '/docs/canvas_v2_101/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/about/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
+
+validurls['/docs/view_pii'] = '/docs/user_guide/administrative/company_settings/security_settings/#view-pii';
+
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#creating-tests'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewing-results-of-a-multivariate-campaign'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
+

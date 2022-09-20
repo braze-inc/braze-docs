@@ -1,7 +1,7 @@
 ---
 nav_title: Subscription Groups
 article_title: Subscription Group Endpoints
-page_order: 4
+page_order: 5
 layout: featured
 
 #Required
@@ -23,6 +23,9 @@ guide_featured_list:
   - name: "POST: Update User's Subscription Group Status"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
     fa_icon: fas fa-user-plus
+  - name: "POST: Update User's Subscription Group Status V2"
+    link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
+    fa_icon: fas fa-user-edit
 ---
 <br>
 <br>

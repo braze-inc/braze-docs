@@ -6,7 +6,7 @@ page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
 
 ---
-
+ 
 {% include archive/ios-swift-upgrade.md %}
 
 
@@ -47,7 +47,8 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - Note that if the product identifier is empty, the purchase will not be logged to Braze.
 
 ### Adding properties {#properties-purchases}
-You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
+
+You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
 Refer to the [iOS class documentation][8] for additional details.
 
@@ -83,6 +84,9 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 {% alert tip %}
 If you pass in a value of 10 USD and a quantity of 3, that will log to the user's profile as three purchases of 10 dollars for a total of 30 dollars.
 {% endalert %}
+
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### Reserved keys
 

@@ -11,13 +11,9 @@ channel: push
 
 # Soft push prompt
 
-{% alert tip %}
-Braze now supports push registration in-app messages out-of-the-box with no coding required! To learn more visit our [Push primer guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
-{% endalert %}
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission, you can never ask them again. 
-
-This can be done simply through Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#trigger-types) for a seamless user experience. Instead of calling `requestPushPermission()` directly as described in the standard [Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), instead.
+This can be done by implementing the standard [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use Braze's [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
 
 {% include archive/web-v4-rename.md %}
 

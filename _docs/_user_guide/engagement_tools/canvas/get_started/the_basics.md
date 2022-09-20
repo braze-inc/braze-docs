@@ -10,6 +10,37 @@ tool: Canvas
 
 # Canvas: The basics
 
+## Anatomy of Canvas
+
+Here's an overview of the anatomy of a Canvas:
+
+{% tabs %}
+  {% tab Canvas %}
+    **Canvas** refers to the workspace and overall visualization.<br><br>
+    ![]({% image_buster /assets/img/Canvas2.png %})
+  {% endtab %}
+
+  {% tab Journey %}
+    A **journey or customer journey** is an individual user's experience within the Canvas.<br><br>
+    ![]({% image_buster /assets/img_archive/Journey_2.png %})
+  {% endtab %}
+
+  {% tab Entry Step %}
+    **The Entry Step** and **The Entry Wizard** are the first steps you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.<br><br>
+    ![]({% image_buster /assets/img/entry-wizard.gif %})
+  {% endtab %}
+
+  {% tab Variants %}
+    **Variants** are the variant flows marketers build that create personalized journeys.<br><br>
+    ![]({% image_buster /assets/img/variants.gif %})
+  {% endtab %}
+
+  {% tab Steps %}
+    **Steps** are individual decision points (like messages) within a variant.<br><br>
+    ![]({% image_buster /assets/img/steps.gif %})
+  {% endtab %}
+{% endtabs %}
+
 ## Finding your strategy with the five W’s of visualization
 
 Answer the following questions to get started:
@@ -33,8 +64,7 @@ Answer the following questions to get started:
   * Retargeting
   * Marketing Activity
   * User Attributes
-  * Install Attribution
-  * Social Activity<br><br>
+  * Install Attribution<br><br>
 
 4. **Why** am I creating this Canvas?
   * **Start Session**: I want them coming back and engaging with the app.
@@ -56,37 +86,6 @@ Answer the following questions to get started:
   * **Content**: Build creative copy with strong appeals, value propositions, and CTAs
   * **Targeting**: Add additional segments and filters
   * **Triggers**: Use customer actions to trigger messages
-
-## Anatomy of Canvas
-
-Here's an overview of the anatomy of a Canvas:
-
-{% tabs %}
-  {% tab Canvas %}
-    **Canvas** refers to the workspace and overall visualization.<br><br>
-    ![Journey]({% image_buster /assets/img/Canvas2.png %})
-  {% endtab %}
-
-  {% tab Journey %}
-    A **journey or customer journey** is an individual user's experience within the Canvas.<br><br>
-    ![Journey for New User]({% image_buster /assets/img_archive/Journey_2.png %})
-  {% endtab %}
-
-  {% tab Entry Step %}
-    **The Entry Step** and **The Entry Wizard** are the first steps you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.<br><br>
-    ![Journey_3]({% image_buster /assets/img/entry-wizard.gif %})
-  {% endtab %}
-
-  {% tab Variants %}
-    **Variants** are the variant flows marketers build that create personalized journeys.<br><br>
-    ![Journey_3]({% image_buster /assets/img/variants.gif %})
-  {% endtab %}
-
-  {% tab Steps %}
-    **Steps** are individual decision points (like messages) within a variant.<br><br>
-    ![Journey_4]({% image_buster /assets/img/steps.gif %})
-  {% endtab %}
-{% endtabs %}
 
 ## Building the customer journey in Canvas
 
@@ -115,7 +114,6 @@ Who are you trying to reach? Here you can use a pre-defined segment and add furt
 | Marketing Activity | Marketing filters segment customers based on universal behaviors like last engagement or received campaigns. |
 | User Attributes | User attribute filters segment customers by their constant attributes and characteristics. |
 | Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad. |
-| Social Activity | Social activity filters segment customers by their social media activity namely through connection to Facebook and Twitter. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Only the users who match these target audience criteria can enter the journey.

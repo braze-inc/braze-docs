@@ -169,7 +169,7 @@ class GlideIntegrationApplication : Application() {
 [gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-64]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
-[gifs-66]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-image-loader.html
+[gifs-66]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html
 [gifs-67]: https://bumptech.github.io/glide/
 [gifs-70]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html
 [gifs-71]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html

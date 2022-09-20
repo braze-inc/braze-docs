@@ -47,7 +47,122 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
-## August 2022
+## August 23, 2022 release
+
+### Developer portal
+
+Connect, learn, and get inspired with other developers building with Braze. Check out our [developer portal](https://www.braze.com/dev-portal) and join the Braze developer community on Slack.
+
+### Message archiving
+
+[Message Archiving]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/message_archiving/) is an add-on feature that lets you save a copy of messages sent to users for archival or compliance purposes to your S3 bucket.
+
+### Canvas entry properties and event properties
+
+Though similar in name, Canvas entry properties and event properties function differently within your Canvas workflows. Learn more about when to use each property and the differences in behavior in [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+
+### Tracked link aliases
+
+You can now view all the link aliases you're tracking in your emails from **Manage Settings** > **Email Settings** > **Link Aliasing Settings**. For more information, refer to [Tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#tracking-links).
+
+### Liquid 5
+
+Braze has updated support to Liquid up to and including **Liquid 5 from Shopify**. For new Braze users, Liquid 5 is generally available. For existing Braze users, Liquid 5 is in early access. Learn more about [what's new with Liquid 5]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#whats-new-with-liquid-5).
+
+### Best practices for campaigns and Canvases
+
+Creating successful campaigns and Canvases can be complex, so check out our list of best practices you should be aware of to make the most of your messaging.
+
+- [Campaign best practices]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/)
+- [Canvas best practices]({{site.baseurl}}/user_guide/engagement_tools/canvas/best_practices/)
+
+### Searching for campaigns
+
+Did you know you can search for a campaign by its API identifier? Learn more about this and other ways to filter and find campaigns in [Searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/).
+
+### New Braze partnerships
+
+#### IAM Studio - Message templates
+
+With the Braze and [IAM Studio]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/iam_studio/) integration, you can easily insert customizable in-app message templates into your Braze in-app messages, offering image replacement, text modification, deep link settings, custom attributes, and event settings. Using IAM Studio, you can reduce message production time and dedicate more time to content planning.
+
+#### actionable.me - Analytics
+
+The Braze and [actionable.me]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/actionableme/) integration allows you to deploy a service to monitor your progress in the utilization of Braze. Through a combination of tools and processes, they will rapidly benchmark your CRM performance, identify new opportunities and provide recommendations on how to perform better.
+
+#### Storyly - Cohort import
+
+The Braze and [Storyly]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/storyly/) integration allows you to use your segments in Braze as an audience in the Storyly platform. With this integration, you can:
+
+- Target your segments with specific stories
+- Use user attributes to personalize your story contents
+
+#### Lokalise - Localization
+
+The Braze and [Lokalise]({{site.baseurl}}/partners/message_personalization/localization/lokalise/) integration leverages Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
+
+#### Quikly - Retargeting
+
+The Braze and [Quikly]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/quikly/) partnership allows you to accelerate conversions on events within a Braze customer journey. Quikly does this by using urgency psychology to motivate consumers in fun — and instant — ways. For example, brands can use Quikly to immediately acquire new email and SMS subscribers directly into Braze or to motivate other key marketing objectives like downloading your mobile app.
+
+#### DataGrail - Data privacy and compliance
+
+The Braze and [DataGrail]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/datagrail/) integration allows you to detect consumer data collected and stored within Braze to quickly process DSRs (access, delete, and do-not-sell requests). Braze will be added to an accurate blueprint of where consumer data lives in your organization with automated data mapping — no more surveys or spreadsheets are needed to maintain a privacy framework or produce a record of processing activities (RoPA).
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK 4.2.0–4.2.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#421)
+- [iOS 4.5.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#450) (Objective-C)
+- [iOS Swift 5.1.0–5.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#520)
+- [Android 23.0.0–23.0.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2301)
+    - `BaseContentCardView.bindViewHolder()` now takes `Card` instead of generic type.
+
+## July 26, 2022 release
+
+### Canvas Flow
+The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#editing-a-step) has been released. With Canvas Flow you get access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits).
+
+![]({% image_buster /assets/img/canvas_flow.png %})
+
+### Array of objects
+Use an [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects#array-of-objects) to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
+
+### Updated partner integrations
+[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) and [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) now have updated integration steps. If you leverage these partners, visit their documentation to ensure you have followed the most recent setup. 
+
+### Shopify requirements
+- Required user permissions listed under [prerequisites]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) have been updated. 
+- Example Shopify [payloads]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#supported-shopify-events) that include the `price`, `total_price`, `total_discounts`, and `amount` properties have been updated to format these properties as numbers instead of strings.
+
+### Prediction updates
+The maximum time window for churn predictions and purchase predictions has increased from 14 days to 60 days.  
+
+### SDK updates
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs. 
+- [Web SDK 4.1.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#410)
+- [Cordova SDK 2.30.1](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2301)
+- [Unity SDK 3.8.1](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#381)
+- [Swift SDK 5.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#501)
+- [Roku SDK 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
+- [React Native SDK 1.37.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1370)
+  - The Braze React Native SDK now exports its default object as an ES Module. If you currently import the SDK using `require()`, you will need to now import it as a standard ES Module (e.g., import Braze from "`react-native-appboy-sdk`").
+- [Android SDK 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
+  - `Appboy.java` is now `Braze.kt`. Kotlin clients will need to update their code to support the use of Kotlin properties on the Braze singleton where needed.
+    - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` is now `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. If using Kotlin, use the property `Braze.registeredPushToken`.
+    - `Braze.getDeviceId` is now just `Braze.deviceId` for Kotlin.
+    - `Braze.enableMockNetworkAppboyRequestsAndDropEventsMode` is now `Braze.enableMockNetworkRequestsAndDropEventsMode()`.
+    - `Appboy.java` has been removed. For example, calls like `Appboy.getInstance()` will need to be `Braze.getInstance()` moving forward.
+    - Replaced `setCustomAppboyNotificationFactory()` with `setCustomBrazeNotificationFactory()` / `customBrazeNotificationFactory`.
+    - Renamed `enableMockAppboyNetworkRequestsAndDropEventsMode` to `enableMockNetworkRequestsAndDropEventsMode`.
+  - Moved `com.appboy.IBrazeEndpointProvider` to `com.braze.IBrazeEndpointProvider`.
+  - Renamed `com.appboy.events.IEventSubscriber` to `com.braze.events.IEventSubscriber`.
+  - Removed `Appboy.registerAppboyPushMessages()` / `Appboy.getAppboyPushMessageRegistrationId()`. Replaced with `getRegisteredPushToken()` / `setRegisteredPushToken()`.
+  - Replaced `IAppboyNotificationFactory` with `IBrazeNotificationFactory`.
+  - Removed `com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener`. Use `com.braze.ui.inappmessage.listeners.IHtmlInAppMessageActionListener` instead.
+
+## June 28, 2022 release
 
 ### Delivery validation for Canvas Message Steps
 
@@ -75,7 +190,7 @@ Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our
 
 ![Braze learning logo in the custom attributes article, which takes you to the Braze Learning course for custom attributes]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
 
-## July 2022
+## May 31, 2022 release
 
 ### Inbox Vision
 
@@ -135,7 +250,7 @@ The Braze and [Survicate]({{site.baseurl}}/partners/message_orchestration/channe
 
 The Braze and [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstake or contest entry information into Braze to use in campaigns or Canvases. 
 
-## June 2022
+## May 3, 2022 release
 
 ### Campaign approval
 
@@ -173,7 +288,7 @@ The Braze SDKs team has released Web SDK v4. For a list of breaking changes, upd
 
 Support for Grouparoo has been discontinued as of April 2022.
 
-## May 2022
+## April 5, 2022 release
 
 ### Filter by campaign or Canvas attribution
 You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
@@ -204,7 +319,7 @@ As of March 24, 2022, the [Braze Baidu Push Integration]({{site.baseurl}}/develo
 
 The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/) integration allows you to seamlessly control the flow of information between the two systems. Now with Currents, you can also connect data to Tealium to make it actionable across the entire growth stack.
 
-## April 2022
+## March 8, 2022 release
 
 ### In-app messages for Roku
 
@@ -265,51 +380,5 @@ The Braze and [Lexer]({{site.baseurl}}/partners/data_and_infrastructure_agility/
 #### Knak - Email orchestration
 
 The Braze and [Knak]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/knak/) integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding.
-
-## March 2022
-
-### Canvas Action Paths
-
-[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) allow you to sort your users based on their actions. Using Action Paths, you can:
-- Customize user paths based on a specific action. 
-- Hold users for a given duration to prioritize their next path based on their actions during this evaluation period. 
-
-Access to Action Paths will be rolled out slowly to all Braze instances. Contact your Braze account manager to learn more.
-
-### API endpoint reference page
-
-Looking for a quick reference page of all available Braze endpoints? Visit our [API endpoint index]({{site.baseurl}}/api/endpoints/).
-
-### Transifex v2 and v2.5 API deprecation
-Beginning April 7, 2022, [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#transifex) will be deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. Users of this partner integration are urged to update their API version before this date.
-
-### Available custom attribute data types
-Coming soon! Object and object array data type support for custom attributes is arriving in Spring 2022.
-
-## February 2022
-
-### Canvas Experiment Paths Step
-The new Canvas Experiment Paths Step helps track path performance by testing multiple Canvas paths against each other and a control group at any point in the user journey. Now, you can leverage the analytics gathered here to further determine which path is most effective. Read more about how to create a [Experiment Paths Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
-
-### Handling invalid phone numbers
-You've encountered a scenario where a user has entered an invalid phone number. Here's your solution! Braze marks these invalid phone numbers and will not attempt to send any further communications to those numbers. Read more on how Braze [handles invalid phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers/).
-
-### New SMS endpoints
-You can now manage invalid phone numbers using the new [Braze SMS Endpoints]({{site.baseurl}}/api/endpoints/sms/)! This update features:
-- [GET: Query or list invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) returns a list of phone numbers that are considered "invalid" by Braze.
-- [POST: Remove invalid phone numbers endpoint]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) allows you to remove the "invalid" phone numbers from Braze's invalid list.
-
-### Rate limits
-API rate limits have been included for all [Braze Endpoint articles]({{site.baseurl}}/api/basics/#nav_top_endpoints). You can now easily view the rate limits by request type. For more information on rate limits, check out our article on [API rate limits]({{site.baseurl}}/api/api_limits/).
-
-### New REST endpoint
-Braze has added a [new EU-02 REST Endpoint]({{site.baseurl}}/api/basics/#api-definitions).
-
-### About email
-Email messages are a great way to connect with your customers. For a quick introduction on how you can customize and leverage email messages, check out our new article on [About email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/). 
-
-### About in-app messages
-In-app messages deliver rich content to your users who are active within your app. You can easily engage with your active customers by creating in-app messges for personalized greetings or feature adoption. To learn about the advantages and message types, check out our new article on [About in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/).
-
 
 [support]: {{site.baseurl}}/support_contact/

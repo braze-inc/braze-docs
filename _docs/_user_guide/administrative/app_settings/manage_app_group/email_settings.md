@@ -36,12 +36,12 @@ When setting your "From" addresses, make sure your "From" email domain matches y
 The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
 {% alert important %} 
-The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas step since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
+The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
 {% endalert %}
 
 ![BCC Address section of the Email Settings tab.][11]
 
-Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas step. If you'd like to override this at the message level, you can select **No BCC** when setting up your message.
+Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. If you'd like to override this at the message level, you can select **No BCC** when setting up your message.
 
 If you require that all email messages sent from Braze have a BCC address included, you can check **Require a BCC address for all your email campaigns**. This will require you to select a default address which will be automatically selected on new email campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. 
 

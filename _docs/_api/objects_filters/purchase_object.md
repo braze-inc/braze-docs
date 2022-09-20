@@ -13,7 +13,7 @@ description: "This article explains the different components of a purchase objec
 
 ## What is a purchase object?
 
-A Purchase Object is an object that gets passed through the API when a purchase has been made. Each Purchase Object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
+A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
 
 ### Purchase object
 
@@ -23,7 +23,7 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "external_id" : (optional, string) External User ID,
   "user_alias" : (optional, User Alias Object), User Alias,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (required, string) see App Identifier,
+  "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string), identifier for the purchase, e.g., Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
@@ -54,10 +54,37 @@ Within the purchase object, The `product_id` is an identifier for the purchase (
 
 ### Product ID naming conventions
 
-At Braze, we offer some general naming conventions for the purchase object `product_id`.
-When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
+At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
 This helps make products easy to identify for segmentation and triggering.
+
+### Log purchases at the order level
+
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (e.g., Online Order or Completed Order).
+
+For example, to log purchases at the order level in the Web SDK: 
+```html
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+{
+  "purchases" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "Completed Order",
+      "currency" : "USD",
+      "price" : 219.98,
+      "time" : "2013-07-16T19:20:30+01:00",
+      "properties" : {
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        ]
+      }
+    }
+  ]
+}
+```
 
 ## Purchase properties object
 

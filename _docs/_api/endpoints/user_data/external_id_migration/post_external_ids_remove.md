@@ -71,11 +71,9 @@ The response will confirm all successful removals, as well as unsuccessful remov
 
 ```
 {
-
   "message" : (string) status message,
-  "removed_ids" : (array of successful Remove Operations),
-  "removal_errors": (array of any <minor error message>)
-
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 

@@ -62,10 +62,12 @@ The Microsoft address local part must follow these parameters:
 
 - Can start with a character (a-z), an underscore (_), or a number (0-9).  
 - Can contain any alphanumeric character (a-z or 0-9) or an underscore (_)
-- Can contain the following characters (.) or (-)
+- Can contain the following characters: (.) or (-) or (+)
 - Cannot start with a period (.) or hyphen (-)
 - Cannot contain two or more consecutive periods (.)
-- Cannot end with a period (.)
+- Cannot end with a period (.) or plus symbol (+)
+
+Note that the validation test checks if the local part, preceding the "+", matches the regex.
 
 ### All other domains
 

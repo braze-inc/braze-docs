@@ -21,10 +21,6 @@ Objects can contain existing [data types][1], such as:
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
-{% alert important %}
-Support for nested custom attributes is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Limitations
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
@@ -34,7 +30,7 @@ Support for nested custom attributes is currently in early access. Contact your 
 
 ## API request body
 
-{% tabs local %}
+{% tabs %}
 {% tab Create %}
 The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
@@ -44,30 +40,14 @@ The following is a `/users/track` example with a "Most Played Song" object. To c
     {
       "external_id": "user_id",
       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
-          }
-      }
-    }
-  ]
-}
-```
-
-Here's another `/users/track` example with an "Important Dates" object to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
-
-```json
-{
-  "attributes": [ 
-    {
-      "external_id": "time_with_nca_test",
-      "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "genre": "Jazz",
+        "play_analytics": {
+            "count": 1000,
+            "top_10_listeners": true
+        }
       }
     }
   ]
@@ -96,14 +76,15 @@ After this request is received, the custom attribute object will now look like t
 
 ```json
 "most_played_song": {
-    "song_name": "Solea",
-    "artist_name" : "Miles Davis",
-    "album_name": "Sketches of Spain",
-    "year_released": 1960,
-    "genre": "Jazz",
-    "play_analytics": {
-        "count": 1000,
-        "top_10_listeners": true
+  "song_name": "Solea",
+  "artist_name" : "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "year_released": 1960,
+  "genre": "Jazz",
+  "play_analytics": {
+     "count": 1000,
+     "top_10_listeners": true
+  }
 }
 ```
 
@@ -128,6 +109,24 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 {% endtab %}
 {% endtabs %}
+
+#### Capturing dates as object properties
+
+To capture dates as object properties, you must use the `$time` key. In the following example, an "Important Dates" object is used to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+      }
+    }
+  ]
+}
+```
 
 ## Liquid templating
 
@@ -216,6 +215,10 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
+### Regenerate schemas {#regenerate-schema}
+
+After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus button to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
+
 ## Data Points
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
@@ -225,15 +228,16 @@ Any key that is updated consumes a data point. For example, this object initiali
   "attributes": [
     {
       "external_id": "user_id",
-       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "year_released": 1960,
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
+      "most_played_song": {
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "year_released": 1960,
+        "genre": "Jazz",
+        "play_analytics": {
+          "count": 1000,
+          "top_10_listeners": true
+        }
       }
     }
   ]

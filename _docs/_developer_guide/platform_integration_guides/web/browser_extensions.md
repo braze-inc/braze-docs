@@ -21,6 +21,10 @@ In general, since Extensions are simply HTML and Javascript, you can use Braze f
 * **Content Cards**: Add a feed of native cards to your extension for onboarding or promotional content.
 * **Web Push**: Send timely notifications even when your web page is not currently open.
 
+## What's not supported
+
+* Manifest v3 Service Workers do not support importing modules meant for web environments.
+
 ## Extension types
 
 Braze can be included in the following areas of your extension:
@@ -28,7 +32,7 @@ Braze can be included in the following areas of your extension:
 | Area | Details | What's supported |
 |--------|-------|------|
 | Popup Page | The [Popup][1] page is a dialog that can be shown to users when clicking on your extension's icon in the browser toolbar.| Analytics, in-app messages, and Content Cards |
-| Background Scripts | [Background Scripts][2] allow your extension to inspect and interact with user navigation or modify webpages (for example, how ad blockers detect and change content on pages). | Analytics, in-app messages, and Content Cards.<br><br>Background scripts aren't visible to users, so for messaging, you would need to communicate with browser tabs or your popup page when displaying messages. |
+| Background Scripts | [Background Scripts][2] (Manifest v2 only) allow your extension to inspect and interact with user navigation or modify webpages (for example, how ad blockers detect and change content on pages). | Analytics, in-app messages, and Content Cards.<br><br>Background scripts aren't visible to users, so for messaging, you would need to communicate with browser tabs or your popup page when displaying messages. |
 | Options Pages | The [Options Page][3] lets your users toggle settings within your extension. It's a standalone HTML page that opens a new tab. | Analytics, in-app messages, and Content Cards |
 {: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
 
@@ -48,12 +52,7 @@ To integrate Braze's Web SDK, you'll first need to download a copy of the latest
 
 Alternatively, if you prefer to use [Google Tag Manager][8] or use an externally hosted copy of Braze's SDK, keep in mind that loading external resources will require you to adjust your [`content_security_policy`][6] setting in your `manifest.json`.
 
-Once downloaded, be sure to copy the `braze.min.js` file somewhere into your extension's directory. For example, using NPM:
-
-```bash
-npm install --save @braze/web-sdk;
-cp node_modules/@braze/web-sdk/braze.min.js /path/to/extension
-```
+Once downloaded, be sure to copy the `braze.min.js` file somewhere into your extension's directory.
 
 ### Extension popups {#popup}
 
@@ -70,7 +69,7 @@ To add Braze to an extension popup, reference the local Javascript file in your 
 </html>
 ```
 
-### Background script {#background-script}
+### Background script (Manifest v2 only) {#background-script}
 
 To use Braze within your extension's background script, add the Braze library to your `manifest.json` in the `background.scripts` array. This will make the global `braze` variable available in your background script context.
 

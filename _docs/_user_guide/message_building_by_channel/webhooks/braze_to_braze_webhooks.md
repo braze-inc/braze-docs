@@ -33,7 +33,7 @@ The example use cases on this page assume that you're already familiar with [how
 
 While the specifics of your webhook request will vary from use case to use case, the general workflow for creating a Braze to Braze webhook stays the same.
 
-1. [Create a webhook][5] as a campaign or Canvas step. 
+1. [Create a webhook][5] as a campaign or Canvas component. 
 2. Choose **Blank Template**.
 3. In the **Compose** tab, specify the **Webhook URL** and **Request Body** as noted for your use case.
 4. In the **Settings** tab, specify your **HTTP Method** and **Request Headers** as noted for your use case.

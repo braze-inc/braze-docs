@@ -176,7 +176,7 @@ $(document).ready(function() {
          toappend = false;
          // Don't filter if item is set to all tags
          if (matchterms('all',cur_glossary[glossary_map['tags']])) {
-           filter = false;
+           filtered = true;
          }
          else if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
            filtered = false;

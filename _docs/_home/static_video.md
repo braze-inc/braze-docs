@@ -352,8 +352,6 @@ The following content will be trimmed programmatically from your attributes and 
 Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
 
 - `email`
-- `facebook`
-- `twitter`
 - `first_name`
 - `last_name`
 - `dob`

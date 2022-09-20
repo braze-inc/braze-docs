@@ -23,7 +23,7 @@ The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3]
 
 ## Integration
 
-In the following Zapier example, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze campaign or Canvas.
+In the following Zapier example, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze Canvas.
 
 ### Step 1: Create a Zapier trigger
 
@@ -45,24 +45,42 @@ Continuing our example, we want to send a POST request as a JSON to a Braze endp
 
 ### Step 4: Set up Braze POST
 
-First, choose **POST** as the webhook action type. Next, make sure to fill out the following fields using your Braze REST endpoint in the webhook URL:
+When setting up your webhook, use the following settings and provide your Braze REST endpoint in the webhook URL. Once complete, select **Publish**.
 
-- **Webhook URL**: `https://rest.iad-01.braze.com/campaigns/trigger/send`
-- **Payload Type** : JSON
-- **Data** : `trigger_properties__name`, `api_key`, and `campaign_id`
-These data fields are key-value pairs that will be used for the data portion of the request.
+- **Method** : POST
+- **Webhook URL**: `https://rest.iad-01.braze.com/canvas/trigger/send`
+- **Data Pass-Though**: False
+- **Unflatten**: No
+- **Request Header**:
+  - **Content-Type**: JSON
+  - **Authorization**: Bearer YOUR-API-KEY
+- **Data**: 
 
-![The data key-value pairs for this example are "app_group_id" set as "your-app-group-id", "campaign_id" set as "your-campaign-id", and "trigger_properties__name" set as "Post Name".][10]
+```json
+{
+  "canvas_id": "your_canvas_identifier",
+  "recipients": [
+    {
+      "external_user_id": "external_user_identifier",
+      "canvas_entry_properties":{
+        "string_property": "Your example string",
+        "example_integer_property": 1
+      }
+    }
+  ]
+}
+```
+
+![][4]{: style="max-width:70%;"}
 
 ### Step 5: Create a Braze campaign
 
-![A Braze push campaign with Liquid that references the trigger properties name. This Liquid will template your name into the message.][12]
-
-Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with Wordpress data by using Liquid formatting to display the information in your messages.
+Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with WordPress data by using Liquid formatting to display the information in your messages.
 
 [0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
+[4]:{% image_buster /assets/img/zapier.png %}
 [5]:{% image_buster /assets/img_archive/zapier1.png %}
 [6]:{% image_buster /assets/img_archive/zapier2.png %}
 [7]:{% image_buster /assets/img_archive/zapier3.png %}

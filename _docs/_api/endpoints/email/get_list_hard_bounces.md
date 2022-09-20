@@ -14,7 +14,7 @@ description: "This article outlines the usage of and parameters for using the re
 /email/hard_bounces
 {% endapimethod %}
 
-This endpoint allows you to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
+Use this endpoint to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 
@@ -54,16 +54,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
-      "email": "example1@braze.com",
-      "hard_bounced_at": "2016-08-25 15:24:32 +0000"
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": "example2@braze.com",
-      "hard_bounced_at": "2016-08-24 17:41:58 +0000"
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": "example3@braze.com",
-      "hard_bounced_at": "2016-08-24 12:01:13 +0000"
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"
