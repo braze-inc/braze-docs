@@ -47,6 +47,44 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## September 20, 2022 release
+
+### API guide
+Check out the [Braze API Guide]({{site.baseurl}}/docs/api/home) to search for endpoints based on endpoint types, helping you narrow down the glossary 
+
+### Personalized variants
+Use [personalized variants]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) to send each user in your target segment the variant they're most likely to engage with.
+
+### Testing Canvases
+After creating your Canvas, there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters. Check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for tips.
+
+### Video editor block
+As you build your email campaign, you can add a [`video` editor block]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to the Drag & Drop Editor. This editor block inserts a preview image for a video where the image links to a YouTube or Vimeo URL. 
+
+### Liquid 5
+For existing Braze users, Liquid 5 is generally available. Learn more about [what's new with Liquid 5]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#whats-new-with-liquid-5).
+
+### New Braze partnerships
+
+#### Shopify
+The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) allows you to update existing user profiles or create new ones in Braze for leads, sign-ups, and account registrations being captured in your Shopify store.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Android SDK 23.1.0–23.12](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [React Native SDK v1.38.0–v1.38.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
+  - Updated the native Android bridge to Braze Android SDK 23.0.1.
+  - Updated the native iOS bridge to Braze iOS SDK 4.5.0.
+  - The Braze React Native Android SDK now requires Kotlin directly for compilation.
+- [Braze Expo Plugin 0.4.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
+  - Renamed the prop `fcmSenderID` to `firebaseCloudMessagingSenderId`.
+- [Unity 3.9.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md)
+  - Updated the Android plugin to use Braze Android SDK 23.1.0.
+  - Added the ability to request push notification permissions on Android 13+ devices via `Appboy.AppboyBinding.PromptUserForPushPermissions(false)`.
+- [Swift SDK 5.3.0–5.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#540)
+
 ## August 23, 2022 release
 
 ### Developer portal
@@ -318,67 +356,5 @@ As of March 24, 2022, the [Braze Baidu Push Integration]({{site.baseurl}}/develo
 #### Tealium for Currents
 
 The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/) integration allows you to seamlessly control the flow of information between the two systems. Now with Currents, you can also connect data to Tealium to make it actionable across the entire growth stack.
-
-## March 8, 2022 release
-
-### In-app messages for Roku
-
-Braze now supports sending in-app messages to your users on their Roku devices! Note that this requires additional SDK configuration and is not available out-of-the-box. For more information on integrating in-app messages for Roku, refer to [Roku in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
-
-### Full Filter Mode for Churn Predictions and Purchase Predictions
-
-In order to build a new prediction immediately, only a subset of Braze segmentation filters are supported by default. You can now enable Full Filter Mode to enable all segmentation filters, however this mode limits you to one window when building the prediction. For more, refer to the following articles:
-
-- [Creating a Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#full-filter-mode)
-- [Creating a Purchase Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/#full-filter-mode)
-
-### Retargeting option for keyword responses
-
-When viewing analytics for an SMS campaign, you can now conveniently create a segment for retargeting based on the users who responded with a specific keyword category. For more information, refer to [Keyword Responses]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#keyword-responses) in SMS reporting.
-
-### Data collection best practices
-
-Have you wondered when and how you should collect user data when you're handling both known and unknown users? We know the lifecycle of a user profile in Braze can be a bit confusing, so we put together some [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/) to help clarify different methods and best practices for collecting new and existing user data.
-
-### Transifex API deprecation
-
-As of April 7, 2022, Transifex is deprecating their API versions 2 and 2.5 to make way for version 3. After this date, v2 and v2.5 will no longer be operational, and relevant requests will fail. If you are leveraging the Transifex API, update your Connected Content calls accordingly. For more information, refer to [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/).
-
-### New Braze partnerships
-
-#### Toovio - Customer data platform
-
-The Braze and [Toovio]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/toovio/) partnership provides near real-time message triggering, the tools to drive incremental performance, and access to Toovio’s advanced campaign measurement tools.
-
-#### Snowplow - Analytics
-
-The Braze and [Snowplow]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/snowplow/) integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side tagging. The Snowplow Braze tag allows you to send events to Braze while offering additional flexibility and control:
-
-- Full visibility into all transformations on the data
-- Ability to evolve sophistication over time
-- All data remains in your private cloud until you choose to forward it
-- Ease of setup due to rich libraries of tags and familiar Google Tag Manager UI
-
-Leverage Snowplow’s rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real-time.
-
-#### Clarisights - Analytics
-
-The Braze and [Clarisights]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/clarisights/) integration allows you to import data from Braze campaigns and Canvases to help achieve a unified reporting interface of performance and CRM/retention marketing.
-
-#### Wyng - Dynamic content
-
-The Braze and [Wyng]({{site.baseurl}}/partners/message_personalization/dynamic_content/wyng/) integration allows you to leverage Wyng experiences to deliver personalization in Braze campaigns and Canvases. Wyng also includes a customer preference portal so users can control the data and preferences they share with a brand.
-
-#### Grouparoo - Workflow automation
-
-The Braze and [Grouparoo]({{site.baseurl}}/help/release_notes/deprecations/grouparoo) integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
-
-#### Lexer - Customer data platform
-
-The Braze and [Lexer]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/lexer/) integration allows you to sync data across the two platforms. Use your Lexer data to create valuable Braze segments or import your existing ones to Lexer to unlock insights.
-
-#### Knak - Email orchestration
-
-The Braze and [Knak]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/knak/) integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding.
 
 [support]: {{site.baseurl}}/support_contact/

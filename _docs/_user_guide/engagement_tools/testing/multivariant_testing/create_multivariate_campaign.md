@@ -1,6 +1,6 @@
 ---
 nav_title: Creating Tests
-article_title: Creating multivariate and A/B tests
+article_title: Creating Multivariate and A/B Tests
 page_order: 1
 page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."

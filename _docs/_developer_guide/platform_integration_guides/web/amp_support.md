@@ -50,9 +50,7 @@ The AMP Web Push component works by creating a popup that handles the push subsc
 
 Create a `service-worker.js` file with the following content, and place it in the root directory of your website:
 
-```js
-self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Step 5: Configure the AMP web push HTML element
 

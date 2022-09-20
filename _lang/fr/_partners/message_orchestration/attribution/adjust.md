@@ -32,7 +32,7 @@ L’intégration Braze et Adjust vous permet d’importer des données d’attri
 Si vous disposez d’une application Android, vous devez transmettre un ID de périphérique Braze unique à Adjust. Cet ID peut être défini dans la méthode `addSessionPartnerParameter()` du SDK Adjust. L’extrait de code suivant doit être inclus avant d’initialiser le SDK sur `Adjust.onCreate.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getInstallTrackingId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS 
