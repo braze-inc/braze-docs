@@ -158,7 +158,7 @@ Make sure to create a new Android app in the dashboard for your Android OTT inte
 
 ### LG webOS
 
-Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lge.com/discover/discover-webos-tv/).
+Use Braze's Web SDK to integrate with [LG webOS TVs](https://webostv.developer.lge.com/discover).
 
 Features include:
 
