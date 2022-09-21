@@ -51,7 +51,7 @@ Next, you are prompted by Braze's setup wizard. Within this flow, you must enter
 #### Shopify setup within Braze
 <br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:80%;"}
 
-#### Collect email or SMS subscribers
+### Step 3: Collect email or SMS subscribers
 
 At this step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
 
