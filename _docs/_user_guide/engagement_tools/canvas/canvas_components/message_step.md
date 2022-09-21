@@ -29,9 +29,9 @@ With a Message component, all users who enter the step advance to the next step 
 
 ![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
 
-{% alert tip %} 
-You can also reference SMS event properties in the Message step. Check out [About SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) for more information.
-{% endalert %}
+{% raw %}
+You can reference SMS properties in the first Message step of an action-based Canvas that is triggered by sending an SMS inbound message. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
+{% endraw %}
 
 ### Edit delivery settings
 
