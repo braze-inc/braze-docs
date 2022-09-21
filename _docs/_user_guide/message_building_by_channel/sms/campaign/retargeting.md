@@ -65,6 +65,10 @@ Filter for users who have replied to a specific SMS campaign or Canvas component
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
+{% alert tip %} 
+You can also reference SMS event properties in the [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step of a Canvas journey.
+{% endalert %}
+
 **Trigger by inbound keyword category**<br>
 ![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 

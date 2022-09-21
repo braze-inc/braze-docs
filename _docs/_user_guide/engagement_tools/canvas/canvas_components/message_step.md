@@ -27,7 +27,11 @@ With a Message component, all users who enter the step advance to the next step 
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"} 
+![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
+
+{% alert tip %} 
+You can also reference SMS event properties in the Message step. Check out [About SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) for more information.
+{% endalert %}
 
 ### Edit delivery settings
 
