@@ -70,7 +70,7 @@ You are able to manage your own responses that get sent to users after they text
 {% endtabs %}
 
 {% alert tip %} 
-You can also reference SMS properties in the first [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step of a Canvas triggered by sending an SMS inbound message.
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
 {% endalert %}
 
 ## Multi-language support
