@@ -12,9 +12,15 @@ hidden: true
 
 guide_featured_title: "Articles"
 guide_featured_list:
+- name: Shopify overview
+  link: /docs/shopify_overview/
+  fa_icon: fa fa-shopping-cart
 - name: Setting up Shopify
   link: /docs/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
+- name: Shopify Data Processing
+  link: /docs/shopify_processing/
+  fa_icon: fas fa-cogs
 - name: Shopify Data in Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
