@@ -208,7 +208,7 @@ As you begin to add more steps, you can view your entire Canvas using either the
 {% endalert %}
 
 {% alert warning %}
-A Canvas built using Canvas Flow has a maximum limit of 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
+A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
 
 {% endtab %}
