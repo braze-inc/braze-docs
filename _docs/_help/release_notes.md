@@ -50,7 +50,7 @@ guide_featured_list:
 ## September 20, 2022 release
 
 ### API guide
-Check out the [Braze API Guide]({{site.baseurl}}/docs/api/home) to search for endpoints based on endpoint types, helping you narrow down the glossary 
+Check out the [Braze API Guide]({{site.baseurl}}/docs/api/home) to search for endpoints based on endpoint types, helping you narrow down the glossary.
 
 ### Personalized variants
 Use [personalized variants]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) to send each user in your target segment the variant they're most likely to engage with.

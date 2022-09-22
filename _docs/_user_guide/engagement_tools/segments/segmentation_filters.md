@@ -317,6 +317,54 @@ glossaries:
     description: Segments your users by their mobile phone’s operating system.
     tags:
       - User Attributes
+  - name: Clicked Content Card
+    description: Segments your users by whether or not they have clicked a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked Email
+    description: Segments your users by whether or not they have clicked a specific email. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked In-App Message
+    description: Segments your users by whether or not they have clicked a specific in-app message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked In-App Message Button
+    description: Segments your users by whether or not they have clicked a specific in-app message button. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Directly Opened Push Notification
+    description: Segments your users by whether or not they have directly opened a specific push notification. The proportion of opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Dismissed Content Card
+    description: Segments your users by whether or not they have dismissed a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email
+    description: Segments your users by whether or not they have opened a specific email This includes both user and machine opens. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email (Other Opens)
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven’t been identified as “Machine opens”. For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an “Other opens”. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email (Machine Opens)
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Replied to SMS
+    description: Segments your users by whether or not they have replied to a specific SMS message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Viewed Content Card
+    description: Segments your users by whether or not they have viewed a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Viewed In-App Message
+    description: Segments your users by whether or not they have viewed a specific in-app message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
   - name: Email Available
     description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
     tags:

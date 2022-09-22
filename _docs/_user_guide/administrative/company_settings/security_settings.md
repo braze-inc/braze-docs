@@ -79,6 +79,8 @@ The Security Event report is a CSV report of security events such as account inv
 
 This section covers a permission only accessible to a few select Braze users. For the existing team permission capabilities, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
+By default, all admins will have their **View PII** permission enabled. This means they can see the following standard and custom attributes throughout the dashboard. When this permission is disabled for users in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions), those users will not be able to see this information.
+
 ### Define PII
 
 Braze allows you to define which fields are designated as personally identifiable information (PII) in your dashboard. To do this, navigate to **Company Settings > Security Settings**.
@@ -89,8 +91,6 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 | ------------------- | ----------------- |
 | - Email address<br>- Phone number<br>- First name<br>- Last name<br>- Gender<br>- Birthday<br>- Device IDs<br>- Most recent location | - All custom attributes |
 {: .reset-td-br-1 .reset-td-br-2}
-
-By default, all admins will have their **View PII** permission enabled. This means they can see all standard and custom attributes throughout the dashboard. When this permission is disabled for users in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions), those users will not be able to see this information.
 
 ### Limited areas
 
