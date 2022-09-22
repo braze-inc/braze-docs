@@ -63,7 +63,7 @@ The **Overview** tab contains basic information about a user and their interacti
 
 For more information on this data, see [User Data Collection][12].
 
-![][8]
+![][2]
 
 ### Engagement tab {#engagement-tab}
 
@@ -82,7 +82,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Purchase Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][9]
+![][3]
 
 ### Social tab
 
@@ -94,12 +94,25 @@ The **Social** tab contains a high-level view of the user's activity on Twitter 
 | Facebook | Facebook posts this user has liked. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+![][4]
+
 ### Messaging History tab
 
+![][5]
 
-[1]: {% image_buster /assets/img_archive/profiles_multiple_results.png %}
-[7]: {% image_buster /assets/img_archive/user_search2.png %}
-[8]: {% image_buster /assets/img_archive/user_profile2.png %}
-[9]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
+<!---Replace [1] with {% image_buster /assets/img_archive/profiles_multiple_results.png %} when rollout is complete--->
+[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
+
+<!---Replace [2] with {% image_buster /assets/img_archive/profiles_overview_tab.png %} when rollout is complete--->
+[2]: {% image_buster /assets/img_archive/user_profile2.png %}
+
+<!---Replace [3] with {% image_buster /assets/img_archive/profiles_engagement_tab.png %} when rollout is complete--->
+[3]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
+
+<!---Replace [4] with {% image_buster /assets/img_archive/profiles_social_tab.png %} when rollout is complete--->
+[4]: {% image_buster /assets/img_archive/profiles_social_tab_old.png %}
+
+[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
+
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
