@@ -127,7 +127,7 @@ All of your existing Canvases and the original Canvas editor will continue to ex
 
 ### Is there a limit for how many steps I can include?
 
-Yes. A Canvas built using Canvas Flow has a maximum limit of 200 steps.
+Yes. A Canvas built using Canvas Flow can contain up to 200 steps.
 
 ### Can I launch a Canvas with disconnected steps?
 
