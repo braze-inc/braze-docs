@@ -13,10 +13,6 @@ hidden: true
 
 Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
-## Shopify webhooks
-Braze offers a turnkey solution to support abandoned checkout, purchase, and post-purchase lifecycle campaigns through [Shopify webhooks](https://shopify.dev/api/admin-rest/2022-04/resources/webhook#top). Depending on which events you select during your onboarding process, Braze determines which Shopify event topics to subscribe to. As soon as you have successfully onboarded your Shopify store, Braze will instantly receive your Shopify customer activity.
-
-
 ## Supported Shopify events
 
 {% tabs local %}
