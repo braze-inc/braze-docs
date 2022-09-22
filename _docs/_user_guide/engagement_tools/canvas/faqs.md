@@ -125,6 +125,10 @@ Switching from Canvas Flow to the original Canvas editor is allowed only if you 
 
 All of your existing Canvases and the original Canvas editor will continue to exist and be supported by Braze. Customers who choose to join Canvas Flow for early access will have the option of creating a Canvas using either the original or Flow workflow.
 
+### Is there a limit for how many steps I can include?
+
+Yes. A Canvas built using Canvas Flow can contain up to 200 steps.
+
 ### Can I launch a Canvas with disconnected steps?
 
 Yes! Canvas Flow allows you to launch your Canvas with disconnected steps. You can also save Canvases post-launch with disconnected steps. 
