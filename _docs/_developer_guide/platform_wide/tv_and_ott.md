@@ -96,13 +96,14 @@ The following lists features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-success"></i></td>  
+            <td for="push"><i class="fa-solid fa-minus"></i></td>  
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
     </tbody>
 </table>
 
 - <i class="fas fa-check text-success"></i> = Supported
+- <i class="fa-solid fa-minus"></i> = Partial support
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
 - N/A = Not supported by OTT platform
 
@@ -199,10 +200,10 @@ For more information, visit the [iOS Swift SDK integration guide][4].
 
 Features include:
 
-- Data and Analytics collection for cross-channel engagement
+- Data and analytics collection for cross-channel engagement
 - Content Cards (via [Custom UI](#custom-ui))
 - In-app messages (via [Custom UI](#custom-ui))
-- Silent Push Notifications
+- Silent push notifications and update badging
 
 **Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
 
