@@ -13,6 +13,10 @@ hidden: true
 
 Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
+## Shopify webhooks
+Braze offers a turnkey solution to support abandoned checkout, purchase, and post-purchase lifecycle campaigns through [Shopify webhooks](https://shopify.dev/api/admin-rest/2022-04/resources/webhook#top). Depending on which events you select during your onboarding process, Braze determines which Shopify event topics to subscribe to. As soon as you have successfully onboarded your Shopify store, Braze will instantly receive your Shopify customer activity.
+
+
 ## Supported Shopify events
 
 {% tabs local %}
@@ -453,6 +457,76 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% endtab %}
 {% endtabs %}
 
+### Supported Shopify custom attributes
+{% tabs local %}
+{% tab Shopify Custom Attributes %}
+| Attribute Name | Description |
+| --- | --- |
+| `shopify_accepts_marketing` | This custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
+| `shopify_sms_consent` | This custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
+| `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Example Payload %}
+{% subtabs local %}
+{% subtab Shopify SMS Consent %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_sms_consent": {
+        "state": "subscribed",
+        "opt_in_level": "single_opt_in",
+        "collected_from": "other"
+      }
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% subtab Shopify Accepts Marketing (Email) %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_accepts_marketing": true
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% subtab Shopify Tags %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_tags": "VIP_customer"
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Supported Shopify standard attributes
+
+- Email
+- First Name
+- Last Name
+- Phone
+- City
+- Country
+
+{% alert note %}
+Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and the customer will not be charged a data point.
+{% endalert %}
+
 ## Shopify advanced settings
 
 ### Update abandoned cart and abandoned checkout delay
@@ -521,7 +595,7 @@ Once you’ve completed your integration, take a look at our next Shopify [artic
 
 ## How does the Braze Web SDK get installed onto my Shopify store?
 
-### No pre-existing Web SDK implementation
+#### No pre-existing Web SDK implementation
 
 [Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) is a remote JavaScript code loaded into the pages of your store or the order status page of checkout. When a store page is loaded, Shopify will check to see if any script tags need to be loaded to the site page. Within the process, the Braze Web SDK scripts will be loaded onto your Shopify store site directly.
 
@@ -529,7 +603,7 @@ From the event selector within the Shopify setup wizard, the events denoted with
 
 After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
 
-### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
+#### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
 
 If you already have the Web SDK installed on your Shopify store, you can still proceed with setting up the Shopify ScriptTag within the onboarding process. During the installation process, Braze will check if there are instances of the Web SDK already available on your Shopify store. 
 
@@ -541,39 +615,12 @@ It is important to review your existing Web SDK integration for the following it
 
 If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
 
-### What if I use a customer data platform like Segment or mParticle?
+#### What if I use a customer data platform like Segment or mParticle?
 
 Ensure that you disable Shopify events you may have been sending through your customer data platform.
 
-## Use Cases
-If you need inspiration on setting up basic and advanced use cases after setting up this integration with your Shopify data, check out what’s possible with our [Use Cases guide](https://www.braze.com/docs/shopify_use_cases/).
-
-## Troubleshooting
-
-{% details Why is my Shopify app install still pending? %}
-Your install may still be pending for one of the following reasons: 
-  - When Braze is setting up your Shopify webhooks
-  - When Braze is communicating with Shopify
-
-If your app installation is pending for 1 hour, Braze will fail the installation and you will be prompted to Retry Setup.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
-{% enddetails %}
-
-{% details Why did my Shopify app install fail? %}
-Your install may have failed for one of the following reasons: 
-  - Braze could not reach Shopify
-  - Braze failed to process the request 
-  - Your Shopify access token is invalid 
-  - The Braze Shopify app was deleted from your Shopify admin page
-
-If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
-{% enddetails %}
-
-{% details How do I uninstall the Braze application from my Shopify store? %}
-Go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
-{% enddetails %}
+## Use cases
+If you need inspiration on setting up basic and advanced use cases after setting up this integration with your Shopify data, check out what’s possible with our [use cases guide](https://www.braze.com/docs/shopify_use_cases/).
 
 ## GDPR
 

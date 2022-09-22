@@ -14,18 +14,18 @@ guide_featured_title: "Articles"
 guide_featured_list:
 - name: Shopify overview
   link: /docs/shopify_overview/
-  fa_icon: fa fa-shopping-cart
+  fa_icon: fa-brands fa-shopify
+- name: Web SDK integration with Shopify ScriptTag
+  link: /docs/scripttag_web_sdk_integration/
+  fa_icon: fa-solid fa-tag
 - name: Setting up Shopify
   link: /docs/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
 - name: Shopify Data Processing
   link: /docs/shopify_processing/
-  fa_icon: fas fa-cogs
+  fa_icon: fa-solid fa-database
 - name: Shopify Data in Braze
   link: /docs/shopify_data/
-  fa_icon: fas fa-cogs
-- name: Web SDK Integration with Shopify ScriptTag
-  link: /docs/scripttag_web_sdk_integration/
   fa_icon: fas fa-cogs
 - name: Use Cases
   link: /docs/shopify_use_cases/

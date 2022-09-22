@@ -32,8 +32,35 @@ You’ll then be redirected to your Shopify store to install the Braze app. Once
 That’s it! The status of your integration appears in the Data Import and Web SDK Installation section of the Shopify partner page. Once the Braze app has been successfully installed, the webhook and script creation is complete, you will be notified via email. In addition, the Connection Pending status will be updated to Connected and will display the timestamp of when the connection was established.
 
 ### Shopify setup within Braze
-<br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:80%;"}
+<br>![Workflow of setting up Shopify within Braze by entering the store name and navigating to Shopify to install the Braze app.][3]{: style="max-width:90%;"}
+
+## Troubleshooting
+
+{% details Why is my Shopify app install still pending? %}
+Your install may still be pending for one of the following reasons: 
+  - When Braze is setting up your Shopify webhooks
+  - When Braze is communicating with Shopify
+
+If your app installation is pending for 1 hour, Braze will fail the installation and you will be prompted to Retry Setup.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+{% details Why did my Shopify app install fail? %}
+Your install may have failed for one of the following reasons: 
+  - Braze could not reach Shopify
+  - Braze failed to process the request 
+  - Your Shopify access token is invalid 
+  - The Braze Shopify app was deleted from your Shopify admin page
+
+If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
+{% enddetails %}
+
+{% details How do I uninstall the Braze application from my Shopify store? %}
+Go to your Shopify admin page located under **Apps**. You will then see an option to delete the Braze application.<br><br>
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
+{% enddetails %}
 
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
-[3]: {% image_buster /assets/img/Shopify/scripttag1.png %} 
+[3]: {% image_buster /assets/img/Shopify/scripttag.gif %} 
