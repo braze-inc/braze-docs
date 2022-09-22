@@ -98,7 +98,56 @@ The **Social** tab contains a high-level view of the user's activity on Twitter 
 
 ### Messaging History tab
 
+The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more.
+
+{% alert note %}
+If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
+{% endalert %}
+
 ![][5]
+
+#### Viewing and understanding events
+
+For each event in the **Messaging History** table, you can see the messaging channel, event type, timestamp the event occurred, and the associated campaign or Canvas message. To filter for specific events, click **Filters** and select events from the list.
+
+##### Message engagement events
+
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+
+| Channel | Engagement events available |
+| --- | --- |
+| Email | Bounce<br>Click<br>Delivery<br>Mark as spam<br>Open (see [note on email open event](#note-on-email-open-event))<br>Send<br>Soft bounce<br>Unsubscribe |
+| SMS | Carrier send<br>Delivery<br>Delivery failure<br>Inbound receive<br>Rejection<br>Send |
+| Push | Bounce<br>Influenced open<br>iOS Foreground<br>Open<br>Send |
+| In-app message | Click<br>Impression |
+| Content Cards | Click<br>Dismiss<br>Impression<br>Send |
+| Webhooks | Send |
+{: .reset-td-br-1 .reset-td-br-2}
+
+##### Message abort events
+
+Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content#aborting-messages), or from Liquid rendering timeouts.
+
+Abort events are available for the following channels:
+
+- Email
+- SMS
+- Push
+- Webhooks
+
+Abort events are currently not available for in-app messages and Content Cards.
+
+##### Frequency cap events
+
+A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings on the **Global Message Settings** page of your dashboard.
+
+#### Note on email open event {#note-on-email-open-event}
+
+Email open tracking is error prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
+
+While email open statistics can be useful in aggregate, for example to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
+
+
 
 <!---Replace [1] with {% image_buster /assets/img_archive/profiles_multiple_results.png %} when rollout is complete--->
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
