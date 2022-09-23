@@ -117,6 +117,9 @@ braze.initialize("YOUR-API-KEY-HERE", {
 braze.toggleLogging()
 ```
 
+If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr)
+
+
 ## Upgrading the SDK
 
 {% include archive/web-v4-rename.md %}
@@ -134,7 +137,7 @@ These two files must be updated in coordination with each other to ensure proper
 
 ## Alternative integration methods
 
-### Server-side rendering frameworks
+### Server-side rendering frameworks {#ssr}
 
 If you use a server-side rendering framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
 
@@ -174,6 +177,16 @@ useEffect(() => {
         openSession();
     });
 }, []);
+```
+
+### Vite support {#vite}
+
+If you use Vite and see a warning around circular dependences or `Uncaught TypeError: Class extends value undefined is not a constructor or null`, you may need to exclude the Braze SDK from its [dependency discovery](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior):
+
+```
+optimizeDeps: {
+    exclude: ['@braze/web-sdk']
+},
 ```
 
 ### AMD module loader
