@@ -33,7 +33,7 @@ With Braze's turnkey Shopify integration, you can:
 - Seamlessly connect your Shopify store within Braze
 - Allow Braze to ingest and process Shopify user data
 - Sync Shopify user profiles into Braze
-- Embed our Web SDK integration via ScriptTag on to your Shopify store, which will support tracking the following (optional):
+- Embed our [Web SDK integration]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag on to your Shopify store, which will support tracking the following (optional):
   - [Anonymous user tracking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) to track guest activity in your store
   - [Monthly active user]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) tracking as the Web SDK is capable of tracking session data from your store visitors
   - Option to collect Shopify on-site activity users which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption

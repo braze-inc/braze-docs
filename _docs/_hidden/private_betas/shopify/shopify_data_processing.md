@@ -550,11 +550,15 @@ Braze will update existing user profiles or create new ones for leads, sign-ups,
 
 Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
 
-**Anonymous Users**<br>
+**Anonymous users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
   - For existing alias-only profiles, we'll add the Shopify alias object for that user.
 - If the email address or phone number is **not** associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
   - If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+
+**Identified users**<br>
+- As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile. 
+- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
 
 If Braze does not find a match for the email address or phone number, we will create a new user profile with the supported Shopify data.
 
@@ -564,10 +568,10 @@ Some of the user data and events collected by the Shopify integration will count
 
 ### The Web SDK and Shopify webhooks
 
-#### Anonymous users
-1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (i.e., anonymous), Braze will capture the `device_id` for that particular customer's session.<br><br>
-2. As the customer progresses through to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.<br><br>
-3. In this process, Braze will effectively match the user by the same `device_id` for the same session and merge all of the user data captured from both the Web SDK and Shopify webhooks into a single user profile in Braze.<br><br>Braze will also assign the Shopify customer ID as the [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) on the user profile:
+<br>**Anonymous users**
+1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (i.e., anonymous), Braze will capture the `device_id` for that particular customer's session.
+2. As the customer progresses through to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.
+3. In this process, Braze will effectively match the user by the same `device_id` for the same session and merge all of the user data captured from both the Web SDK and Shopify webhooks into a single user profile in Braze.<br>Braze will also assign the Shopify customer ID as the [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) on the user profile:
 
 ```json
 {
@@ -578,36 +582,9 @@ Some of the user data and events collected by the Shopify integration will count
 }
 ```
 
-#### Identified users
-
+**Identified users**<br>
 - As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile. 
-- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.
-
-## How does the Braze Web SDK get installed onto my Shopify store?
-
-#### No pre-existing Web SDK implementation
-
-[Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) is a remote JavaScript code loaded into the pages of your store or the order status page of checkout. When a store page is loaded, Shopify will check to see if any script tags need to be loaded to the site page. Within the process, the Braze Web SDK scripts will be loaded onto your Shopify store site directly.
-
-From the event selector within the Shopify setup wizard, the events denoted with an asterisk (&#42;) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will determine that the Web SDK implementation via Shopify ScriptTag will be added to your Shopify store as part of your setup.
-
-After you install Braze's Shopify app, you'll be redirected back into Braze. Once successfully installed, you'll then see the Shopify configuration page.
-
-#### What if I already have the Web SDK or Google Tag Manager enabled on my Shopify store? {#existing}
-
-If you already have the Web SDK installed on your Shopify store, you can still proceed with setting up the Shopify ScriptTag within the onboarding process. During the installation process, Braze will check if there are instances of the Web SDK already available on your Shopify store. 
-
-We'll then add the necessary scripts to ensure you can track the selected events or enable in-browser messaging. 
-
-It is important to review your existing Web SDK integration for the following items:
-- Web SDK version should be v4.0+
-- Web SDK initializes upon session start
-
-If the above items are not met, then the Web SDK integration via Shopify ScriptTag will not be supportable.
-
-#### What if I use a customer data platform like Segment or mParticle?
-
-Ensure that you disable Shopify events you may have been sending through your customer data platform.
+- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
 
 ## GDPR
 

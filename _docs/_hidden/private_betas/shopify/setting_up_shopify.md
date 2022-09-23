@@ -19,7 +19,7 @@ In Braze, go to the **Technology Partners** section and then search **Shopify**.
 ### Step 2: Braze’s setup wizard
 Next, you are prompted by Braze’s setup wizard. Within this flow, you must enter your Shopify Store Name. Enter only the store name, and not your Shopify domain. Please note that today we are only able to connect one store per app group.
 
-### Step 3: Flexible Eeent selection
+### Step 3: Flexible event selection
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any of the events with a * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
 
 ### Step 4: Enable in-browser message channel
