@@ -93,6 +93,8 @@ Using [Liquid][11], you can insert one of the unique promotion codes from the up
 If the user receives two messages through two channels, they will be reserved two codes, though only one will be shown. For reporting purposes, two codes will show as being sent. However, the user will have received one unique code through two channels. For example, for a multi-channel Canvas step, only one code would be used by the user.
 
 {% alert important %}
+Test sends and seed group sends that contain a promo code will use the promo code.<br><br>
+
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promo codes, the message will not send.
 {% endalert %}
 
