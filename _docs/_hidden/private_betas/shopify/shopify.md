@@ -11,13 +11,13 @@ permalink: "/shopify_overview/"
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 
-The Shopify and Braze integration allow brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
+The Shopify and Braze integration allows brands to connect their Shopify store seamlessly to pass select Shopify events and customers into Braze. Leverage Braze’s cross-channel strategies and Canvas to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchase
 
 ## Prerequisites
 
 All Braze customers looking to utilize the Shopify integration must sign Braze's Shopify order form. Reach out to your account executive for more details.
 
-This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation](#shopify-user-syncing)). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
+This integration will create alias user profiles if we are unable to match Shopify data using the email or phone number ([see here for more details on Shopify user reconciliation]({{site.baseurl}}/shopify_processing/#shopify-user-syncing)). Consult with your development teams around the downstream impacts and need to merge these user profiles as part of your user lifecycle before you enable the integration. 
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -33,9 +33,13 @@ With Braze's turnkey Shopify integration, you can:
 - Seamlessly connect your Shopify store within Braze
 - Allow Braze to ingest and process Shopify user data
 - Sync Shopify user profiles into Braze
-- Embed our [Web SDK integration]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag on to your Shopify store, which will support tracking the following (optional):
+
+#### Web SDK integration via Shopify ScriptTag (optional)
+
+Braze also allows you to embed our [Web SDK integration]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag on to your Shopify store. This integration requires the above [prerequisites](#prerequisites), as well as the ones found on the [ScriptTag]({{site.baseurl}}/scripttag_web_sdk_integration/#prerequisites) integration page.
+
+Embedding our Web SDK via ScriptTag supports tracking the following:
   - [Anonymous user tracking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) to track guest activity in your store
   - [Monthly active user]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) tracking as the Web SDK is capable of tracking session data from your store visitors
   - Option to collect Shopify on-site activity users which will count toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points) consumption
   - Option to enable [in-browser messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) as a channel on your Shopify store
-

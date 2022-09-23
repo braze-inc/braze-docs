@@ -26,7 +26,7 @@ Ensure with your development team that the following is supported within your Sh
 
 ## What is the Web SDK?
 
-The [Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data via a web or mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
+The [Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
 
 Review the following Web SDK details with your developers to prevent issues during the integration process.
 
@@ -58,7 +58,7 @@ At this time, you will not be able to customize the Shopify scripts to include m
 If you do want to add more customization to the Braze Web SDK implementation via Shopify ScriptTag, you will need to engage with your development team to directly integrate with the Shopify ScriptTag API.
 {% endalert %}
 
-## How does the Braze Web SDK get installed onto my Shopify store?
+## How does the Braze Web SDK get installed on my Shopify store?
 
 #### No pre-existing Web SDK implementation
 

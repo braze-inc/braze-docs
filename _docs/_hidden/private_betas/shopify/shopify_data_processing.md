@@ -527,13 +527,13 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 #### Update abandoned cart and abandoned checkout delay
 
-By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` and `shopify_abandoned_cart` event to one hour of inactivity. You can set the Abandoned Delay for each event from 5 minutes up to 24 hours by selecting the dropdown and then selecting Set Delay on the Shopify partner page.
+By default, Braze will automatically set the delay to trigger the `shopify_abandoned_checkout` and `shopify_abandoned_cart` events to one hour of inactivity. You can set the Abandoned Delay for each event from 5 minutes up to 24 hours by selecting the dropdown and then selecting Set Delay on the Shopify partner page.
 
 ![Option in Advanced Settings to set abandoned cart and checkout delay.][10]{: style="max-width:40%;"}
 
 #### Set your preferred product identifier
 
-If you have included Braze purchase events within your Shopify integration setup, by default, Braze will set the Shopify Product ID as the `product_id` used within Braze's purchase event. This will then be used when you filter for products purchased in Y days or personalize content in your message using Liquid.
+If you have included Braze purchase events within your Shopify integration setup, by default, Braze will set the Shopify Product ID as the `product_id` used within Braze's purchase event. This will be used when you filter for products purchased in Y days or personalize content in your message using Liquid.
 
 You can also choose to set either the SKU or Product Title from Shopify instead of the Shopify Product ID through advanced settings.
 
@@ -541,7 +541,7 @@ You can also choose to set either the SKU or Product Title from Shopify instead 
 
 ## Shopify user syncing
 
-Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations being captured in your Shopify store. User profile data can be collected from the following methods in Shopify, but is not limited to:
+Braze will update existing user profiles or create new ones for leads, sign-ups, and account registrations captured in your Shopify store. User profile data can be collected from the following methods in Shopify but is not limited to:
 
 - Customer creates an account
 - Customer email or phone is collected in a Shopify pop-up form
@@ -570,7 +570,7 @@ Some of the user data and events collected by the Shopify integration will count
 
 <br>**Anonymous users**
 1. With the Web SDK integration, you will begin tracking sessions for your Shopify customers. If your store visitors are guests (i.e., anonymous), Braze will capture the `device_id` for that particular customer's session.
-2. As the customer progresses through to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.
+2. As the customer progresses to checkout and provides additional identifiable information like email or phone number, Braze will capture the relevant Shopify user data via Shopify webhooks.
 3. In this process, Braze will effectively match the user by the same `device_id` for the same session and merge all of the user data captured from both the Web SDK and Shopify webhooks into a single user profile in Braze.<br>Braze will also assign the Shopify customer ID as the [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) on the user profile:
 
 ```json
@@ -585,6 +585,10 @@ Some of the user data and events collected by the Shopify integration will count
 **Identified users**<br>
 - As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile. 
 - If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
+
+##### User reconciling issues
+
+If you use the ScriptTag integration and your Shopify store offers a "Buy Now" option that skips the cart, Braze may be unable to reconcile users created through this flow. Shopify does not allow our script tags to retrieve a `device_id` to map the events back to this user who skips the cart.
 
 ## GDPR
 

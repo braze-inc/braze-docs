@@ -19,7 +19,7 @@ These are some simple yet effective use cases that you can create shortly after 
 
 ### Campaigns
 
-These are transactional use cases that allow you to alert your users when there's an update to their Shopify order.
+These transactional use cases allow you to alert your users when there's an update to their Shopify order.
 
 {% tabs local %}
 {% tab Refund %}
@@ -31,18 +31,18 @@ Users were provided a refund, either partial or complete. This campaign lets the
 
 **Messaging example**
 
-![Email with the text "Your order has been refunded, Sorry that you were dissapointed with your order. We've successfully sent your refund. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
+![Email with the text "Your order has been refunded, Sorry that you were disappointed with your order. We've successfully sent your refund. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
 {% endtab %}
 {% tab Cancellation %}
 **Shopify cancellation event** - `shopify_cancelled_order`
 
-Users were able to cancel their order before fulfillment. This campaign lets the user know that their purchase was successfully canceled.
+Users were able to cancel their orders before fulfillment. This campaign lets the user know that their purchase was successfully canceled.
 
 ![Action-based campaign that enters users who perform the custom event "shopify_cancelled_order".]({% image_buster /assets/img/Shopify/cancellation.png %}){: style="max-width:45%;"}
 
 **Messaging example**
 
-![Email with the text "Your order has been cancelled, Sorry to see you go! We've successfully cancelled your order. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
+![Email with the text "Your order has been canceled, Sorry to see you go! We've successfully canceled your order. Please wait 3-5 business days for the funds to appear in your statement" and a "View Account" button.]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
 {% tab Fulfilled order %}
@@ -112,7 +112,7 @@ Action-based entry event: `shopify_created_order` or Purchase
 
 ## Advanced
 
-Once you've become more familiar with the platform, you can set up some of these more complex use cases.
+Once you've become more familiar with the platform, you can set up some more complex use cases.
 
 ### Campaigns
 
@@ -152,7 +152,7 @@ Exception event: `shopify_created_order` or Purchase
 
 **Winback cancellation Canvas**
 
-Users were able to cancel their order before fulfillment. This Canvas sends follow-up messages to get the user to make their purchase again.
+Users were able to cancel their orders before fulfillment. This Canvas sends follow-up messages to get the user to make their purchase again.
 
 Action-based entry event: `shopify_cancelled_order`<br>
 Exception event: `shopify_created_order` or Purchase
