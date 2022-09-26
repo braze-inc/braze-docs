@@ -43,7 +43,7 @@ There are two ways to add the Content Block to your email.
 
 ### Rows
 
-First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. \
+First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor.
 
 {% alert note %}
 Once the Content Block is added into the email editor, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**.
