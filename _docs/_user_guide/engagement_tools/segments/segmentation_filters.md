@@ -111,6 +111,8 @@ glossaries:
       - User Activity
   - name: Most Recent Device Locale
     description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
+    tags:
+      - User Attributes
   - name: App Version Number
     description: Filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. For Android, this version number is based on the <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> for the app. For iOS, this version number is based on the <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> for the app. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
     tags:
