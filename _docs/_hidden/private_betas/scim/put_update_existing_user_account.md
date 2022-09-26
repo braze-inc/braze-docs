@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | --------- | -------- | --------- | ----------- |
 | Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
 | `userName` | Required | String | The username that the user will need to log into Braze (usually the same as email address). |
-| `name` | Required | JSON object | This object contains the user's first name and last name |
+| `name` | Required | JSON object | This object contains the user's first name and last name. |
 | `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
