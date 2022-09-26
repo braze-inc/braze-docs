@@ -1,6 +1,6 @@
 ---
 nav_title: "SCIM API Objects and Appendix"
-article_title: SCIM API objects and appendix
+article_title: SCIM API Objects and Appendix
 page_order: 8
 page_type: reference
 description: "This article explains the different SCIM API objects and appendix."
