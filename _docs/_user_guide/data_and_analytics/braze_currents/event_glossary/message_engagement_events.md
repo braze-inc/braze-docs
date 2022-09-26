@@ -45,6 +45,65 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Experiment step path entry events
+
+{% apitags %}
+Sends
+{% endapitags %}
+
+<!--
+Are API tags correct?
+Is event name correct?
+BSON?
+Add to CDP currents partners?
+--->
+
+This event occurs when a user enters a Canvas experiment step path.
+
+```json
+// Experiment Step Path Entry: users.canvas.experimentstep.PathEntry
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON ID of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id" (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_name" (string) name of the experiment split the user enrolled in,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "in_control_group": (boolean) whether the user was enrolled in the control group
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Experiment step conversion events
+
+{% apitags %}
+{% endapitags %}
+
+This event occurs when a user convert for a Canvas experiment step.
+
+```json
+// Experiment Step Conversion: users.canvas.experimentstep.Conversion
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id" (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
+  "conversion_behavior_index": (int) index of the conversion behavior
+}
+```
+{% endapi %}
+
 ## Push send events
 
 {% apitags %}
