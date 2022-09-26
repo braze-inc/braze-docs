@@ -583,12 +583,39 @@ Some of the user data and events collected by the Shopify integration will count
 ```
 
 **Identified users**<br>
-- As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile. 
+- As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile using our [merge functionality](#user-profile-merging). 
 - If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
 
 ##### User reconciling issues
 
 If you use the ScriptTag integration and your Shopify store offers a "Buy Now" option that skips the cart, Braze may be unable to reconcile users created through this flow. Shopify does not allow our script tags to retrieve a `device_id` to map the events back to this user who skips the cart.
+
+### User profile merging
+
+Braze will merge the following fields on the anonymous user created from our Shopify integration to the identified user when we find a match on one of these identifiers, Shopify customer ID, email, or phone number. Note this user data merging functionality is only available in the Shopify integration.
+- First name
+- Last name
+- Email
+- Gender
+- Date of birth
+- Phone number
+- Time zone
+- Home city
+- Country
+- Language
+- Custom attributes
+- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event properties for “X times in Y days” segmentation (where X<=50 and Y<=30)
+- Push tokens
+- Message history
+
+Any of the following fields found on the anonymous user to the identified user:
+- Custom event and purchase event count and first date and last date timestamps
+  - These merged fields will update “for X events in Y days” filters. For purchase events, these filters include “number of purchases in Y days” and “money spent in last Y days”.
+
+{% alert warning%}
+Session data is not yet supported as part of our merging process.
+{% endalert %}
 
 ## GDPR
 
