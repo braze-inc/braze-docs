@@ -49,11 +49,11 @@ Canvas entry properties are configured in the Entry Schedule step of creating a 
 
 #### Original workflow
 
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first Full Step of a Canvas.
+For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas where persistent entry properties are enabled.
 
 #### Canvas Flow
 
-For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid if referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
+For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step for in-app messages where persistent entry properties are enabled. Use this Liquid if referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
@@ -74,7 +74,7 @@ Event properties refer to the properties that you set for custom events and purc
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step. For Canvas Flow, use this Liquid `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
 {% alert important %}
-`event_properties` cannot be used independently of Action Paths for Canvas Flow.
+`event_properties` cannot be used independently of Action Paths for Canvas Flow and cannot be used in scheduled Full Steps for the original Canvas editor.
 {% endalert %}
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.

@@ -106,6 +106,8 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 
 [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
+Note that `canvas_entry_properties` can only be used in in-app messages in Canvas Flow and in the original Canvas editor with persistent entry properties enabled.
+
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
 {% raw %}
