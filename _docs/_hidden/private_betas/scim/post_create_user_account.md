@@ -43,11 +43,11 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for [user object]. |
+| Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
 | `userName` | Required | String | The user’s email address |
 | `name` | Required | JSON object | This object contains the user's first name and last name |
-| `department` | Required | String | Valid department string from the [department string table]. |
-| `permissions` | Required | JSON object | Permissions object as described in the [Permissions Object] section. |
+| `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -133,4 +133,8 @@ Content-Type: text/json;charset=UTF-8
   "status": 409
 }
 ```
+
 {% endapi %}
+
+
+
