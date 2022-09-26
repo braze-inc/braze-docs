@@ -69,4 +69,4 @@ If you use the ScriptTag integration, and your Shopify store offers a "Buy Now" 
 
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
-[3]: {% image_buster /assets/img/Shopify/scripttag.gif %} 
+[3]: {% image_buster /assets/img/Shopify/scriptag.gif %} 
