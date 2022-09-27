@@ -62,9 +62,9 @@ This event occurs when a user enters a Canvas experiment step path.
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id" (string) internal-use Braze ID of the workflow this event belongs to,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
-  "experiment_split_name" (string) name of the experiment split the user enrolled in,
+  "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
@@ -90,7 +90,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id" (string) internal-use Braze ID of the workflow this event belongs to,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
   "conversion_behavior_index": (int) index of the conversion behavior
