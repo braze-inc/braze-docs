@@ -32,7 +32,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 ### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. 
+To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
 
 ![Segmenting based on numeric properties.][13]
 
@@ -42,9 +42,11 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
+![Segmenting based on nested event properties.][18]
+
 Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past two years, and tracking doesn't wait until the extension has been set up first.
 
-{% alert note %} 
+{% alert note %}
 Using event properties within Segment Extensions does not impact data point usage.
 {% endalert %}
 
@@ -100,3 +102,4 @@ Now you can proceed as usual with [creating your segment][11].
 [15]: {% image_buster /assets/img/segment/property4.png %}
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
+[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}

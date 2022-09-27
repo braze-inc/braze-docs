@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Look Up an Existing Dashboard User Account"
 article_title: "GET: Look Up an Existing Dashboard User Account"
-permalink: /get_see_developer_user_information/
+permalink: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
