@@ -64,11 +64,17 @@
     margin: 8px 40px;
   }
   .glossary_text {
+    margin-top: auto;
+    color: $text-color;
+    font-family: $braze-regular;
+    font-size: 16px;
+    line-height: 1.8;
     *,
     *::before,
     *::after {
       border-width: 0;
       border-style: solid;
+
     }
     a {
       display: inline;
@@ -90,9 +96,11 @@
     display: flex;
     flex-wrap: wrap;
     b {
-      color: $black-shark;
-      font-family: $braze-medium;
       font-size: 30px;
+      line-height: 1.4;
+      color: $navy-bay;
+      margin-top: auto;
+      margin-bottom: 10px;
     }
 
     .guide_item {
