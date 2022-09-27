@@ -73,7 +73,7 @@ To begin listening to the stream, use the code below to create a `StreamSubscrip
 // Create stream subscription
 StreamSubscription inAppMessageStreamSubscription;
 
-inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((inAppMessage) {
+inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
   // Function to handle in-app messages
 }
 
