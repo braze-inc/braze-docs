@@ -124,9 +124,9 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
-For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
+For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
@@ -137,7 +137,7 @@ For the Canvases built with the original editor, `canvas_entry_properties` can b
 {% endtab %}
 
 {% tab Event Properties %}
-Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
+Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases.
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
@@ -246,10 +246,6 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
 
-{% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
-
 {% tabs %}
 {% tab Music Example %}
 
@@ -275,10 +271,6 @@ Triggering a campaign with nested properties from the "Ordered" event:
 ##### Segmentation
 
 Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
-
-{% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
 
 ##### Event property segmentation
 
@@ -312,7 +304,7 @@ If you would like to segment on the values of event properties, you have two opt
 1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
 2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
 
-Braze's Success and Support teams can help recommend the best approach depending on your specific needs. 
+Braze's Success and Support teams can help recommend the best approach depending on your specific needs.
 
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
