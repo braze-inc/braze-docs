@@ -42,7 +42,7 @@ To begin listening to the stream, use the code below to create a `StreamSubscrip
 // Create stream subscription
 StreamSubscription contentCardsStreamSubscription;
 
-contentCardsStreamSubscription = _braze.subscribeToContentCards((contentCards) {
+contentCardsStreamSubscription = _braze.subscribeToContentCards((List<BrazeContentCard> contentCards) {
   // Function to handle Content Cards
 }
 
