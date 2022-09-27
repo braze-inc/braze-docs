@@ -96,6 +96,8 @@ You can export the following data from Braze to Segment:
 | Canvas Entered                 | User was entered into a Canvas. |
 | Campaign Control Group Entered | User was enrolled in a campaign control group. |
 | Application Uninstalled        | User uninstalled the App. |
+| Experiment Conversions | User converts for a Canvas experiment step. |
+| Experiment Split Entries | User enters a Canvas experiment step path. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
