@@ -61,4 +61,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
+## Response example
+{% raw %}
+```
+{
+  "preference_center_api_id": "8efc52aa-935e-42b7-bd6b-98f43bb9b0f1",
+  "created_at": "2022-09-22T18:28:07Z",
+  "updated_at": "2022-09-22T18:32:07Z",
+  "message": "success"
+}
+```
+{% endraw %}
+
 {% endapi %}
