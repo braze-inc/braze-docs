@@ -81,6 +81,7 @@ inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMess
 // Cancel stream subscription
 inAppMessageStreamSubscription.cancel();
 ```
+
 For an example, see [main.dart](https://github.com/Appboy/flutter-sdk/blob/develop/braze_plugin/example/lib/main.dart) in our sample app.
 
 ### Method 2: In-app message data callback (Legacy)
