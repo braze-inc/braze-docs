@@ -1,26 +1,26 @@
 ---
-nav_title: "DELETE: Remove Dashboard Developer Account"
-article_title: "DELETE: Remove Dashboard Developer Account"
-permalink: /delete_existing_dashboard_developer/
+nav_title: "DELETE: Remove Dashboard User Account"
+article_title: "DELETE: Remove Dashboard User Account"
+permalink: /delete_existing_dashboard_user/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Remove Existing Developer Account Endpoint."
+description: "This article outlines details about the Remove Existing User Account Endpoint."
 hidden: true
 ---
 
 {% api %}
-# Remove a dashboard developer account
+# Remove a dashboard user account
 {% apimethod delete %}
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to permanently delete an existing dashboard developer, similarly to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This endpoint allows you to permanently delete an existing dashboard user, similarly to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='delete dashboard developer' %}
+{% include rate_limits.md endpoint='delete dashboard user' %}
 
 ## Request body
 
@@ -56,9 +56,9 @@ HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
 {
-  "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-  "detail": "User not found",
-  "status": 404
+    "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+    "detail": "User not found",
+    "status": 404
 }
 ```
 {% endapi %}
