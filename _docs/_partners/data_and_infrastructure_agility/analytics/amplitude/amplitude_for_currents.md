@@ -256,7 +256,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
 }
 ```
 
-## Experiment step events
+### Experiment step events
 
 ```json
 // Experiment Step Path Entry
