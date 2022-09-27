@@ -1,7 +1,7 @@
 ---
 nav_title: Best Practices
 article_title: Canvas Best Practices
-page_order: 10
+page_order: 1
 description: "This article provides some best practices for creating and customizing user journeys with Canvas and Canvas Flow."
 tool: Canvas
 
