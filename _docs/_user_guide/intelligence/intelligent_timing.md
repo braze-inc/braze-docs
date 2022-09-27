@@ -51,6 +51,8 @@ If desired, you can choose to limit the optimal time to within a specific window
 1. When configuring Intelligent Timing, select **Only send messages within specific hours**.
 2. Enter the start and end time of the send window.
 
+![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.][4]
+
 If a user’s optimal time is calculated as being outside this window, the message will send at the edge of the window closest to the user's optimal time. For example, if a user’s optimal time is 10 pm, but the send window is limited to 1 pm–8 pm, the message will send at 8 pm.
 
 #### Preview delivery times
@@ -99,6 +101,8 @@ If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_g
 
 We recommend that if you’re using both Intelligent Timing and A/B testing, schedule the winning variant to send 2 days after the initial test instead of 1 day.
 
+![A/B Testing section of the Target Audiences step where the test ends and sends the Winning Variant two days after the initial test starts.][5]
+
 ### Canvas
 
 This section describes how to use Intelligent Timing in your Canvases. The steps vary slightly depending on which Canvas workflow you're using.
@@ -131,6 +135,8 @@ For example, say Luka’s optimal time is 2:00 pm. He enters the Delay step at 2
 
 However, Intelligent Timing is set to deliver at 2 pm, which has already passed. So Luka won’t receive the message until the following day: March 4 at 2:00 pm.
 
+![Graphic depicting the difference between days and calendar days where if a user's optimal time is 2 pm but they enter the delay step at 2:01 pm and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_days_calendardays.png %}){: style="border:none;"}
+
 {% endtab %}
 {% tab Original Canvas workflow %}
 
@@ -160,8 +166,7 @@ The most popular app time is determined by the average session start time for yo
 
 For campaigns, if you specified a delivery window and the most popular app to use your app falls outside of that window, the message will send closest to the edge of the delivery window. For example, if your delivery window is 1 pm to 8 pm and a user’s optimal time is 10 pm, the message will send at 8 pm.
 
-##### Not enough session data
-
+**Not enough session data**<br>
 In the rare event that your app doesn’t have enough session data to calculate when the app is most used (a completely new app with no data), the message will send at 5 pm in the user’s local time zone. If the user’s local time is unknown, it will send at 5 pm in your company time zone.
 
 It’s important to be aware of the limitations of using Intelligent Timing early in a user’s lifecycle when limited data is available. It can still be valuable, as even users with few recorded sessions can offer insights into their behavior. However, Braze can more effectively calculate the optimal send time later in a user’s lifecycle.
@@ -196,3 +201,5 @@ We recommend that if you are using Intelligent Timing, leave more time for the A
 [1]: {% image_buster /assets/img/intelligent_timing_1.png %}
 [2]: {% image_buster /assets/img/intel-timing-preview.png %}
 [3]: {% image_buster /assets/img/intelligent_timing.png %}
+[4]: {% image_buster /assets/img/intelligent_timing_hours.png %}
+[5]: {% image_buster /assets/img/intelligent_timing_ab_test_duration.png %}
