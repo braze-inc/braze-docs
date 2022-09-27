@@ -45,18 +45,11 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
-## Experiment step path entry events
+## Experiment split entry events
 
 {% apitags %}
-Sends
+Experiment Step, Canvas
 {% endapitags %}
-
-<!--
-Are API tags correct?
-Is event name correct?
-BSON?
-Add to CDP currents partners?
---->
 
 This event occurs when a user enters a Canvas experiment step path.
 
@@ -65,7 +58,7 @@ This event occurs when a user enters a Canvas experiment step path.
 
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON ID of the user that performed this event, 
+  "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
@@ -80,9 +73,10 @@ This event occurs when a user enters a Canvas experiment step path.
 
 {% api %}
 
-## Experiment step conversion events
+## Experiment conversion events
 
 {% apitags %}
+Experiment Step, Canvas
 {% endapitags %}
 
 This event occurs when a user convert for a Canvas experiment step.
@@ -92,7 +86,7 @@ This event occurs when a user convert for a Canvas experiment step.
 
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
+  "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
