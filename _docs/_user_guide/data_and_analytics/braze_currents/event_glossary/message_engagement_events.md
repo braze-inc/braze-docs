@@ -97,6 +97,7 @@ This event occurs when a user convert for a Canvas experiment step.
 }
 ```
 {% endapi %}
+{% api %}
 
 ## Push send events
 
