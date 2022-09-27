@@ -108,7 +108,7 @@ We recommend that if you’re using both Intelligent Timing and A/B testing, sch
 This section describes how to use Intelligent Timing in your Canvases. The steps vary slightly depending on which Canvas workflow you're using.
 
 {% tabs %}
-{% tab Canavs Flow %}
+{% tab Canvas Flow %}
 
 In Canvas Flow, Intelligent Timing is set in Message steps. To use Intelligent Timing in your Canvas:
 
