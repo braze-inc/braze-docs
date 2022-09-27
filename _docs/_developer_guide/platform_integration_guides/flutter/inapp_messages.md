@@ -69,6 +69,7 @@ The `BrazeInAppMessage` object supports a subset of fields available in the nati
 You can set a data stream listener in Dart to receive in-app message data in your Flutter app.
 
 To begin listening to the stream, use the code below to create a `StreamSubscription` in your Flutter app and call the `subscribeToInAppMessages()` method with a function that takes a `BrazeInAppMessage` instance. Remember to `cancel()` the stream subscription when it is no longer needed.
+
 ```dart
 // Create stream subscription
 StreamSubscription inAppMessageStreamSubscription;
