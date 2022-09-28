@@ -1,0 +1,37 @@
+---
+nav_title: Tester les campagnes
+article_title: Tester les campagnes
+layout: dev_guide
+guide_top_header: "Tester les campagnes"
+guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos messages. Ensuite, vous devez toujours examiner les résultats pour vous assurer que votre campagne fonctionne bien et aura un impact positif sur vos campagnes futures.<br>
+<br>
+ Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
+page_order: 4
+
+tool: 
+  - Campagnes
+  - Rapports
+page_type: landing
+description: "Cette page d’accueil présente des tests et des conseils pour les campagnes. Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
+
+guide_featured_title: "Section Articles"
+guide_featured_list:
+  - name: Envoyer des messages de test
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
+    fa_icon: fas fa-envelope
+  - name: Tests A/B avec des compartiments aléatoires
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/
+    fa_icon: fas fa-columns
+
+guide_menu_title: "Articles supplémentaires"
+guide_menu_list:
+  - name: Analyse de campagne
+    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    fa_icon: fas fa-chart-pie
+  - name: Rapports de rétention
+    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
+    fa_icon: fas fa-chart-area
+  - name: Rapports d’entonnoir
+    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
+    fa_icon: fas fa-filter
+---
