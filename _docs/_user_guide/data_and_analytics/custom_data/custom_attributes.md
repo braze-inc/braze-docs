@@ -120,9 +120,9 @@ More resources on regex:
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
+By default, the max length of an array for an attribute is set to 100. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
-If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
 
 {% alert note %}
 The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
