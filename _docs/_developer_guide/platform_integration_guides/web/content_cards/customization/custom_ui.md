@@ -59,3 +59,41 @@ import * as braze from "@braze/web-sdk";
 braze.logCardClick(card, true);
 ```
 
+## Handling changes in users
+
+Handling `changeUser()` and fetching the latest content cards for the new user.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+
+braze.initialize("YOUR_SDK_API_KEY", {
+  baseUrl: "YOUR_SDK_URL",
+  enableLogging: true,
+  doNotLoadFontAwesome: true,
+});
+
+braze.subscribeToContentCardsUpdates(({ cards }) => {
+  console.log("Braze - subscribeToContentCardsUpdates: ", cards);
+  //This will be invoked every time the feed is successfully refreshed following a requestContentCardsRefresh request
+  //Here you can render the cards to the UI as well as logging impressions.
+});
+
+braze.changeUser("test-user-1");
+
+braze.openSession();
+
+
+braze.requestContentCardsRefresh(
+ () => {console.log("Feed Refresh Request successfully submitted");},
+ () => {console.log("Feed Refresh Request Failed");}
+);
+
+
+//Wait to run this next block until after the the content cards have been logged to the console following the above content card refresh
+braze.changeUser("test-user-2");
+braze.requestContentCardsRefresh(
+ () => {console.log("Feed Refresh Request successfully submitted");},
+ () => {console.log("Feed Refresh Request Failed");}
+);
+```

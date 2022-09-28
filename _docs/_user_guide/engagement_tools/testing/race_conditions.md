@@ -25,15 +25,15 @@ However, in some cases, the second event will trigger first. This means that a m
 
 ## Using multiple API endpoints
 
-If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Note that if you are sending a scheduled message API call, these requests must be separate, and a user must be created before sending the schdeuled API call.
+If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is currently no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API request, there should be no issue. Note that if you are sending a scheduled message API request, these requests must be separate, and a user must be created before sending the schdeuled API request.
 
 {% alert note %}
-If user attributes are sent via SDK or in the same user/track call as the event, then Braze will automatically process those first before attempting to send any message.
+If user attributes and events are sent in the same request (either from `users/track` or from the SDK), then Braze will generally process attributes before events or attempting to send any message.
 {% endalert %}
 
 One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your Canvas or campaign. 
 
-Similarly, you can use the [`Attributes`][1] object to add/create/update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API call will process the `Attributes` object before targeting the users.
+Similarly, you can use the [`Attributes`][1] object to add/create/update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API request will process the `Attributes` object before targeting the users.
 
 Attributes that are included in this object will be processed before Braze begins to send the campaign. If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in Braze’s database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user. The `send_to_existing_only` flag can't be used with user aliases.
 

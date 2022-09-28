@@ -37,7 +37,7 @@ npm install --save @braze/web-sdk
 
 Once installed, you can `import` or `require` the library in the typical fashion:
 
-```javascript
+```typescript
 import * as braze from "@braze/web-sdk";
 // or, using `require`
 const braze = require("@braze/web-sdk");
@@ -78,15 +78,15 @@ braze.initialize('YOUR-API-KEY-HERE', {
 // optionally show all in-app messages without custom handling
 braze.automaticallyShowInAppMessages();
 
-// optionally set the current user's External ID
-if (isLoggedIn){
-    braze.changeUser(userIdentifier);
-}
-
 // if you use Content Cards
 braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
+
+// optionally set the current user's External ID
+if (isLoggedIn){
+    braze.changeUser(userIdentifier);
+}
 
 // Be sure to call `openSession` after `automaticallyShowInAppMessages`
 braze.openSession();
@@ -117,6 +117,9 @@ braze.initialize("YOUR-API-KEY-HERE", {
 braze.toggleLogging()
 ```
 
+If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr)
+
+
 ## Upgrading the SDK
 
 {% include archive/web-v4-rename.md %}
@@ -134,7 +137,7 @@ These two files must be updated in coordination with each other to ensure proper
 
 ## Alternative integration methods
 
-### Server-side rendering frameworks
+### Server-side rendering frameworks {#ssr}
 
 If you use a server-side rendering framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
 
@@ -176,6 +179,16 @@ useEffect(() => {
 }, []);
 ```
 
+### Vite support {#vite}
+
+If you use Vite and see a warning around circular dependences or `Uncaught TypeError: Class extends value undefined is not a constructor or null`, you may need to exclude the Braze SDK from its [dependency discovery](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior):
+
+```
+optimizeDeps: {
+    exclude: ['@braze/web-sdk']
+},
+```
+
 ### AMD module loader
 
 If you use RequireJS or other AMD module-loaders we recommend self-hosting a copy of our library and referencing it as you would with other resources:
@@ -189,7 +202,9 @@ require(['path/to/braze.min.js'], function(braze) {
 ```
 ### Alternative No AMD installation
 
-If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library is available at https://js.appboycdn.com/web-sdk/4.0/braze.no-amd.min.js.
+If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
+
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.

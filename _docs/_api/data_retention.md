@@ -14,9 +14,9 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised in March 2nd, 2022*
+*Last revised on September 21st, 2022*
 
-> This article covers general Braze data retention information.
+> This article covers general Braze data retention information.<br><br>Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.<br><br>Braze has features, processes, and APIs in place to automatically implement good data hygiene practices for compliance with GDPR and other best practices. These are described below.
 
 ## Data Retention Handled by Customers Through Braze’s Dashboard or API
 
@@ -26,7 +26,7 @@ This means you can:
 - Delete user profiles using the Braze [User Delete API Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
 - Delete (null) or amend attributes on user profiles using the Braze [User Track API Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
-Behavioral events cannot be deleted from a User Profile (custom events, sessions, campaigns, purchases). In order to remove those events, you must delete the entire User Profile.
+Behavioral events cannot be deleted from a User Profile (custom events, sessions, campaigns, purchases). To remove those events, you must delete the entire User Profile.
 
 For privacy compliance, you may need to delete all personal data pertaining to a User upon the User’s request. You can find instructions on our [data protection technical assistance]({{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure) page.
 
@@ -36,43 +36,28 @@ A User may have multiple profiles, and you may need to delete multiple profiles 
 
 ## Data Retention Handled by Braze
 
-In some cases, we store certain data only for a predetermined period of time before it is automatically deleted based on certain criteria. For each type of data, we set the following retention timeframes:
-
-{% alert important %} The timeframes outlined in this section are not customizable. {% endalert %}
-
 #### Braze Database: Automatic Archiving/Deletion of Churned Users
 
-Each week, Braze runs a process to remove Inactive Users and Dormant Users from the Braze Services. You can read more about this process on our [user archival definitions]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) page.
+Each week, Braze runs a process to remove Inactive and Dormant Users from the Braze Services. In general, these are users who are not reachable (e.g., have no email address, no phone number, no push token, do not use your apps or visit your websites), have had no activity recorded on their user profile, and have not been messaged or engaged with using Braze. This is done to adhere to GDPR principles and best practices. You can read more about this process on our [user archival definitions]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) page.
 
-{% alert note %} While archival of Inactive or Dormant User profiles is automated and the data retention is not customizable, you can run a data point on such profiles at regular intervals to prevent archiving, thus keeping them active. {% endalert %}
-
-#### Braze Troubleshooting
-
-Braze may delete data where necessary as part of the resolution to a technical issue or incident, for example, for de-duplication of data.
-
-#### Braze Data Lake Data Retention
-
-Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the “Data Lake”, formerly known as “BI Database”).
-
-Braze has instituted processes to ensure regularly scheduled deletions of PII from the “Data Lake” at an app group or event level. If you use our APIs to delete user profiles or delete or amend attributes from user profiles, within two weeks, this automatic deletion process will apply to:
-
-- Events
-- Purchases
-- Campaign Engagement Events (e.g., sends, opens, clicks)
-- Sessions data
-
-Deletion of data in the Data Lake will not affect your segmentation.
+{% alert note %} Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. {% endalert %}
 
 #### Braze Servers: Short-term Retention for Recovery Purposes
 
-Data sent from the Braze Services to Braze’s Data Lake via Braze servers is retained for up to 90 days for recovery purposes.
+Data sent from the Braze Services to Braze’s Snowflake Data Lake via Braze servers is retained in such Braze servers for up to 90 days for recovery purposes.
+
+#### Braze Data Lake Data Retention
+
+Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the “Data Lake”, formerly known as “BI Database”). Data Lake data is used for aggregate reporting and other advanced functionality.
+
+If you use our APIs to delete user profiles or delete or amend attributes from user profiles, it may take up to two weeks for that data to be deleted from Braze's Data Lake. Deletion of data in the Data Lake will not affect segmentation or personalization but rather ensures the data is removed from all Braze systems.
 
 #### Braze Backup Servers
 
 When data is deleted from your production instance, the data remains in Braze’s backup servers for six months and is then deleted according to our internal processes.
 
 ## Data Retention Handled by Braze for Specific Features of the Braze Services
- 
+
 #### Campaign Interactions Data 
  
 <br>**What is it?** Campaign Interactions are data related to End Users’ interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility.
@@ -85,4 +70,20 @@ When data is deleted from your production instance, the data remains in Braze’
  
 **How to reset the clock to avoid deletion?** To retain Campaign Interactions for a particular campaign, you can send a message using that campaign at least once within the 25 months since the last message was sent or use that campaign in a retargeting filter in any active campaign, Canvas, or Card.
  
+You can request a shorter data retention than 25 months via your CSM.
+ 
+#### Canvas Interactions Data 
+
+**What is it?** Canvas Interactions are data related to End Users’ interactions with a Canvas or Canvas step. They are used for retargeting filters and to determine Canvas re-eligibility.
+
+**When is it deleted?** Braze automatically deletes from the Customer’s App Groups the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any Active Campaigns or Canvases.
+
+**What happens after deletion?**
+
+- Canvases with no Canvas Interactions cannot be used in retargeting filters for campaigns, Canvases, and Segments.
+- Any active Canvas that has not been used to send messages in 25 months, and is not being used for retargeting in any active campaigns, Canvases, or Cards, will be stopped because Canvas eligibility resets. You can re-launch the Canvas after reviewing the re-eligibility setting.
+- You will not be able to reference these Canvas Interactions in retargeting features, such as filters, and you will not be able to pull the deleted data from the `/users/export` API.
+
+**How to reset the clock to avoid deletion?** To retain Canvas Interactions for a particular Canvas, you can send a message using that Canvas at least once within the 25 months since the last message was sent or use that Canvas in a retargeting filter in any active campaign, Canvas, or Card.
+
 You can request a shorter data retention than 25 months via your CSM.

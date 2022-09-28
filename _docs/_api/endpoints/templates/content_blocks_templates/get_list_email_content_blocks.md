@@ -14,7 +14,7 @@ description: "This article outlines details about the List Available Content Blo
 /content_blocks/list
 {% endapimethod %}
 
-This endpoint will list your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) information.
+Use this endpoint to list your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) information.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
@@ -47,14 +47,14 @@ Authorization: Bearer YOUR-REST-API-KEY
   "count": "integer",
   "content_blocks": [
     {
-      "content_block_id": "string",
-      "name": "string",
-      "content_type": "html or text",
-      "liquid_tag": "string",
-      "inclusion_count" : "integer",
-      "created_at": "time-in-iso",
-      "last_edited": "time-in-iso",
-      "tags" : "array of strings"
+      "content_block_id": (string) the Content Block identifier,
+      "name": (string) the name of the Content Block,
+      "content_type": (string) the content type, html or text,
+      "liquid_tag": (string) the Liquid tags,
+      "inclusion_count" : (integer) the inclusion count,
+      "created_at": (string) The time the Content Block was created in ISO 8601,
+      "last_edited": (string) The time the Content Block was last edited in ISO 8601,
+      "tags": (array) An array of tags formatted as strings,
     }
   ]
 }

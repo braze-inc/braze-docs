@@ -156,7 +156,7 @@ If you see any issues with your template or want to make any changes, click **Ed
 
 ### Step 5: Save your template
 
-Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose.
+Be sure to save your template by clicking **Save Template**. You're now ready to use this template in any campaign or Canvas component you choose. To access your template, select the editing experience you built it with, and then select it from the list of available templates.
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.

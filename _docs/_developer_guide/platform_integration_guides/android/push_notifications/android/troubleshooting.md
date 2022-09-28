@@ -71,7 +71,7 @@ Ensure your device has good internet connectivity and isn't sending network traf
 
 Check if `com_braze_handle_push_deep_links_automatically` is set to `true` or `false`. To enable Braze to automatically open the app and any deep links when a push notification is tapped, set `com_braze_handle_push_deep_links_automatically` to `true` in your `braze.xml` file.
 
-If `com_braze_handle_push_deep_links_automatically` is set to its default of `false`, you need to create a broadcast receiver to listen for and handle the push received and opened intents.
+If `com_braze_handle_push_deep_links_automatically` is set to its default of `false`, you need to use a Braze Push Callback to listen for and handle the push received and opened intents.
 
 ### Push notifications bounced
 
@@ -171,7 +171,7 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
 [22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack

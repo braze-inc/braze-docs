@@ -49,7 +49,6 @@ The following attributes should be set on the `ABKUser` object:
 - `homeCity`
 - `phone`
 - `userID`
-- `twitterAccountIdentifier`
 - `gender`
 
 ## Assigning custom user attributes

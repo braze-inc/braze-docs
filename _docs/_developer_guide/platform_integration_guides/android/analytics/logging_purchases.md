@@ -8,7 +8,7 @@ page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android or FireOS application."
 
 ---
-
+ 
 # Logging purchases for Android and FireOS
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
@@ -83,6 +83,9 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 
 Refer to our [KDoc][6] for more information.
 
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+
 ### Reserved keys
 
 The following keys are reserved and cannot be used as purchase properties:
@@ -102,4 +105,4 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-purchase.html
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

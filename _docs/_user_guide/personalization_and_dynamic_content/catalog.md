@@ -202,7 +202,7 @@ For example, to let a user know that `tales_storefront` (an item in our catalog 
 {% raw %}
 ```liquid
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
-{% catalog_items Games tales_storefront {{ wishlist[0] }} %}
+{% catalog_items Games {{ wishlist[0] }} %}
 
 Get {{ items[0].title }} now, for just {{ items[0].price }}!
 ```
@@ -212,6 +212,10 @@ Which will display as the following:
 > Get Tales now, for just 7.49 USD!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
+
+### Uploading a CSV
+
+You can upload a CSV of new catalog items to add, or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
 
 ### Using Liquid
 
@@ -239,7 +243,7 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com) for more information.
+Interested in upgrading your experience to Catalog Pro? Contact your account manager to get started.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

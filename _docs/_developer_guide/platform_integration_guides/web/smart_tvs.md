@@ -19,7 +19,7 @@ To get started, follow our [Initial SDK setup][4] guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 
-1. When downloading or importing the Web SDK, be sure to use the ["core" bundle][6].
+1. When downloading or importing the Web SDK, be sure to use the "core" bundle (available at https://js.appboycdn.com/web-sdk/x.y/braze.core.min.js, where x.y is the desired version). We recommend using the CDN version of our Web SDK, since the npm version is written in native ES modules whereas the CDN version is transpiled down to ES5. If you prefer to use the [npm version][6], ensure you are using a bundler such as webpack that will remove unused code and that the code is transpiled down to ES5.
 2. When initializing the Web SDK, you must set the `disablePushTokenMaintenance` and `manageServiceWorkerExternally` initialization options to `true`.
 
 ## Analytics
@@ -36,11 +36,11 @@ Visit [Manual in-app message display][5] for more information on how your Smart 
 
 
 [1]: https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html
-[2]: http://webostv.developer.lge.com/discover/discover-webos-tv/
+[2]: https://webostv.developer.lge.com/discover
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display
-[6]: https://www.npmjs.com/package/@braze/web-sdk-core
+[6]: https://www.npmjs.com/package/@braze/web-sdk
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
 [9]: https://github.com/Appboy/smart-tv-sample-apps

@@ -34,6 +34,8 @@ These customer data platforms collect and route information from multiple source
 
 * [Segment][7]
 
+* [Tealium][8]
+
 
 ## Behavioral analytics
 
@@ -52,3 +54,4 @@ These partners specialize in product analytics and business intelligence and can
 [5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
 [6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
+[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents

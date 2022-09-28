@@ -23,17 +23,17 @@ For more on this, check out [Braze Perspectives](https://www.braze.com/perspecti
 
 ![ISO certification graphic][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018, and renewed as of July 15, 2022. Expires December 16, 2024._
+_Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018, and renewed as of August 30, 2022. Expires December 16, 2024._
 
-Any third party wishing to independently verify the status of Braze's certification may query the [Schellman certificate directory][5], [read our report][7], or [see our certificate here][6].
+Any third party wishing to independently verify the status of Braze's certification may see the [Schellman certificate directory][5] or [see our certificate here][6].
 
 ## SOC 2 examination
 
 ![SOC 2 examination graphic][2]{: height="25%" width="25%" style="border:0px;"}
 
-_Last Review Date/Period: July 1, 2020 to June 30, 2021_
+_Last Review Date/Period: July 1, 2021 to June 30, 2022_
 
-Braze has successfully completed the Type 2 SOC 2 examination for _Security_, performed by independent CPA firm [Schellman & Company, LLC][8].
+Braze has successfully completed the Type 2 SOC 2 examination for _Security_ and availability, performed by independent CPA firm [Schellman & Company, LLC][8].
 
 ## HIPAA
 
@@ -42,7 +42,6 @@ Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) clus
 [1]: {% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}
 [2]: {% image_buster /assets/img/SOC2.png %}
 [3]: https://www.iso.org/isoiec-27001-information-security.html
-[5]: https://www.schellman.com/certificate-directory
-[6]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-5
-[7]: {{site_url}}/docs/assets/pdf/Braze_ISO_Cert.pdf
+[5]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-6
+[6]: {{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf
 [8]: https://www.schellman.com/

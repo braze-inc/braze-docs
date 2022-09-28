@@ -58,9 +58,9 @@ Can't see the code because of the scroll bar? See how to fix that [here]({{site.
 | `<event-type>` | The type of the event in the file. |
 | `<date>` | The hour that events are queued in our system for processing in the UTC time zone. Formatted YYYY-MM-DD-HH. |
 | `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
-| `<zone>` | For internal use by Braze. Single letter. |
+| `<zone>` | For internal use by Braze. |
 | `<partition>` | For internal use by Braze. Integer. |
-| `<offset>`| For internal use by Braze. Integer. |
+| `<offset>`| For internal use by Braze. Integer. Note that different files sent within the same hour will have a different `<offset>` parameter. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -69,14 +69,7 @@ File naming conventions may change in the future, Braze recommends searching all
 
 ### Avro write threshold
 
-Data files will be written to your storage bucket once you hit any of the set thresholds, whichever happens first:
-
-| Partner | Write Threshold |
-|---|---|
-| Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. |
-| Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. |
-| Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. |
-{: .reset-td-br-1 .reset-td-br-2}
+Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes of 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events within the same 5-minute period.
 
 {% alert important %}
 Currents will never write empty files.

@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 ### Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 100 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
@@ -88,7 +88,7 @@ To place a link to the preference center in your emails, use the following prefe
 {% endraw %}
 
 {% alert note %}
-The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
+The Preference Center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 {% endalert %}
 
 The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.

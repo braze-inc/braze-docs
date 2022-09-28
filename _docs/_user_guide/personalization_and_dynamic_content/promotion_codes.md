@@ -17,9 +17,9 @@ Promotion codes can't be sent in in-app messages.
 
 ## Creating a promotion code list
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
-
 ### Step 1: Navigate to the Promotion Code section
+
+![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 From the dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
 
@@ -90,7 +90,7 @@ From there, you can paste this code into a message within the dashboard.
 
 Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used in a multichannel campaign or Canvas component, each user always receives a unique code. If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. 
 
-If the user receives two messages through two channels, they will be reserved two codes, though only one will be shown. For reporting purposes, two codes will show as being sent, though the user will have received a single unique code through two channels.
+If the user receives two messages through two channels, they will be reserved two codes, though only one will be shown. For reporting purposes, two codes will show as being sent. However, the user will have received one unique code through two channels. For example, for a multi-channel Canvas step, only one code would be used by the user.
 
 {% alert important %}
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promo codes, the message will not send.
@@ -119,8 +119,3 @@ This code count can also be found when revisited a pre-existing promotion code l
 [11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}
-
-
-
-
-
