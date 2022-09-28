@@ -12,7 +12,11 @@ tool: Segments
 
 > This article will walk you through how to use a Segment Extension to enhance your segmentation capabilities
 
-A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 2 years (730 days). You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+Braze Segmentation allows you to target users based on custom event or purchase behavior stored for the lifetime of that user profile. Examples include finding users who have or not have performed a particular custom event since a specific time, or segmenting users based on which products they have ever purchased or how much money they have spent with your service.
+
+Segment Extensions expands our existing segmentation capabilities by enabling you to create more precise segments of users based on nested event properties or aggregations of custom event and purchase behavior in the past 2 years (730 days). By means of example, standard Braze segmentation allows you to find users who have ever purchased a specific product. With Segment Extensions, you can enhance that segment by including only users who have purchased a specific color of a specific product at least twice in the past 2 years. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+
+The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 ## Step 1: Navigate to Segment Extensions
 
@@ -32,7 +36,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 ### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. 
+To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
 
 ![Segmenting based on numeric properties.][13]
 
@@ -42,9 +46,11 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
+![Segmenting based on nested event properties.][18]
+
 Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past two years, and tracking doesn't wait until the extension has been set up first.
 
-{% alert note %} 
+{% alert note %}
 Using event properties within Segment Extensions does not impact data point usage.
 {% endalert %}
 
@@ -100,3 +106,5 @@ Now you can proceed as usual with [creating your segment][11].
 [15]: {% image_buster /assets/img/segment/property4.png %}
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
+[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

@@ -207,6 +207,10 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 As you begin to add more steps, you can view your entire Canvas using either the **Detailed View** or **Simplified View**. **Simplified View** shows just the component icons as a high-level visual of your user journey whereas **Detailed View** shows the expanded step details. Depending on your preferences, you can toggle between these views!
 {% endalert %}
 
+{% alert warning %}
+A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
+{% endalert %}
+
 {% endtab %}
 
 {% tab Original Canvas Editor %}

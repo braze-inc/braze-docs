@@ -4,6 +4,7 @@ article_title: "GET: [Endpoint Name]"
 search_tag: Endpoint
 
 page_order: 1
+excerpt_separator: ""
 
 layout: api_page
 page_type: reference

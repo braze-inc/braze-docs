@@ -96,13 +96,14 @@ The following lists features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-success"></i></td>  
+            <td for="push"><i class="fa-solid fa-minus"></i></td>  
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
     </tbody>
 </table>
 
 - <i class="fas fa-check text-success"></i> = Supported
+- <i class="fa-solid fa-minus"></i> = Partial support
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
 - N/A = Not supported by OTT platform
 
@@ -163,8 +164,8 @@ Use Braze's Web SDK to integrate with [LG webOS TVs](https://webostv.developer.l
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI](#custom-ui))
-- In-app messages (via [Custom UI](#custom-ui))
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
 
@@ -175,8 +176,8 @@ Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI](#custom-ui))
-- In-app messages (via [Custom UI](#custom-ui))
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
 
@@ -187,7 +188,7 @@ Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/doc
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- In-app messages (via [Custom UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
 
 For more information, visit the [Roku integration guide][3].
 
@@ -199,10 +200,10 @@ For more information, visit the [iOS Swift SDK integration guide][4].
 
 Features include:
 
-- Data and Analytics collection for cross-channel engagement
-- Content Cards (via [Custom UI](#custom-ui))
-- In-app messages (via [Custom UI](#custom-ui))
-- Silent Push Notifications
+- Data and analytics collection for cross-channel engagement
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
+- Silent push notifications and update badging
 
 **Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
 
@@ -212,9 +213,9 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 
 ![A segment created using the Android OTT app.][1]
 
-## Custom UI {#custom-ui}
+## Headless UI {#custom-ui}
 
-For platforms that support in-app messages or Content Cards via Custom UI, Braze will deliver a data model (i.e. JSON) that your app can read and use within a UI your app controls. These platforms don't include any out-of-the-box UI or Views.
+For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model (i.e. JSON) that your app can read and use within a UI your app controls. These platforms don't include any out-of-the-box UI or Views.
 
 This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
 

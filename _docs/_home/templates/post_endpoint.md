@@ -5,6 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
+excerpt_separator: ""
 
 description: "This article outlines details about and using this POST [endpoint name] Braze endpoint."
 
