@@ -13,7 +13,7 @@ description: "This article outlines the usage of and parameters for using the re
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
-This endpoint allows you to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
+Use this endpoint to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
@@ -53,16 +53,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {
-      "phone": "12345678900",
-      "invalid_detected_at": "2016-08-25 15:24:32 +0000"
+      "phone": (string) phone number in e.164 format,
+      "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
     },
     {
-      "phone": "12345678901",
-      "invalid_detected_at": "2016-08-24 17:41:58 +0000"
+      "phone": (string) phone number in e.164 format,
+      "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
     },
     {
-      "phone": "12345678902",
-      "invalid_detected_at": "2016-08-24 12:01:13 +0000"
+      "phone": (string) phone number in e.164 format,
+      "invalid_detected_at": (string) the time the invalid number was detected in ISO 8601
     }
   ],
   "message": "success"

@@ -62,7 +62,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 Braze allows setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
-For example, to update the font on all titles for captioned image cards, override the `Appboy.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
+For example, to update the font on all titles for captioned image cards, override the `Braze.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
@@ -77,7 +77,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 ## Custom pinned icon {#setting-a-custom-pinned-icon-for-android}
 
-To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
 ## Custom card rendering {#customizing-card-rendering-for-android}
 
@@ -291,7 +291,6 @@ To override this behavior, override the `values-night` values in `android-sdk-ui
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-content-cards-displayed.html
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html

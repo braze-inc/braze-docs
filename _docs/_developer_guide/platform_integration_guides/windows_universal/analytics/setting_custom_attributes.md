@@ -28,8 +28,6 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 - `Country`
 - `HomeCity`
 - `PhoneNumber`
-- `FacebookData`
-- `TwitterData`
 
 **Example Implementation**
 

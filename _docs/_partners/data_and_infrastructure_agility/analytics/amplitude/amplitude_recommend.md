@@ -40,15 +40,20 @@ In Braze, navigate to **Technology Partners** and select **Amplitude**. Here, yo
 
 In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
-![]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img/amplitude.png %})
 
 ### Step 3: Export an Amplitude cohort to Braze
 
-First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Once you have created a cohort, click **Sync to...** to export these users to Braze.
+First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Amplitude can sync cohorts to Braze using the following identifiers:
+- User Alias
+- Device ID
+- User ID (External ID)
 
-#### Scheduled cohort syncs
+Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
-Cohort syncs can be scheduled to be performed hours or daily. Scheduled sync will only send the updated data set deltas to minimize data point usage.
+#### Defining Sync Cadence
+
+Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
 ### Step 4: Segment users in Braze
 

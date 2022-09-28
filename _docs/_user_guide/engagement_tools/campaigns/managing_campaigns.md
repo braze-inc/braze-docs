@@ -27,4 +27,7 @@ guide_featured_list:
   - name: Campaign Alerts
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
     fa_icon: fas fa-bell
+  - name: Searching for Campaigns
+    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
+    fa_icon: fas fa-magnifying-glass
 ---

@@ -14,7 +14,7 @@ description: "This article outlines details about the Canvas Data Summary Analyt
 /canvas/data_summary
 {% endapimethod %}
 
-This endpoint allows you to export rollups of time series data for a Canvas, providing a concise summary of a Canvas' results.
+Use this endpoint allows to export rollups of time series data for a Canvas, providing a concise summary of a Canvas' results.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -50,35 +50,35 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
-    "name": (string) Canvas name,
+    "name": (string) the Canvas name,
     "total_stats": {
-      "revenue": (float),
-      "conversions": (int),
-      "conversions_by_entry_time": (int),
-      "entries": (int)
+      "revenue": (float) the number of dollars of revenue (USD),
+      "conversions": (int) the number of conversions,
+      "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
+      "entries": (int) the number of entries
     },
     "variant_stats": (optional) {
-      "00000000-0000-0000-0000-0000000000000": (API identifier for variant) {
-        "name": (string) name of variant,
-        "revenue": (float),
-        "conversions": (int),
-        "entries": (int)
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the variant {
+        "name": (string) the name of variant,
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "entries": (int) the number of entries
       },
       ... (more variants)
     },
     "step_stats": (optional) {
-      "00000000-0000-0000-0000-0000000000000": (API identifier for step) {
-        "name": (string) name of step,
-        "revenue": (float),
-        "conversions": (int),
-        "conversions_by_entry_time": (int),
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
+        "name": (string) the name of step,
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
         "messages": {
           "android_push": (name of channel) [
             {
-              "sent": (int),
-              "opens": (int),
-              "influenced_opens": (int),
-              "bounces": (int)
+              "sent": (int) the number of sends,
+              "opens": (int) the number of opens,
+              "influenced_opens": (int) the number of influenced opens,
+              "bounces": (int) the number of bounces
               ... (more stats for channel)
             }
           ],

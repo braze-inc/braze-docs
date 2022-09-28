@@ -21,7 +21,6 @@ glossary_tags:
   - name: Marketing Activity
   - name: User Attributes
   - name: Install Attribution
-  - name: Social Activity
   - name: Testing
   - name: Other
 
@@ -110,6 +109,10 @@ glossaries:
     description: Segments your users by the latest version of your app that they have used.
     tags:
       - User Activity
+  - name: Most Recent Device Locale
+    description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
+    tags:
+      - User Attributes
   - name: App Version Number
     description: Filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. For Android, this version number is based on the <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> for the app. For iOS, this version number is based on the <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> for the app. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
     tags:
@@ -278,8 +281,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Extension
-    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
+  - name: Amplitude Cohorts
+    description: Clients who use Amplitude can supplement their segments by choosing and importing their cohorts in Amplitude.
     tags:
       - User Attributes
   - name: Background Push Enabled
@@ -318,6 +321,54 @@ glossaries:
     description: Segments your users by their mobile phone’s operating system.
     tags:
       - User Attributes
+  - name: Clicked Content Card
+    description: Segments your users by whether or not they have clicked a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked Email
+    description: Segments your users by whether or not they have clicked a specific email. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked In-App Message
+    description: Segments your users by whether or not they have clicked a specific in-app message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Clicked In-App Message Button
+    description: Segments your users by whether or not they have clicked a specific in-app message button. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Directly Opened Push Notification
+    description: Segments your users by whether or not they have directly opened a specific push notification. The proportion of opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Dismissed Content Card
+    description: Segments your users by whether or not they have dismissed a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email
+    description: Segments your users by whether or not they have opened a specific email This includes both user and machine opens. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email (Other Opens)
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that haven’t been identified as “Machine opens”. For example, when a user opens an email on another platform (i.e. Gmail app on a phone, Gmail on desktop browser), this will be logged as an “Other opens”. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Opened Email (Machine Opens)
+    description: Segments your users by whether or not they have opened a specific email. This includes email opens that are affected by Apple’s Mail Privacy Protection (MPP) for iOS 15. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Replied to SMS
+    description: Segments your users by whether or not they have replied to a specific SMS message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Viewed Content Card
+    description: Segments your users by whether or not they have viewed a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
+  - name: Viewed In-App Message
+    description: Segments your users by whether or not they have viewed a specific in-app message. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+    tags:
+      - Retargeting
   - name: Email Available
     description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
     tags:
@@ -422,22 +473,6 @@ glossaries:
     description: Segments your users by the source that their install was attributed to.
     tags:
       - Install Attribution
-  - name: Connected to Facebook
-    description: Segments your users who have granted Facebook account access within your app.
-    tags:
-      - Social Activity
-  - name: Connected to Twitter
-    description: Segments your users who have granted Twitter account access within your app.
-    tags:
-      - Social Activity
-  - name: Number of Facebook Friends Using App
-    description: Segments your users by the number of friends that they have on Facebook that are using your app.
-    tags:
-      - Social Activity
-  - name: Number of Twitter Followers
-    description: Segments your users by the number of followers that they have on Twitter.
-    tags:
-      - Social Activity
   - name: Device IDFA
     description: Allows you to designate your campaign recipients by IDFA for testing.
     tags:

@@ -93,8 +93,8 @@ validurls['/docs/api/objects_filters/webhook_object/'] = '/docs/api/objects_filt
 validurls['/docs/api/objects_filters/windows_objects/'] = '/docs/api/objects_filters/messaging/windows_objects/';
 validurls['/docs/api/objects_filters/content_cards_object/'] = '/docs/api/objects_filters/messaging/content_cards_object/';
 
-validurls['/docs/rest_api/'] = '/docs/api/basics/';
-validurls['/docs/rest_apis/'] = '/docs/api/basics/';
+validurls['/docs/rest_api/'] = '/docs/api/home/';
+validurls['/docs/rest_apis/'] = '/docs/api/home/';
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/home/';
 validurls['/docs/home/'] = '/docs/user_guide/introduction/';
@@ -541,4 +541,15 @@ validurls['/docs/user_guide/engagement_tools/canvas/faqs/#canvas-flow/'] = '/doc
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/about/';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
+
+validurls['/docs/view_pii'] = '/docs/user_guide/administrative/company_settings/security_settings/#view-pii';
+
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#creating-tests'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewing-results-of-a-multivariate-campaign'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence';
+validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
+
+validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
+validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
 

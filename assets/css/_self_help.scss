@@ -106,6 +106,13 @@ $help_transition_time : 0.25s;
             position: relative;
             top: 50%;
           }
+          i {
+            vertical-align: top;
+            display: inline-block;
+            font-size: 24px;
+            margin: auto 25px;
+            max-width: 30px;
+          }
         }
         .help_info {
 

@@ -16,11 +16,9 @@ For some email clients, CSS inlining can improve the way that emails render and 
 
 ## Using CSS inlining
 
-You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML Composer, and the **Advanced** tab of the Drag & Drop Editor.
+You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML editor.
 
-| HTML Composer | Drag & Drop Editor|
-| --- | --- |
-| ![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:80%;"} | ![Toggle to manage CSS inlining in Drag & Drop Editor.][3]{: style="max-width:80%;"} |
+![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:80%;"} 
 
 ### Default inlining state
 
@@ -30,4 +28,3 @@ You can set a default on or off state globally from **Manage Settings** > **Emai
 
 [1]:{% image_buster /assets/img_archive/css-inline1.png %}
 [2]:{% image_buster /assets/img_archive/css-inline2.png %}
-[3]:{% image_buster /assets/img_archive/css-inline3.png %}

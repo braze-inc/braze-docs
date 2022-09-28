@@ -59,6 +59,7 @@ You can export the following data from Braze to mParticle:
 
 {% tabs %}
 {% tab Platform-Specific %}
+
 | Event Name| Feed Type| Description| Currents Properties |
 | --------- | -------- | ---------- | ------------------- |
 | Push Notification Sends| Platform-specific Feed | A push notification was successfully sent to a User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
@@ -77,6 +78,7 @@ You can export the following data from Braze to mParticle:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% tab Unbound %}
+
 | Event Name| Feed Type| Description| Currents Properties |
 | --------- | -------- | ---------- | ------------------- |
 | Email Sends| Unbound Feed| An email was successfully sent.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
@@ -85,6 +87,7 @@ You can export the following data from Braze to mParticle:
 | Email Clicks| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled. Link ID and Alias require Link Aliasing to be enabled | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
 | Email Bounces| Unbound Feed| Braze attempted to send an email, but the User’s receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Marks As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
+| Email Soft Bounces| Unbound Feed| Braze attempted to send an email, but the User's receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Email Unsubscribes| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | SMS Sends| Unbound Feed| An SMS was sent to a user.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; |
 | SMS Carrier Sends| Unbound Feed| An SMS was set to a carrier.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
@@ -98,6 +101,8 @@ You can export the following data from Braze to mParticle:
 | Campaign Control Group Enrollments | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
 | Canvas Conversions| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
+| Experiment Conversions | Unbound Feed | User converts for a Canvas experiment step. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
+| Experiment Split Entries | Unbound Feed | User enters a Canvas experiment step path. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 &#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number (`to_phone_number`) in mParticle.

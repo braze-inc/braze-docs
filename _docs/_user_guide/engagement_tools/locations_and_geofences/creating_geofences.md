@@ -12,11 +12,11 @@ tool:
 
 > This reference article covers what geofences are, and how to create and configure them.
 
-At the core of Braze's real-time location offering is the concept of a "geofence." A geofence is a virtual geographic area, represented as latitude/longitude pairs combined with a radius, forming a circle in a specific position on the globe. Geofences can vary in size from the size of a building to the size of an entire city.
+At the core of Braze's real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
 
-You can define geofences on the Braze dashboard and trigger campaigns in real-time as users enter and exit them across the globe. Geofences are deeply integrated into Braze's segmentation and messaging capabilities. Campaigns can be delivered in real-time to users as they exit or enter geofences, or sent as followups hours or days later. As users enter or exit your geofences, they add a new layer of user data that can be used for segmentation and re-targeting.
+You can define geofences on the Braze dashboard and use them to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
-Geofences are managed in the **Locations** page in the **Engagement** section. Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Example geofence sets include `All Northeast Regional Stores` or `September Events`. A given geofence set may only contain up to 10,000 geofences.
+Manage geofences from the **Locations** page. Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. For example, you might have a geofence set for `All Northeast Regional Stores` or `September Events`. One geofence set can contain up to 10,000 geofences.
 
 ## Creating geofence sets manually
 

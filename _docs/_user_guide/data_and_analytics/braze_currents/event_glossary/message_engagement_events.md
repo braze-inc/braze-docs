@@ -45,6 +45,60 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Experiment split entry events
+
+{% apitags %}
+Experiment Step, Canvas
+{% endapitags %}
+
+This event occurs when a user enters a Canvas experiment step path.
+
+```json
+// Experiment Step Path Entry: users.canvas.experimentstep.PathEntry
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_name": (string) name of the experiment split the user enrolled in,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "in_control_group": (boolean) whether the user was enrolled in the control group
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Experiment conversion events
+
+{% apitags %}
+Experiment Step, Canvas
+{% endapitags %}
+
+This event occurs when a user convert for a Canvas experiment step.
+
+```json
+// Experiment Step Conversion: users.canvas.experimentstep.Conversion
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
+  "conversion_behavior_index": (int) index of the conversion behavior
+}
+```
+{% endapi %}
+{% api %}
+
 ## Push send events
 
 {% apitags %}
@@ -503,7 +557,8 @@ This event occurs when the end-user hits the “spam” button on the email. Not
 }
 ```
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
@@ -545,7 +600,8 @@ Note that the `Unsubscribe` event is actually a specialized click event that is 
 }
 ```
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -720,7 +776,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 Content Cards, Sends
 {% endapitags %}
 
-This event occurs when a content card gets sent to a user.
+This event occurs when a Content Card gets sent to a user.
 
 ```json
 // Content Card Send: users.messages.contentcard.Send
@@ -754,7 +810,7 @@ This event occurs when a content card gets sent to a user.
 Content Cards, Impressions
 {% endapitags %}
 
-This event occurs when a user views a content card.
+This event occurs when a user views a Content Card.
 
 ```json
 // Content Card Impression: users.messages.contentcard.Impression
@@ -797,7 +853,7 @@ This event occurs when a user views a content card.
 Content Cards, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks a content card.
+This event occurs when a user clicks a Content Card.
 
 ```json
 // Content Card Click: users.messages.contentcard.Click
@@ -841,7 +897,7 @@ This event occurs when a user clicks a content card.
 Content Cards, Dismissal
 {% endapitags %}
 
-This event occurs when a user dismisses a content card.
+This event occurs when a user dismisses a Content Card.
 
 ```json
 // Content Card Dismiss: users.messages.contentcard.Dismiss
@@ -1209,7 +1265,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 Canvas, Conversion
 {% endapitags %}
 
-This event occurs when a user does an action that has been set as a conversion event in canvas.
+This event occurs when a user does an action that has been set as a conversion event in Canvas.
 
 {% alert important %}
 Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
@@ -1224,7 +1280,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
-  "canvas_id": (string) id of the canvas,
+  "canvas_id": (string) id of the Canvas,
   "canvas_name": (string) name of the Canvas,
   "conversion_behavior_index": (int) index of the conversion behavior,
   "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
@@ -1245,7 +1301,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 Canvas, Entry
 {% endapitags %}
 
-This event occurs when a user enters into the canvas. This event tells you which variant the user entered into.
+This event occurs when a user enters into the Canvas. This event tells you which variant the user entered into.
 
 ```json
 // Canvas Entry Event: users.canvas.Entry
@@ -1259,7 +1315,6 @@ This event occurs when a user enters into the canvas. This event tells you which
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_name": (string) will always return 'null' for this engagement event,
   "canvas_step_id": (string) id of the step the user entered into,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
@@ -1295,3 +1350,29 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
+{% api %}
+## Uninstall events
+
+{% apitags %}
+Uninstall
+{% endapitags %}
+
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+
+{% alert important %}
+This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
+{% endalert %}
+
+```json
+// Uninstall Event: users.behaviors.Uninstall
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
+}
+```
+
+{% endapi %}

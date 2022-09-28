@@ -10,7 +10,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-description: "This landing page includes all Braze partners. Use it to explore techncial documentation that will help implement Technology Partners into your braze SDK."
+description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
 
 valid_partner_list:
 - name: Jampp
@@ -197,6 +197,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
+- name: Quikly
+  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
 - name: IAM Studio
@@ -205,5 +207,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
 - name: Lokalise
   url: /docs/partners/message_personalization/localization/lokalise/
-
+- name: DataGrail
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
 ---

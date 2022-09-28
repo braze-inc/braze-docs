@@ -14,7 +14,7 @@ description: "This article outlines details about Braze's Campaign Daily Stats b
 /sends/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
+Use this endpoint to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
 
 Campaign conversions will be attributed towards the most recent send id that a given user has received from the campaign.
 
@@ -62,26 +62,26 @@ Authorization: Bearer YOUR-REST-API-KEY
             "revenue": (float) the number of dollars of revenue (USD),
             "unique_recipients": (int) the number of unique recipients,
             "conversions": (int) the number of conversions,
-            "conversions_by_send_time": (int) the number of conversions,
-            "conversions1": (int, optional) the number of conversions for the second conversion event,
-            "conversions1_by_send_time": (int, optional) the number of conversions for the second conversion event by send time,
-            "conversions2": (int, optional) the number of conversions for the third conversion event,
-            "conversions2_by_send_time": (int, optional) the number of conversions for the third conversion event by send time,
-            "conversions3": (int, optional) the number of conversions for the fourth conversion event,
-            "conversions3_by_send_time": (int, optional) the number of conversions for the fourth conversion event by send time
+            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+            "conversions1": (optional, int) the number of conversions for the second conversion event,
+            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+            "conversions2": (optional, int) the number of conversions for the third conversion event,
+            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+            "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
           }
         ]
       },
-      "conversions_by_send_time": 0,
-      "conversions1_by_send_time": 0,
-      "conversions2_by_send_time": 0,
-      "conversions3_by_send_time": 0,
-      "conversions": 0,
-      "conversions1": 0,
-      "conversions2": 0,
-      "conversions3": 0,
-      "unique_recipients": 1,
-      "revenue": 0
+      "conversions_by_send_time": (optional, int),
+      "conversions1_by_send_time": (optional, int),
+      "conversions2_by_send_time": (optional, int),
+      "conversions3_by_send_time": (optional, int),
+      "conversions": (int),
+      "conversions1": (optional, int),
+      "conversions2": (optional, int),
+      "conversions3": (optional, int),
+      "unique_recipients": (int),
+      "revenue": (optional, float)
     }
   ],
   "message": "success"

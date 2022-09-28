@@ -14,7 +14,7 @@ description: "This article outlines details about the Delete Scheduled Messages 
 /messages/schedule/delete
 {% endapimethod %}
 
-The delete scheduled messages endpoint allows you to cancel a message that you previously scheduled _before_ it has been sent.
+Use this endpoint to cancel a message that you previously scheduled before it has been sent.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 

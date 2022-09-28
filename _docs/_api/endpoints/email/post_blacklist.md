@@ -2,11 +2,11 @@
 nav_title: "POST: Blacklist Emails"
 article_title: "POST: Blacklist Emails"
 search_tag: Endpoint
-page_order: 5
+page_order: 10
 layout: api_page
 page_type: reference
 alias: /blacklist/
-description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Post Blacklist Emails Braze endpoint."
+description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blacklist Emails Braze endpoint."
 
 ---
 {% api %}
@@ -15,7 +15,14 @@ description: "This article outlines the usage of and parameters for blacklisting
 /email/blacklist
 {% endapimethod %}
 
-Blacklisting an email address will unsubscribe the user from email and mark them as hard bounced.
+{% alert important %}
+
+Braze has released the [`/email/blocklist` endpoint]({{site.baseurl}}/api/endpoints/email/post_blocklist/) with the same functionality as the `/email/blacklist` endpoint. It is recommended to use the `/email/blocklist`
+endpoint instead.
+
+{% endalert %}
+
+Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 

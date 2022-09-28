@@ -83,7 +83,7 @@ collections:
   api:
     title: API
     output: true
-    default_nav_url: basics/
+    default_nav_url: home/
     page_order: 4
   partners:
     title: Technology Partners

@@ -9,7 +9,7 @@ description: "This article explains the different components of the User Alias o
 
 # User attributes object specification
 
-An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
+An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
 ```json
 {
@@ -139,7 +139,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
-      "push_tokens": [{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]
+      "push_tokens": [{"app_id": "Your App Identifier", "token": "abcd", "device_id": "optional_field_value"}]
 
     },
     {
