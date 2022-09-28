@@ -187,7 +187,7 @@ For campaigns with a custom fallback time is specified, if you launch the campai
 
 ## Troubleshooting
 
-### Showing little to no sends
+### Preview chart showing few users with optimal times
 
 Braze needs a certain amount of engagement data to make a good estimate. If there isn’t enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
 
