@@ -24,6 +24,20 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
+### Expected behavior
+
+#### Android
+
+- Android 14 and up - Users can see the in-app message. If you are testing the in-app message and need to see it multiple times, it can be brought up again after disabling push in device settings.
+- Android 13 and under - Push primers are not needed because push is opted-in by default. The in-app message will not display if push is enabled resulting in very few users recieving the in-app message.
+
+#### iOS
+
+- The iOS prompt can only be displayed at most once per install. This is enforced by the operating system meaning if it was displayed guring the app install, it will not display again.
+- If the app's push setting is on, we do not show the in-app message as the user is already opted in. 
+- If the app's push settings is off, you should forward the user to the app's noticiation settings in the settings app.
+- If the push setting is any other field (e.g., Provisional, not determined), the in-app message should display.
+
 #### Note for development teams
 This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
 <br><br>
