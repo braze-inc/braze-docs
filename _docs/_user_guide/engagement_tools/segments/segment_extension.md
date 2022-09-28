@@ -16,7 +16,7 @@ Braze Segmentation allows you to target users based on custom event or purchase 
 
 Segment Extensions expands our existing segmentation capabilities by enabling you to create more precise segments of users based on nested event properties or aggregations of custom event and purchase behavior in the past 2 years (730 days). By means of example, standard Braze segmentation allows you to find users who have ever purchased a specific product. With Segment Extensions, you can enhance that segment by including only users who have purchased a specific color of a specific product at least twice in the past 2 years. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
-The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time.
+The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 ## Step 1: Navigate to Segment Extensions
 
