@@ -27,13 +27,13 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 ## Receiving Content Card data
 
-To receive Content Card data in your Flutter app, the `BrazePlugin` supports sending Content Card data using Dart [Streams](https://dart.dev/tutorials/language/streams) **(Recommended)** or by using a data callback **(Legacy)**.
+To receive Content Card data in your Flutter app, the `BrazePlugin` supports sending Content Card data using [Dart Streams](https://dart.dev/tutorials/language/streams) (recommended) or by using a data callback (legacy).
 
 The `BrazeContentCard` [object](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
 
-{% alert note %} The legacy data callback method will soon be deprecated. Note that Content Cards can be added to both data streams and data callbacks. If you have already integrated data callbacks and wish to use data streams, remove any callback logic to ensure that Content Cards are processed exactly once. {% endalert %}
+{% alert note %} The legacy data callback method will soon be deprecated. Content Cards can be added to both data streams and data callbacks. If you have already integrated data callbacks and wish to use data streams, remove any callback logic to ensure that Content Cards are processed exactly once. {% endalert %}
 
-### Method 1: Content Card data streams (Recommended)
+### Method 1: Content Card data streams (recommended)
 
 You can set a data stream listener in Dart to receive Content Card data in your Flutter app.
 
