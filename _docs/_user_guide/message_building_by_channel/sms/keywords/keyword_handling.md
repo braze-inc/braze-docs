@@ -69,6 +69,10 @@ You are able to manage your own responses that get sent to users after they text
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %} 
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
+{% endalert %}
+
 ## Multi-language support
 
 When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 

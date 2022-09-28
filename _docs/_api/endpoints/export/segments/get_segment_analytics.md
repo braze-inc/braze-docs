@@ -48,8 +48,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
         {
-            "time" : (string) date as ISO 8601 date,
-            "size" : (int) size of the segment on that date
+            "time" : (string) the date as ISO 8601 date,
+            "size" : (int) the size of the segment on that date
         },
         ...
     ]

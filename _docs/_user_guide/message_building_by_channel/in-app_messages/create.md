@@ -234,7 +234,7 @@ When your customer clicks on a button in your in-app message, the following acti
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
 
-{% sdk_min_versions android:21.0.0 web:4.0.3 ios:5.4.0 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
 #### iOS device options
 
@@ -341,7 +341,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 In-app messages work by sending the message and triggers to the user's device. Once the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 
 {% alert important %}
-Once an in-app message campaign has been stopped, there may be some users that already received the message but have not seen it because they haven't opened your app. These users will still see your in-app message and be counted as a unique impression—even after your campaign has been stopped.
+Once an in-app message has been stopped, there may be some users that continue to see the message if they started a session before the message was stopped and subsequently perform the trigger event. These users will be counted as a unique impression even after the campaign has been stopped.
 {% endalert %}
 
 #### Choose a priority

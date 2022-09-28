@@ -11,8 +11,11 @@ guide_featured_list:
   - name: Android SDK
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
     image: /assets/img/android.png
-  - name: iOS SDK
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/
+  - name: iOS SDK (Swift)
+    link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
+    fa_icon: fab fa-apple
+  - name: iOS SDK (Objective-C)
+    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
     fa_icon: fab fa-apple
   - name: Web SDK
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
@@ -44,7 +47,10 @@ guide_menu_list:
   - name: Android SDK
     link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
     image: /assets/img/android.png
-  - name: iOS SDK
+  - name: iOS SDK (Swift)
+    link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
+    fa_icon: fab fa-apple
+  - name: iOS SDK (Objective-C)
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
   - name: Web SDK

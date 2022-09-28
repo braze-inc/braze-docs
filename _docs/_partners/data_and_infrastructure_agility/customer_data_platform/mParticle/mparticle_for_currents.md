@@ -101,6 +101,8 @@ You can export the following data from Braze to mParticle:
 | Campaign Control Group Enrollments | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
 | Canvas Conversions| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
+| Experiment Conversions | Unbound Feed | User converts for a Canvas experiment step. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
+| Experiment Split Entries | Unbound Feed | User enters a Canvas experiment step path. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 &#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number (`to_phone_number`) in mParticle.

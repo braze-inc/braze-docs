@@ -44,12 +44,12 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
-      "created_at" : (string) date created as ISO 8601 date,
-      "updated_at" : (string) date last updated as ISO 8601 date,
-      "name" : (string) segment name,
-      "description" : (string) human-readable description of filters,
-      "text_description" : (string) segment description, 
-      "tags" : (array) tag names associated with the segment
+      "created_at" : (string) the date created as ISO 8601 date,
+      "updated_at" : (string) the date last updated as ISO 8601 date,
+      "name" : (string) the segment name,
+      "description" : (string) a human-readable description of filters,
+      "text_description" : (string) the segment description, 
+      "tags" : (array) the tag names associated with the segment formatted as strings
 }
 ```
 

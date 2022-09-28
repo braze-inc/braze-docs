@@ -56,16 +56,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
-      "email": "example1@braze.com",
-      "unsubscribed_at": "2016-08-25 15:24:32 +0000"
+      "email": (string) an email that has been unsubscribed,
+      "unsubscribed_at": (string) the time the email was unsubscribed in ISO 8601
     },
     {
-      "email": "example2@braze.com",
-      "unsubscribed_at": "2016-08-24 17:41:58 +0000"
+      "email": (string) an email that has been unsubscribed,
+      "unsubscribed_at": (string) the time the email was unsubscribed in ISO 8601
     },
     {
-      "email": "example3@braze.com",
-      "unsubscribed_at": "2016-08-24 12:01:13 +0000"
+      "email": (string) an email that has been unsubscribed,
+      "unsubscribed_at": (string) the time the email was unsubscribed in ISO 8601
     }
   ],
   "message": "success"

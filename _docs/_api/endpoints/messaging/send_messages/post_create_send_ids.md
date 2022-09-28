@@ -62,7 +62,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
-  "send_id" : "example_send_id"
+  "send_id" : (string) the send identifier
 }
 ```
 

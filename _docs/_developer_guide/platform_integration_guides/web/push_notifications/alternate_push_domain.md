@@ -60,41 +60,8 @@ document.getElementById("opt-in").onclick = function(){
 At this point, `secure.com` will open a popup window in which you can initialize the Braze Web SDK for the same user ID and request the user's permission for Web push.
 
 **https://secure.com/push-registration.html**
-```html
-<html>
-    <head>
-        <title>Opt-In for Push</title>
-        <script src="https://js.appboycdn.com/web-sdk/4.0/braze.min.js"></script>
-    </head>
-    <body>
-    <button id="opt-in">Opt In For Push</button>
-    <script>
-        // initialize Braze
-        braze.initialize("YOUR-API-KEY", {
-            baseUrl: "YOUR-SDK-BASE-URL",
-            enableLogging: true
-        });
-        // parse the `external_id` from the URL parameters
-        const external_id = (location.search.substring(1).split('&').find(param => param.startsWith('external_id=')) || '').split('=')[1] || '';
-        if (external_id) {
-            braze.changeUser(external_id);
-        }
-        braze.automaticallyShowInAppMessages();
-        braze.openSession();
 
-        // when the user click's our Opt In button, prompt for permission
-        document.getElementById("opt-in").onclick = function(){
-            braze.requestPushPermission(() => {
-                window.alert(`You are registered for push!`);
-                window.close();
-            }, () => {
-                window.alert(`Something went wrong.`);
-            });
-        };
-    </script>
-    </body>
-</html>
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-registration.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Step 3: Communicate between domains (optional)
 
@@ -127,30 +94,7 @@ function getPushStatus(event){
 
 **secure.com/push-status.html**
 
-```html
-<script src="https://js.appboycdn.com/web-sdk/4.0/braze.min.js"></script>
-<script>
-// initialize Braze
-braze.initialize("YOUR-API-KEY", {
-    baseUrl: "YOUR-SDK-BASE-URL",
-    enableLogging: true
-});
-
-// listen for a request from our insecure page
-window.addEventListener("message", (event) => {
-    if (event.origin === "http://insecure.com") {
-        // when they ask for push status, retrieve from Braze SDK
-        if (event.data.type === 'get_push_status') {
-            // send the parent window (insecure.com) the results
-            window.top.postMessage({
-                type: 'set_push_status',
-                isPushPermissionGranted: braze.isPushPermissionGranted()
-            }, event.origin);
-        }
-    }
-});
-</script>
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 [1]: https://www.w3.org/TR/service-workers/#security-considerations
 [2]: https://w3c.github.io/webappsec-secure-contexts/

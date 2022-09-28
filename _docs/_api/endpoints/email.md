@@ -2,7 +2,7 @@
 nav_title: "Email Lists & Addresses"
 article_title: Email Lists & Addresses Endpoints
 search_tag: Endpoint
-page_order: 0
+page_order: 1
 layout: featured
 
 description: "This landing page explains and lists the Braze Email Lists and Addresses Endpoints."
@@ -28,8 +28,8 @@ guide_featured_list:
   - name: "POST: Remove Spam"
     link: /docs/api/endpoints/email/post_remove_spam/
     fa_icon: fas fa-envelope-open
-  - name: "POST: Blacklist Email"
-    link: /docs/api/endpoints/email/post_blacklist/
+  - name: "POST: Blocklist Email"
+    link: /docs/api/endpoints/email/post_blocklist/
     fa_icon: fas fa-envelope-open
 ---
 {% comment %}

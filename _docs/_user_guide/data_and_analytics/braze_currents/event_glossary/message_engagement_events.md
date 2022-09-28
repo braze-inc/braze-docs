@@ -45,6 +45,60 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Experiment split entry events
+
+{% apitags %}
+Experiment Step, Canvas
+{% endapitags %}
+
+This event occurs when a user enters a Canvas experiment step path.
+
+```json
+// Experiment Step Path Entry: users.canvas.experimentstep.PathEntry
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_name": (string) name of the experiment split the user enrolled in,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "in_control_group": (boolean) whether the user was enrolled in the control group
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Experiment conversion events
+
+{% apitags %}
+Experiment Step, Canvas
+{% endapitags %}
+
+This event occurs when a user convert for a Canvas experiment step.
+
+```json
+// Experiment Step Conversion: users.canvas.experimentstep.Conversion
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
+  "conversion_behavior_index": (int) index of the conversion behavior
+}
+```
+{% endapi %}
+{% api %}
+
 ## Push send events
 
 {% apitags %}
@@ -1296,3 +1350,29 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
+{% api %}
+## Uninstall events
+
+{% apitags %}
+Uninstall
+{% endapitags %}
+
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+
+{% alert important %}
+This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
+{% endalert %}
+
+```json
+// Uninstall Event: users.behaviors.Uninstall
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
+}
+```
+
+{% endapi %}

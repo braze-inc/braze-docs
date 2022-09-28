@@ -34,7 +34,7 @@ L’intégration de Braze et de Branch vous aidera à comprendre exactement quan
 Si vous avez une application Android, vous devez transmettre un ID de périphérique Braze unique à Branch. Cet ID peut être défini dans le SDK Branch de la méthode `setRequestMetadataKey()`. L’extrait de code suivant doit être inclus avant d’appeler `initSession`. Vous devez également initialiser le SDK Braze avant de définir les métadonnées de demande dans le SDK Branch.
 
 ```java
-Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getInstallTrackingId());
+Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getDeviceId());
 
 ...
 

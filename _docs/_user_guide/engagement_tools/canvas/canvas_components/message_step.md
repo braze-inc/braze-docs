@@ -27,7 +27,11 @@ With a Message component, all users who enter the step advance to the next step 
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"} 
+![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
+
+{% raw %}
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first Message step of the Canvas. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
+{% endraw %}
 
 ### Edit delivery settings
 

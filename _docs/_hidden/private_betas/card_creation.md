@@ -43,8 +43,8 @@ This section describes the main differences between card creation at launch vers
 
 #### Audience and personalization
 
-- **At campaign launch:** Braze calculates audience membership and personalization when the campaign sends. Users who enter the target audience after the campaign sends won't receive the card.
-- **At first impression:** Braze calculates audience membership and personalization when the user next opens your app (starts a session). Any new users in the target audience can receive the card. Audience and personalization are not re-evaluated after this content is templated.
+- **At campaign launch:** Braze calculates audience membership and personalization when the campaign sends. New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.
+- **At first impression:** Braze calculates audience membership and personalization when the user next opens your app (starts a session). Any new or anonymous users will always be evaluated for eligibility when they try to view the card. Personalization is only evaluated at the time of first impression or after the next recurrence interval.
 
 #### Analytics
 
