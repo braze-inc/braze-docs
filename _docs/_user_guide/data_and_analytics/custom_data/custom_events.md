@@ -150,14 +150,9 @@ In the first Message step following an Action Path, you can use `event_propertie
 
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
-{% alert important %}
-This feature is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
-
 #### Limitations
 
 - Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
-- Sending nested custom attributes (objects as a custom attribute data type) is limited to customers participating in the early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
 - The following SDK versions support nested objects:
 
