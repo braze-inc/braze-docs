@@ -4,9 +4,8 @@ article_title: "Web SDK Integration via Shopify ScriptTag"
 description: "This article outlines how to integrate the Web SDK via Shopify ScriptTag. "
 page_type: partner
 search_tag: Partner
-permalink: "/scripttag_web_sdk_integration/"
-hidden: true
-
+alias: "/scripttag_web_sdk_integration/"
+page_order: 1
 ---
 
 # Web SDK integration via Shopify ScriptTag

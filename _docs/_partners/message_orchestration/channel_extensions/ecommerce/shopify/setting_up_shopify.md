@@ -4,9 +4,8 @@ article_title: "Setting up Shopify"
 description: "This article outlines how to set up Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze."
 page_type: partner
 search_tag: Partner
-permalink: "/setting_up_shopify/"
-hidden: true
-
+alias: "/setting_up_shopify/"
+page_order: 2
 ---
 
 # Setting up Shopify
