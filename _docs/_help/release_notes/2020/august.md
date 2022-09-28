@@ -31,7 +31,7 @@ Vizbee enables all smartphones and smart TVs in your home to work together as on
 
 ## Bluedot partnership
 
-Bluedot is a location platform that provides an accurate and straightforward geofencing for apps. You can use Bluedot’s SDK to message smarter, automate mobile order check-ins, optimize workflows, and create functionless experiences. For more information, check out our [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot) documentation. 
+Bluedot is a location platform that provides an accurate and straightforward geofencing for apps. You can use Bluedot’s SDK to message smarter, automate mobile order check-ins, optimize workflows, and create frictionless experiences. For more information, check out our [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot) documentation. 
 
 ## Iterate partnership
 
