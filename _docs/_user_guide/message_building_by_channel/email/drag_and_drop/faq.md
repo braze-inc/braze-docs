@@ -17,7 +17,7 @@ tool:
 
 ### Does the Drag & Drop Editor support dark mode?
 
-The Drag & Drop Editor does not currently support dark mode. However, we recommend testing your emails across different user platforms and using transparent images for row background images when possible. 
+Yes. Go to the **Preview and Test** section of the Drag & Drop Editor and select the dark mode toggle. We recommend also testing your emails across different user platforms and using transparent images for row background images when possible. 
 
 ### How can I change the email padding on mobile without updating the padding in the web view?
 
