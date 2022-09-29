@@ -73,9 +73,7 @@ Sélectionnez un événement d’exception qui disqualifiera les utilisateurs po
 
 Vous pouvez en apprendre plus sur la manière d’utiliser des événements d’exception dans notre section sur les [cas d’utilisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
 
-> Si vous envoyez une campagne avec l’événement déclencheur correspondant à l’événement d’exception, la campagne initiale sera annulée. Au lieu d’envoyer les deux campagnes, la première campagne de votre utilisateur sera annulée et Braze planifiera à nouveau automatiquement une nouvelle campagne en fonction de l’heure de livraison du message d’événement d’exception.<br>
-<br>
-Par exemple, si votre premier événement déclencheur commence à 5 minutes et que le moment de l’événement d’exception commence à 10 minutes, vous vous baseriez sur les 10 minutes de l’événement d’exception comme heure de livraison officielle du message de la campagne.
+> Si vous envoyez une campagne avec l’événement déclencheur correspondant à l’événement d’exception, la campagne initiale sera annulée. Au lieu d’envoyer les deux campagnes, la première campagne de votre utilisateur sera annulée et Braze planifiera à nouveau automatiquement une nouvelle campagne en fonction de l’heure de livraison du message d’événement d’exception.<br><br>Par exemple, si votre premier événement déclencheur commence à 5 minutes et que le moment de l’événement d’exception commence à 10 minutes, vous vous baseriez sur les 10 minutes de l’événement d’exception comme heure de livraison officielle du message de la campagne.
 
 {% alert note %}
 Vous ne pouvez pas faire que l’événement « démarrer la session » soit à la fois l’événement déclencheur et l’événement d’exception d’une campagne. Cependant, vous avez toujours la possibilité de sélectionner tout autre événement personnalisé en dehors de cette option.

@@ -10,9 +10,7 @@ tool: Campaigns
 # Événements de conversion
 
 > Le présent article définit les événements de conversion, comment les utiliser et définir vos métriques de réussite au sein de Braze et comment utiliser ces outils pour voir le niveau d’engagement de vos utilisateurs.
-> <br>
-> <br>
-> En utilisant des événements de conversion, vous pouvez vous assurer de collecter des informations pertinentes et utiles que vous pouvez utiliser ultérieurement pour obtenir des informations sur votre campagne. 
+> <br>> <br>> En utilisant des événements de conversion, vous pouvez vous assurer de collecter des informations pertinentes et utiles que vous pouvez utiliser ultérieurement pour obtenir des informations sur votre campagne. 
 
 Afin de suivre les métriques d’engagement et les détails nécessaires sur la manière dont la messagerie pilote vos indicateurs clés de performance, Braze vous permet de définir des événements de conversion pour chacune de vos campagnes et de vos Canvas.
 
@@ -46,9 +44,7 @@ Pour chaque événement de conversion que vous souhaitez suivre, sélectionnez l
   - **Ouvre l’application** : Un utilisateur est compté comme ayant été converti lorsqu’il ouvre une des applications que vous avez spécifiées (par défaut toutes les applications du groupe d’apps).
   - **Effectue un achat** : Un utilisateur est compté comme ayant été converti lorsqu’il achète le produit que vous avez spécifié (par défaut, n’importe quel produit).
   - **Effectue un événement personnalisé** : Un utilisateur est compté comme ayant été converti lorsqu’il exécute l’un de vos événements personnalisés existants (aucun par défaut, vous devez spécifier l’événement).
-  - **Met à niveau l’application** : Un utilisateur est compté comme ayant été converti lorsqu’il met à jour la version d’une des applications que vous avez spécifiées (par défaut toutes les applications du groupe d’apps). Braze effectuera une comparaison numérique au mieux pour déterminer si le changement de version était une mise à niveau. Par exemple, un utilisateur sera converti s’il a mis à niveau de la version 1.2.3 à la version 1.3.0 de l’application, mais Braze n’enregistrera pas une conversion si un utilisateur rétrograde de 1.2.3 à 1.2.2. Cependant, si le nom de la version de l’application contient des chaînes de caractères, comme « 1.2.3-beta2 », alors Braze ne pourra pas déterminer si le changement de version était une mise à niveau. Dans cette situation, Braze la comptera comme une conversion lorsque la version d’application la plus récente de l’utilisateur est modifiée.<br>
-<br>
-
+  - **Met à niveau l’application** : Un utilisateur est compté comme ayant été converti lorsqu’il met à jour la version d’une des applications que vous avez spécifiées (par défaut toutes les applications du groupe d’apps). Braze effectuera une comparaison numérique au mieux pour déterminer si le changement de version était une mise à niveau. Par exemple, un utilisateur sera converti s’il a mis à niveau de la version 1.2.3 à la version 1.3.0 de l’application, mais Braze n’enregistrera pas une conversion si un utilisateur rétrograde de 1.2.3 à 1.2.2. Cependant, si le nom de la version de l’application contient des chaînes de caractères, comme « 1.2.3-beta2 », alors Braze ne pourra pas déterminer si le changement de version était une mise à niveau. Dans cette situation, Braze la comptera comme une conversion lorsque la version d’application la plus récente de l’utilisateur est modifiée.<br><br>
 2. Définissez votre date limite de conversion. Il s’agit du temps maximum qui peut s’écouler pour envisager une conversion. Vous avez la possibilité d’autoriser une fenêtre allant jusqu’à 30 jours pendant laquelle une conversion sera comptée si l’utilisateur entreprend l’action spécifiée.  
 
 ![Le type d’événement de conversion « Effectue un achat » utilisé comme exemple pour enregistrer les conversions des utilisateurs qui effectuent un achat. Il a une date limite de conversion de 12 heures.][2]

@@ -11,13 +11,9 @@ page_order: 2
 Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page Analyse prédictive. Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de Churn. Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 **Composants analytiques**<br>
-
 &#45; [Score et catégorie de Churn](#churn_score)<br>
-
 &#45; [Qualité de prédiction](#prediction_quality)<br>
-
 &#45; [Résultats estimés](#estimated_results)<br>
-
 &#45; [Tableau de corrélation de Churn](#correlation_table)
 
 ## Aperçu
@@ -60,15 +56,9 @@ La prédiction sera entraînée à nouveau toutes les deux semaines et mise à j
 
 Dans la partie droite du volet en dessous du graphique, nous montrons les estimations de la précision attendue du ciblage de ce groupe de l’audience de prédiction. Sur la base des données passées concernant les utilisateurs dans l’audience de prédiction et la précision apparente du modèle au sujet de la séparation entre les utilisateurs susceptibles ou non d’abandonner, ces barres de progression prévoient l’éventuel message futur en utilisant l’audience mise en évidence avec le curseur :
 
-1. Une estimation du nombre de personnes susceptibles d’abandonner qui seront correctement ciblées <br>
-<br>
- Bien sûr, nous ne connaissons pas parfaitement l’avenir, donc nous ne savons pas précisément quels utilisateurs de l’audience de prédiction abandonneront à l’avenir. Mais la prédiction est une déduction fiable. Sur la base des performances passées, cette barre de progression indique le nombre total de personnes susceptibles d’abandonner « réelles » ou « exactes » attendu au sein de l’audience de prédiction (sur la base sur les taux d’attrition précédents) et qui sera ciblé avec la sélection actuelle. Nous pensons que ce nombre d’utilisateur abandonnera si vous ne le ciblez pas avec un message supplémentaire ou inhabituel. <br>
-<br>
+1. Une estimation du nombre de personnes susceptibles d’abandonner qui seront correctement ciblées <br><br> Bien sûr, nous ne connaissons pas parfaitement l’avenir, donc nous ne savons pas précisément quels utilisateurs de l’audience de prédiction abandonneront à l’avenir. Mais la prédiction est une déduction fiable. Sur la base des performances passées, cette barre de progression indique le nombre total de personnes susceptibles d’abandonner « réelles » ou « exactes » attendu au sein de l’audience de prédiction (sur la base sur les taux d’attrition précédents) et qui sera ciblé avec la sélection actuelle. Nous pensons que ce nombre d’utilisateur abandonnera si vous ne le ciblez pas avec un message supplémentaire ou inhabituel. <br><br>
 
-
-2. Une estimation du nombre d’utilisateurs ciblés par erreur qui n’auraient pas réellement abandonné<br>
-<br>
-Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de risque de Churn élevé, mais qui ne finissent pas par abandonner. Ils n’abandonneront pas même si vous ne prenez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’abandonneront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
+2. Une estimation du nombre d’utilisateurs ciblés par erreur qui n’auraient pas réellement abandonné<br><br>Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de risque de Churn élevé, mais qui ne finissent pas par abandonner. Ils n’abandonneront pas même si vous ne prenez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’abandonneront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
 
 À l’aide de ces informations, nous vous encourageons à décider du nombre de personnes souhaitant abandonner que vous souhaitez capturer et du coût des faux positifs pour votre entreprise. Si vous envoyez une promotion de valeur, vous voudrez peut-être garder un minimum de ceux qui n’abandonneront pas dans votre ciblage tout en conservant le maximum d’abandons envisagés proposés par le modèle. Ou, si vous êtes moins sensible aux faux positifs et aux utilisateurs recevant des messages supplémentaires, vous pouvez envoyer un message à une audience plus importante afin de capturer plus d’abandons envisagés et ignorer les erreurs probables.
 

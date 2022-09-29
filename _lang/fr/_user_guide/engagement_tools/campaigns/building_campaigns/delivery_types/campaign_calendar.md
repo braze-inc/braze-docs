@@ -24,15 +24,13 @@ Seules les campagnes planifiées sont affichées dans le Campaign Calendar. Les 
 ### Calendrier d’envoi futur
 
 **Rouge :** Campagnes planifiées à canal unique<br>
-
 **Bleu :** Campagnes planifiées multicanales
 
 Notez que seules les **campagnes planifiées** sont affichés dans le Campaign Calendar. Les Canvas Step, les campagnes déclenchées et les campagnes API ne seront pas affichées ici. 
 
 ### Analytique des messages
 
-**Types de messages à venir :** Détaille la quantité de campagnes de notification push, d’e-mail et de messages in-app au cours des 14 prochains jours.<br>
- 
+**Types de messages à venir :** Détaille la quantité de campagnes de notification push, d’e-mail et de messages in-app au cours des 14 prochains jours.<br> 
 **Messages envoyés :** Détaille le nombre de messages envoyés et ouverts au cours des 14 derniers jours. 
 
 Pour obtenir des informations plus détaillées sur ces analytiques, vous pouvez faire défiler les barres individuelles dans les graphiques pour voir la répartition journalière. Si vous souhaitez enregistrer les graphiques d’analytique des messages, vous pouvez appuyer sur le l’icône de ![Menu Hamburger][3]{: style="border:0;"} pour enregistrer le graphique sous divers formats. 

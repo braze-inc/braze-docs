@@ -11,15 +11,10 @@ page_order: 2
 Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page **Analyse prédictive**. Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de probabilité d’achat. Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 **Composants analytiques**<br>
-
 &#45; [Score de probabilité d’achat](#purchase_score)<br>
-
 &#45; [Ciblage des utilisateurs](#target_users)<br>
-
 &#45; [Qualité de prédiction](#prediction_quality)<br>
-
 &#45; [Résultats estimés](#estimated_results)<br>
-
 &#45; [Tableau de corrélation d’achat](#correlation_table)
 
 ## Score de probabilité d’achat {#purchase_score}
@@ -45,15 +40,9 @@ Au fur et à mesure que vous déplacez le curseur d’une position à l’autre,
 
 Dans la partie droite du volet en dessous du graphique, nous montrons les estimations de la précision attendue du ciblage de ce groupe de l’audience de prédiction que vous avez sélectionnée de deux manières :
 
-1. Combien d’utilisateurs sélectionnés sont censés acheter<br>
-<br>
- La prédiction n’est pas parfaitement précise et aucune prédiction ne l’est jamais, ce qui signifie que Braze ne sera pas en mesure d’identifier tous les futurs acheteurs. Les scores de probabilité sont comme un ensemble de prédictions informées et fiables. La barre de progression indique le nombre d’acheteurs « réels » ou « vrais » attendus dans l’audience de prédiction seront ciblés avec l’audience sélectionnée. Notez que nous nous attendons à ce que ce groupe d’utilisateurs achète même si vous ne leur envoyez pas un message. <br>
-<br>
+1. Combien d’utilisateurs sélectionnés sont censés acheter<br><br> La prédiction n’est pas parfaitement précise et aucune prédiction ne l’est jamais, ce qui signifie que Braze ne sera pas en mesure d’identifier tous les futurs acheteurs. Les scores de probabilité sont comme un ensemble de prédictions informées et fiables. La barre de progression indique le nombre d’acheteurs « réels » ou « vrais » attendus dans l’audience de prédiction seront ciblés avec l’audience sélectionnée. Notez que nous nous attendons à ce que ce groupe d’utilisateurs achète même si vous ne leur envoyez pas un message. <br><br>
 
-
-2. Combien d’utilisateurs sélectionnés ne sont pas censés acheter<br>
-<br>
-Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de probabilité d’achat élevé mais qui, au final, ne réaliseront pas d’achat. Ils n’en feraient pas si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’achèteront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
+2. Combien d’utilisateurs sélectionnés ne sont pas censés acheter<br><br>Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de probabilité d’achat élevé mais qui, au final, ne réaliseront pas d’achat. Ils n’en feraient pas si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’achèteront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
 
 À l’aide de ces informations, nous vous encourageons à décider du nombre d’acheteurs que vous souhaitez capturer, du nombre d’utilisateurs qui ne sont pas des acheteurs que vous pouvez accepter de cibler quand même et de ce que les erreurs coûtent à votre entreprise. Si vous envoyez une promotion de valeur, vous pouvez cibler uniquement les non acheteurs en privilégiant le côté gauche du tableau. Vous pouvez également encourager les acheteurs qui achètent souvent à le faire à nouveau en sélectionnant un groupe d’utilisateurs sur le côté droit du tableau.
 

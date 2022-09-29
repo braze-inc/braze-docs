@@ -11,9 +11,7 @@ description: "Le présent article de référence aborde le concept de limitation
 # Limitation du taux et limite de fréquence
 
 > Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence ainsi que la manière dont vous pouvez appliquer cette pression marketing pour améliorer l’expérience utilisateur.
-> <br>
-> <br>
-> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
+> <br>> <br>> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
 
 ## Limitation du taux
 
@@ -176,8 +174,7 @@ Avec une limite de fréquence par tag, les règles peuvent être définies sur l
 
 Vous pouvez également combiner une limite de fréquence régulière avec une limite de fréquence par tags. Prenez en compte les règles suivantes :
 
-1. Pas plus de trois campagnes de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>
-**ET**
+1. Pas plus de trois campagnes de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>**ET**
 2. Pas plus de deux campagnes de notification push ou Canvas Step par semaine avec le tag `promotional`.
 
 ![][12]
@@ -192,8 +189,7 @@ Les Canvas reçoivent leur tag au niveau du Canvas et pas au niveau du Step. Cha
 
 Lorsque les règles entrent en conflit, la règle de limite de fréquence la plus restrictive et applicable sera pratiquée pour vos utilisateurs. Par exemple, imaginons que vous ayez les règles suivantes :
 
-1. Pas plus d’une campagne de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>
-**ET**
+1. Pas plus d’une campagne de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>**ET**
 2. Pas plus de trois campagnes de notification push ou Canvas Step par semaine avec le tag `promotional`.
 
 ![][11]
@@ -215,15 +211,12 @@ Imaginez les campagnes et la limite de fréquence par règle de tag suivantes :
 
 **Limite de fréquence par règle de tag :**
 
-- Votre utilisateur ne doit pas recevoir plus d’une campagne de notification push par semaine avec le tag `promotional`.<br>
-<br>
-
+- Votre utilisateur ne doit pas recevoir plus d’une campagne de notification push par semaine avec le tag `promotional`.<br><br>
 
 | Action | Résultat |
 |---|---|
 | Le tag `promotional` est enlevé de la **Campagne A** après que votre utilisateur a reçu le message, mais avant que la **Campagne B soit envoyée.** | Votre utilisateur recevra la **Campagne B**.|
-| Le tag `promotional` est supprimé par erreur de la **Campagne A** après que votre utilisateur a reçu le message. <br>
- Le tag est ajouté à nouveau à la **Campagne A** mardi, avant que la **Campagne B** soit envoyée. | Votre utilisateur ne recevra pas la **Campagne B**. |
+| Le tag `promotional` est supprimé par erreur de la **Campagne A** après que votre utilisateur a reçu le message. <br> Le tag est ajouté à nouveau à la **Campagne A** mardi, avant que la **Campagne B** soit envoyée. | Votre utilisateur ne recevra pas la **Campagne B**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Envoi à grande échelle

@@ -39,9 +39,7 @@ Voici un exemple de définition simple basée sur l’inactivité des sessions a
 Dans ce cas, nous sélectionnons `do not` et `start a session`. Vous pouvez combiner d’autres filtres avec `AND` et `OR` comme vous le désirez pour créer la définition dont vous avez besoin. Vous êtes intéressé par certaines définitions d’attrition à envisager ? Vous pouvez trouver de l’inspiration dans la section suivante : [Exemples de définition de l’attrition](#sample-definitions).
 
 {% alert note %}
-Pour `do`, nous supposons que les utilisateurs actifs n’ont pas effectué l’action que vous spécifiez pour cette ligne avant d’être considérés comme ayant abandonné. Effectuer l’action entraîne leur considération comme ayant abandonné. <br>
-<br>
-Pour `do not`, nous considérons que les utilisateurs actifs sont ceux qui ont effectué cette action dans les jours qui précèdent, puis arrêtent.
+Pour `do`, nous supposons que les utilisateurs actifs n’ont pas effectué l’action que vous spécifiez pour cette ligne avant d’être considérés comme ayant abandonné. Effectuer l’action entraîne leur considération comme ayant abandonné. <br><br>Pour `do not`, nous considérons que les utilisateurs actifs sont ceux qui ont effectué cette action dans les jours qui précèdent, puis arrêtent.
 {% endalert %}
 
 Sous la définition, vous verrez les estimations du nombre d’utilisateurs disponibles (qui ont abandonné ou pas par le passé selon votre définition). Vous verrez également les valeurs minimales requises. Braze doit avoir ce nombre minimum d’utilisateurs disponibles dans les données historiques afin que la prédiction dispose de suffisamment de données pour apprendre.
@@ -87,26 +85,15 @@ La prédiction sera reconstruite (« entraînée ») à nouveau toutes les **d
 ## Exemples de définitions d’attrition et de l’audience de prédiction {#sample-definitions}
 
 **Exemples de définition de l’attrition**<br>
-
 - « Dans les 7 jours, effectue l’événement personnalisé "Annulation d’abonnement". »<br>
-
 - « Dans les 14 jours, effectue l’événement personnalisé "Essai expiré". »<br>
-
 - « Dans un délai d’un jour, effectue une désinstallation. » <br>
-
 - « Dans les 14 jours, ne réalise pas d’achat. » <br>
 
-
 Pour les définitions d’attrition que nous avons définies, il peut y avoir des définitions d’audience de prédiction correspondantes :<br>
-
-- **Inscription démarrée il y a plus de 2 semaines OU Abonnement démarré il y a moins de deux semaines**<br>
-Vous pourriez désirer créer 2 prédictions dans ce cas, puis contacter les nouveaux abonnés différemment que les anciens. Vous pouvez également définir cela comme « Premier achat réalisé il y a plus de 30 jours ».<br>
-
-- **Utilisateurs qui désinstallent**<br>
-Vous pourriez vous concentrer sur les clients qui ont acheté quelque chose il y a peu ou utilisé l’application très récemment.<br>
-
-- **Les personnes « à risque de ne pas acheter » en tant que définition de l’attrition**<br>
-Vous pourriez désirer vous concentrer sur les clients qui ont parcouru, recherché ou se sont engagés avec votre application plus récemment. Peut-être que l’apparition d’une remise appropriée empêchera ce groupe plus engagé d’abandonner.
+- **Inscription démarrée il y a plus de 2 semaines OU Abonnement démarré il y a moins de deux semaines**<br>Vous pourriez désirer créer 2 prédictions dans ce cas, puis contacter les nouveaux abonnés différemment que les anciens. Vous pouvez également définir cela comme « Premier achat réalisé il y a plus de 30 jours ».<br>
+- **Utilisateurs qui désinstallent**<br>Vous pourriez vous concentrer sur les clients qui ont acheté quelque chose il y a peu ou utilisé l’application très récemment.<br>
+- **Les personnes « à risque de ne pas acheter » en tant que définition de l’attrition**<br>Vous pourriez désirer vous concentrer sur les clients qui ont parcouru, recherché ou se sont engagés avec votre application plus récemment. Peut-être que l’apparition d’une remise appropriée empêchera ce groupe plus engagé d’abandonner.
 
 ## Prédictions archivées
 

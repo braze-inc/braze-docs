@@ -26,12 +26,8 @@ Maintenant que vous avez identifié et sélectionné le groupe d’utilisateurs 
 
 **Voici quelques idées à prendre en compte :**
 
-- Ciblez vos utilisateurs prédits comme étant à risque moyen à élevé d’attrition avec une remise spéciale, une marchandise gratuite (cadeaux physiques ou numériques), un contenu exclusif ou un accès précoce à une nouvelle expérience (produit, fonctionnalité d’application, niveau).<br>
-<br>
-
-- Faites passer ces utilisateurs dans un Canvas quotidien pendant une semaine, livrez des messages sur le canal qu’ils préfèrent, faites une projection concentrée pendant trois jours en touchant les clients sur tous les canaux, depuis l’e-mail à Facebook, ou envoyez un message d’une personne réelle, en demandant des commentaires concernant la marque ou en offrant un conseil professionnel.<br>
-<br>
-
+- Ciblez vos utilisateurs prédits comme étant à risque moyen à élevé d’attrition avec une remise spéciale, une marchandise gratuite (cadeaux physiques ou numériques), un contenu exclusif ou un accès précoce à une nouvelle expérience (produit, fonctionnalité d’application, niveau).<br><br>
+- Faites passer ces utilisateurs dans un Canvas quotidien pendant une semaine, livrez des messages sur le canal qu’ils préfèrent, faites une projection concentrée pendant trois jours en touchant les clients sur tous les canaux, depuis l’e-mail à Facebook, ou envoyez un message d’une personne réelle, en demandant des commentaires concernant la marque ou en offrant un conseil professionnel.<br><br>
 - Vous avez peut-être simplement besoin d’un nouveau moyen amusant de réitérer la valeur de votre marque et de toutes les manières dont ces clients ont auparavant trouvé une valeur pour la vôtre. Cela pourrait ressembler à une lettre d’information hebdomadaire spécifique à la persona, une série d’histoires réelles provenant de vrais utilisateurs concernant votre marque ou d’autres jeux de marketing de contenu.
 
 N’oubliez pas que vous pouvez contacter différents niveaux d’utilisateurs à risque de manière différente ! Les clients à risque élevé pourraient donc obtenir des remises plus élevées que les clients à risque moyen, tandis que les clients les moins à risque obtiennent simplement de nouveaux types de messages ou de contenus, mais pas de plus grande incitation. Vous pouvez également superposer d’autres filtres sur ces segments pour définir plus avant qui obtient quelle offre, message, etc.

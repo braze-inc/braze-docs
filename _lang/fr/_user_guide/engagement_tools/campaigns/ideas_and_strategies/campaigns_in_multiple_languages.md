@@ -11,9 +11,7 @@ tool: Campaigns
 # Campagnes en plusieurs langues
 
 > Le présent article pratique décrira comment envoyer des messages dans plusieurs langues au sein des campagnes.
-> <br>
-> <br>
-> Être capable d’envoyer des messages en plusieurs langues permet aux utilisateurs d’interagir et d’atteindre leurs clients de manière véritablement personnalisée. 
+> <br>> <br>> Être capable d’envoyer des messages en plusieurs langues permet aux utilisateurs d’interagir et d’atteindre leurs clients de manière véritablement personnalisée. 
 
 Braze vous permet d’envoyer des messages dans différentes langues depuis notre tableau de bord. Lors de la création d’une campagne, notre fonction de modélisation de la langue vous permet de créer facilement un message qui apparaît dans différentes langues en fonction des paramètres du téléphone de l’utilisateur.
 

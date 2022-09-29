@@ -3,9 +3,7 @@ nav_title: Tester les campagnes
 article_title: Tester les campagnes
 layout: dev_guide
 guide_top_header: "Tester les campagnes"
-guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos messages. Ensuite, vous devez toujours examiner les résultats pour vous assurer que votre campagne fonctionne bien et aura un impact positif sur vos campagnes futures.<br>
-<br>
- Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
+guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos messages. Ensuite, vous devez toujours examiner les résultats pour vous assurer que votre campagne fonctionne bien et aura un impact positif sur vos campagnes futures.<br><br> Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
 page_order: 4
 
 tool: 

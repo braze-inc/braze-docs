@@ -43,5 +43,4 @@ La page Predictions est accessible depuis la barre de navigation de gauche sur l
 Avec l’Aperçu, vous pouvez également modifier et reconstruire cette prédiction ou l’archiver et en créer d’autres pour tester la [qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) attendue de différentes [définitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
 
 <br><br>
-
 [1]: {% image_buster /assets/img/churn/churn_overview.png %}

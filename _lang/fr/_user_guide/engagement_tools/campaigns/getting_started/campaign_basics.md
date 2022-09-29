@@ -14,9 +14,7 @@ tool: Campaigns
 
 Répondez aux questions suivantes pour commencer :
 
-1. **Que (What)** puis-je faire pour aider le client à mieux comprendre ? (Nom de campagne)<br>
-<br>
-
+1. **Que (What)** puis-je faire pour aider le client à mieux comprendre ? (Nom de campagne)<br><br>
 
 2. **Quand (When)** un utilisateur commencera-t-il cette expérience ? Choisissez l’un des éléments suivants :
     * **Planification** : Entrer les utilisateurs à un moment donné
@@ -27,9 +25,7 @@ Répondez aux questions suivantes pour commencer :
       * Saisir un emplacement
       * Interagir ou quitter une autre campagne ou Canvas
     * **Déclenché par un API** (avancé) : Entrer des utilisateurs lorsqu’ils effectuent une action spécifique déclenchant une demande API à Braze 
-      * Les campagnes déclenchées par API vous donnent la possibilité de stocker le contenu d’un message dans le tableau de bord de Braze, en indiquant le moment où un message est envoyé et son destinataire, via votre API.<br>
-<br>
-
+      * Les campagnes déclenchées par API vous donnent la possibilité de stocker le contenu d’un message dans le tableau de bord de Braze, en indiquant le moment où un message est envoyé et son destinataire, via votre API.<br><br>
 
 3. **Qui (Who)** essayons-nous de joindre ? (Nom du segment avec filtres facultatifs supplémentaires)
   * Données personnalisées
@@ -38,17 +34,13 @@ Répondez aux questions suivantes pour commencer :
   * Activité de marketing
   * Attributs utilisateur
   * Attribution d’installation
-  * Activité sociale<br>
-<br>
-
+  * Activité sociale<br><br>
 
 4. **Pourquoi (Why)** je crée cette campagne ?
   * Lancer la session : Je souhaite qu’ils rejoignent l’application.
   * Effectuer un achat : Je souhaite qu’ils effectuent un achat.
   * Effectuer un événement personnalisé : Je souhaite qu’ils effectuent une action spécifique pour laquelle je réalise un suivi comme événement personnalisé.
-  * Mises à niveau d’application : Je souhaite qu’ils mettent à niveau leur version d’application<br>
-<br>
-
+  * Mises à niveau d’application : Je souhaite qu’ils mettent à niveau leur version d’application<br><br>
 
 5. **Où (Where)** devrais-je les contacter ?
   * E-mail
@@ -56,9 +48,7 @@ Répondez aux questions suivantes pour commencer :
   * Messages in-app
   * Cartes de contenu
   * SMS ou MMS
-  * Webhook<br>
-<br>
-
+  * Webhook<br><br>
 
 6. **Comment (How)** devrais-je les contacter ? (Endroit idéal pour tester les différentes configurations de messagerie)
   * **Timing** : Planifier ou déclencher des messages à l’aide d’outils tels que Timing Intelligent et des délais après le déclenchement d’événements
