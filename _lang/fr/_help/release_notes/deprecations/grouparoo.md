@@ -20,12 +20,8 @@ L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des 
 
 | Configuration requise | Description |
 | ----------- | ----------- |
-| Compte et projet Grouparoo | Un compte Grouparoo est requis pour profiter de ce partenariat.<br>
-<br>
-Cette intégration peut être utilisée avec l’édition gratuite pour la communauté et les solutions d’entreprise fournies par Grouparoo. La configuration se fait dans l’interface utilisateur de configuration Grouparoo. |
-| Clé d’API REST Braze | Une clé API REST Braze avec des utilisateurs et autorisations de suivi. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Compte et projet Grouparoo | Un compte Grouparoo est requis pour profiter de ce partenariat.<br><br>Cette intégration peut être utilisée avec l’édition gratuite pour la communauté et les solutions d’entreprise fournies par Grouparoo. La configuration se fait dans l’interface utilisateur de configuration Grouparoo. |
+| Clé d’API REST Braze | Une clé API REST Braze avec des utilisateurs et autorisations de suivi. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -5,11 +5,7 @@ page_order: 9
 layout: featured
 
 guide_top_header: "Obsolescences"
-guide_top_text: "La technologie évolue constamment, chez Braze et en dehors ! Et nous faisons de notre mieux pour tenir la cadence. Ici, vous en apprendrez plus sur les origines de Braze et sa technologie - ce que nous faisions « avant », avant maintenant... <br>
- <br>
- Vous êtes peut-être arrivé ici en faisant une recherche sur une intégration ou fonctionnalité qui n’existe plus. C’est notre manière de vous tenir informé de nos progrès et des mouvements au sein de l’industrie technologique. <br>
- <br>
- Vous pouvez trouver une liste de fonctions désactivées et non prises en charge et lire les articles associés en visitant les liens suivants."
+guide_top_text: "La technologie évolue constamment, chez Braze et en dehors ! Et nous faisons de notre mieux pour tenir la cadence. Ici, vous en apprendrez plus sur les origines de Braze et sa technologie - ce que nous faisions « avant », avant maintenant... <br> <br> Vous êtes peut-être arrivé ici en faisant une recherche sur une intégration ou fonctionnalité qui n’existe plus. C’est notre manière de vous tenir informé de nos progrès et des mouvements au sein de l’industrie technologique. <br> <br> Vous pouvez trouver une liste de fonctions désactivées et non prises en charge et lire les articles associés en visitant les liens suivants."
 
 page_type: landing
 description: "Cette page d’accueil comprend des références aux articles obsolètes et fournit une liste de fonctions obsolètes qui ne sont plus prises en charge."
@@ -45,17 +41,13 @@ La prise en charge de Grouparo a été arrêtée en avril 2022.
 ## SDK Windows Braze
 
 **24 mars 2022** : Le SDK Windows de Braze est obsolète et aucune nouvelle application Windows ne peut être créée dans le tableau de bord de Braze.<br>
-
 **15 septembre 2022** : Aucun nouveau message ne peut être envoyé aux applications Windows. Les messages existants et la collecte de données ne sont pas affectés.<br>
-
 **15 janvier 2023** : Braze ne sert plus de messages ni ne collecte de données à partir des applications Windows.
 
 ## Intégration des push Baidu
 
 **24 mars 2022** : L’intégration entre les push Baidu et Braze est obsolète et aucune nouvelle application Baidu ne peut être créée dans le tableau de bord de Braze. <br>
-
 **15 septembre 2022** : Aucun nouveau message push Baidu ne peut être créé. Les messages existants et la collecte de données ne sont pas affectés.<br>
-
 **15 janvier 2023** : Braze ne sert plus de messages ni ne recueille des données à partir des applications Baidu.
 
 ## Partenariat Amazon Moments
@@ -85,7 +77,6 @@ Si vous utilisez actuellement [Apptimize avec Braze]({{site.baseurl}}/help/relea
 ## Messages in-app originaux
 
 **Fin du support** : Février 2019<br>
-
 **Remplacé par** : [Messagerie In-App]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
 
 Braze a amélioré le look and feel des messages in-app pour se conformer aux meilleures pratiques en termes d’UX et d’IU, et Braze ne prend plus en charge les messages in-app originaux.
@@ -106,7 +97,6 @@ Le SDK Braze fournissait un widget de commentaires qui pouvait être ajouté à 
 ## Google Cloud Messaging (GCM)
 
 **Fin du support** : Fin de prise en charge par Braze : Juillet 2018, fin de prise en charge par Google : 29 mai 2019<br>
-
 **Remplacé par** : [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
 Google a [cessé de prendre GCM en charge](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) depuis le 29 mai 2019. Braze a cessé le support GCM pour les SDK Android en juillet 2018, ce qui a été noté dans notre [Journal de modifications du SDK Android](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). Cela signifie que les jetons GCM existants continueront de fonctionner, et vous pourrez envoyer des messages à vos utilisateurs existants. Mais vous ne pourrez pas envoyer de messages à des nouveaux utilisateurs.
@@ -118,7 +108,6 @@ Si vous n’avez pas migré vers FCM, tous les enregistrements de jetons push GC
 ## Eclipse
 
 **Fin du support** : 2014-2015<br>
-
 **Remplacé par** : [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
 Braze a arrêté sa prise en charge de l’IDE Eclipse, car Google [arrête sa prise en charge](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) du plug-in Eclipse Android Developer Tools (ADT).  
@@ -128,7 +117,6 @@ Si vous avez besoin d’aide pour votre intégration Eclipse avant la migration,
 ## Raw Event Stream (RES)
 
 **Fin du support** : Juillet 2018<br>
-
 **Remplacé par** : [Currents]({{site.baseurl}}/partners/braze_currents/about/)
 
 Raw Event Stream était le prédécesseur de [Currents]({{site.baseurl}}/partners/braze_currents/about/), il a été arrêté pour laisser la place à Currents, l’avenir des données dans Braze.

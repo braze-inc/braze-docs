@@ -3,9 +3,7 @@ page_order: 5
 nav_title: Notification push
 layout: dev_guide
 guide_top_header: "Articles d’aide sur les notifications push"
-guide_top_text: "Consultez les articles d’aide suivants pour obtenir de l’aide sur les problèmes courants avec les messages push. <br>
-<br>
- En savoir plus sur la façon d’optimiser et de mobiliser votre public dans la section <a href='/docs/api/basics/'>Push</a> (Notifications push) !"
+guide_top_text: "Consultez les articles d’aide suivants pour obtenir de l’aide sur les problèmes courants avec les messages push. <br><br> En savoir plus sur la façon d’optimiser et de mobiliser votre public dans la section <a href='/docs/api/basics/'>Push</a> (Notifications push) !"
 
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants des messages push."

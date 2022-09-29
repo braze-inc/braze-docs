@@ -17,5 +17,4 @@ Les modifications du filtre d’attribut personnalisé sont reflétées dans les
 - Moins de **X** jours dans le futur
 - Jour d’événement récurrent<br>
 
-
 Si vous utilisez ces filtres dans votre segmentation, nous vous recommandons de réajuster vos segments pour prendre ces modifications en compte.

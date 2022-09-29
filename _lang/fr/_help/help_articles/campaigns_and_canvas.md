@@ -3,9 +3,7 @@ page_order: 2
 nav_title: Campagnes et Canvas
 layout: dev_guide
 guide_top_header: "Articles d’aide aux campagnes et Canvas"
-guide_top_text: "Vous recherchez des informations utiles pour ? Ne cherchez plus ! Consultez nos articles d’aide pour vous aider à résoudre les problèmes sur vos Canvas et campagnes. <br>
-<br>
- Pour plus d’informations sur la construction et l’optimisation de votre engagement avec les utilisateurs, consultez les articles sur les <a href='/docs/user_guide/engagement_tools/campaigns/'>Campagnes</a> et les <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a> !"
+guide_top_text: "Vous recherchez des informations utiles pour ? Ne cherchez plus ! Consultez nos articles d’aide pour vous aider à résoudre les problèmes sur vos Canvas et campagnes. <br><br> Pour plus d’informations sur la construction et l’optimisation de votre engagement avec les utilisateurs, consultez les articles sur les <a href='/docs/user_guide/engagement_tools/campaigns/'>Campagnes</a> et les <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a> !"
 
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants avec vos campagnes ou vos Canvas."

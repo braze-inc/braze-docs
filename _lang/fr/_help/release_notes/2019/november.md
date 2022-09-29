@@ -12,9 +12,7 @@ Plus à venir ! Revenez plus tard ce mois-ci pour plus de mises à jour !
 
 ## Intelligence Suite
 
-[Intelligence Suite de Braze]({{site.baseurl}}/user_guide/intelligence/) vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanal, afin d’optimiser l’ensemble. <br>
- <br>
- Intelligence Suite est composée de trois fonctionnalités principales : [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), [Canal intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/) et [Sélection intelligente]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
+[Intelligence Suite de Braze]({{site.baseurl}}/user_guide/intelligence/) vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanal, afin d’optimiser l’ensemble. <br> <br> Intelligence Suite est composée de trois fonctionnalités principales : [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), [Canal intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/) et [Sélection intelligente]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 
 {% alert note %}
 Intelligence Suite est une révision et un regroupement de fonctionnalités précédemment connues sous les noms « Most Engaged Channel », « Timing intelligent » et « Tests A/B et multivariés ».

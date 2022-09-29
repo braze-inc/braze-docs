@@ -3,9 +3,7 @@ page_order: 6
 nav_title: Segments
 layout: dev_guide
 guide_top_header: "Articles d’aide sur les segments"
-guide_top_text: "Voici quelques articles rapides et informatifs sur la logique de segmentation et les problèmes de filtrage. <br>
-<br>
- Pour en savoir plus sur la façon d’utiliser la segmentation dans vos campagnes de Braze ou vos Canvas, reportez-vous à notre section <a href='/docs/user_guide/engagement_tools/segments'>Segments</a>."
+guide_top_text: "Voici quelques articles rapides et informatifs sur la logique de segmentation et les problèmes de filtrage. <br><br> Pour en savoir plus sur la façon d’utiliser la segmentation dans vos campagnes de Braze ou vos Canvas, reportez-vous à notre section <a href='/docs/user_guide/engagement_tools/segments'>Segments</a>."
 
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants liés aux segments."

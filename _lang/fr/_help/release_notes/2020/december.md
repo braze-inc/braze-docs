@@ -9,8 +9,7 @@ description: "Cet article contient les notes de version de décembre 2020."
 
 ## Mises à jour des propriétés de l’événement pour les messages Currents
 
-La propriété de suivi `ip_pool` a été ajoutée aux événements d’engagement Currents de vos communications e-mail, Les propriétés de suivi `bounce_reason` et `bounce_code` ont également été ajoutés aux événements `users.messages.email.Bounce` et `users.messages.email.SoftBounce`. <br>
-Pour la liste complète, consultez le [glossaire des événements d’engagement du client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
+La propriété de suivi `ip_pool` a été ajoutée aux événements d’engagement Currents de vos communications e-mail, Les propriétés de suivi `bounce_reason` et `bounce_code` ont également été ajoutés aux événements `users.messages.email.Bounce` et `users.messages.email.SoftBounce`. <br>Pour la liste complète, consultez le [glossaire des événements d’engagement du client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
 ## FAQ sur les prédictions du taux d’attrition
 
