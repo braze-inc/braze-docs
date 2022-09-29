@@ -27,8 +27,7 @@ Cet endpoint vous permet de récupérer une série quotidienne du nombre total d
 | Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
 | `length`    | Requis      | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
-| `ending_at` | Facultatif | Datetime <br>
-(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `ending_at` | Facultatif | Datetime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 | `app_id`    | Facultatif       | Chaîne de caractères | Identifiant API de l’application extrait de la **Developer Console (Console du développeur)**. En cas d’exclusion, les résultats de toutes les applications du groupe d’apps seront renvoyés. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

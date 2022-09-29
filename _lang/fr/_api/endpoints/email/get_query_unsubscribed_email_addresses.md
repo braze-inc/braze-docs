@@ -26,15 +26,12 @@ Utilisez cet endpoint pour renvoyer les e-mails qui ont été désinscrits entre
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ---------|------ |
-| `start_date` | Facultatif <br>
-(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les désinscriptions doit être antérieure à la date_fin. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `end_date` | Facultatif <br>
-(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ | La date de fin de la plage pour récupérer les désinscriptions. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `start_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les désinscriptions doit être antérieure à la date_fin. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ | La date de fin de la plage pour récupérer les désinscriptions. Ce traitement est effectué à minuit (UTC) par l’API. |
 | `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
 | `sort_direction` | Facultatif | Chaîne de caractères | Indiquez la valeur `asc` pour trier les désinscriptions de la plus ancienne à la plus récente. Indiquez la valeur `desc` pour trier de la plus récente à la plus ancienne. Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus récent au plus ancien. |
-| `email` | Facultatif <br>
-(voir remarque) | Chaîne de caractères | S’il est fourni, nous renverrons si l’utilisateur s’est désinscrit ou pas. |
+| `email` | Facultatif <br>(voir remarque) | Chaîne de caractères | S’il est fourni, nous renverrons si l’utilisateur s’est désinscrit ou pas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}

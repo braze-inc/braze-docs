@@ -28,10 +28,7 @@ Cet endpoint vous permet d’exporter une liste de cartes de fil d’actualité,
 | --------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier   | La page des cartes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
 | `include_archived` | Facultatif | Booléen   | S’il faut inclure ou non des cartes archivées, par défaut sur Faux. |
-| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br>
- - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br>
-<br>
-Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
+| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

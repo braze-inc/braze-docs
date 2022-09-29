@@ -15,11 +15,7 @@ description: "Cette page d’accueil explique et répertorie les endpoints Braze
 page_type: landing
 
 guide_top_header: "Endpoints des données utilisateur"
-guide_top_text: "L’API utilisateur vous permet de suivre les informations sur vos utilisateurs en enregistrant des données les concernant qui proviennent de l’extérieur de votre application mobile. Vous pouvez également utiliser cette API pour supprimer des utilisateurs à des fins de test ou autres. <br>
- <br>
- Tous les endpoints d’API ont une limite de charge utile de 4 Mo. Les tentatives de publication de données de plus de 4 Mo échoueront avec une entité de demande HTTP 413 trop grande. <br>
- <br>
- Les exemples suivants contiennent l’URL https://rest.iad-01.braze.com, mais certains clients devront utiliser une URL d’endpoint différente, par exemple si vous êtes hébergé dans le centre de données européen de Braze ou si vous avez une installation de Braze dédiée. Votre gestionnaire du succès vous informera si vous devez utiliser une URL d’endpoint différente."
+guide_top_text: "L’API utilisateur vous permet de suivre les informations sur vos utilisateurs en enregistrant des données les concernant qui proviennent de l’extérieur de votre application mobile. Vous pouvez également utiliser cette API pour supprimer des utilisateurs à des fins de test ou autres. <br> <br> Tous les endpoints d’API ont une limite de charge utile de 4 Mo. Les tentatives de publication de données de plus de 4 Mo échoueront avec une entité de demande HTTP 413 trop grande. <br> <br> Les exemples suivants contiennent l’URL https://rest.iad-01.braze.com, mais certains clients devront utiliser une URL d’endpoint différente, par exemple si vous êtes hébergé dans le centre de données européen de Braze ou si vous avez une installation de Braze dédiée. Votre gestionnaire du succès vous informera si vous devez utiliser une URL d’endpoint différente."
 
 guide_featured_title: "Endpoints des données utilisateur"
 guide_featured_list:

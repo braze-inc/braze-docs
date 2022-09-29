@@ -26,9 +26,7 @@ Cet endpoint appelle les informations de vos [blocs de contenu d’e-mail]({{sit
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `content_block_id`  | Requis | Chaîne de caractères | Identifiant du bloc de contenu. <br>
-<br>
-Vous pouvez le trouver en répertoriant les informations de bloc de contenu via un appel d’API ou en accédant à **Developer Console (Console du développeur)** > **API Settings (Paramètres API)**, puis défilez vers le bas et recherchez votre identifiant d’API bloc de contenu.|
+| `content_block_id`  | Requis | Chaîne de caractères | Identifiant du bloc de contenu. <br><br>Vous pouvez le trouver en répertoriant les informations de bloc de contenu via un appel d’API ou en accédant à **Developer Console (Console du développeur)** > **API Settings (Paramètres API)**, puis défilez vers le bas et recherchez votre identifiant d’API bloc de contenu.|
 | `include_inclusion_data`  | Facultatif | Booléen | Quand il est défini sur `true`, l’API renvoie l’identifiant d’API Variation de message des campagnes et des Canvas où ce bloc de contenu est inclus, à utiliser lors des appels ultérieurs.  Les résultats excluent les campagnes ou Canvas archivé(e)s ou supprimé(e)s. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

@@ -25,10 +25,7 @@ Notez qu’une entreprise peut exécuter au maximum une exportation par segment 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-En décembre 2021, les modifications suivantes ont été apportées à cette API :<br>
-<br>
-1. Le champ `fields_to_export` dans cette demande API est **requis**. L’option par défaut sur Tous les champs a été supprimée.<br>
-2. Les champs pour `custom_events`, `purchases`, `campaigns_received`, et `canvases_received` contiennent uniquement les données des 90 derniers jours.
+En décembre 2021, les modifications suivantes ont été apportées à cette API :<br><br>1. Le champ `fields_to_export` dans cette demande API est **requis**. L’option par défaut sur Tous les champs a été supprimée.<br>2. Les champs pour `custom_events`, `purchases`, `campaigns_received`, et `canvases_received` contiennent uniquement les données des 90 derniers jours.
 {% endalert %}
 
 ## Limite de débit
@@ -91,13 +88,9 @@ Les attributs personnalisés individuels ne peuvent pas être exportés. Cependa
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-|`segment_id` | Requis | Chaîne de caractères | Identifiant du segment à exporter. Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/).<br>
-<br>
-Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l’[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
+|`segment_id` | Requis | Chaîne de caractères | Identifiant du segment à exporter. Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/).<br><br>Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l’[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Facultatif | Chaîne de caractères | Endpoint auquel publier une URL de téléchargement lorsque l’exportation est disponible. |
-|`fields_to_export` | Requis* | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter des attributs personnalisés. <br>
-<br>
-*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
+|`fields_to_export` | Requis* | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter des attributs personnalisés. <br><br>*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
 |`output_format` | Facultatif | Chaîne de caractères | Lorsque vous utilisez votre propre compartiment S3, vous pouvez spécifier le format de fichier `zip` ou `gzip`. Le format de fichier ZIP est défini par défaut. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

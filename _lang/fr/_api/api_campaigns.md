@@ -28,11 +28,7 @@ Une [campagne déclenchée par API]({{site.baseurl}}/user_guide/engagement_tools
 Pour configurer votre campagne, procédez comme suit :
 
 1. Ajoutez un titre descriptif pour pouvoir trouver les résultats sur notre page Campagnes après avoir envoyé vos messages.
-2. Cliquez sur **Add Message (Ajouter un message)** et ajoutez les types de messages qui seront inclus dans votre campagne API. Cela créera un `Message Variation ID` qui servira de `campaign_id`. <br>
-<br>
- Après avoir enregistré votre campagne API, vous devez inclure les champs `campaign_id` générés avec votre demande d’API, lorsque cela est indiqué dans l’article [Send Messages Endpoints (Endpoints d’envoi de messages)][2].<br>
-<br>
-
+2. Cliquez sur **Add Message (Ajouter un message)** et ajoutez les types de messages qui seront inclus dans votre campagne API. Cela créera un `Message Variation ID` qui servira de `campaign_id`. <br><br> Après avoir enregistré votre campagne API, vous devez inclure les champs `campaign_id` générés avec votre demande d’API, lorsque cela est indiqué dans l’article [Send Messages Endpoints (Endpoints d’envoi de messages)][2].<br><br>
 3. Vous pouvez éventuellement ajouter un événement de conversion pour suivre les conversions de l’utilisateur sur une action spécifique ou un objectif de campagne.
 4. Cliquez sur **Save Campaign (Enregistrer la campagne)** et vous êtes prêt à commencer votre campagne API !
 

@@ -28,8 +28,7 @@ Cet endpoint vous permet de récupérer une série du nombre de sessions de votr
 | -------- | -------- | --------- | ----------- |
 | `length`    | Requis      | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `unit`      | Facultatif       | Chaîne de caractères   | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
-| `ending_at` | Facultatif | Datetime <br>
-(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `ending_at` | Facultatif | Datetime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 | `app_id` | Facultatif | Chaîne de caractères | Identifiant API de l’application extrait de la **console du développeur (Developer Console)** pour limiter l’analyse à une application spécifique. |
 | `segment_id` | Facultatif       | Chaîne de caractères | Voir [Identifiant API de segment]({{site.baseurl}}/api/identifier_types/). ID de segment indiquant le segment à analyser pour lequel les sessions doivent être renvoyées. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

@@ -25,9 +25,7 @@ Les modèles sont parfaits si votre entreprise établit des contrats sur vos con
 ### Où puis-je le trouver ?
 Vous pouvez trouver votre ID de modèle de deux manières :
 
-1. Dans le tableau de bord, ouvrez **Templates & Media (Modèles et médias)** dans **Engagement** et sélectionnez un modèle préexistant. Si le modèle que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page de modèle individuel, vous trouverez votre identifiant API modèle.<br>
-<br>
-
+1. Dans le tableau de bord, ouvrez **Templates & Media (Modèles et médias)** dans **Engagement** et sélectionnez un modèle préexistant. Si le modèle que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page de modèle individuel, vous trouverez votre identifiant API modèle.<br><br>
 2. Braze propose une recherche des **identifiants API supplémentaires**. Vous pouvez rapidement y rechercher des identifiants spécifiques. Elle se trouve au bas de l’onglet **API Settings (Paramètres API)** sur la page **Developer Console (Console du développeur)**.
 
 ### À quoi cela sert-il ?
@@ -35,8 +33,7 @@ Vous pouvez trouver votre ID de modèle de deux manières :
 - Mettre à jour les modèles sur API
 - Saisir des informations sur un modèle spécifique
 
-<br>
-{% endtab %}
+<br>{% endtab %}
 {% tab Canvas IDs %}
 
 ## Identifiant API Canvas
@@ -55,8 +52,7 @@ Vous pouvez trouver votre ID Canvas dans le tableau de bord. Ouvrez **Canvas** d
 - Avec Currents pour apporter des données au niveau utilisateur pour une approche « d’image plus large » des Canvas
 - Avec la livraison déclenchée par API afin de collecter des statistiques pour les messages transactionnels
 
-<br>
-{% endtab %}
+<br>{% endtab %}
 {% tab Campaign IDs %}
 
 ## Identifiant API de campagne
@@ -68,9 +64,7 @@ Notez que si vous disposez d’une campagne qui comporte des variantes, il exist
 ### Où puis-je le trouver ?
 Vous pouvez trouver votre ID de campagne de deux manières :
 
-1. Dans le tableau de bord, ouvrez **Campagnes** dans **Engagement** et sélectionnez une campagne préexistante. Si la campagne que vous souhaitez n’existe pas encore, créez-en une et enregistrez-la. Au bas de la page de campagne individuelle, vous trouverez votre **identifiant API de campagne**.<br>
-<br>
-
+1. Dans le tableau de bord, ouvrez **Campagnes** dans **Engagement** et sélectionnez une campagne préexistante. Si la campagne que vous souhaitez n’existe pas encore, créez-en une et enregistrez-la. Au bas de la page de campagne individuelle, vous trouverez votre **identifiant API de campagne**.<br><br>
 2. Braze propose une recherche des **identifiants API supplémentaires**. Vous pouvez rapidement y rechercher des identifiants spécifiques. Vous pouvez la trouver au bas de l’onglet **API Settings (Paramètres API)** dans **Developer Console (Console du développeur)**.
 
 ### À quoi cela sert-il ?
@@ -80,8 +74,7 @@ Vous pouvez trouver votre ID de campagne de deux manières :
 - Avec Currents pour apporter des données au niveau utilisateur pour une approche « d’image plus large » des campagnes
 - Avec la livraison déclenchée par API afin de collecter des statistiques pour les messages transactionnels
 
-<br>
-{% endtab %}
+<br>{% endtab %}
 {% tab Segment IDs %}
 
 ## Identifiant API de segment
@@ -91,9 +84,7 @@ Un identifiant API de [segment]({{site.baseurl}}/user_guide/engagement_tools/seg
 ### Où puis-je le trouver ?
 Vous pouvez trouver votre ID de segment de deux manières :
 
-1. Dans le tableau de bord, ouvrez **Segments** dans **Engagement** et sélectionnez un segment préexistant. Si le segment que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du segment individuel, vous trouverez votre identifiant API de segment. <br>
-<br>
-
+1. Dans le tableau de bord, ouvrez **Segments** dans **Engagement** et sélectionnez un segment préexistant. Si le segment que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du segment individuel, vous trouverez votre identifiant API de segment. <br><br>
 2. Braze propose une recherche des **identifiants API supplémentaires**. Vous pouvez rapidement y rechercher des identifiants spécifiques. Elle se trouve au bas de l’onglet **API Settings (Paramètres API)** sur la page **Developer Console (Console du développeur)**.
 
 ### À quoi cela sert-il ?
@@ -112,17 +103,14 @@ Un identifiant API de carte ou ID de carte est une clé prête à l’emploi pro
 ### Où puis-je le trouver ?
 Vous pouvez trouver votre ID de carte de deux manières :
 
-1. Dans le tableau de bord, ouvrez **Fil d’actualité** dans **Engagement** et sélectionnez un fil d’actualité préexistant. Si le fil d’actualité que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du fil d’actualité individuel, vous trouverez votre identifiant API unique de carte. <br>
-<br>
-
+1. Dans le tableau de bord, ouvrez **Fil d’actualité** dans **Engagement** et sélectionnez un fil d’actualité préexistant. Si le fil d’actualité que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du fil d’actualité individuel, vous trouverez votre identifiant API unique de carte. <br><br>
 2. Braze propose une recherche des **identifiants API supplémentaires**. Vous pouvez rapidement y rechercher des identifiants spécifiques. Elle se trouve au bas de l’onglet **API Settings (Paramètres API)** sur la page **Developer Console (Console du développeur)**.
 
 ### À quoi cela sert-il ?
 - Récupérer les informations pertinentes sur une carte
 - Suivre les événements liés aux cartes de contenu et à l’engagement
 
-<br>
-{% endtab %}
+<br>{% endtab %}
 {% tab Send IDs %}
 
 ## Identifiant d’envoi
@@ -136,8 +124,7 @@ Les API et campagnes déclenchées par API qui sont envoyées en tant que diffus
 ### À quoi cela sert-il ?
 Envoyer et suivre par programme les performances des messages, sans création de campagne pour chaque envoi.
 
-<br>
-{% endtab %}
+<br>{% endtab %}
 {% endtabs %}
 
 [1]: https://en.wikipedia.org/wiki/UTF-8

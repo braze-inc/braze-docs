@@ -75,8 +75,7 @@ Lorsque les données sont supprimées de votre instance de production, elles res
  
 #### Données sur les interactions de la campagne 
  
-<br>
-**Qu’est-ce que c’est ? ** Les interactions de la campagne sont des données relatives aux interactions des utilisateurs finaux avec une campagne. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des campagnes.
+<br>**Qu’est-ce que c’est ? ** Les interactions de la campagne sont des données relatives aux interactions des utilisateurs finaux avec une campagne. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des campagnes.
  
 **Quand sont-elles supprimées ? ** Braze supprime automatiquement des groupes d’applications du client les interactions de campagne pour les campagnes qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes, des Canvas ou des cartes de contenu dans un statut actif.
  

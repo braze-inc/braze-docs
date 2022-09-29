@@ -24,41 +24,21 @@ table td {
 
 | Méthode | Endpoints |
 | --- | --- |
-| POST | [/users/alias/new][/users/alias/new]<br>
-[/users/delete][/users/delete]<br>
-[/users/export/global_control_group][/users/export/global_control_group]<br>
-[/users/export/ids][/users/export/ids]<br>
-[/users/export/segment][/users/export/segment]<br>
-[/users/external_ids/rename][/users/external_ids/rename]<br>
-[/users/external_ids/remove][/users/external_ids/remove]<br>
-[/users/identify][/users/identify]<br>
-[/users/track][/users/track] |
+| POST | [/users/alias/new][/users/alias/new]<br>[/users/delete][/users/delete]<br>[/users/export/global_control_group][/users/export/global_control_group]<br>[/users/export/ids][/users/export/ids]<br>[/users/export/segment][/users/export/segment]<br>[/users/external_ids/rename][/users/external_ids/rename]<br>[/users/external_ids/remove][/users/external_ids/remove]<br>[/users/identify][/users/identify]<br>[/users/track][/users/track] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Envoyer les messages
 
 | Méthode | Endpoints |
 | --- | --- |
-| POST | [/campaigns/trigger/send][/campaigns/trigger/send]<br>
-[/canvas/trigger/send][/canvas/trigger/send]<br>
-[/messages/send][/messages/send]<br>
-[/sends/id/create][/sends/id/create]<br>
-[/transactional/v1/campaigns/&#123;&#123;CAMPAIGN_ID&#125;&#125;/send][/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send] |
+| POST | [/campaigns/trigger/send][/campaigns/trigger/send]<br>[/canvas/trigger/send][/canvas/trigger/send]<br>[/messages/send][/messages/send]<br>[/sends/id/create][/sends/id/create]<br>[/transactional/v1/campaigns/&#123;&#123;CAMPAIGN_ID&#125;&#125;/send][/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Planifier les messages
 
 | Méthode | Endpoints |
 | --- | --- |
-| POST | [/campaigns/trigger/schedule/create][/campaigns/trigger/schedule/create]<br>
-[/campaigns/trigger/schedule/delete][/campaigns/trigger/schedule/delete]<br>
-[/campaigns/trigger/schedule/update][/campaigns/trigger/schedule/update]<br>
-[/canvas/trigger/schedule/create][/canvas/trigger/schedule/create]<br>
-[/canvas/trigger/schedule/delete][/canvas/trigger/schedule/delete]<br>
-[/canvas/trigger/schedule/update][/canvas/trigger/schedule/update]<br>
-[/messages/schedule/create][/messages/schedule/create]<br>
-[/messages/schedule/delete][/messages/schedule/delete]<br>
-[/messages/schedule/update][/messages/schedule/update] |
+| POST | [/campaigns/trigger/schedule/create][/campaigns/trigger/schedule/create]<br>[/campaigns/trigger/schedule/delete][/campaigns/trigger/schedule/delete]<br>[/campaigns/trigger/schedule/update][/campaigns/trigger/schedule/update]<br>[/canvas/trigger/schedule/create][/canvas/trigger/schedule/create]<br>[/canvas/trigger/schedule/delete][/canvas/trigger/schedule/delete]<br>[/canvas/trigger/schedule/update][/canvas/trigger/schedule/update]<br>[/messages/schedule/create][/messages/schedule/create]<br>[/messages/schedule/delete][/messages/schedule/delete]<br>[/messages/schedule/update][/messages/schedule/update] |
 | GET | [/messages/scheduled_broadcasts][/messages/scheduled_broadcasts] |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -67,91 +47,65 @@ table td {
 | Méthode | Endpoints |
 | --- | --- |
 | POST | [/subscription/status/set][/subscription/status/set] |
-| GET | [/subscription/status/get][/subscription/status/get]<br>
-[/subscription/user/status][/subscription/user/status] |
+| GET | [/subscription/status/get][/subscription/status/get]<br>[/subscription/user/status][/subscription/user/status] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## E-mail et modèles d’e-mail
 
 | Méthode | Endpoints |
 | --- | --- |
-| POST | [/email/blacklist][/email/blacklist]<br>
-[/email/bounce/remove][/email/bounce/remove]<br>
-[/email/spam/remove][/email/spam/remove]<br>
-[/email/status][/email/status]<br>
-[/templates/email/create][/templates/email/create]<br>
-[/templates/email/update][/templates/email/update] |
-| GET | [/email/hard_bounces][/email/hard_bounces]<br>
-[/email/unsubscribes][/email/unsubscribes]<br>
-[/templates/email/info][/templates/email/info]<br>
-[/templates/email/list][/templates/email/list] |
+| POST | [/email/blacklist][/email/blacklist]<br>[/email/bounce/remove][/email/bounce/remove]<br>[/email/spam/remove][/email/spam/remove]<br>[/email/status][/email/status]<br>[/templates/email/create][/templates/email/create]<br>[/templates/email/update][/templates/email/update] |
+| GET | [/email/hard_bounces][/email/hard_bounces]<br>[/email/unsubscribes][/email/unsubscribes]<br>[/templates/email/info][/templates/email/info]<br>[/templates/email/list][/templates/email/list] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Campagnes
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/campaigns/data_series][/campaigns/data_series]<br>
-[/campaigns/details][/campaigns/details]<br>
-[/campaigns/list][/campaigns/list]<br>
-[/sends/data_series][/sends/data_series]
+| GET | [/campaigns/data_series][/campaigns/data_series]<br>[/campaigns/details][/campaigns/details]<br>[/campaigns/list][/campaigns/list]<br>[/sends/data_series][/sends/data_series]
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Canvas
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/canvas/data_series][/canvas/data_series]<br>
-[/canvas/data_summary][/canvas/data_summary]<br>
-[/canvas/details][/canvas/details]<br>
-[/canvas/list][/canvas/list] |
+| GET | [/canvas/data_series][/canvas/data_series]<br>[/canvas/data_summary][/canvas/data_summary]<br>[/canvas/details][/canvas/details]<br>[/canvas/list][/canvas/list] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Segments
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/segments/data_series][/segments/data_series]<br>
-[/segments/details][/segments/details]<br>
-[/segments/list][/segments/list]<br>
-[/sessions/data_series][/sessions/data_series] |
+| GET | [/segments/data_series][/segments/data_series]<br>[/segments/details][/segments/details]<br>[/segments/list][/segments/list]<br>[/sessions/data_series][/sessions/data_series] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Événements personnalisés
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/events/data_series][/events/data_series]<br>
-[/events/list][/events/list] |
+| GET | [/events/data_series][/events/data_series]<br>[/events/list][/events/list] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Blocs de contenu
 
 | Méthode | Endpoints |
 | --- | --- |
-| POST | [/content_blocks/create][/content_blocks/create]<br>
-[/content_blocks/update][/content_blocks/update] |
-| GET | [/content_blocks/info][/content_blocks/info]<br>
-[/content_blocks/list][/content_blocks/list] |
+| POST | [/content_blocks/create][/content_blocks/create]<br>[/content_blocks/update][/content_blocks/update] |
+| GET | [/content_blocks/info][/content_blocks/info]<br>[/content_blocks/list][/content_blocks/list] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Indicateur clé de performance
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/kpi/dau/data_series][/kpi/dau/data_series]<br>
-[/kpi/mau/data_series][/kpi/mau/data_series]<br>
-[/kpi/new_users/data_series][/kpi/new_users/data_series]<br>
-[/kpi/uninstalls/data_series][/kpi/uninstalls/data_series] |
+| GET | [/kpi/dau/data_series][/kpi/dau/data_series]<br>[/kpi/mau/data_series][/kpi/mau/data_series]<br>[/kpi/new_users/data_series][/kpi/new_users/data_series]<br>[/kpi/uninstalls/data_series][/kpi/uninstalls/data_series] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Fil d’actualité
 
 | Méthode | Endpoints |
 | --- | --- |
-| GET | [/feed/data_series][/feed/data_series]<br>
-[/feed/details][/feed/details]<br>
-[/feed/list][/feed/list] |
+| GET | [/feed/data_series][/feed/data_series]<br>[/feed/details][/feed/details]<br>[/feed/list][/feed/list] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## SMS

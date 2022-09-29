@@ -76,31 +76,11 @@ Les types de données suivants peuvent être stockés en tant qu’attribut pers
 
 | Type de données | Remarques |
 | --- | --- |
-| Tableaux | Les tableaux d’attribut personnalisé sont des ensembles unidimensionnels ; les tableaux multidimensionnels ne sont pas pris en charge. L’ajout d’un élément à un tableau d’attribut personnalisé ajoute l’élément à la fin du tableau, à moins qu’il ne soit déjà présent, auquel cas il passe de sa position actuelle à la fin du tableau.<br>
-<br>
-Par exemple, si un tableau `['hotdog','hotdog','hotdog','pizza']` a été importé, il apparaîtra dans l’attribut de tableau comme `['hotdog', 'pizza']` car seules des valeurs uniques sont prises en charge.<br>
-<br>
-En plus de définir les valeurs d’un tableau en indiquant quelque chose comme `"my_array_custom_attribute":[ "Value1", "Value2" ]`, vous pouvez ajouter des tableaux existants en faisant quelque chose comme `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou supprimer les valeurs d’un tableau en écrivant quelque chose comme `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br>
-<br>
-Le nombre maximum d’éléments par défaut dans les tableaux d’attributs personnalisés est de 25, mais peut être augmenté sur demande. Pour plus d’informations, consultez les [tableaux][6]. |
+| Tableaux | Les tableaux d’attribut personnalisé sont des ensembles unidimensionnels ; les tableaux multidimensionnels ne sont pas pris en charge. L’ajout d’un élément à un tableau d’attribut personnalisé ajoute l’élément à la fin du tableau, à moins qu’il ne soit déjà présent, auquel cas il passe de sa position actuelle à la fin du tableau.<br><br>Par exemple, si un tableau `['hotdog','hotdog','hotdog','pizza']` a été importé, il apparaîtra dans l’attribut de tableau comme `['hotdog', 'pizza']` car seules des valeurs uniques sont prises en charge.<br><br>En plus de définir les valeurs d’un tableau en indiquant quelque chose comme `"my_array_custom_attribute":[ "Value1", "Value2" ]`, vous pouvez ajouter des tableaux existants en faisant quelque chose comme `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou supprimer les valeurs d’un tableau en écrivant quelque chose comme `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>Le nombre maximum d’éléments par défaut dans les tableaux d’attributs personnalisés est de 25, mais peut être augmenté sur demande. Pour plus d’informations, consultez les [tableaux][6]. |
 | Booléens |  |
-| Dates | Doit être stocké au format [ISO 8601][19] ou dans l’un des formats suivants : <br>
-- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>
-- `yyyy-MM-ddTHH:mm:ss` <br>
-- `yyyy-MM-dd HH:mm:ss` <br>
-- `yyyy-MM-dd` <br>
-- `MM/dd/yyyy` <br>
-- `ddd MM dd HH:mm:ss.TZD YYYY` <br>
-<br>
-Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br>
-<br>
-Les attributs de temps sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l’équivalent de minuit UTC dans le fuseau horaire de la société). <br>
-<br>
- Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle. |
+| Dates | Doit être stocké au format [ISO 8601][19] ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br><br>Les attributs de temps sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l’équivalent de minuit UTC dans le fuseau horaire de la société). <br><br> Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle. |
 | Floats |  |
-| Entiers | Les attributs personnalisés Integer peuvent être incrémentés par des entiers positifs ou négatifs en leur affectant un objet avec le champ « inc » et la valeur par laquelle vous souhaitez les incrémenter. <br>
-<br>
-Exemple : `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Entiers | Les attributs personnalisés Integer peuvent être incrémentés par des entiers positifs ou négatifs en leur affectant un objet avec le champ « inc » et la valeur par laquelle vous souhaitez les incrémenter. <br><br>Exemple : `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Chaînes de caractères |  |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -116,20 +96,8 @@ Les champs de profil utilisateur suivants sont sensibles à la casse, veillez do
 | ---| --- |
 | pays | (chaîne de caractères) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
 | emplacement_actuel | (objet) De la forme {"longitude" : -73.991443, "latitude" : 40.753824} |
-| date_de_première_session | (date à laquelle l’utilisateur s’est servi de l’application pour la première fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>
-- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>
-- `yyyy-MM-ddTHH:mm:ss` <br>
-- `yyyy-MM-dd HH:mm:ss` <br>
-- `yyyy-MM-dd` <br>
-- `MM/dd/yyyy` <br>
-- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| date_de_dernière_session | (date à laquelle l’utilisateur s’est servi de l’application pour la dernière fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>
-- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>
-- `yyyy-MM-ddTHH:mm:ss` <br>
-- `yyyy-MM-dd HH:mm:ss` <br>
-- `yyyy-MM-dd` <br>
-- `MM/dd/yyyy` <br>
-- `ddd MM dd HH:mm:ss.TZD YYYY`  |
+| date_de_première_session | (date à laquelle l’utilisateur s’est servi de l’application pour la première fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
+| date_de_dernière_session | (date à laquelle l’utilisateur s’est servi de l’application pour la dernière fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
 | ddn | (date de naissance) Chaîne de caractères au format « AAAA-MM-DD », p. ex. 1980-12-21. |
 | E-mail | (chaîne de caractères) |
 | e-mail_souscrire | (chaîne de caractères) Les valeurs disponibles sont « confirmé » (explicitement consenti à recevoir des e-mails), « désabonné » (explicitement refusé de recevoir des e-mails), et « abonné » (ni accepté, ni refusé).  |
@@ -142,13 +110,7 @@ Les champs de profil utilisateur suivants sont sensibles à la casse, veillez do
 | accueil_ville | (chaîne de caractères) |
 | langue | (chaîne de caractères) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. Pour les langues prises en charge, consultez notre [liste de langues acceptées][2]. |
 | _nom | (chaîne de caractères) |
-|e-mail_marqué_comme_courrier indésirable_à| (chaîne de caractères) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. Apparaît au format ISO 8601 ou dans l’un des formats suivants : <br>
-- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>
-- `yyyy-MM-ddTHH:mm:ss` <br>
-- `yyyy-MM-dd HH:mm:ss` <br>
-- `yyyy-MM-dd` <br>
-- `MM/dd/yyyy` <br>
-- `ddd MM dd HH:mm:ss.TZD YYYY` |
+|e-mail_marqué_comme_courrier indésirable_à| (chaîne de caractères) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. Apparaît au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | téléphone | (chaîne de caractères) |
 | souscrire_notifications push | (chaîne de caractères) Les valeurs disponibles sont « confirmé » (explicitement consenti à recevoir des notifications push), « désabonné » (explicitement refusé de recevoir des notifications push), et « abonné » (ni accepté, ni refusé).  |
 | jetons_de notification push | Tableau d’objets avec `app_id` et la chaîne de caractères `token`. Vous pouvez éventuellement fournir un `device_id` pour le périphérique auquel ce jeton est associé, par exemple, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si aucun `device_id` n’est pas fourni, il sera généré de manière aléatoire. |

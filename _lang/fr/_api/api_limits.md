@@ -21,9 +21,7 @@ Le tableau suivant répertorie les limites de débit d’API spécifiques pour d
 
 | Type de demande | Limite de débit de l’API par défaut |
 | --- | --- |
-| [`/users/track`][10] | **Demandes :** 50 000 demandes par minute. Cette limite peut être augmentée sur demande. Contactez votre gestionnaire du succès des clients pour plus d’informations.<br>
-<br>
-**Traitement par lot :** 75 événements, 75 achats et 75 attributs par demande API. Voir [Demandes de suivi utilisateur du traitement par lots](#batch-user-track) pour en savoir plus. |
+| [`/users/track`][10] | **Demandes :** 50 000 demandes par minute. Cette limite peut être augmentée sur demande. Contactez votre gestionnaire du succès des clients pour plus d’informations.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par demande API. Voir [Demandes de suivi utilisateur du traitement par lots](#batch-user-track) pour en savoir plus. |
 | [`/users/export/ids`][11] | 2 500 demandes par minute. |
 | [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20 000 demandes par minute, partagées entre les endpoints. |
 | [`/users/external_id/rename`][20] | 1 000 demandes par minute. |

@@ -30,10 +30,7 @@ Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ
 | --------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier   | La page des Canvas à renvoyer, par défaut sur `0` (renvoie le premier ensemble jusqu’à 100 éléments) |
 | `include_archived` | Facultatif | Booléen | S’il faut inclure ou non des Canvas archivés, par défaut sur `false`. |
-| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br>
- - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br>
-<br>
-Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
+| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
 | `last_edit.time[gt]` | Facultatif | Date | Filtre les résultats et renvoie uniquement les Canvas qui ont été modifiés au-delà de l’heure indiquée jusqu’à maintenant. Le format est `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

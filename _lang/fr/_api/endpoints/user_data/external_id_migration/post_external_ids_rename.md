@@ -95,23 +95,18 @@ Le champ `message` renverra `success` pour toutes les demandes valides. Des erre
 ## Foire aux questions
 
 **Cela a-t-il un impact sur le MAU ?**<br>
-
 Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement un nouveau `external_id`.
 
 **Le comportement des utilisateurs change-t-il au cours du temps ?**<br>
-
 Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
 
 **Est-il possible d’exécuter sur des groupes d’apps de développement/préproduction ?**<br>
-
 Oui. En fait, nous recommandons vivement de lancer une migration de test sur un groupe d’apps de développement ou de préproduction, et de veiller à ce que tout se soit bien passé avant d’exécuter sur les données de production.
 
 **Est-ce que cela consomme des points de données ?**<br>
-
 Cette fonctionnalité ne coûte pas de points de données.
 
 **Quelle est la période de désapprobation recommandée ?**<br>
-
 Nous n’avons pas de limite stricte sur la durée de conservation des ID externes obsolètes, mais nous vous recommandons vivement de les supprimer une fois qu’il n’y a plus besoin de référencer les utilisateurs par l’ID obsolète.
 
 {% endapi %}

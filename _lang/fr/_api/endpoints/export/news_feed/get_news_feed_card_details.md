@@ -26,9 +26,7 @@ Cet endpoint vous permet de récupérer des informations pertinentes sur la cart
 
 | Paramètre | Requis | Type de données | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id`   | Requis      | Chaîne de caractères    | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br>
-<br>
- Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id`   | Requis      | Chaîne de caractères    | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

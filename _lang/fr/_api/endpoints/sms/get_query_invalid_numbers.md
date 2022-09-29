@@ -25,14 +25,11 @@ Cet endpoint vous permet d’extraire une liste des numéros de téléphone cons
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif <br>
-(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les numéros de téléphone non valides doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `end_date` | Facultatif <br>
-(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les numéros de téléphone non valides. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `start_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les numéros de téléphone non valides doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les numéros de téléphone non valides. Ce traitement est effectué à minuit (UTC) par l’API. |
 | `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
-| `phone_numbers` | Facultatif <br>
-(voir remarque) | Tableau de chaînes de caractères au format e.164 | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
+| `phone_numbers` | Facultatif <br>(voir remarque) | Tableau de chaînes de caractères au format e.164 | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}

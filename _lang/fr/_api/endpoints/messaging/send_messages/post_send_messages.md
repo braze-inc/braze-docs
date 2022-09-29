@@ -65,21 +65,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br>
-<br>
- Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre campagne ou Canvas à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre campagne ou Canvas à une audience plus importante que prévue. |
 |`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [ID utilisateur externe]({{site.baseurl}}/api/parameters/#external-user-id). |
 |`user_aliases`| Facultatif | Tableau des objets alias utilisateur| Voir [Objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Facultatif* | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/) pour plus d’informations. <br>
-<br>
-*Obligatoire si vous souhaitez suivre les statistiques de campagne (par ex., le nombre d’envois, de clics, de rebonds, etc.) sur le tableau de bord de Braze. |
+|`campaign_id`| Facultatif* | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/) pour plus d’informations. <br><br>*Obligatoire si vous souhaitez suivre les statistiques de campagne (par ex., le nombre d’envois, de clics, de rebonds, etc.) sur le tableau de bord de Braze. |
 |`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/) |
 |`override_frequency_capping`| Facultatif | Booléen | Ignorer frequency_capping pour les campagnes, défini sur Faux par défaut. |
-|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br>
-<br>
-Appliquer l’option `all` les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
+|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 |`messages`| Facultatif | Objets de messagerie | Voir [Objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

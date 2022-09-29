@@ -33,15 +33,9 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `subscription_group_id`  | Requis | Chaîne de caractères | Le `id` de votre groupe d’abonnement. |
-| `external_id`  |  Requis* | Chaîne de caractères | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br>
-<br>
-Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
-| `email` | Requis* | Chaîne de caractères | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br>
-<br>
- Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
-| `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br>
-<br>
- Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| `external_id`  |  Requis* | Chaîne de caractères | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
+| `email` | Requis* | Chaîne de caractères | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 *L’`external_id` ou l’`email` ou le `phone` est obligatoire pour chaque utilisateur.

@@ -26,13 +26,10 @@ Cet endpoint vous permet de récupérer une série quotidienne de statistiques d
 
 | Paramètre   | Requis | Type de données | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id`   | Requis      | Chaîne de caractères    | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br>
-<br>
- Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id`   | Requis      | Chaîne de caractères    | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 | `length`    | Requis      | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `unit`      | Facultatif       | Chaîne de caractères   | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
-| `ending_at` | Facultatif | Datetime <br>
-(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `ending_at` | Facultatif | Datetime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
