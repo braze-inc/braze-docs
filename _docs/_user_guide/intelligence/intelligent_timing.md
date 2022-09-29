@@ -53,7 +53,7 @@ If desired, you can choose to limit the optimal time to within a specific window
 
 ![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.][4]
 
-If a user’s optimal time is calculated as being outside this window, the message will send at the edge of the window closest to the user's optimal time. For example, if a user’s optimal time is 10 pm, but the send window is limited to 1 pm–8 pm, the message will send at 8 pm.
+When a send window is specified, Braze only looks at engagement data within the window to determine a user's optimal time. If there isn't enough engagement data within that window, the message sends at the [fallback time](#fallback-time) specified.
 
 #### Preview delivery times
 
