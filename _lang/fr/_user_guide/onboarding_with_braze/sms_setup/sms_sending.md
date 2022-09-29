@@ -16,25 +16,15 @@ channel:
 L’envoi de message peut être compliqué, mais il n’a pas à être. Les sections suivantes répertorient les principes fondamentaux de l’envoi de message SMS envoyé chez Braze, notamment l’importance des groupes d’abonnement, les exigences pour les segments SMS et les corps de message, ainsi que des options de personnalisation avancées disponibles.
 
 1. **Sélectionnez votre groupe d’abonnement**<br>
-
-Les SMS doivent être envoyés à partir d’un [groupe d’abonnement]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Vous devez désigner un groupe d’abonnement pour vous assurer que seuls les utilisateurs abonnés sont ciblés. Certains clients peuvent envisager d’avoir plusieurs groupes d’abonnement pour différents cas d’utilisation, tels que la messagerie SMS transactionnelle et la messagerie SMS promotionnelle.<br>
-<br>
-
+Les SMS doivent être envoyés à partir d’un [groupe d’abonnement]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Vous devez désigner un groupe d’abonnement pour vous assurer que seuls les utilisateurs abonnés sont ciblés. Certains clients peuvent envisager d’avoir plusieurs groupes d’abonnement pour différents cas d’utilisation, tels que la messagerie SMS transactionnelle et la messagerie SMS promotionnelle.<br><br>
 
 2. **Saisir le corps du message**<br>
-
-Un corps de message SMS accepte jusqu’à 1 600 caractères, y compris Emojis, Liquid et Contenu connecté. Un envoi de campagne unique peut entraîner des envois de nombreux segments de messages. Les corps de message SMS de Braze peuvent être composés de normes d’encodage [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) ou [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set). Dans le cas où un caractère UCS-2 (par exemple, un Emoji) est utilisé, le corps du message sera automatiquement formaté pour cette norme d’encodage.<br>
-<br>
- 
+Un corps de message SMS accepte jusqu’à 1 600 caractères, y compris Emojis, Liquid et Contenu connecté. Un envoi de campagne unique peut entraîner des envois de nombreux segments de messages. Les corps de message SMS de Braze peuvent être composés de normes d’encodage [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) ou [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set). Dans le cas où un caractère UCS-2 (par exemple, un Emoji) est utilisé, le corps du message sera automatiquement formaté pour cette norme d’encodage.<br><br> 
 
 3. **Comprendre les segments de message et les limites de caractère**<br>
-
-Les segments de messages SMS sont la manière dont les messages de l’industrie SMS sont envoyés. Un segment de message est un groupement allant jusqu’à un nombre défini de caractères (160 pour le codage GSM-7 ; 67 pour le codage UCS-2) qui sera envoyé dans une seule distribution par SMS. Si vous envoyez un SMS avec 161 caractères à l’aide du codage GSM-7, vous verrez qu’il y a deux (2) segments de messages envoyés. L’envoi de plusieurs segments de messages peut entraîner des frais supplémentaires.<br>
-<br>
-
+Les segments de messages SMS sont la manière dont les messages de l’industrie SMS sont envoyés. Un segment de message est un groupement allant jusqu’à un nombre défini de caractères (160 pour le codage GSM-7 ; 67 pour le codage UCS-2) qui sera envoyé dans une seule distribution par SMS. Si vous envoyez un SMS avec 161 caractères à l’aide du codage GSM-7, vous verrez qu’il y a deux (2) segments de messages envoyés. L’envoi de plusieurs segments de messages peut entraîner des frais supplémentaires.<br><br>
 
 4. **Personnalisation du mot-clé (facultatif)**<br>
-
 Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/réponses par mot-clé SMS d'information. Avec Braze, vous pouvez définir vos propres mots-clés pour déclencher des réponses d’abonnement, de désabonnement et d’aide, gérer vos propres réponses qui sont envoyées aux utilisateurs et définir des jeux de mots-clés pour différentes langues. Pour en savoir plus, consultez notre collection [Traitement des mots-clés]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 
 {% alert tip %}
@@ -53,18 +43,10 @@ Pour surmonter cette limitation, pendant le [processus de configuration][5] des 
 
 #### Bonnes pratiques
 
-1. **Demandez la permission**. L’une des règles les plus importantes de l’utilisation de SMS par une entreprise est que vous devez d’abord obtenir la permission des clients pour les contacter. Ne pas le faire peut endommager votre marque et entraîner des frais de justice élevés.<br>
-<br>
-
-2. **Choisissez le bon numéro pour votre cas d’utilisation**. Trois principaux types de numéros de téléphone peuvent envoyer et recevoir des SMS : les codes longs, les codes courts et les ID alphanumériques d’émetteur, ainsi que leurs capacités et disponibilités dans différentes régions. Demandez-vous à l’avance si votre activité est mieux servie avec un code personnalisé. <br>
-<br>
-
-3. **Faites attention au timing**. Gardez à l’esprit que les clients sont plus réactifs aux textes qui leur sont adressés directement. Une petite personnalisation a beaucoup d’effet, comme utiliser le prénom des destinataires ou ajouter une touche de conversation qui évoque les centres d’intérêt de vos clients.<br>
-<br>
-
-4. **Engager des conversations bilatérales**. SMS est un canal tellement efficace pour parler avec les clients qu’il est important d’anticiper - et de gérer - efficacement les réponses à vos messages. 85 % des consommateurs veulent non seulement recevoir des informations, mais aussi répondre aux entreprises ou participer à une conversation.<br>
-<br>
-
+1. **Demandez la permission**. L’une des règles les plus importantes de l’utilisation de SMS par une entreprise est que vous devez d’abord obtenir la permission des clients pour les contacter. Ne pas le faire peut endommager votre marque et entraîner des frais de justice élevés.<br><br>
+2. **Choisissez le bon numéro pour votre cas d’utilisation**. Trois principaux types de numéros de téléphone peuvent envoyer et recevoir des SMS : les codes longs, les codes courts et les ID alphanumériques d’émetteur, ainsi que leurs capacités et disponibilités dans différentes régions. Demandez-vous à l’avance si votre activité est mieux servie avec un code personnalisé. <br><br>
+3. **Faites attention au timing**. Gardez à l’esprit que les clients sont plus réactifs aux textes qui leur sont adressés directement. Une petite personnalisation a beaucoup d’effet, comme utiliser le prénom des destinataires ou ajouter une touche de conversation qui évoque les centres d’intérêt de vos clients.<br><br>
+4. **Engager des conversations bilatérales**. SMS est un canal tellement efficace pour parler avec les clients qu’il est important d’anticiper - et de gérer - efficacement les réponses à vos messages. 85 % des consommateurs veulent non seulement recevoir des informations, mais aussi répondre aux entreprises ou participer à une conversation.<br><br>
 5. **Mesurer ce qui fonctionne**. Atteignez-vous les clients au bon moment, avec la meilleure fréquence et en utilisant les appels à l’action les plus efficaces ? Utiliser les bons outils de suivi peut apporter des indicateurs directs et mesurables qui prouvent leur retour sur investissement. 
 
 ### Envoi en grand volume

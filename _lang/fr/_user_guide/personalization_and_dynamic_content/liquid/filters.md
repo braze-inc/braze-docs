@@ -58,9 +58,7 @@ SALE
 
 {% alert important %}
 Braze ne prend pas en charge tous les filtres Liquid de Shopify. Cette page a pour objectif définir les filtres Liquid que Braze a testés, néanmoins, cette liste peut ne pas être exhaustive. Toujours tester votre Liquid avant d’envoyer des messages. 
-<br>
-<br>
-Si vous avez des questions sur un filtre non répertorié ici, contactez le service d’assistance ou le gestionnaire du succès des clients
+<br><br>Si vous avez des questions sur un filtre non répertorié ici, contactez le service d’assistance ou le gestionnaire du succès des clients
 {% endalert %}
 
 ## Filtres de baie
@@ -111,9 +109,7 @@ Les filtres mathématiques vous permettent d’effectuer des opérations mathém
 {% alert tip %}
 Lorsque vous divisez les nombres entiers (nombres entiers) par des entiers dans Liquid, si la réponse est un float (nombre avec une décimale), Liquid arrondira automatiquement au nombre entier le plus proche. Cependant, la division des nombres entiers par des floats fournit toujours un float. Cela signifie que vous pouvez transformer vos nombres entiers en float (1,0, 2,0, 3,0) pour obtenir un float.
 {% raw %}
-<br>
-<br>
-Par exemple,`{{15 | divided_by: 2}}` will output `7`, whereas  `{{15 | divided_by: 2.0}}` will output `7,5 €.
+<br><br>Par exemple,`{{15 | divided_by: 2}}` will output `7`, whereas  `{{15 | divided_by: 2.0}}` will output `7,5 €.
 {% endraw %}
 {% endalert %}
 
@@ -246,8 +242,7 @@ Les guillemets droits sont différents des guillemets courbes dans Liquid. Soyez
 | [handle/handleize][6.6]                          | Fomate une chaîne de caractère en handle     | ⛔  Non    |
 | [md5][6.7]                                       | Convertit une chaîne de caractères en hash MD5. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
 | [sha1][6.8]                                      | Convertit une chaîne de caractères en hash SHA-1 Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
-| hmac_sha1_hex<br>
-(auparavant [hmac_Sha_1][6.10]) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
+| hmac_sha1_hex<br>(auparavant [hmac_Sha_1][6.10]) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
 | [hmac_sha256][6.11]                              | Convertit une chaîne de caractères en hash SHA-256 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre.| ✅  Oui   |
 | [newline_to_br][6.12]                            | Insère une balise `<br>` HTML devant chaque saut de ligne dans une chaîne de caractères. | ✅  Oui   |
 | [pluralize][6.13]                                | Génère la version au singulier ou au pluriel d’une chaîne de caractères anglaise en fonction de la valeur d’un nombre. | ⛔  Non    |

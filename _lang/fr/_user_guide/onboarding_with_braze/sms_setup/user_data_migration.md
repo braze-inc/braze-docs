@@ -37,9 +37,7 @@ Avant de commencer à composer des campagnes SMS via Braze, vous devrez mettre �
 **Voici un bref résumé des données utilisateur que vous devrez mettre à jour à Braze :**
 
 1. **Importer les numéros de téléphone des utilisateurs au format correct** ([E.164][0]) le formatage nécessite un signe plus « + » et un code pays, par ex. +12408884782. Pour plus d’informations sur l’importation des numéros de téléphone des utilisateurs, consultez [Numéros de téléphone utilisateur][userphone].
-    * Utilisez l’endpoint de l'API REST [utilisateurs/suivi][1] pour attribuer la valeur `phone`.<br>
-<br>
-
+    * Utilisez l’endpoint de l'API REST [utilisateurs/suivi][1] pour attribuer la valeur `phone`.<br><br>
 
 2. **Attribuer l’[état d’abonnement][subscriptionstate]** SMS de votre utilisateur (par ex., abonné ou désabonné) si vous disposez de cette information.
     * Utilisez le [abonnement/statut/jeu][6] Endpoint API REST pour définir les utilisateurs comme étant abonnés ou désabonnés à vos groupes d’abonnement SMS.

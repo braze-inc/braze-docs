@@ -12,9 +12,7 @@ description: "Le présent article pratique vous expliquera comment configurer vo
 
 {% include video.html id="iTm3yQkJ0UU" align="right"  %}
 
-> Le présent article vous guidera dans les exigences et les étapes nécessaires pour configurer vos adresses IP et pools, ainsi que les domaines et sous-domaines nécessaires avant de pouvoir commencer à envoyer des e-mails avec Braze.<br>
-<br>
-Bien que la plupart des processus de configuration soient effectués par Braze, nous avons décrit les exigences et les matériaux de cette configuration.
+> Le présent article vous guidera dans les exigences et les étapes nécessaires pour configurer vos adresses IP et pools, ainsi que les domaines et sous-domaines nécessaires avant de pouvoir commencer à envoyer des e-mails avec Braze.<br><br>Bien que la plupart des processus de configuration soient effectués par Braze, nous avons décrit les exigences et les matériaux de cette configuration.
 
 ## Étape 1 : Informations détaillées
 

@@ -5,9 +5,7 @@ page_order: 0
 layout: featured
 
 guide_top_header: "Personnalisation à l’aide des Balise Liquids"
-guide_top_text: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée. À l’intérieur de ces parenthèses, toutes les valeurs d’utilisateur que vous souhaitez remplacer doivent être entourées d’un ensemble supplémentaire de parenthèses précédées d’un signe dollar.<br>
-<br>
-Pour en savoir plus sur Liquid, consultez notre guide <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Personnalisation dynamique avec liquide</a></b> Le cours d’apprentissage Braze !"
+guide_top_text: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée. À l’intérieur de ces parenthèses, toutes les valeurs d’utilisateur que vous souhaitez remplacer doivent être entourées d’un ensemble supplémentaire de parenthèses précédées d’un signe dollar.<br><br>Pour en savoir plus sur Liquid, consultez notre guide <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Personnalisation dynamique avec liquide</a></b> Le cours d’apprentissage Braze !"
 description: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée."
 
 guide_featured_title: "Section Articles"
@@ -75,5 +73,4 @@ Braze ne prend pas actuellement en charge 100 % de Liquid de Shopify, mais seul
 {% endraw %}
 
 <br>
-
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

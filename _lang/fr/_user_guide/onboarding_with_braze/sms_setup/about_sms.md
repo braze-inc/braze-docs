@@ -14,10 +14,8 @@ channel:
 
 > Le présent article partage certains cas d’utilisation courants à titre de références, des exigences et des conditions à connaître pour favoriser l’intégration de SMS et vous permettre de communiquer de manière efficace et stratégique avec vos clients.![Message SMS avec le texte « Bienvenue dans Braze ! Nous sommes ravis de vous accueillir à bord. » Consultez notre documentation pour commencer. https://www.braze.com/docs/ Envoyez le message HELP pour obtenir de l’aide et STOP pour arrêter."][picture]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
-<br>
-SMS, pour Short Message Service, est utilisé pour envoyer des messages de texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
+<br>SMS, pour Short Message Service, est utilisé pour envoyer des messages de texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
 <br><br>
-
 ## Cas d’utilisation potentiels
 
 | Cas d’utilisation | Explication |
@@ -40,24 +38,13 @@ Avant d’envoyer des SMS, vous avez besoin de certaines données. Consultez le 
 
 ## Termes à connaître
 
-- **Code court :** Un code à 5 à 6 chiffres, plus court qu’un numéro de téléphone complet. Ce code est utilisé pour traiter et envoyer les SMS.<br>
-<br>
-
-- **Codes longs :** Code à 10 chiffres utilisé pour traiter les SMS. La plupart des numéros de téléphone standard sont considérés des codes longs (par ex. 123-456-7891). Ces codes sont utilisés pour traiter et envoyer les SMS.<br>
-<br>
-
-- **Groupe d’abonnement :** Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Par exemple, si une marque prévoit d’envoyer des messages SMS transactionnels et promotionnels, deux groupes d’abonnement avec des pools distincts de numéros de téléphone émetteurs devront être configurés dans votre tableau de bord de Braze.<br>
-<br>
-
-- ** Segments de message et limites de caractères :** Un segment de message désigne le nombre de segments dans lequel votre message SMS initial sera divisé. Chaque message a une limite de caractères qui, si elle est dépassée, entraîne la division du message en segments. Selon les normes d’encodage employées (UTF-2 ou GSM-7), les limites de caractères varient. Pour plus d’informations sur les segments de messages et les limites de caractères de message, reportez-vous à [Les bases d’envoi par SMS][2].<br>
-<br>
-
-- **Métriques standard de campagne par SMS :** <br>
-`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, et `Help`. <br>
-Pour plus d’informations sur ces métriques, reportez-vous à [Rapports sur les SMS][1].
+- **Code court :** Un code à 5 à 6 chiffres, plus court qu’un numéro de téléphone complet. Ce code est utilisé pour traiter et envoyer les SMS.<br><br>
+- **Codes longs :** Code à 10 chiffres utilisé pour traiter les SMS. La plupart des numéros de téléphone standard sont considérés des codes longs (par ex. 123-456-7891). Ces codes sont utilisés pour traiter et envoyer les SMS.<br><br>
+- **Groupe d’abonnement :** Un groupe d’abonnement est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Par exemple, si une marque prévoit d’envoyer des messages SMS transactionnels et promotionnels, deux groupes d’abonnement avec des pools distincts de numéros de téléphone émetteurs devront être configurés dans votre tableau de bord de Braze.<br><br>
+- ** Segments de message et limites de caractères :** Un segment de message désigne le nombre de segments dans lequel votre message SMS initial sera divisé. Chaque message a une limite de caractères qui, si elle est dépassée, entraîne la division du message en segments. Selon les normes d’encodage employées (UTF-2 ou GSM-7), les limites de caractères varient. Pour plus d’informations sur les segments de messages et les limites de caractères de message, reportez-vous à [Les bases d’envoi par SMS][2].<br><br>
+- **Métriques standard de campagne par SMS :** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, et `Help`. <br>Pour plus d’informations sur ces métriques, reportez-vous à [Rapports sur les SMS][1].
 
 <br><br>
-
 Pour obtenir une liste complète des termes, consultez notre SMS [Conditions à connaître]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/terms/) ou notre [Section SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) pour plus de sujets, comme la création d’une campagne SMS, l’analyse de campagnes SMS et le traitement des mots-clés SMS.
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}

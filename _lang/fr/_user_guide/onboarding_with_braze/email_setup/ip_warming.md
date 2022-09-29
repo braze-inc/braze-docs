@@ -24,9 +24,7 @@ Le réchauffement IP est conçu pour vous aider à établir une réputation posi
       - Les ISP arrêtent la livraison des e-mails lorsque la suspicion de spam se produit afin de protéger leurs utilisateurs. Par exemple, si vous envoyez à 100000 utilisateurs, le fournisseur de services Internet peut envoyer l’e-mail à seulement 5 000 de ces utilisateurs au cours de la première heure. Le Fournisseur de services Internet surveille ensuite les mesures d’engagement telles que les taux d’ouverture, les taux de clics, les désinscriptions et les rapports de spam.
       - Si un nombre important de rapport de courrier indésirable se produit, ils peuvent choisir de reléguer le reste de cet envoi dans le dossier spam plutôt que de le remettre dans la boîte de réception de l'utilisateur.
       - Si l’engagement est modéré, il peut continuer à faire passer votre e-mail afin de recueillir davantage de données d’engagement afin de déterminer si le courrier est un spam avec plus de certitude.
-      - Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.<br>
-<br>
-
+      - Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.<br><br>
 2. **Votre domaine et ou IP peuvent être répertoriés sur liste noire par les Fournisseurs de services Internet à ce moment-là, tous vos e-mails commenceront à accéder directement au dossier spam de la boîte de réception de votre utilisateur.**
   - Si cela se produit, les codes de réponse dans le **Developer Console de Braze** contiendront des informations sur les sites Web à visiter pour faire appel auprès des Fournisseurs de services Internet afin d’être exclu de ces listes.
 
@@ -35,30 +33,14 @@ Le réchauffement IP est conçu pour vous aider à établir une réputation posi
 Toutes ces conséquences sont totalement évitables si vous suivez les directives suivantes :
 
 1. **Commencez par envoyer de petits volumes d’e-mails et augmentez le montant que vous envoyez chaque jour aussi progressivement que possible.**<br>
-
-Les campagnes par e-mail abrupt et à haut volume sont considérées avec le plus grand scepticisme par les Fournisseurs d’accès Internet. Par conséquent, vous devez commencer par envoyer de petites quantités d’e-mails et graduellement vers le volume d’e-mails que vous avez finalement l’intention d’envoyer. Quel que soit le volume, nous vous suggérons de réchauffer votre IP pour être sûr. Pour plus de détails, consultez la planification suivante :<br>
-<br>
-
-2. **Assurez-vous que votre premier contenu est très intéressant et optimise la probabilité que les utilisateurs cliquent, s’ouvrent et s’engagent dans votre e-mail.**<br>
-Privilégiez toujours les e-mails bien ciblés pour éviter de discriminer les explosions lors de l’échauffement des IP.<br>
-<br>
-
+Les campagnes par e-mail abrupt et à haut volume sont considérées avec le plus grand scepticisme par les Fournisseurs d’accès Internet. Par conséquent, vous devez commencer par envoyer de petites quantités d’e-mails et graduellement vers le volume d’e-mails que vous avez finalement l’intention d’envoyer. Quel que soit le volume, nous vous suggérons de réchauffer votre IP pour être sûr. Pour plus de détails, consultez la planification suivante :<br><br>
+2. **Assurez-vous que votre premier contenu est très intéressant et optimise la probabilité que les utilisateurs cliquent, s’ouvrent et s’engagent dans votre e-mail.**<br>Privilégiez toujours les e-mails bien ciblés pour éviter de discriminer les explosions lors de l’échauffement des IP.<br><br>
 3. **Lorsque le réchauffement IP est terminé, continuez à envoyer les e-mails aussi régulièrement que possible.**<br>
-
-Les IP peuvent refroidir si le volume s’arrête ou diminue considérablement pendant plus de quelques jours.<br>
-<br>
-
+Les IP peuvent refroidir si le volume s’arrête ou diminue considérablement pendant plus de quelques jours.<br><br>
 4. **Étalez vos envois par e-mail sur un jour ou plusieurs jours.**<br>
-
-Utilisez notre [Planification de réchauffement IP](#ip-warming-schedules) pour transmettre vos envois sur une période plus longue, plutôt que d’envoyer une explosion de masse à un seul moment spécifique. Des caractéristiques telles que la [livraison fuseau horaire local]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) de Braze peuvent vous aider à envoyer des messages en fonction du fuseau horaire individuel d’un utilisateur, vous effectuez l’envoi lorsque les utilisateurs sont plus susceptibles d’être actifs.<br>
-<br>
-
-5. **Assurez-vous que votre liste d’e-mails est propre et qu’il n’y a pas d’e-mails anciens ou non vérifiés.**<br>
-Vérifier que vous êtes [Conforme CASL-et CAN-SPAM][40] est idéal.<br>
-<br>
-
+Utilisez notre [Planification de réchauffement IP](#ip-warming-schedules) pour transmettre vos envois sur une période plus longue, plutôt que d’envoyer une explosion de masse à un seul moment spécifique. Des caractéristiques telles que la [livraison fuseau horaire local]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) de Braze peuvent vous aider à envoyer des messages en fonction du fuseau horaire individuel d’un utilisateur, vous effectuez l’envoi lorsque les utilisateurs sont plus susceptibles d’être actifs.<br><br>
+5. **Assurez-vous que votre liste d’e-mails est propre et qu’il n’y a pas d’e-mails anciens ou non vérifiés.**<br>Vérifier que vous êtes [Conforme CASL-et CAN-SPAM][40] est idéal.<br><br>
 6. **Surveillez attentivement votre réputation de l’expéditeur pendant que vous effectuez le processus de réchauffement IP.** <br>
-
 Les mesures suivantes sont importantes à observer pendant le réchauffement :
 - **Taux de retour** Si une campagne dépasse de 3 à 5 %, vous devez évaluer la propreté de votre liste en suivant les directives de notre [Gardez-le propre : Article sur l’importance de l’hygiène des listes d’e-mails][43]. En outre, vous devriez envisager de mettre en œuvre un [Politique de temporisation][46] pour arrêter d’envoyer des adresses e-mail non engagées ou dormantes.
 - **Rapports de courrier indésirable**: Si une campagne est signalée comme courrier indésirable à un taux supérieur à 0,08 %, vous devez réévaluer le contenu que vous envoyez, vous assurer qu’il est ciblé dans un public intéressé, et veiller à ce que vos courriels soient correctement formulés pour faire rayonner leur intérêt.

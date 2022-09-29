@@ -56,7 +56,6 @@ Si Braze reçoit une demande d’ajout d’un utilisateur et que l’adresse e-m
 ### Domaines Microsoft
 
 Si le domaine hôte inclut « msn », « hotmail », « outlook » ou « live », alors l’expression régulière suivante sera utilisée pour valider la partie locale :<br>
-
 `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
 La partie locale de Microsoft doit suivre ces paramètres :
@@ -71,7 +70,6 @@ La partie locale de Microsoft doit suivre ces paramètres :
 ### Tous les autres domaines
 
 Pour tous les autres domaines, Braze permet des adresses e-mail correspondant aux regex suivants pour la partie locale :<br>
-
 `/\A [\p{L}\p{N}_\-] (?: [\.\+\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] )? \z/x`
 
 La partie locale de Microsoft doit suivre ces paramètres :
@@ -87,7 +85,6 @@ Si la partie de domaine est une adresse Gmail, la partie locale doit comporter a
 Les adresses Ipv4 ou Ipv6 ne sont pas autorisées dans la partie hôte d’une adresse e-mail. De plus, le domaine de niveau supérieur (par ex.,.com,.org,.net, etc.) peut ne pas être entièrement numérique.
 
 L’expression régulière suivante est utilisée pour valider le domaine :<br>
-
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
 Le nom de domaine doit suivre ces paramètres :
@@ -103,12 +100,10 @@ Le nom de domaine doit suivre ces paramètres :
 	-Contenir 1 à 63 caractères
 
 **Validation supplémentaire requise :**<br>
-
 L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD doit être dans [Liste TLD ICANN][2]. Le validateur e-mail Braze garantit uniquement que la syntaxe de l’e-mail est correcte conformément à l’expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
 
 {% alert important %}
 Unicode est accepté uniquement pour la partie locale de l’adresse e-mail.<br>
-
 Unicode n’est pas accepté pour la partie domaine, mais il peut être encodé par code Punycode. 
 {% endalert %}
 

@@ -20,9 +20,7 @@ Les groupes d’abonnement sont nécessaires pour tout message SMS envoyé par l
 
 1. **Groupes d’abonnement**
 - Un groupe d’abonnement est requis pour chaque groupe d'apps Braze que vous prévoyez d’envoyer avec des SMS. 
-- Les utilisateurs peuvent se désabonner des messages dans un SMS ou en utilisant d’autres types d’invites de désabonnement (par exemple, page de compte ou flux Web dans l’application). Votre équipe doit mettre à jour le statut de l’abonnement de tout utilisateur qui désabonne en dehors de la messagerie SMS.<br>
-<br>
-
+- Les utilisateurs peuvent se désabonner des messages dans un SMS ou en utilisant d’autres types d’invites de désabonnement (par exemple, page de compte ou flux Web dans l’application). Votre équipe doit mettre à jour le statut de l’abonnement de tout utilisateur qui désabonne en dehors de la messagerie SMS.<br><br>
 2. **Gestion des mises à jour utilisateur**
 - Vous devez ajouter des utilisateurs à un groupe d’abonnement via REST API.
 - Groupe d’abonnement des [filtres de reciblage]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) sont disponibles pour créer et cibler des campagnes et des Canvas.

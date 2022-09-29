@@ -63,6 +63,4 @@ Après avoir réchauffé votre IP, n’hésitez pas à [commencer à créer et �
 
 ## Ressources supplémentaires
 
-Pour plus d’informations sur les e-mails de Braze, consultez notre [section e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br>
-<br>
-
+Pour plus d’informations sur les e-mails de Braze, consultez notre [section e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>

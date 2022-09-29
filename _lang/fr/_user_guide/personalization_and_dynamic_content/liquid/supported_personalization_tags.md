@@ -23,10 +23,8 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour de
 | Attributs de Canvas Step | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Attributs de la carte | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Événements de geofence | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
-| Propriétés de l’événement <br>
- (Elles sont personnalisées sur votre groupe d'apps.)| `{{event_properties.${your_custom_event_property}}}` |
-| Attributs personnalisés <br>
- (Elles sont personnalisées sur votre groupe d'apps.) | `{{custom_attribute.${your_custom_attribute}}}` |
+| Propriétés de l’événement <br> (Elles sont personnalisées sur votre groupe d'apps.)| `{{event_properties.${your_custom_event_property}}}` |
+| Attributs personnalisés <br> (Elles sont personnalisées sur votre groupe d'apps.) | `{{custom_attribute.${your_custom_attribute}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
