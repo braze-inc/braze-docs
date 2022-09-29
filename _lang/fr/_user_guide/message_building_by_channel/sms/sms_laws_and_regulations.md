@@ -28,17 +28,11 @@ En général, nous vous encourageons à faire preuve de discernement lorsque vou
 - **Le type de messagerie SMS qu’ils ont accepté**
 - **Le numéro de téléphone de l’utilisateur**
 - **La langue pour laquelle ils se sont abonnés**<br><br>
-
 2. **Communiquez clairement les types de SMS que vous enverrez**. Les utilisateurs doivent comprendre quels messages ils peuvent attendre de votre marque dans ce canal et les types d’informations ou d’offres qu’ils recevront. Énoncez explicitement l’objectif de vos futures campagnes, la fréquence des messages et rappelez aux utilisateurs que des taux de message/données s’appliquent.<br><br>
-
 3. **Tenez les informations essentielles à jour et visibles**. Assurez-vous que la version la plus récente des Conditions générales de votre marque et de votre Politique de confidentialité de marketing par SMS est clairement visible et facilement accessible depuis votre page d’adhésion SMS.<br><br>
-
 4. **N’envoyez des SMS qu’à des numéros de téléphone légalement obtenus, abonnés**. Dans le cadre de la planification de la migration technique, assurez-vous que votre équipe comprend le mécanisme permettant d’associer la situation d’abonnement à chaque profil utilisateur sur votre plateforme d’engagement client.<br><br>
-
 5. **Veillez à la conformité SHAFT aux États-Unis et dans d’autres régions concernées.** L’envoi de messages SMS avec du texte concernant le sexe, la haine, l’alcool, les armes à feu et le tabac (SHAFT) est généralement considéré comme illégal aux États-Unis et dans d’autres régions.<br><br>
-
 6. **Vérifiez bien tout**. Travaillez avec votre équipe juridique pour vous assurer que votre programme SMS est entièrement conforme à toutes les règles et réglementations applicables pour les régions où votre marque opère.<br><br>
-
 ## Ressources
 
 Voici quelques liens que vous pourriez avoir besoin de consulter lorsque vous construisez votre campagne SMS :
