@@ -24,8 +24,7 @@ Tout d’abord, vous devez choisir le type d’élément que vous souhaitez envo
 
 #### Cartes de fil d’actualité
 
-<br>
-![Un aperçu d’une carte classique avec l’icône Facebook, un en-tête qui indique « Laissez-nous un j’aime sur Facebook ! » et deux lignes de texte : « Cliquez ici ! » et « www.facebook.com ».][2]{: style="max-width:40%;"}
+<br>![Un aperçu d’une carte classique avec l’icône Facebook, un en-tête qui indique « Laissez-nous un j’aime sur Facebook ! » et deux lignes de texte : « Cliquez ici ! » et « www.facebook.com ».][2]{: style="max-width:40%;"}
 
 Les cartes de fil d’actualité standard comprennent :
 
@@ -36,8 +35,7 @@ Les cartes de fil d’actualité standard comprennent :
 
 #### Des cartes d’images avec légende
 
-<br>
-![Aperçu d’une carte d’image avec légende sur laquelle figure une tarte aux pommes entourée de pommes. Sous l’image, un en-tête indique « Les soldes des vacances sont arrivées ! Économisez près de 50 dollars ! » avec le texte suivant : « Quatre délicieuses tartes aux pommes pour le prix de 3. Offre disponible pour une durée limitée. Dépêchez-vous ! Cette offre ne durera pas longtemps. Cliquez ici pour échanger votre coupon : www.example.com ».][3]{: style="max-width:40%;"}
+<br>![Aperçu d’une carte d’image avec légende sur laquelle figure une tarte aux pommes entourée de pommes. Sous l’image, un en-tête indique « Les soldes des vacances sont arrivées ! Économisez près de 50 dollars ! » avec le texte suivant : « Quatre délicieuses tartes aux pommes pour le prix de 3. Offre disponible pour une durée limitée. Dépêchez-vous ! Cette offre ne durera pas longtemps. Cliquez ici pour échanger votre coupon : www.example.com ».][3]{: style="max-width:40%;"}
 
 Les cartes d’images avec légende comprennent :
 
@@ -48,8 +46,7 @@ Les cartes d’images avec légende comprennent :
 
 #### Des cartes-bannières
 
-<br>
-![Aperçu d’une carte-bannière avec une image qui indique « Ceci est une bannière ».][4]{: style="max-width:40%;"}
+<br>![Aperçu d’une carte-bannière avec une image qui indique « Ceci est une bannière ».][4]{: style="max-width:40%;"}
 
 Les cartes-bannières comprennent :
 

@@ -12,9 +12,7 @@ description: "Cet article de référence explique comment utiliser les entonnoir
 # Entonnoirs de segments
 
 > Cet article de référence explique comment utiliser les entonnoirs de segments de Braze et présente les meilleures pratiques à suivre ainsi que des cas d’utilisation. 
-> <br>
-> <br>
-> Les entonnoirs de segments sont parfaits pour limiter la taille de votre audience pour un cas d’utilisation de campagne spécifique, apprendre de cette audience et de ses interactions, et utiliser ces connaissances afin d’élaborer des stratégies et de concevoir des campagnes efficaces.
+> <br>> <br>> Les entonnoirs de segments sont parfaits pour limiter la taille de votre audience pour un cas d’utilisation de campagne spécifique, apprendre de cette audience et de ses interactions, et utiliser ces connaissances afin d’élaborer des stratégies et de concevoir des campagnes efficaces.
 
 Les entonnoirs de segments vous permettent de voir comment chaque filtre que vous ajoutez affecte les statistiques de votre segment. Lorsque vous créez un segment, une ligne de données apparaîtra sous chaque filtre. Ces données fourniront les informations suivantes sur les utilisateurs ciblés par tous les filtres à ce moment-là :
 

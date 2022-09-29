@@ -71,12 +71,8 @@ Les images de petite taille et de haute qualité se chargeront plus rapidement, 
 
 | Disposition | Format | Qualité de l’image | Remarques |
 | ----- | ----- | ----- | ----- |
-| Image et texte | Format 6:5 | Haute résolution : 1 200 x 1 000 pixels<br>
-<br>
-Résolution minimum : 600 x 500 pixels | L’image peut être rognée de tous les côtés, mais elle occupera toujours la moitié supérieure de la fenêtre. |
-| Image uniquement | Format 3:5 | Haute résolution : 1 200 x 2 000 pixels<br>
-<br>
-Résolution minimum : 600 x 1 000 pixels | Sur les appareils grand format, l’image peut être rognée sur les bords gauche et droit. |
+| Image et texte | Format 6:5 | Haute résolution : 1 200 x 1 000 pixels<br><br>Résolution minimum : 600 x 500 pixels | L’image peut être rognée de tous les côtés, mais elle occupera toujours la moitié supérieure de la fenêtre. |
+| Image uniquement | Format 3:5 | Haute résolution : 1 200 x 2 000 pixels<br><br>Résolution minimum : 600 x 1 000 pixels | Sur les appareils grand format, l’image peut être rognée sur les bords gauche et droit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -84,12 +80,8 @@ Résolution minimum : 600 x 1 000 pixels | Sur les appareils grand format, l
 
 | Disposition | Format | Qualité de l’image | Remarques |
 | ----- | ----- | ----- | ----- |
-| Image et texte | Format 29:10 | Haute résolution : 1 450 x 500 pixels<br>
-<br>
-Résolution minimum : 600 x 205 pixels | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
-| Image uniquement | Presque n’importe quel format | Haute résolution : 1 200 x 2 000 pixels<br>
-<br>
-Résolution minimum : 600 x 600 pixels | Le message sera redimensionné pour s’adapter à la plupart des formats d’image.|
+| Image et texte | Format 29:10 | Haute résolution : 1 450 x 500 pixels<br><br>Résolution minimum : 600 x 205 pixels | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
+| Image uniquement | Presque n’importe quel format | Haute résolution : 1 200 x 2 000 pixels<br><br>Résolution minimum : 600 x 600 pixels | Le message sera redimensionné pour s’adapter à la plupart des formats d’image.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -97,9 +89,7 @@ Résolution minimum : 600 x 600 pixels | Le message sera redimensionné pour 
 
 | Disposition | Format | Qualité de l’image | Remarques |
 | ----- | ----- | ----- | ----- |
-| Image et texte | Format 1:1 | Haute résolution : 150 x 150 pixels<br>
-<br>
-Résolution minimum : 50 x 50 pixels | Les images de différents formats seront insérées dans un conteneur d’images carré, sans rognage.|
+| Image et texte | Format 1:1 | Haute résolution : 150 x 150 pixels<br><br>Résolution minimum : 50 x 50 pixels | Les images de différents formats seront insérées dans un conteneur d’images carré, sans rognage.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
@@ -130,9 +120,7 @@ Les notifications enrichies pour Android ne prennent pas en charge les GIF.
 | Type d’image | Format | Qualité de l’image |
 | ---- | ----- | ---- |
 | Icône de notification push | Format 1:1 | S/O |
-| Notification étendue | Format 2:1 | Small: 512 x 256 pixels<br>
-Moyenne : 1 024 x 512 pixels<br>
-Grande : 2 048 x 1 024 pixels |
+| Notification étendue | Format 2:1 | Small: 512 x 256 pixels<br>Moyenne : 1 024 x 512 pixels<br>Grande : 2 048 x 1 024 pixels |
 | Image incorporée | Format 3:2 | S/O |
 
 ##### Ressources supplémentaires

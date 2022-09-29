@@ -44,7 +44,6 @@ Vous pouvez utiliser et gérer des modèles ainsi que des contenus créatifs dan
 - **[Profils de couleurs des messages dans l’application et modèles CSS][4]**
 - **[Gestion des ressources dans la bibliothèque multimédia][5]**
 <br><br><br>
-
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile

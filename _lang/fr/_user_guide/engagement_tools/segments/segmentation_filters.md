@@ -27,146 +27,75 @@ glossary_tags:
 
 glossaries:
   - name: Attributs personnalisés
-    description: Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Événement personnalisé
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br>
-<br>
- Exemple :<br>
-Activité terminée avec le nom de l’actif_de la propriété.<br>
-<br>
-Fuseau horaire :<br>
-UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Exemple :<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
     tags:
       - Données personnalisées
   - name: Premier événement personnalisé
-    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br>
-<br>
-Exemple :<br>
- Premier panier abandonné il y a moins d’un jour<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier événement personnalisé
-    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br>
-<br>
-Exemple :<br>
- Dernier panier d’achats abandonné il y a moins d’un jour<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier SMS reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: X événements personnalisés en Y jours
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br>
- <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br>
-<br>
-Exemple :<br>
-Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br>
-<br>
-Fuseau horaire :<br>
-UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: X Propriétés d’événement personnalisé en Y jours
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br>
-<a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br>
-<br>
-Exemple :<br>
- Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br>
-<br>
-Fuseau horaire :<br>
-UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: Date de l’événement récurrent
-    description: Ce filtre examine le mois et le jour de l’attribut personnalisé avec le type de données « date », mais ne prend pas l’année en compte. Ce filtre est utile pour les événements annuels.<br>
-<br>
-Fuseau horaire&#58;<br>
-Ce filtre s’adapte au fuseau horaire de l’utilisateur.
+    description: Ce filtre examine le mois et le jour de l’attribut personnalisé avec le type de données « date », mais ne prend pas l’année en compte. Ce filtre est utile pour les événements annuels.<br><br>Fuseau horaire&#58;<br>Ce filtre s’adapte au fuseau horaire de l’utilisateur.
     tags:
       - Données personnalisées
   - name: Premier achat
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-UTC
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br><br>Fuseau horaire :<br>UTC
     tags:
       - Activité de l’utilisateur
   - name: Premier achat dans l’application
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article dans votre application (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article dans votre application (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Premier produit acheté
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont utilisé l’une des applications de votre groupe d’apps. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont utilisé l’une des applications de votre groupe d’apps. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernier achat effectué
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont effectué un achat à travers votre application. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont effectué un achat à travers votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernier achat dans l’application
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article dans votre application. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article dans votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernier produit acheté
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Durée médiane des sessions
@@ -214,28 +143,23 @@ Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: X argent dépensé dans les Y derniers jours
-    description: Segmente vos utilisateurs en fonction du montant dépensé dans votre application au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. Ce montant ne comprendra que la somme des 50 derniers achats. <br>
- <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: Segmente vos utilisateurs en fonction du montant dépensé dans votre application au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. Ce montant ne comprendra que la somme des 50 derniers achats. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: X produits achetés dans les Y derniers jours
-    description: Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu’ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.) au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. <br>
- <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu’ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.) au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: X propriétés d’achat en Y jours
-    description: Segmente vos utilisateurs en fonction du nombre de fois où un achat a été effectué par rapport à une certaine propriété d’achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br>
- <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: Segmente vos utilisateurs en fonction du nombre de fois où un achat a été effectué par rapport à une certaine propriété d’achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: X achats dans les Y derniers jours
-    description: Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu’ils ont effectué un achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br>
- <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu’ils ont effectué un achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: X sessions dans les Y derniers jours
-    description: Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br>
- <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: Carte cliquée
@@ -283,24 +207,15 @@ Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière campagne ou dernier Canvas reçu avec balise
-    description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière campagne spécifique reçue
-    description: Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière Canvas Step spécifique reçue
-    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu une Canvas Step spécifique. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu une Canvas Step spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Campagne reçue
@@ -324,55 +239,31 @@ Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière interaction avec un message
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos messages (e-mail, messages in-app, notification push). (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos messages (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière inscription dans un groupe de contrôle
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière impression des messages dans l’application
-    description: Segmente vos utilisateurs en déterminant si la dernière impression de message dans l’application a bien été reçue. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en déterminant si la dernière impression de message dans l’application a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier message reçu
-    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br>
-<br>
-Exemple :<br>
-Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Exemple :<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier e-mail reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière notification push reçue
-    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier webhook reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à chaque utilisateur. (période de 24 heures)<br>
-<br>
-Fuseau horaire :<br>
-Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à chaque utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Last Viewed News Feed (Dernier fil d’actualité vu)
@@ -396,8 +287,7 @@ Fuseau horaire de l’entreprise
     tags:
       - Attributs utilisateur
   - name: Anniversaire
-    description: Segmente vos utilisateurs en fonction de leur date d’anniversaire, comme indiqué dans votre application. <br>
- Les utilisateurs dont l’anniversaire est le 29 février seront inclus dans les segments qui incluent le 1er mars.
+    description: Segmente vos utilisateurs en fonction de leur date d’anniversaire, comme indiqué dans votre application. <br> Les utilisateurs dont l’anniversaire est le 29 février seront inclus dans les segments qui incluent le 1er mars.
     tags:
       - Attributs utilisateur
   - name: Braze Segment Extension
@@ -481,9 +371,7 @@ Fuseau horaire de l’entreprise
     tags:
       - Attributs utilisateur
   - name: Notifications push activées
-    description: Segmente vos utilisateurs qui ont explicitement activé les notifications push de n’importe quelle application de votre groupe d’apps. Ce compte inclut uniquement les notifications push de premier plan et n’inclut pas les utilisateurs qui se sont désabonnés. <br>
-<br>
-Après avoir segmenté vos utilisateurs à l’aide de ce filtre, vous pourrez voir une répartition de ceux présents dans ce segment pour Android, iOS et Web dans le panneau inférieur, intitulé <em>Reachable Users (Utilisateurs joignables)</em>.
+    description: Segmente vos utilisateurs qui ont explicitement activé les notifications push de n’importe quelle application de votre groupe d’apps. Ce compte inclut uniquement les notifications push de premier plan et n’inclut pas les utilisateurs qui se sont désabonnés. <br><br>Après avoir segmenté vos utilisateurs à l’aide de ce filtre, vous pourrez voir une répartition de ceux présents dans ce segment pour Android, iOS et Web dans le panneau inférieur, intitulé <em>Reachable Users (Utilisateurs joignables)</em>.
     tags:
       - Attributs utilisateur
   - name: Notifications push activées pour l’application
@@ -575,11 +463,7 @@ Après avoir segmenté vos utilisateurs à l’aide de ce filtre, vous pourrez v
     tags:
       - Autre
   - name: "Canal intelligent"
-    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br>
- Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br>
- <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br>
- <br>
- _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
+    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
     tags:
       - Activité de l’utilisateur
   - name: Suivi des campagnes publicitaires activé

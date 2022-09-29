@@ -145,8 +145,7 @@ Sur la page des analyses, vous pouvez également suivre les performances de la v
 
 {% alert note %}
 Braze compare toutes les variantes entre elles en utilisant le [test du χ² de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Ce test mesure si une variante dépasse ou non toutes les autres sur le plan statistique avec un niveau d’importance de p < 0,05 (ou ce que nous appelons une importance de 95 %). Si c’est le cas, la variante gagnante reçoit alors l’étiquette « Winner (Gagnante) ».
-<br><br>
-Ce test est différent du score de confiance, qui décrit uniquement la performance d’une variante par rapport au groupe de contrôle avec une valeur numérique comprise entre 0 et 100 %.
+<br><br>Ce test est différent du score de confiance, qui décrit uniquement la performance d’une variante par rapport au groupe de contrôle avec une valeur numérique comprise entre 0 et 100 %.
 {% endalert %}
 
 Une variante peut fournir de meilleurs résultats que le groupe de contrôle, mais le test du χ² vérifie si une variante est meilleure que tous les autres. Des [tests de suivi](#recommended-follow-ups) peuvent apporter davantage d’informations.
@@ -182,23 +181,9 @@ Quels leviers devez-vous utiliser et quels sont les effets souhaités ? Bien qu
 
 | Canal | Aspects du message que vous pouvez modifier | Résultats à rechercher |
 | ---------------------| --------------- | ------------- |
-| Notification push | Texte <br>
- Utilisation des images et des émojis <br>
- Liens profonds <br>
- Présentation des chiffres (par ex. « triple » contre « augmentation de 200 % ») <br>
- Présentation de la durée (p. ex. « se termine à minuit » par rapport à « se termine dans 6 heures ») | Ouvertures <br>
- Taux de conversion |
-| E-mail | Sujet <br>
- Nom affiché <br>
- Formule de politesse <br>
- Corps du message <br>
- Utilisation des images et des émojis <br>
- Présentation des chiffres (par ex. « triple » contre « augmentation de 200 % ») <br>
- Présentation de la durée (p. ex. « se termine à minuit » par rapport à « se termine dans 6 heures ») | Ouvertures <br>
- Taux de conversion |
-| Notification dans l’application | Aspects listés pour « notifications push » <br>
- [Format du message][273] | Clics <br>
- Taux de conversion |
+| Notification push | Texte <br> Utilisation des images et des émojis <br> Liens profonds <br> Présentation des chiffres (par ex. « triple » contre « augmentation de 200 % ») <br> Présentation de la durée (p. ex. « se termine à minuit » par rapport à « se termine dans 6 heures ») | Ouvertures <br> Taux de conversion |
+| E-mail | Sujet <br> Nom affiché <br> Formule de politesse <br> Corps du message <br> Utilisation des images et des émojis <br> Présentation des chiffres (par ex. « triple » contre « augmentation de 200 % ») <br> Présentation de la durée (p. ex. « se termine à minuit » par rapport à « se termine dans 6 heures ») | Ouvertures <br> Taux de conversion |
+| Notification dans l’application | Aspects listés pour « notifications push » <br> [Format du message][273] | Clics <br> Taux de conversion |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
@@ -228,35 +213,27 @@ Par ailleurs, lorsque vous choisissez un segment à tester, assurez-vous que la 
 Un test A/B ou multivarié peut (et devrait !) vous donner des idées pour vos prochains tests, et vous inciter à réorienter votre stratégie de communication. Voici quelques exemples d’actions de suivi :
 
 **Modifier votre stratégie de communication en fonction des résultats des tests**<br>
-
 Vos résultats multivariés peuvent vous amener à changer la façon dont vous formulez ou formatez votre message.
 
 **Modifier votre compréhension de vos utilisateurs**<br>
-
 Chaque test apportera des informations sur les comportements de vos utilisateurs, la manière dont ils réagissent face à différents canaux de communication et les différences (et similarités) entre vos segments.
 
 **Améliorer la façon dont vous structurez vos prochains tests**<br>
-
 Votre échantillon était-il trop petit ? Les différences entre vos variantes étaient-elles trop subtiles ? Chaque test est une occasion d’améliorer les suivants. Si votre confiance est faible, cela signifie que la taille de votre échantillon est trop petite et qu’il doit être agrandi lors des prochains tests.  Si vous n’observez aucune différence notable entre les résultats de vos variantes, il est possible que les différences aient été trop subtiles pour avoir un effet discernable par rapport aux réactions des utilisateurs.
 
 **Effectuer un test de suivi avec un plus grand échantillon**<br>
-
 Les échantillons de grande taille augmentent le risque de détecter de petites différences entre les variantes.
 
 **Effectuer un test de suivi en utilisant un autre canal de communication**<br>
-
 Si vous constatez qu’une stratégie donnée est très efficace pour un canal, vous pouvez tester cette stratégie avec d’autres canaux.  Si un type de message est efficace dans un canal, mais pas dans un autre, vous pouvez raisonnablement conclure que certains canaux sont plus propices à certains types de messages.  Ou bien, il existe peut-être une différence entre les utilisateurs qui sont plus susceptibles d’activer les notifications push et ceux qui sont plus susceptibles de prêter attention aux messages dans l’application.  En fin de compte, ce type de test vous aidera à découvrir comment votre audience interagit avec vos différents canaux de communication.
 
 **Effectuer un test de suivi sur un autre segment d’utilisateurs**<br>
-
 Pour ce faire, créez un autre test avec le même canal de communication et les mêmes variantes, mais choisissez un segment d’utilisateurs différent.  Par exemple, si un type de message était extrêmement efficace auprès des utilisateurs actifs, il peut être utile d’enquêter sur son effet auprès des utilisateurs inactifs. Les utilisateurs inactifs pourraient réagir de manière similaire ou préférer une des autres variantes.  Ce test vous aidera à en savoir plus sur vos différents segments et sur la manière dont ils réagissent à différents types de messages.  Pourquoi formuler des hypothèses sur vos segments lorsque vous pouvez baser votre stratégie sur les données ?
 
 **Effectuer un test de suivi basé sur les informations issues d’un test précédent**<br>
-
 Utilisez les informations issues de vos tests passés pour mieux orienter vos futurs projets. L’un de vos précédents tests semble-t-il indiquer qu’une technique de communication est plus efficace que les autres ? Quel élément de la variante gagnante l’a rendu plus efficace ? Baser vos tests de suivi sur ces questions vous aidera à obtenir des résultats pertinents sur vos utilisateurs.
 
 **Comparer l’impact à long terme de différentes variantes**<br>
-
 Si vous menez un test A/B sur des messages de ré-engagement, n’oubliez pas de comparer l’impact à long terme de différentes variantes dans les [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
