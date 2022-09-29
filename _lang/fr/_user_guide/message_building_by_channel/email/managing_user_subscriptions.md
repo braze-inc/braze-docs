@@ -104,7 +104,6 @@ Vous pouvez créer et héberger sur votre serveur Web un centre de préférences
 Utilisez les paires champ-valeur de la chaîne de caractères dans le corps de l’URL pour transmettre l’ID d’utilisateur et la catégorie d’e-mail à la page, afin que les utilisateurs n’aient qu’à confirmer leur choix de désabonnement. Cette option est valable pour ceux qui stockent un identifiant utilisateur dans un format haché et n’ont pas déjà de centre d’abonnement.
 
 Pour cette option, chaque catégorie de courrier électronique nécessitera son propre lien de désabonnement :<br>
-
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}

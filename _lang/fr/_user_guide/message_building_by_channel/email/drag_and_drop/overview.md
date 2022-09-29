@@ -103,7 +103,6 @@ L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan
 
 Pour ajuster la marge intérieure, faites défiler jusqu’à **Block Options (Options de bloc)**, et affichez **More Options (Plus d’options)**. Cela vous permettra d’ajuster votre marge intérieure pour que votre e-mail soit parfait !
 <br>
-
 #### Ajout de Liquid 
 
 ![Options d’ajout de personnalisation de l’éditeur Drag & Drop.][5]{: style="float:right;max-width:25%;margin-left:15px;"}

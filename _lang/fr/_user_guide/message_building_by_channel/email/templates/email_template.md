@@ -51,9 +51,7 @@ Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas
 Pour saisir une ligne d’objet, cliquez sur <i class="fas fa-pencil-alt"></i> **Edit Sending Info (Modifier les informations d’envoi)**. 
 
 ![Panneau Détails du modèle d’e-mail dans l’éditeur HTML.]({% image_buster/assets/img/email_templates/template3.png %})
-<br>
-<br>
-
+<br><br>
 Pour entrer dans l’éditeur d’e-mail robuste, cliquez sur <i class="fas fa-pencil-alt"></i> **Edit Email Body (Modifier le corps de l’e-mail)**. Si vous le souhaitez, utilisez la liste déroulante dans l’onglet **Body (Corps)** pour sélectionner l’éditeur d’e-mail Classic, Block, HTML ou Plaintext. Le panneau adjacent affiche un aperçu en temps réel de l’e-mail créé.
 
 {% alert important %}
@@ -96,14 +94,8 @@ La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canv
 
 La section **Content (Contenu)** comprend l’éditeur. Cette section comporte trois composants principaux.
 
-- **Contenu** : Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br>
-<br>
- Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br>
-<br>
-
-- **Lignes :** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br>
-<br>
-
+- **Contenu** : Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br><br> Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
+- **Lignes :** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br><br>
 - **Paramètres :** Paramètres généraux du message. Ils sont héritées des sections Rows (Lignes) et Content (Contenu). Par exemple, la famille de polices définie dans les paramètres de message sera utilisée partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
 
 Ceci est très utile pour créer un message cohérent très rapidement.
@@ -115,12 +107,8 @@ Ceci est très utile pour créer un message cohérent très rapidement.
 La section **Preview & Test (Aperçu et test)** vous permet d’afficher un aperçu de votre e-mail en fonction des différents utilisateurs.
 
 - **Utilisateur aléatoire :** Braze sélectionnera de manière aléatoire un utilisateur de la base de données et prévisualisera l’e-mail en fonction de ses attributs/informations sur l’événement.
-Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre public cible à ce stade.<br>
-<br>
-
-- **Utilisateur sélectionné :** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br>
-<br>
-
+Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre public cible à ce stade.<br><br>
+- **Utilisateur sélectionné :** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br><br>
 - **Utilisateur personnalisé :** Vous pouvez personnaliser un utilisateur. Braze offre des entrées pour tous les attributs et événements disponibles. Vous pouvez saisir toutes les informations que vous souhaitez voir dans l’aperçu d’e-mail.
 {% endsubtab %}
 {% endsubtabs %}

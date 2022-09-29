@@ -49,9 +49,7 @@ Ce n’est peut-être pas le cas de votre adresse. Vérifiez vos enregistrements
 
 | Valeur | Description |
 |---|---|
-| UID | Cette valeur est fournie par Sendgrid dans vos enregistrements DNS. N’incluez pas le caractère « U » dans votre UID dans l’adresse e-mail que vous marquez comme Whitelabel. Par exemple, si votre UID est présenté dans Sendgrid comme `u1234567.wl134.sendgrid.net`, alors `1234567` est la valeur UID. <br>
- <br>
- Vous pouvez également contacter votre conseiller Braze pour qu’il vous fournisse votre UID si vous n’avez pas accès à vos enregistrements DNS. |
+| UID | Cette valeur est fournie par Sendgrid dans vos enregistrements DNS. N’incluez pas le caractère « U » dans votre UID dans l’adresse e-mail que vous marquez comme Whitelabel. Par exemple, si votre UID est présenté dans Sendgrid comme `u1234567.wl134.sendgrid.net`, alors `1234567` est la valeur UID. <br> <br> Vous pouvez également contacter votre conseiller Braze pour qu’il vous fournisse votre UID si vous n’avez pas accès à vos enregistrements DNS. |
 | Sous-domaine et domaine marqué comme Whitelabel | Il s’agit du domaine et du sous-domaine initiaux que vous avez saisis dans Sendgrid. Vous pouvez également utiliser la **HOST Value (Valeur HÔTE)** dans vos enregistrements DNS dans Sendgrid.|
 {: .reset-td-br-1 .reset-td-br-2}
 
