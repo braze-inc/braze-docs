@@ -36,7 +36,7 @@ Push tokens are specific to both a device and app, so it isn't possible to use p
 
 For example, say you have two users: Charlie and Kim. If Charlie has enabled push notifications for your app on his phone and Kim uses Charlie's phone to log out of Charlie's profile and log into her own, the push token will be re-assigned to Kim's profile. The push token will then remain assigned to Kim's profile on that device until she logs out and Charlie logs back in again.
 
-An app or website can only have one push subscription per device. So when a user logs out of a device or website, and a new user logs in, the push token gets reassigned to the new user. This is reflected on the user's profile, in **Contact Settings** section of the **Engagement** tab:
+An app or website can only have one push subscription per device. So when a user logs out of a device or website, and a new user logs in, the push token gets reassigned to the new user. This is reflected on the user's profile in **Contact Settings** section of the **Engagement** tab:
 
 ![Push token changelog on the **Engagement** tab of a user's profile, which lists when the push token was moved to another user, and what the token was.][4]
 
