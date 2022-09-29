@@ -95,7 +95,7 @@ Each bucket can have a different contribution or "push" towards each message var
 
 The **Personalized Variant** tab shows the results of the second send, where each remaining user was sent the variant they were most likely to engage with.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead.
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead. Even if Personalized Variant fails to provide any lift, which can sometimes happen, the result is equivalent to sending only the winning variant, i.e. a traditional A/B test. 
 
 - **Projected lift:** The improvement in your selected optimization metric for this send due to using personalized variants instead of a standard A/B test (if the remaining users only received the winning variant).
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
