@@ -20,14 +20,10 @@ channel:
 Envoi de MMS avec Braze :
 
 - **Sélectionnez votre groupe d’abonnement**
-  - Vous devez désigner un groupe d’abonnement avec des numéros de téléphone MMS activés à cibler (il peut s’agir de codes courts ou longs).<br>
-<br>
-
+  - Vous devez désigner un groupe d’abonnement avec des numéros de téléphone MMS activés à cibler (il peut s’agir de codes courts ou longs).<br><br>
 - **Saisissez le corps du message**
   - Entrez les types d’images PNG, JPG, GIF et VCF à partir de la médiathèque ou spécifiez une URL.
-  - Une seule image est prise en charge<br>
-<br>
-
+  - Une seule image est prise en charge<br><br>
 - **Comprenez comment sont envoyés les MMS**
   - Les MMS sont facturés à un tarif différent des SMS avec uniquement du texte.
   - Tous les opérateurs n’acceptent pas les MMS. Dans ces cas spécifiques, Twilio convertit automatiquement le MMS en un lien d’image sur lequel l’utilisateur peut cliquer.

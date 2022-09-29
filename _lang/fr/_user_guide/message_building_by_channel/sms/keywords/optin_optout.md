@@ -21,12 +21,8 @@ Braze traitera automatiquement les mots-clés suivants et mettra à jour l’ét
 
 | Type | Mot-clé | Changement |
 |-|-------|---|
-|Abonnement| `START`<br> `YES`<br> `UNSTOP` | Toute demande entrante avec l’un de ces mots-clés `Opt-In` entraînera un changement d’état du groupe d’abonnement `subscribed`. De plus, l’ensemble de numéros associés à ce groupe d’abonnement sera désormais en mesure d’envoyer un SMS à ce client. <br>
-<br>
-L’utilisateur reçoit votre réponse automatique d’abonnement définie.  |
-|Désabonnement| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Toute demande entrante avec l’un de ces mots-clés `Opt-Out` entraînera un changement d’état du groupe d’abonnement `unsubscribed`. De plus, l’ensemble de numéros associés à ce groupe d’abonnement ne sera plus en mesure d’envoyer un SMS à ce client.<br>
-<br>
-L’utilisateur reçoit votre réponse automatique de désabonnement définie. |
+|Abonnement| `START`<br> `YES`<br> `UNSTOP` | Toute demande entrante avec l’un de ces mots-clés `Opt-In` entraînera un changement d’état du groupe d’abonnement `subscribed`. De plus, l’ensemble de numéros associés à ce groupe d’abonnement sera désormais en mesure d’envoyer un SMS à ce client. <br><br>L’utilisateur reçoit votre réponse automatique d’abonnement définie.  |
+|Désabonnement| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Toute demande entrante avec l’un de ces mots-clés `Opt-Out` entraînera un changement d’état du groupe d’abonnement `unsubscribed`. De plus, l’ensemble de numéros associés à ce groupe d’abonnement ne sera plus en mesure d’envoyer un SMS à ce client.<br><br>L’utilisateur reçoit votre réponse automatique de désabonnement définie. |
 | Aide | `HELP`<br> `INFO` | L’utilisateur reçoit votre réponse automatique d’aide définie. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

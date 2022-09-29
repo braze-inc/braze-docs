@@ -38,15 +38,12 @@ Notez que les codes alphanumériques ne sont pas compatibles avec les messages b
 ![]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 **Photo du contact de la carte de visite**<br>
-
 Vous pouvez télécharger une photo miniature pour votre carte de visite. Nous recommandons d’utiliser une image JPEG ou PNG de 240x240. Toutes les images haute résolution téléchargées seront redimensionnées en 240x240 pour garantir la livraison de votre message, sachant que les messages MMS de plus de 5 Mo peuvent engendrer une erreur.
 
 **Autres informations**<br>
-
 D’autres champs vous permettent d’insérer votre nom, sous-en-tête, adresse et autres coordonnées pouvant s’avérer utiles pour votre utilisateur. 
 
 <br>
-
 ### Étape 4 : Enregistrer votre carte de visite
 
 Une fois que vous avez renseigné tous les champs nécessaires, cliquez sur **Generate Contact Card** (Générer une carte de visite) pour qu’elle soit automatiquement jointe à votre campagne ou Canvas. À partir de là, vous pouvez ajouter un message, tester votre carte de visite et lancer votre campagne ou Canvas.

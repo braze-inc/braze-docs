@@ -72,20 +72,14 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
 
 - **Limite de caractères par segment**
     - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) a une limite de 160 caractères par segment SMS. Tous les messages comportant plus de 160 caractères sont segmentés avec une limite de 153 caractères.
-    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) a une limite de 70 caractères par segment de message. Tous les messages comportant plus de 70 caractères sont segmentés avec une limite de 67 caractères.<br>
-<br>
-
+    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) a une limite de 70 caractères par segment de message. Tous les messages comportant plus de 70 caractères sont segmentés avec une limite de 67 caractères.<br><br>
 - **Limite de segments par message**
     - Un maximum de **10 segments** peut être envoyé dans un message SMS Braze.
-    - Ces 10 segments sont limités à 1 530 caractères (codage GSM-7) ou 670 caractères (codage UCS-2).<br>
-<br>
-
+    - Ces 10 segments sont limités à 1 530 caractères (codage GSM-7) ou 670 caractères (codage UCS-2).<br><br>
 - **Compatible avec la modélisation de Liquid, le contenu connecté, les émojis et les liens**
     - Utiliser la création de modèles de Liquid et le contenu connecté dans votre message risque de vous faire dépasser la limite de caractères du type de codage choisi. Vous pouvez utiliser le [filtre de troncation de mots](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) pour limiter le nombre de mots que Liquid peut apporter au message.
     - Les émojis ne partageant pas un nombre de caractères standard, testez vos messages pour être sûr qu’ils sont segmentés et affichés correctement.
-    - Les liens peuvent inclure de nombreux caractères, entraînant plus de segments de messages que prévu. Bien que l’utilisation de raccourcissements de liens soit possible, mieux vaut utiliser des codes courts. Consultez nos [FAQ sur les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d’informations.<br>
-<br>
-
+    - Les liens peuvent inclure de nombreux caractères, entraînant plus de segments de messages que prévu. Bien que l’utilisation de raccourcissements de liens soit possible, mieux vaut utiliser des codes courts. Consultez nos [FAQ sur les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d’informations.<br><br>
 - **Test**
     - Testez toujours vos messages SMS avant de les envoyer, en particulier lorsque vous utilisez Liquid et du contenu connecté, car le dépassement des limites de messages ou de texte peut entraîner des frais supplémentaires. Notez que les messages test comptent dans les limites de messages.
 
@@ -97,7 +91,6 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
 **Testez la longueur de texte du SMS**
 
 <br>
-
 Pour voir le nombre de segments dans lequel votre message sera envoyé, saisissez votre texte dans la calculatrice. Cette opération ne traite pas et ne prédit pas la sortie de Liquid ou du contenu connecté.
 <style>
   .segment_data_hide {

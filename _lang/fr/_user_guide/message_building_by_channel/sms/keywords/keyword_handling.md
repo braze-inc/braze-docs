@@ -9,8 +9,7 @@ channel:
 
 ---
 
-<br>
-{% alert important %}
+<br>{% alert important %}
 Êtes-vous actuellement un client SMS non natif ? Si oui, consultez la [documentation sur les SMS non natifs](/docs/user_guide/message_building_by_channel/sms/non_native/) et l’article sur la gestion des mots-clés.
 {% endalert %}
 
@@ -30,12 +29,8 @@ Les SMS avec Braze vous permettent de créer des déclencheurs de mots-clés, de
 Outre les mots-clés par défaut d’abonnement et de désabonnement, vous pouvez définir vos propres mots-clés pour déclencher des réponses d’abonnement, de désabonnement et d’aide.
 
 ![Modification des mots-clés pour la catégorie Abonnement. Les mots-clés ajoutés sont « START », « UNSTOP » et « YES ». Le champ de réponse indique « Vous n’êtes plus abonné aux messages provenant de ce numéro. Répondez HELP pour obtenir de l’aide. Répondez STOP pour vous désabonner. Des frais de messages et de données peuvent s’appliquer."]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. Pour définir vos propres mots-clés, accédez à la section SMS du tableau de bord situé dans Subscription Groups (Groupes d’abonnement).<br>
-<br>
-
-2. Dans SMS Global Keywords (Mots-clés globaux SMS), sélectionnez une catégorie de mots-clés pour ajouter un mot-clé à l’aide de l’icône en forme de crayon.<br>
-<br>
-
+1. Pour définir vos propres mots-clés, accédez à la section SMS du tableau de bord situé dans Subscription Groups (Groupes d’abonnement).<br><br>
+2. Dans SMS Global Keywords (Mots-clés globaux SMS), sélectionnez une catégorie de mots-clés pour ajouter un mot-clé à l’aide de l’icône en forme de crayon.<br><br>
 3. Dans la boîte de dialogue qui s’affiche, ajoutez le mot-clé souhaité pour déclencher cette catégorie de mots-clés. Notez que les mots-clés sont sensibles à la casse et que les mots-clés universels `START`, `YES` et `UNSTOP` ne sont pas modifiables. 
 
 ![]({% image_buster /assets/img/sms/sms_keywords.png %})
@@ -44,14 +39,7 @@ Les règles suivantes s’appliquent aux mots-clés et aux réponses à des mots
 
 | Mots-clés | Réponses à des mots-clés |
 | -------- | ----------------- |
-| - Caractères avec codage UTF-8 valides<br>
-- Maximum de 20 mots-clés par catégorie<br>
-- Longueur maximale de 34 caractères<br>
-- Longueur minimum de 1 caractère <br>
-- Ne peut pas contenir d’espaces<br>
-- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>
-- Longueur maximale de 300 caractères<br>
-- Caractères UTF-8 valides |
+| - Caractères avec codage UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie<br>- Longueur maximale de 34 caractères<br>- Longueur minimum de 1 caractère <br>- Ne peut pas contenir d’espaces<br>- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -66,28 +54,15 @@ Vous voulez voir comment utiliser ces mots-clés dans vos campagnes et Canvas po
 Vous pouvez gérer vos propres réponses, envoyées aux utilisateurs quand ils saisissent un mot-clé dans une catégorie de mots-clés spécifique.
 
 ![Accueil]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. Pour gérer vos réponses à des mots-clés, accédez à la section SMS du tableau de bord situé dans Subscription Groups (Groupes d’abonnement). <br>
-<br>
-
-2. Dans SMS Global Keywords (Mots-clés globaux SMS), sélectionnez une catégorie de mots-clés pour modifier une réponse à l’aide de l’icône en forme de crayon.<br>
-<br>
- 
-3. Dans la boîte de dialogue qui s’affiche, modifiez et enregistrez votre réponse. Gardez à l’esprit les [six règles pour garantir la conformité]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) lorsque vous créez votre réponse, et lisez les règles suivantes qui s’appliquent aux mots-clés et aux réponses aux mots-clés.<br>
-<br>
-
+1. Pour gérer vos réponses à des mots-clés, accédez à la section SMS du tableau de bord situé dans Subscription Groups (Groupes d’abonnement). <br><br>
+2. Dans SMS Global Keywords (Mots-clés globaux SMS), sélectionnez une catégorie de mots-clés pour modifier une réponse à l’aide de l’icône en forme de crayon.<br><br> 
+3. Dans la boîte de dialogue qui s’affiche, modifiez et enregistrez votre réponse. Gardez à l’esprit les [six règles pour garantir la conformité]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) lorsque vous créez votre réponse, et lisez les règles suivantes qui s’appliquent aux mots-clés et aux réponses aux mots-clés.<br><br>
 
 ![Réponses]({% image_buster /assets/img/sms/keyword_home.png %})
 
 | Mots-clés | Réponses à des mots-clés |
 | -------- | ----------------- |
-| - Caractères avec codage UTF-8 valides<br>
-- Maximum de 20 mots-clés par catégorie<br>
-- Longueur maximale de 34 caractères<br>
-- Longueur minimum d’1 caractère <br>
-- Ne peut pas contenir d’espaces<br>
-- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>
-- Longueur maximale de 300 caractères<br>
-- Caractères UTF-8 valides |
+| - Caractères avec codage UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie<br>- Longueur maximale de 34 caractères<br>- Longueur minimum d’1 caractère <br>- Ne peut pas contenir d’espaces<br>- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
