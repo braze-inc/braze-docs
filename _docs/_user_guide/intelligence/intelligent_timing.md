@@ -37,10 +37,9 @@ To use Intelligent Timing in your campaigns:
 1. Create a campaign and compose your message.
 2. Select **Scheduled Delivery** as your delivery type.
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
-4. Specify if this campaign should send once, or if it should repeat.
-5. Select the send date. See [campaign nuances](#campaign-nuances) for considerations.
-6. Determine if you want to [only send messages within specific hours](#sending-within-specific-hours).
-7. Specify a [fallback time](#fallback-time). This is when the message will send if a user's profile doesn't have enough data to calculate an optimal time.
+4. Select the send date. See [campaign nuances](#campaign-nuances) for considerations.
+5. Determine if you want to [only send messages within specific hours](#sending-within-specific-hours).
+6. Specify a [fallback time](#fallback-time). This is when the message will send if a user's profile doesn't have enough data to calculate an optimal time.
 
 ![Scheduling a campaign with Intelligent Timing][1]
 
@@ -49,11 +48,11 @@ To use Intelligent Timing in your campaigns:
 If desired, you can choose to limit the optimal time to within a specific window of time. This is useful if your campaign pertains to a specific event, sale, or promotion.
 
 1. When configuring Intelligent Timing, select **Only send messages within specific hours**.
-2. Enter the start and end time of the send window.
+2. Enter the start and end time of the delivery window.
 
 ![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.][4]
 
-When a send window is specified, Braze only looks at engagement data within the window to determine a user's optimal time. If there isn't enough engagement data within that window, the message sends at the [fallback time](#fallback-time) specified.
+When a delivery window is specified, Braze only looks at engagement data within the window to determine a user's optimal time. If there isn't enough engagement data within that window, the message sends at the [fallback time](#fallback-time) specified.
 
 #### Preview delivery times
 
@@ -73,13 +72,9 @@ The chart shows users who had enough data to calculate an optimal time in blue a
 
 Here are some nuances you should be aware of when scheduling campaigns with Intelligent Timing.
 
-##### Scheduling the campaign
-
-Schedule your campaign for at least 24 hours before the send date. Messages are sent within 24 hours of the send date, so this ensures that a user’s optimal time hasn’t passed when the campaign is launched.
-
 ##### Launching the campaign
 
-Launch your campaign at least 48 hours before the send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoan time (UTC+13), the first time zone in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it’s possible that a user’s optimal time has already passed in their time zone, and the message won’t send.
+Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoan time (UTC+13), the first time zone in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it’s possible that a user’s optimal time has already passed in their time zone, and the message won’t send.
 
 {% alert important %}
 If a campaign is launched and a user’s optimal time is less than an hour in the past, the message goes out immediately. If the optimal time is more than an hour in the past, the message is not sent at all.
