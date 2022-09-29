@@ -131,6 +131,10 @@ This feature allows you to automatically include a list-unsubscribe header for e
 
 Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
 
+#### Availability
+
+Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these ESPs may still choose not to provide you with this feature if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
+
 #### How the list-unsubscribe header works
 
 Navigate to **Email Settings** within your app group. Toggle **List-Unsubscribe** to **ON**.
