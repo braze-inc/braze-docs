@@ -133,7 +133,7 @@ Some recipients prefer to have an unsubscribe link available in the same place f
 
 #### Availability
 
-Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. This feature may not be available from your ESP if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
+Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these ESPs may still choose not to provide you with this feature if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
 
 #### How the list-unsubscribe header works
 
