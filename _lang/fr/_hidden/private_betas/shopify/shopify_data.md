@@ -23,25 +23,15 @@ Braze propose une solution clé en main pour prend en charge les paiements aband
 | --- | --- | --- |
 | `shopify_product_viewed` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Les vues de produits se déclencheront une fois que les produits seront complètement visibles pour le client sur la boutique Shopify. |
 | `shopify_product_clicked` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les clics de produit se déclencheront dès que le client clique sur la page d’informations du produit. |
-| `shopify_abandoned_cart` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Dès qu’un client ajoute des articles à son panier, Braze stocke l’ID du jeton de panier. <br>
-<br>
-Le délai de panier abandonné par défaut est réglé sur 1 heure. Si après une heure, le panier abandonné n’a pas été mis à jour, Braze déclenchera l’événement. Vous pouvez mettre à jour votre délai de panier abandonné dans **Paramètres avancés**. | 
-| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Tout paiement met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET progresse dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br>
-<br>
-Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. Le délai de paiement abandonné est fixé par défaut sur 1 heure, mais il est configurable dans la section **Advanced Settings** (Paramètres avancés) de la page partenaire Shopify. |
-| `shopify_created_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de création de commande sont déclenchés :<br>
-<br>
-Automatiquement après qu’un client a effectué un achat dans votre boutique Shopify.<br>
-**OU**<br>
-Manuellement via la section [Orders](https://help.shopify.com/en/manual/orders/create-orders) (Commandes) de votre compte Shopify.|
+| `shopify_abandoned_cart` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Dès qu’un client ajoute des articles à son panier, Braze stocke l’ID du jeton de panier. <br><br>Le délai de panier abandonné par défaut est réglé sur 1 heure. Si après une heure, le panier abandonné n’a pas été mis à jour, Braze déclenchera l’événement. Vous pouvez mettre à jour votre délai de panier abandonné dans **Paramètres avancés**. | 
+| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Tout paiement met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET progresse dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br><br>Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. Le délai de paiement abandonné est fixé par défaut sur 1 heure, mais il est configurable dans la section **Advanced Settings** (Paramètres avancés) de la page partenaire Shopify. |
+| `shopify_created_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de création de commande sont déclenchés :<br><br>Automatiquement après qu’un client a effectué un achat dans votre boutique Shopify.<br>**OU**<br>Manuellement via la section [Orders](https://help.shopify.com/en/manual/orders/create-orders) (Commandes) de votre compte Shopify.|
 | Achat | [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | L’événement créé par Shopify déclenche un événement d’achat dans Braze. |
 | `shopify_paid_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande payée se déclencheront lorsque le statut de paiement d’une commande passe à « payé ». Une commande est en état payé après qu’un paiement par carte de crédit a été enregistré, ou lorsqu’une commande utilisant un mode de paiement manuel est marquée comme payée. |
 | `shopify_partially_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque certaines lignes d’une commande sont exécutées avec succès. |
 | `shopify_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque l’exécution de toutes les lignes d’une commande est complétée. |
 | `shopify_cancelled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande annulée seront déclenchés lorsqu’un client crée une commande mais annule ensuite la commande avant son exécution. |
-| `shopify_created_refund` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de remboursement créés sont déclenchés lorsqu’un client reçoit un remboursement, partiel ou total, pour sa commande.<br>
-<br>
- Un remboursement peut également être déclenché lorsqu’un administrateur de compte Shopify traite manuellement le remboursement dans Shopify. |
+| `shopify_created_refund` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de remboursement créés sont déclenchés lorsqu’un client reçoit un remboursement, partiel ou total, pour sa commande.<br><br> Un remboursement peut également être déclenché lorsqu’un administrateur de compte Shopify traite manuellement le remboursement dans Shopify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
@@ -540,15 +530,9 @@ Braze met à jour uniquement les attributs personnalisés Shopify et les attribu
 #### Les SDK Web et webhooks Shopify
 
 ##### Utilisateurs anonymes
-1. Avec l’intégration SDK Web, vous commencerez à suivre les sessions de vos clients Shopify. Si les visiteurs de votre magasin sont des clients anonymes, Braze enregistre le `device_id` pour la session du client.<br>
-<br>
-
-2. Au fur et à mesure que le client progresse dans la procédure de paiement et fournit des informations d’identification supplémentaires, l’e-mail ou le numéro de téléphone par exemple, Braze enregistre les données utilisateur Shopify pertinentes à l’aide des webhooks Shopify.<br>
-<br>
-
-3. Au cours de ce processus, Braze fera bien correspondre l'utilisateur avec le même `device_id` pour la même session, et fusionnera toutes les données utilisateur enregistrées à partir du Web SDK et des webhooks Shopify en un seul profil utilisateur dans Braze.<br>
-<br>
-Braze attribuera également l’ID client Shopify comme [alias d’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) sur le profil utilisateur.
+1. Avec l’intégration SDK Web, vous commencerez à suivre les sessions de vos clients Shopify. Si les visiteurs de votre magasin sont des clients anonymes, Braze enregistre le `device_id` pour la session du client.<br><br>
+2. Au fur et à mesure que le client progresse dans la procédure de paiement et fournit des informations d’identification supplémentaires, l’e-mail ou le numéro de téléphone par exemple, Braze enregistre les données utilisateur Shopify pertinentes à l’aide des webhooks Shopify.<br><br>
+3. Au cours de ce processus, Braze fera bien correspondre l'utilisateur avec le même `device_id` pour la même session, et fusionnera toutes les données utilisateur enregistrées à partir du Web SDK et des webhooks Shopify en un seul profil utilisateur dans Braze.<br><br>Braze attribuera également l’ID client Shopify comme [alias d’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) sur le profil utilisateur.
 
 ##### Utilisateurs identifiés
 
@@ -576,8 +560,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 {% tabs %}
 {% tab Product Viewed %}
-**Event**: `shopify_product_viewed`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_product_viewed`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -592,8 +575,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Product Clicked %}
-**Event**: `shopify_product_clicked`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_product_clicked`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -607,8 +589,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Abandon Cart %}
-**Event**: `shopify_abandoned_cart`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_abandoned_cart`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -624,8 +605,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Abandon Checkout %}
-**Event**: `shopify_abandoned_checkout`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_abandoned_checkout`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -649,8 +629,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 {% tab Created Order %}
 
-**Event**: `shopify_created_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_created_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -679,7 +658,6 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% tab Purchase %}
 
 **Event**: Achat<br>
-
 **Type**: [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
 
 {% raw %}
@@ -693,8 +671,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 {% endtab %}
 {% tab Order Paid %}
-**Event**: `shopify_paid_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_paid_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -721,8 +698,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Partially Fulfilled Order %}
-**Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_partially_fulfilled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -766,8 +742,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Fulfilled Order %}
-**Event**: `shopify_fulfilled_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_fulfilled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -811,8 +786,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Cancelled Order %}
-**Event**: `shopify_cancelled_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_cancelled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -843,8 +817,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 
 {% tab Created Refund %}
-**Event**: `shopify_created_refund`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_created_refund`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |

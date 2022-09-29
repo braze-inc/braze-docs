@@ -13,8 +13,7 @@ page_type: reference
 ### Gestion des jetons
 Braze utilise le jeton d’appareil Apple, pour iOS.
 
-| **Perspective Braze :**<br>
-Nous veillons à ce que les clients puissent communiquer en continu avec leurs utilisateurs (par exemple, avec des notifications push) lorsqu’ils migrent d’Airship vers Braze (qu’il s’agisse d’une migration avec basculement complet vers Braze, ou d’une transition partielle de type 50/50, etc.). |
+| **Perspective Braze :**<br>Nous veillons à ce que les clients puissent communiquer en continu avec leurs utilisateurs (par exemple, avec des notifications push) lorsqu’ils migrent d’Airship vers Braze (qu’il s’agisse d’une migration avec basculement complet vers Braze, ou d’une transition partielle de type 50/50, etc.). |
 {: .reset-td-br-1}
 
 #### Migration des jetons de notification push
@@ -44,8 +43,7 @@ Avec une certaine maîtrise, Braze est un véritable outil unique dans l’espac
 #### Notifications push
 Braze nécessite des canaux distincts pour les notifications push (un pour iOS, un pour Android).
 
-| **Perspective Braze :**<br>
-Nous offrons à nos clients la possibilité d’obtenir le meilleur des deux mondes au lieu d’avoir à faire des concessions. Être capable de tirer parti de l’ensemble des capacités d’un seul canal offre plus de flexibilité pour le marketeur et une expérience utilisateur améliorée. Cela nous permet d’adopter les dernières fonctionnalités de chaque système d’exploitation ; par exemple, Android prenait en charge des notifications riches avant iOS. |
+| **Perspective Braze :**<br>Nous offrons à nos clients la possibilité d’obtenir le meilleur des deux mondes au lieu d’avoir à faire des concessions. Être capable de tirer parti de l’ensemble des capacités d’un seul canal offre plus de flexibilité pour le marketeur et une expérience utilisateur améliorée. Cela nous permet d’adopter les dernières fonctionnalités de chaque système d’exploitation ; par exemple, Android prenait en charge des notifications riches avant iOS. |
 {: .reset-td-br-1}
 
 Braze peut envoyer des notifications push aux utilisateurs qui ne mettent pas à jour leur application avec le SDK de Braze installé. Étant donné que Braze dispose d’un jeton de notification push valide, Braze peut envoyer la notification push sans le SDK Braze car les APN s’occupent du reste. Il est crucial de noter que **l’analyse de cette notification push ne sera pas disponible pour les builds sans le SDK Braze**.
@@ -60,20 +58,15 @@ Pour remplacer la fonctionnalité de campagne de centre de messages Airship, nou
 ### Segmentation
 Braze propose plusieurs [segmentations]({{site.baseurl}}/user_guide/engagement_tools/segments/) pour offrir une expérience utilisateur riche à vos clients.
 
-| **Perspective Braze :**<br>
- Les segments de Braze sont entièrement dynamiques : les utilisateurs accéderont et quitteront le segment en fonction des conditions définies. |
+| **Perspective Braze :**<br> Les segments de Braze sont entièrement dynamiques : les utilisateurs accéderont et quitteront le segment en fonction des conditions définies. |
 {: .reset-td-br-1}
 
 #### Migration de segment utilisateur
 
 Pour recréer directement un segment statique Airship dans Braze, il existe deux options :
 - **Importer via API - Affecter un attribut personnalisé** (recommandé)<br>
-
-Nous recommandons d’importer des utilisateurs via l’endpoint d’API [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) tout en affectant un attribut personnalisé à ces utilisateurs importés. Par exemple, vous pouvez créer un segment d’utilisateurs qui possèdent chacun un attribut personnalisé `Segment_Group_1` défini sur `true`. Pour segmenter ces utilisateurs ultérieurement, vous pouvez [créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) de tous les utilisateurs, où `Segment_Group_1` est `true`.<br>
-<br>
-
+Nous recommandons d’importer des utilisateurs via l’endpoint d’API [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) tout en affectant un attribut personnalisé à ces utilisateurs importés. Par exemple, vous pouvez créer un segment d’utilisateurs qui possèdent chacun un attribut personnalisé `Segment_Group_1` défini sur `true`. Pour segmenter ces utilisateurs ultérieurement, vous pouvez [créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) de tous les utilisateurs, où `Segment_Group_1` est `true`.<br><br>
 - **Filtre basé sur l’importation CSV d’utilisateurs**<br>
-
 Il existe une option de Braze pour filtrer uniquement les utilisateurs inclus dans une importation CSV spécifique. Cette option de filtrage est visible lors de l'étape des utilisateurs cibles (outils d'engagement) dans « Filtrer les utilisateurs par `Updated/Imported via CSV` ».
 ![Importation CSV du filtre][1]{: style="max-width:90%;border:0;"}
 Notez que pour les importations CSV, un `External ID` est demandé pour chaque utilisateur importé, et **les segments avec des utilisateurs anonymes (ou alias) ne pourront pas être importés**. Pour afficher un modèle d’importation et en savoir plus sur l’importation des données dans le tableau de bord, consultez notre [Documentation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).

@@ -24,12 +24,8 @@ Dans l’éditeur de messages dans l’application, vous pouvez choisir la date 
 
 | Option | Description |
 |---|---|---|
-| `Message Expires ... After` | La première option vous permet de définir la date d’expiration d’un message in-app en fonction de la disponibilité de l’étape pour l’utilisateur. <br>
- <br>
- Par exemple, un message dans l’application avec un délai d’expiration de deux jours deviendra disponible une fois le délai de l’étape écoulé et lorsque les options d’audience seront cochées. Il sera alors disponible pendant 2 jours (48 heures) et au cours de ces deux jours, les utilisateurs pourront voir le message in-app s’ils ouvrent l’application. |
-| `Message Expires By ...` | La deuxième option vous permet de choisir une date et une heure spécifiques auxquelles le message in-app ne sera plus disponible. <br>
- <br>
- Par exemple, si vous avez une vente qui se termine à une heure et une date spécifiques, vous pourrez sélectionner cette option de sorte qu’une fois la vente terminée, les utilisateurs ne verront plus le message in-app associé. |
+| `Message Expires ... After` | La première option vous permet de définir la date d’expiration d’un message in-app en fonction de la disponibilité de l’étape pour l’utilisateur. <br> <br> Par exemple, un message dans l’application avec un délai d’expiration de deux jours deviendra disponible une fois le délai de l’étape écoulé et lorsque les options d’audience seront cochées. Il sera alors disponible pendant 2 jours (48 heures) et au cours de ces deux jours, les utilisateurs pourront voir le message in-app s’ils ouvrent l’application. |
+| `Message Expires By ...` | La deuxième option vous permet de choisir une date et une heure spécifiques auxquelles le message in-app ne sera plus disponible. <br> <br> Par exemple, si vous avez une vente qui se termine à une heure et une date spécifiques, vous pourrez sélectionner cette option de sorte qu’une fois la vente terminée, les utilisateurs ne verront plus le message in-app associé. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Cas d’utilisation
@@ -44,22 +40,9 @@ Les promotions, les coupons de réduction et les ventes ont souvent des dates d�
 
 | Canvas Step | Délai | Audience | Canal | Expiration | Avancement | Détails |
 |---|---|---|
-| Jour 1 : 50 % de remise | Aucun | Tous à partir de l’entrée | Notification push | S/O | Intégralité de l’audience après le délai | Notification push qui alerte vos utilisateurs de la promotion. <br>
-  <br>
- Elle a pour but de diriger vos utilisateurs vers votre application pour profiter de la promotion. |
-| In-App: 50 % de remise | Aucun | Tous à partir de l’entrée | Message dans l’application | Date d’expiration : <br>
- 28/02/2019 <br>
- 11h15 <br>
- heure de l’entreprise | Message dans l’application consulté | L’utilisateur a maintenant ouvert l’application et recevra ce message, qu’il ait préalablement reçu ou pas le message de notification push. |
-| Rappel de 50 % de remise | 1 jour <br>
- après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée <br>
- _Filtre : Achat effectué il y a plus d’une semaine._ | Message dans l’application |  Date d’expiration : <br>
- 28/02/2019 <br>
- 11h15 <br>
- heure de l’entreprise  | Aucun. <br>
- Dernier message dans Canvas. | L’utilisateur a reçu le message in-app à l’étape précédente, mais n’a pas effectué d’achat même s’il est dans l’application.  <br>
-  <br>
- Ce message est destiné à encourager l’utilisateur à effectuer un achat en utilisant la promotion. |
+| Jour 1 : 50 % de remise | Aucun | Tous à partir de l’entrée | Notification push | S/O | Intégralité de l’audience après le délai | Notification push qui alerte vos utilisateurs de la promotion. <br>  <br> Elle a pour but de diriger vos utilisateurs vers votre application pour profiter de la promotion. |
+| In-App: 50 % de remise | Aucun | Tous à partir de l’entrée | Message dans l’application | Date d’expiration : <br> 28/02/2019 <br> 11h15 <br> heure de l’entreprise | Message dans l’application consulté | L’utilisateur a maintenant ouvert l’application et recevra ce message, qu’il ait préalablement reçu ou pas le message de notification push. |
+| Rappel de 50 % de remise | 1 jour <br> après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée <br> _Filtre : Achat effectué il y a plus d’une semaine._ | Message dans l’application |  Date d’expiration : <br> 28/02/2019 <br> 11h15 <br> heure de l’entreprise  | Aucun. <br> Dernier message dans Canvas. | L’utilisateur a reçu le message in-app à l’étape précédente, mais n’a pas effectué d’achat même s’il est dans l’application.  <br>  <br> Ce message est destiné à encourager l’utilisateur à effectuer un achat en utilisant la promotion. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Comme vous pouvez le voir, les messages dans l’application expirent lorsque la promotion prend fin pour éviter tout écart entre la messagerie et l’expérience client.
@@ -73,13 +56,9 @@ La première impression que vous avez d’un utilisateur est peut-être la plus 
 
 | Canvas Step | Délai | Audience | Canal | Expiration | Avancement | Détails |
 |---|---|---|
-| E-mail de bienvenue | Aucun | Tous à partir de l’entrée | E-mail | S/O | Intégralité de l’audience après le délai | E-mail initial pour souhaiter la bienvenue à vos utilisateurs dans un projet, dans le cadre d’une adhésion ou d’un autre programme onboarding. <br>
-  <br>
- Il est conçu pour diriger les utilisateurs vers votre application pour commencer leur onboarding. |
-| Message dans l’application, jour 3 à 6 | 3 jours <br>
- après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée | Message dans l’application | Expire 3 jours après la disponibilité de l’étape. | Message dans l’application en direct | Si l’utilisateur a donné suite à l’e-mail et a été dirigé vers l’application, il recevra le message dans l’application souhaité pour poursuivre ou lui rappeler l’onboarding et les exigences qui y sont associées. |
-| Notification push, jour 5 | 2 jours <br>
- après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée | Notification push |  S/O  | Avance uniquement si message reçu | Après la réception de leur message dans l’application, les utilisateurs recevront une notification push de suivi pour poursuivre leur onboarding. |
+| E-mail de bienvenue | Aucun | Tous à partir de l’entrée | E-mail | S/O | Intégralité de l’audience après le délai | E-mail initial pour souhaiter la bienvenue à vos utilisateurs dans un projet, dans le cadre d’une adhésion ou d’un autre programme onboarding. <br>  <br> Il est conçu pour diriger les utilisateurs vers votre application pour commencer leur onboarding. |
+| Message dans l’application, jour 3 à 6 | 3 jours <br> après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée | Message dans l’application | Expire 3 jours après la disponibilité de l’étape. | Message dans l’application en direct | Si l’utilisateur a donné suite à l’e-mail et a été dirigé vers l’application, il recevra le message dans l’application souhaité pour poursuivre ou lui rappeler l’onboarding et les exigences qui y sont associées. |
+| Notification push, jour 5 | 2 jours <br> après l’obtention de l’étape précédente par l’utilisateur. | Tous à partir de l’entrée | Notification push |  S/O  | Avance uniquement si message reçu | Après la réception de leur message dans l’application, les utilisateurs recevront une notification push de suivi pour poursuivre leur onboarding. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Comme vous pouvez le voir, les messages de notification push suivent le message dans l’application pour garantir que l’utilisateur a bien consulté l’application et commencé son onboarding. Cela évite les courriers indésirables gênants et les messages hors d’usage, pouvant dissuader les utilisateurs de consulter votre application, au lieu de favoriser un bon ressenti par rapport à leur première expérience avec votre application.
@@ -99,12 +78,8 @@ Les étapes avec des messages in-app ont des options d’avancement spécifiques
 
 | Option | Description |
 |---|---|---|
-| Message in-app consulté | Lorsque l’option **Message in-app consulté** est sélectionnée, les utilisateurs avanceront aux étapes suivantes du Canvas lorsqu’ils consultent le message in-app dans votre application et qu’ils journalisent une impression du message in-app.  <br>
- <br>
- Les utilisateurs qui n’ont pas consulté le message in-app avant qu’il n’expire quitteront le Canvas et ne poursuivront pas aux étapes suivantes. |
-| En direct dans l’application | Lorsque l’option **Message in-app en direct** est sélectionnée, les utilisateurs avanceront aux étapes suivantes du Canvas dès que le message in-app est activé. Les messages dans l’application sont activés une fois que le délai pour l’étape est écoulé et que les options d’audience pour l’étape ont été cochées.  <br>
- <br>
- Lorsque cette option est sélectionnée, tous les utilisateurs répondant au segment de l’étape et aux critères de filtre, avanceront aux étapes suivantes dans le Canvas. Utilisez cette option lorsque vous souhaitez que les utilisateurs avancent, que le message in-app ait été consulté ou qu’il expire. |
+| Message in-app consulté | Lorsque l’option **Message in-app consulté** est sélectionnée, les utilisateurs avanceront aux étapes suivantes du Canvas lorsqu’ils consultent le message in-app dans votre application et qu’ils journalisent une impression du message in-app.  <br> <br> Les utilisateurs qui n’ont pas consulté le message in-app avant qu’il n’expire quitteront le Canvas et ne poursuivront pas aux étapes suivantes. |
+| En direct dans l’application | Lorsque l’option **Message in-app en direct** est sélectionnée, les utilisateurs avanceront aux étapes suivantes du Canvas dès que le message in-app est activé. Les messages dans l’application sont activés une fois que le délai pour l’étape est écoulé et que les options d’audience pour l’étape ont été cochées.  <br> <br> Lorsque cette option est sélectionnée, tous les utilisateurs répondant au segment de l’étape et aux critères de filtre, avanceront aux étapes suivantes dans le Canvas. Utilisez cette option lorsque vous souhaitez que les utilisateurs avancent, que le message in-app ait été consulté ou qu’il expire. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -117,12 +92,8 @@ Les étapes avec un message in-app et un autre canal de messagerie disposent des
 
 | Option | Description |
 |---|---|---|
-| Message reçu | Si message reçu est sélectionné, les utilisateurs recevront un(e) e-mail/webhook/notification push ou consulteront le message in-app pour progresser vers les étapes suivantes dans le Canvas. <br>
- <br>
- Si le message in-app expire et que l’utilisateur n’a pas reçu d’e-mail, de webhook ou de notification push ou n’a pas consulté le message in-app, il quittera Canvas et ne progressera pas vers les étapes suivantes. |
-| Intégralité de l’audience après le délai (avancé) | Lorsque cette option est sélectionnée, tous les utilisateurs dans l’audience avanceront aux étapes suivantes une fois le délai écoulé.  <br>
- <br>
- Les utilisateurs doivent répondre au segment de l’étape et aux critères de filtre pour avancer aux étapes suivantes. |
+| Message reçu | Si message reçu est sélectionné, les utilisateurs recevront un(e) e-mail/webhook/notification push ou consulteront le message in-app pour progresser vers les étapes suivantes dans le Canvas. <br> <br> Si le message in-app expire et que l’utilisateur n’a pas reçu d’e-mail, de webhook ou de notification push ou n’a pas consulté le message in-app, il quittera Canvas et ne progressera pas vers les étapes suivantes. |
+| Intégralité de l’audience après le délai (avancé) | Lorsque cette option est sélectionnée, tous les utilisateurs dans l’audience avanceront aux étapes suivantes une fois le délai écoulé.  <br> <br> Les utilisateurs doivent répondre au segment de l’étape et aux critères de filtre pour avancer aux étapes suivantes. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}

@@ -47,9 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_group_id` | Requis | Chaîne de caractères | Le `id` de votre groupe d’abonnement. |
 | `subscription_state` | Requis | Chaîne de caractères | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
 | `external_ids` | Requis* | Tableau de chaînes de caractères | Le `external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
-| `emails` | Requis* | Chaîne de caractères ou tableau de chaîne de caractères | L’adresse e-mail de l’utilisateur, peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (50 maximum). <br>
-<br>
-Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
+| `emails` | Requis* | Chaîne de caractères ou tableau de chaîne de caractères | L’adresse e-mail de l’utilisateur, peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (50 maximum). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
 | `phones` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (50 maximum). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 

@@ -51,12 +51,8 @@ Pour exécuter avec succès cette fonction Lambda, vous aurez besoin de :
 
 Vous pouvez trouver votre URL d’API, ou l’endpoint REST, dans la documentation de l’API de Braze et via le tableau de bord.
 
-- **Documentation API**<br>
-Comme le précise la [Documentation API]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), il vous suffit de faire correspondre votre URL de l’instance Braze à l’URL d’endpoint REST. Par exemple, si votre URL de tableau de bord est `dashboard-01.braze.com/`, votre endpoint REST sera `https://rest.iad-01.braze.com`. <br>
-<br>
-
-- **Tableau de bord**<br>
-Dans le panneau de navigation gauche, faites défiler vers le bas et sélectionnez **Manage Settings** (Gérer les paramètres). Là, vous pouvez voir votre `SDK Endpoint`. Remplacer `sdk` par `rest` pour obtenir votre endpoint REST. Par exemple, si vous voyez `sdk.iad-01.braze.com`, votre URL API sera `rest.iad-01.braze.com`
+- **Documentation API**<br>Comme le précise la [Documentation API]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), il vous suffit de faire correspondre votre URL de l’instance Braze à l’URL d’endpoint REST. Par exemple, si votre URL de tableau de bord est `dashboard-01.braze.com/`, votre endpoint REST sera `https://rest.iad-01.braze.com`. <br><br>
+- **Tableau de bord**<br>Dans le panneau de navigation gauche, faites défiler vers le bas et sélectionnez **Manage Settings** (Gérer les paramètres). Là, vous pouvez voir votre `SDK Endpoint`. Remplacer `sdk` par `rest` pour obtenir votre endpoint REST. Par exemple, si vous voyez `sdk.iad-01.braze.com`, votre URL API sera `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}

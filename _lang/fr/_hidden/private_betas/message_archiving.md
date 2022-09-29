@@ -20,11 +20,9 @@ Lorsque cette fonction est activée et que vous avez connecté avec succès un c
 Ce fichier contient les champs définis dans [Références de fichiers](#file-references) et reflète les messages types finaux envoyés à l’utilisateur. Toutes les valeurs types définies dans votre campagne (par ex., {% raw %}`{{${first_name}}}`{% endraw %}) affichera la valeur finale obtenue par l’utilisateur en fonction des informations du profil. Cela vous permettra de conserver une copie du message envoyé pour satisfaire les exigences de conformité, d’audit ou d’assistance aux clients. 
 
 Le fichier sera enregistré dans votre compartiment S3 en utilisant la structure clé suivante :<br>
-
 `sent_messages/Channel/(md5Ofe164PhoneOrEmailOrPushToken)/CampaignId/DispatchId.json.gz`
 
 Un fichier exemple peut ressembler à ceci :<br>
-
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/wxyz-lmno/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert important %}

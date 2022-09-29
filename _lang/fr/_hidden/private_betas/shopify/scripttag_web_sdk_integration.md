@@ -19,19 +19,9 @@ Vérifiez avec votre équipe de développement que les éléments suivants sont 
 
 | Configuration requise | Description |
 | ----------- | ----------- |
-| [API Ajax Shopify](https://shopify.dev/api/ajax) | Voici plusieurs utilisations possibles de l’API Ajax :<br>
-- Ajouter des produits au panier et mettre à jour le compteur d’articles de celui-ci.<br>
-- Afficher les recommandations relatives aux produits.<br>
-- Suggérer des produits et des collections aux visiteurs lorsqu’ils écrivent dans un champ de recherche.<br>
-<br>
-Braze nécessite l’API Ajax, car nous allons récupérer les informations produit pour vos événements de produits. |
-| [Gestion des jetons de panier par Shopify](https://shopify.dev/api/examples/cart) | Un panier contient des marchandises qu’un client a l’intention d’acheter, ainsi que le coût total estimé du panier. Vous pouvez utiliser l’[API Storefront](https://shopify.dev/api/storefront) pour interagir avec le panier d’un client lorsqu’il parcourt le site. <br>
-<br>
-Braze nécessite la gestion des jetons de panier via Shopify directement, et non un système tiers pour récupérer l’ID de jeton de panier en cas de panier abandonné. |
-| Gestion des URL par Shopify | Votre boutique devra suivre le modèle de chemin structuré des URL Shopify, où chacun des chemins vers les collections/produits adopte la structure suivante : <br>
-- /collections/collectionA<br>
-- /collections/collectionA/produits/produitA<br>
-- /produits/produitB |
+| [API Ajax Shopify](https://shopify.dev/api/ajax) | Voici plusieurs utilisations possibles de l’API Ajax :<br>- Ajouter des produits au panier et mettre à jour le compteur d’articles de celui-ci.<br>- Afficher les recommandations relatives aux produits.<br>- Suggérer des produits et des collections aux visiteurs lorsqu’ils écrivent dans un champ de recherche.<br><br>Braze nécessite l’API Ajax, car nous allons récupérer les informations produit pour vos événements de produits. |
+| [Gestion des jetons de panier par Shopify](https://shopify.dev/api/examples/cart) | Un panier contient des marchandises qu’un client a l’intention d’acheter, ainsi que le coût total estimé du panier. Vous pouvez utiliser l’[API Storefront](https://shopify.dev/api/storefront) pour interagir avec le panier d’un client lorsqu’il parcourt le site. <br><br>Braze nécessite la gestion des jetons de panier via Shopify directement, et non un système tiers pour récupérer l’ID de jeton de panier en cas de panier abandonné. |
+| Gestion des URL par Shopify | Votre boutique devra suivre le modèle de chemin structuré des URL Shopify, où chacun des chemins vers les collections/produits adopte la structure suivante : <br>- /collections/collectionA<br>- /collections/collectionA/produits/produitA<br>- /produits/produitB |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Qu’est-ce que le SDK Web ?

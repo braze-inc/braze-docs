@@ -17,8 +17,7 @@ Présentation de la documentation de partenariat
 - [Vérification et test](#testing)
 - [Engagement avec Github](#committing)
 - [Processus de vérification](#review)
-<br><br>
-{% alert important %}
+<br><br>{% alert important %}
 Ce guide de partenariat est destiné aux NOUVEAUX partenaires de Braze qui **n'ont pas de documentation existante** déjà hébergée sur notre site. Si vous êtes un partenaire existant mettant à jour votre documentation, accédez à votre page partenaire (`braze-docs` > `_docs` > `_partners`) et mettez à jour vos pages comme vous le feriez normalement. 
 {% endalert %}
 
@@ -27,31 +26,24 @@ Ce guide de partenariat est destiné aux NOUVEAUX partenaires de Braze qui **n'o
 Pour contribuer aux documents de Braze, vous devez avoir un compte GitHub pour valider les changements et les modifications. 
 
 Nous recommandons d’abord de [dupliquer](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) notre référentiel GitHub, puis de créer un clone local de votre duplication :
-1. Naviguez jusqu’au principal [référentiel de documents de Braze](https://github.com/Appboy/braze-docs), et cliquez sur **Dupliquer**. <br>
-<br>
-
-2. Ensuite, dans ce nouveau référentiel, cliquez sur le bouton **Cloner ou télécharger**. Dans la fenêtre de dialogue visible à l’écran, cliquez sur **Utiliser SSH**, et **Enregistrer le lien de référentiel fourni** pour l’étape 3. <br>
-<br>
-
+1. Naviguez jusqu’au principal [référentiel de documents de Braze](https://github.com/Appboy/braze-docs), et cliquez sur **Dupliquer**. <br><br>
+2. Ensuite, dans ce nouveau référentiel, cliquez sur le bouton **Cloner ou télécharger**. Dans la fenêtre de dialogue visible à l’écran, cliquez sur **Utiliser SSH**, et **Enregistrer le lien de référentiel fourni** pour l’étape 3. <br><br>
 3. Enfin, suivez notre Guide GitHub Wiki pour configurer votre [environnement local](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) ** étape 3 du guide**, et plutôt, **à l’aide du lien de référentiel enregistré,** pour cloner votre repo.
 
 Après avoir configuré votre environnement local, assurez-vous de signer notre [CLC](https://www.braze.com/docs/cla) (contrat de licence de contribution), _cette étape étant obligatoire_.
 
 ## Étape 2 : Créez et ajoutez du contenu à votre page {#create_page}
 
-Pour créer votre page partenaire, ouvrez le référentiel braze-docs et naviguez jusqu’au `wip_partnerships` dossier  dans le référentiel. <br>
-Vous pouvez trouver ce dossier à l’aide du chemin suivant : `braze-docs` > `_docs` > `_hidden` > `wip_partnerships`. Vous trouverez ici un [modèle de partenariat]({{site.baseurl}}/partners/your_partner_name/).
+Pour créer votre page partenaire, ouvrez le référentiel braze-docs et naviguez jusqu’au `wip_partnerships` dossier  dans le référentiel. <br>Vous pouvez trouver ce dossier à l’aide du chemin suivant : `braze-docs` > `_docs` > `_hidden` > `wip_partnerships`. Vous trouverez ici un [modèle de partenariat]({{site.baseurl}}/partners/your_partner_name/).
 
 Ensuite, créez un dossier, nommez-le, copiez ce modèle dans votre dossier et mettez-vous au travail !
 
-> Votre chemin devrait maintenant ressembler à ceci : <br>
-`braze-docs` > `_docs` > `_hidden` > `wip_partnerships` > `partner_name` (dossier) > `partner.md`.
+> Votre chemin devrait maintenant ressembler à ceci : <br>`braze-docs` > `_docs` > `_hidden` > `wip_partnerships` > `partner_name` (dossier) > `partner.md`.
 
 ### Ressources utiles
 
 Liens utiles à référencer lorsque vous écrivez :
 - [Guide de style de rédaction de Braze et meilleures pratiques](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub): Un petit coup d’œil à notre guide de style de rédaction et aux meilleures pratiques pour améliorer la correspondance entre votre documentation et notre communication.<br>
-
 - [Page de style (test) des documents Braze](https://www.braze.com/docs/home/styling_test_page/) et [mise en forme spéciale](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting) : Vous voyez quelque chose d’intéressant dans nos documents que vous souhaitez inclure sur votre page ? Vous voulez savoir comment ajouter des graphiques, des onglets, des fichiers téléchargeables, et bien plus encore ? Consultez notre page de style (test) et les pages de mise en forme spéciale pour commencer.
 
 ### Composants du modèle
@@ -179,9 +171,7 @@ Les intégrations partenaires tirent souvent parti de nos capacités Liquid dans
 {% raw %}
 
 {&#37; raw &#37;}<br>
-
 ?user_braze_id={{&#36;{braze_id}}}<br>
-
 {&#37; endraw &#37;}
 
 {% endraw %}
@@ -210,18 +200,10 @@ Dans le référentiel de documents GitHub de Braze, trouvez votre branche. Si vo
 
 ![Fusionner les branches][2]
 
-1. Configurez votre branche à fusionner de la même manière que celle illustrée dans l’image précédente.<br>
-<br>
-
-2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat -Documents partenaires »<br>
-<br>
-
-3. Fournissez toute information pertinente qui peut aider l’équipe de documentation de Braze à confirmer vos changements, et indiquez votre **chef de produit Braze** pour le contacter. Si nécessaire, nous vous recontacterons par la suite.<br>
-<br>
-
-4. Une fois que vous avez fait des changements, citez @KellieHawks et @Timothy-Kim dans un commentaire dans la demande de tirage, et notre équipe prendra le relais.<br>
-<br>
-
+1. Configurez votre branche à fusionner de la même manière que celle illustrée dans l’image précédente.<br><br>
+2. Nommez votre demande de tirage de la façon suivante : « Nom du partenariat -Documents partenaires »<br><br>
+3. Fournissez toute information pertinente qui peut aider l’équipe de documentation de Braze à confirmer vos changements, et indiquez votre **chef de produit Braze** pour le contacter. Si nécessaire, nous vous recontacterons par la suite.<br><br>
+4. Une fois que vous avez fait des changements, citez @KellieHawks et @Timothy-Kim dans un commentaire dans la demande de tirage, et notre équipe prendra le relais.<br><br>
 
 ## Processus de vérification {#review}
 

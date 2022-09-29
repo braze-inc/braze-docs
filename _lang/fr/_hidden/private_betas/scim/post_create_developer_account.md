@@ -48,14 +48,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | `id` | Requis | Chaîne de caractères | Adresse e-mail du développeur |
 | `username` | Requis | Chaîne de caractères | Le nom d'utilisateur dont le développeur aura besoin pour se connecter à Braze (généralement le même que l'adresse e-mail) |
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom du développeur |
-| `departments` | Requis | Chaîne de caractères | Cette chaîne indique le service auquel l’utilisateur appartient. Les options disponibles comprennent :<br>
-- « Agence / Tiers »<br>
-- « BI / Analyses »<br>
-- « C-suite »<br>
-- « Ingénierie »<br>
-- « Finance »<br>
-- « Marketing / Éditorial »<br>
-- « Gestion produits »" |
+| `departments` | Requis | Chaîne de caractères | Cette chaîne indique le service auquel l’utilisateur appartient. Les options disponibles comprennent :<br>- « Agence / Tiers »<br>- « BI / Analyses »<br>- « C-suite »<br>- « Ingénierie »<br>- « Finance »<br>- « Marketing / Éditorial »<br>- « Gestion produits »" |
 | `entitlements` | Requis | Object JSON | Cet objet permet de définir les autorisations du développeur dans une entreprise, un groupe d’apps et un niveau d’équipe. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

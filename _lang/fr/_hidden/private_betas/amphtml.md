@@ -15,8 +15,7 @@ Braze n’est en aucun cas responsable de l’inscription d’un client auprès 
 Configuration requise   | Description
 --------------| -----------
 Activation de compte Gmail | Voir [activation du compte Gmail](#enabling-gmail-account).
-Authentification de l’expéditeur Google | Gmail authentifie l’expéditeur des e-mails AMP avec [DomainKeys Identified Mail (DKIM)](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail), [Sender Policy Framework (SPF)](https://en.wikipedia.org/wiki/Sender_Policy_Framework), et [la spécification technique DMARC](https://en.wikipedia.org/wiki/DMARC). <br>
- Pour en savoir plus, cliquez [ici](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication).
+Authentification de l’expéditeur Google | Gmail authentifie l’expéditeur des e-mails AMP avec [DomainKeys Identified Mail (DKIM)](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail), [Sender Policy Framework (SPF)](https://en.wikipedia.org/wiki/Sender_Policy_Framework), et [la spécification technique DMARC](https://en.wikipedia.org/wiki/DMARC). <br> Pour en savoir plus, cliquez [ici](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication).
 Éléments d’e-mail AMP | Découvrez l’onglet Essentials dans la section [Composants](#components). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -70,12 +69,9 @@ Voilà les éléments qui constituent un e-mail AMPHTML... AMP ! Chacun de ces 
 
 | Composant | Son utilité | Exemple |
 |---------|--------------|---------|
-| Identification de <br>
- `⚡4email` ou `amp4email`| Identifie votre e-mail comme un e-mail AMPHTML. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
-| Chargement de l’exécution AMP <br>
- `<script>` | Allows AMP to fun within your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
-| CSS réutilisable | Masque le contenu jusqu’à ce que AMP soit chargé. <br>
- Les fournisseurs de messagerie qui prennent en charge les e-mails AMP instaurent des contrôles de sécurité renforcés qui permettent uniquement aux scripts AMP vérifiés de fonctionner dans leurs clients| `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
+| Identification de <br> `⚡4email` ou `amp4email`| Identifie votre e-mail comme un e-mail AMPHTML. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
+| Chargement de l’exécution AMP <br> `<script>` | Allows AMP to fun within your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| CSS réutilisable | Masque le contenu jusqu’à ce que AMP soit chargé. <br> Les fournisseurs de messagerie qui prennent en charge les e-mails AMP instaurent des contrôles de sécurité renforcés qui permettent uniquement aux scripts AMP vérifiés de fonctionner dans leurs clients| `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
   {% endtab %}
@@ -85,10 +81,8 @@ Vous voulez voir quelque chose de cool ? Oh mais, c’est ton e-mail. Utilisez 
 
 | Composant | Son utilité | Script requis |
 |---------|--------------|---------|
-| [Accordéon](https://amp.dev/documentation/components/amp-accordion?format=email) <br>
- `amp-accordion`| Permet à vos utilisateurs d’afficher la description de contenu et d’accéder à une section spécifique. | `<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>` |
-| [Formulaires](https://amp.dev/documentation/components/amp-form?format=email) <br>
- `amp-form`| Créez des formulaires pour soumettre des champs d’entrée dans un document AMP. | `<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>` |
+| [Accordéon](https://amp.dev/documentation/components/amp-accordion?format=email) <br> `amp-accordion`| Permet à vos utilisateurs d’afficher la description de contenu et d’accéder à une section spécifique. | `<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>` |
+| [Formulaires](https://amp.dev/documentation/components/amp-form?format=email) <br> `amp-form`| Créez des formulaires pour soumettre des champs d’entrée dans un document AMP. | `<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -101,12 +95,9 @@ Tout composant nécessitant une authentification doit utiliser les [jetons d’a
 
 | Composant | Son utilité | Script requis |
 |---------|--------------|---------|
-| [Image animée](https://amp.dev/documentation/components/amp-anim?format=email) <br>
- `amp-anim`| Afficher une image animée (généralement un GIF) gérée par l’exécution. | `<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>` |
-| [Carrousel](https://amp.dev/documentation/components/amp-carousel?format=email) <br>
- `amp-carousel`| Afficher plusieurs extraits de contenu similaires le long d’un axe horizontal. | `<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>` |
-| [Image](https://amp.dev/documentation/components/amp-img?format=email) | Un remplacement géré par l’exécution pour la balise HTML `img`. <br>
-  Vous pouvez également créer une [lightbox pour votre image](https://amp.dev/documentation/components/amp-image-lightbox?format=email). | `<amp-img alt="A view of the sea"` <br> `src="images/sea.jpg"` <br> `width="900"` <br>  `height="675"` <br>  `layout="responsive">`  <br> `</amp-img>` |
+| [Image animée](https://amp.dev/documentation/components/amp-anim?format=email) <br> `amp-anim`| Afficher une image animée (généralement un GIF) gérée par l’exécution. | `<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>` |
+| [Carrousel](https://amp.dev/documentation/components/amp-carousel?format=email) <br> `amp-carousel`| Afficher plusieurs extraits de contenu similaires le long d’un axe horizontal. | `<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>` |
+| [Image](https://amp.dev/documentation/components/amp-img?format=email) | Un remplacement géré par l’exécution pour la balise HTML `img`. <br>  Vous pouvez également créer une [lightbox pour votre image](https://amp.dev/documentation/components/amp-image-lightbox?format=email). | `<amp-img alt="A view of the sea"` <br> `src="images/sea.jpg"` <br> `width="900"` <br>  `height="675"` <br>  `layout="responsive">`  <br> `</amp-img>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -120,8 +111,7 @@ Tout composant nécessitant une authentification doit utiliser les [jetons d’a
 
 | Composant | Son utilité |
 |---------|--------------|
-| [Liaison des données et expressions](https://amp.dev/documentation/components/amp-anim?format=email) <br>
- `amp-bind`| Ajoute une interactivité dynamique personnalisée à vos pages AMP par liaison des données et expressions de type JS. |
+| [Liaison des données et expressions](https://amp.dev/documentation/components/amp-anim?format=email) <br> `amp-bind`| Ajoute une interactivité dynamique personnalisée à vos pages AMP par liaison des données et expressions de type JS. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}

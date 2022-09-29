@@ -92,7 +92,6 @@ L’utilisateur paie sa commande et le statut de la commande passe en « payé�
 Les utilisateurs abandonnent le paiement et ne réalisent pas les transactions avant la déconnexion. Ce Canvas vous permet d’envoyer des rappels automatisés aux utilisateurs qui n’ont pas terminé leurs transactions pour les ramener dans le processus de paiement.
 
 Événement d’entrée basé sur une action : `shopify_abandoned_checkout`<br>
-
 Événement d’exception : `shopify_created_order` ou achat
 
 ![]({% image_buster /assets/img/Shopify/abandoned_checkout_canvas.gif %})
@@ -125,11 +124,8 @@ Lorsque vous maîtriserez la plateforme, vous pourrez configurer certains de ces
 L’utilisateur a cliqué ou regardé un article, mais n’a pas l’acheté. Cette campagne envoie un message de suivi à l’utilisateur avec les mêmes éléments ou éléments similaires (recommandés par le contenu connecté) pour inviter l’utilisateur à en acheter un.
 
 Événement d’entrée basé sur une action : `shopify_product_clicked` ou `shopify_product_viewed`<br>
-
 ![]({% image_buster /assets/img/Shopify/product_view3.png %}){: style="max-width:45%;border:0;"}
-<br><br>
-Événement d’exception : `shopify_created_order` ou achat<br>
-
+<br><br>Événement d’exception : `shopify_created_order` ou achat<br>
 ![]({% image_buster /assets/img/Shopify/product_view2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
@@ -145,7 +141,6 @@ L’utilisateur a cliqué ou regardé un article, mais n’a pas l’acheté. Ce
 Les utilisateurs ont reçu un remboursement, partiel ou complet. Ce Canvas envoie des messages de suivi pour permettre à l’utilisateur de recommencer son achat.
 
 Événement d’entrée basé sur une action : `shopify_created_refund`<br>
-
 Événement d’exception : `shopify_created_order` ou achat
 
 ![]({% image_buster /assets/img/Shopify/winback_canvas_refund.gif %})
@@ -159,7 +154,6 @@ Les utilisateurs ont reçu un remboursement, partiel ou complet. Ce Canvas envoi
 Les utilisateurs ont pu annuler leur commande avant l’exécution. Ce Canvas envoie des messages de suivi pour permettre à l’utilisateur de recommencer son achat.
 
 Événement d’entrée basé sur une action : `shopify_cancelled_order`<br>
-
 Événement d’exception : `shopify_created_order` ou achat
 
 ![]({% image_buster /assets/img/Shopify/winback_canvas_cancel.gif %})

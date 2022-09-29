@@ -23,13 +23,9 @@ Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pa
 
 | Configuration requise | Description |
 | ----------- | ----------- |
-| Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br>
-<br>
-Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
+| Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br><br>Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
 | Segmentation de propriété d’événement activée | Pour vous assurer que vous pouvez segmenter les propriétés de vos événements Shopify, vous devez travailler avec votre gestionnaire du succès des clients ou avec [l’assistance de Braze]({{site.baseurl}}/braze_support/) pour confirmer que la segmentation des propriétés d’événements est activée pour votre tableau de bord. |
-| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Shopify.<br>
-<br>
-Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
+| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Qu’est-ce qui est pris en charge dans l’intégration ?
@@ -58,23 +54,11 @@ Les types de cas d’utilisation de Shopify que vous prévoyez de soutenir déte
 
 | Cas d’utilisation prévu | Méthode d’intégration |
 | -------- | ------------------ |
-| Reciblez les clients lorsqu’ils commencent leur parcours d’achat. Vous pouvez reciblez avec les événements d’e-commerce de type TOFU suivants :<br>
-   • Produit cliqué<br>
-   • Produit vu<br>
-   • Panier abandonné | SDK Web de Braze via Shopify ScriptTag |
-| Prend en charge les paiements abandonnés, les achats et le ciblage post-achat :<br>
-   • Paiement abandonné<br>
-   • Commande créée<br>
-   • Événement d’achat Braze | Webhooks Shopify |
-| Prise en charge de la messagerie marketing transactionnelle :<br>
-   • Commande payée<br>
-   • Exécution de la commande<br>
-   • Exécution partielle de la commande<br>
-   • Annulation de la commande<br>
-   • Remboursement de la commande | Webhooks Shopify |
+| Reciblez les clients lorsqu’ils commencent leur parcours d’achat. Vous pouvez reciblez avec les événements d’e-commerce de type TOFU suivants :<br>   • Produit cliqué<br>   • Produit vu<br>   • Panier abandonné | SDK Web de Braze via Shopify ScriptTag |
+| Prend en charge les paiements abandonnés, les achats et le ciblage post-achat :<br>   • Paiement abandonné<br>   • Commande créée<br>   • Événement d’achat Braze | Webhooks Shopify |
+| Prise en charge de la messagerie marketing transactionnelle :<br>   • Commande payée<br>   • Exécution de la commande<br>   • Exécution partielle de la commande<br>   • Annulation de la commande<br>   • Remboursement de la commande | Webhooks Shopify |
 |Suivi anonyme des utilisateurs | SDK Web de Braze via Shopify ScriptTag |
-| Prise en charge des canaux :<br>
-   • Messagerie dans le navigateur | SDK Web de Braze via Shopify ScriptTag |
+| Prise en charge des canaux :<br>   • Messagerie dans le navigateur | SDK Web de Braze via Shopify ScriptTag |
 
 ### Étape 1 : Localiser Shopify dans le tableau de bord
 Dans Braze, accédez à **Technology Partners** puis recherchez **Shopify**. Sur la page partenaire Shopify, sélectionnez **Begin Setup** (Commencer la configuration) pour démarrer le processus d’intégration.
@@ -90,7 +74,6 @@ Au cours du processus d’onboarding, vous devrez :
 3. Activer un canal Braze
 4. Installation de l’application Braze dans votre vitrine
 <br><br>
-
 ### Étape 2a : Associer un nom de boutique Shopify
 
 Lorsque vous cliquez sur **Begin Setup** (Commencer la configuration), il vous sera demandé d’indiquer votre **nom de boutique Shopify**. Assurez-vous de bien saisir le nom de votre boutique, et non le [domaine Shopify](https://help.shopify.com/en/manual/domains).
@@ -145,9 +128,7 @@ Votre installation peut être en attente pour l’une des raisons suivantes :
   - Lorsque Braze configure vos webhooks Shopify
   - Lorsque Braze communique avec Shopify
 
-Si l’installation de votre application reste en attente pendant 1 heure, Braze arrête l’installation et vous serez invité à réessayer l’opération.<br>
-<br>
-
+Si l’installation de votre application reste en attente pendant 1 heure, Braze arrête l’installation et vous serez invité à réessayer l’opération.<br><br>
 ![]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
@@ -158,16 +139,12 @@ Votre installation a échoué pour l’une des raisons suivantes :
   - Votre jeton d’accès à Shopify n’est pas valide 
   - L’application Braze Shopify a été supprimée de votre page d’administration Shopify
 
-Si cela se produit, vous pourrez sélectionner **Retry Setup** (Réessayer l’installation) et recommencer le processus d’installation.<br>
-<br>
-
+Si cela se produit, vous pourrez sélectionner **Retry Setup** (Réessayer l’installation) et recommencer le processus d’installation.<br><br>
 ![]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
 {% details How do I uninstall the Braze application from my Shopify store? %}
-Vous devrez aller sur votre page d’administration Shopify située sous **Apps** (Applications). Vous verrez alors une option pour supprimer l’application Braze<br>
-<br>
-
+Vous devrez aller sur votre page d’administration Shopify située sous **Apps** (Applications). Vous verrez alors une option pour supprimer l’application Braze<br><br>
 ![]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
