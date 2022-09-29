@@ -190,7 +190,7 @@ Braze needs a certain amount of engagement data to make a good estimate. If ther
 
 Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Campaigns using A/B testing optimizations can automatically send the winning variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the winning variant to the remaining users the day after the initial test, but you can change this send date.
 
-We recommend that if you are using Intelligent Timing, leave more time for the A/B test to finish and schedule the winning variant to send for 2 days after the initial test instead of 1 day.
+If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the winning variant to send for 2 days after the initial test instead of 1 day.
 
 
 [1]: {% image_buster /assets/img/intelligent_timing_1.png %}
