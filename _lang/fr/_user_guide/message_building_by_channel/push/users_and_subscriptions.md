@@ -85,9 +85,7 @@ L’état de l’abonnement aux notifications push ne garantit pas la livraison 
 
 Il existe deux façons de vérifier l’état de l’abonnement aux notifications push d’un utilisateur avec Braze :
 
-1. **Profil utilisateur :** Vous pouvez accéder aux profils utilisateur individuels via le tableau de bord de Braze sur la page **User Search** (Recherche utilisateur). Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Une fois dans un profil utilisateur, sous l’onglet **Engagement**, vous pouvez afficher et modifier manuellement l’état d’abonnement de l’utilisateur. <br>
-<br>
-
+1. **Profil utilisateur :** Vous pouvez accéder aux profils utilisateur individuels via le tableau de bord de Braze sur la page **User Search** (Recherche utilisateur). Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Une fois dans un profil utilisateur, sous l’onglet **Engagement**, vous pouvez afficher et modifier manuellement l’état d’abonnement de l’utilisateur. <br><br>
 2. **Rest API Export (Exportation d’API Rest)** : Vous pouvez exporter des profils utilisateur individuels au format JSON en utilisant les endpoints d’exportation [Users by segment][segment] (Utilisateurs par segment) ou [Users by identifier][identifier] (Utilisateurs par identifiant). Braze renvoie un objet jeton de notification push qui contient des informations sur l’activation de la notification par appareil.
 
 ## Différences de comportement des notifications push {#ios-android-details}

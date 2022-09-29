@@ -47,20 +47,9 @@ Vos utilisateurs peuvent voir les notifications push dans différentes situation
 </thead>
 <tbody>
   <tr>
-    <td width="33%">C’est le scénario le plus courant.<br>
-<br>
-<b>Titre :</b> 1 ligne de texte<br>
-<b>Corps :</b> 4 lignes de texte<br>
-<b>Image :</b> miniature carrée</td>
-    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br>
-<br>
-<b>Titre :</b> 1 ligne de texte<br>
-<b>Corps :</b> 7 lignes de texte<br>
-<b>Image :</b> proportion 2:1 (recommandé, voir la remarque suivante)</td>
-    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br>
-<br>
-<b>Titre :</b> 1 ligne de texte<br>
-<b>Corps :</b> 2 lignes de texte</td>
+    <td width="33%">C’est le scénario le plus courant.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 4 lignes de texte<br><b>Image :</b> miniature carrée</td>
+    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 7 lignes de texte<br><b>Image :</b> proportion 2:1 (recommandé, voir la remarque suivante)</td>
+    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 2 lignes de texte</td>
   </tr>
 </tbody>
 </table>
@@ -84,16 +73,13 @@ Lorsque vous créez du contenu, tenez compte des scénarios suivants qui peuvent
 Selon le moment où un utilisateur s’engage dans une notification push, l’horodatage peut raccourcir le texte du titre.
 
 ![Exemple de notification push avec un horodatage « now » (maintenant) et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
-<br>
-Nombre de caractères du titre : **35**
+<br>Nombre de caractères du titre : **35**
 
 ![Exemple de notification push avec un horodatage « 3h ago » (il y a 3h) et un titre de 33 caractères.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
-<br>
-Nombre de caractères du titre : **33**
+<br>Nombre de caractères du titre : **33**
 
 ![Exemple de notification push avec un horodatage « Yesterday, 8:37 AM » (hier 8h37) et un titre de 22 caractères.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
-<br>
-Nombre de caractères du titre : **22**
+<br>Nombre de caractères du titre : **22**
 
 {% endtab %}
 {% tab Images %}
@@ -103,12 +89,10 @@ Nombre de caractères du titre : **22**
 Le corps du texte est raccourci d’environ 10 caractères par ligne lorsqu’une image est présente.
 
 ![Exemple de notification push sans image et un corps de 179 caractères.]({% image_buster/assets/img_archive/push_ios_images_179.png %})
-<br>
-Nombre de caractères du corps : **179**
+<br>Nombre de caractères du corps : **179**
 
 ![Exemple de notification push avec une image et un corps de 154 caractères.]({% image_buster/assets/img_archive/push_ios_images_154.png %})
-<br>
-Nombre de caractères du corps : **154**
+<br>Nombre de caractères du corps : **154**
 
 {% endtab %}
 {% tab Interruption level %}
@@ -118,12 +102,10 @@ Nombre de caractères du corps : **154**
 Les dénotations Time Sensitive (Temporel) et Critical (Critique) poussent le titre vers le bas sur une nouvelle ligne sans l’horodatage, lui donnant ainsi un peu plus d’espace.
 
 ![Exemple de notification push sans dénotation Time Sensitive (Temporel) ou Critical (Critique) et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
-<br>
-Nombre de caractères du titre : **35**
+<br>Nombre de caractères du titre : **35**
 
 ![Exemple de notification push avec denotation Time Sensitive et un titre de 39 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
-<br>
-Nombre de caractères du titre : **39**
+<br>Nombre de caractères du titre : **39**
 
 {% endtab %}
 {% tab More %}
