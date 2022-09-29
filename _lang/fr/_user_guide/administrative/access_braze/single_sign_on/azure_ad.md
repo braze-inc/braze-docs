@@ -19,11 +19,8 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 
 | Configuration requise | Détails |
 |---|---|
-| URL de connexion | `https://<SUBDOMAIN>.braze.com/sign_in` <br>
-<br>
- Pour le sous-domaine, utilisez le sous-domaine de coordination indiqué dans votre [URL de l’instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Par exemple, si votre instance est `US-01`, votre URL est `https://dashboard-01.braze.com`. Cela signifie que votre sous-domaine sera `dashboard-01`. |
-| URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>/auth/saml/callback` <br>
- Pour certains IdP, cela peut également être appelé Reply URL, Audience URL ou Audience URI. |
+| URL de connexion | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Pour le sous-domaine, utilisez le sous-domaine de coordination indiqué dans votre [URL de l’instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Par exemple, si votre instance est `US-01`, votre URL est `https://dashboard-01.braze.com`. Cela signifie que votre sous-domaine sera `dashboard-01`. |
+| URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>/auth/saml/callback` <br> Pour certains IdP, cela peut également être appelé Reply URL, Audience URL ou Audience URI. |
 | Entity ID | `braze_dashboard`|
 | RelayState API key | Pour activer la connexion IdP, créez une clé API dans le **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2}

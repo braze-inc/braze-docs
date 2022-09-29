@@ -24,15 +24,9 @@ Lorsqu’elle est activée, cette fonctionnalité empêchera les requêtes non a
 
 Il existe quatre étapes de haut niveau pour commencer :
 
-1. [Intégration côté serveur][1] - Générez une paire de clés publique et privée et utilisez votre clé privée pour créer un JWT (_Jeton Web JSON_) pour l’utilisateur connecté actuel.<br>
-<br>
-
-2. [Intégration SDK][2] - Activez cette fonctionnalité dans le SDK Braze et demandez le jeton JWT généré à partir de votre serveur.<br>
-<br>
-
-3. [Ajout de clés publiques][3] - Ajoutez votre  _clé publique_ au tableau de bord de Braze dans la page **Manage Settings** (Gérer les paramètres).<br>
-<br>
-
+1. [Intégration côté serveur][1] - Générez une paire de clés publique et privée et utilisez votre clé privée pour créer un JWT (_Jeton Web JSON_) pour l’utilisateur connecté actuel.<br><br>
+2. [Intégration SDK][2] - Activez cette fonctionnalité dans le SDK Braze et demandez le jeton JWT généré à partir de votre serveur.<br><br>
+3. [Ajout de clés publiques][3] - Ajoutez votre  _clé publique_ au tableau de bord de Braze dans la page **Manage Settings** (Gérer les paramètres).<br><br>
 4. [Basculer l’application dans le tableau de bord de Braze][4] - Basculez l’application de cette fonctionnalité dans le tableau de bord de Braze, application par application.
 
 ## Intégration côté serveur {#server-side-integration}

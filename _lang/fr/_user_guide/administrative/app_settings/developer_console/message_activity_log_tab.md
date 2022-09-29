@@ -46,13 +46,7 @@ Les messages suivants servent d’exemple et peuvent ne pas correspondre exactem
 
 | Type de message | Exemple de message | Description |
 |---|---|---|
-| Soft bounce | L’adresse e-mail same@example.com a été rejetée. | L’adresse e-mail était valide et le message e-mail a été acheminé jusqu’au serveur de messagerie du destinataire, mais a été rejeté pour un problème « temporaire ». Les raisons les plus courantes de ce type de rejet sont les suivantes :<br>
-<br>
-- La boîte de réception était pleine (l’utilisateur a dépassé son quota)<br>
-- Le serveur était en panne<br>
-- Le message était trop volumineux pour la boîte de réception du destinataire<br>
-<br>
-Si un e-mail a été rejeté, nous réessayons dans un délai de 72 heures, mais le nombre de tentatives varie d’un destinataire à l’autre. |
+| Soft bounce | L’adresse e-mail same@example.com a été rejetée. | L’adresse e-mail était valide et le message e-mail a été acheminé jusqu’au serveur de messagerie du destinataire, mais a été rejeté pour un problème « temporaire ». Les raisons les plus courantes de ce type de rejet sont les suivantes :<br><br>- La boîte de réception était pleine (l’utilisateur a dépassé son quota)<br>- Le serveur était en panne<br>- Le message était trop volumineux pour la boîte de réception du destinataire<br><br>Si un e-mail a été rejeté, nous réessayons dans un délai de 72 heures, mais le nombre de tentatives varie d’un destinataire à l’autre. |
 | Hard bounce | Le compte d’e-mail que vous avez essayé de contacter n’existe pas. Essayez de vérifier que l’adresse e-mail du destinataire ne contient pas de fautes de frappe ou d’espaces inutiles. En savoir plus sur  _URL ÉCHANTILLON_.| Votre message n’a jamais atteint la boîte de réception de cette personne, car il n’y avait pas de boîte de réception à joindre ! Si vous souhaitez approfondir l’information, des messages comme celui-ci peuvent parfois comporter des liens dans la colonne **View Details** (Afficher les détails) qui vous permettra d’afficher le profil du destinataire prévu.|
 | Bloc | Le message spam est rejeté en raison de la politique anti-spam. Pour plus d’informations, consultez  _URL ÉCHANTILLON_.| Oh oh. On dirait que votre message a été classé dans la catégorie des spams. ll se peut qu’il soit destiné à ce destinataire, mais si vous voyez souvent ce message, vous devriez peut-être revoir vos habitudes d’envoi ou le contenu de votre message. Réfléchissez également : avez-vous [mis votre IP à jour][8] ? Si ce n’est pas le cas, contactez Braze pour des conseils sur la façon de procéder.|
 | Erreurs de message annulé | panier-vide_Web | Si vous avez une application avec un panier ou que vous créez un envoi avec un message annulé dans le Liquid, vous pouvez personnaliser le message qui vous est renvoyé si l’envoi est annulé. Dans ce cas, le message renvoyé est panier-vide_Web.|

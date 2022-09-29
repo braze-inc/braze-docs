@@ -58,53 +58,12 @@ table td {
 </thead>
 <tbody>
   <tr>
-    <td>On-boarding<br>
-Re-engagement<br>
-Loyal<br>
-PowerUser<br>
-Churn<br>
-Lost</td>
-    <td>HighSpender<br>
-ActiveUser<br>
-NewUsers<br>
-FacebookAttribution<br>
-FirstAction</td>
-    <td>UnitedStates<br>
-Northeast<br>
-Midwest<br>
-South<br>
-West<br>
-LATAM<br>
-AP<br>
-WesternEurope<br>
-MiddleEast</td>
-    <td>Sales<br>
-Coupons<br>
-Events</td>
-    <td>MLK<br>
-SuperBowl<br>
-PiDay<br>
-StPatricksDay<br>
-MarchMadness<br>
-Easter<br>
-Passover<br>
-MothersDay<br>
-MemorialDay<br>
-FathersDay<br>
-FourthJuly<br>
-LaborDay<br>
-VeteransDay<br>
-ColumbusDay<br>
-PresidentsDay<br>
-Halloween<br>
-RoshHashanah<br>
-Thanksgiving<br>
-Christmas<br>
-Hanukkah<br>
-NewYears</td>
-    <td>Transactional<br>
-Notification<br>
-ConnectedActionTaken</td>
+    <td>On-boarding<br>Re-engagement<br>Loyal<br>PowerUser<br>Churn<br>Lost</td>
+    <td>HighSpender<br>ActiveUser<br>NewUsers<br>FacebookAttribution<br>FirstAction</td>
+    <td>UnitedStates<br>Northeast<br>Midwest<br>South<br>West<br>LATAM<br>AP<br>WesternEurope<br>MiddleEast</td>
+    <td>Sales<br>Coupons<br>Events</td>
+    <td>MLK<br>SuperBowl<br>PiDay<br>StPatricksDay<br>MarchMadness<br>Easter<br>Passover<br>MothersDay<br>MemorialDay<br>FathersDay<br>FourthJuly<br>LaborDay<br>VeteransDay<br>ColumbusDay<br>PresidentsDay<br>Halloween<br>RoshHashanah<br>Thanksgiving<br>Christmas<br>Hanukkah<br>NewYears</td>
+    <td>Transactional<br>Notification<br>ConnectedActionTaken</td>
   </tr>
 </tbody>
 </table>
@@ -128,8 +87,7 @@ Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour g�
 Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un certain type. Par exemple, vous pouvez définir les filtres suivants pour limiter la fréquence des campagnes promotionnelles :
 
 `Last received campaign` avec balise `Promo` il y a plus de 5 jours 
-<br>`OR`<br>
-`Has not received campaign` avec balise `Promo`
+<br>`OR`<br>`Has not received campaign` avec balise `Promo`
 
 ### Rapports
 

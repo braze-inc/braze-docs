@@ -49,29 +49,14 @@ Le tableau suivant répertorie les notifications disponibles :
 
 Slack a une [application de Webhook entrant][67] qui permet de publier des messages de sources externes dans Slack. Pour commencer, ouvrez le Webhook entrant de l’application. 
 
-1. Sélectionnez le canal Slack vers lequel vous souhaitez que les notifications soient envoyées et cliquez sur **Add Incoming Webhooks Integration** (Ajouter une intégration de Webhooks entrants).<br>
-<br>
-
-    ![Ajouter l’intégration des Webhook entrants dans Slack][63]<br>
-<br>
-
-  Slack génère une URL que vous devrez saisir dans Braze pour les notifications que vous souhaitez recevoir.<br>
-<br>
-
-2. Copier l’**URL du Webhook**.<br>
-<br>
-
-    ![Copier l’URL du Webhook][64]<br>
-<br>
-
-3. Naviguez jusqu’à l’onglet **Notification Preferences** (Préférences de notification) dans **Company Settings** (Paramètres de l’entreprise).<br>
-<br>
-
-4. Sélectionnez la notification que vous souhaitez activer pour Slack. Ou, si vous avez plusieurs notifications à envoyer à ce canal Slack, utilisez **Bulk Add** (Ajout groupé) pour ajouter le Webhook à plusieurs notifications.<br>
-<br>
-
-    ![Sélectionnez Slack notifications to enable (Notifications Slack à activer)][65]{: style="max-width:60%;"}<br><br>
-5. Saisissez l’URL que Slack a générée pour vous.
+1. Sélectionnez le canal Slack vers lequel vous souhaitez que les notifications soient envoyées et cliquez sur **Add Incoming Webhooks Integration** (Ajouter une intégration de Webhooks entrants).<br><br>
+    ![Ajouter l’intégration des Webhook entrants dans Slack][63]<br><br>
+  Slack génère une URL que vous devrez saisir dans Braze pour les notifications que vous souhaitez recevoir.<br><br>
+2. Copier l’**URL du Webhook**.<br><br>
+    ![Copier l’URL du Webhook][64]<br><br>
+3. Naviguez jusqu’à l’onglet **Notification Preferences** (Préférences de notification) dans **Company Settings** (Paramètres de l’entreprise).<br><br>
+4. Sélectionnez la notification que vous souhaitez activer pour Slack. Ou, si vous avez plusieurs notifications à envoyer à ce canal Slack, utilisez **Bulk Add** (Ajout groupé) pour ajouter le Webhook à plusieurs notifications.<br><br>
+    ![Sélectionnez Slack notifications to enable (Notifications Slack à activer)][65]{: style="max-width:60%;"}<br><br>5. Saisissez l’URL que Slack a générée pour vous.
 
 C’est tout ! Vous devez commencer à recevoir des notifications concernant votre entreprise dans ce canal Slack. Vous pouvez également consulter l’article d’aide Slack sur cette rubrique : [Envoi de messages à l’aide des Webhooks entrants][62].
 

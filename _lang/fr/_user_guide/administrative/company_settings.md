@@ -22,7 +22,6 @@ guide_featured_list:
   fa_icon: fas fa-shield-alt
 ---
 <br>
-
 ## Informations supplémentaires
 
 Si vous recherchez plus d’informations sur vos propres paramètres de compte, consultez notre série d’articles [administratifs][1].
@@ -34,5 +33,4 @@ Toute modification apportée à la section **Company Settings** (Paramètres de 
 {% endalert %}
 
 <br>
-
 [1]: {{site.baseurl}}/user_guide/administrative/

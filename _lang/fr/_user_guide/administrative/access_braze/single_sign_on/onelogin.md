@@ -19,9 +19,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 
 | Configuration requise | Détails |
 |---|---|
-| Domaine Braze | Vous aurez besoin de votre domaine Braze pour configurer Braze dans OneLogin. Si votre instance est `US-01`, vous devrez saisir votre URL de tableau de bord dans le tableau de bord OneLogin. <br>
-<br>
- Par exemple, si votre URL de tableau de bord est `https://dashboard-01.braze.com`, vous devez saisir `dashboard-01.braze.com`.  |
+| Domaine Braze | Vous aurez besoin de votre domaine Braze pour configurer Braze dans OneLogin. Si votre instance est `US-01`, vous devrez saisir votre URL de tableau de bord dans le tableau de bord OneLogin. <br><br> Par exemple, si votre URL de tableau de bord est `https://dashboard-01.braze.com`, vous devez saisir `dashboard-01.braze.com`.  |
 | RelayState API key | Pour activer la connexion IdP, créez une clé API dans le **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -29,24 +27,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 
 ### Étape 1 : Configurer l’application Braze
 
-1. Connectez-vous à [OneLogin](https://app.onelogin.com/login). Cliquez sur **Administration**.<br>
-<br>
-![page OneLogin Administration (Administration OneLogin).]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
-2. Allez à **Apps** > **Add Apps** (Ajouter des apps) dans la barre de navigation supérieure. Recherchez « Braze » et sélectionnez l’application Braze.<br>
-<br>
-![Recherchez Braze dans OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
-3. Enregistrez l’application Braze dans votre entreprise.<br>
-<br>
-![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
-4. Une fois enregistrée, allez à **Configuration** et ajoutez **Braze Domain** (Domaine Braze) et la clé API **RelayState**.<br>
-<br>
-![Onglet OneLogin Configuration (Configuration OneLogin) pour l’application Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze requiert des assertions SAML dans un [format spécifique][1]. Sous **Parameters** (Paramètres), les attributs supportés par Braze doivent être préremplis. Vérifiez qu’ils sont corrects.<br>
-<br>
-![Paramètres SAML de Braze dans OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
-6. Copiez le **Certificat** et l’**endpoint SAML 2.0 (HTTP)** nécessaire pour configurer le tableau de bord de Braze sous l’onglet **SSO**.<br>
-<br>
-![Certificats à copier à partir de l’onglet SSO de l’application Braze dans OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
+1. Connectez-vous à [OneLogin](https://app.onelogin.com/login). Cliquez sur **Administration**.<br><br>![page OneLogin Administration (Administration OneLogin).]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>2. Allez à **Apps** > **Add Apps** (Ajouter des apps) dans la barre de navigation supérieure. Recherchez « Braze » et sélectionnez l’application Braze.<br><br>![Recherchez Braze dans OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>3. Enregistrez l’application Braze dans votre entreprise.<br><br>![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>4. Une fois enregistrée, allez à **Configuration** et ajoutez **Braze Domain** (Domaine Braze) et la clé API **RelayState**.<br><br>![Onglet OneLogin Configuration (Configuration OneLogin) pour l’application Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>5. Braze requiert des assertions SAML dans un [format spécifique][1]. Sous **Parameters** (Paramètres), les attributs supportés par Braze doivent être préremplis. Vérifiez qu’ils sont corrects.<br><br>![Paramètres SAML de Braze dans OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>6. Copiez le **Certificat** et l’**endpoint SAML 2.0 (HTTP)** nécessaire pour configurer le tableau de bord de Braze sous l’onglet **SSO**.<br><br>![Certificats à copier à partir de l’onglet SSO de l’application Braze dans OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Étape 2 : Configurer OneLogin dans Braze
 

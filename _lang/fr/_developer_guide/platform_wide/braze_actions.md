@@ -86,22 +86,17 @@ function encode(input) {
 |Type|Args|
 |--|--|
 |`container`|Éventail d’autres actions à réaliser|
-|`logCustomEvent`|1. `event name`<br>
-2. `event properties JSON object` (facultatif)|
+|`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (facultatif)|
 |`setEmailNotificationSubscriptionType`|« abonné »_" | « Inscrit" | Non inscrit|
 |`setPushNotificationSubscriptionType`|« abonné »_" | « Inscrit" | Non inscrit|
-|`setCustomUserAttribute`|1. `attribute_name`<br>
-2. `attribute_value`|
+|`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
 |`requestPushPermission`| S.O. |
-|`openLink`|1. `url`<br>
-2. `openInNewTab` (booléen)|
+|`openLink`|1. `url`<br>2. `openInNewTab` (booléen)|
 |`openLinkInWebview`| `url`|
 |`addToSubscriptionGroup`| `subscriptionGroupId`|
 |`removeFromSubscriptionGroup`| `subscriptionGroupId`|
-|`addToCustomAttributeArray`|1. `attribute_name`<br>
-2. `attribute_value`|
-|`removeFromCustomAttributeArray`|1. `attribute_name`<br>
-2. `attribute_value`|
+|`addToCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
+|`removeFromCustomAttributeArray`|1. `attribute_name`<br>2. `attribute_value`|
 
 ## Encodeur JSON
 
