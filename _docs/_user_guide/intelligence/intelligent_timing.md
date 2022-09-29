@@ -159,7 +159,7 @@ You need to choose a fallback time for the message to send to users in your audi
 
 The most popular app time is determined by the average session start time for your app group (in local time). This time is displayed in red on the [preview chart](#preview-delivery-times) (campaigns only).
 
-For campaigns, if you specified a delivery window and the most popular app to use your app falls outside of that window, the message will send closest to the edge of the delivery window. For example, if your delivery window is 1 pm to 8 pm and a user’s optimal time is 10 pm, the message will send at 8 pm.
+For campaigns, if you specified a [delivery window](#sending-within-specific-hours) and the most popular time to use your app falls outside of that window, the message will send closest to the edge of the delivery window. For example, if your delivery window is 1 pm to 8 pm and the most popular app time is 10 pm, the message will send at 8 pm.
 
 **Not enough session data**<br>
 In the rare event that your app doesn’t have enough session data to calculate when the app is most used (a completely new app with no data), the message will send at 5 pm in the user’s local time zone. If the user’s local time is unknown, it will send at 5 pm in your company time zone.
