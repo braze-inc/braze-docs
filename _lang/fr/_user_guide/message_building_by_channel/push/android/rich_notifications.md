@@ -20,15 +20,13 @@ tool:
 
 - Prenez en compte le fait que la vue de notification étendue est uniquement disponible sur les appareils utilisant Jelly Bean (Android 4.1) ou ultérieur. Si l’appareil d’un utilisateur ne tourne pas sur ces systèmes, il ne verra pas l’image de notification.
 - Les images de notification étendue Android doivent avoir un rapport 2:1, mais n’ont pas de limite de taille.
-- Android permet également de définir une image séparée pour la vue de notification standard. <br>
-Tailles d’images recommandées : 512 x 256 pour les petites, 1024 x 512 pour les moyennes et 2048 x 1024 pour les grandes.
+- Android permet également de définir une image séparée pour la vue de notification standard. <br>Tailles d’images recommandées : 512 x 256 pour les petites, 1024 x 512 pour les moyennes et 2048 x 1024 pour les grandes.
 - Actuellement, les notifications enrichies Android permettent uniquement des images statiques utilisant les formats .jpg et .png. Les .gif et les autres formats ne sont pas encore pris en charge.
 - Notez que l’ajout de boutons d’action à votre notification push peut affecter la zone de l’image pouvant être affichée. Testez avec l’aperçu du tableau de bord et directement sur des appareils pour vous assurer que vous obtenez le résultat escompté.
 
 {% alert note %}
 Même si Braze fournit des instructions sur la manière de mettre en place des push riche, leur rendu réel peut varier en fonction de facteurs externes tels que le rapport d’aspect de l’appareil, la version d’Android, des contraintes spécifiques au fabriquant, etc. 
-<br><br>
-Nous vous recommandons d’effectuer un test d’envoi à plusieurs appareils Android pour vous assurer que vos notifications push enrichies apparaissent comme vous le désirez.
+<br><br>Nous vous recommandons d’effectuer un test d’envoi à plusieurs appareils Android pour vous assurer que vos notifications push enrichies apparaissent comme vous le désirez.
 {% endalert %}
 
 ## Configurer votre notification enrichie Android

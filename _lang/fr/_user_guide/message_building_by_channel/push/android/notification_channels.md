@@ -61,21 +61,9 @@ Pour mieux comprendre le comportement attendu pour les canaux, reportez-vous au 
 
 |Scénario |Résultat  |    
 | ---|-------------
-|La **société ABC** se met à niveau vers un SDK prenant en charge Android O<br>
-La **société ABC** n’ajoute aucun canal au tableau de bord de Braze<br>
-La **société ABC** ne renomme pas le canal par défaut de son SDK | Les notifications push envoyées aux appareils Android O créeront un canal appelé « Général » et les notifications seront envoyées via ce canal
-|**La société XYZ** se met à niveau vers un SDK prenant en charge Android O<br>
-** La société XYZ** n’ajoute aucun canal au tableau de bord de Braze<br>
-** La société XYZ** renomme le canal par défaut de son SDK pour « Marketing »" | Les notifications push envoyées aux appareils Android O créeront un canal appelé « Marketing » et les notifications seront envoyées via ce canal
-|**La société LMN** se met à niveau vers un SDK prenant en charge Android O<br>
-** La société LMN** définit deux canaux dans le code de son application, « Promotions » et « Mises à jour des commandes »<br>
-** La société LMN **ajoute des ID de canal pour les « Promotions » et les « Mises à jour des commandes » au tableau de bord de Braze<br>
-** La société LMN **désigne « Promotions » comme canal de secours du tableau de bord <br>
-**La société LMN** renomme le canal par défaut de son SDK pour « Marketing »" | Les notifications push envoyées aux périphériques Android O ne créent pas de canal<br>
-<br>
-Sauf si le marketeur spécifie explicitement que les notifications doivent être envoyées par le canal « Mises à jour des commandes » ou « Marketing », toutes les notifications créées avant que les canaux aient été ajoutés au tableau de bord seront envoyées via le canal « Promotions »<br>
-<br>
-Le canal par défaut du SDK, « Marketing », est créé et utilisé uniquement si la société tente d’envoyer une notification via un ID de canal non valide ou s’il est explicitement sélectionné
+|La **société ABC** se met à niveau vers un SDK prenant en charge Android O<br>La **société ABC** n’ajoute aucun canal au tableau de bord de Braze<br>La **société ABC** ne renomme pas le canal par défaut de son SDK | Les notifications push envoyées aux appareils Android O créeront un canal appelé « Général » et les notifications seront envoyées via ce canal
+|**La société XYZ** se met à niveau vers un SDK prenant en charge Android O<br>** La société XYZ** n’ajoute aucun canal au tableau de bord de Braze<br>** La société XYZ** renomme le canal par défaut de son SDK pour « Marketing »" | Les notifications push envoyées aux appareils Android O créeront un canal appelé « Marketing » et les notifications seront envoyées via ce canal
+|**La société LMN** se met à niveau vers un SDK prenant en charge Android O<br>** La société LMN** définit deux canaux dans le code de son application, « Promotions » et « Mises à jour des commandes »<br>** La société LMN **ajoute des ID de canal pour les « Promotions » et les « Mises à jour des commandes » au tableau de bord de Braze<br>** La société LMN **désigne « Promotions » comme canal de secours du tableau de bord <br>**La société LMN** renomme le canal par défaut de son SDK pour « Marketing »" | Les notifications push envoyées aux périphériques Android O ne créent pas de canal<br><br>Sauf si le marketeur spécifie explicitement que les notifications doivent être envoyées par le canal « Mises à jour des commandes » ou « Marketing », toutes les notifications créées avant que les canaux aient été ajoutés au tableau de bord seront envoyées via le canal « Promotions »<br><br>Le canal par défaut du SDK, « Marketing », est créé et utilisé uniquement si la société tente d’envoyer une notification via un ID de canal non valide ou s’il est explicitement sélectionné
 |La **société HIJ** se met à niveau vers Android O, mais ne met pas à jour le SDK Android de Braze vers la version 2.1.0 ou ultérieure | Les notifications envoyées aux utilisateurs exécutant Android O ou ultérieur n’apparaissent pas |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -83,17 +71,9 @@ Le canal par défaut du SDK, « Marketing », est créé et utilisé uniquemen
 
 1. Ouvrez toute campagne ou Canvas qui comprend une notification push Android et cliquez sur **Edit Campaign** (Modifier la campagne).
 2. Accédez au composeur de messages de notification push Android.
-3. Cliquez sur **Manage Notification Channels** (Gérer les canaux de notification). Notez que tous les canaux ajoutés ici seront disponibles de manière globale pour toutes les campagnes et les Canvas et que vous devez disposer d’autorisations « gérer les applications » pour que votre groupe d’apps puisse gérer les canaux.<br>
-<br>
-![][6]<br>
-<br>
-
+3. Cliquez sur **Manage Notification Channels** (Gérer les canaux de notification). Notez que tous les canaux ajoutés ici seront disponibles de manière globale pour toutes les campagnes et les Canvas et que vous devez disposer d’autorisations « gérer les applications » pour que votre groupe d’apps puisse gérer les canaux.<br><br>![][6]<br><br>
 4. Cliquez sur **Add Notification Channel** (Ajouter un canal de notification).
-5. Saisissez le nom et l’ID du canal de notification que vous souhaitez ajouter.<br>
-<br>
-![][8]<br>
-<br>
-
+5. Saisissez le nom et l’ID du canal de notification que vous souhaitez ajouter.<br><br>![][8]<br><br>
 6. Répétez les étapes 4 et 5 pour chaque canal de notification que vous souhaitez ajouter.
 7. Appuyez sur **Save** (Enregistrer) pour sauvegarder vos modifications.
 
@@ -103,10 +83,7 @@ Votre canal de secours est le canal avec lequel Braze essaiera d’envoyer votre
 
 1. Ouvrir toute campagne ou Canvas existant.
 2. Accédez au composeur de notification push Android.
-3. Sélectionnez **Manage Notification Channels** (Gérer les canaux de notification) après avoir étendu les options de canal de notification. <br>
-<br>
-![][9]{: style="max-width:80%;"}<br><br>
-4. Ajoutez le canal au tableau de bord (s’il n’a pas encore été ajouté).
+3. Sélectionnez **Manage Notification Channels** (Gérer les canaux de notification) après avoir étendu les options de canal de notification. <br><br>![][9]{: style="max-width:80%;"}<br><br>4. Ajoutez le canal au tableau de bord (s’il n’a pas encore été ajouté).
 5. Sélectionnez le cadran radio à côté du canal que vous souhaitez désigner comme canal de secours.
 6. Enregistrez vos modifications. Vos modifications seront appliquées à l’échelle globale.
 
