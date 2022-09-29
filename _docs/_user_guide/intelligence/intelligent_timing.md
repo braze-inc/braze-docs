@@ -130,7 +130,7 @@ For example, say Luka’s optimal time is 2:00 pm. He enters the Delay step at 2
 
 However, Intelligent Timing is set to deliver at 2 pm, which has already passed. So Luka won’t receive the message until the following day: March 4 at 2:00 pm.
 
-![Graphic depicting the difference between days and calendar days where if a user's optimal time is 2 pm but they enter the delay step at 2:01 pm and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_days_calendardays.png %}){: style="border:none;"}
+![Graphic depicting the difference between days and calendar days where if a user's optimal time is 2 pm but they enter the delay step at 2:01 pm and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 
 {% endtab %}
 {% tab Original Canvas workflow %}
