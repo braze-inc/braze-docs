@@ -51,7 +51,9 @@ Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas
 Pour saisir une ligne d’objet, cliquez sur <i class="fas fa-pencil-alt"></i> **Edit Sending Info (Modifier les informations d’envoi)**. 
 
 ![Panneau Détails du modèle d’e-mail dans l’éditeur HTML.]({% image_buster/assets/img/email_templates/template3.png %})
-<br><br>
+<br>
+<br>
+
 Pour entrer dans l’éditeur d’e-mail robuste, cliquez sur <i class="fas fa-pencil-alt"></i> **Edit Email Body (Modifier le corps de l’e-mail)**. Si vous le souhaitez, utilisez la liste déroulante dans l’onglet **Body (Corps)** pour sélectionner l’éditeur d’e-mail Classic, Block, HTML ou Plaintext. Le panneau adjacent affiche un aperçu en temps réel de l’e-mail créé.
 
 {% alert important %}
