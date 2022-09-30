@@ -16,7 +16,7 @@ Prior to this feature, the entry properties could only be used in the first step
 
 ## Using entry properties
 
-Entry properties can be used in Action-based and API-Triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
 - [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
