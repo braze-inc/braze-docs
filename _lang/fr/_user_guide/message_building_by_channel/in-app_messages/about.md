@@ -48,21 +48,27 @@ Les slideups apparaissent généralement en haut et en bas de l’écran de l’
 
 ![Message In-App slideup apparaissant en bas de l’écran de l’application. Le slideup comprend une image d’icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
-<br>{% endtab %}
+<br>
+
+{% endtab %}
 {% tab Modal %}
 
 Les modaux apparaissent au centre de l’écran de l’appareil avec une incrustation le démarquant de votre application en arrière-plan. Ils permettent d’intéressants appels à l’action et sont parfaits pour suggérer plus ou moins subtilement à votre utilisateur de profiter d’une vente ou d’un concours.
 
 ![Message In-App modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. Le modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
-<br>{% endtab %}
+<br>
+
+{% endtab %}
 {% tab Full-Screen %}
 
 Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de capter l’attention de votre utilisateur, comme pour les mises à jour obligatoires de l’application.
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-<br>{% endtab %}
+<br>
+
+{% endtab %}
 {% endtabs %}
 
 Outre ces modèles de messages intégrés, vous pouvez personnaliser vos envois à l’aide de messages In-App HTML personnalisés, de modaux Web avec CSS ou de formulaires de capture d’e-mail Web. Pour plus d’informations, consultez [Personnalisation][4].

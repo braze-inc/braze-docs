@@ -233,7 +233,9 @@ Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu�
 ### Modifications non rétrocompatibles {#backward-incompatible-changes}
 
 1. Les exigences de SDK sont le changement incompatible le plus notable avec ce nouveau type de message. Les utilisateurs dont le SDK d’application ne respecte pas les [exigences de version SDK](#supported-sdk-versions) minimum ne reçoivent pas le message.
-<br>2. Le lien profond `appboy://close`, auparavant pris en charge par les applications mobiles, a été supprimé en faveur du Javascript `appboyBridge.closeMessage()`. Vous bénéficiez ainsi de messages HTML multiplateforme, sachant que le Web ne prend pas en charge les liens profonds.
+<br>
+
+2. Le lien profond `appboy://close`, auparavant pris en charge par les applications mobiles, a été supprimé en faveur du Javascript `appboyBridge.closeMessage()`. Vous bénéficiez ainsi de messages HTML multiplateforme, sachant que le Web ne prend pas en charge les liens profonds.
 
 3. Le suivi automatique des clics, qui utilisait `?abButtonId=0` pour les ID de boutons et le suivi de clics dans le corps pour les boutons de fermeture, a été supprimé. Les exemples de code suivants montrent comment modifier votre HTML pour utiliser nos nouvelles méthodes Javascript de suivi des clics :
 

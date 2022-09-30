@@ -64,7 +64,9 @@ Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l�
 
 {% enddetails %}
 
-<br>## Web
+<br>
+
+## Web
 
 Ceci analyse des informations précédentes sur des messages In-App plus personnalisés. Pour voir les informations les plus récentes sur notre génération de messages In-App, consultez notre [documentation sur la personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
@@ -115,7 +117,9 @@ Nous avons conçu un ensemble de modèles de messages In-App HTML5 pour vous aid
 
 {% enddetails %}
 
-<br>## Spécifications
+<br>
+
+## Spécifications
 
 Ceci analyse des informations précédentes sur les spécifications créatives des messages In-App. Pour voir les informations les plus récentes sur notre génération de messages In-App, consultez notre [documentation sur les spécifications créatives]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
