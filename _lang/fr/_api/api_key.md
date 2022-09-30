@@ -34,7 +34,8 @@ Bien que l’ancienne façon de transmettre les clés API continue de fonctionne
 {% alert important %}
 **Vous recherchez le paramètre `api_key` dans vos endpoints Braze ?**<br>
 En mai 2020, Braze a modifié la façon dont nous lisons les clés API pour plus de sécurité. Les clés API doivent être transmises comme en-tête de demande, voir VOTRE CLÉ-API-REST dans chaque demande d’exemple d’endpoint.
-<br><br>Braze continuera à prendre en charge le `api_key` transmis par le corps de la demande et les paramètres d’URL, mais finira par l’abandonner. Mettez donc à jour vos appels API en conséquence.
+<br><br>
+Braze continuera à prendre en charge le `api_key` transmis par le corps de la demande et les paramètres d’URL, mais finira par l’abandonner. Mettez donc à jour vos appels API en conséquence.
 {% endalert %}
 
 ### Autorisations de clé API REST

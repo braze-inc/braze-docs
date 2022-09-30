@@ -33,7 +33,8 @@ Vous pouvez trouver votre ID de modèle de deux manières :
 - Mettre à jour les modèles sur API
 - Saisir des informations sur un modèle spécifique
 
-<br>{% endtab %}
+<br>
+{% endtab %}
 {% tab Canvas IDs %}
 
 ## Identifiant API Canvas
@@ -52,7 +53,8 @@ Vous pouvez trouver votre ID Canvas dans le tableau de bord. Ouvrez **Canvas** d
 - Avec Currents pour apporter des données au niveau utilisateur pour une approche « d’image plus large » des Canvas
 - Avec la livraison déclenchée par API afin de collecter des statistiques pour les messages transactionnels
 
-<br>{% endtab %}
+<br>
+{% endtab %}
 {% tab Campaign IDs %}
 
 ## Identifiant API de campagne
@@ -74,7 +76,8 @@ Vous pouvez trouver votre ID de campagne de deux manières :
 - Avec Currents pour apporter des données au niveau utilisateur pour une approche « d’image plus large » des campagnes
 - Avec la livraison déclenchée par API afin de collecter des statistiques pour les messages transactionnels
 
-<br>{% endtab %}
+<br>
+{% endtab %}
 {% tab Segment IDs %}
 
 ## Identifiant API de segment
@@ -110,7 +113,8 @@ Vous pouvez trouver votre ID de carte de deux manières :
 - Récupérer les informations pertinentes sur une carte
 - Suivre les événements liés aux cartes de contenu et à l’engagement
 
-<br>{% endtab %}
+<br>
+{% endtab %}
 {% tab Send IDs %}
 
 ## Identifiant d’envoi
@@ -124,7 +128,8 @@ Les API et campagnes déclenchées par API qui sont envoyées en tant que diffus
 ### À quoi cela sert-il ?
 Envoyer et suivre par programme les performances des messages, sans création de campagne pour chaque envoi.
 
-<br>{% endtab %}
+<br>
+{% endtab %}
 {% endtabs %}
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
