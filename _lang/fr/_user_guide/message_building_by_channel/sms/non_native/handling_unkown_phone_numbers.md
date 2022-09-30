@@ -21,10 +21,12 @@ Braze traite automatiquement un nombre inconnu de l’une de trois manières :
 1. Si un mot-clé d’abonnement est envoyé par SMS :
   * Braze crée un profil anonyme
   * Notre système définit l’attribut de téléphone
-  * Inscrit l’utilisateur dans le groupe d’abonnement correspondant en fonction du mot clé d’abonnement reçu par Braze.<br><br>2. Si un mot-clé de désabonnement est envoyé par SMS :
+  * Inscrit l’utilisateur dans le groupe d’abonnement correspondant en fonction du mot clé d’abonnement reçu par Braze.<br><br>
+2. Si un mot-clé de désabonnement est envoyé par SMS :
   * Braze crée un profil anonyme
   * Notre système définit l’attribut de téléphone
-  * Inscrit l’utilisateur du groupe d’abonnement correspondant en fonction du mot clé de désabonnement reçu par Braze.<br><br>3. Si un autre mot-clé personnalisé est envoyé par SMS :
+  * Inscrit l’utilisateur du groupe d’abonnement correspondant en fonction du mot clé de désabonnement reçu par Braze.<br><br>
+3. Si un autre mot-clé personnalisé est envoyé par SMS :
   * Braze ignore le message texte et ne fait rien.
 
 {% alert important %}
