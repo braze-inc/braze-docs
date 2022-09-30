@@ -12,8 +12,10 @@ channel:
 
 > Cet article aborde certains cas d’utilisation courants à titre de références, les exigences et les termes à connaître pour favoriser l’intégration de SMS et vous permettre de communiquer de manière efficace et stratégique avec vos clients.![Message SMS avec le texte « Bienvenue dans Braze ! Nous sommes ravis de vous savoir parmi nous. » Consultez notre documentation pour commencer. https://www.braze.com/docs/ Envoyez le message HELP pour obtenir de l’aide et STOP pour arrêter."][picture]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
-<br>Le SMS, pour Short Message Service, est utilisé pour envoyer des messages texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
-<br><br>## Cas d’utilisation potentiels
+<br>
+Le SMS, pour Short Message Service, est utilisé pour envoyer des messages texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
+<br><br>
+## Cas d’utilisation potentiels
 
 | Cas d’utilisation | Explication |
 |---|---|

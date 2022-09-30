@@ -91,6 +91,7 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
 **Testez la longueur de texte du SMS**
 
 <br>
+
 Pour voir le nombre de segments dans lequel votre message sera envoyé, saisissez votre texte dans la calculatrice. Cette opération ne traite pas et ne prédit pas la sortie de Liquid ou du contenu connecté.
 <style>
   .segment_data_hide {

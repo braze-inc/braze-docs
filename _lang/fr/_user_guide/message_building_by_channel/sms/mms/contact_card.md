@@ -44,6 +44,7 @@ Vous pouvez télécharger une photo miniature pour votre carte de visite. Nous r
 D’autres champs vous permettent d’insérer votre nom, sous-en-tête, adresse et autres coordonnées pouvant s’avérer utiles pour votre utilisateur. 
 
 <br>
+
 ### Étape 4 : Enregistrer votre carte de visite
 
 Une fois que vous avez renseigné tous les champs nécessaires, cliquez sur **Generate Contact Card** (Générer une carte de visite) pour qu’elle soit automatiquement jointe à votre campagne ou Canvas. À partir de là, vous pouvez ajouter un message, tester votre carte de visite et lancer votre campagne ou Canvas.

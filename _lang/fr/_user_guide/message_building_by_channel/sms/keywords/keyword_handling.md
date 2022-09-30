@@ -9,7 +9,8 @@ channel:
 
 ---
 
-<br>{% alert important %}
+<br>
+{% alert important %}
 Êtes-vous actuellement un client SMS non natif ? Si oui, consultez la [documentation sur les SMS non natifs](/docs/user_guide/message_building_by_channel/sms/non_native/) et l’article sur la gestion des mots-clés.
 {% endalert %}
 

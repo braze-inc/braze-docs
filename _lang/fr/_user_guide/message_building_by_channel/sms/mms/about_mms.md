@@ -19,6 +19,7 @@ Le MMS (Multimedia Message Service) est un service utilisé pour envoyer des mes
 
 Comme le SMS, le MMS est un canal de messagerie d’urgence qui vous permet de communiquer avec les clients de façon immédiate et sans pareille. Cependant, MMS étend les capacités des SMS en permettant aussi d’ajouter des médias à des SMS uniquement textuels.
 <br><br>
+
 ## Cas d’utilisation potentiels
 
 | Cas d’utilisation | Explication |
