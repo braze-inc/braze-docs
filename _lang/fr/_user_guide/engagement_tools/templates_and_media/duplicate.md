@@ -21,6 +21,7 @@ tool:
 
 Pour dupliquer un modèle individuel, cliquez sur l’icône <i class="fas fa-cog"></i> en forme d’engrenage pour le modèle individuel et sélectionnez **Duplicate (Dupliquer)** dans le menu déroulant.
 <br><br>
+
 {% alert note %}
 Une copie ébauche est créée pour les modèles de [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/). Pour tous les autres modèles, une nouvelle copie est automatiquement créée.
 {% endalert %}
