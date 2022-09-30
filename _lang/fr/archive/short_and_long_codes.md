@@ -117,6 +117,7 @@ Un code court Vanity est un numéro de téléphone à 5 ou 6 chiffres spécial
 - Le service de santé de New York dispose d’un code court Vanity `692-692` qui affiche NYC-NYC sur un clavier de téléphone.
 - Amazon utilise un code court `262-966` qui affiche AMA-ZON pour les mises à jour de suivi des envois.
 - Paypal utilise un code court `729-725` qui affiche PAY-PAL pour les commandes de message texte.<br><br>
+
 | Avantages |
 | ---- |
 | **Vitesse et évolutivité**<br> Les codes courts offrent vitesse et évolutivité avec des taux d’envoi de 100 segments par seconde, 6 000 segments par minute, 360 000 segments par heure et 1 million de segments par 2 heures. Les codes courts peuvent atteindre ces taux élevés en raison de la vérification requise pendant le processus de demande de code court.<br><br>**Compatible MMS**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettant d’envoyer des messages contenant des objets multimédia (jpg, gif, png) vers des téléphones portables. Pour plus d’informations sur les MMS dans Braze, consultez [À propos des MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |

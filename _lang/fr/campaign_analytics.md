@@ -43,7 +43,8 @@ Pour mesurer l’impact d’une carte de contenu individuelle, vous pouvez ajout
 
 {% alert warning %}
 Les cartes de contenu n’offrent pas d’assistance prête à l’emploi pour le groupe de contrôle. Si vous souhaitez tirer parti des groupes de contrôle, vous devez créer un flux personnalisé, y compris des cartes personnalisées et un suivi de mise en œuvre personnalisé pour vous assurer que les variantes sont correctement enregistrées dans le tableau de bord et pour permettre la précision du groupe de contrôle dans vos analyses. 
-<br><br>Assurez-vous de consigner les impressions pour les cartes de contrôle afin d’informer notre analyse du moment où un utilisateur a vu la carte de contrôle dans son flux. Pour plus de détails, voir les guides de développeur [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#content-card-model), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android) et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#data-models).
+<br><br>
+Assurez-vous de consigner les impressions pour les cartes de contrôle afin d’informer notre analyse du moment où un utilisateur a vu la carte de contrôle dans son flux. Pour plus de détails, voir les guides de développeur [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/#content-card-model), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android) et [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#data-models).
 {% endalert %}
 
 {% elsif include.channel == "SMS" %}
