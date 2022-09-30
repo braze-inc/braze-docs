@@ -11,7 +11,9 @@ description: "Le présent article de référence aborde le concept de limitation
 # Limitation du taux et limite de fréquence
 
 > Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence ainsi que la manière dont vous pouvez appliquer cette pression marketing pour améliorer l’expérience utilisateur.
-> <br>> <br>> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
+> <br>
+> <br>
+> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
 
 ## Limitation du taux
 

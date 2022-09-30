@@ -14,7 +14,9 @@ tool:
 # Dupliquer des segments, campagnes et Canvas
 
 > Le présent article de référence explique comment dupliquer des segments, des campagnes et des Canvas pour les réutiliser.
-> <br>> <br>> Non seulement la duplication des outils d’engagement constitue une économie de temps, mais elle vous permet également de bâtir et d’itérer continuellement sur des campagnes, des segments et des Canvas fructueux.
+> <br>
+> <br>
+> Non seulement la duplication des outils d’engagement constitue une économie de temps, mais elle vous permet également de bâtir et d’itérer continuellement sur des campagnes, des segments et des Canvas fructueux.
 
 Braze vous permet de dupliquer des segments, des campagnes et des Canvas préexistants. Cela peut être utile dans les cas où vous souhaitez créer un nouvel outil d’engagement très similaire à un ancien. Grâce à notre fonction de clonage, vous pouvez créer une deuxième version d’un ancien segment, campagne ou Canvas et effectuer les modifications nécessaires.
 

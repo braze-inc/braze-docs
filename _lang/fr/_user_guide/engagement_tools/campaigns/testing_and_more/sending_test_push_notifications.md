@@ -12,7 +12,9 @@ description: "Le présent article de référence explique comment envoyer des me
 # Envoyer des messages de test
 
 > Le présent article de référence explique comment envoyer des messages de test sur les différents canaux de Braze et comment incorporer des propriétés de l’événement personnalisées ou des attributs utilisateur. 
-> <br>> <br>> En testant vos campagnes, vous pouvez vous assurer que tout fonctionne bien !
+> <br>
+> <br>
+> En testant vos campagnes, vous pouvez vous assurer que tout fonctionne bien !
 
 Avant d’envoyer une campagne de messagerie à vos utilisateurs, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe à l’aide des outils du tableau de bord.
 

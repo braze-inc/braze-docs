@@ -12,7 +12,9 @@ tool:
 # Obtenir des notes élevées
 
 > Le présent article de référence aborde les meilleures pratiques lors de l’utilisation de Braze pour diriger vos plates-formes client vers la réussite.
-> <br>> <br>> Nous savons tous que des notes élevées sont précieuses pour une application mobile et en appliquant la fonctionnalité de Braze de manière astucieuse, nous pouvons vous aider à augmenter votre engagement client. 
+> <br>
+> <br>
+> Nous savons tous que des notes élevées sont précieuses pour une application mobile et en appliquant la fonctionnalité de Braze de manière astucieuse, nous pouvons vous aider à augmenter votre engagement client. 
 
 L’obtention de notes cinq étoiles dans l’App Store fait partie des souhaits de chaque marketeur mobile, car elle motive des téléchargements et fait ressortir votre application parmi les millions qui existent. Obtenir des commentaires positifs n’est toutefois pas facile car ils nécessitent un effort supplémentaire de la part de vos utilisateurs. Apprenez à demander des évaluations aux utilisateurs de la bonne manière.
 
