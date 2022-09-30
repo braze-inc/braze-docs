@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Best Practices
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
     fa_icon: fas fa-book-open
-  - name: Capturing Lapsing Users
+  - name: Launching with Canvas Flow
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
+    fa_icon: fas fa-code-branch
+  - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/sending_test_canvases/
-    fa_icon: far fa-user-circle
+    fa_icon: fas fa-user-check
