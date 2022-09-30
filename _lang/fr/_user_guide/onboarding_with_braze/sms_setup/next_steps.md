@@ -7,7 +7,7 @@ guide_top_header: "Étapes suivantes"
 guide_top_text: "Maintenant que vous comprenez les bases de SMS requises pour l’onboarding, préparez-vous à visiter notre <a href='/docs/user_guide/message_building_by_channel/sms/'>section dédiée aux SMS</a> pour plus de sujets, comme la création d’une campagne SMS, la compréhension des analyses de campagne et le traitement des mots-clés SMS."
 page_type: landing
 description: "Cette page d’accueil comprend les prochaines étapes après avoir terminé votre configuration initiale SMS."
-channel: 
+channel:
 - SMS
 - MMS
 noindex: true
@@ -36,7 +36,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
 
-guide_menu_title: ""MMS
+guide_menu_title: "MMS"
 guide_menu_list:
 - name: "À propos des MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
@@ -50,7 +50,7 @@ guide_menu_list:
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment
-  
+
 ---
 
 
