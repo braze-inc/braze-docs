@@ -14,9 +14,11 @@ Le nombre d’utilisateurs (administrateurs ou utilisateurs limités) n’est pa
 Pour ajouter un nouvel utilisateur à votre compte Braze, procédez comme suit :
 
 1. Allez à **Manage Users** (Gérer les utilisateurs) sous votre nom d’utilisateur.<br><br>
-   ![Option Gérer les utilisateurs de la liste déroulante du profil.][1]{: style="max-width:50%"}<br><br>2. Cliquez sur **+ Add New User** (+ Ajouter un nouvel utilisateur).<br><br>
+   ![Option Gérer les utilisateurs de la liste déroulante du profil.][1]{: style="max-width:50%"}<br><br>
+2. Cliquez sur **+ Add New User** (+ Ajouter un nouvel utilisateur).<br><br>
 3. Saisissez leurs informations comme demandé, y compris leur e-mail, service et [rôle utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).<br><br>
-   ![][2]<br><br>4. Pour les utilisateurs ayant un rôle limité, sélectionnez les autorisations de niveau de l’entreprise et du groupe d’apps que vous souhaitez que cet utilisateur ait.<br><br>
+   ![][2]<br><br>
+4. Pour les utilisateurs ayant un rôle limité, sélectionnez les autorisations de niveau de l’entreprise et du groupe d’apps que vous souhaitez que cet utilisateur ait.<br><br>
    ![][3]
 
 {% alert important %}

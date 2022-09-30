@@ -137,7 +137,8 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 
 {% alert tip %}
 Pour en savoir plus sur la façon d’utiliser notre filtre d’expressions régulières, consultez la documentation sur les [expressions régulières compatibles Perl](http://www.regextester.com/pregsyntax.html) (PCRE).
-<br>Plus de ressources sur les expressions régulières :
+<br>
+Plus de ressources sur les expressions régulières :
 - [Braze et les expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [Débogueur et testeur d’expression régulière](https://regex101.com/)
 - [Didacticiel d’expression régulière](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)

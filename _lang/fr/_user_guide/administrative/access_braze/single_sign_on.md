@@ -30,6 +30,7 @@ guide_featured_list:
 ---
 
 <br>
+
 {% alert important %}
 Le support SSO de Google et de l’Authentification unique (SSO) SAML est disponible pour les clients professionnels et les entreprises. Pour les autres clients, contactez votre gestionnaire de compte Braze pour plus de détails.
 {% endalert %}

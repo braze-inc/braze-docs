@@ -87,7 +87,8 @@ Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour g�
 Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un certain type. Par exemple, vous pouvez définir les filtres suivants pour limiter la fréquence des campagnes promotionnelles :
 
 `Last received campaign` avec balise `Promo` il y a plus de 5 jours 
-<br>`OR`<br>`Has not received campaign` avec balise `Promo`
+<br>`OR`<br>
+`Has not received campaign` avec balise `Promo`
 
 ### Rapports
 

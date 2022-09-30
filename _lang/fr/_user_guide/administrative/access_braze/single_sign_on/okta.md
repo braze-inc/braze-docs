@@ -15,6 +15,7 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 
 Okta connecte toute personne à n’importe quelle application sur n’importe quel appareil. Il s’agit d’un service de gestion d’identité, de qualité professionnelle, conçu pour le cloud, mais compatible avec de nombreuses applications sur site. Avec Okta, l’informatique peut gérer l’accès de tout employé à toute application ou tout dispositif.
 <br>
+
 ## Exigences
 
 | Configuration requise | Détails |
