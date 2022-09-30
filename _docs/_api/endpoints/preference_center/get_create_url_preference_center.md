@@ -14,7 +14,7 @@ description: "This article outlines details about the Generate preference center
 /preference_center/v1/{preferenceCenterExternalId}/url/{userId}
 {% endapimethod %}
 
-Use this endpoint to generate a URL for a preference center.
+Use this endpoint to generate a URL for a preference center. Each preference center URL is unique to each user.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.

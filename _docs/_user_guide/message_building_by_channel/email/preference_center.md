@@ -32,9 +32,9 @@ Let's begin building a preference center using the [`/preference_center/v1`]({{s
 
 The [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) endpoint allows you to grab the preference center URL for a specific user outside of an email that is sent through Braze.
 
-## Step 3: Include in email campaign
+## Step 2: Include in email campaign
 
-Next, include insert your preference center into your email campaign by using a combination of HTML that includes Liquid. Here's an example of what you could include at an email footer to indicate to your users that they can edit their preferences. 
+Next, insert your preference center into your email campaign by pasting a combination of HTML that includes Liquid. For example, you can paste the following as the link URL in either the HTML or Drag & Drop Editor.  
 
 ```html
 <a href="{{preference_center.${preference_center_name_example}}}">Edit your preferences</a>
@@ -47,6 +47,6 @@ You can edit and update your preference center by using the [`/preference_center
 
 ## Identifying preference centers and details
 
-To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) endpoint to return related information such as the a last updated timestamp, the preference center ID, and more.
+To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) endpoint to return related information such as the last updated timestamp, the preference center ID, and more.
 
 `

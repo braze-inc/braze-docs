@@ -14,7 +14,7 @@ description: "This article outlines details about the Create a preference center
 /preference_center/v1
 {% endapimethod %}
 
-Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns.
+Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -48,55 +48,29 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+### Liquid tags
+
+Refer to the following Liquid tags that can be included in your HTML to generate a user's subscription state on the preference center page.
+
 {% raw %}
-```
-curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{
-  "name": "Example Preference Center",
-  "preference_center_page_html": "<html>
-  <head></head>
-    <body>
-    Email Subscription Group A (Marketing) Status: {% subscribed_state :email_subscription_group XXX %}
-    <br />
-    Email Subscription Group B (Math Games) Status: {% subscribed_state :email_subscription_group XXX %}
-    <br />
-    Global email subscription state: {% subscribed_state :email_global_state %}
-    <br />
-    <form method=\"post\" action=\"{{ preference_center_submit_url }}\">
-      <select id=\"sg-a\" name = \"{% form_field_name :email_subscription_group XXX %}\" >
-        <option value=\"subscribed\">Subscribed</option>
-        <option value=\"unsubscribed\">Unsubscribed</option>
-      </select>
-      <label for=\"sg-a\">Subscription Group A</label>
-      <br />
-      <select id=\"sg-b\" name = \"{% form_field_name :email_subscription_group XXX %}\" >
-        <option value=\"subscribed\">Subscribed</option>
-        <option value=\"unsubscribed\">Unsubscribed</option>
-      </select>
-      <label for=\"sg-b\">Subscription Group B</label>
-      <br />
-      <select id=\"global\" name = \"{% form_field_name :email_global_state %}\" >
-        <option value=\"subscribed\">Subscribed</option>
-        <option value=\"unsubscribed\">Unsubscribed</option>
-        <option value=\"opted_in\">Opted In</option>
-      </select>
-      <label for=\"global\">Global Subscription State</label>
-      <br />
-      <input type=\"submit\" value=\"Submit\">
-    </form>
-  </body>
-</html>",
-  "confirmation_page_html":"<html>
-    <head>
-    </head>
-    <body>Thanks for updating your preferences!
-      </body>
-</html>",
-}'
-```
+
+#### User subscription state
+
+| Liquid | Description |
+| --------- | ---------|
+|`{{subscribed_state.${email_global}}}`| Get the global email subscribed state for the user (i.e. "opted_in" "subscribed" or "unsubscribed". |
+|`{{subscribed_state.${}}}`| Get the subscribed state of a subscription group for the user (i.e. "subscribed" or "unsubscribed"). |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Form inputs and action
+
+| Liquid | Description |
+| --------- | ---------|
+|`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email susbcribed state. User's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
+|`{% form_field_name :subscription_group %}`| Indicates that a specific form input element corresponds to a given subscription group. User's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
+|`{{preference_center_submit_url}}`| Generates URL for form submission. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endraw %}
 
 ## Response example
