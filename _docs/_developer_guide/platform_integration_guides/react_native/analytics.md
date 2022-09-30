@@ -80,10 +80,24 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 
 #### Unsetting a custom attribute
 
+
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
     // optional onResult callback
 });
+```
+
+#### Custom Attribute Arrays
+
+```javascript
+
+// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
+Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
+
+// Removes a string from a custom attribute string array.
+
+
+Braze.removeFromCustomUserAttributeArray("my-attribute-array", "existing value", optionalCallback);
 ```
 
 ## Logging purchases

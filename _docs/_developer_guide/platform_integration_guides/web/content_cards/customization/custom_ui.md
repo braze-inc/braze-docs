@@ -85,7 +85,7 @@ braze.openSession();
 
 
 braze.requestContentCardsRefresh(
- () => {console.log("Feed Refresh Request successfully submitted");}
+ () => {console.log("Feed Refresh Request successfully submitted");},
  () => {console.log("Feed Refresh Request Failed");}
 );
 
@@ -93,7 +93,7 @@ braze.requestContentCardsRefresh(
 //Wait to run this next block until after the the content cards have been logged to the console following the above content card refresh
 braze.changeUser("test-user-2");
 braze.requestContentCardsRefresh(
- () => {console.log("Feed Refresh Request successfully submitted");}
+ () => {console.log("Feed Refresh Request successfully submitted");},
  () => {console.log("Feed Refresh Request Failed");}
 );
 ```

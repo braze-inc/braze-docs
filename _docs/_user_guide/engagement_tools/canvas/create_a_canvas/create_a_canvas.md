@@ -207,6 +207,10 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 As you begin to add more steps, you can view your entire Canvas using either the **Detailed View** or **Simplified View**. **Simplified View** shows just the component icons as a high-level visual of your user journey whereas **Detailed View** shows the expanded step details. Depending on your preferences, you can toggle between these views!
 {% endalert %}
 
+{% alert warning %}
+A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
+{% endalert %}
+
 {% endtab %}
 
 {% tab Original Canvas Editor %}
@@ -301,7 +305,13 @@ The `canvas_entry_properties` are configured in the Entry Schedule step of creat
 
 For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
 
-For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step for in-app messages where persistent entry properties are enabled. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
+
+{% alert note %}
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
+{% endalert %}
+
+Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.

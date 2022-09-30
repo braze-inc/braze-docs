@@ -13,11 +13,11 @@ tool:
 
 Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and push.
 
+![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
+
 ## Email performance dashboard
 
 To use your email performance dashboard, go to **Overview** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
-
-![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
 ### Metrics calculations
 
@@ -41,26 +41,25 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 
 ## SMS performance dashboard
 
-To use your email performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
+To use your SMS performance dashboard, go to **Overview** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past. 
 
 ### Metrics calculations
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the email performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+The calculations for different metrics in the SMS performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you’ve selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
 
-Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period).
+Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |
 | Sends | Count | Total number of sends across each day in the date range |
-| Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
-| Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
-| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
-| Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for date range) |
-| Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven’t been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
-| Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for date range) |
-| Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
+| Confirmed deliveries rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
+| Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
+| Rejections rate | Rate | (Total number of rejections across each day in the date range) / (Total number of sends across each day in the date range) |
+| Click rate | Rate | (Total number of clicks across each day in the date range) / (Total number of deliveries across each day in the date range) |
+| Total opt-ins | Rate | Total number of opt-ins across each day in the date range |
+| Total opt-outs | Rate | Total number of opt-outs across each day in the date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Dashboard filters
@@ -69,18 +68,19 @@ You can filter the data on your dashboard using the following filter options:
 
 - **Tag:** Choose one tag; once applied, your dashboard will show metrics for only your selected tag.
 - **Canvas:** Choose up to 10 Canvases; once applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
+- **Campaign:** Choose up to 10 campaigns; once applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
 
-![Filter options on the Email Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
+![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 
 ## Comparison to last period: Change in totals or rates
 
-The email dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
+The channel performance dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
 
 The comparison is the percentage change between the last and current periods, calculated by taking the difference between the two periods and dividing it by the metric from the last period.
 
 You can switch between **Show Change in Totals**—which compares the total counts (i.e., number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (i.e., delivery rate).
 
-![Radio buttons to switch between showing change in totals or change in rates for the Email Performance Dashboard.][4]
+![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.][4]
 
 ## Frequently asked questions
 

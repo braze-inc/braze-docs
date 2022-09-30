@@ -67,7 +67,7 @@ Event properties refer to the properties that you set for custom events and purc
 
 #### Original workflow
 
-`event_properties` can only be used in any action-based Canvas step using the original workflow. 
+`event_properties` can be used in the first full step in an action-based Canvas using the original workflow. 
 
 #### Canvas Flow
 
@@ -80,9 +80,7 @@ In Canvas Flow, custom event and purchase event properties can be used in Liquid
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
 
 {% alert important %}
-
 For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
-
 {% endalert %}
 
 For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
