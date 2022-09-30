@@ -3,7 +3,7 @@ nav_title: Ideas and Strategies
 article_title: Ideas and Strategies
 layout: dev_guide
 guide_top_header: "Ideas & Strategies"
-guide_top_text: "Learn more about how to build your Canvas with different use cases."
+guide_top_text: "Learn more about how to test and check your Canvases with different ideas and strategies."
 page_order: 6
 
 tool: Canvas

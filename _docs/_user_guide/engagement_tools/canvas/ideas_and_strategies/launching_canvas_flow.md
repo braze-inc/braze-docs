@@ -11,7 +11,7 @@ tool: Canvas
 
 > This reference article covers how to prepare and test a Canvas built using Canvas Flow before launch. This includes identifying important Canvas checkpoints such as Canvas entry conditions, audience summaries, and user segments.
 
-As you prepare to launch your Canvas, Braze recommends that you check your Canvas at each stage of the Canvas builder, including:
+As you prepare to launch your Canvas, Braze recommends that you check your Canvas at each stage of the Canvas builder for settings that can impact your message sending, including:
 * [Race conditions](#race-conditions)
 * [Delivery times](#delivery-times)
 * [User segments](#segment-users)
@@ -37,6 +37,12 @@ Another option to avoid race conditions is to use the Delay step (ideally set fo
 ## Delivery times
 
 By setting a Canvas delivery time in real time, this can lead to increasing engagement and conversion rates. Take note of which delivery time you've set for your Canvas. To increase engagement and conversion rates, it's best to have Canvases trigger in real time as opposed to a scheduled, recurring basis.
+
+If you selected a scheduled delivery for your Canvas, Braze recommends scheduling your Canvas at least 24 hours before you want it to launch.
+
+{% alert tip %}
+Check out [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
+{% endalert %}
 
 ## Segment users
 
