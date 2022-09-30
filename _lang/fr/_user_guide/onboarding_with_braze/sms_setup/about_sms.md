@@ -14,8 +14,10 @@ channel:
 
 > Le présent article partage certains cas d’utilisation courants à titre de références, des exigences et des conditions à connaître pour favoriser l’intégration de SMS et vous permettre de communiquer de manière efficace et stratégique avec vos clients.![Message SMS avec le texte « Bienvenue dans Braze ! Nous sommes ravis de vous accueillir à bord. » Consultez notre documentation pour commencer. https://www.braze.com/docs/ Envoyez le message HELP pour obtenir de l’aide et STOP pour arrêter."][picture]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
-<br>SMS, pour Short Message Service, est utilisé pour envoyer des messages de texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
+<br>
+SMS, pour Short Message Service, est utilisé pour envoyer des messages de texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. L’utilisation répandue et la valeur prouvée des SMS en ont fait un outil de marketing efficace pour les entreprises de toutes tailles. 
 <br><br>
+
 ## Cas d’utilisation potentiels
 
 | Cas d’utilisation | Explication |
@@ -45,6 +47,7 @@ Avant d’envoyer des SMS, vous avez besoin de certaines données. Consultez le 
 - **Métriques standard de campagne par SMS :** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, et `Help`. <br>Pour plus d’informations sur ces métriques, reportez-vous à [Rapports sur les SMS][1].
 
 <br><br>
+
 Pour obtenir une liste complète des termes, consultez notre SMS [Conditions à connaître]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/terms/) ou notre [Section SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) pour plus de sujets, comme la création d’une campagne SMS, l’analyse de campagnes SMS et le traitement des mots-clés SMS.
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}

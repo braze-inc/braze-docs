@@ -18,8 +18,10 @@ Les balises peuvent être utilisées pour exécuter des relevés conditionnels a
 
 {% alert tip %}
 Pour faciliter votre vie, Braze a inclus un formatage de couleurs qui s’activera en vert et violet si vous avez correctement formaté votre syntaxe Liquid. Le formatage vert peut aider à identifier les balises, tandis que le formatage violet met en évidence les zones qui contiennent une personnalisation.
-<br><br>Si vous rencontrez des difficultés à utiliser des messages conditionnels, essayez d’écrire la syntaxe conditionnelle avant d’insérer vos attributs personnalisés et autres éléments de Liquid.
-<br><br>Par exemple, ajoutez les éléments suivants dans le champ de message :  
+<br><br>
+Si vous rencontrez des difficultés à utiliser des messages conditionnels, essayez d’écrire la syntaxe conditionnelle avant d’insérer vos attributs personnalisés et autres éléments de Liquid.
+<br><br>
+Par exemple, ajoutez les éléments suivants dans le champ de message :  
 {% raw %}
 ```liquid
 {% if X >0 %}
@@ -28,7 +30,8 @@ Pour faciliter votre vie, Braze a inclus un formatage de couleurs qui s’active
 ```
 
 Assurez-vous qu’il est en vert, puis remplacez le `X` avec le Liquid de votre choix ou le contenu connecté en utilisant le bleu `+` dans l’angle du message, et `0` avec la valeur souhaitée.
-<br><br>Ajoutez ensuite vos variations de message selon vos besoins entre les conditions `else` :
+<br><br>
+Ajoutez ensuite vos variations de message selon vos besoins entre les conditions `else` :
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
 Thanks for purchasing! Here's another 10% off!

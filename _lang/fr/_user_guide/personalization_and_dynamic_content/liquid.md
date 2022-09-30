@@ -73,4 +73,5 @@ Braze ne prend pas actuellement en charge 100 % de Liquid de Shopify, mais seul
 {% endraw %}
 
 <br>
+
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
