@@ -12,9 +12,11 @@ description: "Cet article archivé couvre le partenariat entre Apptimize et Braz
 Braze a cessé la prise en charge du partenariat avec Apptimize en septembre 2019.
 
 <br>
+
 Si vous utilisez actuellement Apptimize avec Braze, vous ne subirez pas d’interruption de service. Vous pouvez toujours définir des attributs personnalisés Apptimize sur les profils utilisateur Braze. Cependant, aucune escalade de support formelle avec le partenaire ne sera fournie.
 
 <br>
+
 Contactez votre conseiller Braze ou Apptimize si vous avez d’autres questions.
 {% endalert %}
 
