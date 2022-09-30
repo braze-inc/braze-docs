@@ -125,7 +125,8 @@ L’utilisateur a cliqué ou regardé un article, mais n’a pas l’acheté. Ce
 
 Événement d’entrée basé sur une action : `shopify_product_clicked` ou `shopify_product_viewed`<br>
 ![]({% image_buster /assets/img/Shopify/product_view3.png %}){: style="max-width:45%;border:0;"}
-<br><br>Événement d’exception : `shopify_created_order` ou achat<br>
+<br><br>
+Événement d’exception : `shopify_created_order` ou achat<br>
 ![]({% image_buster /assets/img/Shopify/product_view2.png %}){: style="max-width:50%;"}
 
 {% endtab %}

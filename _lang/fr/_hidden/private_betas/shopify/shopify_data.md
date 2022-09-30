@@ -560,7 +560,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 {% tabs %}
 {% tab Product Viewed %}
-**Event**: `shopify_product_viewed`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_product_viewed`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -575,7 +576,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Product Clicked %}
-**Event**: `shopify_product_clicked`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_product_clicked`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -589,7 +591,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Abandon Cart %}
-**Event**: `shopify_abandoned_cart`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_abandoned_cart`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -605,7 +608,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Abandon Checkout %}
-**Event**: `shopify_abandoned_checkout`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_abandoned_checkout`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -629,7 +633,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 {% tab Created Order %}
 
-**Event**: `shopify_created_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_created_order`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -671,7 +676,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 {% endtab %}
 {% tab Order Paid %}
-**Event**: `shopify_paid_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_paid_order`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -698,7 +704,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Partially Fulfilled Order %}
-**Event**: `shopify_partially_fulfilled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_partially_fulfilled_order`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -742,7 +749,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Fulfilled Order %}
-**Event**: `shopify_fulfilled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_fulfilled_order`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -786,7 +794,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 {% tab Cancelled Order %}
-**Event**: `shopify_cancelled_order`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_cancelled_order`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |
@@ -817,7 +826,8 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 
 
 {% tab Created Refund %}
-**Event**: `shopify_created_refund`<br>**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Event**: `shopify_created_refund`<br>
+**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Modèle Liquid |

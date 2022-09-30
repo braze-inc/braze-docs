@@ -17,7 +17,8 @@ Présentation de la documentation de partenariat
 - [Vérification et test](#testing)
 - [Engagement avec Github](#committing)
 - [Processus de vérification](#review)
-<br><br>{% alert important %}
+<br><br>
+{% alert important %}
 Ce guide de partenariat est destiné aux NOUVEAUX partenaires de Braze qui **n'ont pas de documentation existante** déjà hébergée sur notre site. Si vous êtes un partenaire existant mettant à jour votre documentation, accédez à votre page partenaire (`braze-docs` > `_docs` > `_partners`) et mettez à jour vos pages comme vous le feriez normalement. 
 {% endalert %}
 

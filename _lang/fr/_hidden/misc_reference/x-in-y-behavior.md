@@ -18,6 +18,7 @@ La modification rendra le filtre plus intuitif et plus cohérent avec le comport
 {% enddetails %}
 
 <br>
+
 ## Exemple
 
 La campagne suivante est/sera envoyée à 21h00 le 16 avril. La segmentation de l’audience est « a effectué plus de 2 achats au cours des 3 derniers jours ».

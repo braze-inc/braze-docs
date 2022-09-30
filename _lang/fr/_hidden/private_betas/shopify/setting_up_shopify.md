@@ -74,6 +74,7 @@ Au cours du processus d’onboarding, vous devrez :
 3. Activer un canal Braze
 4. Installation de l’application Braze dans votre vitrine
 <br><br>
+
 ### Étape 2a : Associer un nom de boutique Shopify
 
 Lorsque vous cliquez sur **Begin Setup** (Commencer la configuration), il vous sera demandé d’indiquer votre **nom de boutique Shopify**. Assurez-vous de bien saisir le nom de votre boutique, et non le [domaine Shopify](https://help.shopify.com/en/manual/domains).
