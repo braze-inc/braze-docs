@@ -88,7 +88,9 @@ Si un utilisateur a fermé toutes ses cartes ou si vous n’avez pas envoyé de 
 | [Installer la bibliothèque d’images personnalisées.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/gifs/) | Inclus dans l’intégration. | Inclus dans Intégration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-<br><br>[1]: {% image_buster /assets/img/classic-cc.png %}
+<br><br>
+
+[1]: {% image_buster /assets/img/classic-cc.png %}
 [2]: {% image_buster /assets/img/captioned-image-cc.png %}
 [3]: {% image_buster /assets/img/banner-cc.png %}
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/

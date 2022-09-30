@@ -68,6 +68,7 @@ C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas �
     ```
 
     Où `6185005a9d9bee79387cce43` est le `campaign_id`.<br><br>
+
 6. Allez sur la page **Campaigns (Campagnes)** et recherchez `campaign_id`.
 
 ![Rechercher une campaign_id sur la page Campaigns (Campagnes)][1]

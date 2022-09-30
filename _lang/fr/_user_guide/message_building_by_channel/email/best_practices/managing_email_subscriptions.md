@@ -30,7 +30,9 @@ Comme la déduplication se produit lorsque les utilisateurs ciblés sont inclus 
 
 {% alert important %}
 Si vous envoyez une campagne API via un appel API (à l’exclusion des campagnes déclenchées par l’API) et que plusieurs utilisateurs dans le segment ont la même adresse e-mail, nous l’enverrons à cette adresse autant de fois que vous l’indiquez dans l’appel. C’est parce que nous supposons que les appels API sont faits intentionnellement. 
-<br><br>**Campagnes déclenchées par API**<br>Notez que les campagnes déclenchées via API peuvent dédupliquer les e-mails ou les envoyer plusieurs fois : cela dépend de la définition du public. <br>-La déduplication se produit s’il y a des e-mails en double dans un segment cible ou des e-mails dupliqués en raison de doublons d’ID dans le [champ destinataire]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) d’un appel déclenché par API. <br>-Des e-mails dupliqués se produisent si vous ciblez directement des ID Utilisateur distincts dans le champ destinataire d’un appel déclenché par l’API. 
+<br><br>
+**Campagnes déclenchées par API**<br>
+Notez que les campagnes déclenchées via API peuvent dédupliquer les e-mails ou les envoyer plusieurs fois : cela dépend de la définition du public. <br>-La déduplication se produit s’il y a des e-mails en double dans un segment cible ou des e-mails dupliqués en raison de doublons d’ID dans le [champ destinataire]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) d’un appel déclenché par API. <br>-Des e-mails dupliqués se produisent si vous ciblez directement des ID Utilisateur distincts dans le champ destinataire d’un appel déclenché par l’API. 
 {% endalert %}
 
 [22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

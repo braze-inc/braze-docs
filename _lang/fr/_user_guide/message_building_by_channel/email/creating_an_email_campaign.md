@@ -18,6 +18,7 @@ Les messages électroniques sont parfaits pour fournir du contenu à vos utilisa
 
 {% alert tip %}
 Si c’est la première fois que vous créez une campagne par e-mail, nous vous recommandons vivement de consulter les cours suivants de Braze Learning :<br>
+
 - [E-mail](https://learning.braze.com/messaging-channels-email)
 - [Project: Élaborer un programme marketing d’e-mail basique](https://learning.braze.com/project-build-a-basic-email-marketing-program)
 
@@ -152,6 +153,7 @@ Si vous rencontrez des problèmes avec votre e-mail ou si vous souhaitez apporte
 {% alert tip %}
 Les clients par e-mail qui prennent en charge la prévisualisation mettent toujours suffisamment de caractères pour remplir tout l’espace disponible pour le texte de prévisualisation. Cependant, cela peut entrainer des cas où le texte de prévisualisation est incomplet ou non optimisé.
 <br><br>Pour éviter cela, vous pouvez créer un espace blanc après le texte de prévisualisation souhaité pour que les clients par e-mail n’ajoutent pas du texte ou des caractères non souhaités. Vous n’avez qu’à ajouter une chaîne d’antiliants sans chasse (`&zwnj;`) et d’espaces insécables (`&nbsp;`) après le texte que vous souhaitez afficher dans la prévisualisation. <br><br>Si vous l’ajoutez à la fin de votre texte de prévisualisation dans la section Accroche, le code suivant ajoutera l’espace vide que vous souhaitez :<br><br>
+
 ```html
 <div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
 ```
