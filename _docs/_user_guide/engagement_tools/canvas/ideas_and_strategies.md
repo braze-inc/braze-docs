@@ -4,7 +4,7 @@ article_title: Ideas and Strategies
 layout: dev_guide
 guide_top_header: "Ideas & Strategies"
 guide_top_text: "Learn more about how to test and check your Canvases with different ideas and strategies."
-page_order: 6
+page_order: 5
 
 tool: Canvas
 page_type: landing
@@ -21,3 +21,5 @@ guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/sending_test_canvases/
     fa_icon: fas fa-user-check
+
+---

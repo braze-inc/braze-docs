@@ -24,7 +24,7 @@ To enter your Canvas, users must be in the **Entry Audience** before the entry s
 
 ### Review entry audience filters
 
-In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the Entry Audience, so there's no need to add the event as an audience filter. 
+In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the entry audience, so there's no need to add the event as an audience filter. 
 
 ### Batch multiple API requests
 
@@ -50,22 +50,30 @@ Before oversaturating your Canvas Flow user journey with components, consider ho
 
 There are four main components you can use to segment your users in a simple, effective manner:
 
-* Audience Paths
-* Decision Split
-* Action Paths
-* Experiement Paths
+* [Audience Paths](#audience-paths)
+* [Decision Split](#decision-split)
+* [Action Paths](#action-paths)
+* [Experiement Paths](#experiment-paths)
 
-Use the Action Paths step to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
+### Audience Paths
 
-The Decision Split step creates a point in your user journey where you can evaluate your users with a polar question to determine which path to send the user to, depending on their answer.
+Use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) steps to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
 
-Actions Paths focus on segmenting users based on real-time behaviors such as custom events, purcahse events, and custom attribute changes.
+### Decision Split
 
-Similar to Action Paths, you can leverage Experiment Paths steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
+The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step creates a point in your user journey where you can evaluate your users with a polar question to determine which path to send the user to, depending on their answer.
+
+### Action Paths
+
+[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purcahse events, and custom attribute changes. 
+
+### Experiment Paths
+
+Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
 
 ## Testing before launch
 
-Check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for different methods you can leverage to test your Canvas.
+After reviewing the finer details of your Canvas, check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for different methods you can leverage to test your Canvas with test users.
 
 ## Troubleshooting
 
