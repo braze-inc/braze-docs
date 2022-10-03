@@ -20,21 +20,25 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) that may be occur before launching your Canvas. 
 
-To enter your Canvas, users must be in the **Entry Audience** before the entry schedule occurs (whether that be scheduled at a specific time, or triggered by action-based or API-triggered event). 
+To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
 ![][1]{: style="max-width:75%;"}
 
-Note that users who qualify for your entry audience after will not enter for Canvases that are action-based, API-triggered, or one-time-send Canvases.
+Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
+
+{% alert tip %}
+Check out [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
+{% endalert %}
 
 ### Review entry audience filters
 
 In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the entry audience, so there's no need to add the event as an audience filter. 
 
-For more details on available segmentation filters to target your audience, check out [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+For more details on available segmentation filters to target your audience, see [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 ### Batch multiple API requests
 
-Make your requests in the same API call, rather than multiple calls, to confirm that the user profile is created or updated first. Check out [Using multiple endpoints]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#using-multiple-api-endpoints) for more examples.
+Make your requests in the same API call, rather than multiple calls, to confirm that the user profile is created or updated first. Refer to [Using multiple endpoints]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#using-multiple-api-endpoints) for more examples.
 
 ### Add a delay
 
@@ -44,15 +48,11 @@ This allows time for attributes, email addresses, and push tokens to be processe
 
 ## Delivery times
 
-By setting a Canvas delivery time in real time, this can lead to increasing engagement and conversion rates. Take note of which delivery time you've set for your Canvas. To increase engagement and conversion rates, it's best to have Canvases trigger in real time as opposed to a scheduled, recurring basis.
+By setting a Canvas delivery time in real time, this can lead to increasing engagement and conversion rates. Take note of which delivery time you've set for your Canvas. To help increase engagement and conversion rates, it's best to have Canvases trigger in real time as opposed to a scheduled, recurring basis.
 
-If you selected a scheduled delivery for your Canvas, Braze recommends scheduling your Canvas at least 24 hours before you want it to launch.
+If you selected a scheduled delivery for your Canvas, Braze recommends scheduling your Canvas at least 24 hours before you want it to launch to allow for any adjustments to your Canvas.
 
-{% alert tip %}
-Check out [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
-{% endalert %}
-
-## Segment users
+## User segments
 
 Before oversaturating your Canvas Flow user journey with components, consider how you might keep a user journey simple. Use the simplified view in the Canvas editor to get a better idea of how your user journey branches. 
 
@@ -69,7 +69,7 @@ Use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_
 
 ### Decision Split
 
-The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step creates a point in your user journey where you can evaluate your users with a polar question to determine which path to send the user to, depending on their answer.
+Th [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
 
 ### Action Paths
 
