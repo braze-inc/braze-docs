@@ -555,3 +555,4 @@ validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/d
 
 validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/';
 validurls['/docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/sending_test_canvases/';
+
