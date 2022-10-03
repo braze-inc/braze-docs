@@ -20,11 +20,17 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) that may be occur before launching your Canvas. 
 
-To enter your Canvas, users must be in the **Entry Audience** before the entry schedule occurs (whether that be scheduled at a specific time, or triggered by action-based or API-triggered event). Note that users who qualify for your entry audience after will not enter for Canvases that are action-based, API-triggered, or one-time-send Canvases.
+To enter your Canvas, users must be in the **Entry Audience** before the entry schedule occurs (whether that be scheduled at a specific time, or triggered by action-based or API-triggered event). 
+
+![][1]{: style="max-width:75%;"}
+
+Note that users who qualify for your entry audience after will not enter for Canvases that are action-based, API-triggered, or one-time-send Canvases.
 
 ### Review entry audience filters
 
 In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the entry audience, so there's no need to add the event as an audience filter. 
+
+For more details on available segmentation filters to target your audience, check out [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 ### Batch multiple API requests
 
@@ -32,7 +38,9 @@ Make your requests in the same API call, rather than multiple calls, to confirm 
 
 ### Add a delay
 
-Another option to avoid race conditions is to use the Delay step (ideally set for 5 minutes) as the first step of your Canvas. This allows time for attributes, email addresses, and push tokenbs to be processed to new user profiles before they're targeted for the following Canvas steps. Without this Delay step, it's possible for an email to be sent to a user whose email hasn't updated yet.
+Another option to avoid race conditions is to use the Delay step (ideally set for 5 minutes) as the first step of your Canvas. 
+
+This allows time for attributes, email addresses, and push tokens to be processed to new user profiles before they're targeted for the following Canvas steps. Without this Delay step, it's possible for an email to be sent to a user whose email hasn't updated yet.
 
 ## Delivery times
 
@@ -82,3 +90,5 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 - If global frequency capping is enabled for your Canvas, depending on your specific rules, this can limit how many times each user should receive a message from a specific channel. 
 - If Quiet Hours are enabled, this can impact your message send time, meaning that your message may send a the next available time (when the Quiet Hours end) or cancel the message entirely.
 {% enddetails %}
+
+[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}
