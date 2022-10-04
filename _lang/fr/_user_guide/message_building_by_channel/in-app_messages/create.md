@@ -376,7 +376,9 @@ Lorsque vous sélectionnez **Re-evaluate campaign elegibility before displaying*
 
 {% alert note %}
 L’activation de cette option entraîne un léger retard (< 100 ms) entre le déclenchement d’un message In-App et son affichage en raison de la demande ajoutée d’éligibilité et de mise en place.
-<br><br>N’utilisez pas cette option pour les messages qui peuvent être déclenchés lorsqu’un utilisateur est hors ligne ou lorsque l’éligibilité et la réévaluation de Liquid ne sont pas requises.
+
+<br><br>
+N’utilisez pas cette option pour les messages qui peuvent être déclenchés lorsqu’un utilisateur est hors ligne ou lorsque l’éligibilité et la réévaluation de Liquid ne sont pas requises.
 {% endalert %}
 
 #### Choisir des événements de conversion
