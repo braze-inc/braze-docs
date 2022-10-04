@@ -88,7 +88,7 @@ Yes! Any static URL parameters can be added.
 
 One year.
 
-#### Will Link Shortening work with Deep Links or Universal Links?
+#### Will Link Shortening work with deep links or universal links?
 
 Link Shortening will only shorten static URLs that start with _http://_ or _https://_. It is not advised to further shorten generated Universal Links (from providers such as Branch or Firebase) as this may break the attribution or redirect of those tools.
 
