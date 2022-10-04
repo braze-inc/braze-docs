@@ -34,7 +34,7 @@ guide_featured_list:
 
 # channel to icon/fa or image mapping
 glossary_tags:
-  - name: Campaign
+  - name: Campaigns
   - name: Canvas
   - name: Catalogs
   - name: Content Blocks
