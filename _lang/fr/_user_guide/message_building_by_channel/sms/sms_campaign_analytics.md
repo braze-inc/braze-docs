@@ -1,0 +1,20 @@
+---
+nav_title: "Rapports"
+article_title: Rapports SMS
+page_order: 7
+description: "Le présent article de référence couvre les indicateurs SMS utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes SMS."
+page_type: reference
+tool:
+  - Rapports
+channel:
+  - SMS
+  
+---
+
+# Rapports SMS
+
+> Le présent article de référence couvre les indicateurs SMS utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes SMS.
+
+{% include campaign_analytics.md channel="SMS" %}
+
+

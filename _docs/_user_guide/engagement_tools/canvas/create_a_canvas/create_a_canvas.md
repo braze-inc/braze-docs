@@ -89,11 +89,7 @@ If your Canvas has multiple variants or a Control Group, Braze will use this con
 
 ### Step 2b: Set your Canvas entry schedule
 
-You can choose one of three ways in which users can enter your Canvas:
-
-- Scheduled Delivery
-- Action-Based Delivery
-- API-Triggered Delivery
+You can choose one of three ways in which users can enter your Canvas.
 
 #### Entry schedule types
 
@@ -144,13 +140,9 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 ### Step 2d: Select your send settings
 
-Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
+Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [Rate Limiting][6b] or [Frequency Capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
-
-{% alert note %}
-Visit your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account to manage your Frequency Capping rules.
-{% endalert %}
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frquency capping rules, go  to your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -158,7 +150,9 @@ For Canvases targeting email and push channels, you may want to limit your Canva
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
 - **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
 
-To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default. 
+
+These subscription settings are applied on a per-step basis, meaning that there is no effect on the entry audience. So this setting is used to evaluate a user's eligibility to receive each Canvas step.
 
 {% alert important %}
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
@@ -253,7 +247,7 @@ Or you can set a group of messages to be sent after your users take a particular
 
 ![]({% image_buster /assets/img_archive/Canvas_Exception_Events.png %})
 
-You can also apply **Filters** to each Step of a Canvas. Use this to add additional control flow logic, such as dropping users out of a journey when they're not likely to need additional engagement encouragement:
+You can also apply **Filters** to each step of a Canvas. Use this to add additional control flow logic, such as dropping users out of a journey when they're not likely to need additional engagement encouragement:
 
 ![]({% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %})
 
@@ -303,9 +297,15 @@ Click **Done** once you've finished configuring your Canvas component.
 
 The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first Full Step of a Canvas.
+For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
 
-For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
+
+{% alert note %}
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
+{% endalert %}
+
+Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.
@@ -317,6 +317,8 @@ For example, consider the following request: `\"canvas_entry_properties\" : {\"p
 Event properties are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+
+For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
 

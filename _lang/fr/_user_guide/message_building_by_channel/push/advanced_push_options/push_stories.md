@@ -42,7 +42,8 @@ Pour utiliser les Push Stories, créez une [campagne de notification push]({{sit
 Pour créer une page, procédez comme suit :
 
 1. Cliquez sur **Manage Pages** (Gérer les pages) du composeur principal.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>2. Insérez une image pour chaque page, ainsi que le comportement lors du clic pour cette image.
+    <br><br>![][4]{: style="max-width:70%"}<br><br>
+2. Insérez une image pour chaque page, ainsi que le comportement lors du clic pour cette image.
 3. Si vous le souhaitez, ajoutez un **Titre** et une **Description** pour chaque page. Si vous utilisez un titre et une description pour une page, ils doivent être insérés pour toutes les pages.
 
 Les aperçus seront reflétés et interactifs.

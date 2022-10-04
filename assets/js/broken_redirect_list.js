@@ -550,3 +550,8 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewi
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
 
+validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
+validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/';
+
