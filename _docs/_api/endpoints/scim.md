@@ -4,8 +4,7 @@ article_title: SCIM Endpoints
 search_tag: Endpoint
 page_order: 3
 layout: dev_guide
-hidden: true
-permalink: /scim/
+alias: /scim/
 
 description: "This landing page lists the Braze SCIM Endpoints."
 page_type: landing
