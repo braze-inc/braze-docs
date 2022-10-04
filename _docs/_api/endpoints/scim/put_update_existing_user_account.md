@@ -17,7 +17,7 @@ description: "This article outlines details about the Update Existing Dashboard 
 
 This endpoint allows you to update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level). For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-For security reasons, userName (email address) cannot be updated through this endpoint at this time. If you would like to change the userName (email address) for a user, contact support@braze.com.
+For security reasons, `userName` (email address) cannot be updated through this endpoint at this time. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
 ## Rate limit
 
