@@ -91,7 +91,7 @@ Use personalized variants to send each user in your target segment the variant t
 Personalized variants are in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
-To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
+To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. If no associations are found and no personalizations can be made, this feature will automatically send only the winning variant to the remaining users. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
 
 1. Select **Personalized Variant**, then specify what percentage of your campaign audience should be assigned to the personalized variant group.
 2. Configure the following additional settings.
