@@ -8,7 +8,7 @@ hidden: true
 # Braze Cloud Ingestion - Snowflake integration
 
 {% alert important %}
-Braze Cloud Ingestion is currently in Beta. Contact your Braze account manager if you are interested in participating in the Early Access.
+Braze Cloud Ingestion is currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
 ## What is Braze Cloud Ingestion?
