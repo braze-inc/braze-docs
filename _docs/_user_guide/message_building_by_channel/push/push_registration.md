@@ -30,6 +30,18 @@ When a user profile has a valid foreground push token associated with an app, Br
 The `Push enabled for App` filter only considers the presence of a valid foreground or background push token for the given app. However, the more generic `Push Enabled` filter segments users who have explicitly activated push notifications for any apps in your app group. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 {% endalert %}
 
+### Multiple users on one device
+
+Push tokens are specific to both a device and app, so it isn't possible to use push tokens to distinguish between multiple users who are using the same device.
+
+For example, say you have two users: Charlie and Kim. If Charlie has enabled push notifications for your app on his phone and Kim uses Charlie's phone to log out of Charlie's profile and log into her own, the push token will be re-assigned to Kim's profile. The push token will then remain assigned to Kim's profile on that device until she logs out and Charlie logs back in again.
+
+An app or website can only have one push subscription per device. So when a user logs out of a device or website, and a new user logs in, the push token gets reassigned to the new user. This is reflected on the user's profile in **Contact Settings** section of the **Engagement** tab:
+
+![Push token changelog on the **Engagement** tab of a user's profile, which lists when the push token was moved to another user, and what the token was.][4]
+
+Because there isn't a way for push providers (APNs/FCM) to distinguish between multiple users on one device, we pass the push token to the last user who was logged in to determine which user to target on the device for push.
+
 ## Push token registration
 
 Platforms deal with push token registration and push permissions in different ways:
@@ -115,5 +127,6 @@ To account for that ambiguity, our SDK push integrations always register and flu
 [2]: {% image_buster /assets/img/push_changelog.png %}
 [push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
 [3]: {% image_buster /assets/img/push_example.png %}
+[4]: {% image_buster /assets/img/push_token_changelog.png %}
 
 
