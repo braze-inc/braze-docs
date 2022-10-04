@@ -4,8 +4,7 @@ article_title: Automated User Provisioning
 page_order: 10
 page_type: reference
 description: "This reference article covers what info you need to provide for automated user provisioning and how and where to use your generated SCIM token."
-hidden: true
-permalink: /scim/automated_user_provisioning/
+alias: /scim/automated_user_provisioning/
 
 ---
 
