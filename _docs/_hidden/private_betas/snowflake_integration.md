@@ -40,7 +40,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
   "external_id":"customer_1234",
   "email":"jane@exaple.com",
   "attribute_1":"abcdefg",
-  "attribute_2":42,E
+  "attribute_2":42,
   "attribute_3":"2019-07-16T19:20:30+1:00",
   "attribute_4":false,
   "attribute_5":"testing"
