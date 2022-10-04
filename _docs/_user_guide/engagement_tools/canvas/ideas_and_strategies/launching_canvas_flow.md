@@ -69,7 +69,7 @@ Use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_
 
 ### Decision Split
 
-Th [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
+The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
 
 ### Action Paths
 
