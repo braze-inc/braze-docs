@@ -21,7 +21,7 @@ To create a filtered set, select your catalog and click **Create Filtered Set**.
 
 Let's say we want to recommend meals from a popular restaurant to multiple customers. With filtered sets, you can set up information that is personalized to each customer. 
 
-Using a catalog with restaurant's information for menu items, prices, and product types, we can create a filtered set to recommend a meal based on the latest product type a customer has viewed. In the example below, we've 
+Using a catalog with the restaurant's information for menu items, prices, and product types, we can create a filtered set to recommend a meal based on the latest product type a customer has viewed.
 
 ![An example of a filtered set for a restaurant with two filters: one that identifies a meal recommendation, and one that identifies a customer's most recently viewed category.][2]{: style="max-width:85%;"}
 
