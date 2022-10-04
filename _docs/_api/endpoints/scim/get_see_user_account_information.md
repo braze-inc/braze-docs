@@ -1,19 +1,18 @@
 ---
 nav_title: "GET: Look Up an Existing Dashboard User Account"
 article_title: "GET: Look Up an Existing Dashboard User Account"
-permalink: /get_see_user_account_information/
+alias: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Look Up an Existing Dashboard User Account Endpoint."
-hidden: true
 ---
 
 {% api %}
 # Look up an existing dashboard user account
 {% apimethod get %}
-/scim/v2/Users/YOUR_ID_HERE
+/scim/v2/users/YOUR_ID_HERE
 {% endapimethod %}
 
 This endpoint allows you to look up an existing dashboard user account by specifying their email. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
@@ -53,12 +52,12 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
-        "companyPermissions": ["manageCompanySettings"],
+        "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
                 "appGroupName": "Test App Group",
-                "appGroupPermissions": ["basicAccess","sendCampaignsCanvases"],
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",

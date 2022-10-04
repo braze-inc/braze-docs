@@ -1,22 +1,23 @@
 ---
 nav_title: "PUT: Update Dashboard User Account"
 article_title: "PUT: Update Dashboard User Account"
-permalink: /post_update_existing_user_account/
+alias: /post_update_existing_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Update Existing Dashboard User Account Endpoint."
-hidden: true
 ---
 
 {% api %}
 # Update an existing dashboard user account
 {% apimethod put %}
-/scim/v2/Users/YOUR_ID_HERE
+/scim/v2/users/YOUR_ID_HERE
 {% endapimethod %}
 
 This endpoint allows you to update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level). For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+
+For security reasons, `userName` (email address) cannot be updated through this endpoint at this time. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
 ## Rate limit
 
@@ -64,11 +65,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/user@
     },
     "department": "finance",
     "permissions": {
-        "companyPermissions": ["manageCompanySettings"],
+        "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
                 "appGroupName": "Test App Group",
-                "appGroupPermissions": ["basicAccess","sendCampaignsCanvases"],
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamName": "Test Team",                  
@@ -98,12 +99,12 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
-        "companyPermissions": ["manageCompanySettings"],
+        "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
                 "appGroupName": "Test App Group",
-                "appGroupPermissions": ["basicAccess","sendCampaignsCanvases"],
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
