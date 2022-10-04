@@ -20,7 +20,3 @@ guide_featured_list:
   link: /docs/api/endpoints/catalogs/
   fa_icon: fas fa-server
 ---
-
-{% alert important %}
-Catalogs and filtered sets are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %} 

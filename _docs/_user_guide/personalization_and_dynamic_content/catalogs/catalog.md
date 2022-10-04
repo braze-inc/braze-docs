@@ -42,7 +42,7 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
 
-![The table shows two example games with columns for id, title, price, and image_link.][5]
+![The table shows two example games with columns for id, title, price, and image link.][5]
 
 ### Step 2: Upload your CSV
 
