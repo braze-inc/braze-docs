@@ -22,7 +22,7 @@ Cet endpoint vous permet d’envoyer des messages de campagne (jusqu’à 90 jo
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Corps de la demande
 

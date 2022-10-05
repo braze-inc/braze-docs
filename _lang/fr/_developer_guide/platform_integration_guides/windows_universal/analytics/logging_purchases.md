@@ -8,7 +8,7 @@ description: "Cet article de référence explique comment enregistrer les achats
 ---
 
 # Enregistrer les achats
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
 

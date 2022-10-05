@@ -19,7 +19,7 @@ Cet endpoint vous permet d’extraire une liste des numéros de téléphone cons
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

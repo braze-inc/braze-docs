@@ -13,4 +13,4 @@ channel:
 
 # GIF {#gifs-IAMs}
 
-{% include archive/android/gifs.md channel="in-app messages" %}
+{% multi_lang_include archive/android/gifs.md channel="in-app messages" %}

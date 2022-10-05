@@ -22,7 +22,7 @@ Note that to send messages with this endpoint, you must have a Canvas ID, create
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Request body
 

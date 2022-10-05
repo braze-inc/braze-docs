@@ -20,7 +20,7 @@ Use this endpoint allows to export rollups of time series data for a Canvas, pro
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

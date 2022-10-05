@@ -11,7 +11,7 @@ description: "This article covers Content Card integration for Web, including Co
 
 # Content Card integration
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Content Card data model {#data-models}
 

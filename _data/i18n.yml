@@ -1,15 +1,22 @@
 en:
-  next: next
-  previous: previous
+  next: NEXT
+  previous: PREVIOUS
   popular_topic: Popular Topic
   helpful_resources: Helpful Resources
   braze_status: BRAZE SYSTEM STATUS
   braze_status_check: Checking Braze Status
-
+  edit_github: Edit this page on GithHub
+  page_nav_title: On this page
+  helpful: "WAS THIS PAGE HELPFUL?"
 fr:
-  next: suivante
-  previous: précédente
+  next: SUIVANTE
+  previous: PRÉCÉDENTE
   popular_topic: Sujet Populaire
   helpful_resources: Ressources utiles
   braze_status: ÉTAT DU SYSTÈME BRAZE
   braze_status_check: Vérification du statut Braze
+  edit_github: Modifier cette page sur GithHub
+  page_nav_title: Sur cette page
+  helpful: "CETTE PAGE VOUS A ÉTÉ UTILE?"
+
+

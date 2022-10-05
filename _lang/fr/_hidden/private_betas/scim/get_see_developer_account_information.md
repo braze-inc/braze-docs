@@ -20,7 +20,7 @@ Cet endpoint vous permet de rechercher un compte développeur de tableau de bord
 
 ## Limites de débit
 
-{% include rate_limits.md endpoint='look up dashboard developer' %}
+{% multi_lang_include rate_limits.md endpoint='look up dashboard developer' %}
 
 ## Paramètres de demande
 

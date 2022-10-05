@@ -20,7 +20,7 @@ Use this endpoint to call information for your existing email [Content Blocks]({
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

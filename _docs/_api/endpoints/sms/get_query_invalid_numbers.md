@@ -19,7 +19,7 @@ Use this endpoint to pull a list of phone numbers that have been deemed "invalid
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

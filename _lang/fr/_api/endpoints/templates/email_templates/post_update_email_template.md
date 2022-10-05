@@ -24,7 +24,7 @@ Tous les champs autres que l’`email_template_id` sont facultatifs, mais vous d
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

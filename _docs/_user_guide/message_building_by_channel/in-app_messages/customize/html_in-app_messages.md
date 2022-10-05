@@ -74,7 +74,7 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 }
 </style>
 
-{% include archive/appboyBridge.md %}
+{% multi_lang_include archive/appboyBridge.md %}
 
 ## Link-based actions
 

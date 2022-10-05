@@ -24,7 +24,7 @@ Braze traite les données transmises via l’API à leur valeur nominale et les 
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='users track' %}
+{% multi_lang_include rate_limits.md endpoint='users track' %}
 
 ## Corps de la demande
 

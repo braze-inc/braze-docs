@@ -20,7 +20,7 @@ Use this endpoint to create an email [Content Block]({{site.baseurl}}/user_guide
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

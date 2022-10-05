@@ -20,7 +20,7 @@ Use this endpoint to retrieve a daily series of the estimated size of a segment 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

@@ -30,7 +30,7 @@ Use this endpoint to pull a list of phone numbers that have been deemed "invalid
 ## Rate limit
 
 <!-- The rate limit of the endpoint. This pulls from /includes/rate_limits/ and displays specific endpoint limits based on the endpoint provided -->
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

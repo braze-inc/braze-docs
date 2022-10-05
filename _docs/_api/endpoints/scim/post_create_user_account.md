@@ -20,7 +20,7 @@ This endpoint allows you to create a new dashboard user account by specifying em
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='create dashboard user' %}
+{% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
 ## Request body
 ```

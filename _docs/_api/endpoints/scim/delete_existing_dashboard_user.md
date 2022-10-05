@@ -19,7 +19,7 @@ This endpoint allows you to permanently delete an existing dashboard user, simil
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='delete dashboard user' %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
 ## Request body
 

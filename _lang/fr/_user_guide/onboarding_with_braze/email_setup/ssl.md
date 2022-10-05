@@ -10,7 +10,7 @@ channel: (e-mail)
 
 # SSL chez Braze
 
-{% include video.html id="zP1N_wN0SsQ" align="right" %}
+{% multi_lang_include video.html id="zP1N_wN0SsQ" align="right" %}
 
 > Un Secured Socket Layer (SSL) chiffre une URL avec HTTPS plutôt que le HTTP moins sécurisé. Les URL avec HTTPS indiquent qu’un certificat SSL ou TLS est valide et approuvé et que le site est sans danger pour visiter et non une arnaque ou la source de logiciels malveillants dangereux.
 

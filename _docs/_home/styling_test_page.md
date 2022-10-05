@@ -397,45 +397,45 @@ This is a update
 {% tab Styling %}
 #### Embedded Video/YouTube
 Defaults to youtube embedded.
-{% include video.html id="XY5uXoKIvFY" source="youtube" %}
+{% multi_lang_include video.html id="XY5vFY" source="youtube" %}
 
 #### Embedded Video Right Align
-{% include video.html id="XY5uXoKIvFY" align="right" source="youtube" %}
+{% multi_lang_include video.html id="XYuXoKIvFY" align="right" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 #### Embedded Video Left Align
-{% include video.html id="XY5uXoKIvFY" align="left" source="youtube" %}
+{% multi_lang_include video.html id="XY5uXvFY" align="left" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 <br /><br />
 
 #### Loom Example
 * use `source="loom"`
-{% include video.html id="c1d3199463c448e8918f046265b54eb2" source="loom" %}
+{% multi_lang_include video.html id="c1d3199463c448e8918f046265b54eb2" source="loom" %}
 
 {% endtab %}
 {% tab Markdown %}
 
 {% raw %}
 ```html
-{% include video.html id="[youtube_id]" source="youtube" %}
+{% multi_lang_include video.html id="[youte_id]" source="youtube" %}
 ```
 {% endraw  %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
 {% raw  %}
 ```html
-{% include video.html id="[youtube_id]" align="left" source="youtube" %}
+{% multi_lang_include video.html id="[ytube_id]" align="left" source="youtube" %}
 
-{% include video.html id="[youtube_id]" align="right" source="youtube" %}
+{% multi_lang_include video.html id="[youe_id]" align="right" source="youtube" %}
 ```
 {% endraw  %}
 
 Loom Example:
 {% raw %}
 ```html
-{% include video.html id="[loom_id]" source="loom" %}
+{% multi_lang_include video.html id="[lid]" source="loom" %}
 ```
 {% endraw  %}
 

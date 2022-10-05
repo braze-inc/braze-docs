@@ -15,4 +15,4 @@ channel:
 
 This article applies to integrations that use the Braze SDK's default Content Cards fragment or views to display Content Cards.
 
-{% include archive/android/gifs.md channel="Content Cards" %}
+{% multi_lang_include archive/android/gifs.md channel="Content Cards" %}

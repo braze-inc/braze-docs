@@ -21,7 +21,7 @@ For security reasons, `userName` (email address) cannot be updated through this 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='update dashboard user' %}
+{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
 ## Request body
 ```

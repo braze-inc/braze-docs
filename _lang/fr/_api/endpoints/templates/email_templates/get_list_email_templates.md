@@ -22,7 +22,7 @@ Utilisez les API REST de modèles pour gérer par programme les modèles d’e-m
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

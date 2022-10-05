@@ -11,7 +11,7 @@ search_tag: Partenaire
 
 # mParticle
 
-{% include video.html id="Njhqwd36gZM" align="right" %}
+{% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
 > La plateforme de données client de mParticle vous permet de tirer le meilleur parti de vos données. Les marketeurs ingénieux utilisent mParticle pour organiser des données sur toute leur pile d’outils, ce qui leur permet de gagner à des moments clés du parcours client.
 

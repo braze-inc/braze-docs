@@ -25,7 +25,7 @@ Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='transactional email' %}
+{% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
 ## Request body
 

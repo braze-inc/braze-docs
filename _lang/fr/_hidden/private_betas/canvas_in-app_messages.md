@@ -6,7 +6,7 @@ hidden: true
 
 # Messages dans l’application de Canvas
 
-{% include video.html id="6X8E20BlblI" align="right" %}
+{% multi_lang_include video.html id="6X8E20BlblI" align="right" %}
 
 Une fois que vous avez configuré les options de délai et d’audience, vous pouvez ajouter un message dans l’application à votre Canvas en sélectionnant **Message In-App** dans le volet **Canaux de messagerie**. Une fois que le délai d’une étape est passé et que les options d’audience ont été cochées, le message dans l’application sera activé et les utilisateurs le verront à l’ouverture de l’application.
 

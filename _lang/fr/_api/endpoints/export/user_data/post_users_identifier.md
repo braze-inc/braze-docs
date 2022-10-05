@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter des données à partir de n’importe quel
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='users export ids' %}
+{% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
 ## Corps de la demande
 

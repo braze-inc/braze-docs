@@ -11,7 +11,7 @@ description: "This reference article covers various aspects of Teams in your Bra
 
 Braze admins can group their dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes so that members and non-members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. 
 
-{% include video.html id="UYjKrFcL9sQ" align="right" %}
+{% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
 ## Creating Teams
 

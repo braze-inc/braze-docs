@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AppsFlyer
 
-{% include video.html id="gQ9y2DA2LuQ" align="right" %}
+{% multi_lang_include video.html id="gQ9y2DA2LuQ" align="right" %}
 
 > AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
 

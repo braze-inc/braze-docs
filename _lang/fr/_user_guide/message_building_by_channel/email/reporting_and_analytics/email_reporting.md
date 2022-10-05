@@ -14,5 +14,5 @@ channel:
 
 > Le présent article explique les différents composants de votre reporting d’e-mails et où il se trouve dans le tableau de bord.
 
-{% include campaign_analytics.md channel="email" %}
+{% multi_lang_include campaign_analytics.md channel="email" %}
 

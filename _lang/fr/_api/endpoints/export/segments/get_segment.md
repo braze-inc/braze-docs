@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter une liste de segments, chacun incluant son
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

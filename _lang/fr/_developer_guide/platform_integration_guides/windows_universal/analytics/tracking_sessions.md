@@ -8,7 +8,7 @@ description: "Cet article de référence explique comment suivre des sessions su
 ---
 
 # Analytique
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 ## Suivi d’une session
 

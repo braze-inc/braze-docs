@@ -22,7 +22,7 @@ L’endpoint d’envoi vous permet d’envoyer des messages instantanés et ad h
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Corps de la demande
 
