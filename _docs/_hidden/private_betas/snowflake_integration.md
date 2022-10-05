@@ -158,20 +158,25 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 After this step, you will share connection information with Braze and receive a public key to append to the user. 
 
+{% alert note %}
+When connecting different app groups to the same Snowflake account, you must create a unique user for each Braze app group where you are creating an integration. Within an app group, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across app groups. 
+{% endalert %}
+
 #### Step 5: Allow Braze IPs in Snowflake network policy (optional)
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies). 
 
-| Braze IPs |
-| --- | 
-| 23.21.118.191 |
-| 34.206.23.173 |
-| 50.16.249.9 |
-| 52.4.160.214 |
-| 54.87.8.34 |
-| 54.156.35.251 |
-| 52.54.89.238 |
-| 18.205.178.15 |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: | For Instances `EU-01` and `EU-02`: |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
 
 ### Create a new integration in the Braze dashboard
 
@@ -201,13 +206,14 @@ Once the user is updated with the public key, return to the Braze dashboard and 
 You must successfully test an integration before it can move from Draft into Active state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
 {% endalert %}
 
-### Set up additional integrations (optional)
+### Set up additional integrations or users (optional)
 
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the snowflake account. 
 
 ![][4]
 
-Note that if you reuse the same user and role across integrations, you will not need to go through the step of adding the public key again. 
+If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again. 
+
 
 ## Product limitations
 
@@ -216,8 +222,8 @@ Note that if you reuse the same user and role across integrations, you will not 
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view. 
 | Number of rows | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column. |
 | Attributes per row | Each row should contain a single user ID and a JSON object with up to 50 attributes. Each key in the JSON object counts as one attribute (i.e., an array counts as one attribute). |
-| Data type | Currently, the product only supports user attributes. In the future, you’ll also be able to sync events and purchases. |
-| Braze region | The beta product is only available to Braze customers in the US region (Dashboard is in one of `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`) |
+| Data type | You can sync User Attributes through Cloud Data Ingestion. |
+| Braze region | This product is avialable in all Braze regions. Any Braze region can connect to any Snowflake region |
 | Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
 {: .reset-td-br-1 .reset-td-br-2}
 
