@@ -50,6 +50,8 @@ Do not include any of the following information in the JSON composer:
 * Braze cluster URL
 * Fields related to push token imports
 
+## Use case
+
 As an example, users who receive the following User Update step will have the VIP Member attribute set to `true`.
 
 ![][3]
