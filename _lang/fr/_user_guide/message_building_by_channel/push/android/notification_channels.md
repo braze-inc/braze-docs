@@ -83,7 +83,8 @@ Votre canal de secours est le canal avec lequel Braze essaiera d’envoyer votre
 
 1. Ouvrir toute campagne ou Canvas existant.
 2. Accédez au composeur de notification push Android.
-3. Sélectionnez **Manage Notification Channels** (Gérer les canaux de notification) après avoir étendu les options de canal de notification. <br><br>![][9]{: style="max-width:80%;"}<br><br>4. Ajoutez le canal au tableau de bord (s’il n’a pas encore été ajouté).
+3. Sélectionnez **Manage Notification Channels** (Gérer les canaux de notification) après avoir étendu les options de canal de notification. <br><br>![][9]{: style="max-width:80%;"}<br><br>
+4. Ajoutez le canal au tableau de bord (s’il n’a pas encore été ajouté).
 5. Sélectionnez le cadran radio à côté du canal que vous souhaitez désigner comme canal de secours.
 6. Enregistrez vos modifications. Vos modifications seront appliquées à l’échelle globale.
 

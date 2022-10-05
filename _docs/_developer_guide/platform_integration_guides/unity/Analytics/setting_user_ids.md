@@ -12,7 +12,7 @@ description: "This reference article covers how to set user ids on Unity platfor
 
 # Setting user IDs
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
@@ -26,11 +26,11 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 ## Suggested user ID naming convention
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## User ID integration best bractices and notes
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

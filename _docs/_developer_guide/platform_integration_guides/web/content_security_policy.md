@@ -16,7 +16,7 @@ Content-Security-Policy provides added security by restricting how and where con
 This article is intended for developers working on websites that enforce CSP rules and integrate with Braze. It is not intended as advice on how you should approach security.
 {% endalert %}
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Nonce attributes {#nonce}
 

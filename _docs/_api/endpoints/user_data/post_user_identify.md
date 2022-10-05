@@ -34,7 +34,7 @@ Request fields and their values are case sensitive. Using different cases to ref
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users identify' %}
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## Request body
 

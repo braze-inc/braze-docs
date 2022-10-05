@@ -20,7 +20,7 @@ Use this endpoint to retrieve a daily series of the total number of new users on
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

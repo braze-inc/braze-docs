@@ -14,7 +14,7 @@ tool:
 
 > Avec l’éditeur Drag & Drop, vous pouvez créer des e-mails entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer.
 
-{% include video.html id="4dTrkxe8DLo" align="right" %}
+{% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
 Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes. 
 
@@ -103,6 +103,7 @@ L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan
 
 Pour ajuster la marge intérieure, faites défiler jusqu’à **Block Options (Options de bloc)**, et affichez **More Options (Plus d’options)**. Cela vous permettra d’ajuster votre marge intérieure pour que votre e-mail soit parfait !
 <br>
+
 #### Ajout de Liquid 
 
 ![Options d’ajout de personnalisation de l’éditeur Drag & Drop.][5]{: style="float:right;max-width:25%;margin-left:15px;"}

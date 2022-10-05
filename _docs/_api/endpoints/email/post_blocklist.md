@@ -20,7 +20,7 @@ Use this endpoint to unsubscribe a user from email and mark them as hard bounced
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

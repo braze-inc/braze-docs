@@ -27,8 +27,8 @@ guide_featured_list:
   - name: Testing Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
     fa_icon: fas fa-vials
-  - name: Best Practices
-    link: /docs/user_guide/engagement_tools/canvas/best_practices/
+  - name: Ideas and Strategies
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
     fa_icon: fas fa-bullseye
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/

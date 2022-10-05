@@ -8,7 +8,7 @@ platform: iOS
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # Guide d’intégration SDK de Braze pour iOS

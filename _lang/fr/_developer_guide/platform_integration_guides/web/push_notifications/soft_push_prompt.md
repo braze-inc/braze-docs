@@ -19,7 +19,7 @@ C’est souvent une bonne idée pour les sites d’implémenter une invite de no
 
 Cela peut être fait simplement par le biais des [messages in-app déclenchés]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#trigger-types) de Braze pour une expérience utilisateur transparente. Plutôt que d’appeler directement `requestPushPermission()` comme décrit dans l’[intégration de notification push pour le Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) habituelle.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Étape 1 : Créer une campagne d’amorce de notification push
 

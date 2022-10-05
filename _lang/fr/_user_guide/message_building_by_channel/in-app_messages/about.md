@@ -49,6 +49,7 @@ Les slideups apparaissent généralement en haut et en bas de l’écran de l’
 ![Message In-App slideup apparaissant en bas de l’écran de l’application. Le slideup comprend une image d’icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 <br>
+
 {% endtab %}
 {% tab Modal %}
 
@@ -57,6 +58,7 @@ Les modaux apparaissent au centre de l’écran de l’appareil avec une incrust
 ![Message In-App modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. Le modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 <br>
+
 {% endtab %}
 {% tab Full-Screen %}
 
@@ -65,6 +67,7 @@ Comme leur nom l’indique, les messages plein écran occupent tout l’écran d
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
+
 {% endtab %}
 {% endtabs %}
 

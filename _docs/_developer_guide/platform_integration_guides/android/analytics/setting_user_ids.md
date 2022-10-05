@@ -11,11 +11,11 @@ description: "This article shows how to set user IDs in your Android or FireOS a
  
 # Setting user IDs for Android and FireOS
  
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Suggested user ID naming convention
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ### Assigning a user ID
 
@@ -48,11 +48,11 @@ Refer to the [`changeUser`][4] documentation for more information.
 
 ## User ID integration best practices and notes
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Aliasing users
 
-{% include archive/setting_user_ids/aliasing.md platform="Android" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
 [1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

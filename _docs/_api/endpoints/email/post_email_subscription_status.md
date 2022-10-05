@@ -22,7 +22,7 @@ You can set the email subscription state for an email address that is not yet as
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

@@ -20,7 +20,7 @@ Use this endpoint to schedule a campaign, Canvas, or other message to be sent at
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 

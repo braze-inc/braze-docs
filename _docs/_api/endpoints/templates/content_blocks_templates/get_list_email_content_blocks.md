@@ -20,7 +20,7 @@ Use this endpoint to list your existing [Content Blocks]({{site.baseurl}}/user_g
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

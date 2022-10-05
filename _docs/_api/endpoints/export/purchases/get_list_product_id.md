@@ -20,7 +20,7 @@ Use this endpoint to return a paginated lists of product IDs.
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='purchases product list' %}
+{% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
 ## Request parameters
 

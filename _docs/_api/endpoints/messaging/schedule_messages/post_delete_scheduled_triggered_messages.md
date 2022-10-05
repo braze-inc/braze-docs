@@ -20,7 +20,7 @@ Use this endpoint to cancel a Canvas message that you previously scheduled via A
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

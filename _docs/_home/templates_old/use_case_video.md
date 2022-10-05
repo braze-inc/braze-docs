@@ -40,7 +40,7 @@ noindex: true
 
 # Use Case Name
 
-{% include video.html id="XY5uXoKIvFY" align="right" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > Welcome to the Use Case Template! Here, you'll find everything you need to write a walk through of a Braze Use Case. In this first section, you should describe the use case in just a few sentences. Perhaps something like "this use case explores how you can reintroduce lapsing users to your content using Push, Email, etc.".
 >

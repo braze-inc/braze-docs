@@ -20,7 +20,7 @@ Use this endpoint to export a list of News Feed cards, each of which will includ
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

@@ -7,7 +7,7 @@ page_order: 2
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # Completing the integration

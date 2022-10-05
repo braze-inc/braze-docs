@@ -21,7 +21,7 @@ Users' email subscription status can be updated and retrieved via Braze using a 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

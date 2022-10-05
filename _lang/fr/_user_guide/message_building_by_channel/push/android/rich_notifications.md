@@ -26,7 +26,8 @@ tool:
 
 {% alert note %}
 Même si Braze fournit des instructions sur la manière de mettre en place des push riche, leur rendu réel peut varier en fonction de facteurs externes tels que le rapport d’aspect de l’appareil, la version d’Android, des contraintes spécifiques au fabriquant, etc. 
-<br><br>Nous vous recommandons d’effectuer un test d’envoi à plusieurs appareils Android pour vous assurer que vos notifications push enrichies apparaissent comme vous le désirez.
+<br><br>
+Nous vous recommandons d’effectuer un test d’envoi à plusieurs appareils Android pour vous assurer que vos notifications push enrichies apparaissent comme vous le désirez.
 {% endalert %}
 
 ## Configurer votre notification enrichie Android
