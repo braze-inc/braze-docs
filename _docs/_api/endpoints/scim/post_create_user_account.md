@@ -1,20 +1,19 @@
 ---
 nav_title: "POST: Create New Dashboard User Account"
 article_title: "POST: Create New Dashboard User Account"
-permalink: /post_create_user_account/
+alias: /post_create_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Create New Dashboard User Account Endpoint."
-hidden: true
 
 ---
 
 {% api %}
 # Create a new dashboard user account
 {% apimethod post %}
-/scim/v2/Users
+/scim/v2/users
 {% endapimethod %}
 
 This endpoint allows you to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level). For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/). 
@@ -66,15 +65,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
     },
     "department": "finance",
     "permissions": {
-        "companyPermissions": ["manageCompanySettings"],
+        "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
                 "appGroupName": "Test App Group",
-                "appGroupPermissions": ["basicAccess","sendCampaignsCanvases"],
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamName": "Test Team",                  
-                         "teamPermissions": ["basicAccess","exportUserData"]
+                         "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
             } 
@@ -99,17 +98,17 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
-        "companyPermissions": ["manageCompanySettings"],
+        "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
                 "appGroupName": "Test App Group",
-                "appGroupPermissions": ["basicAccess","sendCampaignsCanvases"],
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
                          "teamName": "Test Team",                  
-                         "teamPermissions": ["basicAccess","exportUserData"]
+                         "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
             } 

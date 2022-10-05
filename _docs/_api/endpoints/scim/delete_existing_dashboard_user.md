@@ -1,19 +1,18 @@
 ---
 nav_title: "DELETE: Remove Dashboard User Account"
 article_title: "DELETE: Remove Dashboard User Account"
-permalink: /delete_existing_dashboard_user/
+alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Remove Existing User Account Endpoint."
-hidden: true
 ---
 
 {% api %}
 # Remove a dashboard user account
 {% apimethod delete %}
-/scim/v2/Users/YOUR_ID_HERE
+/scim/v2/users/YOUR_ID_HERE
 {% endapimethod %}
 
 This endpoint allows you to permanently delete an existing dashboard user, similarly to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
