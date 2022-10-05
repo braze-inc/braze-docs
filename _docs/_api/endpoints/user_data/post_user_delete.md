@@ -24,7 +24,7 @@ Deleting user profiles cannot be undone. It will permanently remove users which 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users delete' %}
+{% multi_lang_include rate_limits.md endpoint='users delete' %}
 
 ## Request body
 

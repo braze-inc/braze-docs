@@ -7,16 +7,16 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
  
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # Setting user IDs for iOS
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Suggested user ID naming convention
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## Assigning a user ID
 
@@ -49,11 +49,11 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 ## User ID integration best practices and notes
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Aliasing users
 
-{% include archive/setting_user_ids/aliasing.md platform="iOS" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

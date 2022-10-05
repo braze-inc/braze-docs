@@ -34,7 +34,7 @@ Les champs de demande et leurs valeurs sont sensibles à la casse. Utiliser diff
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='users identify' %}
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## Corps de la demande
 

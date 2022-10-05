@@ -20,7 +20,7 @@ Use this endpoint to pull a list of email addresses that have "hard bounced" you
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

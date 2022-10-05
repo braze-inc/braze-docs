@@ -20,7 +20,7 @@ Cet endpoint vous permet de supprimer définitivement un développeur de tableau
 
 ## Limites de débit
 
-{% include rate_limits.md endpoint='delete dashboard developer' %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard developer' %}
 
 ## Corps de la demande
 

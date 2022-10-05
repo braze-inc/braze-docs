@@ -40,7 +40,7 @@ noindex: true
 
 # [Partner Name]
 
-{% include video.html id="XY5uXoKIvFY" align="right" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > Welcome to the Partner Page  Template! Here, you'll find everything you need to create your own partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
 

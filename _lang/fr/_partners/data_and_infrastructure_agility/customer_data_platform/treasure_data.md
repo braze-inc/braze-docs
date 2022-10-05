@@ -13,7 +13,7 @@ search_tag: Partenaire
 
 > [Treasure Data][4] est la seule plateforme de données client (CDP) d’entreprise qui favorise des expériences client pertinentes en harmonisant les données, les informations et l’engagement pour qu’ils fonctionnent en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), y compris les équipes de marketing, de ventes et de service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client.
 
-{% include video.html id="Zqdm33TWr0E" align="right" %}
+{% multi_lang_include video.html id="Zqdm33TWr0E" align="right" %}
 
 L’intégration de Braze et de Treasure Data vous permet d’écrire les résultats issus de Treasure Data directement dans Braze, en vous permettant de :
 * **Mapper des ID externes** : Mapper des ID sur le compte utilisateur Braze depuis votre système de gestion de la relation client (CRM). 

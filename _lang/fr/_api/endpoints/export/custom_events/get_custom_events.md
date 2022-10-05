@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter une liste d’événements personnalisés 
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='events list' %}
+{% multi_lang_include rate_limits.md endpoint='events list' %}
 
 ## Paramètres de demande
 

@@ -22,7 +22,7 @@ Vous pouvez définir l’état de l’abonnement aux e-mails pour une adresse e-
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

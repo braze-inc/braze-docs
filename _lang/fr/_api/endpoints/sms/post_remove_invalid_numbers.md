@@ -19,7 +19,7 @@ Cet endpoint vous permet de supprimer des numéros de téléphone « non valide
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

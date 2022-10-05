@@ -7,7 +7,7 @@ description: "This article covers iOS sample apps."
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 # Sample apps
 

@@ -20,7 +20,7 @@ The delete schedule endpoint allows you to cancel a message that you previously 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

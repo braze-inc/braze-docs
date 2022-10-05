@@ -20,7 +20,7 @@ Use this endpoint to export time series data for a Canvas.
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

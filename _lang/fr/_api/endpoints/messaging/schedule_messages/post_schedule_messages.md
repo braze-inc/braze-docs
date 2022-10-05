@@ -22,7 +22,7 @@ L’endpoint de création d’une planification vous permet d’organiser une ca
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Corps de la demande
 

@@ -20,7 +20,7 @@ Cet endpoint créera un [bloc de contenu d’e-mail]({{site.baseurl}}/user_guide
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

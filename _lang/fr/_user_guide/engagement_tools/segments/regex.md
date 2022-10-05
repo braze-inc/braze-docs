@@ -12,7 +12,7 @@ tool:
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Les expressions régulières avec Braze
 
-<!--{% include video.html id="3h5Xbhl-TxE" align="right" %}-->
+<!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
 >  Cet article de référence explique ce que sont les expressions régulières et comment les utiliser. Il inclut également un débogueur conçu pour valider et tester des expressions régulières.
 

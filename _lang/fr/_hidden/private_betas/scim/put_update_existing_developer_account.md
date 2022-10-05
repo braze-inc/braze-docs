@@ -20,7 +20,7 @@ Cet endpoint vous permet de mettre à jour compte développeur de tableau de bor
 
 ## Limites de débit
 
-{% include rate_limits.md endpoint='update dashboard developer' %}
+{% multi_lang_include rate_limits.md endpoint='update dashboard developer' %}
 
 ## Corps de la demande
 ```

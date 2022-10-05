@@ -40,7 +40,7 @@ noindex: true
 
 # Page Title
 
-{% include video.html id="XY5uXoKIvFY" align="right" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 >  This type of article explains a concept and contains specific information about technical processes and product content (Canvas Steps, Segmentation, a specific type of Object etc.). The other type of Reference template is a Glossary. This format is not used for our API glossary or reference documentation unless there is a specific concept that needs to be explained. Be sure to outline that they will learn [this](#what-is-x-concept), [that](#topic-1-regarding-this-concept), and [the other](#topic-2-regarding-this-concept) on this page. This is a [good sample of a reference doc](https://guide.meteor.com/code-style.html). This is a good example of a [very technical reference doc](https://www.w3schools.com/html/html_intro.asp).
 >

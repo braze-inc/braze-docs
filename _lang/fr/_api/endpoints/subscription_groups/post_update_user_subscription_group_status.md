@@ -25,7 +25,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d‚
 
 ## Limite de d√©bit
 
-{% include rate_limits.md endpoint='subscription status set' %}
+{% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
 ## Corps de la demande
 

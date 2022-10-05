@@ -20,7 +20,7 @@ Cet endpoint renvoie les listes paginées d’ID de produit.
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='purchases product list' %}
+{% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
 ## Paramètres de demande
 

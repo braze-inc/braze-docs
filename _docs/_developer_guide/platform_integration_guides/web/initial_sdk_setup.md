@@ -14,7 +14,7 @@ The Braze Web SDK lets you collect analytics and display rich in-app messages, p
 
 See our [JavaScript Documentation][9] for a complete technical reference.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Step 1: Install the Braze library
 
@@ -122,7 +122,7 @@ If you use a server-side rendering framework, see our additional integration ste
 
 ## Upgrading the SDK
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
 

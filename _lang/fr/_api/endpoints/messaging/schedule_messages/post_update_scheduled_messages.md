@@ -20,7 +20,7 @@ L’endpoint de mise à jour de la planification des messages accepte les mises 
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

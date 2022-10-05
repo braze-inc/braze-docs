@@ -22,7 +22,7 @@ Cet endpoint vous permet de planifier des messages de Canvas (jusqu’à 90 jou
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Corps de la demande
 

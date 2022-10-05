@@ -23,7 +23,7 @@ Toute planification écrasera complètement celle que vous avez établie dans la
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

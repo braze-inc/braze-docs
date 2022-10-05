@@ -20,7 +20,7 @@ Use this endpoint to create send IDs that can be used to send messages and track
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='sends id create' %}
+{% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
 ## Request body
 

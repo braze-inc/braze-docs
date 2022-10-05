@@ -22,7 +22,7 @@ Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

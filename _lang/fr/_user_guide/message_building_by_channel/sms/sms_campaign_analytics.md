@@ -15,6 +15,6 @@ channel:
 
 > Le présent article de référence couvre les indicateurs SMS utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes SMS.
 
-{% include campaign_analytics.md channel="SMS" %}
+{% multi_lang_include campaign_analytics.md channel="SMS" %}
 
 

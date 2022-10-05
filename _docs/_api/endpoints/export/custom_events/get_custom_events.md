@@ -20,7 +20,7 @@ Use this endpoint to export a list of custom events that have been recorded for 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='events list' %}
+{% multi_lang_include rate_limits.md endpoint='events list' %}
 
 ## Request parameters
 

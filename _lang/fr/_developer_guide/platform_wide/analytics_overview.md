@@ -329,7 +329,7 @@ Ne pas utiliser comme ID utilisateur :
 - Numéro aléatoire ou ID de session
 - N’importe quel ID non unique
 
-{% include sdk_auth_alert.md %}
+{% multi_lang_include sdk_auth_alert.md %}
 
 #### Donnez des noms et des noms lisibles des événements personnalisés
 Imaginez que vous êtes un marketeur qui commence à utiliser Braze un an ou deux après la mise en œuvre, lire une liste déroulante remplie de noms comme « usr_non_cpte » sans contexte supplémentaire peut être déconcertant. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des meilleures pratiques suivantes :

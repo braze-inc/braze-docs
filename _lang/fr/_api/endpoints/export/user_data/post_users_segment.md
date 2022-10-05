@@ -30,7 +30,7 @@ En décembre 2021, les modifications suivantes ont été apportées à cette API
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Informations relatives à la réponse basée sur les informations d’identification
 

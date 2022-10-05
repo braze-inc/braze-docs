@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter une liste de cartes de fil d’actualité,
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

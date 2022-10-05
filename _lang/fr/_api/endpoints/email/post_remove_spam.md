@@ -20,7 +20,7 @@ Cet endpoint vous permet de supprimer les adresses e-mail de votre liste de cour
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 ```

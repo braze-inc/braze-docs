@@ -20,7 +20,7 @@ Use this endpoint to get a list of available email templates in your Braze accou
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

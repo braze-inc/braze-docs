@@ -22,7 +22,7 @@ Campaign conversions will be attributed towards the most recent send id that a g
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

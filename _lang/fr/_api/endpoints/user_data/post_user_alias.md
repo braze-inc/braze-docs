@@ -28,7 +28,7 @@ Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='users alias new' %}
+{% multi_lang_include rate_limits.md endpoint='users alias new' %}
 
 ## Corps de la demande
 

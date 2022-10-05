@@ -21,7 +21,7 @@ Cet endpoint vous permet de créer un nouveau compte développeur de tableau de 
 
 ## Limites de débit
 
-{% include rate_limits.md endpoint='create dashboard developer' %}
+{% multi_lang_include rate_limits.md endpoint='create dashboard developer' %}
 
 ## Corps de la demande
 ```

@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # AppsFlyer
 
-{% include video.html id="gQ9y2DA2LuQ" align="right" %}
+{% multi_lang_include video.html id="gQ9y2DA2LuQ" align="right" %}
 
 > AppsFlyer est une plateforme d’analytiques et d’attribution de marketing mobile qui vous aide à analyser et à optimiser vos applications grâce à des analytiques marketing, à l’attribution mobile et à la création de liens profonds.
 

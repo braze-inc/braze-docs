@@ -20,7 +20,7 @@ L’endpoint de suppression des messages planifiés vous permet d’annuler un m
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 
