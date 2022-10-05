@@ -166,7 +166,7 @@ When connecting different app groups to the same Snowflake account, you must cre
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies). 
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: | For Instances `EU-01` and `EU-02`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06 | For Instances `EU-01` and `EU-02` |
 |---|---|
 | `23.21.118.191`| `52.58.142.242`
 | `34.206.23.173`| `52.29.193.121`
