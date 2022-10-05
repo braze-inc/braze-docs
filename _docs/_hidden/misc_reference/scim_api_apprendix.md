@@ -120,5 +120,3 @@ A valid team permission object is a JSON object with the following key value pai
 | Marketing / Editorial | `marketing` |
 | Product Management | `pm` |
 {: .reset-td-br-1 .reset-td-br-2}
-
-

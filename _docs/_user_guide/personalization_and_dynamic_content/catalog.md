@@ -14,12 +14,6 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
-{% alert important %}
-Catalogs are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
-If you'd like to share your feedback on this feature or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com).
-
 ## Creating a catalog
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
@@ -220,6 +214,10 @@ You can upload a CSV of new catalog items to add, or catalog items to update. To
 ### Using Liquid
 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
+
+## Mangaging catalogs
+
+As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
 ## Limitations {#limits}
 
