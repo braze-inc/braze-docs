@@ -14,33 +14,47 @@ tool: Canvas
 
 The User Update component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
-With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook.
+With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component does consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
-Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you are making, you can ensure that these updates have been completed prior to when the messages send.
+Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
 
 {% alert important %}
-User Update is currently in early access and only supported in Canvas Flow. Contact your Braze account manager if you are interested in participating in the Canvas User Updates early access. <br><br>Braze will begin to deprecate Braze-to-Braze webhooks that target the `/users/track` endpoint once this feature is generally available. We'll let you know about the full deprecation process and timeline when the User Update component is released so that you have the time and support from Braze to make the switch.
+User Update is currently in early access and only supported in Canvas Flow. Contact your Braze account manager if you are interested in participating in this early access. <br><br>Braze will begin to deprecate Braze-to-Braze webhooks that target the `/users/track` endpoint once this feature is generally available. We'll let you know about the full deprecation process and timeline when the User Update component is released so that you have the time and support from Braze to make the switch.
 {% endalert %}
 
-## Create a User Update 
+## Create a User Update
 
-To create a User Update step, add a component to your Canvas and select **User Update**. Then, add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer.
+Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
+
+There are three options that allow you to update existing, add new, or remove user profile information. If you switch between actions, this will clear any existing inputs. This component will update up to 50,000 user profiles per minute.
+
+### Update user attribute
+
+To update a user attribute, select an attribute name from your list of existing attributes and key value using the dropdowns.
+
+### Remove user attribute
+
+To remove a user attribute, select an attribute name using the dropdown.
+
+### Advanced JSON composed 
+
+Then, add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer.
 
 ![][2] 
 
-{% alert note %}
+#### Limitations
+
 Do not include any of the following information in the JSON composer:
 * External user ID
 * API key
 * Braze cluster URL
 * Fields related to push token imports
-{% endalert %}
 
 As an example, users who receive the following User Update step will have the VIP Member attribute set to `true`.
 
 ![][3]
 
-### Personalization Features
+## Personalization features
 
 User Update also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
