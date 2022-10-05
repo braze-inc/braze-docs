@@ -209,7 +209,6 @@ You must successfully test an integration before it can move from Draft into Act
 ### Set up additional integrations or users (optional)
 
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the snowflake account. 
-
 ![][4]
 
 If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again. 
