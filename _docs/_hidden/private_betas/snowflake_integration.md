@@ -1,23 +1,23 @@
 ---
-nav_title: Braze Cloud Ingestion 
+nav_title: Braze Cloud Data Ingestion 
 permalink: /cloud_ingestion/
-description: "This reference article covers Braze Cloud Ingestion and how to sync relevant user data to your Snowflake integration."
+description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Snowflake integration."
 hidden: true
 ---
 
-# Braze Cloud Ingestion - Snowflake integration
+# Braze Cloud Data Ingestion - Snowflake integration
 
 {% alert important %}
-Braze Cloud Ingestion is currently in beta. Contact your Braze account manager if you are interested in participating in the beta.
+Braze Cloud Data Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the Early Access.
 {% endalert %}
 
-## What is Braze Cloud Ingestion?
+## What is Braze Cloud Data Ingestion?
 
-Braze Cloud Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user data. Once synced to Braze, these attributes can be used for personalization or segmentation.
+Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user data. Once synced to Braze, these attributes can be used for personalization or segmentation.
 
 ### How it works
 
-With Braze Cloud Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. 
+With Braze Cloud Data Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. 
 
 When a sync runs, Braze will directly connect to your Snowflake instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
 
