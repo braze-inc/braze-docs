@@ -24,21 +24,21 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
-### Expected behavior
+#### Notes for development teams
 
-#### Android
+###### Android 
 
-- Android 14 and up - Users can see the in-app message. If you are testing the in-app message and need to see it multiple times, it can be brought up again after disabling push in device settings.
-- Android 13 and under - Push primers are not needed because push is opted-in by default. The in-app message will not display if push is enabled resulting in very few users recieving the in-app message.
+- Android 13 and under - implementing push primers is not recommended because push is opted-in by default. 
+- Android 14 and above - if and wish to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. 
 
-#### iOS
+###### iOS
+- The iOS prompt can be displayed only **once** per install, enforced by the operating system. 
+- The prompt will not display if the app's push setting is on or off. (e.g., will display for Provisional, not determined, etc.).
+  - If we find the app's push setting is on, we do not show the in-app message as the user is already opted-in. 
+  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app. 
 
-- The iOS prompt can only be displayed at most once per install. This is enforced by the operating system meaning if it was displayed guring the app install, it will not display again.
-- If the app's push setting is on, we do not show the in-app message as the user is already opted in. 
-- If the app's push settings is off, you should forward the user to the app's noticiation settings in the settings app.
-- If the push setting is any other field (e.g., Provisional, not determined), the in-app message should display.
+##### Manual code removal
 
-#### Note for development teams
 This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
 <br><br>
 You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
