@@ -42,7 +42,7 @@ To remove a custom attribute, select an attribute name using the dropdown. You c
 
 ### Advanced JSON composer
 
-Then, add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer. 
+Add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer. 
 
 ![][2]{: style="max-width:80%;"}
 
