@@ -20,7 +20,7 @@ Use this endpoint to schedule a campaign, Canvas, or other message to be sent at
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 
@@ -167,8 +167,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 ```json
 {
-    "dispatch_id": (string),
-    "schedule_id": (string),
+    "dispatch_id": (string) the dispatch identifier,
+    "schedule_id": (string) the schedule identifier,
     "message": "success"
 }
 ```

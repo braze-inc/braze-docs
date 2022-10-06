@@ -20,7 +20,7 @@ Use this endpoint to remove email addresses from your Braze spam list. We will a
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 ```

@@ -10,7 +10,7 @@ description: "Cet article couvre la désactivation du suivi du SDK Web, y compri
 
 # Désactiver le suivi du SDK Web
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 Afin de se conformer aux réglementations de confidentialité des données, l’activité de suivi des données sur le SDK Web peut être entièrement arrêtée à l’aide de la méthode [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk). Cette méthode synchronisera toutes les données enregistrées avant que `disableSDK()` soit appelé et tous les appels ultérieurs vers le SDK Braze pour le Web pour cette page et les charges de page ultérieures seront ignorés. Si vous souhaitez reprendre le recueil des données ultérieurement, vous pouvez utiliser la méthode [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) pour reprendre la collecte des données.
 

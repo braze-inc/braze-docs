@@ -91,12 +91,12 @@ module Jekyll
       end
 
       # Render the variable if required
-      def render_variable(context)
+      def render_variable(context, file)
         if @file =~ VARIABLE_SYNTAX
           partial = context.registers[:site]
             .liquid_renderer
             .file("(variable)")
-            .parse(@file)
+            .parse(file)
           partial.render!(context)
         end
       end
@@ -104,18 +104,25 @@ module Jekyll
       def render(context)
         site = context.registers[:site]
 	      lang = site.config['language'] || 'en'
-				include_prefix  = ''
+				include_prefix = ''
+        lang_prefix = ''
 				if (lang != 'en')
-					include_prefix = MULTI_LANG_PATH.gsub('[LANG]', lang)
+					lang_prefix = MULTI_LANG_PATH.gsub('[LANG]', lang)
+          include_prefix = lang_prefix + '_includes/'
+        else
+          include_prefix = '_includes/'
 				end
-				include_prefix += '_includes/'
-				@file = include_prefix + @file
-        file = render_variable(context) || @file
 
+        file = render_variable(context, @file) || (include_prefix + @file)
         validate_file_name(file)
 
         source = File.expand_path(context.registers[:site].config['source']).freeze
         path = File.join(source, file)
+        # Check if file exist, if not default to normal path
+        if (!File.exist?(path))
+          path.gsub!(lang_prefix, '/')
+        end
+
         return unless path
 
         partial = Liquid::Template.parse(read_file(path, context))

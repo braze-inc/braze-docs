@@ -66,6 +66,12 @@ Uninstall statistics for campaigns are located on the Campaign Details page. For
 
 ![Uninstall Campaign Level][6]
 
+## Troublshooting
+
+### Why am I seeing a spike in uninstalls all of a sudden?
+
+If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency. 
+
 [1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
 [2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"
 [3]: {% image_buster /assets/img_archive/Uninstall_232.png %} "Uninstall Graph"

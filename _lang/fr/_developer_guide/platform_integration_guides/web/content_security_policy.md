@@ -16,7 +16,7 @@ La politique de sécurité du contenu fournit une sécurité supplémentaire en 
 Cet article est destiné aux développeurs travaillant sur des sites Web qui appliquent des règles CSP et s’intègrent à Braze. Il n’est pas destiné à donner des conseils sur la manière dont vous devez aborder la sécurité.
 {% endalert %}
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Attributs Nonce {#nonce}
 

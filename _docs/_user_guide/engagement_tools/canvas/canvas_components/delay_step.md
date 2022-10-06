@@ -19,6 +19,8 @@ You can also use this component to delay a different step until an exact date, u
 
 To create a delay, first add a step to your Canvas. For Canvas Flow, drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Delay**.
 
+There are several limitations to be aware of when creating a delay in your Canvas journey.
+- The delay limit is 30 days.
 - A Delay component cannot have full step sibling steps. In other words, you cannot create a full step that branches into a delay and a full step. This restriction exists because if there was a branch with a Delay step and a full step, it wouldn’t be clear which branch users would go down.
 - A Delay component can only connect to one next step.
 
@@ -29,9 +31,7 @@ You can choose the type of delay before the next message in your Canvas. You can
 {% tabs %}
   {% tab After a duration %}
 
-  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days (24-hour period), calendar days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
-
-  There are two day options available: days and calendar days. Days are calculated as 24 hours after the user entered the step, whereas calendar days are calculated as midnight the following day. With calendar days, users could enter a Delay step set to 1 calendar day at 11 pm in their local time, then move onto the following step one hour later (on midnight the next calendar day).
+  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
 
   {% endtab %}
   {% tab Until a specific date %}

@@ -13,5 +13,5 @@ channel:
 
 # GIF {#gifs-news-feed}
 
-{% include archive/android/gifs.md channel="News Feed" %}
+{% multi_lang_include archive/android/gifs.md channel="News Feed" %}
 

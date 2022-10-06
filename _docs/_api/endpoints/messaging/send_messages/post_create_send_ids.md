@@ -20,7 +20,7 @@ Use this endpoint to create send IDs that can be used to send messages and track
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='sends id create' %}
+{% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
 ## Request body
 
@@ -62,7 +62,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
-  "send_id" : "example_send_id"
+  "send_id" : (string) the send identifier
 }
 ```
 

@@ -102,7 +102,7 @@ hide_breadcrumb: true
     </div>
     <div id="user_bottom">
         <div id="user_popular" class="user_info">
-          <div class="user_name">Popular Topics</div>
+          <div class="user_name">{{ site.data.i18n[site.language]['popular_topic'] | default: "Popular Topics"}}</div>
             <div class="user_description">
             {%- for user_list in page.popular_topic_list  -%}
               <div>

@@ -7,4 +7,4 @@ layout: basic
 ---
 
 
-{% include search_page.html %}
+{% multi_lang_include search_page.html %}

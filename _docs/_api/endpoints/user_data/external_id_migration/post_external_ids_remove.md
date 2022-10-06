@@ -28,7 +28,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Request body
 
@@ -71,11 +71,9 @@ The response will confirm all successful removals, as well as unsuccessful remov
 
 ```
 {
-
   "message" : (string) status message,
-  "removed_ids" : (array of successful Remove Operations),
-  "removal_errors": (array of any <minor error message>)
-
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 

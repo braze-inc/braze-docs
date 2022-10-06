@@ -20,7 +20,7 @@ Use this endpoint to export metadata about a Canvas, such as the name, time crea
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -43,36 +43,36 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "created_at": (string) date created as ISO 8601 date,
-  "updated_at": (string) date updated as ISO 8601 date,
-  "name": (string) Canvas name,
-  "description": (string) Canvas description,
+  "created_at": (string) the date created as ISO 8601 date,
+  "updated_at": (string) the date updated as ISO 8601 date,
+  "name": (string) the Canvas name,
+  "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
-  "schedule_type": (string) type of scheduling action,
-  "first_entry": (string) date of first entry as ISO 8601 date,
-  "last_entry": (string) date of last entry as ISO 8601 date,
+  "schedule_type": (string) the type of scheduling action,
+  "first_entry": (string) the date of first entry as ISO 8601 date,
+  "last_entry": (string) the date of last entry as ISO 8601 date,
   "channels": (array of strings) step channels used with Canvas,
   "variants": [
     {
-      "name": (string) name of variant,
-      "id": (string) API identifier of the variant,
-      "first_step_ids": (array of strings) API identifiers for first steps in variant,
-      "first_step_id": (string) API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
+      "name": (string) the name of variant,
+      "id": (string) the API identifier of the variant,
+      "first_step_ids": (array of strings) the API identifiers for first steps in variant,
+      "first_step_id": (string) the API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
     },
     ... (more variations)
   ],
-  "tags": (array of strings) tag names associated with the Canvas,
+  "tags": (array of strings) the tag names associated with the Canvas,
   "steps": [
     {
-      "name": (string) name of step,
-      "id": (string) API identifier of the step,
-      "next_step_ids": (array of strings) API identifiers of steps following step,
-      "channels": (array of strings) channels used in step,
+      "name": (string) the name of step,
+      "id": (string) the API identifier of the step,
+      "next_step_ids": (array of strings) the API identifiers of steps following step,
+      "channels": (array of strings) the channels used in step,
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
-              "channel": (string) channel type of the message (eg., "email"),
-              ... channel-specific fields for this message, see Campaign Details Endpoint API Response for example message responses ...
+              "channel": (string) the channel type of the message (eg., "email"),
+              ... channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses ...
           }
       }
     },

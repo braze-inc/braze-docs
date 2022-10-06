@@ -20,7 +20,7 @@ Use this endpoint to return a JSON list of information about scheduled campaigns
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -42,23 +42,13 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
-    # Example Canvas
     {
-      "name" => String,
-      "id" => String,
-      "type" => "Canvas",
-      "tags" => [String tag names],
-      "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
-      "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
-    },
-    # Example Campaign
-    {
-      "name" => String,
-      "id" => String,
-      "type" => "Campaign",
-      "tags" => [String tag names],
-      "next_send_time" => "YYYY-MM-DD HH:mm:ss" (may also include time zone if not local/intelligent delivery)
-      "schedule_type" => one of "local_time_zones", "intelligent_delivery", or the name of your company's time zone
+      "name" (string) the name of the scheduled boradcast,
+      "id" (stings) the Canvas or campaign identifier,
+      "type" (string) the broadcast type either Canvas or Campaign,
+      "tags" (array) an array of tag names formatted as strings,
+      "next_send_time" (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
+      "schedule_type" (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
     },
   ]
 }

@@ -14,7 +14,7 @@ Le SDK Braze pour le Web vous permet de collecter des analytiques et d’affiche
 
 Consultez notre [Documentation JavaScript][9] pour obtenir une référence technique complète.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Étape 1 : Installer la bibliothèque Braze
 
@@ -119,7 +119,7 @@ braze.toggleLogging()
 
 ## Mise à niveau du SDK
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 Lorsque vous consultez le SDK Braze pour le Web de notre réseau de diffusion de contenu, par exemple, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (tel que recommandé par nos instructions d’intégration par défaut), vos utilisateurs recevront des mises à jour mineures (correctifs de bogues et fonctions rétrocompatibles, versions) `a.a.a` par `a.a.z` dans les exemples ci-dessus) automatiquement lorsqu’ils actualisent votre site. 
 

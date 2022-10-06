@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # AppsFlyer
 
-{% include video.html id="gQ9y2DA2LuQ" align="right" %}
+{% multi_lang_include video.html id="gQ9y2DA2LuQ" align="right" %}
 
 > AppsFlyer est une plateforme d’analytiques et d’attribution de marketing mobile qui vous aide à analyser et à optimiser vos applications grâce à des analytiques marketing, à l’attribution mobile et à la création de liens profonds.
 
@@ -37,7 +37,7 @@ Assurez-vous que les lignes de code suivantes sont insérées au bon endroit, ap
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
 customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
@@ -51,9 +51,9 @@ Braze conservera toujours les valeurs IDFA pour les utilisateurs qui ont choisi 
 #### Unité
 
 ```
-Appboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.getDeviceId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
-customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
+customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
 

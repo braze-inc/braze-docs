@@ -12,7 +12,7 @@ tool:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions with Braze
 
-<!--{% include video.html id="3h5Xbhl-TxE" align="right" %}-->
+<!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
 >  This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
 

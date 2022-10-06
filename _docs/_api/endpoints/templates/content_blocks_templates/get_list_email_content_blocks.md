@@ -20,7 +20,7 @@ Use this endpoint to list your existing [Content Blocks]({{site.baseurl}}/user_g
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -47,14 +47,14 @@ Authorization: Bearer YOUR-REST-API-KEY
   "count": "integer",
   "content_blocks": [
     {
-      "content_block_id": "string",
-      "name": "string",
-      "content_type": "html or text",
-      "liquid_tag": "string",
-      "inclusion_count" : "integer",
-      "created_at": "time-in-iso",
-      "last_edited": "time-in-iso",
-      "tags" : "array of strings"
+      "content_block_id": (string) the Content Block identifier,
+      "name": (string) the name of the Content Block,
+      "content_type": (string) the content type, html or text,
+      "liquid_tag": (string) the Liquid tags,
+      "inclusion_count" : (integer) the inclusion count,
+      "created_at": (string) The time the Content Block was created in ISO 8601,
+      "last_edited": (string) The time the Content Block was last edited in ISO 8601,
+      "tags": (array) An array of tags formatted as strings,
     }
   ]
 }

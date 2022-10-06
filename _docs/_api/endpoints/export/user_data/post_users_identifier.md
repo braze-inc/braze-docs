@@ -20,7 +20,7 @@ Use this endpoint to export data from any user profile by specifying a user iden
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users export ids' %}
+{% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
 ## Request body
 

@@ -8,7 +8,7 @@ description: "Cet article de référence explique comment définir des attributs
 ---
 
 # Définir des attributs personnalisés
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 

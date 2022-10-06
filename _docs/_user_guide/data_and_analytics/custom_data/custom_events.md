@@ -97,6 +97,9 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
+Nested custom event properties are also supported in [Action-Based Delivery][19] or conversion processing:
+![Custom event property filters for an abandoned card. One filter is selected if any items in the cart have a price more than 100 dollars.][20]
+
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
@@ -124,7 +127,11 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
+
+{% alert note %}
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
+{% endalert %}
 
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
@@ -137,9 +144,11 @@ For the Canvases built with the original editor, `canvas_entry_properties` can b
 {% endtab %}
 
 {% tab Event Properties %}
-Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
+Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases.
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+
+For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
 
@@ -150,14 +159,9 @@ In the first Message step following an Action Path, you can use `event_propertie
 
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
-{% alert important %}
-This feature is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
-
 #### Limitations
 
 - Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
-- Sending nested custom attributes (objects as a custom attribute data type) is limited to customers participating in the early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
 - The following SDK versions support nested objects:
 
@@ -246,10 +250,6 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
 
-{% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
-
 {% tabs %}
 {% tab Music Example %}
 
@@ -275,10 +275,6 @@ Triggering a campaign with nested properties from the "Ordered" event:
 ##### Segmentation
 
 Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
-
-{% alert important %}
-Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, reach out to your Braze account manager.
-{% endalert %}
 
 ##### Event property segmentation
 
@@ -312,7 +308,7 @@ If you would like to segment on the values of event properties, you have two opt
 1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
 2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
 
-Braze's Success and Support teams can help recommend the best approach depending on your specific needs. 
+Braze's Success and Support teams can help recommend the best approach depending on your specific needs.
 
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
@@ -323,3 +319,4 @@ Braze's Success and Support teams can help recommend the best approach depending
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

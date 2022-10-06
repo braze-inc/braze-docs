@@ -6,11 +6,11 @@ layout: self_help
 help_top_header: "Aide Braze"
 
 page_type: landing
-user_top_text: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d'aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
-description: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d'aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
+user_top_text: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
+description: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
 
 resources_list:
-  - name: Articles d'aide
+  - name: Articles d’aide
     link: /docs/help/help_articles/overview/
     image: /assets/img/pencil-paper.png
   - name: Meilleures pratiques et FAQ
@@ -38,8 +38,8 @@ popular_topic_list:
     link: /docs/help/help_articles/push/push_error_codes/
   - name: Modifier un attribut personnalisé ou un type d’événement
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: Migration des jetons Push
+  - name: Migration du jeton Push
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: Journalisation des Propriétés de l'événement personnalisé
+  - name: Journalisation des Propriétés de l’événement personnalisé
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
 ---

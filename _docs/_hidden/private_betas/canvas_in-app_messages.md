@@ -6,7 +6,7 @@ hidden: true
 
 # In-app messages in Canvas
 
-{% include video.html id="6X8E20BlblI" align="right" %}
+{% multi_lang_include video.html id="6X8E20BlblI" align="right" %}
 
 Once you've set up delay and audience options, you can add an in-app message to your Canvas by selecting **In-App Message** in the **Messaging Channels** panel. Once a step's delay has passed and the audience options have been checked, the in-app message will be set live, and users will see it if they open the app.
 

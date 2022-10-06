@@ -34,8 +34,9 @@ guide_featured_list:
 
 # channel to icon/fa or image mapping
 glossary_tags:
-  - name: Campaign
+  - name: Campaigns
   - name: Canvas
+  - name: Catalogs
   - name: Content Blocks
   - name: Custom Events
   - name: Email List
@@ -45,6 +46,7 @@ glossary_tags:
   - name: Purchases
   - name: Preference Center
   - name: Schedule Messages
+  - name: SCIM
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -102,7 +104,7 @@ glossaries:
     description: Create send IDs that can be used to send messages and track message performance programatically, without campaign creation for each send.
     tags:
       - Send Messages
-  - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send</a>
+  - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>
     description: Send immediate, ad-hoc transactional messages to a designated user.
     tags:
       - Send Messages
@@ -334,4 +336,36 @@ glossaries:
     description: Update a preference center.
     tags:
       - Preference Center
+  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+    description: Delete multiple items in your catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+    description: List a catalog item and its details.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Edit multiple items in your catalog.
+    tags: 
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+    description: Create multiple items in your catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/post_create_user_account/'>/scim/v2/users</a>
+    description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    tags:
+      - SCIM
+  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/users/{ID}</a>
+    description: Look up an existing dashboard user account by specifying their email.
+    tags:
+      - SCIM
+  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/users/{ID}</a>
+    description: Update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    tags:
+      - SCIM
+  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/users/{ID}</a>
+    description: Permanently delete an existing dashboard user.
+    tags:
+      - SCIM
 ---

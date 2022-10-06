@@ -9,7 +9,7 @@ channel: notification push
 ---
 
 # Intégration de notifications Push
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 ![Un exemple de notification push pour Windows Universal.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 

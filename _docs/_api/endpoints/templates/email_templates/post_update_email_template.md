@@ -22,7 +22,7 @@ All fields other than the `email_template_id` are optional, but you must specify
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

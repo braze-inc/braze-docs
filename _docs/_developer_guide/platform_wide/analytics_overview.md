@@ -330,7 +330,7 @@ These should not be used as user IDs:
 - Email address
 - Another 3rd party vendor's User ID
 
-{% include sdk_auth_alert.md %}
+{% multi_lang_include sdk_auth_alert.md %}
 
 #### Give custom events and attributes readable names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:

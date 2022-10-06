@@ -11,7 +11,7 @@ search_tag: Partner
 
 # mParticle
 
-{% include video.html id="Njhqwd36gZM" align="right" %}
+{% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
 > mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key customer journey moments.
 

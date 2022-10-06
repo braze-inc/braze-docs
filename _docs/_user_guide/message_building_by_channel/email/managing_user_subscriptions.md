@@ -88,7 +88,7 @@ To place a link to the preference center in your emails, use the following prefe
 {% endraw %}
 
 {% alert note %}
-The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
+The Preference Center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 {% endalert %}
 
 The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.

@@ -10,11 +10,11 @@ description: "Cet article explique comment définir des ID utilisateur dans votr
 
 # Définir des ID Utilisateur pour iOS
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Convention de dénomination des ID utilisateur suggérée
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## Attribution d’un ID utilisateur
 
@@ -47,11 +47,11 @@ Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un u
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Alias d’utilisateurs
 
-{% include archive/setting_user_ids/aliasing.md platform="iOS" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

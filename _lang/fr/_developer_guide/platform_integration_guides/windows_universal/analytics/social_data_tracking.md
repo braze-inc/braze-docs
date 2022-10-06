@@ -8,7 +8,7 @@ description: "Cet article de référence explique comment gérer le suivi des do
 ---
 
 # Suivre des données sociales
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 Contrairement au SDK Braze pour iOS, le SDK Braze pour Windows ne recueille pas automatiquement les données Facebook et Twitter. Il est cependant possible d’ajouter des données de réseaux sociaux à un profil utilisateur Braze depuis le SDK Windows :
 

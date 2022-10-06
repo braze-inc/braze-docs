@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Branch pour l’attribution {#branch}
 
-{% include video.html id="PwGKqfwV-Ss" align="right" %}
+{% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/) est une plateforme de liaison mobile qui vous aide à acquérir, engager et mesurer à travers tous les appareils, canaux et plateformes en vous offrant une vue complète de tous les points de contact avec les utilisateurs.
 
@@ -34,7 +34,7 @@ L’intégration de Braze et de Branch vous aidera à comprendre exactement quan
 Si vous avez une application Android, vous devez transmettre un ID de périphérique Braze unique à Branch. Cet ID peut être défini dans le SDK Branch de la méthode `setRequestMetadataKey()`. L’extrait de code suivant doit être inclus avant d’appeler `initSession`. Vous devez également initialiser le SDK Braze avant de définir les métadonnées de demande dans le SDK Branch.
 
 ```java
-Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getInstallTrackingId());
+Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getDeviceId());
 
 ...
 
