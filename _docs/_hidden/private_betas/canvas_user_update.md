@@ -26,21 +26,25 @@ User Update is currently in early access and only supported in Canvas Flow. Cont
 
 Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
-There are three options that allow you to update existing, add new, or remove user profile information. If you switch between actions, this will clear any existing inputs. This component will update up to 50,000 user profiles per minute.
+There are three options that allow you to update existing, add new, or remove user profile information. This component will update up to 50,000 user profiles per minute.
 
-### Update user attribute
+### Update custom attribute
 
-To update a user attribute, select an attribute name from your list of existing attributes and key value using the dropdowns.
+To add or update a custom attribute, select an attribute name from your list of attributes and enter the key value.
 
-### Remove user attribute
+![][4]{: style="max-width:80%;"}
 
-To remove a user attribute, select an attribute name using the dropdown.
+### Remove custom attribute
 
-### Advanced JSON composed 
+To remove a custom attribute, select an attribute name using the dropdown. You can switch to the advanced JSON composer to further edit. 
 
-Then, add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer.
+![][5]{: style="max-width:80%;"}
 
-![][2] 
+### Advanced JSON composer
+
+Then, add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer. 
+
+![][2]{: style="max-width:80%;"}
 
 #### Limitations
 
@@ -52,9 +56,9 @@ Do not include any of the following information in the JSON composer:
 
 ## Use case
 
-As an example, users who receive the following User Update step will have the VIP Member attribute set to `true`.
+For example, if we want a group of users to be promoted to VIP members, we can select **VIP Member** as the attribute name, and enter `True` as the corresponding key value. Now, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
 
-![][3]
+![][3]{: style="max-width:80%;"}
 
 ## Personalization features
 
@@ -62,10 +66,12 @@ User Update also supports the following personalization features:
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
-* Liquid logic (including [Aborting Messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
+* Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
 
 [1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
 [2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %} 
 [3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %} 
+[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %} 
+[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %} 
