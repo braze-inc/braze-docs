@@ -48,5 +48,3 @@ You can edit and update your preference center by using the [`/preference_center
 ## Identifying preference centers and details
 
 To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) endpoint to return related information such as the last updated timestamp, the preference center ID, and more.
-
-`
