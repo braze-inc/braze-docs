@@ -2,7 +2,7 @@
 nav_title: Preference Center
 article_title: Preference Center Endpoints
 search_tag: Endpoint
-page_order: 3.5
+page_order: 4
 layout: featured
 
 description: "This landing page lists the Braze Preference Center Endpoints."
