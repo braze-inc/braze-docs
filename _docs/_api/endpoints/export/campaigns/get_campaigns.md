@@ -20,7 +20,7 @@ Use this endpoint to export a list of campaigns, each of which will include its 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

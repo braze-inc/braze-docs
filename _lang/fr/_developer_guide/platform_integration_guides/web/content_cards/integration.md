@@ -11,7 +11,7 @@ description: "Cet article couvre l’intégration d’une carte de contenu pour 
 
 # Intégration d’une carte de contenu
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Modèle de données de carte de contenu {#data-models}
 

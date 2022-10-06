@@ -20,7 +20,7 @@ Use this endpoint to export all users within a Global Control Group. User data i
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Credentials-based response details
 

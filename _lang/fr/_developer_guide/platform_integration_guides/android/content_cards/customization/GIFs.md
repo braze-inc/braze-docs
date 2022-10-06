@@ -15,4 +15,4 @@ channel:
 
 Cet article s’applique aux intégrations qui utilisent les fragments ou les vues de carte de contenu par défaut du SDK Braze pour afficher les cartes de contenu.
 
-{% include archive/android/gifs.md channel="Content Cards" %}
+{% multi_lang_include archive/android/gifs.md channel="Content Cards" %}

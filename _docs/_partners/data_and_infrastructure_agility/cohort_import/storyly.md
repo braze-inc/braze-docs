@@ -39,7 +39,7 @@ __Personalized stories with user attributes__<br>Braze user attributes are also 
 
 The Braze Storyly integration is explained in the following video:
 
-{% include video.html id="3-OEqQs48Zw" source="youtube" %}
+{% multi_lang_include video.html id="3-OEqQs48Zw" source="youtube" %}
 
 Make sure that your Storyly integration holds custom parameters. These paramters will be matched to the Braze `external id` user property. Custom parameter implementation is explained here for [iOS](https://integration.storyly.io/ios/personalization-customaudience.html), [Android](https://integration.storyly.io/android/personalization-customaudience.html), [React Native](https://integration.storyly.io/react-native/personalization-customaudience.html), [Flutter](https://integration.storyly.io/flutter/personalization-customaudience.html), and [Web](https://integration.storyly.io/web/personalization-customaudience.html) .
 

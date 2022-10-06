@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter des données de série temporelles pour un
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

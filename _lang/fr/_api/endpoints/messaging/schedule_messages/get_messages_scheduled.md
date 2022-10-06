@@ -20,7 +20,7 @@ Vous pouvez afficher une liste JSON des campagnes et Canvas planifiés à venir 
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

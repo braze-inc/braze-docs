@@ -74,7 +74,7 @@ Les méthodes Javascript suivantes sont prises en charge dans les messages In-Ap
 }
 </style>
 
-{% include archive/appboyBridge.md %}
+{% multi_lang_include archive/appboyBridge.md %}
 
 ## Actions basées sur des liens
 

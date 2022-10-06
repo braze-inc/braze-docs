@@ -25,7 +25,7 @@ Comme pour l’[endpoint Envoyer des campagnes déclenchées]({{site.baseurl}}/a
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='transactional email' %}
+{% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
 ## Corps de la demande
 

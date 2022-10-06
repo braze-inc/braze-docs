@@ -22,7 +22,7 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Request body
 

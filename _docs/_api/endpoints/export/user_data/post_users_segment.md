@@ -30,7 +30,7 @@ Beginning December 2021, the following changed for this API:<br><br>1. The `fiel
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Credentials-based response details
 

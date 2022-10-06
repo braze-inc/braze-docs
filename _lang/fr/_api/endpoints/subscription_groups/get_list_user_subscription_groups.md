@@ -26,7 +26,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

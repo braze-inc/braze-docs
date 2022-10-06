@@ -7,7 +7,7 @@ description: "Cet article de référence montre comment vous abonner aux mises �
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 # Suivre une session pour iOS
 

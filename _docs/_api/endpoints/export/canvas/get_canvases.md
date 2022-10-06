@@ -22,7 +22,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

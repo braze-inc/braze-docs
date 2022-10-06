@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Branch for attribution {#branch}
 
-{% include video.html id="PwGKqfwV-Ss" align="right" %}
+{% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
 

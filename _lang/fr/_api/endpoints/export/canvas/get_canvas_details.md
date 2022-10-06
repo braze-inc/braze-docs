@@ -20,7 +20,7 @@ Cet endpoint vous permet d’exporter des métadonnées sur un Canvas, telles qu
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

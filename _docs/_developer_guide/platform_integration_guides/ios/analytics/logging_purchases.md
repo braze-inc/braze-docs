@@ -7,7 +7,7 @@ description: "This reference article shows how to track in-app purchases and rev
 
 ---
  
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # Logging purchases for iOS

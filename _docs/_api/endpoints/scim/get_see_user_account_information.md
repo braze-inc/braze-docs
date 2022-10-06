@@ -19,7 +19,7 @@ This endpoint allows you to look up an existing dashboard user account by specif
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='look up dashboard user' %}
+{% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
 ## Request parameters
 

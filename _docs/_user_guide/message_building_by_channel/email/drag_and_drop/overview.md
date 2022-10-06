@@ -14,7 +14,7 @@ tool:
 
 > With the Drag & Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag & drop editing experience.
 
-{% include video.html id="4dTrkxe8DLo" align="right" %}
+{% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
 Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. 
 

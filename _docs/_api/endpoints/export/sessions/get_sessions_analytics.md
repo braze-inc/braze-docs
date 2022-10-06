@@ -20,7 +20,7 @@ Use this endpoint to retrieve a series of the number of sessions for your app ov
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

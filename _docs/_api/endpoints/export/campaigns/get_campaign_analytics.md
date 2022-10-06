@@ -20,7 +20,7 @@ Use this endpoint to retrieve a daily series of various stats for a campaign ove
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

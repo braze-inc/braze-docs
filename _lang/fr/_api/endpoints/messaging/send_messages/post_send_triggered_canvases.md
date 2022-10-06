@@ -22,7 +22,7 @@ Cet endpoint vous permet d’envoyer des messages de Canvas via une livraison d�
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Corps de la demande
 

@@ -22,7 +22,7 @@ Les conversions de campagne seront attribuées à l’ID d’envoi le plus réce
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

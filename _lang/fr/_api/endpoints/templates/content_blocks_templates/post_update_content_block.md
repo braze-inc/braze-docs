@@ -20,7 +20,7 @@ Utilisez cet endpoint pour mettre à jour un [bloc de contenu d’e-mail]({{site
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

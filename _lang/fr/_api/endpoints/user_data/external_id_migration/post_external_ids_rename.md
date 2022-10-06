@@ -32,7 +32,7 @@ Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec l
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Corps de la demande
 

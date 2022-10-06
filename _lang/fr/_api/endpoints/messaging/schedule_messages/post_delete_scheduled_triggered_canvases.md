@@ -20,7 +20,7 @@ L’endpoint de suppression de la planification vous permet d’annuler un messa
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

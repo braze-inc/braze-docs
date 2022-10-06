@@ -304,7 +304,7 @@ $(document).ready(function() {
     var pg_prev = nav_links.eq(nav_index - 1);//nav_active.prevAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_prev_link.attr('href',pg_prev.attr('href') );
-    pg_prev_div.html('<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> PREVIOUS</div>' + pg_prev.html() );
+    pg_prev_div.html(`<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> ${site_i18n['previous'] || 'PREVIOUS'}</div> ${pg_prev.html()}`);
     pg_prev_div.css('display', 'inline-block');
     if (nav_index < (nav_links.length -1)) {
       pg_prev_div.css('border-right', '0px');
@@ -318,7 +318,7 @@ $(document).ready(function() {
     var pg_next = nav_links.eq(nav_index + 1);//nav_active.nextAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_next_link.attr('href',pg_next.attr('href') );
-    pg_next_div.html('<div class="nav_indicator">NEXT <i class="fas fa-long-arrow-alt-right"></i></div>' + pg_next.html() );
+    pg_next_div.html(`<div class="nav_indicator">${site_i18n['next'] || 'NEXT'} <i class="fas fa-long-arrow-alt-right"></i></div> ${pg_next.html()}`);
     pg_next_div.css('display', 'inline-block');
   }
   else {

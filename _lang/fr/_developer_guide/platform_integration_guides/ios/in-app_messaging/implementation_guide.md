@@ -8,7 +8,7 @@ channel:
   - messages in-app
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 <br>

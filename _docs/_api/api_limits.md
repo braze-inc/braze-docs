@@ -33,6 +33,8 @@ The following table lists specific API rate limits for different request types. 
 | [`/canvas/trigger/send`][17.2] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
 | [`/sends/id/create`][18] | 100 requests per day. |
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per app group. |
+| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per app group. |
 {: .reset-td-br-1 .reset-td-br-2}
 <!--
 | [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
@@ -114,3 +116,8 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [23]: {{site.baseurl}}/scim/post/
 [24]: {{site.baseurl}}/scim/delete/
 [25]: {{site.baseurl}}/scim/put
+[26]: {{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/
+[27]: {{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/
+[28]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/
+[29]: {{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/
+[30]: {{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/

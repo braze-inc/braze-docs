@@ -42,6 +42,7 @@ collections:
     title: Guide du développeur
   api:
     title: API
+    default_nav_url: basics/
   partners:
     title: Technology Partners
   help:

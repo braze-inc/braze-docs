@@ -11,11 +11,11 @@ description: "Cet article montre comment définir des ID utilisateur dans votre 
  
 # Définir des ID utilisateur pour Android et FireOS
  
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Convention de dénomination des ID utilisateurs suggérée
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ### Attribuer un ID utilisateur
 
@@ -48,11 +48,11 @@ Reportez-vous à la documentation [`changeUser`][4] pour plus d’informations.
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Donner un alias aux utilisateurs
 
-{% include archive/setting_user_ids/aliasing.md platform="Android" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

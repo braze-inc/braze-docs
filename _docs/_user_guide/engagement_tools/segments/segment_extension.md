@@ -18,7 +18,7 @@ Segment Extensions are audience definitions which allow you to use nested event 
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
-There can be 10 active Segment Extensions per App Group at a particular time.
+Out of the box, there is a soft limit of 10 active Segment Extensions per App Group at a particular time. This can be increased by contacting your Customer Success Manager to discuss your use case.
 
 ## Step 1: Navigate to Segment Extensions
 

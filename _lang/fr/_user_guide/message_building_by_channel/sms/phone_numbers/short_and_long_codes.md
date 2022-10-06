@@ -9,4 +9,4 @@ channel:
   
 ---
 
-{% include archive/short_and_long_codes.md %}
+{% multi_lang_include archive/short_and_long_codes.md %}

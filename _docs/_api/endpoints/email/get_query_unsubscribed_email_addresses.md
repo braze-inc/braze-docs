@@ -20,7 +20,7 @@ Use this endpoint to return emails that have unsubscribed during the time period
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

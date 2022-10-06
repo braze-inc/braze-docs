@@ -20,7 +20,7 @@ Use this endpoint to return a JSON list of information about scheduled campaigns
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

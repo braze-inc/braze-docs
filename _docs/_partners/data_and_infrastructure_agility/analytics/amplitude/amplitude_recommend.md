@@ -28,7 +28,7 @@ The Braze and Amplitude bi-directional integration allows you to import your Amp
 
 Use Braze and Amplitude's partnership to import Amplitude cohorts directly into Braze for audience segmentation. This allows you to perform deep analysis using Amplitude and seamlessly execute your strategies using Braze.
 
-{% include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
+{% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
 
 Any integration you set up will count towards your account's data point volume.
 

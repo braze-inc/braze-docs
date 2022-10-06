@@ -26,7 +26,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

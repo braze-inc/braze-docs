@@ -44,6 +44,7 @@ glossary_tags:
   - name: KPI
   - name: News Feed
   - name: Purchases
+  - name: Preference Center
   - name: Schedule Messages
   - name: SCIM
   - name: Segments
@@ -315,6 +316,26 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
+  - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
+    description: Create a URL for a preference center.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/get_list_preference_center/'>/preference_center/v1/list</a>
+    description: List available preference centers.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
+    description: View the details for your preference centers, including when it was created and updated.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>
+    description: Create a preference center to allow users to manage their notification preferences for email campaigns.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
+    description: Update a preference center.
+    tags:
+      - Preference Center
   - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
     description: Delete multiple items in your catalog.
     tags:
@@ -347,5 +368,4 @@ glossaries:
     description: Permanently delete an existing dashboard user.
     tags:
       - SCIM
-
 ---

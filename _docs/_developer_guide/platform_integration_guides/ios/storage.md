@@ -8,7 +8,7 @@ description: "This reference article describes the device-level properties captu
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 # Storage
 

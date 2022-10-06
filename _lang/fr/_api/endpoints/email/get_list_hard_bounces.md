@@ -20,7 +20,7 @@ Cet endpoint vous permet d’extraire une liste d’adresses e-mail qui ont reje
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Paramètres de demande
 

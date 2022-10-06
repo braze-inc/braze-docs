@@ -24,7 +24,7 @@ Braze processes the data passed via API at face value and customers should only 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users track' %}
+{% multi_lang_include rate_limits.md endpoint='users track' %}
 
 ## Request body
 

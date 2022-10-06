@@ -21,7 +21,7 @@ L’ajout d’une adresse e-mail à la liste noire entraîne le désabonnement d
 
 ## Limite de débit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

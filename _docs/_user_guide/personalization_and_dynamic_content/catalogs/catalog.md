@@ -2,7 +2,7 @@
 nav_title: Catalogs
 article_title: Catalogs
 alias: "/catalogs/"
-page_order: 4.1
+page_order: 1
 description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
@@ -42,7 +42,7 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
 
-![The table shows two example games with columns for id, title, price, and image_link.][5]
+![The table shows two example games with columns for id, title, price, and image link.][5]
 
 ### Step 2: Upload your CSV
 
@@ -149,6 +149,9 @@ This returns as the following:
 
 > Get the ultimate trio Tales, Teslagrad, and Acaratus today!
 
+{% alert tip %}
+Check out [filtered sets]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/) to create groups of data for more personalized messaging!
+{% endalert %}
 
 ### Using images {#using-images}
 

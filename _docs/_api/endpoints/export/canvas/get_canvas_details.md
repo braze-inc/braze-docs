@@ -20,7 +20,7 @@ Use this endpoint to export metadata about a Canvas, such as the name, time crea
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

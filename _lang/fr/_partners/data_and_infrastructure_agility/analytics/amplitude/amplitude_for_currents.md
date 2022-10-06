@@ -28,7 +28,7 @@ L’intégration de Braze et Amplitude vous permet d’[importer des cohortes Am
 
 Utilisez le partenariat entre Braze et Amplitude pour importer des cohortes Amplitude directement dans Braze afin de segmenter des audiences. Cela vous permet d’effectuer des analyses plus approfondies à l’aide d’Amplitude et d’exécuter vos stratégies de façon transparente avec Braze.
 
-{% include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
+{% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
 
 Toutes les intégrations que vous avez configurées seront prises en compte dans le volume de points de données de votre compte.
 
