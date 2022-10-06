@@ -1,21 +1,21 @@
 ---
-nav_title: "POST: Create Catalog"
-article_title: "POST: Create Catalog"
+nav_title: "GET: List Catalogs"
+article_title: "GET: List Catalogs"
 search_tag: Endpoint
-page_order: 10
+page_order: 11
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create Catalog Braze endpoint."
+description: "This article outlines details about the List Catalogs Braze endpoint."
 
 ---
 {% api %}
-# Create catalog
-{% apimethod post %}
+# List catalogs in app group
+{% apimethod get %}
 /catalogs/
 {% endapimethod %}
 
-Use this endpoint to create a catalog.
+Use this endpoint to return a list of catalogs in an app group.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,21 +25,20 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of X requests per minute between all bulk endpoints.
+This endpoint has a rate limit of 50 requests per minute.
 
-## Request body
-
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
+## Response
 
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
 {
-	"catalogs": [
-		{
-			"name": "catalog_1",
+    "catalogs": [
+        {
+            "name": "catalog_1",
             "description": "this is catalog_1",
+            "last_updated": "2022-04-06T14:36:55+0000",
+            "num_items": 1000,
             "fields": [
                 {
                     "name": "id",
@@ -50,43 +49,25 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "type": "number"
                 }
             ]
-        }
-        // will only accept 1 atom
-    ]
-}
-```
-
-## Request parameters
-
-
-## Example response
-
-```json
-{
-    "catalogs": [
+        },
         {
-            "name": "catalog_1",
-            "description": "this is catalog_1",
-            "last_updated": "2022-04-06T14:36:55+0000",
-            "num_items": 1000,
-            "size_in_mb": 25,
+            "name": "catalog_2",
+            "description": "this is catalog_2",
+            "last_updated": "2022-03-03T12:10:33+0000",
+            "num_items": 200,
             "fields": [
-            	{
-            		"name": "id",
+                {
+                    "name": "id",
                     "type": "string" 
                 },
                 {
-                	"name": "count"
-                    "type": "number"
+                    "name": "is_restaurant"
+                    "type": "boolean"
                 }
             ]
-        },
+        }
     ]
 }
 ```
-
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
 {% endapi %}
