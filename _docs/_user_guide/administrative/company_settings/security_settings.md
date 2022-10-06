@@ -73,7 +73,7 @@ Two-factor authentication enforcement:
 
 ## Security event download
 
-The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. To download this report, click your user profile in the top right of your Braze Dashboard, select **Company Settings** and then select the **Security Settings** tab. Scroll down and select **Download report** in the **Security Event Download** section. This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
+The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. To download this report, click your user profile in the top right of your Braze dashboard, select **Company Settings**, and then select the **Security Settings** tab. Scroll down and select **Download report** in the **Security Event Download** section. This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
 ## View PII
 
