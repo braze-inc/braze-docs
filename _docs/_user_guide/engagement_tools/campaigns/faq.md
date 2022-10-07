@@ -126,3 +126,33 @@ The number of users entering a campaign may differ from your expected number bec
 ### Can I search for a campaign by its API identifier?
 
 Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
+
+### What is the difference between action-based and API-triggered campaigns?
+
+<style>
+table th:nth-child(1) {
+    width: 50%;
+}
+table th:nth-child(3) {
+    width: 50%;
+}
+</style>
+
+#### Action-based
+
+Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages and allow you to trigger them to send after a user completes a certain event. 
+
+| Pros | Cons | 
+| ---- | ---- |
+| • Visibility of incoming JSON payloads into the platform (if event triggered by test user) via the **Message Activity Log**<br><br>• Personalization elements are included in the custom event properties<br><br>• Custom event can be used to create Segments of users eligible for the message | • Consumes data points |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### API-triggered
+
+API-triggered or server-trigger campaigns are ideal for more advanced transactional use cases allowing you to trigger the delivery of campaign content from your own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
+
+| Pros | Cons | 
+| ---- | ---- |
+| • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads via the **Message Activity Log**|
+{: .reset-td-br-1 .reset-td-br-2}
+
