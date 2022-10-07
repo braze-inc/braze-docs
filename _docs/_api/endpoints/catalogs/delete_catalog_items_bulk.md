@@ -75,13 +75,13 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| catalog-not-found | Check that the catalog name is valid. |
-| invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| ids-too-large | Item IDs can't be more than 250 characters. |
-| ids-not-unique | Item IDs must be unique in the request. |
-| request-includes-too-many-items | Your request has too many items. The maximum is 50.
-| fields-do-not-match | Updated fields must match the fields in the catalog. |
-| arbitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Item IDs can't be more than 250 characters. |
+| `ids-not-unique` | Item IDs must be unique in the request. |
+| `request-includes-too-many-items` | Your request has too many items. The maximum is 50.
+| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

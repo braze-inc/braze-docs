@@ -54,8 +54,8 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| catalog-not-found | Check that the catalog name is valid. |
-| item-not-found | Check that the item is in the catalog. |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-not-found` | Check that the item is in the catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
