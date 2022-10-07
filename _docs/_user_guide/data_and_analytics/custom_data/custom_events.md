@@ -11,6 +11,18 @@ description: "This reference article describes custom events and properties, the
 
 Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
 
+## Use cases
+
+Some common custom event use cases include:
+- Trigger a campaign or Canvas using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) based on a custom event.
+- Segment users by how many times they performed a custom event, when the last time the event occurred, etc.
+- Use dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
+- Find additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/) reports
+- Leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps.
+- Generate more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)
+- Set up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users should not advance to the next step of your Canvas
+- And more!
+
 ## Managing custom events
 
 To create and manage custom events in the dashboard, go to **Manage Settings** > **Custom Events**. From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
