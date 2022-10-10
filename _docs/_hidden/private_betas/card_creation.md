@@ -64,7 +64,7 @@ This section describes the main differences between card creation at launch vers
   <tr>
     <td class="leftHeader">Audience</td>
     <td class="tg-0pky">Braze evaluates audience membership when the campaign sends.<br><br>New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.</td>
-    <td class="tg-0pky">Brae evaluates membership when the user next opens your app (starts a session).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibilty when they try to view the card.</td>
+    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalization</td>
