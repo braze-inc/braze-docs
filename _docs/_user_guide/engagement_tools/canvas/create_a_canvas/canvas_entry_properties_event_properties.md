@@ -39,7 +39,7 @@ For in-app message channels specifically, `canvas_entry_properties` can only be 
 
 Here's an example that explains behavior for `canvas_entry_properties` and `event_properties` in Canvas Flow. Let's say we have an action-based Canvas. In this scenario, users will enter this Canvas if they perform the custom event "add item to wishlist". 
 
-The `canvas_entry_properties` are configured in the [Entry Schedule][4] step of creating a Canvas and will correspond to when a user enters a Canvas. These `canvas_entry_properties` can also be referenced in any Message Step in Canvas Flow since Canvas Flow supports persistent entry properties. 
+The `canvas_entry_properties` are configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and will correspond to when a user enters a Canvas. These `canvas_entry_properties` can also be referenced in any Message Step in Canvas Flow since Canvas Flow supports persistent entry properties. 
 
 In this Canvas, we have a user journey that begins at an Action Paths step to determine if a user has added an item to their wishlist. From here, if the user has added an item, then they will experience a delay before receiving a message "New item in your wishlist!" from the Message step. The first Message step in a user journey will have access to the custom `event_properties` from your Action Paths step, so in this case, we're able to include `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` here in this Message step as part of our message content. 
 
@@ -52,7 +52,6 @@ Note that you’ll only have access to event_properties if your Message Step can
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
 [3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[4]: ({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)
-[5]: ({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
+[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
 [7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
 [8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
