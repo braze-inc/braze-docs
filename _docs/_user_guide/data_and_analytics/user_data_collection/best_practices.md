@@ -21,11 +21,19 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 ## Capturing user data through a web form
 
-### Step 1: Check if the user exists
+### Step 1: Check if user exists
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
-- **Client checks internally (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission to ensure the email has not already been captured.<br><br>
-- **[/users/export/id]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint**<br>Check to see if the returned users array is empty or contains a value. It is not recommended to heavily leverage this endpoint when querying a single user; we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
+
+- **Client checks internally (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to ensure the information has not already been captured.<br><br>
+- **[/users/export/id]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint**<br>Run the following call and check to see if the returned users array is empty or contains a value:
+  ```json
+  --data-raw '{
+    "email_address": "example@braze.com",
+    "fields_to_export": ["external_id", "user_aliases"]
+  }'
+  ```
+It is not recommended to heavily leverage this endpoint when querying a single user; we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
 
 ### Step 2: Log or update user
 
@@ -33,9 +41,18 @@ When a user enters content through a web form, check if a user with that email a
   - Do not create a new profile.
   - Log a custom attribute (e.g., `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
 - **If a user does not exist:**
-  - Create an alias-only profile via Braze's [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. This endpoint will accept a [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+  - Create an alias-only profile via Braze's [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. This endpoint will accept a [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
 
 ![Diagram showing the process to update an alias-only user profile. A user submits their email address and a custom attribute, their zip code, on a marketing landing page. An arrow pointing from the landing page collection to an alias-only user profile shows a Braze API request to the user track endpoint, with the request body containing the user's alias name, alias label, email, and zip code. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.][3]{: style="max-width:90%;"}
+
+## Identifying alias-only users
+
+When identifying users upon account creation, alias-only users can be identified and assigned an external ID through the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint by merging the alias-only user with the known profile. 
+
+To check if a user is alias-only, [check if the user exists](#step-1-check-if-user-exists) within your database. 
+- If an external record exists, you can call the `/users/identify/` endpoint. 
+- If the [`/users/export/id`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint returns an `external_id`, you can call the `/users/identify/` endpoint.
+- If the endpoint returns nothing, a `/users/identify/` call should not be made.
 
 ## Capturing user data when alias-only user info is already present
 
