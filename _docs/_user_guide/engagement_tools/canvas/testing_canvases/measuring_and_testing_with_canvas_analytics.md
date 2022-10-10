@@ -24,7 +24,7 @@ This is a great place to get a high-level overview to check if your Canvas is pe
 
 ## Performance visualization
 
-As you move down the **Canvas Details** page, you can see the performance for each component. These metrics include sends, unique recipients, conversion count, and revenue generated. You can click on a component to further breakdown your data and see channel-specific performance.
+As you move down the **Canvas Details** page, you can see the performance for each component. These metrics include sends, unique recipients, conversion count, and revenue generated. You can click on a component to further breakdown your data, and see channel-specific performance.
 
 ![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and for the nested Step 1, Step 2, and Step 3.][25]
 
