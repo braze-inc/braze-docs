@@ -318,7 +318,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Device OS
-    description: Segments your users by their mobile phone’s operating system.
+    description: Segments your users that have one or more devices with the specified operating system.
     tags:
       - User Attributes
   - name: Clicked Content Card
