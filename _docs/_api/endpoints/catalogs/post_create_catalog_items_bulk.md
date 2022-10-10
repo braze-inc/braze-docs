@@ -6,7 +6,7 @@ page_order: 5
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create multiple catalog items Braze endpoint."
+description: "This article outlines details about the Create Multiple Catalog Items Braze endpoint."
 
 ---
 {% api %}
@@ -35,8 +35,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "items": [
         {
