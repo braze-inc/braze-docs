@@ -16,7 +16,7 @@ guide_featured_list:
 - name: Filtered Sets
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/
   fa_icon: fas fa-list-alt
-- name: Catalogs API endpoints
+- name: Catalogs API Endpoints
   link: /docs/api/endpoints/catalogs/
   fa_icon: fas fa-server
 ---
