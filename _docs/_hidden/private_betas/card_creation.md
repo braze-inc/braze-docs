@@ -41,19 +41,43 @@ For both options, after a card is created, Braze does not recalculate audience e
 
 This section describes the main differences between card creation at launch versus at first impression.
 
-#### Audience and personalization
-
-- **At campaign launch:** Braze calculates audience membership and personalization when the campaign sends. New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.
-- **At first impression:** Braze calculates audience membership and personalization when the user next opens your app (starts a session). Any new or anonymous users will always be evaluated for eligibility when they try to view the card. Personalization is only evaluated at the time of first impression or after the next recurrence interval.
-
-#### Analytics
-
-While your reachable users and impressions will not change, you can expect a decrease in send volume (Messages Sent) when cards are created at first impression compared to if the same card was created at campaign launch. This is because of how Braze defines Message Sent for Content Cards.
-
-- **At campaign launch:** Messages Sent refers to the number of cards created and available to be seen and doesn't count whether users viewed the card.
-- **At first impression:** Messages Sent refers to the number of cards displayed to users.
-
-This change, combined with the fact that eligibility is evaluated closer to when users would view the card for cards created at first impression, results in a decrease in sends.
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;}
+.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-0pky">When campaign is launched</th>
+    <th class="tg-0pky">At first impression</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="leftHeader">When to use this</td>
+    <td class="tg-0pky">If you need content to be snapshot at a specific time (the launch time).</td>
+    <td class="tg-0pky">If you need to display cards to new or anonymous users who may enter the segment after launch.<br><br>If you're using personalization and want the latest content to be available on the card.</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Audience</td>
+    <td class="tg-0pky">Braze evaluates audience membership when the campaign sends.<br><br>New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.</td>
+    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card.</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Personalization</td>
+    <td class="tg-0pky">Braze evaluates Liquid, Connected Content, and Content Blocks at the time the campaign is launched. For recurring campaigns, this will be at the next recurrence interval.</td>
+    <td class="tg-0pky">Braze evaluates Liquid, Connected Content, and Content Blocks at the time of first impression or after the next recurrence interval.</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Analytics</td>
+    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards created and available to be seen. This doesn't count whether the users viewed the card.</td>
+    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards displayed to users. <br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Considerations
 

@@ -2,7 +2,7 @@
 nav_title: SCIM
 article_title: SCIM Endpoints
 search_tag: Endpoint
-page_order: 3
+page_order: 5
 layout: dev_guide
 alias: /scim/
 

@@ -2,7 +2,7 @@
 nav_title: SMS
 article_title: SMS Endpoints
 search_tag: Endpoint
-page_order: 4
+page_order: 6
 layout: dev_guide
 
 description: "This landing page lists the Braze SMS Endpoints."

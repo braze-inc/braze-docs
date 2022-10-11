@@ -1,7 +1,7 @@
 ---
 nav_title: Templates
 article_title: Template Endpoints
-page_order: 6
+page_order: 8
 layout: dev_guide
 
 search_tag: Endpoint
