@@ -1,8 +1,11 @@
 ---
-nav_title: Braze Cloud Data Ingestion 
-permalink: /cloud_ingestion/
+nav_title: Cloud Data Ingestion
+article_title: Braze Cloud Data Ingestion 
+alias: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Snowflake integration."
-hidden: true
+page_order: 6.1
+page_type: reference
+
 ---
 
 # Braze Cloud Data Ingestion - Snowflake integration
