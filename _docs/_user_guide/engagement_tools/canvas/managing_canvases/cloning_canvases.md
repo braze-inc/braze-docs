@@ -38,9 +38,11 @@ When a Canvas has [branching]({{site.baseurl}}/user_guide/engagement_tools/canva
 
 ### Examples
 
-For example, the following Canvas has multiple steps that trace back to the variant (variant-level branching), so it can't be cloned to Canvas Flow.
+If a Canvas has multiple steps that trace back to the variant (variant-level branching), it can't be cloned to Canvas Flow.
 
 However, if a Canvas has variant-level branching, and this variant branches out into full steps with the criteria listed in the previous section, then this Canvas can be cloned to Canvas Flow.
+
+![Example of a Canvas that branches out into two full steps from the variant.][4]{: style="max-width:50%;"}
 
 As another example, if a Canvas has a full step that has exception events and this full step also uses the delay filter "in" or "on the next", then it can't be cloned to Canvas Flow. However, if a Canvas step uses exception events with any other delay type, then the Canvas can be cloned to Canvas Flow.
 
@@ -50,3 +52,4 @@ For more information about the differences between the original Canvas editor an
 [1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}
 [2]: {% image_buster /assets/img_archive/clone_to_v2_modal.png %}
 [3]: {% image_buster /assets/img_archive/clone_to_v2_dashboard.png %}
+[4]: {% image_buster /assets/img_archive/clone_to_flow_variant.png %}
