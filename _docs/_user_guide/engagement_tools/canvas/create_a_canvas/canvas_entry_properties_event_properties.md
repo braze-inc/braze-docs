@@ -30,7 +30,7 @@ Check out this table for a summary of differences between `canvas_entry_properti
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties][5] enabled in the original editor as part of the previous early access.
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) enabled in the original editor as part of the previous early access.
 {% endalert %}
 
 ## Example
@@ -52,6 +52,5 @@ Note that you’ll only have access to event_properties if your Message Step can
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
 [3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
 [7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
 [8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
