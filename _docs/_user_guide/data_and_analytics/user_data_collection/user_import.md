@@ -97,8 +97,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
-| `user_alias` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
-| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias` is used |
+| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
+| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
 | `first_name` | String | The first name of your users as they have indicated (e.g., `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
@@ -122,7 +122,7 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 While `external_id` itself is not mandatory, you **must** include one of these fields:
 - `external_id` - A unique user identifier for your customer <br> - OR -
 - `braze_id` - A unique user identifier pulled for existing Braze users <br> - OR -
-- `user_alias` - A unique user identifier for an anonymous user
+- `user_alias_name` - A unique user identifier for an anonymous user
 {% endalert %}
 
 ### Importing custom data
