@@ -20,7 +20,11 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 ## CSV
 
-You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import, depending on if your users have an `external_id` or not.
+You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.
+
+{% alert note %}
+If you are uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
+{% endalert %}
 
 ### Importing with external ID
 
@@ -97,8 +101,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
-| `user_alias` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
-| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias` is used |
+| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
+| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
 | `first_name` | String | The first name of your users as they have indicated (e.g., `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
@@ -122,7 +126,7 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 While `external_id` itself is not mandatory, you **must** include one of these fields:
 - `external_id` - A unique user identifier for your customer <br> - OR -
 - `braze_id` - A unique user identifier pulled for existing Braze users <br> - OR -
-- `user_alias` - A unique user identifier for an anonymous user
+- `user_alias_name` - A unique user identifier for an anonymous user
 {% endalert %}
 
 ### Importing custom data
