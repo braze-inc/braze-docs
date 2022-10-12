@@ -186,51 +186,6 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 ```
 {% endraw %}
 
-### Use case: Track email opt-ins
-
-For this use case, you will add a conversion event to track the success of a specific campaign whose objective is driving email opt-ins. You will be able to see the trends of email opt-ins over time, get a timestmp of when the idividual opted-in, and get granular information on email events.
-
-1. Start by creating an action-based webhook campaign that is triggered when "Update Subscription Status" changes to "opted-in". This webhook will update a custom event on the user's profile.
-2. Set the webhook to fire immediately once the trigger event occurs.
-3. Optional: Allow users to become re-eligible to track when/if they opt-in at separate times over the course of their user lifetime.
-
-Refer to the following when configuring your webhook:
-
-- **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
-- **Request Body:** Raw Text
-
-#### Request headers and method
-
-Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
-
-- **Request Header:**
-  - **Authorization:** Bearer `YOUR_API_KEY`
-  - **Content-Type:** application/json
-- **HTTP Method:** POST
-
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Developer Console** > **REST API Key** > **Create New API Key**.
-
-![][1]
-
-#### Request body
-
-Add your `/users/track` request in the text field along with additional custom data you may want to log on the user profile.
-
-{% raw %}
-```json
-{% assign today = 'now' | date: "%Y-%m-%dT%X:000" %}
-{
-  "events": [ 
-     {
-      "external_id": "{{${user_id}}}",
-      "name": "email_opt_in",
-      "time": "{{today}}"
-     }
-  ]
-}
-```
-{% endraw %}
-
 ## Things to know
 
 - Braze to Braze webhooks are subject to endpoint [rate limits]({{site.baseurl}}/api/api_limits/).
