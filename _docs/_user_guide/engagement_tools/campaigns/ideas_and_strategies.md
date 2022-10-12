@@ -39,4 +39,7 @@ guide_menu_list:
   - name: Feature Awareness and New App Version
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile
+  - name: Add-to-Calendar Links
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
+    fa_icon: fas fa-calendar
 ---
