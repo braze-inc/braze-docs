@@ -1,27 +1,31 @@
 ---
-nav_title: "POST: Create Catalog Item"
-article_title: "POST: Create Catalog Item"
+nav_title: "PATCH: Edit Catalog Item"
+article_title: "PATCH: Edit Catalog Item"
 search_tag: Endpoint
-page_order: 11
+page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create Catalog Item Braze endpoint."
+description: "This article outlines details about the Edit Catalog Item Braze endpoint."
 
 ---
 {% api %}
-# Create a catalog item
-{% apimethod post %}
+# Edit catalog item
+{% apimethod patch %}
 /catalogs/catalog_name/items/item_id
 {% endapimethod %}
 
-Use this endpoint to create an item in your catalog.
+Use this endpoint to edit an item in your catalog. 
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
+## Rate limit
+
+This endpoint has a shared rate limit of X requests per minute.
 
 ## Request body
 
@@ -32,9 +36,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-	"items": [
+    "items": [
         {
-        	"count": 5
+            "count": 5
         }
         // will only accept 1 atom
     ]
@@ -54,7 +58,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Example error response
+## Example error response 
 
 ```json
 {
@@ -64,8 +68,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       "message": "Could not find catalog"
     },
     {
-      "id": "item-already-exists",
-      "message": "The item already exists"
+      "id": "item-not-found",
+      "message": "Could not find item"
     }
   ]
 }
@@ -77,12 +81,11 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `request-includes-too-many-items` | You can only create one catalog item per request. | 
-| `id-in-body` | Remove any item IDs in the request body. |
-| `fields-do-not-match` | Fields must match the fields in the catalog. |
+| `request-includes-too-many-items` | You can only edit one item in your catalog per request. |
+| `fields-do-not-match` | The item's fields must match with the fields in the catalog. |
+| `items-too-large` | Character limit for each item is 5,000 characters. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
-| `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `unable-to-coerce` | Item types can't be converted. |
+| `unable-to-coerce` | Item types can be converted. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 

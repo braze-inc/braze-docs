@@ -54,8 +54,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ## Example error response 
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {

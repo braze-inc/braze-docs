@@ -352,6 +352,34 @@ glossaries:
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog/'>/catalogs/catalog_name</a>
+    description: Delete a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog/'>/catalogs/</a>
+    description: Create a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/get_list_catalogs/'>/catalogs/</a>
+    description: List the catalogs in an app group.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+    description: Retrieve a catalog item and its content.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Create an item in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Edit an item in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Delete an item in a catalog.
+    tags:
+      - Catalogs 
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/users</a>
     description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
     tags:

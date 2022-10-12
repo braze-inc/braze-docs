@@ -1,21 +1,21 @@
 ---
-nav_title: "DELETE: Delete Catalog"
-article_title: "DELETE: Delete Catalog"
+nav_title: "DELETE: Delete Catalog Item"
+article_title: "DELETE: Delete Catalog Item"
 search_tag: Endpoint
-page_order: 12
+page_order: 15
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete Catalog Braze endpoint."
+description: "This article outlines details about the Delete Catalog Item Braze endpoint."
 
 ---
 {% api %}
-# Delete catalog
+# Delete a catalog item
 {% apimethod delete %}
-/catalogs/catalog_name
+/catalogs/catalog_name/items/item_id
 {% endapimethod %}
 
-Use this endpoint to delete a catalog.
+Use this endpoint to delete an item in your catalog. 
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -27,11 +27,16 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of X requests per minute.
 
+## Request body (need example)
+
+
+
 ### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
+| `catalog_name`  | Required | String | Name of the imported catalog.|
+| `item_id` | Required | String | Item ID. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example error response 
@@ -58,6 +63,7 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
+| `item-not-found`| Check that the item to be deleted exists in your catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

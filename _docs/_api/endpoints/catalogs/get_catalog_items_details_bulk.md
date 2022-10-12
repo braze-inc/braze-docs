@@ -1,21 +1,21 @@
 ---
-nav_title: "DELETE: Delete Catalog"
-article_title: "DELETE: Delete Catalog"
+nav_title: "GET: List Multiple Catalog Item Details"
+article_title: "GET: List Multiple Catalog Item Details"
 search_tag: Endpoint
-page_order: 12
+page_order: 16
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete Catalog Braze endpoint."
+description: "This article outlines details about the List Multiple Catalog Item Details Braze endpoint."
 
 ---
 {% api %}
-# Delete catalog
-{% apimethod delete %}
-/catalogs/catalog_name
+# List multiple catalog item details
+{% apimethod get %}
+/catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to delete a catalog.
+Use this endpoint to return multiple catalog items and their content.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,29 +25,35 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of X requests per minute.
+This endpoint has a rate limit of 50 requests per minute.
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
+| `catalog_item`  | Required | String | Name of the imported catalog.|
+| `item_id `  |  Required | String | The item ID of the imported catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example error response 
+## Example response
 
 ```json
 {
-  "errors": [
-    {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
-    },
-    {
-      "id": "item-not-found",
-      "message": "Could not find item"
-    }
-  ]
+    "items": [
+        {
+            "id": "0",
+            "count": 1,
+        },
+        {
+            "id": "1",
+            "count": 2,
+        },
+        {
+            "id": "2",
+            "count": 3,
+        }
+        // ... max of 50 items
+    ]
 }
 ```
 
