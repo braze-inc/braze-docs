@@ -9,7 +9,7 @@ channel:
 
 # Creating a preference center via API
 
-Setting up a preference center provides a one-stop shop for your users to edit their notification preferences with your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). By using the preference center Braze endpoints, you can directly edit the HTML of your preference center to align with your branding and to understand your users' preferences.
+Setting up a preference center provides a one-stop shop for your users to edit their notification preferences with your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). By using the [Preference Center Braze endpoints]({{site.baseurl}}/api/endpoints/preference_center), you can directly edit the HTML of your preference center to align with your branding and to understand your users' preferences.
 
 {% alert important %}
 The Braze endpoints used to create a preference center are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -28,9 +28,9 @@ The Braze endpoints used to create a preference center are currently in early ac
 ## Step 1: Create a preference center via API
 
 {% raw %}
-Let's begin building a preference center using the [`/preference_center/v1`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/) endpoint. To customize your preference center, you can include HTML that aligns with your branding for the `preference_center_page_html` field and `confirmation_page_html` field.
+Let's begin building a preference center using the [`/preference_center/v1` endpoint][1]. To customize your preference center, you can include HTML that aligns with your branding for the `preference_center_page_html` field and `confirmation_page_html` field.
 
-The [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) endpoint allows you to grab the preference center URL for a specific user outside of an email that is sent through Braze.
+The [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}` endpoint][2] allows you to grab the preference center URL for a specific user outside of an email that is sent through Braze.
 
 ## Step 2: Include in email campaign
 
@@ -43,8 +43,13 @@ Next, insert your preference center into your email campaign by pasting a combin
 
 ## Editing a preference center
 
-You can edit and update your preference center by using the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/) endpoint. 
+You can edit and update your preference center by using the [`/preference_center/v1/{preferenceCenterExternalId}` endpoint][3]. 
 
 ## Identifying preference centers and details
 
-To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) endpoint to return related information such as the last updated timestamp, the preference center ID, and more.
+To identify your preference centers, use the [`/preference_center/v1/{preferenceCenterExternalId}` endpoint][4] to return related information such as the last updated timestamp, the preference center ID, and more.
+
+[1]: {{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/
+[2]: {{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/
+[3]: {{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/
+[4]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/ 
