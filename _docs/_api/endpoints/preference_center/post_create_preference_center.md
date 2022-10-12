@@ -43,10 +43,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`name`| Required | String | The name of the preference center. |
+|`name`| Required | String | The name of the preference center that meets the following requirements: <br>- Can only contain letters, numbers, hyphens, and underscores <br>- Cannot have spaces |
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+The preference center name can't be edited once created.
+{% endalert %}
 
 ### Liquid tags
 
@@ -66,8 +70,8 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 
 | Liquid | Description |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email susbcribed state. User's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
-|`{% form_field_name :subscription_group %}`| Indicates that a specific form input element corresponds to a given subscription group. User's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
+|`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email susbcribed state. The user's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
+|`{% form_field_name :subscription_group external_id %}`| Indicates that a specific form input element corresponds to a given subscription group. The user's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
 |`{{preference_center_submit_url}}`| Generates URL for form submission. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -77,8 +81,8 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 {% raw %}
 ```
 {
-  "preference_center_api_id": "8efc52aa-935e-42b7-bd6b-98f43bb9b0f1",
-  "liquid_tag": "{{ preference_center.${My Preference Center 2022-09-22} }}",
+  "preference_center_api_id": "preference_center_api_id_example",
+  "liquid_tag": "{{preference_center.${MyPreferenceCenter2022-09-22}}}",
   "created_at": "2022-09-22T18:28:07+00:00",
   "message": "success"
 }
