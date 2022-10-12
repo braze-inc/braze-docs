@@ -2,7 +2,7 @@
 nav_title: "GET: List Catalog Item Details"
 article_title: "GET: List Catalog Item Details"
 search_tag: Endpoint
-page_order: 2
+page_order: 5
 
 layout: api_page
 page_type: reference

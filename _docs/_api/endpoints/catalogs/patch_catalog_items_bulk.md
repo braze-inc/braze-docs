@@ -3,7 +3,7 @@ nav_title: "PATCH: Edit Multiple Catalog Items"
 article_title: "PATCH: Edit Multiple Catalog Items"
 alias: /catalogs_items_patch/
 search_tag: Endpoint
-page_order: 4
+page_order: 8
 
 layout: api_page
 page_type: reference

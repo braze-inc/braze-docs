@@ -2,7 +2,7 @@
 nav_title: "DELETE: Delete Multiple Catalog Items"
 article_title: "DELETE: Delete Multiple Catalog Items"
 search_tag: Endpoint
-page_order: 1
+page_order: 3
 
 layout: api_page
 page_type: reference

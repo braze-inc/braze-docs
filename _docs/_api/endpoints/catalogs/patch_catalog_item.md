@@ -2,7 +2,7 @@
 nav_title: "PATCH: Edit Catalog Item"
 article_title: "PATCH: Edit Catalog Item"
 search_tag: Endpoint
-page_order: 4
+page_order: 7
 
 layout: api_page
 page_type: reference

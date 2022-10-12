@@ -2,7 +2,7 @@
 nav_title: "POST: Create Multiple Catalog Items"
 article_title: "POST: Create Multiple Catalog Items"
 search_tag: Endpoint
-page_order: 5
+page_order: 11
 
 layout: api_page
 page_type: reference

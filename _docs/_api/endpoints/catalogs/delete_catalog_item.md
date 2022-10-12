@@ -2,7 +2,7 @@
 nav_title: "DELETE: Delete Catalog Item"
 article_title: "DELETE: Delete Catalog Item"
 search_tag: Endpoint
-page_order: 15
+page_order: 2
 
 layout: api_page
 page_type: reference
