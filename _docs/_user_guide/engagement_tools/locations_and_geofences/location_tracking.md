@@ -27,7 +27,7 @@ Note that the accuracy of your location tracking data may be affected by whether
 
 Using location tracking data and segments, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
 
-Refer to [Location targeting][1] for more information.
+Refer to [Location targeting][1] for more information on creating a location segment.
 
 ## Hard setting the default location attribute
 
