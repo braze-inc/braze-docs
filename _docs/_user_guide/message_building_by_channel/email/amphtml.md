@@ -1,12 +1,21 @@
 ---
 nav_title: AMP for Email
-permalink: /amphtml/
-hidden: true
+article_title: AMP for Email
+alias: /amphtml/
+page_order: 9.2
+description: "This reference article provides an overview of AMP for Email and common use cases."
+channel:
+  - email
+
 ---
 
 # AMP for Email
 
 With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers to a whole new level.
+
+{% alert important %}
+AMP for Email is currently in early access and is unavailable for use in Canvas steps. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
 
 ## Requirements
 
@@ -25,9 +34,9 @@ At this time, only Gmail provides support for AMP for Email. [Register with Goog
 
 ### Enabling Gmail account
 
-Go into your Gmail Settings and select `Enable Dynamic Content`.
+Go to your Gmail settings and select **Enable Dynamic Content** for **Dynamic email** in the **General** tab.
 
-![Dynamic Content][1]
+![Gmail account settings with the Enable dynamic email setting selected.][1]
 
 ## API usage
 
