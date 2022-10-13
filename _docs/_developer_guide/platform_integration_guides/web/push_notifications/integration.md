@@ -64,7 +64,7 @@ Recent versions of Safari and Firefox require that you call this method from a s
 ### Step 3: Configure Safari push {#safari}
 
 {% alert info %}
-Safari 16 on macOS 13 or later uses modern push standards, and this step is no longer required. If you want to support older Safari+macOS versions, this step is required.
+Safari 16 on macOS 13 or later uses modern push standards, and this step is no longer required. If you want to support older Safari macOS versions, this step is required.
 {% endalert %}
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
