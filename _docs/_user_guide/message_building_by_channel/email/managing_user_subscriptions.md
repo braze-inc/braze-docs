@@ -91,13 +91,11 @@ To place a link to the preference center in your emails, use the following prefe
 The Preference Center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 {% endalert %}
 
-The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
+The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center with the [Preference Center Endpoints]({{site.baseurl}}/api/endpoints/preference_center/) and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
 
 #### Customize your preference center
 
-You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28].
-
-At this time, you can only have one preference center, which will list all of your current subscription groups.
+You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28]. At this time, you can only have one preference center, which will list all of your current subscription groups.
 
 **Option 1: Link with string query parameters**
 
@@ -257,6 +255,6 @@ For example, this can be useful if you want to target users who have neither opt
 [25]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
+[28]: {{site.baseurl}}/api/endpoints/preference_center/
 [29]: {% image_buster /assets/img/user-sub-state-export.png %}
 [30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
