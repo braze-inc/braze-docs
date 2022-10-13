@@ -13,9 +13,6 @@ guide_featured_list:
 - name: Default opt-in/opt-out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   fa_icon: fas fa-commenting
-- name: Fuzzy opt-out
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
-  fa_icon: fa-solid fa-hand
 - name: Custom keyword handing
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: fas fa-mobile-alt
@@ -25,3 +22,10 @@ guide_featured_list:
 
 ---
 <br><br>
+
+
+<!----
+- name: Fuzzy opt-out
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
+  fa_icon: fa-solid fa-hand
+----->

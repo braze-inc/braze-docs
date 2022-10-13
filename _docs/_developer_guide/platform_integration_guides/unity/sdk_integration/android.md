@@ -76,15 +76,6 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-
-    <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
-    <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
-      <intent-filter>
-        <action android:name="com.braze.push.intent.NOTIFICATION_OPENED" />
-        <action android:name="com.braze.push.intent.NOTIFICATION_RECEIVED" />
-        <action android:name="com.braze.push.intent.NOTIFICATION_DELETED" />
-      </intent-filter>
-    </receiver>
   </application>
 </manifest>
 ```
