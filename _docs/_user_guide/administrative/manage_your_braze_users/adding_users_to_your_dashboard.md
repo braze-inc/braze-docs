@@ -19,7 +19,7 @@ To add a new user to your Braze account, ensure you have admin privileges and pe
 4. For users with a limited role, select the company level and app group level permissions you want this user to have.<br><br>![][3]
 
 {% alert important %}
-You must select a department for each user added to your company's Braze account. <br><br>Adding your department to your user profile helps ensure you receive relevant communications built around how you use Braze. You will receive support and alerts that apply to you.
+You must select a department for each user added to your company's Braze account.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
