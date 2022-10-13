@@ -127,6 +127,12 @@ The number of users entering a campaign may differ from your expected number bec
 
 Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
 
+### What is the difference between API campaigns, and API-triggered campaigns?
+
+API-triggered campaigns allow you to manage campaign copy, multivariate testing and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from your own servers and systems. These messages can also include additional data to be templated into the messages in real-time.
+
+API campaigns are used to track the messages that you send using the API. Unlike most campaigns, you don't specify the message, recipients, or schedule, but instead pass the identifiers into your API calls. 
+
 ### What is the difference between action-based and API-triggered campaigns?
 
 <style>
