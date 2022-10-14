@@ -19,9 +19,13 @@ guide_featured_list:
 - name: Handling unknown phone numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
   fa_icon: fas fa-phone-volume
-- name: Fuzzy opt-out
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
-  fa_icon: fa-solid fa-hand
 
 ---
 <br><br>
+
+
+<!----
+- name: Fuzzy opt-out
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
+  fa_icon: fa-solid fa-hand
+----->
