@@ -672,8 +672,6 @@ This use case captures a list of the categories a user has purchased from, and i
 
 This use case calculates the number of times a custom event has been logged between the 1st of the current month and the previous month. You can then run an users/track call to update store this value as a custom attribute. Note that this campaign would need to run for two consecutive months before monthly data can be used.
 
-#### Cpature previous month's history
-
 {% raw %}
 ```liquid
 {% for custom_event in response.users[0].custom_events %}
