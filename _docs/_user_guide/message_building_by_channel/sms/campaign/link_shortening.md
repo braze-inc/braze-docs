@@ -14,10 +14,6 @@ channel:
 
 > Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. 
 
-{% alert important %}
-Link Shortening is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Overview
 
 Link Shortening and click tracking can be enabled at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. Links will be shortened using Braze’s shared short domain ([brz.ai](http://brz.ai)) with a length of between 20-21 characters. An example URL may look something like this: `https://brz.ai/8jshX`
