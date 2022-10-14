@@ -31,7 +31,6 @@ A purchase object is an object that gets passed through the API when a purchase 
   "price" : (required, float) value in the base currency unit (e.g., Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
   "time" : (required, datetime as string in ISO 8601), Time of purchase,
-  // Properties stored here are only valid for 30 days.
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
   // Setting this flag to true will put the API in "Update Only" mode.
@@ -106,9 +105,8 @@ Event property objects that contain array or object values can have an event pro
 
 ### Purchase properties
 
-[Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) **do not** persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
-
-While uncommon, if you require these properties to persist past the 30-day limit, contact your customer success manager, or, see our [webhooks suggestions](#purchase-objects-event-objects-and-webhooks) to see how you can incorporate webhooks to save these properties as custom attributes.
+[Purchase properties]
+Purchase properties can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
 ### Purchase property naming conventions
 
