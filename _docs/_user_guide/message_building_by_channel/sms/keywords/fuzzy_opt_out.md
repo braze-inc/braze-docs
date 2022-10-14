@@ -6,7 +6,7 @@ page_type: reference
 channel:
   - SMS
 page_order: 1.1
-
+hidden: true
 ---
 
 # Fuzzy opt-out
