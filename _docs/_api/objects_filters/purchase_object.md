@@ -105,7 +105,6 @@ Event property objects that contain array or object values can have an event pro
 
 ### Purchase properties
 
-[Purchase properties]
 Purchase properties can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
 ### Purchase property naming conventions
