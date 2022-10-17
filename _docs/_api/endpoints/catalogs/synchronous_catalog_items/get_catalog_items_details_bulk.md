@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: List Catalog Item Details"
-article_title: "GET: List Catalog Item Details"
+nav_title: "GET: List Multiple Catalog Item Details"
+article_title: "GET: List Multiple Catalog Item Details"
 search_tag: Endpoint
-page_order: 5
+page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list catalog item details Braze endpoint."
+description: "This article outlines details about the List Multiple Catalog Item Details Braze endpoint."
 
 ---
 {% api %}
-# List catalog item details
+# List multiple catalog item details
 {% apimethod get %}
-/catalogs/catalog_name/items/item_id
+/catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to return a catalog item and its content.
+Use this endpoint to return multiple catalog items and their content.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a rate limit of 50 requests per minute.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
 ## Request Parameters
 
@@ -35,17 +35,26 @@ This endpoint has a rate limit of 50 requests per minute.
 | `item_id `  |  Required | String | The item ID of the imported catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Response
+## Example response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-"items": [
-    {
-        "id": "0",
-        "count": 5,
-    }
-]
+{
+    "items": [
+        {
+            "id": "0",
+            "count": 1,
+        },
+        {
+            "id": "1",
+            "count": 2,
+        },
+        {
+            "id": "2",
+            "count": 3,
+        }
+        // ... max of 50 items
+    ]
+}
 ```
 
 ## Troubleshooting
@@ -54,8 +63,8 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+| `invalid-cursor` | The value `cursor` is not valid. |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `item-not-found` | Check that the item is in the catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

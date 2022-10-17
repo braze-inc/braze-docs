@@ -2,7 +2,7 @@
 nav_title: "POST: Create Catalog"
 article_title: "POST: Create Catalog"
 search_tag: Endpoint
-page_order: 9
+page_order: 3
 
 layout: api_page
 page_type: reference
@@ -12,7 +12,7 @@ description: "This article outlines details about the Create Catalog Braze endpo
 {% api %}
 # Create catalog
 {% apimethod post %}
-/catalogs/
+/catalogs
 {% endapimethod %}
 
 Use this endpoint to create a catalog.
@@ -25,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of X requests per minute between all bulk endpoints.
+This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
 
 ## Request body
 
@@ -55,9 +55,6 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
-
-## Request parameters
-
 
 ## Example response
 
@@ -91,6 +88,7 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+|  `too-many-catalog-atoms` | Only 1 catalog is allowed per request. |
 | `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
 | `catalog-name-too-large` | Character limit for a catalog name is 250. |
 | `catalog-name-already-exists` | Catalog with that name already exists. |
@@ -98,7 +96,7 @@ The following table lists possible returned errors and their associated troubles
 | `too-many-fields` | Number of fields limit is 30. |
 | `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |
 | `field-names-too-large` | Character limit for a field name is 250. |
-| `field-names-not-unique` | Item types can be converted. |
+| `field-names-not-unique` | Item types can't be converted. |
 | `reached-company-catalogs-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
 | `description-too-long` | Character limit for description is 250. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |

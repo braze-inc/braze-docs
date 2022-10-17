@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: List Multiple Catalog Item Details"
-article_title: "GET: List Multiple Catalog Item Details"
+nav_title: "DELETE: Delete Catalog"
+article_title: "DELETE: Delete Catalog"
 search_tag: Endpoint
-page_order: 6
+page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Multiple Catalog Item Details Braze endpoint."
+description: "This article outlines details about the Delete Catalog Braze endpoint."
 
 ---
 {% api %}
-# List multiple catalog item details
-{% apimethod get %}
-/catalogs/catalog_name/items
+# Delete catalog
+{% apimethod delete %}
+/catalogs/catalog_name
 {% endapimethod %}
 
-Use this endpoint to return multiple catalog items and their content.
+Use this endpoint to delete a catalog.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,35 +25,27 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a rate limit of 50 requests per minute.
+This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
 
-## Request Parameters
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_item`  | Required | String | Name of the imported catalog.|
-| `item_id `  |  Required | String | The item ID of the imported catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example response
+## Example error response 
 
 ```json
 {
-    "items": [
-        {
-            "id": "0",
-            "count": 1,
-        },
-        {
-            "id": "1",
-            "count": 2,
-        },
-        {
-            "id": "2",
-            "count": 3,
-        }
-        // ... max of 50 items
-    ]
+  "errors": [
+    {
+      "id": "catalog-not-found",
+      "message": "Could not find catalog",
+      "parameters": ["catalog_name"],
+      "parameter_values": ["catalog_name"]
+    }
+  ]
 }
 ```
 

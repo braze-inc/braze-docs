@@ -2,7 +2,7 @@
 nav_title: "PATCH: Edit Catalog Item"
 article_title: "PATCH: Edit Catalog Item"
 search_tag: Endpoint
-page_order: 7
+page_order: 4
 
 layout: api_page
 page_type: reference
@@ -25,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of X requests per minute.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
 ## Request body
 
@@ -64,12 +64,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
+      "id": "ids-too-large",
+      "message": "Item ids can not be larger than 250 characters",
+      "parameters": ["id"],
+      "parameter_values": ["item_id"]
     },
     {
-      "id": "item-not-found",
-      "message": "Could not find item"
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
+      "parameters": ["id"],
+      "parameter_values": ["item_id"]
     }
   ]
 }
@@ -81,11 +85,16 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-not-found` | Check that the item is in the catalog. |
 | `request-includes-too-many-items` | You can only edit one item in your catalog per request. |
-| `fields-do-not-match` | The item's fields must match with the fields in the catalog. |
+| `ids-in-body` | An item ID already exists in teh catalog. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `items-too-large` | Character limit for each item is 5,000 characters. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
-| `unable-to-coerce` | Item types can be converted. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 

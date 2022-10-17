@@ -1,21 +1,21 @@
 ---
-nav_title: "DELETE: Delete Catalog Item"
-article_title: "DELETE: Delete Catalog Item"
+nav_title: "GET: List Catalog Item Details"
+article_title: "GET: List Catalog Item Details"
 search_tag: Endpoint
 page_order: 2
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete Catalog Item Braze endpoint."
+description: "This article outlines details about the List Catalog Item Details Braze endpoint."
 
 ---
 {% api %}
-# Delete a catalog item
-{% apimethod delete %}
+# List catalog item details
+{% apimethod get %}
 /catalogs/catalog_name/items/item_id
 {% endapimethod %}
 
-Use this endpoint to delete an item in your catalog. 
+Use this endpoint to return a catalog item and its content.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,35 +25,27 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of X requests per minute.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request body (need example)
-
-
-
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the imported catalog.|
-| `item_id` | Required | String | Item ID. | 
+| `catalog_item`  | Required | String | Name of the imported catalog.|
+| `item_id `  |  Required | String | The item ID of the imported catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example error response 
+## Response
 
 ```json
-{
-  "errors": [
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+"items": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
-    },
-    {
-      "id": "item-not-found",
-      "message": "Could not find item"
+        "id": "0",
+        "count": 5,
     }
-  ]
-}
+]
 ```
 
 ## Troubleshooting
@@ -63,7 +55,7 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `item-not-found`| Check that the item to be deleted exists in your catalog. |
+| `item-not-found` | Check that the item is in the catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

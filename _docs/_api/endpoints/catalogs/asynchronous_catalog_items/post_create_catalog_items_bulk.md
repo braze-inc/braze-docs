@@ -1,22 +1,21 @@
 ---
-nav_title: "PATCH: Edit Multiple Catalog Items"
-article_title: "PATCH: Edit Multiple Catalog Items"
-alias: /catalogs_items_patch/
+nav_title: "POST: Create Multiple Catalog Items"
+article_title: "POST: Create Multiple Catalog Items"
 search_tag: Endpoint
-page_order: 8
+page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the edit multiple catalog items Braze endpoint."
+description: "This article outlines details about the Create Multiple Catalog Items Braze endpoint."
 
 ---
 {% api %}
-# Edit multiple catalog items
-{% apimethod patch %}
+# Create multiple catalog items
+{% apimethod post %}
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -26,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all bulk endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous endpoints.
 
 ## Request body
 
@@ -40,11 +39,15 @@ Authorization: Bearer YOUR-REST-API-KEY
     "items": [
         {
             "id": "0",
-            "count": 5
+            "count": 1,
         },
         {
             "id": "1",
-            "count": 10
+            "count": 2,
+        },
+        {
+            "id": "2",
+            "count": 3,
         }
         // ... max of 50 items
     ]
@@ -57,14 +60,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog",
-      "parameters": [
-        "catalog_name"
-      ],
-      "parameter_values": [
-        "catalog_name"
-      ]
+        "id": "catalog-not-found",
+        "message": "Could not find catalog",
+        "parameters": ["catalog_name"],
+        "parameter_values": ["catalog_name"]
     }
   ]
 }
@@ -79,12 +78,13 @@ The following table lists possible returned errors and their associated troubles
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `items-too-large` | Item values can't exceed 5,000 characters. |
 | `ids-not-unique` | Item IDs must be unique in the request. |
-| `request-includes-too-many-items` | Your request has too many items. The maximum is 50.
+| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `request-includes-too-many-items` | Your request has too many items. The maximum is 50. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `fields-do-not-match` | Updated fields must match the fields in the catalog. |
-| `unable-to-coerce` | Item types can be converted. |
-| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
