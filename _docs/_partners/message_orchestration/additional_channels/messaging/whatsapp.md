@@ -15,8 +15,8 @@ search_tag: Partner
 ## Prerequisites
 
 | Requirement| Origin| Access| Description|
-| ---| ---| ---|
-| Opt-in policy | | | Whats App requires businesses to have customers opt-in to messagin
+| ---| ---| ---| -- |
+| Opt-in policy | | | Whats App requires businesses to have customers opt-in to messaging |
 | https://www.whatsapp.com/legal/commerce-policy?l=et | | | Messaging rules |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
