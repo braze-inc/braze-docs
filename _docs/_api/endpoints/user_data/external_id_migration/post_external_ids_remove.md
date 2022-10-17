@@ -17,7 +17,7 @@ description: "This article outlines details about the external IDs Remove endpoi
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
 
 {% alert warning %}
-This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove users who don't already have a [renamed external ID]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) can permanently prevent you from finding that user's data.
+This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove deprecated `external_ids` that are still associated with users in your system can permanently prevent you from finding those users' data.
 {% endalert %}
 
 You can send up to 50 external IDs per request.
