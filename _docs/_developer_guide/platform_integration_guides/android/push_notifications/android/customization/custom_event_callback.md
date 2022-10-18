@@ -36,6 +36,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
   //
   final String pushTitle = parsedData.getTitleText();
   final Long pushArrivalTimeMs = parsedData.getNotificationReceivedTimestampMillis();
+  final String deeplink = parsedData.getDeeplink();
 
   //
   // Custom KVP data
@@ -65,6 +66,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
     //
     val pushTitle = parsedData.titleText
     val pushArrivalTimeMs = parsedData.notificationReceivedTimestampMillis
+    val deeplink = parsedData.deeplink
 
     //
     // Custom KVP data
