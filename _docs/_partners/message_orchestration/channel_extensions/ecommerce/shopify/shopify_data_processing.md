@@ -69,23 +69,26 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% subtab Abandoned Cart %}
 ```json
 {
-    "name" => "shopify_abandoned_cart",
-    "time" => "2021-10-01T21:12:15.773Z",
-    "properties" => {
-      "cart_id"=>"eeafa272cebfd4b22385bc4b645e762c",
-      "line_items" => [
+    "name": "shopify_abandoned_cart",
+    "time": "2022-10-14T15:08:31.571Z",
+    "properties": {
+      "cart_id": "163989958f6b0de13f3b4f702fa5ee0d",
+      "line_items": [
         {
-          "product_id" => 788032119674292922,
-          "quantity" => 3,
-          "sku" => "example-shirt-s",
-          "title" => "Example T-Shirt - ",
-          "vendor" => "Acme",
-          "properties" => {},
-          "price" => "19.99",
-        },
-      ],
-    }
-}
+          "price": 60,
+          "product_id": 7110622675033,
+          "properties": null,
+          "quantity": 1,
+          "sku": null,
+          "title": "Spinach Surprise Smoothie - 12 Pack",
+          "variant_id": 40094740545625,
+          "vendor": "Jennifer's Juice"
+        }
+      ]
+    },
+    "braze_id": "63497b3ca3eabd0053380451"
+  }
+
 ```
 {% endsubtab %}
 {% subtab Checkout Abandoned %}
@@ -103,13 +106,15 @@ Once the app installation is complete, Braze automatically creates your webhook 
     "total_price": "398.00",
     "line_items": [
       {
-        "product_id": 632910392,
+    "price": "199.00",
+    "properties": {},        
+    "product_id": 632910392,
         "quantity": 1,
         "sku": "IPOD2008PINK",
         "title": "IPodNano-8GB",
+        "variant_id": 40094740545625,
+        "variant_title": "Pink iPod Nano 8 GB",
         "vendor": "Apple",
-        "properties": "nil",
-        "price": "199.00"
       }
     ],
     "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
@@ -133,17 +138,21 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "quantity": 1,
         "sku": "IPOD2008PINK",
         "title": "IPodNano-8GB",
-        "vendor": "nil",
+        "variant_id": 40094740545625,
+        "variant_title": "Pink iPod Nano 8 GB",
+        "vendor": null,
         "name": "IPodNano-8GB",
         "properties": [],
         "price": "199.00"
       },
       {
-        "product_id": 632910392,
+        "product_id": 632910393,
         "quantity": 1,
-        "sku": "IPOD2008PINK",
+        "sku": "IPOD2008SILVER",
         "title": "IPodNano-8GB",
-        "vendor": "nil",
+        "variant_id": 40094740545626,
+        "variant_title": "Silver iPod Nano 8 GB",
+        "vendor": null,
         "name": "IPodNano-8GB",
         "properties": [],
         "price": "199.00"
@@ -181,9 +190,9 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "properties": {
     "name": "IPodNano-8GB",
     "sku": "IPOD2008PINK",
-    "title": "IPodNano-8GB",
-    "variant_title": "nil",
-    "vendor": "nil",
+    "variant_id": 40094740545626,
+    "variant_title": "Silver iPod Nano 8 GB",
+    "vendor": null,
     "properties": []
   }
 }
@@ -202,6 +211,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": null,
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
@@ -209,25 +220,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "fulfillment_status": null
       }
     ],
-    "shipping": [
-      {
-        "title": "Standard",
-        "price": "0.00"
-      }
-    ],
-    "total_price": "141.54",
-    "confirmed": true,
-    "total_discounts": "0.00",
-    "discount_codes": [],
-    "order_number": 1092,
-    "order_status_url": "https://test-store.myshopify.com/",
-    "cancelled_at": null,
-    "tags": "",
-    "closed_at": null,
-    "fulfillment_status": null,
-    "fulfillments": []
-  },
-  "braze_id": "123abc123abc"
+  }
 }
 ```
 {% endsubtab %}
@@ -244,6 +237,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "product_id": 6143032066239,
         "sku": null,
         "title": "Dark Denim Top",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
@@ -291,6 +286,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
             "requires_shipping": true,
             "sku": null,
             "title": "Dark Denim Top",
+            "variant_id": 40094740549876,
+            "variant_title": "",
             "vendor": "partners-demo"
           }
         ]
@@ -299,7 +296,6 @@ Once the app installation is complete, Braze automatically creates your webhook 
   },
   "braze_id": "abc123abc123"
 }
-
 ```
 {% endsubtab %}
 {% subtab Order Fulfilled %}
@@ -384,6 +380,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
@@ -411,7 +409,6 @@ Once the app installation is complete, Braze automatically creates your webhook 
   },
   "braze_id": "123abc123abc"
 }
-
 ```
 {% endsubtab %}
 {% subtab Refund Created %}
@@ -428,6 +425,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "properties": [],
         "price": "80.00"
@@ -437,6 +436,8 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "product_id": 6143032852671,
         "sku": null,
         "title": "Chequered Red Shirt",
+        "variant_id": 40094796619876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "properties": [],
         "price": "50.00"
@@ -445,7 +446,6 @@ Once the app installation is complete, Braze automatically creates your webhook 
   },
   "braze_id": "abc123abc123"
 }
-
 ```
 {% endsubtab %}
 {% endsubtabs %}
