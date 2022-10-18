@@ -77,11 +77,35 @@ hide_breadcrumb: true
         {%- endif %}
       {%- endfor -%}
     </div>
-
+    <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }} </h2>
     <h2 class="guide_menu_title"> {{ page.guide_menu_title }} </h2>
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title2 }} </h2>
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list2  -%}
         {%- if menu_list.link -%}
         <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
           {%- endif %}

@@ -11,7 +11,7 @@ page_type: landing
 guide_top_header: "Catalogs Endpoints"
 guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the synchronous catalog endpoints to make bulk changes to your catalog. To receive a confirmation that a change to your catalog has been received and processed, use the asynchronous or synchronous catalog item endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for creating and using <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>Catalogs</a>."
 
-guide_featured_title: "Catalogs Endpoints"
+guide_featured_title: "Synchronous Catalogs<br><br>"
 guide_featured_list:
   - name: "DELETE: Delete Catalog"
     link: /docs/api/endpoints/catalogs/synchronous_catalogs/delete_catalog/
@@ -23,31 +23,36 @@ guide_featured_list:
     link: /docs/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/
     fa_icon: fas fa-check
 
-guide_menu_title: "Catalog Items"
+optional_guide_menu_title: "Catalog Items Endpoints"
+guide_menu_title: "<h3>Asynchronous Catalog Items</h3>"
 guide_menu_list:
   - name: "DELETE: Delete Multiple Catalog Items Endpoints"
-    link: /docs/api/endpoints/catalogs/asynchronous_catalog_items/delete_catalog_items_bulk/
+    link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
     fa_icon: fas fa-clipboard-list
   - name: "PATCH: Edit Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/asynchronous_catalog_items/patch_catalog_items_bulk/
+    link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
     fa_icon: fas fa-user-edit
   - name: "POST: Create Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/asynchronous_catalog_items/post_create_catalog_items_bulk/
+    link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
     fa_icon: fas fa-check
+
+guide_menu_title2: "<h3>Synchronous Catalog Items</h3>"
+guide_menu_list2:  
   - name: "DELETE: Delete Catalog Item"
-    link: /docs/api/endpoints/catalogs/synchronous_catalog_items/delete_catalog_item/
+    link: /docs/api/endpoints/catalogs/synchronous/delete_catalog_item/
     fa_icon: fas fa-dot-circle
   - name: "GET: List Catalog Item Details"
-    link: /docs/api/endpoints/catalogs/synchronous_catalog_items/get_catalog_item_details/
+    link: /docs/api/endpoints/catalogs/synchronous/get_catalog_item_details/
     fa_icon: fas fa-check-square
   - name: "GET: List Multiple Catalog Item Details"
-    link: /docs/api/endpoints/catalogs/synchronous_catalog_items/get_catalog_items_details_bulk/
+    link: /docs/api/endpoints/catalogs/synchronous/get_catalog_items_details_bulk/
     fa_icon: fas fa-list-alt
   - name: "PATCH: Edit Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/synchronous_catalog_items/patch_catalog_items_bulk/
+    link: /docs/api/endpoints/catalogs/synchronous/patch_catalog_items_bulk/
     fa_icon: fas fa-user-edit
   - name: "POST: Create Catalog Item"
-    link: /docs/api/endpoints/catalogs/synchronous_catalog_items/post_create_catalog_item/
+    link: /docs/api/endpoints/catalogs/synchronous/post_create_catalog_item/
     fa_icon: fas fa-check-square
+
 
 ---

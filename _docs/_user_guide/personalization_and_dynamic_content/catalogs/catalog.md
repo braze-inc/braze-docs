@@ -1,12 +1,12 @@
 ---
-nav_title: Catalogs
-article_title: Catalogs
+nav_title: Creating Catalogs
+article_title: Creating Catalogs
 alias: "/catalogs/"
 page_order: 1
 description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
-# Catalogs
+# Creating a catalog
 
 You can use catalogs to reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
@@ -17,8 +17,6 @@ Once this information is imported, you can begin accessing it in messages in a s
 {% alert note %}
 You can create up to five catalogs across your company.
 {% endalert %}
-
-## Creating a catalog
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 

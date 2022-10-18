@@ -25,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
 
 ## Request body
 
