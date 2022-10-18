@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Apptimize Partnership
     link: /docs/help/release_notes/deprecations/apptimize/
     fa_icon: fas fa-vials
+  - name: Custom Push Broadcast Receiver for Android
+    link: /docs/help/release_notes/deprecations/custom_broadcast_receiver/
+    fa_icon: fa-solid fa-mobile
   - name: Eclipse SDK Setup
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
@@ -31,6 +34,14 @@ guide_featured_list:
 ---
 
 # Deprecations log
+
+## Custom push broadcast receiver for Android
+
+**Support withdrawn**: October 2022
+
+Support for Grouparoo has been discontinued as of April 2022.
+
+Using a custom `BroadcastReceiver` for push notifications has been deprecated. Use [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) instead.
 
 ## Grouparoo partnership
 
