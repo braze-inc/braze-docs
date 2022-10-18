@@ -92,6 +92,7 @@ The following table lists possible returned errors and their associated troubles
 | `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
 | `catalog-name-too-large` | Character limit for a catalog name is 250. |
 | `catalog-name-already-exists` | Catalog with that name already exists. |
+| `id-not-first-column` | The ID must be the first field in the array. Check that the type is a string. |
 | `invalid-fields` | Field are not formatted correctly. |
 | `too-many-fields` | Number of fields limit is 30. |
 | `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |

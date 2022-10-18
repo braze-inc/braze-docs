@@ -27,6 +27,14 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
+## Request Parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name`  | Required | String | Name of the catalog.|
+| `item_id `  |  Required | String | The item ID of the catalog item. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
 ## Request body
 
 ```
@@ -88,7 +96,7 @@ The following table lists possible returned errors and their associated troubles
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `item-not-found` | Check that the item is in the catalog. |
 | `request-includes-too-many-items` | You can only edit one item in your catalog per request. |
-| `ids-in-body` | An item ID already exists in teh catalog. |
+| `id-in-body` | An item ID already exists in the catalog. |
 | `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |

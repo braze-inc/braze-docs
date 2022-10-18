@@ -31,7 +31,8 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_item`  | Required | String | Name of the imported catalog.|
+| `catalog_name`  | Required | String | Name of the catalog.|
+| `item_id` | Required | String | The item ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Request body

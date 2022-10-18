@@ -31,7 +31,7 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_item`  | Required | String | Name of the imported catalog.|
+| `catalog_name`  | Required | String | Name of the imported catalog.|
 | `cursor` | Optional | String | Determines the pagination of the catalog items. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -68,7 +68,7 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `invalid-cursor` | The value `cursor` is not valid. |
+| `invalid-cursor` | Check that your `cursor` is valid. |
 | `catalog-not-found` | Check that the catalog name is valid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
