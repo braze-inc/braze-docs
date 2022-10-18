@@ -6,7 +6,7 @@ page_type: reference
 channel:
   - SMS
 page_order: 1.1
-hidden: true
+
 ---
 
 # Fuzzy opt-out
@@ -19,7 +19,7 @@ Fuzzy opt-out attempts to recognize when an inbound message does not match an [o
 
 Currently, only opt-out keywords created using English as the [local language]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support) are supported.
 
-### What is deemed as fuzzy?
+## What is deemed as fuzzy?
 
 The criteria for an inbound response to be deemed as "fuzzy" are as follows:
 - If switching a letter with the letter one to the left or right of it on a QWERTY keyword yields a matching opt-out keyword.

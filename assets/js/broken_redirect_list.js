@@ -562,3 +562,5 @@ validurls['/docs/api/endpoints/catalogs/get_catalog_item_details/'] = '/docs/api
 validurls['/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/asynchronous_catalog_items/patch_catalog_items_bulk/';
 validurls['/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/asynchronous_catalog_items/post_create_catalog_items_bulk/';
 
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
+

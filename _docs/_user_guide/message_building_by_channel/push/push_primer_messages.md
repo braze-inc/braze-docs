@@ -28,8 +28,8 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 ###### Android 
 
-- Android 13 and under - implementing push primers is not recommended because push is opted-in by default. 
-- Android 14 and above - if and wish to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. 
+- Android 12 and under - implementing push primers is not recommended because push is opted-in by default. 
+- Android 13 and above - if you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. 
 
 ###### iOS
 - The iOS prompt can be displayed only **once** per install, enforced by the operating system. 

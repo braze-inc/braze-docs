@@ -80,7 +80,7 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ### Custom event storage
 
-All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for segmentation for 30 days. If you'd like to leverage event properties for Segmentation, contact your Braze account manager or customer success manager.
+All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active.
 
 ### Custom event properties
 
@@ -111,7 +111,7 @@ Custom attributes are best for storing attributes about your users, or informati
 
 ### Custom attribute storage
 
-All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for segmentation for 30 days. If you'd like to leverage event properties for Segmentation, contact your Braze account manager or customer success manager.
+All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active.
 
 ### Custom attribute data types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
