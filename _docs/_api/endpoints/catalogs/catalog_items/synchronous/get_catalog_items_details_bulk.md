@@ -32,12 +32,17 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_item`  | Required | String | Name of the imported catalog.|
-| `item_id `  |  Required | String | The item ID of the imported catalog item. |
+| `cursor` | Optional | String | Determines the pagination of the catalog items. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example response
 
+Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/all_restaurants/items?cursor=c2tpcDoxMDA=>; rel="next"
 {
     "items": [
         {

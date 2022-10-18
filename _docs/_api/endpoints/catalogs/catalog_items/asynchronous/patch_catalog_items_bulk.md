@@ -80,7 +80,6 @@ The following table lists possible returned errors and their associated troubles
 | `request-includes-too-many-items` | Your request has too many items. The maximum is 50. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 

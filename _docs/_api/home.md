@@ -336,47 +336,47 @@ glossaries:
     description: Update a preference center.
     tags:
       - Preference Center
-  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
     description: Delete multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
     description: List a catalog item and its details.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Edit multiple items in your catalog.
     tags: 
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog/'>/catalogs/catalog_name</a>
+  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/delete_catalog/'>/catalogs/catalog_name</a>
     description: Delete a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/'>/catalogs/</a>
     description: Create a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/get_list_catalogs/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/'>/catalogs/</a>
     description: List the catalogs in an app group.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
     description: Retrieve a catalog item and its content.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Create an item in a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Edit an item in a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Delete an item in a catalog.
     tags:
       - Catalogs 
