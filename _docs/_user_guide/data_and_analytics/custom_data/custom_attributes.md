@@ -93,7 +93,7 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
-Note: If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+Note that if you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -107,7 +107,6 @@ Note: If you input any values with spaces in between, before, or after words, th
 | Check if the string attribute **does not exactly match any** of the inputted strings | **IS NOT ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
 | Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
 | Check if the string attribute **does not partially match any** of the inputted strings | **DOES NOT CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -131,7 +130,7 @@ By default, the max length of an array for an attribute is set to 100. For examp
 
 If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
 
-Note: If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
 {% alert note %}
 The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
