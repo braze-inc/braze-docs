@@ -36,22 +36,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-	"catalogs": [
+	"catalogs": [ (max of 1 item)
 		{
-			"name": "required, string",
-            "description": "required, string",
+			"name": (required, string),
+            "description": (required, string),
             "fields": [
                 {
-                    "name": "required, string",
-                    "type": "required, string" 
+                    "name": (required, string),
+                    "type": (required, string) 
                 },
                 {
-                    "name": "required, string",
-                    "type": "required, string"
+                    "name": (required, string),
+                    "type": (required, string)
                 }
             ]
         }
-        // will only accept 1 item
     ]
 }
 ```
