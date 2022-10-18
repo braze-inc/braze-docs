@@ -49,7 +49,7 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 
 ## Displaying In-App Messages on Demand
 
-You may display the next available In-App Message in the In-App Messages stack via the `DisplayNextInAppMessage()` method. Messages are added to this stack of saved messages if `DISPLAY_LATER` or `BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` is chosen as the display action for In-App Messages.
+You may display the next available In-App Message in the stack via the `DisplayNextInAppMessage()` method. Messages are added to this stack of saved messages if `DISPLAY_LATER` or `BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` is chosen as the in-app message display action.
 
 ```csharp
 Appboy.AppboyBinding.DisplayNextInAppMessage();
