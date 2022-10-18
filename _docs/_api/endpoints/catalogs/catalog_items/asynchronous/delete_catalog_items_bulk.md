@@ -33,24 +33,29 @@ This endpoint has a shared rate limit of 100 requests per minute between all asy
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "items": [
+    "items": [ (max of 50 items)
         {
-            "id": "0"
+            "id": (required, item id)
         },
         {
-            "id": "1"
-        }
-        // ... max of 50 items
+            "id": (required, item id)
+        },
     ]
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the imported catalog.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
+
+```
+https://rest.iad-03.braze.com/catalogs/catalog_name/items
+```
 
 ## Example error response 
 

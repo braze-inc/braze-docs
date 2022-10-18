@@ -35,6 +35,12 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 | `item_id` | Required | String | Item ID. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+## Example request
+
+```
+https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+```
+
 ## Example error response 
 
 ```json

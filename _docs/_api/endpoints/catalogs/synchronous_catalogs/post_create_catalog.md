@@ -38,28 +38,40 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"catalogs": [
 		{
-			"name": "catalog_1",
-            "description": "this is catalog_1",
+			"name": "required, string",
+            "description": "required, string",
             "fields": [
                 {
-                    "name": "id",
-                    "type": "string" 
+                    "name": "required, string",
+                    "type": "required, string" 
                 },
                 {
-                    "name": "count"
-                    "type": "number"
+                    "name": "required, string",
+                    "type": "required, string"
                 }
             ]
         }
-        // will only accept 1 atom
+        // will only accept 1 item
     ]
 }
 ```
 
-## Example response
+### Request parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `name`  | Required | String | Name of the imported catalog.|
+| `description` | Required | String | Description for the catalog. |
+| `fields` | Required | Array of strings | Catalog items to create. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+### Example request
 
 ```json
-{
+curl --location --request POST 'https://rest.iad-01.braze.com/catalogs' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
     "catalogs": [
         {
             "name": "catalog_1",

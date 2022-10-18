@@ -27,13 +27,19 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request Parameters
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id ` |  Required | String | The item ID of the catalog item. |
+| `item_id ` |  Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
+
+```
+https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+```
 
 ## Response
 

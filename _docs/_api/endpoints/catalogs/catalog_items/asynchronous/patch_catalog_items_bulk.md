@@ -37,16 +37,49 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "items": [
+    "items": [ (max of 50 items)
         {
-            "id": "0",
-            "count": 5
+            "id": (required, item id),
+            "count": (required, item count),
         },
         {
-            "id": "1",
-            "count": 10
+            "id": (required, item id),
+            "count": (required, item count),
+        },
+        {
+            "id": (required, item id),
+            "count": (required, item count),
         }
-        // ... max of 50 items
+    ]
+}
+```
+
+### Request parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `item_id`  | Required | String | Item ID for a catalog item. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
+```
+curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/catalog_name/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+    "items": [
+        {
+            "id": "item_0",
+            "count": 1,
+        },
+        {
+            "id": "item_1",
+            "count": 2,
+        },
+        {
+            "id": "item_2",
+            "count": 3,
+        }
     ]
 }
 ```

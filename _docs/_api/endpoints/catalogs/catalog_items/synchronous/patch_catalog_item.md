@@ -27,16 +27,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request Parameters
-
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id `  |  Required | String | The item ID of the catalog item. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
 ## Request body
-
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -44,22 +35,43 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
+    "items": [ (max of 50 items)
+        {
+            "id": (required, item id)
+            "count": (required, item count)
+        },
+    ]
+}
+```
+
+### Request parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name`  | Required | String | Name of the catalog.|
+| `item_id `  |  Required | String | Item ID for a catalog item. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
+```
+curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catalog/items/my_item' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
     "items": [
         {
-            "count": 5
-        }
-        // will only accept 1 atom
+            "count": "item_count"
+        },
     ]
 }
 ```
 
 ## Example response
-
 ```json
 {
-	"items": [
+  "items": [
 		{
-			"id": "0",
+			"id": "item_0",
 			"count": 5,
 		}
 	]
