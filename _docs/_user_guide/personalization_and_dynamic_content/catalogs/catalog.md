@@ -14,12 +14,16 @@ To do so, first import your catalog (a CSV file of non-user data) into Braze, an
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
+{% alert note %}
+You can create up to five catalogs across your company.
+{% endalert %}
+
 ## Creating a catalog
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
-{% alert note %}
-You can create up to five catalogs across your company.
+{% alert tip %}
+You can also create a catalog using the [`/catalog` endpoint]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/).
 {% endalert %}
 
 ### Step 1: Create your CSV
