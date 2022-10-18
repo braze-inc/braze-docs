@@ -93,6 +93,8 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
+Note: If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
@@ -101,6 +103,11 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
+| Check if the string exactly matches **any** of the inputted strings | **ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NOT ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not partially match any** of the inputted strings | **DOES NOT CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -124,6 +131,8 @@ By default, the max length of an array for an attribute is set to 100. For examp
 
 If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
 
+Note: If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+
 {% alert note %}
 The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
 {% endalert %}
@@ -135,6 +144,12 @@ The option to increase the max length will not be available if the attribute is 
 | Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
 | Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
 | Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
+| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
