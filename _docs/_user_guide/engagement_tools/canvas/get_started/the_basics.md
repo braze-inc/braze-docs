@@ -10,7 +10,7 @@ tool: Canvas
 
 # Canvas basics
 
-## Breaking down Canvas structure
+## Understanding Canvas structure
 
 Before getting started with the finer details of Canvas setup, let's identify the key components that make up a Canvas.
 
