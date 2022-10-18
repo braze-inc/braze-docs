@@ -49,12 +49,8 @@ The following data types may be stored as custom attributes:
 - [Strings](#strings)
 - [Arrays](#arrays)
 - [Time](#time)
-- [Objects]({{site.baseurl}}/nested_custom_attribute_support/) (early access)
-- [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
-
-{% alert note %}
-**Coming soon!** Generally available support for object and object array data types is arriving in Summer 2022.
-{% endalert %}
+- [Objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/)
+- [Arrays of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)
 
 ### Booleans (true/false) {#booleans}
 
@@ -194,11 +190,11 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 ### Objects
 
-Support for objects as a data type for custom attributes is currently in early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+You can use nested custom attributes to send objects as a data type for custom attributes. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 
 ### Arrays of objects
 
-Support for arrays of objects depends on nested custom attributes, which is currently in early access. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/). 
+Use an array of objects to group related attributes. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
 
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 
