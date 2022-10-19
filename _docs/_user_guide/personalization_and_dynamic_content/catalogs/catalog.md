@@ -18,7 +18,7 @@ Once this information is imported, you can begin accessing it in messages in a s
 You can create up to five catalogs across your company.
 {% endalert %}
 
-To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
+To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference [this sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
 ### Step 1: Create your CSV
 
@@ -130,15 +130,15 @@ You can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalog
 
 ### Managing catalogs
 
-You can create a catalog using the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/) endpoint.
+You can create a catalog using the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/) endpoint.
 
-As you build more catalogs, you can also use the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
+As you build more catalogs, you can also use the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
 
 ### Managing catalog items
 
 In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. 
 
-For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
+For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/) endpoint.
 
 ## Additional use cases
 
