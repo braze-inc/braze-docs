@@ -39,19 +39,19 @@ guide_menu_list:
 guide_menu_title2: "<h3>Synchronous</h3>"
 guide_menu_list2:  
   - name: "DELETE: Delete Catalog Item"
-    link: /docs/api/endpoints/catalogs/synchronous/delete_catalog_item/
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
     fa_icon: fas fa-dot-circle
   - name: "GET: List Catalog Item Details"
-    link: /docs/api/endpoints/catalogs/synchronous/get_catalog_item_details/
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
     fa_icon: fas fa-check-square
   - name: "GET: List Multiple Catalog Item Details"
-    link: /docs/api/endpoints/catalogs/synchronous/get_catalog_items_details_bulk/
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
     fa_icon: fas fa-list-alt
   - name: "PATCH: Edit Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/synchronous/patch_catalog_items_bulk/
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_items_bulk/
     fa_icon: fas fa-user-edit
   - name: "POST: Create Catalog Item"
-    link: /docs/api/endpoints/catalogs/synchronous/post_create_catalog_item/
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     fa_icon: fas fa-check-square
 
 

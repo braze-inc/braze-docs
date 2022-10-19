@@ -126,7 +126,19 @@ This renders as the following:
 
 ## Catalogs via API
 
-As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
+You can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information.
+
+### Managing catalogs
+
+You can create a catalog using the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/) endpoint.
+
+As you build more catalogs, you can also use the [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
+
+### Managing catalog items
+
+In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. 
+
+For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
 ## Additional use cases
 
