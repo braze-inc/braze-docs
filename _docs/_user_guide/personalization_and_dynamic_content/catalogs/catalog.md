@@ -1,6 +1,6 @@
 ---
-nav_title: Creating Catalogs
-article_title: Creating Catalogs
+nav_title: Creating a Catalog
+article_title: Creating a Catalog
 alias: "/catalogs/"
 page_order: 1
 description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
@@ -19,10 +19,6 @@ You can create up to five catalogs across your company.
 {% endalert %}
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference this [sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
-
-{% alert tip %}
-You can also create a catalog using the [`/catalog` endpoint]({{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/).
-{% endalert %}
 
 ### Step 1: Create your CSV
 
@@ -128,6 +124,10 @@ This renders as the following:
 
 > Get Tales for just 7.49 USD!
 
+## Catalogs via API
+
+As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
+
 ## Additional use cases
 
 ### Multiple items
@@ -219,10 +219,6 @@ You can upload a CSV of new catalog items to add, or catalog items to update. To
 ### Using Liquid
 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
-
-## Mangaging catalogs
-
-As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
 ## Limitations {#limits}
 
