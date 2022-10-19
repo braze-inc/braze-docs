@@ -220,7 +220,7 @@ You can upload a CSV of new catalog items to add, or catalog items to update. To
 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
-## Mangaging catalogs
+## Managing catalogs
 
 As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
