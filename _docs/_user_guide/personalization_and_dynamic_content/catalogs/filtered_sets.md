@@ -25,7 +25,9 @@ Using a catalog with the restaurant's information for menu items, prices, and pr
 
 ![An example of a filtered set for a restaurant with two filters: one that identifies a meal recommendation, and one that identifies a customer's most recently viewed category.][2]{: style="max-width:85%;"}
 
-Next, you can insert this filtered set using the **Add Personalization** modal for a Content Card campaign that returns the three meal recommendations for a customer:
+To use this catalog in a campaign, you can insert this filtered set using the **Add Personalization** modal in the message composition section of a campaign. 
+
+In this case, we'll send three meal recommendations for a customer using a Content Card campaign.
 
 ![A Content Card for a test user with the title "Check out some new stuff" followed by three recommended meals and prices.][3]{: style="max-width:50%;"}
 
