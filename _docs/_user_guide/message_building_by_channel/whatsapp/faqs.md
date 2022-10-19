@@ -6,7 +6,7 @@ description: "This article addresses some of the most frequently asked questions
 page_type: FAQ
 channel:
   - WhatsApp
-  
+hidden: true    
 ---
 
 # WhatsApp FAQs

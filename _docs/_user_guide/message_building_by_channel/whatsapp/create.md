@@ -1,16 +1,17 @@
 ---
-nav_title: Creating an WhatsApp message
-article_title: Creating an WhatsApp message
+nav_title: Creating a WhatsApp message
+article_title: Creating a WhatsApp message
 page_order: 5
-description: "This reference article covers the steps involved in building out and creating an WhatsApp message."
+description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
 page_type: reference
 tool:
   - Campaigns
 channel:
   - WhatsApp
+hidden: true
 ---
 
-# Creating an WhatsApp message
+# Creating a WhatsApp message
 
 > WhatsApp campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
@@ -32,7 +33,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 6. Select a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription) to ensure you’re sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign.
 
 {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
+If all of the messages in your campaign are similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
 {% endalert %}
 
 {% endtab %}
@@ -45,28 +46,34 @@ If all of the messages in your campaign are going to be similar or have the same
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
-6. Choose any other messaging channels which you would like to pair with your message.
+6. Choose any other messaging channels you want to pair with your message.
 
 {% endtab %}
 {% endtabs %}
 
 ## Step 2: Compose your WhatsApp message
 
-To compose your message, select an approved WhatsApp template. If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid and add images from media library or upload them manually. Note that grey text can not be edited as they are part of the approved WhatsApp template.
+To compose your message, select an approved WhatsApp template. 
 
-![]()
+![][1]
+
+If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid. If you opted to include images when building your template, upload or add images from the media library. 
+
+![][2]
+
+Note that grey text can not be edited as they are part of the approved WhatsApp template. If you would like to make updates to the grey text, you must edit your template and get it reapproved. 
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !` instead of their name or a coherent sentence.
 {% endraw %}
 {% endalert %}
 
 ## Step 3: Preview and test your message
 
-Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
+Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![]()
+![][3]
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -75,7 +82,7 @@ Braze always recommends previewing and testing your message before sending. Swit
 
 Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build WhatsApp messages.
 
-#### Choose delivery schedule or trigger
+#### Choose a delivery schedule or trigger
 
 WhatsApp messages can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -85,16 +92,11 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your segments, and narrow that segment further with our Filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your segments and narrow that segment further with our filters. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Remember that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
-
-Conversion events help you measure the success of your campaign. For example:
-
-- If you are using geotargeting to trigger an WhatsApp message that has an end goal of the user making a purchase, set the conversion event to a `Purchase`.
-- If you are attempting to drive the user to your app, set the conversion event to `Starts Session`.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 You can also set custom conversion events based on your specific use case. Get creative and think about how you truly want to measure this campaign's success.
 
@@ -112,3 +114,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 After you've finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
 Next, check out [WhatsApp reporting]() to learn how you can access the results of your WhatsApp campaigns.
+
+[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
+[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
+[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
