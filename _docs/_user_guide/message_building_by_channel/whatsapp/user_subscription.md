@@ -55,3 +55,8 @@ HTML phone number capture
 Canvas trigger to update user profile subscription state 
 
 -->
+
+[4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup
