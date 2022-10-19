@@ -9,7 +9,7 @@ description: "This landing page lists the Braze Catalogs Endpoints."
 page_type: landing
 
 guide_top_header: "Catalogs Endpoints"
-guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the synchronous catalog endpoints to make bulk changes to your catalog. To receive a confirmation that a change to your catalog has been received and processed, use the asynchronous or synchronous catalog item endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using Catalogs</a>."
+guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the synchronous catalog endpoints to make bulk changes to your catalog. To receive a confirmation that a change to your catalog has been received and processed, use the asynchronous or synchronous catalog item endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
 
 guide_featured_title: "Catalogs Endpoints<br><br>"
 guide_featured_list:
@@ -47,8 +47,8 @@ guide_menu_list2:
   - name: "GET: List Multiple Catalog Item Details"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
     fa_icon: fas fa-list-alt
-  - name: "PATCH: Edit Multiple Catalog Items"
-    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_items_bulk/
+  - name: "PATCH: Edit Catalog Item"
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
     fa_icon: fas fa-user-edit
   - name: "POST: Create Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
