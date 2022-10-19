@@ -13,17 +13,19 @@ channel:
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!
 
-### How do I affect my WhatsApp send quality? 
+### What is my WhatsApp Business phone number's quality rating?
 
-### How do you build up? 
+Your quality rating is a metric determined by Meta and depends on the feedback from your customers. Refer to [Quality rates](https://business.facebook.com/business/help/896873687365001#) to learn more. 
 
-### Quality Rating - what does this affect?
+### How can I increase my messaging limit?
 
-### How do I manage language templates between WhatsApp and Braze? 
-
-### How can I manage inbound support questions? 
+Your messaging limit will increase automatically with time based on several factors, including quality rating, phone number status, and the number of business-initiated conversations. Refer to [Messaging limits](https://developers.facebook.com/docs/whatsapp/messaging-limits#increasing-your-limit) to learn more. 
 
 ### What countries can I access on WhatsApp?
 
-All countries can be accessed on WhatsApp.
+All countries are available to message through Whatsapp, though rates do change across different recipient countries.
+
+### How do I get my brand's name to appear in the message's contact information?
+
+Setting your brand's name in your messages contact information can be done through the [Meta Business Manager console](https://www.facebook.com/business/help/378834799515077). 
 
