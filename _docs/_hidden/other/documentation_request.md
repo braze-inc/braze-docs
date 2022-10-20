@@ -288,7 +288,7 @@ hide_toc: true
           <div class="row">
             <div class="col">
               <h1 class="h1">Request Documentation Change</h1>
-              <p class="subhead"><b>Internal only.</b> All fields are required unless otherwise noted.</p>
+              <p class="subhead">Internal only. All fields are required unless otherwise noted.</p>
                   <div class="gradient-line"></div>
             </div>
           </div>
