@@ -19,16 +19,21 @@ To create a filtered set, select your catalog and click **Create Filtered Set**.
 
 ## Use case
 
-Let's say we want to recommend meals from a popular restaurant to multiple customers. With filtered sets, you can set up information that is personalized to each customer. 
+Let's say we want to recommend autumn sale items from a popular clothing store to multiple customers. With filtered sets, you can set up information that is personalized to each customer. 
 
-Using a catalog with the restaurant's information for menu items, prices, and product types, we can create a filtered set to recommend a meal based on the latest product type a customer has viewed.
+Using a catalog with the clothing store's information for clothing items, prices, and ratings, we can create a filtered set to recommend clothing items with ratings greater than four stars.
 
-![An example of a filtered set for a restaurant with two filters: one that identifies a meal recommendation, and one that identifies a customer's most recently viewed category.][2]{: style="max-width:85%;"}
+![An example of a filtered set for a clothing store with three filters: one that identifies an item price, an item, and the rating.][2]{: style="max-width:85%;"}
 
-Next, you can insert this filtered set using the **Add Personalization** modal for a Content Card campaign that returns the three meal recommendations for a customer:
+To use this catalog in a campaign, you can insert this filtered set using the **Add Personalization** modal in the message composition section of building a campaign. In our example, we've selected the catalog with store product information with the filtered set for fall sale favorites. 
 
-![A Content Card for a test user with the title "Check out some new stuff" followed by three recommended meals and prices.][3]{: style="max-width:50%;"}
+![Personalization modal that shows the filtered set "Fall_Sale_Favorites" with three filter settings for price, sale, and rating.][4]{: style="max-width:60%;"}
+
+Using the set personalization and a Content Card campaign, we can send three sale items with a rating greater than four stars for each customer at the clothing store.
+
+![A Content Card for a test user with the title "Check out some fall favorites" followed by three recommended item names, sale prices, and ratings.][3]{: style="max-width:50%;"}
 
 [1]: {% image_buster /assets/img_archive/catalog_filtered_sets1.png %}
 [2]: {% image_buster /assets/img_archive/catalog_filtered_sets2.png %}
 [3]: {% image_buster /assets/img_archive/catalog_filtered_sets3.png %}
+[4]: {% image_buster /assets/img_archive/catalog_filtered_sets4.png %}
