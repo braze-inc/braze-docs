@@ -38,13 +38,12 @@ The following table lists specific API rate limits for different request types. 
 | [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 requests per minute shared between the endpoints. |
-{: .reset-td-br-1 .reset-td-br-2}
-<!--
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, PUT, DELETE and `/scim/v2/Users` POST endpoints. |
+| [`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, PUT, DELETE and `/scim/v2/Users` POST endpoints. |
 | [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
 | [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
 | [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
---->
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
 
@@ -115,10 +114,10 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
 [21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-[22]: {{site.baseurl}}/scim/get/
-[23]: {{site.baseurl}}/scim/post/
-[24]: {{site.baseurl}}/scim/delete/
-[25]: {{site.baseurl}}/scim/put
+[22]: {{site.baseurl}}/get_see_user_account_information/
+[23]: {{site.baseurl}}/post_create_user_account/
+[24]: {{site.baseurl}}/delete_existing_dashboard_user/
+[25]: {{site.baseurl}}/post_update_existing_user_account/
 [26]: {{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/
 [27]: {{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/
 [28]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/
@@ -135,3 +134,4 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [39]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
 [40]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
+[43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/

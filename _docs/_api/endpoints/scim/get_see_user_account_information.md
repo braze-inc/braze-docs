@@ -12,10 +12,10 @@ description: "This article outlines details about the Look Up an Existing Dashbo
 {% api %}
 # Look up an existing dashboard user account
 {% apimethod get %}
-/scim/v2/users/YOUR_ID_HERE
+/scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to look up an existing dashboard user account by specifying their email. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This endpoint allows you to look up an existing dashboard user account by specifying their resource ID. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -25,12 +25,12 @@ This endpoint allows you to look up an existing dashboard user account by specif
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The users's email address |
+| `id` | Required | String | The user’s resource ID |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
 ```json
-curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/user@test.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
 --header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
