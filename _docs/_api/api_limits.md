@@ -38,11 +38,7 @@ The following table lists specific API rate limits for different request types. 
 | [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 requests per minute shared between the endpoints. |
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, PUT, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, PUT, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
-| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
