@@ -12,14 +12,29 @@ Version history allows you to view and access Canvas analytics and the user jour
 Version history for Canvas Flow is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
+## Managing versions
 
-To access the version history, navigate to your Canvas details at the top of your Canvas and select **# Versions**. Here, you have access to the **Version history** sidebar. Select any of the Canvas versions to view and compare Canvas details. The Canvases listed under **Version history** are view-only. These previous versions can't be restored or deleted.
+![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-You can toggle between the Canvas analytics and the Canvas setup by clicking **View Analytics** or **View Canvas** at the bottom toolbar. When you create a new version of a Canvas, you can still access all past versions by going to the version history sidebar.
+To access the version history, navigate to your Canvas details at the top of your Canvas and select **# Versions**. Here, you have access to the **Version history** sidebar. Select any of the Canvas versions to view and compare Canvas details. The Canvases listed under **Version history** are view-only.
 
-As you edit and refine your Canvas, you can choose to overwrite the Canvas directly or to create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version.
+You can overwrite the Canvas directly or create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version.
 
-You can still view analytics for any date range by adjusting the date picker. In the Canvas version view, the data will populate for the entire date range, not just the date range of that version. However, at the step level, analytics will only be shown for steps that existed while that version was active. 
+You can also toggle between the Canvas analytics and the Canvas setup by clicking **View Analytics** or **View Canvas** at the bottom toolbar. 
+
+As you edit and refine your Canvas, you can still access all past versions by going to the version history sidebar. You can also view the changes associated with a version in the Canvas changelog. As your version history count increases, you can also rename each version in the sidebar to stay organized. By default, version names are generated as a number based on how many versions have been previously created.
+
+![Canvas changelog example showing that two new Canvas versions have been created.][2]{: style="max-width:85%" }
+
+### Discarding versions
+
+You can create up to 10 versions per Canvas. If you reach this limit, you can discard a version to make space for a new one. Note that versions are discarded upon clicking **Discard**, not when you update the Canvas. 
+
+If you discard a version, the Canvas setup will be lost immediately, but the analytics associated with the discarded version will be retained.
+
+## Viewing analytics
+
+Within version history, you can view Canvas-level and steps-level analytics. In the Canvas version view, the data will populate for the entire date range, not just the date range of that version. However, at the step level, analytics will only be shown for steps that existed while that version was active. These analytics will populate using calendar days that correspond to your company's timezone, so the analytics will not be specific to when the version was created.
 
 [1]: {% image_buster /assets/img_archive/canvas_version_history.png %} 
+[2]: {% image_buster /assets/img_archive/canvas_version_history_changelog.png %}
