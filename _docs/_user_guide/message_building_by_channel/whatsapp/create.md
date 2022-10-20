@@ -15,6 +15,10 @@ hidden: true
 
 > WhatsApp campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
+{% alert important %}
+Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
+
 ## Step 1: Choose where to build your message
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.

@@ -23,8 +23,16 @@ guide_featured_list:
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
   fa_icon: fas fa-table
+- name: "WhatsApp Reporting"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
+  fa_icon: fas fa-file-alt
 - name: "WhatsApp FAQs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   fa_icon: fas fa-comment
 
 ---
+
+{% alert important %}
+Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
+

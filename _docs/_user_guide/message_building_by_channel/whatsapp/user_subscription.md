@@ -13,6 +13,10 @@ hidden: true
 
 WhatsApp subscription groups are created upon integrating WhatsApp with your app through the **Technology Partner Portal**.
 
+{% alert important %}
+Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
+
 ## WhatsApp subscription states
 
 There are two subscription states for WhatsApp users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be subscribed to a transactional Subscription Group but unsubscribed to a promotional one. For brands, this separation of states ensures they can continue sending relevant WhatsApp messages to their users.
@@ -36,7 +40,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ## WhatsApp opt-in process
 
-Currently, users can subscribe and opt-in to WhatsApp messaging in various ways, including SMS, through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel so it's up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
+Currently, users can subscribe and opt-in to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel so it's up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 
 <!--
 

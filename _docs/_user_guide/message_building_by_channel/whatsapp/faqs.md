@@ -13,6 +13,10 @@ hidden: true
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!
 
+{% alert important %}
+Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
+
 ### What is my WhatsApp Business phone number's quality rating?
 
 Your quality rating is a metric determined by Meta and depends on the feedback from your customers. Refer to [Quality rates](https://business.facebook.com/business/help/896873687365001#) to learn more. 
