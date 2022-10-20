@@ -99,10 +99,10 @@ Note that if you input any values with spaces in between, before, or after words
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
-| Check if the string exactly matches **any** of the inputted strings | **ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NOT ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** | **STRING**<br>Case sensitive; multiple strings allowed |
 | Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-| Check if the string attribute **does not partially match any** of the inputted strings | **DOES NOT CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
