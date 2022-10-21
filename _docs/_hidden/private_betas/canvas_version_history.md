@@ -18,9 +18,9 @@ Version history for Canvas Flow is currently in early access. Contact your Braze
 
 To access the version history, navigate to your Canvas details at the top of your Canvas and select **# Versions**. Here, you have access to the **Version history** sidebar. Select any of the Canvas versions to view and compare Canvas details. The Canvases listed under **Version history** are view-only.
 
-You can overwrite the Canvas directly or create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version.
-
-You can also toggle between the Canvas analytics and the Canvas setup by clicking **View Analytics** or **View Canvas** at the bottom toolbar. 
+You can overwrite the Canvas directly or create a new version. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version. You can also view any changes made to a version while it was active by clicking **View Changes** in the version history sidebar.
+ 
+To toggle between the Canvas analytics and the Canvas setup, click **View Analytics** or **View Canvas** at the bottom toolbar. 
 
 As you edit and refine your Canvas, you can still access all past versions by going to the version history sidebar. You can also view the changes associated with a version in the Canvas changelog. As your version history count increases, you can also rename each version in the sidebar to stay organized. By default, version names are generated as a number based on how many versions have been previously created.
 
@@ -28,9 +28,9 @@ As you edit and refine your Canvas, you can still access all past versions by go
 
 ### Discarding versions
 
-You can create up to 10 versions per Canvas. If you reach this limit, you can discard a version to make space for a new one. Note that versions are discarded upon clicking **Discard**, not when you update the Canvas. 
+You can create up to 10 versions per Canvas. If you reach this limit, you can discard a version to make space for a new one. Note that versions are discarded upon clicking **Discard**, not when you update the Canvas. This is reflected in the overall Canvas changelog, not a specific version's changelog.
 
-If you discard a version, the Canvas setup will be lost immediately, but the analytics associated with the discarded version will be retained.
+If you discard a version, the Canvas setup will be lost immediately, but the analytics associated with the discarded version will be retained. 
 
 ## Viewing analytics
 
