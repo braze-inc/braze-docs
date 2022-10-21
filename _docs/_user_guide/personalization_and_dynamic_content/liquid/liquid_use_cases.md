@@ -759,7 +759,7 @@ This use case will display the current date, month, and year, with the month in 
 
 ### Display an image based on a user's language {#language-image-display}
 
-This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to Braze.
+This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze Media Library.
 
 {% raw %}
 ```liquid
