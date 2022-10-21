@@ -41,19 +41,17 @@ guide_featured_list:
 
 ## About Liquid
 
-Campaign messages support templated messaging using the Liquid templating language. For more on Liquid syntax and usage, refer to [**Supported personalization tags**][1].
+Liquid is an open-source template language developed by Shopify and written in Ruby. At Braze, Liquid is used to template data from a user's profile into messages. For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**][1].
 
-{% alert warning %}
-
-Braze does not currently support 100% of Shopify's Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending to reduce the risk of errors or using unsupported Liquid.
-
-{% endalert %}
-
-Liquid templating language supports the use of objects, tags and filters.
+Liquid templating language supports the use of objects, tags, and filters.
 
 - [**Objects**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) allow you to insert personalized attributes into your messages.
-- [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+- [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to insert data into messaging and use conditional logic to send messages if outlines conditions are met. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 - [**Filters**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC*, into a date, such as *September 7, 2016*.
+
+{% alert warning %}
+Braze does not currently support 100% of Shopify's Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending them to reduce the risk of errors or using unsupported Liquid.
+{% endalert %}
 
 ### What's new with Liquid 5
 
@@ -80,10 +78,10 @@ These terms are reinterpreted from [**Shopify's documentation**](https://shopify
 | Term | Definition | Example |  
 |---|---|---|
 | Liquid | An open-source, customer-facing template language created by Shopify and written in Ruby; used to load/pull dynamic content. | `{{${first_name}}}` will insert a user's first name into a message. |
-| Object | A denotation of a variable and location of intended variable name that tells Liquid where to show content in the message. | `{{${first_name}}}` will insert a user's first name into a message. |
-| Conditional Logic Tag | Tags create logic and control the flow for templates. In Braze's case, Conditional Logic Tags are Liquid used to consider intelligent or programming logic to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
-| Filters | Used to change, narrow, or reformat the output of the Liquid Object. It is often used to create mathematical operations. |  ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
-| Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | Is a user meets the defined criteria in a messaged tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
+| Object | A denotation of a variable and location of the intended variable name that tells Liquid where to show content in the message. | `{{${city}}` will insert a user's city into a message. |
+| Conditional logic tag | Tags create logic and control the flow of message content. In Braze's cases, conditional logic tags are used to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
+| Filters | Used to change, narrow, or reformat the output of the Liquid object. It is often used to create mathematical operations. | ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
+| Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | If a user meets the defined criteria in a message tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}
