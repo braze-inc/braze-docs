@@ -25,7 +25,7 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
 
-- **Client checks internally (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to ensure the information has not already been captured.<br><br>
+- **Check internal database (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to ensure the information has not already been captured.<br><br>
 - **[/users/export/id]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint**<br>Run the following call and check to see if the returned users array is empty or contains a value:
   ```json
   --data-raw '{
