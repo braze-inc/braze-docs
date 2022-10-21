@@ -768,7 +768,7 @@ English image URL (for example, https://cdn-staging.braze.com/appboy/communicati
 {% elsif ${language} == 'ru' %}
 Russian iamge URL
 {% elsif ${language} == 'es' %}
-Spanich image URL
+Spanish image URL
 {% else %}
 Fallback image URL
 {% endif %}
