@@ -766,7 +766,7 @@ This use case will display an image based on a user's language. Note that this u
 {% if ${language} == 'en' %}
 English image URL (for example, https://cdn-staging.braze.com/appboy/communication/assets/image_assets/images/60aecba96a93150c749b4d57/original.png?1622068137)
 {% elsif ${language} == 'ru' %}
-Russian iamge URL
+Russian image URL
 {% elsif ${language} == 'es' %}
 Spanish image URL
 {% else %}
