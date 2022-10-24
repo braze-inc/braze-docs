@@ -173,7 +173,7 @@ In this example, the Connected Content script calls Voucherify API to publish a 
 
 ### Invite new referrers
 
-This Connected Content script enables you to publish and send unique referral codes to selected Braze users. Each user receives only one referral code to share with other users and gain new referrals.
+If you want a customer to join a referral program, you need to assign a referral code to that person. The connected content remains the same as in the previous case above. This Connected Content script enables you to publish and send unique referral codes to selected Braze users. Each user receives only one referral code to share with other users and gain new referrals. 
 
 {% raw %}
 
@@ -215,7 +215,7 @@ Here is an example of a Connected Content script that pulls the current loyalty 
 {% assign cache_id = source_id %}
 
 {% connected_content
-   YOUR API ENDPOINT/v1/loyalties/{{voucherify_campaign_id}}/members/{{custom_attribute.${loyalty.card}}}?cache_id={{cache_id}}
+   YOUR API ENDPOINT/v1/loyalties/members/{{custom_attribute.${loyalty.card}}}?cache_id={{cache_id}}
    :method get
    :headers {
         "X-App-Id": "VOUCHERIFY-APP-ID",
