@@ -173,7 +173,7 @@ In this example, the Connected Content script calls Voucherify API to publish a 
 
 ### Invite new referrers
 
-If you want a customer to join a referral program, you need to assign a referral code to that person. The connected content remains the same as in the previous case above. This Connected Content script enables you to publish and send unique referral codes to selected Braze users. Each user receives only one referral code to share with other users and gain new referrals. 
+If you want a customer to join a referral program, you need to assign a referral code to that person. The Connected Content remains the same as in the preceding example. This Connected Content script enables you to publish and send unique referral codes to selected Braze users. Each user receives only one referral code to share with other users and gain new referrals. 
 
 {% raw %}
 
