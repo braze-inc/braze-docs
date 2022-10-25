@@ -35,9 +35,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "items": [ (max of 50 items)
+    "items": [ (max of 1 item)
         {
-            "id": (required, item id)
             "count": (required, item count)
         },
     ]
@@ -58,7 +57,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"items": [
 		{
-			"id": "0",
 			"count": 5,
 		}
 	]

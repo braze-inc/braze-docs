@@ -75,9 +75,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/catalogs' \
         {
             "name": "catalog_1",
             "description": "this is catalog_1",
-            "last_updated": "2022-04-06T14:36:55+0000",
-            "num_items": 1000,
-            "size_in_mb": 25,
             "fields": [
             	{
             		"name": "id",
