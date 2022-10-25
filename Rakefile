@@ -56,7 +56,12 @@ end
 
 namespace :docs_fr do
   config_file = './_config.yml,./_lang/_config_fr.yml'
-  task :build do
+  task :index do
+    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
+      puts `bundle exec jekyll algolia --config #{config_file}`
+    end
+  end
+  task build: [:index] do
     jekyll_build(config_file, 'fr')
   end
   task :serve do
