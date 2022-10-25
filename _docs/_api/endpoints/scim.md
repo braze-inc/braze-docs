@@ -20,6 +20,9 @@ guide_featured_list:
   - name: "GET: Look Up Existing Dashboard User Account"
     link: /docs/get_see_user_account_information/
     fa_icon: fa-solid fa-eye
+  - name: "GET: Search Existing Dashboard User Account by Email"
+    link: /docs/get_search_existing_dashboard_user_email/
+    fa_icon: fa-solid fa-eye
   - name: "PUT: Update Dashboard User Account"
     link: /docs/post_update_existing_user_account/
     fa_icon: fa-solid fa-pencil
