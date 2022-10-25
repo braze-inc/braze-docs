@@ -35,13 +35,11 @@ The following table lists specific API rate limits for different request types. 
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per app group. |
 | [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per app group. |
+| [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
+| [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 requests per minute shared between the endpoints. |
+| [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 requests per minute shared between the endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
-<!--
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`PUT: /scim/v2/Users/YOUR_ID_HERE`][25] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` GET, DELETE and `/scim/v2/Users` POST endpoints. |
-| [`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET and `/scim/v2/Users` POST endpoints. |
-| [`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared with the `/scim/v2/Users/YOUR_ID_HERE` PUT, GET, and DELETE endpoints. |
---->
 
 ## Batching API requests
 
@@ -112,12 +110,24 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
 [21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-[22]: {{site.baseurl}}/scim/get/
-[23]: {{site.baseurl}}/scim/post/
-[24]: {{site.baseurl}}/scim/delete/
-[25]: {{site.baseurl}}/scim/put
+[22]: {{site.baseurl}}/get_see_user_account_information/
+[23]: {{site.baseurl}}/post_create_user_account/
+[24]: {{site.baseurl}}/delete_existing_dashboard_user/
+[25]: {{site.baseurl}}/post_update_existing_user_account/
 [26]: {{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/
 [27]: {{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/
 [28]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/
 [29]: {{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/
 [30]: {{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/
+[31]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/delete_catalog/
+[32]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/
+[33]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/
+[34]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
+[35]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
+[36]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
+[37]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
+[38]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
+[39]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
+[40]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
+[41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
+[43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/

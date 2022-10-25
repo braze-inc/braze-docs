@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete multiple catalog items Braze endpoint."
+description: "This article outlines details about the Delete Multiple Catalog Items Braze endpoint."
 
 ---
 {% api %}
@@ -25,7 +25,7 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all bulk endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
 
 ## Request body
 
@@ -33,24 +33,29 @@ This endpoint has a shared rate limit of 100 requests per minute between all bul
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "items": [
+    "items": [ (max of 50 items)
         {
-            "id": "0"
+            "id": (required, item id)
         },
         {
-            "id": "1"
-        }
-        // ... max of 50 items
+            "id": (required, item id)
+        },
     ]
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the imported catalog.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
+
+```
+https://rest.iad-03.braze.com/catalogs/catalog_name/items
+```
 
 ## Example error response 
 
@@ -58,30 +63,33 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
+        "id": "invalid-ids",
+        "message": "Item ids can only include letters, numbers, hyphens, and underscores",
+        "parameters": ["id"],
+        "parameter_values": ["item_id"]
     },
     {
-      "id": "item-not-found",
-      "message": "Could not find item"
+        "id": "items-missing-ids",
+        "message": "There are 5 items that do not have ids",
+        "parameters": [],
+        "parameter_values": []
     }
-  ]
+    ]
 }
 ```
 
-## Possible errors
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
 | Error | Troubleshooting |
 | --- | --- |
-| catalog-not-found | Check that the catalog name is valid. |
-| invalid-ids | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| ids-too-large | Item IDs can't be more than 250 characters. |
-| ids-not-unique | Item IDs must be unique in the request. |
-| request-includes-too-many-items | Your request has too many items. The maximum is 50.
-| fields-do-not-match | Updated fields must match the fields in the catalog. |
-| arbitrary-error | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Item IDs can't be more than 250 characters. |
+| `ids-not-unique` | Check that the item IDs are unique in the request. |
+| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. | 
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

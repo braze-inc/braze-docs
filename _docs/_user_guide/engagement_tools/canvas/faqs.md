@@ -50,7 +50,7 @@ A user can only convert once per Canvas entry. Conversions are assigned to the m
 
 {% details Examples %}
 
-#### Example 1
+**Example 1**
 
 There is a Canvas path with 10 push notifications and the conversion event is "session start" ("Opens App"):
 
@@ -63,7 +63,7 @@ There is a Canvas path with 10 push notifications and the conversion event is "s
 If Quiet Hours is active when the conversion event happens, the same rules apply.
 {% endalert %}
 
-#### Example 2
+**Example 2**
 
 There is a one-step Canvas with Quiet Hours enabled:
 
@@ -74,6 +74,12 @@ There is a one-step Canvas with Quiet Hours enabled:
 **Result:** The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
 
 {% enddetails %}
+
+### What is the difference between the different conversion rate types?
+
+- Total canvas conversions reflects how many unique users completed a conversion event, not how many conversions they each completed. 
+- Variant conversion rate or summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message, as an aggregate total. 
+- Step conversion rate reflects how many individuals received that message step and completed any of the outlined conversion events.
 
 ### How can I view analytics for each of my Canvas components?
 

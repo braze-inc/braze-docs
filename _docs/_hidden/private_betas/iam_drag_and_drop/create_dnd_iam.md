@@ -26,6 +26,9 @@ Messages created using the Drag & Drop Editor can only be sent to users on the f
 
 If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
 
+**Additional Web SDK prerequisite**<br>
+The initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
+
 ## Step 1: Specify delivery platforms
 
 After selecting the Drag & Drop Editor as your editing experience, select the message platform you would like to send your message to: Mobile Apps, Web Browsers or Both Mobile Apps & Web Browsers.
@@ -40,7 +43,7 @@ When you open the Drag & Drop Editor, you’ll see a basic modal layout on the e
 
 The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
 
-![]({% image_buster /assets/img_archive/dnd_iam_rows_blocks.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![]({% image_buster /assets/img_archive/dnd_iam_rows_blocks.png %}){: style="float:right;max-width:30%;margin-left:15px"}
 
 - **Rows** are structural units that define the horizontal composition of a section of the message by using cells. Using more than one cell allows you to put different content elements side by side. You can add all the structural elements you need to your message.
 - **Blocks** represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
@@ -64,16 +67,6 @@ The default font will only apply to the current message and any duplicated messa
 {% endalert %}
 
 ### Creative details
-
-#### Customizing background image
-
-You can add an image to the background of your message or individual elements within your message by expanding the **Background** field in the **Style** panel. Select the scrollable section of your message to add a background for the entire message.
-
-![]({% image_buster /assets/img_archive/dnd_iam_background.gif %}){: style="max-width:30%"}
-
-{% alert tip %}
-If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
-{% endalert %}
 
 #### Adding Liquid
 

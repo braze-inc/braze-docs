@@ -156,11 +156,35 @@ If you are updating subscription group status, you must have the following two c
 - `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
 - `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).
 
-| external_id | first_name | subscription_group_id | subscription_state |
-| ----------- | ---------- | --------------------- | ------------------ |
-| A8i3mkd99 | Colby | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
-| k2LNhj8Ks | Tom | {% raw %}`<subscription_group_id>`{% endraw %} | subscribed |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;font-size: 14px; font-weight: bold; background-color: #f4f4f7; text-transform: lowercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top;word-break:normal}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">external_id</th>
+    <th class="tg-0pky">first_name</th>
+    <th class="tg-0pky">subscription_group_id</th>
+    <th class="tg-0pky">subscription_state</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">A8i3mkd99</td>
+    <td class="tg-0pky">Colby</td>
+    <td class="tg-0pky">6ff593d7-cf69-448b-aca9-abf7d7b8c273</td>
+    <td class="tg-0pky">subscribed</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">k2LNhj8Ks</td>
+    <td class="tg-0pky">Tom</td>
+    <td class="tg-0pky">aea02307-a91e-4bc0-abad-1c0bee817dfa</td>
+    <td class="tg-0pky">subscribed</td>
+  </tr>
+</tbody>
+</table>
 
 {% alert important %}
 Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you will need to do multiple imports.
