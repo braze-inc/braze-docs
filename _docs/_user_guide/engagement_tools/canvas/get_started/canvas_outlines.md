@@ -21,9 +21,30 @@ Braze Learning offers several dedicated Canvas courses that go over common Canva
 
 ## Canvas Flow
 
+Using Canvas Flow, check out these four outlines that demonstrate how you can build a user journey for common use cases.
+
+{% tabs %}
+  {% tab Onboarding %}
+    Let's say your restaurant wants to help onboard users to make their first reservation. An ideal time for the Canvas to launch would be at session start for all new customers since this is solely for onboarding. For a quick and effective way of reaching your dining audience, you can use the SMS messaging channel.
+  {% endtab %}
+
+  {% tab Upsell %}
+    Upselling your subscriptions can also be encouraged through building and sending effective Canvases. For example, if you want to upgrade active users who are on a free version of your app, you can create an action-based Canvas to trigger when a customer has reached the custom event "3 hours streamed". Using a Message step, you can prompt these customers to sign up for your premium subscriptions.
+  {% endtab %}
+
+  {% tab Cart abandonment %}
+    Retail businesses may often find themselves needing to remind customers of incomplete purchases. With an action-based Canvas, you can send a reminder to all registered customers to purchase the items in their abandoned carts. 
+  {% endtab %}
+
+  {% tab Educate %}
+    You can use Canvases to educate customers on resources. For example, you can create a Canvas that primes customers who have booked for travel in three days by scheduling a weekly email with their flight information and related airport FAQs.
+  {% endtab %}
+{% endtabs %}
+
+
 ## Original workflow editor
 
-The four outlines show a previous version of the Canvas entry step in the original Canvas editor. 
+These four outlines show a previous version of the Canvas entry step in the original Canvas editor. 
 
 {% tabs %}
   {% tab Onboarding %}

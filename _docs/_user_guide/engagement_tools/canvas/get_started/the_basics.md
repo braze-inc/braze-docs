@@ -16,22 +16,28 @@ Before getting started with the finer details of Canvas setup, let's identify th
 
 {% tabs %}
   {% tab Canvas %}
+  A Canvas is a unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey.
 
   {% endtab %}
 
   {% tab Journey %}
 
+  A journey, or commonly referred to as a user journey, is an individual user's experience within the Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:70%;"}
+
   {% endtab %}
 
-  {% tab Entry Step %}
+  {% tab Entry Wizard %}
+  The Entry Wizard includes the first steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Entry Wizard is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [entry audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).
 
   {% endtab %}
 
   {% tab Variants %}
+  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You can name each variant and control the distribution of the target audience following each variant.
 
   {% endtab %}
 
   {% tab Steps %}
+  A step in Canvas is a marketing decision point that can determine your user journey. You can leverage [Canvas components][2] to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
 
   {% endtab %}
 {% endtabs %}
@@ -67,48 +73,35 @@ Selecting at least one conversion event will give you the ability to understand 
 
 Your answer will determine the details of when and how your Canvas is delivered to your customer. Users can enter your Canvas in one of two ways: scheduled or action-based triggers.
 
-| Scheduled | Action-Based |
-|---|---|
-|You can use scheduled delivery when you want to send a Canvas out immediately to your target audience, have it regularly sent, or schedule it for a specific time in the future. | These Canvases respond to specific customer behaviors as they happen. These action-based triggers can include opening your app, making a purchase, interacting with another campaign, or triggering any custom event. |
-{: .reset-td-br-1 .reset-td-br-2}
+Scheduled delivery allows you to send a Canvas immediately to your target audience. You can also have it sent regularly, or schedule it for a specific time in the future. Action-based Canvases respond to specific customer behaviors as they happen. For example, an action-based trigger can include opening an app, making a purchase, interacting with another campaign, or triggering any custom event. At the point of the action occurring, you can have the Canvas send to your users.
 
 ### The "who": Select an audience
 
 > Who are you trying to reach? 
 
-Here you can use a pre-defined segment and add more filters to further focus on connecting to your audience. With these segments, only the users who match the target audience criteria can enter the Canvas journey, leading to a more personalized experience.
+To define your "who", you can use pre-defined segments available in Canvas. You can also add more filters to further focus on connecting to your targeted audience. After building these segments, only the users who match the target audience criteria can enter the Canvas journey, leading to a more personalized experience. See this table for available filters and how they segment your users to fit your use case.
 
 | Filter | Description |
 |---|---|
-| Custom Data | Custom data filters allow you to segment users based on events and attributes you define. With them, you can use features specific to your product. |
-| User Activity | User activity filters allow you to segment customers based on their actions and purchases. |
-| Retargeting | Retargeting filters allow you to segment customers who have been sent, received, or interacted with previous Campaigns or Canvases. |
-| Marketing Activity | Marketing filters segment customers based on universal behaviors like last engagement or received campaigns. |
-| User Attributes | User attribute filters segment customers by their constant attributes and characteristics. |
-| Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad. |
+| Custom Data | Segment users based on events and attributes you define. Can use features specific to your product. |
+| User Activity | Segment customers based on their actions and purchases. |
+| Retargeting | Segment customers who have been sent, received, or interacted with previous Canvases. |
+| Marketing Activity | Segment customers based on universal behaviors such as the last engagement. |
+| User Attributes | Segment customers by their constant attributes and characteristics. |
+| Install Attribution | Segment customers by their first source, adgroup, campaign, or ad. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### The "where": Locate my audience
+### The "where": Find my audience
 
-> Where can I reach my audience? 
+> Where can I best reach my audience? 
 
-This is where we determine which messaging channels make the most sense for your user journey. With Canvas, you can use any of the following channels:
-* Email
-* Push (Android, iOS, Windows, web)
-* In-app Messages
-* Content Cards
-* SMS or MMS
-* Webhook
-
-1. **Setting up variants**: A variant is the trail each customer follows on their journey. Canvas supports up to eight variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
-
-2. **Building steps**: A step is a marketing decision point—what is the experience you’re creating? Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
-
-3. **Determining when and how to use steps & variants:** Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm will help you map out the right shape and structure of your Canvas. There are a couple approaches you can use:
-    - **Work backwards**: Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
-    - **Start with the status quo and add more**: Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a followup message. Look at your performance and keep optimizing by making incremental changes.
-    - **Look to others**: Imitation is the highest form of flattery. Don’t reinvent in the wheel. Don’t worry, we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
-
+This is where we determine which messaging channels make the most sense for your user journey. Ideally, you'd want to reach your users where they're most accessible. With that in mind, you can use any of the following channels with Canvas:
+* [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)
+* [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
+* [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
+* [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
+* [SMS or MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### The "how": Build the complete experience
 
@@ -116,7 +109,21 @@ This is where we determine which messaging channels make the most sense for your
 
 The "how" collectively summarizes how you'll create your Canvas and how you'll reach your users with your message. For example, in order for a message to be effective, you should optimize the timing of your messaging with regards to the timezones across your different users.
 
-Answering "how" also determines the cadence for sending a Canvas to your audience (i.e., once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build. 
+Answering "how" also determines the cadence for sending a Canvas to your audience (i.e., once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
 
+# General tips
+
+## Determine when and how to use steps and variants
+
+Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? This is where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm will help you map out the right shape and structure of your Canvas.
+
+### Work backwards
+
+Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
+
+### Mix up your messaging
+
+Have you ran a similar campaign in the past? Or is one currently running? Try using that one message and adding more personalization to it. Try a new filter or add a follow-up message. As you mix up your messaging techniques, monitor your performance and keep optimizing by making incremental changes.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components
