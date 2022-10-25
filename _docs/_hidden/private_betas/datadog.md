@@ -34,7 +34,7 @@ In DataDog, you will need to create an application key. To add an application ke
 
 ### Step 2: Add key to Braze
 
-In the Braze dashboard, navigate to the **Technology Partners** section and then search **DataDog**. On the DataDog partner page, provide the  DataDog application key. 
+In the Braze dashboard, navigate to the **Technology Partners** section and then search **DataDog**. On the DataDog partner page, provide the DataDog application key. 
 
 ## Braze events
 
