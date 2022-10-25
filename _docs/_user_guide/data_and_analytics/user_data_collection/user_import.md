@@ -20,7 +20,7 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 ## Cloud Data Ingestion
 
-You can use Braze’s Cloud Data Ingestion to import and maintain user attributes for users. See [Cloud Data Ingestion][14] for more information.
+You can use Braze’s Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
 
 ## CSV
 
