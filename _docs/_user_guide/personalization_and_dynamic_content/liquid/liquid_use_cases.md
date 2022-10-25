@@ -229,7 +229,7 @@ Countdowns
 - [Create a countdown for specific shipping dates and priorities](#countdown-shipping-options)
 - [Create a countdown in days](#countdown-days)
 - [Create a countdown from days to hours to minutes](#countdown-dynamic)
-- [Create a countdown to a future date](#countdown-future-date)
+- [Show how many days left until a certain date](#countdown-future-date)
 - [Display how many days left until a custom date attribute will arrive](#countdown-custom-date-attribute)
 - [Display how much time is left, and abort the message if there's only X time left](#countdown-abort-window)
 - [In-app message to send X days before user's membership ends](#countdown-membership-expiry)
@@ -356,7 +356,7 @@ You have {{difference_days}} days left till your order arrives!
 You will need a custom attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes.
 {% endalert %}
 
-### Create a countdown to a future date {#countdown-future-date}
+### Show how many days left until a certain date {#countdown-future-date}
 
 This use case calculates the difference between the current date and future event date and displays a message noting how many days until the event.
 
@@ -610,6 +610,8 @@ Custom event
 - [Abort push notification if a custom event is within two hours of now](#event-abort-push)
 - [Send a campaign each time a user performs a custom event three times](#event-three-times)
 - [Send a message to users who have only purchased from one category](#event-purchased-one-category)
+- [Track how many times a custom event occured over the past month](#track)
+
 
 ### Abort push notification if a custom event is within two hours of now {#event-abort-push}
 
@@ -666,6 +668,43 @@ This use case captures a list of the categories a user has purchased from, and i
 ```
 {% endraw %}
 
+### Track how many times a custom event occurred over the past month {#track}
+
+This use case calculates the number of times a custom event has been logged between the 1st of the current month and the previous month. You can then run an users/track call to update store this value as a custom attribute. Note that this campaign would need to run for two consecutive months before monthly data can be used.
+
+{% raw %}
+```liquid
+{% for custom_event in response.users[0].custom_events %}
+{% assign ce_name = custom_event.name %}
+{% comment %} The following Custom Event name will need to be amended for the target Custom Event. {% endcomment %}
+
+{% if ce_name == "Project Exported" %}
+{% comment %}{{custom_event.name}}: {{custom_event.count}}{% endcomment %}
+{% assign current_count = custom_event.count %}
+{% endif %}
+{% endfor %}
+
+{% assign prev_month_count = {{custom_attribute.${projects_exported_prev_month}}} %}
+{% assign latest_count = current_count | minus: prev_month_count %}
+{% assign now = '"now" | date: "%s" %}
+{% assign yesterday = {{now}} | minus: 86400 %}
+{% assign previous_month = {{yesterday}} | date: "%B" %}
+{% assign previous_year = {{yesterday}} | date: "%y" %}
+{% assign formatted_month = previous_month | downcase %}
+{% comment %}The Custom Event name that is being tracked will be needed to be amended for the target Custom Event in the Attribute Name below. {% endcomment %}
+```
+
+```json
+"attributes": [
+  {
+    "external_id":"{{${user_id}}}",
+       "projects_exported_{{formatted_month}}_{{previous_year}}": "{{latest_count}}"
+  }
+]
+```
+
+{% endraw %}
+
 {% endapi %}
 
 {% api %}
@@ -677,6 +716,7 @@ Language
 {% endapitags %}
 
 - [Display month names in a different language](#language-display-month)
+- [Display an image based on a user's language](#language-image-display)
 - [Personalize messaging based on day of the week and user's language](#language-personalize-message)
 
 ### Display month names in a different language {#language-display-month}
@@ -713,6 +753,24 @@ This use case will display the current date, month, and year, with the month in 
 {{day}} November {{year}}
 {% elsif {{month)) == 'December' %}
 {{day}} December {{year}}
+{% endif %}
+```
+{% endraw %}
+
+### Display an image based on a user's language {#language-image-display}
+
+This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze Media Library.
+
+{% raw %}
+```liquid
+{% if ${language} == 'en' %}
+English image URL (for example, https://cdn-staging.braze.com/appboy/communication/assets/image_assets/images/60aecba96a93150c749b4d57/original.png?1622068137)
+{% elsif ${language} == 'ru' %}
+Russian image URL
+{% elsif ${language} == 'es' %}
+Spanish image URL
+{% else %}
+Fallback image URL
 {% endif %}
 ```
 {% endraw %}
@@ -1111,13 +1169,13 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 Platform targeting
 {% endapitags %}
 
-- [Differentiate in-app message copy by device OS](#platform-device-os)
+- [Differentiate copy by device OS](#platform-device-os)
 - [Target only a specific platform](#platform-target)
 - [Target only iOS devices with a specific OS version](#platform-target-ios-version)
 - [Target only Web browsers](#platform-target-web)
 - [Target a specific mobile carrier](#platform-target-carrier)
 
-### Differentiate in-app message copy by device OS {#platform-device-os}
+### Differentiate copy by device OS {#platform-device-os}
 
 This use case checks what platform a user is on, and depending on their platform, will display specific messaging.
 
@@ -1190,6 +1248,24 @@ This message will display on your desktop web browser.
 ```
 {% endraw %}
 
+The following use case checks if a web users is on iOS or Android and, if so, will display a specific message.
+
+{% raw %}
+```liquid
+{% if {{targeted_device.${os} == 'Android'}} and {{targeted_device.${platform} == 'web'}} %}
+
+Content for Android
+
+{% elsif {{targeted_device.${os} == 'iOS'}} and {{targeted_device.${platform} == 'web'}} %}
+
+Content for iOS
+
+{% else %}
+{% abort_message %}
+{% endif %}
+```
+{% endraw %}
+
 ### Target a specific mobile carrier {#platform-target-carrier}
 
 This use case checks if a user's device carrier is Verizon, and if so, will display a specific message.
@@ -1218,12 +1294,29 @@ This is a message for Verizon users!
 Time zones
 {% endapitags %}
 
+- [Personalize a message depending on a user's time zone](#personalize-timezone)
 - [Append the CST time zone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
 - [Only send a Canvas push during a window of time in a user's local time zone](#time-canvas-window)
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
 - [Send different messages on weekdays versus weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
+
+### Personalize a message depending on a user's time zone {#personalize-timezone}
+
+This use case displays different messages based on a user's time zone.
+
+{% raw %}
+```liquid
+{% if {{${time_zone}}} == ‘xx’ %}
+Message for time zone xx.
+{% elsif {{$time_zone}}} == ‘yy’ %}
+Message for timezone yy.
+{% else %}
+{% abort_message() %}
+{% endif %}
+```
+{% endraw %}
 
 ### Append the CST time zone to a custom attribute {#time-append-cst}
 
