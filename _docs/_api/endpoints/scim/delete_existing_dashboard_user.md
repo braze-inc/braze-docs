@@ -12,10 +12,10 @@ description: "This article outlines details about the Remove Existing User Accou
 {% api %}
 # Remove a dashboard user account
 {% apimethod delete %}
-/scim/v2/users/YOUR_ID_HERE
+/scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to permanently delete an existing dashboard user, similarly to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This endpoint allows you to permanently delete an existing dashboard user, similar to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -33,12 +33,12 @@ X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The developer's email address |
+| `id` | Required | String | The user’s resource ID |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
 ```json
-curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/user@test.com' \
+curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
 --header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
@@ -49,7 +49,7 @@ HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 ### Error states
-If a developer with this email address doesn’t exist in Braze, the endpoint will respond with:
+If a developer with this ID doesn’t exist in Braze, the endpoint will respond with:
 ```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8

@@ -12,10 +12,10 @@ description: "This article outlines details about the Update Existing Dashboard 
 {% api %}
 # Update an existing dashboard user account
 {% apimethod put %}
-/scim/v2/users/YOUR_ID_HERE
+/scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level). For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This endpoint allows you to update an existing dashboard user account by specifying the resource ID. Allows for the update of given and family names, permissions (for setting permissions at the company, app group, and team level) and department. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 For security reasons, `userName` (email address) cannot be updated through this endpoint at this time. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
@@ -32,7 +32,6 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 {
   "schemas": (required, array of strings),
-  "userName": (required, string),
   "name": (required, JSON object),
   "department": (required, string),
   "permissions": (required, JSON object)
@@ -44,8 +43,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
 | Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
-| `userName` | Required | String | The username that the user will need to log into Braze (usually the same as email address). |
-| `name` | Required | JSON object | This object contains the user's first name and last name. |
+| `name` | Required | JSON object | This object contains the user's given name and family name. |
 | `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -58,7 +56,6 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/user@
 --header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "userName": "user@test.com",
     "name": {
         "givenName": "Test",
         "familyName": "User"
@@ -91,7 +88,6 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "id": "user@test.com",
-    "userName": "user@test.com",
     "name": {
         "givenName": "Test",
         "familyName": "User"
@@ -119,7 +115,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 
 ### Error states
-If a user with this email address doesn’t exist in Braze, the endpoint will respond with:
+If a user with this ID doesn’t exist in Braze, the endpoint will respond with:
 
 ```json
 HTTP/1.1 404 Not Found

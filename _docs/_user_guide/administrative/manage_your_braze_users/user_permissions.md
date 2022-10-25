@@ -48,8 +48,8 @@ You can manage user permissions by group or on an individual basis using the Use
 |Publish Cards| Allows user to create and edit News Feed cards. You can still view cards without this permission. To launch existing Content Blocks, both **Publish Cards** and **Send campaigns, Canvases** permissions are required if your account is enabled for News Feed. |
 |Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
-|View PII | Allows user to view personally identifiable information within the dashboard. Note that both email addresses and phone number will be visible. |
-|View User Profile| Allows user to access User Search page.|
+|View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. |
+|View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows user to view, edit, and manage the **Manage Users** tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
 |View Usage Data| Allows user to view app usage.|

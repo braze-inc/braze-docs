@@ -96,7 +96,8 @@ By default, Connected Content will set a `Content-Type` header on a GET HTTP req
 
 By default, Connected Content makes an HTTP GET request to the specified URL. To make a POST request instead, specify `:method post`.
 
-You can optionally provide a POST body by specifying `:body` followed by a query string of the format `key1=value1&key2=value2&...`. Content-Type defaults to `application/x-www-form-urlencoded`. If you specify `:content_type application/json` and provide a form-urlencoded body such as `key1=value1&key2=value2`, Braze will automatically JSON-encode the body before sending.
+You can optionally provide a POST body by specifying `:body` followed by either a query string of the format `key1=value1&key2=value2&...` or a reference to captured values. Content-Type defaults to `application/x-www-form-urlencoded`. If you specify `:content_type application/json` and provide a form-urlencoded body such as `key1=value1&key2=value2`, Braze will automatically JSON-encode the body before sending.
+
 
 #### Default content-type
 {% raw %}
@@ -113,7 +114,7 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 If you want to provide your own JSON body, you can write it inline if there are no spaces. If your body has spaces, you should use an assign or capture statement. That is, any of these three are acceptable:
 
 {% raw %}
-##### Inline: Spaces not allowed
+##### Inline: spaces not allowed
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
@@ -125,7 +126,28 @@ If you want to provide your own JSON body, you can write it inline if there are 
 {% endcapture %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
 ```
+{% endraw %}
 
+{% raw %}
+```js
+{% capture postbody %}
+{
+"ids":[ca_57832,ca_75869],"include":{"attributes":{"withKey":["daily_deals"]}}
+}
+{% endcapture %}
+
+{% connected_content
+    https://example.com/api/endpoint
+    :method post
+    :headers {
+      "Content-Type": "application/json"
+  }
+  :body {{postbody}}
+  :save result
+%}
+```
+{% endraw %}
+{% raw %}
 ##### Body in an assign statement: spaces allowed
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}

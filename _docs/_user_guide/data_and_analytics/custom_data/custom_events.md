@@ -11,6 +11,18 @@ description: "This reference article describes custom events and properties, the
 
 Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
 
+## Use cases
+
+Some common custom event use cases include:
+- Trigger a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+- Segment users by how many times they performed a custom event, when the last time the event occurred, etc.
+- Use dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
+- Find additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/) reports.
+- Leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps.
+- Generate more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
+- Set up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users should not advance to the next step of your Canvas.
+- And more!
+
 ## Managing custom events
 
 To create and manage custom events in the dashboard, go to **Manage Settings** > **Custom Events**. From this page, you can view, manage, or blocklist existing custom events, or create a new one. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs.
@@ -133,7 +145,7 @@ For the original Canvas editor and Canvas Flow, you can't use `event_properties`
 For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 
-For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
+For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
 {% raw %}
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
@@ -306,7 +318,7 @@ Custom event properties are designed to help you increase targeting precision an
 If you would like to segment on the values of event properties, you have two options:
 
 1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
-2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
+2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past two years. Note that this option will not impact data usage.
 
 Braze's Success and Support teams can help recommend the best approach depending on your specific needs.
 
