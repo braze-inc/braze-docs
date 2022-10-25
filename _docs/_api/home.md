@@ -352,20 +352,16 @@ glossaries:
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/delete_catalog/'>/catalogs/catalog_name</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
     description: Delete a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'>/catalogs/</a>
     description: Create a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'>/catalogs/</a>
     description: List the catalogs in an app group.
-    tags:
-      - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
-    description: Retrieve a catalog item and its content.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
@@ -374,6 +370,10 @@ glossaries:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Edit an item in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/catalog_name/items</a>
+    description: Return multiple catalog items and their content.
     tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
