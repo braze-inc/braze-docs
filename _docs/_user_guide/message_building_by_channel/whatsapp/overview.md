@@ -2,7 +2,7 @@
 nav_title: Overview
 article_title: WhatsApp Overview
 alias: /partners/whatsapp/
-description: "This article outlines the partnership between Braze and WhatsApp, one of the world’s most popular instant messaging platforms."
+description: "This article outlines the partnership between Braze and WhatsApp, one of the world's most popular instant messaging platforms."
 page_type: partner
 search_tag: Partner
 page_order: 0
@@ -25,7 +25,7 @@ Acknowledge the following before proceeding with integration:
 - **WhatsApp content rules**: WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
 - **24-hour conversation limits**: After a user or business sends an initial templated message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation**: Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations**: You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
+- **Account limitations**: You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
 <br><br>
 
 | Requirement| Description|
@@ -33,7 +33,6 @@ Acknowledge the following before proceeding with integration:
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
 | WhatsApp phone number | A WhatsApp phone number is required to leverage this messaging channel. | 
-| WhatsApp subscription group | A dedicated [WhatsApp subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/) is required before starting the following integration. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -52,6 +51,8 @@ Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
 
 	![][2]{: style="max-width:100%;"}
 
+Once the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
+
 ### Step 3: Create WhatsApp templates
 
 Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
@@ -61,7 +62,7 @@ In the Meta Business Manager, under **Account Tools**, select **Message Template
 Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template wizard, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
-	The available message template categories include:
+	The available message template categories include the following:
 	- Transactional: Send account updates, order updates, alerts, and more to share important information.
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement.
 	- One-time passwords: Send codes that allow your customers to access their accounts.<br><br> 

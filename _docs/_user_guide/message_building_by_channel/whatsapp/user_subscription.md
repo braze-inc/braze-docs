@@ -40,25 +40,8 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ## WhatsApp opt-in process
 
-Currently, users can subscribe and opt-in to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel so it's up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
+Currently, users can subscribe and opt-in to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 
-<!--
-
-### How to upload user lists
-
-User import  (if customer has this audience) 
-Download from Meta 
-Upload as per Braze instructions 
-
-### User lists
-
-Maintaining your user list (opt in/opt out) 
-Subscription status endpoints to manage WhatsApp subscriptions 
-Generating opt ins 
-HTML phone number capture
-Canvas trigger to update user profile subscription state 
-
--->
 
 [4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
