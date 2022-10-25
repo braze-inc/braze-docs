@@ -114,38 +114,40 @@ You can optionally provide a POST body by specifying `:body` followed by either 
 If you want to provide your own JSON body, you can write it inline if there are no spaces. If your body has spaces, you should use an assign or capture statement. That is, any of these three are acceptable:
 
 {% raw %}
-##### Inline: Spaces not allowed
+##### Inline: spaces not allowed
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
-##### Body in a capture statement: example 1
+##### Body in a capture statement: spaces allowed
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
 {% endcapture %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
 ```
-##### Body in capture statement: example 2
+{% endraw %}
 
 {% raw %}
 ```js
 {% capture postbody %}
 {
-  {
-    "ids":[ca_57832,ca_75869],
-      "include":{
-        "attributes":{
-          "withKey":["daily_deals"]
-      }
-    }
-  }
+"ids":[ca_57832,ca_75869],"include":{"attributes":{"withKey":["daily_deals"]}}
 }
 {% endcapture %}
-{% connected_content https://example.com/api/endpoint :method post :content_type application/json :body postbody :save result %}
+
+{% connected_content
+    https://example.com/api/endpoint
+    :method post
+    :headers {
+      "Content-Type": "application/json"
+  }
+  :body {{postbody}}
+  :save result
+%}
 ```
 {% endraw %}
-
+{% raw %}
 ##### Body in an assign statement: spaces allowed
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
