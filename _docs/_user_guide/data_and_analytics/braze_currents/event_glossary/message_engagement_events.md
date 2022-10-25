@@ -624,7 +624,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "channel": (string) either 'sms' or 'email',
+  "channel": (string) either 'sms', 'email', or 'whats_app',
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
