@@ -49,6 +49,8 @@ First, go to the the **Rows** tab the editor and select **Content Blocks**. Loca
 Once the Content Block is added into the email editor, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**.
 {% endalert %}
 
+Misalignment in the Drag & Drop Editor can occur when multiple Content Blocks are added to a single row block. Try using separate row blocks to ensure alignment across your content at the row level.
+
 ### Liquid
 
 Navigate to your email campaign and select **Edit Email Body**. Click the <i class="fas fa-plus"></i> **Personalization** button. 

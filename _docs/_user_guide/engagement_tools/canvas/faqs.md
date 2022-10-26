@@ -93,6 +93,10 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
+### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
+
+It’s common for a Canvas variant’s conversion total to be greater than the sum of its step total. This occurs because a suer can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count towards a Canvas step. So, any user who enters the Canvas, peforms the conversion event before receiving the first Canvas step, will be counted towards the variant conversion total, and not towards the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
+
 ### How are Canvas audiences evaluated? 
 
 By default, filters and segments for full steps in the Canvas are checked at send time. For Canvas Flow, the Decision Split component performs an evaluation right after receiving a previous step (or before a delay).

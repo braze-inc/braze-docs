@@ -23,5 +23,8 @@ guide_menu_list:
   - name: Search Exact Text
     link: /docs/help/help_articles/segments/search_exact_text/
     fa_icon: fas fa-magnifying-glass
+  - name: Exporting Large Segments
+    link: /docs/help/help_articles/segments/exporting_large_segments/
+    fa_icon: fas fa-file-export
 
 ---

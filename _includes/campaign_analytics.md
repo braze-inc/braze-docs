@@ -168,6 +168,10 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Opens | Instances including both Direct Opens and Influenced Opens in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert tip %}
+Even though Direct Opens and Influenced Opens include the word "opens", they're actually different metrics. Direct Opens refer to the direct opening of a push notification, as stated in the table above. Influenced Opens refer to the opening of an app, without opening a push notification within a specific timeframe after receiving it. So, Influence Opens refer to the app opens, not push notification opens.
+{% endalert %}
+
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
 
 #### Bounced push notifications {#bounced-push}

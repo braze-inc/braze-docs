@@ -14,11 +14,7 @@ tool:
 
 > This reference article covers what can be changed in a Canvas after the initial launch.
 
-## Overview
-
-There are a number of things to know if you plan to edit or add more components to any other component in Canvas after launching based on your Canvas editor. 
-
-For Canvases launched with Canvas Flow or the original editor, you can adjust your Canvases after launch by:
+For Canvases launched with Canvas Flow or the original editor, you can edit your Canvases after launch by:
 * Inserting new Canvas components into the user journey
 * Adding new variants and connections
 * Adjusting variant distribution
@@ -28,7 +24,7 @@ For Canvases launched with Canvas Flow or the original editor, you can adjust yo
 Control variant distribution may only be decreased after launch.
 {% endalert %}
 
-Keep in mind the following permissible post-launch Canvas edits depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you will need to clone to Canvas Flow first in order to perform post-launch edits.
+Keep in mind the following permissible post-launch Canvas edits depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you'll need to clone to Canvas Flow first in order to perform post-launch edits.
 
 {% tabs local %}
 {% tab Canvas Flow %}
@@ -47,7 +43,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) component, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 
-See the [Canvas Flow](#canvas-flow) section for some best practices for specific editing use cases. 
+See the [Canvas Flow](#best-practices) section for some best practices for specific editing use cases. 
 
 {% endtab %}
 
@@ -94,7 +90,7 @@ For individual Canvas components, you can edit the following details after launc
 * Exception events
 * Delays
 
-You can't edit the component's schedule type or control percentages.
+However, the component's schedule type and control percentages are not editable after launch.
 
 ### Canvas variant percentages
 
@@ -116,7 +112,7 @@ Canvases scheduled to launch at a local send time can be edited up to 24 hours p
 If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
 {% endalert %}
 
-## Canvas Flow
+## Best practices
 
 Check out these best practices to keep in mind when editing or adding to your Canvas after it’s been launched using Canvas Flow. 
 

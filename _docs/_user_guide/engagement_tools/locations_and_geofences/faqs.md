@@ -47,10 +47,13 @@ Our geofencing solution uses the native geofence system service on iOS and Andro
 
 Braze geofences work at all hours of the day, even when your app is closed.
 
-
 ### What's the difference between geofences versus segmenting on most recent location?
 
 In Braze, a geofence is a different concept from segmenting based on most recent location. Geofences are only used for triggers, such as sending a message when a user enters or exits a specific area. Segments based on the `Most Recent Location` filter are used to target a specific region of your audience, such as sending a message to users located in New York.
+
+### Can I set up a geofence within a geofence?
+
+As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
