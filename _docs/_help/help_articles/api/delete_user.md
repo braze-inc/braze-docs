@@ -29,7 +29,7 @@ After a user is deleted, Braze does not keep any of the following data:
 
 ## Multiple profiles with a shared email address
 
-Let's say you have multiple user profiles that share the same email address. 
+Let's say you want to merge multiple user profiles that share the same email address. 
 
 To merge these user profiles:
 
