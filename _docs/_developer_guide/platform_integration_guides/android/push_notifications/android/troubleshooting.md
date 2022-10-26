@@ -106,7 +106,7 @@ If you force-quit your application through your system settings, your push notif
 The BrazeFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
 ```xml
-<service android:name="com.braze.BrazeFirebaseMessagingService"
+<service android:name="com.braze.push.BrazeFirebaseMessagingService"
   android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
