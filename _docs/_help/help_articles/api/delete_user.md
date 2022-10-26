@@ -31,7 +31,12 @@ After a user is deleted, Braze does not keep any of the following data:
 
 Let's say you have multiple user profiles that share the same email address. 
 
-In order to merge these user profiles, you must first identify any users with duplicate email addresses. Next, export all the attributes of a single profile. Then, import those attributes to the user profile either via API or CSV. Finally, you can delete the users via API, essentially deleting these duplicate users and the data outlined above.
+To merge these user profiles:
+
+ 1. Identify any users with duplicate email addresses. 
+ 2. Export all the attributes of a single profile. 
+ 3. Import those attributes to the user profile either via API or CSV. 
+ 4. Delete the users via API, essentially deleting these duplicate users and the data outlined above.
 
 _Last updated on October 24, 2022_
 

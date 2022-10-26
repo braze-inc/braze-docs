@@ -125,7 +125,7 @@ The number of users entering a campaign may differ from your expected number bec
 
 ### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
-Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comaprison, selecting **CSV Export User Data** will export all user data.
+Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comparison, selecting **CSV Export User Data** will export all user data.
 
 ### Can I search for a campaign by its API identifier?
 

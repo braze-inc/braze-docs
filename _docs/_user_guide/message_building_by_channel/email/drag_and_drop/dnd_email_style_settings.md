@@ -32,7 +32,12 @@ In the **Basic Styling** dropdown, you can set your default email and content ba
 
 With custom fonts, you can manually add a web font for branding consistency across various email platforms. Currently, you can only add one custom font per section (Basic, Title, and Text).
 
-To add a custom font, click **Add a custom font** and enter the font's name and source file URL. This source file URL must point to a style sheet like a CSS file. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Next, check that the preview shows your custom font before saving. Finally, click **Save** to use the custom font as your default email font. 
+To add a custom font:
+
+1. Click **Add a custom font**.
+2. Enter the font's name and source file URL. This source file URL must point to a style sheet like a CSS file. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. 
+3. Check that the preview shows your custom font before saving. 
+4. Click **Save** to use the custom font as your default email font. 
 
 {% alert important %}
 Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
