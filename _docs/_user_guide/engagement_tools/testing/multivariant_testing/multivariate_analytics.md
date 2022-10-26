@@ -86,14 +86,14 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual campaign and will change from campaign to campaign. 
 
-Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using logistic regression. This table only summarizes the results by displaying which variant users in each bucket tended to engage with. But, any individual user's actual personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which variant users in each bucket tended to engage with. Any individual user's actual personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% endtab %}
 {% tab Personalized Variant %}
 
 The **Personalized Variant** tab shows the results of the second send, where each remaining user was sent the variant they were most likely to engage with.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead. Even if Personalized Variant fails to provide any lift, which can sometimes happen, the result is equivalent to sending only the winning variant, i.e. a traditional A/B test. 
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning variant (a traditional A/B test). 
 
 - **Projected lift:** The improvement in your selected optimization metric for this send due to using personalized variants instead of a standard A/B test (if the remaining users only received the winning variant).
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).
