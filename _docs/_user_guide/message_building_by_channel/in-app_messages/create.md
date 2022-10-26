@@ -412,7 +412,7 @@ Processing action-based in-app message campaigns that are still in an active sta
 There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.
 {% endalert %}
 
-The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you. This limit can be increased on a case-by-case basis, reach out to your customer success manager for help.
+The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
 
 
 [2]: {% image_buster /assets/img/iam-generations.gif %}
