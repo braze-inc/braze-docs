@@ -69,15 +69,21 @@ Braze.logCustomEvent("YOUR-EVENT-NAME",
 
 ```kotlin
 Braze.logCustomEvent("YOUR-EVENT-NAME",
-    BrazeProperties()
-        .addProperty("you", "can")
-        .addProperty("pass", false)
-        .addProperty("orNumbers", 42)
-        .addProperty("orDates", Date())
-        .addProperty("or", JSONArray(listOf("any", "array", "here")))
-        .addProperty("andEven", BrazeProperties()
-            .addProperty("deeply", JSONArray(listOf("nested", "json"))))
-)
+    BrazeProperties(JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", Date())
+        .put("or", JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", JSONObject()
+            .put("deeply", JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+))
 ```
 
 {% endtab %}
