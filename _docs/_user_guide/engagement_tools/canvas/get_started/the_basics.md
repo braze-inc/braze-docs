@@ -12,7 +12,7 @@ tool: Canvas
 
 ## Understanding Canvas structure
 
-Before getting started with the finer details of Canvas setup, let's identify the key components that make up a Canvas.
+Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
 
 {% tabs %}
   {% tab Canvas %}
@@ -22,22 +22,22 @@ Before getting started with the finer details of Canvas setup, let's identify th
 
   {% tab Journey %}
 
-  A journey, or commonly referred to as a user journey, is an individual user's experience within the Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:70%;"}
+  A journey, or commonly referred to as a user journey, is an individual user's experience within the Canvas.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Entry Wizard %}
-  The Entry Wizard includes the first steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Entry Wizard is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [entry audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).
+  The Entry Wizard includes the first steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Entry Wizard is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [entry audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variants %}
-  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You can name each variant and control the distribution of the target audience following each variant.
+  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You can name each variant and control the distribution of the target audience following each variant.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point that can determine your user journey. You can leverage [Canvas components][2] to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
+  A step in Canvas is a marketing decision point that can determine your user journey. You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) and add channels from email to push to webhooks.
 
   {% endtab %}
 {% endtabs %}
@@ -124,6 +124,3 @@ Some goals have smaller sub-goals. For instance, if you’re aiming for converti
 ### Mix up your messaging
 
 Have you ran a similar campaign in the past? Or is one currently running? Try using that one message and adding more personalization to it. Try a new filter or add a follow-up message. As you mix up your messaging techniques, monitor your performance and keep optimizing by making incremental changes.
-
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components
