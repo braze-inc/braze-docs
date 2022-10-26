@@ -130,7 +130,9 @@ Advanced functionality will appear in the campaign or Canvas composer. In advanc
 
 ## Step 4: Test your email
 
-The **Preview & Test** section allows you to preview of your emails across different email clients and devices. Here, you can use **Preview & Test Send** and **Inbox Vision** to ensure that the details are aligned across all your platforms for your drag & drop email campaign.
+The **Preview & Test** section allows you to preview of your emails across different email clients and devices with **Preview & Test Send** and **Inbox Vision**.
+
+Because you can view three different versions of the same email in the actual editor, in Inbox Vision, and as an actual test email, it's important to align the details across all your platforms. 
 
 ### Preview & Test Send
 
@@ -147,6 +149,10 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 ### Inbox Vision
 
 [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**. 
+
+{% alert tip %}
+Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
+{% endalert %}
 
 After using the Drag & Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
 
