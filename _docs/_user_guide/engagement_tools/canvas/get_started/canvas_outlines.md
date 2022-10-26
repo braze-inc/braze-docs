@@ -19,7 +19,7 @@ Braze Learning offers several dedicated Canvas courses that go over common Canva
 - [Use case: onboarding](https://learning.braze.com/onboarding-canvas)
 - [Canvas use cases for retail](https://learning.braze.com/canvas-use-cases-for-retail)
 
-Here are several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging.
+Here are several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) and [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps.
 
 ### Onboarding
 
@@ -53,7 +53,7 @@ Upselling your subscriptions can also be encouraged through building and sending
 
 ### Abandoned carts
 
-Retail businesses may often find themselves needing to remind customers of incomplete purchases. With an action-based Canvas, you can send a reminder to all registered customers to purchase the items in their abandoned carts. 
+Retail businesses may often find themselves needing to remind customers of incomplete purchases. With an action-based Canvas, you can send a reminder to all registered customers to purchase the items in their abandoned carts. You can also test how receptive your customers will be to your messaging with different delay times.
 
 {% tabs %}
   {% tab Canvas Flow %}

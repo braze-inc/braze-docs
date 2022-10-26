@@ -37,7 +37,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point that can determine your user journey. You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) and add channels from email to push to webhooks.
+  A step in Canvas is a marketing decision point that determines your user journey. You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) and add channels from email to push to webhooks.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 {% endtabs %}
@@ -60,18 +60,22 @@ You can add tags and name both steps and variants within the Canvas. For more on
 
 It’s always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
 
-Selecting at least one conversion event will give you the ability to understand your campaign performance and also to help you optimize performance within the Canvas as if your Canvas has multiple variants or a control group Braze will use the conversion event to determine the best variation for achieving this goal.
+Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
 
-* **Start Session**: I want them coming back and engaging with the app.
-* **Make Purchase**: I want them to buy.
-* **Perform Custom Event**: I want them to perform a specific action that I’m tracking as a custom event.
-* **Upgrades App:** I want them to upgrade their app version.
+* **Start Session**: I want my users coming back and engaging with the app.
+* **Make Purchase**: I want my users to buy.
+* **Perform Custom Event**: I want my users to perform a specific action that I’m tracking as a custom event.
+* **Upgrades App:** I want my users to upgrade their app version.
 
 ### The "when": Create starting conditions
 
 > When will a user start this experience?
 
 Your answer will determine the details of when and how your Canvas is delivered to your customer. Users can enter your Canvas in one of two ways: scheduled or action-based triggers.
+
+{% alert tip %}
+Check out [Time-based functionalities]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) for Canvas for more strategies and answers to common questions.
+{% endalert %}
 
 Scheduled delivery allows you to send a Canvas immediately to your target audience. You can also have it sent regularly, or schedule it for a specific time in the future. Action-based Canvases respond to specific customer behaviors as they happen. For example, an action-based trigger can include opening an app, making a purchase, interacting with another campaign, or triggering any custom event. At the point of the action occurring, you can have the Canvas send to your users.
 
@@ -111,9 +115,9 @@ The "how" collectively summarizes how you'll create your Canvas and how you'll r
 
 Answering "how" also determines the cadence for sending a Canvas to your audience (i.e., once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
 
-# General tips
+## General tips
 
-## Determine when and how to use steps and variants
+### Determine when and how to use steps and variants
 
 Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? This is where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm will help you map out the right shape and structure of your Canvas.
 
