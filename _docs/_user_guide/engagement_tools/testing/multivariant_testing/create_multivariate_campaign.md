@@ -29,7 +29,7 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
 {% alert important %}
-If you want to use an [optimization](#optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for recurring campaigns.
+If you want to use an [optimization](#optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for recurring campaigns or campaigns with re-eligibility.
 {% endalert %}
 
 ## Step 4: Choose a segment and distribute your users across variants
