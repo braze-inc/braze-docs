@@ -132,6 +132,10 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
 
+{% alert tip %}
+Set up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/) to identify which users you want to exit your Canvas.
+{% endalert %}
+
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 {% alert warning %}
