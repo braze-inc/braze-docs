@@ -123,7 +123,7 @@ Each Canvas must have at least one variant and at least one step. The sky's the 
 
 ### Work backwards
 
-Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
+Some goals have smaller sub-goals. For instance, if you’re aiming to convert a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
 
 ### Mix up your messaging
 
