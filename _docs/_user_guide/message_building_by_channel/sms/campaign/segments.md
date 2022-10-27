@@ -25,7 +25,7 @@ As you create an SMS campaign or Canvas using Braze, the messages you build in t
 
 ### Segment breakdown
 
-The character limit for **a stand-alone SMS segment** is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). 
+The character limit for **a stand-alone SMS segment** is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). So while a message may include several segments, if it does not exceeed these concatenation limits, it will be viewed as one message, and reported as such.
 
 It's important to note that **as you pass the character limit of your first segment, additional characters will cause your entire message to be split and segmented based on new character limits**:
 - **GSM-7 encoding**
