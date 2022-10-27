@@ -127,4 +127,4 @@ Some goals have smaller sub-goals. For instance, if you’re aiming to convert a
 
 ### Mix up your messaging
 
-Have you ran a similar campaign in the past? Or is one currently running? Try using that one message and adding more personalization to it. Try a new filter or add a follow-up message. As you mix up your messaging techniques, monitor your performance and keep optimizing by making incremental changes.
+Have you run a similar campaign in the past? Or is one currently running? Try using that one message and adding more personalization to it. Try a new filter or add a follow-up message. As you mix up your messaging techniques, monitor your performance and keep optimizing by making incremental changes.
