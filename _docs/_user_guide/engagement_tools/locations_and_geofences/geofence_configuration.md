@@ -18,7 +18,7 @@ The geographic center of the geofence.
 
 ## Radius
 
-The radius of the geofence in meters, measured from the geographic center. we recommend setting a minimum radius of 200 meters for all geofences. Only geofences that are within 2,000km radius are sent down to the users device.
+The radius of the geofence in meters, measured from the geographic center. we recommend setting a minimum radius of 200 meters for all geofences. Only geofences that are within 2,000 kilometer radius are sent down to the users device.
 
 ## Cooldown
 

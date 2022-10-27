@@ -13,9 +13,7 @@ channel:
  
 > Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link. 
 
-{% raw %}
-Link aliasing creates user-generated names that are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. For each known link that is present in the email body, Braze will append `lid={{placeholder}}` to the end, where `{{placeholder}}` is a unique Liquid-generated alphanumeric value.
-{% endraw %}
+Link aliasing creates user-generated names that are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing works by decorating a Braze-generated query parameter on links in the email channel.
 
 ## Creating a link alias
 

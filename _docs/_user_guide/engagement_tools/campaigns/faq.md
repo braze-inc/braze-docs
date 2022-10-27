@@ -123,6 +123,10 @@ Make sure to re-adjust campaign schedule times to allow for time zone sending.
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.
 
+### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
+
+Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comparison, selecting **CSV Export User Data** will export all user data.
+
 ### Can I search for a campaign by its API identifier?
 
 Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
