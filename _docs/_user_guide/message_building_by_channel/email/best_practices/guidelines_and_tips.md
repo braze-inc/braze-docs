@@ -30,6 +30,9 @@ Since spam filters watch for both an HTML and a plain text version of a message,
 
 ### Email validation
 
+{% alert important %}
+Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
+{% endalert %}
 
 Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, SDK, or modified in the dashboard. Note that your email addresses cannot include white spaces, and if send using the API, whitespaces will result in a 400 error.
 
