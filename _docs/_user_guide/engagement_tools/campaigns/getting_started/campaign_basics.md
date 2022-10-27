@@ -30,13 +30,13 @@ Never underestimate the power of the name. Braze is built for collaboration, so 
 
 > When will a customer encounter this campaign? 
 
-Users can enter your campaign in three ways: scheduled, action-based, or API-triggered. Scheduled delivery involves adjusting your campaigns to send at a specificed time, and optionally, for a specified cadence. Action-based campaigns respond to specific customer behaviors as they happen in real-time. This can include making a purchase or interacting with another campaign. API-triggered campaigns can be set up to determine key customer actions on your platform that, once achieved, will trigger an API call to Braze and send your campaigns.
+Users can enter your campaign in three ways: scheduled, action-based, or API-triggered. Scheduled delivery involves adjusting your campaigns to send at a specified time, and optionally, for a specified cadence. Action-based campaigns respond to specific customer behaviors as they happen in real-time. This can include making a purchase or interacting with another campaign. API-triggered campaigns can be set up to determine key customer actions on your platform that, once achieved, will trigger an API call to Braze and send your campaigns.
 
 ### The "who": Select an entry audience
 
 > Who are you trying to reach? 
 
-You can use a pre-defined segment and add further filters. Only the users who match these target audience criteria can enter the journey. Check out this table for a quick summary of the available filter types.
+You can use pre-defined [segments]({{site.baseurl}}/user_guide/engagement_tools/segments) to target users based on their demographic, behavioral, or technical characteristics and actions. Add more filters when building your campaign to tailor your segment further. Only the users who match these target audience criteria can enter the journey. Check out this table for a quick summary of the available filter types.
 
 | Filter | Description |
 |---|---|
@@ -52,17 +52,17 @@ You can use a pre-defined segment and add further filters. Only the users who ma
 
 > Why are you building this campaign? 
 
-It’s always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one conversion event will give you the ability to understand your campaign performance.
+It’s always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand your campaign performance.
 
 ### The "where": Find my audience
 
 > Where can I best reach my audience?
 
-This is where we determine which messaging channels make the most sense for your user journey. Ideally, you'd want to reach your users where they're most accessible.
+This is where we determine which messaging channels make the most sense for your user journey. Ideally, you'd want to reach your users where they're most active.
 
 ### The “how”: Build the experience
 
 > How do I build my campaign after identifying the five W's?
 
-Consider setting up variants and A/B testing as you become more savvy with campaign building. Note that campaigns support up to eight variants with a control group. Use your campaign analytics to make informative choices as you build your campaign, adjusting anything from your segmented audience to your actual messaging content.
+Consider setting up variants and A/B testing as you become more savvy with campaign building. Note that campaigns support up to eight variants with a control group. Use your campaign analytics to make informed choices as you build your campaign, adjusting anything from your segmented audience to your actual messaging content.
 

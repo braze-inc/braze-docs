@@ -23,7 +23,7 @@ Here are several examples that demonstrate how you can use Canvas to accomplish 
 
 ### Onboarding
 
-Let's say your restaurant wants to help onboard users to make their first reservation. An ideal time for the Canvas to launch would be at session start for all new customers since this is solely for onboarding. For a quick and effective way of reaching your dining audience, you can use the SMS messaging channel.
+Let's say your restaurant wants to help onboard users to make their first reservation. Since this Canvas is just for onboarding, an ideal time for the Canvas to launch would be at session start for all new customers. For a quick and effective way of reaching your dining audience, you can use the SMS messaging channel.
 
 {% tabs %}
   {% tab Canvas Flow %}
