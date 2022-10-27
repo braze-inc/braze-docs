@@ -12,11 +12,17 @@ $(document).ready(function(){
     };
     $('#feedback_helpful_yes, #feedback_helpful_but, #feedback_helpful_no').on('click', function(e){
       e.preventDefault();
-      var last_feedback = Cookies.get('_site_feedback');
+      var feedback_cookie_name = '_site_feedback';
+      var last_feedback = Cookies.get(feedback_cookie_name);
       var process_submit = true;
       // only allow 1 submission every 5mins and if they dont have a cookie
       if (!last_feedback) {
-        Cookies.set('_site_feedback', new Date(), { expires: (1/(24 * 12)) });
+        Cookies.set(feedback_cookie_name, new Date(), { expires: (1/(24 * 60)) });
+        // Check to make sure user has a cookie to allow submission
+        var last_feedback = Cookies.get(feedback_cookie_name);
+        if (!last_feedback) {
+          process_submit = false;
+        }
       }
       else {
         process_submit = false;
