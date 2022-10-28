@@ -245,6 +245,7 @@ Refer to the following table for limitations that apply at a company level:
 | Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
 | Number of all catalogs items | Up to 5,000 items | Up to 100,000 items |
 | Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
+| Filtered sets | Up to 1 filtered set per catalog | Up to 10 filtered sets per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The following table describes the limitations that apply at a catalog level:
