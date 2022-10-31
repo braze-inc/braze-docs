@@ -26,6 +26,11 @@ There will be a step explaining which events require us to implement the Braze W
 You can optionally unlock a new channel on your Shopify store for in-browser messages. This will allow you to use our out-of-the-box message types like slideup, modal, full screen, simple surveys, and custom HTML. Note that enabling this will implement our Web SDK in your store. Check out our [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on how you can create your first in-browser message.
 
 ### Step 5: Collect email or SMS Subscribers
+
+{% alert important %}
+Collecting email or SMS subscribers is in early access. Contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
+
 At this step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
 
 ![][77]{: style="max-width:60%;"}
