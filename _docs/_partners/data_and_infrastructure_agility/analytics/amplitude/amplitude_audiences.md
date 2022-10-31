@@ -98,7 +98,7 @@ When a user’s property or a computation updates, Amplitude will update a custo
 
 User trait and computation syncs will create new users for user IDs that do not yet exist within Braze. Computations and user traits can only be synced using user ID.
 
-Refer to Amplitude's documentation to learn more about [syncing properties, recommendations, and cohorts to third-party destinations.](https://help.amplitude.com/hc/en-us/articles/360060055531)
+Refer to Amplitude's documentation to learn more about [syncing properties, recommendations, and cohorts to third-party destinations](https://help.amplitude.com/hc/en-us/articles/360060055531).
 
 #### How to sync user properties and computations
 
