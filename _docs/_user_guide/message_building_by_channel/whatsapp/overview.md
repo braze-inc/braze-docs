@@ -21,11 +21,11 @@ Support for the WhatsApp channel is currently in early access. Contact your Braz
 
 Acknowledge the following before proceeding with integration:
 
-- **Opt-in policy**: WhatsApp requires businesses to have customers opt-in to messaging.
-- **WhatsApp content rules**: WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
-- **24-hour conversation limits**: After a user or business sends an initial templated message, a 24-hour window will occur where the two parties can message back and forth. 
-- **Initiating conversation**: Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations**: You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
+- **Opt-in policy:** WhatsApp requires businesses to have customers opt-in to messaging.
+- **WhatsApp content rules:** WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
+- **24-hour conversation limits:** After a user or business sends an initial templated message, a 24-hour window will occur where the two parties can message back and forth. 
+- **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
+- **Account limitations:** You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
 <br><br>
 
 | Requirement| Description|
