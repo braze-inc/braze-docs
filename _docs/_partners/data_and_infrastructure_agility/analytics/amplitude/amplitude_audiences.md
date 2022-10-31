@@ -29,7 +29,7 @@ The Braze and Amplitude bi-directional integration allows you to import your Amp
 Amplitude and Braze offer two different integration methods. Read through the following documentation to decide which methods will fit your needs:
 
 - Braze Event Streaming (beta): An integration that allows you to forward raw Amplitude event data straight to Braze.
-- Cohort import: An integration that allows you to forward Amplitude cohorts to Braze .
+- Cohort import: An integration that allows you to forward Amplitude cohorts to Braze.
 
 ## Braze Event Streaming
 
