@@ -27,7 +27,7 @@ Your messaging limit will increase automatically with time based on several fact
 
 ### What countries can I access on WhatsApp?
 
-All countries are available to message through Whatsapp, though rates do change across different recipient countries.
+All countries are available to message through Whatsapp, however rates do change across different recipient countries.
 
 ### How do I get my brand's name to appear in the message's contact information?
 
