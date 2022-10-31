@@ -78,7 +78,7 @@ First, to export users from Amplitude to Braze, create a [cohort](https://help.a
 
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
-#### Defining Sync Cadence
+#### Defining dync cadence
 
 Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
@@ -97,6 +97,49 @@ Use Audiences to send user properties and computations to Braze as custom attrib
 When a user’s property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
 
 User trait and computation syncs will create new users for user IDs that do not yet exist within Braze. Computations and user traits can only be synced using user ID.
+
+Refer to Amplitude's documentation to learn more about [syncing properties, recommendations, and cohorts to third-party destinations.](https://help.amplitude.com/hc/en-us/articles/360060055531)
+
+#### How to sync user properties and computations
+
+In Amplitude Audiences select **New** > **Sync**.
+
+![]({% image_buster /assets/img/amplitude5.png %})
+
+Next, choose to sync a user property, computation, cohort, or recommendation. 
+
+{% tabs %}
+{% tab Syncing user property %}
+
+Select **User Property** and then the desired user property to sync.
+
+![]({% image_buster /assets/img/amplitude7.png %})
+
+Next, select a destination to sync your user property to.
+
+![]({% image_buster /assets/img/amplitude8.png %})
+
+Lastly, define the frequency of your sync.
+
+![Define your cadence as a one-time sync or scheduled sync.]({% image_buster /assets/img/amplitude9.png %})
+
+{% endtab %}
+{% tab Syncing computation %}
+
+Select **Computation** and then the desired computation to sync
+
+![]({% image_buster /assets/img/amplitude10.png %})
+
+Next, select a destination to sync your computation to.
+
+![]({% image_buster /assets/img/amplitude8.png %})
+
+Lastly, define the frequency of your sync.
+
+![Define your cadence as a one-time sync or scheduled sync.]({% image_buster /assets/img/amplitude9.png %})
+
+{% endtab %}
+{% endtabs %}
 
 ## Amplitude user profile API endpoints
 
