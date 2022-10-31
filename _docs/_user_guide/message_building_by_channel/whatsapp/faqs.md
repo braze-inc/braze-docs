@@ -19,7 +19,7 @@ Support for the WhatsApp channel is currently in early access. Contact your Braz
 
 ### What is my WhatsApp Business phone number's quality rating?
 
-Your quality rating is a metric determined by Meta and depends on the feedback from your customers. Refer to [Quality rates](https://business.facebook.com/business/help/896873687365001#) to learn more. 
+Your quality rating is a metric determined by Meta and depends on the feedback from your customers. Refer to this Meta article on [Quality rates](https://business.facebook.com/business/help/896873687365001#) to learn more. 
 
 ### How can I increase my messaging limit?
 
