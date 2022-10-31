@@ -45,7 +45,7 @@ In Braze, go to the **Technology Partners** section and then search **WhatsApp**
 
 ### Step 2: WhatsApp setup
 Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
-1. Create or select your Meta and WhatsApp Business accounts
+1. Create or select your Meta and WhatsApp Business accounts.
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
 
