@@ -66,7 +66,7 @@ Uninstall statistics for campaigns are located on the Campaign Details page. For
 
 ![Uninstall Campaign Level][6]
 
-## Troublshooting
+## Troubleshooting
 
 ### Why am I seeing a spike in uninstalls all of a sudden?
 

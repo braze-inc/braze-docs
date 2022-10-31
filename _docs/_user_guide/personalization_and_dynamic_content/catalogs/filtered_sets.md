@@ -7,13 +7,17 @@ description: "This reference article covers how to create and use filtered sets 
 
 # Filtered sets
 
-Filtered sets are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating filtered sets in your Braze campaigns.
+Filtered sets are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating filtered sets in your Braze campaigns. Note that the free tier of catalogs allows one filtered set to be created per catalog. 
 
 {% alert important %}
 Filtered sets are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 To create a filtered set, select your catalog and click **Create Filtered Set**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed. Click **Create Filtered Set**, and the filtered set will display above the catalog data. Now, you can reference this filtered set in your messaging.
+
+{% alert important %}
+String fields with more than 1,000 characters cannot be filtered.
+{% endalert %}
 
 If you use any Liquid in catalogs, such as custom attributes and custom events, this can result in different results returned for each user in your filtered set.
 
