@@ -65,7 +65,7 @@ If you added variables while creating the WhatsApp template in the Meta Business
 
 ![][2]
 
-Note that grey text can not be edited as they are part of the approved WhatsApp template. If you would like to make updates to the grey text, you must edit your template and get it reapproved. 
+Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved. 
 
 {% alert tip %}
 {% raw %}
