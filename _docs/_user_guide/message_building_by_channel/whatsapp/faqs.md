@@ -23,7 +23,7 @@ Your quality rating is a metric determined by Meta and depends on the feedback f
 
 ### How can I increase my messaging limit?
 
-Your messaging limit will increase automatically with time based on several factors, including quality rating, phone number status, and the number of business-initiated conversations. Refer to [Messaging limits](https://developers.facebook.com/docs/whatsapp/messaging-limits#increasing-your-limit) to learn more. 
+Your messaging limit will increase automatically with time based on several factors, including quality rating, phone number status, and the number of business-initiated conversations. Refer to this Meta article on [Messaging limits](https://developers.facebook.com/docs/whatsapp/messaging-limits#increasing-your-limit) to learn more. 
 
 ### What countries can I access on WhatsApp?
 
