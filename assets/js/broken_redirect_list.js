@@ -564,3 +564,4 @@ validurls['/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'] = '/do
 
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
 
+validurls['/docs/exit_criteria/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/';
