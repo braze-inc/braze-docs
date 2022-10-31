@@ -19,6 +19,13 @@ hidden: true
 Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
+## Prerequisites
+
+To create a WhatsApp message and leverage the Whatsapp channel, you must first read through the WhatsApp [overview]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) and do the following:
+  - Acknowledge policies, limits, and content rules
+  - Set up your WhatsApp connection
+  - Build out initial templates in Meta to use in your messages
+
 ## Step 1: Choose where to build your message
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
@@ -57,7 +64,7 @@ If all of the messages in your campaign are similar or have the same content, co
 
 ## Step 2: Compose your WhatsApp message
 
-To compose your message, select an approved WhatsApp template. 
+To compose your message, select an [approved WhatsApp template]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates). 
 
 ![][1]
 

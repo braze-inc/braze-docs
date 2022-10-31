@@ -10,7 +10,7 @@ guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used acro
 description: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform."
 
 hidden: true
-permalink: /whatsapp/
+alias: /whatsapp/
 
 guide_featured_title: "WhatsApp"
 guide_featured_list:
