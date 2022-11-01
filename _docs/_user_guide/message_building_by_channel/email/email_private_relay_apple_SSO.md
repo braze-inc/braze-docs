@@ -37,20 +37,16 @@ An example is: `bounces+1234567@braze.online.docs.com`.
 
 Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
 
-If you have any further questions, open a [support ticket]({{site.baseurl}}/braze_support/).
-
 {% alert important %}
-If your desired `From` address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
-
-This might not be the case for your address. Check your DNS records in Sendgrid. 
+If your desired `From` address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`. <br><br> This might not be the case for your address. Check your DNS records in Sendgrid. 
 {% endalert %}
 
 ### From address components for whitelisting with Apple email relay
 
 | Value | Description |
 |---|---|
-| UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> <br> You can also contact your Braze representative to provide your UID if you do not have access to your DNS records. |
-| Whitelabeled Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the **HOST Value** in your DNS Records in Sendgrid.|
+| UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br><br> If you don't have access to your DNS records, contact your Braze representative to provide your UID. |
+| Whitelabeled Subdomain and Domain | The initial domain and subdomain you entered into Sendgrid. You can also use the **HOST Value** in your DNS Records in Sendgrid.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Sending emails to Apple Private Relay for Sparkpost
@@ -65,3 +61,5 @@ Braze customers who use Sparkpost can also set up Apple Private Relay. To do so,
 {% alert important %}
 Make sure you complete this process within 2 to 3 days of the verification files being created or else they will expire. Apple does not disclose how long they're valid for.
 {% endalert %}
+
+If you have any further questions, open a [support ticket]({{site.baseurl}}/braze_support/).
