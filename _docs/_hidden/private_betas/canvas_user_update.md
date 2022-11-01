@@ -32,19 +32,23 @@ There are three options that allow you to update existing, add new, or remove us
 
 To add or update a custom attribute, select an attribute name from your list of attributes and enter the key value.
 
-![][4]{: style="max-width:80%;"}
+![][4]{: style="max-width:90%;"}
 
 ### Remove custom attribute
 
 To remove a custom attribute, select an attribute name using the dropdown. You can switch to the advanced JSON composer to further edit. 
 
-![][5]{: style="max-width:80%;"}
+![][5]{: style="max-width:90%;"}
 
 ### Advanced JSON composer
 
-Add an attribute, event, or purchase JSON object to the JSON composer. You can add up to 65,536 characters to the JSON composer. 
+Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON composer.
 
-![][2]{: style="max-width:80%;"}
+![][2]{: style="max-width:90%;"}
+
+You can also preview and test that the user profile is updated with the changes with the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
+
+![][6]{: style="max-width:90%;"}
 
 #### Limitations
 
@@ -56,9 +60,9 @@ Do not include any of the following information in the JSON composer:
 
 ## Use case
 
-For example, if we want a group of users to be promoted to VIP members, we can select **VIP Member** as the attribute name, and enter `True` as the corresponding key value. Now, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
+For example, if we want a group of users to be promoted to VIP members, select **VIP Member** as the attribute name, and enter `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
 
-![][3]{: style="max-width:80%;"}
+![][3]{: style="max-width:90%;"}
 
 ## Personalization features
 
@@ -75,3 +79,4 @@ User Update also supports the following personalization features:
 [3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %} 
 [4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %} 
 [5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %} 
+[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %} 
