@@ -206,7 +206,7 @@ The following table describes available segmentation options for numeric attribu
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the numeric attribute **is more than** a **numver**| **MORE THAN** | **NUMVER** |
+| Check if the numeric attribute **is more than** a **numver**| **MORE THAN** | **NUMBER** |
 | Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
 | Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
 | Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
@@ -235,7 +235,7 @@ The following table describes available segmentation options for purchase events
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** |
-| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBERL** |
+| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** |
 | Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** |
 | Check if the purchase last occurred **after X date** | **AFTER** | **TIME** |
 | Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** |
