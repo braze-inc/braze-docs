@@ -20,7 +20,7 @@ You can create up to five catalogs across your company.
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference [this sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
-### Step 1: Create your CSV
+## Step 1: Create your CSV
 
 First, create your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
@@ -38,11 +38,41 @@ Ensure that you are encoding your CSV file using the UTF-8 format in order to su
 Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
 {% endalert %}
 
+### Example catalog
+
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
 
-![The table shows two example games with columns for id, title, price, and image link.][5]
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;font-size: 14px; font-weight: bold; background-color: #f4f4f7; text-transform: lowercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top;word-break:normal}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">id</th>
+    <th class="tg-0pky">title</th>
+    <th class="tg-0pky">price</th>
+    <th class="tg-0pky">image_link</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">1234</td>
+    <td class="tg-0pky">Tales</td>
+    <td class="tg-0pky">7.49 USD</td>
+    <td class="tg-0pky">https://picsum.photos/200</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1235</td>
+    <td class="tg-0pky">Regeneration</td>
+    <td class="tg-0pky">22.49 USD</td>
+    <td class="tg-0pky">https://picsum.photos/200</td>
+  </tr>
+</tbody>
+</table>
 
-### Step 2: Upload your CSV
+## Step 2: Upload your CSV
 
 After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
 
@@ -64,7 +94,7 @@ Note that you cannot use templates in a catalog name. For example, you cannot ha
 ```
 {% endraw %}
 
-### Step 3: Select your data type
+## Step 3: Select your data type
 
 Select one of the following data types for each column:
 - Boolean
@@ -78,7 +108,7 @@ This data type cannot be edited after you set up your catalog.
 
 ![][9]{: style="max-width:85%;"}
 
-### Step 4: Enter a catalog name
+## Step 4: Enter a catalog name
 
 Enter a unique name for your catalog. This name can only contain numbers, letters, hyphens, and underscores. Optionally, you can also add a description for your catalog.
 
@@ -110,11 +140,11 @@ We can immediately see the following Liquid preview:
 
 Next, it's time to add your catalog items! Using the dropdown, select the catalog items and the information to display. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
 
-For example, to reference the title and price of the `tales_storefront` item, we could select the `tales_storefront` as the catalog item and `title` and `price` for the displayed information.
+For example, to reference the title and price of our Tales game, we could select the `id` for Tales (1234) as the catalog item and request `title` and `price` for the displayed information.
 
 {% raw %}
 ```liquid
-{% catalog_items Games tales_storefront %}
+{% catalog_items Games 1234 %}
  
 Get {{ items[0].title }} for just {{ items[0].price }}!
 ```
@@ -146,15 +176,15 @@ For example, if you want to edit an individual catalog item, you can use the [`/
 
 You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Note that you can add up to three catalog items only. 
 
-Check out this example where we add `tales_storefront`, `teslagrad_storefront`, and `acaratus_storefront` for **Catalog Items** and select `title` for **Information to Display**.
+Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
-![][6]
+![][6]{: style="max-width:70%" }
 
 We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games tales_storefront teslagrad_storefront acaratus_storefront %}
+Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -171,11 +201,11 @@ Check out [filtered sets]({{site.baseurl}}/user_guide/personalization_and_dynami
 
 You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
 
-For example, to add the `image_link` from our Games catalog to our promotional message for Tales, select the `tales_storefront` for the **Catalog Items** field and `image_link` for the **Information to Display** field. This adds the following Liquid tags to our image field:
+For example, to add the `image_link` from our Games catalog to our promotional message for Tales, select the `id` for the **Catalog Items** field and `image_link` for the **Information to Display** field. This adds the following Liquid tags to our image field:
 
 {% raw %}
 ```liquid
-{% catalog_items Games tales_storefront %}
+{% catalog_items Games 1234 %}
 
 {{ items[0].image_link }}
 ```
@@ -196,7 +226,7 @@ You can also use templating to dynamically pull catalog items based on custom at
     "attributes": [
         {
             "external_id": "user_id",
-            "wishlist": ["tales_storefront", "teslagrad_storefront"]
+            "wishlist": ["1234", "1235"]
         }
     ]
 }
@@ -208,7 +238,7 @@ Using Liquid templating, you can dynamically pull out the wishlist IDs and then 
 Remember, arrays start at `0`, not `1`.
 {% endalert %}
 
-For example, to let a user know that `tales_storefront` (an item in our catalog that they've wished for) is on sale, we can add the following to our message composer:
+For example, to let a user know that Tales (an item in our catalog that they've wished for) is on sale, we can add the following to our message composer:
 
 {% raw %}
 ```liquid

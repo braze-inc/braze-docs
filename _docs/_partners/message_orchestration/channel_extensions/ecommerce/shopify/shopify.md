@@ -34,6 +34,7 @@ With Braze's turnkey Shopify integration, you can:
 - Seamlessly connect your Shopify store within Braze
 - Allow Braze to ingest and process Shopify user data
 - Sync Shopify user profiles into Braze
+- Collect email and SMS opt-ins from your Shopify store to sync to Braze
 
 #### Web SDK integration via Shopify ScriptTag (optional)
 

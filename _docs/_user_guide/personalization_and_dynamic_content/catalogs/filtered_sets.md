@@ -13,7 +13,11 @@ Filtered sets are groups of data that can be used to personalize a message for e
 Filtered sets are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-To create a filtered set, select your catalog and click **Create Filtered Set**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed. Click **Create Filtered Set**, and the filtered set will display above the catalog data. Now, you can reference this filtered set in your messaging.
+To create a filtered set, select your catalog and click **Create Filtered Set**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed for filter settings.
+
+In the **Sort type** section, you can specify the order in which results are returned. This includes an option to randomize the sort order. Next, enter the maximum number of results, up to 10, for the **Limit number** under the **Results limit** section.
+
+After setting up the filtered set, click **Create Filtered Set**, and the filtered set will display above the catalog data. Now, you can reference this filtered set in your messaging.
 
 {% alert important %}
 String fields with more than 1,000 characters cannot be filtered.
@@ -21,7 +25,7 @@ String fields with more than 1,000 characters cannot be filtered.
 
 If you use any Liquid in catalogs, such as custom attributes and custom events, this can result in different results returned for each user in your filtered set.
 
-![The Filtered Sets section in an example catalog "restaurants".][1]{: style="max-width:85%;"}
+![The Filtered Sets section in an example catalog.][1]{: style="max-width:85%;"}
 
 ## Use case
 
@@ -29,7 +33,7 @@ Let's say we want to recommend autumn sale items from a popular clothing store t
 
 Using a catalog with the clothing store's information for clothing items, prices, and ratings, we can create a filtered set to recommend clothing items with ratings greater than four stars.
 
-![An example of a filtered set for a clothing store with three filters: one that identifies an item price, an item, and the rating.][2]{: style="max-width:85%;"}
+![An example of a filtered set for a clothing store with three filters: one that identifies an item price, an item, and the rating. The filtered set is set to randomize the order in which the ten results are returned.][2]{: style="max-width:85%;"}
 
 To use this catalog in a campaign, you can insert this filtered set using the **Add Personalization** modal in the message composition section of building a campaign. In our example, we've selected the catalog with store product information with the filtered set for fall sale favorites. 
 
