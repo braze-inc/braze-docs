@@ -16,7 +16,7 @@ tool:
 
 With Content Blocks, you can:
 
-- Create a consistent look and feel to your email campaigns using Content Blocks as Headers and Footers.
+- Create a consistent look and feel to your email campaigns using Content Blocks as headers and footers.
 - Distribute the same offer codes through different channels.
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
