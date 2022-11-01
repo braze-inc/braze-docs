@@ -23,7 +23,6 @@ Additional exception events include:
 * Performing a custom event or conversion event
 * Adding an email address
 * Changing custom attribute value
-* Adding values to a custom attribute array
 * Updating subscription status or subscription group status
 * Interacting with a campaign
 * Entering a location
