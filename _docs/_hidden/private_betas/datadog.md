@@ -38,7 +38,6 @@ In the Braze dashboard, navigate to the **Technology Partners** section and then
 After the connection is integrated, Braze will send the following events to Datadog:
 
 - `braze.messaging.sent` - The count of sends
-- `braze.messaging.abort_message` - The count of aborted messages
 
 Each of these events will have metadata in the form of Datadog tags to give you information such as:
 
