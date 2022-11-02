@@ -63,6 +63,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
+|Manage Approval Settings| Allows user to turn [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) on or off. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions
