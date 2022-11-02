@@ -12,7 +12,7 @@ description: "This article outlines details about the Edit Catalog Item Braze en
 {% api %}
 # Edit catalog item
 {% apimethod patch %}
-/catalogs/catalog_name/items/item_id
+/catalogs/:catalog_name/items/:item_id
 {% endapimethod %}
 
 Use this endpoint to edit an item in your catalog. 
@@ -25,77 +25,84 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
 
-## Request body
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
+## Request
 
-```json
-{
-    "items": [ (max of 50 items)
-        {
-            "id": (required, item id)
-            "count": (required, item count)
-        },
-    ]
-}
-```
-
-### Request parameters
-
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id `  |  Required | String | Item ID for a catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `item_id`  | Required | String | The ID of the catalog item. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+### Request Body parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain fields that exist in the catalog except for the `id` field. Only 1 item object is allowed per request. |
+
+### Example request
+
 ```
-curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catalog/items/my_item' \
+curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "items": [
-        {
-            "count": "item_count"
-        },
-    ]
-}
+  "items": [
+    {
+      "Name": "Restaurant",
+      "Loyalty_Program": false,
+      "Open_Time": "2021-09-03T09:03:19.967+00:00"
+    }
+  ]
+}'
 ```
 
-## Example response
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `200` |
+| `400` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`200`
+
+#### Response Body
+
 ```json
 {
-  "items": [
-		{
-			"id": "item_0",
-			"count": 5,
-		}
-	]
+  "message": "success"
 }
 ```
 
-## Example error response 
+### Example Failure Response
+
+#### Status Code
+`400`
+
+#### Response Body
 
 ```json
 {
   "errors": [
     {
-      "id": "ids-too-large",
-      "message": "Item ids can not be larger than 250 characters",
-      "parameters": ["id"],
-      "parameter_values": ["item_id"]
-    },
-    {
       "id": "invalid-fields",
       "message": "Some of the fields given do not exist in the catalog",
-      "parameters": ["id"],
-      "parameter_values": ["item_id"]
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant1"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

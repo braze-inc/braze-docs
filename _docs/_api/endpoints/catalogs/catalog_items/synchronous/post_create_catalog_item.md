@@ -12,7 +12,7 @@ description: "This article outlines details about the Create Catalog Item Braze 
 {% api %}
 # Create a catalog item
 {% apimethod post %}
-/catalogs/catalog_name/items/item_id
+/catalogs/:catalog_name/items/:item_id
 {% endapimethod %}
 
 Use this endpoint to create an item in your catalog.
@@ -25,58 +25,87 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
 
-## Request body
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
+## Request
 
-```json
-{
-    "items": [ (max of 1 item)
-        {
-            "count": (required, item count)
-        },
-    ]
-}
-```
-
-### Request parameters
-
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id` | Required | String | The item ID of the catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `item_id`  | Required | String | The ID of the catalog item. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example response
+### Request Body parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only 1 item objects is allowed per request. |
+
+### Example request
+
+```
+curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "items": [
+    {
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-01T09:03:19.967+00:00"
+    }
+  ]
+}'
+```
+
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `201` |
+| `400` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`201`
+
+#### Response Body
 
 ```json
 {
-	"items": [
-		{
-			"count": 5,
-		}
-	]
+  "message": "success"
 }
 ```
 
-## Example error response
+### Example Failure Response
+
+#### Status Code
+`400`
+
+#### Response Body
 
 ```json
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
-    },
-    {
-      "id": "item-already-exists",
-      "message": "The item already exists"
+      "id": "fields-do-not-match",
+      "message": "Fields do not match with fields on the catalog",
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant2"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

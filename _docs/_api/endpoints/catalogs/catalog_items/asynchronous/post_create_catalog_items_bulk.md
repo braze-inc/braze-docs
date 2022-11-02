@@ -12,10 +12,10 @@ description: "This article outlines details about the Create Multiple Catalog It
 {% api %}
 # Create multiple catalog items
 {% apimethod post %}
-/catalogs/catalog_name/items
+/catalogs/:catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,76 +25,105 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
 
-## Request body
+## Request
 
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
-
-```json
-{
-    "items": [ (max of 50 items)
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        },
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        },
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        }
-    ]
-}
-```
-
-### Request parameters
-
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `item_id`  | Required | String | Item ID for a catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+### Request Body parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain all of the fields in the catalog. Up to 50 items objects are allowed per request. |
+
+### Example request
+
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/catalogs/catalog_name/items' \
+curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "items": [
-        {
-            "id": "item_0",
-            "count": 1,
-        },
-        {
-            "id": "item_1",
-            "count": 2,
-        },
-        {
-            "id": "item_2",
-            "count": 3,
-        }
-    ]
+  "items": [
+    {
+      "id": "restaurant1",
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-01T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant2",
+      "Name": "Restaurant2",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 10,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-02T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant3",
+      "Name": "Restaurant3",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 3,
+      "Loyalty_Program": false,
+      "Created_At": "2022-11-03T09:03:19.967+00:00"
+    }
+  ]
+}'
+```
+
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `202` |
+| `400` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`202`
+
+#### Response Body
+
+```json
+{
+  "message": "success"
 }
 ```
 
-## Example error response 
+### Example Failure Response
+
+#### Status Code
+`400`
+
+#### Response Body
 
 ```json
 {
   "errors": [
     {
-        "id": "catalog-not-found",
-        "message": "Could not find catalog",
-        "parameters": ["catalog_name"],
-        "parameter_values": ["catalog_name"]
+      "id": "fields-do-not-match",
+      "message": "Fields do not match with fields on the catalog",
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant2"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

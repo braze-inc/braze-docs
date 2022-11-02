@@ -12,7 +12,7 @@ description: "This article outlines details about the List Catalog Item Details 
 {% api %}
 # List catalog item details
 {% apimethod get %}
-/catalogs/catalog_name/items/item_id
+/catalogs/:catalog_name/items/:item_id
 {% endapimethod %}
 
 Use this endpoint to return a catalog item and its content.
@@ -25,33 +25,84 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
 
-### Request Parameters
+## Request
 
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id ` |  Required | String | The ID of the catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `item_id`  | Required | String | The ID of the catalog item. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+### Request Body parameters
+There is no request body for this endpoint.
+
+### Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
+### Status Codes
+| Code  |
+|---|---|
+| `200` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`200`
+
+#### Response Body
+
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-"items": [
+{
+  "items": [
     {
-        "id": "0",
-        "count": 5,
+      "id": "restaurant3",
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Open_Time": "2022-11-01T09:03:19.967Z"
     }
-]
+  ],
+  "message": "success"
+}
+```
+
+### Example Failure Response
+
+#### Status Codes
+`404`
+
+#### Response Body
+
+```json
+{
+  "errors": [
+    {
+      "id": "item-not-found",
+      "message": "Could not find item",
+      "parameters": [
+        "item_id"
+      ],
+      "parameter_values": [
+        "restaurant34"
+      ]
+    }
+  ],
+  "message": "Invalid Request"
+}
 ```
 
 ## Troubleshooting

@@ -12,10 +12,10 @@ description: "This article outlines details about the Delete Multiple Catalog It
 {% api %}
 # Delete multiple catalog items
 {% apimethod delete %}
-/catalogs/catalog_name/items
+/catalogs/:catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to delete multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to delete multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous. 
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -25,56 +25,77 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
 
-## Request body
+## Request
+
+### Route parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+### Request Body parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain an `"id"` referencing the items Braze should delete. Up to 50 items objects are allowed per request. |
+
+### Example request
+
+```
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "items": [
+    {"id": "restaurant1"},
+    {"id": "restaurant2"},
+    {"id": "restaurant3"}
+  ]
+}'
+```
+
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `202` |
+| `400` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`202`
+
+#### Response Body
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
-    "items": [ (max of 50 items)
-        {
-            "id": (required, item id)
-        },
-        {
-            "id": (required, item id)
-        },
-    ]
+  "message": "success"
 }
 ```
 
-### Request parameters
+### Example Failure Response
 
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalog_name`  | Required | String | Name of the imported catalog.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+#### Status Code
+`400`
 
-## Example request
-
-```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items
-```
-
-## Example error response 
+#### Response Body
 
 ```json
 {
   "errors": [
     {
-        "id": "invalid-ids",
-        "message": "Item ids can only include letters, numbers, hyphens, and underscores",
-        "parameters": ["id"],
-        "parameter_values": ["item_id"]
-    },
-    {
-        "id": "items-missing-ids",
-        "message": "There are 5 items that do not have ids",
-        "parameters": [],
-        "parameter_values": []
+      "id": "items-missing-ids",
+      "message": "There are 1 item(s) that do not have ids",
+      "parameters": [],
+      "parameter_values": []
     }
-    ]
+  ],
+  "message": "Invalid Request",
 }
 ```
 

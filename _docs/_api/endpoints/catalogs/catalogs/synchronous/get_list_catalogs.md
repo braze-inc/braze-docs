@@ -25,67 +25,112 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
+This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
-## Example request
+## Request
+
+### Route parameters
+There are no route parameters for this endpoint.
+
+### Request Body parameters
+There is no request body for this endpoint.
+
+### Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
+### Status Codes
+| Code  |
+|---|---|
+| `200` |
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`200`
+
+#### Response Body
+
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
-    "catalogs": [
+  "catalogs": [
+    {
+      "description": "My Restaurants",
+      "fields": [
         {
-            "description": "this is catalog 1",
-            "fields": [
-                {
-                    "name": "id",
-                    "type": "string"
-                },
-                {
-                    "name": "rating",
-                    "type": "number"
-                }
-            ],
-            "name": "catalog_1",
-            "num_items": 5,
-            "updated_at": "2022-09-27T15:49:18.818+00:00"
+          "name": "id",
+          "type": "string"
         },
         {
-            "description": "this is catalog_2",
-            "fields": [
-                {
-                    "name": "id",
-                    "type": "string"
-                },
-                {
-                    "name": "column_1",
-                    "type": "string"
-                },
-                {
-                    "name": "column_2",
-                    "type": "number"
-                },
-                {
-                    "name": "column_3",
-                    "type": "boolean"
-                },
-                {
-                    "name": "column_4",
-                    "type": "time"
-                },
-            ],
-            "name": "catalog_2",
-            "num_items": 10,
-            "updated_at": "2022-08-31T20:22:56.127+00:00"
+          "name": "Name",
+          "type": "string"
+        },
+        {
+          "name": "City",
+          "type": "string"
+        },
+        {
+          "name": "Cuisine",
+          "type": "string"
+        },
+        {
+          "name": "Rating",
+          "type": "number"
+        },
+        {
+          "name": "Loyalty_Program",
+          "type": "boolean"
+        },
+        {
+          "name": "Created_At",
+          "type": "time"
         }
-    ]
+      ],
+      "name": "restaurants",
+      "num_items": 10,
+      "updated_at": "2022-11-02T20:04:06.879+00:00"
+    },
+    {
+      "description": "My Catalog",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "string_field",
+          "type": "string"
+        },
+        {
+          "name": "number_field",
+          "type": "number"
+        },
+        {
+          "name": "boolean_field",
+          "type": "boolean"
+        },
+        {
+          "name": "time_field",
+          "type": "time"
+        },
+      ],
+      "name": "my_catalog",
+      "num_items": 3,
+      "updated_at": "2022-11-02T09:03:19.967+00:00"
+    },
+  ],
+  "message": "success"
 }
 ```
+
+### Example Failure Response
+There are no failure responses for this endpoint.
 
 {% endapi %}

@@ -13,10 +13,10 @@ description: "This article outlines details about the Edit Multiple Catalog Item
 {% api %}
 # Edit multiple catalog items
 {% apimethod patch %}
-/catalogs/catalog_name/items
+/catalogs/:catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -26,76 +26,89 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
 
-## Request body
+## Request
 
-```
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-```
-
-```json
-{
-    "items": [ (max of 50 items)
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        },
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        },
-        {
-            "id": (required, item id),
-            "count": (required, item count),
-        }
-    ]
-}
-```
-
-### Request parameters
-
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `item_id`  | Required | String | Item ID for a catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+### Request Body parameters
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain fields that exist in the catalog. Up to 50 items objects are allowed per request. |
+
+### Example request
+
 ```
-curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/catalog_name/items' \
+curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "items": [
-        {
-            "id": "item_0",
-            "count": 1,
-        },
-        {
-            "id": "item_1",
-            "count": 2,
-        },
-        {
-            "id": "item_2",
-            "count": 3,
-        }
-    ]
+  "items": [
+    {
+      "id": "restaurant1",
+      "Name": "Restaurant",
+      "Loyalty_Program": false,
+      "Open_Time": "2021-09-03T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant3",
+      "City": "San Francisco",
+      "Rating": 2
+    }
+  ]
+}'
+```
+
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `202` |
+| `400` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`202`
+
+#### Response Body
+
+```json
+{
+  "message": "success"
 }
 ```
 
-## Example error response 
+### Example Failure Response
+
+#### Status Code
+`400`
+
+#### Response Body
 
 ```json
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog",
-      "parameters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant1"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

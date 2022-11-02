@@ -12,7 +12,7 @@ description: "This article outlines details about the Delete Catalog Braze endpo
 {% api %}
 # Delete catalog
 {% apimethod delete %}
-/catalogs/catalog_name
+/catalogs/:catalog_name
 {% endapimethod %}
 
 Use this endpoint to delete a catalog.
@@ -25,22 +25,55 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
+This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
-### Request parameters
+## Request
 
+### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+### Request Body parameters
+There is no request body for this endpoint.
+
+### Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 ```
 
-## Example error response 
+## Response
+
+### Status Codes
+| Code  |
+|---|---|
+| `200` |
+| `404` | 
+{: .reset-td-br-1}
+
+### Example Successful Response
+
+#### Status Code
+`200`
+
+#### Response Body
+
+```json
+{
+  "message": "success"
+}
+```
+
+### Example Failure Response
+
+#### Status Codes
+`404`
+
+#### Response Body
 
 ```json
 {
@@ -48,16 +81,21 @@ https://rest.iad-03.braze.com/catalogs/catalog_name
     {
       "id": "catalog-not-found",
       "message": "Could not find catalog",
-      "parameters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
+      "parameters": [
+        "catalog_name"
+      ],
+      "parameter_values": [
+        "restaurants"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 
 ## Troubleshooting
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |

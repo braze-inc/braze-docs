@@ -9,9 +9,10 @@ description: "This landing page lists the Braze Catalogs Endpoints."
 page_type: landing
 
 guide_top_header: "Catalogs Endpoints"
-guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the synchronous catalog endpoints to make bulk changes to your catalog. To receive a confirmation that a change to your catalog has been received and processed, use the asynchronous or synchronous catalog item endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
+guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
 
 guide_featured_title: "Catalogs Endpoints<br><br>"
+guide_menu_title: "<h3>Synchronous</h3>"
 guide_featured_list:
   - name: "DELETE: Delete Catalog"
     link: /docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/
