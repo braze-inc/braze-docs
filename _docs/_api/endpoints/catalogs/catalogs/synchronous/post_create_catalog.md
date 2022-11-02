@@ -28,17 +28,18 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
 ## Request
-
 ### Route parameters
 There are no route parameters for this endpoint.
 
 ### Request Body parameters
+
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalogs`  | Required | Array | An array that contains Catalog Objects. See the Catalog Object paramaters below. Only one catalog object is allowed for this request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Catalog Object parameters
+
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `name`  | Required | String | The name of the catalog that you want to create. |
@@ -93,8 +94,8 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 ```
 
 ## Response
-
 ### Status Codes
+
 | Code  |
 |---|
 | `201` |
@@ -102,10 +103,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 {: .reset-td-br-1}
 
 ### Example Successful Response
-
-Status Code: `201`
-
-Response Body
+#### Status Code:
+`201`
+#### Response Body
 
 ```json
 {
@@ -152,11 +152,9 @@ Response Body
 ```
 
 ### Example Failure Response
-
-Status Code: `400`
-
-Response Body
-
+#### Status Code
+`400`
+#### Response Body
 ```json
 {
   "errors": [
