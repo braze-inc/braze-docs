@@ -29,35 +29,33 @@ This use case shows how to calculate a user’s app anniversary based on their i
 
 {% raw %}
 ```liquid
-{% assign this_month = 'now' | date: "%B" %}
+{% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = {{custom_attribute.${signup_date}}} | date: "%B" %}
-{% assign anniversary_day = {{custom_attribute.${signup_date}}} | date: "%d" %}
-{% assign anniversary_year = {{custom_attribute.${signup_date}}} | date: "%Y" %}
-{% if {{this_month}} == {{anniversary_month}} %}
-{% if {{this_day}} == {{anniversary_day}} %}
-{% if {{anniversary_year}} == ‘2021’ %}
-Happy one year anniversary!
-{% elsif {{anniversary_year}} == ‘2020’ %}
-Happy two year anniversary!
-{% elsif {{anniversary_year}} == ‘2019’ %}
-Happy three year anniversary!
-{% elsif {{anniversary_year}} == ‘2018’ %}
-Happy four year anniversary!
-{% elsif {{anniversary_year}} == ‘2017’ %}
-Happy five year anniversary!
-{% elsif {{anniversary_year}} == ‘2016’ %}
-Happy six year anniversary!
-{% elsif {{anniversary_year}} == ‘2015’ %}
-Happy seven year anniversary!
-{% else %}
-{% abort_message(not same month) %}
-{% else %}
-{% abort_message(not same day) %}
+{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+
+{% if this_month == anniversary_month %} 
+{% if this_day == anniversary_day %} 
+{% if anniversary_year == '2021' %}
+Heute vor genau einem Jahr haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2020' %}
+Heute vor genau zwei Jahren haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2019' %}
+Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
+
 {% else %}
 {% abort_message(not same year) %}
 {% endif %}
+
+{% else %} 
+{% abort_message(not same day) %} 
 {% endif %}
+
+{% else %}
+{% abort_message(not same month) %}
 {% endif %}
 ```
 {% endraw %}
