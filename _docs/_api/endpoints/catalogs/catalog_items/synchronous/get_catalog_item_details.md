@@ -32,8 +32,8 @@ This endpoint has a shared rate limit of 50 requests per minute between all of t
 ### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
-| `item_id`  | Required | String | The ID of the catalog item. Passed through the URL Route |
+| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
+| `item_id` | Required | String | The ID of the catalog item. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
@@ -51,17 +51,16 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `200` |
 | `404` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
 
-#### Status Code
-`200`
+Status Code: `200`
 
-#### Response Body
+Response Body
 
 ```json
 {
@@ -82,10 +81,9 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### Example Failure Response
 
-#### Status Codes
-`404`
+Status Code: `404`
 
-#### Response Body
+Response Body
 
 ```json
 {

@@ -32,7 +32,7 @@ This endpoint has a shared rate limit of 5 requests per minute between all of th
 ### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
@@ -50,17 +50,16 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `200` |
 | `404` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
 
-#### Status Code
-`200`
+Status Code: `200`
 
-#### Response Body
+Response Body
 
 ```json
 {
@@ -70,10 +69,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Example Failure Response
 
-#### Status Codes
-`404`
+Status Codes: `404`
 
-#### Response Body
+Response Body
 
 ```json
 {

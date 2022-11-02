@@ -33,13 +33,13 @@ This endpoint has a shared rate limit of 100 requests per minute between all of 
 ### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain fields that exist in the catalog. Up to 50 items objects are allowed per request. |
+| `items` | Required | Array | An array that contains Item Objects. The item objects should contain fields that exist in the catalog. Up to 50 items objects are allowed per request. |
 
 ### Example request
 
@@ -68,7 +68,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `202` |
 | `400` |
 | `404` | 
@@ -76,10 +76,9 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ### Example Successful Response
 
-#### Status Code
-`202`
+Status Code: `202`
 
-#### Response Body
+Response Body
 
 ```json
 {
@@ -89,10 +88,9 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ### Example Failure Response
 
-#### Status Code
-`400`
+Status Code: `400`
 
-#### Response Body
+Response Body
 
 ```json
 {

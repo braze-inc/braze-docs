@@ -47,16 +47,15 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `200` |
 {: .reset-td-br-1}
 
 ### Example Successful Response
 
-#### Status Code
-`200`
+Status Code: `200`
 
-#### Response Body
+Response Body
 
 ```json
 {

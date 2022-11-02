@@ -65,7 +65,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `201` |
 | `400` |
 | `404` | 
@@ -73,10 +73,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ### Example Successful Response
 
-#### Status Code
-`201`
+Status Code: `201`
 
-#### Response Body
+Response Body
 
 ```json
 {
@@ -86,10 +85,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ### Example Failure Response
 
-#### Status Code
-`400`
+Status Code: `400`
 
-#### Response Body
+Response Body
 
 ```json
 {

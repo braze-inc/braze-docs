@@ -59,7 +59,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `202` |
 | `400` |
 | `404` | 
@@ -67,10 +67,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Example Successful Response
 
-#### Status Code
-`202`
+Status Code: `202`
 
-#### Response Body
+Response Body
 
 ```json
 {
@@ -80,10 +79,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Example Failure Response
 
-#### Status Code
-`400`
+Status Code: `400`
 
-#### Response Body
+Response Body
 
 ```json
 {

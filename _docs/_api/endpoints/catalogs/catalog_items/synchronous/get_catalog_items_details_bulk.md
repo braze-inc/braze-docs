@@ -32,7 +32,7 @@ This endpoint has a shared rate limit of 50 requests per minute between all of t
 ### Route parameters
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### URL parameters
@@ -65,7 +65,7 @@ curl --location --request GET 'https://anna.braze.com/catalogs/restaurants/items
 
 ### Status Codes
 | Code  |
-|---|---|
+|---|
 | `200` |
 | `404` | 
 {: .reset-td-br-1}
@@ -73,10 +73,9 @@ curl --location --request GET 'https://anna.braze.com/catalogs/restaurants/items
 ### Example Successful Response
 Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
 
-#### Status Code
-`200`
+Status Code: `200`
 
-#### Response Header
+Response Header
 ```
 Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/all_restaurants/items?cursor=c2tpcDoxMDA=>; rel="next"
 ```
@@ -84,7 +83,8 @@ Note
 The `Link` header won't exist if the catalog has less than or equal to 50 items.
 `prev` will not show for calls without a cursor
 `next` will not show when looking at the last page of items
-#### Response Body
+
+Response Body
 
 ```json
 {
@@ -123,10 +123,9 @@ The `Link` header won't exist if the catalog has less than or equal to 50 items.
 
 ### Example Failure Response
 
-#### Status Codes
-`400`
+Status Codes: `400`
 
-#### Response Body
+Response Body
 
 ```json
 {
