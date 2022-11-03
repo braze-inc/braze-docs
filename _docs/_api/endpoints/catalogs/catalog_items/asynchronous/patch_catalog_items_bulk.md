@@ -31,15 +31,15 @@ This endpoint has a shared rate limit of 100 requests per minute between all of 
 ## Request
 
 ### Route parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                       |
+|----------------|----------|-----------|---------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `items` | Required | Array | An array that contains Item Objects. The item objects should contain fields that exist in the catalog. Up to 50 items objects are allowed per request. |
+| Parameter | Required | Data Type | Description                                                                                                                                            |
+|-----------|----------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain fields that exist in the catalog. Up to 50 items objects are allowed per request. |
 
 ### Example request
 
@@ -68,7 +68,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ### Status Codes
 | Code  |
-|---|
+|-------|
 | `202` |
 | `400` |
 | `404` | 
@@ -76,9 +76,9 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ### Example Successful Response
 
-Status Code: `202`
-
-Response Body
+#### Status Code 
+`202`
+#### Response Body
 
 ```json
 {
@@ -87,10 +87,9 @@ Response Body
 ```
 
 ### Example Failure Response
-
-Status Code: `400`
-
-Response Body
+#### Status Code
+`400`
+#### Response Body
 
 ```json
 {
@@ -114,17 +113,19 @@ Response Body
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error | Troubleshooting |
-| --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `items-too-large` | Item values can't exceed 5,000 characters. |
-| `ids-not-unique` | Item IDs must be unique in the request. |
-| `request-includes-too-many-items` | Your request has too many items. The maximum is 50. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `unable-to-coerce-value` | Item types can't be converted. |
+| Error                             | Troubleshooting                                                                 |
+|-----------------------------------|---------------------------------------------------------------------------------|
+| `catalog-not-found`               | Check that the catalog name is valid.                                           |
+| `item-array-invalid`              | `items` must be an array of objects.                                            |
+| `request-includes-too-many-items` | Your request has too many items. The maximum is 50.                             |
+| `invalid-ids`                     | Item IDs can only include letters, numbers, hyphens, and underscores.           |
+| `ids-too-large`                   | Item IDs can't be more than 250 characters.                                     |
+| `ids-not-unique`                  | Item IDs must be unique in the request.                                         |
+| `ids-not-strings`                 | Item IDs must be of type string.                                                |
+| `items-missing-ids`               | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-too-large`                 | Item values can't exceed 5,000 characters.                                      |
+| `invalid-fields`                  | Confirm that the fields in the request exist in the catalog.                    |
+| `unable-to-coerce-value`          | Item types can't be converted.                                                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

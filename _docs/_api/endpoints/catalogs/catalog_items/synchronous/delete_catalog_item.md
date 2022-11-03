@@ -30,10 +30,10 @@ This endpoint has a shared rate limit of 50 requests per minute between all of t
 ## Request
 
 ### Route parameters
-| Parameter | Required | Data Type | Description |
-| --- | --- | --- | --- |
-| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
-| `item_id`  | Required | String | The ID of the catalog item. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                              |
+|----------------|----------|-----------|----------------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route        |
+| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
@@ -51,17 +51,16 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ### Status Codes
 | Code  |
-|---|
+|-------|
 | `200` |
 | `400` |
 | `404` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
-
-Status Code: `200`
-
-Response Body
+#### Status Code
+`200`
+#### Response Body
 
 ```json
 {
@@ -70,10 +69,9 @@ Response Body
 ```
 
 ### Example Failure Response
-
-Status Code: `404`
-
-Response Body
+#### Status Code
+`404`
+#### Response Body
 
 ```json
 {
@@ -97,11 +95,11 @@ Response Body
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
-| Error | Troubleshooting |
-| --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. |
-| `item-not-found`| Check that the item to be deleted exists in your catalog. |
-| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| Error               | Troubleshooting                                                                                        |
+|---------------------|--------------------------------------------------------------------------------------------------------|
+| `catalog-not-found` | Check that the catalog name is valid.                                                                  |
+| `item-not-found`    | Check that the item to be deleted exists in your catalog.                                              |
+| `arbitrary-error`   | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

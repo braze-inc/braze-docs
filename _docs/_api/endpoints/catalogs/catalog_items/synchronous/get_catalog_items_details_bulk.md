@@ -30,15 +30,15 @@ This endpoint has a shared rate limit of 50 requests per minute between all of t
 ## Request
 
 ### Route parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalog_name` | Required | String | Name of the catalog. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                       |
+|----------------|----------|-----------|---------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### URL parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `cursor` | Optional | String | Determines the pagination of the catalog items. |
+| Parameter | Required | Data Type | Description                                     |
+|-----------|----------|-----------|-------------------------------------------------|
+| `cursor`  | Optional | String    | Determines the pagination of the catalog items. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
@@ -65,17 +65,16 @@ curl --location --request GET 'https://anna.braze.com/catalogs/restaurants/items
 
 ### Status Codes
 | Code  |
-|---|
+|-------|
 | `200` |
 | `404` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
 Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
-
-Status Code: `200`
-
-Response Header
+#### Status Code
+`200`
+#### Response Header
 ```
 Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/all_restaurants/items?cursor=c2tpcDoxMDA=>; rel="next"
 ```
@@ -83,8 +82,7 @@ Note
 The `Link` header won't exist if the catalog has less than or equal to 50 items.
 `prev` will not show for calls without a cursor
 `next` will not show when looking at the last page of items
-
-Response Body
+#### Response Body
 
 ```json
 {
@@ -122,10 +120,9 @@ Response Body
 ```
 
 ### Example Failure Response
-
-Status Codes: `400`
-
-Response Body
+#### Status Code 
+`400`
+#### Response Body
 
 ```json
 {
@@ -137,7 +134,7 @@ Response Body
         "cursor"
       ],
       "parameter_values": [
-        "aaa"
+        "bad-cursor"
       ]
     }
   ],
@@ -149,9 +146,9 @@ Response Body
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
-| Error | Troubleshooting |
-| --- | --- |
-| `invalid-cursor` | Check that your `cursor` is valid. |
+| Error               | Troubleshooting                       |
+|---------------------|---------------------------------------|
+| `invalid-cursor`    | Check that your `cursor` is valid.    |
 | `catalog-not-found` | Check that the catalog name is valid. |
 {: .reset-td-br-1 .reset-td-br-2}
 

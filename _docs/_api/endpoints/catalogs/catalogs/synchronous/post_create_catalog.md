@@ -33,18 +33,18 @@ There are no route parameters for this endpoint.
 
 ### Request Body parameters
 
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalogs`  | Required | Array | An array that contains Catalog Objects. See the Catalog Object paramaters below. Only one catalog object is allowed for this request |
+| Parameter  | Required | Data Type | Description                                                                                                                          |
+|------------|----------|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `catalogs` | Required | Array     | An array that contains Catalog Objects. See the Catalog Object paramaters below. Only one catalog object is allowed for this request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Catalog Object parameters
 
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `name`  | Required | String | The name of the catalog that you want to create. |
-| `description`  | Required | String | The description of the catalog that you want to create. |
-| `fields`  | Required | Array | An array that contains objects where the object contains keys `"name"` and `"type"`. |
+| Parameter     | Required | Data Type | Description                                                                          |
+|---------------|----------|-----------|--------------------------------------------------------------------------------------|
+| `name`        | Required | String    | The name of the catalog that you want to create.                                     |
+| `description` | Required | String    | The description of the catalog that you want to create.                              |
+| `fields`      | Required | Array     | An array that contains objects where the object contains keys `"name"` and `"type"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Example request
@@ -97,13 +97,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 ### Status Codes
 
 | Code  |
-|---|
+|-------|
 | `201` |
 | `400` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
-#### Status Code:
+#### Status Code
 `201`
 #### Response Body
 
@@ -177,21 +177,22 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error | Troubleshooting |
-| --- | --- |
-| `too-many-catalog-atoms` | Only 1 catalog object is allowed per request. |
-| `invalid_catalog_name` | Catalog name can only include letters, numbers, hyphens, and underscores. |
-| `catalog-name-too-large` | Character limit for a catalog name is 250. |
-| `catalog-name-already-exists` | Catalog with that name already exists. |
-| `id-not-first-column` | The `id` must be the first field in the array. Check that the type is a string. |
-| `invalid-fields` | `fields` is not formatted correctly. |
-| `too-many-fields` | Number of fields limit is 30. |
-| `invalid-field-names` | Fields can only include letters, numbers, hyphens, and underscores. |
-| `field-names-too-large` | Character limit for a field name is 250. |
-| `field-names-not-unique` | The same field name is referenced twice. |
+| Error                            | Troubleshooting                                                                              |
+|----------------------------------|----------------------------------------------------------------------------------------------|
+| `catalog-array-invalid`          | `catalogs` must be an array of objects                                                       |
+| `too-many-catalog-atoms`         | You can only create one catalog per request.                                                 |
+| `invalid_catalog_name`           | Catalog name can only include letters, numbers, hyphens, and underscores.                    |
+| `catalog-name-too-large`         | Character limit for a catalog name is 250.                                                   |
+| `catalog-name-already-exists`    | Catalog with that name already exists.                                                       |
+| `id-not-first-column`            | The `id` must be the first field in the array. Check that the type is a string.              |
+| `invalid-fields`                 | `fields` is not formatted correctly.                                                         |
+| `too-many-fields`                | Number of fields limit is 30.                                                                |
+| `invalid-field-names`            | Fields can only include letters, numbers, hyphens, and underscores.                          |
+| `invalid-field-types`            | Make sure the field types are valid.                                                         |
+| `field-names-too-large`          | Character limit for a field name is 250.                                                     |
+| `field-names-not-unique`         | The same field name is referenced twice.                                                     |
 | `reached-company-catalogs-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
-| `description-too-long` | Character limit for description is 250. |
-| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `description-too-long`           | Character limit for description is 250.                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

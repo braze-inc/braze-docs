@@ -30,15 +30,15 @@ This endpoint has a shared rate limit of 100 requests per minute between all of 
 ## Request
 
 ### Route parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                       |
+|----------------|----------|-----------|---------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body parameters
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `items`  | Required | Array | An array that contains Item Objects. The item objects should contain an `"id"` referencing the items Braze should delete. Up to 50 items objects are allowed per request. |
+| Parameter | Required | Data Type | Description                                                                                                                                                               |
+|-----------|----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain an `"id"` referencing the items Braze should delete. Up to 50 items objects are allowed per request. |
 
 ### Example request
 
@@ -58,18 +58,18 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 ## Response
 
 ### Status Codes
+
 | Code  |
-|---|
+|-------|
 | `202` |
 | `400` |
 | `404` | 
 {: .reset-td-br-1}
 
 ### Example Successful Response
-
-Status Code: `202`
-
-Response Body
+#### Status Code 
+`202`
+#### Response Body
 
 ```json
 {
@@ -78,10 +78,9 @@ Response Body
 ```
 
 ### Example Failure Response
-
-Status Code: `400`
-
-Response Body
+#### Status Code
+`400`
+#### Response Body
 
 ```json
 {
@@ -99,16 +98,17 @@ Response Body
 
 ## Troubleshooting
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error | Troubleshooting |
-| --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `ids-not-unique` | Check that the item IDs are unique in the request. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. | 
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
+| Error                             | Troubleshooting                                                                 |
+|-----------------------------------|---------------------------------------------------------------------------------|
+| `catalog-not-found`               | Check that the catalog name is valid.                                           |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50.              |
+| `invalid-ids`                     | Item IDs can only include letters, numbers, hyphens, and underscores.           |
+| `ids-too-large`                   | Item IDs can't be more than 250 characters.                                     |
+| `ids-not-unique`                  | Check that the item IDs are unique in the request.                              |
+| `ids-not-strings`                 | Item IDs must be of type string.                                                |
+| `items-missing-ids`               | There are items that do not have item IDs. Check that each item has an item ID. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
