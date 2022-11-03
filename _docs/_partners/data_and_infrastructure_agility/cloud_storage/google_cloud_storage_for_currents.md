@@ -38,6 +38,8 @@ Create a new role in your Google Cloud Platform Console by navigating to **IAM &
 
 Next, give the role a name, click **+Add Permissions** and add `storage.buckets.get` and `storage.objects.create`, and click **Create**.
 
+Optionally, add `storage.objects.delete` permissions to allow Braze to clean up incomplete files. In rare circumstances, Google Cloud may terminate connections early, resulting in Braze writing incomplete files to Google Cloud Storage. Under normal circumstances, Braze will retry and create a new file with the correct data, leaving the old file in Google Cloud Storage.
+
 ![][3]
 
 ### Step 2: Create a service account
