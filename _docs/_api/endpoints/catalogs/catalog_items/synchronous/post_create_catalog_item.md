@@ -30,17 +30,17 @@ This endpoint has a shared rate limit of 50 requests per minute between all of t
 ## Request
 ### Path Parameters
 
-| Parameter      | Required | Data Type | Description                                             |
-|----------------|----------|-----------|---------------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path        |
-| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path |
+| Parameter      | Required | Data Type | Description                                              |
+|----------------|----------|-----------|----------------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path.        |
+| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body Parameters
 
-| Parameter | Required | Data Type | Description                                                                                                                                                                  |
-|-----------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only 1 item objects is allowed per request. |
+| Parameter | Required | Data Type | Description                                                                                                                                                                 |
+|-----------|----------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only 1 item object is allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Example Request

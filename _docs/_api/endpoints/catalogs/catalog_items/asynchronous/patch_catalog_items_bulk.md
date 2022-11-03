@@ -31,9 +31,9 @@ This endpoint has a shared rate limit of 100 requests per minute between all of 
 ## Request
 ### Path Parameters
 
-| Parameter      | Required | Data Type | Description                                      |
-|----------------|----------|-----------|--------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path |
+| Parameter      | Required | Data Type | Description                                       |
+|----------------|----------|-----------|---------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body Parameters
