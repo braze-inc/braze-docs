@@ -23,24 +23,26 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate limit
+## Rate Limit
 
 This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
 
 ## Request
+### Route Parameters
 
-### Route parameters
 | Parameter      | Required | Data Type | Description                                       |
 |----------------|----------|-----------|---------------------------------------------------|
 | `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Request Body parameters
+### Request Body Parameters
+
 | Parameter | Required | Data Type | Description                                                                                                                                                               |
 |-----------|----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain an `"id"` referencing the items Braze should delete. Up to 50 items objects are allowed per request. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Example request
+### Example Request
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -56,7 +58,6 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 ```
 
 ## Response
-
 ### Status Codes
 
 | Code  |

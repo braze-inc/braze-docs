@@ -23,22 +23,22 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate limit
+## Rate Limit
 
 This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
 ## Request
-### Route parameters
+### Route Parameters
 There are no route parameters for this endpoint.
 
-### Request Body parameters
+### Request Body Parameters
 
 | Parameter  | Required | Data Type | Description                                                                                                                          |
 |------------|----------|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
 | `catalogs` | Required | Array     | An array that contains Catalog Objects. See the Catalog Object paramaters below. Only one catalog object is allowed for this request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-#### Catalog Object parameters
+#### Catalog Object Parameters
 
 | Parameter     | Required | Data Type | Description                                                                          |
 |---------------|----------|-----------|--------------------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ There are no route parameters for this endpoint.
 | `fields`      | Required | Array     | An array that contains objects where the object contains keys `"name"` and `"type"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Example request
+### Example Request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
@@ -155,6 +155,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 #### Status Code
 `400`
 #### Response Body
+
 ```json
 {
   "errors": [

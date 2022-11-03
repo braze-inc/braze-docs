@@ -356,11 +356,11 @@ glossaries:
     description: Delete a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'>/catalogs</a>
     description: Create a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'>/catalogs</a>
     description: List the catalogs in an app group.
     tags:
       - Catalogs

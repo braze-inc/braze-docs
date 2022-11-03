@@ -23,19 +23,18 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate limit
+## Rate Limit
 
 This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
 ## Request
-
-### Route parameters
+### Route Parameters
 There are no route parameters for this endpoint.
 
-### Request Body parameters
+### Request Body Parameters
 There is no request body for this endpoint.
 
-### Example request
+### Example Request
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
@@ -44,8 +43,8 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 ```
 
 ## Response
-
 ### Status Codes
+
 | Code  |
 |-------|
 | `200` |
