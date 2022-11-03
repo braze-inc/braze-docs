@@ -35,7 +35,7 @@ The Braze Data API provides a web service where you can record actions taken by 
 
 ## Granular targeting and analysis
 
-### App Analytics
+### App analytics
 The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events that you instrument in your application.
 
 ### User segmentation
