@@ -22,6 +22,11 @@ function refresh(){
   braze.requestContentCardsRefresh();    
 }
 ```
+
+{% alert note %}
+If you implemented the Braze Web SDK using [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/), use `window.braze.requestContentCardsRefresh();` instead.
+{% endalert %}
+
 ## Listening for card updates
 
 A callback function can be registered to subscribe for updates when cards are refreshed. 

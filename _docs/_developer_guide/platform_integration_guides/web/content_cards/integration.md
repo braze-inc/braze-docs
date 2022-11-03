@@ -11,7 +11,7 @@ description: "This article covers Content Card integration for Web, including Co
 
 # Content Card integration
 
-This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods. If you implemented the Braze Web SDK using Google Tag Manager, refer to Content Card integration nuances with GTM.
+This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods. If you implemented the Braze Web SDK using Google Tag Manager, refer to [integration nuances with GTM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/content_card_integration_nuances_with_GTM/).
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -104,11 +104,13 @@ The Braze Web SDK includes a Content Cards feed UI to speed up your integration 
 
 ### Standard feed UI
 
-To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
+To use the included Content Cards UI, you'll need to specify where to show the feed on your website.
 
-In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. 
+In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
 
-We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
+{% alert note %}
+If you implemented the Braze Web SDK using [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/), add `window.` to the start of Braze methods. For example `braze.showContentCards` becomes `window.braze.showContentCards`. This is not needed for a custom feed UI.
+{% endalert %}
 
 ```html
 
