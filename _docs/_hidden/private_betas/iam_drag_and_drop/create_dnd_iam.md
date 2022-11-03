@@ -11,7 +11,7 @@ hidden: true
 With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
 {% alert important %}
-This feature is currently in beta. Please reach out to your customer success representative for access.
+This feature is currently in early access. Please reach out to your customer success representative for access.
 {% endalert %}
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
@@ -29,13 +29,38 @@ If a user hasn't updated their application (that is, they're on an older SDK ver
 **Additional Web SDK prerequisite**<br>
 The initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 
-## Step 1: Specify delivery platforms
+## Step 1: Create an in-app message
 
-After selecting the Drag & Drop Editor as your editing experience, select the message platform you would like to send your message to: Mobile Apps, Web Browsers or Both Mobile Apps & Web Browsers.
+Create a new in-app message or Canvas step, then select **Drag & Drop Editor** as your editing experience.
 
 ## Step 2: Build and design your in-app message
 
-The drag & drop editing experience is divided into three sections: **Build**, **Settings**, and **Preview & Test**.
+The drag & drop editing experience is divided into two sections: **Build** and **Preview & Test**.
+
+### Set message-level styles
+
+You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. The styles set in this section are used everywhere in your message except where you override it for a specific block.
+
+To return to the **Message Styles** tab at any time:
+
+- Click the close X button on individual block properties
+- Select the message container, message close X button, or editor background
+
+### Add a custom font
+
+To add a custom font:
+
+1. Go to the **Settings** tab
+2. Click **Add a custom font**.
+3. Upload your font using the Media Library. 
+
+We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
+
+You can add multiple variations of a font family, as some styling options may not be available for custom fonts. Currently, we don't support adding fonts via URL.
+
+{% alert note %}
+The default font will only apply to the current message and any duplicated messages, but not to future templates.
+{% endalert %}
 
 ### Drag and drop in-app message components
 
@@ -45,34 +70,35 @@ The Drag & Drop Editor uses two key components to make in-app message compositio
 
 ![]({% image_buster /assets/img_archive/dnd_iam_rows_blocks.png %}){: style="float:right;max-width:30%;margin-left:15px"}
 
-- **Rows** are structural units that define the horizontal composition of a section of the message by using cells. Using more than one cell allows you to put different content elements side by side. You can add all the structural elements you need to your message.
-- **Blocks** represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
+#### Rows
+
+Rows are structural units that define the horizontal composition of a section of the message by using cells. When a row is selected, you can add or remove the number of columns you need from the **Column customization** section to put different content elements side by side. 
+
+You can also slide to adjust the size of existing columns. All columns are distributed across a 12-point system with a maximum of 6 columns in a row.
+
+#### Blocks
+
+Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
 
 Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
 
-### Set default font settings
-
-You can select a default font from our library of fonts or add a custom font to be applied across all possible in-app message text in the **Settings** tab. The default font set in this section is used everywhere in your message except where you use a custom setting.
-
-#### Add a custom font
-
-To add a custom font, go to the **Settings** tab, click **Add a custom font**, and upload your font using the Media Library. We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
-
-You can add multiple variations of a font family, as some styling options may not be available for custom fonts. Currently, we don't support adding fonts via URL.
-
-{% alert note %}
-The default font will only apply to the current message and any duplicated messages, but not to future templates.
-{% endalert %}
-
 ### Creative details
+
+#### Customize background image 
+
+You can add an image to the background of your message from the **Message styles** tab. The scrollable section of your message must be selected to add a background for the entire message.
+
+{% alert tip %}
+If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
+{% endalert %}
 
 #### Adding Liquid
 
 ![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
-To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Liquid Personalization** from the editor toolbar. Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more!
+To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
 Next, take your generated Liquid snippet and insert it into your message. Once you’ve finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
@@ -108,6 +134,5 @@ No.
 **Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a Full-Screen or Slideup in-app message?**<br>
-The Drag and Drop Editor is in beta and is limited to the Modal message type.
-
+**How can I create a full-screen or slideup in-app message?**<br>
+Currently the editor is limited to modal messages only.
