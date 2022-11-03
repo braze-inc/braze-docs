@@ -160,9 +160,9 @@ You can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalog
 
 ### Managing catalogs
 
-You can create a catalog using the [Create Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/) endpoint.
+You can create a catalog using the [Create Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalogs_management/synchronous/post_create_catalog/) endpoint.
 
-As you build more catalogs, you can also use the [List Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
+As you build more catalogs, you can also use the [List Catalogs]({{site.baseurl}}/api/endpoints/catalogs/catalogs_management/synchronous/get_list_catalogs/) endpoint to return a list of the catalogs in an app group.
 
 ### Managing catalog items
 

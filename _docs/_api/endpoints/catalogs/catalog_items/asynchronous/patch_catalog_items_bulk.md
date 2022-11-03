@@ -29,11 +29,11 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
 
 ## Request
-### Route Parameters
+### Path Parameters
 
-| Parameter      | Required | Data Type | Description                                       |
-|----------------|----------|-----------|---------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                      |
+|----------------|----------|-----------|--------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body Parameters

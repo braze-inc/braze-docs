@@ -28,8 +28,8 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 This endpoint has a shared rate limit of 5 requests per minute between all of the synchronous catalog endpoints.
 
 ## Request
-### Route Parameters
-There are no route parameters for this endpoint.
+### Path Parameters
+There are no path parameters for this endpoint.
 
 ### Request Body Parameters
 There is no request body for this endpoint.

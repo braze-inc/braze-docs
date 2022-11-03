@@ -28,12 +28,12 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
 
 ## Request
-### Route Parameters
+### Path Parameters
 
-| Parameter      | Required | Data Type | Description                                              |
-|----------------|----------|-----------|----------------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route        |
-| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Route |
+| Parameter      | Required | Data Type | Description                                             |
+|----------------|----------|-----------|---------------------------------------------------------|
+| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path        |
+| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Request Body Parameters
