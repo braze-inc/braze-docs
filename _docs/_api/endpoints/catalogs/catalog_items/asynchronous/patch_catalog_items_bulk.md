@@ -30,6 +30,7 @@ This endpoint has a shared rate limit of 100 requests per minute between all of 
 
 ## Request
 ### Route Parameters
+
 | Parameter      | Required | Data Type | Description                                       |
 |----------------|----------|-----------|---------------------------------------------------|
 | `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Route |
