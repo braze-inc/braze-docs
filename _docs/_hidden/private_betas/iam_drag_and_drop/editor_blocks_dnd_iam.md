@@ -22,7 +22,7 @@ The following table describes how you can use each editor block type.
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Close Button | Adds a close button (x). Properties for this block are set to close the message when clicked. |
-| Link | Inserts a text link into the message |
+| Spacer | Adds space or padding between other blocks. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Properties
@@ -61,11 +61,6 @@ Details for each editor block's properties are provided in the following tables.
 | URL | Dynamic based on the selected On-click behavior |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Link
 
-| Name | Description |
-| --- | --- |
-| URL | Sets the appropriate link protocol |
-{: .reset-td-br-1 .reset-td-br-2}
 
 

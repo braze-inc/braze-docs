@@ -66,19 +66,27 @@ The default font will only apply to the current message and any duplicated messa
 
 When you open the Drag & Drop Editor, you’ll see a basic modal layout on the editing canvas, which you can use to start building your message. You can keep this layout or add, delete, and move around the Rows and Blocks. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the modal.
 
-The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
+![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
-![]({% image_buster /assets/img_archive/dnd_iam_rows_blocks.png %}){: style="float:right;max-width:30%;margin-left:15px"}
+The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
 
 #### Rows
 
-Rows are structural units that define the horizontal composition of a section of the message by using cells. When a row is selected, you can add or remove the number of columns you need from the **Column customization** section to put different content elements side by side. 
+Rows are structural units that define the horizontal composition of a section of the message by using cells. 
+
+![]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+
+When a row is selected, you can add or remove the number of columns you need from the **Column customization** section to put different content elements side by side. 
 
 You can also slide to adjust the size of existing columns. All columns are distributed across a 12-point system with a maximum of 6 columns in a row.
+
+![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 #### Blocks
 
 Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
+
+![]({% image_buster /assets/img_archive/dnd_iam_blocks.png %}){: style="max-width:40%"}
 
 Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
