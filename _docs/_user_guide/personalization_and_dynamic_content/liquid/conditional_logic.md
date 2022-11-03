@@ -127,7 +127,7 @@ Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 1
 
 After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
 
-When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
+When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the **Custom Attributes** page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 
 ![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.][20]{: style="max-width:80%;"}
 
@@ -213,7 +213,6 @@ A time stamp of when an event took place. [Time][13] values must have a [math fi
 [36]:{% image_buster /assets/img/value_null.png %}
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[4]: https://dashboard-01.braze.com/app_settings/app_settings/custom_attributes/ "Custom Attributes"
 [5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
 [8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
