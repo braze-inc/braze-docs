@@ -11,6 +11,8 @@ description: "This article covers Content Card integration for Web, including Co
 
 # Content Card integration
 
+This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods. If you implemented the Braze Web SDK using Google Tag Manager, refer to Content Card integration nuances with GTM.
+
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Content Card data model {#data-models}
