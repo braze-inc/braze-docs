@@ -38,27 +38,44 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Example error response 
+## Response
+
+There are three status code responses: `202`, `400`, and `404`.
+
+### Example success responses
+
+The status code `202` returns the following response.
+
+```json
+{
+  "message": "success"
+}
+```
+
+### Example error response 
+
+The status code `404` returns the following response.
 
 ```json
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog",
-      "paramters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
-    },
-    {
       "id": "item-not-found",
       "message": "Could not find item",
-      "parameters": ["item_id"],
-      "parameter_values": ["item_id"]
+      "parameters": [
+        "item_id"
+      ],
+      "parameter_values": [
+        "restaurant34"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

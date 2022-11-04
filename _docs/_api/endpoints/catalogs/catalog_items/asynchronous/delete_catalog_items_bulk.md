@@ -15,7 +15,7 @@ description: "This article outlines details about the Delete Multiple Catalog It
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to delete multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to delete multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -34,12 +34,8 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "items": [ (max of 50 items)
-        {
-            "id": (required, item id)
-        },
-        {
-            "id": (required, item id)
-        },
+        {"id": (required, item id)},
+        {"id": (required, item id)},
     ]
 }
 ```
@@ -48,33 +44,51 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the imported catalog.|
+| `items`  | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "items": [
+    {"id": "restaurant1"},
+    {"id": "restaurant2"},
+    {"id": "restaurant3"}
+  ]
+}'
 ```
 
-## Example error response 
+## Response
+
+### Example success responses
+
+A status code `202` returns the following response.
 
 ```json
 {
-  "errors": [
-    {
-        "id": "invalid-ids",
-        "message": "Item ids can only include letters, numbers, hyphens, and underscores",
-        "parameters": ["id"],
-        "parameter_values": ["item_id"]
-    },
-    {
-        "id": "items-missing-ids",
-        "message": "There are 5 items that do not have ids",
-        "parameters": [],
-        "parameter_values": []
-    }
-    ]
+  "message": "success"
+}
+```
+
+### Example error response 
+
+A status code `400` or `404` returns the following response.
+
+```json
+{
+    "errors": [
+        {
+            "id": "items-missing-ids",
+            "message": "There are 1 item(s) that do not have ids",
+            "parameters": [],
+            "parameter_values": []
+        }
+    ],
+    "message": "Invalid Request",
 }
 ```
 
@@ -85,11 +99,17 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `request-includes-too-many-items` | Your request has too many items. The maximum is 50. |
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `ids-not-unique` | Check that the item IDs are unique in the request. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. | 
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
+| `ids-not-unique` | Item IDs must be unique in the request. |
+| `ids-not-strings` | Item IDs must be of type string. |
+| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog.                    |
+| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

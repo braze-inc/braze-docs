@@ -37,7 +37,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "items": [ (max of 1 item)
         {
-            "count": (required, item count)
+            "item_object": (required, item object)
         },
     ]
 }
@@ -47,36 +47,58 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id` | Required | String | The item ID of the catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL. |
+| `item_id` | Required | String | The item ID of the catalog item. Passed through the URL. |
+| `items` | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example response
+## Example request
+
+```json
+curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "items": [
+    {
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-01T09:03:19.967+00:00"
+    }
+  ]
+}'
+```
+
+## Example responses
+
+**Success code `200`**
 
 ```json
 {
-	"items": [
-		{
-			"count": 5,
-		}
-	]
+  "message": "success"
 }
 ```
 
-## Example error response
+**Error code `400`** 
 
 ```json
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog"
-    },
-    {
-      "id": "item-already-exists",
-      "message": "The item already exists"
+      "id": "fields-do-not-match",
+      "message": "Fields do not match with fields on the catalog",
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant2"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

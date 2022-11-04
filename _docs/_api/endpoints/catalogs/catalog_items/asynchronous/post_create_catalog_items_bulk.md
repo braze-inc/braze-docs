@@ -15,7 +15,7 @@ description: "This article outlines details about the Create Multiple Catalog It
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `item_id`  | Required | String | Item ID for a catalog item. |
+| `items`  | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
@@ -66,35 +66,71 @@ curl --location --request POST 'https://rest.iad-01.braze.com/catalogs/catalog_n
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "items": [
-        {
-            "id": "item_0",
-            "count": 1,
-        },
-        {
-            "id": "item_1",
-            "count": 2,
-        },
-        {
-            "id": "item_2",
-            "count": 3,
-        }
-    ]
-}
+  "items": [
+    {
+      "id": "restaurant1",
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-01T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant2",
+      "Name": "Restaurant2",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 10,
+      "Loyalty_Program": true,
+      "Created_At": "2022-11-02T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant3",
+      "Name": "Restaurant3",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 3,
+      "Loyalty_Program": false,
+      "Created_At": "2022-11-03T09:03:19.967+00:00"
+    }
+  ]
+}'
 ```
 
-## Example error response 
+## Response
+
+There are three status code responses: `202`, `400`, and `404`.
+
+### Example success responses
+
+The status code `202` returns the following response.
 
 ```json
 {
-  "errors": [
-    {
-        "id": "catalog-not-found",
-        "message": "Could not find catalog",
-        "parameters": ["catalog_name"],
-        "parameter_values": ["catalog_name"]
-    }
-  ]
+  "message": "success"
+}
+```
+
+### Example error response 
+
+The status code `400` returns the following response.
+
+```json
+{
+    "errors": [
+        {
+            "id": "fields-do-not-match",
+            "message": "Fields do not match with fields on the catalog",
+            "parameters": [
+                "id"
+            ],
+            "parameter_values": [
+                "restaurant2"
+            ]
+        }
+    ],
+    "message": "Invalid Request"
 }
 ```
 

@@ -31,16 +31,28 @@ This endpoint has a shared rate limit of 5 requests per minute between all synch
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL path. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 ```
 
-## Example error response 
+## Example responses
+
+**Success code `200`**
+
+```json
+{
+  "message": "success"
+}
+```
+
+**Error code `404`** 
 
 ```json
 {
@@ -48,10 +60,15 @@ https://rest.iad-03.braze.com/catalogs/catalog_name
     {
       "id": "catalog-not-found",
       "message": "Could not find catalog",
-      "parameters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
+      "parameters": [
+        "catalog_name"
+      ],
+      "parameter_values": [
+        "restaurants"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 

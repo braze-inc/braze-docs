@@ -48,37 +48,38 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id `  |  Required | String | Item ID for a catalog item. |
+| `catalog_name`  | Required | String | Name of the catalog. Passed through the URL path. |
+| `item_id `  |  Required | String | Item ID for a catalog item. Passed through the URL path. |
+| `items` | Required | Array | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 ```
 curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catalog/items/my_item' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
     "items": [
-        {
-            "count": "item_count"
-        },
-    ]
-}
+    {
+      "Name": "Restaurant",
+      "Loyalty_Program": false,
+      "Open_Time": "2021-09-03T09:03:19.967+00:00"
+    }
+  ]
+}'
 ```
 
-## Example response
+## Example responses
+
+**Success code `200`**
+
 ```json
 {
-  "items": [
-		{
-			"id": "item_0",
-			"count": 5,
-		}
-	]
+  "message": "success"
 }
 ```
 
-## Example error response 
+**Error code `400`** 
 
 ```json
 {
@@ -86,16 +87,15 @@ curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catal
     {
       "id": "ids-too-large",
       "message": "Item ids can not be larger than 250 characters",
-      "parameters": ["id"],
-      "parameter_values": ["item_id"]
-    },
-    {
-      "id": "invalid-fields",
-      "message": "Some of the fields given do not exist in the catalog",
-      "parameters": ["id"],
-      "parameter_values": ["item_id"]
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant1"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 
@@ -107,14 +107,15 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `item-not-found` | Check that the item is in the catalog. |
-| `request-includes-too-many-items` | You can only edit one item in your catalog per request. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `request-includes-too-many-items` | You can only edit one catalog item per request. |
 | `id-in-body` | An item ID already exists in the catalog. |
-| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores.                 |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
-| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `items-too-large` | Character limit for each item is 5,000 characters. |
-| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
+| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 

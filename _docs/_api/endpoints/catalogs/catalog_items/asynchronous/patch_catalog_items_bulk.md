@@ -16,7 +16,7 @@ description: "This article outlines details about the Edit Multiple Catalog Item
 /catalogs/catalog_name/items
 {% endapimethod %}
 
-Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items.
+Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% alert important %}
 Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `item_id`  | Required | String | Item ID for a catalog item. |
+| `items`  | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
@@ -68,34 +68,54 @@ curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/catalog_
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
     "items": [
-        {
-            "id": "item_0",
-            "count": 1,
-        },
-        {
-            "id": "item_1",
-            "count": 2,
-        },
-        {
-            "id": "item_2",
-            "count": 3,
-        }
-    ]
-}
+    {
+      "id": "restaurant1",
+      "Name": "Restaurant",
+      "Loyalty_Program": false,
+      "Open_Time": "2021-09-03T09:03:19.967+00:00"
+    },
+    {
+      "id": "restaurant3",
+      "City": "San Francisco",
+      "Rating": 2
+    }
+  ]
+}'
 ```
 
-## Example error response 
+## Response
+
+There are three status code responses: `202`, `400`, and `404`.
+
+### Example success responses
+
+The status code `202` returns the following response.
 
 ```json
 {
-  "errors": [
-    {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog",
-      "parameters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
-    }
-  ]
+  "message": "success"
+}
+```
+
+### Example error response 
+
+The status code `400` returns the following response.
+
+```json
+{
+    "errors": [
+        {
+            "id": "invalid-fields",
+            "message": "Some of the fields given do not exist in the catalog",
+            "parameters": [
+                "id"
+            ],
+            "parameter_values": [
+                "restaurant1"
+            ]
+        }
+    ],
+    "message": "Invalid Request"
 }
 ```
 
@@ -106,12 +126,14 @@ The following table lists possible returned errors and their associated troubles
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
+| `item-array-invalid` | `items` must be an array of objects.                                            |
+| `request-includes-too-many-items` | Your request has too many items. The maximum is 50.                             |
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `ids-too-large`  Item IDs can't be more than 250 characters. |
 | `ids-not-unique` | Item IDs must be unique in the request. |
-| `request-includes-too-many-items` | Your request has too many items. The maximum is 50. |
+| `ids-not-strings` | Item IDs must be of type string. |
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}

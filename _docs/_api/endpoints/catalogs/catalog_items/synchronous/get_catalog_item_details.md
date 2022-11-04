@@ -38,20 +38,56 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
+There are two status code responses: `200` and `404`.
+
+### Example success responses
+
+The status code `200` returns the following response.
+
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-"items": [
+{
+  "items": [
     {
-        "id": "0",
-        "count": 5,
+      "id": "restaurant3",
+      "Name": "Restaurant1",
+      "City": "New York",
+      "Cuisine": "American",
+      "Rating": 5,
+      "Loyalty_Program": true,
+      "Open_Time": "2022-11-01T09:03:19.967Z"
     }
-]
+  ],
+  "message": "success"
+}
+```
+
+### Example error response 
+
+The status code `404` returns the following response.
+
+```json
+{
+  "errors": [
+    {
+      "id": "item-not-found",
+      "message": "Could not find item",
+      "parameters": [
+        "item_id"
+      ],
+      "parameter_values": [
+        "restaurant34"
+      ]
+    }
+  ],
+  "message": "Invalid Request"
+}
 ```
 
 ## Troubleshooting
