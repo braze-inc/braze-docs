@@ -55,8 +55,7 @@ Si des utilisateurs accèdent plusieurs fois à un parcours d’action et dispos
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
-| **Désactivé** | Lorsqu’une action pertinente est exécutée, Braze dédupliquera les entrées et la première entrée passera au groupe d’actions pertinent. <br>
-<br/>Lorsqu’aucune action pertinente n’est exécutée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
+| **Désactivé** | Lorsqu’une action pertinente est exécutée, Braze dédupliquera les entrées et la première entrée passera au groupe d’actions pertinent. <br><br/> Lorsqu’aucune action pertinente n’est exécutée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 | **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 {: .reset-td-br-1 .reset-td-br-2}
 

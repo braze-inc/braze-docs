@@ -5,7 +5,7 @@ alias: "/dnd/overview/"
 channel: E-mail
 page_order: 0
 description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop."
-tool: 
+tool:
   - Campagnes
   - Canvas
 ---
@@ -16,30 +16,30 @@ tool:
 
 {% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
-Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes. 
+Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes.
 
-Une fois que vous avez choisi où créer votre message, examinons les étapes pour créer un e-mail en glisser-déposer ! 
+Une fois que vous avez choisi où créer votre message, examinons les étapes pour créer un e-mail en glisser-déposer !
 
 ## Étape 1 : Sélectionnez votre modèle
 
 Après avoir sélectionné l’éditeur Drag & Drop comme expérience de modification, vous pouvez choisir de :
 - Commencer par un modèle vide
-- Utiliser un modèle de courriel en glisser-déposer Braze 
+- Utiliser un modèle de courriel en glisser-déposer Braze
 - Sélectionner un modèle enregistré de courriel en glisser-déposer
 
 ![La section Modèles de base d’e-mail en glisser-déposer qui montre la possibilité de sélectionner un modèle vierge ou un modèle de Braze. Il existe également une section ci-dessous pour les modèles enregistrés d’e-mail en glisser-déposer.][1]
 
-Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou les modèles créés par un tiers, ils doivent être recréés dans l’éditeur Drag & Drop. 
+Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou les modèles créés par un tiers, ils doivent être recréés dans l’éditeur Drag & Drop.
 
 {% alert tip %}
 Vous pouvez également accéder à tous les modèles de la page **Templates & Media (Modèles et médias)** dans la section **Engagement**.
 {% endalert %}
 
-Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pouvez modifier les informations d’envoi et le corps de l’e-mail, et afficher les erreurs ou avertissements à résoudre avant l’envoi. Cliquez sur **Edit Email Body (Modifier le corps du courriel)** pour commencer à concevoir votre structure de courrier électronique dans l’éditeur Drag & Drop ! 
+Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pouvez modifier les informations d’envoi et le corps de l’e-mail, et afficher les erreurs ou avertissements à résoudre avant l’envoi. Cliquez sur **Edit Email Body (Modifier le corps du courriel)** pour commencer à concevoir votre structure de courrier électronique dans l’éditeur Drag & Drop !
 
 ![][8]
 
-## Étape 2 : Créez votre e-mail 
+## Étape 2 : Créez votre e-mail
 
 L’expérience de modification en glisser-déposer est divisée en trois sections : **Paramètres d’envoi**, **Contenu**, et **Aperçu et test**.
 
@@ -50,17 +50,17 @@ Avant de créer votre e-mail, il est important de comprendre les principaux comp
 ![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
 ![][9]{: style="float:right;max-width:25%;margin-left:10px;"}
 
-L’éditeur Drag & Drop utilise deux composants principaux pour faciliter et accélérer la composition des e-mails : **Content (Contenu)** et **Rows (Lignes)**. 
+L’éditeur Drag & Drop utilise deux composants principaux pour faciliter et accélérer la composition des e-mails : **Content (Contenu)** et **Rows (Lignes)**.
 
-**Content (Contenu)** comprend une série de mosaïques qui représentent différents types de contenu que vous pouvez utiliser dans votre message, comme titre, blocs de texte, icônes et espacements. Il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. 
+**Content (Contenu)** comprend une série de mosaïques qui représentent différents types de contenu que vous pouvez utiliser dans votre message, comme titre, blocs de texte, icônes et espacements. Il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne.
 
-Chaque bloc dans **Content (Contenu)** possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné. Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/). 
+Chaque bloc dans **Content (Contenu)** possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné. Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/).
 
 Les **lignes** sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.
 
-Le panneau **Settings (Paramètres)** dans la section **Design and Build (Conception et création)** comprend les paramètres généraux du courrier électronique. Ces paramètres sont hérités des sections **Content (Contenu)** et **Rows (Lignes)** sections. Par exemple, l’ensemble **Default Font (Polices par défaut)** de cette section est utilisé partout dans votre message, sauf si vous utilisez un paramètre personnalisé. 
+Le panneau **Settings (Paramètres)** dans la section **Design and Build (Conception et création)** comprend les paramètres généraux du courrier électronique. Ces paramètres sont hérités des sections **Content (Contenu)** et **Rows (Lignes)** sections. Par exemple, l’ensemble **Default Font (Polices par défaut)** de cette section est utilisé partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
 
-![][11]{: style="width:300px;height:auto;"} 
+![][11]{: style="width:300px;height:auto;"}
 
 ### Utiliser le contenu de l’e-mail
 
@@ -68,10 +68,10 @@ Lorsque vous chargez pour la première fois dans l’éditeur Drag & Drop, vous 
 
 1. Sélectionnez le panneau **Rows (Lignes)**. Glissez-déposez les configurations de lignes dans l’éditeur principal. Cela permettra de définir la mise en page du contenu de votre e-mail. Notez que les nouvelles configurations doivent être déplacées au début ou à la fin d’une section existante.
 - Lorsque vous sélectionnez une configuration de ligne, les paramètres **Row Properties (Propriétés de ligne)** s’affichent pour une personnalisation supplémentaire des couleurs d’arrière-plan de ligne, des images et des tailles de colonnes.
-2. Sélectionnez le panneau **Content (Contenu)**. Glissez-déposez les mosaïques de contenu souhaitées sur les composants de ligne. 
+2. Sélectionnez le panneau **Content (Contenu)**. Glissez-déposez les mosaïques de contenu souhaitées sur les composants de ligne.
 - Vous pouvez affiner davantage la mosaïque en la sélectionnant et en ajustant les champs dans **Content Properties (Propriétés de contenu)** et **Block Options (Options de bloc)**. Cela inclut l’espacement des lettres, la marge intérieure, la hauteur de ligne, etc.
 
-Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure. 
+Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure.
 
 {% alert tip %}
 Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
@@ -87,13 +87,13 @@ Vous pouvez créer un thème personnalisé pour votre éditeur Drag & Drop en ut
 
 #### Images de largeur automatique
 
-Les images ajoutées à votre e-mail seront automatiquement définies sur **Largeur automatique**. Pour ajuster ce réglage, désactivez la fonction **Auto width (Largeur automatique)** et modifiez le pourcentage de largeur selon les besoins. 
+Les images ajoutées à votre e-mail seront automatiquement définies sur **Largeur automatique**. Pour ajuster ce réglage, désactivez la fonction **Auto width (Largeur automatique)** et modifiez le pourcentage de largeur selon les besoins.
 
 ![Option de largeur automatique dans l’onglet Contenu de l’éditeur Drag & Drop.][2]
 
 #### Superposition de couleurs
 
-L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan de l’e-mail, de la zone de contenu et des différents composants de contenu. La commande couleur de l’avant à l’arrière est la couleur du composant de contenu, la couleur de l’arrière-plan de la zone de contenu et la couleur de l’arrière-plan. 
+L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan de l’e-mail, de la zone de contenu et des différents composants de contenu. La commande couleur de l’avant à l’arrière est la couleur du composant de contenu, la couleur de l’arrière-plan de la zone de contenu et la couleur de l’arrière-plan.
 
 ![Exemple de superposition de couleurs dans l’éditeur Drag & Drop.][3]
 
@@ -104,13 +104,13 @@ L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan
 Pour ajuster la marge intérieure, faites défiler jusqu’à **Block Options (Options de bloc)**, et affichez **More Options (Plus d’options)**. Cela vous permettra d’ajuster votre marge intérieure pour que votre e-mail soit parfait !
 <br>
 
-#### Ajout de Liquid 
+#### Ajout de Liquid
 
 ![Options d’ajout de personnalisation de l’éditeur Drag & Drop.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter Liquid dans votre e-mail, sélectionnez **Personnalisation** sous **Design / Build (Conception/Création)**. 
+Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter Liquid dans votre e-mail, sélectionnez **Personnalisation** sous **Design / Build (Conception/Création)**.
 
-Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs par défaut, des attributs de périphérique, des attributs personnalisés, et bien plus encore ! 
+Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs par défaut, des attributs de périphérique, des attributs personnalisés, et bien plus encore !
 
 Ensuite, prenez votre extrait de code Liquid généré et ajoutez-le à votre e-mail.
 
@@ -142,7 +142,7 @@ L’utilisateur aléatoire peut ou non faire partie de vos critères de segmenta
 
 ### Inbox Vision
 
-[Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) vous permet de consulter vos campagnes par e-mail du point de vue de différents clients par e-mail et appareils mobiles. Pour tester votre courrier électronique à l’aide d’Inbox Vision, sélectionnez **Inbox Vision** dans la section **Preview & Test (Aperçu et test)** et cliquez sur **Run Inbox Vision (Exécuter Inbox Vision)**. 
+[Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) vous permet de consulter vos campagnes par e-mail du point de vue de différents clients par e-mail et appareils mobiles. Pour tester votre courrier électronique à l’aide d’Inbox Vision, sélectionnez **Inbox Vision** dans la section **Preview & Test (Aperçu et test)** et cliquez sur **Run Inbox Vision (Exécuter Inbox Vision)**.
 
 Après avoir utilisé l’éditeur Drag & Drop pour concevoir et créer votre courrier électronique, continuez à [créer][12] le reste de votre campagne ou Canvas.
 
@@ -156,7 +156,7 @@ La taille moyenne de l’empreinte de nos données HTML exportées a été rédu
 
 #### Rendu HTML
 
-Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui minimisent le nombre de commentaires conditionnels et les requêtes de médias CSS. En conséquence, les fichiers HTML sont plus petits et mieux codés. 
+Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui minimisent le nombre de commentaires conditionnels et les requêtes de médias CSS. En conséquence, les fichiers HTML sont plus petits et mieux codés.
 
 - Migration d’une `<div>` conception basée sur des éléments à une norme `<table>` base de code formatée
 - Des [blocs éditeur][7] ont été recodées pour la concision

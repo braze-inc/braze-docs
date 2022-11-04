@@ -7,7 +7,7 @@ channel:
   - cartes de contenu
 tool:
   - Rapports
-  
+
 ---
 
 # Rapports sur les cartes de contenu

@@ -112,6 +112,18 @@ String.prototype.sanitize = function() {
   return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
 };
 
+let replaceParams = function(qs = '', pr = {}) {
+	var queryString = qs.replace(/^\?/,'').split('&');
+	var params = [];
+	queryString.forEach((e) => {
+		let param = e.split('=');
+		if (param.length >1){
+		    params.push(`${param[0]}=${pr[param[0]] || param[1]}`);
+		}
+	});
+	return `?${params.join('&')}`;
+}
+
 $(document).ready(function() {
   $("#braze_header").click((e) => {
     setTimeout(function() {
@@ -448,6 +460,8 @@ $(document).ready(function() {
     if (wovn_lang != wovn_lang_code) {
       WOVN.io.changeLang(lang);
     }
+    query_str = replaceParams(query_str,{'wovn': lang})
+
   });
 
   window.addEventListener('wovnApiReady', function(evt){

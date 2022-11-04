@@ -52,9 +52,7 @@ Les Canvas Steps avec une carte de contenu et un autre canal de messagerie dispo
 | Option | Description |
 |---|---|
 | Avancement lors de l’envoi du message | Les utilisateurs avanceront jusqu’aux étapes suivantes lorsqu’au moins un des types de messages de cette étape a été correctement envoyé.|
-| Audience avancée immédiatement | Lorsque cette option est sélectionnée, toute personne qui se trouve dans l’audience, avancera aux étapes suivantes une fois le délai passé, que le message indiqué ait été vu ou pas.  <br>
- <br>
- _Les utilisateurs doivent faire correspondre le segment de l’étape et les critères de filtre pour avancer aux étapes suivantes._ |
+| Audience avancée immédiatement | Lorsque cette option est sélectionnée, toute personne qui se trouve dans l’audience, avancera aux étapes suivantes une fois le délai passé, que le message indiqué ait été vu ou pas.  <br> <br> _Les utilisateurs doivent faire correspondre le segment de l’étape et les critères de filtre pour avancer aux étapes suivantes._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]

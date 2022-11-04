@@ -164,8 +164,8 @@ Les clients par e-mail qui prennent en charge la prévisualisation mettent toujo
 
 L’éditeur vous affichera les problèmes qu’il détecte dans votre message avant que vous ne l’envoyiez. Voici une liste d’erreurs qui peuvent être détectées dans notre éditeur :
 
-- **Nom d’affichage « De » ** et **En-tête** non spécifiés ensemble
-- Adresses** De** et **Répondre à** invalides
+- **Nom d’affichage « De »** et **En-tête** non spécifiés ensemble
+- Adresses **De** et **Répondre à** invalides
 - Clés **d’en-tête** dupliquées
 - Problèmes de syntaxe Liquid
 - Corps d’e-mail de plus de 400 Ko (il est fortement recommandé que les corps des messages fassent [moins de 102 Ko][16])
