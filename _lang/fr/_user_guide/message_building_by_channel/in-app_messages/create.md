@@ -106,7 +106,7 @@ Ces messages In-App sont acceptés par les applications mobiles et les applicati
       </ul>
     </td>
     <td>Orientation de l’appareil appliquée (portrait ou paysage)</td>
-    <td>Grand et en gras À utiliser pour vous assurer que les utilisateurs voient votre contenu, comme vos campagnes clés, des notifications importantes ou des promotions massives.</td>
+    <td>Grand et en gras ! À utiliser pour vous assurer que les utilisateurs voient votre contenu, comme vos campagnes clés, des notifications importantes ou des promotions massives.</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>

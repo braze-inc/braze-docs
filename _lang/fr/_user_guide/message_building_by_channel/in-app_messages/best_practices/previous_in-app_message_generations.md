@@ -75,7 +75,7 @@ Les messages de capture d’e-mail vous permettent d’inviter facilement les ut
 
 ![Message de capture d’e-mail]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
->  Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir l'`allowUserSuppliedJavascript`option d'initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+>  Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir l'option `allowUserSuppliedJavascript` d'initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
 **Fonctions personnalisables**
 
