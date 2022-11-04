@@ -68,7 +68,7 @@ The following table shows the filters available for segmenting users by custom e
 
 ## Custom event analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [Custom Events][7] page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** reporting page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for two different custom events][8]
 
@@ -326,7 +326,6 @@ Braze's Success and Support teams can help recommend the best approach depending
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}
 [3]: {% image_buster /assets/img/nested_object3.png %}
-[7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/

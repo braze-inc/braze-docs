@@ -40,7 +40,7 @@ We recommend having multiple Braze users with admin permissions for a single app
 
 ## Renaming or deleting your app group
 
-To rename your app group, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** on the [Settings][19] page.
+To rename your app group, click **Manage Settings** in the left sidebar. Then, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** next to your app group's name.
 
 To delete your App Group entirely from the dashboard, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-cog" ></span>**Settings** on the same page and select **Delete App Group**.
 
@@ -50,6 +50,5 @@ To delete your App Group entirely from the dashboard, click <span style="font-si
 Be careful when deleting app groups! Once an app group is deleted, it can't be restored.
 {% endalert %}
 
-[19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}
 [70]: {% image_buster /assets/img_archive/appsettingsview1.png %}

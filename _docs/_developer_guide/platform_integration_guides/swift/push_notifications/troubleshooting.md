@@ -49,7 +49,7 @@ If [APNs][20] informs us that any of the push tokens we were attempting to send 
 
 ## Utilizing the push error logs
 
-Braze provides a log of push notification errors within the [message activity log][27]. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+Braze provides a log of push notification errors within the **Message Activity Log**. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.][26]
 
@@ -120,7 +120,7 @@ The following would indicate a problem with push registration or that the user's
 
 #### Received unregistered sending to push token {#received-unregistered-sending}
 
-- Make sure that the push token being sent to Braze from the method `[[Appboy sharedInstance] registerPushToken:]` is valid. You can look in the [message activity log][27] to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code][37] for sending Braze the push tokens.
+- Make sure that the push token being sent to Braze from the method `[[Appboy sharedInstance] registerPushToken:]` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code][37] for sending Braze the push tokens.
 - Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
 
@@ -163,7 +163,6 @@ If opens are being logged, check whether it is an issue with the deep link in ge
 [21]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [25]: {% image_buster /assets/img_archive/registration_problem.png %}
 [26]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[27]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
 [14]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607
 [2]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities

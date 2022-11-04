@@ -8,7 +8,7 @@ description: "This reference article covers app group configuration and how to c
 
 # App group configuration
 
-Braze organizes your apps via app groups. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same application or a free and paid versions. These two apps should be in the same group to allow for ease of navigation, segmentation, and messaging across both platforms.
+Braze organizes your apps via app groups. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same app or the free and premium versions of the same app. Grouping these apps into the same app group allows for ease of navigation, segmentation, and messaging across both platforms.
 
 ## Creating your app group
 
@@ -38,16 +38,18 @@ Braze recommends that you create a testing app group for integration and campaig
 
 ## Multiple apps in a single app group
 
-The draw to have multiple apps under one app group can be enticing as it can lead to the ability to rate limit messaging across your entire app portfolio. However, as a best practice, we suggest only putting different versions of the same or very similar apps together under one app group. For example, your iOS and Android versions of the same app or your free and premium versions of the same app.
+It can be enticing to group multiple apps under one app group in an attempt to optimize [rate limiting]{{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) across your entire app portfolio. However, as a best practice, we suggest only putting different versions of the same or very similar apps together under one app group. 
 
-Whichever apps you choose to have in one app group will have their data aggregated which will have a notable impact on filters in Braze. This includes, but isn't limited to, these filters:
+All apps in the same app group will have their data aggregated. This will have a notable impact on filters in Braze. This includes, but isn't limited to, these filters:
 
 - Last Used App
 - First Used App
 - Session Count
 - Money Spent
-- Push subscription (If your users unsubscribe from one app, they will be unsubscribed from all of your apps under the app group)
-- Email subscription (This can leave you open to compliance issues)
+- Push Subscription
+  - If your users unsubscribe from one app, they will be unsubscribed from all of your apps under the app group.
+- Email Subscription
+  - This can leave you open to compliance issues.
 
 The aggregation of the data across dissimilar apps in the aforementioned filters is why we do not recommend housing substantially different apps within the same app group.
 
