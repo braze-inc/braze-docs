@@ -95,7 +95,7 @@ Bien que les messages In-App Braze soient personnalisés de diverses façons, vo
 
 Les messages In-App HTML prennent en charge une interface de pont Javascript vers le SDK Web Braze, ce qui vous permet de déclencher des actions Braze personnalisées lorsque les utilisateurs cliquent sur des éléments avec des liens ou montrent un engagement avec votre contenu. Les méthodes Javascript suivantes sont prises en charge dans les messages In-App HTML Braze :
 
-{% multi_lang_include archive/appboyBridge.md platform="web" %}
+{% include archive/appboyBridge.md platform="web" %}
 
 En outre, pour le suivi analytique, tous les éléments `<a>` ou `<button>` dans votre HTML enregistrent automatiquement une action de clic sur la campagne associée au message In-App. Pour enregistrer un « clic sur bouton » au lieu d’un « clic dans le corps », entrez une valeur de chaîne de caractères abButtonId dans les href de votre lien (par ex., `<a href="http://mysite.com?abButtonId=0">click me</a>`) ou un identifiant dans l’élément HTML (par ex., `<a id="0" href="http://mysite.com">click me</a>`). Notez que seuls les identifiants de bouton « 0 » et « 1 » sont actuellement acceptés. Un lien avec un ID de bouton 0 est représenté comme « Bouton 1 » dans le tableau de bord, tandis qu’un lien avec un ID de bouton 1 est représenté comme « Bouton 2 »."
 
