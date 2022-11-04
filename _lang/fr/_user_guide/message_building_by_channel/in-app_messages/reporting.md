@@ -14,5 +14,5 @@ tool:
 
 > Le présent article de référence couvre les rapports et analyses des messages In-App, dont les détails de la campagne, la performance des messages et les performances historiques.
 
-{% include campaign_analytics.md channel="in-app message" %}
+{% multi_lang_include campaign_analytics.md channel="in-app message" %}
 
