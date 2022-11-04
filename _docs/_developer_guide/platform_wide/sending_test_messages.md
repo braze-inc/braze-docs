@@ -90,7 +90,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
-- `YOUR_EXTERNAL_USER_ID` - available on the the **User Search page**
+- `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
