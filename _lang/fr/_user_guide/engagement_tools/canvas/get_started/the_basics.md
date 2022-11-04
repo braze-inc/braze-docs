@@ -14,9 +14,7 @@ tool: Canvas
 
 Répondez aux questions suivantes pour commencer :
 
-1. **Que (What)** puis-je faire pour aider le client à mieux comprendre ? (Nom du Canvas)<br>
-<br>
-
+1. **Que (What)** puis-je faire pour aider le client à mieux comprendre ? (Nom du Canvas)<br><br>
 
 2. **Quand (When)** un utilisateur commencera-t-il cette expérience ? Choisissez l’un des éléments suivants :
     * **Planification** : Entrer les utilisateurs à un moment donné
@@ -27,9 +25,7 @@ Répondez aux questions suivantes pour commencer :
       * Saisir un emplacement
       * Interagir ou quitter une autre campagne ou Canvas
     * **Déclenché par un API** (avancé) : Entrer des utilisateurs lorsqu’ils effectuent une action spécifique déclenchant une demande API à Braze
-      * Les campagnes déclenchées par API vous donnent la possibilité de stocker le contenu d’un message dans le tableau de bord Braze, en indiquant le moment où un message est envoyé et son destinataire, via votre API.<br>
-<br>
-
+      * Les campagnes déclenchées par API vous donnent la possibilité de stocker le contenu d’un message dans le tableau de bord Braze, en indiquant le moment où un message est envoyé et son destinataire, via votre API.<br><br>
 
 3. **Qui (Who)** essayons-nous de joindre ? (Nom du segment avec filtres facultatifs supplémentaires)
   * Données personnalisées
@@ -38,17 +34,13 @@ Répondez aux questions suivantes pour commencer :
   * Activité de marketing
   * Attributs utilisateur
   * Attribution d’installation
-  * Activité sociale<br>
-<br>
-
+  * Activité sociale<br><br>
 
 4. **Pourquoi (Why)** je crée ce Canvas ?
   * **Lancer la session** : Je souhaite qu’ils rejoignent l’application.
   * **Effectuer un achat** : Je souhaite qu’ils effectuent un achat.
   * **Effectuer un événement personnalisé** : Je souhaite qu’ils effectuent une action spécifique pour laquelle je réalise un suivi comme événement personnalisé.
-  * Mises à niveau d’application : Je souhaite qu’ils mettent à niveau leur version d’application<br>
-<br>
-
+  * Mises à niveau d’application : Je souhaite qu’ils mettent à niveau leur version d’application<br><br>
 
 5. **Où (Where)** devrais-je les contacter ?
   * E-mail
@@ -56,9 +48,7 @@ Répondez aux questions suivantes pour commencer :
   * Messages in-app
   * Cartes de contenu
   * SMS ou MMS
-  * Webhook<br>
-<br>
-
+  * Webhook<br><br>
 
 6. **How (Comment)** devrais-je les contacter ? (Endroit idéal pour tester les différentes configurations de messagerie)
   * **Timing** : Planifier ou déclencher des messages à l’aide d’outils tels que Timing Intelligent et des délais après le déclenchement d’événements
@@ -73,37 +63,27 @@ Voici un Overview de l’anatomie d’un Canvas :
 
 {% tabs %}
   {% tab Canvas %}
-    **Canvas** fait référence à l’espace de travail et à la visualisation globale.<br>
-<br>
-
+    **Canvas** fait référence à l’espace de travail et à la visualisation globale.<br><br>
     ![Parcours]({% image_buster /assets/img/Canvas2.png %})
   {% endtab %}
 
   {% tab Journey %}
-    Un **parcours ou parcours client** désigne une expérience utilisateur spécifique dans le Canvas.<br>
-<br>
-
+    Un **parcours ou parcours client** désigne une expérience utilisateur spécifique dans le Canvas.<br><br>
     ![Parcours pour nouvel utilisateur]({% image_buster /assets/img_archive/Journey_2.png %})
   {% endtab %}
 
   {% tab Entry Step %}
-    **L’étape Entrée** et **L’assistant Entrée** sont les premières étapes que vous exécutez lorsque vous créez votre Canvas. À ce niveau, vous pouvez contrôler la façon dont vos utilisateurs commencent et réalisent leur parcours client.<br>
-<br>
-
+    **L’étape Entrée** et **L’assistant Entrée** sont les premières étapes que vous exécutez lorsque vous créez votre Canvas. À ce niveau, vous pouvez contrôler la façon dont vos utilisateurs commencent et réalisent leur parcours client.<br><br>
     ![Parcours_3]({% image_buster /assets/img/entry-wizard.gif %})
   {% endtab %}
 
   {% tab Variants %}
-    Les **Variantes** désignent les flux de variantes conçus par les marketeurs, créant des parcours personnalisés.<br>
-<br>
-
+    Les **Variantes** désignent les flux de variantes conçus par les marketeurs, créant des parcours personnalisés.<br><br>
     ![Parcours_3]({% image_buster /assets/img/variants.gif %})
   {% endtab %}
 
   {% tab Steps %}
-    Les **Étapes** désignent des points de décision (tels que des messages) dans une variante.<br>
-<br>
-
+    Les **Étapes** désignent des points de décision (tels que des messages) dans une variante.<br><br>
     ![Parcours_4]({% image_buster /assets/img/steps.gif %})
   {% endtab %}
 {% endtabs %}
@@ -153,7 +133,7 @@ Sélectionnez au moins un événement de conversion pour pouvoir comprendre vos 
 2. **Création d’étapes** : Une étape désigne un point de décision marketing, quelle expérience créez-vous ? Dans une étape, vous pouvez définir des déclencheurs ou planifier une livraison, affiner le ciblage en ajoutant des filtres ou en marquant des [événements d’exception][1] et ajouter des canaux à partir d’e-mails, notifications push et webhooks.
 
 3. **Déterminer quand et comment utiliser des étapes et des variantes :** Chaque Canvas doit avoir au moins une variante et au moins une étape. Il n’y a pas de limites, comment définissez-vous donc la forme de votre Canvas ? C’est à ce niveau que vos objectifs, données et hypothèses entrent en jeu. La réflexion « how » (comment) et « where » (où) vous aidera à tracer la forme appropriée et la structure de votre Canvas. Vous pouvez utiliser deux approches :
-    - **Travailler à contresens ** : Certains objectifs ont des sous-objectifs identiques. Par exemple, si votre objectif est de convaincre un utilisateur libre de souscrire, vous aurez besoin d’un document indiquant vos services d’abonnement. Un visiteur doit voir les options avant d’acheter. Vous devez mettre en avant cette page avant une page de paiement. Travailler à contresens pour comprendre le parcours d’un client va de pair avec la réalisation de votre objectif, élément clé pour la conversion.
+    - **Travailler à contresens** : Certains objectifs ont des sous-objectifs identiques. Par exemple, si votre objectif est de convaincre un utilisateur libre de souscrire, vous aurez besoin d’un document indiquant vos services d’abonnement. Un visiteur doit voir les options avant d’acheter. Vous devez mettre en avant cette page avant une page de paiement. Travailler à contresens pour comprendre le parcours d’un client va de pair avec la réalisation de votre objectif, élément clé pour la conversion.
     - **Commencer par le statu quo et ajouter des éléments** : Avez-vous déjà réalisé une campagne identique dans le passé ? Ou est-ce la première que vous menez ? Utilisez un message et ajoutez-en d’autres. Essayez un nouveau filtre ou ajoutez un message de réponse. Examinez vos performances et continuez à optimiser en apportant des modifications progressives.
     - **Regarder les autres** : L’imitation est la plus grande forme de flatterie. Ne réinventez pas la roue. N’ayez crainte, nous avons une solution. À la fin de ce guide, vous trouverez des caractéristiques essentielles qui vous aideront à démarrer.
 

@@ -15,7 +15,7 @@ channel: messages in-app
 
 > Des messages in-app peuvent être ajoutés dans le cadre de votre parcours Canvas pour mettre en valeur votre messagerie lorsque votre client accède à votre application. Cet article décrit les fonctionnalités et les nuances spécifiques aux messages in-app de Canvas.
 
-Avant de poursuivre, vous devez avoir déjà [créé votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) et configuré des options de délai et d’audience. 
+Avant de poursuivre, vous devez avoir déjà [créé votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) et configuré des options de délai et d’audience.
 
 À présent, vous pouvez ajouter un message in-app dans votre Canvas en sélectionnant un message in-app à partir de **canaux de messagerie**. Une fois que le délai d’une étape est passé et que les options d’audience ont été cochées, le message in-app sera activé et les utilisateurs le verront à l’ouverture de l’application. Les messages in-app dans Canvas peuvent être uniquement déclenchés par l’`start session`événement déclencheur - ils ne peuvent pas être déclenchés par des événements personnalisés dans une étape Canvas !
 
@@ -220,7 +220,7 @@ Par défaut, la priorité d’une étape Canvas est définie comme moyenne, avec
 
 ## Propriétés d’événement personnalisé dans un Canvas
 
-La livraison par événement n’étant pas disponible pour les Canvas Steps avec messages in-app, vous ne pouvez pas non plus utiliser des propriétés de l’événement personnalisées pour ces étapes. Si vous voulez modifier des propriétés de l’événement dans Canvas, nous recommandons d’archiver vos propriétés d’événement comme attributs personnalisés dans votre première étape Canvas puis de personnaliser votre message in-app avec les attributs personnalisés dans la deuxième étape. 
+La livraison par événement n’étant pas disponible pour les Canvas Steps avec messages in-app, vous ne pouvez pas non plus utiliser des propriétés de l’événement personnalisées pour ces étapes. Si vous voulez modifier des propriétés de l’événement dans Canvas, nous recommandons d’archiver vos propriétés d’événement comme attributs personnalisés dans votre première étape Canvas puis de personnaliser votre message in-app avec les attributs personnalisés dans la deuxième étape.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"

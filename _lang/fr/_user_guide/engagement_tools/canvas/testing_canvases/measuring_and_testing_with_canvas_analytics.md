@@ -53,9 +53,7 @@ Les métriques de base comprennent les éléments suivants :
 - **Total des revenus :** Le revenu total en dollars de destinataires de Canvas dans la fenêtre de conversion principale définie.
 
 {% alert note %}
-Comme les conversions, le revenu est soumis techniquement à un suivi au niveau de Canvas, mais il est attribué à l’étape la plus récente et à la variante la plus récente depuis lesquelles l’utilisateur a reçu un message (ou saisi, si aucun message n’a encore été reçu).<br>
-<br>
-
+Comme les conversions, le revenu est soumis techniquement à un suivi au niveau de Canvas, mais il est attribué à l’étape la plus récente et à la variante la plus récente depuis lesquelles l’utilisateur a reçu un message (ou saisi, si aucun message n’a encore été reçu).<br><br>
 Par exemple, si un utilisateur exécute deux étapes puis effectue un achat, ce revenu est attribué à la seconde étape et à la variante saisie. S’il accède au Canvas, mais effectue un achat avant de recevoir la première étape, ce revenu est attribué à la variante saisie, mais pas à une étape.
 {% endalert %}
 
