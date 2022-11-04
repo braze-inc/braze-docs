@@ -839,6 +839,7 @@ Miscellaneous
 - [Find the smallest value in an array](#misc-smallest-value)
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
+- [Format a string into a phone number](#phone-number)
 
 ### Avoid sending emails to customers that have blocked marketing emails {#misc-avoid-blocked-emails}
 
@@ -1158,6 +1159,17 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 
 {% alert important %} You will need to find matches between the arrays first, then build logic at the end to split up the matches. {% endalert %}
 
+### Format a string into a phone number {#phone-number}
+
+This use case shows you how to index the `phone_number` user profile field (by default, formatted as a string of integers), and reformat it based on your local phone number standards. For example, 1234567890 to (123)-456-7890.
+
+{% raw %} 
+```liquid
+{% assign phone = {{${phone_number}}} | remove: "-" | split: '' %}
+
+({{ phone[0] }}{{ phone[1] }}{{ phone[2] }})-{{ phone[3] }}{{ phone[4] }}{{ phone[5] }}-{{ phone[6] }}{{ phone[7] }}{{ phone[8] }}{{ phone[9] }}
+```
+{% endraw %}
 
 {% endapi %}
 

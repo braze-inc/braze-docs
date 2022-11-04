@@ -22,6 +22,12 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 You can use Braze’s Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
 
+## Lambda user CSV import
+
+You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts uploads it via our API.
+
+Estimated execution times for a file with 1M rows should be around 5 minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
+
 ## CSV
 
 You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.
