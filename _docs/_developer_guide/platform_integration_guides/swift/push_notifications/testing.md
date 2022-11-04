@@ -15,7 +15,7 @@ channel:
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page.
-- `YOUR_EXTERNAL_USER_ID` - available on the **User Profile Search** page. See [assigning user IDs][32] for more information.
+- `YOUR_EXTERNAL_USER_ID` - available on the **User Search** page. See [assigning user IDs][32] for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
