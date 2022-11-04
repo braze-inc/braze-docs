@@ -16,9 +16,9 @@ Braze dispose de trois états d’abonnement globaux pour les utilisateurs de co
 
 | État | Définition |
 | ----- | ---------- |
-| Abonné | L’utilisateur a explicitement confirmé qu’il souhaitait recevoir un e-mail. Nous recommandons un processus explicite d’abonnement pour obtenir le consentement des utilisateurs à l’envoi d’e-mails. |
+| Abonné actif | L’utilisateur a explicitement confirmé qu’il souhaitait recevoir un e-mail. Nous recommandons un processus explicite d’abonnement pour obtenir le consentement des utilisateurs à l’envoi d’e-mails. |
 | Abonné | L’utilisateur ne s’est pas désabonné et n’a pas accepté explicitement de recevoir des e-mails. Il s’agit de l’état d’abonnement par défaut lorsqu’un profil utilisateur est créé. |
-| Non inscrit | L’utilisateur s’est explicitement désabonné de vos courriels. |
+| Désabonné | L’utilisateur s’est explicitement désabonné de vos courriels. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -218,7 +218,7 @@ Cliquez sur les boutons **Unsubscribed (Désabonné)**, **Subscribed (Abonné)**
 
 ## Ciblage des abonnements et des campagnes {#subscriptions-and-campaign-targeting}
 
-Les campagnes avec des notifications push ou des e-mails ciblent les utilisateurs qui sont inscrits ou abonnés par défaut. Vous pouvez modifier cette préférence de ciblage lors de la modification d’une campagne en allant à l’étape **Target Users (Utilisateurs cibles)** et en cliquant sur **Advanced Options (Options avancées)**.
+Les campagnes avec des notifications push ou des e-mails ciblent les utilisateurs qui sont abonnés ou abonnés actifs par défaut. Vous pouvez modifier cette préférence de ciblage lors de la modification d’une campagne en allant à l’étape **Target Users (Utilisateurs cibles)** et en cliquant sur **Advanced Options (Options avancées)**.
 
 Braze prend en charge trois états de ciblage :
 
