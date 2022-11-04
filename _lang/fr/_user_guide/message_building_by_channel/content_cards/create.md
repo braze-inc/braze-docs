@@ -46,7 +46,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
 3. Choisissez un [calendrier des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire. Les étapes contenant des cartes de contenu peuvent être programmées ou basées sur des actions.
 4. Filtrez votre public pour cette étape, si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options de public seront vérifiées après le délai, au moment de l’envoi des messages.
-5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Vous pouvez utiliser soit l’option **Advance when Message Sent (Progresser lorsque le message est envoyé)**, pour faire progresser vos utilisateurs vers les étapes suivantes lorsque la carte de contenu est envoyée, soit l’option**Immediately Advance Audience (Progresser immédiatement)**, qui fait progresser les utilisateurs lorsque la carte de contenu est envoyée, ou si la carte de contenu est abandonnée pour quelque raison que ce soit.
+5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Vous pouvez utiliser soit l’option **Advance when Message Sent (Progresser lorsque le message est envoyé)**, pour faire progresser vos utilisateurs vers les étapes suivantes lorsque la carte de contenu est envoyée, soit l’option **Immediately Advance Audience (Progresser immédiatement),** qui fait progresser les utilisateurs lorsque la carte de contenu est envoyée, ou si la carte de contenu est abandonnée pour quelque raison que ce soit.
 6. Choisissez les autres canaux de messagerie que vous souhaitez associer à votre message.
 
 {% endtab %}
@@ -56,7 +56,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Ensuite, sélectionnez un **Type de carte**. Braze propose trois types de carte de contenu prêts à l’emploi : Classique, Image avec légende et Bannière.
 
-Pour en savoir plus sur le comportement attendu et l’apparence de chacun de ces types de messages, consultez [Détails créatifs ou]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) consultez les liens du tableau suivant. Ces types de carte de contenu sont acceptés par les applications mobiles et les applications Web.
+Pour en savoir plus sur le comportement attendu et l’apparence de chacun de ces types de messages, consultez [Détails créatifs]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) ou consultez les liens du tableau suivant. Ces types de carte de contenu sont acceptés par les applications mobiles et les applications Web.
 
 | Type de message | Exemple | Description |
 |---|---|---|
@@ -87,7 +87,7 @@ Pour ajouter une image à votre carte de contenu, cliquez sur **Add Image (Ajout
 
 #### Épingler en haut
 
-Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Si plus d’une carte est épinglée dans le flux d’un utilisateur, les cartes épinglées sont affichées dans l’ordre chronologique. Une fois qu’une carte a été envoyée, vous ne pouvez pas modifier rétroactivement l’option Épinglée. Modifier cette option après l’envoi d’une campagne n’affectera que les futurs envois .
+Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Si plus d’une carte est épinglée dans le flux d’un utilisateur, les cartes épinglées sont affichées dans l’ordre chronologique. Une fois qu’une carte a été envoyée, vous ne pouvez pas modifier rétroactivement l’option Épinglée. Modifier cette option après l’envoi d’une campagne n’affectera que les futurs envois.
 
 #### Comportement on-click
 
@@ -103,7 +103,7 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 | Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) à définir pour l’utilisateur actuel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**Note**: Les options  __Enregistrer événement personnalisé__  et  __Enregistrer Attribut personnalisé __  sont disponibles si vous avez la version suivante du SDK  :
+**Note**: Les options  __Enregistrer événement personnalisé__  et  __Enregistrer Attribut personnalisé__  sont disponibles si vous avez la version suivante du SDK  :
 
 {% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
 
