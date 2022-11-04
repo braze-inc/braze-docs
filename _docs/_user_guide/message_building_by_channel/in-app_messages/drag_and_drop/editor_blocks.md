@@ -1,12 +1,11 @@
 ---
 nav_title: Editor Blocks
-article_title: "Editor Blocks"
+article_title: "In-App Message Editor Blocks"
 description: "This reference article describes the editor blocks available in the Drag and Drop Editor for in-app messages."
-permalink: "/editor_blocks_dnd_iam/"
-hidden: true
+alias: "/editor_blocks_dnd_iam/"
 ---
 
-# Editor blocks
+# In-app message editor blocks
 
 Editor blocks are the various blocks available in the Drag & Drop Editor under the **Build** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
 
