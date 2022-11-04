@@ -338,7 +338,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 
 - Do not begin a custom event with a numeric character. The drop-down list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
 - Try not to use obscure abbreviations or technical jargon where possible
-  - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute ought to be sent to Braze as something like `user_country` to lend some clarity to a marketer using the dashboard down the line.
+  - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute should be sent to Braze as something like `user_country` to lend some clarity to a marketer using the dashboard down the line.
 
 #### Only log attributes when they change
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
