@@ -14,7 +14,7 @@ tool:
 
 > Avec l’éditeur Drag & Drop, vous pouvez créer des e-mails entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer.
 
-{% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
+{% include video.html id="4dTrkxe8DLo" align="right" %}
 
 Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes. 
 
