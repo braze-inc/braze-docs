@@ -7,11 +7,11 @@ channel:
   - cartes de contenu
 tool:
   - Rapports
-  
+
 ---
 
 # Rapports sur les cartes de contenu
 
 > Le présent article de référence présent les mesures et options d’analyse des rapports sur les cartes de contenu fourniss par le tableau de bord de Braze.
 
-{% include campaign_analytics.md channel="Content Card" %}
+{% multi_lang_include campaign_analytics.md channel="Content Card" %}
