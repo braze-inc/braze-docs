@@ -44,7 +44,7 @@ Comme vous venez de fournir un service à vos utilisateurs, ils seront peut-êtr
 Le ton utilisé doit être amical ! C’est peut-être votre dernière chance de reconquérir ces utilisateurs, alors assurez-vous d’inclure du contenu qui explique la valeur de votre appli. Si l’utilisateur a été relativement inactif depuis l’installation, proposez des astuces utiles pour l’aider à se lancer.
 
 - Pour les applications sociales, gardez les utilisateurs informés des activités de leurs amis.
-- Offrez des remises ou toute autre incitation pour les faire revenir..
+- Offrez des remises ou toute autre incitation pour les faire revenir.
 
 Essayez de personnaliser votre message personnel pour montrer à l’utilisateur qu’il est toujours apprécié. Pour son e-mail de conservation, Rue La La, par exemple, envoie un message de son PDG :
 
