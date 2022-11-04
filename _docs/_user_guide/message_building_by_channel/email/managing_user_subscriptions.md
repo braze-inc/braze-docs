@@ -190,7 +190,7 @@ You can also choose to set a custom footer for plaintext emails from the **Email
 
 When a user clicks on an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the email **Settings** page.
+Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the **Email Settings** page.
 
 We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
