@@ -11,7 +11,7 @@ channel: messages in-app
 
 # Messages in-app de Canvas
 
-{% multi_lang_include video.html id="6X8E20BlblI" align="right" %}
+{% include video.html id="6X8E20BlblI" align="right" %}
 
 > Des messages in-app peuvent être ajoutés dans le cadre de votre parcours Canvas pour mettre en valeur votre messagerie lorsque votre client accède à votre application. Cet article décrit les fonctionnalités et les nuances spécifiques aux messages in-app de Canvas.
 
