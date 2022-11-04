@@ -11,8 +11,17 @@ tool: Campaigns
 
 > This reference article covers how to generate a `campaign_id` to include in your API calls and how to configure that campaign.
 
-{% alert note %}
-Campaigns sent through the <a href="{{site.baseurl}}/api/endpoints/messaging/"> Messaging API</a> can have the same detailed reporting and retargeting options as campaigns created on the dashboard.
+API campaigns are typically used for transactional messaging. When creating API campaigns (not [API-triggered campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)), the Braze dashboard is only used to generate a `campaign_id`, which lets you track analytics for campaign reporting. You can also generate a message variation ID, which is different for each variant in your campaign. 
+
+You'll then send that information to your development team to use in the API request, along with:
+- Campaign copy
+- Audience membership
+- Assets
+
+After the campaign begins, you can view the results in the dashboard. API campaigns use the Braze [messaging APIs]({{site.baseurl}}/api/endpoints/messaging/), which have the same detailed reporting and retargeting options as campaigns created completely through the dashboard.
+
+{% alert warning %}
+Because API campaigns are typically transactional, all users are eligible for API campaigns, even those in your Global Control Group.
 {% endalert %}
 
 ## Create a new campaign
