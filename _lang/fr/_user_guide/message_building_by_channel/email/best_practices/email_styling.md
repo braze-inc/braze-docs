@@ -45,7 +45,7 @@ Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vo
   - Navigation facile
   - Grand texte
   - Beaucoup d’espace vide
-  - Corps du message bref et concis.
+  - Corps du message bref et concis
   - Appels à l’action clairs 
 
 ### Limites de caractères de l’accroche
