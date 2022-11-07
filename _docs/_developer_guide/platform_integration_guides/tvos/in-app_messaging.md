@@ -28,4 +28,4 @@ Reference our [In-app message custom UI](https://braze-inc.github.io/braze-swift
 
 [1]: {% image_buster /assets/img/tvos.png %} 
 [2]: {% image_buster /assets/img/tvos1.png %} 
-[swift-sdk] https://github.com/braze-inc/braze-swift-sdk
+[swift-sdk]: https://github.com/braze-inc/braze-swift-sdk
