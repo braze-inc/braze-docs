@@ -38,7 +38,7 @@ This endpoint has a shared rate limit of 100 requests per minute between all asy
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `items` | Required | Array | An array that contains Item Objects. The item objects should contain an `id` referencing the items Braze should delete. Up to 50 item objects are allowed per request. |
+| `items` | Required | Array | An array that contains item objects. The item objects should contain an `id` referencing the items Braze should delete. Up to 50 item objects are allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request

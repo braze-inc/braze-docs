@@ -35,8 +35,8 @@ There is no request body for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name` | Required | String | Name of the catalog. Passed through the URL path. |
-| `item_id` | Required | String | The ID of the catalog item. Passed through the URL path. |
+| `catalog_name` | Required | String | Name of the catalog. |
+| `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request

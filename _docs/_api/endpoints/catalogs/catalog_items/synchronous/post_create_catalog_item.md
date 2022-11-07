@@ -39,7 +39,7 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `items` | Required | Array | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only one item object is allowed per request. |
+| `items` | Required | Array | An array that contains item objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only one item object is allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example Request
