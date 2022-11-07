@@ -12,7 +12,7 @@ description: "This article outlines details about the List Catalog Item Details 
 {% api %}
 # List catalog item details
 {% apimethod get %}
-/catalogs/:catalog_name/items/:item_id
+/catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
 Use this endpoint to return a catalog item and its content.
@@ -23,23 +23,23 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate Limit
+## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request
-### Path Parameters
+## Request parameters
 
-| Parameter      | Required | Data Type | Description                                              |
-|----------------|----------|-----------|----------------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path.        |
-| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-### Request Body Parameters
 There is no request body for this endpoint.
 
-### Example request
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name` | Required | String | Name of the catalog. Passed through the URL path. |
+| `item_id` | Required | String | The ID of the catalog item. Passed through the URL path. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example request
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -48,18 +48,12 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 ```
 
 ## Response
-### Status Codes
 
-| Code  |
-|-------|
-| `200` |
-| `404` | 
-{: .reset-td-br-1}
+There are two status code responses for this endpoint: `200` and `404`.
 
-### Example Successful Response
-#### Status Code
-`200`
-#### Response Body
+### Example success response
+
+The status code `200` could return the following response body.
 
 ```json
 {
@@ -78,10 +72,9 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 }
 ```
 
-### Example Failure Response
-#### Status Code 
-`404`
-#### Response Body
+### Example error response
+
+The status code `404` could return the following response. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses. 
 
 ```json
 {
@@ -105,10 +98,10 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
 
-| Error               | Troubleshooting                        |
-|---------------------|----------------------------------------|
-| `catalog-not-found` | Check that the catalog name is valid.  |
-| `item-not-found`    | Check that the item is in the catalog. |
+| Error | Troubleshooting |
+| --- | --- |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-not-found` | Check that the item is in the catalog. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

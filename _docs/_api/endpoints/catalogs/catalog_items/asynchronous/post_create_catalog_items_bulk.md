@@ -12,7 +12,7 @@ description: "This article outlines details about the Create Multiple Catalog It
 {% api %}
 # Create multiple catalog items
 {% apimethod post %}
-/catalogs/:catalog_name/items
+/catalogs/{catalog_name}/items
 {% endapimethod %}
 
 Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
@@ -23,26 +23,25 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate Limit
+## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all of the asynchronous catalog item endpoints.
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
 
-## Request
-### Path Parameters
+## Path parameters
 
-| Parameter      | Required | Data Type | Description                                       |
-|----------------|----------|-----------|---------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name` | Required | String | Name of the catalog. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Request Body Parameters
+## Request parameters
 
-| Parameter | Required | Data Type | Description                                                                                                                                           |
-|-----------|----------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain all of the fields in the catalog. Up to 50 item objects are allowed per request. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items` | Required | Array | An array that contains Item Objects. The item objects should contain all of the fields in the catalog. Up to 50 item objects are allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Example Request
+## Example Request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -82,19 +81,12 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 ```
 
 ## Response
-### Status Codes
 
-| Code  |
-|-------|
-| `202` |
-| `400` |
-| `404` | 
-{: .reset-td-br-1}
+There are three status code responses for this endpoint: `202`, `400`, and `404`.
 
-### Example Successful Response
-#### Status Code 
-`202`
-#### Response Body
+### Example success response
+
+The status code `202` could return the following response body.
 
 ```json
 {
@@ -102,10 +94,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }
 ```
 
-### Example Failure Response
-#### Status Code
-`400`
-#### Response Body
+### Example error response
+
+The status code `400` could return the following response body. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses.
 
 ```json
 {
@@ -129,20 +120,20 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error                             | Troubleshooting                                                                 |
-|-----------------------------------|---------------------------------------------------------------------------------|
-| `catalog-not-found`               | Check that the catalog name is valid.                                           |
-| `item-array-invalid`              | `items` must be an array of objects.                                            |
-| `request-includes-too-many-items` | Your request has too many items. The maximum is 50.                             |
-| `invalid-ids`                     | Item IDs can only include letters, numbers, hyphens, and underscores.           |
-| `ids-too-large`                   | Item IDs can't be more than 250 characters.                                     |
-| `ids-not-unique`                  | Item IDs must be unique in the request.                                         |
-| `ids-not-strings`                 | Item IDs must be of type string.                                                |
-| `items-missing-ids`               | There are items that do not have item IDs. Check that each item has an item ID. |
-| `items-too-large`                 | Item values can't exceed 5,000 characters.                                      |
-| `invalid-fields`                  | Confirm that the fields in the request exist in the catalog.                    |
-| `fields-do-not-match`             | Updated fields must match the fields in the catalog.                            |
-| `unable-to-coerce-value`          | Item types can't be converted.                                                  |
+| Error | Troubleshooting |
+| --- | --- |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
+| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Item IDs can't be more than 250 characters. |
+| `ids-not-unique` | Item IDs must be unique in the request. |
+| `ids-not-strings` | Item IDs must be of type string. |
+| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-too-large` | Item values can't exceed 5,000 characters. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
+| `unable-to-coerce-value` | Item types can't be converted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

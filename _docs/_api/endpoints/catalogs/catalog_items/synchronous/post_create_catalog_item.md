@@ -12,7 +12,7 @@ description: "This article outlines details about the Create Catalog Item Braze 
 {% api %}
 # Create a catalog item
 {% apimethod post %}
-/catalogs/:catalog_name/items/:item_id
+/catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
 Use this endpoint to create an item in your catalog.
@@ -23,27 +23,26 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate Limit
+## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request
-### Path Parameters
+## Path parameters
 
-| Parameter      | Required | Data Type | Description                                              |
-|----------------|----------|-----------|----------------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path.        |
-| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name` | Required | String | Name of the catalog. |
+| `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Request Body Parameters
+## Request parameters
 
-| Parameter | Required | Data Type | Description                                                                                                                                                                 |
-|-----------|----------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only 1 item object is allowed per request. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items` | Required | Array | An array that contains Item Objects. The item objects should contain all of the fields in the catalog except for the `id` field. Only one item object is allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Example Request
+## Example Request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -64,20 +63,12 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 ```
 
 ## Response
-### Status Codes
 
-| Code  |
-|---|
-| `201` |
-| `400` |
-| `404` | 
-{: .reset-td-br-1}
+There are three status code responses for this endpoint: `201`, `400`, and `404`.
 
-### Example Successful Response
+### Example success response
 
-#### Status Code 
-`201`
-#### Response Body
+The status code `201` could return the following response body.
 
 ```json
 {
@@ -85,10 +76,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }
 ```
 
-### Example Failure Response
-#### Status Code
-`400`
-#### Response Body
+### Example error response
+
+The status code `400` could return the following response body. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses.
 
 ```json
 {
@@ -112,23 +102,23 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error                                | Troubleshooting                                                                                        |
-|--------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `catalog-not-found`                  | Check that the catalog name is valid.                                                                  |
-| `item-array-invalid`                 | `items` must be an array of objects.                                                                   |
-| `request-includes-too-many-items`    | You can only create one catalog item per request.                                                      | 
-| `id-in-body`                         | Remove any item IDs in the request body.                                                               |
-| `invalid-ids`                        | Supported characters for item ID names are letters, numbers, hyphens, and underscores.                 |
-| `ids-too-large`                      | Character limit for each item ID is 250 characters.                                                    |
-| `items-too-large`                    | Character limit for each item is 5,000 characters.                                                     |
-| `item-already-exists`                | The item already exists in the catalog.                                                                |
-| `invalid-fields`                     | Confirm that the fields in the request exist in the catalog.                                           |
-| `fields-do-not-match`                | Fields must match the fields in the catalog.                                                           |
-| `filtered-set-field-too-long`        | The field value is being used in a filtered set that exceeds the character limit for an item.          |
-| `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information.           |
-| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information.      | 
-| `unable-to-coerce-value`             | Item types can't be converted.                                                                         |
-| `arbitrary-error`                    | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| Error | Troubleshooting |
+| --- | --- |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `request-includes-too-many-items` | You can only create one catalog item per request. | 
+| `id-in-body` | Remove any item IDs in the request body. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `items-too-large` | Character limit for each item is 5,000 characters. |
+| `item-already-exists` | The item already exists in the catalog. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `fields-do-not-match` | Fields must match the fields in the catalog. |
+| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
+| `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
+| `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. | 
+| `unable-to-coerce-value` | Item types can't be converted. |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

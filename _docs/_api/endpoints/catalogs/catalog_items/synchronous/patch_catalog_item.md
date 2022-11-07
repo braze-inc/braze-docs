@@ -12,7 +12,7 @@ description: "This article outlines details about the Edit Catalog Item Braze en
 {% api %}
 # Edit catalog item
 {% apimethod patch %}
-/catalogs/:catalog_name/items/:item_id
+/catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
 Use this endpoint to edit an item in your catalog. 
@@ -25,25 +25,24 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 ## Rate Limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request
-### Path Parameters
+## Path parameters
 
-| Parameter      | Required | Data Type | Description                                              |
-|----------------|----------|-----------|----------------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path.        |
-| `item_id`      | Required | String    | The ID of the catalog item. Passed through the URL Path. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name` | Required | String | Name of the catalog. |
+| `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Request Body Parameters
+## Request parameters
 
-| Parameter | Required | Data Type | Description                                                                                                                                                                 |
-|-----------|----------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `items`   | Required | Array     | An array that contains Item Objects. The item objects should contain fields that exist in the catalog except for the `id` field. Only 1 item object is allowed per request. |
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items` | Required | Array | An array that contains item objects. The item objects should contain fields that exist in the catalog except for the `id` field. Only one item object is allowed per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example Request
+## Example request
 
 ```
 curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -61,19 +60,12 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 ```
 
 ## Response
-### Status Codes
 
-| Code  |
-|-------|
-| `200` |
-| `400` |
-| `404` | 
-{: .reset-td-br-1}
+There are three status code responses for this endpoint: `200`, `400`, and `404`.
 
-### Example Successful Response
-#### Status Code
-`200`
-#### Response Body
+### Example success response
+
+The status code `200` could return the following response body.
 
 ```json
 {
@@ -81,10 +73,9 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 }
 ```
 
-### Example Failure Response
-#### Status Code
-`400`
-#### Response Body
+### Example error response
+
+The status code `400` could return the following response body. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses.
 
 ```json
 {
@@ -108,20 +99,20 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error                             | Troubleshooting                                                                                        |
-|-----------------------------------|--------------------------------------------------------------------------------------------------------|
-| `catalog-not-found`               | Check that the catalog name is valid.                                                                  |
-| `item-not-found`                  | Check that the item is in the catalog.                                                                 |
-| `item-array-invalid`              | `items` must be an array of objects.                                                                   |
-| `request-includes-too-many-items` | You can only edit one catalog item per request.                                                        |
-| `id-in-body`                      | An item ID already exists in the catalog.                                                              |
-| `invalid-ids`                     | Supported characters for item ID names are letters, numbers, hyphens, and underscores.                 |
-| `ids-too-large`                   | Character limit for each item ID is 250 characters.                                                    |
-| `items-too-large`                 | Character limit for each item is 5,000 characters.                                                     |
-| `invalid-fields`                  | Confirm that the fields in the request exist in the catalog.                                           |
-| `unable-to-coerce-value`          | Item types can't be converted.                                                                         |
-| `filtered-set-field-too-long`     | The field value is being used in a filtered set that exceeds the character limit for an item.          |
-| `arbitrary-error`                 | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| Error | Troubleshooting |
+| --- | --- |
+| `catalog-not-found` | Check that the catalog name is valid. |
+| `item-not-found` | Check that the item is in the catalog. |
+| `item-array-invalid` | `items` must be an array of objects. |
+| `request-includes-too-many-items` | You can only edit one catalog item per request. |
+| `id-in-body` | An item ID already exists in the catalog. |
+| `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `ids-too-large` | Character limit for each item ID is 250 characters. |
+| `items-too-large` | Character limit for each item is 5,000 characters. |
+| `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
+| `unable-to-coerce-value` | Item types can't be converted. |
+| `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
+| `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

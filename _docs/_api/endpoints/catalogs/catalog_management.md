@@ -1,5 +1,5 @@
 ---
-nav_title: Catalogs Management
+nav_title: Catalog Management
 config_only: true
 noindex: true
 page_order: 1

@@ -12,7 +12,7 @@ description: "This article outlines details about the List Multiple Catalog Item
 {% api %}
 # List multiple catalog item details
 {% apimethod get %}
-/catalogs/:catalog_name/items
+/catalogs/{catalog_name}/items
 {% endapimethod %}
 
 Use this endpoint to return multiple catalog items and their content.
@@ -23,31 +23,33 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate Limit
+## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all of the synchronous catalog item endpoints.
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request
-### Path Parameters
+## Request parameters
 
-| Parameter      | Required | Data Type | Description                                       |
-|----------------|----------|-----------|---------------------------------------------------|
-| `catalog_name` | Required | String    | Name of the catalog. Passed through the URL Path. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-### Query Parameters
-
-| Parameter | Required | Data Type | Description                                     |
-|-----------|----------|-----------|-------------------------------------------------|
-| `cursor`  | Optional | String    | Determines the pagination of the catalog items. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-### Request Body Parameters
 There is no request body for this endpoint.
 
-### Example Request
+## Path parameters
 
-#### Without Cursor
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `catalog_name` | Required | String | Name of the catalog. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Query parameters
+
+Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `cursor` | Optional | String | Determines the pagination of the catalog items. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example requests
+
+### Without cursor
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -55,7 +57,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-#### With Cursor
+### With cursor
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items?cursor=c2tpcDow' \
@@ -64,28 +66,20 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 ```
 
 ## Response
-### Status Codes
 
-| Code  |
-|-------|
-| `200` |
-| `400` |
-| `404` | 
-{: .reset-td-br-1}
+There are three status code responses for this endpoint: `200`, `400`, and `404`.
 
-### Example Successful Response
-Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
-#### Status Code
-`200`
-#### Response Header
+### Example success response
+
+The status code `200` could return the following response header and body.
+
+{% alert note %}
+The `Link` header won't exist if the catalog has less than or equal to 50 items. For calls without a cursor, `prev` will not show. When looking at the last page of items, `next` will not show.
+{% endalert %}
+
 ```
 Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/all_restaurants/items?cursor=c2tpcDoxMDA=>; rel="next"
 ```
-Note
-The `Link` header won't exist if the catalog has less than or equal to 50 items.
-`prev` will not show for calls without a cursor
-`next` will not show when looking at the last page of items
-#### Response Body
 
 ```json
 {
@@ -122,10 +116,9 @@ The `Link` header won't exist if the catalog has less than or equal to 50 items.
 }
 ```
 
-### Example Failure Response
-#### Status Code 
-`400`
-#### Response Body
+### Example error response
+
+The status code `400` could return the following response body. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses. 
 
 ```json
 {
@@ -147,11 +140,11 @@ The `Link` header won't exist if the catalog has less than or equal to 50 items.
 
 ## Troubleshooting
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error               | Troubleshooting                       |
-|---------------------|---------------------------------------|
-| `invalid-cursor`    | Check that your `cursor` is valid.    |
+| Error | Troubleshooting |
+| --- | --- |
+| `invalid-cursor` | Check that your `cursor` is valid. |
 | `catalog-not-found` | Check that the catalog name is valid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
