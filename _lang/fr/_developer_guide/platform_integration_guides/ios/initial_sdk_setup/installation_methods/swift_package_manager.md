@@ -7,7 +7,7 @@ description: "Ce didacticiel couvre le SDK Braze en utilisant le Gestionnaire de
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Intégration du Gestionnaire de paquets Swift
 

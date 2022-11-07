@@ -7,7 +7,7 @@ description: "Cet article couvre les exemples d’applications iOS."
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Exemples d’applications
 

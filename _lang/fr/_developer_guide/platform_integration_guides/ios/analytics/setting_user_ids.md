@@ -7,7 +7,7 @@ description: "Cet article explique comment définir des ID utilisateur dans votr
  
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 
 # Définir des ID Utilisateur pour iOS

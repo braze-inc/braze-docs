@@ -44,4 +44,4 @@ guide_featured_list:
 ---
 <br><br>
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}

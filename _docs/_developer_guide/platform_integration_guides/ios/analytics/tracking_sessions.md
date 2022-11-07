@@ -7,7 +7,7 @@ description: "This reference article shows how to subscribe to session updates f
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Session tracking for iOS
 
