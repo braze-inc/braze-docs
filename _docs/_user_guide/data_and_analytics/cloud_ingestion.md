@@ -82,6 +82,10 @@ Each attribute sent for a user will consume one data point. It’s up to you to 
 
 We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend you only sync attributes you want to add or update.
 
+#### Use a UTC timestamp for the UPDATED_AT column
+
+The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time.  Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
+
 #### Removing an attribute
 
 If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
@@ -115,7 +119,7 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
-     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      EXTERNAL_ID VARCHAR(16777216) NOT NULL,
      PAYLOAD VARCHAR(16777216) NOT NULL
 );
