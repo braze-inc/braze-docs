@@ -20,7 +20,6 @@ The following table describes how you can use each editor block type.
 | Text | Enters text into the message |
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
-| Close Button | Adds a close button (x). Properties for this block are set to close the message when clicked. |
 | Spacer | Adds space or padding between other blocks. |
 {: .reset-td-br-1 .reset-td-br-2}
 
