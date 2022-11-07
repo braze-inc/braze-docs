@@ -68,6 +68,12 @@ Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/m
 
 Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because once the send requests are sent out, they cannot be stopped from being delivered to the user.
 
+### Why am I seeing more email clicks than opens?
+
+You may be seeing more clicks than opens for any of the following reasons:
+- Users are performing multiple clicks on the body of the email within a single open.
+- Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
+- Users reopen an email that they previewed earlier.
 
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/

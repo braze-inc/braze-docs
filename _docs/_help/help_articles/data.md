@@ -16,5 +16,7 @@ guide_menu_list:
   - name: Dispatch ID Behavior
     link: /docs/help/help_articles/data/dispatch_id/
     fa_icon: fas fa-id-badge
-
+  - name: Blocklisting and Deletion
+    link: /docs/help/help_articles/data/blocklisting_deletion/
+    fa_icon: fa-solid fa-trash
 ---
