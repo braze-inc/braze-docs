@@ -8,23 +8,30 @@ description: "This reference article covers app group configuration and how to c
 
 # App group configuration
 
-Braze organizes your apps via app groups. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same app or the free and premium versions of the same app. Grouping these apps into the same app group allows for ease of navigation, segmentation, and messaging across both platforms.
+> This article covers how to create and set up an app group, and some best practices to keep in mind when grouping applications.
 
-## Creating your app group
+## What is an app group?
+
+App groups are where you organize your apps. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same app or the free and premium versions of the same app. Grouping these apps into the same app group allows for ease of navigation, segmentation, and messaging across both platforms.
+
+## Create an app group
+
+![][3]{: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Step 1: Add your app group
 
-![][3]
+1. Select the app group dropdown and click <i class='icon-plus'> </i> **Add App Group**.
+2. Give your app group a name. 
+   - You might want to adopt a naming convention so that others in your company can find your app group. For example: *FinanceApp - Production* and *FinanceApp - Development*.
+3. Click **Add App Group** to confirm.
 
-Click the <i class='icon-plus'> </i> **Add App Group** button, and enter  the name of your app group into the form.
-
-Next, you'll be taken to the **Settings** page. Generally, you can access this page by navigating to the **Apps** tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
-
-![][4]
+Next, you'll be taken to the **Settings** page. Generally, you can access this page by going to **Manage Settings** > **Settings**.
 
 ### Step 2: Add your apps
 
-Using the form at the top of your screen, select your platform, type in the name of your app, and click **Add App**.
+1. From the **Settings** page, click <i class='icon-plus'> </i> **Add App**.
+2. Give your app a name, and select the platform.
+3. Click **Add App** to confirm.
 
 - After adding your app, you will have access to its API key, which you will need to complete SDK integration.
     - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
@@ -78,5 +85,5 @@ By creating a new app group, all of the historical data and profiles from the ol
 To separate old and new apps, create a new app within the same app group. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use [Liquid to select the old app and filter the previous app version](https://learning.braze.com/target-different-app-versions-with-liquid/929971).
 
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
-[4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze Settings"
+[4]: {% image_buster /assets/img_archive/add_app_appgroup.png %}
 [5]: {% image_buster /assets/img_archive/App_Setup_API.png %} "Braze API Input"
