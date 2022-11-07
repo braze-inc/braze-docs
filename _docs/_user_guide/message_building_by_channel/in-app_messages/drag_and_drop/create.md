@@ -45,20 +45,20 @@ To return to the **Message Styles** tab at any time:
 - Click the close X button on individual block properties
 - Select the message container, message close X button, or editor background
 
-### Add a custom font
+#### Add a custom font
 
 To add a custom font:
 
-1. Go to the **Settings** tab
-2. Click **Add a custom font**.
+1. Go to the **Content** section in the **Message styles** tab.
+2. Click **Add custom font**.
 3. Upload your font using the Media Library. 
 
 We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
 
-You can add multiple variations of a font family, as some styling options may not be available for custom fonts. Currently, we don't support adding fonts via URL.
+You can add multiple variations of a font family as some styling options may not be available for custom fonts. Currently, we don't support adding fonts via URL.
 
 {% alert note %}
-The default font will only apply to the current message and any duplicated messages, but not to future templates.
+The message-level font will only apply to the current message and any duplicated messages, but not to future templates.
 {% endalert %}
 
 ### Drag and drop in-app message components
@@ -67,7 +67,7 @@ When you open the Drag & Drop Editor, you’ll see a basic modal layout on the e
 
 ![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
-The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **Rows** and **Blocks**.
+The Drag & Drop Editor uses two key components to make in-app message composition quick and easy: **rows** and **blocks**. All blocks must be placed in a row.
 
 #### Rows
 
