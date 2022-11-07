@@ -50,12 +50,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the catalog. Passed through the URL path. |
 | `item_id `  |  Required | String | Item ID for a catalog item. Passed through the URL path. |
-| `items` | Required | Array | 
+| `items` | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
+
 ```
-curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catalog/items/my_item' \
+curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
@@ -71,7 +72,11 @@ curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catal
 
 ## Example responses
 
-**Success code `200`**
+There are two status code responses: `200`, `400`, and `404`.
+
+### Example success response
+
+The status code `200` returns the following response.
 
 ```json
 {
@@ -79,7 +84,9 @@ curl --location --request PATCH 'https://rest.iad-01.braze.com/catalogs/my_catal
 }
 ```
 
-**Error code `400`** 
+### Example error response
+
+The status code `400` returns the following response.
 
 ```json
 {

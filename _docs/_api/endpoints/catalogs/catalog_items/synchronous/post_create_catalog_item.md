@@ -37,7 +37,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "items": [ (max of 1 item)
         {
-            "item_object": (required, item object)
+            "item_object": (required, array of item objects)
         },
     ]
 }
@@ -54,8 +54,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Example request
 
-```json
-curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+```
+curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1'\
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
@@ -72,9 +72,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }'
 ```
 
-## Example responses
+## Responses
 
-**Success code `200`**
+There are three status code responses: `200`, `400`, and `404`.
+
+### Example success response
+
+The status code `200` returns the following response.
 
 ```json
 {
@@ -82,7 +86,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }
 ```
 
-**Error code `400`** 
+### Example error response
+
+The status code `400` returns the following response.
 
 ```json
 {

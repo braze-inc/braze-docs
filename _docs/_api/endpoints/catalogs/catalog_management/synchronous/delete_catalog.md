@@ -27,7 +27,9 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
 
-### Request parameters
+### Parameters
+
+There is no request body for this endpoint. Note the following required path parameter.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -42,9 +44,13 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 ```
 
-## Example responses
+## Responses
 
-**Success code `200`**
+There are two status code responses: `200` and `404`.
+
+### Example success response
+
+The status code `200` returns the following response.
 
 ```json
 {
@@ -52,7 +58,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-**Error code `404`** 
+### Example error response
+
+The status code `404` returns the following response.
 
 ```json
 {

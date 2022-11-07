@@ -27,27 +27,29 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-### Request Parameters
+### Parameters
+
+There is no request body for this endpoint. Note the following required path parameters.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
-| `item_id ` |  Required | String | The ID of the catalog item. |
+| `catalog_name`  | Required | String | Name of the imported catalog. Passed through the URL path. |
+| `item_id` | Required | String | ID for the catalog item. Passed through the URL path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id' \
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Response
+## Responses
 
 There are two status code responses: `200` and `404`.
 
-### Example success responses
+### Example success response
 
 The status code `200` returns the following response.
 

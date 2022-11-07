@@ -39,15 +39,12 @@ Authorization: Bearer YOUR-REST-API-KEY
     "items": [ (max of 50 items)
         {
             "id": (required, item id),
-            "count": (required, item count),
         },
         {
             "id": (required, item id),
-            "count": (required, item count),
         },
         {
             "id": (required, item id),
-            "count": (required, item count),
         }
     ]
 }
@@ -57,12 +54,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
+| `catalog_name` | Required | String | Name of catalog. Passed through the URL path. |
 | `items`  | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/catalogs/catalog_name/items' \
+curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
@@ -98,7 +96,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/catalogs/catalog_n
 }'
 ```
 
-## Response
+## Responses
 
 There are three status code responses: `202`, `400`, and `404`.
 

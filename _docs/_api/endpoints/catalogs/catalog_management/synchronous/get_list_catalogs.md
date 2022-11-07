@@ -35,9 +35,9 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Example responses
+## Example response
 
-**Success code `200`**
+The status code `200` returns the following response.
 
 ```json
 {

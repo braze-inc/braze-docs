@@ -59,14 +59,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `name`  | Required | String | Name of the imported catalog.|
+| `catalogs` | Required | Array | An array that contains catalog objects. Only one catalog is allowed per request. Refer to the catalog object parameters in the following section. | 
+
+#### Catalog object parameters 
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `name`  | Required | String | Name of the catalog.|
 | `description` | Required | String | Description for the catalog. |
-| `fields` | Required | Array of strings | Catalog items to create. |
+| `fields` | Required | Array | An array that contains objects, which contains keys `"name"` and `"type"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Example request
 
-```json
+```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -110,9 +115,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 }'
 ```
 
-## Example responses
+## Responses
 
-**Success code `202`**
+There are two status code responses: `201` and `400`.
+
+### Example success response
+
+The status code `201` returns the following response.
 
 ```json
 {
@@ -158,7 +167,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 }
 ```
 
-**Error code `400`**
+### Example error response
+
+The status code `400` returns the following response.
 
 ```json
 {

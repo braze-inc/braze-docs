@@ -44,6 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
+| `catalog_name` | Required | String | Name of catalog. Passed through the URL path. |
 | `items`  | Required | Array | An array of item objects that include an `id` for the catalog items to be deleted. Maximum of 50 item objects per request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -62,11 +63,13 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }'
 ```
 
-## Response
+## Responses
+
+There are three status code responses: `202`, `400`, and `404`.
 
 ### Example success responses
 
-A status code `202` returns the following response.
+The status code `202` returns the following response.
 
 ```json
 {
@@ -76,7 +79,7 @@ A status code `202` returns the following response.
 
 ### Example error response 
 
-A status code `400` or `404` returns the following response.
+The status code `400` returns the following response.
 
 ```json
 {

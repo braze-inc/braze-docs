@@ -344,7 +344,7 @@ glossaries:
     description: List a catalog item and its details.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalog/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Edit multiple items in your catalog.
     tags: 
       - Catalogs

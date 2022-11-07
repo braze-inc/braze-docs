@@ -29,37 +29,41 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 ### Parameters
 
+There is no request body for this endpoint. Note the following required parameter for the URL and the optional query parameter.
+
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name`  | Required | String | Name of the imported catalog. Passed through the URL path. |
 | `cursor` | Optional | String | Determines the pagination of the catalog items. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example request
+## Example requests
 
 ### Without cursor
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/catalog_name/items' \
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ### With cursor
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/catalog_name/items?cursor=c2tpcDow' \
+curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurants/items?cursor=c2tpcDow' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Response
+## Responses
 
 ### Example success response
 
-Note that each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+{% alert note %}
+Each call to this endpoint will return 50 items. For a catalog with more than 50 items, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+{% endalert %}
 
 #### Response header
 
-**`202` status code**
+The status code `202` returns the following response.
 
 ```
 Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/all_restaurants/items?cursor=c2tpcDoxMDA=>; rel="next"
@@ -67,7 +71,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 
 Note that the `Link` header doesn't appear if the catalog has less than or equal to 50 items. `prev` doesn't display for API calls without a cursor, and `next` doesn't display on the last item page.
 
-### Response body
+### Example response body
 
 ```json
 {
@@ -106,7 +110,7 @@ Note that the `Link` header doesn't appear if the catalog has less than or equal
 
 ### Example error response
 
-**`400` status code**
+The status code `400` returns the following response.
 
 ```json
   "errors": [
