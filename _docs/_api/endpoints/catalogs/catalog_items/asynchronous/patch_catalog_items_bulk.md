@@ -24,7 +24,7 @@ Support for this endpoint is currently in early access. Contact your Braze accou
 
 If you'd like to share your feedback on this endpoint or make a request, contact the Braze Catalogs team at [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
-## Rate Limit
+## Rate limit
 
 This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
 
