@@ -67,7 +67,16 @@ Keep in mind that paths and their downstream steps cannot be removed from a Canv
 
 ## Tracking performance
 
-Each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. Additionally, clicking on the Experiment Paths from Canvas Analytics will open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+Each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. 
+
+From the Canvas Analytics page, click the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+
+### Winning Path performance
+
+If Winning Path was turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
+
+- **Initial Experiment:** Shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events, and which path was selected as the winner.
+- **Winning Path:** Shows only the metrics for the Winning Path.
 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
 [1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
