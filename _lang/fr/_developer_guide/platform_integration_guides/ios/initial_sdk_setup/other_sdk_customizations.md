@@ -7,7 +7,7 @@ page_order: 3
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 
 # Autres personnalisations du SDK

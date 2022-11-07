@@ -7,7 +7,7 @@ description: "Cet article de référence explique comment ajouter et suivre des 
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Suivre les événements personnalisés pour iOS
 

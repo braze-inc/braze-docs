@@ -7,7 +7,7 @@ description: "This reference article covers how to add and track custom events f
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Tracking custom events for iOS
 

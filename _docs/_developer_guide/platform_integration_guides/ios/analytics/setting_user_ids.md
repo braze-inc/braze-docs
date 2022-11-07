@@ -7,7 +7,7 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
  
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 
 # Setting user IDs for iOS

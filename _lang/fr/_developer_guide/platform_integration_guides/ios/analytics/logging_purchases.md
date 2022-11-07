@@ -7,7 +7,7 @@ description: "Cet article de référence montre comment suivre les achats et les
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 
 # Enregistrement des achats pour iOS

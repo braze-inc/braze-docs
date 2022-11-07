@@ -8,7 +8,7 @@ description: "Cet article de référence décrit les propriétés capturées par
 
 ---
 
-{% multi_lang_include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Stockage
 
