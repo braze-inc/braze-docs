@@ -77,7 +77,7 @@ Rows are structural units that define the horizontal composition of a section of
 
 When a row is selected, you can add or remove the number of columns you need from the **Column customization** section to put different content elements side by side. 
 
-You can also slide to adjust the size of existing columns. All columns are distributed across a 12-point system with a maximum of 6 columns in a row.
+You can also slide to adjust the size of existing columns.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
