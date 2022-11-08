@@ -1238,7 +1238,7 @@ Campaign, Conversion
 This event occurs when a user does an action that has been set as a conversion event in a campaign.
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1272,7 +1272,7 @@ Canvas, Conversion
 This event occurs when a user does an action that has been set as a conversion event in Canvas.
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
