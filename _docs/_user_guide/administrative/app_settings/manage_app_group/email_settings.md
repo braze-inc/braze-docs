@@ -151,10 +151,6 @@ The header is not added for messages targeting all users including unsubscribed 
 
 Note that currently, only Windows Live Hotmail and Gmail support this feature.
 
-{% alert note %}
-If you use Mailjet, you do not have the flexibility to choose on or off for this feature. By default, your list-unsubscribe header will be enabled.
-{% endalert %}
-
 ### Inline CSS on new emails by default
 
 CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.

@@ -20,7 +20,7 @@ Braze Cloud Data Ingestion allows you to set up a direct connection from your Sn
 
 ### How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your Customer Success Manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your Snowflake instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
 
@@ -82,6 +82,10 @@ Each attribute sent for a user will consume one data point. It’s up to you to 
 
 We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend you only sync attributes you want to add or update.
 
+#### Use a UTC timestamp for the UPDATED_AT column
+
+The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time.  Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
+
 #### Removing an attribute
 
 If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
@@ -115,7 +119,7 @@ New Cloud Data Ingestion integrations require some setup on the Braze side and i
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
-     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      EXTERNAL_ID VARCHAR(16777216) NOT NULL,
      PAYLOAD VARCHAR(16777216) NOT NULL
 );

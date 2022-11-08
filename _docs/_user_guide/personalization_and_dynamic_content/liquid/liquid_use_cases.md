@@ -29,35 +29,33 @@ This use case shows how to calculate a user’s app anniversary based on their i
 
 {% raw %}
 ```liquid
-{% assign this_month = 'now' | date: "%B" %}
+{% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = {{custom_attribute.${signup_date}}} | date: "%B" %}
-{% assign anniversary_day = {{custom_attribute.${signup_date}}} | date: "%d" %}
-{% assign anniversary_year = {{custom_attribute.${signup_date}}} | date: "%Y" %}
-{% if {{this_month}} == {{anniversary_month}} %}
-{% if {{this_day}} == {{anniversary_day}} %}
-{% if {{anniversary_year}} == ‘2021’ %}
-Happy one year anniversary!
-{% elsif {{anniversary_year}} == ‘2020’ %}
-Happy two year anniversary!
-{% elsif {{anniversary_year}} == ‘2019’ %}
-Happy three year anniversary!
-{% elsif {{anniversary_year}} == ‘2018’ %}
-Happy four year anniversary!
-{% elsif {{anniversary_year}} == ‘2017’ %}
-Happy five year anniversary!
-{% elsif {{anniversary_year}} == ‘2016’ %}
-Happy six year anniversary!
-{% elsif {{anniversary_year}} == ‘2015’ %}
-Happy seven year anniversary!
-{% else %}
-{% abort_message(not same month) %}
-{% else %}
-{% abort_message(not same day) %}
+{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+
+{% if this_month == anniversary_month %} 
+{% if this_day == anniversary_day %} 
+{% if anniversary_year == '2021' %}
+Heute vor genau einem Jahr haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2020' %}
+Heute vor genau zwei Jahren haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2019' %}
+Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
+
 {% else %}
 {% abort_message(not same year) %}
 {% endif %}
+
+{% else %} 
+{% abort_message(not same day) %} 
 {% endif %}
+
+{% else %}
+{% abort_message(not same month) %}
 {% endif %}
 ```
 {% endraw %}
@@ -783,7 +781,7 @@ The example provided stops on Tuesday but can be repeated for each day of the we
 
 {% raw %}
 ```liquid
-{% assign today  = 'now' | date: "%A" %}
+{% assign today  = 'now' | date: '%A' %}
 
 {% if today == 'Monday' %}
 {% if ${language} == 'es' %}
@@ -908,6 +906,8 @@ Today's offer from {{store}}
 
 This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
 
+With this use case, the following should go in the body of a [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) or Canvas step.
+
 {% raw %}
 ```liquid
 {% comment %}
@@ -924,8 +924,8 @@ When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas A
 The following step calculates how much there is between today's date and the Reminder Date as 'time_to_reminder'.
 {% endcomment %}
 
-{% assign today = "now" | date: "%s" %}
-{% assign reminder_start_date = {{event_properties.${reminder_date}}} | date: "%s" %}
+{% assign today = "now" | date: '%s' %}
+{% assign reminder_start_date = {{event_properties.${reminder_date}}} | date: '%s' %}
 {% assign time_to_reminder = reminder_start_date | minus: today %}
 
 {% comment %}
@@ -936,7 +936,7 @@ N.B. Additional time zones would need to be catered for by adding an additional 
 
 {% if {{time_to_reminder}} > 2246400 %}
 {% assign time_to_first_message = reminder_start_date | plus: 2246400 %}
-{{ time_to_first_message | date: "%Y-%m-%dT%H:%M" }}
+{{ time_to_first_message | date: '%Y-%m-%dT%H:%M' }}
 {
 "canvas_id": "954e15bc-af93-9dc8-a863-ad2580f1750e",
 "recipients": [
@@ -946,14 +946,14 @@ N.B. Additional time zones would need to be catered for by adding an additional 
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -974,9 +974,9 @@ Users are scheduled to enter the journey on day 13.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
@@ -1002,14 +1002,14 @@ Users are scheduled to enter the journey on day 7.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -1030,14 +1030,14 @@ Users are scheduled to enter the journey on day 2.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 {% endif %}

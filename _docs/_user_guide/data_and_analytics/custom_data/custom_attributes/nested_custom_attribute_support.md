@@ -155,6 +155,12 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
 
+### Multi-criteria segmentation
+
+Use **Multi-Criteria Segmentation** to create a segment that matches multiple criteria within a single object. This qualifies the user into the segment if they have at least one object array that matches all the criteria specified. For example, users will only match this segment if their key is not blank, and if their number is more than 0.
+
+![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
+
 ### Generate a schema using the nested object explorer {#generate-schema}
 
 You can generate a schema for your objects to build segment filters without needing to memorize nested object paths. To do so, perform the following steps.
@@ -261,3 +267,4 @@ Updating a custom attribute object to `null` also consumes a data point.
 [11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
 [12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
 [13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
+[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}

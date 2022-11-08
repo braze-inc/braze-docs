@@ -12,7 +12,7 @@ description: "This article outlines details about the Delete Catalog Item Braze 
 {% api %}
 # Delete a catalog item
 {% apimethod delete %}
-/catalogs/catalog_name/items/item_id
+/catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
 Use this endpoint to delete an item in your catalog. 
@@ -27,49 +27,70 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-### Request Parameters
+## Request parameters
+
+There is no request body for this endpoint.
+
+## Path parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the imported catalog.|
-| `item_id` | Required | String | Item ID. | 
+| `catalog_name` | Required | String | Name of the catalog. |
+| `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name/items/item_id
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Example error response 
+## Response
+
+There are three status code responses for this endpoint: `202`, `400`, and `404`.
+
+### Example success response
+
+The status code `202` could return the following response body.
+
+```json
+{
+  "message": "success"
+}
+```
+
+### Example error response
+
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
 
 ```json
 {
   "errors": [
     {
-      "id": "catalog-not-found",
-      "message": "Could not find catalog",
-      "paramters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
-    },
-    {
       "id": "item-not-found",
       "message": "Could not find item",
-      "parameters": ["item_id"],
-      "parameter_values": ["item_id"]
+      "parameters": [
+        "item_id"
+      ],
+      "parameter_values": [
+        "restaurant34"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 
 ## Troubleshooting
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
-| `item-not-found`| Check that the item to be deleted exists in your catalog. |
+| `item-not-found` | Check that the item to be deleted exists in your catalog. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
