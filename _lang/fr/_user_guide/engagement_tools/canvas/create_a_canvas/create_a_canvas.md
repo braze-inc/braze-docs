@@ -104,18 +104,14 @@ Une fois que vous avez sélectionné le mode que vous utiliserez, ajustez ces pa
     ![Livraison Canvas planifiée]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    Avec cette livraison par événement, vous pouvez choisir d’intégrer des utilisateurs à un Canvas lorsqu’ils actionnent certains déclencheurs. Les utilisateurs accéderont à votre Canvas et commenceront à recevoir des messages lors d’activités particulières, comme ouvrir votre application, effectuer un achat ou déclencher un événement personnalisé. <br>
-<br>
-Notez que cette livraison par événement n’est pas disponible pour des Canvas Steps avec des messages in-app.
+    Avec cette livraison par événement, vous pouvez choisir d’intégrer des utilisateurs à un Canvas lorsqu’ils actionnent certains déclencheurs. Les utilisateurs accéderont à votre Canvas et commenceront à recevoir des messages lors d’activités particulières, comme ouvrir votre application, effectuer un achat ou déclencher un événement personnalisé. <br><br>Notez que cette livraison par événement n’est pas disponible pour des Canvas Steps avec des messages in-app.
 
     ![Livraison par événement Canvas]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
     Vous pouvez contrôler d’autres aspects de votre comportement de Canvas dans la fenêtre **Audience d’entrée**, incluant des règles de rééligibilité et des paramètres de limite de fréquence.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    Avec la livraison déclenchée par API, vous pouvez décider d’intégrer des utilisateurs à un Canvas via une demande API. Sur le tableau de bord, vous trouverez un exemple de demande cURL à l’origine de cette action qui affecte [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) facultatif à l’aide de [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br>
-<br>
-Les utilisateurs accéderont à votre Canvas et commenceront à recevoir des messages une fois qu’ils auront été ajoutés à l’aide de l’endpoint [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via l’API.
+    Avec la livraison déclenchée par API, vous pouvez décider d’intégrer des utilisateurs à un Canvas via une demande API. Sur le tableau de bord, vous trouverez un exemple de demande cURL à l’origine de cette action qui affecte [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) facultatif à l’aide de [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Les utilisateurs accéderont à votre Canvas et commenceront à recevoir des messages une fois qu’ils auront été ajoutés à l’aide de l’endpoint [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via l’API.
 
     ![Livraison déclenchée par API Canvas]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -131,9 +127,7 @@ Les utilisateurs accéderont à votre Canvas et commenceront à recevoir des mes
 <a id="important-edge-case"></a>
 
 {% alert important %}
-Si la fenêtre de rééligibilité est inférieure à la durée maximale du Canvas, un utilisateur sera autorisé à accéder à nouveau au Canvas et à recevoir plusieurs messages d’étapes. Lors d’un nouvel accès, lorsqu’un utilisateur accède à nouveau à la même étape que l’accès précédent, Braze dédupliquera ces messages d’étape. <br>
-<br>
-Si un utilisateur accède à nouveau au Canvas, atteint la même étape qu’à l’accès précédent, est éligible à un message In-App pour chaque entrée, il recevra le message deux fois (en fonction de la priorité de message In-App) à condition qu’il rouvre une session deux fois.
+Si la fenêtre de rééligibilité est inférieure à la durée maximale du Canvas, un utilisateur sera autorisé à accéder à nouveau au Canvas et à recevoir plusieurs messages d’étapes. Lors d’un nouvel accès, lorsqu’un utilisateur accède à nouveau à la même étape que l’accès précédent, Braze dédupliquera ces messages d’étape. <br><br>Si un utilisateur accède à nouveau au Canvas, atteint la même étape qu’à l’accès précédent, est éligible à un message In-App pour chaque entrée, il recevra le message deux fois (en fonction de la priorité de message In-App) à condition qu’il rouvre une session deux fois.
 {% endalert %}
 
 ### Étape 2c : Définir votre audience d’entrée cible :
@@ -189,27 +183,15 @@ Vous pouvez ajouter des variantes supplémentaires en cliquant sur le bouton <i 
 ![][12]
 
 {% alert tip %}
-Par défaut, l’affectation de Canvas Variant est bloquée lorsque des utilisateurs accèdent à Canvas, ce qui signifie que si un utilisateur saisit d’abord une variante, cette dernière reste définie à chaque accès au Canvas. Cependant il existe des façons d’éviter ce comportement. <br>
-<br>
-Pour ce faire, vous pouvez créer un générateur de nombres aléatoires à l’aide de Liquid, l’exécuter chaque fois qu’un utilisateur accède à Canvas, archiver la valeur comme attribut personnalisé puis utiliser cet attribut pour diviser les utilisateurs de manière aléatoire.
+Par défaut, l’affectation de Canvas Variant est bloquée lorsque des utilisateurs accèdent à Canvas, ce qui signifie que si un utilisateur saisit d’abord une variante, cette dernière reste définie à chaque accès au Canvas. Cependant il existe des façons d’éviter ce comportement. <br><br>Pour ce faire, vous pouvez créer un générateur de nombres aléatoires à l’aide de Liquid, l’exécuter chaque fois qu’un utilisateur accède à Canvas, archiver la valeur comme attribut personnalisé puis utiliser cet attribut pour diviser les utilisateurs de manière aléatoire.
 
 {% details Expand for steps %}
 
-1. Créez un attribut personnalisé pour archiver votre nombre aléatoire. Attribuez-lui un nom simple pour le retrouver, par exemple « numéro_de loterie » ou « affectation_aléatoire ». Vous pouvez créer l’attribut [dans votre tableau de bord]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) ou via des appels API sur votre Endpoint [Suivi de l’utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
-<br>
-
-2. Créez une campagne webhook au début de votre Canvas. Cette campagne servira de support pour créer votre nombre aléatoire et l’archiver comme attribut personnalisé. Reportez-vous à [Création d’un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) pour en savoir plus. Saisissez l’URL pour votre Endpoint Suivi utilisateur.<br>
-<br>
-
-3. Créez le générateur de nombres aléatoires. Vous pouvez le faire à l’aide du code [indiqué ici](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), qui se sert de l’accès unique de chaque utilisateur pour créer un nombre aléatoire. Définissez le nombre qui en résulte comme variante Liquid dans votre campagne webhook.<br>
-<br>
-
-4. Formatez l’appel `users/track` dans votre campagne webhook de sorte qu’il définisse l’attribut personnalisé que vous avez créé à l’étape 1 pour le nombre aléatoire que vous avez généré sur votre profil utilisateur actuel. L’exécution de cette étape vous permettra de créer correctement un nombre aléatoire qui change chaque fois que votre utilisateur accède à votre campagne.<br>
-<br>
-
-5. Ajustez les branches de votre Canvas de sorte qu’elles soient divisées en fonction des règles d’audience plutôt qu’en variantes sélectionnées de manière aléatoire. Dans les règles d’audience de chaque branche, définissez le filtre d’audience en fonction de votre attribut personnalisé. <br>
-<br>
-Par exemple, une branche peut avoir « numéro de_loterie est inférieur à 3 » comme filtre d’audience, alors qu’une autre branche peut avoir « numéro_de loterie est supérieur à 3 et inférieur à 6 » comme filtre d’audience.
+1. Créez un attribut personnalisé pour archiver votre nombre aléatoire. Attribuez-lui un nom simple pour le retrouver, par exemple « numéro_de loterie » ou « affectation_aléatoire ». Vous pouvez créer l’attribut [dans votre tableau de bord]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) ou via des appels API sur votre Endpoint [Suivi de l’utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br><br>
+2. Créez une campagne webhook au début de votre Canvas. Cette campagne servira de support pour créer votre nombre aléatoire et l’archiver comme attribut personnalisé. Reportez-vous à [Création d’un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) pour en savoir plus. Saisissez l’URL pour votre Endpoint Suivi utilisateur.<br><br>
+3. Créez le générateur de nombres aléatoires. Vous pouvez le faire à l’aide du code [indiqué ici](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), qui se sert de l’accès unique de chaque utilisateur pour créer un nombre aléatoire. Définissez le nombre qui en résulte comme variante Liquid dans votre campagne webhook.<br><br>
+4. Formatez l’appel `users/track` dans votre campagne webhook de sorte qu’il définisse l’attribut personnalisé que vous avez créé à l’étape 1 pour le nombre aléatoire que vous avez généré sur votre profil utilisateur actuel. L’exécution de cette étape vous permettra de créer correctement un nombre aléatoire qui change chaque fois que votre utilisateur accède à votre campagne.<br><br>
+5. Ajustez les branches de votre Canvas de sorte qu’elles soient divisées en fonction des règles d’audience plutôt qu’en variantes sélectionnées de manière aléatoire. Dans les règles d’audience de chaque branche, définissez le filtre d’audience en fonction de votre attribut personnalisé. <br><br>Par exemple, une branche peut avoir « numéro de_loterie est inférieur à 3 » comme filtre d’audience, alors qu’une autre branche peut avoir « numéro_de loterie est supérieur à 3 et inférieur à 6 » comme filtre d’audience.
 
 {% enddetails %}
 {% endalert %}
@@ -259,9 +241,7 @@ Les propriétés d’entrée Canvas peuvent uniquement être référencées dans
 {% endtab %}
 
 {% tab Custom Event Properties %}
-Les [propriétés d’événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) désignent les propriétés que vous avez définies sur des événements personnalisés et des achats, utilisées surtout dans les campagnes Livraison par événement. Ces propriétés sont éphémères et peuvent être utilisées uniquement lorsqu’elles apparaissent. <br>
-<br>
-Les propriétés de l’événement ne sont pas définitives, donc si vous planifiez une Canvas Step plutôt que d’utiliser une livraison par événement, vous ne pourrez pas utiliser une propriété de l’événement (car nous n’archivons pas ces données). Vous ne pouvez pas référencer la propriété d’événement pour un événement qui s’est déjà produit.
+Les [propriétés d’événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) désignent les propriétés que vous avez définies sur des événements personnalisés et des achats, utilisées surtout dans les campagnes Livraison par événement. Ces propriétés sont éphémères et peuvent être utilisées uniquement lorsqu’elles apparaissent. <br><br>Les propriétés de l’événement ne sont pas définitives, donc si vous planifiez une Canvas Step plutôt que d’utiliser une livraison par événement, vous ne pourrez pas utiliser une propriété de l’événement (car nous n’archivons pas ces données). Vous ne pouvez pas référencer la propriété d’événement pour un événement qui s’est déjà produit.
 
 {% alert note %}
 Les propriétés d’événement personnalisées peuvent être référencées uniquement dans la première étape d’un Canvas.
@@ -272,7 +252,6 @@ Les propriétés d’événement personnalisées peuvent être référencées un
 
 {% alert tip %}
 Savez-vous que vous pouvez inclure des noms de Canvas Step dans vos messages et des modèles de lien ?<br>
-
 Utilisez la balise Liquid `campaign.${name}` dans Canvas pour afficher le nom de Canvas Step actuel.
 {% endalert %}
 

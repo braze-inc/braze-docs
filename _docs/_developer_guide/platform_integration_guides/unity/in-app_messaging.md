@@ -22,6 +22,8 @@ On Android, in-app messages from Braze are automatically displayed natively. To 
 
 You may alternatively set `com_braze_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
+The initial in-app message display operation can be set in Braze config via the "In App Message Manager Initial Display Operation".
+
 {% endtab %}
 {% tab iOS %}
 
@@ -43,6 +45,14 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 
 // Sets in-app messages to be discarded after being triggered.
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
+```
+
+## Displaying in-app messages on demand
+
+You may display the next available in-app message in the stack via the `DisplayNextInAppMessage()` method. Messages are added to this stack of saved messages if `DISPLAY_LATER` or `BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` is chosen as the in-app message display action.
+
+```csharp
+Appboy.AppboyBinding.DisplayNextInAppMessage();
 ```
 
 ## Receiving in-app message data in Unity

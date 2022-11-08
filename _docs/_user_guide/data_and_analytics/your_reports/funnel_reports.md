@@ -70,6 +70,7 @@ In your funnel report, you can directly compare the control group alongside the 
 **For campaigns with multiple variants**: Braze will show a table that displays metrics for each event and variant, as well as the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipients.
 
 **For campaigns with re-eligibility**: If a user receives the campaign more than once in the report time window, Braze will determine whether the user should be included in the funnel based on the actions this user took after the first time they received the campaign within the time window.
+- Note that there may be a discrepancy between funnel and standard conversion values, as users can convert more than once with re-eligibility, but Funnel Reports will convert a max of one time even if a user performs the event more than once. 
 
 **For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count towards multiple different variants if they received multiple variants during the time window for the funnel.
 

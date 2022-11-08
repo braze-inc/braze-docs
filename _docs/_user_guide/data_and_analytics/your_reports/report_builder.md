@@ -39,7 +39,9 @@ Within the dashboard, navigate to the **Report Builder** page in the lefthand na
 
 If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together.
 
-{% alert note %} Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report. {% endalert %}
+{% alert note %} 
+Any campaigns and Canvases that have last sent messages within the past 6 months will be eligible for a report. 
+{% endalert %}
 
 ![Campaign dashboard][6]{: style="max-width:80%;"}
 
@@ -52,7 +54,9 @@ The following are the differences between these two options:
 | **Editing Report** | You can click Edit Report to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert note %} Both **Manual** and **Automated** reports can include a maximum of 50 campaigns in a report. {% endalert %}
+{% alert note %} 
+Both **Manual** and **Automated** reports can include a maximum of 50 campaigns in a report. 
+{% endalert %}
 
 Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually. You can include at most five Canvases in one report.
 
@@ -88,7 +92,9 @@ For any multivariate campaigns, you can view these metrics broken down by your v
 
 The metrics populating the row for your overall campaign will reflect the performance of its variants, but will not include the performance of the control. For instance, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this will not include the Primary Conversion Event A for your control.
 
-{% alert important %} If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report. {% endalert %}
+{% alert important %} 
+If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report. 
+{% endalert %}
 
 ## Canvas comparison report breakdown
 

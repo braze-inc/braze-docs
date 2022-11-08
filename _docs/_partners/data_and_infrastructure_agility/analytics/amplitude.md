@@ -13,9 +13,9 @@ guide_featured_list:
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
   fa_icon: fas fa-warehouse
 - name: Amplitude Recommend
-  link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/
+  link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/
   fa_icon: fa-solid fa-lightbulb
-- name: Amplitude User Profile API Endpoints
+- name: Amplitude and Connected Content
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
   fa_icon: fas fa-user-circle
 ---

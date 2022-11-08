@@ -17,7 +17,7 @@ Though similar in name, Canvas entry properties and event properties function di
 For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
 {% endalert %}
 
-Behavior can vary between workflows built with the original Canvas editor versus Canvas Flow. For example, in the original Canvas editor, you can use `event_properties` in the first full ftep if it's an action-based step. In Canvas Flow, full steps aren't supported, so this does not apply. 
+Behavior can vary between workflows built with the original Canvas editor versus Canvas Flow. For example, in the original Canvas editor, you can use `event_properties` in the first full step if it's an action-based step. In Canvas Flow, full steps aren't supported, so this does not apply. 
 
 Check out this table for a summary of differences between `canvas_entry_properties` and `event_properties`.
 

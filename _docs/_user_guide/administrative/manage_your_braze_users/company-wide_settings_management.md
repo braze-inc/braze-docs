@@ -11,7 +11,7 @@ description: "This reference article covers company-wide settings, like changing
 
 ## Managing your company settings
 
-The **[Company Settings][1]** page allows you to change the name of your company, set your time zone, and request to delete your company.
+The **Company Settings** page allows you to change the name of your company, set your time zone, and request to delete your company.
 
 {% alert note %}
 Only admins and users with explicit permissions to manage company settings will see this page.
@@ -63,13 +63,13 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly analytics reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to five events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the **Manage Settings** page of the dashboard. You may select up to five events to be included in your weekly report:
 
 ![Selecting events to be included in the Analytics Report][22]
 
 ### Additional email settings
 
-You also can access the [Email Settings][8] tab to edit:
+You also can access the **Email Settings** tab to edit:
 
 - The name which will be displayed by default on your emails
 - The default reply-to address for your emails
@@ -88,7 +88,7 @@ For more information about list-unsubscribe, refer to [Email Settings][2]
 
 ## Security settings
 
-The security settings page is where you can configure authentication rules, dashboard IP whitelisting, and two-factor authentication. These settings are located in the [Security Settings][83] tab of the **Company Settings** page.
+The security settings page is where you can configure authentication rules, dashboard IP whitelisting, and two-factor authentication. These settings are located in the **Security Settings** tab of the **Company Settings** page.
 
 ![Security Settings tab of the Company Settings page][50]
 
@@ -131,11 +131,8 @@ Under the **Manage Users** tab, there will be an additional column that indicate
 
 ![Account Users section on the Manage Users page][55]
 
-[1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header
 [7]: {% image_buster /assets/img_archive/email_settings_custom_new.png %}
-[8]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
-[19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [50]: {% image_buster /assets/img_archive/security_settings_new.png %}
 [51]: {% image_buster /assets/img_archive/authentication_rules_new.png %}
@@ -150,5 +147,4 @@ Under the **Manage Users** tab, there will be an additional column that indicate
 [64]: {% image_buster /assets/img_archive/copy_url.png %}
 [65]: {% image_buster /assets/img_archive/click_edit_f.png %}
 [67]: https://my.slack.com/services/new/incoming-webhook/
-[83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632

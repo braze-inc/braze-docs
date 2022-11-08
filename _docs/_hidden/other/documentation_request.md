@@ -288,7 +288,7 @@ hide_toc: true
           <div class="row">
             <div class="col">
               <h1 class="h1">Request Documentation Change</h1>
-              <p class="subhead">Submit a change request here.</p>
+              <p class="subhead">Internal only. All fields are required unless otherwise noted.</p>
                   <div class="gradient-line"></div>
             </div>
           </div>
@@ -297,12 +297,20 @@ hide_toc: true
 
 
               <div class="form-group" id="doc_name_div">
-                <label for="doc_name" id="doc_name_label">    * What's your name?</label>
+                <label for="doc_name" id="doc_name_label">Name</label>
                 <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
+              </div>
+              <div class="form-group" id="doc_pm_div">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
+                <label class="form-check-label" for="doc_is_pm">
+                I'm a product manager
+              </label>
+              </div>
               </div>
               <div class="form-group">
 
-                <label for="doc_email" id="doc_email_label"> * Email Address</label>
+                <label for="doc_email" id="doc_email_label">Email address</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">@</span>
@@ -310,23 +318,15 @@ hide_toc: true
                   <input type="email" class="form-control" id="doc_email" maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
               </div>
               <div class="form-group" id="doc_request_div">
-                <label for="doc_request" id="doc_request_label">    * What needs to be changed?</label>
+                <label for="doc_request" id="doc_request_label">Request summary</label>
                 <input type="text" name="Request_Subject" id="doc_request" maxlength="180" required="required" value="" placeholder="Enter your request" class="form-control" />
-              </div>
-              <div class="form-group" id="doc_pm_div">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
-                <label class="form-check-label" for="doc_is_pm">
-                Are you a Product Manager?
-              </label>
-              </div>
               </div>
 
               <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Y" id="doc_urgent" name="Request_Urgent">
                 <label class="form-check-label" for="doc_urgent">
-                Is this request Urgent?
+                This request is urgent
               </label>
               </div>
               </div>
@@ -335,7 +335,7 @@ hide_toc: true
 
               <div class="form-group">
 
-                <label for="doc_description" id="doc_description_label">   * Describe your request. </label>
+                <label for="doc_description" id="doc_description_label">Description</label>
 
                 <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation." placeholder="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images, relevant Slack threads, and Confluence articles. Include links to existing documentation that need to be repaired, as well as links that might need to be included in the documentation."
                   rows="7"></textarea>
@@ -343,7 +343,7 @@ hide_toc: true
 
               <div class="form-group">
 
-                <label for="doc_snippet" id="doc_snippet_label">   * Insert relevant code snippets with context.</label>
+                <label for="doc_snippet" id="doc_snippet_label">Code snippets (optional)</label>
 
                 <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="This is useful if you're a developer. Make sure it's clear which language this is written in, too. " placeholder="This is useful if you're a developer. Make sure it's clear which language code snippets are written in."
                   rows="7"></textarea>

@@ -33,16 +33,6 @@ Nope! If a user has ever had a location stored on their profile, that data will 
 
 ## Geofences
 
-### How many geofences can I store?
-
-Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
-
-iOS devices may monitor up to 20 [geofences][4] at a time per app. Braze will monitor up to 20 locations if space is available. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
-
-### How many geofences can I upload to Braze?
-
-You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
-
 ### How accurate are Braze geofences?
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include WiFi, GPS, and cellular towers.
@@ -57,21 +47,13 @@ Our geofencing solution uses the native geofence system service on iOS and Andro
 
 Braze geofences work at all hours of the day, even when your app is closed.
 
-### How often are geofences refreshed for users?
-
-For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
-
-For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
-
-You can manually update geofence sets for individual users at any time by clicking **Re-sync Geofences** on the bottom corner of the **Locations** page.
-
-{% alert note %}
-If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
-{% endalert %}
-
 ### What's the difference between geofences versus segmenting on most recent location?
 
 In Braze, a geofence is a different concept from segmenting based on most recent location. Geofences are only used for triggers, such as sending a message when a user enters or exits a specific area. Segments based on the `Most Recent Location` filter are used to target a specific region of your audience, such as sending a message to users located in New York.
+
+### Can I set up a geofence within a geofence?
+
+As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

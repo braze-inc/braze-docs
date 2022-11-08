@@ -29,7 +29,7 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
 {% alert important %}
-If you want to use an [optimization](#optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for recurring campaigns.
+If you want to use an [optimization](#optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 {% endalert %}
 
 ## Step 4: Choose a segment and distribute your users across variants
@@ -91,7 +91,7 @@ Use personalized variants to send each user in your target segment the variant t
 Personalized variants are in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
-To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
+To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. If no associations are found and no personalizations can be made, the winning variant is automatically sent to the remaining users. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
 
 1. Select **Personalized Variant**, then specify what percentage of your campaign audience should be assigned to the personalized variant group.
 2. Configure the following additional settings.
@@ -100,7 +100,7 @@ To determine the best variant for each user, Braze will send an initial test to 
 | --- | --- | 
 | Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign’s [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you’re using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
 | Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when personalized variants are sent to the remaining users.<br><br>When sending in users’ local time or with Intelligent Timing, personalized variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the personalized variant group. |
+| Initial test end date | The date and time the initial test ends. This is when personalized variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for personalized variants shouldn't last any less than 4 hours.<br><br>When sending in users’ local time or with Intelligent Timing, personalized variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the personalized variant group. |
 | Fallback | What happens if no personalized variants are found. Choose between sending the winning variant instead, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 

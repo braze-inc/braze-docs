@@ -18,6 +18,8 @@ Before continuing, you should have already [created your Canvas]({{site.baseurl}
 
 Now you can add an in-app message to your Canvas. Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and choose **In-App Message** for your **Messaging Channel**. After any delays pass and the audience options are checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
 
+For Canvases that have action-triggered entry, users can enter the Canvas mid-session. However, as noted above, in-app messages won't trigger until the next session start, so these users would miss the initial in-app message since they weren't eligible to enter the Canvas prior to the session start.
+
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
 ## In-app message expiration
@@ -34,11 +36,10 @@ In the in-app message composer, you can choose when the in-app message will expi
 
 ### Use cases
 
-When should you use this feature? Braze highly recommends that you consider using this feature in your promotional and onboarding campaigns.
+When should you use this feature? Braze highly recommends that you consider using this feature in your promotional and onboarding Canvases.
 
 {% tabs %}
   {% tab Promotional %}
-**Promotional Canvases**
 
 Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15 am in the company's time zone.
 
@@ -93,9 +94,7 @@ Promotions, coupons, and sales often have hard expiration dates. The following C
 As you can see, the in-app messages expire when the promotion expires to prevent any discrepancies between the messaging and the customer experience.
 
   {% endtab %}
-  {% tab Onboarding %}
-
-**User Onboarding Canvases**
+  {% tab User Onboarding %}
 
 Your first impression with a user is, perhaps, your most critical one. It can make or break future visits to your app. Your initial communications with your user should be sensibly timed and encourage frequent visits to your app to promote usage.
 

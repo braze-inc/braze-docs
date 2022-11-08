@@ -32,7 +32,7 @@ The primary conversion event is the first event added during the campaign or Can
 
 ## Step 1: Create a campaign with conversion tracking
 
-Navigate to the [Campaigns][1] page in your company dashboard and click **Create Campaign**, then select the type of campaign you'd like to create.
+Navigate to the **Campaigns** page in your company dashboard and click **Create Campaign**, then select the type of campaign you'd like to create.
 
 After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking. 
 
@@ -73,7 +73,6 @@ Conversion events allow you to attribute user action back to a point of engageme
 - If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, then the conversion will register on both.
 - A user will count as converted if they performed the specific conversion event in the window even if they did not open or click the message.
 
-[1]: https://dashboard-01.braze.com/engagement/campaigns/ "Campaigns Page"
 [2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing

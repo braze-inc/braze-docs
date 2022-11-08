@@ -63,9 +63,7 @@ If you want to see the performance of the winning variant throughout the campaig
 
 ### Personalized variant (early access) {#personalized-variant}
 
-If you selected **Personalized Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After personalized variants are sent to the remaining users in your test, this tab shows the results of that send.
-
-The **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
+If you selected **Personalized Variant** for your optimization when setting up your campaign, the **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
 
 {% tabs local %}
 {% tab Initial Test %}
@@ -86,16 +84,16 @@ For example, the test may find that most users prefer Variant A, but users who h
 
 #### How personalized variants are selected
 
-An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. Each bucket can have a different contribution at a different "strength" for each message variant. 
+An individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual campaign and will change from campaign to campaign. 
 
-This table only summarizes which variant each bucket tends to engage with. It does not guarantee that the "strength" of any one bucket will dominate the others. Therefore a user's personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution or "push" towards each message variant. The strength of the push for each bucket is determined from user responses in the initial send using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which variant users in each bucket tended to engage with. Any individual user's actual personalized variant depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% endtab %}
 {% tab Personalized Variant %}
 
 The **Personalized Variant** tab shows the results of the second send, where each remaining user was sent the variant they were most likely to engage with.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead.
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning variant instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning variant (a traditional A/B test). 
 
 - **Projected lift:** The improvement in your selected optimization metric for this send due to using personalized variants instead of a standard A/B test (if the remaining users only received the winning variant).
 - **Overall results:** The results of the second send based on your chosen optimization metric (*Unique Opens*, *Unique Clicks*, or *Primary Conversion Event*).

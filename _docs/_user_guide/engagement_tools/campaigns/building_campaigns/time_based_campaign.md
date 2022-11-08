@@ -39,7 +39,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| Allows you to deliver messages to a segment based on a user's [individual time zone]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer). | Users's local time. If a user's time zone isn't set, this will fall back to company time zone. |
+| Allows you to deliver messages to a segment based on a user's [individual time zone]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery). | Users's local time. If a user's time zone isn't set, this will fall back to company time zone. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![A campaign with the option "Send at a designated time" selected to send once starting at 9 am on July 13, 2021 with the checkbox "Send Campaign to users in their local time zone" selected.][4]

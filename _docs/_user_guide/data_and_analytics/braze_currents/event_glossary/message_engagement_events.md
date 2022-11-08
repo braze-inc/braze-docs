@@ -54,18 +54,22 @@ Experiment Step, Canvas
 This event occurs when a user enters a Canvas experiment step path.
 
 ```json
-// Experiment Step Path Entry: users.canvas.experimentstep.PathEntry
+// Experiment Step Split Path Entry: users.canvas.experimentstep.SplitEntry
 
 {
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
 ```
@@ -624,7 +628,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "channel": (string) either 'sms' or 'email',
+  "channel": (string) either 'sms', 'email', or 'whats_app',
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
@@ -1193,7 +1197,11 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 SMS, InboundReceived
 {% endapitags %}
 
-This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. Note when Braze receives an Inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number. If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message.
+This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. 
+
+When Braze receives an inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.
+
+If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS received.
 
 ```json
 // SMS Inbound Received: users.messages.sms.InboundReceive

@@ -22,7 +22,7 @@ Les cartes de contenu ne sont pas disponibles en standard, elles doivent être a
 Braze recommande aux clients qui utilisent notre fil d'actualité de passer à notre canal Cartes de contenu. Il est plus flexible, plus personnalisable et plus fiable. Les cartes de contenu sont également plus facile à trouver et à utiliser dans la plateforme Braze. Voir notre [Guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre gestionnaire de compte Braze pour plus d’informations.
 {% endalert %}
 
-## Quand utiliser les cartes de contenu 
+## Quand utiliser les cartes de contenu
 
 Les cartes de contenu sont généralement (mais pas nécessairement) dans une sorte de flux et permettent de tirer parti de l’espace disponible en intégrant des images et des graphiques qui se démarquent des autres. Vous pouvez personnaliser les cartes en fonction des actions de l’utilisateur, onboarder vos clients avec une checklist et bien plus encore !
 
