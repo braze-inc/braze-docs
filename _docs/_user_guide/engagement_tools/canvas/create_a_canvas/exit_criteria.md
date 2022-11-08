@@ -1,8 +1,8 @@
 ---
 nav_title: Exit Criteria 
 article_title: Exit Criteria 
+hidden: true
 alias: /exit_criteria/
-page_order: 4.5
 page_type: reference
 description: "This reference article covers the Exit Criteria feature for Canvas Flow."
 tool: Canvas
@@ -11,6 +11,10 @@ tool: Canvas
 # Exit criteria
 
 In the **Target Audience** step of the Canvas Flow builder, you can set up exit criteria to identify which users you want to exit your Canvas. To add exit criteria, click the dropdown to select your exception event then click **Add Trigger**.
+
+{% alert important %}
+Exit criteria for Canvas Flow is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+{% endalert %}
 
 By adding [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directly to your Canvas entry rules, you can immediately exit users as soon as the event happens. These users will not receive any further messaging, which leads to a more targeted approach to your Canvas messaging with your audience.
 
