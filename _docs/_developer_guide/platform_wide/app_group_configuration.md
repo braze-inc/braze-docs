@@ -33,7 +33,7 @@ Next, you'll be taken to the **Settings** page. Generally, you can access this p
 2. Give your app a name, and select the platform.
 3. Click **Add App** to confirm.
 
-After adding your app, you will have access to its API key, which you will need to complete SDK integration. You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
+After adding your app, you will have access to its API key, which you will need to complete SDK integration. You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have four app instances within your app group and must use the appropriate API key that is generated for each app.
 
 {% alert tip %}
 The **Live SDK Version** displayed on the **Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has least 500 sessions in the past day.
