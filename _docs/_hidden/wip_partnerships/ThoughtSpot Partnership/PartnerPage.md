@@ -11,19 +11,19 @@ search_tag: Partner
 hidden: true
 ---
 
-# [Partner Name]
+# [ThoughtSpot]
 
 >ThoughtSpot is the Modern Analytics Cloud, a next-generation analytics platform that delivers Live Analytics to your modern data stack - empowering your colleagues, partners and customers to turn data into actionable insights.
 
-Leveraging TML Blocks, Braze users can acclerate their user behaviour analytics with prebuilt templates of worksheets and models. Enable all users to limitlessly search across their Braze interaction data and uncover actionable insights. 
+Leveraging TML Blocks, Braze users can accelerate their user behavior analytics with prebuilt templates of worksheets and models. Enable all users to limitlessly search across their Braze interaction data and uncover actionable insights. 
 
 
 ## Prerequisites
 
-To get started with using ThoughtSpot on Braze, your data needs to be sent to a cloud data warehouse before it is able to be live queried by ThoughtSpot.
+To start using ThoughtSpot on Braze, your data needs to be sent to a cloud data warehouse before it can be live queried by ThoughtSpot.
 
 <div class='alert alert-important' role='alert'><div class='alert-msg'> <b>important: </b><br />
-<p>The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration.</p>
+
 </div></div>
 
 
@@ -48,3 +48,4 @@ Log into your ThoughtSpot instance and create an Embrace connection to each of t
 Import the zipped file for the worksheets and verify that it has all been imported without any errors. Import the zipped for the liveboards and verify that it has all been imported without any errors.
 
 Once imported you can start searching and customizing the liveboards. 
+
