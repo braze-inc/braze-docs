@@ -27,10 +27,6 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
 
-## Request parameters
-
-There is no request body for this endpoint.
-
 ## Path parameters
 
 | Parameter | Required | Data Type | Description |
@@ -38,6 +34,10 @@ There is no request body for this endpoint.
 | `catalog_name` | Required | String | Name of the catalog. |
 | `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Request parameters
+
+There is no request body for this endpoint.
 
 ## Example request
 
@@ -74,7 +74,7 @@ The status code `200` could return the following response body.
 
 ### Example error response
 
-The status code `404` could return the following response. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses. 
+The status code `404` could return the following response. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
 
 ```json
 {

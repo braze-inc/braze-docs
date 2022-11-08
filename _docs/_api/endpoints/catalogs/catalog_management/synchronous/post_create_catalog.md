@@ -143,7 +143,7 @@ The status code `201` could return the following response body.
 
 ### Example error response
 
-The status code `400` could return the following response body. Refer to [API errors and responses]({{site.baseurl}}/api/errors/) for more infomation about various errors and server responses.
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
 
 ```json
 {

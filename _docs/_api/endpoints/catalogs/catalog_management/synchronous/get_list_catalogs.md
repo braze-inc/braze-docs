@@ -27,6 +27,10 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
 
+## Request parameters
+
+There is no request body for this endpoint.
+
 ### Example request
 
 ```
