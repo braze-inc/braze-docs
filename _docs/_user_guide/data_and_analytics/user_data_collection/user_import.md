@@ -53,7 +53,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 | 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
+When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn't found, Braze will create a newly identified user with that `user_alias_name` set.
 
 {% alert important %}
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
