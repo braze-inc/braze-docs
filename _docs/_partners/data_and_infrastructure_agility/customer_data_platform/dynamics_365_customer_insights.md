@@ -41,8 +41,9 @@ You can configure this export if you have access to a connection of this type. F
 
 1. In Customer Insights, go to **Data > Exports**. To create a new export, select **Add destination**.
 2. In the **Connection for export** field, choose a connection for the Braze section. If you don't see this section name, there are no connections of this type available to you. 
-3. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Customer ID** field, select the field that represents the customer's Braze ID. You can also choose an additional, optional field for matching data. 
-4. Lastly, select **Save**. 
+3. Enter your REST endpoint into the hostname field in the following format: `rest.iad-03.braze.com`.
+4. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Customer ID** field, select the field that represents the customer's Braze ID. You can also choose an additional, optional field for matching data. 
+5. Lastly, select **Save**. 
 
 Note that saving an export does not run the export immediately. This export will run with every [scheduled refresh](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab). You can also [export data on demand](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
 
