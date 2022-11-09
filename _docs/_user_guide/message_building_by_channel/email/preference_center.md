@@ -42,7 +42,7 @@ Next, insert your preference center into your email campaign by pasting a combin
 {%endraw%}
 
 {% alert important %}
-The above liquid tag only works when launching a Campaign or Canvas. Sending a test email will not render a valid link.
+The above Liquid tag will only work when launching a Campaign or Canvas. Sending a test email will not render a valid link.
 {% endalert %}
 
 ## Editing a preference center
