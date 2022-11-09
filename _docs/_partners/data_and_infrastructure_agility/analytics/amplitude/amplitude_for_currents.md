@@ -191,6 +191,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
 }
 // Push Notification iOS Foreground Open
+// Please note, this event is deprecated and not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
 {
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
