@@ -43,6 +43,12 @@ Using the set personalization and a Content Card campaign, we can send three sal
 
 ![A Content Card for a test user with the title "Check out some fall favorites" followed by three recommended item names, sale prices, and ratings.][3]{: style="max-width:50%;"}
 
+### Using dynamic values
+
+As another example, let's say you want to personalize meal recommendations to each of your users.
+
+
+
 [1]: {% image_buster /assets/img_archive/catalog_filtered_sets1.png %}
 [2]: {% image_buster /assets/img_archive/catalog_filtered_sets2.png %}
 [3]: {% image_buster /assets/img_archive/catalog_filtered_sets3.png %}
