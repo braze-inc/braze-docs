@@ -41,6 +41,10 @@ Next, insert your preference center into your email campaign by pasting a combin
 ```
 {%endraw%}
 
+{% alert important %}
+The above liquid tag only works when launching a Campaign or Canvas. Sending an email via the "Test Send" botton will not render a valid link.
+{% endalert %}
+
 ## Editing a preference center
 
 You can edit and update your preference center by using the [`/preference_center/v1/{preferenceCenterExternalId}` endpoint][3]. 
