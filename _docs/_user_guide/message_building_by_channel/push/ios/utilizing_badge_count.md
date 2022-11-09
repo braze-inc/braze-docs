@@ -23,6 +23,10 @@ The badge count can be used to re-engage your users who did not notice a push, o
 
 You can specify the desired badge count when you compose a push notification through Braze's dashboard. This can be set to a user attribute with Braze's personalized messaging, allowing endlessly customizable logic. If you wish to send a silent push that updates the badge count without disturbing the user, add the "Content-Available" flag to your push and leave its message contents empty.
 
+{% alert note %}
+Wondering how to set badge counts for Android? Android automatically handles app badging for push, so there are no customization settings for badging in Braze.
+{% endalert %}
+
 ### Removing the badge count
 
 Set the badge count to 0 or "" to remove the badge count from the app's icon. Braze will also automatically clear the badge when a push notification is received while the app is in the foreground.
