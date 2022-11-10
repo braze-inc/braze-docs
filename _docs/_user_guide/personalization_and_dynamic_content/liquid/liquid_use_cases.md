@@ -6,7 +6,7 @@ page_order: 10
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "This landing page is home to sample Liquid use cases organized by category, such as Anniversaries, App Usage, Countdowns, and more."
+description: "This landing page is home to sample Liquid use cases organized by category, such as anniversaries, app usage, countdowns, and more."
 
 ---
 
@@ -829,6 +829,7 @@ Miscellaneous
 {% endapitags %}
 
 - [Avoid sending emails to customers that have blocked marketing emails](#misc-avoid-blocked-emails)
+- [Use a customer's subscription state to personalize content in messages](#misc-personalize-content)
 - [Capitalize the first letter of every word in a string](#misc-capitalize-words-string)
 - [Compare custom attribute value against an array](#misc-compare-array)
 - [Create an upcoming event reminder](#misc-event-reminder)
@@ -864,6 +865,19 @@ Your message here!
 {% alert note %}
 Content Blocks have a size limit of 5 MB.
 {% endalert %}
+
+### Use a customer's subscription state to personalize content in messages {#misc-personalize-content}
+
+This use case takes a customer's subscription state to send personalized content. Customers are who subscribed to a specific subscription group will receive an exclusive message for both email and SMS subscription groups.
+
+{% raw %}
+```liquid
+{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+This is an exclusive message for subscribed users!
+{% else %} This is the default message for other users.
+{% endif %}
+```
+{% endraw %}
 
 ### Capitalize the first letter of every word in a string {#misc-capitalize-words-string}
 
