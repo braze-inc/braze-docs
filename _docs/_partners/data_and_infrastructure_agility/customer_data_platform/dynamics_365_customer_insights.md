@@ -41,14 +41,17 @@ You can configure this export if you have access to a connection of this type. F
 
 1. In Customer Insights, go to **Data > Exports**. To create a new export, select **Add destination**.
 2. In the **Connection for export** field, choose a connection for the Braze section. If you don't see this section name, there are no connections of this type available to you. 
-3. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Customer ID** field, select the field that represents the customer's Braze ID. You can also choose an additional, optional field for matching data. 
-4. Lastly, select **Save**. 
+3. Enter your REST endpoint into the hostname field in the following format: `rest.iad-03.braze.com`.
+4. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Customer ID** field, select the field that represents the customer's Braze ID. You can also choose an additional, optional field for matching data. 
+5. Lastly, select **Save**. 
 
 Note that saving an export does not run the export immediately. This export will run with every [scheduled refresh](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab). You can also [export data on demand](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
 
 ### Using this integration
 
-Once your segments have successfully exported to Braze, you will be able to find them by name and use them for targeting in your Braze campaigns and Canvases. Segments built in Braze will be created with the same name as the segment found in Dynamics 365 Customer Insights. 
+Once your segments have successfully exported to Braze, you will be able to find them as custom attributes on user profiles with the same name as the segment found in Dynamics 365 Customer Insights. 
+
+To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 custom attribute. Once created, you can select your segment as an audience filter when creating a campaign or Canvas.
 
 {% alert note %}
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).
