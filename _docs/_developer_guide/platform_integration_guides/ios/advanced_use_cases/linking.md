@@ -7,42 +7,40 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-# Linking
+# Deep linking for iOS
 
-## Deep links
+For introductory information on deep links, refer to our [User Guide article][4]. If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.
 
-For more information on deep links, refer to our [FAQ article][4]. If you're looking to implement deep links for the first time, follow these steps.
+## Step 1: Register a scheme
 
-### Step 1: Registering a scheme
+You must state a custom scheme in the `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
 
-The custom scheme must be stated in the `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
-
-Using Xcode edit your `Info.plist` file:
+Use Xcode to edit your `Info.plist` file:
 
 1. Add a new key, `URL types`. Xcode will automatically make this an array containing a dictionary called `Item 0`.
 2. Within `Item 0`, add a key `URL identifier`. Set the value to your custom scheme.
 3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
 4. Set `URL Schemes` >> `Item 0` to your custom scheme.
 
-Alternatively, if you wish to edit your `info.plist` file directly, you can follow this spec:
+Alternatively, if you wish to edit your `Info.plist` file directly, you can follow this spec:
 
 ```html
 <key>CFBundleURLTypes</key>
 <array>
     <dict>
         <key>CFBundleURLName</key>
-        <string>YOUR.SCHEME</string>
+        <string>{YOUR.SCHEME}</string>
         <key>CFBundleURLSchemes</key>
         <array>
-            <string>YOUR.SCHEME</string>
+            <string>{YOUR.SCHEME}</string>
         </array>
     </dict>
 </array>
 ```
 
-### Step 2: Adding a scheme whitelist (iOS 9+)
+## Step 2: Whitelist the custom scheme (iOS 9+)
 
-Starting with iOS 9, apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
+Starting with iOS 9, apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error looks like this:
 
 ```
 <Warning>: -canOpenURL: failed for URL: “yourapp://deeplink” – error: “This app is not allowed to query for scheme yourapp”
@@ -63,7 +61,7 @@ You should add all the schemes that the app needs to deep link to in a whitelist
 
 For more information, refer to [Apple's documentation][12] on the `LSApplicationQueriesSchemes` key.
 
-### Step 3: Implement a handler
+## Step 3: Implement a handler
 
 After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
 
@@ -162,15 +160,15 @@ ATS compliance is enforced for links opened within the mobile app (Braze's defau
 
 You can handle ATS in one of the following three ways:
 
-#### Ensure all links are ATS-compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+#### Ensure all links are ATS compliant (recommended)
+Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
 An SSL tool can help you pinpoint web server security issues. This [SSL server test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
 
 #### Partially disable ATS
 You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
 
-To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
+To add a domain as an exception of the ATS, add the following to your app's `Info.plist` file:
 
 ```html
 <key>NSAppTransportSecurity</key>
