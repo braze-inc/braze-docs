@@ -155,7 +155,7 @@ If you're having issues with the Looker Action, add a test user to [internal gro
 * The API key has the `users.track` permissions.
 * The correct REST endpoint is entered i.e., `https://rest.iad-01.braze.com`.
 * A `braze_id` tag is set in the dimension view.
-* Your query includes the Id dimension/attribute as a column.
+* Your query includes the Id dimension or attribute as a column.
 * Looker results are not pivoted.
 * The unique key is correctly selected. Usually the `external_id`.
 * `braze_id` in the dimension is different then the `braze_id` in the api. `braze_id` in the dimension is use to indicated that it's the `id` field for the Braze API. For most purposes, upon send `external_id` is the primary key.
