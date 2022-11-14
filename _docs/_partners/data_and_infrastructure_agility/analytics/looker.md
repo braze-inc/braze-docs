@@ -86,7 +86,7 @@ dimension: external_id {
 }
 ```
 
-**Make sure to commit the changes, Looker Action only works with production settings.**
+**Make sure to commit the changes. Looker Action will only work with production settings.**
 
 #### Step 3: Set user attributes in tags
 
