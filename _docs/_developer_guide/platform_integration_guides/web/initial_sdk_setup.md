@@ -214,9 +214,9 @@ For more details or in-depth Tealium configuration support, check out our [integ
 ### Other tag managers
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
-### CommonJS Modules {#commonJS}
+### Jest Framework {#jest}
 
-When using CommonJS modules, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your bundling tools to ignore the Braze SDK. For example, to build for Jest, add the following configuration:
+When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration to ignore the Braze SDK:
 
 ```
 "jest": {
