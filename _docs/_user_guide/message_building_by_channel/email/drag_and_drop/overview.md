@@ -146,6 +146,8 @@ You can also view your email previews with these user types:
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
+Here, you can also use the **Dark Mode Preview** toggle to preview your email in dark mode and adjust your email as needed.
+
 ### Inbox Vision
 
 [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**. 
