@@ -17,6 +17,10 @@ To complete the installation, you will need the [App Identifier API key]({{site.
 
 ## Step 1: Integrate the Braze library
 
+{% alert note %}
+Braze React Native SDK v1.38.0+ requires at least React Native v0.64+.
+{% endalert %}
+
 Add the Braze React Native SDK package.
 
 ```bash
