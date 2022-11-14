@@ -196,7 +196,7 @@ Push, iOS, Sends
 
 Please note, this event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
 
-This event only occurs if a push was sent while the iOS app was in the foreground and your developers have integrated the Obj-C iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10).
+This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
