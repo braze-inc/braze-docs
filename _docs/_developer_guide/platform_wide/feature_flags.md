@@ -90,7 +90,6 @@ Let's say you were to rolling out a new type of user profile for your app. You m
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-
 const {enabled, properties} = braze.getFeatureFlag("expanded_user_profile");
 if (enabled) {
   console.log(`expanded_user_profile is enabled`, properties);
