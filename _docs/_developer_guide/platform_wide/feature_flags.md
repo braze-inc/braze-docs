@@ -51,16 +51,22 @@ A feature flag `ID` is unique. The same `ID` is used across app groups so that d
 Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
 
 #### Properties
-To update your app remotely, define variables as key/value pairs for your feature flag. These properties will be passed to your app through the Braze SDK. Defining properties is an optional step.
+Custom properties can be defined as part of your feature flag. These properties will be accessible by your app through the Braze SDK when the feature is enabled. Defining properties is an optional step.
 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
 
-For example:
+For example, if we are defining a feature flag that controls a free-shipping threshold banner for an e-commerce store, we might set the following properties, which our app will consume:
 
-<!-- TODO -->
-[David: Add example]
+|:Property Name|Type|Value|
+|--|--|--|
+|`min_spend`|`number`|`99.00`|
+|`banner_height`|`number`|`75`|
+|`banner_color`|`string`|`blue`|
+|`banner_text`|`string`|`Spend $99+ for free shipping`|
 
-[Question: Is there any limit to the number of properties that can be added to a feature flag?]
+{% alert info %}
+There is no limit to the number of properties you can add, though properties are limited to 10kB in total.
+{% endalert %}
 
 #### Targeting
 To target a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users for your feature rollout, use the **Add Segment** dropdown menu.
@@ -68,9 +74,6 @@ To target a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/se
 If no segment is selected, the percentage of targeted users (see [Rollout Traffic](#rollout-traffic), below) will come from your entire user base. You can add multiple segments to target.
 
 To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
-
-<!-- TODO -->
-[David: Is there any limit to the number of segments or filters that can be added to a feature flag?]
 
 #### Rollout Traffic
 Feature flags always start as disabled to allow you to separate the timing of the feature's release and activation in your users' experience. When you are ready to rollout your new feature, use the **Rollout Traffic** slider to randomly define a portion of your targeted user base to receive the new feature. Set the **Rollout Traffic** slider to set a percentage between 0% (no users) and 100% (the entire target audience). 
@@ -146,10 +149,11 @@ todo copy example from web
 {% endtabs %}
 
 #### Refresh flags
-You can set a flag to request a refresh if your rate limit/throttling allows.
+You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
-<!-- TODO -->
-[David: Some additional context would be worthwhile here.]
+{% alert info %}
+Refreshing happens automatically upon session start, and may be throttled by Braze. Please ensure you refresh only prior to important user actions or pages, such as before loading a checkout page, or if you know a feature flag will be consumed.
+{% endalert %}
 
 {% tabs %}
 {% tab Javascript %}
@@ -181,9 +185,9 @@ todo copy example from web
 
 
 #### Listen for changes
-You can configure the SDK to listen and update your app if a refresh changes a flag's value.
+You can configure the SDK to listen and update your app if a refresh changes a feature flag's value.
 
-[David: Some additional context would be worthwhile here.]
+This is useful if you want to update your app behind the scenes if feature flags are refreshed mid-session. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
 {% tabs %}
 {% tab Javascript %}
@@ -227,7 +231,7 @@ Use feature flags to modify your app's functionality on-the-fly. This can be par
 For example, you can change homepage links or banners on the fly using a feature flag's property values. You can even dynamically personalize this content using Braze profile attributes.
 
 <!-- TODO -->
-[David: Can you provide some examples of how they would do this?]
+<!-- [David: Can you provide some examples of how they would do this?] -->
 
 ### Message coordination
 Use feature flags to coordinate feature rollout and messaging simultaneously. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
