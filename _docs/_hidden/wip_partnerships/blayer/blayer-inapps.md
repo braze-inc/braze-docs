@@ -14,13 +14,10 @@ hidden: true
 
 # B.Layer
 
-> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site.
 
 [![B.Layer](https://braze-images.com/appboy/communication/assets/image_assets/images/6373679b954dfd049d24614d/original.png?1668507546)](https://blayer.phiture.com)
 
 Using B.Layer together with braze will help you elevate your customer in-app experience. B.Layer is developed to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to be uploaded to braze. We do not require any additional integration. This way you won't need developer resources which will save you time and budget.
-
-In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
 
 Sign up on https://blayer.phiture.com
 
@@ -77,11 +74,11 @@ Navigate to the hamburger menu on the top right > Click on brand assets > add yo
 You are all set. Now you can start designing your in-app message.
 
 
-
 ## Using this integration
 
 B.Layer in-app messages come as zip file or inline HTML file. That way they can be dragged and dropped into your braze in-app message campaign.
 You have the option in B.Layer to log button interactions or text input as a braze attribute. That can be done within the editor. A popular example is an NPS survey.
+
 You can store the NPS score as an attribute to retarget your users afterwards. Additionally it is possible to store the feedback they give when using an open text field in the message.
 Of course, there are many other options.
 
