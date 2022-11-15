@@ -64,7 +64,7 @@ For example, if we are defining a feature flag that controls a free-shipping thr
 |`banner_color`|`string`|`blue`|
 |`banner_text`|`string`|`Spend $99+ for free shipping`|
 
-{% alert info %}
+{% alert tip %}
 There is no limit to the number of properties you can add, though properties are limited to 10kB in total.
 {% endalert %}
 
@@ -151,7 +151,7 @@ todo copy example from web
 #### Refresh flags
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
-{% alert info %}
+{% alert tip %}
 Refreshing happens automatically upon session start, and may be throttled by Braze. Please ensure you refresh only prior to important user actions or pages, such as before loading a checkout page, or if you know a feature flag will be consumed.
 {% endalert %}
 
