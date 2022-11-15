@@ -147,7 +147,7 @@ todo copy example from web
 {% endtab %}
 {% endtabs %}
 
-#### Refresh flags
+#### Refresh feature flags
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
 {% alert tip %}
