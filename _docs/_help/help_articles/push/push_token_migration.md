@@ -101,10 +101,11 @@ Braze will check once a month to find any anonymous profile with the `push_token
 
 ### Web push tokens
 {% alert warning %}
-Braze does not support migrating web push tokens through the API. This is because that web push tokens contain extra fields that other platforms do not. If you are attempting to migrate web push tokens programmatically, you might see an error like the following: 
+Braze does not support migrating web push tokens through the API. This is because that web push tokens contain extra fields that other platforms do not. 
 
-`Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
+<br>If you are attempting to migrate web push tokens programmatically, you might see an error like the following: `Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
 
+<br>
 As an alternative, we recommend that you integrate push and allow your token-base to repopulate naturally.
 {% endalert %}
 
