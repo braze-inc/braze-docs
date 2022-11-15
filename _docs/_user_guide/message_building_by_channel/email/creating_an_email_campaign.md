@@ -145,7 +145,7 @@ From the bottom of the overview screen, click **Preview and Test**. Here you can
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
 {% alert tip %}
-Curious about what your drag & drop email messaging looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section.
+Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (Drag & Drop Editor only).
 {% endalert %}
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
