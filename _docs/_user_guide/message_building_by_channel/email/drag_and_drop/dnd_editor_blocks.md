@@ -87,7 +87,7 @@ Refer to the following table for details on the `List` editor block properties.
 |`Align`| Moves the title to be left, center or right-oriented. |
 |`List items spacing`| Modifies the space between list items. |
 |`List items indent`| Modifies the indentation of list items. |
-|`Line Height`| Modifies the distance between lines of text. |
+|`Line height`| Modifies the distance between lines of text. |
 |`Letter spacing`| Modifies the distance in between each character. |
 |`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
 {: .reset-td-br-1 .reset-td-br-2}
