@@ -21,7 +21,7 @@ For example, if you've built a new profile page for your ride-sharing app, inste
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 <!-- TODO -->
-{% sdk_min_versions android:9999 web:9999 swift:9999 %}
+{% sdk_min_versions android:9999 web:4.4.0 swift:9999 %}
 
 ## Implementation
 Manage, create, and delete feature flags by navigating to **Feature Flags** in the left sidebar of the Braze dashboard. This page displays a list of existing feature flags for this app group.
@@ -84,21 +84,66 @@ Once you have defined your feature flag, configure your app to check whether or 
 
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
-<!-- TODO -->
-[David: Help with example code, please]
+{% tabs %}
+{% tab Javascript %}
 ```javascript
-const {value, properties} = braze.getFeature("expanded_user_profile");
-if (value) {
-  return <NewDesign />
+
+const {enabled, properties} = braze.getFeatureFlag("expanded_user_profile");
+if (enabled) {
+  console.log(`expanded_user_profile is enabled`, properties);
 } else {
-  return <OldDesign />
-}
-Const height = expanded_user_profile.properties.height;
-Const background = expanded_user_profile.properties.background;
+  console.log(`expanded_user_profile is not enabled`);
 }
 ```
+{% endtab %}
+{% tab Swift %}
+```swift
+todo copy example from web
+```
+{% endtab %}
+{% tab Java %}
+```java
+todo copy example from web
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+todo
+braze.getFeatureFlag("expanded_user_profile")
+
+copy example from web
+
+
+```
+{% endtab %}
+{% endtabs %}
 
 The Braze SDK uses getter methods to pull your feature flag's properties into your app. It refreshes these properties during app start so that it displays the most up-to-date version of your feature upon launch. The SDK caches these values so your app can be used while offline. 
+
+You can also get a list of all enabled feature flags:
+
+{% tabs %}
+{% tab Javascript %}
+```javascript
+const features = getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled, feature.properties);
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+todo copy example from web
+```
+{% endtab %}
+{% tab Java %}
+todo copy example from web
+
+{% endtab %}
+{% tab Kotlin %}
+todo copy example from web
+{% endtab %}
+{% endtabs %}
 
 #### Refresh flags
 You can set a flag to request a refresh if your rate limit/throttling allows.
@@ -106,22 +151,67 @@ You can set a flag to request a refresh if your rate limit/throttling allows.
 <!-- TODO -->
 [David: Some additional context would be worthwhile here.]
 
+{% tabs %}
+{% tab Javascript %}
 ```javascript
 braze.refreshFeatureFlags(() => {
-  // refresh is completed
-})
+  console.log(`Feature flags have been refreshed`);
+}, () => {
+  console.log(`Failed to refresh feature flags.);
+});
 ```
+{% endtab %}
+{% tab Swift %}
+```swift
+todo copy example from web
+```
+{% endtab %}
+{% tab Java %}
+```java
+todo copy example from web
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+todo copy example from web
+
+```
+{% endtab %}
+{% endtabs %}
+
 
 #### Listen for changes
 You can configure the SDK to listen and update your app if a refresh changes a flag's value.
 
 [David: Some additional context would be worthwhile here.]
 
+{% tabs %}
+{% tab Javascript %}
 ```javascript
-braze.subscribeToFeatureUpdates("new_design", ({value}) => {
-  // new_design feature's value has changed
-})
+// register an event listener
+const subscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
+  console.log(`Features were updated`, features);
+});
+// unregister this event listener
+braze.removeSubscription(subscriptionId);
 ```
+{% endtab %}
+{% tab Swift %}
+```swift
+todo copy example from web
+```
+{% endtab %}
+{% tab Java %}
+```java
+todo copy example from web
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+todo copy example from web
+```
+{% endtab %}
+{% endtabs %}
 
 ## Use cases
 Feature flags have a few different strategic uses, outlined below.
