@@ -105,17 +105,22 @@ todo copy example from web
 {% endtab %}
 {% tab Java %}
 ```java
-todo copy example from web
+FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
+if (featureFlag.getEnabled()) {
+  Log.i(TAG, "expanded_user_profile is enabled", featureFlag.getProperties());
+} else {
+  Log.i(TAG, "expanded_user_profile is not enabled");
+}
 ```
 {% endtab %}
 {% tab Kotlin %}
 ```kotlin
-todo
-braze.getFeatureFlag("expanded_user_profile")
-
-copy example from web
-
-
+val featureFlag = braze.getFeatureFlag("expanded_user_profile")
+if (featureFlag.enabled) {
+  Log.i(TAG, "expanded_user_profile is enabled. ${featureFlag.properties}")
+} else {
+  Log.i(TAG, "expanded_user_profile is not enabled.")
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -139,11 +144,16 @@ todo copy example from web
 ```
 {% endtab %}
 {% tab Java %}
-todo copy example from web
-
+List<FeatureFlag> features = braze.getAllFeatureFlags();
+for (FeatureFlag feature: features) {
+  Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled(), feature.getProperties());
+}
 {% endtab %}
 {% tab Kotlin %}
-todo copy example from web
+val featureFlags = braze.getAllFeatureFlags()
+featureFlags.forEach { feature ->
+  Log.i(TAG, "Feature: ${feature.id} ${feature.enabled} ${feature.properties}")
+}
 {% endtab %}
 {% endtabs %}
 
@@ -171,13 +181,12 @@ todo copy example from web
 {% endtab %}
 {% tab Java %}
 ```java
-todo copy example from web
+braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% tab Kotlin %}
 ```kotlin
-todo copy example from web
-
+braze.refreshFeatureFlags()
 ```
 {% endtab %}
 {% endtabs %}
@@ -206,12 +215,22 @@ todo copy example from web
 {% endtab %}
 {% tab Java %}
 ```java
-todo copy example from web
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  Log.i(TAG, "Feature flags were updated.");
+  for (FeatureFlag feature: event.getFeatureFlags()) {
+    Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled(), feature.getProperties());
+  }
+});
 ```
 {% endtab %}
 {% tab Kotlin %}
 ```kotlin
-todo copy example from web
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  Log.i(TAG, "Feature flags were updated.")
+  event.featureFlags.forEach { feature ->
+    Log.i(TAG, "Feature: ${feature.id}")
+  }
+}
 ```
 {% endtab %}
 {% endtabs %}
