@@ -41,7 +41,7 @@ Finally, your business and the types of emails you send may also affect delivera
 
 ### Why are my email deliverability metrics not adding up to 100%?
 
-Email deliverability metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up-to 72 hours.
+Email deliverability metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
 
 Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign deliverability metrics.
 
