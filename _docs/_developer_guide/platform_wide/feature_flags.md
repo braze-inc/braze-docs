@@ -59,10 +59,10 @@ For example, if we are defining a feature flag that controls a free-shipping thr
 
 |:Property Name|Type|Value|
 |--|--|--|
-|`min_spend`|`number`|`99.00`|
 |`banner_height`|`number`|`75`|
 |`banner_color`|`string`|`blue`|
-|`banner_text`|`string`|`Spend $99+ for free shipping`|
+|`banner_text`|`string`|`Widgets are out of stock until July 1.`|
+|`dismissible`|`boolean`|`false`|
 
 {% alert tip %}
 There is no limit to the number of properties you can add, though properties are limited to 10kB in total.
