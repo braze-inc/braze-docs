@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
 | `id` | Required | String | The user's resource ID. |
 | `userName` | Required | String | The user’s email address. |
-| `name` | Required | JSON object | This object contains the user's given name and family name |
+| `name` | Required | JSON object | This object contains the user's given name and family name. |
 | `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
