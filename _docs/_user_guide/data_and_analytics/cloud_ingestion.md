@@ -107,7 +107,7 @@ SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
 
 We use the `UPDATED_AT` timestamp to keep track of what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
 - If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
-- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted
+- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
 - Use a transaction to write all rows that have the same timestamp 
 
 #### Example table configuration
