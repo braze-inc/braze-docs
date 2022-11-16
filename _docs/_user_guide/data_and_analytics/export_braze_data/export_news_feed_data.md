@@ -11,7 +11,7 @@ channel: news feed
 
 # News Feed data
 
-When analyzing the performance of a specific News Feed card, you can export the data found in the Performance Breakdown graphs:
+When analyzing the performance of a specific News Feed card, you can export the data found in the performance breakdown graphs:
 
 - Impressions by Date
     - Clickthrough Rate
