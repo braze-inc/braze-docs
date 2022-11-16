@@ -22,12 +22,6 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 You can use Braze’s Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
 
-## Lambda user CSV import
-
-You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts uploads it via our API.
-
-Estimated execution times for a file with 1 million rows should be around 5 minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
-
 ## CSV
 
 You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.
@@ -233,6 +227,12 @@ When you're satisfied with the upload, start the import. The pop-up will close a
 Under **Lines Processed**, you will see the progress of the import; the status will change to Complete when finished. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
 
 If the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can hover over the icon to see details into why certain lines failed. Once the import is complete, all data will be added to existing profiles, or new profiles will be created.
+
+### Lambda user CSV import
+
+You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts uploads it via our API.
+
+Estimated execution times for a file with 1 million rows should be around 5 minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
 
 ## Segmenting
 
