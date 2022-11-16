@@ -43,7 +43,7 @@ Finally, your business and the types of emails you send may also affect delivera
 
 Email deliverability metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up-to 72 hours.
 
-Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the verdict of the soft bounced email after 72 hours is unsuccessfully delivered, this will not be accounted for in the campaign deliverability metrics.
+Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign deliverability metrics.
 
 ### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric
 
