@@ -16,9 +16,9 @@ Depending on your Braze permissions, and if you are a designated support contact
 
 ![]({% image_buster /assets/img/braze_support.png %}){: style="max-width:60%;"}
 
-## Opening the developer console
+## Provide developer console screenshots
 
-Sometimes you may find you need to access your developer console to provide additional information to Braze support. 
+When communicating with support you may find you need to access your developer console to provide additional information:
 - Chrome
   1. Right-click on the webpage and click **Inspect**.
   2. Click the **Console** tab in the window that opens.
