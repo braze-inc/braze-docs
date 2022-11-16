@@ -112,7 +112,7 @@ We use the `UPDATED_AT` timestamp to keep track of what data has been synced suc
 
 #### Example table configuration
 
-We have a public github repo for customers to share best practices or code snippets, which can be found [here](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion). To contribute your own snippets, create a PR!
+We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
 ## Product setup
 
