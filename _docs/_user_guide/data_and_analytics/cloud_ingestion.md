@@ -233,7 +233,7 @@ If you reuse the same user and role across integrations, you will **not** need t
 
 ### Running the sync
 
-Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside of the normal schedule, for testing or to fetch the most recent data, click the “Sync Now” button. This run will not impact regularly scheduled future syncs.  
+Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside of the normal schedule for testing or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.  
 ![][5]
 
 ## Product limitations
