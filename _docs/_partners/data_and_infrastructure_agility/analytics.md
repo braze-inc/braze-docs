@@ -35,5 +35,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-
+- name: Contentsquare
+  url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 ---
