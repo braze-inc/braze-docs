@@ -11,7 +11,7 @@ tool: Campaign
 
 ## Four T's of Braze
 
-Braze recommends that you send customer data that you intend to utilize on the Braze platform. Consider the philosophy of the "Four T's of Braze" to ensure you only send data that you will use to:
+Braze recommends that you only send customer data that you intend to utilize on the Braze platform. Consider the philosophy of the "Four T's of Braze" to ensure you only send data that you will use to:
 
 - **Target** your audiences by building [audience segments]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Trigger** your messages with [action-based]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) or [API-triggered]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) delivery.
