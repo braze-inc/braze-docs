@@ -144,16 +144,20 @@ todo copy example from web
 ```
 {% endtab %}
 {% tab Java %}
+```java
 List<FeatureFlag> features = braze.getAllFeatureFlags();
 for (FeatureFlag feature: features) {
   Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled(), feature.getProperties());
 }
+```
 {% endtab %}
 {% tab Kotlin %}
+```kotlin
 val featureFlags = braze.getAllFeatureFlags()
 featureFlags.forEach { feature ->
   Log.i(TAG, "Feature: ${feature.id} ${feature.enabled} ${feature.properties}")
 }
+```
 {% endtab %}
 {% endtabs %}
 
