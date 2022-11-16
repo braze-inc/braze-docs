@@ -19,7 +19,6 @@ You can get to the **Company Settings** section by clicking on your name, then s
 
 Make sure to hit **Save** before you leave the page!
 
-
 {% alert warning %}
 
 Switching time zones can cause some data discrepancies around the point when the time zone was changed. If someone switches their time zone, we make a good faith effort to convert things over accurately, but it is not always a perfect conversion. You may notice a discontinuity in your data, where it may switch between time zones.
