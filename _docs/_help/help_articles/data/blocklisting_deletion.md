@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article walks you through the difference between attribute blocklisting and deletion."
 ---
 
-# Blocklisting and deletion
+# Difference between blocklisting and deleting
 
 The difference between blocklisting and deletion are as follows:
 - Blocklisting: If custom attributes, events, or purchases are blocklisted, they will remain on the user profile, but no new requests for the attribute will be processed.
