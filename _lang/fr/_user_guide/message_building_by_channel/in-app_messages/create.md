@@ -106,7 +106,7 @@ Ces messages In-App sont acceptés par les applications mobiles et les applicati
       </ul>
     </td>
     <td>Orientation de l’appareil appliquée (portrait ou paysage)</td>
-    <td>Grand et en gras À utiliser pour vous assurer que les utilisateurs voient votre contenu, comme vos campagnes clés, des notifications importantes ou des promotions massives.</td>
+    <td>Grand et en gras ! À utiliser pour vous assurer que les utilisateurs voient votre contenu, comme vos campagnes clés, des notifications importantes ou des promotions massives.</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>
@@ -376,7 +376,6 @@ Lorsque vous sélectionnez **Re-evaluate campaign elegibility before displaying*
 
 {% alert note %}
 L’activation de cette option entraîne un léger retard (< 100 ms) entre le déclenchement d’un message In-App et son affichage en raison de la demande ajoutée d’éligibilité et de mise en place.
-
 <br><br>
 N’utilisez pas cette option pour les messages qui peuvent être déclenchés lorsqu’un utilisateur est hors ligne ou lorsque l’éligibilité et la réévaluation de Liquid ne sont pas requises.
 {% endalert %}

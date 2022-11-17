@@ -53,7 +53,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 | 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
+When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn't found, Braze will create a newly identified user with that `user_alias_name` set.
 
 {% alert important %}
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
@@ -228,6 +228,12 @@ Under **Lines Processed**, you will see the progress of the import; the status w
 
 If the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can hover over the icon to see details into why certain lines failed. Once the import is complete, all data will be added to existing profiles, or new profiles will be created.
 
+### Lambda user CSV import
+
+You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts uploads it via our API.
+
+Estimated execution times for a file with 1 million rows should be around 5 minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
+
 ## Segmenting
 
 User import creates and updates user profiles, and can also be used to create segments. To create a segment, select **Automatically generate a segment from the users who are imported from this CSV** before starting the import.
@@ -303,7 +309,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [9]: {% image_buster /assets/img/subscription_group_import.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_data_ingestion/
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 [errors]:#common-errors
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
 [template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

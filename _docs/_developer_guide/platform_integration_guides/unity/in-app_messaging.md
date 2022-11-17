@@ -90,6 +90,6 @@ Use `LogClicked()` and `LogImpression()` on [`IInAppMessage`][13] to log clicks 
 
 Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`][12] to log button clicks. Note that buttons are represented as lists of[`InAppMessageButton`][8] instances, each of which contains a `ButtonID`.
 
-[8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageButton.cs
-[12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/IInAppMessageImmersive.cs
-[13]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/IInAppMessage.cs
+[8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs
+[12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs
+[13]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs

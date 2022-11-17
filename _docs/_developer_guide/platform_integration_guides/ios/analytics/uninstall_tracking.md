@@ -23,7 +23,7 @@ Braze uses background push notifications to collect uninstall tracking analytics
 
 ## Step 3: Test from the dashboard
 
-Next, send yourself a test push from the [dashboard][7]. This test push will not update your user profile.
+Next, send yourself a test push from the dashboard. This test push will not update your user profile.
 
 1. On the **Campaigns** page, create a push notification campaign and select **iOS push** as your platform.<br><br>
 2. On the **Settings** page, add the key `appboy_uninstall_tracking` with corresponding value `true` and check **Add Content-Available Flag**.<br><br>
@@ -41,6 +41,5 @@ Follow the instructions for [enabling uninstall tracking][6].
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
-[7]: https://dashboard-01.braze.com/
 [9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
 [10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

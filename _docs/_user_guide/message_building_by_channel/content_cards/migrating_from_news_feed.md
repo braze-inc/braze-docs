@@ -11,7 +11,11 @@ channel:
 
 # Migrating from News Feed to Content Cards
 
-Moving from News Feed to Content Cards takes time, but it is an easy adoption! You cannot automatically migrate content from News Feed to Content Cards—you must integrate Content Cards from scratch. However, with the new flexibility of Content Cards, we don't think you'll miss it or mind.
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable.
+{% endalert %}
+
+Moving from News Feed to Content Cards takes time, but it is an easy adoption! You can't automatically migrate content from News Feed to Content Cards—you must integrate Content Cards from scratch. However, with the new flexibility of Content Cards, we don't think you'll miss it or mind.
 
 Reach out to your Braze account manager for more details.
 
@@ -21,23 +25,22 @@ Content Cards offers many capabilities that are not supported by Braze's News Fe
 
 As you plan your migration from the News Feed to Content Cards, it will be important to note the main differences between Content Cards and the News Feed:
 
-- **Segmentation:** Content Cards segmentation is evaluated at the time messages are sent, News Feed segmentation is evaluated at the time that News Feed Cards are viewed.
-- **Personalization:** Content Cards personalization is templated at the time messages are sent, News Feed card personalization is templated at the time that News Feed Cards are viewed.
+- **Segmentation:** Content Cards segmentation can be evaluated at the time messages are sent or at the time the card is first viewed. News Feed segmentation is evaluated at the time that News Feed Cards are viewed.
+- **Personalization:** Content Cards personalization can be templated at the time messages are sent or at the time the card is first viewed. News Feed card personalization is templated at the time that News Feed Cards are viewed.
 
 The following table further outlines the difference in supported features between News Feed and Content Cards:
 
 | Feature | News Feed | Content Cards |
 |---|---|---|
-| Transactional and 1:1 Messaging | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Multivariate and Multichannel Campaigns | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Scheduled, Action-Based, and API-Based Delivery | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| API-Created Messages | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| A/B Testing | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Dismissing and Pinning Cards][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Rich Analytics][3] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| Multivariate and multichannel campaigns | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| Scheduled, action-based, and API-based delivery | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| API-created messages | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| A/B testing | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Dismissing and pinning cards][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Rich analytics][3] (e.g., conversion tracking) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Available in Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Connected Content][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Personalization and Segmentation | Templated at Impression | Templated at Send |
+| Personalization and segmentation | Templated at impression | Templated at send or first impression |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3} 
 
 ## Implementation

@@ -11,10 +11,10 @@ description: "This article contains release notes for October 2016."
 ## New security settings
 We’ve added enhanced security features to Braze, including password expiration rules, password length rules, password complexity rules, dashboard IP login whitelisting, and two-factor authentication.
 
-> Update: Braze's security settings, accessed from your [company settings page](https://dashboard-01.braze.com/company_settings/company_settings), also includes rules for password reusability and expiration.
+> Update: Braze's **Security Settings**, accessed from your **Company Settings** page, also includes rules for password reusability and expiration.
 
 ## CSV download after import
-Braze users can now download CSVs of recently imported users. This gives you more visibilty in the data sync from your systems. Learn more on [CSV importing]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
+Braze users can now download CSVs of recently imported users. This gives you more visibility in the data sync from your systems. Learn more on [CSV importing]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
 
 ## Anniversary filter
 In addition to the [birthday filter]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze now supports an anniversary filter which gives you the ability to target users based on a calendar date for loyalty milestones, refill notices, and more! Access this feature by selecting the "Date of Custom Attribute" filter on the Segments page. Learn more about [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).

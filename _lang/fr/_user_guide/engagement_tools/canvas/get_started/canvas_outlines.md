@@ -20,10 +20,9 @@ Les Étapes de saisie affichées dans chacune de ces quatre grandes lignes prés
 - **Where**: Notification push, e-mail
 - **How**: Canal, contenu (test)
 
-<br>
-![Onboarding des restaurants][41]
+<br>![Onboarding des restaurants][41]
 
-## Vente additionnelle Diffusion de musique
+## Vente additionnelle : diffusion de musique
 - **What**: Mise à jour des parasites actifs vers l’abonnement premium de base
 - **When**: Déclenché après un événement personnalisé de « jalon - 3 heures de musique diffusées »
 - **Who**: Tous les clients actifs, mais libres
@@ -31,8 +30,7 @@ Les Étapes de saisie affichées dans chacune de ces quatre grandes lignes prés
 - **Where**: Notification push, e-mail, Webhook
 - **How**: Contenu, remise
 
-<br>
-![Voyage musical - vente additionnelle][28]
+<br>![Voyage musical - vente additionnelle][28]
 
 ## Abandon du panier : vente au détail de vêtements
 - **What**: Rappeler aux clients les achats inachevés
@@ -42,8 +40,7 @@ Les Étapes de saisie affichées dans chacune de ces quatre grandes lignes prés
 - **Where**: Notification push, e-mail
 - **How**: Canal, déclencheur (test)
 
-<br>
-![Abandon du panier - parcours][29]
+<br>![Abandon du panier - parcours][29]
 
 ## Voyage de vacances : compagnie aérienne 
 - **What**: Informer les clients des ressources et leur fournir des informations pour les bonnes expériences concernant le vol et la compagnie aérienne
@@ -53,14 +50,13 @@ Les Étapes de saisie affichées dans chacune de ces quatre grandes lignes prés
 - **Where**: Notification push
 - **How**: Canal, cadence (test)
 
-<br>
-![Parcours de vacances][42]
+<br>![Parcours de vacances][42]
 
 ## Ressources supplémentaires
 
 [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-L’apprentissage Braze propose plusieurs cours Canvas dédiés, passant en revue des canvas communs Consultez-les pour obtenir des informations précieuses sur les termes et concepts expliqués dans un mélange de vidéos, cours et exercices interactifs. 
+L’apprentissage Braze propose plusieurs cours Canvas dédiés, passant en revue des canvas communs. Consultez-les pour obtenir des informations précieuses sur les termes et concepts expliqués dans un mélange de vidéos, cours et exercices interactifs. 
 - [Créer des parcours clients avec Canvas](https://learning.braze.com/canvas-course)
 - [Canvas utilisateur caduque](https://learning.braze.com/lapsed-user-canvas)
 - [Canvas prévu abandonné](https://learning.braze.com/abandoned-intent-canvas)

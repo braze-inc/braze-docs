@@ -10,19 +10,7 @@ channel:
 
 # Video in in-app messages {#video}
 
-To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL).
-
-To use a local video asset, be sure to include this file when uploading assets to your campaign.
-
-To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
-
-{% alert note %}
-iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
-{% endalert %}
-
-To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/).
-
-You can find other possible `<video>` options on [MDN Web Docs][9]
+To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). You can find other possible `<video>` options on [MDN Web Docs][9].
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -32,8 +20,21 @@ You can find other possible `<video>` options on [MDN Web Docs][9]
 </video>
 ```
 
-{% alert warning %}
-Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
+To use a local video asset, be sure to include this file when uploading assets to your campaign.
+
+{% alert note %}
+Video content is only available when the device has a reasonable network speed, unless the video is sourced from the device locally.
 {% endalert %}
+
+## Android considerations
+
+To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/).
+
+## iOS considerations
+
+To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
+
+- iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+- Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
 
 [9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

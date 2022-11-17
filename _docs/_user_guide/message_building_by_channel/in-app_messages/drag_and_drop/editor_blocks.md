@@ -1,12 +1,11 @@
 ---
 nav_title: Editor Blocks
-article_title: "Editor Blocks"
+article_title: "In-App Message Editor Blocks"
 description: "This reference article describes the editor blocks available in the Drag and Drop Editor for in-app messages."
-permalink: "/editor_blocks_dnd_iam/"
-hidden: true
+alias: "/editor_blocks_dnd_iam/"
 ---
 
-# Editor blocks
+# In-app message editor blocks
 
 Editor blocks are the various blocks available in the Drag & Drop Editor under the **Build** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
 
@@ -21,8 +20,7 @@ The following table describes how you can use each editor block type.
 | Text | Enters text into the message |
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
-| Close Button | Adds a close button (x). Properties for this block are set to close the message when clicked. |
-| Link | Inserts a text link into the message |
+| Spacer | Adds space or padding between other blocks. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Properties
@@ -61,11 +59,6 @@ Details for each editor block's properties are provided in the following tables.
 | URL | Dynamic based on the selected On-click behavior |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Link
 
-| Name | Description |
-| --- | --- |
-| URL | Sets the appropriate link protocol |
-{: .reset-td-br-1 .reset-td-br-2}
 
 

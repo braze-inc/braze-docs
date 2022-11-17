@@ -352,15 +352,15 @@ glossaries:
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
     description: Delete a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>
     description: Create a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
     description: List the catalogs in an app group.
     tags:
       - Catalogs

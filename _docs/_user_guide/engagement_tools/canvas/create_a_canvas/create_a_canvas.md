@@ -132,10 +132,6 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
 
-{% alert tip %}
-Set up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/) to identify which users you want to exit your Canvas.
-{% endalert %}
-
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 {% alert warning %}
@@ -146,7 +142,7 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frquency capping rules, go  to your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account.
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go  to your **Global Message Settings** page in your Braze account.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 

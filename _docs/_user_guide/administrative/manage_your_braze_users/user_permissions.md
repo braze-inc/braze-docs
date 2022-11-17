@@ -45,7 +45,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which Limited Users are unable to do.|
 |Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, view drafts of News Feed, segments, templates and media, create templates, upload media, and view engagement reports. However, users with this permission cannot view existing live content. |
 |Send Campaigns, Canvases| Allows user to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. To launch existing Content Blocks, **Send campaigns, Canvases** permission is required. |
-|Publish Cards| Allows user to create and edit News Feed cards. You can still view cards without this permission. To launch existing Content Blocks, both **Publish Cards** and **Send campaigns, Canvases** permissions are required if your account is enabled for News Feed. |
+|Publish Cards| This permission is only visible if your account is enabled for News Feed. This does not affect Content Cards.<br><br>Allows user to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both **Publish Cards** and **Send campaigns, Canvases** permissions. |
 |Edit Segments| Allows user to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
 |View PII | Allows user to view the personally identifiable information fields as defined by your company within the dashboard. |
@@ -59,10 +59,11 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
 |Manage Apps| Allows user to edit settings (under **Manage Settings**).|
 |Manage Teams|Allows user to manage teams which is under **Manage Settings**. The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Manage Settings**.|
+|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Manage Settings**. If your enabling for a non-admin Braze user, **Access Campaigns, Canvases, Cards, Segments, Media Library** permissions must also be granted. |
 |Manage Tags|Allows users to edit or delete tags (under **Manage Settings**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under **Manage Settings**).|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
+|Manage Approval Settings| Allows user to turn [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) on or off. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions

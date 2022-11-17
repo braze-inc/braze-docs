@@ -8,46 +8,55 @@ description: "This reference article covers app group configuration and how to c
 
 # App group configuration
 
-Braze organizes your apps via app groups. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same application or a free and paid versions. These two apps should be in the same group to allow for ease of navigation, segmentation, and messaging across both platforms.
+> This article covers how to create and set up an app group, and some best practices to keep in mind when grouping applications.
 
-## Creating your app group
+## What is an app group?
+
+App groups are where you organize your apps. Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same app or the free and premium versions of the same app. Grouping these apps into the same app group allows for ease of navigation, segmentation, and messaging across both platforms.
+
+## Create an app group
+
+![][3]{: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Step 1: Add your app group
 
-![][3]
+1. Select the app group dropdown and click <i class="fas fa-plus"></i> **New App Group**.
+2. Give your app group a name. 
+   - You might want to adopt a naming convention so that others in your company can easily find your app group. For example: *FinanceApp - Production* and *FinanceApp - Development*.
+3. Click **Add App Group** to confirm.
 
-Click the <i class='icon-plus'> </i> **Add App Group** button, and enter  the name of your app group into the form.
-
-Next, you'll be taken to the **Settings** page. Generally, you can access this page by navigating to the **Apps** tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
-
-![][4]
+Next, you'll be taken to the **Settings** page. Generally, you can access this page by going to **Manage Settings** > **Settings**.
 
 ### Step 2: Add your apps
 
-Using the form at the top of your screen, select your platform, type in the name of your app, and click **Add App**.
+1. From the **Settings** page, click <i class="fas fa-plus"></i> **Add App**.
+2. Give your app a name, and select the platform.
+3. Click **Add App** to confirm.
 
-- After adding your app, you will have access to its API key, which you will need to complete SDK integration.
-    - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
-- The live SDK version is based on the highest app version with at least 5% of your total daily sessions and as least 500 sessions in the past day.
+After adding your app, you will have access to its API key, which you will need to complete SDK integration. You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have four app instances within your app group and must use the appropriate API key that is generated for each app.
 
-![The app group setting page showing the different apps within an app group. In this example, four similiar app instances are shown representing the different versions of their app.][5]
+{% alert tip %}
+The **Live SDK Version** displayed on the **Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has least 500 sessions in the past day.
+{% endalert %}
 
-### Step 3: Add a testing app group
+#### Add a testing app group
 
 Braze recommends that you create a testing app group for integration and campaign testing. You can perform app testing by completely sandboxing certain users from your production instance. Create a new app group, and remember to switch your API codes so your production environments are not corrupted with false data. When you publish your application, be sure to change the API key that Braze is using to match that of your production app group rather than your testing app group.
 
 ## Multiple apps in a single app group
 
-The draw to have multiple apps under one app group can be enticing as it can lead to the ability to rate limit messaging across your entire app portfolio. However, as a best practice, we suggest only putting different versions of the same or very similar apps together under one app group. For example, your iOS and Android versions of the same app or your free and premium versions of the same app.
+It can be enticing to group multiple apps under one app group in an attempt to optimize [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) across your entire app portfolio. However, as a best practice, we suggest only putting different versions of the same or very similar apps together under one app group. 
 
-Whichever apps you choose to have in one app group will have their data aggregated which will have a notable impact on filters in Braze. This includes, but isn't limited to, these filters:
+All apps in the same app group will have their data aggregated. This will have a notable impact on filters in Braze. This includes, but isn't limited to, these filters:
 
 - Last Used App
 - First Used App
 - Session Count
 - Money Spent
-- Push subscription (If your users unsubscribe from one app, they will be unsubscribed from all of your apps under the app group)
-- Email subscription (This can leave you open to compliance issues)
+- Push Subscription
+  - If your users unsubscribe from one app, they will be unsubscribed from all of your apps under the app group.
+- Email Subscription
+  - This can leave you open to compliance issues.
 
 The aggregation of the data across dissimilar apps in the aforementioned filters is why we do not recommend housing substantially different apps within the same app group.
 
@@ -69,12 +78,10 @@ For the original Canvas workflow, it is necessary to specify the segment in the 
 
 ## Relaunching your app
 
-If users will simply have to update the app and it’s not a new app being released to the app store, you should not create a new app group if you plan to still message users on the older version.
+If users only need to update their app and you're not releasing a new app to the app store, you should not create a new app group if you plan to still message users on the older version.
 
-By creating a new app group, all of the historical data and profiles from the older app version won't exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created without any of the behavioral data from the old app. Additionally, this user will exist in the old app group and the new app group. They can also potentially have the same push token. This may lead to users receiving a marketing message intended for only old app group users, even if they’ve already upgraded.
+By creating a new app group, all historical data and profiles from the older app version won't exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created without any of the behavioral data from the old app. Additionally, this user will exist in the old app group and the new app group. They can also potentially have the same push token. This may lead to users receiving a marketing message intended for only old app group users, even if they’ve already upgraded.
 
 To separate old and new apps, create a new app within the same app group. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use [Liquid to select the old app and filter the previous app version](https://learning.braze.com/target-different-app-versions-with-liquid/929971).
 
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
-[4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze Settings"
-[5]: {% image_buster /assets/img_archive/App_Setup_API.png %} "Braze API Input"

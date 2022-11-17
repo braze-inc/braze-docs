@@ -47,6 +47,51 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## November 15, 2022 release
+
+### New Drag & Drop Editor for in-app messages
+
+With the new [Drag & Drop Editor for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop), you can create completely custom and personalized in-app messages without needing to know HTML. The Drag & Drop Editor is being rolled out to all customers over the next few months. If you’d like to request access sooner, reach out to your customer success manager.
+
+### Updates to Drag & Drop Editor for email
+
+#### New editor blocks
+
+Two new editor block have been added to the Drag & Drop Editor for email: [Paragraph blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#paragraph) and [List blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#list).
+
+{% alert important %}
+The existing Text block is being deprecated, but any existing email that has a Text block will continue to be supported.
+{% endalert %}
+
+#### Dark Mode Preview
+
+When [previewing and testing your emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-3b-preview-and-test-your-message) in the Drag & Drop Editor, you can now turn on **Dark Mode Preview** to see what your email looks like for dark mode users.
+
+### Winning Path early access
+
+Available as part of Experiment Paths in Canvas, [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#step-2-turn-on-winning-path-optional) lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
+
+This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+
+### In-app messages and Content Cards on tvOS
+
+This new article covers the nuances of integrating [in-app messages and Content Cards on tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/in-app_messaging), which are available through the Braze Swift SDK.
+
+### New Liquid use case
+
+We've added a new use case to the [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases#misc-personalize-content) on how to use a customer's subscription state to personalize content in messages. With this use case, customers are who subscribed to a specific subscription group will receive an exclusive message for both email and SMS subscription groups.
+
+### SDK updates
+
+The following SDK updates have been released. There are no breaking updates with these releases. All other updates can be found by checking the corresponding SDK changelogs.
+
+- [Android SDK 23.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2330)
+- [Web SDK 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
+- [Unity SDK 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
+- [Xamarin SDK 1.26.0](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1260)
+- [iOS Swift SDK 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
+- [Flutter SDK 2.6.1](https://pub.dev/packages/braze_plugin/changelog#261)
+
 ## October 18, 2022 release
 
 ### User profile Messaging History
@@ -335,42 +380,7 @@ The Braze and [Survicate]({{site.baseurl}}/partners/message_orchestration/channe
 
 The Braze and [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstake or contest entry information into Braze to use in campaigns or Canvases. 
 
-## May 3, 2022 release
-
-### Campaign approval
-
-Campaign approval adds a review process to your workflow before launching a campaign. Now, you can ensure that each confirmation is approved in order to launch the campaign. To learn more about the approval process, check out [Campaign approval]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/).
-
-### Canvas Message Step
-
-Message Steps allow you to add a standalone message where you want in your Canvas Flow. Visit our [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) article to learn more.
-
-### AI copywriting assistant
-
-The Braze [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting#ai-copywriting-assistant) passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available out-of-the-box for most message composers in the Braze dashboard.
-
-### iOS push notification unit testing guide
-
-An [iOS unit testing guide for push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests#unit-tests) has been added to the developer guide. This guide will provide unit tests that will verify whether your app delegate is correctly set up. 
-
-### Google privacy questionnaire
-
-As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. [This guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/google_play_privacy#google-play-privacy-questionnaire) provides instructions on how to fill out this new form with information on how Braze handles your app data. 
-
-### RelayState SAML SSO
-
-Initial single sign-on set-up instructions have been updated to recommend use of a `RelayState` API key. For more information, refer to [SAML SSO setup]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) and cooresponding [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/), [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/), and [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) articles. 
-
-### Talon.One integration updates
-
-Our [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone#talonone) partnership article now has updated integration steps, endpoints, and examples. If you are leveraging the Talon.One partnership, we recommend updating your integration accordingly.
-
-### Braze Web SDK V4 released
-
-The Braze SDKs team has released Web SDK v4. For a list of breaking changes, updates, and additions, visit our Web SDK [changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md). An [upgrade guide](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md) has been created for those upgrading from V3 to V4.
-
-### Grouparoo deprecation
-
-Support for Grouparoo has been discontinued as of April 2022.
 
 [support]: {{site.baseurl}}/support_contact/
+
+<br><br>
