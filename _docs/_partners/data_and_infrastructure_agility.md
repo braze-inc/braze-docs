@@ -97,5 +97,13 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/  
+- name: ThoughtSpot
+  url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
+- name: Wunderkind
+  url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
+- name: Tellius
+  url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
+- name: Contentsquare
+  url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 
 ---
