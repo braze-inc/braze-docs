@@ -144,12 +144,12 @@ description: "This glossary covers the current language codes Braze supports."
 | EWONDO | ewo |
 | PEUL | ff |
 | FILIPINO | fil |
-| GERMAN_SWISS | gsw |
+| GERMAN SWISS | gsw |
 | EKUGUSII | guz |
 | HAUSA | ha |
 | HAWAIIAN | haw |
 | IGBO | ig |
-| SICHUAN_YI | ii |
+| SICHUAN YI | ii |
 | MACHAME | jmc |
 | KABYLE | kab |
 | KAMBA | kam |
@@ -166,28 +166,28 @@ description: "This glossary covers the current language codes Braze supports."
 | LUXEMBOURGISH | lb |
 | GANDA | lg |
 | LINGALA | ln |
-| LUBA_KATANGA | lu |
+| LUBA KATANGA | lu |
 | LUO | luo |
 | LUYIA | luy |
 | MASAI | mas |
 | MERU | mer |
 | MORISYEN | mfe |
-| MAKHUWA_MEETTO | mgh |
+| MAKHUWA MEETTO | mgh |
 | MUNDANG | mua |
 | NAMA | naq |
-| NORTH_NDEBELE | nd |
-| RAETO_ROMANCE | rm |
+| NORTH NDEBELE | nd |
+| RAETO ROMANCE | rm |
 | ROMBO | rof |
 | RWA | rwk |
 | SANGU | sbp |
 | SENA | seh |
-| KOYRABORO_SENNI | ses |
+| KOYRABORO SENNI | ses |
 | TACHELHIT | shi |
 | SHONA | sn |
-| CONGO_SWAHILI | swc |
+| CONGO SWAHILI | swc |
 | TESO | teo |
 | TASAWAQ | twq |
-| CENTRAL_ATLAS_TAMAZIGHT | tzm |
+| CENTRAL ATLAS TAMAZIGHT | tzm |
 | VAI | vai |
 | VUNJO | vun |
 | XHOSA | xh |

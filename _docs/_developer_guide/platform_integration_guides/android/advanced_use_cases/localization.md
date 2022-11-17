@@ -43,11 +43,11 @@ If you are looking for a complete list of supported languages you may attribute 
 - Burmese
 - Cambodian
 - Catalan
-- Central_atlas_tamazight
+- Central atlas tamazight
 - Cherokee
 - Chiga
 - Chinese
-- Congo_swahili
+- Congo swahili
 - Cornish
 - Criol
 - Croatian
@@ -72,7 +72,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Ganda
 - Georgian
 - German
-- German_swiss
+- German swiss
 - Greek
 - Greenlandic
 - Guarani
@@ -90,7 +90,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Italian
 - Japanese
 - Javanese
-- Jola_fonyi
+- Jola fonyi
 - Kabyle
 - Kalenjin
 - Kamba
@@ -103,20 +103,20 @@ If you are looking for a complete list of supported languages you may attribute 
 - Kirghiz
 - Konkani
 - Korean
-- Koyraboro_senni
+- Koyraboro senni
 - Kurdish
 - Lao
 - Latin
 - Latvian
 - Lingala
 - Lithuanian
-- Luba_katanga
+- Luba katanga
 - Luo
 - Luxembourgish
 - Luyia
 - Macedonian
 - Machame
-- Makhuwa_meetto
+- Makhuwa meetto
 - Makonde
 - Malagasy
 - Malay
@@ -132,7 +132,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Mundang
 - Nama
 - Nepali
-- North_ndebele
+- North ndebele
 - Norwegian
 - Nuer
 - Nyankole
@@ -145,7 +145,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Portuguese
 - Punjabi
 - Quechua
-- Raeto_romance
+- Raeto romance
 - Romanian
 - Rombo
 - Rundi
@@ -160,7 +160,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Serbian
 - Shambala
 - Shona
-- Sichuan_yi
+- Sichuan yi
 - Sindhi
 - Sinhalese
 - Slovak
