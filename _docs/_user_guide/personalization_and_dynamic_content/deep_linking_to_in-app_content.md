@@ -28,6 +28,11 @@ These deep links are a powerful tool when used in tandem with the Braze [News Fe
 Keep in mind that enabling these deep links requires some additional setup within your app. Reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
 {% endalert %}
 
+{% alert important %}
+Braze does not support using a wrapper like Flutter to send deep links. To use this feature, you will need to configure deep links at the native layer.
+{% endalert %}
+
+
 ## UTM tags and campaign attribution
 
 ### What is a UTM tag?

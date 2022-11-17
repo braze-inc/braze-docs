@@ -100,7 +100,15 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
 
 ### Web push tokens
-Web push tokens contain extra fields that other platforms do not. As a result, we recommend that you integrate push and allow your token-base to repopulate naturally.
+{% alert warning %}
+Braze does not support migrating web push tokens through the API. This is because that web push tokens contain extra fields that other platforms do not. 
+
+<br>If you are attempting to migrate web push tokens programmatically, you might see an error like the following: `Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
+
+<br>
+As an alternative, we recommend that you integrate push and allow your token-base to repopulate naturally.
+{% endalert %}
+
 
 ## Sending push before Braze SDK integration (Android only)
 
