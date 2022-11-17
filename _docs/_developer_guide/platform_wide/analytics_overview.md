@@ -23,13 +23,11 @@ The following events and attributes are captured and updated automatically by th
 - Number of Feedback Items (Number)
 - Number of Sessions in the Last Y Days (Number and Time)
 - Email Available (Boolean)
-- News Feed View Count (Number)
 
 #### Campaign retargeting
 - Last Received Any Message (Time)
 - Last Received Email Campaign (Time)
 - Last Received Push Campaign (Time)
-- Last Viewed News Feed (Time)
 - Clicked Card (Number)
 - Received Message from Campaign
   - This filter allows you to target users based on their having (not) received a previous campaign.

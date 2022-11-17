@@ -269,14 +269,6 @@ glossaries:
     description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time that they have visited your app’s News Feed interface.
-    tags:
-      - Marketing Activity
-  - name: News Feed View Count
-    description: Segments your users by the number of times that they have viewed your app’s News Feed interface.
-    tags:
-      - Marketing Activity
   - name: Age
     description: Segments your users by their age, as they indicated from within your app.
     tags:
