@@ -14,187 +14,187 @@ description: "This glossary covers the current language codes Braze supports."
 
 | Language | Code | 
 | -------- | ---- |
-|AFRIKAANS|af|
-|AGHEM|agq|
-|AKAN|ak|
-|ALBANIAN|sq|
-|AMHARIC|am|
-|ARABIC|ar|
-|ARMENIAN|hy|
-|ASSAMESE|as|
-|ASU|asa|
-|AYMARA|ay|
-|AZERBAIJANI|az|
-|BAFIA|ksf|
-|BAMBARA|bm|
-|BASA|bas|
-|BASQUE|eu|
-|BELARUSIAN|be|
-|BEMBA|bem|
-|BENA|bez|
-|BENGALI|bn|
-|BODO|brx|
-|BOSNIAN|bs|
-|BRETON|br|
-|BULGARIAN|bg|
-|BURMESE|my|
-|CAMBODIAN|km|
-|CATALAN|ca|
-|CENTRAL ATLAS TAMAZIGHT|tzm|
-|CHEROKEE|chr|
-|CHIGA|cgg|
-|CHINESE|zh|
-|CONGO SWAHILI|swc|
-|CORNISH|kw|
-|CRIOL|kea|
-|CROATIAN|hr|
-|CZECH|cs|
-|DANISH|da|
-|DAWIDA|dav|
-|DOUALA|dua|
-|DUTCH|nl|
-|DZONGKHA|dz|
-|EKUGUSII|guz|
-|ENGLISH|en|
-|ESPERANTO|eo|
-|ESTONIAN|et|
-|EWE|ee|
-|EWONDO|ewo|
-|FAROESE|fo|
-|FARSI|fa|
-|FILIPINO|fil|
-|FINNISH|fi|
-|FRENCH|fr|
-|GALICIAN|gl|
-|GANDA|lg|
-|GEORGIAN|ka|
-|GERMAN SWISS|gsw|
-|GERMAN|de|
-|GREEK|el|
-|GREENLANDIC|kl|
-|GUARANI|gn|
-|GUJARATI|gu|
-|HAUSA|ha|
-|HAWAIIAN|haw|
-|HEBREW|he|
-|HINDI|hi|
-|HUNGARIAN|hu|
-|ICELANDIC|is|
-|IGBO|ig|
-|INDONESIAN|id|
-|INUKTITUT|iu|
-|IRISH|ga|
-|ITALIAN|it|
-|JAPANESE|ja|
-|JAVANESE|jv|
-|JOLA FONYI|dyo|
-|KABYLE|kab|
-|KALENJIN|kln|
-|KAMBA|kam|
-|KANNADA|kn|
-|KASHMIRI|ks|
-|KAZAKH|kk|
-|KIEMBU|ebu|
-|KIKUYU|ki|
-|KINYARWANDA|rw|
-|KIRGHIZ|ky|
-|KONKANI|kok|
-|KOREAN|ko|
-|KOYRABORO SENNI|ses|
-|KURDISH|ku|
-|LAO|lo|
-|LATIN|la|
-|LATVIAN|lv|
-|LINGALA|ln|
-|LITHUANIAN|lt|
-|LUBA KATANGA|lu|
-|LUO|luo|
-|LUXEMBOURGISH|lb|
-|LUYIA|luy|
-|MACEDONIAN|mk|
-|MACHAME|jmc|
-|MAKHUWA MEETTO|mgh|
-|MAKONDE|kde|
-|MALAGASY|mg|
-|MALAYALAM|ml|
-|MALAY|ms|
-|MALTESE|mt|
-|MANX|gv|
-|MARATHI|mr|
-|MASAI|mas|
-|MERU|mer|
-|MOLDAVIAN|mo|
-|MONGOLIAN|mn|
-|MORISYEN|mfe|
-|MUNDANG|mua|
-|NAMA|naq|
-|NEPALI|ne|
-|NORTH NDEBELE|nd|
-|NORWEGIAN|nb|
-|NUER|nus|
-|NYANKOLE|nyn|
-|NYNORSK|nn|
-|ORIYA|or|
-|OROMO|om|
-|PASHTO|ps|
-|PEUL|ff|
-|POLISH|pl|
-|PORTUGUESE|pt|
-|PUNJABI|pa|
-|QUECHUA|qu|
-|RAETO ROMANCE|rm|
-|ROMANIAN|ro|
-|ROMBO|rof|
-|RUNDI|rn|
-|RUSSIAN|ru|
-|RWA|rwk|
-|SAMBURU|saq|
-|SAMI|se|
-|SANGU|sbp|
-|SANSKRIT|sa|
-|SCOTTISH|gd|
-|SENA|seh|
-|SERBIAN|sr|
-|SHAMBALA|ksb|
-|SHONA|sn|
-|SICHUAN YI|ii|
-|SINDHI|sd|
-|SINHALESE|si|
-|SLOVAK|sk|
-|SLOVENIAN|sl|
-|SOGA|xog|
-|SOMALI|so|
-|SONGHAY|khq|
-|SPANISH|es|
-|SUNDANESE|su|
-|SWAHILI|sw|
-|SWEDISH|sv|
-|TACHELHIT|shi|
-|TAGALOG|tl|
-|TAJIKI|tg|
-|TAMIL|ta|
-|TASAWAQ|twq|
-|TATAR|tt|
-|TELUGU|te|
-|TESO|teo|
-|THAI|th|
-|TIBETAN|bo|
-|TIGRINYA|ti|
-|TONGAN|to|
-|TURKISH|tr|
-|TURKMEN|tk|
-|UIGHUR|ug|
-|UKRAINIAN|uk|
-|URDU|ur|
-|UZBEK|uz|
-|VAI|vai|
-|VIETNAMESE|vi|
-|VUNJO|vun|
-|WELSH|cy|
-|XHOSA|xh|
-|YANGBEN|yav|
-|YIDDISH|yi|
-|YORUBA|yo|
-|ZARMA|dje|
-|ZULU|zu|
-|UNKNOWN|nil|
+| ENGLISH | en |
+| FRENCH | fr |
+| GERMAN | de |
+| ITALIAN | it |
+| DUTCH | nl |
+| SWEDISH | sv |
+| SPANISH | es |
+| DANISH | da |
+| PORTUGUESE | pt |
+| NORWEGIAN | nb |
+| HEBREW | he |
+| JAPANESE | ja |
+| ARABIC | ar |
+| FINNISH | fi |
+| GREEK | el |
+| ICELANDIC | is |
+| MALTESE | mt |
+| TURKISH | tr |
+| CROATIAN | hr |
+| CHINESE | zh |
+| URDU | ur |
+| HINDI | hi |
+| THAI | th |
+| KOREAN | ko |
+| LITHUANIAN | lt |
+| POLISH | pl |
+| HUNGARIAN | hu |
+| ESTONIAN | et |
+| LATVIAN | lv |
+| SAMI | se |
+| SAMBURU | saq |
+| FAROESE | fo |
+| FARSI | fa |
+| RUSSIAN | ru |
+| IRISH | ga |
+| ALBANIAN | sq |
+| ROMANIAN | ro |
+| CZECH | cs |
+| SLOVAK | sk |
+| SLOVENIAN | sl |
+| YIDDISH | yi |
+| SERBIAN | sr |
+| MACEDONIAN | mk |
+| DOUALA | dua |
+| BULGARIAN | bg |
+| UKRAINIAN | uk |
+| BELARUSIAN | be |
+| DAWIDA | dav |
+| UZBEK | uz |
+| KAZAKH | kk |
+| AZERBAIJANI | az |
+| ARMENIAN | hy |
+| GEORGIAN | ka |
+| MOLDAVIAN | mo |
+| KIRGHIZ | ky |
+| TAJIKI | tg |
+| TURKMEN | tk |
+| MONGOLIAN | mn |
+| PASHTO | ps |
+| KURDISH | ku |
+| KASHMIRI | ks |
+| SINDHI | sd |
+| TIBETAN | bo |
+| NEPALI | ne |
+| SANSKRIT | sa |
+| MARATHI | mr |
+| BENGALI | bn |
+| ASSAMESE | as |
+| GUJARATI | gu |
+| PUNJABI | pa |
+| ORIYA | or |
+| MALAYALAM | ml |
+| KANNADA | kn |
+| TAMIL | ta |
+| TELUGU | te |
+| SINHALESE | si |
+| BURMESE | my |
+| LAO | lo |
+| VIETNAMESE | vi |
+| INDONESIAN | id |
+| TAGALOG | tl |
+| MALAY | ms |
+| AMHARIC | am |
+| TIGRINYA | ti |
+| OROMO | om |
+| SOMALI | so |
+| SWAHILI | sw |
+| KINYARWANDA | rw |
+| RUNDI | rn |
+| MALAGASY | mg |
+| ESPERANTO | eo |
+| WELSH | cy |
+| BASQUE | eu |
+| CATALAN | ca |
+| LATIN | la |
+| QUECHUA | qu |
+| GUARANI | gn |
+| AYMARA | ay |
+| TATAR | tt |
+| UIGHUR | ug |
+| DZONGKHA | dz |
+| JAVANESE | jv |
+| SUNDANESE | su |
+| GALICIAN | gl |
+| AFRIKAANS | af |
+| BRETON | br |
+| INUKTITUT | iu |
+| SCOTTISH | gd |
+| MANX | gv |
+| TONGAN | to |
+| GREENLANDIC | kl |
+| NYNORSK | nn |
+| AKAN | ak |
+| AGHEM | agq |
+| ASU | asa |
+| BASA | bas |
+| BEMBA | bem |
+| BENA | bez |
+| BAMBARA | bm |
+| BODO | brx |
+| BOSNIAN | bs |
+| CHIGA | cgg |
+| CHEROKEE | chr |
+| ZARMA | dje |
+| JOLA_FONYI | dyo |
+| KIEMBU | ebu |
+| EWE | ee |
+| EWONDO | ewo |
+| PEUL | ff |
+| FILIPINO | fil |
+| GERMAN_SWISS | gsw |
+| EKUGUSII | guz |
+| HAUSA | ha |
+| HAWAIIAN | haw |
+| IGBO | ig |
+| SICHUAN_YI | ii |
+| MACHAME | jmc |
+| KABYLE | kab |
+| KAMBA | kam |
+| MAKONDE | kde |
+| CRIOL | kea |
+| SONGHAY | khq |
+| KIKUYU | ki |
+| KALENJIN | kln |
+| CAMBODIAN | km |
+| KONKANI | kok |
+| SHAMBALA | ksb |
+| BAFIA | ksf |
+| CORNISH | kw |
+| LUXEMBOURGISH | lb |
+| GANDA | lg |
+| LINGALA | ln |
+| LUBA_KATANGA | lu |
+| LUO | luo |
+| LUYIA | luy |
+| MASAI | mas |
+| MERU | mer |
+| MORISYEN | mfe |
+| MAKHUWA_MEETTO | mgh |
+| MUNDANG | mua |
+| NAMA | naq |
+| NORTH_NDEBELE | nd |
+| RAETO_ROMANCE | rm |
+| ROMBO | rof |
+| RWA | rwk |
+| SANGU | sbp |
+| SENA | seh |
+| KOYRABORO_SENNI | ses |
+| TACHELHIT | shi |
+| SHONA | sn |
+| CONGO_SWAHILI | swc |
+| TESO | teo |
+| TASAWAQ | twq |
+| CENTRAL_ATLAS_TAMAZIGHT | tzm |
+| VAI | vai |
+| VUNJO | vun |
+| XHOSA | xh |
+| SOGA | xog |
+| YANGBEN | yav |
+| YORUBA | yo |
+| ZULU | zu |
+| NYANKOLE | nyn |
+| NUER | nus |
+| UNKNOWN | nil |
