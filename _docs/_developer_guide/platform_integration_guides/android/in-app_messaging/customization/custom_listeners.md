@@ -271,10 +271,10 @@ The Braze SDK has a default `DefaultHtmlInAppMessageActionListener` class that i
 Create a class that implements [`IHtmlInAppMessageActionListener`][86].
 
 The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever the user initiates any of the following actions inside the HTML in-app message:
-- Clicks on the close button.
-- Clicks on the News Feed button.
-- Fires a custom event.
-- Clicks on a URL inside HTML in-app message.
+
+- Clicks on the close button
+- Fires a custom event
+- Clicks on a URL inside HTML in-app message
 
 {% tabs %}
 {% tab JAVA %}
