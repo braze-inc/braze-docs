@@ -209,6 +209,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/lokalise/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: B.Layer 
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
