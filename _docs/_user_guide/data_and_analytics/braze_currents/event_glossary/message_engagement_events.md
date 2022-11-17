@@ -198,7 +198,9 @@ This event occurs when a user directly clicks on the Push notification to open t
 Push, iOS, Sends
 {% endapitags %}
 
-This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10).
+Please note, this event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
+
+This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground

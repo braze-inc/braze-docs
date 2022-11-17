@@ -5,7 +5,7 @@ description: "The following article references a serverless application that all
 hidden: true
 ---
 
-# User Attribute CSV to Braze Import
+# User attribute CSV to Braze import
 
 > The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on [GitHub](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 

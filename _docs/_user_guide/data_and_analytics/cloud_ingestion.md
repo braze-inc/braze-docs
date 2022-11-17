@@ -103,6 +103,17 @@ CREATE TABLE "PURCHASE_DATA"
 SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
 ```
 
+#### Using the UPDATED_AT timestamp
+
+We use the `UPDATED_AT` timestamp to keep track of what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
+- If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
+- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
+- Use a transaction to write all rows that have the same timestamp.
+
+#### Example table configuration
+
+We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
+
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your Snowflake instance. Follow these steps to set up the integration:
@@ -220,6 +231,10 @@ You may set up multiple integrations with Braze, but each integration should be 
 
 If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again.
 
+### Running the sync
+
+Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside of the normal schedule for testing or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.  
+![][5]
 
 ## Product limitations
 
@@ -237,3 +252,4 @@ If you reuse the same user and role across integrations, you will **not** need t
 [2]: {% image_buster /assets/img/cloud_ingestion/ingestion_2.png %}
 [3]: {% image_buster /assets/img/cloud_ingestion/ingestion_3.png %}
 [4]: {% image_buster /assets/img/cloud_ingestion/ingestion_4.png %}
+[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_5.png %}
