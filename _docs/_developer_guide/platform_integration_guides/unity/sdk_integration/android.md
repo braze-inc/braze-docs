@@ -143,7 +143,7 @@ This automatic integration should not be used with a manually created `braze.xml
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], [Content Cards][40], and [News Feed][35].
+Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
 
 ## Additional advanced implementation options
 

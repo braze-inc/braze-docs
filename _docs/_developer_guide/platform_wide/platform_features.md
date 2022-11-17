@@ -91,7 +91,6 @@ Braze's webhooks allow you to trigger non-app actions provide other systems and 
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Segmentation Example"
 [4]: http://en.wikipedia.org/wiki/Dayparting
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[6]: {% image_buster /assets/img_archive/news_feed_dashboard_example.png %} "News Feed dashboard"
 [8]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
 [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
 [10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"

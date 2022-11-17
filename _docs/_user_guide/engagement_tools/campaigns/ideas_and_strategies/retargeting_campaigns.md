@@ -16,6 +16,10 @@ tool:
 > <br>
 > By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards. 
 
 Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
