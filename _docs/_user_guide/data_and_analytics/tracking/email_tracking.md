@@ -15,8 +15,8 @@ description: "This reference article covers how to disable open pixel and click 
 
 When either importing or updating a user profile via [API][api_doc] or [CSV][csv_doc], two new fields are now available for you to modify:
 
-- email_open_tracking_disabled
-- email_click_tracking_disabled
+- `email_open_tracking_disabled`
+- `email_click_tracking_disabled`
 
 For easy reference, this information is reflected on the user profile in the email **Contact Settings**, located in the **Engagement** tab.
 
@@ -24,5 +24,5 @@ For easy reference, this information is reflected on the user profile in the ema
 
 [open_tracking]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel
 [api_doc]: {{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields
-[csv_doc]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#standard-user-data-column-headers
+[csv_doc]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv
 [1]: {% image_buster /assets/img_archive/open_click_user_profile.png %}
