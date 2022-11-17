@@ -209,4 +209,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/lokalise/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: Ada
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 ---

@@ -44,9 +44,7 @@ Next to Braze, click **Connect** and provide the following information:
 
 ### Step 2: Pass through an identifier from Braze to Ada
 
-To ensure you're updating the correct user, you'll need to modify the Ada embed script on your website to receive an identifier from Braze. This integration is designed to accept an external ID, but it's possible to pass other identifiers, such as a user alias, to Ada. 
-
-Reach out to your Ada team, and they can help you make the necessary modifications to your embed script to pass the right identifier to Ada from Braze.
+To ensure you're updating the correct user, you'll need to reach out to your Ada team and they can help you make the necessary modifications to the Ada embed script to receive an identifier from Braze. This integration is designed to accept an external ID, but it's possible to pass other identifiers, such as a user alias. 
 
 ### Step 3: Drop the Braze block into the relevant Answers
 
