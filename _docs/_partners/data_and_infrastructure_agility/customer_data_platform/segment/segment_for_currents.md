@@ -65,7 +65,7 @@ You can export the following data from Braze to Segment:
 | Push Notification Sent         | A push notification was successfully sent. |
 | Push Notification Tapped       | User opened a push notification. |
 | Push Notification Bounced      | Braze was not able to send a push notification to this User. |
-| iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. |
+| iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. <br> (Please note, this event is deprecated on our Obj-C SDK and not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).)|
 | Email Sent                     | An email was successfully sent. |
 | Email Delivered                | An email was successfully delivered to a User's mail server. |
 | Email Opened                   | User opened an email. |

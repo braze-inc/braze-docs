@@ -44,9 +44,9 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
 | Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
-| `id` | Required | String | The user’s resource ID |
-| `userName` | Required | String | The user’s email address |
-| `name` | Required | JSON object | This object contains the user's given name and family name |
+| `id` | Required | String | The user's resource ID. |
+| `userName` | Required | String | The user’s email address. |
+| `name` | Required | JSON object | This object contains the user's given name and family name. |
 | `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -59,7 +59,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "id": "user@test.com",
+    "id": "9d5a095c-a350-4c88-bfc2-7e11782c1862",
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",

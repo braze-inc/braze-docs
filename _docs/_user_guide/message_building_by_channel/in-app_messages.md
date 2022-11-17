@@ -10,7 +10,7 @@ description: "In-app messages help you get content to your user without interrup
 channel:
   - in-app messages
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "About in-app messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
@@ -18,24 +18,36 @@ guide_featured_list:
 - name: "Creating an in-app message"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile-alt
-- name: Creative Details
+- name: "Drag & Drop Editor"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop
+  fa_icon: fas fa-paint-brush
+- name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
   fa_icon: fas fa-paint-brush
-- name: Customize
+- name: "Customize"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   fa_icon: fas fa-cog
-- name: Testing
+- name: "Testing"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
   fa_icon: fas fa-vial
-- name: "Reporting & Analytics"
+- name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   fa_icon: fas fa-chart-bar
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
   fa_icon: fas fa-mobile
-- name: HTML Preview
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/preview/
-  fa_icon: fas fa-file-code
+- name: "App Store Rating Prompt"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
+  fa_icon: fas fa-star
+- name: "Simple Survey"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
+  fa_icon: fas fa-poll
+- name: "Best Practices"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
+  fa_icon: fas fa-check-square
+- name: "FAQs"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
+  fa_icon: fas fa-question
 
 ---
 <br><br>
