@@ -58,8 +58,8 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
 | Rejections rate | Rate | (Total number of rejections across each day in the date range) / (Total number of sends across each day in the date range) |
 | Click rate | Rate | (Total number of clicks across each day in the date range) / (Total number of deliveries across each day in the date range) |
-| Total opt-ins | Rate | Total number of inbound message Opt-ins across each day in the date range |
-| Total opt-outs | Rate | Total number of inbound message Opt-outs across each day in the date range |
+| Total opt-ins | Rate | Total number of inbound message opt-ins across each day in the date range |
+| Total opt-outs | Rate | Total number of inbound message opt-outs across each day in the date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Dashboard filters
