@@ -31,7 +31,7 @@ You can choose the type of delay before the next message in your Canvas. You can
 {% tabs %}
   {% tab After a duration %}
 
-  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
+  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day. Note the difference between how "days" and "calendar days" are calculated. A "day" is 24 hours and calculated from the time the user enters the Delay step. A "calendar day" means that a day is the period from when the user enters the Delay step to midnight in their time zone.
 
   {% endtab %}
   {% tab Until a specific date %}

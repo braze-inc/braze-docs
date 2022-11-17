@@ -214,6 +214,18 @@ For more details or in-depth Tealium configuration support, check out our [integ
 ### Other tag managers
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
+### Jest framework troubleshooting {#jest}
+
+When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration in `package.json` to ignore the Braze SDK:
+
+```
+"jest": {
+  "transformIgnorePatterns": [
+    "/node_modules/(?!@braze)"
+  ]
+}
+```
+
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md

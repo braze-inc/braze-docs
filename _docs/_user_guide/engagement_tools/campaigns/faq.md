@@ -59,7 +59,7 @@ For local time zone delivery, Braze evaluates users for their entry eligibility 
 - At Samoa time (UTC+13) of the scheduled day
 - At local time of the scheduled day
 
-For a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone, then targeting a user located in New York would require the following checks for eligibility:
+For a user to be eligible for entry, they must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone, then targeting a user located in New York would require the following checks for eligibility:
 
 - New York on August 6, 2021 at 9 pm
 - New York on August 7, 2021 at 2 pm

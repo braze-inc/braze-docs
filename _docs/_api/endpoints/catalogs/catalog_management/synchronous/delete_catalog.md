@@ -12,7 +12,7 @@ description: "This article outlines details about the Delete Catalog Braze endpo
 {% api %}
 # Delete catalog
 {% apimethod delete %}
-/catalogs/catalog_name
+/catalogs/{catalog_name}
 {% endapimethod %}
 
 Use this endpoint to delete a catalog.
@@ -27,20 +27,42 @@ If you'd like to share your feedback on this endpoint or make a request, contact
 
 This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
 
-### Request parameters
+## Path parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `catalog_name`  | Required | String | Name of the catalog.|
+| `catalog_name` | Required | String | Name of the catalog. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Request parameters
+
+There is no request body for this endpoint.
 
 ## Example request
 
 ```
-https://rest.iad-03.braze.com/catalogs/catalog_name
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 ```
 
-## Example error response 
+## Response
+
+There are two status code responses for this endpoint: `200` and `404`.
+
+### Example success response
+
+The status code `200` could return the following response body.
+
+```json
+{
+  "message": "success"
+}
+```
+
+### Example error response
+
+The status code `404` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
 
 ```json
 {
@@ -48,16 +70,21 @@ https://rest.iad-03.braze.com/catalogs/catalog_name
     {
       "id": "catalog-not-found",
       "message": "Could not find catalog",
-      "parameters": ["catalog_name"],
-      "parameter_values": ["catalog_name"]
+      "parameters": [
+        "catalog_name"
+      ],
+      "parameter_values": [
+        "restaurants"
+      ]
     }
-  ]
+  ],
+  "message": "Invalid Request"
 }
 ```
 
-## Troubleshooting
+## Troubleshooting 
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
