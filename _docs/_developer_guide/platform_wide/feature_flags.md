@@ -17,7 +17,9 @@ Create a new feature flag within the Braze dashboard by providing a name and an 
 
 For example, if you've built a new profile page for your ride-sharing app, instead of releasing it (and potential bugs) to your entire user base, you can roll out the new profile page to just 5% of all users as a way to mitigate risk. 
 
-{% alert important %} Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. {% endalert %}
+{% alert important %} 
+Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
+{% endalert %}
 
 ## Prerequisites
 
@@ -258,9 +260,17 @@ For example, you can change homepage links or banners on the fly using a feature
 <!-- [David: Can you provide some examples of how they would do this?] -->
 
 ### Message coordination
+{% alert important %} 
+This functionality is not supported in beta.
+{% endalert %}
+
 Use feature flags to coordinate feature rollout and messaging simultaneously. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
+{% alert important %} 
+This functionality is not supported in beta.
+{% endalert %}
+
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
 
 With Canvas, you can track the impact of feature rollout on conversations. And, using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths), you can optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
