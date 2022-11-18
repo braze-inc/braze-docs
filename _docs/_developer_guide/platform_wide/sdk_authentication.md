@@ -162,7 +162,7 @@ Keep in mind that [`changeUser`][11] should only be called when the User ID has 
 Supply the JWT Token when calling [`changeUser`][11]:
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
