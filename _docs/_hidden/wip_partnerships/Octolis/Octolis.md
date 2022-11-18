@@ -3,8 +3,8 @@ nav_title: Your Partner Page
 article_title: Your Partner Page
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
-alias: /partners/your_partner_name/
+description: "Everything you need to know about Braze integration with Octolis"
+alias: /partners/Octolis/
 
 page_type: partner
 search_tag: Partner
@@ -12,11 +12,17 @@ hidden: true
 
 ---
 
-# [Partner Name]
+# Octolis
 
-> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
+> [Octolis][0] is a powerful data activation platform (or headless CDP). Sitting on top of a database you own, Octolis is the easiest way to unify, prepare, score and sync data in your business tools.
 
-In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
+The Braze and Octolis integration allows you easily integrate all your data into Braze’s data model. With Octolis, you are now able to transform data from several sources to feed Braze with contacts attributes or events, for example : 
+- Unify online and offline data
+- Normalize offline data
+- Add computed fields or score
+- Sync data to Braze as events or contacts attributes
+
+![Braze scheme](https://user-images.githubusercontent.com/100789766/202741181-48e3419c-d81d-4813-8aa7-1d6ba1df893c.png)
 
 ## Prerequisites
 
@@ -26,80 +32,144 @@ This section should list what you need to complete this partnership integration.
 The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
 
+## Prerequisites
+
 | Requirement | Description |
 | ----------- | ----------- |
-| Partner account | A partner account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Octolis account | An Octolis account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API key with [*users.track*][1] permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze app key | Your app identifier key. This can be found within the Braze Dashboard > Manage Settings > API Key. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Use cases
+## Getting started
 
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+### Introduction
+
+Acting as a middleware between your raw data sources and Braze, Octolis will make you able to retrieve and unify data from various sources, online & offline.
+
+Our approach is particularly relevant for omnichannel players : 
+
+1. Unify & combine data from any sources: Eshop, CRM, POS system,…
+2. Normalize & score 
+3. Real-time synchronization of computed fields and events to Braze 
+
+For instance, we enable KFC France to send offline transactional data from ERP to braze as events (new orders in the restaurant ABC, loyalty enrollment,..). Thus, KFC retrieves in Braze all of the offline touchpoints for each customer.
+
+### Multi-keys deduplication
+Deduplication is a major challenge when it comes to reconciling data from multiple sources and especially online and offline.
+Depending on business reality and the quality/completeness of your data, you will need the flexibility to choose the most relevant key combination for deduplication.
+
+For instance, you might want to define that "If two contacts have a different email but the same postal address + first/last name, then the two contacts should be deduplicated and merged.”
+But it could be as well: Email x Phone x (Last name x First name x Zip code).
+
+Through our advanced no-code module, you will be able to use multiple keys for deduplication. This module is available for each master table, meaning that you can adapt the logic to each entity.
+
+{% alert note %} 
+For further information about Octolis deduplication, please refer to [our specific help center section][3].
+{% endalert %}
+
+### Control over Braze attributes
+
+By default, Braze creates all the attributes that you would send.
+
+This generates two types of issues:
+
+- The attribute's format created automatically by Braze will not match yours.
+- You will pay for each additional attribute, even if you don’t use it afterward.
+
+With Octolis, when you create a connection with Braze, you must document the list of fields to be synchronized. 
+
+Thus, Octolis brings more control over the structure of the data entering into Braze and avoids the above-mentioned issues.
 
 ## Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
+### Getting started
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+Before taking advantage of the Octolis and Braze integration, take a few minutes to understand Octolis’ core concepts: Connections, Sources, Audiences, and Syncs.
 
-### Step 1: Short description of step one 
-
-Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
-
-### Step 2: Short description of step two 
-
-You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
-
-### Step 3: Short description of step three 
-
-Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
-
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-
-#### Request headers and method
-
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-
-{% raw %}
-- **HTTP Method**: POST
-- **Request Header**:
-  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
-{% endraw %}
-
-#### Request body
-
-Include code of your webhook request body. 
-
-### Step 3: Preview your request
-
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
-
-{% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+{% alert note %} 
+You will find all of this detailed within our Help Center > [Getting Started” section][4].
 {% endalert %}
-```
-{% enddetails %}
 
-## Customization
+### Step 1 - Connect Octolis to your data sources
 
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
+To start sending data to Braze, you first need to make sure that you have [created at least one Audience][5].
+An Audience is an entity combining several data Sources, applying them to Preparation steps, and adding Computed fields.
 
-## Using this integration
+Before sending any kind of data to Braze, you first need to build your first audience based on one or several data sources.
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+For instance, a *Source* can be one of the following:
 
-### Step 1: Short description of step one 
+- A Salesforce object (contacts, accounts...)
+- A Zendesk object (tickets)
+- A file inside of an SFTP (CSV file containing some contacts, JSON file containing events...)
+- A table/view of a database.
+- One of your systems sends us records through Webhooks/API calls.
 
-This set of steps will walk your users through how to use this integration in Braze.
+### Step 2 - Add Braze as a new destination
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+Once Octolis connected to your data sources and your first Audience created, you are now able to add braze as a new destination.
+
+Within the main screen, select “+ Add more” on top of your current destinations.
+
+![Braze_screen1](https://user-images.githubusercontent.com/100789766/202749807-ea83dcc6-2ba8-4422-9b24-bb410cf38c0a.png)
+
+Select Braze amongst available business tools.
+
+<img width="956" alt="Braze_screen2" src="https://user-images.githubusercontent.com/100789766/202749910-08cdd6e3-af64-44a8-a30f-e2fc580fd2e4.png">
+
+Once selected, you must provide :
+
+- Your Braze’s API key. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- Time window: The given period on which we will apply the rate limiting.
+- Request Volume: Number of requests that you will be able to make within this time frame.
+- Custom Attributes: Specify here the new fields that you will send to Braze, their format (String, Integer, float,..), and tick the “Required for syncs” if you want one of them to be mandatory for a sync.
+
+{% alert note %} 
+By default, [Braze’s API quota][6] for /users/track requests is 50 000 per minute.
+{% endalert %}
+
+<img width="958" alt="Braze_screen3" src="https://user-images.githubusercontent.com/100789766/202750052-e288b7e4-c058-4f3e-b76f-b7bfd4a00b73.png"
+Once configured, Braze will appear as a new destination on the home screen.
+
+### Step 3: Create a new sync
+
+From the left Menu, click on “Syncs”, and select “Add sync” at the top right.
+Select the Audience you want to sync amongst the Audiences you have previously created.
+
+### Step 4: Configure your Destination
+
+Select Braze as the Destination and which entity you will send data to.
+
+<img width="963" alt="Braze_screen4" src="https://user-images.githubusercontent.com/100789766/202760588-b9adfbdc-e82e-40e0-b87f-e56fd0288f74.png">
+
+### Step 5: Output settings
+
+![Braze_screen5](https://user-images.githubusercontent.com/100789766/202750534-ce2f739c-090f-4ba1-8211-a38ec2a1eb8f.png)
+
+Here is a specific definition of settings fields.
+
+| Field | Description |
+| --- | --- |
+| Where do you want to sync the Audience to? | Braze’s entity where you will create or update records. |
+| Which field is used to identify a record? | The field that will use Octolis to identify a record if it already exists in Braze. |
+| How often do you want to send each record? | By default, for all types of integrations (API, database, ftp) the sync will be incremental. This means that only new values since the last update will be updated. If necessary, you can also send whole tables at regular intervals. On initiation, we will send the complete table. |
+| Which fields should be synced? | Octolis to Braze fields mapping. The list of all available fields appears in the drop-down menu. If you want to send a computed field to Braze, you first have to make sure that you created the corresponding column within your Braze entity. |
+| When do you want to sync the Audience? | How the data will be sent to Braze: manually, in real-time, or programmed.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %} 
+Why having to choose “Created or updated” for each field?
+
+**Create**: For instance, for opt-ins, it is important that the Braze table remains master. You don't want Octolis to trigger a sync when the field is updated.
+
+**Update**: On the other hand, for a first name field, for example, you want to be able to update the field in your Braze table each time a customer gives you a new entry.{% endalert %}
+
+[0]: http://octolis.com 
+[1]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/
+[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[3]: https://help.octolis.com/resources/faq/what-is-deduplication-and-how-does-it-work
+[4]: https://help.octolis.com/
+[5]: https://help.octolis.com/audiences/create-a-no-code-audience
+[6]: https://www.braze.com/docs/api/api_limits/
