@@ -113,10 +113,11 @@ Once Octolis connected to your data sources and your first Audience created, you
 
 Within the main screen, select “+ Add more” on top of your current destinations.
 
-![][assets/img/Octolis/Braze_screen1.png
+![Braze_screen1](https://user-images.githubusercontent.com/100789766/202801818-ff01da12-af44-4cba-893d-d418dcb7a07b.png)
 
 Select Braze amongst available business tools.
 
+<img width="960" alt="Braze_screen2" src="https://user-images.githubusercontent.com/100789766/202800839-f45ecb09-595b-49c3-a7de-db4a878e2695.png">
 
 Once selected, you must provide :
 
@@ -129,7 +130,8 @@ Once selected, you must provide :
 By default, [Braze’s API quota][6] for /users/track requests is 50 000 per minute.
 {% endalert %}
 
-<img width="958" alt="Braze_screen3" src="https://user-images.githubusercontent.com/100789766/202750052-e288b7e4-c058-4f3e-b76f-b7bfd4a00b73.png"
+<img width="960" alt="Braze_screen3" src="https://user-images.githubusercontent.com/100789766/202801879-6c81d052-e8c3-4c92-81ea-b1f4460300ae.png">
+
 Once configured, Braze will appear as a new destination on the home screen.
 
 ### Step 3: Create a new sync
