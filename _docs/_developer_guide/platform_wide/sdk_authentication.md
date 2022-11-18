@@ -265,7 +265,7 @@ These callback methods are a great place to add your own monitoring or error-log
 import * as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((someErrorEvent) => {
   // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the someErrorEvent user matches the currently logged-in user
+  // TODO: Check if the user_id within the `errorEvent` matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(someErrorEvent);
   appboy.setSdkAuthenticationSignature(updated_jwt);
 });
