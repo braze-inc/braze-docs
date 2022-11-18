@@ -1,13 +1,13 @@
 ---
-nav_title: Your Partner Page
-article_title: Your Partner Page
+nav_title: Octolis
+article_title: Octolis
 page_order: 1
 
 description: "Everything you need to know about Braze integration with Octolis"
 alias: /partners/Octolis/
 
 page_type: partner
-search_tag: Partner
+search_tag: Octolis
 hidden: true
 
 ---
