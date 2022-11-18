@@ -22,7 +22,7 @@ The Braze and Octolis integration allows you easily integrate all your data into
 - Add computed fields or score
 - Sync data to Braze as events or contacts attributes
 
-![Braze scheme](https://user-images.githubusercontent.com/100789766/202741181-48e3419c-d81d-4813-8aa7-1d6ba1df893c.png)
+![][7]
 
 ## Prerequisites
 
@@ -113,11 +113,10 @@ Once Octolis connected to your data sources and your first Audience created, you
 
 Within the main screen, select “+ Add more” on top of your current destinations.
 
-![Braze_screen1](https://user-images.githubusercontent.com/100789766/202749807-ea83dcc6-2ba8-4422-9b24-bb410cf38c0a.png)
+![][assets/img/Octolis/Braze_screen1.png
 
 Select Braze amongst available business tools.
 
-<img width="956" alt="Braze_screen2" src="https://user-images.githubusercontent.com/100789766/202749910-08cdd6e3-af64-44a8-a30f-e2fc580fd2e4.png">
 
 Once selected, you must provide :
 
@@ -173,3 +172,5 @@ Why having to choose “Created or updated” for each field?
 [4]: https://help.octolis.com/
 [5]: https://help.octolis.com/audiences/create-a-no-code-audience
 [6]: https://www.braze.com/docs/api/api_limits/
+[7]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
+[8]: {% image_buster /assets/img/Octolis/Braze_screen1.png %}
