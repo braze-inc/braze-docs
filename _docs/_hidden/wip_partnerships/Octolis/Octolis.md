@@ -172,5 +172,4 @@ Why having to choose “Created or updated” for each field?
 [4]: https://help.octolis.com/
 [5]: https://help.octolis.com/audiences/create-a-no-code-audience
 [6]: https://www.braze.com/docs/api/api_limits/
-[7]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
-[8]: {% image_buster /assets/img/Octolis/Braze_screen1.png %}
+[7]: {% image_buster /assets/img/Octolis/Braze scheme.png %}
