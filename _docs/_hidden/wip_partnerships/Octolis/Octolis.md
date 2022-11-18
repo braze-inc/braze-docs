@@ -113,7 +113,7 @@ Once Octolis connected to your data sources and your first Audience created, you
 
 Within the main screen, select “+ Add more” on top of your current destinations.
 
-![Braze_screen1](https://user-images.githubusercontent.com/100789766/202801818-ff01da12-af44-4cba-893d-d418dcb7a07b.png)
+<img width="960" alt="Braze_screen1" src="https://user-images.githubusercontent.com/100789766/202801818-ff01da12-af44-4cba-893d-d418dcb7a07b.png">
 
 Select Braze amongst available business tools.
 
