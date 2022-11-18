@@ -165,7 +165,7 @@ featureFlags.forEach { feature ->
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
 {% alert tip %}
-Refreshing happens automatically upon session start, and may be throttled by Braze. Please ensure you refresh only prior to important user actions or pages, such as before loading a checkout page, or if you know a feature flag will be consumed.
+Refreshing happens automatically upon session start. Manually refreshing may be throttled by Braze. Please ensure you refresh only prior to important user actions or pages, such as before loading a checkout page, or if you know a feature flag will be consumed.
 {% endalert %}
 
 {% tabs %}
