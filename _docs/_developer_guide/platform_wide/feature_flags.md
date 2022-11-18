@@ -15,7 +15,7 @@ Feature flags allow you to remotely enable or disable functionality for a specif
 
 Create a new feature flag within the Braze dashboard by providing a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
 
-For example, if you've built a new profile page for your ride-sharing app, instead of releasing it (and potential bugs) directly to your entire user base, you can roll out the new profile page to only a single segment. 
+For example, if you've built a new profile page for your ride-sharing app, instead of releasing it (and potential bugs) to your entire user base, you can roll out the new profile page to just 5% of all users as a way to mitigate risk. 
 
 ## Prerequisites
 
