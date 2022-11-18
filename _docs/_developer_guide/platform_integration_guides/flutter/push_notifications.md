@@ -14,8 +14,8 @@ A push notification is an out-of-app alert that appears on the user’s screen w
 
 {% alert important %}
 Braze does not support using the Flutter wrapper layer for sending push notifications or deep links. To use this feature with your Flutter app, you will need to configure push notifications for each native platform separately. 
-- **Android:** Follow the [Android integration instructions][1].
-- **iOS:** Follow the [iOS integration instructions][2].
+- **Android:** Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/).
+- **iOS:** Follow the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
 
@@ -31,7 +31,3 @@ You can't test push notification related app behavior on an iOS simulator becaus
 2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. You should receive the notification on your device shortly. You may need to check in the Notification Center or update Settings if it doesn't display.
-
-
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
