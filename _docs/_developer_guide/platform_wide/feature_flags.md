@@ -17,6 +17,8 @@ Create a new feature flag within the Braze dashboard by providing a name and an 
 
 For example, if you've built a new profile page for your ride-sharing app, instead of releasing it (and potential bugs) to your entire user base, you can roll out the new profile page to just 5% of all users as a way to mitigate risk. 
 
+{% alert important %} Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. {% endalert %}
+
 ## Prerequisites
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
