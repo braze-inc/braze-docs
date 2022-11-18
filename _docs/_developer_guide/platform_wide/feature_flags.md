@@ -199,7 +199,7 @@ braze.refreshFeatureFlags()
 #### Listen for changes
 You can configure the Braze SDK to listen and update your app when feature flags have been refreshed.
 
-This is useful if you want to update your app behind the scenes if feature flags are refreshed mid-session. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
+This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
 {% tabs %}
 {% tab Javascript %}
