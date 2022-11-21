@@ -53,8 +53,8 @@ When generating the JWT, the following fields are expected:
 
 | Field | Required | Description                         |
 | ----- | -------- | ----------------------------------- |
-| `alg` | **Yes**  | The supported algorithm is `RS256`. |
-| `typ` | **Yes**  | The type should equal `JWT`.        |
+| `alg` | Yes  | The supported algorithm is `RS256`. |
+| `typ` | Yes  | The type should equal `JWT`.        |
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
