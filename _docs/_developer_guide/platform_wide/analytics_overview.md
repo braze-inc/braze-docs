@@ -198,7 +198,7 @@ The following table describes available segmentation options for time attributes
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
-Numeric attributes have a wide variety of use cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
+Numeric attributes have a wide variety of use cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, such as recording shoe size, waist size, or the number of times a user has viewed a certain product feature or category.
 
 > Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
