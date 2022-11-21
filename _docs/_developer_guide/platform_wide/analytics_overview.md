@@ -249,7 +249,7 @@ The following table describes available segmentation options for purchase events
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
 ## Taxi/ride-sharing app use case {#example-case}
-For this example case, let's consider a taxi/ride-sharing app (such as Hailo or Lyft) that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+For this example, let's consider a ride-sharing app that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 **Case Question #1: What is the goal?**
 
