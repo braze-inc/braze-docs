@@ -334,7 +334,7 @@ braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error)
 
 ## Adding public keys {#key-management}
 
-In the **Manage Settings** page of the dashboard, add your public key to a specific app in the Braze dashboard. Each app supports up to three public keys. Note that the same public/private keys may be used across apps.
+In the **Manage Settings** page of the dashboard, add your public key to a specific app in the Braze dashboard. Each app supports up to three public keys. Note that the same public and private keys may be used across apps.
 
 To add a public key:
 
