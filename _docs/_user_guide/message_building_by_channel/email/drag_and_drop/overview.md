@@ -116,7 +116,7 @@ Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your ema
 
 ##### Dynamic images
 
-You can choose to incorporate dynamic images into your email messaging with Liquid. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image.
+You can choose to include dynamic images into your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
 
