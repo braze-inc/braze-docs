@@ -82,7 +82,7 @@ These properties are collected by the iOS SDK upon proper integration.
 
 ## Data upload and download
 
-The Braze SDK caches data (sessions, custom events, etc) and uploads it periodically. Only after the data has been uploaded will the values be updated on the dashboard. The upload interval takes into account the state of the device and is governed by the quality of the network connection:
+The Braze SDK caches data (sessions, custom events, etc.) and uploads it periodically. Only after the data has been uploaded will the values be updated on the dashboard. The upload interval takes into account the state of the device and is governed by the quality of the network connection:
 
 |Network Connection Quality |    Data Flush Interval|
 |---|---|
@@ -101,7 +101,7 @@ It is possible, though not suggested, to block the automatic collection of certa
 
 For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 
-We highly recommend fully integrating the SDKs to take full advantage of our product's capabilties.
+We highly recommend fully integrating the SDKs to take full advantage of our product's capabilities.
 
 ### Web SDK
 
