@@ -253,7 +253,7 @@ When this feature is set as ["Required"](#enforcement-options), the following sc
 
 You can use [`subscribeToSdkAuthenticationFailures`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetosdkauthenticationfailures) to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`][9], `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
 
-Failed requests will periodically be retried until your app supplies a new valid JWT. If _that user_ is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply Braze's SDK with this new valid token.
+Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply Braze's SDK with this new valid token.
 
 {% alert tip %}
 These callback methods are a great place to add your own monitoring or error-logging service to keep track of how often your Braze requests are being rejected.
