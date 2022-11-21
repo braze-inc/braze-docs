@@ -351,7 +351,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind that SDK requests will continue to flow as usual without authentication unless the app's SDK Authentication setting is set to **Required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply disable this feature in the Braze dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), disable this feature in the Braze dashboard, and data will resume to flow as usual without verification.
 
 ### Enforcement options {#enforcement-options}
 
