@@ -215,7 +215,7 @@ The following table describes available segmentation options for numeric attribu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booleans (true/false)
-Boolean attributes are useful for storing subscription statuses and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
+Boolean attributes are useful for storing subscription statuses and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a boolean in addition to those that don't have any record of that attribute recorded yet.
 
 The following table describes available segmentation options for boolean attributes.
 
