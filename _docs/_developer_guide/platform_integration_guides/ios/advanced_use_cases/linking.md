@@ -11,6 +11,10 @@ description: "This article covers how to implement the universal deep linking de
 
 For introductory information on deep links, refer to our [User Guide article][4]. If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.
 
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 ## Step 1: Register a scheme
 
 You must state a custom scheme in the `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.

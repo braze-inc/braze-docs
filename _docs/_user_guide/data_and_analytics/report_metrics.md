@@ -18,7 +18,6 @@ glossary_tags:
   - name: Content Cards
   - name: Email
   - name: In-App Message
-  - name: News Feed
   - name: Web Push
   - name: iOS Push
   - name: Android Push
@@ -50,18 +49,16 @@ glossaries:
     tags:
       - All
   - name: Total Impressions
-    description: The number of times the in-app message or card has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+    description: The number of times the in-app message has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
     calculation: Count
     tags:
       - In-App Message
-      - News Feed
       - Content Cards
   - name: Unique Impressions
     description: The total number of users who received and viewed a given in-app message or card in a day. For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. Conversely, the count should not increment the second time a user views a Content Card. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
-      - News Feed
       - Content Cards
   - name: Sends
     description: The total number of messages sent in a campaign. This number is received from Braze.
@@ -152,14 +149,12 @@ glossaries:
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
-      - News Feed
       - Content Cards
   - name: Unique Clicks
     description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
     calculation: (Unique Clicks) / (Deliveries) (for Email) or (Unique Clicks) / (Unique Impressions) (for Content Cards)
     tags:
       - Email
-      - News Feed
       - Content Cards
   - name: Body Clicks
     description: Occurs when someone clicks on a slide-up, modal, or full-screen in-app message that has no buttons.

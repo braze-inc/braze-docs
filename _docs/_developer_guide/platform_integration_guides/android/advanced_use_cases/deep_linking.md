@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings."
 
 ---
 
@@ -13,7 +13,11 @@ description: "This article covers how to implement the universal deep linking de
 
 As part of the [implementation process for your Android SDK][1], you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
 
-For introductory information on deep links, refer to our [User Guide article][4]. 
+For introductory information on deep links, refer to our [User Guide article][4].
+
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 ## Universal deep link delegate
 
@@ -172,6 +176,10 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 {% endtabs %}
 
 ## Deep linking to the News Feed {#Android_Deep_Advance}
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 To deep link to the Braze News Feed from a push notification, [create a custom deep link][1] for your News Feed activity.
 

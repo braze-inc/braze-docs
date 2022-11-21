@@ -76,6 +76,11 @@ You can export the following data from Braze to mParticle:
 | News Feed Card Clicks| Platform-specific Feed | User clicked on a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Application Uninstalled| Platform-specific Feed | User uninstalled the App.| `app_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 {% endtab %}
 {% tab Unbound %}
 

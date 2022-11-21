@@ -4,11 +4,15 @@ nav_title: Deep Linking
 article_title: Deep Linking for iOS
 platform: iOS
 page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings or a News Feed."
+description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings."
 
 ---
 
 # Linking
+
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 ## Deep links
 

@@ -9,7 +9,6 @@ platform: iOS
 channel: 
 - push
 - in-app messages
-- news feed
 
 ---
 
@@ -17,7 +16,7 @@ channel:
 
 The iOS badge count displays the number of unread notifications within your application, taking the form of a red circle in the upper-right hand corner of the app icon. In recent years, badging has come to be an effective means for re-engaging app users.
 
-The badge count can be used to re-engage your users who did not notice a push, or who have disabled foreground push notifications. Similarly, it can be used to notify your users about unviewed messages such as News Feed changes or in-app updates.
+The badge count can be used to re-engage your users who did not notice a push, or who have disabled foreground push notifications. Similarly, it can be used to notify your users about unviewed messages such as in-app updates.
 
 ## Badge count with Braze
 
@@ -43,5 +42,3 @@ Research shows that once the badge count increases past double digits, users gen
 ### Limit the things a badge count can represent
 When badging, you want to make the notifications as clear and direct as possible. By limiting the number of things that a badge notification can represent, you can provide your users with a sense of familiarity with your app's features and updates.
 
-### News Feed and in-app badging
-One of the most powerful features of badging is that it allows you to engage with your users without the immediacy of a push notification through the News Feed and in-app updates. To ensure that your users stay interested in the in-app badging notifications, you should try to focus such badge updates on personalized or urgent messages.

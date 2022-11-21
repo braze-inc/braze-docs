@@ -69,7 +69,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
-| [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Side-by-side SDK integration
@@ -135,7 +135,7 @@ Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium 
 
 This integration forwards data from Tealium to the Braze REST API.
 
-Server-to-server integration does not support Braze UI features like in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data (such as device-level fields) that are not available through this method.
+Server-to-server integration does not support Braze UI features like in-app messaging, Content Cards, or push notifications. There also exists automatically captured data (such as device-level fields) that are not available through this method.
 
 If you wish to use this data and these features, consider our [side-by-side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) SDK integration.
 
