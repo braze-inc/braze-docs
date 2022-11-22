@@ -6,11 +6,11 @@ page_order: 5
 layout: dev_guide
 alias: /scim/
 
-description: "This landing page lists the Braze SCIM Endpoints."
+description: "This landing page lists the Braze SCIM endpoints."
 page_type: landing
 
 guide_top_header: "SCIM Endpoints"
-guide_top_text: "Use the Braze SCIM Endpoints to manage automated user provisioning."
+guide_top_text: "The [System for Cross-domain Identity Management (SCIM)](http://www.simplecloud.info/) specification is designed to make managing user identities in cloud-based applications and services easier by providing a defined schema for representing users and groups. Use the Braze SCIM endpoints to manage automated user provisioning."
 
 guide_featured_title: "Braze SCIM Endpoints"
 guide_featured_list:
