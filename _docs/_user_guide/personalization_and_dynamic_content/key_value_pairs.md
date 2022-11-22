@@ -160,12 +160,6 @@ Note that bounced emails will not deliver key-value pairs to SendGrid.
 
 ![Sending Info tab of the email message composer in Braze.][22]
 
-## News Feed
-
-Key-value pairs can be added to a News Feed Card in the Braze message composer under the categories dropdown.
-
-![Key-value pairs section when composing a News Feed card in Braze.][23]
-
 ## Content Cards
 
 To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.

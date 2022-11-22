@@ -106,7 +106,6 @@ table td {
 | Contact settings | Apps registered for push |
 | Contact settings | Subscription group |
 | Campaigns received | Email address |
-| News Feed cards clicked | News Feed cards clicked |
 | Install attribution | Install source |
 | Install attribution | Campaign |
 | Install attribution | Ad Group |

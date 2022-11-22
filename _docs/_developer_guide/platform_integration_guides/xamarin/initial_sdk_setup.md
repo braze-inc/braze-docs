@@ -137,7 +137,7 @@ Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be use
 
 ### SDK integration complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. See the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/), the [News Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/news_feed/) and the complete suite of Braze features.
+Braze should now be collecting data from your application and your basic integration should be complete. See the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/), and the complete suite of Braze features.
 
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
 

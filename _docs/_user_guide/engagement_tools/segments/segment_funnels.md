@@ -50,7 +50,7 @@ For example, let's say you have a group where all users who added items to a wis
 
 ### Compare messaging channels
 
-Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
+Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
 ![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.][5]
 

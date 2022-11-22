@@ -23,6 +23,10 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IHtmlInAppMessageActionListener`][86] - [Custom manage HTML in-app message display and behavior](#custom-html-in-app-message-action-listener)
 - [`IInAppMessageViewWrapperFactory`][88] - [Custom manage in-app message view hierarchy interaction](#custom-view-wrapper-factory)
 
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 ## Custom manager listener
 
 The `BrazeInAppMessageManager` automatically handles the display and lifecycle of in-app messages. If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [extras][14], and much more.
@@ -271,10 +275,10 @@ The Braze SDK has a default `DefaultHtmlInAppMessageActionListener` class that i
 Create a class that implements [`IHtmlInAppMessageActionListener`][86].
 
 The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever the user initiates any of the following actions inside the HTML in-app message:
-- Clicks on the close button.
-- Clicks on the News Feed button.
-- Fires a custom event.
-- Clicks on a URL inside HTML in-app message.
+
+- Clicks on the close button
+- Fires a custom event
+- Clicks on a URL inside HTML in-app message
 
 {% tabs %}
 {% tab JAVA %}

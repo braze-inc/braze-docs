@@ -13,6 +13,10 @@ channel:
 
 # News Feed integration
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 In Android, the News Feed is implemented as a [fragment][2] available in the Braze Android UI project. Refer to [Google's documentation on fragments][3] for information on adding a fragment to an activity.
 
 The `AppboyFeedFragment` class will automatically refresh and display the contents of the News Feed and log usage analytics. The cards that can appear in a user's News Feed are set on the Braze dashboard.
