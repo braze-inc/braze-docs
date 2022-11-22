@@ -44,7 +44,7 @@ If you do not override global subscription states, existing user's states may no
 
 Legacy Shopify customers may have the old method of collecting email and SMS subscribers via the `shopify_accepts_marketing` and `shopify_sms_consent` custom attributes. If you save the settings above with override enabled, Braze will remove the custom attributes on the user profiles and sync those values over to their respective email subscription group and SMS subscription group.
 
-If you have existing campaigns/canvases today using these legacy custom attributes, you should remove them and ensure the campaigns/canvases are using the appropriate subscription state and/or groups instead."
+If you have existing campaigns or Canvases using these legacy custom attributes today, you should remove them and ensure the campaigns or Canvases are using the appropriate subscription state, group, or both."
 
 ### Step 6: Install Braze’s Shopify application
 You’ll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
