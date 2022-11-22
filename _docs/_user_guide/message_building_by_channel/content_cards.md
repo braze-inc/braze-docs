@@ -32,5 +32,8 @@ guide_featured_list:
 - name: Migrating from News Feed
   link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
   fa_icon: fas fa-suitcase
+- name: Best Practices
+  link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
+  fa_icon: fas fa-check-square
 ---
 <br><br>

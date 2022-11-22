@@ -1,7 +1,7 @@
 ---
 nav_title: Push Primer In-App Messages
 article_title: Push Primer In-App Messages
-page_order: 8
+page_order: 9
 page_type: reference
 description: "Optimize your push opt-in rate using a Push Primer In-App Message"
 channel: push

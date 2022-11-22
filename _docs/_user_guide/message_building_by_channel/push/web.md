@@ -1,16 +1,16 @@
 ---
-nav_title: "Push for Web"
-article_title: Push for Web
-page_order: 9
+nav_title: "Web Push"
+article_title: Web Push Notifications
+page_order: 8.5
 page_type: reference
-description: "This reference page briefly covers web push, and links out to the necessary steps to create one."
+description: "This reference page briefly covers web push notifications, and links out to the necessary steps to create one."
 platform: Web
 channel:
   - push
 
 ---
 
-# Web push
+# Web push notifications
 
 > Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
 
