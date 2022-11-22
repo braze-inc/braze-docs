@@ -100,6 +100,10 @@ You can export the following data from Braze to Segment:
 | Experiment Split Entries | User enters a Canvas experiment step path. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 {% endtab %}
 {% tab Export properties %}
 

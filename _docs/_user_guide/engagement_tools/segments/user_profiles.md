@@ -43,7 +43,7 @@ You can use the [Engagement tab](#engagement-tab) to verify whether a certain us
 There are four main sections of a user's profile.
 
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
-- **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, News Feed cards clicked, and random bucket number.
+- **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
 - **Social:** High-level view of the user's activity on Twitter and Facebook, if connected.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
 
@@ -75,7 +75,6 @@ The **Engagement** tab contains information about a user's interactions with the
 | Campaigns received | Campaigns this user has received and when. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
-| News Feed cards clicked | News Feed cards this user has clicked on. Select a card from the list to view it. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
