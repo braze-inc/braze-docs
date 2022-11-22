@@ -16,7 +16,7 @@ channel:
 Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign up. A recommended user flow is outlined below:
 
 1. Schedule a webinar in Zoom and generate a `meetingId`.
-2. Use Braze to promote Zoon webinars via email, push, and in-app message channels. 
+2. Use Braze to promote Zoom webinars via email, push, and in-app message channels. 
 3. Include a call to action button in these communications that automatically adds users to the webinar.
 
 This can be accomplished by using the [Zoom APIs](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) to automatically add a user to a webinar through a button click within an email, push, or in-app message. Use the following endpoint, replacing the meeting ID in the API request. 
