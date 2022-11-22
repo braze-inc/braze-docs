@@ -77,7 +77,7 @@ Users are now registered for the webinar with the details that already exist on 
 2. Create a webhook campaign triggered by the in-app message or button click.<br><br>
 	Using existing user data on their Braze profile, sign up the user for the webinar.<br>
 
-	![A action-based campaign that will be sent to users who clciked a button for a specific campaign.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![An action-based campaign that will be sent to users who clicked a button for a specific campaign.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Example webhook call to Zoom endpoint.<br>
 
