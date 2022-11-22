@@ -41,7 +41,7 @@ Users are now registered for the webinar with the details that already exist on 
 
 1. Create a push campaign<br><br>
 
-	Set on click behavior for the button to link out to the webinar landing page<br>
+	Set on-click behavior for the button to link out to the webinar landing page.<br>
 
 	![Linking out to the webinar when a button gets clicked.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
