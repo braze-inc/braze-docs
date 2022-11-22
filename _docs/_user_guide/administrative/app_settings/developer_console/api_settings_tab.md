@@ -9,7 +9,7 @@ description: "This reference article covers the API Settings page, which display
 
 # API Settings tab
 
-The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([User Data][3],[Messaging][4], [Email Sync][5], or [Export][6]).
+The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
 
 The **API Settings** page is further divided into the following sections:
 
@@ -23,11 +23,11 @@ This section provides your App Group REST API keys, the unique identifiers that 
 
 #### API IP allowlisting
 
-For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
+For additional security, you can specify a list of IP addresses and subnets allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
 ![API IP Whitelisting section of creating a new API key][26]
 
-If you don’t specify any, requests can be sent from any IP address.
+If you don't specify any, requests can be sent from any IP address.
 
 {% alert tip %}
 Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
@@ -35,13 +35,13 @@ Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [I
 
 ### Identification
 
-The **Identification** section includes a list of identifiers that are used to reference specific apps in requests made to the Braze API. To learn more about application identifiers, refer to [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
+This section includes a list of identifiers used to reference specific apps in requests made to the Braze API. To learn more about application identifiers, refer to [App identifier API key]({{site.baseurl}}/api/identifier_types/).
 
 ### Additional API identifiers
 
-To integrate with our API, you can search for the identifiers related to any segments, campaigns, cards and more that you want to access from Braze's external API. All messages should follow [UTF-8][12] encoding. Once you’ve selected any of them, the identifier will be displayed underneath the dropdown menu. .
+To integrate with our API, you can search for the identifiers related to any segments, campaigns, Content Cards, and more that you want to access from Braze's external API. All messages should follow [UTF-8][12] encoding. Once you've selected any of them, the identifier will be displayed underneath the dropdown menu.
 
-For more information, refer to [API Identifier Types]({{site.baseurl}}/api/identifier_types/).
+For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
 
 [3]: {{site.baseurl}}/api/endpoints/user_data/
 [4]: {{site.baseurl}}/api/endpoints/messaging/

@@ -30,7 +30,7 @@ Next, select **Drag & Drop Editor** as the Content Block type. Click **Edit Cont
 Here, we'll make use of the [Drag & Drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a Drag & Drop Editor Content Block. First, drag and drop a format block from the **Rows** tab the editor. This will determine the layout of your Content Block. 
 
 {% alert important %}
-Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suite your email messaging.
+Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suit your email messaging.
 {% endalert %}
 
 You can also add as many Drag & Drop Editor Content Blocks as needed to build out your email campaigns.
@@ -45,9 +45,9 @@ There are two ways to add the Content Block to your email.
 
 First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor.
 
-{% alert note %}
 Once the Content Block is added into the email editor, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**.
-{% endalert %}
+
+Misalignment in the Drag & Drop Editor can occur when multiple Content Blocks are added to a single row block. Try using separate row blocks to ensure alignment across your content at the row level.
 
 ### Liquid
 
@@ -58,12 +58,12 @@ In the **Add Personalization** tab, select **Content Blocks** in the **Personali
 When you preview your email messaging, the Liquid snippet will display as the Drag & Drop Editor Content Block. 
 
 {% alert important %}
-When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means that edits cannot be made directly to the Content Block that is added into the email editor.
+When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes to the original Content Block template.
 {% endalert %}
 
 ## Updating Content Blocks
 
-To update an existing Content Block, you can either edit the original Content Block located in **Templates & Media**, or copy the HTML from the original message to your new one. Note that if you choose to update a Content Block, it will update in all email messages where the Content Block is used.
+To update an existing Content Block, you can either edit the original Content Block located in **Templates & Media**, or copy the HTML from the original message to your new one. If you update a Content Block template, it will update in all email messages where the Content Block is added via Liquid.
 
 To archive a Content Block, go to the **Templates & Media** page and select the <i class="fas fa-cog"></i> gear icon next to the selected Content Block and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. 
 

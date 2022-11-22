@@ -22,7 +22,7 @@ Consultez nos [meilleures pratiques concernant les notifications push][7] pour p
 
 Les notifications push Web sont implémentées à l’aide des [normes de notification push W3C][1], pour lesquelles les navigateurs développent leur support. Actuellement, les navigateurs qui prennent en charge les notifications push Web comprennent la plupart des versions de Chrome, Firefox et Opera. La notification push pour le Web n’est pas prise en charge à ce jour sur les navigateurs iOS. Il est prévu qu’avec l’adoption plus large de la norme, plus de navigateurs continueront à implémenter un support. De plus, la version Safari pour ordinateur de bureau (sur macOS X) dispose d’une solution de notification push Web personnalisée basée sur les services de notification push Apple. Braze prend en charge ces notifications Safari.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Intégration
 

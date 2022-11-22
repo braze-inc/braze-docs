@@ -14,9 +14,11 @@ tool: Segments
 
 Braze Segmentation allows you to target users based on custom event or purchase behavior stored for the lifetime of that user profile. Examples include finding users who have or not have performed a particular custom event since a specific time, or segmenting users based on which products they have ever purchased or how much money they have spent with your service.
 
-Segment Extensions expands our existing segmentation capabilities by enabling you to create more precise segments of users based on nested event properties or aggregations of custom event and purchase behavior in the past 2 years (730 days). By means of example, standard Braze segmentation allows you to find users who have ever purchased a specific product. With Segment Extensions, you can enhance that segment by including only users who have purchased a specific color of a specific product at least twice in the past 2 years. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). By means of example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
+
+Out of the box, there is a soft limit of 10 active Segment Extensions per App Group at a particular time. This can be increased by contacting your Customer Success Manager to discuss your use case.
 
 ## Step 1: Navigate to Segment Extensions
 

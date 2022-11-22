@@ -16,7 +16,7 @@ Before reading on, note that the Braze Web SDK will not store any data in the br
 
 Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [Javascript documentation][1] for our public API interfaces.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Cookies {#cookies}
 

@@ -10,7 +10,7 @@ channel:
 
 # Messages In-App HTML personnalisés {#custom-html-messages}
 
-Bien que les messages In-App prêts à l’emploi de Braze puissent être personnalisés de diverses manières, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. 
+Bien que les messages In-App prêts à l’emploi de Braze puissent être personnalisés de diverses manières, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins.
 
 Les messages In-App HTML permettent de contrôler davantage l’apparence et l’impression d’un message, y compris les éléments suivants :
 
@@ -24,7 +24,7 @@ Les messages In-App HTML permettent de contrôler davantage l’apparence et l�
 Les messages HTML personnalisés peuvent utiliser les méthodes de [pont Javascript](#javascript-bridge) pour consigner des événements, définir des attributs personnalisés, fermer le message, etc. Découvrez notre [référentiel GitHub][2] qui contient des instructions détaillées sur l’utilisation et la personnalisation de messages In-App HTML selon vos besoins, ainsi qu’un ensemble de modèles de messages In-App HTML5 pour vous aider à démarrer.
 
 {% alert note %}
-Pour activer les messages In-App HTML, votre intégration SDK doit fournir `allowUserSuppliedJavascript`l’option d’initialisation à Braze, par exemple `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+Pour activer les messages In-App HTML, votre intégration SDK doit fournir l’option `allowUserSuppliedJavascript` d’initialisation à Braze, par exemple `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 {% endalert %}
 
 ## Pont Javascript {#javascript-bridge}
@@ -74,7 +74,7 @@ Les méthodes Javascript suivantes sont prises en charge dans les messages In-Ap
 }
 </style>
 
-{% include archive/appboyBridge.md %}
+{% multi_lang_include archive/appboyBridge.md %}
 
 ## Actions basées sur des liens
 
@@ -128,7 +128,7 @@ Par exemple, `<a onclick="appboyBridge.closeMessage()" href="#">Close</a>` ferme
 
 ## Téléchargement HTML avec aperçu
 
-Lorsque vous concevez des messages In-App HTML personnalisés, vous pouvez prévisualiser votre contenu interactif directement dans Braze. 
+Lorsque vous concevez des messages In-App HTML personnalisés, vous pouvez prévisualiser votre contenu interactif directement dans Braze.
 
 Le panneau d’aperçu de message de l’éditeur offre un aperçu réaliste avec le rendu du Javascript inclus dans votre message. Vous pouvez prévisualiser et interagir avec vos messages personnalisés depuis le panneau d’aperçu en cliquant sur les pages, en soumettant des formulaires ou des enquêtes, en regardant des animations Javascript, et bien plus encore !
 
@@ -181,9 +181,9 @@ Vous pouvez ajouter des ressources nouvelles ou existantes à votre campagne.
 
 Pour ajouter de nouvelles ressources à votre campagne, utilisez la section de glisser-déposer pour télécharger un fichier. Les ressources ajoutées dans cette section sont également ajoutées automatiquement à la médiathèque. Pour ajouter des ressources déjà téléchargées dans la médiathèque, sélectionnez **Add from Media Library** (Ajouter à partir de la médiathèque).
 
-Une fois ajoutées, vos ressources apparaissent dans la **Assets for this campaign** (Ressources pour cette campagne). 
+Une fois ajoutées, vos ressources apparaissent dans la **Assets for this campaign** (Ressources pour cette campagne).
 
-Si le nom de fichier d’une ressource correspond à celui d’un ressource HTML locale, il est remplacé automatiquement (par exemple, `cat.png` est téléchargé et `<img src="cat.png" />` existe). 
+Si le nom de fichier d’une ressource correspond à celui d’un ressource HTML locale, il est remplacé automatiquement (par exemple, `cat.png` est téléchargé et `<img src="cat.png" />` existe).
 
 Sinon, survolez une ressource dans la liste et sélectionnez <i class="fas fa-copy"></i> **Copy** (Copier) pour copier l’URL du fichier dans votre presse-papiers. Collez ensuite l’URL de la ressource copiée dans votre HTML comme lors du référencement d’une ressource distante.
 
@@ -220,7 +220,7 @@ Vous pouvez suivre plusieurs événements de clic de bouton par impression. Par 
 
 ```html
 <a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
-``` 
+```
 
 Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu’à 100 noms uniques par campagne). Par exemple, `appboyBridge.logClick("blue button")` ou `appboyBridge.logClick("viewed carousel page 3")`.
 
@@ -234,6 +234,7 @@ Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu�
 
 1. Les exigences de SDK sont le changement incompatible le plus notable avec ce nouveau type de message. Les utilisateurs dont le SDK d’application ne respecte pas les [exigences de version SDK](#supported-sdk-versions) minimum ne reçoivent pas le message.
 <br>
+
 2. Le lien profond `appboy://close`, auparavant pris en charge par les applications mobiles, a été supprimé en faveur du Javascript `appboyBridge.closeMessage()`. Vous bénéficiez ainsi de messages HTML multiplateforme, sachant que le Web ne prend pas en charge les liens profonds.
 
 3. Le suivi automatique des clics, qui utilisait `?abButtonId=0` pour les ID de boutons et le suivi de clics dans le corps pour les boutons de fermeture, a été supprimé. Les exemples de code suivants montrent comment modifier votre HTML pour utiliser nos nouvelles méthodes Javascript de suivi des clics :

@@ -170,6 +170,10 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% endtab %}
 {% tab News Feed %}
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 | Name | Description |
 |---|---|---|
 | `feed.list` | Query for a list of News Feed cards. |
@@ -242,7 +246,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 ![][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-To create a new REST API key, visit the [Developer Console][8] on your Braze dashboard. This page displays your existing API keys. To create a new key, click **Create New API Key**.
+To create a new REST API key, visit the **Developer Console** on your Braze dashboard. This page displays your existing API keys. To create a new key, click **Create New API Key**.
 
 You can then to do the following:
 
@@ -272,7 +276,7 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, open a [support ticket][support].
+If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].
 
 ### API IP allowlisting
 
@@ -309,7 +313,6 @@ This client library is currently in beta. Want to help us make this library bett
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
 [support]: {{site.baseurl}}/braze_support/
-[8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [28]: {% image_buster /assets/img_archive/create-new-key.png %}
 [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

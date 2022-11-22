@@ -76,15 +76,6 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-
-    <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
-    <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
-      <intent-filter>
-        <action android:name="com.braze.push.intent.NOTIFICATION_OPENED" />
-        <action android:name="com.braze.push.intent.NOTIFICATION_RECEIVED" />
-        <action android:name="com.braze.push.intent.NOTIFICATION_DELETED" />
-      </intent-filter>
-    </receiver>
   </application>
 </manifest>
 ```
@@ -152,7 +143,7 @@ This automatic integration should not be used with a manually created `braze.xml
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], [Content Cards][40], and [News Feed][35].
+Braze should now be collecting data from your application, and your basic integration should be complete. Check out the following articles for more information on integrating push ([Android][53] and [iOS][50]), [in-app messages][34], and [Content Cards][40].
 
 ## Additional advanced implementation options
 

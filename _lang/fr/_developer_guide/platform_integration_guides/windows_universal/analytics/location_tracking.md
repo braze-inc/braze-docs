@@ -9,7 +9,7 @@ tool: Location
 ---
 
 # Suivre la position
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 1. Assurez-vous que `Package.appxmanifest` est coché dans votre fichier`location`.
 2. Si vous souhaitez désactiver le suivi automatique de la position, définissez `<DisableLocationCollection>false</DisableLocationCollection>` sur `true` dans votre `AppboyConfiguration.xml`.

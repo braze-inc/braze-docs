@@ -9,7 +9,7 @@ channel:
 
 ---
 # Intégration Baidu
-{% include archive/baidu_deprecation.md %}
+{% multi_lang_include archive/baidu_deprecation.md %}
 
 Braze peut envoyer des notifications push aux appareils Android en utilisant les [notifications push du cloud Baidu][14]. Notez que l’utilisation de notifications push du cloud Baidu **ne nécessite pas** de distribuer vos applications via l’App Store Baidu.
 

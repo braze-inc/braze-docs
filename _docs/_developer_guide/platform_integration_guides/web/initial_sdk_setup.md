@@ -14,7 +14,7 @@ The Braze Web SDK lets you collect analytics and display rich in-app messages, p
 
 See our [JavaScript Documentation][9] for a complete technical reference.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Step 1: Install the Braze library
 
@@ -122,7 +122,7 @@ If you use a server-side rendering framework, see our additional integration ste
 
 ## Upgrading the SDK
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
 
@@ -213,6 +213,18 @@ For more details or in-depth Tealium configuration support, check out our [integ
 
 ### Other tag managers
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
+
+### Jest framework troubleshooting {#jest}
+
+When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration in `package.json` to ignore the Braze SDK:
+
+```
+"jest": {
+  "transformIgnorePatterns": [
+    "/node_modules/(?!@braze)"
+  ]
+}
+```
 
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/

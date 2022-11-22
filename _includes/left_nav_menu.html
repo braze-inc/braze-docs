@@ -47,8 +47,8 @@
   <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
     <div class="nav_bottom_item">
 
-      <div class="status-title">BRAZE SYSTEM STATUS</div>
-      <div class="color-dot"></div><div class="color-description">Checking Status</div>
+      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || default: "BRAZE SYSTEM STATUS"}}</div>
+      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || default: "Checking Status" }}</div>
   </div></a>
 </div>
 

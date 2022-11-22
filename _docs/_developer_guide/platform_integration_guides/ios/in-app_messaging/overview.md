@@ -9,7 +9,7 @@ channel:
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # In-app messages
@@ -36,7 +36,7 @@ All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
 <br><br>
-Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images within iOS in-app messages, News Feed, or Content Cards.
+Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images within iOS in-app messages or Content Cards.
 {% endalert %}
 
 ### Expected behaviors by message types

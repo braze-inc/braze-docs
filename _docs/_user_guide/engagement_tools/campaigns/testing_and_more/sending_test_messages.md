@@ -26,8 +26,6 @@ For steps to send test messages, refer to the following section for your channel
 {% tabs %}
 {% tab Email %}
 
-#### Email
-
 After drafting your email message, click **Preview and Test**. From this page, select the **Test Send** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
@@ -52,18 +50,16 @@ If you have already accepted push messages from the Braze dashboard, you will se
 {% endtab %}
 {% tab In-App Message %}
 
-#### In-app message
+If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. 
 
-If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. After drafting your in-app message, select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. When you're ready, click **Send Test**. A test push message will appear at the top of your device screen. 
+After drafting your in-app message, select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. When you're ready, click **Send Test**. A test push message will appear at the top of your device screen. 
 
 ![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
 
-Directly clicking and opening the push message will send you to your app, where you'll be able to view your in-app message test.
+Directly clicking and opening the push message will send you to your app, which is where you'll be able to view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification in order to trigger the in-app message.
 
 {% endtab %}
 {% tab Content Card %}
-
-#### Content card
 
 After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
@@ -72,16 +68,12 @@ After creating your Content Card, you can send a test Content Card to your app t
 {% endtab %}
 {% tab SMS/MMS %}
 
-#### SMS/MMS
-
 After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 
 ![Test Content Card]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
-
-#### Webhook
 
 After creating your webhook, you can do a test send to check the webhook response. Select the **test** tab and select **send test** to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
 
@@ -90,7 +82,9 @@ After creating your webhook, you can do a test send to check the webhook respons
 {% endtab %}
 {% tab News Feed %}
 
-#### News Feed card
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 

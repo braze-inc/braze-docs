@@ -34,7 +34,7 @@ guide_featured_list:
 
 # channel to icon/fa or image mapping
 glossary_tags:
-  - name: Campaign
+  - name: Campaigns
   - name: Canvas
   - name: Catalogs
   - name: Content Blocks
@@ -44,7 +44,9 @@ glossary_tags:
   - name: KPI
   - name: News Feed
   - name: Purchases
+  - name: Preference Center
   - name: Schedule Messages
+  - name: SCIM
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -102,7 +104,7 @@ glossaries:
     description: Create send IDs that can be used to send messages and track message performance programatically, without campaign creation for each send.
     tags:
       - Send Messages
-  - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send</a>
+  - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>
     description: Send immediate, ad-hoc transactional messages to a designated user.
     tags:
       - Send Messages
@@ -314,20 +316,88 @@ glossaries:
     description: Return a paginated lists of product IDs.
     tags:
       - Purchases
-  - name: <a href='/docs/api/endpoints/catalogs/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
+    description: Create a URL for a preference center.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/get_list_preference_center/'>/preference_center/v1/list</a>
+    description: List available preference centers.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
+    description: View the details for your preference centers, including when it was created and updated.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>
+    description: Create a preference center to allow users to manage their notification preferences for email campaigns.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
+    description: Update a preference center.
+    tags:
+      - Preference Center
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
     description: Delete multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
     description: List a catalog item and its details.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Edit multiple items in your catalog.
     tags: 
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
+    description: Delete a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>
+    description: Create a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
+    description: List the catalogs in an app group.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Create an item in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Edit an item in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/catalog_name/items</a>
+    description: Return multiple catalog items and their content.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+    description: Delete an item in a catalog.
+    tags:
+      - Catalogs 
+  - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>
+    description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    tags:
+      - SCIM
+  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{ID}</a>
+    description: Look up an existing dashboard user account by specifying their email.
+    tags:
+      - SCIM
+  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{ID}</a>
+    description: Update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
+    tags:
+      - SCIM
+  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{ID}</a>
+    description: Permanently delete an existing dashboard user.
+    tags:
+      - SCIM
+  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq “user@test.com”</a>
+    description: Look up an existing dashboard user account by specifying their email.
+    tags:
+      - SCIM
 ---

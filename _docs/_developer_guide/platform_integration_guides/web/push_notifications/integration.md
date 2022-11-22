@@ -22,7 +22,7 @@ Refer to our [push best practices][7] for more resources.
 
 Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers thats support web push include most versions of Chrome, Firefox, and Opera. Web push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple push notification services; Braze supports these Safari notifications.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Integration
 
@@ -61,7 +61,11 @@ If you wish to unsubscribe a user, you can do so by calling `braze.unregisterPus
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g., from a button click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
-### Step 3: Configure Safari push
+### Step 3: Configure Safari push {#safari}
+
+{% alert info %}
+Safari 16 on macOS 13 or later uses modern push standards, and this step is no longer required. If you want to support older macOS Safari versions, this step is required.
+{% endalert %}
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 

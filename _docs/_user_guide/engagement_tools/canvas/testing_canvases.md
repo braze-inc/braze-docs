@@ -10,13 +10,13 @@ tool:
   - Canvas
   - Reports
 page_type: landing
-description: "This landing page is home to resources on Canvas analytics and testing."
+description: "This landing page is home to resources on Canvas analytics."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    fa_icon: fas fa-check-square
+    fa_icon: fas fa-user-check
   - name: Canvas Analytics
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
     fa_icon: fas fa-chart-pie

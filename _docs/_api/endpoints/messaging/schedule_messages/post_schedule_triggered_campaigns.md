@@ -22,7 +22,7 @@ Note that to send messages with this endpoint, you must have a Campaign ID, crea
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 

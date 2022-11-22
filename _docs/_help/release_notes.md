@@ -47,6 +47,101 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## November 15, 2022 release
+
+### New Drag & Drop Editor for in-app messages
+
+With the new [Drag & Drop Editor for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop), you can create completely custom and personalized in-app messages without needing to know HTML. The Drag & Drop Editor is being rolled out to all customers over the next few months. If you’d like to request access sooner, reach out to your customer success manager.
+
+### Updates to Drag & Drop Editor for email
+
+#### New editor blocks
+
+Two new editor block have been added to the Drag & Drop Editor for email: [Paragraph blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#paragraph) and [List blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#list).
+
+{% alert important %}
+The existing Text block is being deprecated, but any existing email that has a Text block will continue to be supported.
+{% endalert %}
+
+#### Dark Mode Preview
+
+When [previewing and testing your emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-3b-preview-and-test-your-message) in the Drag & Drop Editor, you can now turn on **Dark Mode Preview** to see what your email looks like for dark mode users.
+
+### Winning Path early access
+
+Available as part of Experiment Paths in Canvas, [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#step-2-turn-on-winning-path-optional) lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
+
+This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+
+### In-app messages and Content Cards on tvOS
+
+This new article covers the nuances of integrating [in-app messages and Content Cards on tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/in-app_messaging), which are available through the Braze Swift SDK.
+
+### New Liquid use case
+
+We've added a new use case to the [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases#misc-personalize-content) on how to use a customer's subscription state to personalize content in messages. With this use case, customers are who subscribed to a specific subscription group will receive an exclusive message for both email and SMS subscription groups.
+
+### SDK updates
+
+The following SDK updates have been released. There are no breaking updates with these releases. All other updates can be found by checking the corresponding SDK changelogs.
+
+- [Android SDK 23.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2330)
+- [Web SDK 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
+- [Unity SDK 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
+- [Xamarin SDK 1.26.0](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1260)
+- [iOS Swift SDK 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
+- [Flutter SDK 2.6.1](https://pub.dev/packages/braze_plugin/changelog#261)
+
+## October 18, 2022 release
+
+### User profile Messaging History
+
+The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Refer to [User profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab) to learn more. 
+
+### Content Blocks for Drag & Drop Editor
+
+The [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used exclusively in the Drag & Drop Editor are similar in functionality to the Content Blocks used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
+
+### Shopify ScriptTag
+
+The [Braze and Shopify Integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify) now allows you to embed our Web SDK integration via ScriptTag on to your Shopify store. Embedding our Web SDK via ScriptTag supports tracking the following:
+- Anonymous user tracking to track guest activity in your store
+- Monthly active user tracking as the Web SDK is capable of tracking session data from your store visitors
+- Option to collect Shopify on-site activity users which will count toward your data point consumption
+- Option to enable in-browser messaging as a channel on your Shopify store
+
+### SCIM endpoint
+
+Use the following Braze SCIM endpoints to manage automated user provisioning:
+- [DELETE: Remove Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/delete_existing_dashboard_user/)
+- [GET: Look Up an Existing Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/get_see_user_account_information/)
+- [POST: Create New Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/)
+- [PUT: Update Dashboard User Account]({{site.baseurl}}/api/endpoints/scim/put_update_existing_user_account/)
+
+### SMS Fuzzy opt-outs
+
+[Fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out#fuzzy-opt-out) attempts to recognize when an inbound SMS message does not match an opt-out keyword, but indicates opt-out intent. If fuzzy opt-out is enabled and an inbound keyword response is deemed “fuzzy”, Braze will automatically respond asking the user to confirm their intent.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Android SDK 23.2.0-23.2.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2321)
+- [iOS Objective-C SDK 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
+- [iOS Swift SDK 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
+- [Cordova SDK 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
+  - Updated to [Braze Android SDK 23.0.1](https://github.com/Appboy/appboy-android-sdk/releases/tag/v23.0.1).
+- [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
+- [React SDK v1.39.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1400)
+  - Updated the native Android SDK to 23.2.0.
+  - Renamed the `kotlin_versio`n gradle template variable to `kotlinVersion`
+- [Flutter SDK 2.6.0](https://pub.dev/packages/braze_plugin/changelog#260)
+  - The native Android bridge uses Braze Android SDK 23.2.0.
+  - The native iOS bridge uses Braze iOS SDK 4.5.1.
+  - `process(inAppMessage)` is renamed to `processInAppMessage(inAppMessage)` in the iOS layer.
+- [Segment iOS 4.6.0](https://github.com/Appboy/appboy-segment-ios/blob/master/CHANGELOG.md#460)
+  - Updated to Braze [iOS SDK 4.5.1+](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451).
+
 ## September 20, 2022 release
 
 ### API guide
@@ -57,9 +152,6 @@ Use [personalized variants]({{site.baseurl}}/user_guide/engagement_tools/testing
 
 ### Testing Canvases
 After creating your Canvas, there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters. Check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for tips.
-
-### Video editor block
-As you build your email campaign, you can add a [`video` editor block]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to the Drag & Drop Editor. This editor block inserts a preview image for a video where the image links to a YouTube or Vimeo URL. 
 
 ### Liquid 5
 For existing Braze users, Liquid 5 is generally available. Learn more about [what's new with Liquid 5]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#whats-new-with-liquid-5).
@@ -288,73 +380,7 @@ The Braze and [Survicate]({{site.baseurl}}/partners/message_orchestration/channe
 
 The Braze and [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstake or contest entry information into Braze to use in campaigns or Canvases. 
 
-## May 3, 2022 release
-
-### Campaign approval
-
-Campaign approval adds a review process to your workflow before launching a campaign. Now, you can ensure that each confirmation is approved in order to launch the campaign. To learn more about the approval process, check out [Campaign approval]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/).
-
-### Canvas Message Step
-
-Message Steps allow you to add a standalone message where you want in your Canvas Flow. Visit our [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) article to learn more.
-
-### AI copywriting assistant
-
-The Braze [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting#ai-copywriting-assistant) passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging. This functionality is available out-of-the-box for most message composers in the Braze dashboard.
-
-### iOS push notification unit testing guide
-
-An [iOS unit testing guide for push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests#unit-tests) has been added to the developer guide. This guide will provide unit tests that will verify whether your app delegate is correctly set up. 
-
-### Google privacy questionnaire
-
-As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. [This guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/google_play_privacy#google-play-privacy-questionnaire) provides instructions on how to fill out this new form with information on how Braze handles your app data. 
-
-### RelayState SAML SSO
-
-Initial single sign-on set-up instructions have been updated to recommend use of a `RelayState` API key. For more information, refer to [SAML SSO setup]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) and cooresponding [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/), [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/), and [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) articles. 
-
-### Talon.One integration updates
-
-Our [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone#talonone) partnership article now has updated integration steps, endpoints, and examples. If you are leveraging the Talon.One partnership, we recommend updating your integration accordingly.
-
-### Braze Web SDK V4 released
-
-The Braze SDKs team has released Web SDK v4. For a list of breaking changes, updates, and additions, visit our Web SDK [changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md). An [upgrade guide](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md) has been created for those upgrading from V3 to V4.
-
-### Grouparoo deprecation
-
-Support for Grouparoo has been discontinued as of April 2022.
-
-## April 5, 2022 release
-
-### Filter by campaign or Canvas attribution
-You can now filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag. For more information, see [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
-
-### Email performance dashboard
-With the [email performance dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/), you can view aggregate performance metrics for your entire email channel from both campaigns and Canvases for your selected date range.
-
-For more information about the analytics dashboards available within Braze, check out the [Your Analytics Dashboards]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) section.
-
-### Global style settings
-
-Introducing [global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/) for the Drag & Drop Editor! Now, you can easily personalize the look of your email campaigns and Canvases by adding a default theme, setting basic text styling, and more.
-
-### Braze to Braze webhooks
-With a Braze to Braze webhook, you can use webhooks to communicate with the Braze REST API, doing anything that our API allows you to do. Essentially, this is a webhook that is communicating from Braze to Braze. For more information, see our [Braze to Braze webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) article.
-
-### Deprecations
-
-#### Windows SDK
-As of March 24, 2022, the [Braze Windows SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/) is deprecated, and no new Windows apps can be created in the Braze dashboard. 
-
-#### Baidu push integration
-As of March 24, 2022, the [Braze Baidu Push Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/baidu_integration/) is deprecated, and no new Baidu apps can be created in the Braze dashboard. 
-
-### New Braze partnerships
-
-#### Tealium for Currents
-
-The Braze and [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/) integration allows you to seamlessly control the flow of information between the two systems. Now with Currents, you can also connect data to Tealium to make it actionable across the entire growth stack.
 
 [support]: {{site.baseurl}}/support_contact/
+
+<br><br>

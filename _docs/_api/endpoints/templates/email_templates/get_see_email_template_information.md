@@ -24,7 +24,7 @@ Templates built using the Drag & Drop Editor are not accepted
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/scripttag_web_sdk_integration/
   fa_icon: fa-solid fa-tag
 - name: Setting up Shopify
-  link: /docs/setting_up_shopify/
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
 - name: Shopify Data Processing
   link: /docs/shopify_processing/

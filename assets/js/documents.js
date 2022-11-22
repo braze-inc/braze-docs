@@ -112,6 +112,18 @@ String.prototype.sanitize = function() {
   return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
 };
 
+let replaceParams = function(qs = '', pr = {}) {
+	var queryString = qs.replace(/^\?/,'').split('&');
+	var params = [];
+	queryString.forEach((e) => {
+		let param = e.split('=');
+		if (param.length >1){
+		    params.push(`${param[0]}=${pr[param[0]] || param[1]}`);
+		}
+	});
+	return `?${params.join('&')}`;
+}
+
 $(document).ready(function() {
   $("#braze_header").click((e) => {
     setTimeout(function() {
@@ -304,7 +316,7 @@ $(document).ready(function() {
     var pg_prev = nav_links.eq(nav_index - 1);//nav_active.prevAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_prev_link.attr('href',pg_prev.attr('href') );
-    pg_prev_div.html('<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> PREVIOUS</div>' + pg_prev.html() );
+    pg_prev_div.html(`<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> ${site_i18n['previous'] || 'PREVIOUS'}</div> ${pg_prev.html()}`);
     pg_prev_div.css('display', 'inline-block');
     if (nav_index < (nav_links.length -1)) {
       pg_prev_div.css('border-right', '0px');
@@ -318,7 +330,7 @@ $(document).ready(function() {
     var pg_next = nav_links.eq(nav_index + 1);//nav_active.nextAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_next_link.attr('href',pg_next.attr('href') );
-    pg_next_div.html('<div class="nav_indicator">NEXT <i class="fas fa-long-arrow-alt-right"></i></div>' + pg_next.html() );
+    pg_next_div.html(`<div class="nav_indicator">${site_i18n['next'] || 'NEXT'} <i class="fas fa-long-arrow-alt-right"></i></div> ${pg_next.html()}`);
     pg_next_div.css('display', 'inline-block');
   }
   else {
@@ -448,6 +460,8 @@ $(document).ready(function() {
     if (wovn_lang != wovn_lang_code) {
       WOVN.io.changeLang(lang);
     }
+    query_str = replaceParams(query_str,{'wovn': lang})
+
   });
 
   window.addEventListener('wovnApiReady', function(evt){

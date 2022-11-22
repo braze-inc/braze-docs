@@ -10,7 +10,7 @@ description: "This article describes how to set user IDs for each of your users,
 
 # Setting user IDs for web
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) to set the user ID:
 
@@ -28,15 +28,15 @@ Refer to the [`changeUser()` documentation][4] for more information.
 
 ## Suggested user ID naming convention
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## User ID integration best practices and notes
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Aliasing users
 
-{% include archive/setting_user_ids/aliasing.md platform="Web" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Web" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

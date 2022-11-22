@@ -29,15 +29,23 @@ In the **Basic Styling** dropdown, you can set your default email and content ba
 ![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.][2]
 
 ### Custom font
+
 With custom fonts, you can manually add a web font for branding consistency across various email platforms. Currently, you can only add one custom font per section (Basic, Title, and Text).
 
-To add a custom font, click **Add a custom font** and enter the font's name and source file URL. This source file URL must point to a style sheet like a CSS file. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
+To add a custom font:
 
-{% alert tip %}
+1. Click **Add a custom font**.
+2. Enter the font's name and source file URL. This source file URL must point to a style sheet like a CSS file. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. 
+3. Check that the preview shows your custom font before saving. 
+4. Click **Save** to use the custom font as your default email font. 
+
+{% alert important %}
 Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
 {% endalert %}
 
 ![][3]{: style="max-width:80%;"}
+
+To use alternative custom fonts in your email campaigns, you have the option to create an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). However, if you choose to do this, ensure that your font choice is still web-safe and supported on your email platforms. 
 
 ### Fallback font
 
@@ -46,6 +54,7 @@ Fallback fonts are used for the title, header, and body text when your default f
 You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
 ## Title styling
+
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
 
 ![Heading styling options for a main header example with the font size set to 34, font color as black, text alignment to center, and text direction as left to right.][6]
@@ -55,6 +64,7 @@ Optionally, you can override the default style of your Drag & Drop Editor theme.
 ![][7]{: style="max-width:60%;"}
 
 ## Text styling
+
 To set a default text style, in the **Text Styling** dropdown, enter the **Font Size** and select **Font Color** to choose a font color from the color picker. 
 
 You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the text block.

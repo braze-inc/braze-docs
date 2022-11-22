@@ -24,7 +24,21 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
-#### Note for development teams
+#### Notes for development teams
+
+###### Android 
+
+- Android 12 and under - implementing push primers is not recommended because push is opted-in by default. 
+- Android 13 and above - if you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. 
+
+###### iOS
+- The iOS prompt can be displayed only **once** per install, enforced by the operating system. 
+- The prompt will not display if the app's push setting is on or off. (e.g., will display for Provisional, not determined, etc.).
+  - If we find the app's push setting is on, we do not show the in-app message as the user is already opted-in. 
+  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app. 
+
+##### Manual code removal
+
 This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
 <br><br>
 You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.

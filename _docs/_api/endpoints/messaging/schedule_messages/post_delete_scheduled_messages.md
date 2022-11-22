@@ -20,7 +20,7 @@ Use this endpoint to cancel a message that you previously scheduled before it ha
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

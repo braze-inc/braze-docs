@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment définir les ID utilis
 
 # Définir des ID utilisateur
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après s’être connecté) afin de définir l’ID utilisateur :
 
@@ -26,11 +26,11 @@ Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un u
 
 ## Convention de dénomination des ID utilisateur suggérée
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

@@ -14,13 +14,13 @@ description: "This article outlines details about the See Available Content Bloc
 /content_blocks/info
 {% endapimethod %}
 
-Use this endpoint to call information for your existing email [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to call information for your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

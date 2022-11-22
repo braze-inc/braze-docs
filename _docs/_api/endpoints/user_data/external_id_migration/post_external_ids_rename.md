@@ -14,11 +14,9 @@ description: "This article outlines details about the external IDs Rename endpoi
 /users/external_ids/rename
 {% endapimethod %}
 
-{% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, reach out to your Success Manager.
-{% endalert %}
+Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don’t break. 
 
-Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. The deprecated ID can be removed using the [External ID remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint. Having multiple external IDs allows for a migration period whereby older versions of your apps still in the wild that use the previous external ID naming schema don’t break. We highly recommend removing deprecated external IDs once your old naming schema is no longer in use.
+After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
 
 {% alert warning %}
 Make sure to remove deprecated external IDs with the `/users/external_ids/remove` endpoint instead of `/users/delete`. Sending a request to `/users/delete` with the deprecated external ID deletes the user profile entirely and cannot be undone.
@@ -32,7 +30,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Request body
 

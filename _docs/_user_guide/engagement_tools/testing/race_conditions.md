@@ -12,7 +12,7 @@ description: "This article covers best practices to avoid race conditions from a
 
 A race condition is a concept where an outcome is dependent on the sequence or timing of other events. For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
 
-{% include video.html id="LyJaxDoMtMs" align="right" %}
+{% multi_lang_include video.html id="LyJaxDoMtMs" align="right" %}
 
 ## Targeting new users
 
@@ -33,13 +33,15 @@ If user attributes and events are sent in the same request (either from `users/t
 
 One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your Canvas or campaign. 
 
-Similarly, you can use the [`Attributes`][1] object to add/create/update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API request will process the `Attributes` object before targeting the users.
+Similarly, you can use the [`Attributes`][1] object to add, create, or update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API request will process the `Attributes` object before targeting the users.
 
 Attributes that are included in this object will be processed before Braze begins to send the campaign. If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in Braze’s database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user. The `send_to_existing_only` flag can't be used with user aliases.
 
 ## Matching action-based triggers and audience filters
 
-Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas. In this case, Braze recommends you avoid configuring your trigger to match your audience filter.
+Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas. In this case, Braze recommends you avoid configuring your trigger to match your audience filter. 
+
+However, one way to avoid this race condition can be to add a delay of more than one minute to allow users enough time to enter the Canvas.
 
 
 [1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/

@@ -89,11 +89,7 @@ If your Canvas has multiple variants or a Control Group, Braze will use this con
 
 ### Step 2b: Set your Canvas entry schedule
 
-You can choose one of three ways in which users can enter your Canvas:
-
-- Scheduled Delivery
-- Action-Based Delivery
-- API-Triggered Delivery
+You can choose one of three ways in which users can enter your Canvas.
 
 #### Entry schedule types
 
@@ -144,13 +140,9 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 ### Step 2d: Select your send settings
 
-Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
+Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 
 
-By turning on [Rate Limiting][6b] or [Frequency Capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
-
-{% alert note %}
-Visit your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account to manage your Frequency Capping rules.
-{% endalert %}
+By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To manage your frequency capping rules, go  to your **Global Message Settings** page in your Braze account.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -158,7 +150,9 @@ For Canvases targeting email and push channels, you may want to limit your Canva
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
 - **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
 
-To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default. 
+
+These subscription settings are applied on a per-step basis, meaning that there is no effect on the entry audience. So this setting is used to evaluate a user's eligibility to receive each Canvas step.
 
 {% alert important %}
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).

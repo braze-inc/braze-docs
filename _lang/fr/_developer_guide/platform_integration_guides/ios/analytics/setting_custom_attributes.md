@@ -7,7 +7,7 @@ description: "Cet article de référence montre comment définir des attributs p
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 # Définition des attributs personnalisés pour iOS
 

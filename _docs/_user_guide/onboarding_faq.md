@@ -9,7 +9,7 @@ description: "This page contains a collection of frequently asked questions, out
 
 ---
 
-{% include video.html id="keAZAlBR9zc" source="youtube" %}
+{% multi_lang_include video.html id="keAZAlBR9zc" source="youtube" %}
 
 
 <!--- Users --->

@@ -14,13 +14,13 @@ description: "This article outlines details about the Create Email Content Block
 /content_blocks/create
 {% endapimethod %}
 
-Use this endpoint to create an email [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to create a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

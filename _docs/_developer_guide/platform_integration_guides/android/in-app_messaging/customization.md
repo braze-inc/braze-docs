@@ -24,7 +24,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     fa_icon: fa fa-cog
   - name: Handling Clicks Manually
-    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
+    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     fa_icon: fa fa-mouse-pointer
   - name: Message Dismissal
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/

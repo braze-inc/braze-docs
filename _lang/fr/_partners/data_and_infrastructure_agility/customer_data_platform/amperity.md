@@ -13,7 +13,7 @@ search_tag: Partenaire
 
 > [Amperity](https://amperity.com/) est une plateforme de données client complète qui aide les marques à connaître leurs clients, à prendre des décisions stratégiques et à adopter systématiquement la meilleure ligne de conduite pour mieux servir leurs consommateurs. Amperity fournit des capacités intelligentes d’unification de la gestion des données, d’analyses, de renseignements et d’activation.
 
-{% include video.html id="06G0lxaSjgk" align="right" %}
+{% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 L’intégration de Braze et d’Amperity fournit une vue unifiée de vos clients sur les deux plateformes. Cette intégration vous permet de :
 - **Synchroniser des utilisateurs Amperity** : Synchronisez des listes d’utilisateurs pour mapper les données utilisateur d’Amperity aux comptes utilisateur Braze.

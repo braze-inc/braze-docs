@@ -120,10 +120,10 @@ You can open a session for a particular user by calling the following code in yo
 
 ```dart
 BrazePlugin braze = BrazePlugin();
-braze.changeUser("some-user-id");
+braze.changeUser("{some-user-id}");
 ```
 
-Then, search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
+Then, search for the user with `{some-user-id}` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
 
 [1]: https://pub.dev/packages/braze_plugin
 [2]: https://flutter.dev/

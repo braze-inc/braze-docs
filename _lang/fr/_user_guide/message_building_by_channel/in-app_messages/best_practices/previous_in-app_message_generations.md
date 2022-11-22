@@ -65,6 +65,7 @@ Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l�
 {% enddetails %}
 
 <br>
+
 ## Web
 
 Ceci analyse des informations précédentes sur des messages In-App plus personnalisés. Pour voir les informations les plus récentes sur notre génération de messages In-App, consultez notre [documentation sur la personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
@@ -74,7 +75,7 @@ Les messages de capture d’e-mail vous permettent d’inviter facilement les ut
 
 ![Message de capture d’e-mail]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
->  Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir l'`allowUserSuppliedJavascript`option d'initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+>  Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir l'option `allowUserSuppliedJavascript` d'initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
 **Fonctions personnalisables**
 
@@ -94,7 +95,7 @@ Bien que les messages In-App Braze soient personnalisés de diverses façons, vo
 
 Les messages In-App HTML prennent en charge une interface de pont Javascript vers le SDK Web Braze, ce qui vous permet de déclencher des actions Braze personnalisées lorsque les utilisateurs cliquent sur des éléments avec des liens ou montrent un engagement avec votre contenu. Les méthodes Javascript suivantes sont prises en charge dans les messages In-App HTML Braze :
 
-{% include archive/appboyBridge.md platform="web" %}
+{% multi_lang_include archive/appboyBridge.md platform="web" %}
 
 En outre, pour le suivi analytique, tous les éléments `<a>` ou `<button>` dans votre HTML enregistrent automatiquement une action de clic sur la campagne associée au message In-App. Pour enregistrer un « clic sur bouton » au lieu d’un « clic dans le corps », entrez une valeur de chaîne de caractères abButtonId dans les href de votre lien (par ex., `<a href="http://mysite.com?abButtonId=0">click me</a>`) ou un identifiant dans l’élément HTML (par ex., `<a id="0" href="http://mysite.com">click me</a>`). Notez que seuls les identifiants de bouton « 0 » et « 1 » sont actuellement acceptés. Un lien avec un ID de bouton 0 est représenté comme « Bouton 1 » dans le tableau de bord, tandis qu’un lien avec un ID de bouton 1 est représenté comme « Bouton 2 »."
 
@@ -117,6 +118,7 @@ Nous avons conçu un ensemble de modèles de messages In-App HTML5 pour vous aid
 {% enddetails %}
 
 <br>
+
 ## Spécifications
 
 Ceci analyse des informations précédentes sur les spécifications créatives des messages In-App. Pour voir les informations les plus récentes sur notre génération de messages In-App, consultez notre [documentation sur les spécifications créatives]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).

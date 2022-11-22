@@ -119,7 +119,7 @@ hide_breadcrumb: true
     <!-- popular -->
     <div id="doc_right" class="col-xl">
       <div id="doc_popular" class="doc_info">
-        <div class="doc_name">Popular Topics</div>
+        <div class="doc_name">{{ site.data.i18n[site.language]['popular_topic'] | default: "Popular Topics"}}</div>
         <div class="doc_description">
         {%- for doc_list in page.popular_topic_list  -%}
           <div>
@@ -129,7 +129,7 @@ hide_breadcrumb: true
       </div>
       </div>
       <div id="doc_helpful" class="doc_info">
-        <div class="doc_name">Helpful Resources</div>
+        <div class="doc_name">{{ site.data.i18n[site.language]['helpful_resources'] | default: "Helpful Resources"}}</div>
         <div class="doc_description">
         {%- for doc_list in page.helpful_resources_list  -%}
           <div>
@@ -141,8 +141,8 @@ hide_breadcrumb: true
       <div id="gradient"></div>
       <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
         <div id="doc_status" class="doc_info">
-            <div class="status-title">BRAZE SYSTEM STATUS</div>
-            <div class="color-dot"></div><div class="color-description">Checking Status</div>
+            <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] | default: "BRAZE SYSTEM STATUS"}}</div>
+            <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] | default: "Checking Status"}}</div>
         </div>
       </a>
 

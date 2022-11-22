@@ -6,7 +6,7 @@ page_order: 10
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "This landing page is home to sample Liquid use cases organized by category, such as Anniversaries, App Usage, Countdowns, and more."
+description: "This landing page is home to sample Liquid use cases organized by category, such as anniversaries, app usage, countdowns, and more."
 
 ---
 
@@ -29,35 +29,33 @@ This use case shows how to calculate a user’s app anniversary based on their i
 
 {% raw %}
 ```liquid
-{% assign this_month = 'now' | date: "%B" %}
+{% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = {{custom_attribute.${signup_date}}} | date: "%B" %}
-{% assign anniversary_day = {{custom_attribute.${signup_date}}} | date: "%d" %}
-{% assign anniversary_year = {{custom_attribute.${signup_date}}} | date: "%Y" %}
-{% if {{this_month}} == {{anniversary_month}} %}
-{% if {{this_day}} == {{anniversary_day}} %}
-{% if {{anniversary_year}} == ‘2021’ %}
-Happy one year anniversary!
-{% elsif {{anniversary_year}} == ‘2020’ %}
-Happy two year anniversary!
-{% elsif {{anniversary_year}} == ‘2019’ %}
-Happy three year anniversary!
-{% elsif {{anniversary_year}} == ‘2018’ %}
-Happy four year anniversary!
-{% elsif {{anniversary_year}} == ‘2017’ %}
-Happy five year anniversary!
-{% elsif {{anniversary_year}} == ‘2016’ %}
-Happy six year anniversary!
-{% elsif {{anniversary_year}} == ‘2015’ %}
-Happy seven year anniversary!
-{% else %}
-{% abort_message(not same month) %}
-{% else %}
-{% abort_message(not same day) %}
+{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+
+{% if this_month == anniversary_month %} 
+{% if this_day == anniversary_day %} 
+{% if anniversary_year == '2021' %}
+Heute vor genau einem Jahr haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2020' %}
+Heute vor genau zwei Jahren haben wir uns das erste Mal getroffen!
+
+{% elsif anniversary_year == '2019' %}
+Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
+
 {% else %}
 {% abort_message(not same year) %}
 {% endif %}
+
+{% else %} 
+{% abort_message(not same day) %} 
 {% endif %}
+
+{% else %}
+{% abort_message(not same month) %}
 {% endif %}
 ```
 {% endraw %}
@@ -229,7 +227,7 @@ Countdowns
 - [Create a countdown for specific shipping dates and priorities](#countdown-shipping-options)
 - [Create a countdown in days](#countdown-days)
 - [Create a countdown from days to hours to minutes](#countdown-dynamic)
-- [Create a countdown to a future date](#countdown-future-date)
+- [Show how many days left until a certain date](#countdown-future-date)
 - [Display how many days left until a custom date attribute will arrive](#countdown-custom-date-attribute)
 - [Display how much time is left, and abort the message if there's only X time left](#countdown-abort-window)
 - [In-app message to send X days before user's membership ends](#countdown-membership-expiry)
@@ -356,7 +354,7 @@ You have {{difference_days}} days left till your order arrives!
 You will need a custom attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes.
 {% endalert %}
 
-### Create a countdown to a future date {#countdown-future-date}
+### Show how many days left until a certain date {#countdown-future-date}
 
 This use case calculates the difference between the current date and future event date and displays a message noting how many days until the event.
 
@@ -610,6 +608,8 @@ Custom event
 - [Abort push notification if a custom event is within two hours of now](#event-abort-push)
 - [Send a campaign each time a user performs a custom event three times](#event-three-times)
 - [Send a message to users who have only purchased from one category](#event-purchased-one-category)
+- [Track how many times a custom event occured over the past month](#track)
+
 
 ### Abort push notification if a custom event is within two hours of now {#event-abort-push}
 
@@ -666,6 +666,43 @@ This use case captures a list of the categories a user has purchased from, and i
 ```
 {% endraw %}
 
+### Track how many times a custom event occurred over the past month {#track}
+
+This use case calculates the number of times a custom event has been logged between the 1st of the current month and the previous month. You can then run an users/track call to update store this value as a custom attribute. Note that this campaign would need to run for two consecutive months before monthly data can be used.
+
+{% raw %}
+```liquid
+{% for custom_event in response.users[0].custom_events %}
+{% assign ce_name = custom_event.name %}
+{% comment %} The following Custom Event name will need to be amended for the target Custom Event. {% endcomment %}
+
+{% if ce_name == "Project Exported" %}
+{% comment %}{{custom_event.name}}: {{custom_event.count}}{% endcomment %}
+{% assign current_count = custom_event.count %}
+{% endif %}
+{% endfor %}
+
+{% assign prev_month_count = {{custom_attribute.${projects_exported_prev_month}}} %}
+{% assign latest_count = current_count | minus: prev_month_count %}
+{% assign now = '"now" | date: "%s" %}
+{% assign yesterday = {{now}} | minus: 86400 %}
+{% assign previous_month = {{yesterday}} | date: "%B" %}
+{% assign previous_year = {{yesterday}} | date: "%y" %}
+{% assign formatted_month = previous_month | downcase %}
+{% comment %}The Custom Event name that is being tracked will be needed to be amended for the target Custom Event in the Attribute Name below. {% endcomment %}
+```
+
+```json
+"attributes": [
+  {
+    "external_id":"{{${user_id}}}",
+       "projects_exported_{{formatted_month}}_{{previous_year}}": "{{latest_count}}"
+  }
+]
+```
+
+{% endraw %}
+
 {% endapi %}
 
 {% api %}
@@ -677,6 +714,7 @@ Language
 {% endapitags %}
 
 - [Display month names in a different language](#language-display-month)
+- [Display an image based on a user's language](#language-image-display)
 - [Personalize messaging based on day of the week and user's language](#language-personalize-message)
 
 ### Display month names in a different language {#language-display-month}
@@ -717,6 +755,24 @@ This use case will display the current date, month, and year, with the month in 
 ```
 {% endraw %}
 
+### Display an image based on a user's language {#language-image-display}
+
+This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze Media Library.
+
+{% raw %}
+```liquid
+{% if ${language} == 'en' %}
+English image URL (for example, https://cdn-staging.braze.com/appboy/communication/assets/image_assets/images/60aecba96a93150c749b4d57/original.png?1622068137)
+{% elsif ${language} == 'ru' %}
+Russian image URL
+{% elsif ${language} == 'es' %}
+Spanish image URL
+{% else %}
+Fallback image URL
+{% endif %}
+```
+{% endraw %}
+
 ### Personalize messaging based on day of the week and user's language {#language-personalize-message}
 
 This use case checks the current day of the week and, based on the day, if the user's language is set to one of the language options provided, it will display a specific message in their language.
@@ -725,7 +781,7 @@ The example provided stops on Tuesday but can be repeated for each day of the we
 
 {% raw %}
 ```liquid
-{% assign today  = 'now' | date: "%A" %}
+{% assign today  = 'now' | date: '%A' %}
 
 {% if today == 'Monday' %}
 {% if ${language} == 'es' %}
@@ -773,6 +829,7 @@ Miscellaneous
 {% endapitags %}
 
 - [Avoid sending emails to customers that have blocked marketing emails](#misc-avoid-blocked-emails)
+- [Use a customer's subscription state to personalize content in messages](#misc-personalize-content)
 - [Capitalize the first letter of every word in a string](#misc-capitalize-words-string)
 - [Compare custom attribute value against an array](#misc-compare-array)
 - [Create an upcoming event reminder](#misc-event-reminder)
@@ -781,6 +838,7 @@ Miscellaneous
 - [Find the smallest value in an array](#misc-smallest-value)
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
+- [Format a string into a phone number](#phone-number)
 
 ### Avoid sending emails to customers that have blocked marketing emails {#misc-avoid-blocked-emails}
 
@@ -808,6 +866,19 @@ Your message here!
 {% alert note %}
 Content Blocks have a size limit of 5 MB.
 {% endalert %}
+
+### Use a customer's subscription state to personalize content in messages {#misc-personalize-content}
+
+This use case takes a customer's subscription state to send personalized content. Customers are who subscribed to a specific subscription group will receive an exclusive message for both email and SMS subscription groups.
+
+{% raw %}
+```liquid
+{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+This is an exclusive message for subscribed users!
+{% else %} This is the default message for other users.
+{% endif %}
+```
+{% endraw %}
 
 ### Capitalize the first letter of every word in a string {#misc-capitalize-words-string}
 
@@ -850,6 +921,8 @@ Today's offer from {{store}}
 
 This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
 
+With this use case, the following should go in the body of a [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) or Canvas step.
+
 {% raw %}
 ```liquid
 {% comment %}
@@ -866,8 +939,8 @@ When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas A
 The following step calculates how much there is between today's date and the Reminder Date as 'time_to_reminder'.
 {% endcomment %}
 
-{% assign today = "now" | date: "%s" %}
-{% assign reminder_start_date = {{event_properties.${reminder_date}}} | date: "%s" %}
+{% assign today = "now" | date: '%s' %}
+{% assign reminder_start_date = {{event_properties.${reminder_date}}} | date: '%s' %}
 {% assign time_to_reminder = reminder_start_date | minus: today %}
 
 {% comment %}
@@ -878,7 +951,7 @@ N.B. Additional time zones would need to be catered for by adding an additional 
 
 {% if {{time_to_reminder}} > 2246400 %}
 {% assign time_to_first_message = reminder_start_date | plus: 2246400 %}
-{{ time_to_first_message | date: "%Y-%m-%dT%H:%M" }}
+{{ time_to_first_message | date: '%Y-%m-%dT%H:%M' }}
 {
 "canvas_id": "954e15bc-af93-9dc8-a863-ad2580f1750e",
 "recipients": [
@@ -888,14 +961,14 @@ N.B. Additional time zones would need to be catered for by adding an additional 
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -916,9 +989,9 @@ Users are scheduled to enter the journey on day 13.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
@@ -944,14 +1017,14 @@ Users are scheduled to enter the journey on day 7.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 
@@ -972,14 +1045,14 @@ Users are scheduled to enter the journey on day 2.
 ],
 "trigger_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder_date" : "{{event_properties.${reminder_date} | date: "%Y-%m-%dT%H:%M:%S+0000}}",
+"reminder_date" : "{{event_properties.${reminder_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message_personalisation_X" : "{{event_properties.${property_x}}}",
-"message_personalisation_Y" : "{{event_properties.${property_x}}}",
+"message_personalisation_Y" : "{{event_properties.${property_y}}}",
 "message_personalisation_Z" : "{{event_properties.${property_z}}}"
 },
 
 "schedule": {
-"time": "{{ time_to_first_message | date: "%Y-%m-%dT%H:%M:%S+0000" }}"
+"time": "{{ time_to_first_message | date: '%Y-%m-%dT%H:%M:%S+0000' }}"
 }
 }
 {% endif %}
@@ -1100,6 +1173,17 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 
 {% alert important %} You will need to find matches between the arrays first, then build logic at the end to split up the matches. {% endalert %}
 
+### Format a string into a phone number {#phone-number}
+
+This use case shows you how to index the `phone_number` user profile field (by default, formatted as a string of integers), and reformat it based on your local phone number standards. For example, 1234567890 to (123)-456-7890.
+
+{% raw %} 
+```liquid
+{% assign phone = {{${phone_number}}} | remove: "-" | split: '' %}
+
+({{ phone[0] }}{{ phone[1] }}{{ phone[2] }})-{{ phone[3] }}{{ phone[4] }}{{ phone[5] }}-{{ phone[6] }}{{ phone[7] }}{{ phone[8] }}{{ phone[9] }}
+```
+{% endraw %}
 
 {% endapi %}
 
@@ -1111,13 +1195,13 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 Platform targeting
 {% endapitags %}
 
-- [Differentiate in-app message copy by device OS](#platform-device-os)
+- [Differentiate copy by device OS](#platform-device-os)
 - [Target only a specific platform](#platform-target)
 - [Target only iOS devices with a specific OS version](#platform-target-ios-version)
 - [Target only Web browsers](#platform-target-web)
 - [Target a specific mobile carrier](#platform-target-carrier)
 
-### Differentiate in-app message copy by device OS {#platform-device-os}
+### Differentiate copy by device OS {#platform-device-os}
 
 This use case checks what platform a user is on, and depending on their platform, will display specific messaging.
 
@@ -1190,6 +1274,24 @@ This message will display on your desktop web browser.
 ```
 {% endraw %}
 
+The following use case checks if a web users is on iOS or Android and, if so, will display a specific message.
+
+{% raw %}
+```liquid
+{% if {{targeted_device.${os} == 'Android'}} and {{targeted_device.${platform} == 'web'}} %}
+
+Content for Android
+
+{% elsif {{targeted_device.${os} == 'iOS'}} and {{targeted_device.${platform} == 'web'}} %}
+
+Content for iOS
+
+{% else %}
+{% abort_message %}
+{% endif %}
+```
+{% endraw %}
+
 ### Target a specific mobile carrier {#platform-target-carrier}
 
 This use case checks if a user's device carrier is Verizon, and if so, will display a specific message.
@@ -1218,12 +1320,29 @@ This is a message for Verizon users!
 Time zones
 {% endapitags %}
 
+- [Personalize a message depending on a user's time zone](#personalize-timezone)
 - [Append the CST time zone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
 - [Only send a Canvas push during a window of time in a user's local time zone](#time-canvas-window)
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
 - [Send different messages on weekdays versus weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
+
+### Personalize a message depending on a user's time zone {#personalize-timezone}
+
+This use case displays different messages based on a user's time zone.
+
+{% raw %}
+```liquid
+{% if {{${time_zone}}} == ‘xx’ %}
+Message for time zone xx.
+{% elsif {{$time_zone}}} == ‘yy’ %}
+Message for timezone yy.
+{% else %}
+{% abort_message() %}
+{% endif %}
+```
+{% endraw %}
 
 ### Append the CST time zone to a custom attribute {#time-append-cst}
 

@@ -17,7 +17,7 @@ Message Steps allow you to add a standalone message where you want in your Canva
 
 ## Create a Message component
 
-To create a Message component, first add a step to your Canvas. For Canvas Flow, drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Message**.
+To create a Message component, first add a step to your Canvas. For Canvas Flow, drag and drop the Message component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Message**.
 
 ### Set up messages
 
@@ -39,7 +39,7 @@ The Message component also includes settings for Intelligent Delivery, Quiet Hou
 
 Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 
-Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent.
+Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent. If a user doesn't meet the set delivery validations for a Message step, they will exit the Canvas at the step.
 
 ![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.][4]{: style="max-width:80%;"}
 

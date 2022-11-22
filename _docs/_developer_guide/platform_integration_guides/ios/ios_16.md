@@ -21,7 +21,7 @@ Apple has announced two changes to their Web Push functionality.
 
 Previously, Apple supported push notifications on macOS (desktop) using their own Safari push APIs.
 
-Beginning in macOS Ventura, [Safari will add support](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/#web-push-for-macos) for Web Push APIs in addition to Safari push. This is an existing cross-browser API standard used in other popular browsers.
+Beginning in macOS Ventura (released October 24, 2022), [Safari has added support](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/#web-push-for-macos) for Web Push APIs in addition to Safari push. This is an existing cross-browser API standard used in other popular browsers.
 
 If you're already sending Web Push for Safari through Braze, no change is needed.
 

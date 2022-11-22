@@ -30,7 +30,6 @@ The following table describes how users can use each editor block type.
 | `Menu` |  Creates a flexible menu for the message you're designing. |
 | `Spacer` |  Adds space, or "padding", between other blocks. |
 | `Social Icon` | Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
-| `Video` | Inserts a preview image for a video. The image links to a YouTube or Vimeo URL. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
@@ -41,27 +40,56 @@ Details for each editor block's properties are provided in the following tables.
 
 | properties | description |
 |---|---|
-| `Title`  | Selects the heading style. Only H1, H2, or H3 are available. | 
-|`Font Family`| This is the font style for your title. |
-|`Font Size`| Determines the size of your text. |
-|`Text Color`| Modifies the color of the title. |
-|`Link Color`| Modifies the color of the link. |
+|`Title`| Selects the heading style. Only H1, H2, or H3 are available. | 
+|`Font family`| This is the font style for your title. |
+|`Font weight`| This is the overall boldness of the font. |
+|`Font size`| Determines the size of your text. |
+|`Text color`| Modifies the color of the title. |
+|`Link color`| Modifies the color of the link. |
 |`Align`| Moves the title to be left, center or right-oriented. |
-|`Line Height`| Modifies the distance between lines of text. |
+|`Line height`| Modifies the distance between lines of text. |
 |`Line spacing`| Modifies the distance in between each character. |
 |`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Text
+### Paragraph
 
-Refer to the following table for details on the `Text` editor block properties.
+Refer to the following table for details on the `Paragraph` editor block properties.
 
 | properties | description |
 |---|---|
-|`Text Color`| Modifies the color of the title. |
-|`Link Color`| Modifies the color of the link. |
-|`Line Height`| Modifies the distance between lines of text|
-|`Line spacing`| Modifies the distance in between each character|
+|`Font family`| This is the font style for your paragraph text. |
+|`Font weight`| This is the overall boldness of the font. |
+|`Font size`| Determines the size of your text. |
+|`Text color`| Modifies the color of the title. |
+|`Link color`| Modifies the color of the link. |
+|`Align`| Moves the title to be left, center or right-oriented. |
+|`Paragraph spacing`| Modifies the space between paragraphs. |
+|`Line height`| Modifies the distance between lines of text. |
+|`Letter spacing`| Modifies the distance in between each character. |
+|`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### List
+
+Refer to the following table for details on the `List` editor block properties.
+
+| properties | description |
+|---|---|
+|`List type`| This is the type of list. Can be either bulleted or numbered. |
+|`List style type`| Determines the style of your list. |
+|`Start list from`| Determines the starting number for your list. |
+|`Font family`| This is the font style for your paragraph text. |
+|`Font weight`| This is the overall boldness of the font. |
+|`Font size`| Determines the size of your text. |
+|`Text color`| Modifies the color of the title. |
+|`Link color`| Modifies the color of the link. |
+|`Align`| Moves the title to be left, center or right-oriented. |
+|`List items spacing`| Modifies the space between list items. |
+|`List items indent`| Modifies the indentation of list items. |
+|`Line height`| Modifies the distance between lines of text. |
+|`Letter spacing`| Modifies the distance in between each character. |
+|`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Image
@@ -99,9 +127,9 @@ Refer to the following table for details on the `Divider` editor block.
 | properties | description |
 |---|---|
 |`Transparent`| If enabled, 'line' and 'width' options are removed. |
-|`Line `| The different line formats, whether dotted, spotted, or solid.  In addition, you can modify the thickness and color of the divider line|
-|`Width `| Adjusts the spread of the divider in increments of 5  |
-|`Align`| Moves the line to be either left, center, or right-oriented |
+|`Line`| The different line formats, whether dotted, spotted, or solid.  In addition, you can modify the thickness and color of the divider line. |
+|`Width `| Adjusts the spread of the divider in increments of 5.  |
+|`Align`| Moves the line to be either left, center, or right-oriented. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### HTML
@@ -110,7 +138,7 @@ Refer to the following table for details on the `HTML` editor block.
 
 | properties | description |
 |---|---|
-|`html editor`| Enter the raw HTML |
+|`html editor`| Enter the raw HTML. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Menu
@@ -139,7 +167,7 @@ Refer to the following table for details on the `Spacer` editor block.
 
 | properties | description |
 |---|---|
-|`height`| Adjusts the height of the spacer block. The default is 60px.|
+|`Height`| Adjusts the height of the spacer block. The default is 60px.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Social icon
@@ -150,17 +178,6 @@ Refer to the following table for details on the `Social Icon` editor block.
 |---|---|
 |`Select icon collection`| The style of your icon collection. |
 |`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-### Video
-
-Refer to the following table for details on the `Video` editor block.
-
-| properties | description |
-|---|---|
-|`Video url`| The YouTube or Vimeo URL that generates a preview image. |
-|`Padding`| Modifies the padding of the preview image. |
-|`Hide on`| Option to hide the content on mobile or desktop views. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Add Liquid personalization

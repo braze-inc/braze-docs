@@ -20,7 +20,7 @@ Use this endpoint to retrieve relevant information on a segment, which can be id
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

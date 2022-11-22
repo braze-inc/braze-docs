@@ -11,12 +11,12 @@ search_tag: Partner
 
 # Segment  
 
-{% include video.html id="RfOHfZ34hYM" align="right" %}
+{% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
 > [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
-- Sync [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/) to Braze for use in Braze campaign and Canvas segmentation.
+- Sync [Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to Braze’s REST APIs
 - [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
 
@@ -49,7 +49,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
-| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -155,7 +155,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. |
 | Allow crawler activity | By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. |
 | Enable logging | Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the javascript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
-| Open News Feed cards in a new tab (open cards in new tab) | By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window.|
+| Open News Feed cards in a new tab (open cards in new tab) | By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window. <br><br>**Note:** News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more. |
 | Allow user-supplied Javascript | By default, the Braze Web SDK does not allow user-supplied Javascript click actions, as it allows Braze dashboard users to run Javascript on your site. To indicate that you trust the Braze dashboard users to write non-malicious Javascript click actions, set this property to `TRUE`. If `enableHtmlInAppMessages` is `TRUE`, this option will also be set to `TRUE`. |
 | App version| If you provide a value for this option, user events sent to Braze will be associated with the given version, which can be used for user segmentation. |
 | Session timeout in seconds | Defaults to 30.<br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | 

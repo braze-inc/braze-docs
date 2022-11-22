@@ -11,7 +11,7 @@ search_tag: Partner
 
 # mParticle
 
-{% include video.html id="Njhqwd36gZM" align="right" %}
+{% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
 > mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key customer journey moments.
 
@@ -105,7 +105,7 @@ The mParticle and Braze SDK will be present on your application through the embe
 
 These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations). 
 
-The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, News Feed, and all relevant message analytics tracking).
+The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, and all relevant message analytics tracking).
 
 {% alert note %}
 For Content Cards and custom in-app message integrations, call Braze's SDK methods directly.
@@ -138,7 +138,7 @@ Not all connection settings will apply to all platforms and integration types. F
 This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow [mParticle's documentation](https://docs.mparticle.com/guides/platform-guide/connections/).
 
 {% alert important %}
-Server-to-server integration does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method. 
+Server-to-server integration does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method. 
 
 Consider a side-by-side integration if you wish to use these features.
 
@@ -205,7 +205,7 @@ Turning off this setting won't check for changing data. It will, however, preven
 There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
 1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (e.g., a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
   - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point consumption will be far less than sending all user attributes on every call with the feature enabled.
-2. Calculated attributes are only passed to Braze as an enriched user attribute, so these will not be available to customers who turn off "Enriched User Attributes".
+2. Calculated Attributes are passed to Braze as an enriched user attribute, so when "Enriched User Attributes" is turned off these will no longer be passed to Braze. To forward calculated attributes to Braze when "Enriched User Attributes" are turned off, a [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) could help without pushing all the attributes. The feed will fire an update downstream to Braze when a calculated attribute changes. 
 
 ### Sending unnecessary or duplicative data to Braze
 Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.

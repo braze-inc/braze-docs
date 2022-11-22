@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Branch pour la création de liens profonds {#branch}
 
-{% include video.html id="PwGKqfwV-Ss" align="right" %}
+{% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
 > [Branch][1] est une plateforme de liaison mobile qui vous aide à acquérir, engager et mesurer à travers tous les appareils, canaux et plateformes en vous offrant une vue complète de tous les points de contact avec les utilisateurs.
 

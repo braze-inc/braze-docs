@@ -8,7 +8,7 @@ description: "Cet article de référence couvre les étapes initiales d’intég
 ---
 
 # Intégration SDK initiale
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 Le SDK Braze vous fournira une API pour signaler les informations à utiliser pour l’analytique, la segmentation et l’engagement, ainsi que la possibilité d’enregistrer des utilisateurs pour les notifications push et reçues.
 

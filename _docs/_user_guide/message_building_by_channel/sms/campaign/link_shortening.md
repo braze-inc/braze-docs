@@ -12,11 +12,7 @@ channel:
 
 # Link Shortening
 
-> Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect open-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. 
-
-{% alert important %}
-Link Shortening is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+> Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. 
 
 ## Overview
 
@@ -87,6 +83,10 @@ Yes! Any static URL parameters can be added.
 #### How long do shortened URLs remain valid?
 
 One year.
+
+#### Will Link Shortening work with deep links or universal links?
+
+Link Shortening will only shorten static URLs that start with _http://_ or _https://_. It is not advised to further shorten generated universal links (from providers such as Branch or Firebase) as this may break the attribution or redirect of those tools.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 

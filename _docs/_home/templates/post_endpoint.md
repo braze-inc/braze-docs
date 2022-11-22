@@ -29,7 +29,7 @@ Use this endpoint to remove "invalid" phone numbers from Braze's invalid list. T
 ## Rate limit
 
 <!-- The rate limit of the endpoint. This pulls from /includes/rate_limits/ and displays specific endpoint limits based on the endpoint provided -->
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request Body
 

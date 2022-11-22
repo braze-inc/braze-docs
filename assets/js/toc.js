@@ -10,7 +10,7 @@
       listPrefix: 'toc_',
       showEffect: 'fadeIn', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'fast', // set to 0 to deactivate effect
-      toc_header: 'On this page...',
+      toc_header: `${ site_i18n['page_nav_title'] || "On this page"}...`,
       toc_header_class: 'toc_header',
       toc_container_class: 'toc_container',
       toc_item_class: 'nav_item',

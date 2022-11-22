@@ -11,8 +11,8 @@ guide_featured_list:
 - name: Segment
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/
   fa_icon: fas fa-user-circle
-- name: Segment Personas
-  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
+- name: Segment Engage
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/
   fa_icon: fas fa-users
 - name: Segment for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/

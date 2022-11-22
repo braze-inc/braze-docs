@@ -15,6 +15,6 @@ channel:
 
 > This reference article covers SMS metrics used at Braze, as well as how to view them in your SMS campaigns.
 
-{% include campaign_analytics.md channel="SMS" %}
+{% multi_lang_include campaign_analytics.md channel="SMS" %}
 
 

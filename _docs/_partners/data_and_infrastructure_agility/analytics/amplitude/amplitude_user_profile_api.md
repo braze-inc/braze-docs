@@ -1,6 +1,6 @@
 ---
-nav_title: Amplitude User Profile API
-article_title: Amplitude User Profile API Endpoints
+nav_title: Amplitude and Connected Content
+article_title: Amplitude and Connected Content
 page_order: 0
 alias: /partners/amplitude_api_endpoints/
 page_type: partner
@@ -9,9 +9,9 @@ search_tag: Partner
 
 ---
 
-# Amplitude user profile API endpoints
+# Amplitude and Connected Content
 
-> Amplitude's user profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
+> Amplitude's user profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. The following lists common Amplitude API endpoints that an be used with Connected Content.
 
 ## Endpoint parameters
 

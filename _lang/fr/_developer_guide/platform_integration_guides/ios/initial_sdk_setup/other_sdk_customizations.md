@@ -7,7 +7,7 @@ page_order: 3
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 # Autres personnalisations du SDK

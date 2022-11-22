@@ -10,7 +10,7 @@ description: "Cet article décrit comment définir des ID utilisateur pour chacu
 
 # Définir des ID utilisateur pour le Web
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après s’être connecté) afin de définir l’ID utilisateur :
 
@@ -25,15 +25,15 @@ Reportez-vous à la [`changeUser()` documentation ][4] pour plus d’information
 
 ## Convention de dénomination des ID utilisateurs suggérée
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 ## Donner un alias aux utilisateurs
 
-{% include archive/setting_user_ids/aliasing.md platform="Web" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Web" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

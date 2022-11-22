@@ -65,7 +65,7 @@ You can export the following data from Braze to Segment:
 | Push Notification Sent         | A push notification was successfully sent. |
 | Push Notification Tapped       | User opened a push notification. |
 | Push Notification Bounced      | Braze was not able to send a push notification to this User. |
-| iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. |
+| iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. <br> (Please note, this event is deprecated on our Obj-C SDK and not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).)|
 | Email Sent                     | An email was successfully sent. |
 | Email Delivered                | An email was successfully delivered to a User's mail server. |
 | Email Opened                   | User opened an email. |
@@ -99,6 +99,10 @@ You can export the following data from Braze to Segment:
 | Experiment Conversions | User converts for a Canvas experiment step. |
 | Experiment Split Entries | User enters a Canvas experiment step path. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 {% endtab %}
 {% tab Export properties %}

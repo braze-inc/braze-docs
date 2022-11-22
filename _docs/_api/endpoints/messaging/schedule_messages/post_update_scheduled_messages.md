@@ -20,7 +20,7 @@ Use this endpoint to update scheduled messages. This endpoint accepts updates to
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

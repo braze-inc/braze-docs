@@ -550,3 +550,20 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewi
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
 
+validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
+validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
+
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalog/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/';
+
+validurls['/docs/api/endpoints/catalogs/delete_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/';
+validurls['/docs/api/endpoints/catalogs/get_catalog_item_details/'] = '/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/';
+validurls['/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/';
+validurls['/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/';
+
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
+
+validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog_items_bulk/';
+validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/';
+validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/';

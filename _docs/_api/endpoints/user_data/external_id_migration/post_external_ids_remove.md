@@ -14,11 +14,11 @@ description: "This article outlines details about the external IDs Remove endpoi
 /users/external_ids/remove
 {% endapimethod %}
 
-{% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, reach out to your Success Manager.
-{% endalert %}
-
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
+
+{% alert warning %}
+This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove deprecated `external_ids` that are still associated with users in your system can permanently prevent you from finding those users' data.
+{% endalert %}
 
 You can send up to 50 external IDs per request.
 
@@ -28,7 +28,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Request body
 

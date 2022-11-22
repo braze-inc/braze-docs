@@ -39,7 +39,6 @@ This status indicates campaigns with multivariate tests that have finished runni
 ## Completed
 Completed campaigns have finished sending and are not scheduled to send again in the future.
 
-
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns
 [3]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-5-pick-the-action-that-determines-the-winner
