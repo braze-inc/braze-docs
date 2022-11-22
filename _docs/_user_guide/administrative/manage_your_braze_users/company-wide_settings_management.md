@@ -33,16 +33,18 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 The following table lists available notifications:
 
-| Notification | Description | Webhook Support |
+| Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|
-| AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Yes |
-| Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to. | Yes |
-| Scheduled Campaign Limit Met | Notifies recipients when a scheduled recurring campaign is not sent because the total campaign limit has been met. | Yes |
-| Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Yes |
-| Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Yes |
-| Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Yes |
-| News Feed Card Published/Live | Notifies recipients when News Feed cards are scheduled or published. <br><br>**Note:** News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more. | Yes |
-| Weekly Analytics Report | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | No |
+| AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Email, Webhook |
+| Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
+| Connected Content Errors | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
+| News Feed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
+| Push Credential Errors | Notifies recipients when an app’s push credentials are invalid and when an app’s push credentials are expiring soon. | Email, Webhook |
+| Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send but had no eligible users to send to. | Email, Webhook |
+| Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
+| Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
+| Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
+| Weekly Analytics Report | Sends a summary of the past week’s app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Slack incoming webhook integration
