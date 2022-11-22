@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create New Dashboard User Account Endpoint."
+description: "This article outlines details about the Create New Dashboard User Account endpoint."
 
 ---
 
@@ -26,40 +26,11 @@ This endpoint allows you to create a new dashboard user account by specifying em
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 ```
 {
-  "schemas": (required, array of strings),
-  "id": (required, string),
-  "userName": (required, string),
-  "name": (required, JSON object),
-  "department": (required, string),
-  "permissions": (required, JSON object)
-}
-```
-
-## Request parameters
-
-| Parameter | Required | Data type | Description |
-| --------- | -------- | --------- | ----------- |
-| Schemas | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
-| `id` | Required | String | The user's resource ID. |
-| `userName` | Required | String | The user’s email address. |
-| `name` | Required | JSON object | This object contains the user's given name and family name. |
-| `department` | Required | String | Valid department string from the [department string table]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Required | JSON object | Permissions object as described in the [Permissions object]({{site.baseurl}}/scim_api_appendix/#permissions-object) section. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-## Example request
-```json
-curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
---header 'Content-Type: application/json' \
---header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
---data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "id": "9d5a095c-a350-4c88-bfc2-7e11782c1862",
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
@@ -81,17 +52,57 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
             } 
         ]
     }
-}' 
+}
+```
+
+## Request parameters
+
+| Parameter | Required | Data type | Description |
+| --------- | -------- | --------- | ----------- |
+| `schemas` | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
+| `userName` | Required | String | The user’s email address. |
+| `name` | Required | JSON object | This object contains the user's given name and family name. |
+| `department` | Required | String | Valid department string from the [department string documentation]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Required | JSON object | Permissions object as described in the [permissions object documentation]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Example request
+```json
+curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
+--header 'Content-Type: application/json' \
+--header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data raw '{
+    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+    "userName": "user@test.com",
+    "name": {
+        "givenName": "Test",
+        "familyName": "User"
+    },
+    "department": "finance",
+    "permissions": {
+        "companyPermissions": ["manage_company_settings"],
+        "appGroup": [
+            {
+                "appGroupName": "Test App Group",
+                "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
+                "team": [
+                    {
+                         "teamName": "Test Team",                  
+                         "teamPermissions": ["basic_access","export_user_data"]
+                    }
+                ]
+            } 
+        ]
+    }
+}
 ```
 
 ## Response
 ```json
-CContent-Type: application/json
-X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "id": "user@test.com",
+    "id": "dfa245b7-24195aec-887bb3ad-602b3340",
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
