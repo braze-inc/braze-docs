@@ -3,19 +3,19 @@ nav_title: "In-App Messages"
 article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/
-layout: featured
+layout: dev_guide
 guide_top_header: "In-App Messages"
 guide_top_text: "In-app messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
 description: "In-app messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app."
 channel:
   - in-app messages
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: "About in-app messages"
+- name: "About In-App Messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
   fa_icon: fas fa-check
-- name: "Creating an in-app message"
+- name: "Create an In-App Message"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile-alt
 - name: "Drag & Drop Editor"
@@ -27,6 +27,9 @@ guide_featured_list:
 - name: "Customize"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   fa_icon: fas fa-cog
+
+guide_menu_title: "More Articles"
+guide_menu_list:
 - name: "Testing"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
   fa_icon: fas fa-vial
@@ -48,6 +51,5 @@ guide_featured_list:
 - name: "FAQs"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
   fa_icon: fas fa-question
-
 ---
 <br><br>

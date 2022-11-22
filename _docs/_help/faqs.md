@@ -58,9 +58,6 @@ guide_menu_list:
   - name: "SMS Best Practices"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
     fa_icon: fa-solid fa-comment-sms
-  - name: "News Feed Best Practices"
-    link: /docs/user_guide/engagement_tools/news_feed/best_practices/
-    fa_icon: fas fa-newspaper
 
 
 local_redirect: #what-does-local-time-zone-delivery-offer
