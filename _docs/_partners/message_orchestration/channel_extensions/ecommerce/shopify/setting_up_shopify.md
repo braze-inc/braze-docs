@@ -27,10 +27,6 @@ You can optionally unlock a new channel on your Shopify store for in-browser mes
 
 ### Step 5: Collect email or SMS subscribers
 
-{% alert important %}
-Collecting email or SMS subscribers is in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 At this step, select whether you want to collect email and SMS opt-ins from your Shopify store to sync to Braze.
 
 ![][77]{: style="max-width:60%;"}
@@ -43,6 +39,12 @@ If there is an existing global subscription state on a user profile within Braze
 {% alert important %}
 If you do not override global subscription states, existing user's states may not match those found in Shopify. This can lead to unreceived and unintended messages.
 {% endalert %}
+
+#### Legacy custom attributes
+
+Legacy Shopify customers may have the old method of collecting email and sms subscribers via the `shopify_accepts_marketing` and `shopify_sms_consent` custom attributes. If you save the settings above with override enabled, Braze will remove the custom attributes on the user profiles and sync those values over to their respective email subscription group and SMS subscription group.
+
+If you have existing campaigns/canvases today using these legacy custom attributes, you should remove them and ensure the campaigns/canvases are using the appropriate subscription state and/or groups instead."
 
 ### Step 6: Install Braze’s Shopify application
 You’ll then be redirected to your Shopify store to install the Braze app. Once you select **Install Unlisted App**, you will be redirected to the Braze dashboard. 
