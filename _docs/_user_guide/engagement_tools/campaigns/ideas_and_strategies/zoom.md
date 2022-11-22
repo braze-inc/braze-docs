@@ -13,7 +13,7 @@ channel:
 
 # Automate Zoom attendee registration
 
-Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign-up. A recommended user flow is outlined below:
+Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign up. A recommended user flow is outlined below:
 
 1. Schedule a webinar in Zoom and generate a `meetingId`.
 2. Use Braze to promote Zoon webinars via email, push, and in-app message channels. 
