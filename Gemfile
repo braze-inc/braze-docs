@@ -14,6 +14,7 @@ gem 'puma'
 gem 'rack-rewrite'
 gem 'sinatra'
 gem 'uglifier'
+gem 'git'
 
 #gem 'japr' #Jekyll Asset Pipeline Reborn https://github.com/janosrusiczki/japr
 gem 'jekyll_asset_pipeline'
