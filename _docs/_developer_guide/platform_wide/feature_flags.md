@@ -1,8 +1,10 @@
 ---
 nav_title: Feature Flags
 article_title: Feature Flags
+hidden: true
+permalink: "/feature_flags/"
 page_order: 3
-description: "Learn how to coordinate new feature rollouts with Braze Feature Flags"
+description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
   - iOS
   - Android
@@ -59,6 +61,7 @@ Custom properties can be defined as part of your feature flag. These properties 
 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
 
+##### Example
 For example, if we are defining a feature flag that controls a free-shipping threshold banner for an e-commerce store, we might set the following properties, which our app will consume:
 
 |:Property Name|Type|Value|
