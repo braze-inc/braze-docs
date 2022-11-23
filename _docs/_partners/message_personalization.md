@@ -53,4 +53,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Lokalise
   url: /docs/partners/message_personalization/localization/lokalise/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+
 ---
