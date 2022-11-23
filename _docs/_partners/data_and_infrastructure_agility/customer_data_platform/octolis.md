@@ -14,8 +14,8 @@ search_tag: Octolis
 
 The Braze and Octolis integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, online and offline:
 1. Unify and combine data from sources such as Eshop, CRM, POS system, etc.
-2. Normalize and score 
-3. Real-time synchronization of computed fields and events to Braze 
+2. Normalize and score
+3. Real-time synchronization of computed fields and events to Braze
 
 ![][7]
 
@@ -31,13 +31,13 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 
 ## Integration
 
-Before beginning the integration, refer to the following sections on connections, sources, audiences, and syncs. 
+Before beginning the integration, refer to the following sections on connections, sources, audiences, and syncs.
 
 For more information, refer to the Octolis [Getting started][4] section.
 
 ### Step 1: Connect Octolis to your data sources
 
-To send data to Braze, you must ensure that you have created at least one [audience][5]. An audience combines several data sources, applies them to preparation steps, and adds computed fields. 
+To send data to Braze, you must ensure that you have created at least one [audience][5]. An audience combines several data sources, applies them to preparation steps, and adds computed fields.
 
 These audiences need to be built based on several data sources. A source can be any of the following:
 - A Salesforce object (contacts, accounts, etc.)
@@ -48,7 +48,7 @@ These audiences need to be built based on several data sources. A source can be 
 
 ### Step 2: Add Braze as a destination
 
-Next, to set Braze as a new destination, select **+ Add more** at the top of your current destination within the main screen and select **Braze** from the available business tools. 
+Next, to set Braze as a new destination, select **+ Add more** at the top of your current destination within the main screen and select **Braze** from the available business tools.
 
 ![][9]
 
@@ -72,7 +72,7 @@ Next, select **Braze** as the destination and which entity you will send data to
 
 ### Step 4: Set output settings
 
-By default, Braze creates all the attributes that you would send, but you must document the list of fields to be synchronized. 
+By default, Braze creates all the attributes that you would send, but you must document the list of fields to be synchronized.
 
 ![][12]{: style="max-width:75%;"}
 
@@ -92,16 +92,16 @@ Here is a specific definition of settings fields.
 
 Deduplication is a major challenge when reconciling data from multiple sources, especially online and offline. Through Octolis's advanced no-code module, you can use multiple keys for [deduplication][3]. This module is available for each master table, meaning you can adapt the logic to each entity.
 
-[0]: http://octolis.com 
+[0]: http://octolis.com
 [1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [3]: https://help.octolis.com/resources/faq/what-is-deduplication-and-how-does-it-work
 [4]: https://help.octolis.com/
 [5]: https://help.octolis.com/audiences/create-a-no-code-audience
 [6]: {{site.baseurl}}/api/api_limits/
-[7]: {% image_buster /assets/img/octolis/braze_scheme.png %}
-[8]: {% image_buster /assets/img/octolis/Braze_screen1.png %}
-[9]: {% image_buster /assets/img/octolis/Braze_screen2.png %}
-[10]: {% image_buster /assets/img/octolis/Braze_screen3.png %}
-[11]: {% image_buster /assets/img/octolis/Braze_screen4.png %}
-[12]: {% image_buster /assets/img/octolis/Braze_screen5.png %}
+[7]: {% image_buster /assets/img/Octolis/Braze_scheme.png %}
+[8]: {% image_buster /assets/img/Octolis/Braze_screen1.png %}
+[9]: {% image_buster /assets/img/Octolis/Braze_screen2.png %}
+[10]: {% image_buster /assets/img/Octolis/Braze_screen3.png %}
+[11]: {% image_buster /assets/img/Octolis/Braze_screen4.png %}
+[12]: {% image_buster /assets/img/Octolis/Braze_screen5.png %}
