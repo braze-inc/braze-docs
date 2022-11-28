@@ -74,7 +74,7 @@ For example, if we are defining a feature flag that shows an out-of-stock banner
 |`dismissible`|`boolean`|`false`|
 
 {% alert tip %}
-There is no limit to the number of properties you can add, though properties are limited to 10kB in total.
+There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total.
 {% endalert %}
 
 #### Targeting
