@@ -35,20 +35,21 @@ Wondering about the benefits of using Content Cards versus having your tech team
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
 - **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that, you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
-### Great use cases
+### Use cases
 
-By using Content Cards, you can:
+Here are some common use cases for Content Cards:
+
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
-- Give customers without push enabled access to promotions.
+- Give customers who don't have push enabled access to promotions.
 - Trigger order confirmations or other personalized communication with your customer.
-- Develop and deliver and an onboarding schedule.
+- Develop and deliver an onboarding schedule.
 
 ## Content Cards and feed
 
 This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed—a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
-![Contents Card feed that shows the three standard types of cards.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
+![Contents Card feed that shows the three standard types of cards.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%;border:none"}
 
 {% alert note %}
 Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
