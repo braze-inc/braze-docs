@@ -35,14 +35,15 @@ Wondering about the benefits of using Content Cards versus having your tech team
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
 - **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that, you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
-### Great use cases
+### Use cases
 
-By using Content Cards, you can:
+Here are some common use cases for Content Cards:
+
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
-- Give customers without push enabled access to promotions.
+- Give customers who don't have push enabled access to promotions.
 - Trigger order confirmations or other personalized communication with your customer.
-- Develop and deliver and an onboarding schedule.
+- Develop and deliver an onboarding schedule.
 
 ## Content Cards and feed
 
