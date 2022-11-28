@@ -80,7 +80,6 @@ There is no limit to the number of properties you can add, though a feature flag
 #### Targeting
 To target a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users for your feature rollout, use the **Add Segment** dropdown menu.
 
-If no segment is selected, the percentage of targeted users (see [Rollout Traffic](#rollout-traffic), below) will come from your entire user base. You can add multiple segments to target.
 
 To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
 
