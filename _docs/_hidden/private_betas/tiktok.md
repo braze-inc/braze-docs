@@ -10,7 +10,7 @@ hidden: true
 
 # Audience Sync to TikTok
 
-Using the Braze Audience Sync to TikTok, brands can elect to add user data from their own Braze integration to TikTok Audiences to deliver advertisements based upon behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your TikTok Audiences.
+Braze’s integration with TikTok enables advertisers to push audiences to TikTok for the purpose of targeting or suppression in TikTok Ads Manager.
 
 **Common use cases for audience syncing include**:
 
@@ -32,7 +32,7 @@ You will need to ensure that you have the following items created and completed 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (i.e., ad accounts, pages, apps). |
-| TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
+| TikTok Ads Manager Account| [TikTok](https://ads.tiktok.com/) | An active TikTok Ads Manager account tied to your brand’s Business Center account.<br><br>Only TikTok Advertiser Accounts can utilize this integration. In order for the authorization to properly function, confirm that you have the sufficient permission level to authorize the integration. The permission level needs to be TikTok Ad Account Operator or TikTok Ad Account Admin. The authorization will not work properly if you only have Ad Account Analyst permission. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration 
@@ -43,7 +43,7 @@ In the Braze dashboard, go to **Technology Partners** and select **TikTok**. In 
 
 ![TikTok technology page in Braze includes an Overview module and TikTok Audience Export module with the Connected TikTok button.][1]{: style="max-width:75%;"}
 
-You'll then be redirected to the TikTok OAuth page to authorize Braze for Ad Account Management and Audience Management. Once you have selected confirm, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
+You'll then be redirected to the TikTok OAuth page to authorize Braze for Ad Account Management and Audience Management. Once you have selected confirm, you'll be redirected back into Braze to select which TikTok Ads Manager accounts you wish to sync to. 
 
 ![][2]{: style="max-width:75%;"}
 
@@ -63,7 +63,7 @@ Add a component in your Canvas and select **TikTok Audience**.
 
 Click on the **Custom Audience** button to open the component editor.
 
-Select the desired TikTok ad account. Under the Choose a **New or Existing Audience** dropdown, type in the name of a new or existing audience.
+Select the desired TikTok Ads Manager account. Under the Choose a **New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -96,7 +96,7 @@ At this time, TikTok does not have the ability to remove users from audiences. I
 ### Step 4: Launch Canvas
 Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
-You can view the audience in TikTok by going into your ads manager account and then selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
+You can view the audience in TikTok by going into your Ads Manager account and then selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
 ![TikTok page listing the following metrics for the given audience.][5]
 
@@ -129,16 +129,16 @@ Remember that there will be a delay in reporting for users synced and users erro
 
 {% details What should I do next if I receive an invalid token error?
  %}
-You can simply disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
+You can simply disconnect and reconnect your TikTok Ads Manager account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync. The permission level needs to be TikTok Ad Account Operator or TikTok Ad Account Admin. The authorization will not work properly if you only have Ad Account Analyst permission.
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
-Ensure that your TikTok account successfully connects to Braze on the TikTok partner page.
+Ensure that your TikTok Ads Manager account successfully connects to Braze on the TikTok partner page.
 Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
 {% enddetails %}
 
 {% details How do I know if users have matched after passing users to TikTok? %}
-TikTok does not provide this information for their data privacy policies.
+You can view the audience in TikTok by going into your Ads Manager account and then selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches ~1,000.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
