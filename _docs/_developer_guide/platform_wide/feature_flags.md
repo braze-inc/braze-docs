@@ -64,7 +64,7 @@ Custom properties can be defined as part of your feature flag. These properties 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
 
 ##### Example
-For example, if we are defining a feature flag that controls a free-shipping threshold banner for an e-commerce store, we might set the following properties, which our app will consume:
+For example, if we are defining a feature flag that shows an out-of-stock banner for our e-commerce store, we might set the following properties, which our app will use when displaying the banner:
 
 |:Property Name|Type|Value|
 |--|--|--|
