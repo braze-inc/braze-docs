@@ -136,6 +136,17 @@ window.braze.getUser().setGender("f")
 </script>
 ```
 
+## Integrating Content Cards
+
+There are a few additional steps to integrate the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) messaging channel using Google Tag Manager. Google Tag Manager works by injecting the [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without GTM, except when implementing Content Cards.
+
+### Integrating using GTM
+
+For a standard integration of the Content Card feed, you can add a **Custom HTML** tag 
+
+### Integrating directly in your website
+
+
 ## Upgrading and updating templates {#upgrading}
 
 To upgrade to the latest version of the Braze Web SDK, take the following three steps in your Google Tag Manager dashboard:
