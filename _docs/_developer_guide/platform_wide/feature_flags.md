@@ -51,7 +51,7 @@ Give your new feature flag a **Name** and **ID**.
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
-A feature flag `ID` is unique. The same `ID` is used across app groups so that different platforms (i.e., iOS/Android/Web) can share references to the same feature. Once set, the feature flag `ID` should not be changed.
+Feature flags are shared across apps within an app group so that different platforms (i.e., iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
 Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
