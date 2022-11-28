@@ -49,7 +49,7 @@ Here are some common use cases for Content Cards:
 
 This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed—a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
-![Contents Card feed that shows the three standard types of cards.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
+![Contents Card feed that shows the three standard types of cards.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%;border:none"}
 
 {% alert note %}
 Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
