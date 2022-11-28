@@ -78,13 +78,15 @@ There is no limit to the number of properties you can add, though a feature flag
 {% endalert %}
 
 #### Targeting
-To target a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users for your feature rollout, use the **Add Segment** dropdown menu.
+To being the rollout of a feature flag, you must choose a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users.
 
 
 To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
 
 #### Rollout Traffic
-Feature flags always start as disabled to allow you to separate the timing of the feature's release and activation in your users' experience. When you are ready to rollout your new feature, use the **Rollout Traffic** slider to randomly define a portion of your targeted user base to receive the new feature. Set the **Rollout Traffic** slider to set a percentage between 0% (no users) and 100% (the entire target audience). 
+Feature flags always start as disabled to allow you to separate the timing of the feature's release and activation in your users' experience. 
+
+When you are ready to rollout your new feature, specify an audience and then use the **Rollout Traffic** slider to define the random percentage of your targeted user base to receive the new feature. Set the **Rollout Traffic** slider to set a percentage between 0% (no users) and 100% (the entire target audience). 
 
 {% alert warning %} 
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
@@ -133,7 +135,7 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% endtabs %}
 
-The Braze SDK uses getter methods to pull your feature flag's properties into your app. It refreshes these properties during app start so that it displays the most up-to-date version of your feature upon launch. The SDK caches these values so your app can be used while offline. 
+The Braze SDK provides getter methods to pull your feature flag's enabled/disabled status and its properties into your app. Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 
 You can also get a list of all enabled feature flags:
 
