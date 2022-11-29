@@ -140,12 +140,39 @@ window.braze.getUser().setGender("f")
 
 There are a few additional steps to integrate the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) messaging channel using Google Tag Manager. Google Tag Manager works by injecting the [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without GTM, except when implementing Content Cards.
 
-### Integrating using GTM
+### Option 1: Integrating using GTM
 
-For a standard integration of the Content Card feed, you can add a **Custom HTML** tag 
+For a standard integration of the Content Card feed, you can use a **Custom HTML** tag in Google Tag Manager. Add the following to your Custom HTML tag, which will activate the standard Content Card feed:
 
-### Integrating directly in your website
+```html
+<script>
+   braze.showContentCards();
+</script>
+```
 
+![Tag Configuration in Google Tag Manager of a Custom HTML tag that shows the Content Card feed upon button click.][gtm-content-cards]
+
+### Option 2: Integrating directly in your website
+
+For more freedom over customizing the appearance of Content Cards and their feed, you can directly integrate Content Cards into your native website. There are two approaches you can take with this: using the standard feed UI or creating a custom feed UI.
+
+#### Standard feed
+
+When implementing the [standard feed UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui), Braze methods must have `window.` added to the start of the method. For example, `braze.showContentCards` should instead be `window.braze.showContentCards`.
+
+#### Custom feed UI
+
+For [custom feed](((site.baseurl))/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling) styling, the steps are the same as if you had integrated the SDK without GTM. Unlike the standard feed UI, with a custom UI you are overwriting the CSS file, so you don't need to prepend `window.` to Braze methods. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
+
+{% raw %}
+```css
+body .ab-feed { 
+    width: 800px;
+}
+```
+{% endraw %}
+
+The exception is if you want to [manually refresh the feed]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui#refreshing-the-feed), in which case use `window.braze.requestContentCardsRefresh();`.
 
 ## Upgrading and updating templates {#upgrading}
 
@@ -201,3 +228,4 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 [e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
 [gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
+[gtm-content-cards]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}
