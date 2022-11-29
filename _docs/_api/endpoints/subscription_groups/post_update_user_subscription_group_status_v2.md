@@ -51,10 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-{% alert important %}
-When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
+{% alert tip %}
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
-
 
 ## Request parameters
 
