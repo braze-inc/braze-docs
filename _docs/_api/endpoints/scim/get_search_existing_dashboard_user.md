@@ -21,6 +21,8 @@ This endpoint allows you to look up an existing dashboard user account by specif
 
 For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95 {% endapiref %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}

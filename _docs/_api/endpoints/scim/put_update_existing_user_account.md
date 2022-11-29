@@ -19,6 +19,8 @@ This endpoint allows you to update an existing dashboard user account by specify
 
 For security reasons, `userName` (email address) cannot be updated through this endpoint. If you would like to change the `userName` (email address) for a user, contact [Support]({{site.baseurl}}/support_contact/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='update dashboard user' %}

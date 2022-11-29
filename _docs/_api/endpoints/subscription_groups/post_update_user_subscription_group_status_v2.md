@@ -11,12 +11,20 @@ channel:
 ---
 
 {% api %}
-# Update user's subscription group status
+# Update user's subscription group status V2
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
 
 Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
+
+If you want to see examples or test this endpoint for **Email Subscription Groups**:
+
+{% apiref postman %}hhttps://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
+
+If you want to see examples or test this endpoint for **SMS Subscription Groups**:
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
 ## Request body
 
