@@ -146,7 +146,7 @@ For a standard integration of the Content Card feed, you can use a **Custom HTML
 
 ```html
 <script>
-   braze.showContentCards();
+   window.braze.showContentCards();
 </script>
 ```
 
