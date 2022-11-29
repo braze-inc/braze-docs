@@ -7,17 +7,17 @@ description: "This reference article covers how to create and use selections wit
 
 # Selections
 
-Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating filtered sets in your Braze campaigns. Note that the free tier of catalogs allows one selection to be created per catalog. 
+Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating selections in your Braze campaigns. Note that the free tier of catalogs allows one selection to be created per catalog. 
 
 {% alert important %}
 Selections are currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-To create a selection, select your catalog and click **Create Filtered Set**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed for filter settings.
+To create a selection, select your catalog and click **Create Selection**. Select the catalog column from the **Filter Field** dropdown. Next, select the operator, and enter the attribute. Continue to add any additional filters as needed for filter settings.
 
 In the **Sort type** section, you can specify the order in which results are returned. This includes an option to randomize the sort order. Next, enter the maximum number of results, up to 10, for the **Limit number** under the **Results limit** section.
 
-After setting up the selection, click **Create Filtered Set**, and the selection will display above the catalog data. Now, you can reference this selection in your messaging.
+After setting up the selection, click **Create Selection**, and the selection will display above the catalog data. Now, you can reference this selection in your messaging.
 
 {% alert important %}
 String fields with more than 1,000 characters cannot be filtered.
@@ -25,7 +25,7 @@ String fields with more than 1,000 characters cannot be filtered.
 
 If you use any Liquid in catalogs, such as custom attributes and custom events, this can result in different results returned for each user in your selection.
 
-![The Selections section in an example catalog.][1]{: style="max-width:85%;"}
+![The Selections section in an example catalog.][1]
 
 ## Use case
 
@@ -48,8 +48,8 @@ Using the same personalization, we can also send three meal recommendations for 
 ![A Content Card with an image of beef stroganoff, and a list of two meal recommendations that include beef based on the user's most recently viewed category.][5]{: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_filtered_sets1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_filtered_sets2.png %}
+[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
+[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
 [3]: {% image_buster /assets/img_archive/catalog_filtered_sets3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_filtered_sets4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_filtered_sets5.png %}
+[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
+[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
