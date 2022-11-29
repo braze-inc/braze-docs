@@ -15,7 +15,6 @@ hidden: true
 # [Partner Name]
 
 > Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
-
 In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
 
 ## Prerequisites
@@ -58,32 +57,22 @@ Outline thorough integration usage, especially if it includes inserting Liquid i
 {% details Webhook formatting %}
 ```
 ### Step 2: Create a [Partner] webhook in Braze
-
 To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-
 Once you have selected the [Partner] webhook template, you should see the following:
 - **Webhook URL**: [Partner Webhook URL]
 - **Request Body**: Raw Text
-
 #### Request headers and method
-
 [Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-
 {% raw %}
 - **HTTP Method**: POST
 - **Request Header**:
   - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
   - **Request Body**: application/json
 {% endraw %}
-
 #### Request body
-
 Include code of your webhook request body. 
-
 ### Step 3: Preview your request
-
 Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
-
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}

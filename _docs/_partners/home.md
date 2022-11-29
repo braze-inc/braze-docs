@@ -209,6 +209,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/lokalise/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: Ada

@@ -40,7 +40,6 @@ To create your partner page, open the braze-docs repository and navigate to the 
 Next, create a folder, name it your partner name, copy this template into your folder, and get to work!
 
 > Your file pathing should now look like this: <br>`braze-docs` > `_docs` > `_hidden` > `wip_partnerships` > `partner_name` (folder) > `partner.md`.
-
 ### Useful Resources
 
 Useful links to reference as you write:
@@ -59,10 +58,8 @@ This information helps our Braze search find, label, and categorize your docs pa
 nav_title: Your Partner Page
 article_title: Your Partner Page
 page_order: 1
-
 description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
 alias: /partners/your_partner_name/
-
 page_type: partner
 search_tag: Partner
 hidden: true
@@ -81,32 +78,22 @@ For more information on what to include in the content, check out our [partnersh
 
 ```
 # [Partner Name]
-
 > Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
-
 In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
-
 ## Prerequisites
-
 This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
-
 {% alert important %}
 The following requirements are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
-
 | Requirement | Description |
 | ----------- | ----------- |
 | Partner account | A partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
-
 ## Use cases
-
 Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
-
 ## Integration
-
 This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done.
 ```
 
