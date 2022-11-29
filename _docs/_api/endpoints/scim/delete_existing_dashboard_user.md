@@ -25,8 +25,8 @@ This endpoint allows you to permanently delete an existing dashboard user by spe
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 
 ## Request parameters
