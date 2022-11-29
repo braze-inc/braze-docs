@@ -87,7 +87,7 @@ The daily maximum number of custom send identifiers that can be created via this
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
-For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute to this endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute shared across the `/subscription/status/set` and `/v2/subscription/status/set` endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 
