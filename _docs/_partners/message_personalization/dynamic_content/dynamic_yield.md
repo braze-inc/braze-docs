@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Yield
 article_title: Dynamic Yield
-description: "This article outlines the partnership between Braze and Ada, an AI-powered platform that automates and personalizes customer interactions. This integration allows you to augment user profiles with data collected from your automated Ada conversations."
+description: "This article outlines the partnership between Braze and Dynamic Yield. This partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partner
