@@ -154,12 +154,14 @@ Whenever your app calls the Braze [`changeUser`][11] method, also supply the JWT
 You can also configure the token to refresh mid-session for the current user.
 
 {% alert note %}
-Keep in mind that [`changeUser`][11] should only be called when the User ID has _actually changed_. You should not use this method as a way to update the signature if the user ID has not changed.
+Keep in mind that [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+) should only be called when the User ID has _actually changed_. You should not use this method as a way to update the signature if the user ID has not changed.
 {% endalert %}
 
 {% tabs %}
 {% tab Javascript %}
-Supply the JWT Token when calling [`changeUser`][11]:
+Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -175,7 +177,8 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 {% endtab %}
 {% tab Java %}
 
-Supply the JWT Token when calling [`appboy.changeUser`][11]:
+Supply the JWT Token when calling [`appboy.changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```java
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
@@ -189,7 +192,8 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab KOTLIN %}
 
-Supply the JWT Token when calling [`appboy.changeUser`][11]:
+Supply the JWT Token when calling [`appboy.changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```kotlin
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
@@ -203,7 +207,8 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab Objective-C %}
 
-Supply the JWT Token when calling [`changeUser`][11]:
+Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```objc
 [[Appboy sharedInstance] changeUser:@"userId" sdkAuthSignature:@"signature"];
@@ -217,7 +222,8 @@ Or, when you have refreshed the user's token mid-session:
 {% endtab %}
 {% tab Swift %}
 
-Supply the JWT Token when calling [`changeUser`][11]:
+Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```swift
 Appboy.sharedInstance()?.changeUser("userId", sdkAuthSignature: "signature")
@@ -230,7 +236,8 @@ Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 {% endtab %}
 {% tab Dart %}
 
-Supply the JWT Token when calling [`changeUser`][11]:
+Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
+):
 
 ```dart
 braze.changeUser("userId", sdkAuthSignature: "signature")
