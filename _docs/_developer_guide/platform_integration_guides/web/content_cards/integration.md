@@ -104,9 +104,7 @@ The Braze Web SDK includes a Content Cards feed UI to speed up your integration 
 
 To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
 
-In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. 
-
-We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
+In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
 
 ```html
 

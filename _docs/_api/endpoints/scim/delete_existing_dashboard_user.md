@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Remove Existing User Account Endpoint."
+description: "This article outlines details about the Remove Existing User Account endpoint."
 ---
 
 {% api %}
@@ -15,7 +15,9 @@ description: "This article outlines details about the Remove Existing User Accou
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-This endpoint allows you to permanently delete an existing dashboard user, similar to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This endpoint allows you to permanently delete an existing dashboard user by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) method. This is similar to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
 ## Rate limit
 
@@ -25,15 +27,15 @@ This endpoint allows you to permanently delete an existing dashboard user, simil
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 
 ## Request parameters
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The user’s resource ID |
+| `id` | Required | String | The user’s resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

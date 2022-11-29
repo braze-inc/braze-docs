@@ -49,7 +49,7 @@ Select one of the options below and sign as indicated. By signing, You accept an
 <br /><br />
 <label for="input_name"> Name ("You"):</label> <input type="text" value="" name="name" id="input_name" class="form-control"  /> <br />
 <label for="input_signature"> Signature:</label> <input type="text" value="" name="signature" id="input_signature" class="form-control" /> <br />
-<label for="input_username"> GitHub Login:</label> <input type="text" value="" name="username" id="input_username" class="form-control" /> <br />
+<label for="input_username"> GitHub Username:</label> <input type="text" value="" name="username" id="input_username" class="form-control" /> <br />
 <label for="input_email"> Email:</label> <input type="email" value="" name="email" id="input_email" class="form-control" /> <br />
 <label for="input_address"> Address:</label> <input type="text" value="" name="address" id="input_address" class="form-control" /> <br />
 

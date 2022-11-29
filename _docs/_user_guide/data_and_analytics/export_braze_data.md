@@ -13,28 +13,31 @@ tool: Reports
 guide_featured_title: "Popular Articles"
 
 guide_featured_list:
-  - name: Campaign Results Data
+  - name: Export Campaign Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
     fa_icon: fas fa-chart-bar
-  - name: Canvas Results Data
+  - name: Export Canvas Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
     fa_icon: fas fa-palette
-  - name: Exporting to CSV
+  - name: Export Segment Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
     fa_icon: fas fa-file-csv
 
 guide_menu_title: "More Articles"
 guide_menu_list:
-  - name: Exporting Overview Data
+  - name: Message Archiving
+    link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/
+    fa_icon: fa-solid fa-clock-rotate-left
+  - name: Export Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
     fa_icon: far fa-dot-circle
-  - name: Exporting Revenue Data
+  - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     fa_icon: fas fa-hand-holding-usd
-  - name: Exporting News Feed Data
+  - name: Export News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
     fa_icon: fas fa-newspaper
-  - name: Exporting Custom Event Data
+  - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     fa_icon: fas fa-cog
   - name: Export APIs
@@ -43,14 +46,11 @@ guide_menu_list:
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
     fa_icon: fas fa-file-excel
-  - name: Exporting to Facebook Audiences
+  - name: Export to Facebook Audiences
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_to_facebook_audiences/
     fa_icon: fab fa-facebook-square
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     fa_icon: far fa-question-circle
-  - name: Message Archiving
-    link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/
-    fa_icon: fa-solid fa-clock-rotate-left
 ---
 

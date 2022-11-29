@@ -5,7 +5,6 @@ description: "This article outlines the partnership between Braze and Wyng, a ze
 alias: /partners/wyng/
 page_type: partner
 search_tag: Partner
-
 ---
 
 # Wyng

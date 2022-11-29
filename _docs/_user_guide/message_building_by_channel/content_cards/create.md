@@ -171,7 +171,6 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 The following capabilities are not yet supported for Content Cards:
 
-- Vouchers
 - Frequency Capping
 - Re-ordering Content Cards from the Braze UI
 - Post-launch Edits

@@ -11,9 +11,13 @@ description: "This how-to article goes over what Braze's Campaign Connector is a
 
 > This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time.
 
+{% alert note %}
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 ## Overview
 
-braze's Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. This feature allows you to target users who complete the following interactions with active campaigns:
+Braze's Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. This feature allows you to target users who complete the following interactions with active campaigns:
 
 - View in-app message
 - Click in-app message
@@ -56,7 +60,7 @@ Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger. 
 
 ![][4]
 
-#### Targeting users who interact with a News Feed card
+#### Targeting users who interact with a News Feed card (deprecating)
 
 Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then choose whether you’d like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you’d like to target.
 

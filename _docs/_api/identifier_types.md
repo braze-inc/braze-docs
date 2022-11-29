@@ -140,6 +140,10 @@ You can find your Segment ID one of two ways:
 
 A Card API Identifier or Card ID is an out-of-the-box key by Braze for a given News Feed Card within the dashboard. Card IDs are unique to each [News Feed]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) Card and can be used to reference Cards through the API. 
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 #### Where can I find it?
 You can find your Card ID one of two ways:
 

@@ -53,20 +53,20 @@ Closes #**ISSUE_NUMBER_HERE**
     <td><b>Product Vertical</b></td>
   </tr>
   <tr>
-    <td>@Timothy-Kim</td>
-    <td>Data Infrastructure<br>Platform Infrastructure<br>Quality Infrastructure</td>
+    <td>@josh-mccrowell-braze</td>
+    <td>Monolith Deployments<br>Quality Infrastructure<br>Platform Infrastructure<br>Datalake<br>SDKs</td>
   </tr>
   <tr>
     <td>@kelliehawks</td>
-    <td>Internal Tools<br>Product Partnerships<br>SDKs<br>SMS</td>
+    <td>Currents<br>Internal Tools<br>Product Partnerships<br>SMS<br>Customer Lifecycle, Identity and Permissions</td>
   </tr>
   <tr>
     <td>@bre-fitzgerald</td>
-    <td>Channels<br>FIX<br>Intelligence<br>Reporting<br>SMB</td>
+    <td>Reporting<br>Intelligence<br>User Targeting<br>IAM<br>Channels<br>FIX</td>
   </tr>
   <tr>
     <td>@lydia-xie</td>
-    <td>Email (Composition and Infrastructure)<br>Ingestion<br>Messaging</td>
+    <td>Ingestion<br>Core Objects<br>Core Messaging<br>Messaging and Automation<br>Email (Composition and Infrastructure)</td>
   </tr>
 </table>
 </details>

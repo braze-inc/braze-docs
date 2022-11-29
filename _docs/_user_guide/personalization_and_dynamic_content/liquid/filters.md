@@ -68,8 +68,8 @@ Array filters are used to change the output of arrays.
 | Filter         | Definition                                                                                                         | Supported |
 | :------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
 | [join][1.1]    | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
-| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the most recently added value.         | ✅  Yes   |
-| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the oldest added value.                 | ✅  Yes   |
+| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the oldest added value.         | ✅  Yes   |
+| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the most recently added value.                 | ✅  Yes   |
 | [compact][1.4]  | Removes any `nil` items from an array.                                                                              | ✅  Yes    |
 | [concat][1.5]  | Combines an array with another array.                                                                              | ✅  Yes    |
 | [index][1.6]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
