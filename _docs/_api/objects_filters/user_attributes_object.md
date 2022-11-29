@@ -124,6 +124,8 @@ Language values that are explicitly set via this API will take precedence over t
 
 ####  User attribute example request
 
+This example contains two user attribute objects with the allowed 75 requests per API call.
+
 ```json
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -148,13 +150,10 @@ Authorization: Bearer YOUR-REST-API-KEY
       "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
       "first_name" : "Alice",
       "has_profile_picture" : false,
-    }
+    },
   ]
 }
 ```
-
-This example contains two User Attribute objects of the allowed 75 per API call.
-
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
