@@ -21,22 +21,18 @@ To complete the installation, you will need the [App Identifier API key]({{site.
 Braze React Native SDK v1.38.0+ requires at least React Native v0.64+.
 {% endalert %}
 
-Add the Braze React Native SDK package.
-
-{% tabs %}
+{% tabs local %}
 {% tab bash %}
-
 ```bash
 npm install react-native-appboy-sdk
 ```
-
 {% endtab %}
-{% tab Yarn %}
-
-```yarn
+{% tab yarn %}
+```bash
 yarn add react-native-appboy-sdk
 ```
 {% endtab %}
+{% endtabs %}
 
 ## Step 2: Complete native setup
 
