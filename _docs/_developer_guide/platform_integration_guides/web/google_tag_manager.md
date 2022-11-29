@@ -150,7 +150,7 @@ For a standard integration of the Content Card feed, you can use a **Custom HTML
 </script>
 ```
 
-![Tag Configuration in Google Tag Manager of a Custom HTML tag that shows the Content Card feed upon button click.][gtm-content-cards]
+![Tag Configuration in Google Tag Manager of a Custom HTML tag that shows the Content Card feed.][gtm-content-cards]
 
 ### Option 2: Integrating directly in your website
 
@@ -171,8 +171,6 @@ body .ab-feed {
 }
 ```
 {% endraw %}
-
-The exception is if you want to [manually refresh the feed]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui#refreshing-the-feed), in which case use `window.braze.requestContentCardsRefresh();`.
 
 ## Upgrading and updating templates {#upgrading}
 
