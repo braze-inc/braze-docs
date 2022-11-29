@@ -31,6 +31,7 @@ npm install react-native-appboy-sdk
 ```
 
 {% endtab %}
+
 {% tab Yarn %}
 
 ```yarn
@@ -231,7 +232,7 @@ In the same file, add the following snippet within the `application:didFinishLau
      withLaunchOptions:launchOptions];
 ```
 
-Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in XCode:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
 2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
@@ -264,7 +265,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can start a session for a particular user by calling the following code in your app.
 
 ```javascript
-Braze.changeUser("user-id");
+Braze.changeUser("userId");
 ```
 
 For example, you can assign the user ID at the startup of the app:
