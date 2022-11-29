@@ -13,8 +13,8 @@ guide_featured_list:
 - name: Catalogs
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
   fa_icon: fas fa-users
-- name: Filtered Sets
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/
+- name: Selections
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/selections/
   fa_icon: fas fa-list-alt
 - name: Catalogs API Endpoints
   link: /docs/api/endpoints/catalogs/
