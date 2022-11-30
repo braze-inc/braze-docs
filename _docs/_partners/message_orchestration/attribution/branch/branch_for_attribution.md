@@ -46,6 +46,10 @@ If you have an iOS app, your IDFV will be collected by Branch and sent to Braze.
 
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
+{% alert important %}
+This integration relies on IDFV collection and is therefore not compatible with the `useUUIDAsDeviceID` option in the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
+{% endalert %}
+
 ### Step 2: Get the Braze data import key
 
 In Braze, navigate to **Technology Partners** and select **Branch**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
