@@ -222,6 +222,10 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
+### Trigger nested custom attribute changes
+
+You can trigger when a nested custom attribute object changes. If you don't see an option to view the path explorer, check that you've generated a schema. 
+
 ### Regenerate schemas {#regenerate-schema}
 
 After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus button to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
