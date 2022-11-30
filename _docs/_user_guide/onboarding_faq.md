@@ -449,7 +449,7 @@ If you want to except users who have performed a certain event in advance, use [
 Canvases
 {% endapitags %}
 
-If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
+If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
 
 For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 

@@ -66,7 +66,7 @@ Before disabling your Control Group, we recommend [exporting](#export-group-memb
 
 After disabling your Control Group, you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvses. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
 
 ## Export your control group members {#export-group-members}
 

@@ -35,7 +35,7 @@ Using a catalog with your meal delivery service's information for the meal name,
 
 ![An example of a selection for a meal delivery service with two filters: one that identifies a product type as a meal, and one that identifies the category as the most recently viewed. The selection is set to randomize the order in which the three results are returned.][2]{: style="max-width:90%;"}
 
-To use this catalog and selection in a campaign, use the **Add Personalization** modal in the message composition section of building a campaign. In this example, we've selected the catalog with your meal delivery service's information, and the selection for meal recommendations based on the most recently viewed category. This allows us to display the meal name and price. To futher build our message, you can use the selection to also add an image of the first recommended meal.
+To use this catalog and selection in a campaign, use the **Add Personalization** modal in the message composition section of building a campaign. In this example, we've selected the catalog with your meal delivery service's information, and the selection for meal recommendations based on the most recently viewed category. This allows us to display the meal name and price. To further build our message, you can use the selection to also add an image of the first recommended meal.
 
 ![A Content Card with the header "You will LOVE these highly rated meals!" with the selection "recommendations_be_recent_category" in message composition section.][3]{: style="max-width:90%;"}
 

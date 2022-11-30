@@ -72,7 +72,7 @@ You can't use a CSV import to create a new user using `braze_id`. This method ca
 {% endalert %}
 
 {% alert tip %}
-The `braze_id` value may be labelled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user and therefore you can simply rename this column to `braze_id` when you re-import the CSV.
+The `braze_id` value may be labeled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user and therefore you can simply rename this column to `braze_id` when you re-import the CSV.
 {% endalert %}
 
 ### Constructing your CSV

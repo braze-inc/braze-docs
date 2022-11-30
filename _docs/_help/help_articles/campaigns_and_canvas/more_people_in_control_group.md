@@ -35,7 +35,7 @@ If we look back to the active users, we can see that even though it contains 39.
 
 ![Entry Audience][42]
 
-This means that even though we specified 90% of users to enter the variant, not all of those users are actually able to recieve a push notification. These users who are unable to recieve a push notification will still enter the variant regardless.
+This means that even though we specified 90% of users to enter the variant, not all of those users are actually able to receive a push notification. These users who are unable to receive a push notification will still enter the variant regardless.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

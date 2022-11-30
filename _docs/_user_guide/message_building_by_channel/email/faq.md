@@ -47,7 +47,7 @@ Soft bounces are emails that bounce due to a temporary or transient issue such a
 
 ### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric
 
-Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occured. 
+Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occurred. 
 
 **Workaround:** To achieve this same result, you could send an API call to Braze to update any user profiles where you recorded unsubscribes from your custom link. 
 

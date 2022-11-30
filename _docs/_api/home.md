@@ -101,7 +101,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>
-    description: Create send IDs that can be used to send messages and track message performance programatically, without campaign creation for each send.
+    description: Create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>

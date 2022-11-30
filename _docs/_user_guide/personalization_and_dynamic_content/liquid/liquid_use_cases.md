@@ -608,7 +608,7 @@ Custom event
 - [Abort push notification if a custom event is within two hours of now](#event-abort-push)
 - [Send a campaign each time a user performs a custom event three times](#event-three-times)
 - [Send a message to users who have only purchased from one category](#event-purchased-one-category)
-- [Track how many times a custom event occured over the past month](#track)
+- [Track how many times a custom event occurred over the past month](#track)
 
 
 ### Abort push notification if a custom event is within two hours of now {#event-abort-push}
@@ -1390,7 +1390,7 @@ Here's a message that will send between 8 am and 8 pm!
 ```
 {% endraw %}
 
-### Send a reoccuring in-app message campaign between a window of time in a user's local time zone {#time-reocurring-iam-window}
+### Send a reoccurring in-app message campaign between a window of time in a user's local time zone {#time-reoccurring-iam-window}
 
 This use case will display a message if a user's current time falls within a set window.
 

@@ -73,7 +73,7 @@ You can also adjust the block styling for the body text by editing the **Padding
 
 ## Button styling
 
-In the **Button Styling** dropdown, you can edit the following defaut styles for the button:
+In the **Button Styling** dropdown, you can edit the following default styles for the button:
 - Background color
 - Font size
 - Font color

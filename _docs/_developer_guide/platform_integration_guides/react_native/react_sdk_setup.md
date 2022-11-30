@@ -55,7 +55,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
 | `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
-| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
+| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
 | `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
 | `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
 | `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |

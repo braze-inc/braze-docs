@@ -25,7 +25,7 @@ Updated [storage connect documentation][4] to reflect the new `ad-id` (advertise
 
 ## BCC functionality
 
-The [BCC Address setting][5] allows you to add and manage BCC address that can be appeneded to outbound email messages sent from Braze.	
+The [BCC Address setting][5] allows you to add and manage BCC address that can be appended to outbound email messages sent from Braze.	
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/

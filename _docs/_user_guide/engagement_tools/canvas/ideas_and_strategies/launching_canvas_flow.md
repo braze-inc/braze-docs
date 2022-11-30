@@ -61,7 +61,7 @@ There are four main components you can use to segment your users in a simple, ef
 * [Audience Paths](#audience-paths)
 * [Decision Split](#decision-split)
 * [Action Paths](#action-paths)
-* [Experiement Paths](#experiment-paths)
+* [Experiment Paths](#experiment-paths)
 
 ### Audience Paths
 
@@ -73,7 +73,7 @@ The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_
 
 ### Action Paths
 
-[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purcahse events, and custom attribute changes. 
+[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purchase events, and custom attribute changes. 
 
 ### Experiment Paths
 

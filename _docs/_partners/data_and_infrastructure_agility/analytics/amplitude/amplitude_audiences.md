@@ -43,7 +43,7 @@ Amplitude and Braze offer two different integration methods. Read through the fo
 
 ### Amplitude Setup
 
-1. In Amplitude, naviagte to **Data Destinations** then look up "Braze - Event Stream".
+1. In Amplitude, navigate to **Data Destinations** then look up "Braze - Event Stream".
 2. Enter a sync name and then click **Create Sync**.
 3. Click **Edit** and provide your Braze REST API endpoint, REST API key, and Braze app identifier.
 4. Use the send events filter to select the events to send. You can send all events, but Amplitude recommends choosing the most important ones. 
