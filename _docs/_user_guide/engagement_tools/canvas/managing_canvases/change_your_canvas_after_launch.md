@@ -39,7 +39,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 
 - Users who haven't entered the Canvas yet are eligible for any newly created components. 
 - If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
-- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to recieve those newly added steps. 
+- Users who are currently in a launched Canvas, but haven't reached the points of the user journey where new steps are added, are eligible to receive those newly added steps. 
 
 If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) component, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 

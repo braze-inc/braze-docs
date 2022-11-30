@@ -132,7 +132,7 @@ if (@available(iOS 12.0, *)) {
 
 ### Interruption level (iOS 15+) {#interruption-level}
 
-![iOS Notification Settings page that shows notifcations enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 

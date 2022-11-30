@@ -1,6 +1,6 @@
 ---
 nav_title: Refreshing the Feed
-article_title: Refeshing the Content Card Feed for Web
+article_title: Refreshing the Content Card Feed for Web
 page_order: 2
 platform: Web
 channel: content cards

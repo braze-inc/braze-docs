@@ -47,7 +47,7 @@ There are a couple key differences between CASL and CAN-SPAM, most notably:
 
 ### Liability
 
-While CASL has a three-year transition period, ending july 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Ccommissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
+While CASL has a three-year transition period, ending july 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
 
 ### Exempt messages
 

@@ -40,7 +40,7 @@ curl --request GET \
 
 For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
-## Connnected Content message example
+## Connected Content message example
 
 This example code snippet utilizes the Transifex resource translation API and the user's `language` attribute. Based on your needs, you can then loop through the string objects and pull in the relevant content using the following Liquid: `{{strings.data[X].attributes.strings.other}}`.
 

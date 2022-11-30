@@ -28,7 +28,7 @@ Under **Engagements**, expand **Segments** and click **Segment Extension**. From
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension named "Online Shoppers Extenion - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
 
 ## Step 3: Choose your criteria
 

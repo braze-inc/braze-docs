@@ -55,7 +55,7 @@ You will not need to recreate each email from scratch; you can simply copy the f
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![A scheduled deivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![A scheduled delivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 4: Finalize the Braze campaign setup
 
@@ -114,7 +114,7 @@ You can also enter the whole Phrasee variant into the **Message body** for the r
 
 Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
 
-![A scheduled deivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
+![A scheduled delivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Step 5: Finalize the Braze campaign setup
 

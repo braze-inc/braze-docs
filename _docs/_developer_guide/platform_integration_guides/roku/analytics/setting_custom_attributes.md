@@ -89,7 +89,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 ### Unsetting a custom attribute
 
-Custom atributes can also be unset using the following method:
+Custom attributes can also be unset using the following method:
 
 ```javascript
 m.Braze.unsetCustomAttribute("attributeName")

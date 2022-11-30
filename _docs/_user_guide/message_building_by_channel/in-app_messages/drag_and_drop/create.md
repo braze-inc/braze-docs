@@ -111,7 +111,7 @@ Next, take your generated Liquid snippet and insert it into your message. Once y
 
 ## Step 3: Test your in-app message
 
-The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to yourdevice. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user’s perspective.
+The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user’s perspective.
 
 ### Preview message as a user
 
