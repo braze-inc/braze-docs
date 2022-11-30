@@ -74,7 +74,7 @@ For push notification and in-app message channels, you can template in the follo
 
 |Tag | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | This is Braze’s device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms, it is Braze’s device identifier, a randomly generated GUID. |
+| `{{targeted_device.${id}}}` | This is Braze's device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
 | `{{targeted_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
 | `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
