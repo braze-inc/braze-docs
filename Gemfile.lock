@@ -95,7 +95,7 @@ GEM
     rack-jekyll (0.3.5)
       jekyll
       rack
-    rack-protection (2.2.2)
+    rack-protection (2.2.3)
       rack
     rack-proxy (0.7.4)
       rack
@@ -113,10 +113,10 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sinatra (2.2.2)
+    sinatra (2.2.3)
       mustermann (~> 2.0)
       rack (~> 2.2)
-      rack-protection (= 2.2.2)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
