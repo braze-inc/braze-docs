@@ -34,7 +34,7 @@ The following options are available:
 - **At first impression:** When the user next opens your app (that is, starts a new [session][3]), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card.
 
 {% alert note %}
-For both options, after a card is created, Braze does not recalculate audience eligibility or personalization. This information is only evaluated once when the card is first created. Fully dynamic Content Cards are coming later this year.
+For both options, after a card is created, Braze does not recalculate audience eligibility or personalization.
 {% endalert %}
 
 ### Differences between creating cards at launch versus at first impression
