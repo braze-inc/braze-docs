@@ -56,7 +56,9 @@ If you're only testing email messages, you do not necessarily have to set up a t
 
 ![A Braze campaign with the Test Send tab selected][5]
 
-{% alert tip %} You can now enable or disable [TEST (or SEED)][14] being appended on these Test Messages! {% endalert %}
+{% alert tip %} 
+You can also enable or disable [TEST (or SEED)][14] being appended on your test messages.
+{% endalert %}
 
 
 ## Testing from the command line

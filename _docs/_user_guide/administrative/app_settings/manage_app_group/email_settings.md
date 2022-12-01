@@ -111,7 +111,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP - if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
   
-## Toggle-Capable Features
+## Toggle features
 
 ![][2]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -159,12 +159,11 @@ Changing this setting will not affect any of your existing email messages or tem
 
 For more information, refer to [CSS inlining][10].
   
-  
-### Test and Seed Subject Lines
+### Test and seed subject lines
 
-  When toggled on, this feature will append the word [TEST] for Emails sent as a test or [SEED] when Emails are being deployed to your customers.  By default this feature will be 'disabled' for companies.
+When toggled on, this will append the word "[TEST]" for emails sent as a test, or "[SEED]" when emails are send to your users. By default, this feature is disabled.
   
-![test_and_seed_email_subject_line][14]
+![Test and Seed Email Subject Lines section in the Email Settings page.][14]
 
 [00]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
 [0]: {% image_buster /assets/img/email_settings/custom_footer.png %}
