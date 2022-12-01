@@ -274,6 +274,8 @@ hide_toc: true
       border-radius:50%;
       height:28px;
       width:28px;
+      min-width: 28px;
+      min-height: 28px;
       background-color: rgb(196, 240, 245);
       display: flex;
       -webkit-box-pack: center;
@@ -468,7 +470,7 @@ hide_toc: true
               </div>
 
               <div class="request_info"><div class="request_info_image">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' data-icon='info' data-prefix='fas' style='background:%23c4f0f5' viewBox='0 0 192 512'%3E%3Cpath d='M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z' style='background:%23008294%3Bfill:%23008294'/%3E%3C/svg%3E" width="16" height="16" height="15" width="16" />
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' data-icon='info' data-prefix='fas' style='background:%23c4f0f5' viewBox='0 0 192 512'%3E%3Cpath d='M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z' style='background:%23008294%3Bfill:%23008294'/%3E%3C/svg%3E" width="16" height="16" />
               </div>
               Please wait up to ten seconds after submitting for your request to process.</div>
 
