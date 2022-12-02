@@ -35,8 +35,6 @@ An API request with any fields in the attributes object will create or update an
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
 }
 ```
-- [External User ID]({{site.baseurl}}/api/basics/#external-user-id-explanation)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
@@ -96,6 +94,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | ---| --- |
 | alias_name | (string) |
 | alias_label | (string) |
+| braze_id | (string, optional) When a user profile is recognized via the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
@@ -105,7 +104,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
 | email_open_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
 | email_click_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
-| external_id | (string) Of the unique user identifier. |
+| external_id | (string) A unique identifier for a user profile. Once assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |

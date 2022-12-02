@@ -30,5 +30,5 @@ An API request with any fields in the Attributes Object will create or update an
 }
 ```
 
-- [External User ID]({{site.baseurl}}/api/basics/#external-user-id-explanation)
+- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)

@@ -37,7 +37,7 @@ To create an Internal Group, perform the following steps:
 
 ### Adding test users
 
-After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them in bulk, as identified users, or as anonymous users.
+After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them in bulk as identified users or as anonymous users.
 
 ![Internal Group Settings when creating a new Internal Group][8]
 
