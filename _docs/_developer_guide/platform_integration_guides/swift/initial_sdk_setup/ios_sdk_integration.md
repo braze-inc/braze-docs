@@ -22,7 +22,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)
-- [Push motifications](#push-notifications)
+- [Push notifications](#push-notifications)
 - [Access user variables and methods](#access-user-variables-and-methods)
 - [Log analytics](#log-analytics)
 - [In-app messages (optional)](#in-app-messages)
@@ -288,7 +288,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Step 2: Support remote notifications
-In the **Signing & Capabilities** tab, add **Background Modes** support and select **Remote notificiations** to begin your support of remote notifications originating from Braze.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+In the **Signing & Capabilities** tab, add **Background Modes** support and select **Remote notifications** to begin your support of remote notifications originating from Braze.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Step 3: Remote notification handling
 The Braze SDK can handle remote notifications that originate from Braze. Forward remote notifications to Braze; the SDK will automatically ignore push notifications that do not originate from Braze. Add the following method to your `BrazeManager.swift` file in the push notification extension.

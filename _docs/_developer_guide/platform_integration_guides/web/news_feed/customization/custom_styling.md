@@ -4,7 +4,7 @@ article_title: News Feed Custom Styling for Web
 platform: Web
 page_order: 0
 page_type: reference
-description: "This article covers custom News Feeds styling options for your web applciation."
+description: "This article covers custom News Feeds styling options for your web application."
 channel: news feed
 
 ---

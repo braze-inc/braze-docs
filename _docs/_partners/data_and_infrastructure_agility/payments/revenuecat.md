@@ -119,7 +119,7 @@ Enter the event names that RevenueCat will send or select from the default event
 | Initial Purchase | The first purchase of an auto-renewing subscription product that does not contain a free trial. |
 | Trial Started | The start of an auto-renewing subscription product free trial. |
 | Trial Converted | When an auto-renewing subscription product converts from a free trial to a normal paid period. |
-| Trial Cancelled | When a user turns off renewals for an auto-renewing subscription product during a free trial period. |
+| Trial Canceled | When a user turns off renewals for an auto-renewing subscription product during a free trial period. |
 | Renewal | When an auto-renewing subscription product renews, or a user repurchases the auto-renewing subscription product after a lapse in their subscription. |
 | Cancellation | When a user turns off renewals for an auto-renewing subscription product during the normal paid period. |
 | Non Subscription Purchase | The purchase of any product that's not an auto-renewing subscription. |

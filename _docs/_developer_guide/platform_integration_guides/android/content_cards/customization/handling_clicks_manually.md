@@ -5,7 +5,7 @@ page_order: 4.2
 platform: 
   - Android
   - FireOS
-description: "This article covers how to handle Content Card clicks manually in your Android ofr FireOS application."
+description: "This article covers how to handle Content Card clicks manually in your Android or FireOS application."
 channel:
   - content cards
 

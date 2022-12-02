@@ -74,7 +74,7 @@ The data collected by Braze is determined by your specific integration and the u
             <td>Race and ethnicity</td>
         </tr>
         <tr>
-            <td>Political or regligious beliefs</td>
+            <td>Political or religious beliefs</td>
         </tr>
         <tr>
             <td>Sexual orientation</td>

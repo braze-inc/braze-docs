@@ -155,7 +155,7 @@ Events required:
 Considerations:
 - Execution delay, recommend that the guest add a 5–10-minute delay
 
-![A user segment is configured in punch and then guests sign up for a loyalty program. After this the guest event if triggered and the Braze messaging campaign is triggered. Next, the Punchh signup gifting campaign is triggered after 10 minutes, triggereing the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
+![A user segment is configured in punch and then guests sign up for a loyalty program. After this the guest event if triggered and the Braze messaging campaign is triggered. Next, the Punchh signup gifting campaign is triggered after 10 minutes, triggering the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
 
 {% endtab %}
 {% tab Mass offer %}
@@ -175,15 +175,15 @@ Punchh Configurations Required:
 
 **If using Punchh for segmentation and gifting, and Braze for messaging:**<br>
 For example, a $2 off reward is sent to a segment configurable within Punchh with messaging sent through Braze.<br>
-![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. Next, a reward event is trieggered and then the Braze messaging campaign is triggered.]({% image_buster /assets/img/punchh/usecase4.png %}){: style="max-width:125%;"}
+![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. Next, a reward event is triggered and then the Braze messaging campaign is triggered.]({% image_buster /assets/img/punchh/usecase4.png %}){: style="max-width:125%;"}
 
 **If using Braze segmentation and messaging, but Punchh for gifting:**<br>
 For example, a $2 off reward and messaging sent to a segment with attributes not available in Punchh.<br>
-![A user segment can be configured in Braze, and then a message sent from Braze to Braze segment. Next, the users sent to Punchh custom segment through a Braze webhook with segment and user ID. After this the user recieve a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:125%;"}
+![A user segment can be configured in Braze, and then a message sent from Braze to Braze segment. Next, the users sent to Punchh custom segment through a Braze webhook with segment and user ID. After this the user receive a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:125%;"}
 
 **If using Braze segmentation and Punchh for gifting and/or messaging:**<br>
 For example, a $2 off reward is sent to a segment with attributes not available in Punchh, but no messaging is required, or the messaging can be sent through Punchh (note that all guests must be present in Punchh).<br>
-![A user segment can be configured in Braze, and the users sent to Punchh custom segment through a Braze webhook with segment and user ID. After this the user recieve a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:75%;"}
+![A user segment can be configured in Braze, and the users sent to Punchh custom segment through a Braze webhook with segment and user ID. After this the user receive a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:75%;"}
 
 
 {% endtab %}
@@ -214,7 +214,7 @@ Punchh configurations required:
 
 For example, a surprise and delight Braze campaign is sent to a segment available in Punchh, thanking guests for visiting and rewarding them with $2 off their next visit.
 
-![An qualifying user segment can be configured within Punchh, and a qualifying user checks-in and recieved a gift through a Punchh post check-in campaign. After this a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase2.png %})
+![An qualifying user segment can be configured within Punchh, and a qualifying user checks-in and received a gift through a Punchh post check-in campaign. After this a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase2.png %})
 
 {% endtab %}
 {% tab  Anniversary %}
@@ -232,7 +232,7 @@ Considerations:
 - Lifespan duration (How long is the birthday reward valid?)
 - Recurring campaigns, schedule required 
 
-![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversay campaign. After this a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase1.png %})
+![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversary campaign. After this a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase1.png %})
 
 {% endtab %}
 {% tab Recall %}

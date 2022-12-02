@@ -559,7 +559,7 @@ customObject.logContentCardClicked()
 customObject.logContentCardDismissed()
 ```
 
-**Retreiving the `ABKContentCard`**<br>
+**Retrieving the `ABKContentCard`**<br>
 The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
 
 ```swift
@@ -585,7 +585,7 @@ The logging methods can be called directly from objects conforming to the `Conte
 [customObject logContentCardDismissed];
 ```
 
-**Retreiving the `ABKContentCard`**<br>
+**Retrieving the `ABKContentCard`**<br>
 The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
 
 ```objc

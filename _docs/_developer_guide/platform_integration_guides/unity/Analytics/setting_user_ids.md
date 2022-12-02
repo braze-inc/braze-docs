@@ -28,7 +28,7 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
-## User ID integration best bractices and notes
+## User ID integration best practices and notes
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 

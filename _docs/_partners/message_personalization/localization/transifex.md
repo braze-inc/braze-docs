@@ -35,12 +35,12 @@ First, input the `<ORGANIZATION_NAME>`, `<PROJECT_NAME>`, and `<RESOURCE_NAME>` 
 curl --request GET \
      --url 'https://rest.api.transifex.com/resource_translations?filter\[resource\]=o:<ORGANIZATION_NAME>:p:<PROJECT_NAME>:r:<RESOURCE_NAME>&filter\[language\]=l:<LANGUAGE>' \
      --header 'Accept: application/vnd.api+json' \
-     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475e3d61671ac795302'
+     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475ed68d90a2295302'
 ```
 
 For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
-## Connnected Content message example
+## Connected Content message example
 
 This example code snippet utilizes the Transifex resource translation API and the user's `language` attribute. Based on your needs, you can then loop through the string objects and pull in the relevant content using the following Liquid: `{{strings.data[X].attributes.strings.other}}`.
 

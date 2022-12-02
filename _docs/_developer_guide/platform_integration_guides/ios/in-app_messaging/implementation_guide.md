@@ -81,7 +81,7 @@ There are three sample customer use cases provided. Each use case offers a detai
 
 ### Custom slide-up in-app message
 
-![Two iPhone side-by-side. The first iPhone has the slide-up message touching the botton of the phoen screen. The second iPhone has the slide-up message sitting higher on the screen allowing you to see the displayed app navigation button.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![Two iPhone side-by-side. The first iPhone has the slide-up message touching the botton of the phone screen. The second iPhone has the slide-up message sitting higher on the screen allowing you to see the displayed app navigation button.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
 While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `offset` variable with your own custom variable. The image to the right shows an example of how this can be used to adjust your slide-up in-app messages. 
 

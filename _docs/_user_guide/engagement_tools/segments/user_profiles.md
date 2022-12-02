@@ -28,7 +28,7 @@ If a match is found, you can view the information that you've recorded for this 
 
 Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labelled Previous and Next.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
 
 ## Use cases
 
@@ -111,7 +111,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
 
 | Channel | Engagement events available |
 | --- | --- |

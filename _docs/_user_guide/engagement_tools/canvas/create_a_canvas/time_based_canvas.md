@@ -14,7 +14,7 @@ description: "This reference article covers definitions, time zones, and example
 
 ## Schedule delay
 
-The following information applies to the original Canvas workflow. For time-based funtionalities the for Canvas Flow workflow, check out the [Delay component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
+The following information applies to the original Canvas workflow. For time-based functionalities the for Canvas Flow workflow, check out the [Delay component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
 
 ### Send immediately
 

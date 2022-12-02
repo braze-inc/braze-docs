@@ -15,7 +15,7 @@ Partnership Documentation Overview
 - [Create and add content to your page](#create_page)
 - [Image, link, and code snippet formatting](#image_links)
 - [Reviewing and testing](#testing)
-- [Commiting to Github](#committing)
+- [Committing to Github](#committing)
 - [Review process](#review)
 <br><br>
 {% alert important %}
@@ -29,7 +29,7 @@ To contribute to Braze docs, you must have a GitHub account to commit changes an
 We recommend first [forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository, and then creating a local clone of your fork:
 1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click **Fork**. <br><br>
 2. Next, within this newly forked repo, click the **Clone or download** button. From the dialogue that appears, click **Use SSH**, and **save the repository link provided** for step 3. <br><br>
-3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **ommitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
+3. Lastly, follow our GitHub Wiki Guide on setting up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) **omitting step 3 of the guide**, and instead, **using the repository link saved,** to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
 
@@ -180,7 +180,7 @@ Your page will be viewable at `http://localhost:4000/docs/partners/your_partner_
 
 After reviewing your edits, press **Ctrl-C** in the terminal and end the rake command.
 
-## Step 5: Commiting to GitHub {#committing}
+## Step 5: Committing to GitHub {#committing}
 
 Once you have made the adequate changes to your partnership doc, save your document, and commit your changes. 
 

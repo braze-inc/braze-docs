@@ -69,7 +69,7 @@ This graph allows you to assess the total data point usage of a company by app g
 
 This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
 
-![Data Point Usage over time contrasting current billing cycle alloted data points with running total][8]{: style="max-width:90%;"}
+![Data Point Usage over time contrasting current billing cycle allotted data points with running total][8]{: style="max-width:90%;"}
 
 ### App group billing data
 

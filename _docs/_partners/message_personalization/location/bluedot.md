@@ -36,7 +36,7 @@ Set up your Bluedot account and log into your [Bluedot Canvas dashboard](https:/
 ### Step 2: Integrate the SDKs
 Integrate the Bluedot Point SDK and the Braze SDK in your app using the steps provided in the [Bluedot-Braze integration](https://docs.bluedot.io/integrations/braze-integration/) documentation.
 
-### Step 3: Autheticate the Bluedot SDK
+### Step 3: Authenticate the Bluedot SDK
 Use the `projectId` created in step 1 to authenticate the Bluedot Point SDK.
 
 ### Step 4: Use Bluedot events in Braze
