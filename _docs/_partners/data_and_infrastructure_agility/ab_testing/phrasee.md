@@ -141,6 +141,42 @@ Ensure your scheduled date and time match Braze's configured schedule so that Ph
 {% endtab %}
 {% endtabs %}
 
+## Phrasee React
+
+Phrasee [React](https://phrasee.co/platform/react/), powered by Phrasee X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization. 
+
+| Requirement | Description |
+|---|---|
+| Phrasee connect server token | A long string of characters that will serve as your Braze campaign's password to access your Phrasee language.<br><br>You can request this from your Phrasee customer success manager if you haven't already been provided it. |
+
+## Integration
+
+#### Step 1: Request Phrasee Amazon S3 credentials
+
+You'll need Phrasee to set up a dedicated Amazon S3 bucket to receive your click tracking events from Braze. Reach out to your Phrasee customer success manager to start this process. When the bucket is created, you will be provided unique credentials to create your Current. 
+
+#### Step 2: Create Current
+
+1. In Braze, click **Currents > Create New Current > Amazon S3 Data Export**. 
+2. Next, name your Current and enter a contact email.
+2. In the credentials box, add your Phrasee AWS access key ID and secret access key. Then, add "phrasee-braze-currents-exports" as the AWS S3 bucket name. 
+4. Lastly, add the AWS S3 bucket folder you received from your Phrasee customer success manager. It will likely be your company's name.
+5. Under **General Settings**, check the "Include events from anonymous users" box, and under **Manage Engagement Events** check "Email Click".
+6. When you are finished, click **Launch Current**.
+
+#### Step 3: Request the removal of personally identifiable information (PII).
+
+Next, reach out to your Braze account team to ensure that no personally identifiable information is transmitted to Phrasee.
+
+By default, the Current will include certain PII attributes like email and address. Phrasee cannot and will not receive PII, so it's critical you make this [request]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/#view-pii) of your Braze account team to turn this off for any event data passed along to Phrasee.
+
+### Step 4: Phrasee X code snippets 
+
+The following code snippets leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and once placed in your emails, will dynamically pull in language and a tracking pixel so Phrasee can optimize your language in real-time using Phrasee X.
+
+These code snippets can be found in [Phrasee's documentation](https://support.phrasee.co/en/articles/6101325-braze-dynamic-optimization-code-snippets).  
+
+
 [1]: https://phrasee.co/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [3]: mailto:awesome@phrasee.co
