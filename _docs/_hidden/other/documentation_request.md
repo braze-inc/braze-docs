@@ -284,6 +284,7 @@ hide_toc: true
       align-items: center;
       margin-right: 6px
     }
+
   </style>
   <script type="text/javascript">
     ! function(e, i) {
@@ -368,12 +369,7 @@ hide_toc: true
 
         e.preventDefault();
 
-        $('#doc_thankyou').fadeIn("slow");
-        $('#doc_thankyou_msg').html('<h3>Please wait, your request is being processed.</h3>');
-
         var mform = $(this);
-        e.preventDefault();
-        $('#doc_div').hide();
         var url = 'https://script.google.com/macros/s/AKfycbzDu2Q-VK18apU8-UAMEQFGteT-MuD5b648QWiE-MvmN99XfyBm/exec';
 
         var jqxhr = $.ajax({
@@ -382,17 +378,15 @@ hide_toc: true
           dataType: "json",
           data: mform.serializeObject()
         }).done(function() {
-          $('#doc_thankyou_msg').fadeTo(3200,0,function(){
-              $(this).html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.').fadeTo(3200,1);
+          $('#doc_div').hide();
+          $('#doc_thankyou').show();
+          $('#doc_thankyou_msg').fadeTo(800,0,function(){
+              $(this).html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.').fadeTo(800,1);
           });
         });
-
-      });
+        });
     });
   </script>
-
-
-
 
 <div class="container-fluid" id="main-container">
 
@@ -451,7 +445,10 @@ hide_toc: true
               </div>
               </div>
 
-
+              <div class="form-group" id="doc_request_url">
+                <label for="doc_request" id="doc_request_url_label">Url</label>
+                <input type="text" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g. https://www.braze.com/docs/" class="form-control" />
+              </div>
 
               <div class="form-group">
 
