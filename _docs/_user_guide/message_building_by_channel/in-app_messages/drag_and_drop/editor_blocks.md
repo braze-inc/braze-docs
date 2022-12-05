@@ -17,7 +17,8 @@ The following table describes how you can use each editor block type.
 
 | Name | Description |
 | --- | --- |
-| Text | Enters text into the message |
+| Title | Enters a title text into the message |
+| Paragraph | Enters a paragraph text into the message |
 | Image | Inserts an image from the Media Library |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Spacer | Adds space or padding between other blocks. |
@@ -27,7 +28,7 @@ The following table describes how you can use each editor block type.
 
 Details for each editor block's properties are provided in the following tables.
 
-### Text
+### Title and Paragraph
 
 | Name | Description |
 | --- | --- |
@@ -57,6 +58,14 @@ Details for each editor block's properties are provided in the following tables.
 | Corner Radius | Determines how round you would like the corners |
 | On-click Behavior | Determines the action when clicking the button and sets the appropriate link protocol |
 | URL | Dynamic based on the selected On-click behavior |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Spacer
+
+| Name | Description |
+| --- | --- |
+| Background color | Modifies the background color of the spacer |
+| Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
