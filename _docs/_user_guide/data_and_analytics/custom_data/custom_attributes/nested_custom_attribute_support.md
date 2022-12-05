@@ -226,6 +226,12 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 You can trigger when a nested custom attribute object changes. If you don't see an option to view the path explorer, check that you've generated a schema. 
 
+Using the **Add Personalization** modal, you can also insert nested custom attributes into your messaging. Select **Nested Custom Attributes** as the personalization type. Next, select the top level attribute and attribute key. 
+
+{% alert tip %}
+Check that a schema has been generated if you don't see the option to insert nested custom attributes.
+{% endalert %}
+
 ### Regenerate schemas {#regenerate-schema}
 
 After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus button to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
