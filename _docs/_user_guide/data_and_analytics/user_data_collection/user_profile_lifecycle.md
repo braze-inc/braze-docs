@@ -11,11 +11,11 @@ description: "This reference article describes the user profile lifecycle in Bra
 
 > This article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced. If you're looking to better understand your customer lifecycle, check out our Braze Learning course on [Mapping User Lifecycles](https://learning.braze.com/mapping-customer-lifecycles) instead.
 
-All persistent data associated with a user will be stored against a user profile.
+All persistent data associated with a user is stored in their user profile.
 
-Once a user profile is created, either after a user is recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile to identify or reference that user. 
+Once a user profile is created, either after a user is recognized by the SDK or created via the API, there are a number of parameters that can be assigned to that profile to identify and reference that user. 
 
-These identifiers include:
+These parameters include:
 
 * `braze_id`
 * `external_id`
@@ -23,7 +23,7 @@ These identifiers include:
 
 ## Anonymous user profiles
 
-Any user without a designated `external_id` or alias is called an anonymous user. For example, these could be users who have visited your website but not signed up, or downloaded your mobile app but not created a profile.
+Any user without a designated `external_id` is called an anonymous user. For example, these could be users who have visited your website but not signed up or downloaded your mobile app but not created a profile.
 
 Initially, when a user is recognized via the SDK, an anonymous user profile is created with an associated `braze_id`: a unique identifier that is set by Braze. This identifier can be used to update the user profile through the [API]({{site.baseurl}}/api/endpoints/user_data/).
 
@@ -31,7 +31,7 @@ The `braze_id` is automatically assigned by Braze, cannot be edited, and is devi
 
 ## Identified user profiles
 
-Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web]((https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
+Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
 
 Additional benefits of using an `external_id` include the following: 
 
@@ -46,13 +46,11 @@ Do not assign an `external_id` to a user profile before you are able to uniquely
 Additionally, an `external_id` is unchangeable once it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
 {% endalert %} 
 
-Setting an `external_id` will merge any relevant user profile data from the anonymous user profile with the existing identified user profile data and remove the remaining, irrelevant parts of the previously anonymous profile data from our database. This method can prevent an orphaned user from receiving a campaign that has already been received or opened by your identified user or prevent various errors that can occur when there are duplicates of your users in Braze. These orphaned users are not considered in your user counts and will not be messaged.
-
 There are two scenarios that occur when you identify anonymous users:
 
 1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze's platform, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, either via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze automatically merges the anonymous user's data to the existing identified user's profile. Braze then orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. 
+2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, e.g., via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze automatically merges the anonymous user's data to the existing identified user profile. Braze then orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. 
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 
@@ -66,7 +64,7 @@ Unlike an `external_id`, an alias can be updated with a new name for a given lab
 
 ![Two different user profiles for separate users with the same user alias label but different alias values][29]
 
-User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your e-commerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases, or referenced by the API.
+User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your e-commerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
 
