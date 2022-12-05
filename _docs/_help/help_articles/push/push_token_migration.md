@@ -10,9 +10,9 @@ channel: push
 
 # Migrating push tokens
 
-A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. If a device doesn’t have a push token, there is no way to send push notifications to it. Push token migration is the process of importing these previously-created keys into your Braze platform through the API.
+A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. Push token migration is the process of importing these previously-created keys into your Braze platform through the API.
 
-If you are a customer who was previously sending push notifications, either on your own or through another provider, push token migration allows you to continue sending push notifications to your users with registered push tokens during the SDK implementation process. Once the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them via the API.
+If you are a customer who was previously sending push notifications, either on your own or through another provider, push token migration allows you to continue sending push notifications to your users with registered push tokens during the SDK implementation process. Once the Braze SDKs are put in place, they handle push tokens automatically with no need to migrate them via the API.
 
 ## Migration via API
 
