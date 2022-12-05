@@ -32,9 +32,22 @@ The initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.c
 
 Create a new in-app message or Canvas step, then select **Drag & Drop Editor** as your editing experience.
 
-## Step 2: Build and design your in-app message
+## Step 2: Select your template
+
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:40%"}
+
+After selecting the Drag & Drop Editor as your editing experience, you can choose to:
+
+- Use a Braze basic modal template
+- Start with a blank modal template
+
+Click **Build message** to begin designing your in-app message in the Drag & Drop Editor!
+
+## Step 3: Build and design your in-app message
 
 The drag & drop editing experience is divided into two sections: **Build** and **Preview & Test**.
+
+![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ### Set message-level styles
 
@@ -85,7 +98,7 @@ You can also slide to adjust the size of existing columns.
 
 Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
 
-![]({% image_buster /assets/img_archive/dnd_iam_blocks.png %}){: style="max-width:40%"}
+![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
 Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
@@ -109,7 +122,7 @@ To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 
 Next, take your generated Liquid snippet and insert it into your message. Once you’ve finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
-## Step 3: Test your in-app message
+## Step 4: Test your in-app message
 
 The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user’s perspective.
 
