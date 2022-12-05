@@ -304,7 +304,7 @@ hide_toc: true
   		padding: 10px;
       height: 45px;
       font-family: Sailec W00 Bold, Arial, sans-serif;
-      font-size: 12pt;
+      font-size: 12tpt;
   		position: absolute;
       left: 0;
       top: 60px;
@@ -437,6 +437,7 @@ hide_toc: true
           <div class="row">
             <div class="col">
               <h1 class="h1">Documentation Request Form</h1>
+              <p class="subhead">All fields are required unless otherwise noted.</p>
               <div class="gradient-line"></div>
             </div>
           </div>
