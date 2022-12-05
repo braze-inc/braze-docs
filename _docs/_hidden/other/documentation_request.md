@@ -16,19 +16,28 @@ hide_toc: true
       font-style: normal;
       color: #212123;
   }
-  #main-container {
-    margin-top: 20px;
-  }
+
   #main-container label {
     font-weight: bold;
     font-size: 18px;
+  }
+  #main-container {
+    margin-top: 40px;
   }
 
   .container {
     margin-top: 40px;
   }
-
-
+  @media (min-width: 768px) {
+    #main-container {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: 1200px) {
+    #main-container {
+      margin-top: 60px;
+    }
+  }
   .popover{
     max-width: 95%;
     min-width: 350px;
@@ -69,7 +78,11 @@ hide_toc: true
         max-width: 1340px;
       }
     }
-
+    @media (min-width: 992px) {
+      #doc_div {
+        padding-top: 16px;
+      }
+    }
     .h1, h1  {
       font-size: 34pt;
       font-family: Sailec W00 Bold, Arial, sans-serif;
@@ -284,7 +297,32 @@ hide_toc: true
       align-items: center;
       margin-right: 6px
     }
-
+    #braze_internal {
+  		width: 100%;
+  		text-align: center;
+  		background-color: #FFEEE3;
+  		padding: 10px;
+      height: 45px;
+      font-family: Sailec W00 Bold, Arial, sans-serif;
+      font-size: 12pt;
+  		position: absolute;
+      left: 0;
+      top: 60px;
+  		z-index: 10;
+      color: #D45F24;
+  	}
+    @media (min-width: 768px) {
+      #braze_internal {
+        margin-top: 70px;
+      }
+    }
+  	#braze_internal a {
+  	  color: #27368F;
+  	  text-decoration: none;
+  	}
+  	#braze_internal a:hover{
+  	  color: #27368F;
+  	}
   </style>
   <script type="text/javascript">
     ! function(e, i) {
@@ -362,13 +400,14 @@ hide_toc: true
   </script>
   <script type="text/javascript">
     $(document).ready(function() {
+      var braze_internal = $('#braze_internal').remove();
+      $('#header_nav').after(braze_internal);
       $('#doc_form').submit(function(e) {
         $('#submit_progress').css('display','inline');
         $('#submit_text').html('Submitting');
         $('#ticket_submit_button').prop("disabled",true);
 
         e.preventDefault();
-
         var mform = $(this);
         var url = 'https://script.google.com/macros/s/AKfycbzDu2Q-VK18apU8-UAMEQFGteT-MuD5b648QWiE-MvmN99XfyBm/exec';
 
@@ -384,10 +423,13 @@ hide_toc: true
               $(this).html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.').fadeTo(800,1);
           });
         });
-        });
+
+      });
+
     });
   </script>
 
+<div id="braze_internal" ><i class="fa-solid fa-lock"></i> Internal only. Do not share with customers.</div>
 <div class="container-fluid" id="main-container">
 
       <div id="doc_div">
@@ -395,15 +437,11 @@ hide_toc: true
           <div class="row">
             <div class="col">
               <h1 class="h1">Documentation Request Form</h1>
-              <p class="subhead">Internal only. All fields are required unless otherwise noted.</p>
-
-                  <div class="gradient-line"></div>
+              <div class="gradient-line"></div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-
-
               <div class="form-group" id="doc_name_div">
                 <label for="doc_name" id="doc_name_label">Name</label>
                 <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
@@ -446,8 +484,8 @@ hide_toc: true
               </div>
 
               <div class="form-group" id="doc_request_url">
-                <label for="doc_request" id="doc_request_url_label">Url</label>
-                <input type="text" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g. https://www.braze.com/docs/" class="form-control" />
+                <label for="doc_request" id="doc_request_url_label">URL</label>
+                <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g. https://www.braze.com/docs/" class="form-control" />
               </div>
 
               <div class="form-group">
