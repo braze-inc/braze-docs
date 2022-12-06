@@ -222,7 +222,7 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 ### Trigger nested custom attribute changes
 
-You can trigger when a nested custom attribute object changes. This option is not available for  changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
+You can trigger when a nested custom attribute object changes. This option is not available for changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
 
 ![][16]
 
