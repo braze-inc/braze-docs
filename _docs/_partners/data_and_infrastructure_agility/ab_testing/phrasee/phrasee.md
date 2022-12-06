@@ -107,7 +107,7 @@ A Phrasee language model can generate two-line variants split between the 'Title
 
 ![An example of Phrasee's two-line variant split language model shown in the Braze message composer.]({% image_buster /assets/img/phrasee/10_push_two_lines.png %})
 
-You can also enter the whole Phrasee variant into the **Message body** for the results to be pulled correctly into Phrasee. In that instance, the ‘Title’ must remain constant across all variants to ensure an accurate test.
+You can also enter the whole Phrasee variant into the **Message body** for the results to be pulled correctly into Phrasee. In that instance, the 'Title' must remain constant across all variants to ensure an accurate test.
 
 ![An example of what a Phrasee variant may look like if you add the entire variant into the message body.]({% image_buster /assets/img/phrasee/11_push_messagebody.png %})
 
