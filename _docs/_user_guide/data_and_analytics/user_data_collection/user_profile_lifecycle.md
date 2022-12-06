@@ -42,7 +42,7 @@ Additional benefits of using an `external_id` include the following:
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
-<br>
+<br><br>
 Additionally, an `external_id` is unchangeable once it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
 {% endalert %} 
 
