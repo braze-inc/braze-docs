@@ -32,7 +32,7 @@ When using endpoints for SDK integration, use the **SDK Endpoint** listed on thi
 
 {% alert note %}
 To configure the Braze Web SDK to use the appropriate endpoint for your integration, you must use the `baseUrl` option when initializing the function and include the SDK endpoint here. For example `braze.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`
-<br><br>For more information, check out our [initial setup guide]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
+<br><br>For more information, check out our [initial setup guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
 {% endalert %}
 
 ## SDK file sizes
