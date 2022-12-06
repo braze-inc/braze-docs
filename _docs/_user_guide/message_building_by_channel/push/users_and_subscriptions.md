@@ -125,6 +125,10 @@ An app or website can only have one push subscription per device. So when a user
 
 Because there isn't a way for push providers (APNs/FCM) to distinguish between multiple users on one device, we pass the push token to the last user who was logged in to determine which user to target on the device for push.
 
+### Multiple devices and one user
+
+The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-in` across all eligible devices. If a user later opts out of push notifications, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
+
 ## Push Enabled filter {#push-enabled}
 
 `Push Enabled` is a segmentation filter in Braze that allows marketers to easily identify users that allow Braze to send push notifications and users that haven't expressed preferences to not receive push notifications. 
