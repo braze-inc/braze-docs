@@ -100,7 +100,7 @@ Phrasee’s integration will allow you to select both an iOS and an Android Braz
 #### Step 3: Copy the Phrasee variants into Braze
 
 {% alert important %} 
-For Phrasee to automatically pull the results of the variants within your push campaign, the variant text must be contained within the message body, not the Title.
+For Phrasee to automatically pull the results of the variants within your push campaign, the variant text must be contained within the message body, not the 'Title'.
 {% endalert %}
 
 A Phrasee language model can generate two-line variants split between the 'Title' and 'Message'. Make sure that the second line is included in the message body; this way, Phrasee can automatically pull the results of the variants within your campaign.
