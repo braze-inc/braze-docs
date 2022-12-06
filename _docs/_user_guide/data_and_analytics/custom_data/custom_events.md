@@ -196,6 +196,17 @@ You can use nested objects—objects that are inside of another object—to send
 
 {% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
 
+#### Schema generation
+
+Generting a schema for events with nested event properties allows you to access the nested data. To generate a schema, follow these steps:
+1. Go to **Manage Events** > **Custom Events**.
+2. Select **Manage Properties** for the events with nested properties.
+3. Click the icon to generate the schema. To view the schema, click the plus button.
+
+![][6]{: style="max-width:80%;"}
+
+After generating a schema, you'll be able to reference the nested data during [segmentation](#segmentation) and [personalization](#personalization).
+
 #### Usage examples
 
 ##### API request body
@@ -277,7 +288,7 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ##### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
+To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages. However, you can also add nested objects after generating a schema.
 
 {% tabs %}
 {% tab Music Example %}
@@ -304,10 +315,6 @@ Triggering a campaign with nested properties from the "Ordered" event:
 ##### Segmentation
 
 Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Once you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
-
-##### Schema generation
-
-To generate a schema, go to **Manage Events** > **Custom Events** and select **Manage Properties** for the events with nested properties. 
 
 ![][4]
 
@@ -357,6 +364,7 @@ Contact your Braze customer success manager for recommendations on the best appr
 [3]: {% image_buster /assets/img/nested_object3.png %}
 [4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
+[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
