@@ -232,7 +232,7 @@ For example, in the following action-based campaign, you can add a new trigger a
 
 ### Personalization
 
-Using the **Add Personalization** modal, you can also insert nested custom attributes into your messaging. Select **Nested Custom Attributes** as the personalization type. Next, select the top level attribute and attribute key. 
+Using the **Add Personalization** modal, you can also insert nested custom attributes into your messaging. Select **Nested Custom Attributes** as the personalization type. Next, select the top-level attribute and attribute key. 
 
 For example, in the personalization modal below, this inserts the nested custom attribute of a local neighborhood office based on a user's preferences.
 
