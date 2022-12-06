@@ -34,6 +34,9 @@ guide_menu_list:
 - name: AI Copywriting Assistant
   link: /docs/user_guide/intelligence/ai_copywriting/
   fa_icon: fas fa-edit
+- name: AI Image Generator
+  link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
+  fa_icon: fas fa-wand-magic-sparkles
 
 ---
 
