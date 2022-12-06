@@ -103,7 +103,7 @@ Phrasee’s integration will allow you to select both an iOS and an Android Braz
 For Phrasee to automatically pull the results of the variants within your push campaign, the variant text must be contained within the message body, not the Title.
 {% endalert %}
 
-A Phrasee language model can generate two-line variants split between the ‘Title’ and ‘Message’. Make sure that the second line is included in the message body; this way, Phrasee can automatically pull the results of the variants within your campaign.
+A Phrasee language model can generate two-line variants split between the 'Title' and 'Message'. Make sure that the second line is included in the message body; this way, Phrasee can automatically pull the results of the variants within your campaign.
 
 ![An example of Phrasee's two-line variant split language model shown in the Braze message composer.]({% image_buster /assets/img/phrasee/10_push_two_lines.png %})
 
