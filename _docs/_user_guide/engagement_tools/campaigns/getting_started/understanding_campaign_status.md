@@ -23,7 +23,7 @@ Active campaigns are in the process of sending. They can fall under one of the f
 - Scheduled to send on a recurring schedule and has at least one occurrence that hasn't finished sending
 
 ## Archived
-Archivced campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
+Archived campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
 To [archive a campaign][2], click on the gear icon for a given campaign, or simply check it off and select **Archive Selected**.
 

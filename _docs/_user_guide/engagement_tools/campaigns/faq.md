@@ -20,7 +20,7 @@ No, control groups in campaigns are intended for single-channel messaging, such 
 
 ### What are some ways I can start testing and optimizing campaigns?
 
-Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for tsting entire workflows.
+Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for testing entire workflows.
 
 ### Why did the open rate for my campaign decrease?
 
@@ -68,7 +68,7 @@ Note that the user needs to be in the segment for 24 hours prior to the launch. 
 
 For example, if a campaign is scheduled to be delivered at 7 PM UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not that we send the campaign out. If users then don't match any filters when we check eligibility, they won't fall in the target audience.
 
-As another example, say you want to create two campaigns scheduled to send on the same day—one in the morning and one in the evening—and add a filter that users can only receive the second campaign if they've already received the first. With local time zone delivery, some users may not receive the second campaign. This is because we check eligibility when the user's time zone is identified, so if the scheduled time hasn't occured in their time zone yet, they haven't received the first campaign. Therefore they won't be eligible for the second campaign.
+As another example, say you want to create two campaigns scheduled to send on the same day—one in the morning and one in the evening—and add a filter that users can only receive the second campaign if they've already received the first. With local time zone delivery, some users may not receive the second campaign. This is because we check eligibility when the user's time zone is identified, so if the scheduled time hasn't occurred in their time zone yet, they haven't received the first campaign. Therefore they won't be eligible for the second campaign.
 
 ### How do I schedule a local time zone campaign?
 

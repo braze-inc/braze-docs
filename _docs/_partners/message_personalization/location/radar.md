@@ -50,7 +50,7 @@ You can use custom events and user attributes to build location-based segments o
 
 Send a push notification to the user with arrival instructions as they arrive at your store for a curbside pickup.
 
-![An action-based delivery campaign showing that the campaign will be delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbisde".]({% image_buster /assets/img_archive/radar-campaign.png %})
+![An action-based delivery campaign showing that the campaign will be delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Build an audience segment of recent store visitors
 

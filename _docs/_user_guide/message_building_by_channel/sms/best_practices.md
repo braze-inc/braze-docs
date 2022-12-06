@@ -16,7 +16,7 @@ guide_featured_list:
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
 - name: "Opt-ins"
-  link: /user_guide/message_building_by_channel/sms/best_practices/opt-ins/
+  link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
   fa_icon: fa-solid fa-comment-sms
 - name: "Sending Test Messages"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/

@@ -24,11 +24,11 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 
 |Property|Description|
 |---|---|
-| `expiresAt` | The unix timestamp of the card's expiration time.|
+| `expiresAt` | The UNIX timestamp of the card's expiration time.|
 | `extras`| (Optional) Key-value pair data formatted as a string object with a value string. |
 | `id` | (Optional) The id of the card. This will be reported back to Braze with events for analytics purposes. |
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
-| `updated` | The unix timestamp of when this card was last modified. |
+| `updated` | The UNIX timestamp of when this card was last modified. |
 | `viewed` | This property reflects whether the user viewed the card or not.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -39,7 +39,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
 | `imageUrl` | The URL of the card's image.|
@@ -54,7 +54,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
 | `imageUrl` | The URL of the card's image.|
@@ -70,7 +70,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `description` | The body text for this card. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |

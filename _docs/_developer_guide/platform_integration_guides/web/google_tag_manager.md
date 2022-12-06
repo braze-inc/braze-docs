@@ -100,7 +100,7 @@ The **Product ID** and **Price** fields are required.
 
 Use the **Add Row** button to add purchase properties.
 
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quantity", and "purchase properties".][gtm-purchase]
 
 ### Stop and resume tracking {#stop-tracking}
 

@@ -3,7 +3,7 @@ nav_title: Previous Generations
 article_title: Previous In-App Message Generations
 page_order: 20
 page_type: reference
-description: "This article reviews prevous information around in-app messages in Braze."
+description: "This article reviews previous information around in-app messages in Braze."
 channel: in-app messages
 noindex: true
 

@@ -62,7 +62,7 @@ To complete the device mode integration, refer to the detailed RudderStack instr
 
 ### Step 3b: Server-to-server integration (cloud mode) {#cloud-mode}
 
-With this mode, the Braze SDK sends the event data directly to RudderStack. RudderStack then transforms this data and routes it to Braze in the expected format. The transformation is done in the RudderStack backend.
+In this mode, the SDK sends the event data directly to the RudderStack server. RudderStack then transforms this data and routes it to the desired destination. This transformation is done in the RudderStack backend, using RudderStack's Transformer module.
 
 To enable the integration, you will need to map the RudderStack methods to Braze, as described in step 4.
 

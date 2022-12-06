@@ -280,7 +280,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtabs %}
 
 **Override and provide custom view**<br>
-Provide a layout that mimics the standard modal in-app message, but supply your view as the root elment, and then inflate that layout 
+Provide a layout that mimics the standard modal in-app message, but supply your view as the root element, and then inflate that layout 
 ```xml
 <com.braze.advancedsamples.inapp.modal.TeamPickerView xmlns:android="http://schemas.android.com/apk/res/android"
                                                       xmlns:tools="http://schemas.android.com/tools"
@@ -403,7 +403,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtabs %}
 
 **Override and provide custom view**<br>
-Provide a layout that mimics the standard modal in-app message, but supply your view as the root elment, and then inflate that layout 
+Provide a layout that mimics the standard modal in-app message, but supply your view as the root element, and then inflate that layout 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <com.braze.advancedsamples.immersive.CustomImmersiveInAppMessage
