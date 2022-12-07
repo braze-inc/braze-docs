@@ -30,6 +30,7 @@ The following table describes how users can use each editor block type.
 | `Menu` |  Creates a flexible menu for the message you're designing. |
 | `Spacer` |  Adds space, or "padding", between other blocks. |
 | `Social Icon` | Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
+| `Video` | Creates a link to the video content. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
@@ -180,28 +181,22 @@ Refer to the following table for details on the `Social Icon` editor block.
 |`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ### Video
 
-Refer to the following table for details on the `Video` editor block.  This helps you include a visual link to video content.
+Refer to the following table for details on the `Video` editor block.
 
 | properties | description |
 |---|---|
-|`URL`| The URL for the video |
-|`Title`| Auto-generated from the video meta data or can be customized.  Note, only Youtube or Vimeo is supported |
-|`Play Icon Style`| Various options for the 'play' button depicated on top of the video image |
-|`Play Icon Color`| Can select between 'Light' or 'Dark' for the 'play' button |
-|`Play Icon Size`| Can choose the px size for the 'play' button.  Pre-fixed range from 50px - 80px (incremented by 5px)|
+|`URL`| The URL for the video. |
+|`Title`| Auto-generated from the video meta data or can be customized.  Note that only Youtube and Vimeo are supported. |
+|`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
+|`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
+|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50 px to 80 px (incremented by 5 px). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Videos hosted by Vimeo will only work if they are set to "public". All other security settings available within Vimeo (e.g. "Hide from Vimeo.com") will generate a different link format that is not supported by the video content block. These types of links will be altered by the builder, which prevents us from generating a thumbnail.
+Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (e.g., "Hide from Vimeo.com") will generate a different link format that is not supported by this content block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
 {% endalert %}
-
-{% alert tip %}
-The reason why the actual video content is not embedded in the message is that, unfortunately, it doesn't work very well. Many email clients do not support it. Apple has been "back and forth" on video support in iOS over the years
-{% endalert %}
-
 
 ### Add Liquid personalization
 
