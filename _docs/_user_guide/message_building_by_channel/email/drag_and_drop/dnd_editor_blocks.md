@@ -15,6 +15,10 @@ Editor blocks are the various blocks available in the Drag & Drop Editor under t
 
 To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
+{% alert tip %}
+You can now add custom attributes to any [URL]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) within the Image, Button, or Text Blocks.
+{% endalert %}
+
 ## Types
 
 The following table describes how users can use each editor block type.
@@ -109,6 +113,7 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 - Images wider than the available space will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
 - Images smaller than the available space will use the image's natural size to avoid distortion effects or blurry pictures.
 {% endalert %}
+
 
 ### Button
 
