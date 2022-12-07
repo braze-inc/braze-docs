@@ -123,7 +123,7 @@ Platform configuration: To enable external identifiers in Punchh, from the Punch
 
 ### Step 2: Braze adapter setup in Punchh
 
-#### Available Events to Sync {#available-events-to-sync}
+#### Available events to sync {#available-events-to-sync}
 
 1. Guest
 2. Loyalty Check-in
