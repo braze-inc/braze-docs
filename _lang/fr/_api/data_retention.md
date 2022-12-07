@@ -50,7 +50,7 @@ Chaque semaine, Braze exécute un processus visant à supprimer les utilisateurs
 
 Braze peut supprimer des données lorsque cela s’avère nécessaire dans le cadre de la résolution d’un problème ou d’un incident technique, par exemple pour dédupliquer des données.
 
-#### Conservation des données du Data Lake de Braze
+#### Rétention des données du Data Lake de Braze
 
 Les données disponibles pour les clients dans le tableau de bord de Braze sont principalement agrégées. Les journaux détaillés sont conservés dans une base de données distincte créée par Braze (le « Data Lake », anciennement appelé « BI Database »).
 
@@ -75,14 +75,15 @@ Lorsque les données sont supprimées de votre instance de production, elles res
  
 #### Données sur les interactions de la campagne 
  
-<br>**Qu’est-ce que c’est ? ** Les interactions de la campagne sont des données relatives aux interactions des utilisateurs finaux avec une campagne. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des campagnes.
+<br>
+**Qu’est-ce que c’est ? ** Les interactions de la campagne sont des données relatives aux interactions des utilisateurs finaux avec une campagne. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des campagnes.
  
-**Quand sont-elles supprimées ? ** Braze supprime automatiquement des groupes d’applications du client les interactions de campagne pour les campagnes qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes, des Canvas ou des cartes de contenu dans un statut actif.
+**Quand sont-elles supprimées ? ** Braze supprime automatiquement des Groupes d’Apps du Client les Interactions de campagne pour les campagnes qui n’ont pas envoyé de messages depuis 25 mois calendaires et qui ne sont pas utilisées pour le reciblage dans des campagnes, des canvas ou des cartes de contenu dans un statut actif.
  
 **Que se passe-t-il après la suppression ? **
- - Les campagnes sans interactions de campagne ne peuvent pas être utilisées dans les filtres de reciblage pour les campagnes, les Canvas et les segments.
- - Toute campagne active qui n’a pas envoyé de messages depuis 25 mois, et qui n’est pas utilisée pour le reciblage dans des campagnes, des Canvas ou des cartes actives, sera arrêtée car l’éligibilité des campagnes est remise à zéro. Vous pouvez relancer la campagne après avoir vérifié le paramètre de rééligibilité.
+ - Les campagnes sans interactions de campagne ne peuvent pas être utilisées dans les filtres de reciblage pour les campagnes, les canvas et les segments.
+ - Toute campagne active qui n’a pas envoyé de messages depuis 25 mois, et qui n’est pas utilisée pour le reciblage dans des campagnes, des canvas ou des cartes actives, sera arrêtée car l’éligibilité des campagnes est remise à zéro. Vous pouvez relancer la campagne après avoir vérifié le paramètre de rééligibilité.
  
-**Comment remettre l’horloge à zéro pour éviter la suppression ? ** Pour conserver les interactions de la campagne pour une campagne particulière, vous pouvez envoyer un message utilisant cette campagne au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser cette campagne dans un filtre de reciblage dans toute campagne, Canvas ou carte active.
+**Comment remettre l’horloge à zéro pour éviter la suppression ? ** Pour conserver les interactions de la campagne pour une campagne particulière, vous pouvez envoyer un message utilisant cette campagne au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser cette campagne dans un filtre de reciblage dans toute campagne, canvas ou carte active.
  
 Vous pouvez demander une conservation des données plus courte que 25 mois via votre CSM.
