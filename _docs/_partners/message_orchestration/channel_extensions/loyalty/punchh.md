@@ -41,7 +41,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 - Punchh has added the ability to disable the sending of default user attributes to Braze, so the customer does not incur data point overages. This is configured during the adapter setup.
 - If using custom segments on recurring campaigns, campaign name must be used instead of Campaign ID, as the IDs change each time the campaign runs.
 - Communication channels available within each Punchh gifting campaign include rich messages, push notifications, SMS, and email.
-- Once users have been sent to a Punchh custom segment from Braze, they can’t be removed. Only new guests can be added to an existing custom segment. If guests need to be removed from an existing Punchh custom segment, a new webhook campaign will need to be created in Braze to send users to a new Punchh Custom Segment.
+- Once users have been sent to a Punchh custom segment from Braze, they can’t be removed. Only new guests can be added to an existing custom segment. If guests need to be removed from an existing Punchh custom segment, a new webhook campaign will need to be created in Braze to send users to a new Punchh custom segment.
 
 
 ## Integration
