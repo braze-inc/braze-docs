@@ -175,7 +175,7 @@ Adding a trigger will pull up the list of events created in Braze. Choose the ev
 
 ![][12]
 
-Property filters can be added to further filter the triggering event. For example, the message should only be triggered when a customer triggers the “checkins_gift” event where the approved event property is `true`. This is an optional feature that may not be applicable to all use cases. 
+Property filters can be added to further filter the triggering event. For example, the message should only be triggered when a customer triggers the "checkins_gift" event where the approved event property is `true`. This is an optional feature that may not be applicable to all use cases. 
 
 #### Segmentation
 
