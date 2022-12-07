@@ -55,8 +55,16 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 ### Additional parameters
 
-You can add additional parameters for recurring events.
+The following parameters are optional and can be used to define additional aspects of an event.
 
+**Organizer name:** `&organizer=name`
+**Attach URL related to event:** `&attach=http://www.example.com/`
+**Duration:** `duration=30M`, as an alternative to dtend specify a duration like 1H or 30M
+**Reminder alarm time, in minutes:** `&reminder=15`
+**All day event:** `&allday=1` for all day event
+**UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
+
+You can also add additional parameters for recurring events:
 - **Weekly events:** `&recur=weekly`
 - **Monthly events:** `&recur=monthly`
 - **End of recurrence:** `&recuruntil=END_DATE`, where `END_DATE` is the date and time the recurrence ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ) as UTC
