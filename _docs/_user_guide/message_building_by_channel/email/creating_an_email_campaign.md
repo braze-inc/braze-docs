@@ -82,6 +82,10 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
+{% alert important %}
+Braze will automatically remove HTML Event Handlers referenced as attributes.  Please be aware that this does modify the HTML and it is recommended to validate or re-check the email once completed.  Learn more about HTML handlers [here](https://www.w3schools.com/tags/ref_eventattributes.asp).
+{% endalert %}
+
 ### Step 3a: Add email headers
 
 To add email headers, click **Edit Sending Info** and select **Add New Header**.
