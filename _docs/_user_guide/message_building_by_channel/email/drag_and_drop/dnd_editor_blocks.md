@@ -180,6 +180,29 @@ Refer to the following table for details on the `Social Icon` editor block.
 |`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+
+### Video
+
+Refer to the following table for details on the `Video` editor block.  This helps you include a visual link to video content.
+
+| properties | description |
+|---|---|
+|`URL`| The URL for the video |
+|`Title`| Auto-generated from the video meta data or can be customized |
+|`Play Icon Style`| Various options for the 'play' button depicated on top of the video image |
+|`Play Icon Color`| Can select between 'Light' or 'Dark' for the 'play' button |
+|`Play Icon Size`| Can choose the px size for the 'play' button.  Pre-fixed range from 50px - 80px (incremented by 5px)|
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+Videos hosted by Vimeo will only work if they are set to "public". All other security settings available within Vimeo (e.g. "Hide from Vimeo.com") will generate a different link format that is not supported by the video content block. These types of links will be altered by the builder, which prevents us from generating a thumbnail.
+{% endalert %}
+
+{% alert tip %}
+The reason why the actual video content is not embedded in the message is that, unfortunately, it doesn't work very well. Many email clients do not support it. Apple has been "back and forth" on video support in iOS over the years
+{% endalert %}
+
+
 ### Add Liquid personalization
 
 Refer to the following table for details on `Add Personalization`.
