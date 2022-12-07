@@ -253,7 +253,7 @@ Considerations:
 
 ### Post check-in offer campaign with notification
 
-When utilizing a Post Checkin Offer Campaign, Braze will send the notification regarding the gifting, and once the guest makes a checkin, they will then be gifted from the Punchh Post Checkin Campaign. Therefore, a Post Checkin Offer Campaign will need to be configured within Punchh and a Messaging Campaign in Braze (if notifying the customers of the campaign).
+When utilizing a post check-in offer campaign, Braze will send the notification regarding the gifting, and once the guest makes a check-in, they will then be gifted from the Punchh post check-in campaign. Therefore, a post check-in offer campaign will need to be configured within Punchh and a messaging campaign in Braze (if notifying the customers of the campaign).
 
 Punchh configurations required:
 - Campaign: Post check-in offer
