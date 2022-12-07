@@ -179,7 +179,7 @@ Property filters can be added to further filter the triggering event. For exampl
 
 #### Segmentation
 
-In many cases, Braze Campaigns and Canvases being triggered by Punchh events can be set to an “All Users” audience since the segmentation of users triggering these events will be determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and/or segments in the “Target Audiences” section of the Campaign composer or the “Entry Audience” of the Canvas composer. 
+In many cases, Braze campaigns and Canvases being triggered by Punchh events can be set to an “All Users” audience since the segmentation of users triggering these events will be determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
 
 ### Example use cases
 
