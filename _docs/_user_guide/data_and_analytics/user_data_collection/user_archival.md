@@ -8,7 +8,7 @@ description: "This reference article covers user archival definitions and how to
 ---
 # User archival
 
-Each week on Sunday at 5:30am EST, Braze runs a process to remove inactive users and dormant users from the Braze Services. 
+Each week on Sunday at 5:30am EST, Braze runs a process to remove inactive users and dormant users from the Braze Services. Note that Braze does not archive users unless the number of users in the app group hits the 250,000 threshold. 
 
 This process ensures that Braze provides accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
 
