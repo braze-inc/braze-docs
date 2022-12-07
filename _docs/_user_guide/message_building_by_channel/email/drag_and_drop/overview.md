@@ -122,7 +122,7 @@ Once you've finished designing and building your email message, go to **Sending 
 
 #### Adding Attributes to Links
 
-![Custom_Attributes.][14]{: style="float:right;max-width:25%;margin-left:15px;"}
+![dnd_custom_attributes.][14]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 With Custom Attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images, and they serve a variety of scenarios: personalization, segmentation, styling, accessibility, etc.  A common use case is to input an attribute into your anchor tag to disable click tracking when sending through the Braze product (SendGrid: clicktracking = "off" or SparkPost: data-msys-clicktrack="0")
 
