@@ -48,10 +48,6 @@ If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Bra
 
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
-{% alert important %}
-This integration relies on IDFV collection and is therefore not compatible with the `useUUIDAsDeviceID` option in the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
-{% endalert %}
-
 #### Unity
 
 ```
