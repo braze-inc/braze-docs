@@ -81,40 +81,68 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "attributes": [ 
-    {
-      "external_id":"user_identifier",
-      "string_attribute": "fruit",
-      "boolean_attribute_1": true,
-      "integer_attribute": 25,
-      "array_attribute": ["banana", "apple"]
-    }
-  ],
-  "events": [
-    {
-      "external_id": "user_identifier",
-      "app_id" : "app_identifier",
-      "name": "watched_trailer",
-      "time": "2013-07-16T19:20:30+1:00"
-    }  
-  ],
-  "purchases": [
-     {
-      "external_id": "user_identifier",
-      "app_id": "app_identifier",
-      "product_id": "product_name",
-      "currency": "USD",
-      "price": 12.12,
-      "quantity": 6,
-      "time": "2017-05-12T18:47:12Z",
-      "properties": {
-         "integer_property": 3,
-         "string_property": "Russell",
-         "date_property": "2014-02-02T00:00:00Z"
-      } 
-    }
-  ]
-}'
+    "attributes": [
+        {
+            "external_id": "user_identifier",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2022-12-06T19:20:45+01:00",
+            "properties": {
+                "release": {
+                    "studio": "FilmStudio",
+                    "year": "2022"
+                },
+                "cast": [
+                    {
+                        "name": "Actor1"
+                    },
+                    {
+                        "name": "Actor2"
+                    }
+                ]
+            }
+        },
+        {
+            "user_alias": {
+                "alias_name": "device123",
+                "alias_label": "my_device_identifier"
+            },
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2013-07-16T19:20:50+01:00"
+        }
+    ],
+    "purchases": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "product_id": "product_name",
+            "currency": "USD",
+            "price": 12.12,
+            "quantity": 6,
+            "time": "2017-05-12T18:47:12Z",
+            "properties": {
+                "color": "red",
+                "monogram": "ABC",
+                "checkout_duration": 180,
+                "size": "Large",
+                "brand": "Backpack Locker"
+            }
+        }
+    ]
+}`
 ```
 
 ## Responses
