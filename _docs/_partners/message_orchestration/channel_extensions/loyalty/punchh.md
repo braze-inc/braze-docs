@@ -171,7 +171,7 @@ For more information on how webhooks are used at Braze, check out [Creating a we
 
 Use cases for Braze messaging triggered by Punchh events being sent to Braze, such as reward events or guest events, can be created as [action-based campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) or Canvases triggered by the relevant Punchh event.
 
-Adding a trigger will pull up the list of events created in Braze. Choose the event that should trigger your Campaign or Canvas to be sent to the user who logged the event.
+Adding a trigger will pull up the list of events created in Braze. Choose the event that should trigger your campaign or Canvas to be sent to the user who logged the event.
 
 ![][12]
 
