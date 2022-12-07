@@ -59,7 +59,7 @@ The following parameters are optional and can be used to define additional aspec
 
 **Organizer name:** `&organizer=name`
 **Attach URL related to event:** `&attach=http://www.example.com/`
-**Duration:** `duration=30M`, as an alternative to dtend specify a duration like 1H or 30M
+**Duration:** `duration=30M`, as an alternative to the event end time (dtend), specify a duration like 1H or 30M
 **Reminder alarm time, in minutes:** `&reminder=15`
 **All day event:** `&allday=1`
 **UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
