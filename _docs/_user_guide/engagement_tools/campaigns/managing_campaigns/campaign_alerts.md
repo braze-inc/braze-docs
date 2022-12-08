@@ -37,7 +37,7 @@ For a scheduled recurring campaign, you can set upper and lower thresholds for t
 You can set up an email alert, a webhook alert or both. Webhook alerts can be very useful, as they allow you to send an alert to a Slack channel. For more information on integrating campaign alerts with Slack, see our [documentation][1].
 
 {% alert note %}
-When setting campaign alerts for future campaign, you may receive updates before the campaign starts, and after it ends. This is because campaign alert will continue to send until the capaign has been manually stopped.
+When setting campaign alerts for future campaigns, you may receive updates before the campaign starts and after it ends. This is because campaign alerts will continue to send until the campaign has been manually stopped.
 {% endalert %}
 
 ## Campaign alert webhook payload
