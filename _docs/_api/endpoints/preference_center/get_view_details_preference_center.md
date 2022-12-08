@@ -38,6 +38,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_api_id": "preference_center_api_id",
   "created_at": "example_time_created",
   "updated_at": "example_time_updated",
+  "preference_center_title": "Example Preference Center Title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
   "redirect_page_html": null
