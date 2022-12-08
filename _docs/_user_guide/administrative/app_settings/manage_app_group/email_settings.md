@@ -11,78 +11,51 @@ channel: email
 
 # Email settings
 
-Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
+Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
 
-## Outbound email settings
+## Sending configuration
 
-### Multiple sending emails
+The email settings under the **Sending Configuration** section determine which details are included in your email campaigns. In particular, these settings are mainly related to what your user sees when they receive an email from Braze.
 
-Use the following outbound email settings to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
+### Outbound email settings
 
-Here, you may also exclude the "Reply-To" email and exclusively send replies to the "From" address.
+When configuring your email settings, your outbound email settings identify which name and email addresses are used when Braze sends emails to your users.
 
-![Outbound Email Settings section of the Email Settings tab.][1]
+{% tabs local %}
+{% tab Display Name Address %}
 
-This feature allows you to:
+In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
 
-- Set up multiple sending and reply-to email addresses
-- Set a default sending and reply-to address
-- Exclude the reply-to option and send replies to the "From" address
+![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
 When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e., marketing.yourdomain.com). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
-### BCC addresses
+{% endtab %}
+{% tab Reply-To Address %}
 
-The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
+Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
+
+![]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
+
+{% endtab %}
+{% tab BCC Address %}
+
+This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
 {% alert important %} 
 The **BCC Address** settings are currently in early access. Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address. Contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature.
 {% endalert %}
 
-![BCC Address section of the Email Settings tab.][11]
+![BCC Address section of the Email Settings tab.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
-Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. If you'd like to override this at the message level, you can select **No BCC** when setting up your message.
+Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. To override this at the message level, you can select **No BCC** when setting up your message.
 
-If you require that all email messages sent from Braze have a BCC address included, you can check **Require a BCC address for all your email campaigns**. This will require you to select a default address which will be automatically selected on new email campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. 
+If you require that all email messages sent from Braze have a BCC address included, you can select the **Require a BCC address for all your email campaigns** toggle. This will require you to select a default address which will be automatically selected on new email campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. There is no need to change the existing API request to include the address.
 
-There is no need to change the existing API request to include the address. Checking the box in the Braze dashboard to require BCC will set the address at the time of sending.  
+{% endtab %}
+{% endtabs %}
 
-![][12]
-
-### Custom footer
-
-For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group.
-
-![][0]
-
-To learn more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
-
-Note the following requirements when creating a custom footer for your email messaging:
-
-- Must include an unsubscribe URL and physical mailing address.
-- Should be less than 100KB.
-
-To learn more about email best practices, refer to [Managing email subscriptions][7].
-
-## Custom pages
-
-### Unsubscribe
-
-Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear once a user has selected to unsubscribe from the bottom of an email.
-
-![][3]
-
-Note that this page should be less than 750KB. Learn more about best practices for email list management in [Managing email subscriptions][7].
-
-### Opt-in
-
-You can create a custom opt-in page using your own HTML. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
-
-![][4]
-
-Note that this page should be less than 750KB. Learn more about best practices for email list management in [Managing email subscriptions][7].
-
-## Email open tracking pixel
+## Open tracking pixel
 
 [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
@@ -90,15 +63,13 @@ The email opening tracking pixel is an invisible 1px by 1px image that automatic
 
 ### Placing the tracking pixel
 
-Braze's default behavior is to append the tracking pixel to the bottom of your email. For the vast majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
-
-However, a small subset of companies may prefer that the pixel get templated to a different location. One advantage of not placing the tracking pixel at the bottom is avoiding cases where it gets cut off by clients (e.g., Gmail) that truncate emails after a certain amount of kilobytes.
+Braze's default behavior is to append the tracking pixel to the bottom of your email. For the majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
 
 ### Changing location of tracking pixel
 
-Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the <body> of an email) to move it to the first tag in the <body>.
+Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the `<body>` of an email) to move it to the first tag in the `<body>`.
   
-![Custom open tracking pixel settings][13]
+![][13]{: style="max-width:80%;" }
 
 To change the location:
 1. Go to **Manage App Group**, then **Email Settings** in your Braze account.
@@ -110,36 +81,24 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 {% alert important %} 
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP - if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
-  
-## Toggle features
 
-![][2]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-The four email settings listed are features that require no additional action other than toggling it on or off by using the corresponding switch. Read each setting for further details.
-
-### Resubscribe users when their email changes
-
-You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed app group user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
-
-Learn more about best practices for email list management in [Managing email subscriptions][7].
-
-### Include a list-unsubscribe header
+## Include a list-unsubscribe header
 
 ![][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 This feature allows you to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users. This header allows email providers to include an **Unsubscribe** button when displaying an email.
 
-Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
+Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email, making it easier to unsubscribe and, therefore, helps reduce the likelihood that a user would mark your email as spam. This can have a significant impact on your reputation and deliverability as an email sender.
 
-#### Availability
+### Availability
 
 Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these ESPs may still choose not to provide you with this feature if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
 
-#### How the list-unsubscribe header works
+### How the list-unsubscribe header works
 
 Navigate to **Email Settings** within your app group. Toggle **List-Unsubscribe** to **ON**.
 
-![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.] [59]
+![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 
 When enabled, this feature will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
 
@@ -147,37 +106,67 @@ When enabled, this feature will add a standard list-unsubscribe "mailto:" header
 This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
 {% endalert %}
 
-The header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function.
+The header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function. Note that only Windows Live Hotmail and Gmail currently support this feature.
 
-Note that currently, only Windows Live Hotmail and Gmail support this feature.
+## Append email subject lines
 
-### Inline CSS on new emails by default
+Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.
+
+![]({% image_buster /assets/img/email_settings/test_and_seed_email_subject_line.png %}){: style="max-width:70%;" }
+
+## Inline CSS on new emails by default
 
 CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.
 
-Changing this setting will not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates.
+Changing this setting will not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining][10].
 
-For more information, refer to [CSS inlining][10].
-  
-### Test and seed subject lines
+## Resubscribe users when their email changes
 
-When toggled on, this will append the word "[TEST]" for emails sent as a test, or "[SEED]" when emails are send to your users. By default, this feature is disabled.
-  
-![Test and Seed Email Subject Lines section in the Email Settings page.][14]
+You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed app group user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
+
+![]({% image_buster /assets/img/email_settings/resubscribe_users.png %}){: style="max-width:90%;" }
+
+## Subscription pages and footers
+
+{% tabs local %}
+{% tab Custom Footer %}
+
+For commercial emails, the [CAN-SPAM Act](https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003) requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group.
+
+Note the following requirements when creating a custom footer for your email messaging:
+- Must include an unsubscribe URL and physical mailing address.
+- Should be less than 100 KB.
+
+![]({% image_buster /assets/img/email_settings/custom_footer.png %})
+
+To learn more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+
+{% endtab %}
+{% tab Custom Unsubscribe Page %}
+
+Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page will appear once a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
+
+![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
+
+Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses).
+
+{% endtab %}
+{% tab Custom Opt-In Page %}
+
+You can create a custom opt-in page using your own HTML. Including this in your email can be especially beneficial if you want your branding and message to remain consistent throughout your user lifecycle. Note that this page should be less than 750 KB. 
+
+![]({% image_buster /assets/img/email_settings/custom_opt_in.png %})
+
+Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses).
+
+{% endtab %}
+{% endtabs %}
 
 [00]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
-[0]: {% image_buster /assets/img/email_settings/custom_footer.png %}
 [1]: {% image_buster /assets/img/email_settings/outbound_email.png %}
 [2]: {% image_buster /assets/img/email_settings/switch.gif %}
-[3]: {% image_buster /assets/img/email_settings/custom_unsubscribe.png %}
-[4]: {% image_buster /assets/img/email_settings/custom_opt_in.png %}
-[5]: https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003
 [6]: https://learning.braze.com/email-open-tracking-pixel
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
-[11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
-[12]: {% image_buster /assets/img/email_settings/require_bcc.png %}
 [13]: {% image_buster /assets/img/open_pixel.png %}
-[14]: {% image_buster /assets/img_archive/test_and_seed_email_subject_line.png %}
-[59]: {% image_buster /assets/img_archive/list_unsub_img3_new.png %}
