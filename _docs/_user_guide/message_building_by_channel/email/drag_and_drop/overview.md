@@ -47,14 +47,14 @@ Before building your email, it's important to understand the key components to h
 
 ### Drag & drop email components {#content}
 
-![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
-![][9]{: style="float:right;max-width:25%;margin-left:10px;"}
-
 The Drag & Drop Editor uses two key components to make email composition quick and easy: **Content** and **Rows**. 
 
-**Content** includes a series of tiles that represent different types of content you can use in your message such as a title, text blocks, icons, and spacers. Simply drag one inside an existing row segment, and it will auto-adjust to the column width. 
+![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
+![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
+**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic content blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media content blocks allow you to include images, videos, social media information, and icons. With the advanced content blocks, you can insert HTML blocks or add a menu to your email.
+
+Simply drag one inside an existing row segment, and it will auto-adjust to the column width. Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
@@ -177,7 +177,7 @@ The underlying engine that produces HTML from the Drag & Drop Editor has been op
 
 Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
 
-#### HTML Rendering
+#### HTML rendering
 
 HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
 
