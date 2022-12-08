@@ -26,7 +26,7 @@ The Braze and Toovio partnership provides near real-time message triggering, the
 
 ## Integration
 
-The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Integrating Toovio to Braze will be made via SDK-to-SDK. Triggers determined by Toovio will transmit to Braze via the Braze [users/track][3] API endpoint.
+The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Triggers determined by Toovio will transmit to Braze via the Braze [users/track][3] API endpoint.
 
 ### Step 1: Define data partner
 

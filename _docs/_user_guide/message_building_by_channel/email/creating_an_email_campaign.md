@@ -82,6 +82,10 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
+{% alert important %}
+Braze will automatically remove HTML event handlers referenced as attributes. Note that this does modify the HTML, and it is recommended to validate or re-check the email once completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
+{% endalert %}
+
 ### Step 3a: Add email headers
 
 To add email headers, click **Edit Sending Info** and select **Add New Header**.
@@ -246,7 +250,6 @@ Now just wait for all the data to roll in! Next, check out [Email reporting]({{s
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
