@@ -42,9 +42,20 @@ Branch.initSession(...);
 ```
 #### iOS
 
+{% tabs local %}
+{% tab Objective-C %}
+
 If you have an iOS app, your IDFV will be collected by Branch and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
+{% endtab %}
+{% tab Swift %}
+
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Branch to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Get the Braze data import key
 
@@ -73,7 +84,7 @@ Using click tracking links in your Braze campaigns will allow you to easily see 
 
 To get started with Branch click tracking links, visit their [documentation](https://help.branch.io/using-branch/docs/ad-links). You can insert the Branch click tracking links into your Braze campaigns directly. Branch will then use their [probabilistic attribution methodologies](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings) to attribute the user that has clicked on the link. We recommend appending your Branch tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Branch SDK integration. You can include the GAID in your Branch click tracking links by utilizing the following Liquid logic:
 {% raw %}
