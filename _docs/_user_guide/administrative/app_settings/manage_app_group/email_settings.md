@@ -128,7 +128,7 @@ You may automatically resubscribe users when they change their email address. Fo
 
 ## Subscription pages and footers
 
-{% tabs %}
+{% tabs local %}
 {% tab Custom Footer %}
 
 For commercial emails, the [CAN-SPAM Act](https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003) requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group.
