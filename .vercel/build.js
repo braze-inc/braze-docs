@@ -4,10 +4,10 @@ let branch_check = process.env.BRANCH_CHECK || '';
 let vercel_env = process.env.VERCEL_ENV || 'preview';
 let vercel_lang = process.env.LANGUAGE || 'en';
 
-console.log(branch_commit,branch_commit)
-console.log(branch_check,branch_check)
-console.log(vercel_env,vercel_env)
-console.log(vercel_lang,vercel_lang)
+console.log(`branch_commit`,branch_commit)
+console.log(`branch_check`,branch_check)
+console.log(`vercel_env`,vercel_env)
+console.log(`vercel_lang`,vercel_lang)
 
 // For develop and master branches, always build to make sure everything is updated
 if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
@@ -29,5 +29,5 @@ if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
 		}
 	}
 }
-
+console.log(build_app)
 process.exit(build_app);
