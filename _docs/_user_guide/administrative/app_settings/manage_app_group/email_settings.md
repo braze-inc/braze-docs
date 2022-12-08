@@ -21,7 +21,7 @@ The email settings under the **Sending Configuration** section determine which d
 
 When configuring your email settings, your outbound email settings identify which name and email addresses are used when Braze sends emails to your users.
 
-{% tabs %}
+{% tabs local %}
 {% tab Display Name Address %}
 
 In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
