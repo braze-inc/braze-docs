@@ -44,9 +44,20 @@ AppsFlyerLib.setAdditionalData(customData);
 
 #### iOS
 
+{% tabs local %}
+{% tab Objective-C %}
+
 If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
+{% endtab %}
+{% tab Swift %}
+
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+{% endtab %}
+{% endtabs %}
 
 #### Unity
 
@@ -112,7 +123,7 @@ You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.co
 
 You can simply create your OneLink tracking URL in AppsFlyer and directly insert it into your Braze campaigns. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link. We recommend appending your AppsFlyer tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 {% raw %}
