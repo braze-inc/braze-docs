@@ -31,7 +31,26 @@ When this feature is not enabled (by default), devices will continue to be assig
 
 The diagram below describes when a UUID or IDFV will be assigned as the device ID. Note that the IDFV field can only be read from devices that support this feature (e.g., iOS, tvOS, macCatalyst)
 
-![]({% image_buster /assets/img/swift_idfv.png %}){: style="max-width:80%"}
+![Flow chart for Swift v5.7 Device ID Configuration Scenarios — full description of flow chart included under “Process description”]({% image_buster /assets/img/swift_idfv.png %}){: style="max-width:80%"}
+
+{% details Process description %}
+1. User initializes SDK v5.7+
+2. Is the user upgraded from a previous SDK version?
+	- If Obj-C or less than v5.7, proceed to step 3
+	- If v5.7+, proceed to step 4
+3. Use IDFV as `device_id`
+	- **End of process**
+4. Does the user have an existing `device_id`?
+	- If yes, proceed to step 5
+	- If no (new user), proceed to step 6
+5. Use existing `device_id`
+	- **End of process**
+6. Is UUID setting enabled?
+	- If yes, proceed to step 7
+	- If no, return to step 3
+7. Assign UUID as `device_id`
+	- **End of process**
+{% enddetails %}
 
 ### Downstream 
 
