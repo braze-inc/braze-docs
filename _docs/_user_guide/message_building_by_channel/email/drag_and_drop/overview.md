@@ -120,6 +120,17 @@ You can choose to include dynamic images into your email messaging by including 
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
 
+#### Adding custom attributes to links
+
+![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+
+With custom attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images. This can be especially useful for message personalization, segmentation, and styling. 
+
+A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
+
+* **Sendgrid:** `clicktracking = "off"`
+* **SparkPost:** `data-msys-clicktrack = "0"`
+
 ## Step 3: Add sending information
 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
@@ -180,6 +191,7 @@ HTML rendering has improved based on these following updates that minimize the n
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
 [4]: {% image_buster /assets/img/dnd/dnd3.png %}
 [5]: {% image_buster /assets/img/dnd/dnd4.png %}
+[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
 [8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}

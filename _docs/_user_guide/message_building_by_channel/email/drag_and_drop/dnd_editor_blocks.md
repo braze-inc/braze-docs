@@ -15,21 +15,25 @@ Editor blocks are the various blocks available in the Drag & Drop Editor under t
 
 To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
+{% alert tip %}
+You can also [add custom attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) to any URL within the `Image`, `Button`, or `Text` editor blocks.
+{% endalert %}
+
 ## Types
 
 The following table describes how users can use each editor block type.
 
 | name | description |
 |---|---|
-| `Title`  | Adds text with H1, H2, and H3 tags for email. | 
-| `Text`  |  Enters text into their message. A toolbar helps with font and text editing functionality. | 
-| `Image` | Inserts an image from the Media Library. | 
-| `Button` |  Adds a standard button. Properties for this block allow for editing and setting links easily.  | 
-| `Divider` |  Inserts a solid, dotted, or dashed line to help with spacing.|
-| `HTML` |  Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
-| `Menu` |  Creates a flexible menu for the message you're designing. |
-| `Spacer` |  Adds space, or "padding", between other blocks. |
-| `Social Icon` | Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
+|`Title`| Adds text with H1, H2, and H3 tags for email. | 
+|`Text`| Enters text into their message. A toolbar helps with font and text editing functionality. | 
+|`Image`| Inserts an image from the Media Library. | 
+|`Button`| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
+|`Divider`| Inserts a solid, dotted, or dashed line to help with spacing.|
+|`HTML`| Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
+|`Menu`| Creates a flexible menu for the message you're designing. |
+|`Spacer`| Adds space, or "padding", between other blocks. |
+|`Social Icon`| Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
 | `Video` | Creates a link to the video content. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
@@ -110,6 +114,7 @@ For `Auto Width`, automatic image resizing picks the best size for the image bas
 - Images wider than the available space will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
 - Images smaller than the available space will use the image's natural size to avoid distortion effects or blurry pictures.
 {% endalert %}
+
 
 ### Button
 
