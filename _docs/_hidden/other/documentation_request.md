@@ -47,17 +47,6 @@ hide_toc: true
   .container-fluid {
     max-width: 820px;
   }
-  .header {
-    margin-top: 20px;
-    margin-left: 5%;
-  }
-  .header .navbar-brand img {
-      max-width: none;
-      width: 112px;
-      height: 51px;
-  }
-
-
   .gradient-line {
       background: linear-gradient(30deg,#3accdd,#f7918e 64%,#ff9349 90%);
       height: 2px;
