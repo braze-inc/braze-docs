@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`name`| Required | String | The name of the preference center that meets the following requirements: <br>- Only contains letters, numbers, hyphens, and underscores <br>- Does not have spaces |
-|`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If no title is specified, the title of the pages will default to "Preference Center".  |
+|`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
