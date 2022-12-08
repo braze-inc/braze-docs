@@ -57,7 +57,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "name": "Example",
-  "preference_center_title": "My Preference Center",
+  "preference_center_title": "Example Preference Center",
   "preference_center_page_html": "HTML for preference center here"
   "confirmation_page_html": "HTML here with a message to users here"
 
