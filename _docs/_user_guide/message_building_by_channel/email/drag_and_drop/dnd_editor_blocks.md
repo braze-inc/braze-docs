@@ -34,6 +34,7 @@ The following table describes how users can use each editor block type.
 |`Menu`| Creates a flexible menu for the message you're designing. |
 |`Spacer`| Adds space, or "padding", between other blocks. |
 |`Social Icon`| Inserts social media platform icon. Custom images can be uploaded for brand specific icons. An oversized placeholder icon will be used until an image is uploaded. |
+| `Video` | Creates a link to the video content. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Properties
@@ -184,6 +185,23 @@ Refer to the following table for details on the `Social Icon` editor block.
 |`Select icon collection`| The style of your icon collection. |
 |`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+### Video
+
+Refer to the following table for details on the `Video` editor block.
+
+| properties | description |
+|---|---|
+|`URL`| The URL for the video. |
+|`Title`| Auto-generated from the video meta data or can be customized.  Note that only Youtube and Vimeo are supported. |
+|`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
+|`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
+|`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50 px to 80 px (incremented by 5 px). |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (e.g., "Hide from Vimeo.com") will generate a different link format that is not supported by this content block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
+{% endalert %}
 
 ### Add Liquid personalization
 

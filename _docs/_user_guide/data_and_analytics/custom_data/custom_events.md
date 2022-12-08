@@ -198,8 +198,8 @@ You can use nested objects—objects that are inside of another object—to send
 
 #### Schema generation
 
-Generting a schema for events with nested event properties allows you to access the nested data. To generate a schema, follow these steps:
-1. Go to **Manage Events** > **Custom Events**.
+Generating a schema for events with nested event properties allows you to access the nested data. To generate a schema, follow these steps:
+1. Go to **Manage Settings** > **Custom Events**.
 2. Select **Manage Properties** for the events with nested properties.
 3. Click the icon to generate the schema. To view the schema, click the plus button.
 
