@@ -16,7 +16,7 @@ Braze Cloud Data Ingestion is currently in early access. Contact your Braze acco
 
 ## What is Braze Cloud Data Ingestion?
 
-Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user data. Once synced to Braze, these attributes can be used for personalization or segmentation.
+Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.
 
 ### How it works
 
@@ -86,6 +86,9 @@ We will sync all attributes in a given row, regardless of whether they are the s
 
 The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time.  Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
 
+#### Separate EXTERNAL_ID from PAYLOAD column 
+The PAYLOAD object should not include an external id or other id type. 
+
 #### Removing an attribute
 
 If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
@@ -94,13 +97,24 @@ If you want to completely remove an attribute from a user’s profile, you can s
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
 ```json
-CREATE TABLE "PURCHASE_DATA"
-    (purchase_date datetime,
-     purchase_amount number,
-     quantity number,
-     address string);
+CREATE TABLE "EXAMPLE_USER_DATA"
+    (attribute_1 string,
+     attribute_2 string,
+     attribute_3 number,
+     my_user_id string);
 
-SELECT TO_JSON(OBJECT_CONSTRUCT (*)) FROM "PURCHASE_DATA";
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    TO_JSON(
+        OBJECT_CONSTRUCT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'yet_another_attribute',
+            attribute_3)
+    )as PAYLOAD FROM "EXAMPLE_DATA";
 ```
 
 #### Using the UPDATED_AT timestamp
@@ -200,10 +214,10 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 
 Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
 
-1. Add Snowflake connection information and source table
+1. **Add Snowflake connection information and source table**<br>
 Input the information for your Snowflake account and source table, then proceed to the next step.<br>![][1]<br><br>
-2. Name sync and set frequency
-Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br>You will also choose the sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync.
+2. **Configure sync details**<br>
+Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
 
 ### Add a public key to the Braze user
 At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
