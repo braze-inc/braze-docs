@@ -30,6 +30,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
 | `updated` | The UNIX timestamp of when this card was last modified. |
 | `viewed` | This property reflects whether the user viewed the card or not.|
+| `isControl` | This property is `true` when a card is a "control" group within an a/b test.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner Content Card properties - Banner
