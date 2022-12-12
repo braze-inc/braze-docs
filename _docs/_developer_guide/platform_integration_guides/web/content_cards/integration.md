@@ -151,15 +151,9 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen.
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen - even for "control" cards within an a/b test.
 
-Here is an example of how to determine if a Content Card is a "Control" card:
-
-```javascript
-function isControlCard(card) {
-    return card instanceof braze.ControlCard;
-}
-```
+To determine if a Content Card is in the "control" group for an a/b test, you can check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a ControlCard instance (`card instanceof braze.ControlCard`).
 
 {% alert note %}
 Visit the following customization articles for documentation on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
