@@ -121,6 +121,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 This example shows how you can create a user and set their subscription group within the user attributes object.
 
+{% alert important %}
+Using endpoint to create a new user and update their subscription groups is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+{% endalert %}
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
