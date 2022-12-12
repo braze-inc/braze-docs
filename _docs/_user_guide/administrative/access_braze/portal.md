@@ -13,6 +13,10 @@ With the product portal, you can access the Braze product roadmap and submit ide
 
 The product portal can be found at the top of the Braze dashboard, listed under **Resources** as **Product Roadmap**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Resources** is now **Community**.
+{% endalert %}
+
 ## What's in the portal
 
 | **Recently Released** | New features that we've released by quarter |

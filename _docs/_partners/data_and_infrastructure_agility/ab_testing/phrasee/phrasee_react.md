@@ -38,6 +38,10 @@ You'll need Phrasee to set up a dedicated Amazon S3 bucket to receive your click
 5. Under **General Settings**, check the "Include events from anonymous users" box, and under **Manage Engagement Events** check "Email Click".
 6. When you are finished, click **Launch Current**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
 ### Step 3: Request to remove personally identifiable information (PII).
 
 Next, reach out to your Braze account team to ensure no personally identifiable information is transmitted to Phrasee.

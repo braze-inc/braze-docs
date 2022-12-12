@@ -53,6 +53,10 @@ When two-factor authentication is enabled, in addition to entering a password, u
 
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Account Settings** is now **Manage Profile**.
+{% endalert %}
+
 ### Remember me
 
 ![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -70,6 +74,10 @@ Two-factor authentication enforcement:
 
 - If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to **Account Settings** to enable and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Account Settings** is now **Manage Profile**.
+{% endalert %}
 
 ## Security event download
 

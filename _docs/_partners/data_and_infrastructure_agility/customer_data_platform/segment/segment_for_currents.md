@@ -33,6 +33,10 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 2. In Braze, navigate to **Currents > + Create Currents > Create Segment Export**.
 3. Next, provide an integration name, contact email, Segment write key, and Segment region.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
 ![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
 
 {% alert warning %}

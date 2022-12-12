@@ -110,6 +110,11 @@ In Fivetran, click on **+ Connector** and select the **Braze** connector to laun
 - `Bucket`: Found in your Braze account by navigating to **Integration > Currents > [Your Current name] > Bucket Name**.
 - `Role ARN`: The Role ARN can be found in [step 1](#step-one) of the Current setup directions.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
+
 {% alert important %}
 Ensure **Amazon S3** is selected as the **Cloud Storage** choice.
 {% endalert %}
@@ -142,6 +147,10 @@ In Fivetran, click on **+ Connector** and select the **Braze** connector to laun
 - `API Key`: Your Braze REST API key. 
 - `Bucket Name`: Found in your Braze account by navigating to **Integration > Currents > [Your Current name] > Bucket Name**.
 - `Folder`: Found in your Braze account by navigating to **Integration > Currents > [Your Current name] > Prefix**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
 
 {% alert important %}
 Ensure **Google Cloud Storage** is selected as the **Cloud Storage** choice.

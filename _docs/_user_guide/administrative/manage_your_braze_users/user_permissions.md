@@ -67,7 +67,9 @@ You can manage user permissions by group or on an individual basis using the Use
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+- **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
 {% endalert %}
 
 ## App-by-app user permissions

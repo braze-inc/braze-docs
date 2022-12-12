@@ -44,7 +44,11 @@ Before you begin your integration, it’s best to decide which integration is be
 
 ## Step 2: Navigate to Currents
 
-To get started, visit the Currents page in the sidebar, in the "Integrations" section of the dashboard. You'll be taken to the Currents integration management page.
+To get started, visit the **Currents** page in the sidebar, in the **Integrations** section of the dashboard. You'll be taken to the Currents integration management page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 

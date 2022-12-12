@@ -32,7 +32,13 @@ Any integration you set up will count towards your account's data point volume.
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+{% endalert %}
+
+![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
 ### Step 2: Set up the Braze integration in Mixpanel
 
@@ -73,6 +79,10 @@ In your Mixpanel dashboard, click into the **Project Settings**in either a new o
 ### Step 2: Create Braze Current
 
 In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 

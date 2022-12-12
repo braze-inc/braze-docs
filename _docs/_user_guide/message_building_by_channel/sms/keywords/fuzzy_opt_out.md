@@ -35,6 +35,10 @@ To configure fuzzy opt-out, navigate to the subscription group keyword managemen
 3. Enable **Fuzzy Opt-Out** by toggling it on.
 4. Modify the fuzzy opt-out response as desired. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups** > **Subscription**.
+{% endalert %}
+
 ![][2]{: style="max-width:70%;"}
 
 [1]: {% image_buster /assets/img/sms/fuzzy1.jpg %}

@@ -9,6 +9,12 @@ search_tag: Partner
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Technology Partners** and **Currents**. If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+- **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
 # Amazon S3
 
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.

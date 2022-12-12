@@ -30,9 +30,13 @@ SMS with Braze gives you the option to create keyword triggers, custom responses
 In addition to the default opt-in and opt-out keywords, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
 
 ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups.<br><br>
+1. To define your own keywords, navigate to the SMS section of the dashboard located under **Subscription Groups**.<br><br>
 2. Under SMS global keywords, select a keyword category to add a keyword to by selecting the pencil icon.<br><br>
 3. In the dialogue box that pops up, add a keyword you would like to trigger this keyword category. Note that keywords are case sensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups** > **Subscription**.
+{% endalert %}
 
 ![]({% image_buster /assets/img/sms/sms_keywords.png %})
 
@@ -55,9 +59,13 @@ Interested in seeing how these keywords can be used in your campaigns and Canvas
 You are able to manage your own responses that get sent to users after they text in a keyword to a specific keyword category.
 
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. <br><br>
+1. To manage your keyword responses, navigate to the SMS section of the dashboard located under **Subscription Groups**. <br><br>
 2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon.<br><br> 
 3. In the dialogue box that pops up, edit and save your response. Be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the following rules that apply to keywords and keyword responses.<br><br>
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups** > **Subscription**.
+{% endalert %}
 
 ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
 

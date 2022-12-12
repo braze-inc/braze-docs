@@ -25,10 +25,6 @@ Reports are not saved in the dashboard, and re-running the report can result in 
 
 ## Create a new report
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Engagement Reports** is now **Engagement** and is located under **Analytics** > **Reports** > **Engagement**.
-{% endalert %}
-
 1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
 2. Click **+ Create New Report**.
 3. Add the [campaigns and Canvas messages](#manually-select-campaigns-or-canvases) (individually or [by tag](#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
@@ -39,6 +35,10 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Engag
 8. Select the [intervals (daily, weekly, etc.)](#data-display) at which would like to see the breakdown of your data.
 9. Schedule your report to [send immediately](#send-immediately) or at a [future, specified time](#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Engagement Reports** is now **Engagement** and is located under **Analytics** > **Reports** > **Engagement**.
+{% endalert %}
 
 {% alert note %}
 Your Braze user account must have ‘Export User Data’ access to utilize Engagement Reports.

@@ -122,6 +122,10 @@ Two-factor authentication adds an extra layer of identity verification upon logi
 4. Open the Authy App on the device linked to obtain the code. 
 5. Navigate to **Two-Factor Authentication** settings and enter the code. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Account Settings** is now **Manage Profile**.
+{% endalert %}
+
 If you would like to enforce two-factor authentication for the whole company, turn on two-factor authentication under the **Security Settings** tab and click **Save Changes** at the bottom of the page.
 
 ![Two-Factor Authentication section of the Security Settings tab][53]

@@ -51,6 +51,10 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Currents** is now **Data Export** and is located under **Partner Integrations** > **Data Export**.
+{% endalert %}
+
+{% alert note %}
 Events sent from Braze Currents to Amplitude will count towards your Amplitude event volume quota.
 {% endalert %}
 
