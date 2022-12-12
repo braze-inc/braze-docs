@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call. <br><br>Note that using the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to create a new user and update their subscription groups is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Request parameters
