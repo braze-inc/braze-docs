@@ -207,7 +207,6 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for more information.
 
 [34]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
 [69]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
@@ -225,7 +224,6 @@ See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for mor
 [50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
 [51]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
 [52]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html
-[83]: https://www.braze.com/customers
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
 [91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
