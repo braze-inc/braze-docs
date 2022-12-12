@@ -117,6 +117,38 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
+## Example request to set subscription groups
+
+This example shows how you can create a user and set their subscription group within the user attributes object.
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "attributes": [
+  {
+    "external_id": "user_identifier",
+    "email": "example@email.com",
+    "email_subscribe": "subscribed",
+    "subscription_groups" : [{
+      "subscription_group_id": "subscription_group_identifier_1",
+      "subscription_state": "unsubscribed"
+      },
+      {
+        "subscription_group_id": "subscription_group_identifier_2",
+        "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
+    }
+  ]
+}'
+```
+
 ## Responses
 
 When using any of the aforementioned API requests, you should receive one of the following three general responses:
