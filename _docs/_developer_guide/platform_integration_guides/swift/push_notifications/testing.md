@@ -19,6 +19,10 @@ If you'd like to test in-app and push notifications via the command line, you ca
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],

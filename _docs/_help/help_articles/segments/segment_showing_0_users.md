@@ -24,6 +24,10 @@ The Segment statistics could be providing an estimate. The estimation is calcula
 
 It is possible that the data you are filtering on is not being sent to Braze. To check which custom events are being sent to Braze, click **Custom Events** in the **Data** section. Select the custom event along with the specific dates and app to see what data is actually being transferred to Braze. If you notice that `0` data is being sent to Braze, the next step is to evaluate how you are sending the events to Braze.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom Events Report** and is located under **Analytics** > **Reports** > **Custom Events**.
+{% endalert %}
+
 ![Graph that shows the custom event count as zero][29]
 
 {% alert important %} 

@@ -94,6 +94,10 @@ Once you set up a test segment, you can utilize these messaging channels. The pr
 
 Go to the **Segments** page and create a new segment. In the dropdown menu under **Add Filter**, locate the testing filters at the bottom of the list.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})
 
 Use these testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/).

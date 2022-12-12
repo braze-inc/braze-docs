@@ -43,6 +43,10 @@ In Tinyclues, select the campaign(s) you want to export and click **Export Campa
 
 In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and select **Tinyclues Cohorts** as your filter. From here, you can choose which Tinyclues cohort you wish to include. Once created, you can select your Tinyclues cohort segment as an audience filter when creating a campaign or Canvas.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![][3]{: style="max-width:90%;"}<br><br>
 ![In the Braze segment builder, the user attributes filter "Tinyclues cohort" is set to "includes" and "Primary cohort".][4]{: style="max-width:90%;"}
 

@@ -70,6 +70,10 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 - **Single attribute**: Select `SegmentMembership` as your filter. Next, use the "matches regex" option and input your desired audience ID. ![mParticle segment filter "SegmentMembership" set as "matches Regex" and audience ID.][9]<br><br>
 - **One attribute per segment**: Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 #### Deactivating and deleting connections

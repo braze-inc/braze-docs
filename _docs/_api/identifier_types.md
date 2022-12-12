@@ -127,6 +127,10 @@ You can find your Segment ID one of two ways:
 1. In the dashboard, open up **Segments** under **Engagement** and select a pre-existing segment. If the Segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your Segment API Identifier. <br><br>
 2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 #### What can it be used for?
 - Get details on a specific segment
 - Retrieve analytics of a specific segment

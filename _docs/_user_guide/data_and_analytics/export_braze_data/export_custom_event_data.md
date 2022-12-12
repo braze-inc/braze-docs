@@ -12,6 +12,10 @@ tool: Reports
 
 The **Custom Events** page of the dashboard allows you to view the occurrences of one or more custom events over time. If you view Detailed Statistics for custom events or custom events by the hour, you'll have the option of also viewing the data by specific segments.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom Events Report** and is located under **Analytics** > **Reports** > **Custom Events**.
+{% endalert %}
+
 ![Custom events][14]
 
 You can export the following CSVs:

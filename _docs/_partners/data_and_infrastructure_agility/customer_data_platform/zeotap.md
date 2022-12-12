@@ -57,6 +57,10 @@ Next, you must create and define this segment within Braze:
 2. Next, name your segment and select the custom attribute segment made in Zeotap.
 3. Save your changes. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![In the Braze segment builder, you can find the imported segments set as custom attributes.][3]
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users. 

@@ -75,6 +75,10 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 - **Identify**: Select **custom attribute** as the filter and locate your custom attribute. Next, use the "matches regex" option (trait) or the "equals" option (audience) and input the appropriate variable.
 - **Track**: Select **custom event** as the filter and locate your custom event. Next, use the "more than", "less than", or "exactly" option, and insert your desired value. This will depend on how you want to define your segment.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Sync time

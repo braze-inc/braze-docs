@@ -47,6 +47,10 @@ To import previously identified users, you can upload a CSV to Braze, or send da
 
 You can upload and update user profiles via CSV files from the **User Import** page. When importing your customer data, you’ll need to specify each customer’s unique identifier, also known as `external_id`.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+{% endalert %}
+
 Before starting your CSV import, it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Learn more about Braze’s [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
@@ -125,6 +129,10 @@ Segments
 
 To import your CSV file, navigate to the **User Import** page under the Users section. The **Recent Imports** table lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+{% endalert %}
+
 The **Import CSV** panel contains importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest. Then, before clicking **Start Import**, you have the option to let Braze know what to do with this list under “What do you want us to do with the users in this CSV".
 
 Select **Import Users in this CSV and also make it possible to retarget this specific batch of users as a group**, and then select **Automatically generate a segment from the users who are imported from this CSV**. Once you click **Start Import**, Braze will upload your file, check the column headers and the data types of each column, and create a segment.
@@ -152,6 +160,10 @@ Segments
 {% endapitags %}
 
 Navigate to the **Segments** page, under Engagement, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
 
 Once you have created your segment, add a `Most Recent Location` filter to target users by the last place that they used your app. You can either highlight users in a standard circular region or create a custom polygonal region.
 
@@ -181,6 +193,10 @@ You can create up to 10 Segment Extensions per app group. After these extension 
 4. Select between a purchase or custom event criteria for targeting.
 5. Choose which purchased item or specific custom event you’d like to target for your user list. 
 6. Choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
 
 To increase targeting precision, you can select **Add Property Filters** and segment based on the specific properties of your purchase or custom event. Braze supports event property segmentation based on string, numeric, boolean, and time objects.
 
@@ -541,6 +557,10 @@ Analytics
 
 On the **Revenue** page, you can view data on revenue or purchases over specific periods of time, for a specific product, or your app’s total revenue or purchases. These revenue numbers are generated from the purchases made from campaign recipients within a certain conversion period.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Revenue** under **Analytics** > **Reports** > **Revenue**.
+{% endalert %}
+
 That being said, it’s important to note that Braze is a marketing tool and not a revenue management tool. Our [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) doesn't support refunds and cancellations, so you may see discrepancies when comparing data with other tools.
 
 {% endapi %}
@@ -577,6 +597,10 @@ To schedule a recurring engagement report, do the following:
 8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#data-display) at which would like to see the breakdown of your data.
 9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Engagement Reports** is now **Engagement**.
+{% endalert %}
 
 {% endapi %}
 {% api %}

@@ -45,6 +45,10 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 To create a subscription group, go to the **Subscription Groups** page, then click **+ Create Email Subscription Group**. Give your subscription group a name and description, and click **Save**. All subscription groups are automatically added to your preference center.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups**.
+{% endalert %}
+
 ![Fields to create a subscription group.][26]{: height="50%" width="50%"}
 
 When creating your segments, set the subscription group name as a filter. This will ensure users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more!
@@ -56,6 +60,10 @@ When creating your segments, set the subscription group name as a filter. This w
 Archived subscription groups cannot be edited and will no longer appear in segment filters or in your preference center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
 You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups**.
+{% endalert %}
 
 Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is considered `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie, "Subscription Group A" is archived and you can't send any messages using it).
 
@@ -78,6 +86,10 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 ### Email preference center
 
 The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Subscription Groups** is now **Subscription** and is located under **Audience** > **Subscription** > **Subscription Groups**.
+{% endalert %}
 
 To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
@@ -209,6 +221,10 @@ Braze's SDKs provide methods for changing a user's push message subscription. Re
 ### Manually changing user subscriptions {#manually-changing-subscriptions}
 
 You can manually change the subscription status for any user in their user profile. You can find individual user profiles by searching for a user's ID or email address on the **User Search** page. Under the user profile's **Engagement** tab, you'll find a user's current push and email subscription status. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
 
 Click the **Unsubscribed**, **Subscribed**, or **Opted In** buttons to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 

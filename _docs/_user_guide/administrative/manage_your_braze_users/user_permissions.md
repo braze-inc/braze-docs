@@ -53,7 +53,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Dashboard Users| Allows user to view, edit, and manage the **Manage Users** tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
 |View Usage Data| Allows user to view app usage.|
-|Import and Update User Data| Allows user to import CSV and update files of app users as well as view the User Import page.|
+|Import and Update User Data| Allows user to import CSV and update files of app users as well as view the **User Import** page.|
 |View Billing Details| Allows user to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
@@ -65,6 +65,10 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
 |Manage Approval Settings| Allows user to turn [approval workflows]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) on or off. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+{% endalert %}
 
 ## App-by-app user permissions
 

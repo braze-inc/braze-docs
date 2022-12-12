@@ -54,6 +54,10 @@ There are two ways you can check a user's push subscription state with Braze:
 <br><br>
 2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment][segment] or [Users by identifier][identifier] endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
+
 
 ## Push permission
 

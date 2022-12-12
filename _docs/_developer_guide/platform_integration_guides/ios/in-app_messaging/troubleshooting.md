@@ -59,6 +59,10 @@ If your in-app messages are not being returned, you're likely experiencing a cam
   - You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment.
   - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ### In-app message display {#troubleshooting-in-app-message-display}
 
 If your app is successfully requesting and receiving in-app messages but they are not being shown, some device-side logic may be preventing display:
