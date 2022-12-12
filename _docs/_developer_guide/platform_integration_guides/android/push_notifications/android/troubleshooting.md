@@ -30,6 +30,10 @@ When a push campaign is launched, Braze will make requests to FCM to deliver you
 ### Step 4: Removing invalid tokens
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 For more details about FCM, visit [Cloud messaging][6].
 
 ## Utilizing the push error logs

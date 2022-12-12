@@ -24,6 +24,10 @@ Out of the box, there is a soft limit of 10 active Segment Extensions per App Gr
 
 Under **Engagements**, expand **Segments** and click **Segment Extension**. From the Segment Extensions table, click <i class="fas fa-plus"></i> **Create New Extension**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ## Step 2: Name your Segment Extension
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.

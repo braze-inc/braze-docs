@@ -20,6 +20,10 @@ You can create up to five catalogs across your company.
 
 To create a catalog in Braze, upload a CSV file to the **Catalogs** page. Each CSV file you upload will be its own distinct catalog. You can also download and reference [this sample CSV file]({{site.baseurl}}/assets/download_file/sample_sunglasses_catalog.csv) to follow along the steps for creating a catalog.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Catalogs** under **Data Settings** > **Catalogs**.
+{% endalert %}
+
 ## Step 1: Create your CSV
 
 First, create your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
@@ -75,6 +79,10 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
 ## Step 2: Upload your CSV
 
 After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Catalogs** under **Data Settings** > **Catalogs**.
+{% endalert %}
 
 {% alert important %}
 Your CSV file can be rejected if you go above [company limitations](#limits). 

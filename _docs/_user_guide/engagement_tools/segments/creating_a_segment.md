@@ -22,6 +22,10 @@ Segmentation allows you to target users based upon their demographic, behavioral
 
 Go to the **Segments** page located under **Engagements**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ## Step 2: Name your segment
 
 Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
@@ -79,6 +83,10 @@ If **Include users from all apps** is cleared and you have more than one app in 
 ## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
 
 {% alert warning %}
 When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.

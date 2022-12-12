@@ -30,6 +30,10 @@ If you are interested in filtering Braze background push on iOS, you can use a [
 
 This time can be used to define a segment of users for win-back campaigns. Using the "Uninstalled" filter on the **Segments** page, you can select users who uninstalled your app within a time range. Since determining the exact time of an uninstall is difficult, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![Uninstall Segment][5]
 
 ## App-level analysis

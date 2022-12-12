@@ -106,6 +106,10 @@ The following assumes all fields are set as PII and that the users mentioned are
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
+{% endalert %}
+
+{% alert note %}
 When previewing a message, the **View PII** permission is not applied, so users can see the preceding standard attributes if they were referenced in the message via Liquid.
 {% endalert %}
 

@@ -16,6 +16,10 @@ Once you set up a test segment, you can utilize it to test **any** of our messag
 
 To set up a test segment, navigate to the **Segments** page in the dashboard and create a new segment. Click **Add Filter** to choose one of the testing filters found towards the bottom of the dropdown menu.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![A Braze test campaign displaying the filters available in the targeting step.][1]
 
 Two such testing filters allow you to select users with specific email addresses or external [user IDs][2].
@@ -74,6 +78,9 @@ You can send a single notification through the terminal via CURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
@@ -99,6 +106,10 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
@@ -126,6 +137,10 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
@@ -148,6 +163,10 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_API_KEY` - available on the **Developer Console** page
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
+
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
@@ -168,6 +187,10 @@ You can send a single notification through the terminal via cURL and the [Messag
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
 
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 

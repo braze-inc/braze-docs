@@ -19,6 +19,10 @@ User profiles are a great way to find information about specific users. All pers
 
 To access a user's profile, go to the **User Search** page and search for a user by any of the following:
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
+{% endalert %}
+
 - External user ID
 - Email
 - Phone number

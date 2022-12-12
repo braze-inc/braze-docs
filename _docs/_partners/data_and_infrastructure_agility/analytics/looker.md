@@ -145,6 +145,10 @@ Authorization: Bearer [API_KEY]
 
 In Braze, to create a segment of these flagged users, navigate to **Segments** under **Engagement**, name your segment, and select **Looker_Export** as the filter. Next, use the "includes value" option and provide the custom attribute flag you assigned in Looker.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![In the Braze segment builder, the filter "looker_export" is set to "includes_value" and "Looker".][15]
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.

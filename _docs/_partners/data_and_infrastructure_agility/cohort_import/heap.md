@@ -44,6 +44,10 @@ In Braze, click on **Technology Partners** and then select **Heap**. On this pag
 
 In Braze, navigate to **Segments**, name your Heap cohort segment, and select **Heap Cohorts** as your filter. From here, you can choose which Heap cohort you wish to include. Once created, you can select your Heap cohort segment as an audience filter when creating a campaign or Canvas.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
 ![In the Braze segment builder, the user attributes filter "Heap cohort" is set to "includes" and "Heap Test Cohort".][2]{: style="max-width:90%;"}
 
 ### Using this integration

@@ -15,6 +15,10 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments Insights** under **Analytics** > **Reports** > **Segment Insights**.
+{% endalert %}
+
 ![Segment Insights dashboard.][1]
 
 The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:

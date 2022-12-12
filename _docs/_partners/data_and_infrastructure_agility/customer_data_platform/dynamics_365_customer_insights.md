@@ -54,6 +54,10 @@ Once your segments have successfully exported to Braze, you will be able to find
 To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 custom attribute. Once created, you can select your segment as an audience filter when creating a campaign or Canvas.
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Segments** under **Audience** > **Segments**.
+{% endalert %}
+
+{% alert note %}
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).
 {% endalert %}
 

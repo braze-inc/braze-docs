@@ -17,6 +17,10 @@ When you turn analytics tracking on for a segment, Braze will let you view sessi
 
 On the **Revenue** page of the dashboard, you can view data on [revenue and purchases over time for this segment][14]. To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** and search for your segments to view them in the chart. Click any legend item to toggle visibility for that metric on or off.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Revenue** under **Analytics** > **Reports** > **Revenue**.
+{% endalert %}
+
 ![Revenue data by segment][17]
 
 Similarly, you can find data on [sessions over time for this particular segment][13] on the **Overview** page.
@@ -24,6 +28,10 @@ Similarly, you can find data on [sessions over time for this particular segment]
 ![Session data by segment][18]
 
 Braze also provides the ability to view data on [Custom events over time for segments][20], via the **Custom Events** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom Events Report** and is located under **Analytics** > **Reports** > **Custom Events**.
+{% endalert %}
 
 If you don't turn analytics tracking on for a segment, you can still access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned.
 
