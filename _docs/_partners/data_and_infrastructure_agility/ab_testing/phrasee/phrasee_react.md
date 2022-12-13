@@ -42,7 +42,7 @@ You'll need Phrasee to set up a dedicated Amazon S3 bucket to receive your click
 
 Next, reach out to your Braze account team to ensure no personally identifiable information is transmitted to Phrasee.
 
-By default, the Current will include certain PII attributes like email and address. Phrasee cannot and will not receive PII, so it's critical you make this [request]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/#view-pii) of your Braze account team to turn this off for any event data passed along to Phrasee.
+By default, the Current will include certain PII attributes like email and address. Phrasee cannot and will not receive PII, so it's critical you make a request to your Braze account team to turn this off for any event data passed along to Phrasee.
 
 ### Step 4: Phrasee X code snippets 
 
