@@ -138,6 +138,10 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 3. In the "Braze API Key" field, input your application's API key found in **Manage Settings** from the Braze dashboard.
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
+{% alert note %}
 This automatic integration should not be used with a manually created `braze.xml` file since the configuration values may conflict during project building. If you require a manual `braze.xml`, disable the automatic integration.
 {% endalert %}
 

@@ -19,6 +19,10 @@ You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [app identifier API key][3] as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 Before following these steps, install and set up the [Flutter SDK][5].
 
 ## Step 1: Integrate the Braze library

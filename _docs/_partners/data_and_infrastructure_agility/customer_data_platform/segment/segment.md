@@ -122,6 +122,10 @@ The source code for the [Braze Cloud Mode (Actions) destination](https://github.
 
 Define the settings for your destination. Not at all settings will apply to all destination types.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 {% tabs local %}
 {% tab Mobile Device-Mode %}
 

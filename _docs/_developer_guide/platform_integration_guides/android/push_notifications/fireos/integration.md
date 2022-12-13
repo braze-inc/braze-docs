@@ -107,6 +107,10 @@ If you would like to custom handle deep links, you will need to create a push ca
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's **Manage Settings** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![][34]
 
 ## Manual push registration

@@ -24,6 +24,10 @@ Braze automatically collects a base level of uninstall information from your reg
 
 You can enable uninstall tracking in the **Settings** tab of the **Manage Settings** page for each app you are interested in tracking.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
+
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 
 If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`BrazeNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.

@@ -32,6 +32,10 @@ The following lists methods across various platforms that are used to log purcha
 
 In the Braze dashboard, you can manage blocklisting from **Manage Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Products** under **Data Settings** > **Products**.
+{% endalert %}
+
 ## Purchase event segmentation
 
 You can trigger any number or type of follow-up campaigns based on logged purchase events, and enable the following segmentation filters based on the recency and frequency of that event when targeting users.
@@ -90,6 +94,10 @@ These segmentation filters include:
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
 Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Manage Properties** and used in the target step of the campaign or Canvas builder.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
 
 ### Canvas entry properties and event properties
 

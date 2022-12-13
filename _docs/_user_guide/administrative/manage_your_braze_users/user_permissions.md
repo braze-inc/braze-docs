@@ -70,6 +70,12 @@ You can manage user permissions by group or on an individual basis using the Use
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **User Import** is now **Import Users** and is located under **Audience** > **Import Users**.
 - **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+- **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+- **Products** is located under **Data Settings** > **Products**.
+{% endalert %}
+{% endalert %}
+{% endalert %}
+
 {% endalert %}
 
 ## App-by-app user permissions

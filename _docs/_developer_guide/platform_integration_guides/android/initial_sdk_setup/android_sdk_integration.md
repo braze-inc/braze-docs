@@ -78,6 +78,10 @@ Now that the libraries have been integrated, you must create a `braze.xml` file 
 
 The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, ask your customer success manager or open a [support ticket][support].
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>

@@ -26,6 +26,10 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 | External subscriber ID | This is the identifier used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something you pass to Rokt Calendar.|
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Audience segmentation {#audience-segmentation}
 
 When Rokt Calendar creates a new user or matches an existing subscriber with a Braze user, Rokt Calendar will send the following custom subscription attributes you can filter within Braze:
@@ -97,6 +101,10 @@ Once you have selected the Rokt Calendar webhook template, you should see the fo
 #### Request headers and method
 
 Rokt Calendar requires an `HTTP Header` for authorization that includes your Rokt Calendar Connected Content credential name. The following will already be included within the template as key-value pairs, but in the **Settings** tab, you must replace `<Rokt-Calendar-API>` with the credential name found in `Manage Settings > Connected Content > Credential`.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 {% raw %}
 - **HTTP Method**: POST

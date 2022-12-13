@@ -11,6 +11,10 @@ description: "This reference article covers managing app groups in your Braze da
 
 You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 App groups are designed to house versions of the same application across multiple platforms. Many Braze customers also use app groups to contain free and premium versions of their application on the same platform.
 
 {% alert note %}
@@ -43,6 +47,10 @@ We recommend having multiple Braze users with admin permissions for a single app
 To rename your app group, click **Manage Settings** in the left sidebar. Then, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** next to your app group's name.
 
 To delete your App Group entirely from the dashboard, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-cog" ></span>**Settings** on the same page and select **Delete App Group**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
 
 ![Rename app group from the Settings tab][70]
 

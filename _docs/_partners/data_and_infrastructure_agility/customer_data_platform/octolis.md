@@ -29,6 +29,10 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 | Braze app key | Your app identifier key. This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Integration
 
 Before beginning the integration, refer to the following sections on connections, sources, audiences, and syncs.

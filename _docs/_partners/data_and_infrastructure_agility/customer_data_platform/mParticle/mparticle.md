@@ -30,6 +30,10 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | App group REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Integration
 
 ### Audiences
@@ -100,6 +104,10 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |
 | Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate-limits]({{site.baseurl}}/api/basics/#api-limits). |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
 
 ![][10]
 

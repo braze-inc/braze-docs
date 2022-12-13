@@ -195,6 +195,10 @@ Though similar in name, Canvas entry properties and event properties function di
 
 You can now view all the link aliases you're tracking in your emails from **Manage Settings** > **Email Settings** > **Link Aliasing Settings**. For more information, refer to [Tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#tracking-links).
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ### Liquid 5
 
 Braze has updated support to Liquid up to and including **Liquid 5 from Shopify**. For new Braze users, Liquid 5 is generally available. For existing Braze users, Liquid 5 is in early access. Learn more about [what's new with Liquid 5]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#whats-new-with-liquid-5).

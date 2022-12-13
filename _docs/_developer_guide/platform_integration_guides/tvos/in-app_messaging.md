@@ -22,6 +22,10 @@ Do not choose tvOS from the checkbox list; doing so will prohibit you from lever
 
 **2\.** Use the API key listed in **Manage Settings** when referencing the API key during your SDK configuration in your Xcode project.<br>![][2]{: style="width:70%"}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Customization
 
 Reference our [In-app message custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization) and [Content Cards custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization) articles to further customize these channels on tvOS when integrating. We also offer [example projects](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples) to reference as well to aid in the integration. 

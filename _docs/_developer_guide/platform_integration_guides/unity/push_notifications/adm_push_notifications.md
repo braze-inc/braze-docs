@@ -107,6 +107,10 @@ The required ADM Jar file may be placed anywhere in your project according to th
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's **Manage Settings** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![][34]
 
 [2]: #step-1-enable-adm

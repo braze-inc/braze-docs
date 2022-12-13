@@ -20,7 +20,11 @@ Braze's test application within the [Android SDK GitHub repository][3] is called
 2. Copy your FCM sender ID and Braze API identifier key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named `com_braze_push_fcm_sender_id` and `com_braze_api_key`, respectively).<br><br>
 3. Copy your FCM server key and server ID into your app group settings under **Manage Settings**.<br><br>
 4. To assemble the Droidboy APK, run `./gradlew assemble` within the SDK directory. Use `gradlew.bat` on Windows.<br><br>
-5. To automatically install the Droidboy APK on a test device, run `./gradlew installDebug` within the SDK directory:
+5. To automatically install the Droidboy APK on a test device, run `./gradlew installDebug` within the SDK directory.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 ## Building the Hello Braze test application
 The Hello Braze test application shows a minimal use case of the Braze SDK and additionally shows how to easily integrate the Braze SDK into a Gradle project.
@@ -31,6 +35,10 @@ The Hello Braze test application shows a minimal use case of the Braze SDK and a
 ```
 ./gradlew installDebug
 ```
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 If you don't have your `ANDROID_HOME` variable properly set or don't have a `local.properties` folder with a valid `sdk.dir` folder, this plugin will also install the base SDK for you. See the [plugin repo][27] for more information.
 
 For more information on the Android SDK build system, see the [Github Repository README][26].

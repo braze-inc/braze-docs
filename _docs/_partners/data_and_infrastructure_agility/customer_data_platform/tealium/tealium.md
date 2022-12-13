@@ -64,6 +64,10 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | REST API key (server-to-server only) | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Choose your integration type
 
 | Integration | Details |

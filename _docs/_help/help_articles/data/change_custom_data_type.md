@@ -11,6 +11,12 @@ description: "This help article walks you through how to change the data type of
 
 To change the data type of a custom attribute or event, from the Braze dashboard, navigate to **Manage Settings** and select either the **Custom Attributes** or **Custom Events** tab. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/)
+- **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+- **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
+
 ![Custom Attributes tab to edit attribute or data type][1]
 
 If you must change the data type of a custom attribute or event (for example, from a `date` to a `string`), consider the following:

@@ -34,3 +34,7 @@ In May 2021, Braze updated the following labels and terms in the Braze dashboard
 - Money Spent In-App --> Money Spent
 - App Usage (User Profile) --> Sessions Overview
 - Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}

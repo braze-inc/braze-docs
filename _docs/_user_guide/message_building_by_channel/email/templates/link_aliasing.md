@@ -110,7 +110,11 @@ While you can select an unlimited number of links to track, Braze only allows re
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
 
-To view all of your tracked linked aliases, go to the **Manage Settings** page under the **Settings** section. Next, select **Email Settings > Link Aliasing Settings**. On the **Tracked Link Aliases** page, you can also turn off tracking as well as search and sort your aliases.
+To view all of your tracked linked aliases, go to the **Manage Settings > Settings** section. Next, select **Email Settings > Link Aliasing Settings**. On the **Tracked Link Aliases** page, you can also turn off tracking as well as search and sort your aliases.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
 
 ![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
 
