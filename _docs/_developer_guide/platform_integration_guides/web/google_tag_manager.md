@@ -31,6 +31,10 @@ Search for Braze in the community template gallery, and select the **Braze Initi
 
 Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ### Step 3. Choose initialization options
 
 Choose from the optional set of additional initialization options described in the [Initial setup][7] guide.

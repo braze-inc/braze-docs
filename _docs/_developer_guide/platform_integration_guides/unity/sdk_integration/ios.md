@@ -44,6 +44,10 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 2. Check the **Automate Unity iOS Integration** box.
 3. In the "Braze API Key" field, input your application's API key found in **Manage Settings**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![]({% image_buster /assets/img_archive/unity-ios-appboyconfig.png %})
 
 If your application is already using another `UnityAppController` subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.

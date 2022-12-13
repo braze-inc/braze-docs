@@ -26,9 +26,20 @@ Integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be ov
 
 ## Step 2: Set your Firebase credentials
 
-You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console][58] and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID:<br>![][59]
+You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console][58] and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
+
+![][59]
 
 In Braze, select your Android app on the **App Settings** page under **Manage Settings**. Next, enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field and Firebase Sender ID in the **Firebase Cloud Messaging Sender** ID field.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 
 ![][15]
 
@@ -48,6 +59,10 @@ The Braze SDK can automatically handle push registration with the Firebase Cloud
 If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
 
 In Braze, select your Android app on the **App Settings** page under **Manage Settings**. Next, enter your Firebase Server Key in the **Push Notification Settings** field and Firebase Sender ID in the **Push Notification Settings** ID field.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 #### Push received listener
 

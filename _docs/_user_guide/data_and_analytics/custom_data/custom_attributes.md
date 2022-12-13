@@ -17,6 +17,10 @@ When stored in Braze, these characteristics can be used to build out audience se
 
 To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+{% endalert %}
+
 If you would like to remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint.
 
 ## Setting custom attributes
@@ -127,6 +131,10 @@ Array attributes are good for storing related lists of information about your us
 By default, the max length of an array for an attribute is set to 100. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
 If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 

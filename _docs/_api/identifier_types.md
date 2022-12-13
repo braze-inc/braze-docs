@@ -28,6 +28,12 @@ There are two ways to locate your `app_id`:
 
 2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for **APP NAME** on **PLATFORM**" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Manage Settings** is now **Workspace Settings**.
+- **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
+
 #### What can it be used for?
 
 App identifiers at Braze are used when integrating the SDK and are also used to reference a specific app in REST API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app.

@@ -28,6 +28,10 @@ Within the **Application** tab, ensure that `Toast Capable` is set to `YES`.
 1. [Find your SID and Client Secret][4]
 2. Within the **Settings** page of the Braze dashboard, add the SID and Client Secret in your settings.<br>![][6]
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
+
 ## Step 3: Update for background open logging
 
 In your `OnLaunched` method, after you have called `OpenSession` add the following code snippet.

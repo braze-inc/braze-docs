@@ -161,6 +161,10 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 The maximum number of elements in custom attribute arrays defaults to 25. If you’d like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+{% endalert %}
+
 The following table describes available segmentation options for array attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |

@@ -8,6 +8,10 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Manage Settings**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 # Initial SDK setup
 
 {% alert note %}

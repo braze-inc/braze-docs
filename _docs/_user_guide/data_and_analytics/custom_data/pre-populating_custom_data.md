@@ -16,6 +16,13 @@ There may be times when you'd like to start setting up campaigns and segments us
 
 To pre-populate custom events and attributes, navigate to the **Manage Settings** page and select the **Custom Attributes** or **Custom Events** tab. Then add a new custom attribute or custom event.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+- **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
+{% endalert %}
+
 ![Navigate to Custom Attributes or Custom Events][21]
 
 For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute.

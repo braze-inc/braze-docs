@@ -149,6 +149,10 @@ You need to input your Firebase Server Key and Sender ID into the Braze dashboar
 2. Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the push notification settings section.
 3. Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
+
 ![][16]
 
 ### Step 5: Remove old permissions

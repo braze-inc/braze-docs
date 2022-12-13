@@ -39,6 +39,10 @@ Next, within your `AppDelegate.m` file, add the following snippet within your `a
 
 Update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 {% endtab %}
 {% tab swift %}
 
@@ -62,6 +66,10 @@ Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaun
 ```
 
 Update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}

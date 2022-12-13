@@ -22,7 +22,6 @@ There are three easy ways to integrate the Web SDK to include analytics and mess
 
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
 
-
 ### Option 1: NPM or Yarn {#install-npm}
 
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
@@ -62,6 +61,10 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 ## Step 2: Initialize Braze
 
 Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings > Settings** within your Braze dashboard.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+{% endalert %}
 
 {% alert note %}
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.

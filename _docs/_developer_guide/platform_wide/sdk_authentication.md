@@ -10,6 +10,10 @@ platform:
   
 ---
 
+{% alert note %}
+Several references in this page refer to the **Manage Settings**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 # SDK Authentication
 
 SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JSON Web Token (JWT) signature.

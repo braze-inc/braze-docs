@@ -226,6 +226,10 @@ You need to input your Baidu API Key and Baidu Secret Key into the Braze dashboa
 
 On the **Manage Settings** page, select your Android China app and enter your Baidu API Key and Baidu Secret Key in the push notifications section.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![][19]{: style="max-width:80%;"}
 
 ## Additional resources

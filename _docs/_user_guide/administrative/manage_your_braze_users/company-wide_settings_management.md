@@ -67,6 +67,10 @@ That's it! You should start receiving notifications about your company to this S
 
 Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the **Manage Settings** page of the dashboard. You may select up to five events to be included in your weekly report:
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
+
 ![Selecting events to be included in the Analytics Report][22]
 
 ### Additional email settings

@@ -48,6 +48,10 @@ When composing your email template copy, do not switch back and forth between di
 
 Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
 
 ![Email Template Details panel in the HTML editor.]({% image_buster/assets/img/email_templates/template3.png %})
@@ -125,6 +129,10 @@ To read more about the different components of the drag & drop editing experienc
 {% endtabs %}
 
 Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer][cf] in the **Email Settings** tab of the **Manage Settings** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
 
 #### Step 4a: Check for email errors
 

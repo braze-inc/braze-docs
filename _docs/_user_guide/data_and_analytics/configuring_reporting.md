@@ -20,4 +20,8 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Accou
 
 Additionally, if you’re utilizing custom events, you can select up to 5 key events to be included in your weekly report. The events can be updated at any time on the **Custom Events** tab of the **Manage Settings** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
+
 [1]: {% image_buster /assets/img/checkbox.png %}

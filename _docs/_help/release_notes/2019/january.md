@@ -13,6 +13,10 @@ Welcome to a new year!
 
 In your account, within **Manage Settings**, click the [push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) tab to manage the time duration for attempted resends in the event that a device is offline.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Connected Content IP whitelisting
 
 Braze is pleased to announce that due to a number of infrastructure upgrades made by our internal teams, we can now offer IP whitelisting for Connected Content on all clusters. In the future, we plan to add additional IPs for the non-EU clusters.

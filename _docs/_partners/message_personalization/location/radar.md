@@ -26,6 +26,10 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | iOS API key<br>Android API key | These API keys can be found within the **Braze Dashboard > Manage Settings** page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ## Integration
 
 To map data between the Braze and Radar SDKs, you must set the same user IDs in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.

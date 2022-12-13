@@ -33,6 +33,10 @@ Check with your developers which event properties are being tracked. Keep in min
 
 To confirm that the event properties are successfully tracked, you can view all event properties by navigating to the **Manage Settings** page, clicking on the **Custom Events** tab, then clicking **Manage Properties**. This will show you the names of the properties associated with an event.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+{% endalert %}
+
 ### Verify values
 
 To check the specific property values being passed for each event, check the [event user logs][24] on your dashboard. After adding your user as a test user, you should perform the custom event within the app, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.

@@ -16,6 +16,10 @@ With global style settings, you can personalize the look of your email campaigns
 
 To edit your global style settings, go to the **Manage Settings** page and select the **Email Settings** tab. Select **Drag & Drop Email Editor Settings**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![][1]
 
 {% alert note %}

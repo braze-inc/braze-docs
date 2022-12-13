@@ -102,6 +102,10 @@ In order to associate the incoming events to a particular instance of send, you 
 
 To get started using the Transactional HTTP Event Postback, navigate to **Manage Settings** > **Email Settings** > **Transactional Webpush URL** in your Braze dashboard and input your desired URL to receive postbacks.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+{% endalert %}
+
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
 
 

@@ -17,6 +17,14 @@ You can manage custom attributes, custom events (and their properties), and prod
 - Custom Events
 - Products
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
+- **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
+- **Products** is located under **Data Settings** > **Products**.
+{% endalert %}
+{% endalert %}
+
 To add a custom attribute, event, or product, go to the respective tab and click **+ Add**. Give it a name (and for custom attributes, a data type) and click **Save**. This will enable tracking on it.
 
 ### Managing properties
