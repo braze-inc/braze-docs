@@ -37,6 +37,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "platform": "android",
      "os_version": "Android (N)",
     "device_model": "Nexus 5X",
@@ -64,6 +65,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "send_id": "f123456789abcdef01234567",
     "dispatch_id": "01234567-89ab-cdef-0123-456789abcdef"
   }
@@ -86,6 +88,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
     "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
@@ -109,6 +112,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "to_phone_number": "+16462345678",
     "subscription_group_id": "41234567-89ab-cdef-0123-456789abcdef",
     "from_phone_number": "+12123470922"
