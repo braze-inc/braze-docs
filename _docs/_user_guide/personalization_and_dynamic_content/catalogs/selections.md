@@ -50,6 +50,6 @@ Using the same personalization, we can also send three meal recommendations for 
 
 [1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
 [2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_filtered_sets3.png %}
+[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
 [4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
 [5]: {% image_buster /assets/img_archive/catalog_selections5.png %}

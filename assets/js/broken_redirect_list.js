@@ -323,7 +323,7 @@ validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/
 validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
 validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
 validurls['/docs/hidden/private_betas/funnel_report/'] = '/docs/funnel_report/';
-validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/frequency_capping_tag/';
+validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
@@ -569,4 +569,3 @@ validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'
 validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/';
 
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/selections/';
-validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#sending-at-large-scales';

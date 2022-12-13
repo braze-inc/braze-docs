@@ -42,7 +42,8 @@ First, find and remove the call to `braze.automaticallyShowInAppMessages()` from
 braze.subscribeToInAppMessage(function(inAppMessage) {
   // control group messages should always be "shown"
   // this will log an impression and not show a visible message
-  if (inAppMessage instanceof braze.ControlMessage) {
+  
+  if (inAppMessage.isControl) { // v4.5.0+, otherwise use  `inAppMessage instanceof braze.ControlMessage`
      return braze.showInAppMessage(inAppMessage);
   }
   
