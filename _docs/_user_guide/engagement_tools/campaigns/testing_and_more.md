@@ -17,8 +17,8 @@ guide_featured_list:
   - name: Sending Test Messages
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     fa_icon: fas fa-envelope
-  - name: A/B Testing with Random Buckets
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/
+  - name: API-Triggered and Action-Based Campaigns
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
     fa_icon: fas fa-columns
 
 guide_menu_title: "Additional Articles"
