@@ -20,10 +20,10 @@ permalink: /link_shortening/
 Link shortening and click tracking can be enabled at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
 The length of the URL will be determined by the type of tracking that is enabled:
-- **Basic tracking** enables campaign-level click tracking.
-- **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs.
+- **Basic tracking** enables campaign-level click tracking. Basic links will have a length of between 20-21 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs. Advanced links will have a length of between 27-28 characters.
 
-Links will be shortened using Braze’s shared short domain ([brz.ai](http://brz.ai)) with a length of between 20-21 characters for basic links and 27-28 characters for advanced links. An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
+Links will be shortened using Braze’s shared short domain ([brz.ai](http://brz.ai)). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
 
 Shortened URLs will be valid for one year from the date they were created.
 
@@ -80,14 +80,6 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 
 ## Frequently asked questions
 
-#### How long are the shortened URLs?
-
-Shortened URLs will be between 20 and 21 characters long.
-
-#### Does link shortening work with URLs that contain Liquid?
-
-No. Currently, only static URLs are shortened.
-
 #### Are the links I receive when test sending real URLs?
 
 If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. Note that the exact URL sent in a launched Campaign may differ from the one sent via a Test Send.
@@ -100,10 +92,6 @@ No, link shortening will work without any SDK integration.
 
 Not yet, though we plan to provide more customization options in the future.
 
-#### Do I know which individual users are clicking on a URL?
-
-Not yet. This will be part of a future user-level click-tracking release.
-
 #### Can I add UTM parameters to a URL before it is shortened?
 
 Yes! Any static URL parameters can be added. 
@@ -112,9 +100,13 @@ Yes! Any static URL parameters can be added.
 
 One year.
 
+#### Does link shortening work with URLs that contain Liquid?
+
+No. Currently, only static URLs are shortened.
+
 #### Will link shortening work with deep links or universal links?
 
-Link shortening will only shorten static URLs that start with _http://_ or _https://_. It is not advised to further shorten generated universal links (from providers such as Branch or Firebase) as this may break the attribution or redirect of those tools.
+Link shortening will shorten any static URLs that start with _http://_ or _https://_. However, it is not advised to further shorten generated universal links (from providers such as Branch or Appsflyer) as this may break the attribution or redirect of those tools.
 
 [1]: {% image_buster /assets/img/sms/link_shortening10.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 

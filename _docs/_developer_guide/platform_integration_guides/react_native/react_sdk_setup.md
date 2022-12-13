@@ -21,13 +21,18 @@ To complete the installation, you will need the [App Identifier API key]({{site.
 Braze React Native SDK v1.38.0+ requires at least React Native v0.64+.
 {% endalert %}
 
-Add the Braze React Native SDK package.
-
+{% tabs local %}
+{% tab bash %}
 ```bash
 npm install react-native-appboy-sdk
-# or using yarn
-# yarn add react-native-appboy-sdk
 ```
+{% endtab %}
+{% tab yarn %}
+```bash
+yarn add react-native-appboy-sdk
+```
+{% endtab %}
+{% endtabs %}
 
 ## Step 2: Complete native setup
 
@@ -222,7 +227,7 @@ In the same file, add the following snippet within the `application:didFinishLau
      withLaunchOptions:launchOptions];
 ```
 
-Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in XCode:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
 2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
@@ -255,7 +260,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can start a session for a particular user by calling the following code in your app.
 
 ```javascript
-Braze.changeUser("user-id");
+Braze.changeUser("userId");
 ```
 
 For example, you can assign the user ID at the startup of the app:
