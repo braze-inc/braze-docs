@@ -44,11 +44,9 @@ As part of the changes to our information architecture and navigation, we have a
 7. **Administrator icon** - Appears next to your profile if you are an administrator for your company.
 
 {% endtab %}
-{% tab Side-by-side %}
+{% tab Changes %}
 
 ![]({% image_buster /assets/img/navigation/global_header_compare.png %}){: style="border:0"}
-
-What's new:
 
 - Community
    - **Resources** is now **Community**
@@ -99,17 +97,65 @@ What's new:
 </table>
 
 {% endtab %}
-{% tab Side-by-side %}
+{% tab Changes %}
 
-<table id="navigation">
-<tbody>
-  <tr>
-    <td><img src="{% image_buster /assets/img/navigation/sidebar_compare.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
-  </tr>
-</tbody>
-</table>
+The following table lists where each page is located in the new navigation. Some pages have been renamed, and the new name is referenced in the "New location" column.
 
+| Page name                     | New location                                            |
+|-------------------------------|---------------------------------------------------------|
+| API Settings                  | Settings > Workspace Logs & Testing > API Keys          |
+| Approval Workflow             | Settings > Workspace Settings > Approval Workflow       |
+| Campaigns                     | Messaging > Campaigns                                   |
+| Calendar                      | Messaging > Content Calendar                            |
+| Canvas                        | Messaging > Canvas                                      |
+| Catalogs                      | Data Settings > Catalogs                                |
+| Connected Content             | Settings > Workspace Settings > Connected Content       |
+| Content Blocks Library        | Templates > Content Blocks                              |
+| Conversions                   | Analytics > Analytics Dashboards > Conversions          |
+| Currents                      | Partner Integrations > Data Export (Currents)           |
+| Custom Attributes             | Data Settings > Custom User Attributes                  |
+| Custom Events (report)        | Analytics > Reports > Custom Events Reports             |
+| Custom Events                 | Data Settings > Custom User Events                      |
+| Data Feeds                    | Data Settings > Data Feeds                              |
+| Developer Console             | Settings > Workspace Logs & Testing                     |
+| Devices & Carriers            | Analytics > Reports > Devices and Carriers              |
+| Email Performance             | Analytics > Analytics Dashboards > Email Performance    |
+| Email Settings                | Settings > Workspace Settings >  Email Preferences      |
+| Email Templates               | Templates > Email Templates                             |
+| Engagement Reports            | Analytics > Reports > Engagement                        |
+| Event User Log                | Settings > Workspace Logs & Testing > Event User Log    |
+| Feature Flags                 | Audience > Feature Flags                                |
+| Global Control (report)       | Analytics > Reports > Global Control                    |
+| Global Control Group Settings | Audience > Global Control Group                         |
+| In-App Message Templates      | Templates > In-App Message Templates                    |
+| Internal Groups               | Settings > Workspace Logs & Testing > Internal Groups   |
+| Link Templates                | Templates > Email Link Templates                        |
+| Locations                     | Audience > Locations                                    |
+| Manage Settings               | Settings > Workspace Settings                           |
+| Manage Teams                  | Settings > Workspace Settings > Internal Teams          |
+| Media Library                 | Templates > Media Library                               |
+| Message Activity Log          | Settings > Workspace Logs & Testing > Message Activity  |
+| News Feed                     | Messaging > News Feed                                   |
+| Overview                      | Home                                                    |
+| Predictions                   | Analytics > Predictions                                 |
+| Products                      | Data Settings > Products                                |
+| Promotion Codes               | Data Settings > Promotion Codes                         |
+| Push TTL Settings             | Settings > Workspace Settings > Push Time-To-Live (TTL) |
+| Report Builder                | Analytics > Reports > Report Builder                    |
+| Revenue                       | Analytics > Reports > Revenue                           |
+| Segments                      | Audience > Segments                                     |
+| Segment Extensions            | Audience > Segment Extensions                           |
+| Segment Insights              | Analytics > Reports > Segment Insights                  |
+| Global Message Settings       | Settings > Workspace Settings > Message Frequency       |
+| SMS Performance               | Analytics > Analytics Dashboards > SMS Performance      |
+| Subscription Group Management | Audience > Subscription > Subscription Groups           |
+| Subscription Groups           | Audience > Subscription > Subscription Groups           |
+| Tags                          | Settings > Workspace Settings > Tag Management          |
+| Technology Partners           | Partner Integrations > Technology Partner Integrations  |
+| User Import                   | Audience > Import Users                                 |
+| User Search                   | Audience > Search Users                                 |
+| Webhook Templates             | Templates > Webhook Templates                           |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
