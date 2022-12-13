@@ -115,6 +115,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
+| subscription_groups| Array of objects with `subscription_group_id` and `subscription_state` string. |
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -122,6 +123,8 @@ The following user profile fields are case sensitive, so be sure to reference th
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
 ####  User attribute example request
+
+This example contains two user attribute objects with the allowed 75 requests per API call.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -147,13 +150,10 @@ Authorization: Bearer YOUR-REST-API-KEY
       "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
       "first_name" : "Alice",
       "has_profile_picture" : false,
-    }
+    },
   ]
 }
 ```
-
-This example contains two User Attribute objects of the allowed 75 per API call.
-
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
