@@ -50,6 +50,14 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+---
+nav_title: December 13, 2022
+page_order: 1
+noindex: true
+page_type: update
+description: "This article contains release notes for 12/13/2022."
+---
+
 ## December 13, 2022 release
 
 ### Custom attributes for links in the Drag & Drop Editor for Email
@@ -60,11 +68,11 @@ You can generate images for your Media Library using DALL·E 2 an AI system from
 
 ### Enhancements to nested custom attributes
 You can use nested custom attributes to send objects as a new data type for custom attributes. 
-[You can trigger when a nested custom attribute object changes.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#trigger-nested-custom-attribute-changes)
-[You can also now personalize your messages using a custom attribute object and Liquid.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization)
+- [You can trigger when a nested custom attribute object changes.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#trigger-nested-custom-attribute-changes)
+- [You can also now personalize your messages using a custom attribute object and Liquid.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization)
 
 ### New API endpoints: Catalogs
-Use the [Braze API Catalogs endpoints](({{site.baseurl}}/api/endpoints/catalogs) to add, edit, and manage your catalogs and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog.
+Use the [Braze API Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs) to add, edit, and manage your catalogs and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog.
 
 Looking for guidance on creating a catalog? Check out our [article for creating and using catalogs.]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)
 
