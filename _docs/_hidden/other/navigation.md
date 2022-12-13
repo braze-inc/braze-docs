@@ -6,6 +6,14 @@ permalink: /navigation/
 
 # Braze navigation
 
+> Summary of what's up with this page
+
+## New navigation (beta)
+
+> Summary of the nav beta, opt-in period timing, how to opt in, anything else they need to know
+
+As part of the changes to our information architecture and navigation, we have also renamed "App Group" to "Workspace". If you're using our updated navigation, this change will be reflected throughout the dashboard.
+
 ## Global header
 
 {% tabs %}
@@ -44,7 +52,6 @@ What's new:
 
 - Community
    - **Resources** is now **Community**
-   - **Braze Learning** and **Documentation** are now under **Support** in the global header
 - Support
    - **Get Help** is now **Support** 
    - **Braze Learning** and **Documentation** are now located here
@@ -63,6 +70,7 @@ What's new:
 #navigation td {
     word-break: break-word;
     width: 50%;
+    font-size: 16px;
 }
 </style>
 
@@ -73,7 +81,7 @@ What's new:
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_new.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
+    <td><b>1. Workspace selector</b> - See what workspace you're currently in or switch between workspaces.<br><br><b>2. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>3. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>4. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>5. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>6. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>7. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>8. Data Settings</b> - Contains settings related to user data, such as custom user attributes, custom user events, catalogs, products, and more.<br><br><b>9. Settings</b> - Manage your workspace integration, workspace settings, company settings, billing, and more.<br></td>
   </tr>
 </tbody>
 </table>
@@ -85,7 +93,7 @@ What's new:
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
+    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboard, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
   </tr>
 </tbody>
 </table>
@@ -101,6 +109,7 @@ What's new:
   </tr>
 </tbody>
 </table>
+
 
 {% endtab %}
 {% endtabs %}
