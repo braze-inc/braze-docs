@@ -32,7 +32,7 @@ This feature is in early access and is under active development. If you're inter
 1. Navigate to the **Conversions** page, under **Data**.
 2. Select a time period for your report, up to 365 days in the past.
 3. Select a conversion event, **Started session**, **Performed custom event**, or **Made a specific purchase**.
-4. Decide if you want your report to include untracked events. Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
+4. Decide if you want your report to include untracked events (Optional, this feature is currently being tested on a small subset of early access customers). Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
 5. Select a conversion window, up to 7 days. This is how much time users have after they perform the message engagement action for the conversion event to count as a conversion. Conversion events that occur outside of this window are not counted in your report.
 6. Click **Refresh**.
 
@@ -43,6 +43,7 @@ You can filter by campaign, Canvas step, or channel to narrow down your report's
 - **Filter by campaign:** Select up to 10 campaigns to show conversions that occurred after receiving, opening, or clicking any of the selected campaigns.
 - **Filter by Canvas step:** Select up to 10 Canvases or 10 Canvas steps to show conversiosn that occurred after receiving, opening, or clicking any of the selected Canvases or steps.
 - **Filter by channel:** Select one channel (required) to show conversions that occurred after receiving, opening, or clicking any messages sent from that channel. By default, the email channel is selected.
+- **Filter by country:** Select up to 10 countries to show conversions for users with those countries in their profile.
 
 ## Understanding your results
 
@@ -50,19 +51,42 @@ Your report is split into three sections: **Total conversions**, **Unique conver
 
 ### Total conversions
 
-The total conversions are total counts and are not de-duplicated when users convert multiple times. For example, if a user converts two times within the conversion window, then two additional total conversions are incremented. 
+The total conversions are total counts and are not de-duplicated when users convert multiple times. For example, if a user converts two times within the conversion window, then two additional total conversions are incremented.
 
 This section includes the following metric tiles:
 
-- Received conversions
-  - **Number of conversions:** The number of times your selected conversion event occurred after message receipt, within the selected conversion window.
-  - **Total conversions per user:** Calculated as (Number of total conversions from time period) / (Number of unique recipients from time period)<br><br>
-- Open conversions
-  - **Number of conversions:** The number of times your selected conversion event occurred after message open, within the selected conversion window.
-  - **Total conversions per user:** Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)<br><br>
-- Click conversions
-  - **Number of conversions:** The number of times your selected conversion event occurred after message click, within the selected conversion window.
-  - **Total conversions per user:** Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;}
+.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-0pky">Number of conversions</th>
+    <th class="tg-0pky">Total conversions per user</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="leftHeader">Received conversions</td>
+    <td class="tg-0pky">The number of times your selected conversion event occurred after message receipt, within the selected conversion window.</td>
+    <td class="tg-0pky">Calculated as (Number of total conversions from time period) / (Number of unique recipients from time period)</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Open conversions</td>
+    <td class="tg-0pky">The number of times your selected conversion event occurred after message open, within the selected conversion window.</td>
+    <td class="tg-0pky">Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Click conversions</td>
+    <td class="tg-0pky">The number of times your selected conversion event occurred after message click, within the selected conversion window.</td>
+    <td class="tg-0pky">Calculated as (Number of conversions from time period) / (Number of unique recipients from time period)</td>
+  </tr>
+</tbody>
+</table>
 
 ### Unique conversions
 
@@ -77,14 +101,8 @@ The unique conversions rates and counts track the number of users who converted 
 
 ### Conversion performance by channel
 
-This section shows the conversion results for each messaging channel. Due to how opens and clicks are tracked across channels, not all metrics are available for all channels. The following table lists how each attribution method is tracked for each channel. 
+This section shows the conversion results for each messaging channel. Due to how opens and clicks are tracked across channels, not all metrics are available for all channels. The following table lists how each attribution method is tracked for each channel.
 
-<style type="text/css">
-.tg td{word-break:normal;}
-.tg th{word-break:normal;}
-.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
