@@ -1,8 +1,8 @@
 ---
 nav_title: User Update 
 article_title: User Update 
-permalink: "/user_update/"
-hidden: true
+alias: "/user_update/"
+page_order: 6
 page_type: reference
 description: "This reference article covers the User Update component and how to use them in your Canvases."
 tool: Canvas
@@ -17,10 +17,6 @@ The User Update component allows you to update a user’s attributes, events, an
 With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component does consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
 Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
-
-{% alert important %}
-User Update is currently in early access and only supported in Canvas Flow. Contact your Braze account manager if you are interested in participating in this early access. <br><br>Braze will begin to deprecate Braze-to-Braze webhooks that target the `/users/track` endpoint once this feature is generally available. We'll let you know about the full deprecation process and timeline when the User Update component is released so that you have the time and support from Braze to make the switch.
-{% endalert %}
 
 ## Create a User Update
 
@@ -46,7 +42,7 @@ Add an attribute, event, or purchase JSON object up to 65,536 characters to the 
 
 ![][2]{: style="max-width:90%;"}
 
-You can also preview and test that the user profile is updated with the changes with the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
+Using the advanced composer, you can also preview and test that the user profile is updated with the changes with the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
 
 ![][6]{: style="max-width:90%;"}
 
@@ -60,13 +56,13 @@ Do not include any of the following information in the JSON composer:
 
 ## Use case
 
-For example, if we want a group of users to be promoted to VIP members, select **VIP Member** as the attribute name, and enter `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
+For example, if we want a group of users to be promoted to loyalty members, select **Loyalty Member** as the attribute name, and select `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
 
 ![][3]{: style="max-width:90%;"}
 
 ## Personalization features
 
-User Update also supports the following personalization features: 
+To store the property of the trigger event for a Canvas as an attribute, you can use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)

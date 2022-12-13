@@ -31,6 +31,9 @@ guide_featured_list:
   - name: Experiment Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     fa_icon: fas fa-columns
+  - name: User Update Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    fa_icon: fas fa-user-check
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync/
     fa_icon: fab fa-facebook
