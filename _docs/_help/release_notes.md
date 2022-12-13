@@ -50,14 +50,6 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
----
-nav_title: December 13, 2022
-page_order: 1
-noindex: true
-page_type: update
-description: "This article contains release notes for 12/13/2022."
----
-
 ## December 13, 2022 release
 
 ### Custom attributes for links in the Drag & Drop Editor for Email
