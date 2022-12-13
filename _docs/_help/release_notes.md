@@ -10,6 +10,9 @@ description: "This landing page is home to Braze Release Notes. This is where yo
 
 guide_featured_title: "Release Notes"
 guide_featured_list:
+  - name: 2023
+    link: /docs/help/release_notes/2023/
+    fa_icon: fas fa-calendar-alt
   - name: 2022
     link: /docs/help/release_notes/2022/
     fa_icon: fas fa-calendar-alt
@@ -46,6 +49,99 @@ guide_featured_list:
 > <br>
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
+
+## December 13, 2022 release
+
+### Custom attributes for links in the Drag & Drop Editor for Email
+You can now [add HTML attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) to any URL within the `Image`, `Button`, or `Text` editor blocks in the Drag & Drop Editor for Email. With custom attributes, you can easily append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling. 
+
+### Generate AI images for your Media Library
+You can generate images for your Media Library using DALL·E 2 an AI system from OpenAI that can create realistic images and art from a description in natural language. Read more about [Generating an image using AI here.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai)
+
+### Enhancements to nested custom attributes
+You can use nested custom attributes to send objects as a new data type for custom attributes. 
+[You can trigger when a nested custom attribute object changes.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#trigger-nested-custom-attribute-changes)
+[You can also now personalize your messages using a custom attribute object and Liquid.]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization)
+
+### New API endpoints: Catalogs
+Use the [Braze API Catalogs endpoints](({{site.baseurl}}/api/endpoints/catalogs) to add, edit, and manage your catalogs and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog.
+
+Looking for guidance on creating a catalog? Check out our [article for creating and using catalogs.]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)
+
+### New Video block
+A new content block for [Video]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#video) has been added to the Drag & Drop Editor for Email.
+
+### News Feed is deprecated
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it’s more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+
+### Optional Identifier for Vendor collection - Swift
+In previous versions of the Braze iOS Swift SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+### Show Heatmap toggle
+You can now use the [Show Heatmap toggle]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#heatmaps) to bring up a visual view of your **Message Analytics** that shows the overall frequency and location of clicks within the lifespan of the campaign. You can also download a copy of your heatmaps for future reference.
+
+### Snowflake Reader Accounts
+Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze. 
+
+To learn more, reach out to your customer success manager.
+
+### Updated email settings
+The previous **General Email Settings** section has been split into two new sections: **Sending Configuration** and **Subscription Pages and Footers.** For more information about the individual settings, check out the [Email settings article.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#sending-configuration)
+
+### Updated Shopify integration
+The [Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) now allows you to collect email and SMS opt-ins from your Shopify store and assign them to a subscription group in Braze.
+
+
+### New Braze partnerships
+
+#### Ada - Surveys
+The [Ada]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/ada/) and Braze integration allows you to augment user profiles with data collected from your automated Ada conversations. You can set custom user attributes based on the information you collect during an Ada chat and record custom events in Braze at specified points in an Ada conversation. By connecting your Ada chatbot to Braze, you can learn more about your consumers based on what questions they ask about your brand or by proactively starting conversations with them, asking them questions that allow you to learn more about their interests and preferences.
+
+#### B.Layer - Message templates
+The [B.Layer]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/blayer) and Braze integration allows you to leverage the B.Layer in-app message builder to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to Braze. This integration does not require additional developer resources, saving you time and budget.
+
+#### Contentsquare - Analytics
+The [Contentsquare]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) and Braze integration allows you to send Live Signals (fraud, frustration signals, etc.) as custom events in Braze. Leverage Contentsquare experience insights to improve your campaigns' relevance and conversion rates by targeting messages based on your customers' digital experience and body language.
+
+#### Dynamic Yield - Dynamic content
+The [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and Braze partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
+- **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 
+- **Dynamic Content blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
+
+#### Octolis - Analytics
+The [Octolis]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) and Braze integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, both online and offline.
+
+#### Phrasee - AB testing
+[Phrasee React]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react/), powered by Phrasee X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization.
+
+#### Sheetlabs - Dynamic content
+The [Sheetlabs]({{site.baseurl}}/partners/message_personalization/dynamic_content/sheetlabs/) and Braze integration allows you to leverage [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) to include Sheetlabs APIs inside your Braze marketing campaigns. This is commonly used to provide a bridge between a Google Spreadsheet (which is updated directly by the marketing team) and Braze's templates. This allows you to achieve more with Braze templates, such as translations or larger sets of custom attributes.
+
+#### Tellius - Analytics
+The [Tellius]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/tellius/) and Braze integration and Braze integration empowers users to leverage data, without relying on BI engineers, to build dashboards and generate insights to make better marketing decisions.
+
+#### ThoughtSpot - Analytics
+The [ThoughtSpot]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/thoughtspot/) and Braze integration leverages ThoughtSpot TML Blocks that allows Braze users to accelerate their user behavior analytics with prebuilt templates of worksheets and models. This integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights. 
+
+#### Wunderkind - Analytics
+The [Wunderkind]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/wunderkind/) and Braze integration allows you to analyze the performance lift and identify more anonymous users, significantly scaling one-to-one messages sent via Braze and contacts added directly to Braze.
+
+
+### SDK updates
+The following SDK updates have been released. Breaking changes are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [iOS Swift SDK 5.6.3-5.7.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+- [Flutter SDK 3.0.0](https://pub.dev/packages/braze_plugin/changelog)
+    - The native iOS bridge now uses the [new Braze Swift SDK, version 5.6.4](https://github.com/braze-inc/braze-swift-sdk).The minimum iOS deployment target is 10.0.
+    - During migration, update your project with the following changes:
+        - To initialize Braze, [follow these integration steps to create a configuration object](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/a2-configure-braze). Then, add this code to complete the setup: `let braze = BrazePlugin.initBraze(configuration)`
+        - To continue using `SDWebImage` as a dependency, add this line to your project's `/ios/Podfile`: `pod 'SDWebImage', :modular_headers => true`. Then, follow [these setup instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
+        - For guidance around other changes such as receiving in-app message and content card data, reference our sample [`AppDelegate.swift`](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift).
+- [React Native SDK v1.41.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md)
+- [Web SDK 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
+#### New SDK library: Segment Kotlin SDK 
+Segment has updated their library with a new Kotlin-first approach called Segment Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
 
 ## November 15, 2022 release
 
@@ -319,67 +415,6 @@ Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our
 [Braze Learning](https://learning.braze.com/), previously Learning at Braze (LAB), offers courses for marketers, administrators, and developers on key concepts and fundamentals in Braze. Keep an eye out for the Braze Learning logo in select articles, and click the link to learn more about that topic.
 
 ![Braze learning logo in the custom attributes article, which takes you to the Braze Learning course for custom attributes]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
-
-## May 31, 2022 release
-
-### Inbox Vision
-
-With Inbox Vision, you can check that your drag & drop email campaigns are aligned across all your email clients and mobile platforms before sending. To learn more, check out [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/).
-
-### Updated HTML engine
-
-The underlying engine that produces HTML from the Drag & Drop Editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering. For more details on the updates, check out [Updated HTML engine]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#updated-html-engine/).
-
-### Updated keyword category-specific retargeting
-
-You can create up to 25 of your own SMS keyword categories, allowing you to identify arbitrary keywords and responses to be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, check out [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
-
-### Event property segmentation
-
-[Event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#event-property-segmentation/) allows you to target users based on custom events taken and the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
-
-### Audience sync to Google
-
-The Braze Audience Sync to Google implementation process has been simplified allowing you to grant Braze access to multiple Google Ads accounts. For more information, see [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/). 
-
-### New Braze partnerships
-
-#### Amperity - Customer data platform
-
-The Braze and [Amperity]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/) integration offers a unified view of your customers across the two platforms. With this integration, you can sync user lists to map Amperity user data to Braze user accounts by creating an Amperity user list. 
-
-#### Dynamic 365 Customer Insights - Customer data platform
-
-The Braze and [Dynamics 365 Customer Insights]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/) integration allows you to export customer segments to Braze to use in campaigns or Canvases.
-
-#### Extole - Loyalty
-
-With the Braze and [Extole]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/extole/) integration, you can pull customer events and attributes from Extole refer-a-friend and growth programs into Braze, empowering you to create more personalized marketing campaigns that boost customer acquisition, engagement, and loyalty. You can also dynamically pull Extole content attributes, such as personalized share codes and links, into Braze communications.
-
-#### Heap - Cohort import
-
-The Braze and [Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/) integration enables you to import Heap data to Braze, create user cohorts, as well as export Braze data to Heap to create segments.
-
-#### Hightouch - Workflow automation
-
-The Braze and [Hightough]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/) integration allows you to import user cohorts to Braze, sending targeted campaigns based on data that may only exist in your warehouse.
-
-#### Peak - Dynamic content
-
-The Braze and [Peak]({{site.baseurl}}/partners/message_personalization/dynamic_content/peak/) integration allows you to take predicted churn probability and attributes based on customer behaviors and interactions, and import them into Braze to use in customer segmentation and targeting. 
-
-#### Shopify - eCommerce
-
-The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) integration has been expanded to offer abandoned checkout delay, setting a preferred product identifier, and several new Shopify events including `shopify_paid_order`, `shopify_partially_fulfilled_order`, `shopify_fulfilled_order`, `shopify_cancelled_order`, and `shopify_created_refund`.
-
-#### Survicate - Surveys
-
-The Braze and [Survicate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/survicate/) integration allows you to include survey links in your emails or directly embed survey snippets to increase the response rate. After surveys have been completed, return to Survicate to identify and analyze the attributes and responses of your survey responders.
-
-#### Viralsweep - Loyalty
-
-The Braze and [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstakes or contest entry information into Braze to use in campaigns or Canvases. 
-
 
 [support]: {{site.baseurl}}/support_contact/
 
