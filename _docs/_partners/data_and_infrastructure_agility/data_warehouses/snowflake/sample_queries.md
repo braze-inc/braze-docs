@@ -17,7 +17,7 @@ search_tag: Partner
 
 A common query might be to filter events by time.
 
-You can filter them by the time of occurrence. Event tables are clustered by `time` which makes filtering by `time` performant:
+You can filter them by the time of occurrence. Event tables are clustered by `time` which makes filtering by `time` optimal:
 ```sql
 -- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *

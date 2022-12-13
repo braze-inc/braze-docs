@@ -149,13 +149,12 @@ Currently, SDK Authentication must be enabled as part of initializing the SDK in
 
 ### Set the current user's JWT token
 
-Whenever your app calls the Braze [`changeUser`][11] method, also supply the JWT token that was [generated server-side][4].
+Whenever your app calls the Braze `changeUser` method, also supply the JWT token that was [generated server-side][4].
 
 You can also configure the token to refresh mid-session for the current user.
 
 {% alert note %}
-Keep in mind that [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-) should only be called when the User ID has _actually changed_. You should not use this method as a way to update the signature if the user ID has not changed.
+Keep in mind that `changeUser` should only be called when the User ID has _actually changed_. You should not use this method as a way to update the signature if the user ID has not changed.
 {% endalert %}
 
 {% tabs %}
@@ -177,8 +176,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 {% endtab %}
 {% tab Java %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+Supply the JWT Token when calling [`appboy.changeUser`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
 
 ```java
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
@@ -192,8 +190,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab KOTLIN %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+Supply the JWT Token when calling [`appboy.changeUser`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
 
 ```kotlin
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
@@ -207,8 +204,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab Objective-C %}
 
-Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
 
 ```objc
 [[Appboy sharedInstance] changeUser:@"userId" sdkAuthSignature:@"signature"];
@@ -222,8 +218,7 @@ Or, when you have refreshed the user's token mid-session:
 {% endtab %}
 {% tab Swift %}
 
-Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
 
 ```swift
 Appboy.sharedInstance()?.changeUser("userId", sdkAuthSignature: "signature")
@@ -236,8 +231,7 @@ Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 {% endtab %}
 {% tab Dart %}
 
-Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+Supply the JWT Token when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
 
 ```dart
 braze.changeUser("userId", sdkAuthSignature: "signature")
@@ -253,12 +247,12 @@ braze.setSdkAuthenticationSignature("signature")
 
 ### Register a callback function for invalid tokens {#sdk-callback}
 
-When this feature is set as ["Required"](#enforcement-options), the following scenarios will cause SDK requests to be rejected by Braze:
+When this feature is set as [Required](#enforcement-options), the following scenarios will cause SDK requests to be rejected by Braze:
 - JWT was expired by the time is was received by the Braze API
 - JWT was empty or missing
 - JWT failed to verify for the public keys you uploaded to the Braze dashboard
 
-You can use [`subscribeToSdkAuthenticationFailures`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetosdkauthenticationfailures) to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`][9], `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
+You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`][9], `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
 
 Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply Braze's SDK with this new valid token.
 
@@ -358,7 +352,7 @@ Once your [Server-side Integration][1] and [SDK Integration][2] are complete, yo
 
 Keep in mind that SDK requests will continue to flow as usual without authentication unless the app's SDK Authentication setting is set to **Required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), disable this feature in the Braze dashboard, and data will resume to flow as usual without verification.
+Should anything go wrong with your integration (e.g., your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), disable this feature in the Braze dashboard, and data will resume to flow as usual without verification.
 
 ### Enforcement options {#enforcement-options}
 
@@ -411,11 +405,11 @@ No, this feature can be enabled for specific apps and doesn't need to be used on
 
 When you begin to enforce this feature, requests made by older app versions will be rejected by Braze and retried by the SDK. Once users upgrade their app to a supported version, those enqueued requests will begin to be accepted again.
 
-If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature ["optional"][6] until you see that an acceptable percentage of users have upgraded.
+If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature [Optional][6] until you see that an acceptable percentage of users have upgraded.
 
 #### What expiration should I use when generating JWT tokens? {#faq-expiration}
 
-We recommend using the higher value of: average session duration, session cookie/token expiration, or the frequency at which your application would otherwise refresh the current user's profile.
+We recommend using the higher value of average session duration, session cookie/token expiration, or the frequency at which your application would otherwise refresh the current user's profile.
 
 #### What happens if a JWT expires in the middle of a user's session? {#faq-jwt-expiration}
 
@@ -427,11 +421,11 @@ If your server is not able to provide JWT tokens or you notice some integration 
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
-#### Why does this feature use public/private keys instead of Shared Secrets? {#faq-shared-secrets}
+#### Why does this feature use public/private keys instead of shared secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
+When using shared secrets, anyone with access to that shared secret (i.e., the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
-Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
+Instead, we use public/private keys so that not even Braze Employees (let alone your dashboard users) have access to your private keys.
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 
