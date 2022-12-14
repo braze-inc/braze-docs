@@ -37,7 +37,7 @@ When [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/
 
 ![][2]
 
-You may want to use these types of segments if you want to run a test of three different variants and also include a control group. Consider the following sample plan for creating segments of equal size for 3 variants and a control group:
+You may want to use these types of segments if you want to run a test of three different variants and also include a control group. Consider the following sample plan for creating segments of equal size for three variants and a control group:
 
 - Bucket numbers 0 to 2499 correspond to the control segment
 - Bucket numbers 2500 to 4999 correspond to the segment that will receive variant 1
