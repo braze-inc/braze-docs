@@ -55,7 +55,7 @@ The following are the differences between these two options:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} 
-Both **Manual** and **Automated** reports can include a maximum of 50 campaigns in a report. 
+Both **Manual** and **Automated** reports can include a maximum of 250 campaigns in a report. 
 {% endalert %}
 
 Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually. You can include at most five Canvases in one report.
