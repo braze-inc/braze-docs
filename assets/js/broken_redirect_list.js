@@ -323,7 +323,7 @@ validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/
 validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
 validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
 validurls['/docs/hidden/private_betas/funnel_report/'] = '/docs/funnel_report/';
-validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
+validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
@@ -352,7 +352,7 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/preview/
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
-validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
 
 validurls['/docs/help/webinars/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/ab_and_multivariate_testing/'] = '/docs/help/home/';
