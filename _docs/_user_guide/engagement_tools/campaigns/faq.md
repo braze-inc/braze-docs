@@ -131,6 +131,10 @@ Selecting the **CSV Export Email Addresses** option will only download data for 
 
 Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ### What is the difference between API campaigns, and API-triggered campaigns?
 
 API-triggered campaigns allow you to manage campaign copy, multivariate testing and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from your own servers and systems. These messages can also include additional data to be templated into the messages in real-time.

@@ -31,6 +31,10 @@ The Braze and Zendesk server-to-server integration allows you to utilize Braze w
 **Campaign**<br>To create a webhook, go to the **Campaigns** page in the Braze dashboard, under **Engagement**. From the **Create Campaign** drop-down, select **Webhook** and name your campaign.<br>
 **Canvas**<br>To create a webhook, from a new or existing Canvas, create a full or message step in the Canvas builder. Next, click **Messages** and then select **Webhook** from the message options.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 In your Webhook, fill out the following fields:
 - **Webhook URL**: `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
 - **Request Body**: Raw Text

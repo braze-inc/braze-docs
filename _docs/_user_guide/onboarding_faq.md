@@ -236,6 +236,10 @@ Campaigns
 
 To create a multichannel campaign, go to the **Campaigns** page, select **Create Campaign**, then select **Multichannel Campaign**. Once in a multichannel campaign, select **Add Messaging Channel** from the compose tab to add your desired channels. Click the channel icons that appear to toggle through different messaging composers as you build your campaign copy for the different channels.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 

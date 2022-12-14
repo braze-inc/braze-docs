@@ -94,6 +94,10 @@ Note that if you have a Canvas that has variants, there exists an overall Canvas
 #### Where can I find it?
 You can find your Canvas ID in the dashboard. Open up **Canvas** under **Engagement** and select a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of an individual Canvas page, click **Analyze Variants**. A window appears with the Canvas API Identifier located at the bottom.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Canvas** under **Messaging** > **Canvas**.
+{% endalert %}
+
 #### What can it be used for?
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Canvas performance
@@ -116,6 +120,10 @@ You can find your campaign ID one of two ways:
 
 1. In the dashboard, open up **Campaigns** under **Engagement** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
 2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. You can find this at the bottom of the **API Settings** tab in the **Developer Console**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
 
 #### What can it be used for?
 - Track analytics on a specific message

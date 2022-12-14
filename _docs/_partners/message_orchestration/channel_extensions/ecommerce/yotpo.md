@@ -46,6 +46,10 @@ To integrate Yotpo and Braze, perform the following steps:
     - [Display visual UGC by product](#visual-ugc)
     - [Display a customer's loyalty balance in an email](#loyalty-balance)
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ### Display a product's star rating and review count {#star-review-count}
 
 Use this snippet to provide the public average score and number of total reviews for a product that is included in the email:

@@ -198,6 +198,10 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 - You can save your Braze to Braze webhook as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) to be re-used again.
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+{% endalert %}
+
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}
 [2]: {{site.baseurl}}/api/basics/

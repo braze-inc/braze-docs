@@ -92,6 +92,10 @@ Follow these steps to test a sample Content Card.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.][4]
 
 For more details on each platform, follow the [Android integration][5] or [iOS integration][6] guides.

@@ -11,6 +11,10 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 > This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Internal Groups** under **Settings** > **Workspace Logs & Testing** > **Internal Groups**.
+{% endalert %}
+
 Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
 {% alert note %}
@@ -51,6 +55,10 @@ After you create your Internal Group, you can add test users as members of that 
 |Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) page.|
 |Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. You can only add users that are already known in the dashboard. For more information, refer to [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Event User Log** under **Settings** > **Workspace Logs & Testing** > **Event User Log**.
+{% endalert %}
 
 ### Content test groups
 

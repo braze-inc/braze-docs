@@ -42,6 +42,10 @@ Expanded campaign details are now shown in the ...wait for it...**Campaign Detai
 
 The "Only Show Mine" check filter on the **Campaigns** page has proven to be wildly popular. As a result, we're also adding this option to the Canvas and Segment lists!
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ### Advancement behavior
 
 You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next. These options include "Message Sent" and "Entire Audience After Delay".
@@ -95,6 +99,10 @@ Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app
 ## "Show Only Mine" setting persists
 
 The "Show Only Mine" filter on the campaign grid will remain "on" any time you visit the **Campaigns** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
 
 ## A/B testing updates
 

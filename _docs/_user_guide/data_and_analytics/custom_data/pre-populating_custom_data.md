@@ -21,7 +21,6 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
 - **Custom Events** is now **Custom User Events** and is located under **Data Settings** > **Custom User Events**.
 {% endalert %}
-{% endalert %}
 
 ![Navigate to Custom Attributes or Custom Events][21]
 

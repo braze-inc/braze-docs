@@ -123,6 +123,10 @@ Follow these steps to test a sample in-app message.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should display the in-app message on your device.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][2]
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/

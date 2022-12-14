@@ -97,6 +97,10 @@ You can't test push notification related app behavior on an iOS simulator becaus
 2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should receive the notification on your device shortly.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
 
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"

@@ -108,6 +108,10 @@ Next, we can test out the integration by testing a new push campaign in Braze.
 
 In the **Campaigns** page, create a new campaign, and choose **Push Notification** as your message type.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 After you name your campaign, choose **Android Push** as the push platform.
 
 ![The campaign creation wizard displaying the available push platforms.][5]

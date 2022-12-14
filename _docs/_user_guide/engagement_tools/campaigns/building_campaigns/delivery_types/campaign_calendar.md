@@ -15,6 +15,10 @@ The Campaign Calendar is a useful central location in the dashboard where you ca
 
 The Campaign Calendar can be found by navigating to the Braze dashboard and selecting **Calendar**, listed under **Campaigns**. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Calendar** is now **Content Calendar** and is located under **Messaging** > **Content Calendar**.
+{% endalert %}
+
 ![][4]
 
 {% alert note %}

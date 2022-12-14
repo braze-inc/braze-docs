@@ -124,6 +124,10 @@ Follow these steps to test a sample in-app message.
 2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+{% endalert %}
+
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
 A sample implementation can be found in AppboyProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
