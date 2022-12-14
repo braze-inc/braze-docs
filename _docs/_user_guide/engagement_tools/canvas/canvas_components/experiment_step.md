@@ -20,7 +20,7 @@ Take advantage of Winning Paths to track performance over a period of time and t
 
 ## Use cases
 
-Experiment Paths are best suited for testing delivery, cadence, and messaging channel combinations.
+Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
 
 #### Delivery
 
@@ -35,7 +35,11 @@ Test multiple messaging flows over a specific period. For example, you could tes
 
 When targeting lapsing users, you can test the effectiveness of sending two win-back messages in a week versus sending just one.
 
-#### Messaging channels
+#### Message copy
+
+Similar to a standard [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/), you can test different message copy to see which wording results in a higher conversion rate.
+
+#### Channel combinations
 
 Test the effectiveness of different message channel combinations. For example, you can compare the impact of using just an email versus an email combined with a push.
 
