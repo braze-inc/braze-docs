@@ -23,7 +23,7 @@ By default, Braze will collect the following [device-level properties](https://g
 * Device Locale
 * Device Model
 * Device OS Version
-* IDFV (Optional with [Swift v5.7.0+](https://github.com/braze-inc/braze-swift-sdk))
+* IDFV (Optional with [iOS SDK v5.7.0+](https://github.com/braze-inc/braze-swift-sdk))
 * Push Enabled
 * Device Time Zone
 * Push Auth Status
