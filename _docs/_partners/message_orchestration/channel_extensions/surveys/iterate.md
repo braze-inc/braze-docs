@@ -25,6 +25,10 @@ With the Braze SDK installed in your app or website, you can use the segmentatio
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use cases
 
 With Iterate, you can collect nearly any type of data. Ranging from personal info (name, age, email), performance data (NPS, customer satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog, or cat person). What you ask is entirely up to you, and what kind of data you want to collect or audiences you want to build.

@@ -26,6 +26,10 @@ Okta connects any person with any application on any device. It's an enterprise-
 | Braze admin privileges | Make sure you have admin privileges before setting up Okta |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Step 1: Configure Braze
 
 ### Step 1a: Log in to your Braze account and navigate to Security Settings

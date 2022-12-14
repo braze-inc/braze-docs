@@ -26,6 +26,10 @@ The Braze and Digioh integration allows you to use their flexible drag-and-drop 
 | Braze API `/users/track/` endpoint | Your REST endpoint URL with the `/users/track/` details appended to it. Your endpoint will depend on the [Braze URL for your instance][6].<br><br>For example, if your REST API endpoint is `https://rest.iad-01.braze.com` your `/users/track/` endpoint will be `https://rest.iad-01.braze.com/users/track/`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration 
 
 To integrate Digioh, you must first configure the Braze connector. Once completed, you will need to apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.

@@ -26,6 +26,10 @@ To create an Internal Group, perform the following steps:
 3. Give your group a meaningful name.
 4. Choose one or more group types, as listed in the following chart.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ![Creating an Internal Group in Braze][7]
 
 | Group Type     | Use Case     |

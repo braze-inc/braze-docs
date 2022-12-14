@@ -7,6 +7,10 @@ page_type: reference
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 # API Identifier types
 
 > This reference guide touches on the different types of API Identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API Keys or App Group API Keys, refer to the [Rest API Key Overview]({{site.baseurl}}/api/api_key/)

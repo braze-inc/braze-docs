@@ -8,6 +8,10 @@ description: "This article covers how to create a Braze to Braze webhook for key
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 # Braze to Braze webhooks
 
 > This article covers how to create a Braze to Braze webhook for key use cases.

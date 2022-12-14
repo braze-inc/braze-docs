@@ -23,6 +23,10 @@ The Braze and Looker integration allows Braze users to leverage first-party [Loo
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 #### Limitations
 
 - This process only works with data that has not been pivoted.

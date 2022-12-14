@@ -82,6 +82,10 @@ You also can access the **Email Settings** tab to edit:
 - Your custom unsubscribe page
   - If you do not provide a custom unsubscribe page Braze will handle unsubscribes automatically
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
+{% endalert %}  
+
 ![Outbound Email Settings section of the Email Settings tab][7]
 
 ## List-unsubscribe settings

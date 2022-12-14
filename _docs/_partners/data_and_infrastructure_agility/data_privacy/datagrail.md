@@ -23,6 +23,10 @@ The Braze and DataGrail integration allows you to detect consumer data collected
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 Login to the DataGrail portal and click **Connect** within the integration page for Braze. Next, enter your instance and Braze API Key and click **Connect Braze**.

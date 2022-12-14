@@ -29,6 +29,10 @@ LINE allows both promotional and non-promotional messaging to users as long your
 | LINE user IDs | You will need to have users' LINE IDs (this ID is different from users' usernames) to send messages on LINE.<br><br>Once a user adds your LINE official account as a friend, you can access the user's LINE ID through LINE's Users API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 ### Step 1: Collect customer LINE IDs

@@ -24,6 +24,10 @@ The Braze and Jebbit integration lets you pass user emails and attributes from y
 |Braze REST Endpoint | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 When requesting integrating with Jebbit, communicate if any hard deadlines need to be met. Additionally, ensure that you have the attributes mapped to your Jebbit experience(s) that you would like passed to Braze.

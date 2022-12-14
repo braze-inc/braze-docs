@@ -24,6 +24,10 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({site.baseurl}}/api/basics/?redirected=true). |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use cases
 
 The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:

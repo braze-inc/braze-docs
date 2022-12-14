@@ -22,6 +22,10 @@ The Braze and Transcend partnership helps users automate privacy requests by orc
 | Braze API key | A Braze REST API key with `users.delete, users.alias.new, users.export.ids, email.unsubscribe,`and `email.blacklist` permissions.<br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 Transcend allows you to programmatically access, erase, and opt users out of communication in the Braze platform in accordance with data privacy regulations.

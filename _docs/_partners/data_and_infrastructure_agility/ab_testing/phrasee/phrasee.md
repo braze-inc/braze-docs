@@ -25,6 +25,10 @@ To include click tracking information for your subscribers, using Braze Currents
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 With this integration, you can integrate email or push campaigns into Phrasee. The following steps are detailed for both.

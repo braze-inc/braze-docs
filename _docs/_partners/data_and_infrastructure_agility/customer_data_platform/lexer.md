@@ -24,6 +24,10 @@ The Braze and Lexer integration allows you to sync data across the two platforms
 | Amazon AWS S3 bucket and credentials | Before beginning the integration, you must have access credentials for an AWS S3 bucket connected to your Lexer hub (this may be a bucket you create or one that Lexer creates and manages for you). Visit [Lexer](https://learn.lexer.io/docs/amazon-s3) for guidance on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 In Lexer, navigate to **Manage > Integration**, select the **Braze** tile, and click **Integrate Braze**. Provide the following information:

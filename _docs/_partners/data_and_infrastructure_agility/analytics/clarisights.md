@@ -25,6 +25,10 @@ The Braze and Clarisights integration allows you to import data from Braze campa
 | Braze app group name | The name of the app group associated with the Braze API key. This name will be used to identify the app group integration on Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use cases
 
 With the Braze and Clarisights integration, users can create different visualizations and tabled to gain insights from the campaigns they have created. Popular use cases include:

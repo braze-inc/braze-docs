@@ -106,4 +106,8 @@ All of the following error codes indicate that no messages will be sent.
 | `429 Rate Limited` | Over rate limit.|
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 {% endraw %}

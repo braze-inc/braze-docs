@@ -26,6 +26,10 @@ The Braze and RudderStack integration offers a native SDK integration for your A
 | Data center | Your data center aligns with your Braze dashboard [instance][15].  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 ### Step 1: Add a source

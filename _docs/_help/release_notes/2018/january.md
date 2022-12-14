@@ -11,6 +11,10 @@ description: "This article contains release notes for January 2018."
 
 You can now toggle [CSS inlining][84] on or off for individual email messages by going to your **Email Settings**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
+{% endalert %}
+
 ## New segment filters
 
 You can now create segments using the following filters:

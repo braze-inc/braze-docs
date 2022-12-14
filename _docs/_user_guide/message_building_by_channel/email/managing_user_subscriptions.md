@@ -156,7 +156,7 @@ It is your responsibility to make sure that your custom footer meets those requi
 To create or edit your custom footer, go to the **Manage Settings** page, and select the **Email Settings** tab.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
 {% endalert %}
 
 ![Outbound Email Settings panel.][19]

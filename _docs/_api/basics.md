@@ -248,6 +248,10 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 To create a new REST API key, visit the **Developer Console** on your Braze dashboard. This page displays your existing API keys. To create a new key, click **Create New API Key**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 You can then to do the following:
 
 - Give your new key a name for identification at a glance
@@ -277,6 +281,10 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 {% endalert %}
 
 If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
 
 ### API IP allowlisting
 

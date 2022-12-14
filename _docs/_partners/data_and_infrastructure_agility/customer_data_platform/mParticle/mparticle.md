@@ -31,7 +31,9 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Manage Settings** is now **Workspace Settings**.
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
 {% endalert %}
 
 ## Integration
@@ -61,6 +63,10 @@ To connect Braze as an output for your audience, you must provide the following 
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Email identity type**: The mParticle user identity type to forward as the email to Braze.
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
 
 Lastly **Save** your audience. 
 

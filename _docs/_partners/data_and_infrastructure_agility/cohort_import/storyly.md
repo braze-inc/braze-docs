@@ -26,6 +26,10 @@ The Braze and Storyly integration allows you to use your segments in Braze as an
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use cases
 
 With the Braze and Storyly integration, app owners can show stories to all segments in Braze and personalize the stories with user attributes.

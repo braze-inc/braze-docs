@@ -30,7 +30,9 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Manage Settings** is now **Workspace Settings**.
 {% endalert %}
 
 ## Integration
@@ -62,6 +64,10 @@ Once selected, provide the following:
 - Time window: Octolis will apply the rate limiting in the given period.
 - Request volume: Number of requests you can make within this time frame.
 - Custom attributes: Specify here the new fields you will send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
 
 ![][10]
 

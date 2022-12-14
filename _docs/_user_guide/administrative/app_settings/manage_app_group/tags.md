@@ -71,7 +71,7 @@ table td {
 You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Tags** is now **Tag Management** and is located under **Settings** > **Workspace Settings** > **Tag Management**.
 {% endalert %}
 
 ![Tags tab on the Manage Settings page][8]

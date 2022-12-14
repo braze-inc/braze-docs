@@ -69,7 +69,7 @@ Customers can now set a `null` value for an email messages's "reply-to" address 
 To set a `null` value for an email messages's "reply-to-" address from Braze, go to **Manage Settings** in the navigation, then the **Email Settings** tab. Scroll to the **Outbound Email Settings** section, and select **Exclude “Reply-To” and send replies to “From”** as the default address.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
 {% endalert %}
 
 ## Campaign comparisons

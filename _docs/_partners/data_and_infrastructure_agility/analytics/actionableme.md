@@ -24,6 +24,10 @@ The Braze and actionable.me integration allows you to deploy a service to monito
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 To integrate Braze and actionable.me, the actionable.me platform must be configured, and a Braze API key needs to be created in Braze and configured in the actionable.me dashboard.

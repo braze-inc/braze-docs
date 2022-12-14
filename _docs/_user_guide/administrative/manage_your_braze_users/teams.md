@@ -18,7 +18,7 @@ Braze admins can group their dashboard users into Teams with varying user roles 
 Go to the **Manage Settings** page, select **Manage Teams**, and click <i class="fas fa-plus"></i> **Add Team**. Enter the **Team Name**. Use the **Define Team (Optional)** to select a custom attribute, location, or language to further define permissions. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
 {% endalert %}
 
 Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See the section in this article on [Assigning tags and filters](#tags-and-filters) to learn more. 
@@ -54,7 +54,7 @@ Based on assigned permissions, members of teams will only be allowed to access d
 You can archive Teams from the **Manage Teams** page, under **Manage Settings**. Select one or many teams to archive.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
 {% endalert %}
 
 If the Team is not associated with any object within Braze, the Team will be archived immediately.

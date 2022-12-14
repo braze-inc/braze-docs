@@ -25,6 +25,10 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | RelayState API key | To enable IdP login, create an API key in the **Developer Console** under **API Settings** with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Service Provider (SP) initiated login within Azure AD
 
 ### Step 1: Add Braze from the gallery

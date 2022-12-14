@@ -26,6 +26,10 @@ The Braze and Fivetran integration allows users to create a zero-maintenance pip
 | Amazon S3 or Google Cloud Storage | This integration requires you have access to one Amazon S3 or Google Cloud Storage. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 The following Currents integration is supported for both [Amazon S3](#setting-up-braze-currents-for-s3) and [Google Cloud Storage](#setting-up-braze-currents-for-google-cloud-storage).

@@ -31,6 +31,10 @@ Use this endpoint to retrieve a daily series of the total number of new users on
 | `app_id` | Optional | String | App API identifier retrieved from the **Developer Console**. If excluded, results for all apps in app group will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Example request
 {% raw %}
 ```

@@ -38,6 +38,10 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
 ```
 >  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found in the **Developer Console** on the Braze dashboard.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 
 1. Set the `Build Action` to `Content`

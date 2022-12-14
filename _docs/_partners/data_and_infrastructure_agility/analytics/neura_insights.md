@@ -36,6 +36,10 @@ The Braze and Neura integration allows you to leverage [Neura Insights](https://
 | Server region | This is your Braze REST API endpoint and can be found in our [Braze API documentation]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 To get started, ensure that both the Braze and Neura SDKs are properly integrated for both Android and iOS. 

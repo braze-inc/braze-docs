@@ -17,7 +17,7 @@ Campaign approval adds a review process to your workflow before launching a camp
 By default, the campaign approval setting is turned off. To enable this feature, go to **Manage Settings** > **Approval Workflow**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Approval Workflow** under **Settings** > **Workspace Settings** > **Approval Workflow**.
 {% endalert %}
 
 {% alert note %}

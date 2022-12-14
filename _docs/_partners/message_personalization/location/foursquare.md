@@ -23,6 +23,10 @@ search_tag: Partner
 | Braze App Group and App IDs | The Braze App Group and App IDs can be found in the [developer console]({{site.baseurl}}/api/api_key/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 To integrate the two platforms, you must integrate the two SDKs and map the matching user fields. After integrating the Pilgrim SDK, you will receive location events on the device or to a webhook. 

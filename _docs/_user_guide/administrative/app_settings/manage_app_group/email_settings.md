@@ -14,7 +14,7 @@ channel: email
 Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
 {% endalert %}
 
 ## Sending configuration
@@ -101,6 +101,10 @@ Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe head
 ### How the list-unsubscribe header works
 
 Navigate to **Email Settings** within your app group. Toggle **List-Unsubscribe** to **ON**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
+{% endalert %}
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 

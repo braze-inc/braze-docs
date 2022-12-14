@@ -26,6 +26,10 @@ At a minimum, you will need to enable the integration from the RevenueCat dashbo
 | Braze test REST API key (optional) | A test API key can be used for test and production purchases if you'd like these requests sent to separate Braze instances. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use Cases 
 
 - Trigger an onboarding campaign highlighting your premium features when a customer starts a free trial.

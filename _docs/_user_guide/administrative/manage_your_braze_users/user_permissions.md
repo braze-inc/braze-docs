@@ -72,10 +72,9 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
 - **Custom Attributes** is now **Custom User Attributes** and is located under **Data Settings** > **Custom User Attributes**.
 - **Products** is located under **Data Settings** > **Products**.
-{% endalert %}
-{% endalert %}
-{% endalert %}
-
+- **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
+- **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
 {% endalert %}
 
 ## App-by-app user permissions

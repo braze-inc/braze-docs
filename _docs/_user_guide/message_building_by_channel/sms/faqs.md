@@ -118,6 +118,10 @@ The app identifier API key or `app_id` is a parameter associating activity with 
 
 Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification"**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ### How will I be billed for SMS?
 
 Besides the charges for short and long codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 

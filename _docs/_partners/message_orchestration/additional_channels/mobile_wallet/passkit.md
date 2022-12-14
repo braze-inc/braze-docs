@@ -24,6 +24,10 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Integration
 
 To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze’s [users/track endpoint][7]. 

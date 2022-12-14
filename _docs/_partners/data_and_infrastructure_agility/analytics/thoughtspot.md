@@ -26,6 +26,10 @@ To start using ThoughtSpot on Braze, your data needs to be sent to a cloud data 
 | Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## TML Blocks
 
 Braze users can easily access and search all their digital interaction data. Our templates empower users to set up their analysis quickly with pre-built visualizations and worksheets. Analyze your website's acquisition and user behavior with search, drill-downs, and spotIQ.

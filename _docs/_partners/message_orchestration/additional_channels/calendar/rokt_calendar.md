@@ -27,7 +27,9 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Connected Content** is now under **Settings** > **Workspace Settings** > **Connected Content**.
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
 {% endalert %}
 
 ## Audience segmentation {#audience-segmentation}
@@ -103,7 +105,7 @@ Once you have selected the Rokt Calendar webhook template, you should see the fo
 Rokt Calendar requires an `HTTP Header` for authorization that includes your Rokt Calendar Connected Content credential name. The following will already be included within the template as key-value pairs, but in the **Settings** tab, you must replace `<Rokt-Calendar-API>` with the credential name found in `Manage Settings > Connected Content > Credential`.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Manage Settings** is now **Workspace Settings**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Connected Content** under **Settings** > **Workspace Settings** > **Connected Content**.
 {% endalert %}
 
 {% raw %}

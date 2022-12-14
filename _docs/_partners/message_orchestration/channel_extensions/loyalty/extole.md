@@ -25,6 +25,10 @@ With the Braze and Extole integration, you can pull customer events and attribut
 | User identity | The unique identifier for a user in Braze and Extole. This is generally the `external_id`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 ## Use cases
 
 The following use cases showcase a few ways you can leverage Extole's integration with Braze. Work with your Extole implementation and customer success managers to develop an option that fits your company's specific needs.
