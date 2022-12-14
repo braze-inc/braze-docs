@@ -148,6 +148,10 @@ table th:nth-child(3) {
 }
 </style>
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+{% endalert %}   
+
 #### Action-based
 
 Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages and allow you to trigger them to send after a user completes a certain event. 

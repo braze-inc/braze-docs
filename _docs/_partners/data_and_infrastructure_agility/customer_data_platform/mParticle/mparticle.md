@@ -33,7 +33,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Manage Settings** is now **Workspace Settings**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
 {% endalert %}
 
 ## Integration

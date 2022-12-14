@@ -8,8 +8,6 @@ description: "Using Liquid templating, you have the option to abort messages wit
 
 # Aborting messages {#aborting-connected-content}
 
-Using Liquid templating, you have the option to abort messages with conditional logic. For example:
-
 {% raw %}
 ```
 {% connected_content https://example.com/webservice.json :save connected %}
@@ -21,6 +19,10 @@ Using Liquid templating, you have the option to abort messages with conditional 
 In this example, the conditionals `connected.recommendations.size < 5` and `connected.foo.bar == nil` specify situations that would cause the message to be aborted.
 
 You can also specify an abort reason, which will be saved to the **Message Activity Log** in your **Developer Console**. This abort reason must be a string and cannot contain Liquid.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
 
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}

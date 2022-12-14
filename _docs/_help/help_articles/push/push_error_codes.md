@@ -49,6 +49,10 @@ This error may occur for several reasons:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+{% endalert %}
+
 ### Push bounced: APNS feedback service removed
 
 This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to Apple's [Communicating with APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).

@@ -6,6 +6,10 @@ description: "Messages may now be aborted within conditional statements. In this
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+{% endalert %}
+
 # Aborting Liquid messages
 
 Optionally, you can also abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:

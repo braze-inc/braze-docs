@@ -8,7 +8,9 @@ page_type: reference
 ---
 
 {% alert note %}
-Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+Several references in this page refer to the **Developer Console** and **API Settings**. If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
 {% endalert %}
 
 # API Identifier types

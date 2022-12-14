@@ -27,7 +27,7 @@ Okta connects any person with any application on any device. It's an enterprise-
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
 {% endalert %}
 
 ## Step 1: Configure Braze

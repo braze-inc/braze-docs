@@ -119,7 +119,7 @@ The app identifier API key or `app_id` is a parameter associating activity with 
 Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification"**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
 {% endalert %}
 
 ### How will I be billed for SMS?

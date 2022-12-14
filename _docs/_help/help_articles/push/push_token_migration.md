@@ -21,7 +21,9 @@ Programmatically migrate iOS and Android push tokens to your platform by using t
 You need to specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Be sure to use the correct platform's `app_id`.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/):
+- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
 {% endalert %}
 
 {% alert important %}

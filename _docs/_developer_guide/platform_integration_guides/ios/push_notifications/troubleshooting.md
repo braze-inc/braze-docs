@@ -50,6 +50,10 @@ If [APNs][20] informs us that any of the push tokens we were attempting to send 
 
 Braze provides a log of push notification errors within the **Message Activity Log**. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+{% endalert %}
+
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.][26]
 
 Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"][35].
@@ -122,6 +126,10 @@ The following would indicate a problem with push registration or that the user's
 - Make sure that the push token being sent to Braze from the method `[[Appboy sharedInstance] registerPushToken:]` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code][37] for sending Braze the push tokens.
 - Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+{% endalert %}
 
 #### Device token not for topic
 
