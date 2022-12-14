@@ -22,6 +22,10 @@ Once you've selected where to build your message, let's dive into the steps to c
 
 ## Step 1: Select your template
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 After selecting the Drag & Drop Editor as your editing experience, you can choose to:
 - Start with a blank template
 - Use a Braze drag & drop email template 

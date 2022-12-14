@@ -35,6 +35,10 @@ Check out [Inkit documentation](https://help.inkit.com/hc/en-us/articles/3600365
 
 To create an Inkit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off Inkit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 ![A selection of available predesigned webhook templates in the Webhook Templates tab of the Templates & Media section.][7]
 
 Once you have selected the Inkit webhook template, you should see the following:

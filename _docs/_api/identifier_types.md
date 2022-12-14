@@ -76,6 +76,10 @@ You can find your Template ID one of two ways:
 1. In the dashboard, open up **Templates & Media** under **Engagement** and select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your Template API Identifier.<br><br>
 2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 #### What can it be used for?
 
 - Update templates over API
@@ -173,6 +177,10 @@ You can find your Card ID one of two ways:
 
 1. In the dashboard, open up **News Feed** under **Engagement** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique Card API Identifier. <br><br>
 2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **News Feed** under **Messaging** > **News Feed**.
+{% endalert %}
 
 #### What can it be used for?
 - Retrieve relevant information on a card

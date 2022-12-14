@@ -40,6 +40,10 @@ Updating the risk scores of the Prediction audience can be done at a [frequency 
 
 The **Predictions** page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your Braze account manager. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Predictions** under **Analytics** > **Predictions**.
+{% endalert %}
+
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo Churn Prediction with synthetic data and create one Churn Prediction model based on your user data at a time. This preview will not allow you to target users for messaging according to churn risk and will not regularly update after creation.
 
 With the preview, you can also edit and rebuild your one Prediction or archive it and create others to test the expected [Prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of different [definitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).

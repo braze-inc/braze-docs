@@ -14,6 +14,10 @@ If you have an existing Canvas from the original editor, you can clone this Canv
 
 To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. You can clone Canvases with a **Draft**, **Active**, or **Stopped** status. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Canvas** under **Messaging** > **Canvas**.
+{% endalert %}
+
 ![][1]{: style="max-width:25%;"}
 
 Next, enter the name for your new Canvas and click **Clone to Canvas Flow**. 

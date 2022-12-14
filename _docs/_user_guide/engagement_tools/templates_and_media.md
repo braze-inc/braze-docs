@@ -35,6 +35,10 @@ guide_featured_list:
 
 To access Templates and Media, navigate to **Engagement** in your left navigation bar of your Braze account, then select **Templates & Media**. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 You can use and manage templates and creative content in Templates & Media for the following features:
 
 - **[Email templates][2]**

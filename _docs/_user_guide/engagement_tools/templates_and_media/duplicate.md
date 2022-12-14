@@ -15,6 +15,10 @@ tool:
 
 > Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 ## Duplicate an individual template
 
 ![][8]{: style="float:right;max-width:15%;margin-left:15px;"}

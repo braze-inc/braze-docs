@@ -13,6 +13,10 @@ tool: Canvas
 
 To stop a Canvas from sending or to remove it from your dashboard, you can archive a Canvas. Go to the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Archive**.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Canvas** under **Messaging** > **Canvas**.
+{% endalert %}
+
 There are also bulk actions you can use, such as archiving multiple Canvases, by checking the boxes next to the Canvases and selecting the relevant button. 
 
 ![][1]

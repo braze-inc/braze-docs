@@ -62,6 +62,10 @@ Coordinate and share this with your developers to send the `line_id` to Braze as
 
 In Braze, navigate to **Templates & Media > Content Blocks Library > + Create Content Block** and create a Braze [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks). Name this Content Block `LINE_Channel_AccessToken`. 
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Content Blocks Library** is now **Content Blocks** and is located under **Templates** > **Content Blocks**.
+{% endalert %}
+
 Next, paste your channel access token in the Content Block body, and save it.
 
 ![An image the Content Block showing the Content Block name, Liquid tag, and censored channel access token.][2]
@@ -71,6 +75,10 @@ Once you've set the channel access token inside a Content Block, you will be abl
 ### Step 4: Select a webhook template
 
 From **Templates & Media**, go to **Webhook Templates** and choose one of the following LINE Messenger webhook templates: 
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Webhook Templates** under **Templates** > **Webhook Templates**.
+{% endalert %}
 
 ![A selection of available predesigned webhook templates.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
 

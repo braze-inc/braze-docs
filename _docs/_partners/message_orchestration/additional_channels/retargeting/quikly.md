@@ -137,6 +137,10 @@ Use webhooks to trigger incentives for specific events in the customer journey. 
 
 To create a Quikly webhook template for future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off Quikly webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 Select **Blank Template**, and enter the following for the webhook URL and request body:
 - **Webhook URL**: https://api.quikly.com/webhook/braze
 - **Request body**: JSON key/value pairs

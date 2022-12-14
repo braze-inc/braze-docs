@@ -90,6 +90,10 @@ For a full list of available fields, their types, and helpful descriptions, have
 
 Create and name a new Content Block by navigating to `Templates & Media` within the Braze dashboard. Here you can find the `Content Block Library` tab. Select `Create Content Block` to get started.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
 Within this Content Block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
@@ -223,6 +227,10 @@ Before you get started, here are the common JSON payload parameters that you can
 ### Step 1: Create your Braze webhook template
 
 To create a PassKit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off PassKit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
 
 Once you have selected the PassKit webhook template, you should see the following:
 - **Webhook URL**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`

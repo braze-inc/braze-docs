@@ -24,6 +24,10 @@ You can now customize the dismissal of in-app messages to a specific duration of
 
 We’ve consolidated all [templates][40] and image under the tab **Templates & Media** in Braze to streamline your marketing process. The **Templates & Media** page also houses link templates.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 ## Push action buttons
 
 You can now increase your engagement by using push action buttons to give your users contextual choices that simplify their busy lives. Learn more about best practices for [push notifications][39].

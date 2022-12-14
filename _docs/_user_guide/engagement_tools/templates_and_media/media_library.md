@@ -12,6 +12,10 @@ tool: Media
 
 > The Media Library allows you to manage your assets in a single, centralized location. To access this feature go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Media Library** under **Templates** > **Media Library**.
+{% endalert %}
+
 You can use the **Media Library** to:
 
 * Upload multiple images at one time
@@ -139,6 +143,10 @@ You can generate images for your Media Library using [DALL·E 2](https://openai.
 2. Enter a description of the image you want to generate, up to 300 characters. The more detailed the description, the better your result.
 3. Click **Generate Images**. It can take about a minute for images to generate.
 4. Click <i class="fas fa-download" title="Add image to Media Library"></i> on the images you like to add them to your Media Library.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Media Library** under **Templates** > **Media Library**.
+{% endalert %}
 
 ![AI image generator modal in the Media Library.][6]{: style="max-width:75%"}
 

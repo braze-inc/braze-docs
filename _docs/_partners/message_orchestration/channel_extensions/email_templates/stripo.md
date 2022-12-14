@@ -51,4 +51,8 @@ This is a one-time setup, and any exports in the future will automatically utili
 
 Find your uploaded Stripo template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Templates** is located under **Templates** > **Email Templates**.
+{% endalert %}
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

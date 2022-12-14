@@ -62,6 +62,11 @@ Outline thorough integration usage, especially if it includes inserting Liquid i
 ```
 ### Step 2: Create a [Partner] webhook in Braze
 To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 Once you have selected the [Partner] webhook template, you should see the following:
 - **Webhook URL**: [Partner Webhook URL]
 - **Request Body**: Raw Text

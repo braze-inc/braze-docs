@@ -44,6 +44,10 @@ After completing an email in Dyspatch, to send your template to Braze, view the 
 
 If you want to upload your template manually, view the published email template and  click **Download/Export** and then **Download HTML**. Next, in the **Templates & Media > Email Templates** section of your Braze account, select **From File** to upload your template.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Email Templates** is located under **Templates** > **Email Templates**.
+{% endalert %}
+
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
 {% alert important %}

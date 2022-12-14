@@ -8,6 +8,11 @@ tool:
   - Location
 
 ---
+
+{% alert note %}
+Several references in this page refer to the **Locations**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Locations** under **Audience** > **Locations**.
+{% endalert %}
+
 # Geofences
 
 > At the core of Braze's real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.

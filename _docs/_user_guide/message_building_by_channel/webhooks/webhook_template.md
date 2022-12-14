@@ -17,7 +17,7 @@ description: "This reference article covers how to create and customize webhook 
 You can access the Webhook Template Editor by first clicking the **Campaigns** tab under **Engagement** on the navigation bar, which will reveal a drop-down menu with a Templates and Styles tab.  Click this tab to access the Webhook Template Editor.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Campaigns** under **Messaging** > **Campaigns**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Webhook Templates** under **Templates** > **Webhook Templates**.
 {% endalert %}
 
 ![Webhook Templates tab under the Templates and Media page on the Braze dashboard.][1]

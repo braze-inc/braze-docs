@@ -30,6 +30,10 @@ When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalizati
 To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
 
 {% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Link Templates** is now **Email Link Templates** and is located under **Templates** > **Email Link Templates**.
+{% endalert %}
+
+{% alert note %}
 Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your customer success manager or account manager to enable the feature flipper for link templates.
 {% endalert %}
 

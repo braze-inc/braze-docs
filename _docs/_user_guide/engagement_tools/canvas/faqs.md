@@ -111,6 +111,10 @@ Canvas Flow is the new and improved editing experience that simplifies how marke
 
 To use the Canvas Flow workflow, go to **Canvas** under the **Engagement** tab. Click <i class="fas fa-plus"></i> **Create Canvas**. Next, you'll have the option of building with Canvas Flow or the original Canvas experience. Select **Canvas Flow Workflow** and begin building your Canvas as you normally would!
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Canvas** under **Messaging** > **Canvas**.
+{% endalert %}
+
 ### What's the difference between a component and a step?
 
 A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.

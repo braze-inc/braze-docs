@@ -25,6 +25,10 @@ With Content Blocks, you can:
 
 Creating a Content Block is easy—go to **Templates & Media**, then select the **Content Blocks Library** tab. Click **Create Content Block.** Then, create your Content Block!
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Content Blocks Library** is now **Content Blocks** and is located under **Templates** > **Content Blocks**.
+{% endalert %}
+
 ![][1]
 
 Content Blocks have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  

@@ -16,6 +16,10 @@ You can use the Braze [Notification Preferences Center][77] within your Company 
 
 You can now upload multiple assets and folders of assets to the [Media Library][79] from your **Templates & Media** page, as well as perform bulk actions, such as applying tags or deleting multiple assets.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 ## Branching for Canvas first steps
 
 You can now create branches on the first step of a variant. This feature will allow you to send multiple messages as the first step of a variant, opening up opportunities to further target your audience.

@@ -97,6 +97,10 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ### Enable geofences from the locations page:
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Locations** under **Audience** > **Locations**.
+{% endalert %}
+
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Enable geofences from the settings page:

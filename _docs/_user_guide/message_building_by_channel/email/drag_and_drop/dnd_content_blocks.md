@@ -9,6 +9,10 @@ tool: Media
 
 ---
 
+{% alert note %}
+Several references in this page refer to the **Templates & Media**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 # Drag & Drop Editor Content Blocks
 
 The Content Blocks used exclusively in the Drag & Drop Editor are similar in functionality to the [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) used across different channels. They're a centralized location for holding information that can be referenced in various email campaigns. This can include grouping together email headers, promotional callouts, and more all in one reusable row.
@@ -16,6 +20,10 @@ The Content Blocks used exclusively in the Drag & Drop Editor are similar in fun
 ## Creating a Content Block
 
 To create a Content Block, go to **Templates & Media** under the **Engagement** section of your Braze dashboard. Select the **Content Blocks Library** tab and click <i class="fas fa-plus"></i> **Create Content Block**.
+
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Content Blocks Library** is now **Content Blocks** and is located under **Templates** > **Content Blocks**.
+{% endalert %}
 
 Enter a **Content Block Name** and an optional description. 
 

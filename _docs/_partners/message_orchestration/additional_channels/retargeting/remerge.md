@@ -31,6 +31,10 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 
 To create a Remerge webhook template for future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off Remerge webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
+{% alert note %}
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Templates & Media** is now **Templates** and is located under **Templates**.
+{% endalert %}
+
 In your new Webhook template, fill out the following fields:
 - **Request Body**: Raw Text
 - **Webhook URL**: 
