@@ -51,7 +51,7 @@ The drag & drop editing experience is divided into two sections: **Build** and *
 
 ### Set message-level styles
 
-You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. The styles set in this section are used everywhere in your message except where you override it for a specific block.
+You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. The styles set in this section are used everywhere in your message except where you override it for a specific block. For an easier design experience, we recommend that you set up message-level styles first before you customize styles at the block level.
 
 To return to the **Message Styles** tab at any time:
 
@@ -84,7 +84,7 @@ The Drag & Drop Editor uses two key components to make in-app message compositio
 
 #### Rows
 
-Rows are structural units that define the horizontal composition of a section of the message by using cells. 
+Rows are structural units that define the horizontal composition of a section of the message by using cells.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
@@ -94,9 +94,15 @@ You can also slide to adjust the size of existing columns.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
+As a best practice, format your row and column properties before formatting any of the blocks inside the rows. There are many places where you can adjust the spacing and alignment, so starting from the foundation makes it easier to edit as you go.
+
 #### Blocks
 
 Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
+
+{% alert tip %}
+Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed.
+{% endalert %}
 
 ![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 

@@ -18,6 +18,19 @@ When you include a Experiment Paths component, it will randomly assign users to 
 
 Take advantage of Winning Paths to track performance over a period of time and then automatically send subsequent users down the path with the best performance.
 
+## Use cases
+
+Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
+
+- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/docs/user_guide/intelligence/intelligent_timing/#canvas).<br><br>
+- **Cadence:** Test multiple messaging flows over a specific period. For example, you could test two different onboarding cadences:
+    - Cadence 1: Send 2 messages in the user’s first 2 weeks
+    - Cadence 2: Send 3 messages in the user’s first 2 weeks
+    
+    When targeting lapsing users, you can test the effectiveness of sending two win-back messages in a week versus sending just one.
+- **Message copy:** Similar to a standard [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/), you can test different message copy to see which wording results in a higher conversion rate.<br><br>
+- **Channel combinations:** Test the effectiveness of different message channel combinations. For example, you can compare the impact of using just an email versus an email combined with a push.
+
 ## Create Experiment Paths
 
 To create Experiment Paths, first add a step to your Canvas. 

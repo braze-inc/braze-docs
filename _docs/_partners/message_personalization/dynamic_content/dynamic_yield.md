@@ -81,7 +81,7 @@ When satisfied with your email, the next step is to generate the code to embed i
 
 [1]: {% image_buster /assets/img/dynamic_yield/dynamic_yield.png %}
 [2]: {% image_buster /assets/img/dynamic_yield/dynamic_yield1.png %}
-[3]: {% image_buster /assets/img/dynamic_yield/dynamic_yield2.png %}
+[3]: {% image_buster /assets/img/dynamic_yield/dynamic_yield2_new.png %}
 [4]: {% image_buster /assets/img/dynamic_yield/dynamic_yield3.png %}
 [5]: {% image_buster /assets/img/dynamic_yield/dynamic_yield4.png %}
 [6]: {% image_buster /assets/img/dynamic_yield/dynamic_yield5.png %}

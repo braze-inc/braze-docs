@@ -8,7 +8,7 @@ description: "This reference article covers the topic of how to import users int
 ---
 # User import
 
-There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
+Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
 
 {% alert important %}
 Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more.
