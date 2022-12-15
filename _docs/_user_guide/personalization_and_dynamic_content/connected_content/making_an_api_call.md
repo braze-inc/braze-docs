@@ -33,6 +33,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% endraw %}
 
 {% alert note %}
+* Braze does not charge for API calls and will not count towards your given data point allotment.
 * Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid Syntax.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
