@@ -16,10 +16,7 @@ The conversions dashboard allows you to analyze conversions across campaigns, Ca
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
 - **Received conversions:** Conversions that occurred after a user receved the message
-
-<!---
-Last-click conversions: Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked
----->
+- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (this feature is currently being tested on a small subset of early access customers)
 
 When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
 
