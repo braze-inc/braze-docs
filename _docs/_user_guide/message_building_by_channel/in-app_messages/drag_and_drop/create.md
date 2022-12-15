@@ -45,7 +45,7 @@ Click **Build message** to begin designing your in-app message in the Drag & Dro
 
 ## Step 3: Build and design your in-app message
 
-The drag & drop editing experience is divided into two sections: **Build** and **Preview & Test**. 
+The drag & drop editing experience is divided into two sections: **Build** and **Preview & Test**.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
@@ -96,10 +96,10 @@ As a best practice, format your row and column properties before formatting any 
 
 #### Blocks
 
-Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the modal.
+Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
 
 {% alert tip %}
-Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed.
+Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the modal.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
