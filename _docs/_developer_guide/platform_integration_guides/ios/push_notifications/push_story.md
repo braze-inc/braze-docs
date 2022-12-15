@@ -43,7 +43,7 @@ Xcode should generate a new target for you and create files automatically for yo
 
 ## Step 3: Enable capabilities
 
-The Push Story feature requires the background mode in the **Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote Notification**.
+The Push Story feature requires the background mode in the **Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote notifications**.
 
 ![][3]
 

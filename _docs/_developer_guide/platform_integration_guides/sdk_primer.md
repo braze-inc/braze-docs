@@ -117,7 +117,7 @@ An empty allowlist will result in **no** device data being sent to Braze.
 
 ### iOS SDK
 
-You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`.
+You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`. Refer to [`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for `appboyOptions` key documentation.
 
 To specify allowlisted device fields, assign the bitwise OR of desired fields to `ABKDeviceAllowlistKey` in the `appboyOptions` object passed to `startWithApiKey`.
 
