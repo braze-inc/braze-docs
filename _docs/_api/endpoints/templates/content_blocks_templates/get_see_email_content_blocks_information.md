@@ -32,8 +32,8 @@ Use this endpoint to call information for your existing [Content Blocks]({{site.
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
-- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
 {% endalert %}
 
 ## Example request

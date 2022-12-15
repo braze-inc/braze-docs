@@ -18,7 +18,7 @@ description: "This reference article covers Message Archiving, a feature that al
 2. You have connected an S3 bucket to your app group via the **Technology Partners** page.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ## Overview

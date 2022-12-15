@@ -7,7 +7,7 @@ description: "Messages may now be aborted within conditional statements. In this
 ---
 
 {% alert note %}
-Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 # Aborting Liquid messages

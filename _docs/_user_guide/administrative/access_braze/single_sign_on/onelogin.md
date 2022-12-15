@@ -24,7 +24,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
 {% endalert %}
 
 ## Idp-initiated login within OneLogin

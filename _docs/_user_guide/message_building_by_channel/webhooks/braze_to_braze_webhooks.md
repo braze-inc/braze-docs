@@ -9,7 +9,7 @@ description: "This article covers how to create a Braze to Braze webhook for key
 ---
 
 {% alert note %}
-Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+Several references in this page refer to the **Developer Console**. If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 # Braze to Braze webhooks
@@ -199,7 +199,7 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}
 
 

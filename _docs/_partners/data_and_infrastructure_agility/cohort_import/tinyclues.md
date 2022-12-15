@@ -30,7 +30,7 @@ To integrate Braze and Tinyclues, you must configure the Tinyclues platform, exp
 In Braze, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ![][6]{: style="max-width:90%;"} 

@@ -63,7 +63,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings > Settings** within your Braze dashboard.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 {% alert note %}

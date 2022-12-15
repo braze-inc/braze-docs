@@ -32,7 +32,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## What else should I know?

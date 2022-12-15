@@ -22,7 +22,7 @@ If you'd like to test in-app and push notifications via the command line, you ca
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **User Search** is now **Search Users** and is located under **Audience** > **Search Users**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ```bash

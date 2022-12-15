@@ -51,7 +51,7 @@ If [APNs][20] informs us that any of the push tokens we were attempting to send 
 Braze provides a log of push notification errors within the **Message Activity Log**. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}
 
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.][26]
@@ -128,7 +128,7 @@ The following would indicate a problem with push registration or that the user's
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}
 
 #### Device token not for topic

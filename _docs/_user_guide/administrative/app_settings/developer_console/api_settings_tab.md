@@ -12,7 +12,7 @@ description: "This reference article covers the API Settings page, which display
 The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
 {% endalert %}
 
 The **API Settings** page is further divided into the following sections:

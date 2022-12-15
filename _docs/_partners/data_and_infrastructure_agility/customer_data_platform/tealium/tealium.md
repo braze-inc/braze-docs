@@ -67,7 +67,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Manage Settings** is now **Workspace Settings**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Choose your integration type

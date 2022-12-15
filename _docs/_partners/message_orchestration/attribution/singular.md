@@ -65,7 +65,7 @@ If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDev
 In Braze, navigate to **Technology Partners** and select **Singular**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 You will need to provide the data import key and REST endpoint to your Singular account manager to complete the integration.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Singular technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}

@@ -74,7 +74,7 @@ If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Products** is located under **Data Settings** > **Products**.
 - **Email Settings** is now **Email Preferences** and is located under **Settings** > **Workspace Settings** >  **Email Preferences**.
 - **Manage Teams** is now **Internal Teams** and is located under **Settings** > **Workspace Settings** > **Internal Teams**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## App-by-app user permissions

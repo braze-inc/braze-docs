@@ -29,7 +29,7 @@ Integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be ov
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console][58] and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 ![][59]

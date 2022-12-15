@@ -30,7 +30,7 @@ Use this endpoint to retrieve relevant information on a segment, which can be id
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Example request

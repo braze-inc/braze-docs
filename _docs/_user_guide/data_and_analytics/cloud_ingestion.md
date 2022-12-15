@@ -215,7 +215,7 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 1. **Add Snowflake connection information and source table**<br>

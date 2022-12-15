@@ -150,7 +150,7 @@ You need to input your Firebase Server Key and Sender ID into the Braze dashboar
 3. Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the push notification settings section.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 ![][16]
@@ -423,7 +423,7 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 - `YOUR_VALUE1` (optional)
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ```bash

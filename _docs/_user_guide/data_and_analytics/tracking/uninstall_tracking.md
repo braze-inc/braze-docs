@@ -25,7 +25,7 @@ Braze automatically collects a base level of uninstall information from your reg
 You can enable uninstall tracking in the **Settings** tab of the **Manage Settings** page for each app you are interested in tracking.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 

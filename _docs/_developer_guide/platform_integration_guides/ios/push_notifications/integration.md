@@ -48,7 +48,7 @@ As described on the Apple [developer documentation](https://help.apple.com/devel
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 <br><br>
@@ -77,7 +77,7 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 4. Navigate to **Manage Settings > Settings** in the dashboard and upload your production certificate under **Apple Push Certificate**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 >  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.

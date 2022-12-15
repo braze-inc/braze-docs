@@ -38,7 +38,7 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
 >  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located the **Developer Console** page of the Braze dashboard.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ```java
@@ -98,7 +98,7 @@ Within your `AppDelegate.cs` file, add the following snippet within your `Finish
 >  Be sure to update `YOUR-API-KEY` with the correct value from the **Developer Console** page.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ```csharp

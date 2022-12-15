@@ -43,7 +43,7 @@ You will need to ensure that you have the following items created and completed 
 In the Braze dashboard, go to **Technology Partners** and select **Facebook**. In the Facebook Audience Export module, click **Connect Facebook**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ![Facebook technology page in Braze that includes an Overview module and Facebook Audience Export module with the Connected Facebook button.][4]{: style="max-width:70%;"}

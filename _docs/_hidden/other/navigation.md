@@ -103,7 +103,7 @@ The following table lists where each page is located in the new navigation. Some
 
 | Page name                     | New location                                            |
 |-------------------------------|---------------------------------------------------------|
-| API Settings                  | Settings > Workspace Logs & Testing > API Keys          |
+| API Settings                  | Settings > Workspace Setup and Testing > API Keys          |
 | Approval Workflow             | Settings > Workspace Settings > Approval Workflow       |
 | Campaigns                     | Messaging > Campaigns                                   |
 | Calendar                      | Messaging > Content Calendar                            |
@@ -117,24 +117,24 @@ The following table lists where each page is located in the new navigation. Some
 | Custom Events (report)        | Analytics > Reports > Custom Events Reports             |
 | Custom Events                 | Data Settings > Custom User Events                      |
 | Data Feeds                    | Data Settings > Data Feeds                              |
-| Developer Console             | Settings > Workspace Logs & Testing                     |
+| Developer Console             | Settings > Workspace Setup and Testing                     |
 | Devices & Carriers            | Analytics > Reports > Devices and Carriers              |
 | Email Performance             | Analytics > Analytics Dashboards > Email Performance    |
 | Email Settings                | Settings > Workspace Settings >  Email Preferences      |
 | Email Templates               | Templates > Email Templates                             |
 | Engagement Reports            | Analytics > Reports > Engagement                        |
-| Event User Log                | Settings > Workspace Logs & Testing > Event User Log    |
+| Event User Log                | Settings > Workspace Setup and Testing > Event User Log    |
 | Feature Flags                 | Audience > Feature Flags                                |
 | Global Control (report)       | Analytics > Reports > Global Control                    |
 | Global Control Group Settings | Audience > Global Control Group                         |
 | In-App Message Templates      | Templates > In-App Message Templates                    |
-| Internal Groups               | Settings > Workspace Logs & Testing > Internal Groups   |
+| Internal Groups               | Settings > Workspace Setup and Testing > Internal Groups   |
 | Link Templates                | Templates > Email Link Templates                        |
 | Locations                     | Audience > Locations                                    |
 | Manage Settings               | Settings > Workspace Settings                           |
 | Manage Teams                  | Settings > Workspace Settings > Internal Teams          |
 | Media Library                 | Templates > Media Library                               |
-| Message Activity Log          | Settings > Workspace Logs & Testing > Message Activity  |
+| Message Activity Log          | Settings > Workspace Setup and Testing > Message Activity  |
 | News Feed                     | Messaging > News Feed                                   |
 | Overview                      | Home                                                    |
 | Predictions                   | Analytics > Predictions                                 |

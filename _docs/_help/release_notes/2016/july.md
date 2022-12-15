@@ -13,7 +13,7 @@ description: "This article contains release notes for July 2016."
 This upgrade makes it easier for you to use the Message Error Log on the Developer Console to troubleshoot issues with their Braze integrations. This is a usability update allows you to filter the Message Error Log by type and makes it much easier to find and identify specific integration problems.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Added timestamp for last uninstall tracking push sent

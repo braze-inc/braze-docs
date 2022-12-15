@@ -33,7 +33,7 @@ To integrate with Microsoft Azure Blob Storage, you must have a storage account 
 In Microsoft Azure, navigate to **Storage Accounts** in the sidebar and click **+ Add** to create a new storage account. Next, provide a storage account name. Other default settings will not need to be updated. Lastly, select **Review + create**. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.

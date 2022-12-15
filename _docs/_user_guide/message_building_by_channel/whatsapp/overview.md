@@ -42,7 +42,7 @@ Acknowledge the following before proceeding with integration:
 In Braze, go to the **Technology Partners** section and then search **WhatsApp**. On the WhatsApp partner page, select **Login with Facebook** to start the integration process.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ![][1]{: style="max-width:70%;"}

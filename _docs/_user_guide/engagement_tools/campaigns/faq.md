@@ -153,7 +153,7 @@ table th:nth-child(3) {
 </style>
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}   
 
 #### Action-based

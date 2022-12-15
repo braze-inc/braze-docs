@@ -33,7 +33,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Manage Settings** is now **Workspace Settings**.
-- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
 {% endalert %}
 
 ## Integration
@@ -65,7 +65,7 @@ To connect Braze as an output for your audience, you must provide the following 
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 Lastly **Save** your audience. 
@@ -112,7 +112,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 ![][10]

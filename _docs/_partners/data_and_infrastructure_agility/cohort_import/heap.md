@@ -26,7 +26,7 @@ The Braze and Heap integration enables you to [import Heap data to Braze](#data-
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Use cases
@@ -43,7 +43,7 @@ Use the Heap to Braze integration to automatically sync cohorts defined in Heap 
 In Braze, click on **Technology Partners** and then select **Heap**. On this page, you can find your data import key and a REST Endpoint. Take note of both of these values and provide them to your Heap account manager to finish setting up the integration. 
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ![][3]{: style="max-width:90%;"}

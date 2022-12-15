@@ -31,7 +31,7 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 - **Manage Settings** is now **Workspace Settings**.
 {% endalert %}
 
@@ -66,7 +66,7 @@ Once selected, provide the following:
 - Custom attributes: Specify here the new fields you will send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ![][10]

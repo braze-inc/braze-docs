@@ -29,7 +29,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Manage Settings** is now **Workspace Settings**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Integration

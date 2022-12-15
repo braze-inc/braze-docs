@@ -50,7 +50,7 @@ This error may occur for several reasons:
 		- Recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}
 
 ### Push bounced: APNS feedback service removed

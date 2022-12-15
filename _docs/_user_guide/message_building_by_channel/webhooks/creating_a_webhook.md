@@ -170,7 +170,7 @@ After you've finished building the last of your campaign or Canvas, review its d
 Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Developer Console][42], under **Message Activity Log**. This description contains the time the error occurred, the app name, and the error message:
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Logs & Testing** > **Message Activity**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Message Activity Log** is now **Message Activity** and is located under **Settings** > **Workspace Setup and Testing** > **Message Activity**.
 {% endalert %}
 
 ![Webhook error with the message "An active access token must be used to query information about the current user"][43]

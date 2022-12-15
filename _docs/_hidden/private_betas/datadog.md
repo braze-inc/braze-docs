@@ -34,7 +34,7 @@ In Datadog, you will need to create an [API key](https://docs.datadoghq.com/acco
 In the Braze dashboard, navigate to the **Technology Partners** section and then search **Datadog**. On the Datadog partner page, provide the Datadog API key. This will create a connection to allow Braze to send data to Datadog.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Technology Partners** is now **Technology Partner Integration** and is located under **Partner Integrations** > **Technology Partner Integration**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Technology Partners** under **Partner Integrations** > **Technology Partners**.
 {% endalert %}
 
 ## Braze events

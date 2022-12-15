@@ -28,7 +28,7 @@ App groups are where you organize your apps. Think of each of these app groups a
 Next, you'll be taken to the **Settings** page. Generally, you can access this page by going to **Manage Settings** > **Settings**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 ### Step 2: Add your apps

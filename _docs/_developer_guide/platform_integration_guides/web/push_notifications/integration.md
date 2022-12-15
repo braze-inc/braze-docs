@@ -74,7 +74,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 - When you call `braze.initialize`, supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 ## Soft push prompt

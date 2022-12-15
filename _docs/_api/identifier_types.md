@@ -9,8 +9,8 @@ page_type: reference
 
 {% alert note %}
 Several references in this page refer to the **Developer Console** and **API Settings**. If you are using our [updated navigation]({{site.baseurl}}/navigation/):
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
-- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Logs & Testing** > **API Keys**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
+- **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
 {% endalert %}
 
 # API Identifier types
@@ -37,7 +37,7 @@ There are two ways to locate your `app_id`:
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Manage Settings** is now **Workspace Settings**.
-- **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Logs & Testing** > **Workspace Integrations**.
+- **Settings** is now **Workspace Integrations** and is located under **Settings** > **Workspace Setup and Testing** > **Workspace Integrations**.
 {% endalert %}
 
 #### What can it be used for?

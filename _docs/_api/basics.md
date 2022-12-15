@@ -249,7 +249,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 To create a new REST API key, visit the **Developer Console** on your Braze dashboard. This page displays your existing API keys. To create a new key, click **Create New API Key**.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 You can then to do the following:
@@ -283,7 +283,7 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ### API IP allowlisting

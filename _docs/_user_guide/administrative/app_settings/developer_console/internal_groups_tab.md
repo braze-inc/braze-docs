@@ -12,7 +12,7 @@ description: "This reference article covers Internal Groups, a great way to get 
 > This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Internal Groups** under **Settings** > **Workspace Logs & Testing** > **Internal Groups**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Internal Groups** under **Settings** > **Workspace Setup and Testing** > **Internal Groups**.
 {% endalert %}
 
 Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
@@ -31,7 +31,7 @@ To create an Internal Group, perform the following steps:
 4. Choose one or more group types, as listed in the following chart.
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ![Creating an Internal Group in Braze][7]
@@ -57,7 +57,7 @@ After you create your Internal Group, you can add test users as members of that 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Event User Log** under **Settings** > **Workspace Logs & Testing** > **Event User Log**.
+If you are using our [updated navigation]({{site.baseurl}}/navigation/), you can find **Event User Log** under **Settings** > **Workspace Setup and Testing** > **Event User Log**.
 {% endalert %}
 
 ### Content test groups

@@ -29,7 +29,7 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 {% alert note %}
 If you are using our [updated navigation]({{site.baseurl}}/navigation/):
 - **Connected Content** is now under **Settings** > **Workspace Settings** > **Connected Content**.
-- **Developer Console** is now **Workspace Logs & Testing** and is located under **Settings** > **Workspace Logs & Testing**.
+- **Developer Console** is now **Workspace Setup and Testing** and is located under **Settings** > **Workspace Setup and Testing**.
 {% endalert %}
 
 ## Audience segmentation {#audience-segmentation}
