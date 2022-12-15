@@ -16,7 +16,7 @@ The conversions dashboard allows you to analyze conversions across campaigns, Ca
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
 - **Received conversions:** Conversions that occurred after a user receved the message
-- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (this feature is currently being tested on a small subset of early access customers)
+- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
 
 When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
 
@@ -94,11 +94,18 @@ The unique conversions rates and counts track the number of users who converted 
 | Unique received conversions rate | (Number of users that converted at least once after message receipt, within selected conversion window) / (Number of unique recipients) |
 | Unique open conversions rate | (Number of users that converted at least once after message open, within selected conversion window) / (Number of unique recipients) |
 | Unique click conversions rate | (Number of users that converted at least once after message click, within selected conversion window) / (Number of unique recipients) |
+| Last click conversions rate (This feature is currently being tested on a small subset of early access customers) | (Number of users that converted at least once if their most recent click within the conversion window was for this message) / (Number of unique recipients)
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Conversion performance by channel
 
-This section shows the conversion results for each messaging channel. Due to how opens and clicks are tracked across channels, not all metrics are available for all channels. The following table lists how each attribution method is tracked for each channel.
+This section shows the conversion results for each messaging channel. Due to how opens and clicks are tracked across channels, not all metrics are available for all channels. 
+
+{% alert note %}
+Receipt events vary from channel to channel, therefore the _unique recipients_ metric used in the denominator of total and unique conversion calculations will alter slightly from channel to channel. For example, in-app messages track impressions rather than receipts. That means for the in-app message channel, the calculations for _Total conversions_ and _Unique conversions_ use the number of impressions in the denominator.
+{% endalert %}
+
+The following table lists how each attribution method is tracked for each channel.
 
 <table class="tg">
 <thead>
