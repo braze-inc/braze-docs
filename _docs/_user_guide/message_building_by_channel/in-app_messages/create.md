@@ -259,22 +259,6 @@ This setting only applies to the Custom code message type. Copy and paste HTML i
 
 This setting only applies to the email capture form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
 
-### Generations
-
-Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which generation they support, in the [preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section while composing your in-app message.
-
-![Switching between in-app message generations in the preview section][2]{: height="50%" width="50%"}
-
-Depending on what SDK versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation.
-
-{% details What is a generation? %}
-A Generation is defined as a collection of SDK versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates.
-
-By selecting **Send to all Generations that support this message**, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences and absence of button border).
-
-You could clear the **Send to all Generations that support this message** checkbox and select **Send only to users on Generation 3 (the latest)** if you do not want to allow users to receive the older message styles. Users on Generation 3 will be the only ones to receive the message.
-{% enddetails %}
-
 ## Step 5: Style your in-app message
 
 The **Style** tab allows you to adjust all visual aspects of your message. Upload an image or badge, or pick a pre-designed badge icon. Change the colors of the header and body text, buttons, and background by selecting from a palette or entering a hex, RGB, or HSB code.
