@@ -33,7 +33,7 @@ You can find a breakdown of how Braze accumulates data points in the following s
 
 {% alert note %} 
 The following actions do not consume data points:
-- Deleting Users from Braze
+- Deleting users from Braze
 - Using Connected Content in messaging
 {% endalert %}
 
