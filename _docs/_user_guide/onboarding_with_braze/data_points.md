@@ -32,7 +32,9 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 You can find a breakdown of how Braze accumulates data points in the following sections, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
 {% alert note %} 
-Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 
+The following actions do not consume data points:
+- Deleting users from Braze
+- Using Connected Content in messaging
 {% endalert %}
 
 ### Billable data points
