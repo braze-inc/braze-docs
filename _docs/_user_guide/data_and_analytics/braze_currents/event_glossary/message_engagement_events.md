@@ -1245,7 +1245,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
   "inbound_phone_number": (string) the phone number the message was sent to,
-  "inbound_media_urls": (string) the URLs of inbound media attachments if received, 
+  "media_urls": (string) the URLs of inbound media attachments if received, 
   "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
   "message_body" : (string) the body of the message sent by the user,
   "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
