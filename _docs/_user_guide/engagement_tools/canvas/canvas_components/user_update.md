@@ -38,7 +38,7 @@ To remove a custom attribute, select an attribute name using the dropdown. You c
 
 ### Advanced JSON composer
 
-Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON composer. You are also able to set a user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [Subscription Group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state.
+Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON composer. A user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [Subscription Group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state can also be set.
 
 ![][2]{: style="max-width:90%;"}
 
