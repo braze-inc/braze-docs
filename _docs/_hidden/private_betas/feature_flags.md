@@ -32,14 +32,12 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 ## Implementation
 Create, edit, and archive feature flags by navigating to **Feature Flags** in the left sidebar of the Braze dashboard. This page displays a list of existing feature flags for this app group.
 
-<!-- TODO -->
-[Josh: ADD SCREENSHOT]
+![A list of previously created feature flags on the Braze dashboard][1]
 
 ### Create a new feature flag
 To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
 
-<!-- TODO -->
-[Josh: ADD SCREENSHOT]
+![A blank feature flag form][2]
 
 #### Details
 Give your new feature flag a **Name** and **ID**. 
@@ -282,3 +280,6 @@ Use feature flags to experiment and confirm your hypotheses around your new feat
 With Canvas, you can track the impact of feature rollout on conversations. And, using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths), you can optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
 For example, imagine that your ecommerce team has a new checkout page design that they believe will improve purchase conversion rates. When you release this feature, you can display the new page to 50% of your users for one month. If it performs better than the old design, you can increase the rollout traffic to 100%. If it performs poorly, you can turn it off completely and revisit the designs. In either case, you have avoided a poor experience for 50% of your users.
+
+[1]: {% image_buster /assets/img_archive/Feature-Flag-1.png %} 
+[2]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
