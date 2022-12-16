@@ -31,13 +31,17 @@ As of December 2022, the Data Transformation team will review and approve submit
 First, identify an external platform you want to connect to Braze. Check that the platform offers webhooks or API notifications. Next, follow these steps to create a data transformation with Braze.
 
 1. Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section in the left navigation bar. Click **Create Transformation**.![][5]<br><br>
-2. Using a sample webhook payload from your external platform. We recommend sending a test webhook to Braze. On your external platform, enter the webhook URL as the destination. If prompted, choose a non-authenticated POST request. If the external platform has a “test send” capability, use it and hit **Refresh** in Braze to display what Braze just received.<br>![][1]<br><br>
+2. Using a sample webhook payload from your external platform. We recommend sending a test webhook to Braze. On your external platform, enter the webhook URL as the destination. If prompted, choose a non-authenticated POST request. If the external platform has a “test send” capability, use it and hit **Refresh** in Braze to display what Braze just received.<br><br>
 3. Find the fields that would map to the following Braze fields:
 - A Braze user (`external_id`, `user_alias`, `braze_id`, or `email`)
 - Custom attributes (optional)
 - Custom events (optional)
 - Purchase events (optional)<br><br>
-4. Back on the Braze transformation details page, write your transformation that maps the values from your platform to Braze. For example, `user_id` can be mapped to Braze's `external_id`. You can use square brackets to reference items in the webhook.<br><br>
+For example in this sample payload, `user_id` is the match to Braze’s `external_id`, and a a webhook field is set as a Braze custom attribute:<br>![][2]<br><br>
+4. Back on the Braze transformation details page, write your transformation that maps the values from your platform to Braze. For example, `user_id` can be mapped to Braze's `external_id`. You can use square brackets to reference items in the webhook.<br><br>In the sample payload, a transformation like this would achieve the desired mapping from the previous step:
+- `user_id` as Braze’s `external_id`
+- `form_response.answers[0].text` as a custom attribute<br>![][7]
+<br><br>
 5. Click **Submit for Approval**, and your transformation will be sent to the Braze Data Transformation team for review. After receiving approval, you can enable the webhooks from your external platform.
 
 ## Use case
@@ -252,7 +256,7 @@ And another action if no user exists with that email address, where
 - ```user["braze_id"].nil?``` or 
 - ```user["braze_id"] == nil)```
 
-See "Advanced Transformation" under [Additional Examples](#additional_examples) for an example of this.
+See "Advanced Transformation" under [Additional examples](#additional-examples) for an example of this.
 
 ## Frequently asked questions
 
