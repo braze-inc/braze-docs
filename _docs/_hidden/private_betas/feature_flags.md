@@ -98,9 +98,9 @@ Let's say you were to rolling out a new type of user profile for your app. You m
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-const {enabled, properties} = braze.getFeatureFlag("expanded_user_profile");
-if (enabled) {
-  console.log(`expanded_user_profile is enabled`, properties);
+const featureFlag = braze.getFeatureFlag("expanded_user_profile");
+if (feature.enabled) {
+  console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
 }
@@ -142,7 +142,7 @@ You can also get a list of all enabled feature flags:
 ```javascript
 const features = getAllFeatureFlags();
 for(const feature of features) {
-  console.log(`Feature: ${feature.id}`, feature.enabled, feature.properties);
+  console.log(`Feature: ${feature.id}`, feature.enabled);
 }
 ```
 {% endtab %}
@@ -155,7 +155,7 @@ todo copy example from web
 ```java
 List<FeatureFlag> features = braze.getAllFeatureFlags();
 for (FeatureFlag feature: features) {
-  Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled(), feature.getProperties());
+  Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled());
 }
 ```
 {% endtab %}
@@ -163,7 +163,7 @@ for (FeatureFlag feature: features) {
 ```kotlin
 val featureFlags = braze.getAllFeatureFlags()
 featureFlags.forEach { feature ->
-  Log.i(TAG, "Feature: ${feature.id} ${feature.enabled} ${feature.properties}")
+  Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
 }
 ```
 {% endtab %}
@@ -180,7 +180,7 @@ Refreshing happens automatically upon session start. Manually refreshing may be 
 {% tab Javascript %}
 ```javascript
 braze.refreshFeatureFlags(() => {
-  console.log(`Feature flags have been refreshed`);
+  console.log(`Feature flags have been refreshed.`);
 }, () => {
   console.log(`Failed to refresh feature flags.);
 });
