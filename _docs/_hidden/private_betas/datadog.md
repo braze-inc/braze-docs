@@ -12,10 +12,6 @@ hidden: true
 
 The Braze and Datadog integration allows customers to collect Braze data in Datadog and create alerts on the data we send. For example, setting up a monitor and alert if your weekly newsletter campaign sends an abnormally low volume of messages or if a Canvas step that usually only sends a few messages a day starts sending thousands. 
 
-{% alert important %}
-The Datadog partner integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites 
 
 | Requirement | Description |
