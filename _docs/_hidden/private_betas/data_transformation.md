@@ -177,13 +177,13 @@ end
 {% endtab %}
 {% tab Advanced transformation %}
 
-This advanced use case involves the scenario where the survey response could come from a user that does not yet exist in Braze. To solve this, the `get_user_for_email` helper function is used.
+This advanced use case involves the scenario where the survey response could come from a user that does not yet exist in Braze. To solve this, the `get_user_by_email` helper function is used.
 
 If the user exists, the existing profile is updated. If the user does not, a new alias-only user is created.
 
 ```
-user = get_user_for_email(payload["form_response"]["hidden"]["email_address"])
-#get_user_for_email is a Braze function that takes an email_address to see if any Braze user profiles return.
+user = get_user_by_email(payload["form_response"]["hidden"]["email_address"])
+#get_user_by_email is a Braze function that takes an email_address to see if any Braze user profiles return.
 #If a profile is returned, you have the entire user object to work with (see our /export/ids documentation).
 #If multiple profiles with the same email exist, we will randomly return one user object for you to work with.
 
@@ -238,13 +238,13 @@ End
 
 ## About helper functions
 
-`get_user_for_email(email)` is a helper function that you can call in your transformation code to turn an email address into a Braze user profile object. This can help when an external platform sends an email address as an identifier.
+`get_user_by_email(email)` is a helper function that you can call in your transformation code to turn an email address into a Braze user profile object. This can help when an external platform sends an email address as an identifier.
 
-**Input:** `get_user_for_email(email)` works by accepting a string email address as an input within the parentheses. You can template in the incoming webhook’s email field within the parentheses. For example, ```get_user_for_email(payload["email_address"])```.
+**Input:** `get_user_by_email(email)` works by accepting a string email address as an input within the parentheses. You can template in the incoming webhook’s email field within the parentheses. For example, ```get_user_by_email(payload["email_address"])```.
 
 If a Braze profile exists with that email address, the [entire user export object]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/#sample-user-export-file-output) is returned as a Hash. Any field in the user export object is available for use. If multiple profiles exist with the same email, only one user export object is returned.
 
-**Output:** For example, if you had ```user = get_user_for_email(payload["email_address"])``` and a profile exists for that email address, the user will contain the entire user export object. So, `user["braze_id"]` will return the `braze_id` of the matching user. If a profile does not exist with that email address, the user will be `nil`.
+**Output:** For example, if you had ```user = get_user_by_email(payload["email_address"])``` and a profile exists for that email address, the user will contain the entire user export object. So, `user["braze_id"]` will return the `braze_id` of the matching user. If a profile does not exist with that email address, the user will be `nil`.
 
 You can also use if/else logic in your transformation to perform one action if a user with the email address exists, where
 
@@ -270,7 +270,7 @@ While we would love for developers to use this feature as well, you don’t need
 
 #### Can I still use data transformation if my external platform only gives a user's email address in their webhooks without a matching user ID to Braze?
 
-Yes. In your transformation, you can use the `get_user_for_email` function to have Braze take an email address and return a user profile for you to map to. Check out the example for advanced transformation.
+Yes. In your transformation, you can use the `get_user_by_email` function to have Braze take an email address and return a user profile for you to map to. Check out the example for advanced transformation.
 
 #### How do I check that my data transformation is correct?
 
