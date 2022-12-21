@@ -34,9 +34,9 @@ Optionally, you can add a description to the segment to provide more details abo
 
 Choose which apps or platforms you'd like to target by either selecting **Include users from all apps** (default), or by clearing the checkbox. If you clear this option, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
 
-For more information on this option, refer to the section [Segment membership calculation](#segment-membership-calculation).
+Choose which apps or platforms you'd like to target by either selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, segment membership includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment. For example, if you’d like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the unselected "Include users from all apps" checkbox in the Apps Used section.][5]
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
 
 ## Step 4: Add filters to your segment
 
@@ -50,7 +50,7 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
-Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived. 
+Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived.
 
 {% alert important %}
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
@@ -72,10 +72,6 @@ Once you've clicked **Save**, you're ready to start sending messages to your use
 
 Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
-Additionally, segment membership is calculated differently when **Include users from all apps** is selected, or when an app group has only one app. In these scenarios, segment membership includes all users—both those who have sessions logged, as well as users with no sessions and no app data (typically created via user import or REST API).
-
-If **Include users from all apps** is cleared and you have more than one app in your app group, segment membership will only include users with sessions logged in the selected apps, and excludes users with no sessions or app data. Therefore, the total of individual segments with one app selected will not equal a segment with **Include users from all apps** selected.
-
 ## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
@@ -83,7 +79,7 @@ If you no longer need or wish to retire a specific segment, you can archive it b
 {% alert warning %}
 When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.
 
-You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment. 
+You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.
