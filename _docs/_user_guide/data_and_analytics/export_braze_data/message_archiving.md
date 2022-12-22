@@ -24,10 +24,10 @@ When this feature is enabled and you have successfully connected an S3 bucket vi
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (e.g., {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements. 
 
 The file will be saved in your S3 bucket using the following key structure:<br>
-`sent_messages/Channel/(md5Ofe164PhoneOrEmailOrPushToken)/CampaignId/DispatchId.json.gz`
+`sent_messages/Channel/(md5Ofe164PhoneOrEmailOrPushToken)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
 
 An example file may look like this:<br>
-`sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/wxyz-lmno/651fd10b282850b39e1169c13975234b.json.gz`
+`sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert important %}
 Enabling this feature will impact the delivery speed of your messages as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
@@ -54,6 +54,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiKey, // may not be available
   "canvas_id": CanvasApiKey, // may not be available
+  "canvas_step_id": CanvasStepID, // may not be available
+  "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
 }
 ```
@@ -71,6 +73,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiKey, // may not be available
   "canvas_id": CanvasApiKey, // may not be available
+  "canvas_step_id": CanvasStepID, // may not be available
+  "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
 }
 ```
@@ -87,6 +91,8 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiKey, // may not be available
   "canvas_id": CanvasApiKey, // may not be available
+  "canvas_step_id": CanvasStepID, // may not be available
+  "canvas_variation_id" : CanvasVariationId, // may not be available
   "message_variation_id": MessagVariationId, // may not be available
 }
 ```
