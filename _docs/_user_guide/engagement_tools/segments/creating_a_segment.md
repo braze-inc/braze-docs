@@ -32,7 +32,9 @@ Optionally, you can add a description to the segment to provide more details abo
 
 ## Step 3: Choose your app or platform
 
-Choose which apps or platforms you'd like to target by either selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, segment membership includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
+Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment. 
+
+For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
 ![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
 
