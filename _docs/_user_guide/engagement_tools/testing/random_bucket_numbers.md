@@ -27,7 +27,7 @@ If you want to perform long-term testing on the effectiveness of multiple campai
 
 ### When to use something else
 
-If you want to segment users for testing within a single campaign or single Canvas, instead use [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) for campaigns or [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) for Canvases.
+If you want to segment users for testing within a single campaign or single Canvas, instead use [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for campaigns or [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) for Canvases.
 
 ## Create segments using random bucket numbers
 
