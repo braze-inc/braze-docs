@@ -14,6 +14,8 @@ doc_top_text: "Rejoignez-nous au carrefour de l’art et de la science. En ce mo
 Quand vous arriverez, attendez-vous au meilleur de l’engagement client.
 Chez Braze, notre but est de créer des liens forts entre vous et vos clients ou vos utilisateurs."
 
+braze_learning: Termes et concepts techniques expliqués à travers un mélange de vidéos, des cours et des exercices interactifs.
+
 doc_menu_list:
   - name: Guide de l'utilisateur
     bg_color: '#3accdd'
@@ -58,7 +60,7 @@ popular_topic_list:
 helpful_resources_list:
   - name: Déclaration d'innovation
     link: /docs/innovation_statement/
-  - name: Assistance et Manuel des Success Services 
+  - name: Assistance et Manuel des Success Services
     link: /docs/handbooks/
   - name: Assistance technique sur la protection des données
     link: /docs/dp-technical-assistance/
