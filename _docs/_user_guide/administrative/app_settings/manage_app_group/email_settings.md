@@ -90,23 +90,17 @@ This feature allows you to automatically include a list-unsubscribe header for e
 
 Some recipients prefer to have an unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent unsubscribe link in the header of the email, making it easier to unsubscribe and, therefore, helps reduce the likelihood that a user would mark your email as spam. This can have a significant impact on your reputation and deliverability as an email sender.
 
-### Availability
-
-Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these ESPs may still choose not to provide you with this feature if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
-
 ### How the list-unsubscribe header works
 
-Navigate to **Email Settings** within your app group. Toggle **List-Unsubscribe** to **ON**.
+When enabled, this feature is applied to the entire app group. Braze will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. This list-unsubscribe header is not customizable. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request. 
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 
-When enabled, this feature will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
+Note that the header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function.
 
-{% alert note %}
-This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
-{% endalert %}
+### Availability
 
-The header is not added for messages targeting all users including unsubscribed users, as these represent transactional messages which do not need an unsubscribe function. Note that only Windows Live Hotmail and Gmail currently support this feature.
+Currently, only Windows Live Hotmail and Gmail support the list-unsubscribe header. Additionally, these ESPs may still choose not to provide you with this feature if you haven't completed [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) yet, or if you are a new sender. This is because providers like Gmail won't include the unsubscribe option if they can't trust that you'll actually unsubscribe the user.
 
 ## Append email subject lines
 
