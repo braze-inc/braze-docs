@@ -245,6 +245,10 @@ The following status codes and associated error messages will be returned if you
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
 
+## Creating an alias-only profile
+
+When working with an alias-only profile, you can use this endpoint to create a new alias-only user by setting the `update_existing_only` flag to `false`. Then, you can submit updates to this `/users/track` endpoint and Braze will update the alias-only user. This guarantees that one profile with that alias will exist. This is especially helpful when building an integration as it prevents the creation of duplicate profiles.
+
 ## Importing legacy user data
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
