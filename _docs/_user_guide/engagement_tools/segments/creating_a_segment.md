@@ -32,11 +32,11 @@ Optionally, you can add a description to the segment to provide more details abo
 
 ## Step 3: Choose your app or platform
 
-Choose which apps or platforms you'd like to target by either selecting **Include users from all apps** (default), or by clearing the checkbox. If you clear this option, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
+Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default) or **Users from specific apps** in the **Apps and websites targeted** dropdown. If you want to target users from specific apps, you can select the apps or platforms you want to include in your segment using the **Specific Apps** dropdown. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
 
 For more information on this option, refer to the section [Segment membership calculation](#segment-membership-calculation).
 
-![Segment Details panel with the unselected "Include users from all apps" checkbox in the Apps Used section.][5]
+![Segment Details panel with the dropdown option to select users from specific apps and a dropdown to select the specific apps.][5]
 
 ## Step 4: Add filters to your segment
 
