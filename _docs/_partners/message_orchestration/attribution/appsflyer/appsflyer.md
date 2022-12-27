@@ -54,7 +54,11 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. 
+
+If you're using iOS Swift SDK v5.7.0+ and the `useUUIDAsDeviceId` field is set to `true` for attributions where IDFA is unavailable, users from your platform will not be matched to Braze as there will not be a common identifier to match these users. To ensure the highest possible match rate between both platforms, it is recommended to set the `useUUIDAsDeviceId` field as `false` so the IDFV is used as a common identifier if the IDFA is unavailable.
+
+For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
 
 {% endtab %}
 {% endtabs %}
