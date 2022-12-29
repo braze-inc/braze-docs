@@ -49,7 +49,7 @@ Alternatively, you can directly find the artifact AAR files on our [maven reposi
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. 
 
 {% alert important %}
-If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
+If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
 {% endalert %}
 
 ```gradle
@@ -62,9 +62,9 @@ The following example shows where to place the dependency line in your `build.gr
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 
-#### Perform gradle sync
+#### Perform Gradle sync
 
-Be sure to perform a Gradle Sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
+Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
 ![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
 

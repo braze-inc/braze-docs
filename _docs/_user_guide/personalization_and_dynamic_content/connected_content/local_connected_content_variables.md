@@ -110,7 +110,7 @@ You can optionally provide a POST body by specifying `:body` followed by either 
 ```
 {% endraw %}
 
-### Providing json body
+### Providing JSON body
 If you want to provide your own JSON body, you can write it inline if there are no spaces. If your body has spaces, you should use an assign or capture statement. That is, any of these three are acceptable:
 
 {% raw %}
@@ -210,7 +210,6 @@ Be certain the provided Connected Content endpoint can handle large bursts of tr
 
 With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
 
-[6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
 [46]: http://www.json.org
