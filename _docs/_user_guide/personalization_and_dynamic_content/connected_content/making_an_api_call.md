@@ -19,7 +19,7 @@ For example, the following message body will access the URL `http://numbersapi.c
 Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
-You can also include user profile attributes as variables in the URL string when making Connected Content requests. For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the following email address attribute. Connected Content requests only support GET requests.
+You can also include user profile attributes as variables in the URL string when making Connected Content requests. For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the following email address attribute. Connected Content requests support GET and POST requests only.
 
 ```
 Hi, here are some articles that you might find interesting:
