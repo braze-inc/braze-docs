@@ -9,7 +9,7 @@ description: "This article outlines details about the Users Merge Braze endpoint
 
 ---
 {% api %}
-# Merge two users
+# Users Merge
 {% apimethod post %}
 /users/merge
 {% endapimethod %}
@@ -24,9 +24,9 @@ Use this endpoint to merge one user into another user. Up to 50 merges may be sp
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
-|---|---|---|---|
-| `merge_updates` | Required | Array | An array containing merge update objects. Each object should contain an identifier_to_merge object and an identifier_to_keep object, which should each reference a user either by external_id or user_alias. Both users being merged must be identified using the same method. |
+| Parameter | Required | Data Type | Description                                                                                                                                                                                                                                                   |
+|---|---|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id` or `user_alias`. Both users being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example Request
@@ -85,7 +85,6 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
   "message": "'merge_updates' must be an array of objects"
 }
-
 ```
 
 ## Troubleshooting
