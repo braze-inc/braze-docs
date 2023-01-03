@@ -31,6 +31,9 @@ guide_featured_list:
   - name: "POST: User Track"
     link: /docs/api/endpoints/user_data/post_user_track/
     fa_icon: fas fa-database
+  - name: "POST: Users Merge"
+    link: /docs/api/endpoints/user_data/post_users_merge/
+    fa_icon: fas fa-users
 
 guide_menu_title: "External ID Migration Endpoints"
 guide_menu_list:
