@@ -6,6 +6,12 @@ permalink: /navigation/
 
 # Braze navigation
 
+> Summary of what's up with this page
+## New navigation (beta)
+
+> Summary of the nav beta, opt-in period timing, how to opt in, anything else they need to know
+As part of the changes to our information architecture and navigation, we have also renamed "App Group" to "Workspace". If you're using our updated navigation, this change will be reflected throughout the dashboard.
+
 ## Global header
 
 {% tabs %}
@@ -36,15 +42,12 @@ permalink: /navigation/
 7. **Administrator icon** - Appears next to your profile if you are an administrator for your company.
 
 {% endtab %}
-{% tab Side-by-side %}
+{% tab Changes %}
 
 ![]({% image_buster /assets/img/navigation/global_header_compare.png %}){: style="border:0"}
 
-What's new:
-
 - Community
    - **Resources** is now **Community**
-   - **Braze Learning** and **Documentation** are now under **Support** in the global header
 - Support
    - **Get Help** is now **Support** 
    - **Braze Learning** and **Documentation** are now located here
@@ -63,6 +66,7 @@ What's new:
 #navigation td {
     word-break: break-word;
     width: 50%;
+    font-size: 16px;
 }
 </style>
 
@@ -73,7 +77,7 @@ What's new:
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_new.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
+    <td><b>1. Workspace selector</b> - See what workspace you're currently in or switch between workspaces.<br><br><b>2. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>3. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>4. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>5. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>6. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>7. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>8. Data Settings</b> - Contains settings related to user data, such as custom user attributes, custom user events, catalogs, products, and more.<br><br><b>9. Settings</b> - Manage your workspace integration, workspace settings, company settings, billing, and more.<br></td>
   </tr>
 </tbody>
 </table>
@@ -85,23 +89,71 @@ What's new:
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
+    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboard, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
   </tr>
 </tbody>
 </table>
 
 {% endtab %}
-{% tab Side-by-side %}
+{% tab Changes %}
 
-<table id="navigation">
-<tbody>
-  <tr>
-    <td><img src="{% image_buster /assets/img/navigation/sidebar_compare.png %}"></td>
-    <td>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</td>
-  </tr>
-</tbody>
-</table>
+The following table lists where each page is located in the new navigation. Some pages have been renamed, and the new name is referenced in the "New location" column.
+
+| Page name                     | New location                                            |
+|-------------------------------|---------------------------------------------------------|
+| API Settings                  | Settings > Workspace Setup and Testing > API Keys       |
+| Approval Workflow             | Settings > Workspace Settings > Approval Workflow       |
+| Campaigns                     | Messaging > Campaigns                                   |
+| Calendar                      | Messaging > Content Calendar                            |
+| Canvas                        | Messaging > Canvas                                      |
+| Catalogs                      | Data Settings > Catalogs                                |
+| Connected Content             | Settings > Workspace Settings > Connected Content       |
+| Content Blocks Library        | Templates > Content Blocks                              |
+| Conversions                   | Analytics > Analytics Dashboards > Conversions          |
+| Currents                      | Partner Integrations > Data Export (Currents)           |
+| Custom Attributes             | Data Settings > Custom User Attributes                  |
+| Custom Events (report)        | Analytics > Reports > Custom Events Reports             |
+| Custom Events                 | Data Settings > Custom User Events                      |
+| Data Feeds                    | Data Settings > Data Feeds                              |
+| Developer Console             | Settings > Workspace Setup and Testing                     |
+| Devices & Carriers            | Analytics > Reports > Devices and Carriers              |
+| Email Performance             | Analytics > Analytics Dashboards > Email Performance    |
+| Email Settings                | Settings > Workspace Settings >  Email Preferences      |
+| Email Templates               | Templates > Email Templates                             |
+| Engagement Reports            | Analytics > Reports > Engagement                        |
+| Event User Log                | Settings > Workspace Setup and Testing > Event User Log    |
+| Feature Flags                 | Audience > Feature Flags                                |
+| Global Control (report)       | Analytics > Reports > Global Control                    |
+| Global Control Group Settings | Audience > Global Control Group                         |
+| In-App Message Templates      | Templates > In-App Message Templates                    |
+| Internal Groups               | Settings > Workspace Setup and Testing > Internal Groups   |
+| Link Templates                | Templates > Email Link Templates                        |
+| Locations                     | Audience > Locations                                    |
+| Manage Settings               | Settings > Workspace Settings                           |
+| Manage Teams                  | Settings > Workspace Settings > Internal Teams          |
+| Media Library                 | Templates > Media Library                               |
+| Message Activity Log          | Settings > Workspace Setup and Testing > Message Activity  |
+| News Feed                     | Messaging > News Feed                                   |
+| Overview                      | Home                                                    |
+| Predictions                   | Analytics > Predictions                                 |
+| Products                      | Data Settings > Products                                |
+| Promotion Codes               | Data Settings > Promotion Codes                         |
+| Push TTL Settings             | Settings > Workspace Settings > Push Time-To-Live (TTL) |
+| Report Builder                | Analytics > Reports > Report Builder                    |
+| Revenue                       | Analytics > Reports > Revenue                           |
+| Segments                      | Audience > Segments                                     |
+| Segment Extensions            | Audience > Segment Extensions                           |
+| Segment Insights              | Analytics > Reports > Segment Insights                  |
+| Global Message Settings       | Settings > Workspace Settings > Message Frequency       |
+| SMS Performance               | Analytics > Analytics Dashboards > SMS Performance      |
+| Subscription Group Management | Audience > Subscription > Subscription Groups           |
+| Subscription Groups           | Audience > Subscription > Subscription Groups           |
+| Tags                          | Settings > Workspace Settings > Tag Management          |
+| Technology Partners           | Partner Integrations > Technology Partner Integrations  |
+| User Import                   | Audience > Import Users                                 |
+| User Search                   | Audience > Search Users                                 |
+| Webhook Templates             | Templates > Webhook Templates                           |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
-
