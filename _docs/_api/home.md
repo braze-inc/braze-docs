@@ -90,6 +90,10 @@ glossaries:
     description: Record custom events, purchases, and update user profile attributes.
     tags:
       - User Data
+  - name: <a href='/docs/api/endpoints/user_data/post_users_merge/'>/users/merge</a>
+    description: Merge a user profile into another user.
+    tags:
+      - User Data
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/'>/campaigns/trigger/send</a>
     description: Send immediate, ad-hoc messages to designated users via API-triggered delivery.
       - Send Messages
