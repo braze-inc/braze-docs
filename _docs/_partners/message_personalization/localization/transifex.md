@@ -72,7 +72,3 @@ This example code snippet utilizes the Transifex resource translation API and th
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
-[32]: {% image_buster /assets/img_archive/TransifexUI.png %}
-[33]: {% image_buster /assets/img_archive/terminal.png %}
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}

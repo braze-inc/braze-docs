@@ -56,11 +56,6 @@ For each of the request components listed in the following table, one of `extern
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Keep the following nuances in mind when using the `/users/track` endpoint:
-
-- When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
-- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
-
 ## Example request body for event tracking
 
 ```json
@@ -147,7 +142,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Example request to set subscription groups
 
-This example shows how you can create a user and set their subscription group within the user attributes object.
+This example shows how you can create a user and set their subscription group within the user attributes object. 
+
+Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
 {% alert important %}
 Using endpoint to create a new user and update their subscription groups is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
@@ -244,6 +241,30 @@ The following status codes and associated error messages will be returned if you
 {: .reset-td-br-1 .reset-td-br-2}
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
+## Creating an alias-only user profile
+
+You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
+
+### Example request to create an alias-only user
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+{
+    "attributes": [
+        {
+            "_update_existing_only": false,
+            "user_alias": {
+                "alias_name": "example_name",
+                "alias_label": "example_label"
+            },
+            "email": "email@example.com"
+        }
+    ],
+}
+```
 
 ## Importing legacy user data
 

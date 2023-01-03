@@ -14,6 +14,8 @@ doc_top_text: "Meet us at the intersection of art and science. Find us in the mo
 Upon arrival, expect lifecycle engagement at its best.
 At Braze, we aim to create strong bonds between you and your customers or users."
 
+braze_learning: Technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
+
 doc_menu_list:
   - name: User Guide
     bg_color: '#3accdd'
