@@ -96,7 +96,7 @@ The following table lists possible error messages that may occur.
 | 'merge_updates' must be an array of objects |
 | a single request may not contain more than 50 merge updates |
 | identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object |
-| identifiers must be objects of the same type" |
+| identifiers must be objects of the same type |
 | 'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep' |
 {: .reset-td-br-1 .reset-td-br-2}
 
