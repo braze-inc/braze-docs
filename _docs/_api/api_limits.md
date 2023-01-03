@@ -23,7 +23,7 @@ The following table lists specific API rate limits for different request types. 
 | --- | --- |
 | [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your customer success manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
 | [`/users/external_id/rename`][20] | 1,000 requests per minute. |
 | [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
@@ -131,3 +131,4 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [40]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
+[44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
