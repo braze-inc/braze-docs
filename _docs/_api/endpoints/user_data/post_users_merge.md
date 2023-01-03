@@ -9,27 +9,38 @@ description: "This article outlines details about the Users Merge Braze endpoint
 
 ---
 {% api %}
-# Users Merge
+# Merge users
 {% apimethod post %}
 /users/merge
 {% endapimethod %}
 
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
-
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
 
+## Request body
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+```
+
+```json
+{
+  "merge_updates" : (required, array of objects)
+}
+```
 
 ## Request parameters
 
-| Parameter | Required | Data Type | Description                                                                                                                                                                                                                                                   |
-|---|---|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id` or `user_alias`. Both users being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Example Request
+## Example request
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/users/merge' \
@@ -91,13 +102,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 
 The following table lists possible error messages that may occur.
 
-| Message |
+| Error | Troubleshooting |
 | --- |
-| 'merge_updates' must be an array of objects |
-| a single request may not contain more than 50 merge updates |
-| identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object |
-| identifiers must be objects of the same type |
-| 'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep' |
+| `'merge_updates' must be an array of objects` | Ensure that `merge_updates` is an array of objects. |
+| `a single request may not contain more than 50 merge updates` | You can only specify up to 50 merge updates in a single request. |
+| `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Check the identifiers in your request. |
+| `identifiers must be objects of the same type` | Ensure that the identifier object types match. |
+| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Ensure that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
