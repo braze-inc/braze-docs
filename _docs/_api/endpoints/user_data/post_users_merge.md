@@ -94,7 +94,10 @@ The following table lists possible error messages that may occur.
 | Message |
 | --- |
 | 'merge_updates' must be an array of objects |
-| todo add more |
+| Max input length exceeded. |
+| identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object |
+| identifiers must be objects of the same type" |
+| 'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep' |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
