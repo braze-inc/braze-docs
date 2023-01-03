@@ -60,7 +60,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/users/merge' \
       }
     }
   ]
-}
+}'
 ```
 
 ## Response
