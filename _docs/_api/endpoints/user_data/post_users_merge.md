@@ -16,6 +16,10 @@ description: "This article outlines details about the Users Merge Braze endpoint
 
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
+{% alert important %}
+This endpoint is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
