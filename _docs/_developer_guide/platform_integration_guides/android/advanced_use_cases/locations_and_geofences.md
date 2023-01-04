@@ -22,7 +22,7 @@ To support geofences for Android:
 
 ## Step 1: Update build.gradle
 
-Add `android-sdk-location` to your app-level `build.gradle` if using Android SDK version `24.0.0` or greater. Also add the Google Play Services [location package][3] using the Google Play Services [setup guide][10]:
+Add `android-sdk-location` to your app-level `build.gradle`. Also add the Google Play Services [location package][3] using the Google Play Services [setup guide][10]:
 
 ```
 dependencies {
