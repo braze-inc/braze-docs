@@ -48,7 +48,7 @@ Alternatively, you can directly find the artifact AAR files on our [maven reposi
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. 
 
-If you are using any of the location or geofence functionality and also using and SDK version of `24.0.0` or greater, also include `android-sdk-location` to your app's `build.gradle`.
+If you are using any location or Braze Geofence functionality, also include `android-sdk-location` to your app's `build.gradle`.
 
 {% alert important %}
 If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
