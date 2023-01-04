@@ -45,6 +45,63 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Abort message events
+
+{% apitags %}
+Canvas, Campaigns, Abort, Email, Content Cards, In-App Messages, News Feed, Push, SMS, Webhooks
+{% endapitags %}
+
+This event occurs if a message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Campaign Message Abort :users_campaigns_abort
+// Canvas Message Abort :users_canvas_abort
+// Content Card Abort :users_messages_contentcard_abort
+// Email Abort :users_messages_email_abort
+// In-App Message Abort :users_messages_inappmessage_abort
+// News Feed Card Abort :users_messages_newsfeedcard_abort
+// Push Notification Abort :users_messages_pushnotification_abort
+// SMS Abort :users_messages_sms_abort
+// Webhook Abort :users_messages_webhook_abort
+
+{
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Canvas exit events
+
+{% apitags %}
+Exit, Canvas
+{% endapitags %}
+
+This event occurs when a user has exited a Canvas.
+
+```json
+// Canvas Exit Performed Event: users.canvas.exit.PerformedEvent
+// Canvas Exit Performed Event Details: users_canvas_exit_PerformedEvent_Details
+// Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
+// Canvas Exit Matched Audience Details :users_canvas_exit_MatchedAudience_Details
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+}
+```
+{% endapi %}
+
 ## Experiment split entry events
 
 {% apitags %}
