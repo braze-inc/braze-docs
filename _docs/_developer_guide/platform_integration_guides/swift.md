@@ -2,7 +2,6 @@
 nav_title: Swift
 layout: featured
 page_order: 90
-hidden: true
 permalink: /swift/
 ---
 
@@ -11,13 +10,10 @@ permalink: /swift/
 ## Initial SDK Setup
 - [Overview]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/)
 - Installation Methods
-  - [Carthage Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/carthage_integration/)
   - [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/)
   - [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)
-  - [Manual]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration_options/)
 - [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/)
 - [Other SDK Customizations]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/)
-- [SDK Integration Guide (Optional)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/ios_sdk_integration/)
 
 ## Push Notifications
 - [Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
