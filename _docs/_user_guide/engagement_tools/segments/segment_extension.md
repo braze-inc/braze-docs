@@ -18,7 +18,9 @@ Segment Extensions are audience definitions which allow you to use nested event 
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
-Out of the box, there is a soft limit of 10 active Segment Extensions per App Group at a particular time. This can be increased by contacting your Customer Success Manager to discuss your use case.
+{% alert important %}
+Out of the box, there is a soft limit of 10 active Segment Extensions per app group at a particular time. This can be increased by contacting your Braze customer success manager to discuss your use case.
+{% endalert %}
 
 ## Step 1: Navigate to Segment Extensions
 
@@ -34,7 +36,7 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, or custom event criteria for targeting. Once you’ve selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you’d like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
 
-![Segment ][3]
+![][3]
 
 ### Event property segmentation
 
