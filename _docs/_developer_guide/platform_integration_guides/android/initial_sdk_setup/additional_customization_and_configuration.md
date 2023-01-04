@@ -18,7 +18,7 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ```
 -keep class bo.app.** { *; }
--keep class com.appboy.** { *; }
+-keep class com.braze.** { *; }
 ```
 
 ## Enabling verbose logging {#android-verbose-logging}
