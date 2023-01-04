@@ -7,7 +7,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# CocoaPods integration
+# CocoaPods Integration
 
 ## Step 1: Install CocoaPods
 
@@ -37,14 +37,14 @@ end
 
 We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like `pod 'BrazeKit' ~> Major.Minor.Build`. If you want to automatically integrate the latest Braze SDK version, even with major changes, you can use `pod 'BrazeKit'` in your Podfile.
 
-#### Additional libraries
+#### Additional Libraries
 
 The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
 
 | Library | Details |
 | ------- | ------- |
 | `pod 'BrazeLocation'` | Location library providing support for location analytics and geofence monitoring. |
-| `pod 'BrazeUI'` | Braze-provided user interface library for in-app messages and Content Cards. |
+| `pod 'BrazeUI'` | Braze-provided user interface library for In-App Messages and Content Cards. |
 | `pod 'BrazeNotificationService'` | Notification service extension library providing support for rich push notifications. |
 | `pod 'BrazePushStory'` | Notification content extension library providing support for Push Stories. |
 {: .ws-td-nw-1}
