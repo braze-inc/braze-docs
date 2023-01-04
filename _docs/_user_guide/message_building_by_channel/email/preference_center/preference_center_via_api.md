@@ -25,10 +25,6 @@ The Braze endpoints used to create a preference center are currently in early ac
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Developer Console** > **API Settings** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert note %}
-If you are using our [updated navigation]({{site.baseurl}}/navigation/), **API Settings** is now **API Keys** and is located under **Settings** > **Workspace Setup and Testing** > **API Keys**.
-{% endalert %}
-
 ## Step 1: Create a preference center via API
 
 {% raw %}
