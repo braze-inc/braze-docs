@@ -55,7 +55,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | --- | --- |
 | Profile | Gender, age group, location, language, locale, time zone, and birthday. |
 | Sessions overview | How many sessions they had, when their first and last session was, and on which apps. |
-| Custom attributes | Which custom attributes are attributed to this user and their associated value. |
+| Custom attributes | Which custom attributes are attributed to this user and their associated value, including nested custom attributes. |
 | Recent devices | How many devices they logged in on, details on each device, and their associated advertising IDs (if any). |
 | Custom events | Which custom events this user has performed, how many times, and when they last performed each event. |
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
