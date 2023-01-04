@@ -15,6 +15,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <summary>✔️ Pull Request Checklist</summary>
 <br>
 
+- [ ] Check that you haven't removed any images (replacing an image with an updated one of the same name is fine), as this breaks the French site
 - [ ] Check that all links work.
 - [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
 - [ ] Tag @Timothy-Kim and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
