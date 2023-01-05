@@ -42,7 +42,7 @@ To create a new feature flag, click **Create Feature Flag**. Then, define your f
 #### Details
 Give your new feature flag a **Name** and **ID**. 
 * The **Name** field allows you to provide a human-readable title for this feature flag that will be used by marketers and administrators. 
-* The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. 
+* The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. This must be unique and cannot be modified once created.
 * The **Description** field is an optional field that allows you to provide additional context around this feature flag.
 
 
