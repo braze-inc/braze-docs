@@ -19,7 +19,7 @@ Segment Extensions are audience definitions which allow you to use nested event 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 {% alert important %}
-Out of the box, there is a soft limit of 10 active Segment Extensions per app group at a particular time. This can be increased by contacting your Braze customer success manager to discuss your use case.
+Out of the box, there is a soft limit of 25 active Segment Extensions per app group at a particular time. This can be increased by contacting your Braze customer success manager to discuss your use case.
 {% endalert %}
 
 ## Step 1: Navigate to Segment Extensions
