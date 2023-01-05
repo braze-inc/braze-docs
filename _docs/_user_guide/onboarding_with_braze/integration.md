@@ -9,19 +9,15 @@ description: "This reference article briefly covers the integration steps requir
 
 # Integration
 
-Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly you already know that!
-
-But what you probably don't know was that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
+Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly you already know that. But what you probably don't know was that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
 
 {% alert note %} Note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
 
 ## The technical side of the integration process
 
-You may find yourself thinking "My developers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say "Can you send me the API Key and API Endpoint?"
+You may find yourself thinking, "My developers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say "Can you send me the API key and API endpoint?"
 
-So what are they doing when they integrate Braze with your app or site?
-
-Glad you asked!
+So what are they doing when they integrate Braze with your app or site? Glad you asked!
 
 ### Step 1: They implement the Braze SDK
 
@@ -47,7 +43,10 @@ Be sure to tell your developers which channels you want to use to ensure that im
 |---|---|
 | In-app messages | Requires SDK implementation as well as these channel-specific steps. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
-| Email | This is an entirely different process. Check that out in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. |
+| Email | This is an entirely different process. Check out the [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section for more details on integration. |
+| Content Cards | To get started with [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), reach out to your Braze customer success manager. |
+| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup) section for more details on integration. |
+| Webhooks | Requires SDK implementation as well as channel-specific steps. | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -56,7 +55,7 @@ You can use Braze to create accessible messaging campaigns across each channel. 
 
 ### Step 3: They set up your data
 
-Braze isn't a one-trick pony. This isn't about just sending emails or sending push. This is about creating personalized customer journeys that are unique for every user/customer. The customer journeys are based on their actions within your app or site and you get to define what those are! Your developers' next task is to ensure that actions taken within your app or site are picked up by Braze.
+Braze isn't a one-trick pony. This isn't about just sending emails or sending push. This is about creating personalized customer journeys that are unique for every user and customer. The customer journeys are based on their actions within your app or site and you get to define what those are! Your developers' next task is to ensure that actions taken within your app or site are picked up by Braze.
 
 So, what do you need to do to get them this information?
 
