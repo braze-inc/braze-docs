@@ -76,7 +76,7 @@ There is no limit to the number of properties you can add, though a feature flag
 {% endalert %}
 
 #### Targeting
-To being the rollout of a feature flag, you must choose a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users.
+To begin the rollout of a feature flag, you must choose a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users.
 
 
 To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
