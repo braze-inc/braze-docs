@@ -135,10 +135,10 @@ class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 {% tabs %}
 {% tab Kotlin %} 
 **Supply a custom factory to return your custom wrapper**<br>
-In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `AppboyInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
+In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```kotlin
-class CustomInAppMessageViewWrapperFactory : AppboyInAppMessageViewWrapperFactory() {
+class CustomInAppMessageViewWrapperFactory : BrazeInAppMessageViewWrapperFactory() {
 
     override fun createInAppMessageViewWrapper(
         inAppMessageView: View?,
@@ -176,10 +176,10 @@ class CustomInAppMessageViewWrapperFactory : AppboyInAppMessageViewWrapperFactor
 {% endtab %}
 {% tab Java %}
 **Supply a custom factory to return your custom wrapper**<br>
-In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `AppboyInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
+In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `BrazeInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```java
-class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapperFactory {
+class CustomInAppMessageViewWrapperFactory extends BrazeInAppMessageViewWrapperFactory {
     @Override
     public IInAppMessageViewWrapper createInAppMessageViewWrapper(View inAppMessageView, 
         IInAppMessage inAppMessage, 
@@ -216,25 +216,25 @@ class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapper
 {% tabs %}
 {% tab Kotlin %}
 **Register your factory with Braze**<br>
-Once you've created your custom wrapper factory, register it with the Braze SDK via the `AppboyInAppMessageManager`:
+Once you've created your custom wrapper factory, register it with the Braze SDK via the `BrazeInAppMessageManager`:
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
 ```
 {% endtab %}
 {% tab Java %}
 **Register your factory with Braze**<br>
-Once you've created your custom wrapper factory, register it with the Braze SDK via the `AppboyInAppMessageManager`:
+Once you've created your custom wrapper factory, register it with the Braze SDK via the `BrazeInAppMessageManager`:
 
 ```java
-AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Custom modal in-app message
 
-An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The following example shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
+A `BrazeInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The following example shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
 
 {% tabs %}
 {% tab Kotlin %}
@@ -250,7 +250,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
       //...
       else -> {
           //Defer to default
-          AppboyInAppMessageManager
+          BrazeInAppMessageManager
               .getInstance()
               .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
       }
@@ -269,7 +269,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
         return getCustomPickerView(activity, inAppMessage);
     } else {
         //Defer to default
-        AppboyInAppMessageManager
+        BrazeInAppMessageManager
           .getInstance()
           .getDefaultInAppMessageViewFactory(inAppMessage)
           .createInAppMessageView(activity, inAppMessage);
@@ -332,7 +332,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 ```kotlin
     override fun onClick(v: View?) {
         val selectedTeam = spinner.selectedItem as String;
-        Appboy.getInstance(ctx).getCurrentUser<AppboyUser>()?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        Braze.getInstance(ctx).getCurrentUser<BrazeUser>()?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
         messageClickableView.performClick()
     }
 ```
@@ -345,7 +345,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
     @Override
     public void onClick(View v) {
         String selectedTeam = (String)spinner.selectedItem ;
-        Appboy.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        Braze.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
         messageClickableView.performClick()
     }
 ```
@@ -353,7 +353,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 {% endtabs %}
 
 ### Custom full in-app message
-Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined in the section for implementing a [customized modal in-app message](#custom-modal-in-app-message). In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
+Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined in the section for implementing a [customized modal in-app message](#custom-modal-in-app-message). In this instance, however, simply extend `BrazeInAppMessageFullView` and customize as needed. Remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `BrazeInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
 
 {% tabs %}
 {% tab Kotlin %}
@@ -371,7 +371,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
         }
         else -> {
             //Defer to default
-            AppboyInAppMessageManager
+            BrazeInAppMessageManager
                 .getInstance()
                 .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
         }
@@ -392,7 +392,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
         return getCustomImmersiveView(activity, inAppMessage); // new customization
     } else {
         //Defer to default
-        AppboyInAppMessageManager
+        BrazeInAppMessageManager
           .getInstance()
           .getDefaultInAppMessageViewFactory(inAppMessage)
           .createInAppMessageView(activity, inAppMessage);
@@ -464,7 +464,7 @@ Using the view subclass, after a user toggles one of the switches, pass the asso
 
 ```kotlin
 fun logClick(value:String, checked:Boolean){
-    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", BrazeProperties())
+    Braze.getInstance(ctx).logCustomEvent("SwitchChanged", BrazeProperties())
 }
 
 inner class OptionViewHolder(item: View): RecyclerView.ViewHolder(item), View.OnClickListener{
@@ -495,7 +495,7 @@ Using the view subclass, after a user toggles one of the switches, pass the asso
 
 ```java
 private void logClick(String value, boolean checked){
-    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", new BrazeProperties());
+    Braze.getInstance(ctx).logCustomEvent("SwitchChanged", new BrazeProperties());
 }
 
 private class OptionViewHolder extends RecyclerView.ViewHolder, implements View.OnClickListener{
