@@ -30,7 +30,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 {% sdk_min_versions android:9999 web:4.4.0 swift:9999 %}
 
 ## Implementation
-Create, edit, and archive feature flags by navigating to **Feature Flags** in the left sidebar of the Braze dashboard. This page displays a list of existing feature flags for this app group.
+Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this app group.
 
 ![A list of previously created feature flags on the Braze dashboard][1]
 
