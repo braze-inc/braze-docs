@@ -82,7 +82,7 @@ To begin the rollout of a feature flag, you must choose a particular [segment]({
 To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
 
 #### Rollout Traffic
-Feature flags always start as disabled to allow you to separate the timing of the feature's release and activation in your users' experience. 
+Feature flags always start as turned off to allow you to separate the timing of the feature's release and activation in your users' experience. 
 
 When you are ready to rollout your new feature, specify an audience and then use the **Rollout Traffic** slider to define the random percentage of your targeted user base to receive the new feature. Set the **Rollout Traffic** slider to set a percentage between 0% (no users) and 100% (the entire target audience). 
 
