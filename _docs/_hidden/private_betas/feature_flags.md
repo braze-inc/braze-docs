@@ -35,7 +35,7 @@ Create, edit, and archive feature flags from the **Feature Flags** page, located
 ![A list of previously created feature flags on the Braze dashboard][1]
 
 ### Create a new feature flag
-To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
+To create a new feature flag, click **Create Feature Flag**. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
 
 ![A blank feature flag form][2]
 
