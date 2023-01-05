@@ -309,7 +309,7 @@ Braze will ban or block users with over 5 million sessions ("dummy users") and n
 [9]: {% image_buster /assets/img/subscription_group_import.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
 [errors]:#common-errors
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
 [template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}
