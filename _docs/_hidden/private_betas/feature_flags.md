@@ -133,7 +133,7 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% endtabs %}
 
-The Braze SDK provides getter methods to pull your feature flag's enabled/disabled status and its properties into your app. Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
+The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 
 You can also get a list of all enabled feature flags:
 
