@@ -25,6 +25,6 @@ Create a class that implements [`IFeedClickActionListener`][37]. Implement the `
 
 ## Step 2: Instruct Braze to use your News Feed click listener
 
-Once your `IFeedClickActionListener` is created, call `AppboyFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `AppboyFeedManager` to use your custom `IFeedClickActionListener`.
+Once your `IFeedClickActionListener` is created, call `BrazeFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `BrazeFeedManager` to use your custom `IFeedClickActionListener`.
 
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
+[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java
