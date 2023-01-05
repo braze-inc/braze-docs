@@ -10,9 +10,7 @@ nav_title: "Documentation"
 description: "This is the Braze documentation site landing page. Here, you can find links to the user guide, developer guide, API guide, technology partners documentation, and help articles. You can also find quick links to helpful links and popular articles."
 
 doc_top_header: "Braze Documentation"
-doc_top_text: "Meet us at the intersection of art and science. Find us in the moment, or light years ahead.
-Upon arrival, expect lifecycle engagement at its best.
-At Braze, we aim to create strong bonds between you and your customers or users."
+doc_top_text: ""
 
 braze_learning: Technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
 

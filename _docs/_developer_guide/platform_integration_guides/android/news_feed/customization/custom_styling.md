@@ -76,7 +76,7 @@ The following is a description of the themeable Braze UI elements and their name
 
 Braze allows setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
-For example, to update the font on all titles for short news cards, override the `Appboy.Cards.ShortNews.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
+For example, to update the font on all titles for short news cards, override the `Braze.Cards.ShortNews.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 

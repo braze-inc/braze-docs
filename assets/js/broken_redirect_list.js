@@ -571,3 +571,6 @@ validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'
 validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/';
 validurls['/docs/api/endpoints/templates/content_blocks_templates/post_update_email_content_block'] = '/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/selections/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#advanced-settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/'] = '/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/';
+

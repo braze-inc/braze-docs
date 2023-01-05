@@ -100,7 +100,7 @@ public class MyApplication extends Application {
       }
 
       final String token = task.getResult();
-      Braze.getInstance(applicationContext).registerAppboyPushMessages(token);
+      Braze.getInstance(applicationContext).setRegisteredPushToken(token);
     });
   }
 }
@@ -119,7 +119,7 @@ class MyApplication: Application() {
         return@addOnCompleteListener
       }
       val token = task.result
-      Braze.getInstance(applicationContext).registerAppboyPushMessages(token)
+      Braze.getInstance(applicationContext).setRegisteredPushToken(token)
     }
   }
 }
@@ -454,7 +454,7 @@ public Notification createNotification(BrazeNotificationPayload brazeNotificatio
   String title = brazeNotificationPayload.getTitleText();
 
   // Example of retrieving a custom KVP ("my_key" -> "my_value")
-  String customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key");
+  String customKvp = brazeNotificationPayload.getBrazeExtras().getString("my_key");
 }
 ```
 
@@ -468,7 +468,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
   val title = brazeNotificationPayload.getTitleText()
 
   // Example of retrieving a custom KVP ("my_key" -> "my_value")
-  val customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key")
+  val customKvp = brazeNotificationPayload.getBrazeExtras().getString("my_key")
 }
 ```
 
@@ -478,7 +478,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 You can return `null` from your custom `createNotification()` method to not show the notification at all, use `BrazeNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
 {% alert note %}
-For documentation on Braze push data keys, refer to the [Android SDK](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-constants/index.html).
+For documentation on Braze push data keys, refer to the [Android SDK](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
 #### Step 2: Set your custom notification factory
@@ -562,5 +562,5 @@ setCustomBrazeNotificationFactory(null)
 [74]: hhttps://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
-[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.push/-braze-notification-payload/index.html
-[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-constants/index.html
+[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
+[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
