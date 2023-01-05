@@ -8,7 +8,7 @@ hidden: true
 
 > We're updating the Braze navigation to help you create and access your content more quickly and efficiently. To make this transition easier for you and your team, this guide covers what has changed and what you can expect next.
 
-The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable. Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Top-level categories are collapsed by default so you can get a better view of each section at a glance.
+The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable. Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Top-level categories are collapsed by default so you can get a better view of each section at a glance. Some pages have been renamed to better represent their contents.
 
 Early access participants can turn on the new navigation at any time by going to _____.
 
@@ -24,9 +24,9 @@ The new navigation will be released to all Braze customers in **April 2023**.
 
 ### App group rename
 
-As part of our navigation and information architecture changes, we have renamed "App Group" to "Workspace". We recognize that the language "App Group" doesn't recognize the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "App Group" is now "Workspace".
+As part of our navigation and information architecture changes, we have renamed "App Group" to "Workspace". We recognize that the language "App Group" doesn't reflect the way many users onboard, approach, and use the Braze platform. To better reflect the many use cases of Braze, "App Group" is now "Workspace".
 
-If you're using our updated navigation, this change will be reflected throughout the dashboard.
+If you're using our updated navigation, this change will appear throughout the platform.
 
 ### Global header
 
@@ -39,7 +39,7 @@ If you're using our updated navigation, this change will be reflected throughout
 2. **Page name** - The name of the page you are currently on.
 3. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
 4. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
-5. **Language selector** - Select the language of your dashboard.
+5. **Language selector** - Select the language you want to use for Braze.
 6. **Notifications** - Get updates about what's new in Braze.
 7. **Your profile** - View your profile, company settings, billing, company users, or sign out.
 8. **Administrator icon** - Appears next to your profile if you are an administrator for your company.
@@ -53,7 +53,7 @@ If you're using our updated navigation, this change will be reflected throughout
 2. **Page name** - The name of the page you are currently on.
 3. **Resources** - Access links to Braze Learning, documentation, Braze Bonfire community, our blog, case studies, and the product roadmap.
 4. **Get Help** - Check our system status, visit help articles, or get help from support.
-5. **Language selector** - Select the language of your dashboard.
+5. **Language selector** - Select the language you want to use for Braze.
 6. **Your profile** - View your profile, company settings, subscriptions and usage, company users, or sign out.
 7. **Administrator icon** - Appears next to your profile if you are an administrator for your company.
 
@@ -105,7 +105,7 @@ If you're using our updated navigation, this change will be reflected throughout
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_old.png %}"></td>
-    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboard, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
+    <td><b>1. App Group selector</b> - See what app group you're currently in or switch between app groups.<br><br><b>2. Data</b> - Contains various reports, dashboards, and settings related to user data in Braze.<br><br><b>3. Engagement</b> - Contains pages related to messaging, such as your segments campaigns, Canvases, message templates, and more.<br><br><b>4. Users</b> - Search or import users, or manage your subscription groups.<br><br><b>5. Integrations</b> - Contains integrations including our technology partners, Currents, and promotion codes.<br><br><b>6. Settings</b> - Contains app group settings, various data settings, logs, and more.</td>
   </tr>
 </tbody>
 </table>
