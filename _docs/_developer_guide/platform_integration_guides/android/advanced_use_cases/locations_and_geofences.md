@@ -48,7 +48,7 @@ The background location access permission was added in Android 10 and is require
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:
 
 ```xml
-<receiver android:name="com.appboy.BrazeBootReceiver">
+<receiver android:name="com.braze.BrazeBootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED" />
   </intent-filter>
