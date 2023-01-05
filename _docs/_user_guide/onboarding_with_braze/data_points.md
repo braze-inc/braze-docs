@@ -85,8 +85,10 @@ table td {
 | Amplitude cohort assignment | All assignments | |
 | Mixpanel cohort assignment | All assignments | |
 | Hightouch cohort assignment | All assignments | |
+| Appsflyer cohort assignment | All assignments | |
 | Most recent location | All most recent locations | Entering or exiting geofences doesn’t consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
 | Twitter | Username | |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Non-billable data points (out of the box)
 
