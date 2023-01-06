@@ -251,9 +251,35 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 
 To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
 
+If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
+
 {% tabs %}
 {% tab Javascript %}
 ```javascript
+// feature flag instance
+const featureFlag = braze.getFeatureFlag("expanded_user_profile");
+// string properties
+const stringProperty = featureFlag.getStringProperty("color");
+// boolean properties
+const booleanProperty = featureFlag.getBooleanProperty("expanded");
+// number properties
+const numberProperty = featureFlag.getNumberProperty("height");
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+```
+{% endtab %}
+{% tab Java %}
+```java
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+```
+{% endtab %}
+{% endtabs %}
+
 
 [1]: {% image_buster /assets/img_archive/Feature-Flag-1.png %} 
 [2]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
