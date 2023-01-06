@@ -247,6 +247,13 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% endtab %}
 {% endtabs %}
 
+### Accessing Properties
+
+To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
+
+{% tabs %}
+{% tab Javascript %}
+```javascript
 
 [1]: {% image_buster /assets/img_archive/Feature-Flag-1.png %} 
 [2]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
