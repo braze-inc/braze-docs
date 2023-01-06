@@ -299,5 +299,5 @@ val numberProperty = featureFlag.getNumberProperty("height")
 
 [1]: {% image_buster /assets/img_archive/Feature-Flag-1.png %} 
 [2]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
-[3]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
-[4]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
+[3]: {% image_buster /assets/img_archive/Feature-Flag-3.png %}
+[4]: {% image_buster /assets/img_archive/Feature-Flag-4.png %}
