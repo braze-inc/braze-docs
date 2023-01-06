@@ -12,8 +12,6 @@ tool: Segments
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users.
-
 Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 ## Step 1: Navigate to the segments section
@@ -72,6 +70,18 @@ Once you've clicked **Save**, you're ready to start sending messages to your use
 
 Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
+### Total reachable users calculation
+
+Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel. Why is this?
+
+![A table displaying 9,100 total reachable users, 8,899 reachable users by email, 6,720 reachable users by web push, 4,521 reachable users by Android push, and 5,122 reachable users by iOS push.][4]
+
+For a user to be listed as reachable through a certain channel, the user must have both:
+* A valid email address/push token associated with their profile; and
+* Opted in or subscribed to your app.
+
+A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable via those communication channels.
+
 ## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
@@ -87,4 +97,5 @@ You can unarchive the segment by navigating to it within Segments, then selectin
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
+[4]: {% image_buster /assets/img_archive/reachable_users.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
