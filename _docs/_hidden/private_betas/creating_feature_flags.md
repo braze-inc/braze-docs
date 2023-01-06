@@ -272,10 +272,26 @@ const numberProperty = featureFlag.getNumberProperty("height");
 {% endtab %}
 {% tab Java %}
 ```java
+// feature flag instance
+FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
+// string properties
+String stringProperty = featureFlag.getStringProperty("color");
+// boolean properties
+Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
+// number properties
+Number numberProperty = featureFlag.getNumberProperty("height");
 ```
 {% endtab %}
 {% tab Kotlin %}
 ```kotlin
+// feature flag instance
+val featureFlag = braze.getFeatureFlag("expanded_user_profile")
+// string properties
+val stringProperty = featureFlag.getStringProperty("color")
+// boolean properties
+val booleanProperty = featureFlag.getBooleanProperty("expanded")
+// number properties
+val numberProperty = featureFlag.getNumberProperty("height")
 ```
 {% endtab %}
 {% endtabs %}
