@@ -36,7 +36,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "name": "string",
   "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified
 }
 ```
 
@@ -48,6 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
+|`state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
