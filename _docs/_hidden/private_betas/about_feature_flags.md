@@ -49,14 +49,14 @@ For example, you can change homepage links or banners on the fly using a feature
 
 ### Message coordination
 {% alert important %} 
-This functionality is not supported in beta.
+This functionality is not yet supported in beta.
 {% endalert %}
 
 Use feature flags to coordinate feature rollout and messaging simultaneously. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a Campaign or Canvas that only targets that segment. 
 
 ### Feature experimentation
 {% alert important %} 
-This functionality is not supported in beta.
+This functionality is not yet supported in beta.
 {% endalert %}
 
 Use feature flags to experiment and confirm your hypotheses around your new feature. By splitting traffic into two or more groups, you can compare the impact of a feature flag across groups, and determine the best course of action based on the results.
