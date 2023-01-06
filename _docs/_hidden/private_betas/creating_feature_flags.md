@@ -171,7 +171,7 @@ featureFlags.forEach { feature ->
 
 
 
-### Accessing Properties
+### Accessing Properties {#properties}
 
 To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
 
@@ -220,7 +220,7 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% endtab %}
 {% endtabs %}
 
-### Refresh feature flags
+### Refresh feature flags {#refreshing}
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
 {% alert tip %}
@@ -255,7 +255,7 @@ braze.refreshFeatureFlags()
 {% endtabs %}
 
 
-### Listen for changes
+### Listen for changes {#updates}
 You can configure the Braze SDK to listen and update your app when feature flags have been refreshed.
 
 This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
