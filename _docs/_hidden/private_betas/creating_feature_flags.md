@@ -169,6 +169,57 @@ featureFlags.forEach { feature ->
 {% endtab %}
 {% endtabs %}
 
+
+
+### Accessing Properties
+
+To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
+
+If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
+
+{% tabs %}
+{% tab Javascript %}
+```javascript
+// feature flag instance
+const featureFlag = braze.getFeatureFlag("expanded_user_profile");
+// string properties
+const stringProperty = featureFlag.getStringProperty("color");
+// boolean properties
+const booleanProperty = featureFlag.getBooleanProperty("expanded");
+// number properties
+const numberProperty = featureFlag.getNumberProperty("height");
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+```
+{% endtab %}
+{% tab Java %}
+```java
+// feature flag instance
+FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
+// string properties
+String stringProperty = featureFlag.getStringProperty("color");
+// boolean properties
+Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
+// number properties
+Number numberProperty = featureFlag.getNumberProperty("height");
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+// feature flag instance
+val featureFlag = braze.getFeatureFlag("expanded_user_profile")
+// string properties
+val stringProperty = featureFlag.getStringProperty("color")
+// boolean properties
+val booleanProperty = featureFlag.getBooleanProperty("expanded")
+// number properties
+val numberProperty = featureFlag.getNumberProperty("height")
+```
+{% endtab %}
+{% endtabs %}
+
 ### Refresh feature flags
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
@@ -243,55 +294,6 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
     Log.i(TAG, "Feature: ${feature.id}")
   }
 }
-```
-{% endtab %}
-{% endtabs %}
-
-### Accessing Properties
-
-To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
-
-If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
-
-{% tabs %}
-{% tab Javascript %}
-```javascript
-// feature flag instance
-const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
-const stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
-const booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
-const numberProperty = featureFlag.getNumberProperty("height");
-```
-{% endtab %}
-{% tab Swift %}
-```swift
-```
-{% endtab %}
-{% tab Java %}
-```java
-// feature flag instance
-FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// string properties
-String stringProperty = featureFlag.getStringProperty("color");
-// boolean properties
-Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
-// number properties
-Number numberProperty = featureFlag.getNumberProperty("height");
-```
-{% endtab %}
-{% tab Kotlin %}
-```kotlin
-// feature flag instance
-val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-// string properties
-val stringProperty = featureFlag.getStringProperty("color")
-// boolean properties
-val booleanProperty = featureFlag.getBooleanProperty("expanded")
-// number properties
-val numberProperty = featureFlag.getNumberProperty("height")
 ```
 {% endtab %}
 {% endtabs %}
