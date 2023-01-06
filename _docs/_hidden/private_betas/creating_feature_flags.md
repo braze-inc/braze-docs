@@ -108,7 +108,12 @@ if (feature.enabled) {
 {% endtab %}
 {% tab Swift %}
 ```swift
-todo copy example from web
+let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
+if featureFlag.enabled {
+  print("expanded_user_profile is enabled")
+} else {
+  print("expanded_user_profile is not enabled")
+}
 ```
 {% endtab %}
 {% tab Java %}
@@ -148,7 +153,10 @@ for(const feature of features) {
 {% endtab %}
 {% tab Swift %}
 ```swift
-todo copy example from web
+let features = braze.featureFlags.featureFlags
+for let feature in features {
+  print("Feature: \(feature.id)", feature.enabled)
+}
 ```
 {% endtab %}
 {% tab Java %}
@@ -192,6 +200,14 @@ const numberProperty = featureFlag.getNumberProperty("height");
 {% endtab %}
 {% tab Swift %}
 ```swift
+// feature flag instance
+let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
+// string properties
+let stringProperty = featureFlag.stringProperty(key: "color")
+// boolean properties
+let booleanProperty = featureFlag.boolProperty(key: "expanded")
+// number properties
+let numberProperty = featureFlag.numberProperty(key: "height")
 ```
 {% endtab %}
 {% tab Java %}
@@ -239,7 +255,14 @@ braze.refreshFeatureFlags(() => {
 {% endtab %}
 {% tab Swift %}
 ```swift
-todo copy example from web
+braze.featureFlags.requestRefresh { result in
+  switch result {
+  case .success(let features):
+    print("Feature flags have been refreshed:", features)
+  case .failure(let error):
+    print("Failed to refresh feature flags:", error)
+  }
+}
 ```
 {% endtab %}
 {% tab Java %}
@@ -273,7 +296,13 @@ braze.removeSubscription(subscriptionId);
 {% endtab %}
 {% tab Swift %}
 ```swift
-todo copy example from web
+// Create the feature flags subscription
+// - You must keep a strong reference to the subscription to keep it active
+let subscription = braze.featureFlags.subscribeToUpdates { features in
+  print("Feature flags were updated:", features)
+}
+// Cancel the subscription
+subscription.cancel()
 ```
 {% endtab %}
 {% tab Java %}
