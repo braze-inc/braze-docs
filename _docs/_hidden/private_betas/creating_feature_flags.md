@@ -182,7 +182,7 @@ Refreshing happens automatically upon session start. Manually refreshing may be 
 braze.refreshFeatureFlags(() => {
   console.log(`Feature flags have been refreshed.`);
 }, () => {
-  console.log(`Failed to refresh feature flags.);
+  console.log(`Failed to refresh feature flags.`);
 });
 ```
 {% endtab %}
