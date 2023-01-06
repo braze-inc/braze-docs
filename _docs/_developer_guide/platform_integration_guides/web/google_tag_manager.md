@@ -29,7 +29,7 @@ Search for Braze in the community template gallery, and select the **Braze Initi
 
 ### Step 2. Configure settings
 
-Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page.
+Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page. Enter the Web SDK's most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].
 
 ### Step 3. Choose initialization options
 
