@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center/
   fa_icon: fa-solid fa-list-check
 - name: Preference Center via API
-  link: docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
   fa_icon: fa-solid fa-gear
 
 ---
