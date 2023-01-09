@@ -60,6 +60,17 @@
 {%- endcss_asset_tag -%}
 {%- endcase -%}
 
+
+
+<script type="text/javascript">
+  const page_collection = '{{ page.collection }}';
+  const site_language = '{{ site.language }}';
+  const site_i18n = {};
+  {% for i18n in site.data.i18n[site.language] %}
+    site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
+  {%- endfor -%}
+</script>
+
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
 
@@ -80,12 +91,6 @@
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
 
 <script type="text/javascript">
-  const page_collection = '{{ page.collection }}';
-  const site_language = '{{ site.language }}';
-  const site_i18n = {};
-  {% for i18n in site.data.i18n[site.language] %}
-    site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
-  {%- endfor -%}
 
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
   const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
