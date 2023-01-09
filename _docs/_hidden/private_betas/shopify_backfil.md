@@ -40,7 +40,7 @@ Next, the setup wizard will pop up, and you can optionally enable the backfill o
 - Braze Purchase Event
 - Customer Data
 
-To see what specific customer data is being backfilled, visit [Supported Shopify Customer Data](https://docs.google.com/document/d/1TYubX19ypA21DTClKytUBYqzRLHWg6y5PQUC--wiHNc/edit#heading=h.gi1xg2ysvuaq). Once you hit **Next**, the backfill will activate and start syncing over past data.
+To see what specific customer data is being backfilled, you can visit the [Supported Shopify customer aata](#supported-shopify-customer-data) section. Once you hit **Next**, the backfill will activate and start syncing over past data.
 
 ![][1]{: style="max-width:75%;"}
 
