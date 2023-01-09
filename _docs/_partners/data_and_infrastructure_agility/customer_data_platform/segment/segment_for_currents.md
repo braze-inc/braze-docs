@@ -98,6 +98,7 @@ You can export the following data from Braze to Segment:
 | Application Uninstalled        | User uninstalled the App. |
 | Experiment Conversions | User converts for a Canvas experiment step. |
 | Experiment Split Entries | User enters a Canvas experiment step path. |
+| Canvas Exit | User exited a Canvas by performing an event or matching an audience. | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}

@@ -108,6 +108,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 | Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
 | Experiment Conversions | Unbound Feed | User converts for a Canvas experiment step. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
 | Experiment Split Entries | Unbound Feed | User enters a Canvas experiment step path. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
+| Canvas Exit | Unbound Feed | User exited a Canvas by performing an event or matching an audience | `time`, `canvas_step_id`, `canvas_variation_id`, `canvas_step_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 &#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number (`to_phone_number`) in mParticle.
