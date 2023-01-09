@@ -9,6 +9,7 @@ platform:
   - iOS
   - Android
   - Web
+  
 ---
 
 # About feature flags
@@ -65,4 +66,4 @@ With Canvas, you can track the impact of feature rollout on conversations. And, 
 
 For example, imagine that your ecommerce team has a new checkout page design that they believe will improve purchase conversion rates. When you release this feature, you can display the new page to 50% of your users for one month. If it performs better than the old design, you can increase the rollout traffic to 100%. If it performs poorly, you can turn it off completely and revisit the designs. In either case, you have avoided a poor experience for 50% of your users.
 
-[1]: {% image_buster /assets/img_archive/feature-flag-rollout.gif %} 
+[1]: {% image_buster /assets/img_archive/feature-flag-rollout.GIF %} 
