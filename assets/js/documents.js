@@ -1,4 +1,5 @@
 var query_str = window.location.search;
+var page_language = site_language;
 
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();//Timestamp
@@ -450,27 +451,72 @@ $(document).ready(function() {
 
   $('.lang-select').on('change', function(e){
     let lang = this.value;
-    let wovn_lang = WOVN.io.getCurrentLang();
-    let wovn_lang_code = wovn_lang['code'] || 'en';
-    $('.lang-select').each(function(ind) {
-      $(this).val(lang).prop('selected', true);
-    });
-    if (wovn_lang != wovn_lang_code) {
-      WOVN.io.changeLang(lang);
+    let path = window.location.pathname;
+
+    switch (page_language) {
+      // if current page is english, process jp on the same page, or redirect to different language
+      case 'en':
+        switch(lang) {
+          case 'ja':
+          case 'en':
+            let wovn_lang = WOVN.io.getCurrentLang();
+            let wovn_lang_code = wovn_lang['code'] || 'en';
+            $('.lang-select').each(function(ind) {
+              $(this).val(lang).prop('selected', true);
+            });
+            if (wovn_lang != wovn_lang_code) {
+              WOVN.io.changeLang(lang);
+            }
+          break;
+          default:
+            window.location.href = path.replace(/\/docs\//,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+        }
+        break;
+      // if curent page is not english, then check if it needs to be sent to japanese site otherwise just english
+      default:
+        let lang_re = new RegExp(`\/docs\/${page_language}\/`);
+        switch(lang) {
+          case 'ja':
+            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str + '&wovn=ja' ,{'wovn': 'ja'});
+          break;
+          case 'en':
+            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+          default:
+            window.location.href = path.replace(lang_re,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+        }
+
+      break;
     }
-    query_str = replaceParams(query_str,{'wovn': lang})
 
   });
 
   window.addEventListener('wovnApiReady', function(evt){
-    let wovn_lang = WOVN.io.getCurrentLang();
-    let wovn_lang_code = wovn_lang['code'] || 'en';
-    $('.lang-select').each(function(ind) {
-      let $this = $(this);
-      let current_lang = $this.val();
-      if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
-        $this.val(wovn_lang_code).prop('selected', true);
-      }
-    });
+    // only run wovn if current language is english
+    if (page_language == 'en') {
+      let wovn_lang = WOVN.io.getCurrentLang();
+      let wovn_lang_code = wovn_lang['code'] || 'en';
+      $('.lang-select').each(function(ind) {
+        let $this = $(this);
+        let current_lang = $this.val();
+        if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
+          $this.val(wovn_lang_code).prop('selected', true);
+        }
+      });
+    }
   });
+
+  // For non us/jp language update language dropdown
+  switch (page_language) {
+    case 'en':
+    case 'ja':
+      break;
+    default:
+      $('.lang-select').each(function(ind) {
+        $(this).val(page_language).prop('selected', true);
+      });
+    break;
+  }
 });
