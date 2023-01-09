@@ -62,4 +62,4 @@ Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate
 
 ### Logo
 
-You can edit the logo of your preference center. Click the gear, then click **Edit** from the menu that appears.
+To edit the logo in your email preference center, select <i class="fas fa-cog"></i> gear icon and click **Edit**.
