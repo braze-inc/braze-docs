@@ -61,7 +61,7 @@ You will receive a dashboard notification and an email once the Shopify backfill
 
 ### Shopify custom attributes
 
-| Attribute name | Descriptiopn |
+| Attribute name | Description |
 | --- | --- |
 | `shopify_order_count` | This custom attribute corresponds to the total orders this customer has completed in Shopify. This is only available for users that were backfilled as part of this process. |
 | `shopify_total_spent` | This custom attribute corresponds to the total amount spent by this customer in Shopify. This is only available for users that were backfilled as part of this process. |
