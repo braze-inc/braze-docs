@@ -301,6 +301,24 @@
             }
           },
         }),
+        instantsearch.widgets.refinementList({
+          container: "#search_type",
+          attribute: "type",
+          sortBy: ['name:asc'],
+          templates: {
+            header: "Section"
+          },
+          transformItems(items) {
+            var updatedItem = items.find(item => item.value === 'braze_learning');
+            if (!updatedItem) {
+              items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'braze_learning', value: 'braze_learning', highlighted: 'Braze Learning'})
+            }
+            else {
+              items.find(item => item.value === 'braze_learning')['count'] = lab_hit_cache['counts'];
+            }
+            return adjustlabel(items);
+          }
+        }),
       ]),
       instantsearch.widgets.searchBox({
         container: searchbox,
@@ -361,14 +379,14 @@
           header: "Section"
         },
         transformItems(items) {
-          var updatedItem = items.find(item => item.value === 'lab');
+          var updatedItem = items.find(item => item.value === 'braze_learning');
           if (!updatedItem) {
-            items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'lab', value: 'lab', highlighted: 'Braze Learning'})
+            items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'braze_learning', value: 'braze_learning', highlighted: 'Braze Learning'})
           }
           else {
-            items.find(item => item.value === 'lab')['count'] = lab_hit_cache['counts'];
+            items.find(item => item.value === 'braze_learning')['count'] = lab_hit_cache['counts'];
           }
-          return adjustlabel(items)
+          return adjustlabel(items);
         }
       }),
       instantsearch.widgets.pagination({
