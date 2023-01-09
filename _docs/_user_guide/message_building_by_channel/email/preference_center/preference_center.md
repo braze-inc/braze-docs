@@ -9,9 +9,9 @@ channel:
 
 # Email preference center
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
 
-To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the preference center in your emails, use the following Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe URLs](#custom-footer).
 
 {% raw %}
 ```
@@ -19,15 +19,17 @@ To place a link to the preference center in your emails, use the following prefe
 ```
 {% endraw %}
 
+This will show the basic preference center layout that lists all of the subscription groups automatically.
+
 {% alert note %}
-The Preference Center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
+The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 {% endalert %}
 
-The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center with the [Preference Center Endpoints]({{site.baseurl}}/api/endpoints/preference_center/) and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
+The preference center is intended to be used within the email channel. The preference center links are dynamic based on each user and cannot be hosted externally.
 
 ## Customize your preference center
 
-You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28]. At this time, you can only have one preference center, which will list all of your current subscription groups.
+With the [Preference Center endpoints]({{site.baseurl}}/api/endpoints/preference_center/), you can use HTML to update a preference center, which is hosted by Braze. You can create multiple preference centers. Braze manages the subscription state updates from the preference center, which keeps the preference center in sync. However, you can also create and host your own preference center using the [subscription groups APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) with the following options.
 
 **Option 1: Link with string query parameters**
 
@@ -37,7 +39,7 @@ For this option, each email category will require its own specific unsubscribe l
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
-It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an md5 hash value, for example:
+It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an MD5 hash value, for example:
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}
@@ -61,5 +63,3 @@ Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate
 ### Logo
 
 You can edit the logo of your preference center. Click the gear, then click **Edit** from the menu that appears.
-
-[25]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
