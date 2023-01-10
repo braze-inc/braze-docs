@@ -1,4 +1,3 @@
-var query_str = window.location.search;
 var page_language = site_language;
 
 function generateUUID() { // Public Domain/MIT
@@ -113,17 +112,27 @@ String.prototype.sanitize = function() {
   return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
 };
 
-let replaceParams = function(qs = '', pr = {}) {
+function replaceParams(qs = '', pr = {}) {
 	var queryString = qs.replace(/^\?/,'').split('&');
-	var params = [];
+	var params = {};
 	queryString.forEach((e) => {
 		let param = e.split('=');
 		if (param.length >1){
-		    params.push(`${param[0]}=${pr[param[0]] || param[1]}`);
+      // Ignore the parameter if it's blank
+      if (pr[param[0]] !== '') {
+        params[param[0]] = (pr[param[0]] || param[1]);
+      }
 		}
 	});
-	return `?${params.join('&')}`;
-}
+
+  var queryStringParam = [];
+  for (const k in params) {
+    if (params.hasOwnProperty(k)) {
+      queryStringParam.push(`${k}=${params[k]}`);
+    }
+  }
+	return `?${queryStringParam.join('&')}`;
+};
 
 $(document).ready(function() {
   $("#braze_header").click((e) => {
@@ -224,6 +233,7 @@ $(document).ready(function() {
   var y_last = 0;
   //var nav_bottom_height = $('#nav_bottom').height();
   var scrollHandler = function() {
+    var query_str = window.location.search;
     var y_cord = $(this).scrollTop();
     var bzheader_height = $('#braze_header').height();
     // var scroll_dir = 'down';
@@ -452,6 +462,7 @@ $(document).ready(function() {
   $('.lang-select').on('change', function(e){
     let lang = this.value;
     let path = window.location.pathname;
+    let query_str = window.location.search;
 
     switch (page_language) {
       // if current page is english, process jp on the same page, or redirect to different language
@@ -469,13 +480,13 @@ $(document).ready(function() {
             }
           break;
           default:
-            window.location.href = path.replace(/\/docs\//,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
+            window.location.href = path.replace(/\/docs\/?/,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
           break;
         }
         break;
       // if curent page is not english, then check if it needs to be sent to japanese site otherwise just english
       default:
-        let lang_re = new RegExp(`\/docs\/${page_language}\/`);
+        let lang_re = new RegExp(`\/docs\/${page_language}\/?`);
         switch(lang) {
           case 'ja':
             window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str + '&wovn=ja' ,{'wovn': 'ja'});
