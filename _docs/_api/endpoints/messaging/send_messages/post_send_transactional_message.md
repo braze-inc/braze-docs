@@ -84,7 +84,7 @@ curl -X POST \
 
 The send transactional email endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual email sent to a single user.
 
-### Example response
+### Example responses
 
 ```json
 {
@@ -94,7 +94,23 @@ The send transactional email endpoint will respond with the message's `dispatch_
 }
 ```
 
-### Transactional HTTP event postback
+The endpoint may also return an error code and a human-readable message in some cases, most of which are validation errors. Here are some common errors you may get when making invalid requests.
+
+| Error Code | Example Error Message | Cause |
+| ---------- | ----------------------| ----- |
+| 400 | The campaign is not a transactional campaign. Only transactional campaigns may use this endpoint | The campaign ID provided is not for a transactional campaign. |
+| 400 | The external reference has been queued.  Please retry to obtain send_id. | The external_send_id has been created recently, try a new external_send_id if you are intending to send a new message. |
+| 400 | Campaign does not exist | The campaign ID provided does not correspond to an existing campaign. |
+| 400 | The campaign is archived. Unarchive the campaign to ensure trigger requests will take effect. | The campaign ID provided corresponds to an archived campaign. |
+| 400 | The campaign is paused. Resume the campaign to ensure trigger requests will take effect. | The campaign ID provided corresponds to a paused campaign. |
+| 400 | campaign_id must be a string of the campaign api identifier | The campaign ID provided is not a valid format. |
+| 401 | Error authenticating credentials | The API key provided is invalid | 
+| 403 | Invalid whitelisted IPs | The IP address sending the request is not on the IP whitelist (if it is being utilized) | 
+| 403 | You do not have permission to access this resource | The API key used does not have permission to take this action |
+
+Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently -- if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please reach out if you need more information about this functionality.
+
+ ### Transactional HTTP event postback
 
 All transactional emails are complemented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
