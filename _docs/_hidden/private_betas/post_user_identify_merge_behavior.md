@@ -53,9 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 #### Merge_behavior field {#merge}
 
-Setting the `merge_behavior` field to `merge` sets the endpoint to merge:
-
-Any of the following fields found **exclusively** on the anonymous user to the identified user:
+Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of the following fields found **exclusively** on the anonymous user to the identified user. 
 - First name
 - Last name
 - Email
@@ -66,6 +64,9 @@ Any of the following fields found **exclusively** on the anonymous user to the i
 - Home city
 - Country
 - Language
+- Session count (the sum of sessiosn from both profiles)
+- Date of first session (Braze will pick the earlier date of the two dates)
+- Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
 - Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
@@ -74,10 +75,7 @@ Any of the following fields found on the anonymous user to the identified user:
 - Custom event and purchase event count and first date and last date timestamps 
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-{% alert warning %}
-The following attributes are not yet supported:
-- Session data 
-{% endalert %}
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. 
 
 Setting the field to `none` will not merge any user data to the identified user profile.
 
