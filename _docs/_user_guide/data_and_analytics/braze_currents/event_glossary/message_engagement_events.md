@@ -104,7 +104,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
 }
 ```
 {% endapi %}
-
+{% api %}
 ## Experiment split entry events
 
 {% apitags %}
