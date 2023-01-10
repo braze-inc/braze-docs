@@ -146,10 +146,6 @@ This example shows how you can create a user and set their subscription group wi
 
 Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
-{% alert important %}
-Using endpoint to create a new user and update their subscription groups is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \

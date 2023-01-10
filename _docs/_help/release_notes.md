@@ -50,6 +50,46 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## January 10, 2023 release
+
+### User Update component for Canvas Flow
+
+The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there’s no need to include sensitive information like API keys. 
+
+### Setting subscription groups via API
+
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
+
+### Conversions dashboard early access
+
+The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/) allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. You can specifically track these attribution methods:
+
+- **Open conversions:** Conversions that occurred after a user opened the message
+- **Click conversions:** Conversions that occurred after a user clicked the message
+- **Received conversions:** Conversions that occurred after a user receved the message
+- **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
+
+This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+
+### Canvas exit events for Braze Currents
+
+You can now track when your users exit a Canvas by either performing an event or by matching an audience. Check out the [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) section in the Currents Event Glossary for more information.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK 4.5.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [AppboyKit iOS SDK 4.5.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.5.2)
+- [Swift SDK 5.8.0-5.8.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#580)
+  - Renames the `BrazeLocation` class to `BrazeLocationProvider` to avoid shadowing the module of the same name.
+- [Flutter SDK 3.0.1](https://pub.dev/packages/braze_plugin/changelog)
+- [Android SDK 24.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+  - Location and geofence functionality has moved to a new module called `com.braze:android-sdk-location`.
+  - Appboy classes and files have been wholesale moved to Braze.
+  - Changed the default behavior of `DefaultContentCardsUpdateHandler` to use the creation time instead of the last update time when sorting Content Cards.
+  - Removed BrazeUser.setFacebookData() and BrazeUser.setTwitterData().
+
 ## December 13, 2022 release
 
 ### News Feed is deprecated
@@ -386,34 +426,6 @@ The following SDK updates have been released. Breaking updates are listed below;
   - Removed `Appboy.registerAppboyPushMessages()` / `Appboy.getAppboyPushMessageRegistrationId()`. Replaced with `getRegisteredPushToken()` / `setRegisteredPushToken()`.
   - Replaced `IAppboyNotificationFactory` with `IBrazeNotificationFactory`.
   - Removed `com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener`. Use `com.braze.ui.inappmessage.listeners.IHtmlInAppMessageActionListener` instead.
-
-## June 28, 2022 release
-
-### Delivery validation for Canvas Message Steps
-
-You can turn on delivery validation in your Canvas [Message Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) to provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated.
-
-### Android 13 SDK upgrade guide
-
-As of June 8, 2022 Android 13 has reached its [Platform Stability Milestone](https://developer.android.com/about/versions/13/overview#platform_stability). This means all changes have been finalized, and app users will soon be able to upgrade their devices. To learn more about relevant changes introduced in Android 13 and the required upgrade steps for your Braze Android SDK integration, refer to our [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/).
-
-### iOS 16 SDK upgrade guide
-
-As of iOS 16 Beta 2 (June 22, 2022), there were no functional changes in iOS 16 that affected your Braze SDK integration. This may change as Apple releases new beta versions of iOS 16, so we recommend periodically checking our [iOS 16 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_16/), which describes relevant changes introduced in iOS 16.
-
-### Know before you send guide for channels
-
-Launch your campaigns and Canvases with confidence! After visiting our pre-launch guide, refer to [Know before you send: channels]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/) for a final list of checks or “gotchas” for Content Cards, email, in-app messages, push, and SMS.
-
-### How campaign and Canvas attribute names and IDs differ across sources
-
-Campaign, Canvas, and Canvas Step names and IDs are all available in Liquid, our REST API, and Currents. These attributes map to the same value across all three sources, but may be named differently. This [new help article]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/) will help you draw connections between the three.
-
-### Braze Learning
-
-[Braze Learning](https://learning.braze.com/), previously Learning at Braze (LAB), offers courses for marketers, administrators, and developers on key concepts and fundamentals in Braze. Keep an eye out for the Braze Learning logo in select articles, and click the link to learn more about that topic.
-
-![Braze learning logo in the custom attributes article, which takes you to the Braze Learning course for custom attributes]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
 
 [support]: {{site.baseurl}}/support_contact/
 
