@@ -126,7 +126,7 @@ table td {
 
 #### CSV
 
-Custom attributes uploaded via CSV count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
+Custom attributes uploaded via CSV count towards your data points, however CSV imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
 
 #### Arrays
 
