@@ -9,7 +9,7 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 # Swift Package Manager integration
 
-Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you.
+Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, ensure that your environment is supported by Braze (see: [Version Information][2])
 
 ## Adding the dependency to your project
 
@@ -17,11 +17,11 @@ Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majori
 
 Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button below the packages list.
 
-![][2]
+![][3]
 
 Enter the URL of our iOS Swift SDK repository (`https://github.com/braze-inc/braze-swift-sdk`) in the text field. Under the `Dependency Rule` section, select the SDK version. Finally, click **Add Package**. 
 
-![][3]
+![][4]
 
 ### Select packages
 
@@ -42,13 +42,14 @@ Unlike the legacy AppboyKit iOS SDK, the Braze Swift SDK separates features into
 
  Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum. 
 
-![][4]
+![][5]
 
 ## Next steps
 
 Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
 
 [1]: https://swift.org/package-manager/
-[2]: {% image_buster /assets/img/swift/spm/swiftpackages.png %}
-[3]: {% image_buster /assets/img/swift/spm/importsdk_example.png %}
-[4]: {% image_buster /assets/img/swift/spm/add_package.png %}
+[2]: https://github.com/braze-inc/braze-swift-sdk#version-information
+[3]: {% image_buster /assets/img/swift/spm/swiftpackages.png %}
+[4]: {% image_buster /assets/img/swift/spm/importsdk_example.png %}
+[5]: {% image_buster /assets/img/swift/spm/add_package.png %}

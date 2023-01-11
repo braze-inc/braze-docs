@@ -14,6 +14,37 @@ Before following these steps, make sure you have integrated the SDK using either
 ## Update your app delegate
 
 {% tabs %}
+{% tab swift %}
+
+Add the following line of code to your `AppDelegate.swift` file to import the features included in the Braze Swift SDK:
+
+```swift
+import BrazeKit
+```
+
+
+Next, add a static property to your `AppDelegate` class to keep a strong reference to the Braze instance throughout your application's lifetime:
+
+```swift
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  static var braze: Braze? = nil
+}
+```
+
+Finally, in `AppDelegate.swift`, add the following snippet to your `application:didFinishLaunchingWithOptions:` method:
+
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "YOUR-APP-IDENTIFIER-API-KEY",
+    endpoint: "YOUR-BRAZE-ENDPOINT"
+)
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+
+Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 Add the following line of code to your `AppDelegate.m` file:
@@ -45,37 +76,6 @@ BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:"YOUR
                                                                   endpoint:"YOUR-BRAZE-ENDPOINT"];
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
-```
-
-Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
-
-{% endtab %}
-{% tab swift %}
-
-Add the following line of code to your `AppDelegate.swift` file to import the features included in the Braze Swift SDK:
-
-```swift
-import BrazeKit
-```
-
-
-Next, add a static property to your `AppDelegate` class to keep a strong reference to the Braze instance throughout your application's lifetime:
-
-```swift
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  static var braze: Braze? = nil
-}
-```
-
-Finally, in `AppDelegate.swift`, add the following snippet to your `application:didFinishLaunchingWithOptions:` method:
-
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "YOUR-APP-IDENTIFIER-API-KEY",
-    endpoint: "YOUR-BRAZE-ENDPOINT"
-)
-let braze = Braze(configuration: configuration)
-AppDelegate.braze = braze
 ```
 
 Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
