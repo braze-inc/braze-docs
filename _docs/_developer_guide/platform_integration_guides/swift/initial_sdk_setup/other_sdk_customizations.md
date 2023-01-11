@@ -21,30 +21,19 @@ See the following list of available log levels:
 
 ### Log levels
 
-| Level    | Description |
-|----------|-------------|
-| Debug    | Log debugging information + `.info` + `.error`  |
-| Info     | Log general SDK information (e.g. user changes, etc.) + `.error`.  |
-| Error    | Log errors.  |
-| Disabled | No logging occurs. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Swift       | Objective-C              | Description                                                       |
+|-------------|--------------------------|-------------------------------------------------------------------|
+| `.debug`    | `BRZLoggerLevelDebug`    | Log debugging information + `.info` + `.error`                    |
+| `.info`     | `BRZLoggerLevelInfo`     | Log general SDK information (e.g. user changes, etc.) + `.error`. |
+| `.error`    | `BRZLoggerLevelError`    | Log errors.                                                       |
+| `.disabled` | `BRZLoggerLevelDisabled` | No logging occurs.                                                |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Setting log level
 
 Log level can be assigned either at runtime on your Braze.Configuration object:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
-                                                                  endpoint:self.apiEndpoint];
-// Enable logging of general SDK information (e.g. user changes, etc.)
-[configuration.logger setLevel:BRZLoggerLevelInfo];
-Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -55,6 +44,17 @@ let configuration = Braze.Configuration(
 // Enable logging of general SDK information (e.g. user changes, etc.)
 configuration.logger.level = .info
 let braze = Braze(configuration: configuration)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
+                                                                  endpoint:self.apiEndpoint];
+// Enable logging of general SDK information (e.g. user changes, etc.)
+[configuration.logger setLevel:BRZLoggerLevelInfo];
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 ```
 
 {% endtab %}
