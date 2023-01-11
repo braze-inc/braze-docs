@@ -93,6 +93,6 @@ Braze should now be collecting data from your application, and your basic integr
 
 ## Additional resources
 
-Full [iOS class documentation][1] is available to provide additional guidance on any SDK methods.
+[DocC documentation][1] provides additional information and guidance on each SDK symbol.
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation"
