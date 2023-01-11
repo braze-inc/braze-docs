@@ -11,7 +11,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
 
 Run the following command to get started:
 
@@ -20,10 +20,6 @@ $ sudo gem install cocoapods
 ```
 
 If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide][apple_initial_setup_25].
-
-{% alert note %}
-If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") directions on CocoaPods.org for more details.
-{% endalert %}
 
 ## Step 2: Constructing the Podfile
 
@@ -41,9 +37,9 @@ end
 
 We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like `pod 'BrazeKit' ~> Major.Minor.Build`. If you want to automatically integrate the latest Braze SDK version, even with major changes, you can use `pod 'BrazeKit'` in your Podfile.
 
-#### Additional libraries
+#### Additional Libraries
 
-Unlike the legacy AppboyKit iOS SDK, the Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
+The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
 
 | Library | Details |
 | ------- | ------- |
@@ -77,6 +73,7 @@ pod update
 ```
 
 [apple_initial_setup_1]: http://cocoapods.org/
+[cocoapods_getting_started]: https://guides.cocoapods.org/using/getting-started.html
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h

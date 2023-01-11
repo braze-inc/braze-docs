@@ -29,9 +29,15 @@ This feature is in early access and is under active development. If you're inter
 1. Navigate to the **Conversions** page, under **Data**.
 2. Select a time period for your report, up to 365 days in the past.
 3. Select a conversion event, **Started session**, **Performed custom event**, or **Made a specific purchase**.
-4. Decide if you want your report to include untracked events (Optional, this feature is currently being tested on a small subset of early access customers). Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
+4. Decide if you want your report to include [untracked events](#untracked-events) (Optional, this feature is currently being tested on a small subset of early access customers).
 5. Select a conversion window, up to 7 days. This is how much time users have after they perform the message engagement action for the conversion event to count as a conversion. Conversion events that occur outside of this window are not counted in your report.
 6. Click **Refresh**.
+
+### Untracked events
+
+Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
+
+For example, let’s say you're running your report on campaign A (see the next section, [Filtering your report](#filtering-your-report), for how to filter reports to a specific campaign). You’re interested in seeing the conversion rate for users who received campaign A and performed custom event X, but custom event X was not one of the four conversion events tracked for this campaign. If you choose to not include untracked events, then your report will show 0 conversions. However, if you do include untracked events, then Braze will generate a report of users who performed custom event X after receiving, opening, or clicking campaign A.
 
 ### Filtering your report
 

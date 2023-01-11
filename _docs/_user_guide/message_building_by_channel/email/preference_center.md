@@ -9,14 +9,14 @@ description: "This section includes articles on how to create a preference cente
 channel:
   - email
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Overview
   link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center/
   fa_icon: fa-solid fa-list-check
 - name: Preference Center via API
-  link: docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
-  fa_icon: fa-solid fa-gear
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
+  fa_icon: fa-solid fa-laptop-code
 
 ---
 <br><br>
