@@ -12,10 +12,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
     image: /assets/img/android.png
   - name: iOS SDK (Swift)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
-    fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
+    link: /docs/developer_guide/platform_integration_guides/swift/changelog/
     fa_icon: fab fa-apple
   - name: Web SDK
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
@@ -26,6 +23,9 @@ guide_featured_list:
   - name: Flutter SDK
     link: /docs/developer_guide/platform_integration_guides/flutter/changelog/
     image: /assets/img/flutter_icon.png
+  - name: iOS SDK (Objective-C)
+    link: /docs/developer_guide/platform_integration_guides/ios/changelog/
+    fa_icon: fab fa-apple
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/changelog/
     image: /assets/img/reactnative_icon.png
