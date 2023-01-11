@@ -38,7 +38,7 @@ Les raisons peuvent inclure :
 ### Échec du push : Erreur d’envoi à un mauvais jeton push
 
 Cette erreur peut survenir pour plusieurs raisons :
-- Le jeton push ne nous est pas envoyé correctement dans `[[Appboy sharedInstance] registerPushToken:]`
+- Le jeton de notification push ne nous est pas envoyé correctement dans `[[Appboy sharedInstance] registerPushToken:]`
 	- Vérifiez le jeton dans le **Journal des activités des messages**. Généralement, il ressemblera à une longue chaîne de caractères alphanumériques. (p. ex., `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Si ce n’est pas le cas, vérifiez le code concerné par les erreurs d’envoi de jeton push dans Braze.<br><br>
 - Environnement de provisionnement mal adapté :
 	- Si vous inscrivez avec un certificat de développement et essayez d’envoyer des messages dans un environnement de production, cette erreur peut survenir.  

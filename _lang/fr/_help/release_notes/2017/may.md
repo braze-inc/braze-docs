@@ -14,7 +14,7 @@ Nous avons ajouté de nouvelles fonctionnalités aux groupes internes pour les s
 
 ## Mise à jour des tags
 
-Vous pouvez maintenant imbriquer de segment pour mieux organiser votre tableau de bord. En savoir plus sur les [tags de segment][42].
+Vous pouvez maintenant imbriquer de segment pour mieux organiser votre tableau de bord. En savoir plus sur les [balises de segment][42].
 
 ## Mise à jour de la configuration des messages in-app
 
@@ -42,7 +42,7 @@ Nous avons maintenant une alerte pour vous informer que vous avez atteint votre 
 
 ## Données de Canvas dans les Engagement Reports
 
-Les données Canvas de campagne peuvent maintenant être exportées ensemble dans le rapport sur l’engagement pour simplifier l’analyse de vos données. En savoir plus sur les [Engagement Reports][35].
+Les données Canvas de campagne peuvent maintenant être exportées ensemble dans le rapport sur l’engagement pour simplifier l’analyse de vos données. En savoir plus sur les [Engagement Reports][35] (Rapports d’engagement).
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports

@@ -43,7 +43,7 @@ Les `app_id` sont disponibles dans **Developer Console**, sous l’onglet **API 
 ```
 
 {% alert note %}
-Lors de l’importation de jetons push provenant d’autres systèmes, un `external_id` n’est pas toujours disponible. Pour maintenir la communication avec ces utilisateurs pendant votre transition vers Braze, vous pouvez importer les jetons existants pour les utilisateurs anonymes sans fournir `external_id`, en spécifiant `push_token_import` comme `true`.
+Lors de l’importation de jetons de notification push provenant d’autres systèmes, un `external_id` n’est pas toujours disponible. Pour maintenir la communication avec ces utilisateurs pendant votre transition vers Braze, vous pouvez importer les jetons existants pour les utilisateurs anonymes sans fournir `external_id`, en spécifiant `push_token_import` comme `true`.
 {% endalert %}
 
 #### Migration si l’ID externe n’est pas présent
@@ -92,15 +92,23 @@ Ces jetons peuvent être migrés en les important avec notre [API]({{site.baseur
 
 En spécifiant `push_token_import` en tant que `true`, gardez à l’esprit :
 * `external_id` et `braze_id` ne doit pas être spécifié
-* L’objet d’attribut doit contenir un jeton push 
+* L’objet d’attribut doit contenir un jeton de notification push
 * Si le jeton existe déjà dans Braze, la demande est ignorée ; sinon, Braze créera un profil utilisateur temporaire et anonyme pour chaque jeton pour vous permettre de continuer à envoyer des messages à ces personnes
 
-Après l’importation, lorsque chaque utilisateur lance la version compatible Braze de votre application, Braze déplace automatiquement son jeton push importé vers son profil utilisateur Braze et efface le profil temporaire.
+Après l’importation, lorsque chaque utilisateur lance la version compatible Braze de votre application, Braze déplace automatiquement leur jeton de notification push importé vers leur profil utilisateur Braze et efface le profil temporaire.
 
-Braze vérifiera une fois par mois si des profils anonymes ont un flag `push_token_import` qui n’a pas de jeton push. Si le profil anonyme n’a plus de jeton push, nous supprimerons le profil. Cependant, si le profil anonyme a toujours un jeton push, ce qui suggère que l’utilisateur réel ne se s’est pas encore connecté sur l’appareil avec le jeton push en question, nous ne ferons rien.
+Braze vérifiera une fois par mois s’il existe des profils anonymes avec l’indicateur `push_token_import` qui n’ont pas de jeton de notification push. Si le profil anonyme n’a plus de jeton de notification push, nous le supprimerons. Cependant, si le profil anonyme a toujours un jeton push, ce qui suggère que l’utilisateur réel ne se s’est pas encore connecté sur l’appareil avec le jeton push en question, nous ne ferons rien.
 
 ### Jetons push Web
-Nos jetons de push Web contiennent des champs supplémentaires que les autres plateformes n’ont pas. Par conséquent, nous vous recommandons d’intégrer le push et de permettre à votre base de jetons de se remplir naturellement de nouveau.
+{% alert warning %}
+Braze ne prend pas en charge la migration des jetons de notification push Web via l’API. En effet, les jetons de notification push Web contiennent des champs supplémentaires que les autres plateformes n’ont pas. 
+
+<br>Si vous tentez de migrer des jetons de notification push Web par programmation, une erreur semblable à celle-ci peut s’afficher :`Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
+
+<br>
+En guise d’alternative, nous vous recommandons d’intégrer les notifications push et de permettre à votre base de jetons de se remplir naturellement de nouveau.
+{% endalert %}
+
 
 ## Envoi de push avant l’intégration du SDK Braze (Android uniquement)
 

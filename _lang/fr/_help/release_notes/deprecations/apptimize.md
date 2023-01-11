@@ -109,19 +109,19 @@ dans votre implémentation AppDelegate et ajoutez le code ci-dessous à
 #import "Appboy.h"
 #import "ABKUser.h"
 
-// Key to store previous enrollment dictionary to check against to see if enrollment has changed
+// Clé pour stocker le dictionnaire d’inscription précédent afin de vérifier si l’inscription a changé
 NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestEnrollmentStorageKey";
 
 @implementation ApptimizeAppboy
 
 + (void)setupExperimentTracking
 {
-    // Track for enrollment changes
+    // Suivi des modifications d’inscription
     [[NSNotificationCenter defaultCenter] addObserver:self
                                                 selector:@selector(apptimizeTestsProcessed:)
                                                     name:ApptimizeTestsProcessedNotification
                                                 object:nil];
-    // Track for participation events
+    // Suivi de la participation aux événements
     [[NSNotificationCenter defaultCenter] addObserver:self
                                                 selector:@selector(experimentDidGetViewed:)
                                                     name:ApptimizeTestRunNotification
@@ -165,7 +165,7 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
     }
 }
 
-// Dictionary with variant IDs keyed by test ID, both as NSStrings
+// Dictionnaire avec des ID de variantes indexés par l’ID de test, tous deux en tant que NSStrings
 + (NSMutableDictionary *)getEnrollmentDictionaryFromTestInfo
 {
     NSMutableDictionary *enrollmentDictionary = [NSMutableDictionary dictionary];
@@ -185,7 +185,7 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
         return;
     }
 
-    // Apptimize doesn't notify with IDs, so we iterate over all experiments to find the matching one.
+    // Apptimize ne notifie pas avec les ID, nous parcourons donc toutes les expériences pour trouver celle qui correspond.
     NSString *name = notification.userInfo[ApptimizeTestNameUserInfoKey];
     NSString *variant = notification.userInfo[ApptimizeVariantNameUserInfoKey];
 
@@ -195,14 +195,14 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
             return;
         }
 
-        // If you want to log a custom event for each participation
+        // Si vous souhaitez enregistrer un événement personnalisé pour chaque participation
         [[Appboy sharedInstance] logCustomEvent:@"apptimize_experiment_viewed"
                                     withProperties: @{@"apptimize_experiment_name" : [experiment testName],
                                                         @"apptimize_variant_name" : [experiment enrolledVariantName],
                                                         @"apptimize_experiment_id" : [experiment testID],
                                                         @"apptimize_variant_id" : [experiment enrolledVariantID]}];
 
-        // If you want a custom attribute array set for each participation
+        // Si vous désirez définir un tableau d’attributs personnalisés pour chaque participation
         [[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"apptimize_experiments"
                                                                     value:[NSString stringWithFormat:@"experiment_id_%@:variant_id_%@:experiment_name_%@:variant_name_%@",
                                                                             [experiment testID], [experiment enrolledVariantID], [experiment testName], [experiment enrolledVariantName] ]];
@@ -229,7 +229,7 @@ appboyApptimizeIntegration = new ApptimizeAppboy();
 appboyApptimizeIntegration.configureExperimentTracking(this);
 ```    
 
-#### ApptimizeAppboy.java :
+#### ApptimizeAppboy.java:
 
 ```java
 package com.apptimize.appboykit;
@@ -291,10 +291,10 @@ public class ApptimizeAppboy
         }
         Log.d("Apptimize-Appboy", "Logging participation for " + experimentName + ":" + experimentId + " and variant " + variantName + ":" + variantId);
 
-        // If you want to log a custom event for each participation
+        // Si vous souhaitez enregistrer un événement personnalisé pour chaque participation
         logParticipationEventAsEvent(experimentName, variantName, experimentId, variantId);
 
-        // If you want a custom attribute array set for each participation
+        // Si vous désirez définir un tableau d’attributs personnalisés pour chaque participation
         logParticipationEventAsAttributes(experimentName, variantName, experimentId, variantId);
     }
 

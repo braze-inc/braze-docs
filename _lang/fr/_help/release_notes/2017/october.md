@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version d’octobre 2017."
 
 ## Push Stories
 
-Sur iOS et Android, vous pouvez maintenant [créer des notifications][74] de plusieurs pages, chacune contenant une image, un comportement de clic, et un titre et une légende facultatifs. Cette fonctionnalité nécessite le SDK iOS3.2.1 et le SDK Android 2.2.0. Pour accéder à ce nouveau produit, contactez votre gestionnaire du succès des clients, votre gestionnaire de compte ou ouvrez un [ticket de support][support].
+Sur iOS et Android, vous pouvez maintenant [créer des notifications][74] de plusieurs pages, chacune contenant une image, un comportement de clic ainsi qu’un titre et une légende facultatifs. Cette fonctionnalité nécessite le SDK iOS3.2.1 et le SDK Android 2.2.0. Pour accéder à ce nouveau produit, contactez votre gestionnaire du succès des clients, votre gestionnaire de compte ou ouvrez un [ticket de support][support].
 
 ## Currents
 
