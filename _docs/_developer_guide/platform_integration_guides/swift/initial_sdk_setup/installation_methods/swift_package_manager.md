@@ -9,7 +9,7 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 # Swift Package Manager integration
 
-Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, ensure that you use Xcode 13.2.1 or greater.
+Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you.
 
 ## Adding the dependency to your project
 
