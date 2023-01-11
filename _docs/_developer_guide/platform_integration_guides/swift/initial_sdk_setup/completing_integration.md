@@ -83,9 +83,6 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 {% endtab %}
 {% endtabs %}
 
-{% alert warning %}
-Be sure to initialize Braze in your application's main thread. Initializing asynchronously can lead to broken functionality.
-{% endalert %}
 
 ## SDK integration complete
 
