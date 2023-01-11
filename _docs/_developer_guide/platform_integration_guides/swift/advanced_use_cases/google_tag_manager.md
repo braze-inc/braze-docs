@@ -219,12 +219,16 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
       [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
                        boolValue:[(NSNumber *)customAttributeValue boolValue]];
     } else if (strcmp([customAttributeValue objCType], @encode(short)) == 0 ||
-               strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
-               strcmp([customAttributeValue objCType], @encode(long)) == 0) {
-      [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
-                                           intValue:[(NSNumber *)customAttributeValue integerValue]];
+             strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
+             strcmp([customAttributeValue objCType], @encode(long)) == 0) {
+    [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
+                                         intValue:[(NSNumber *)customAttributeValue integerValue]];
+    } else if (strcmp([customAttributeValue objCType], @encode(float)) == 0 ||
+                  strcmp([customAttributeValue objCType], @encode(double)) == 0) {
+         [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
+                                                  doubleValue:[(NSNumber *)customAttributeValue doubleValue]];
     } else {
-      NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@", customAttributeValue);
+      NSLog(@"Could not map NSNumber value to Braze custom attribute:%@", customAttributeValue);
     }
   } else if ([customAttributeValue isKindOfClass:[NSArray class]]) {
     [AppDelegate.braze.user setCustomAttributeArrayWithKey:customAttributeKey
