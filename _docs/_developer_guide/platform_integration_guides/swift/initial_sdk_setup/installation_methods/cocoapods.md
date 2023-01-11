@@ -43,7 +43,7 @@ We suggest you version Braze so pod updates automatically grab anything smaller 
 
 #### Additional Libraries
 
-Unlike the legacy AppboyKit iOS SDK, the Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
+The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects. In addition to `BrazeKit`, you may add the following libraries to your Podfile:
 
 | Library | Details |
 | ------- | ------- |
