@@ -172,7 +172,7 @@ static NSString *const CustomAttributeValueKey = @"customAttributeValue";
 static NSString *const ChangeUserActionType = @"changeUser";
 static NSString *const ChangeUserExternalUserId = @"externalUserId";
 
-@implementation BrazeGTMManager
+@implementation BrazeGTMTagManager
 
 - (NSObject *)executeWithParameters:(NSDictionary *)parameters {
   NSMutableDictionary *mutableParameters = [parameters mutableCopy];
