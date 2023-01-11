@@ -10,8 +10,8 @@ permalink: /swift/
 ## Initial SDK Setup
 - [Overview]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/)
 - Installation Methods
-  - [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/)
   - [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)
+  - [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/)
 - [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/)
 - [Other SDK Customizations]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/)
 
