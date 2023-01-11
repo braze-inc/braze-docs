@@ -11,7 +11,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you.
 
 Run the following command to get started:
 
