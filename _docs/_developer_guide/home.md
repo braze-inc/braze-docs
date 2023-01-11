@@ -11,8 +11,8 @@ guide_featured_list:
   image: /assets/img/android.png
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
-- name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+- name: iOS (Swift)
+  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
   nav_link: ios
 - name: Web
@@ -34,6 +34,10 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter
+  - name: iOS (Objective-C)
+    link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+    fa_icon: fab fa-apple
+    nav_link: ios
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
