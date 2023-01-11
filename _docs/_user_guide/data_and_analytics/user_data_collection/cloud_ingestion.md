@@ -2,22 +2,33 @@
 nav_title: Cloud Data Ingestion
 article_title: Braze Cloud Data Ingestion
 alias: /cloud_ingestion/
-description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Snowflake integration."
+description: "This reference article covers Braze Cloud Data Ingestion and data setup recommendations."
+layout: featured
 page_order: 4.1
-page_type: reference
+page_type: landing
+
+guide_top_header: "Braze Cloud Data Ingestion"
+guide_top_text: "<h2>What is Braze Cloud Data Ingestion?</h2>Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.<br><br>**Braze Cloud Data Ingestion capabilites:**<br> - Create a simple integration directly from your data warehouse to Braze in just a few minutes<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze<br>- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing"
+
+guide_featured_title: "Integration methods"
+guide_featured_list:
+  - name: Snowflake 
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/
+    fa_icon: fa-solid fa-snowflake
+  - name: Redshift 
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
+    fa_icon: fa-solid fa-gear
 
 ---
 
-# Braze Cloud Data Ingestion - Snowflake integration
-
 {% alert important %}
-Braze Cloud Data Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the Early Access.
+Braze Cloud Data Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
-
+<!--
 ## What is Braze Cloud Data Ingestion?
 
 Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.
-
+-->
 ### How it works
 
 With Braze Cloud Data Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
@@ -80,18 +91,18 @@ Each attribute sent for a user will consume one data point. It’s up to you to 
 
 #### Only write new or updated attributes to minimize consumption
 
-We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend you only sync attributes you want to add or update.
+We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 #### Use a UTC timestamp for the UPDATED_AT column
 
-The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time.  Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
+The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
 
 #### Separate EXTERNAL_ID from PAYLOAD column 
 The PAYLOAD object should not include an external id or other id type. 
 
 #### Removing an attribute
 
-If you want to completely remove an attribute from a user’s profile, you can set it to `null`. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
+You can set it to' null' if you want to completely remove an attribute from a user’s profile. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
 
 #### Create JSON string from another table
 
@@ -119,7 +130,7 @@ SELECT
 
 #### Using the UPDATED_AT timestamp
 
-We use the `UPDATED_AT` timestamp to keep track of what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
+We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
 - If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
 - If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
 - Use a transaction to write all rows that have the same timestamp.
@@ -127,128 +138,6 @@ We use the `UPDATED_AT` timestamp to keep track of what data has been synced suc
 #### Example table configuration
 
 We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
-
-## Product setup
-
-New Cloud Data Ingestion integrations require some setup on the Braze side and in your Snowflake instance. Follow these steps to set up the integration:
-1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
-2. Create a new integration in the Braze dashboard.
-3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-4. Test the integration and start the sync.
-
-### Set up tables or views
-
-#### Step 1: Set up the table
-
-```json
-CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
-CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
-CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
-     UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
-     EXTERNAL_ID VARCHAR(16777216) NOT NULL,
-     PAYLOAD VARCHAR(16777216) NOT NULL
-);
-```
-
-You can name the database, schema, and table as you’d like, but the column names should match the preceding definition.
-
-- `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
-- `EXTERNAL_ID` - This identifies the user you want to update. You can use one of `external_id`, `user_alias`, or `braze_id`.
-- `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
-
-#### Step 2: Set up the role and database permissions
-
-```json
-CREATE ROLE BRAZE_INGESTION_ROLE;
-
-GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
-GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION TO ROLE BRAZE_INGESTION_ROLE;
-GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO ROLE BRAZE_INGESTION_ROLE;
-```
-
-Update the names as needed, but the permissions should match the preceding example.
-
-#### Step 3: Set up the warehouse and give access to Braze role
-
-```json
-CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
-
-GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
-```
-
-{% alert note %}
-The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant us additional `OPERATE` privileges on the warehouse for us to turn it on when it’s time to run the query.
-{% endalert %}
-
-#### Step 4: Set up the user
-
-```json
-CREATE USER BRAZE_INGESTION_USER;
-
-GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
-```
-
-After this step, you will share connection information with Braze and receive a public key to append to the user.
-
-{% alert note %}
-When connecting different app groups to the same Snowflake account, you must create a unique user for each Braze app group where you are creating an integration. Within an app group, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across app groups.
-{% endalert %}
-
-#### Step 5: Allow Braze IPs in Snowflake network policy (optional)
-
-Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
-
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` | For Instances `EU-01` and `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
-
-### Create a new integration in the Braze dashboard
-
-Navigate to the Snowflake page on Braze, under **Technology Partners**, and click **Create new import sync**.
-
-1. **Add Snowflake connection information and source table**<br>
-Input the information for your Snowflake account and source table, then proceed to the next step.<br>![][1]<br><br>
-2. **Configure sync details**<br>
-Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
-
-### Add a public key to the Braze user
-At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
-
-For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
-
-```json
-ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
-```
-
-### Test connection
-
-Once the user is updated with the public key, return to the Braze dashboard and click **Test connection**. If successful, you’ll see a preview of the data. If for some reason, we can’t connect, we’ll display an error message to help you troubleshoot the issue.
-
-![][3]
-
-{% alert note %}
-You must successfully test an integration before it can move from Draft into Active state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
-{% endalert %}
-
-### Set up additional integrations or users (optional)
-
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the snowflake account.
-![][4]
-
-If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again.
-
-### Running the sync
-
-Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside of the normal schedule for testing or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.  
-![][5]
 
 ## Product limitations
 
@@ -261,6 +150,8 @@ Once activated, your sync will run on the schedule configured during setup. If y
 | Braze region | This product is available in all Braze regions. Any Braze region can connect to any Snowflake region |
 | Snowflake region | You can connect your Snowflake instance in any region or cloud to Braze using this product. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+<br><br>
 
 [1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}
 [2]: {% image_buster /assets/img/cloud_ingestion/ingestion_2.png %}
