@@ -58,7 +58,6 @@ Add the following line of code to your `AppDelegate.swift` file to import the fe
 import BrazeKit
 ```
 
-Refer to the [Apple developer docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html) for more information on using Objective-C code in Swift projects.
 
 Next, add a static property to your `AppDelegate` class to keep a strong reference to the Braze instance throughout your application's lifetime:
 
