@@ -13,7 +13,7 @@ On the left navigation bar of the Braze dashboard, choose the **Predictions** pa
 To create a new Prediction, choose **Create Prediction** and select a new **Purchase Prediction**.
 
 {% alert note %}
-There is a limit of three concurrently active Purchase Predictions. Before purchasing Predictive Purchases, the limit is one active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
+There is a limit of five concurrently active Purchase Predictions. Before purchasing Predictive Purchases, the limit is one active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
 {% endalert %}
 
 ## Step 1: Create a new Prediction
