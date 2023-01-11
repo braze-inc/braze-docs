@@ -15,7 +15,7 @@ For a full list of available configurations, refer to the [Braze.Configuration c
 
 ## Braze log level
 
-The default log level for the Braze Swift SDK is `Error` in the following chart. This level is the most minimal level above fully disabled logging.
+The default log level for the Braze Swift SDK is `.error` in the following chart. This level is the most minimal level above fully disabled logging.
 
 See the following list of available log levels:
 
