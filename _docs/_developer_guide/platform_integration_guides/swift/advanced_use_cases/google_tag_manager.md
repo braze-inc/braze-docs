@@ -139,16 +139,16 @@ import BrazeKit
 let ActionTypeKey: String = "actionType"
 
 // Custom Events
-let LogEventActionType: String = "logEvent"
+let LogEventAction: String = "logEvent"
 let LogEventName: String = "eventName"
 
 // Custom Attributes
-let CustomAttributeActionType: String = "customAttribute"
+let CustomAttributeAction: String = "customAttribute"
 let CustomAttributeKey: String = "customAttributeKey"
 let CustomAttributeValueKey: String = "customAttributeValue"
 
 // Change User
-let ChangeUserActionType: String = "changeUser"
+let ChangeUserAction: String = "changeUser"
 let ChangeUserExternalUserId: String = "externalUserId"
 
 @objc(BrazeGTMTagManager)
@@ -160,11 +160,11 @@ final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
       return nil
     }
     parameters.removeValue(forKey: ActionTypeKey)
-    if actionType == LogEventActionType {
+    if actionType == LogEventAction {
       logEvent(parameters: parameters)
-    } else if actionType == CustomAttributeActionType {
+    } else if actionType == CustomAttributeAction {
       logCustomAttribute(parameters: parameters)
-    } else if actionType == ChangeUserActionType {
+    } else if actionType == ChangeUserAction {
       changeUser(parameters: parameters)
     }
     return nil
@@ -226,16 +226,16 @@ And add the following code to your `BrazeGTMTagManager.m` file:
 static NSString *const ActionTypeKey = @"actionType";
 
 // Custom Events
-static NSString *const LogEventActionType = @"logEvent";
+static NSString *const LogEventAction = @"logEvent";
 static NSString *const LogEventEventName = @"eventName";
 
 // Custom Attributes
-static NSString *const CustomAttributeActionType = @"customAttribute";
+static NSString *const CustomAttributeAction = @"customAttribute";
 static NSString *const CustomAttributeKey = @"customAttributeKey";
 static NSString *const CustomAttributeValueKey = @"customAttributeValue";
 
 // Change User
-static NSString *const ChangeUserActionType = @"changeUser";
+static NSString *const ChangeUserAction = @"changeUser";
 static NSString *const ChangeUserExternalUserId = @"externalUserId";
 
 @implementation BrazeGTMTagManager
@@ -251,11 +251,11 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
   
   [mutableParameters removeObjectForKey:ActionTypeKey];
   
-  if ([actionType isEqualToString:LogEventActionType]) {
+  if ([actionType isEqualToString:LogEventAction]) {
     [self logEvent:mutableParameters];
-  } else if ([actionType isEqualToString:CustomAttributeActionType]) {
+  } else if ([actionType isEqualToString:CustomAttributeAction]) {
     [self logCustomAttribute:mutableParameters];
-  } else if ([actionType isEqualToString:ChangeUserActionType]) {
+  } else if ([actionType isEqualToString:ChangeUserAction]) {
     [self changeUser:mutableParameters];
   } else {
     NSLog(@"Invalid action type. Doing nothing.");
