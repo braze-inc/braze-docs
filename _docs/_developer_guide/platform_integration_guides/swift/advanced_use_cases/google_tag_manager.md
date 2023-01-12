@@ -130,7 +130,7 @@ The `actionType` we've supported in our example are `logEvent`, `customAttribute
 {% tabs %}
 {% tab SWIFT %}
 
-Add the following code to your `BrazeGTMTagManager.swift' file.
+Add the following code to your `BrazeGTMTagManager.swift` file.
 ```swift
 import FirebaseAnalytics
 import GoogleTagManager
