@@ -27,7 +27,7 @@ Create an in-app message for Roku by selecting **Roku Devices** as the in-app me
 
 Visit our [integration guide][5] for instructions on displaying in-app messages and logging impressions and click analytics.
 
-![A "homepage banner" example showing the different components needed to build the custom banner. Components listed include the message composition component (showing the body, button text, image, assigned button behavior (deep link), and key-value pairs), the backend details (audience listed as "users who watched season 1", intended interactions (button beeplinks to app, closing the message dismisses the message, and automatic dismissal after 10 seconds), the trigger (session start), and the key-value pair (template = homepage_banner)).][2]
+![A "homepage banner" example showing the different components needed to build the custom banner. Components listed include the message composition component (showing the body, button text, image, assigned button behavior (deep link), and key-value pairs), the backend details (audience listed as "users who watched season 1", intended interactions (button deeplinks to app, closing the message dismisses the message, and automatic dismissal after 10 seconds), the trigger (session start), and the key-value pair (template = homepage_banner)).][2]
 
 ## Testing and QA
 

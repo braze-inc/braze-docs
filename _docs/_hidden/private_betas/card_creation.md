@@ -34,7 +34,7 @@ The following options are available:
 - **At first impression:** When the user next opens your app (that is, starts a new [session][3]), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card.
 
 {% alert note %}
-For both options, after a card is created, Braze does not recalculate audience eligibility or personalization. This information is only evaluated once when the card is first created. Fully dynamic Content Cards are coming later this year.
+For both options, after a card is created, Braze does not recalculate audience eligibility or personalization.
 {% endalert %}
 
 ### Differences between creating cards at launch versus at first impression
@@ -76,6 +76,11 @@ This section describes the main differences between card creation at launch vers
     <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards created and available to be seen. This doesn't count whether the users viewed the card.</td>
     <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards displayed to users. <br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch.</td>
   </tr>
+  <tr>
+    <td class="leftHeader">Processing time</td>
+    <td class="tg-0pky">Cards are created for every eligible user in the segment at the time of launch. For large audiences, we recommend to select <b>At First Impression</b>, as cards will be available more quickly after launch.</td>
+    <td class="tg-0pky">Cards are created the first time a user tries to view the card, so it may take 1-2 seconds to display on the first impression.</td>
+  </tr>
 </tbody>
 </table>
 
@@ -87,7 +92,9 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 ### Potential processing time
 
-When cards are created at first impression, it may take 1–2 seconds for the cards to process, resulting in a slight delay before the card is visible to the user. The length of this delay depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
+We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression to realize performance improvements.
+
+When cards are created at first impression, it may take 1–2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
 
 ### Previous SDK versions
 

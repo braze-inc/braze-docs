@@ -24,5 +24,8 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 [GPT3](https://openai.com/blog/gpt-3-apps/) is OpenAI's state of the art natural language generation tool powered by artificial intelligence. It can perform a variety of natural language tasks like text generation, completion, and classification. We've plugged it into the Braze dashboard to help inspire and diversify your copy directly as you work.
 
+## More AI tools
+
+You can also [generate an image using AI]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai) from the Media Library. This leverages DALL·E 2, an AI system from OpenAI that can create realistic images and art from a description in natural language.
 
 [1]: {% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"

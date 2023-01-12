@@ -32,7 +32,9 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 You can find a breakdown of how Braze accumulates data points in the following sections, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
 {% alert note %} 
-Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 
+The following actions do not consume data points:
+- Deleting users from Braze
+- Using Connected Content in messaging
 {% endalert %}
 
 ### Billable data points
@@ -83,8 +85,10 @@ table td {
 | Amplitude cohort assignment | All assignments | |
 | Mixpanel cohort assignment | All assignments | |
 | Hightouch cohort assignment | All assignments | |
+| Appsflyer cohort assignment | All assignments | |
 | Most recent location | All most recent locations | Entering or exiting geofences doesn’t consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
 | Twitter | Username | |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Non-billable data points (out of the box)
 
@@ -106,7 +110,6 @@ table td {
 | Contact settings | Apps registered for push |
 | Contact settings | Subscription group |
 | Campaigns received | Email address |
-| News Feed cards clicked | News Feed cards clicked |
 | Install attribution | Install source |
 | Install attribution | Campaign |
 | Install attribution | Ad Group |
@@ -123,7 +126,7 @@ table td {
 
 #### CSV
 
-Custom attributes uploaded via CSV count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
+Custom attributes uploaded via CSV count towards your data points, however CSV imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
 
 #### Arrays
 

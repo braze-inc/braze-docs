@@ -16,7 +16,7 @@ Avant de poursuivre la lecture, notez que le Braze Web SDK ne stocke aucune donn
 
 En outre, ces valeurs sont susceptibles d’être modifiées et ne doivent pas être consultées directement par le biais de votre intégration. Consultez plutôt notre documentation [Javascript][1] pour connaître les interfaces de notre API publique.
 
-{% multi_lang_include archive/web-v4-rename.md %}
+{% include archive/web-v4-rename.md %}
 
 ## Cookies {#cookies}
 

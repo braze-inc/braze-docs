@@ -15,11 +15,9 @@ if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
 	}
 	else{
 		build_app = 0;
-		if (branch_check.includes('i18n_') || branch_commit.includes('i18n_')) {
+		if (branch_check.includes('i18n_') && branch_commit.includes('i18n_')) {
 			if (branch_check && (vercel_env == 'preview')) {
-				if (branch_commit == branch_check) {
-					build_app = 1;
-				}
+				build_app = 1;
 			}
 		}
 	}

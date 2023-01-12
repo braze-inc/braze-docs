@@ -21,7 +21,7 @@ Braze allows the user the option to control network traffic using the following 
 - This is the **default request policy** value.
 - The Braze SDK will automatically handle all server communication, including:
     - Flushing custom events and attributes data to Braze's servers
-    - Updating the News Feed, Content Cards, and Geofences
+    - Updating Content Cards and geofences
     - Requesting new in-app messages
 - Immediate server requests are performed when user-facing data is required for Braze's features, such as in-app messages.
 - To minimize server load, Braze performs periodic flushes of new user data every few seconds.

@@ -23,13 +23,11 @@ The following events and attributes are captured and updated automatically by th
 - Number of Feedback Items (Number)
 - Number of Sessions in the Last Y Days (Number and Time)
 - Email Available (Boolean)
-- News Feed View Count (Number)
 
 #### Campaign retargeting
 - Last Received Any Message (Time)
 - Last Received Email Campaign (Time)
 - Last Received Push Campaign (Time)
-- Last Viewed News Feed (Time)
 - Clicked Card (Number)
 - Received Message from Campaign
   - This filter allows you to target users based on their having (not) received a previous campaign.
@@ -124,15 +122,15 @@ The following table describes available segmentation options for string attribut
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING** |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX*** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **partially matches** an inputted string **OR** regular expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the string attribute **does not partially match** an inputted string **OR** regular expression | **DOES NOT MATCH REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING** |
 | Check if the string attribute **exists** on a user's profile | **IS BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **IS NOT BLANK** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-&#42; When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targeted properly.
 {% endalert %}
 
 {% alert tip %}
@@ -169,7 +167,7 @@ The following table describes available segmentation options for array attribute
 | ---------------------| --------------- | ------------- |
 | Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
 | Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** |
-| Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
+| Check if the array attribute **contains a value which partially matches** an inputted value **OR** regular expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
 | Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
 | Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -198,7 +196,7 @@ The following table describes available segmentation options for time attributes
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
-Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
+Numeric attributes have a wide variety of use cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, such as recording shoe size, waist size, or the number of times a user has viewed a certain product feature or category.
 
 > Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
@@ -215,7 +213,7 @@ The following table describes available segmentation options for numeric attribu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booleans (true/false)
-Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
+Boolean attributes are useful for storing subscription statuses and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a boolean in addition to those that don't have any record of that attribute recorded yet.
 
 The following table describes available segmentation options for boolean attributes.
 
@@ -249,7 +247,7 @@ The following table describes available segmentation options for purchase events
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
 ## Taxi/ride-sharing app use case {#example-case}
-For this example case, let's consider a taxi/ride-sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+For this example, let's consider a ride-sharing app that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 **Case Question #1: What is the goal?**
 

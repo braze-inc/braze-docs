@@ -17,13 +17,22 @@ To complete the installation, you will need the [App Identifier API key]({{site.
 
 ## Step 1: Integrate the Braze library
 
-Add the Braze React Native SDK package.
+{% alert note %}
+Braze React Native SDK v1.38.0+ requires at least React Native v0.64+.
+{% endalert %}
 
+{% tabs local %}
+{% tab bash %}
 ```bash
 npm install react-native-appboy-sdk
-# or using yarn
-# yarn add react-native-appboy-sdk
 ```
+{% endtab %}
+{% tab yarn %}
+```bash
+yarn add react-native-appboy-sdk
+```
+{% endtab %}
+{% endtabs %}
 
 ## Step 2: Complete native setup
 
@@ -51,7 +60,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
 | `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
 | `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
-| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
+| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
 | `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
 | `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
 | `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
@@ -218,7 +227,7 @@ In the same file, add the following snippet within the `application:didFinishLau
      withLaunchOptions:launchOptions];
 ```
 
-Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in XCode:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
 2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
@@ -251,7 +260,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can start a session for a particular user by calling the following code in your app.
 
 ```javascript
-Braze.changeUser("user-id");
+Braze.changeUser("userId");
 ```
 
 For example, you can assign the user ID at the startup of the app:

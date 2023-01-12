@@ -59,7 +59,7 @@ From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
 ![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_7.png %})
 
-###### Configure application in Idp-initated mode (required)
+###### Configure application in Idp-initiated mode (required)
 
 To configure the application in IdP-initiated mode, enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 

@@ -43,7 +43,7 @@ Xcode should generate a new target for you and create files automatically for yo
 
 ## Step 3: Enable capabilities
 
-The Push Story feature requires the background mode in the **Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote Notification**.
+The Push Story feature requires the background mode in the **Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote notifications**.
 
 ![][3]
 
@@ -231,6 +231,10 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 Alternatively, to configure the Push Story app group from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
+## Next steps
+
+Next refer to the steps for integrating [Action Buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
+
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
 [3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
@@ -240,3 +244,4 @@ Alternatively, to configure the Push Story app group from your `Info.plist` file
 [11]: {% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %}
 [12]: {% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %}
 [13]: {% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %}
+

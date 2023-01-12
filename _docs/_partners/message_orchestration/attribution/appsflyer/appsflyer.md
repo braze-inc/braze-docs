@@ -44,9 +44,24 @@ AppsFlyerLib.setAdditionalData(customData);
 
 #### iOS
 
+{% tabs local %}
+{% tab Objective-C %}
+
 If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
 Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
+{% endtab %}
+{% tab Swift %}
+
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. 
+
+If you're using iOS Swift SDK v5.7.0+ and the `useUUIDAsDeviceId` field is set to `true` for attributions where IDFA is unavailable, users from your platform will not be matched to Braze as there will not be a common identifier to match these users. To ensure the highest possible match rate between both platforms, it is recommended to set the `useUUIDAsDeviceId` field as `false` so the IDFV is used as a common identifier if the IDFA is unavailable.
+
+For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+{% endtab %}
+{% endtabs %}
 
 #### Unity
 
@@ -59,7 +74,7 @@ AppsFlyer.setAdditionalData(customData);
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Inclued in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
+In Braze, navigate to **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
@@ -104,7 +119,7 @@ Attribution data for Facebook and Twitter campaigns is not available through our
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, issues often come up when using them with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid email system to seamlessly deep link from emails.
+There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [Sparkpost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 
@@ -112,7 +127,7 @@ You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.co
 
 You can simply create your OneLink tracking URL in AppsFlyer and directly insert it into your Braze campaigns. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link. We recommend appending your AppsFlyer tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the following Liquid logic:
 {% raw %}

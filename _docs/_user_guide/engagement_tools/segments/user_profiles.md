@@ -28,7 +28,7 @@ If a match is found, you can view the information that you've recorded for this 
 
 Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labelled Previous and Next.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
 
 ## Use cases
 
@@ -43,7 +43,7 @@ You can use the [Engagement tab](#engagement-tab) to verify whether a certain us
 There are four main sections of a user's profile.
 
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
-- **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, News Feed cards clicked, and random bucket number.
+- **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
 - **Social:** High-level view of the user's activity on Twitter and Facebook, if connected.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
 
@@ -55,7 +55,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | --- | --- |
 | Profile | Gender, age group, location, language, locale, time zone, and birthday. |
 | Sessions overview | How many sessions they had, when their first and last session was, and on which apps. |
-| Custom attributes | Which custom attributes are attributed to this user and their associated value. |
+| Custom attributes | Which custom attributes are attributed to this user and their associated value, including nested custom attributes. |
 | Recent devices | How many devices they logged in on, details on each device, and their associated advertising IDs (if any). |
 | Custom events | Which custom events this user has performed, how many times, and when they last performed each event. |
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
@@ -75,7 +75,6 @@ The **Engagement** tab contains information about a user's interactions with the
 | Campaigns received | Campaigns this user has received and when. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
-| News Feed cards clicked | News Feed cards this user has clicked on. Select a card from the list to view it. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
@@ -112,7 +111,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
 
 | Channel | Engagement events available |
 | --- | --- |
@@ -148,19 +147,10 @@ Email open tracking is error prone in any tool, including Braze. With a variety 
 While email open statistics can be useful in aggregate, for example to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
 
-
-<!---Replace [1] with {% image_buster /assets/img_archive/profiles_multiple_results.png %} when rollout is complete--->
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-
-<!---Replace [2] with {% image_buster /assets/img_archive/profiles_overview_tab.png %} when rollout is complete--->
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
-
-<!---Replace [3] with {% image_buster /assets/img_archive/profiles_engagement_tab.png %} when rollout is complete--->
-[3]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
-
-<!---Replace [4] with {% image_buster /assets/img_archive/profiles_social_tab.png %} when rollout is complete--->
-[4]: {% image_buster /assets/img_archive/profiles_social_tab_old.png %}
-
+[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
+[4]: {% image_buster /assets/img_archive/profiles_social_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/

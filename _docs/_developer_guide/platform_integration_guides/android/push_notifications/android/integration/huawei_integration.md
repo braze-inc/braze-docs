@@ -47,7 +47,7 @@ public class CustomPushService extends HmsMessageService {
   @Override
   public void onNewToken(String token) {
     super.onNewToken(token);
-    Braze.getInstance(this.getApplicationContext()).registerAppboyPushMessages(token);
+    Braze.getInstance(this.getApplicationContext()).setRegisteredPushToken(token);
   }
 
   @Override
@@ -67,7 +67,7 @@ public class CustomPushService extends HmsMessageService {
 class CustomPushService: HmsMessageService() {
   override fun onNewToken(token: String?) {
     super.onNewToken(token)
-    Braze.getInstance(applicationContext).registerAppboyPushMessages(token!!)
+    Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
   }
 
   override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {

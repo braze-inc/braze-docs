@@ -100,11 +100,13 @@ If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remov
 
 {% if include.channel == "email" %}
 
-#### Heat maps
+#### Heatmaps
 
-Additionally, you can see how successful different links in a single email campaign are using heat maps. Expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign.
+Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Click **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can click the hyperlink in the variant name to view the heatmap.
 
-![email_analytics]({% image_buster /assets/img_archive/email_click_results_heatmap.gif %})
+In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, click the download button.
+
+![Example of the Preview and Heatmap page that includes an email campaign, and a panel with link alias examples with their total clicks.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
 
 {% endif %}
 
@@ -200,7 +202,7 @@ Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they
 
 Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (i.e. at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
-If a user disables push within their device settings on subsequent app open the SDK will detect that push has been disabled and notify Braze. At this point we will update the push enabled state to be disabled. When a disabled user receives a push campaign before having a new session, the campaign would successfully send and appear as delivered. The push will not bounce for this user. Following a subsequent session, when you attempt to send a push to the user Braze is already aware of whether we have a token as such no notification is sent.
+If a user disables push within their device settings on subsequent app open the SDK will detect that push has been disabled and notify Braze. At this point we will update the push enabled state to be disabled. When a disabled user receives a push campaign before having a new session, the campaign would successfully send and appear as delivered. The push will not bounce for this user. Following a subsequent session, when you attempt to send a push to the user Braze is already aware of whether we have a foreground token as such no notification is sent.
 
 Push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
 
@@ -224,8 +226,8 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Term | Definition |
 | -- | -- |
 | Sent | A campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
-| Sent to Carrier | Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending.
-| Delivery Failures | Messages that were not attempted to be sent due to a failed outcome within Twilio logs. This could be due to queue overflow or invalid recipient number, depending on the associated Twilio error code. Please reach out to Braze [support]({{site.baseurl}}/braze_support/) for assistance in understanding the reasons for delivery failures.
+| Sent to Carrier | Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending. Note that this metric does not exist for all Braze mobile aggregators. |
+| Delivery Failures | Messages that were not attempted to be sent due to a failed outcome within aggregator logs. This could be due to queue overflow or invalid recipient number, depending on the associated aggregator error code. Please reach out to Braze [support]({{site.baseurl}}/braze_support/) for assistance in understanding the reasons for delivery failures.
 | Confirmed Delivery | The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
 | Opt-Out | A user replied to your message with an [Opt-Out Keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.

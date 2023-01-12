@@ -191,6 +191,7 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
 }
 // Push Notification iOS Foreground Open
+// Please note, this event is not supported by our Swift SDK and is deprecated on our Obj-C SDK.
 {
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -259,17 +260,21 @@ Devices should not report more than 30 events/second or 500K events/day under no
 ### Experiment step events
 
 ```json
-// Experiment Step Path Entry
+// Experiment Step Split Path Entry
 {
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
 
@@ -472,6 +477,10 @@ Devices should not report more than 30 events/second or 500K events/day under no
 
 ### News Feed events
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 ```json
 // News Feed Card Impression
 {
@@ -558,4 +567,26 @@ Devices should not report more than 30 events/second or 500K events/day under no
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
 ```
+
+### Canvas exit events
+
+```json
+// Canvas Exit Performed Event
+// Canvas Exit Matched Audience
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+}
+```
+
 [support]: {{site.baseurl}}/braze_support/

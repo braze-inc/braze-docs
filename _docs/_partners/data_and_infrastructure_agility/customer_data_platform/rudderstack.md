@@ -30,7 +30,7 @@ The Braze and RudderStack integration offers a native SDK integration for your A
 
 ### Step 1: Add a source
 
-To start sending data to Braze, you first need to make sure a source is set up in your RudderStack app. Visit [RudderStack](https://rudderstack.com/docs/connections/adding-source-and-destination-rudderstack/) to learn how to set up your data source.
+To start sending data to Braze, you first need to make sure a source is set up in your RudderStack app. Visit [RudderStack][22] to learn how to set up your data source.
 
 ### Step 2: Configure destination
 
@@ -62,7 +62,7 @@ To complete the device mode integration, refer to the detailed RudderStack instr
 
 ### Step 3b: Server-to-server integration (cloud mode) {#cloud-mode}
 
-With this mode, the Braze SDK sends the event data directly to RudderStack. RudderStack then transforms this data and routes it to Braze in the expected format. The transformation is done in the RudderStack backend.
+In this mode, the SDK sends the event data directly to the RudderStack server. RudderStack then transforms this data and routes it to the desired destination. This transformation is done in the RudderStack backend, using RudderStack's Transformer module.
 
 To enable the integration, you will need to map the RudderStack methods to Braze, as described in step 4.
 
@@ -102,3 +102,4 @@ RudderStack's [`group` method](https://rudderstack.com/docs/destinations/marketi
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
 [20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
+[22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started

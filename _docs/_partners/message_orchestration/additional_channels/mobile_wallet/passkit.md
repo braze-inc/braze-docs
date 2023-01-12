@@ -34,7 +34,7 @@ Examples of data to share from PassKit includes:
 - **Pass updates**: when a pass is updated.
 - **Pass delete**: when a customer deletes the pass from their wallet app.
 
-Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Cavanses once these actions have been performed.
+Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Canvases once these actions have been performed.
 
 ## Connect Passkit to Braze
 

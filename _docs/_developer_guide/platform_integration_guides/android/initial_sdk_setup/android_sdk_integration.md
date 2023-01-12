@@ -19,7 +19,7 @@ For optimal performance on Android 12, we recommend upgrading to [Braze Android 
 
 ## Step 1: Integrate the Braze library
 
-The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards), [News Feed]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards) and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
 
 ### Basic integration
 
@@ -48,13 +48,16 @@ Alternatively, you can directly find the artifact AAR files on our [maven reposi
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. 
 
+If you are using any location or Braze Geofence functionality, also include `android-sdk-location` in your app's `build.gradle`.
+
 {% alert important %}
-If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
+If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
 {% endalert %}
 
 ```gradle
 dependencies {
-  implementation "com.appboy:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-location:+"
 }
 ```
 
@@ -62,9 +65,9 @@ The following example shows where to place the dependency line in your `build.gr
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 
-#### Perform gradle sync
+#### Perform Gradle sync
 
-Be sure to perform a Gradle Sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
+Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
 ![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
 

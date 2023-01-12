@@ -13,7 +13,7 @@ On the left navigation bar of the Braze dashboard, choose the **Predictions** pa
 To create a new Prediction, choose **Create Prediction** and select a new **Purchase Prediction**.
 
 {% alert note %}
-There is a limit of three concurrently active Purchase Predictions. Before purchasing Predictive Purchases, the limit is one active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
+There is a limit of five concurrently active Purchase Predictions. Before purchasing Predictive Purchases, the limit is one active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or target users based on the Prediction's output. Contact your account manager for details.
 {% endalert %}
 
 ## Step 1: Create a new Prediction
@@ -40,7 +40,7 @@ Your Prediction Audience is the group of users whose Purchase likelihood you wou
 
 The model will likely perform better if you filter the users you want to assess with some criteria. To do so, select **Define my own prediction audience** and choose your audience filters. For example, you might want to focus on users who have been using your app for at least 30 days by selecting the "First Used App" filter set to 30 days. 
 
-The Prediction Audience definition is also used to query historical data to allow the machine learning model to learn from the past. Similiar to the previous page, the quantity of data provided by these filters is displayed along with the requirement. If you specify your desired audience and do not meet the minimum, try specifying a broader filter or use the **All Users** option.
+The Prediction Audience definition is also used to query historical data to allow the machine learning model to learn from the past. Similar to the previous page, the quantity of data provided by these filters is displayed along with the requirement. If you specify your desired audience and do not meet the minimum, try specifying a broader filter or use the **All Users** option.
 
 {% alert note %}
 The Prediction Audience cannot exceed 100 million users.

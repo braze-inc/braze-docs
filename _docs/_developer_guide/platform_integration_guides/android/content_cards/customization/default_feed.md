@@ -187,14 +187,14 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 If the [`ContentCardsFragment`][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [`EmptyContentCardsAdapter`][50] replaces the standard [`ContentCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
+A special adapter, the [`EmptyContentCardsAdapter`][50] replaces the standard [`ContentCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
 
 The style used to display this message can be found via [`Braze.ContentCardsDisplay.Empty`][52] and is reproduced in the following code snippet:
 
 ```xml
 <style name="Braze.ContentCardsDisplay.Empty">
   <item name="android:lineSpacingExtra">1.5dp</item>
-  <item name="android:text">@string/com_appboy_feed_empty</item>
+  <item name="android:text">@string/com_braze_feed_empty</item>
   <item name="android:textColor">@color/com_braze_content_card_empty_text_color</item>
   <item name="android:textSize">18.0sp</item>
   <item name="android:gravity">center</item>

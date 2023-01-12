@@ -84,6 +84,12 @@ Note that Segments created with custom event data cannot show previous historic 
 
 With custom event properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, track conversions, and generating more sophisticated analytics through raw data export.
 
+{% alert important %}
+Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
+{% endalert %}
+
+### Expected format
+
 The properties values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
 
 Property values can be any of the following data types:
@@ -101,30 +107,41 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
-For example, if an eCommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a custom event property of the 'cart value' of users' carts.
+You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
-{% alert important %}
-Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
-{% endalert %}
+### Using custom event properties
+
+#### Trigger messages
+
+You can use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you could improve your target audience and allow for increased campaign personalization by adding a custom event property of `cart value`.
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
-Nested custom event properties are also supported in [Action-Based Delivery][19] or conversion processing:
+Nested custom event properties are also supported in [Action-Based Delivery][19] or conversion processing.
+
 ![Custom event property filters for an abandoned card. One filter is selected if any items in the cart have a price more than 100 dollars.][20]
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+#### Personalize messages
+
+You can also use custom event properties for personalization within the messaging template. Any campaign using [action-based delivery][19] with a trigger event can use custom event properties from that event for messaging personalization.
+
+For example, if you have a gaming application and want to send a message to users who had completed a level, you could further personalize your message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called `time_spent` can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
-Triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display if there is no internet connectivity.
+If the user has no internet connection, triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display.
 {% endalert %}
 
-You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+#### Considerations with filters
 
-{% alert important %}
-When making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": ""`, then your users would be considered "not blank".
-{% endalert %}
+- **API calls:** When making API calls and using the "is blank" filter, a custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": ""`, then your users would be considered "not blank".
+- **Integers:** When filtering for a number custom event property and the number is very large, don't use the "exactly" filter. If a number is too large, it may be rounded at a certain length, so your filter won't work as expected. 
+ 
+#### Data points
 
-In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
+In regards to subscription usage, custom event properties enabled for segmentation with the following filters are all counted as separate data points in addition to the data point counted by the custom event itself:
+
+- `X Custom Event Property in Y Days`
+- `X Purchase Property in Y Days`
 
 ### Canvas entry properties and event properties
 
@@ -174,10 +191,21 @@ You can use nested objects—objects that are inside of another object—to send
 #### Limitations
 
 - Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
-- Event property objects that contain array or object values can have an event property payload of up to 50KB.
+- Event property objects that contain array or object values can have an event property payload of up to 50 KB.
 - The following SDK versions support nested objects:
 
 {% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
+
+#### Schema generation
+
+Generating a schema for events with nested event properties allows you to access the nested data. To generate a schema, follow these steps:
+1. Go to **Manage Settings** > **Custom Events**.
+2. Select **Manage Properties** for the events with nested properties.
+3. Click the icon to generate the schema. To view the schema, click the plus button.
+
+![][6]{: style="max-width:80%;"}
+
+After generating a schema, you'll be able to reference the nested data during [segmentation](#segmentation) and [personalization](#personalization).
 
 #### Usage examples
 
@@ -260,7 +288,7 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ##### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
+To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages. However, you can also add nested objects after generating a schema.
 
 {% tabs %}
 {% tab Music Example %}
@@ -286,11 +314,19 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ##### Segmentation
 
-Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Once you've generated a schema, the nested objects explorer will display in the segmentation section. Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)). 
+
+![][4]
+
+##### Personalization
+
+Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties once a schema has been generated.
+
+![][5]{: style="max-width:70%;"}
 
 ##### Event property segmentation
 
-Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
+Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds more filtering options when segmenting purchase and custom events.
 
 ![][3]
 
@@ -299,7 +335,7 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Mangage Properties** and used in the target step of the campaign or Canvas builder.
+Event properties with custom events are updated in real time for any segment that uses them. You can manage properties under **Manage Settings > Custom Events > Mangage Properties**. Custom event properties used in certain segment filters have a maximum look back history of 30 days. Reach out to your Braze customer success manager to discuss using event property segmentation for your custom events.
 
 #### Frequently asked questions
 
@@ -318,14 +354,17 @@ Custom event properties are designed to help you increase targeting precision an
 If you would like to segment on the values of event properties, you have two options:
 
 1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
-2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past two years. Note that this option will not impact data usage.
+2. **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past two years. Note that this option will not impact data usage.
 
-Braze's Success and Support teams can help recommend the best approach depending on your specific needs.
+Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
 
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}
 [3]: {% image_buster /assets/img/nested_object3.png %}
+[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
+[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
+[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/

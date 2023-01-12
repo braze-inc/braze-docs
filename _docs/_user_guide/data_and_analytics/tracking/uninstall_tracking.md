@@ -28,8 +28,6 @@ When uninstall tracking is enabled for an app, background push messages will be 
 
 If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`BrazeNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
 
-![Uninstall Attribute][4]
-
 This time can be used to define a segment of users for win-back campaigns. Using the "Uninstalled" filter on the **Segments** page, you can select users who uninstalled your app within a time range. Since determining the exact time of an uninstall is difficult, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
 
 ![Uninstall Segment][5]

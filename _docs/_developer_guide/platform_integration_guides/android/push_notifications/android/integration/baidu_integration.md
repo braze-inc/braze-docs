@@ -142,14 +142,14 @@ Finally, you will need to register your users with Braze. In the `onBind()` meth
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).registerAppboyPushMessages(channelId);
+Braze.getInstance(context).setRegisteredPushToken(channelId);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).registerAppboyPushMessages(channelId)
+Braze.getInstance(context).setRegisteredPushToken(channelId)
 ```
 
 {% endtab %}

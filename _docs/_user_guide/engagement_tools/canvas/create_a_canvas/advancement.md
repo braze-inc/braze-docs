@@ -19,6 +19,8 @@ For components in Canvas Flow, the **Advancement Behavior** is set to always imm
 
 ![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
 
+Users must meet the step's criteria in order to be advanced through the step. With [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps, you can turn on delivery validations to check that your audience meets your delivery criteria at message send. This will count towards the step's criteria when using Canvas Flow.
+
 When **Advance When Message Sent** is selected, users will only be advanced to the subsequent Canvas steps when one of the following conditions occur:
 
 - An email message is sent
@@ -37,10 +39,6 @@ When **Immediately Advance Audience** is selected, users will be advanced to the
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-{% alert important %}
-Users must meet the step's criteria in order to be advanced through the step. 
-{% endalert %}
-
 ### Scheduled steps
 
 For a scheduled component, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
@@ -52,7 +50,7 @@ When sending a multichannel component with [Intelligent Timing]({{site.baseurl}}
 For action-based steps, users must perform the trigger action and meet the audience options in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.
 
 {% alert important %}
-Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
+Users who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
 ## Use case

@@ -46,17 +46,22 @@ For customers who onboarded with Braze on or after August 16, 2021, we apply a r
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/alias/new` and `/users/identify` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/alias/new`, `/users/identify`, and `/users/merge` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete` and `/users/identify` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete`, `/users/identify`, and `/users/merge` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete` and `/users/alias/new` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete`, `/users/alias/new`, and `/users/merge` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+<!---/users/merge-->
+
+{% elsif include.endpoint == "users merge" %}
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete`, `/users/alias/new`, and `/users/identify` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/events/list-->
 
@@ -87,7 +92,7 @@ The daily maximum number of custom send identifiers that can be created via this
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
-For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute to this endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute shared across the `/subscription/status/set` and `/v2/subscription/status/set` endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 

@@ -77,7 +77,7 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| Template name is required |
+| Template name is required | Enter a template name. |
 | Tags must be an array | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. |
 | All tags must be strings | Make sure your tags are encapsulated in quotes (`""`). |
 | Some tags could not be found | To add a tag when creating an email template, the tag must already exist in Braze. |

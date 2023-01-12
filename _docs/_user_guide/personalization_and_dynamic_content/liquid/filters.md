@@ -68,8 +68,8 @@ Array filters are used to change the output of arrays.
 | Filter         | Definition                                                                                                         | Supported |
 | :------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
 | [join][1.1]    | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
-| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the most recently added value.         | ✅  Yes   |
-| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the oldest added value.                 | ✅  Yes   |
+| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the oldest added value.         | ✅  Yes   |
+| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the most recently added value.                 | ✅  Yes   |
 | [compact][1.4]  | Removes any `nil` items from an array.                                                                              | ✅  Yes    |
 | [concat][1.5]  | Combines an array with another array.                                                                              | ✅  Yes    |
 | [index][1.6]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
@@ -172,7 +172,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 ### Shopify money filter versus Braze money filter
 
 {% alert warning %}
-The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depication of the expected behavior.
+The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depiction of the expected behavior.
 {% endalert %}
 
 {% raw %}
@@ -247,7 +247,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [sha1][6.8]                                      | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | [hmac_sha256][6.11]                              | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.| ✅  Yes   |
-| [newline_to_br][6.12]                            | Inserts a `<br>` linebreak HTML tag in front of each line break in a string. | ✅  Yes   |
+| [newline_to_br][6.12]                            | Inserts a `<br>` line break HTML tag in front of each line break in a string. | ✅  Yes   |
 | [pluralize][6.13]                                | Outputs the singular or plural version of an English string based on the value of a number. | ⛔  No    |
 | [prepend][6.14]                                  | Prepends characters to a string.  | ✅  Yes   |
 | [remove][6.15]                                   | Removes all occurrences of a substring from a string. | ✅  Yes   |

@@ -83,15 +83,15 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 |---|---|---|
 | `apps` | Array | Apps this user has logged sessions for, which includes the fields:<br><br>- `name`: app name<br>- `platform`: app platform, such as iOS, Android, or Web<br>- `version`: app version number or name <br>- `sessions`: total number of sessions for this app<br>- `first_used`: date of first session<br>- `last_used`: date of last session<br><br>All fields are strings. |
 | `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
-| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for the platform the ad was on. |
-| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
+| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
+| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
+| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and adgroup. |
 | `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
 | `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |
 | `custom_attributes` | Object | Custom attribute key-value pairs for this user. |
 | `custom_events` | Array | Custom events attributed to this user in the last 90 days. |
-| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `windows_ad_id`: (Windows) Windows Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
+| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `windows_ad_id`: (Windows) Windows Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
 | `dob` | String | User's date of birth in the format `YYYY-MM-DD`. |
 | `email` | String | User's email address. |
 | `external_id` | String | Unique user identifier for identified users. |
@@ -188,7 +188,7 @@ User export object (we will include the least data possible - if a field is miss
         "model" : (string),
         "os" : (string),
         "carrier" : (string),
-        "idfv" : (string) only included for iOS devices,
+        "idfv" : (string) only included for iOS devices when IDFV collection is enabled,
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,

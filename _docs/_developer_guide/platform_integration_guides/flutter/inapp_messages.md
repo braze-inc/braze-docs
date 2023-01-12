@@ -37,7 +37,7 @@ To disable automatic in-app message display, make these updates in the native la
 {% tabs %}
 {% tab Android %}
 
-1. Ensure you are using the automatic integration intializer, which is enabled by default starting in version `2.2.0`.
+1. Ensure you are using the automatic integration initializer, which is enabled by default starting in version `2.2.0`.
 2. Set the in-app message operation default to `DISCARD` by adding the following line to your `braze.xml` file.
 
 ```xml
@@ -109,7 +109,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 
 #### Replaying the callback for in-app messages
 
-To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
+To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

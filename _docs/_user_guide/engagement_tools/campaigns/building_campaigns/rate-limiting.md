@@ -221,7 +221,7 @@ Consider the following campaigns and frequency capping by tag rule:
 | The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user will not receive **Campaign B**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Sending at large scales
+#### Sending at large scales {#sending-at-large-scales}
 
 If you send more than 100 messages per channel from campaigns or Canvas components with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over one week), the frequency capping by tag rule may not always be applied properly.
 

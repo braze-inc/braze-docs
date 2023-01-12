@@ -50,7 +50,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 Follow these steps to test a sample Content Card.
 
-1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
+1. Set an active user in the React application by calling the [`Braze.changeUser('your-user-id')`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new Content Card campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch a Content Card on your device shortly.
 
@@ -58,11 +58,10 @@ Follow these steps to test a sample Content Card.
 
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
-A sample implementation of this can be found in AppboyProject, within the [React SDK][1].
+A sample implementation of this can be found in AppboyProject within the [React SDK][1].
 
 [1]: https://github.com/Appboy/appboy-react-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
-
 [5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"

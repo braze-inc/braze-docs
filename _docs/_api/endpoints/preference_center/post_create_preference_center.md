@@ -34,8 +34,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "name": "string",
+  "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified
 }
 ```
 
@@ -44,8 +46,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`name`| Required | String | The name of the preference center that meets the following requirements: <br>- Only contains letters, numbers, hyphens, and underscores <br>- Does not have spaces |
+|`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
+|`state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -63,15 +67,15 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 | Liquid | Description |
 | --------- | ---------|
 |`{{subscribed_state.${email_global}}}`| Get the global email subscribed state for the user (i.e., "opted_in", "subscribed", or "unsubscribed". |
-|`{{subscribed_state.${subscription_group_id}}}`| Get the subscribed state of a subscription group for the user (i.e., "subscribed" or "unsubscribed"). |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Get the subscribed state of the specified subscription group for the user (i.e., "subscribed" or "unsubscribed"). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Form inputs and action
 
 | Liquid | Description |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email susbcribed state. The user's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
-|`{% form_field_name :subscription_group external_id %}`| Indicates that a specific form input element corresponds to a given subscription group. The user's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
+|`{% form_field_name :email_global_state %}`| Indicates that a specific form input element corresponds to the user's global email subscribed state. The user's selection state should be "opted_in", "subscribed", or "unsubscribed" when the form is submitted with selection data for the global email subscribed state. If it's a checkbox, the user will either be "opted_in" or "unsubscribed". For a hidden input, the "subscribed" state will also be valid. |
+|`{% form_field_name :subscription_group <external_id> %}`| Indicates that a specific form input element corresponds to a given subscription group. The user's selection state should be either "subscribed" or "unsubscribed" when the form is submitted with selection data for a specific subscription group. |
 |`{{preference_center_submit_url}}`| Generates URL for form submission. |
 {: .reset-td-br-1 .reset-td-br-2}
 

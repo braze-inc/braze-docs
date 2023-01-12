@@ -53,7 +53,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 6. Add the following frameworks and mark them as optional:
 	- `CoreTelephony.framework`<br><br>
 7. Select the **Build Settings** tab. In the **Linking** section, locate the **Other Linker Flags** setting and add the `-ObjC` flag.<br><br>
-8. The `SDWebImage` framework is required for the Braze News Feed, Content Cards, and in-app messaging to function properly. `SDWebImage` is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards, or in-app messages, follow the SDWebImage integration steps.
+8. The `SDWebImage` framework is required for Content Cards and in-app messaging to function properly. `SDWebImage` is used for image downloading and displaying, including GIFs. If you intend to use Content Cards or in-app messages, follow the SDWebImage integration steps.
 
 ### SDWebImage integration
 

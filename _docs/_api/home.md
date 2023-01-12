@@ -90,6 +90,10 @@ glossaries:
     description: Record custom events, purchases, and update user profile attributes.
     tags:
       - User Data
+  - name: <a href='/docs/api/endpoints/user_data/post_users_merge/'>/users/merge</a>
+    description: Merge a user profile into another user.
+    tags:
+      - User Data
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/'>/campaigns/trigger/send</a>
     description: Send immediate, ad-hoc messages to designated users via API-triggered delivery.
       - Send Messages
@@ -101,7 +105,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>
-    description: Create send IDs that can be used to send messages and track message performance programatically, without campaign creation for each send.
+    description: Create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>
@@ -352,15 +356,15 @@ glossaries:
     description: Create multiple items in your catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
     description: Delete a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>
     description: Create a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'>/catalogs/</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
     description: List the catalogs in an app group.
     tags:
       - Catalogs

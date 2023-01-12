@@ -47,14 +47,14 @@ Before building your email, it's important to understand the key components to h
 
 ### Drag & drop email components {#content}
 
-![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
-![][9]{: style="float:right;max-width:25%;margin-left:10px;"}
-
 The Drag & Drop Editor uses two key components to make email composition quick and easy: **Content** and **Rows**. 
 
-**Content** includes a series of tiles that represent different types of content you can use in your message such as a title, text blocks, icons, and spacers. Simply drag one inside an existing row segment, and it will auto-adjust to the column width. 
+![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
+![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
+**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic content blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media content blocks allow you to include images, videos, social media information, and icons. With the advanced content blocks, you can insert HTML blocks or add a menu to your email.
+
+Simply drag one inside an existing row segment, and it will auto-adjust to the column width. Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
@@ -76,7 +76,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %}){: style="max-width:85%"}
+![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Creative details {#creative-details}
@@ -116,9 +116,20 @@ Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your ema
 
 ##### Dynamic images
 
-You can choose to incorporate dynamic images into your email messaging with Liquid. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image.
+You can choose to include dynamic images into your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
+
+#### Adding HTML attributes to links
+
+![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+
+With attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images. This can be especially useful for message personalization, segmentation, and styling. 
+
+A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
+
+* **Sendgrid:** `clicktracking = "off"`
+* **SparkPost:** `data-msys-clicktrack = "0"`
 
 ## Step 3: Add sending information
 
@@ -146,6 +157,8 @@ You can also view your email previews with these user types:
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
+Here, you can also use the **Dark Mode Preview** toggle to preview your email in dark mode and adjust your email as needed.
+
 ### Inbox Vision
 
 [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**. 
@@ -164,7 +177,7 @@ The underlying engine that produces HTML from the Drag & Drop Editor has been op
 
 Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
 
-#### HTML Rendering
+#### HTML rendering
 
 HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
 
@@ -178,6 +191,7 @@ HTML rendering has improved based on these following updates that minimize the n
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
 [4]: {% image_buster /assets/img/dnd/dnd3.png %}
 [5]: {% image_buster /assets/img/dnd/dnd4.png %}
+[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
 [8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}

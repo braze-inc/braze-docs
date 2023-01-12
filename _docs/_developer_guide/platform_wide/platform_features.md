@@ -40,7 +40,7 @@ The Braze dashboard displays graphs that are updated in real-time based upon a n
 
 ### User segmentation
 
-Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". Once a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, the following image shows a segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
+Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes." Once a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, the following image shows a segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
 
 ![An example segment where the filters "Last made purchase more than 7 days ago" and "Last used these apps more than 4 weeks ago" are set.][2]
 
@@ -91,7 +91,6 @@ Braze's webhooks allow you to trigger non-app actions provide other systems and 
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Segmentation Example"
 [4]: http://en.wikipedia.org/wiki/Dayparting
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[6]: {% image_buster /assets/img_archive/news_feed_dashboard_example.png %} "News Feed dashboard"
 [8]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
 [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
 [10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"

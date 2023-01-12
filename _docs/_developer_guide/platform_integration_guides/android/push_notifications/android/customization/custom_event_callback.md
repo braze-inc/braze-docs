@@ -10,7 +10,7 @@ channel:
 ---
 # Custom handling for push receipts, opens, dismissals, and key-value pairs via callback {#android-push-listener-callback}
 
-Braze provides a [`subscribeToPushNotificationEvents()`][1] callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occuring while your application is not running.
+Braze provides a [`subscribeToPushNotificationEvents()`][1] callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
 
 {% alert note %}
 If previously using a Custom Broadcast Receiver for this functionality in your application, you can safely remove it in favor of this integration option.

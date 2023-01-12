@@ -18,7 +18,9 @@ Segment Extensions are audience definitions which allow you to use nested event 
 
 The use of nested event properties for [Action-Based Delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
-Out of the box, there is a soft limit of 10 active Segment Extensions per App Group at a particular time. This can be increased by contacting your Customer Success Manager to discuss your use case.
+{% alert important %}
+Out of the box, there is a limit of 25 active Segment Extensions per app group at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
+{% endalert %}
 
 ## Step 1: Navigate to Segment Extensions
 
@@ -28,13 +30,13 @@ Under **Engagements**, expand **Segments** and click **Segment Extension**. From
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension named "Online Shoppers Extenion - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
 
 ## Step 3: Choose your criteria
 
-Select between purchase, message engagement, or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years).
+Select between purchase, message engagement, or custom event criteria for targeting. Once you’ve selected the desired event type criteria, choose which purchased item, message interaction, or specific custom event you’d like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 730 days (2 years). Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**.
 
-![Segment ][3]
+![][3]
 
 ### Event property segmentation
 
@@ -50,7 +52,7 @@ We also support segmentation based on [nested event properties]({{site.baseurl}}
 
 ![Segmenting based on nested event properties.][18]
 
-Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past two years, and tracking doesn't wait until the extension has been set up first.
+Segment Extensions rely on long term storage of event properties and don’t have a time-stamped property storage limit. You can look back on event properties tracked within the past two years.
 
 {% alert note %}
 Using event properties within Segment Extensions does not impact data point usage.

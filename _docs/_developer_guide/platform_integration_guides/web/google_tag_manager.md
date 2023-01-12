@@ -29,7 +29,7 @@ Search for Braze in the community template gallery, and select the **Braze Initi
 
 ### Step 2. Configure settings
 
-Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page.
+Enter your Braze API app identifier key and SDK endpoint, which can be found in your dashboard's **Manage Settings** page. Enter the Web SDK's most recent `major.minor` version. For example, if the latest version is `4.1.2`, enter `4.1`. You can view a list of SDK versions in our [changelog][changelog].
 
 ### Step 3. Choose initialization options
 
@@ -100,7 +100,7 @@ The **Product ID** and **Price** fields are required.
 
 Use the **Add Row** button to add purchase properties.
 
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quanitity", and "purchase properties".][gtm-purchase]
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quantity", and "purchase properties".][gtm-purchase]
 
 ### Stop and resume tracking {#stop-tracking}
 
@@ -135,6 +135,42 @@ For example, the gender attribute can accept any of the following as values: `"m
 window.braze.getUser().setGender("f")
 </script>
 ```
+
+## Integrating Content Cards
+
+There are a few additional steps to integrate the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) messaging channel using Google Tag Manager. Google Tag Manager works by injecting the [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without GTM, except when implementing Content Cards.
+
+### Option 1: Integrating using GTM
+
+For a standard integration of the Content Card feed, you can use a **Custom HTML** tag in Google Tag Manager. Add the following to your Custom HTML tag, which will activate the standard Content Card feed:
+
+```html
+<script>
+   window.braze.showContentCards();
+</script>
+```
+
+![Tag Configuration in Google Tag Manager of a Custom HTML tag that shows the Content Card feed.][gtm-content-cards]
+
+### Option 2: Integrating directly in your website
+
+For more freedom over customizing the appearance of Content Cards and their feed, you can directly integrate Content Cards into your native website. There are two approaches you can take with this: using the standard feed UI or creating a custom feed UI.
+
+#### Standard feed
+
+When implementing the [standard feed UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui), Braze methods must have `window.` added to the start of the method. For example, `braze.showContentCards` should instead be `window.braze.showContentCards`.
+
+#### Custom feed UI
+
+For [custom feed](((site.baseurl))/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
+
+{% raw %}
+```css
+body .ab-feed { 
+    width: 800px;
+}
+```
+{% endraw %}
 
 ## Upgrading and updating templates {#upgrading}
 
@@ -190,3 +226,4 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 [e-commerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
 [gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
+[gtm-content-cards]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}

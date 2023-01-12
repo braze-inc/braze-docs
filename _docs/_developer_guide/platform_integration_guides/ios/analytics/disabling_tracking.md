@@ -14,3 +14,6 @@ To comply with data privacy regulations, data tracking activity on the iOS SDK c
 Additionally, you can use the method [`wipeDataAndDisableForAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8d580f60ec0608cd91240a8a3aa23a3) to fully clear all client-side data stored on the device.
 
 Unless a user uninstalls all apps from a vendor on a given device, the next Braze SDK and app runs after calling `wipeDataAndDisableForAppRun()` will result in our server re-identifying that user via their device identifier (IDFV). In order to fully remove all user data, you should combine a call to `wipeDataAndDisableForAppRun` with a request to delete data on the server via the Braze [REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-delete-endpoint).
+
+## iOS SDK v5.7.0+
+For devices using iOS SDK v5.7.0 and above, when [disabling IDFV collection](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/), calling [`wipeData`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) will not result in our server re-identifying that user via their device identifier (IDFV).

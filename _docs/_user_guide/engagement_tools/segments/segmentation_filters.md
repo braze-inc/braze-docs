@@ -11,7 +11,7 @@ tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
-glossary_filter_text: "Select a catagory to narrow the glossary:"
+glossary_filter_text: "Select a category to narrow the glossary:"
 
 # category to icon/fa or image mapping
 glossary_tags:
@@ -267,14 +267,6 @@ glossaries:
       - Marketing Activity
   - name: Last Received Webhook
     description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time that they have visited your app’s News Feed interface.
-    tags:
-      - Marketing Activity
-  - name: News Feed View Count
-    description: Segments your users by the number of times that they have viewed your app’s News Feed interface.
     tags:
       - Marketing Activity
   - name: Age

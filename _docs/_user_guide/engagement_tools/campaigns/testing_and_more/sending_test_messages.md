@@ -82,6 +82,10 @@ After creating your webhook, you can do a test send to check the webhook respons
 {% endtab %}
 {% tab News Feed %}
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 
 ##### Step 1: Create a designated test segment

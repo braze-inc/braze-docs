@@ -16,7 +16,8 @@ Additionally, you can create a settings page in your app that allows users to di
 
 When the news app wants to create a campaign targeting only users interested in Politics, they simply add the 'Subscribes to Politics' attribute filter to the segment. When set to true, only users who subscribe to notifications will receive them.
 
-The general stats that you see for push enabled will relate to whether the user has approved notifications with the OS. If users disable notifications on iOS they'll be automatically removed from our system since Apple won't allow the push token to be sent. Android subscribes users to notifications by default.
+The general stats that you see for push enabled will relate to whether the user has approved notifications with the OS. If users disable notifications on iOS, they'll be automatically removed from our system since Apple won't allow the push token to be sent. Android 13 and up requires permission be obtained before push notifications can be shown. Older versions of Android will subscribe users to notifications by default.
+
 
 Refer to the following articles for setting custom attributes based on your platform:
 - [iOS][4]

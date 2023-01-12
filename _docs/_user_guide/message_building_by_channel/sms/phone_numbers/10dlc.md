@@ -46,7 +46,7 @@ Visit the Twilio 10DLC article to check out updated [fee estimates](https://supp
 
 ### Throughput
 
-Message throughput for your 10dlc depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
+Message throughput for your 10DLC depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
 
 #### Brand trust score {#trust-score}
 

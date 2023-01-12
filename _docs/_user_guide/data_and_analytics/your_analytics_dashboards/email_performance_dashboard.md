@@ -11,7 +11,7 @@ tool:
 
 # Channel performance dashboards
 
-Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and push.
+Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
@@ -58,8 +58,8 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
 | Rejections rate | Rate | (Total number of rejections across each day in the date range) / (Total number of sends across each day in the date range) |
 | Click rate | Rate | (Total number of clicks across each day in the date range) / (Total number of deliveries across each day in the date range) |
-| Total opt-ins | Rate | Total number of opt-ins across each day in the date range |
-| Total opt-outs | Rate | Total number of opt-outs across each day in the date range |
+| Total opt-ins | Rate | Total number of inbound message opt-ins across each day in the date range |
+| Total opt-outs | Rate | Total number of inbound message opt-outs across each day in the date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Dashboard filters

@@ -45,6 +45,66 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Canvas exit performed event events
+
+{% apitags %}
+Exit, Canvas
+{% endapitags %}
+
+This event occurs when a user has exited a Canvas by performing an event.
+
+```json
+// Canvas Exit Performed Event: users.canvas.exit.PerformedEvent
+// Canvas Exit Performed Event Details: users_canvas_exit_PerformedEvent_Details
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Canvas exit matched audience events
+
+{% apitags %}
+Exit, Canvas
+{% endapitags %}
+
+This event occurs when a user has exited a Canvas by matching an audience.
+
+```json
+// Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
+// Canvas Exit Matched Audience Details :users_canvas_exit_MatchedAudience_Details
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) Braze user id of the user, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+}
+```
+{% endapi %}
+{% api %}
 ## Experiment split entry events
 
 {% apitags %}
@@ -54,18 +114,22 @@ Experiment Step, Canvas
 This event occurs when a user enters a Canvas experiment step path.
 
 ```json
-// Experiment Step Path Entry: users.canvas.experimentstep.PathEntry
+// Experiment Step Split Path Entry: users.canvas.experimentstep.SplitEntry
 
 {
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
 ```
@@ -119,6 +183,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -135,7 +200,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -160,6 +225,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -183,7 +249,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -194,7 +260,9 @@ This event occurs when a user directly clicks on the Push notification to open t
 Push, iOS, Sends
 {% endapitags %}
 
-This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10).
+Please note, this event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
+
+This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
@@ -208,6 +276,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -224,7 +293,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
@@ -249,6 +318,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -290,6 +360,7 @@ This event occurs when an email send request was successfully communicated betwe
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -329,6 +400,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -370,6 +442,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -414,6 +487,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -458,6 +532,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -500,6 +575,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -541,6 +617,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -587,6 +664,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -631,6 +709,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -668,6 +747,7 @@ This event occurs when a user views an in-app message.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -687,7 +767,7 @@ This event occurs when a user views an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -713,6 +793,7 @@ This event occurs when a user clicks on an in-app message.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -732,7 +813,7 @@ This event occurs when a user clicks on an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -758,6 +839,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -790,6 +872,7 @@ This event occurs when a Content Card gets sent to a user.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -825,6 +908,7 @@ This event occurs when a user views a Content Card.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -842,7 +926,7 @@ This event occurs when a user views a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
@@ -868,6 +952,7 @@ This event occurs when a user clicks a Content Card.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -912,6 +997,7 @@ This event occurs when a user dismisses a Content Card.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -936,6 +1022,10 @@ This event occurs when a user dismisses a Content Card.
 {% api %}
 
 ## News Feed impression event
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 {% apitags %}
 News Feed, Impressions
@@ -1022,6 +1112,7 @@ This event occurs when a user sends an SMS.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1059,6 +1150,7 @@ This event occurs when an SMS is sent to the carrier.
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1095,6 +1187,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1132,6 +1225,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1172,6 +1266,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1216,6 +1311,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
+  "message_variation_name": (string) the name of the message variation if Braze identifies this inbound message is a reply to a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
@@ -1238,7 +1334,7 @@ Campaign, Conversion
 This event occurs when a user does an action that has been set as a conversion event in a campaign.
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1255,6 +1351,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "conversion_behavior_index": (int) index of the conversion behavior,
   "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
   "message_variation_id": (string) id of the message variation,
+  "message_variation_name": (string) the name of the message variation,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
@@ -1272,7 +1369,7 @@ Canvas, Conversion
 This event occurs when a user does an action that has been set as a conversion event in Canvas.
 
 {% alert important %}
-Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
+Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1348,6 +1445,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "campaign_id": (string) id of the campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation,
+  "message_variation_name": (string) the name of the message variation,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```

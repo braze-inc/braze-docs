@@ -30,7 +30,7 @@ Next, select **Drag & Drop Editor** as the Content Block type. Click **Edit Cont
 Here, we'll make use of the [Drag & Drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) to build a Drag & Drop Editor Content Block. First, drag and drop a format block from the **Rows** tab the editor. This will determine the layout of your Content Block. 
 
 {% alert important %}
-Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suite your email messaging.
+Each Drag & Drop Editor Content Block is limited to one row. However, you can use Drag & Drop editor blocks to build and customize the Content Block to suit your email messaging.
 {% endalert %}
 
 You can also add as many Drag & Drop Editor Content Blocks as needed to build out your email campaigns.
@@ -58,7 +58,7 @@ In the **Add Personalization** tab, select **Content Blocks** in the **Personali
 When you preview your email messaging, the Liquid snippet will display as the Drag & Drop Editor Content Block. 
 
 {% alert important %}
-When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes the original Content Block template.
+When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes to the original Content Block template.
 {% endalert %}
 
 ## Updating Content Blocks

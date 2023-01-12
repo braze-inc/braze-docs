@@ -69,7 +69,7 @@ Note that if this functionality is disabled, the host activity's hardware back b
 The default and historical value is `false`, meaning clicks outside the modal will not close the modal. Setting this value to `true` will result in the modal in-app message being dismissed when the user taps outside of the in-app message. This behavior can be toggled on by calling:
 
 ```java
-AppboyInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
+BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
 [96]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html

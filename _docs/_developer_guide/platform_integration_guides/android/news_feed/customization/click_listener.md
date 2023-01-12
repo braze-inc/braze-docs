@@ -13,6 +13,10 @@ channel:
 
 # Handling clicks manually
 
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
+
 You can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
 
 ## Step 1: Implement a News Feed click listener
@@ -21,6 +25,6 @@ Create a class that implements [`IFeedClickActionListener`][37]. Implement the `
 
 ## Step 2: Instruct Braze to use your News Feed click listener
 
-Once your `IFeedClickActionListener` is created, call `AppboyFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `AppboyFeedManager` to use your custom `IFeedClickActionListener`.
+Once your `IFeedClickActionListener` is created, call `BrazeFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `BrazeFeedManager` to use your custom `IFeedClickActionListener`.
 
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
+[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java

@@ -21,6 +21,7 @@ Ensure with your development team that the following is supported within your Sh
 | [Shopify Ajax API](https://shopify.dev/api/ajax) | Possible use of the Ajax API includes:<br>- Add products to the cart and update the cart item counter.<br>- Display related product recommendations.<br>- Suggest products and collections to visitors as they type in a search field.<br><br>Braze requires the Ajax API as we will fetch product information for your product events. |
 | [Cart token management by Shopify](https://shopify.dev/api/examples/cart) | A cart contains merchandise that a customer intends to purchase and the estimated cost associated with the cart. You can use the [Storefront API](https://shopify.dev/api/storefront) to interact with a cart during a customer's session. <br><br>Braze requires cart token management through Shopify directly and not a 3rd party system to fetch the cart token ID for abandoned cart events. |
 | URL management by Shopify | Your store will need to follow the structured Shopify URL pathing, where each of the paths for collections or products follows one of the following:<br>- /collections/collectionA<br>- /collections/collectionA/products/productA<br>- /products/productB |
+| Fetch API calls | Stores should be using Shopify's recommended and newer method of calling the API (Fetch). Stores making calls using the older method (XHR) will result in abandoned cart events not registering at all and user reconciliation not properly working. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## What is the Web SDK?

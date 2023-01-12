@@ -24,12 +24,13 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 
 |Property|Description|
 |---|---|
-| `expiresAt` | The unix timestamp of the card's expiration time.|
+| `expiresAt` | The UNIX timestamp of the card's expiration time.|
 | `extras`| (Optional) Key-value pair data formatted as a string object with a value string. |
 | `id` | (Optional) The id of the card. This will be reported back to Braze with events for analytics purposes. |
 | `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
-| `updated` | The unix timestamp of when this card was last modified. |
+| `updated` | The UNIX timestamp of when this card was last modified. |
 | `viewed` | This property reflects whether the user viewed the card or not.|
+| `isControl` | This property is `true` when a card is a "control" group within an A/B test.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner Content Card properties - Banner
@@ -39,7 +40,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
 | `imageUrl` | The URL of the card's image.|
@@ -54,7 +55,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
 | `imageUrl` | The URL of the card's image.|
@@ -70,7 +71,7 @@ The Braze Web SDK offers three Content Card types: [Banner](https://js.appboycdn
 | `aspectRatio` | The aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 | `categories` | This property is purely for organization in your custom implementation; these categories can be set in the dashboard composer. |
 | `clicked` | This property indicates whether this card has ever been clicked on this device. |
-| `created` | The unix timestamp of the card's creation time from Braze. |
+| `created` | The UNIX timestamp of the card's creation time from Braze. |
 | `description` | The body text for this card. |
 | `dismissed` | This property indicates if this card has been dismissed. |
 | `dismissible` | This property reflects if the user can dismiss the card, removing it from view. |
@@ -104,9 +105,7 @@ The Braze Web SDK includes a Content Cards feed UI to speed up your integration 
 
 To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
 
-In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. 
-
-We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
+In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
 
 ```html
 
@@ -153,15 +152,9 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen.
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card would have been seen - even for "control" cards within an A/B test.
 
-Here is an example of how to determine if a Content Card is a "Control" card:
-
-```javascript
-function isControlCard(card) {
-    return card instanceof braze.ControlCard;
-}
-```
+To determine if a Content Card is in the "control" group for an A/B test, you can check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a ControlCard instance (`card instanceof braze.ControlCard`).
 
 {% alert note %}
 Visit the following customization articles for documentation on adding [custom UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), [custom styling]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), [key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), [read and unread indicators]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/), and [requesting unviewed Content Card counts]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).
