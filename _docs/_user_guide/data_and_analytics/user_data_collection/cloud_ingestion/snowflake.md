@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# Braze Cloud Data Ingestion - Snowflake
+# Cloud Data Ingestion for Snowflake
 
 {% alert important %}
 Braze Cloud Data Ingestion for Snowflake is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.

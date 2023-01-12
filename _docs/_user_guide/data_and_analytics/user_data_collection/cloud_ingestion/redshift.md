@@ -4,10 +4,11 @@ article_title: Braze Cloud Data Ingestion for Redshift
 description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Reshift integration."
 page_order: 4.1
 page_type: reference
+hidden: true
 
 ---
 
-# Braze Cloud Data Ingestion - Redshift
+# Cloud Data Ingestion for Redshift
 
 {% alert important %}
 Braze Cloud Data Ingestion for Redshift is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
