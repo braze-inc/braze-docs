@@ -50,9 +50,6 @@ guide_menu_list:
   - name: iOS SDK (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
     fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
-    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-apple
   - name: Web SDK
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     fa_icon: fas fa-globe
@@ -62,6 +59,9 @@ guide_menu_list:
   - name: Flutter SDK
     link: https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md
     image: /assets/img/flutter_icon.png
+  - name: iOS SDK (Objective-C)
+    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
+    fa_icon: fab fa-apple
   - name: React Native
     link: https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md
     image: /assets/img/reactnative_icon.png

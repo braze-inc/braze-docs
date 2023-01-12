@@ -1,5 +1,5 @@
 ---
-nav_title: Objective-C
+nav_title: Changelog
 article_title: Changelog for iOS Objective-C SDK
 page_order: 30
 page_type: update
