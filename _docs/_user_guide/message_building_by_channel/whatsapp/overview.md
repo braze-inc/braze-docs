@@ -23,6 +23,7 @@ Acknowledge the following before proceeding with integration:
 
 - **Opt-in policy:** WhatsApp requires businesses to have customers opt-in to messaging.
 - **WhatsApp content rules:** WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
+- **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
 - **24-hour conversation limits:** After a user or business sends an initial templated message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
 - **Account limitations:** You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
@@ -32,7 +33,7 @@ Acknowledge the following before proceeding with integration:
 | ---| --- |
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
-| WhatsApp phone number | A WhatsApp phone number is required to leverage this messaging channel. | 
+| WhatsApp phone number | You must acquire a phone number that meets [WhatsApp’s requirements](https://developers.facebook.com/docs/whatsapp/phone-numbers/) for use of the messaging channel.  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -43,6 +44,8 @@ In Braze, go to the **Technology Partners** section and then search **WhatsApp**
 
 ![][1]{: style="max-width:70%;"}
 
+It is likely that you already have at least one existing Meta Business account. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions for WhatsApp will be controlled centrally in your Meta Business account.
+
 ### Step 2: WhatsApp setup
 Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
 1. Create or select your Meta and WhatsApp Business accounts.
@@ -50,6 +53,10 @@ Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
 3. Verify your WhatsApp Business number.<br><br>
 
 	![][2]{: style="max-width:100%;"}
+
+{% alert note %}
+WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze app group.
+{% endalert %}	
 
 Once the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
 
@@ -72,7 +79,7 @@ Next, you will be prompted to create your message template. <br><br>Here, you ca
 
 #### Template approval time
 
-WhatsApp may take up to 24 hours to get approved. You can check on the approval status of your message on the **Message Template** page in the Meta Business Manager.
+You can check the approval status of your message template in either the **Message Template** page in the Meta Business Manager, or when creating a campaign or Canvas in Braze. Additionally, you can be notified by email by the WhatsApp team depending on your notification permissions. 
 
 ### Step 4: Create a WhatsApp campaign
 
