@@ -14,7 +14,7 @@ guide_featured_list:
 - name: iOS (Swift)
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
-  nav_link: ios
+  nav_link: ios_swift
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   fa_icon: fas fa-globe
@@ -37,7 +37,7 @@ guide_menu_list:
   - name: iOS (Objective-C)
     link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
     fa_icon: fab fa-apple
-    nav_link: ios
+    nav_link: ios_c
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
