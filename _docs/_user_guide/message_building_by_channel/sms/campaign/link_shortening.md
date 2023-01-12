@@ -94,7 +94,7 @@ No. Currently, only static URLs are shortened.
 
 #### Are the links I receive when test sending real URLs?
 
-If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. Note that the exact URL sent in a launched Campaign may differ from the one sent via a Test Send.
+If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. Note that the exact URL sent in a launched campaign may differ from the one sent via a test send.
 
 #### Does the Braze SDK need to be installed in order to shorten links?
 
