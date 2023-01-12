@@ -33,7 +33,7 @@ When adding variants into your Canvas, click on one of the variant percentages. 
 ![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.][2]
 
 {% alert note %}
-We do not allow intelligent selection campaigns to have re-eligibility enabled because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
+We do not allow the use of intelligent selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
 {% endalert %}
 
 ## For how long will it run?
