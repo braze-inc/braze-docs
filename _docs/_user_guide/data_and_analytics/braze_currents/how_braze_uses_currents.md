@@ -41,7 +41,7 @@ For helpful usage monitoring resources, check out Snowflake's [Resource Monitors
 
 ## Step 4: Use a BI tool to manipulate your data
 
-Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) so we don't have to ETL/ELT data every time it moves from Currents.
+Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://www.marketplace.looker.com/) so we don't have to ETL/ELT data every time it moves from Currents.
 
 Check out the following docs to get more information on these and how you can use them to build your database!
 
