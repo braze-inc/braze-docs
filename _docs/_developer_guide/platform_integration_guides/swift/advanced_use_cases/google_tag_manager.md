@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: Google Tag Manager
 article_title: Google Tag Manager for iOS
 platform: iOS
@@ -51,21 +50,21 @@ The `genre` event property is sent to Google Tag Manager as a "Firebase - Event 
 Lastly, when a user plays a song in our app, we will log an event through Firebase and Google Tag Manager using the Firebase analytics event name that matches our tag's trigger name, `played song`:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```obj-c
-NSDictionary *parameters = @{@"genre" : @"pop",
-                             @"number of times listened" : @42};
-[FIRAnalytics logEventWithName:@"played song" parameters:parameters];
-```
-
-{% endtab %}
 {% tab SWIFT %}
 
 ```swift
 let parameters: [String: Any] = ["genre": "pop",
                                 "number of times listened": 42]
 Analytics.logEvent("played song", parameters: parameters)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```obj-c
+NSDictionary *parameters = @{@"genre" : @"pop",
+                             @"number of times listened" : @42};
+[FIRAnalytics logEventWithName:@"played song" parameters:parameters];
 ```
 
 {% endtab %}
@@ -76,6 +75,13 @@ Analytics.logEvent("played song", parameters: parameters)
 Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key-value to be set via `customAttributeKey` and `customAttributeValue`:
 
 {% tabs %}
+{% tab SWIFT %}
+```swift
+let parameters: [String: Any] = ["customAttributeKey": "favorite song",
+                                "customAttributeValue": "Private Eyes"]
+FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
+```
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```obj-c
@@ -85,13 +91,6 @@ NSDictionary *parameters = @{@"customAttributeKey" : @"favorite song",
 ```
 
 {% endtab %}
-{% tab SWIFT %}
-```swift
-let parameters: [String: Any] = ["customAttributeKey": "favorite song",
-                                "customAttributeValue": "Private Eyes"]
-FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
-```
-{% endtab %}
 
 {% endtabs %}
 
@@ -100,6 +99,12 @@ FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag:
 
 {% tabs %}
+{% tab SWIFT %}
+```swift
+let parameters: [String: Any] = ["externalUserId": "favorite userId"]
+Analytics.logEvent(withName:"changeUser", parameters: parameters)
+```
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```obj-c
@@ -107,12 +112,6 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 [FIRAnalytics logEventWithName:@"changeUser" parameters:parameters];
 ```
 
-{% endtab %}
-{% tab SWIFT %}
-```swift
-let parameters: [String: Any] = ["externalUserId": "favorite userId"]
-Analytics.logEvent(withName:"changeUser", parameters: parameters)
-```
 {% endtab %}
 
 {% endtabs %}
@@ -128,11 +127,84 @@ Be sure to note the "Class Path" to the file - this is what you'll enter when se
 This example shows one of many ways to structure your custom tag provider, where we determine which Braze SDK method to call based on the `actionType` key-value pair sent down from the GTM Tag. This example assumes you've assigned the Braze instance as a variable in the AppDelegate.
 
 The `actionType` we've supported in our example are `logEvent`, `customAttribute`, and `changeUser`, but you may prefer to change how your tag provider handles data from Google Tag Manager.
-
-Add the following code to your `BrazeGTMTagManager.h` file:
-
 {% tabs %}
+{% tab SWIFT %}
+
+Add the following code to your `BrazeGTMTagManager.swift' file.
+```swift
+import FirebaseAnalytics
+import GoogleTagManager
+import BrazeKit
+
+let ActionTypeKey: String = "actionType"
+
+// Custom Events
+let LogEventActionType: String = "logEvent"
+let LogEventName: String = "eventName"
+
+// Custom Attributes
+let CustomAttributeActionType: String = "customAttribute"
+let CustomAttributeKey: String = "customAttributeKey"
+let CustomAttributeValueKey: String = "customAttributeValue"
+
+// Change User
+let ChangeUserActionType: String = "changeUser"
+let ChangeUserExternalUserId: String = "externalUserId"
+
+@objc(BrazeGTMTagManager)
+final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
+  @objc func execute(withParameters parameters: [AnyHashable : Any]!) -> NSObject! {
+    var parameters: [String : Any] = parameters as! [String : Any]
+    guard let actionType: String = parameters[ActionTypeKey] as? String else {
+      print("There is no Braze action type key in this call. Doing nothing.")
+      return nil
+    }
+    parameters.removeValue(forKey: ActionTypeKey)
+    if actionType == LogEventActionType {
+      logEvent(parameters: parameters)
+    } else if actionType == CustomAttributeActionType {
+      logCustomAttribute(parameters: parameters)
+    } else if actionType == ChangeUserActionType {
+      changeUser(parameters: parameters)
+    }
+    return nil
+  }
+  
+  func logEvent(parameters: [String : Any]) {
+    var parameters: [String : Any] = parameters
+    guard let eventName: String = parameters[LogEventName] as? String else { return }
+    parameters.removeValue(forKey: LogEventName)
+    AppDelegate.braze?.logCustomEvent(name: eventName, properties: parameters)
+  }
+  
+  func logCustomAttribute(parameters: [String: Any]) {
+    guard let customAttributeKey = parameters[CustomAttributeKey] as? String else { return }
+    let customAttributeValue = parameters[CustomAttributeValueKey]
+    
+    if let customAttributeValue = customAttributeValue as? String {
+      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
+    } else if let customAttributeValue = customAttributeValue as? Date {
+      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
+    } else if let customAttributeValue = customAttributeValue as? Double {
+      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
+    } else if let customAttributeValue = customAttributeValue as? Bool {
+      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
+    } else if let customAttributeValue = customAttributeValue as? Int {
+      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
+    } else if let customAttibuteValue = customAttributeValue as? [String] {
+      AppDelegate.braze?.user.setCustomAttributeArray(key: customAttributeKey, array: customAttibuteValue)
+    }
+  }
+  
+  func changeUser(parameters: [String: Any]) {
+    guard let userId = parameters[ChangeUserExternalUserId] as? String else { return }
+    AppDelegate.braze?.changeUser(userId: userId)
+  }
+}
+```
+{% endtab %}
 {% tab OBJECTIVE-C %}
+Add the following code to your `BrazeGTMTagManager.h` file:
 
 ```obj-c
 @import Firebase;
@@ -143,13 +215,7 @@ Add the following code to your `BrazeGTMTagManager.h` file:
 @end
 ```
 
-{% endtab %}
-{% endtabs %}
-
 And add the following code to your `BrazeGTMTagManager.m` file:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
 
 ```obj-c
 #import <Foundation/Foundation.h>
@@ -210,23 +276,23 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
   
   if ([customAttributeValue isKindOfClass:[NSString class]]) {
     [AppDelegate.braze logCustomEvent:customAttributeKey
-                         properties:parameters];
+                           properties:parameters];
   } else if ([customAttributeValue isKindOfClass:[NSDate class]]) {
     [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
-                           dateValue:customAttributeValue];
+                                            dateValue:customAttributeValue];
   } else if ([customAttributeValue isKindOfClass:[NSNumber class]]) {
     if (strcmp([customAttributeValue objCType], [@(YES) objCType]) == 0) {
       [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
-                       boolValue:[(NSNumber *)customAttributeValue boolValue]];
+                                              boolValue:[(NSNumber *)customAttributeValue boolValue]];
     } else if (strcmp([customAttributeValue objCType], @encode(short)) == 0 ||
-             strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
-             strcmp([customAttributeValue objCType], @encode(long)) == 0) {
-    [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
-                                         intValue:[(NSNumber *)customAttributeValue integerValue]];
+               strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
+               strcmp([customAttributeValue objCType], @encode(long)) == 0) {
+      [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
+                                               intValue:[(NSNumber *)customAttributeValue integerValue]];
     } else if (strcmp([customAttributeValue objCType], @encode(float)) == 0 ||
-                  strcmp([customAttributeValue objCType], @encode(double)) == 0) {
-         [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
-                                                  doubleValue:[(NSNumber *)customAttributeValue doubleValue]];
+               strcmp([customAttributeValue objCType], @encode(double)) == 0) {
+      [AppDelegate.braze.user setCustomAttributeWithKey:customAttributeKey
+                                            doubleValue:[(NSNumber *)customAttributeValue doubleValue]];
     } else {
       NSLog(@"Could not map NSNumber value to Braze custom attribute:%@", customAttributeValue);
     }
@@ -243,83 +309,7 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
 
 @end
 ```
-
 {% endtab %}
-{% tab SWIFT %}
-```swift
-import FirebaseAnalytics
-import GoogleTagManager
-import BrazeKit
-
-let ActionTypeKey: String = "actionType"
-
-// Custom Events
-let LogEventActionType: String = "logEvent"
-let LogEventName: String = "eventName"
-
-// Custom Attributes
-let CustomAttributeActionType: String = "customAttribute"
-let CustomAttributeKey: String = "customAttributeKey"
-let CustomAttributeValueKey: String = "customAttributeValue"
-
-// Change User
-let ChangeUserActionType: String = "changeUser"
-let ChangeUserExternalUserId: String = "externalUserId"
-
-@objc(BrazeGTMTagManager)
-final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
-  @objc func execute(withParameters parameters: [AnyHashable : Any]!) -> NSObject! {
-    var parameters: [String : Any] = parameters as! [String : Any]
-    guard let actionType: String = parameters[ActionTypeKey] as? String else {
-      NSLog("There is no Braze action type key in this call. Doing nothing.")
-      return nil
-    }
-    parameters.removeValue(forKey: ActionTypeKey)
-    if actionType == LogEventActionType {
-      logEvent(parameters: parameters)
-    } else if actionType == CustomAttributeActionType {
-      logCustomAttribute(parameters: parameters)
-    } else if actionType == ChangeUserActionType {
-      changeUser(parameters: parameters)
-    }
-    return nil
-  }
-  
-  func logEvent(parameters: [String : Any]) {
-    var parameters: [String : Any] = parameters
-    guard let eventName: String = parameters[LogEventName] as? String else { return }
-    parameters.removeValue(forKey: LogEventName)
-    AppDelegate.braze?.logCustomEvent(name: eventName, properties: parameters)
-  }
-  
-  func logCustomAttribute(parameters: [String: Any]) {
-    guard let customAttributeKey = parameters[CustomAttributeKey] as? String else { return }
-    let customAttributeValue = parameters[CustomAttributeValueKey]
-    
-    if let customAttributeValue = customAttributeValue as? String {
-      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
-    } else if let customAttributeValue = customAttributeValue as? Date {
-      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
-    } else if let customAttributeValue = customAttributeValue as? Double {
-      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
-    } else if let customAttributeValue = customAttributeValue as? Bool {
-      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
-    } else if let customAttributeValue = customAttributeValue as? Int {
-      AppDelegate.braze?.user.setCustomAttribute(key: customAttributeKey, value: customAttributeValue)
-    } else if let customAttibuteValue = customAttributeValue as? [String] {
-      AppDelegate.braze?.user.setCustomAttributeArray(key: customAttributeKey, array: customAttibuteValue)
-    }
-  }
-  
-  func changeUser(parameters: [String: Any]) {
-    guard let userId = parameters[ChangeUserExternalUserId] as? String else { return }
-    AppDelegate.braze?.changeUser(userId: userId)
-  }
-}
-```
-{% endtab %}
-
-
 {% endtabs %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
