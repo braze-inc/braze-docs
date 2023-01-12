@@ -3,7 +3,7 @@ nav_title: Apple Private Relay
 article_title: Sending Emails to Apple Private Relay
 alias: /email_relay/
 page_order: 9
-description: "This article covers the process of sending emails to Apple Private Relay. This will allow Sendgrid users to allowlist without having to make DNS changes."
+description: "This article covers the process of sending emails to Apple Private Relay."
 channel:
   - email
   
