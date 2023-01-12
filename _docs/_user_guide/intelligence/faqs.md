@@ -11,11 +11,11 @@ description: "This article provides answers to frequently asked questions about 
 
 ## Intelligent Selection
 
-### Why is re-eligibility not available when combined with Intelligent Selection?
+### Why is re-eligibility in less than 24 hours not available when combined with Intelligent Selection?
 
-We don't allow Intelligent Selection campaigns to have re-eligibility enabled because it would affect the integrity of the control variant.
+We don't allow Intelligent Selection campaigns to have re-eligibility in too short of a window because it would affect the integrity of the control variant. By creating a gap of 24 hours, we help ensure that the algorithm will have a statistically valid dataset to work with.
 
-Normally, campaigns with re-eligibility will cause users to re-enter the same variant they received before. With Intelligent Selection, Braze can't guarantee that a user will receive the same campaign variant because the variant distribution would have shifted due to the optimum allocation aspect for this feature.
+Normally, campaigns with re-eligibility will cause users to re-enter the same variant they received before. With Intelligent Selection, Braze can't guarantee that a user will receive the same campaign variant because the variant distribution would have shifted due to the optimum allocation aspect for this feature. If the user were to be allowed to re-enter before Intelligent Selection re-examines the variant performance, the data might be skewed due to users who re-entered.
 
 For example, if a campaign is using these variants:
 
@@ -43,6 +43,7 @@ Intelligent Selection will be unavailable if:
 
 - You haven't added conversion events to your campaign or Canvas
 - You are creating a single-send campaign
+- You have reeligibility enabled with a window less than 24 hours
 - Your Canvas is composed of a single variant with no additional variants or control groups added
 - Your Canvas is composed of a single control group, with no variants added
 
