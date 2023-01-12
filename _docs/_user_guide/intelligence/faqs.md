@@ -43,6 +43,7 @@ Intelligent Selection will be unavailable if:
 
 - You haven't added conversion events to your campaign or Canvas
 - You are creating a single-send campaign
+- You have reeligibility enabled with a window less than 24 hours
 - Your Canvas is composed of a single variant with no additional variants or control groups added
 - Your Canvas is composed of a single control group, with no variants added
 
