@@ -8,6 +8,8 @@ channel:
   - in-app messages
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Dismiss modal on outside tap
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.

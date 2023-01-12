@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Customizing the Content Cards feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom storyboard that registers the new classes. Check out the Content Cards [sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. 

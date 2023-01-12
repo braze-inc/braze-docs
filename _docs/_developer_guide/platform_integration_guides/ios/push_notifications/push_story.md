@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Push Story setup
 
 The Push Story feature requires the `UNNotification` framework and iOS 10. The feature is only available from iOS SDK version 3.2.1.

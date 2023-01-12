@@ -7,6 +7,8 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # CocoaPods integration
 
 ## Step 1: Install CocoaPods

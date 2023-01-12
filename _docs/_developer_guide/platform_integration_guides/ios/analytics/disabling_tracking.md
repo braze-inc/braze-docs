@@ -7,6 +7,8 @@ description: "This article shows how to disable data collection for your iOS app
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Disabling data collection for iOS
 
 To comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely using the [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) method. This method will cause all network connections to be canceled, and the Braze SDK will not pass any data to Braze's servers. If you wish to resume data collection later, you can use the [`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) method in the future to resume data collection.

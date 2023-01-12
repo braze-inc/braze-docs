@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Custom handling in-app message display
 
 When the [`ABKInAppMessageControllerDelegate`][16] is set, the following delegate method will be called before in-app messages are displayed:

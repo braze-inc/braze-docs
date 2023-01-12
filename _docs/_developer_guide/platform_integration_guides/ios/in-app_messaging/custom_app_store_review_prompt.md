@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Custom App Store review prompt
 
 {% alert note %}

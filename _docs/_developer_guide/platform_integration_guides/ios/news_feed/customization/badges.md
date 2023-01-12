@@ -15,6 +15,8 @@ channel:
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 ## Requesting unread News Feed card counts
 
 ![][45]{: style="float:right;max-width:25%;margin-left:15px;"}

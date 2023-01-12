@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Handling clicks manually
 
 You can manually handle Content Card clicks by implementing the [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. Refer to the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 

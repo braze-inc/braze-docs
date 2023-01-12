@@ -9,6 +9,8 @@ Tool:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Location tracking for iOS
 
 By default, Braze disables location tracking. We enable location tracking after the host application has opted into location tracking and gained permission from the user. Provided users have opted into location tracking, Braze will log a single location for each user on session start.

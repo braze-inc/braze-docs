@@ -9,14 +9,16 @@ channel:
 
 ---
 
-<br>
-{% alert important %}
-Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
-{% endalert %}
+{% multi_lang_include archive/swift_upgrade_banner.md %}
 
 # Content Card implementation guide
 
 > This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+
+<br>
+{% alert important %}
+Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
+{% endalert %}
 
 ## Code considerations
 

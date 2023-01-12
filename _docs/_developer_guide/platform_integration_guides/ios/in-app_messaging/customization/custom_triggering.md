@@ -8,6 +8,8 @@ channel:
   - in-app messages
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Custom in-app message triggering
 
 By default, in-app messages are triggered by event types logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.

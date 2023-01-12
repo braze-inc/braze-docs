@@ -7,6 +7,8 @@ description: "This article covers implementing fine network traffic control for 
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Fine network traffic control
 
 ## Request processing policies

@@ -8,6 +8,8 @@ channel:
   - content cards
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Custom Styling
 
 ## Overriding default images

@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Advanced settings
 
 When creating a push campaign, on the compose step, select **Settings** to view the advanced settings available.

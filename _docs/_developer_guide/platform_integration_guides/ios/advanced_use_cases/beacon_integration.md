@@ -7,6 +7,8 @@ description: "This article covers logging custom events using Gimbal Beacons for
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Beacon integration
 
 Here, we will walk through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.

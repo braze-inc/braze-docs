@@ -9,6 +9,8 @@ channel:
   - push
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Push primer integration
 
 Push primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help! This guide shows the steps developers must make to integrate push priming.

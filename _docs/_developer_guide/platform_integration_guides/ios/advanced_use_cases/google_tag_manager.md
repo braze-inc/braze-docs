@@ -7,6 +7,8 @@ description: "This article covers how to initialize, configure, and implement th
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Google Tag Manager for iOS
 
 ## Initializing the SDK {#initializing-ios-google-tag-provider}

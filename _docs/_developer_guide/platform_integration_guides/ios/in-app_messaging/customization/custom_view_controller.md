@@ -8,6 +8,8 @@ channel:
   - in-app messages
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Display in-app messages in a custom view controller
 
 In-app messages can also be displayed within a custom view controller, which you pass to Braze. Braze will animate the customized in-app message in and out and handle analytics of the in-app message. The view controller must meet the following requirements:

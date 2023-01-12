@@ -7,6 +7,8 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Deep linking for iOS
 
 For introductory information on deep links, refer to our [User Guide article][4]. If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.

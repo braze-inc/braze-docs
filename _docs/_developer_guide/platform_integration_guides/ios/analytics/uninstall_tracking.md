@@ -7,6 +7,8 @@ description: "This article covers how to configure uninstall tracking for your i
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Uninstall tracking for iOS
 
 > This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.

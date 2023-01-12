@@ -9,6 +9,8 @@ Tool:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Locations and geofences
 
 Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.

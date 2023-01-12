@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Unit tests {#unit-tests}
 
 This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in Braze's [push integration instructions][1]. 

@@ -7,6 +7,8 @@ description: "This reference article describes how to collect the optional IDFV 
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Collecting IDFV - Swift
 
 ## Background

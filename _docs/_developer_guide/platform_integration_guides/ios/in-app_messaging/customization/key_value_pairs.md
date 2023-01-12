@@ -9,6 +9,8 @@ channel:
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # Key-value pair extras
 
 `ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down with an in-app message for further handling by your app.

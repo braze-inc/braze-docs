@@ -10,6 +10,8 @@ alias: /shareplay/
 
 ---
 
+{% multi_lang_include archive/swift_upgrade_banner.md %}
+
 # SharePlay in-app message implementation guide
 
 > SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
