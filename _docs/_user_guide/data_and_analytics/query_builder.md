@@ -24,6 +24,8 @@ To run a report:
 3. Click **Run Report**.
 4. To download a CSV of your report, click **Export**.
 
+![Query builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
+
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
 ### Report timeout
@@ -37,18 +39,17 @@ If a report times out or runs into errors even after retrying, please contact su
 All templates surface data from the last 30 days.
 
 <style>
-table {
-    max-width: 100%;
-  }
-table th:nth-child(1),
-table th:nth-child(2),
-table th:nth-child(3),
-table th:nth-child(4),
-table td:nth-child(1),
-table td:nth-child(2),
-table td:nth-child(3),
-table td:nth-child(4) {
-    width: 50%;
+table th:nth-child(1) {
+    width: 10%;
+}
+table th:nth-child(2) {
+    width: 25%;
+}
+table th:nth-child(3) {
+    width: 20%;
+}
+table th:nth-child(4) {
+    width: 45%;
 }
 table td {
     word-break: break-word;
