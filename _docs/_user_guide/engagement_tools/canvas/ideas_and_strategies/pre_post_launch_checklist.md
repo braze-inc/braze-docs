@@ -21,7 +21,7 @@ For example, here’s a Canvas that isn’t leaving enough time between the laun
 
 ### Consider using regex for audience filters
 
-Check over your segments or filters in your Target Audience settings, and review the Target Population summary at the bottom of the screen.
+Check over your segments or filters in your **Target Audience** settings, and review the Target Population summary at the bottom of the screen.
 
 If you notice that your target audience is smaller than expected, try using “Matches Regex” or “Does Not Match Regex” instead of “Equals” or “Does Not Equal.” This may account for those missing users, and target a larger audience.
 
@@ -54,3 +54,4 @@ For message components with multi-channel messaging, we recommend:
 * For a multi-channel message component that includes rate limiting, split your messages into several single-channel message components and connect them together. Then connect the decision split component directly after the last message component to check whether a user received any of the messages. You can also use this method as an alternative for a multi-channel message component with Intelligent Timing
 
 ## Things to consider after launch
+
