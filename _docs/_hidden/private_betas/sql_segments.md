@@ -17,8 +17,10 @@ The SQL editor is in early access. If you're interested in participating in the 
 To create a Segment Extension using SQL:
 
 1. Go to **Segments** > **Segment Extensions**.
-2. Click **Create New Extension** and select **SQL Editor**.
-3. Add a name for your Segment Extension and input your SQL. See the following sections for requirements and resources.
+2. Click **Create New Extension** and select **SQL Editor**.<br><br>
+   ![Dropdown button on the Segment Extension page to open the SQL editor.][1]{: style="max-width:40%" }<br><br>
+3. Add a name for your Segment Extension and input your SQL. See the following sections for requirements and resources.<br><br>
+   ![SQL editor showing an example SQL Segment Extension.][2]<br><br>
 4. Save your Segment Extension.
 
 {% alert note %}
@@ -50,11 +52,13 @@ SELECT user_id FROM “INSERT TABLE NAME”
 
 On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
 
-Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually refresh the segment membership.
+Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
 
-### Updating segment membership
+![Messaging Use section of the SQL Editor showing where the SQL segment is being used.][3]
 
-To update the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Currently SQL Segment Extensions do not automatically regenerate.
+### Refreshing segment membership
+
+To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Currently SQL Segment Extensions do not automatically regenerate.
 
 {% alert tip %}
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
@@ -67,3 +71,7 @@ Your query may fail for any of the following reasons:
 - Syntax errors in your SQL query
 - SQL does not adhere to the SQL rules
 - Processing timeout (after 20 minutes)
+
+[1]: {% image_buster /assets/img_archive/sql_segments_create.png %}
+[2]: {% image_buster /assets/img_archive/sql_segments_editor.png %}
+[3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
