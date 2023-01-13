@@ -214,7 +214,7 @@ If you want to utilize a Braze segment for your campaign or send communication f
 
 Creating the segment of users to receive this offer in Braze is only recommended when using attributes unavailable within Punchh. Otherwise, Punchh segmentation can be used, and the Braze messaging campaign will be created as an action-based campaign triggered by the users receiving their reward (the reward event triggered by Punchh).
 
-Punchh Configurations Required:
+Punchh configurations required:
 - Campaign: Mass offer
 - Segment: Custom list or customer choice
 - Reward: Customer choice
