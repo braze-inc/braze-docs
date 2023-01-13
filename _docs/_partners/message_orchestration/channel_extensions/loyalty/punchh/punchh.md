@@ -210,7 +210,7 @@ Considerations:
 
 When utilizing a mass offer campaign for gifting, a mass offer campaign will need to be configured within Punchh and a messaging campaign in Braze.
 
-If you want to utilize a Braze segment for your campaign or send communication from Braze before gifting guests in the Punchh Platform, then a [custom Punchh segment]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#step-3-create-punchh-webhook-in-braze) will be required for the Punchh gifting campaign. 
+If you want to utilize a Braze segment for your campaign or send communication from Braze before gifting guests in the Punchh platform, then a [custom Punchh segment]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#step-3-create-punchh-webhook-in-braze) will be required for the Punchh gifting campaign. 
 
 Creating the segment of users to receive this offer in Braze is only recommended when using attributes unavailable within Punchh. Otherwise, Punchh segmentation can be used, and the Braze messaging campaign will be created as an action-based campaign triggered by the users receiving their reward (the reward event triggered by Punchh).
 
