@@ -9,7 +9,7 @@ tool: Reports
 
 # Query builder
 
-With the query builder, you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL query templates to get you started. Currently only the templated queries are allowed, support for custom SQL queries will follow.
+With the query builder, you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL [query templates](#query-templates) to get you started. Currently only the templated queries are allowed, support for custom SQL queries will follow.
 
 {% alert important %}
 The query builder is in early access. If you'd like to participate in the early access, reach out to your customer success manager.
@@ -24,7 +24,7 @@ To run a report:
 3. Click **Run Report**.
 4. To download a CSV of your report, click **Export**.
 
-Results from each report can get regenerated once a day. If you run the same report multiple times in one calendar day, you'll see the same results in both reports.
+Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
 ### Report timeout
 
@@ -36,15 +36,34 @@ If a report times out or runs into errors even after retrying, please contact su
 
 All templates surface data from the last 30 days.
 
+<style>
+table {
+    max-width: 100%;
+  }
+table th:nth-child(1),
+table th:nth-child(2),
+table th:nth-child(3),
+table th:nth-child(4),
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(3),
+table td:nth-child(4) {
+    width: 50%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
+
+
 | Query name | Description | Metrics | Preview |
 | --- | --- | --- | --- |
-| Channel engagement and revenue for the last 30 days | For each channel, you’ll see all engagement metrics for that channel (opens, clicks, etc), revenue, number of transactions, and average price. | - **Number of transactions:** number of purchase events<br> - **Average price:** revenue divided by transactions |
-| Email bounce reasons per domain | Number of bounces per email domain |
-| Email performance by country | For each country, you'll see the following metrics: sends, indirect open rate, and direct open rate. Country is the country of the user at the time of push send. |
-| Email subscription group opt-ins and opt-outs | For each week, you’ll see the number of unique user opt-ins and opt-outs of any email subscription groups. |
+| Channel engagement and revenue for the last 30 days | For each channel, you’ll see all engagement metrics for that channel (opens, clicks, etc), revenue, number of transactions, and average price. | - **Number of transactions:** number of purchase events<br> - **Average price:** revenue divided by transactions | ![]({% image_buster /assets/img_archive/query_builder_q1.png %}) |
+| Email bounce reasons per domain | Number of bounces per email domain | | ![]({% image_buster /assets/img_archive/query_builder_q2.png %}) |
+| Email performance by country | For each country, you'll see the following metrics: sends, indirect open rate, and direct open rate. Country is the country of the user at the time of push send. | | ![]({% image_buster /assets/img_archive/query_builder_q3.png %}) |
+| Email subscription group opt-ins and opt-outs | For each week, you’ll see the number of unique user opt-ins and opt-outs of any email subscription groups. | | ![]({% image_buster /assets/img_archive/query_builder_q4.png %}) |
 | Email URLs clicked for the last 30 days | This report shows the number of clicks each link in an email had. To run this report, you’ll need to specify the API identifier for a campaign or Canvas. You can find a campaign’s API identifier at the bottom of that campaign’s details page, and you can find the Canvas API identifier under **Analyze Variants**. <br><br>For each de-personalized link, you’ll see a count of clicks. Your CSV download will include the user IDs of all users that clicked, the link they clicked on, and a timestamp of when they clicked. | **De-personalized URLs:** URLs that are stripped of any Liquid tags
 | Revenue by country breakdown | This report provides revenue per country for a specific campaign/Canvas. To run this report, you’ll need to specify the API identifier for a campaign or Canvas. You can find a campaign’s API identifier at the bottom of that campaign’s details page, and you can find the Canvas API identifier under **Analyze Variants**.<br><br>For each country, you’ll see the amount of revenue generated, number of orders, number of returns, net revenue, and gross revenue. | - **Number of orders:** number of purchase events <br>- **Number of returns:** number of purchase events with negative revenue values <br> - **Net revenue:** revenue of all non-returns <br> - **Gross revenue:** revenue that includes the value of returns |
-| Push performance by country | For each country, you’ll see the following metrics: deliveries, open rate, and click rate. Country is the country of the user at the time of email send. |
+| Push performance by country | For each country, you’ll see the following metrics: deliveries, open rate, and click rate. Country is the country of the user at the time of email send. | | ![]({% image_buster /assets/img_archive/query_builder_q7.png %}) |
 | Email deliverability metrics by day |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
