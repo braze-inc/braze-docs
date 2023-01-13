@@ -11,9 +11,9 @@ description: "This reference article outlines what Data Points are at Braze and 
 
 At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See the [Consumption count](#consumption-count) section of this article to understand what data counts toward your data point allocation.
  
-Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
+Our Customer Success team can help recommend data best practices in order to make your costs/entitlements highly predictable by accounting for seasonality and sized correctly with plenty of headroom and options for flexibility. You can find a more detailed breakdown of this definition in your Braze contract.
 
-“Data Points” shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event or purchase recorded, as well as any attribute set on an End User profile. Data and events collected by default by the Braze Services including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are not counted as Data Points. For clarity, the setting of an End User’s profile information at one point in time shall count as a single Data Point.
+"Data Points” shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event or purchase recorded, as well as any attribute set on an End User profile. Your contracted MAU volume determines your allotment of Data Points, with flexibility as to the appropriate ratio based on your business and/or user needs. Data and events collected by default by the Braze Services including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are not counted as Data Points. For clarity, the setting of an End User’s profile information at one point in time shall count as a single Data Point.
 
 ## Management and usage
 
