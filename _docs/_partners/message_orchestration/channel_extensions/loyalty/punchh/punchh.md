@@ -301,7 +301,7 @@ Considerations:
 
 #### Recall campaign
 
-When targeting users based on inactivity, a recall Campaign can be used. The customer can create the segment and campaign within Punchh but utilize Braze for messaging.
+When targeting users based on inactivity, a recall campaign can be used. The customer can create the segment and campaign within Punchh but utilize Braze for messaging.
 
 If you want to use segmentation created in Braze, a [custom Punchh segment]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/punchh/#step-3-create-punchh-webhook-in-braze) based on inactivity can be attached to a recurring mass offer campaign.
 
