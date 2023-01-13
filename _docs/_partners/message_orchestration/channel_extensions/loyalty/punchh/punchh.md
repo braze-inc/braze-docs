@@ -150,7 +150,7 @@ To set up the Braze and Punchh integration:
 
 Braze can add users to a Punchh segment through webhooks utilizing Punchh Custom Segments.
 
-1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL as shown below. Both classic or beta segment builders can be used. However, beta is recommended as classic will eventually be deprecated.<br><br>In the Punchh Platform, navigate to **Guest > Segment > Custom List > New Custom List**.<br><br>![][8]<br><br>
+1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL as shown below. Both classic or beta segment builders can be used. However, beta is recommended as classic will eventually be deprecated.<br><br>In the Punchh platform, navigate to **Guest > Segment > Custom List > New Custom List**.<br><br>![][8]<br><br>
 
 2. Create a webhook campaign in Braze using the Punchh endpoint for adding a user to a custom segment as the webhook URL. Here, you can provide the `custom_segment_id` pulled from the URL and `user_id` as key-value pairs.<br><br>![][4]<br><br>
 
