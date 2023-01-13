@@ -74,7 +74,8 @@ Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 
 #### Step 2: Set up Looker Develop
 
-Within Looker Develop, select the appropriate views. Add `braze_id` to the dimensions tag.
+Within Looker Develop, select the appropriate views. Add `braze_id` to the dimensions tag and commit the changes.
+This `braze_id` tag is use to determine which field is the unique key.
 
 ```json
 dimension: external_id {
@@ -85,6 +86,8 @@ dimension: external_id {
 }
 ```
 
+**Make sure to commit the changes. Looker Action will only work with production settings.**
+
 #### Step 3: Set user attributes in tags
 
 Optionally, any attribute can be set using a `braze[]` tag with the attribute name in the brackets. For example, if you wanted a custom attribute `user_segment` to be sent, the tag would be `braze[user_segment]`.
@@ -93,7 +96,7 @@ Note the following limitations:
 - Attributes will only be sent if it's **included as a field within the look**.
 - Supported types are `Strings`, `Boolean`, `Numbers`, and `Dates`.
 - Attribute names are case-sensitive.
-- Default attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
+- Standard attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
 - The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
 - Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
 
@@ -152,11 +155,13 @@ If you're having issues with the Looker Action, add a test user to [internal gro
 * The API key has the `users.track` permissions.
 * The correct REST endpoint is entered i.e., `https://rest.iad-01.braze.com`.
 * A `braze_id` tag is set in the dimension view.
-* Your query includes the Id attribute as a column.
+* Your query includes the Id dimension or attribute as a column.
 * Looker results are not pivoted.
 * The unique key is correctly selected. Usually the `external_id`.
+* `braze_id` in the dimension is different then the `braze_id` in the api. `braze_id` in the dimension is use to indicated that it's the `id` field for the Braze API. For most purposes, upon send `external_id` is the primary key.
 * The `external_id` user exist in the Braze platform.
 * The `looker_export` field is set as `Automatically Detect` under `Braze Platform > Settings > Manage Settings > Custom Attributes`.
+* The changes are commit to production. Looker Action works on production settings.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md

@@ -14,12 +14,12 @@ description: "This reference article covers how to integrate the Android SDK int
 Installing the Braze SDK will provide you with basic analytics functionality and working in-app messages with which you can engage your users.
 
 {% alert note %}
-For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
+For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Step 1: Integrate the Braze library
 
-The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards), [News Feed]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards and in-app messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. It is important to note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Refer to the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards) and [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) documentation for a list of benefits of using each channel or tool.
 
 ### Basic integration
 
@@ -46,11 +46,18 @@ Alternatively, you can directly find the artifact AAR files on our [maven reposi
 
 #### Add Braze dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`:
+Add the `android-sdk-ui` dependency to your app's `build.gradle`. 
+
+If you are using any location or Braze Geofence functionality, also include `android-sdk-location` in your app's `build.gradle`.
+
+{% alert important %}
+If you're using a non-native Android SDK (e.g., Flutter, Cordova, Unity, etc.), that SDK already has the `android-sdk-ui` dependency for the correct version of the Android SDK. Do not update that version manually.
+{% endalert %}
 
 ```gradle
 dependencies {
-  implementation "com.appboy:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-location:+"
 }
 ```
 
@@ -58,9 +65,9 @@ The following example shows where to place the dependency line in your `build.gr
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
 
-#### Perform gradle sync
+#### Perform Gradle sync
 
-Be sure to perform a Gradle Sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
+Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
 ![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
 
@@ -159,6 +166,6 @@ Visit the following articles in order to enable [custom event tracking]({{site.b
 [46]: https://developer.android.com/training/permissions/index.html
 [60]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
 [63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
 [support]: {{site.baseurl}}/braze_support/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze

@@ -11,7 +11,7 @@ description: "This page covers initial setup steps for the tvOS Braze SDK."
 # Initial SDK setup
 
 {% alert note %}
-Our tvOS SDK currently supports analytics functionality and fetching News Feed data. To add a tvOS app in your dashboard, open a [support ticket][support].
+Our tvOS SDK currently supports analytics functionality. To add a tvOS app in your dashboard, open a [support ticket]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
 Installing the Braze SDK will provide you with basic analytics functionality.
@@ -207,7 +207,6 @@ See our [iOS documentation][3] for information about setting user ids, logging c
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

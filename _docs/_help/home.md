@@ -1,6 +1,6 @@
 ---
 page_order: 0
-nav_title: Help
+nav_title: Home
 article_title: Braze Help
 layout: self_help
 help_top_header: "Braze Help"
@@ -12,22 +12,22 @@ description: "Welcome to the Braze self-help section! Here you'll find a variety
 resources_list:
   - name: Help Articles
     link: /docs/help/help_articles/overview/
-    image: /assets/img/pencil-paper.png
+    fa_icon: fa-solid fa-circle-info
   - name: Best Practices and FAQs
     link: /docs/help/faqs/
-    image: /assets/img/megaphone.png
+    fa_icon: fa-brands fa-readme
   - name: Release Notes
     link: /docs/help/release_notes/most_recent/
-    image: /assets/img/notebook.png
+    fa_icon: fa-solid fa-note-sticky
   - name: Braze Learning Login
     link: https://learning.braze.com/
-    image: /assets/img/icons/icon-lab.png
+    fa_icon: fa-solid fa-chalkboard-user
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    image: /assets/img/icons/icon-document-ribbon.png
+    fa_icon: fa-brands fa-youtube
   - name: Braze Support
     link: /docs/braze_support/
-    image: /assets/img/sign-in.png
+    fa_icon: fa-solid fa-envelope
 
 popular_topic_list:
   - name: Dispatch ID Behavior

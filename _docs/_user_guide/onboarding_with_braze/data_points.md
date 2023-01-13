@@ -32,108 +32,101 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 You can find a breakdown of how Braze accumulates data points in the following sections, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
 {% alert note %} 
-Connected Content does not consume data points—using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points! 
+The following actions do not consume data points:
+- Deleting users from Braze
+- Using Connected Content in messaging
 {% endalert %}
 
-{% tabs %}
-{% tab General %}
+### Billable data points
 
-### General
+<style>
+  div.small_table + table {
+    max-width: 50%;
+  }
+  div.large_table + table {
+    max-width: 75%;
+  }
+table th:nth-child(1),
+table th:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(3) {
+    width:25%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
 
-|Data type | Data point | Does it count towards consumption? |
-|---|---|---|
-|Profile data | First name | Yes |
-|Profile data | Last name | Yes |
-|Profile data | User ID | No |
-|Profile data | User alias | No |
-|Profile data | Email address | Yes |
-|Profile data | Gender | Yes |
-|Profile data | Age group | Yes |
-|Profile data | Country | Yes* |
-|Profile data | City | Yes |
-|Profile data | Language | Yes* |
-|Profile data | Most recent device locale | Yes |
-|Profile data | Time zone | Yes |
-|Profile data | Date of birth (DOB) | Yes |
-|Profile data | Bio | Yes |
-|Profile data | Phone number  | Yes |
-|App usage data |Session start | Yes |
-|App usage data |Session end | Yes |
-|Custom attributes | All custom attributes | Yes |
-|Recent devices | Number of devices | No |
-|Recent devices | Most recent watch | No |
-|Recent devices | App version | No |
-|Recent devices | Device | No |
-|Recent devices | Device OS | No |
-|Custom events | All custom events | Yes |
-|Custom event properties | All custom event properties* | Yes |
-|Purchases | All purchases | Yes |
-|Amplitude cohort assignment | All assignments | Yes |
-|Mixpanel cohort assignment | All assignments | Yes |
-| Hightouch cohort assignment | All assignments | Yes |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+<div class="large_table"></div>
 
-<sup>*When manually collected. Does not count towards consumption when automatically collected.</sup>
+| Data type | Data point | Notes |
+| --------- | ---------- | ----- |
+| Profile data | First name | |
+| Profile data | Last name | |
+| Profile data | Email address | |
+| Profile data | Gender | |
+| Profile data | Age group | |
+| Profile data | Country | When manually collected. Does not count towards consumption when automatically collected. |
+| Profile data | City | |
+| Profile data | Language | When manually collected. Does not count towards consumption when automatically collected. |
+| Profile data | Most recent device locale | |
+| Profile data | Time zone | |
+| Profile data | Date of birth (DOB) | |
+| Profile data | Bio | |
+| Profile data | Phone number | |
+| App usage data | Session start | |
+| App usage data | Session end | |
+| Custom attributes | All custom attributes | |
+| Custom events | All custom events | |
+| Custom event properties | All custom event properties | Custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
+| Purchases | All purchases | |
+| Amplitude cohort assignment | All assignments | |
+| Mixpanel cohort assignment | All assignments | |
+| Hightouch cohort assignment | All assignments | |
+| Appsflyer cohort assignment | All assignments | |
+| Most recent location | All most recent locations | Entering or exiting geofences doesn’t consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
+| Twitter | Username | |
+{: .reset-td-br-1 .reset-td-br-2}
 
-{% alert note %}
-In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
-{% endalert %}
+### Non-billable data points (out of the box)
 
-{% endtab %}
-{% tab Location %}
+<div class="small_table"></div>
 
-### Location
-
-|Data type | Data point | Does it count towards consumption? |
-|---|---|---|
-|Most recent location | All most recent locations | Yes |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-{% alert note %} Entering or exiting geofences doesn't consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services, Braze only gets notified upon a user triggering a geofence. {% endalert %}
-
-  {% endtab %}
-{% tab Engagement %}
-
-### Engagement
-
-|Data type | Data point | Does it count towards consumption? |
-|---|---|---|
-| Contact settings | Email subscribed | No |
-| Contact settings |  Push subscribed | No |
-| Contact settings |  Apps registered for push | No |
-|Campaigns received | Email address | No |
-|News Feed cards clicked | News Feed Cards clicked | No |
-|Install attribution | Install source | No |
-|Install attribution | Campaign | No |
-|Install attribution | Ad Group | No |
-|Install attribution | Ad | No |
-|Miscellaneous | Random bucket number | No |
-|Canvas messages received | Canvas messages received | No |
-| Contact settings | Subscription group | No |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
- {% endtab %}
-{% tab Social %}
-
-### Social
-
-|Data type | Data point | Does it count towards consumption? |
-|---|---|---|
-|Twitter | Username | Yes |
-|Twitter | Followers | No |
-|Twitter | Following | No |
-|Twitter | Number of tweets | No |
-|Facebook | Likes | No |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
- {% endtab %}
-{% endtabs %}
+| Data type | Data point |
+| --------- | ---------- |
+| Profile data | Country |
+| Profile data | Language |
+| Profile data | User ID |
+| Profile data | User alias |
+| Recent devices | Number of devices |
+| Recent devices | Most recent watch |
+| Recent devices | App version |
+| Recent devices | Device |
+| Recent devices | Device OS |
+| Contact settings | Email subscribed |
+| Contact settings | Push subscribed |
+| Contact settings | Apps registered for push |
+| Contact settings | Subscription group |
+| Campaigns received | Email address |
+| Install attribution | Install source |
+| Install attribution | Campaign |
+| Install attribution | Ad Group |
+| Install attribution | Ad |
+| Miscellaneous | Random bucket number |
+| Canvas messages received | Canvas messages received |
+| Twitter | Followers |
+| Twitter | Following |
+| Twitter | Number of tweets |
+| Facebook | Likes |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Special circumstances
 
 #### CSV
 
-Custom attributes uploaded via CSV count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
+Custom attributes uploaded via CSV count towards your data points, however CSV imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
 
 #### Arrays
 

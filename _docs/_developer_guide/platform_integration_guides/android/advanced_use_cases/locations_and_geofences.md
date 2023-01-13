@@ -22,10 +22,11 @@ To support geofences for Android:
 
 ## Step 1: Update build.gradle
 
-Add the Google Play Services [location package][3] to your app-level `build.gradle` using the Google Play Services [setup guide][10]:
+Add `android-sdk-location` to your app-level `build.gradle`. Also, add the Google Play Services [location package][3] using the Google Play Services [setup guide][10]:
 
 ```
 dependencies {
+  implementation "com.braze:android-sdk-location:+"
   implementation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
 }
 ```
@@ -47,7 +48,7 @@ The background location access permission was added in Android 10 and is require
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:
 
 ```xml
-<receiver android:name="com.appboy.BrazeBootReceiver">
+<receiver android:name="com.braze.BrazeBootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED" />
   </intent-filter>
@@ -319,5 +320,5 @@ However, note that if your application is stopped, receiving a background push w
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
-[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-geofences.html
+[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

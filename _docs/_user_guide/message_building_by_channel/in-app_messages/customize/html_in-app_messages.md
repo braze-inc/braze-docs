@@ -74,7 +74,7 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 }
 </style>
 
-{% include archive/appboyBridge.md %}
+{% multi_lang_include archive/appboyBridge.md %}
 
 ## Link-based actions
 
@@ -115,6 +115,10 @@ To have Braze handle your HTTP or HTTPS link as a deep link, set `?abDeepLink=tr
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
 ### News Feed (mobile only)
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 For mobile apps, you can open the News Feed by setting a link's URL to `appboy://feed`.
 

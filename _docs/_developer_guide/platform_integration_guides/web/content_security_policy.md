@@ -16,7 +16,7 @@ Content-Security-Policy provides added security by restricting how and where con
 This article is intended for developers working on websites that enforce CSP rules and integrate with Braze. It is not intended as advice on how you should approach security.
 {% endalert %}
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Nonce attributes {#nonce}
 
@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### connect-src {#connect-src}
 
 - `connect-src https://sdk.iad-01.braze.com`: allows the SDK to communicate with Braze APIs.
-  - Change this URL to match your `baseUrl` initialization option's [API SDK endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/).
+  - Change this URL to match your `baseUrl` initialization option's [API SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### script-src {#script-src}
 

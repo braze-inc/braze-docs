@@ -12,9 +12,7 @@ tool: Segments
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
-Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users.
-
-Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
+Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 ## Step 1: Navigate to the segments section
 
@@ -32,11 +30,11 @@ Optionally, you can add a description to the segment to provide more details abo
 
 ## Step 3: Choose your app or platform
 
-Choose which apps or platforms you'd like to target by either selecting **Include users from all apps** (default), or by clearing the checkbox. If you clear this option, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
+Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment. 
 
-For more information on this option, refer to the section [Segment membership calculation](#segment-membership-calculation).
+For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the unselected "Include users from all apps" checkbox in the Apps Used section.][5]
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
 
 ## Step 4: Add filters to your segment
 
@@ -50,10 +48,10 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
-Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
+Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas. Note that you will see an error appear if the segment you are referencing in one of your nested segments is archived.
 
 {% alert important %}
-Segments already using the Segment Membership Filter cannot be further included or nested into other segments. 
+Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
 ### Single-user segments
@@ -72,16 +70,26 @@ Once you've clicked **Save**, you're ready to start sending messages to your use
 
 Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
-Additionally, segment membership is calculated differently when **Include users from all apps** is selected, or when an app group has only one app. In these scenarios, segment membership includes all users—both those who have sessions logged, as well as users with no sessions and no app data (typically created via user import or REST API).
+### Total reachable users calculation
 
-If **Include users from all apps** is cleared and you have more than one app in your app group, segment membership will only include users with sessions logged in the selected apps, and excludes users with no sessions or app data. Therefore, the total of individual segments with one app selected will not equal a segment with **Include users from all apps** selected.
+Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel. Why is this?
+
+![A table displaying 9,100 total reachable users, 8,899 reachable users by email, 6,720 reachable users by web push, 4,521 reachable users by Android push, and 5,122 reachable users by iOS push.][4]
+
+For a user to be listed as reachable through a certain channel, the user must have both:
+* A valid email address/push token associated with their profile; and
+* Opted in or subscribed to your app.
+
+A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable via those communication channels.
 
 ## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
-When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will also be archived. You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
+When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.
+
+You will get a warning listing which campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting **Unarchive**.
@@ -89,4 +97,5 @@ You can unarchive the segment by navigating to it within Segments, then selectin
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
+[4]: {% image_buster /assets/img_archive/reachable_users.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}

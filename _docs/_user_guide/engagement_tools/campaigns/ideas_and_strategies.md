@@ -24,19 +24,22 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+  - name:  Best Practices
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
+    fa_icon: fas fa-bullseye
   - name: Localizing A Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
     fa_icon: fas fa-street-view
   - name: Campaigns in Multiple Languages
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/
     fa_icon: fas fa-globe
-  - name: Getting High Ratings
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/
-    fa_icon: fas fa-chart-bar
   - name: Install Attribution Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     fa_icon: fas fa-chart-pie
   - name: Feature Awareness and New App Version
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile
+  - name: Add-to-Calendar Links
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
+    fa_icon: fas fa-calendar
 ---

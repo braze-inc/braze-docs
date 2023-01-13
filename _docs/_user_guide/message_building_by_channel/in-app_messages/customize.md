@@ -1,7 +1,7 @@
 ---
 nav_title: Customize
 article_title: Custom In-App Messages
-page_order: 2
+page_order: 2.5
 layout: featured
 guide_top_header: "Custom In-App Messages"
 guide_top_text: "In addition to the out-of-the-box in-app message templates, Braze also offers customized messaging templates that allow custom HTML, modals with custom CSS, video, and more. Check out the following articles for details."

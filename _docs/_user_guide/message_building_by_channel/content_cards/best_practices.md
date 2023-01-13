@@ -15,10 +15,9 @@ guide_featured_list:
 - name: "Know Before You Send"
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
-- name: Buildling Accessible Content Cards
-  link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/accessibility
-  fa_icon: fas fa-universal-access
-
+- name: "Sending Test Messages"
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+  fa_icon: fas fa-envelope
 ---
 
 <br><br>

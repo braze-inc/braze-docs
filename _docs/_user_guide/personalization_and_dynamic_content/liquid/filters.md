@@ -68,15 +68,18 @@ Array filters are used to change the output of arrays.
 | Filter         | Definition                                                                                                         | Supported |
 | :------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
 | [join][1.1]    | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
-| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the most recently added value.         | ✅  Yes   |
-| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the oldest added value.                 | ✅  Yes   |
-| [concat][1.4]  | Combines an array with another array.                                                                              | ⛔  No    |
-| [index][1.5]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
-| [map][1.6]     | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
-| [reverse][1.7] | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
-| [size][1.8]    | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
-| [sort][1.9]    | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
-| [uniq][1.10]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
+| [first][1.2]   | Returns the first element of an array. In a custom attribute array, this is the oldest added value.         | ✅  Yes   |
+| [last][1.3]    | Returns the last element of an array. In a custom attribute array, this is the most recently added value.                 | ✅  Yes   |
+| [compact][1.4]  | Removes any `nil` items from an array.                                                                              | ✅  Yes    |
+| [concat][1.5]  | Combines an array with another array.                                                                              | ✅  Yes    |
+| [index][1.6]   | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
+| [map][1.7]     | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
+| [reverse][1.8] | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
+| [size][1.9]    | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
+| [sort][1.10]    | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
+| [sort_natural][1.11]    | Sorts the items in an array in case-insensitive alphabetical order.                                    | ✅  Yes   |
+| [uniq][1.12]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
+| [where][1.13]   | Filters an array to only include items with a specific property value.                                                           | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Color filters
@@ -94,8 +97,8 @@ Math filters allow you to perform mathematical operations. Remember—if you use
 | Filter            | Definition                                                                                                                     | Supported |
 | :---------------- | :----------------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [abs][4.1]        | Returns the absolute value of a number.                                                                                        | ✅  Yes   |
-| [at_most][4.2]    | Limits a number to a maximum value.                                                                                            | ⛔  No    |
-| [at_least][4.3]   | Limits a number to a minimum value.                                                                                            | ⛔  No    |
+| [at_most][4.2]    | Limits a number to a maximum value.                                                                                            | ✅  Yes    |
+| [at_least][4.3]   | Limits a number to a minimum value.                                                                                            | ✅  Yes   |
 | [ceil][4.4]       | Rounds an output up to the nearest integer.                                                                                    | ✅  Yes   |
 | [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
 | [floor][4.6]      | Rounds an output down to the nearest integer.                                                                                  | ✅  Yes   |
@@ -161,7 +164,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 | Filter                              | Definition                                                                                                             | Supported |
 | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [money][5.1]                        | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers. | ✅  Yes   |
-| [money_with_currency][5.2]          | Formats numbers with the currency symbol. | ✅  Yes   |
+| [money_with_currency][5.2]          | Formats numbers with the currency symbol. | ⛔  No   |
 | [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, then this filter behaves like the `money` filter. | ✅  Yes   |
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                       | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -169,7 +172,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 ### Shopify money filter versus Braze money filter
 
 {% alert warning %}
-The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depication of the expected behavior.
+The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depiction of the expected behavior.
 {% endalert %}
 
 {% raw %}
@@ -244,7 +247,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [sha1][6.8]                                      | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | [hmac_sha256][6.11]                              | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.| ✅  Yes   |
-| [newline_to_br][6.12]                            | Inserts a `<br>` linebreak HTML tag in front of each line break in a string. | ✅  Yes   |
+| [newline_to_br][6.12]                            | Inserts a `<br>` line break HTML tag in front of each line break in a string. | ✅  Yes   |
 | [pluralize][6.13]                                | Outputs the singular or plural version of an English string based on the value of a number. | ⛔  No    |
 | [prepend][6.14]                                  | Prepends characters to a string.  | ✅  Yes   |
 | [remove][6.15]                                   | Removes all occurrences of a substring from a string. | ✅  Yes   |
@@ -368,13 +371,16 @@ You can also use the reserved variable `now` to access the current date and time
 [1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
 [1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
 [1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.4]: https://shopify.dev/api/liquid/filters#compact
+[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
+[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
+[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
+[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
+[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
+[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
+[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
+[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.13]: https://shopify.dev/api/liquid/filters#where
 
 [2.1]: https://shopify.dev/api/liquid/filters/color-filters
 [3.1]: https://shopify.dev/api/liquid/filters/font-filters

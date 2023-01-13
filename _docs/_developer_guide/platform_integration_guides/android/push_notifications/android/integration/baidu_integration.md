@@ -9,7 +9,7 @@ channel:
 
 ---
 # Baidu integration
-{% include archive/baidu_deprecation.md %}
+{% multi_lang_include archive/baidu_deprecation.md %}
 
 Braze can send push notifications to Android devices using [Baidu Cloud Push][14]. Note that using Baidu Cloud Push **does not** require you to distribute your apps via the Baidu App Store.
 
@@ -142,14 +142,14 @@ Finally, you will need to register your users with Braze. In the `onBind()` meth
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).registerAppboyPushMessages(channelId);
+Braze.getInstance(context).setRegisteredPushToken(channelId);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).registerAppboyPushMessages(channelId)
+Braze.getInstance(context).setRegisteredPushToken(channelId)
 ```
 
 {% endtab %}

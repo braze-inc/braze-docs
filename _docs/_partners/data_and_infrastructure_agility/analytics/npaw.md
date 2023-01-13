@@ -12,7 +12,7 @@ hidden: true
 
 # NPAW
 
-> [NPAW](https://nicepeopleatwork.com/), also knows as _Nice People at Work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. With NPAW's YOUBORA tool suite, Braze customers can now leverage a predictive and robust AI to greater understand customer behavior and drive engagement accross platforms.
+> [NPAW](https://nicepeopleatwork.com/), also knows as _Nice People at Work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. With NPAW's YOUBORA tool suite, Braze customers can now leverage a predictive and robust AI to greater understand customer behavior and drive engagement across platforms.
 
 # Prerequisites
 
@@ -27,7 +27,7 @@ hidden: true
 
 ## Accessing the integrations page
 
-After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu.
+After logging into your YOUBORA tool suite account, navigate to the Integrations page by selecting **Integrations** option from the drop-down account menu.
 
 ![NPAW drop-down]({% image_buster /assets/img/npaw_dropdown.png %})
 
@@ -38,8 +38,8 @@ see the **Braze** integration option. After clicking on this, it will expand and
 
 ![NPAW integration]({% image_buster /assets/img/npaw_integration.png %})
 
-Fill in the details with the appropriate information gathered from the prequisites section, where:
-* **Connector Name** is an **alphanumeric** string that will be used to reffer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
+Fill in the details with the appropriate information gathered from the perquisites section, where:
+* **Connector Name** is an **alphanumeric** string that will be used to refer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
 * **User ID** is the ID previously chosen to link your YOUBORA software with your Braze account. For example, if you choose to perform the link via your **Braze ID**, select **Braze ID** from the dropdown to assign the value to the proper field.
 * **API Key** is your YOUBORA tools suite API Key found previously within the **API** section under **Settings** .
 * **Endpoint** is the customizable URL endpoint previously setup within your **Braze Dashboard**.
@@ -48,7 +48,7 @@ Once all the fields have been filled out, simply click on the **Connect** button
 
 ## Using your NPAW integration
 
-Once you have finished configuring your integration with Braze, navivate to the **Users** product and select the **Sample Manager** within the **Sections Manager**.
+Once you have finished configuring your integration with Braze, navigate to the **Users** product and select the **Sample Manager** within the **Sections Manager**.
 
 After creating a sample within the **Sample Manger**, you will now be able to click on the triple dot icon on the right-hand side to send all users within your sample to Braze.
 

@@ -34,7 +34,7 @@ Examples of data to share from PassKit includes:
 - **Pass updates**: when a pass is updated.
 - **Pass delete**: when a customer deletes the pass from their wallet app.
 
-Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Cavanses once these actions have been performed.
+Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Canvases once these actions have been performed.
 
 ## Connect Passkit to Braze
 
@@ -91,7 +91,7 @@ Next, you must define your **Content Block Liquid Tag**. After saving this Conte
 Within this Content Block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
-{% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
+{% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
 ```
 {% endraw %}
 
@@ -116,7 +116,7 @@ Next, you must generate a signature using this hash and your `Project Secret`. T
 Finally, append the signature to the full URL using the fifth code snippet:
 {% raw %}
 ```liquid
-{% capture longUrl %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}{% endcapture %}
+{% capture longURL %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}{% endcapture %}
 ```
 {% endraw %}
 
@@ -133,13 +133,13 @@ At this point, you will have created a Content Block that looks something like t
 
 {% raw %}
 ```liquid
-{% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
+{% capture base64JsonPayload %}{{passData|base64_encode}}{% endcapture %}
 
 {% capture url %}{{projectUrl}}?data={{base64JsonPayload}}{% endcapture %}
 
 {% capture sig %}{{url | hmac_sha1: "Project_Secret"}}{% endcapture %}
 
-{% capture longUrl %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}&utm_source=braze&utm_campaign={{campaign.${name}}}{% endcapture %}{% capture longUrl %}{{longUrl | url_encode}}{% endcapture %}
+{% capture longURL %}{{projectUrl}}?data={{base64JsonPayload}}&sig={{sig}}&utm_source=braze&utm_campaign={{campaign.${name}}}{% endcapture %}{% capture longURL %}{{longURL | url_encode}}{% endcapture %}
 
 {{longURL}}
 ```

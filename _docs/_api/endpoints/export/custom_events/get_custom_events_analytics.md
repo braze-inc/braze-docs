@@ -14,24 +14,24 @@ description: "This article outlines details about the Custom Events Analytics en
 /events/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
+Use this endpoint to retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `event`      | Required      | String | The name of the custom event for which to return analytics. |
-| `length`     | Required      | Integer | Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
-| `unit`       | Optional       | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
+| `event` | Required | String | The name of the custom event for which to return analytics. |
+| `length` | Required | Integer | Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `unit` | Optional | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
-| `app_id`     | Optional       | String | App API identifier retrieved from the **Developer Console** to limit analytics to a specific app. |
-| `segment_id` | Optional       | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned. |
+| `app_id` | Optional | String | App API identifier retrieved from the **Developer Console** to limit analytics to a specific app. |
+| `segment_id` | Optional | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -51,8 +51,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
         {
-            "time" : (string) point in time - as ISO 8601 extended when unit is "hour" and as ISO 8601 date when unit is "day",
-            "count" : (int)
+            "time" : (string) the point in time - as ISO 8601 extended when unit is "hour" and as ISO 8601 date when unit is "day",
+            "count" : (int) the number of occurrences of provided custom event
         },
         ...
     ]

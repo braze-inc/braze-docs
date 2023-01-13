@@ -20,7 +20,7 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 ## SDK requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+This in-app message must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions). On Web, this message will only be delivered on browsers that support [Flex CSS](https://caniuse.com/?search=flex).
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
@@ -72,7 +72,7 @@ When custom attribute collection is enabled, choices that share the same custom 
 
 #### Logging responses only
 
-Alternatively, you can choose to **Log responses only (no attributes)**. When this option is selected, survey responses are logged as button clicks, but custom attributes are logged to a user's profile. This means you can still view the click metrics for each survey option (see [Analytics](#analytics)), but that choice won't be reflected on their user profile.
+Alternatively, you can choose to **Log responses only (no attributes)**. When this option is selected, survey responses are logged as button clicks, but custom attributes are not logged to a user's profile. This means you can still view the click metrics for each survey option (see [Analytics](#analytics)), but that choice won't be reflected on their user profile.
 
 These click metrics are not available for retargeting.
 

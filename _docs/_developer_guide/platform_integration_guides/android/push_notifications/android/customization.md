@@ -24,6 +24,9 @@ guide_featured_list:
   - name: Advanced Settings
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
     fa_icon: fa fa-cog
+  - name: Custom Broadcast Receiver
+    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/
+    fa_icon: fa fa-cog
 
 
 ---

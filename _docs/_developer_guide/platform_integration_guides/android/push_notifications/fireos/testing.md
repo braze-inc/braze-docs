@@ -37,6 +37,4 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint][66].
 
 [13]: {{site.baseurl}}/api/endpoints/messaging/
-[14]: https://dashboard-01.braze.com/app_settings/api_settings/
-[15]: https://dashboard-01.braze.com/users/user_search/user-search/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

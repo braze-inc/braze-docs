@@ -22,11 +22,10 @@ Deep links are custom URIs that link to a specific part of the app and contain a
 
 Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (e.g., `?foo=1&bar=2`). For the Twitter example, `twitter://user?screen_name=[id]` would be utilized to launch a specific profile in the app.
 
-These deep links are a powerful tool when used in tandem with the Braze [News Feed][11]. Providing deep links as the URI within News Feed items allows you to use the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be used to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
-
-{% alert note %}
-Keep in mind that enabling these deep links requires some additional setup within your app. Reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
+{% alert important %}
+Braze does not support using a wrapper like Flutter to send deep links. To use this feature, you will need to configure deep links at the native layer.
 {% endalert %}
+
 
 ## UTM tags and campaign attribution
 
@@ -48,7 +47,7 @@ If you want to use UTM tags with regular HTTP (web) links—for example, to do c
 
 In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and [correctly configured to handle deep links][7]. Check with your developers if you're unsure about this.
 
-Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, simply include the necessary UTM tags in the destination URL or deep links. The following examples show how to use UTM tags in push notifications, News Feed cards and in-app messages.
+Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, simply include the necessary UTM tags in the destination URL or deep links. The following examples show how to use UTM tags in push notifications and in-app messages.
 
 #### Attributing push opens with UTM tags
 
@@ -60,19 +59,9 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 ![][8]
 
-#### Attributing News Feed clicks with UTM tags
-
-News Feed items deep linking into your app can be configured to use UTM tags as well. Note that you can use `utm_content` to separate between deep links on different operating systems.
-
-```
-myapp://products/pizza?utm_source=my_app&utm_medium=newsfeed&utm_campaign=pizzapromosummer2021&utm_content=android_deeplink
-```
-
-![][9]
-
 #### Attributing in-app message clicks with UTM tags
 
-Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
+You can include UTM tags in the deep links included within your in-app messages using the following.
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link

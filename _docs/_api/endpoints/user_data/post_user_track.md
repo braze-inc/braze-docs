@@ -24,7 +24,7 @@ Braze processes the data passed via API at face value and customers should only 
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users track' %}
+{% multi_lang_include rate_limits.md endpoint='users track' %}
 
 ## Request body
 
@@ -56,11 +56,6 @@ For each of the request components listed in the following table, one of `extern
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Keep the following nuances in mind when using the `/users/track` endpoint:
-
-- When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
-- Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
-
 ## Example request body for event tracking
 
 ```json
@@ -81,37 +76,99 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "attributes": [ 
-    {
-      "external_id":"user_identifier",
-      "string_attribute": "fruit",
-      "boolean_attribute_1": true,
-      "integer_attribute": 25,
-      "array_attribute": ["banana", "apple"]
-    }
-  ],
-  "events": [
-    {
-      "external_id": "user_identifier",
-      "app_id" : "app_identifier",
-      "name": "watched_trailer",
-      "time": "2013-07-16T19:20:30+1:00"
-    }  
-  ],
-  "purchases": [
-     {
-      "external_id": "user_identifier",
-      "app_id": "app_identifier",
-      "product_id": "product_name",
-      "currency": "USD",
-      "price": 12.12,
-      "quantity": 6,
-      "time": "2017-05-12T18:47:12Z",
-      "properties": {
-         "integer_property": 3,
-         "string_property": "Russell",
-         "date_property": "2014-02-02T00:00:00Z"
-      } 
+    "attributes": [
+        {
+            "external_id": "user_identifier",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2022-12-06T19:20:45+01:00",
+            "properties": {
+                "release": {
+                    "studio": "FilmStudio",
+                    "year": "2022"
+                },
+                "cast": [
+                    {
+                        "name": "Actor1"
+                    },
+                    {
+                        "name": "Actor2"
+                    }
+                ]
+            }
+        },
+        {
+            "user_alias": {
+                "alias_name": "device123",
+                "alias_label": "my_device_identifier"
+            },
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2013-07-16T19:20:50+01:00"
+        }
+    ],
+    "purchases": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "product_id": "product_name",
+            "currency": "USD",
+            "price": 12.12,
+            "quantity": 6,
+            "time": "2017-05-12T18:47:12Z",
+            "properties": {
+                "color": "red",
+                "monogram": "ABC",
+                "checkout_duration": 180,
+                "size": "Large",
+                "brand": "Backpack Locker"
+            }
+        }
+    ]
+}`
+```
+
+## Example request to set subscription groups
+
+This example shows how you can create a user and set their subscription group within the user attributes object. 
+
+Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "attributes": [
+  {
+    "external_id": "user_identifier",
+    "email": "example@email.com",
+    "email_subscribe": "subscribed",
+    "subscription_groups" : [{
+      "subscription_group_id": "subscription_group_identifier_1",
+      "subscription_state": "unsubscribed"
+      },
+      {
+        "subscription_group_id": "subscription_group_identifier_2",
+        "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
     }
   ]
 }'
@@ -180,6 +237,30 @@ The following status codes and associated error messages will be returned if you
 {: .reset-td-br-1 .reset-td-br-2}
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
+## Creating an alias-only user profile
+
+You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
+
+### Example request to create an alias-only user
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+{
+    "attributes": [
+        {
+            "_update_existing_only": false,
+            "user_alias": {
+                "alias_name": "example_name",
+                "alias_label": "example_label"
+            },
+            "email": "email@example.com"
+        }
+    ],
+}
+```
 
 ## Importing legacy user data
 

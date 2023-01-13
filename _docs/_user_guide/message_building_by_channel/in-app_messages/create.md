@@ -1,7 +1,7 @@
 ---
 nav_title: Creating an In-App Message
 article_title: Creating an In-App Message
-page_order: 0
+page_order: 1
 description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
 channel:
   - in-app messages
@@ -74,7 +74,7 @@ Once you've selected a sending platform, browse the message types, layouts, and 
 
 When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-![Graphic showing a scale of less instrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
@@ -234,7 +234,7 @@ When your customer clicks on a button in your in-app message, the following acti
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
 
-{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
 #### iOS device options
 
@@ -258,22 +258,6 @@ This setting only applies to the Custom code message type. Copy and paste HTML i
 #### Email capture input placeholder
 
 This setting only applies to the email capture form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
-
-### Generations
-
-Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which generation they support, in the [preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section while composing your in-app message.
-
-![Switching between in-app message generations in the preview section][2]{: height="50%" width="50%"}
-
-Depending on what SDK versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation.
-
-{% details What is a generation? %}
-A Generation is defined as a collection of SDK versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates.
-
-By selecting **Send to all Generations that support this message**, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences and absence of button border).
-
-You could clear the **Send to all Generations that support this message** checkbox and select **Send only to users on Generation 3 (the latest)** if you do not want to allow users to receive the older message styles. Users on Generation 3 will be the only ones to receive the message.
-{% enddetails %}
 
 ## Step 5: Style your in-app message
 
@@ -341,7 +325,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 In-app messages work by sending the message and triggers to the user's device. Once the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 
 {% alert important %}
-Once an in-app message campaign has been stopped, there may be some users that already received the message but have not seen it because they haven't opened your app. These users will still see your in-app message and be counted as a unique impression—even after your campaign has been stopped.
+Once an in-app message has been stopped, there may be some users that continue to see the message if they started a session before the message was stopped and subsequently perform the trigger event. These users will be counted as a unique impression even after the campaign has been stopped.
 {% endalert %}
 
 #### Choose a priority
@@ -387,7 +371,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 {% endtab %}
 {% tab Canvas %}
 
-If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 For information on Canvas-specific in-app messaging options, refer to [In-app messages in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
 
@@ -408,9 +392,11 @@ Braze values reliability and speed. Just like we suggest you send only the data 
 
 Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
-There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.
+{% alert important %}
+There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.
+{% endalert %}
 
-The 200 count includes active IAM campaigns that have not yet reached end time and those that have no end time. Active IAM campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
+The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
 
 
 [2]: {% image_buster /assets/img/iam-generations.gif %}

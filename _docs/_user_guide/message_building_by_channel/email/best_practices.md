@@ -30,6 +30,9 @@ guide_featured_list:
   - name: "Sunset Policies"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     fa_icon: fas fa-sun
+  - name: "Sending Test Messages"
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+    fa_icon: fas fa-envelope
   - name: "Know Before You Send"
     link: /docs/know_before_send/
     fa_icon: fa-solid fa-paper-plane

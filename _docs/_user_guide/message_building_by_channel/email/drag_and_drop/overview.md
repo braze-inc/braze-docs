@@ -14,7 +14,7 @@ tool:
 
 > With the Drag & Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag & drop editing experience.
 
-{% include video.html id="4dTrkxe8DLo" align="right" %}
+{% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
 Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. 
 
@@ -47,14 +47,14 @@ Before building your email, it's important to understand the key components to h
 
 ### Drag & drop email components {#content}
 
-![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
-![][9]{: style="float:right;max-width:25%;margin-left:10px;"}
-
 The Drag & Drop Editor uses two key components to make email composition quick and easy: **Content** and **Rows**. 
 
-**Content** includes a series of tiles that represent different types of content you can use in your message such as a title, text blocks, icons, and spacers. Simply drag one inside an existing row segment, and it will auto-adjust to the column width. 
+![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
+![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
+**Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. Basic content blocks are the foundation of your email such as title and paragraph blocks, buttons, and spacers. Media content blocks allow you to include images, videos, social media information, and icons. With the advanced content blocks, you can insert HTML blocks or add a menu to your email.
+
+Simply drag one inside an existing row segment, and it will auto-adjust to the column width. Every block in **Content** has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/). 
 
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
@@ -76,7 +76,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
-![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %}){: style="max-width:85%"}
+![Copywriter button, located in the Content panel next to Style Settings in the Drag and Drop Editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Creative details {#creative-details}
@@ -104,29 +104,46 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br>
 
+#### Content background
+
+You can add a background image to your row configuration, allowing you to incorporate more design and content in your email campaign.
+
 #### Adding Liquid 
 
 ![Options for adding personalization for the Drag & Drop Editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
+Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. Here, you can add various personalization types such as standard (default) attributes, device attributes, custom attributes, and more! Next, take your generated Liquid snippet and add it to your email.
 
-Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
+##### Dynamic images
 
-Next, take your generated Liquid snippet and add it to your email.
+You can choose to include dynamic images into your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 Once you've finished designing and building your email message, go to **Sending Settings** to add the sending information.
+
+#### Adding HTML attributes to links
+
+![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+
+With attributes, you can easily append additional information to HTML tags in emails. These attributes can be applied to links, both in text blocks and buttons, and images. This can be especially useful for message personalization, segmentation, and styling. 
+
+A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
+
+* **Sendgrid:** `clicktracking = "off"`
+* **SparkPost:** `data-msys-clicktrack = "0"`
 
 ## Step 3: Add sending information
 
 The **Sending Settings** section allows you to configure your **From Display Name + Address** and **Reply-To Address** and set the subject line or preheader. Here, you can also see a preview of your message.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Advanced functionality will appear in the campaign or Canvas composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
 {% endalert %}
 
 ## Step 4: Test your email
 
-The **Preview & Test** section allows you to preview of your emails across different email clients and devices. Here, you can use **Preview & Test Send** and **Inbox Vision** to ensure that the details are aligned across all your platforms for your drag & drop email campaign.
+The **Preview & Test** section allows you to preview of your emails across different email clients and devices with **Preview & Test Send** and **Inbox Vision**.
+
+Because you can view three different versions of the same email in the actual editor, in Inbox Vision, and as an actual test email, it's important to align the details across all your platforms. 
 
 ### Preview & Test Send
 
@@ -140,9 +157,15 @@ You can also view your email previews with these user types:
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
+Here, you can also use the **Dark Mode Preview** toggle to preview your email in dark mode and adjust your email as needed.
+
 ### Inbox Vision
 
 [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/) allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**. 
+
+{% alert tip %}
+Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
+{% endalert %}
 
 After using the Drag & Drop Editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
 
@@ -154,7 +177,7 @@ The underlying engine that produces HTML from the Drag & Drop Editor has been op
 
 Our average exported HTML data footprint size has been reduced, leading to faster loading and rendering, reduced mobile clipping, and reduced bandwidth consumption.
 
-#### HTML Rendering
+#### HTML rendering
 
 HTML rendering has improved based on these following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded. 
 
@@ -168,6 +191,7 @@ HTML rendering has improved based on these following updates that minimize the n
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
 [4]: {% image_buster /assets/img/dnd/dnd3.png %}
 [5]: {% image_buster /assets/img/dnd/dnd4.png %}
+[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
 [8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}

@@ -46,7 +46,9 @@ You may also refer to the documentation for our deprecated [`Original In-App Mes
 
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
--**Note:** Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs.  If you're working with Android, please check out how to log custom events [here][in_app_message_24]. If you're working with iOS, check out how to log custom events [here][in_app_message_25].
+{% alert note %}
+Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with Android, check out how to [log custom events on Android][in_app_message_24]. If you're working with iOS, check out how to [log custom events on iOS][in_app_message_25].
+{% endalert %}
 
 #### Delivery semantics
 

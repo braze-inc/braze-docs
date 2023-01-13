@@ -6,7 +6,7 @@ page_order: 5
 description: "This article covers how to set up and track basic analytics in the Flutter app."
 
 ---
-
+ 
 # Analytics
 
 This article covers how to set up and track basic analytics in your Flutter app.
@@ -64,12 +64,62 @@ The following attributes are supported:
 - Phone Number
 - Language
 - Email
-- Twitter Data
-- Facebook Data
 
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 
-#### Unsetting a custom attribute
+### Setting custom attribute values
+
+Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
+
+{% tabs %}
+{% tab Boolean Value %}
+
+```dart
+braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
+```
+
+{% endtab %}
+{% tab Integer %}
+
+```dart
+// Set Integer Attribute
+braze.setIntCustomUserAttribute("custom int attribute key", integer);
+// Increment Integer Attribute
+braze.incrementCustomUserAttribute("key", integer);
+```
+
+{% endtab %}
+{% tab Double %}
+```dart
+braze.setDoubleCustomUserAttribute("custom double attribute key", double);
+```
+
+{% endtab %}
+{% tab String %}
+
+```dart
+braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
+```
+
+{% endtab %}
+{% tab Date %}
+
+```dart
+braze.setDateCustomUserAttribute("custom date attribute key", date);
+```
+{% endtab %}
+{% tab Array %}
+
+```dart
+// Adding to an Array
+braze.addToCustomAttributeArray("key", "attribute");
+// Removing an item from an Array
+braze.removeFromCustomAttributeArray("key", "attribute");
+```
+{% endtab %}
+{% endtabs %}
+
+### Unsetting a custom attribute
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');
@@ -96,6 +146,9 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 {% alert tip %}
 If you pass in a value of `10 USD` and a quantity of `3`, this will log three purchases of 10 dollars for a total of 30 dollars to the user's profile. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
+
+### Log purchases at the order level
+If you would like to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### Reserved keys
 

@@ -53,9 +53,13 @@ hide_breadcrumb: true
           {%- endif %}
       <div id="{{ help_list.name | handle }}" class="help_item">
         <div class="help_img" >
-        {%- if help_list.image -%}
-        <img src="{{site.baseurl}}{{ help_list.image}} " />
-        {%- endif -%}
+          {%- if help_list.fa_icon -%}
+          <i class="{{help_list.fa_icon}}"></i>
+          {%- else -%}
+            {%- if help_list.image -%}
+            <img src="{{site.baseurl}}{{ help_list.image}} " />
+            {%- endif -%}
+          {%- endif -%}
         </div>
         <div class="help_info">
           <div class="help_name">
@@ -98,7 +102,7 @@ hide_breadcrumb: true
     </div>
     <div id="user_bottom">
         <div id="user_popular" class="user_info">
-          <div class="user_name">Popular Topics</div>
+          <div class="user_name">{{ site.data.i18n[site.language]['popular_topic'] | default: "Popular Topics"}}</div>
             <div class="user_description">
             {%- for user_list in page.popular_topic_list  -%}
               <div>

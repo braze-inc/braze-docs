@@ -17,6 +17,8 @@ When stored in Braze, these characteristics can be used to build out audience se
 
 To create and manage custom attributes in the dashboard, go to **Manage Settings** > **Custom Attributes**. From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
 
+If you would like to remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint.
+
 ## Setting custom attributes
 
 The following lists methods across various platforms that are used to set custom attributes.
@@ -49,12 +51,8 @@ The following data types may be stored as custom attributes:
 - [Strings](#strings)
 - [Arrays](#arrays)
 - [Time](#time)
-- [Objects]({{site.baseurl}}/nested_custom_attribute_support/) (early access)
-- [Arrays of objects]({{site.baseurl}}/array_of_objects/) (early access)
-
-{% alert note %}
-**Coming soon!** Generally available support for object and object array data types is arriving in Spring 2022.
-{% endalert %}
+- [Objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/)
+- [Arrays of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)
 
 ### Booleans (true/false) {#booleans}
 
@@ -93,6 +91,8 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
+Note that if you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
@@ -101,6 +101,10 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
 | Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
+| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
+| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -120,9 +124,11 @@ More resources on regex:
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
+By default, the max length of an array for an attribute is set to 100. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added. 
 
-If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+
+Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
 {% alert note %}
 The option to increase the max length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
@@ -135,6 +141,12 @@ The option to increase the max length will not be available if the attribute is 
 | Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
 | Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
 | Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
+| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
+| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
@@ -180,11 +192,11 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 ### Objects
 
-Support for objects as a data type for custom attributes is currently in early access. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+You can use nested custom attributes to send objects as a data type for custom attributes. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
 
 ### Arrays of objects
 
-Support for arrays of objects depends on nested custom attributes, which is currently in early access. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/). 
+Use an array of objects to group related attributes. For more information, refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
 
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 

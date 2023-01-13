@@ -16,7 +16,7 @@ There will be a top-level JSON object with the key "events" that maps to an arra
 
 The following examples are for _individual_ events (i.e., they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
 
-### Campaign-Associated Events
+### Campaign-associated events
 
 Here are some example event payloads for various events, as they would appear if associated with a campaign:
 
@@ -37,6 +37,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "platform": "android",
      "os_version": "Android (N)",
     "device_model": "Nexus 5X",
@@ -64,6 +65,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "send_id": "f123456789abcdef01234567",
     "dispatch_id": "01234567-89ab-cdef-0123-456789abcdef"
   }
@@ -86,6 +88,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
     "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
@@ -109,6 +112,7 @@ Here are some example event payloads for various events, as they would appear if
     "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Test Message Variation",
     "to_phone_number": "+16462345678",
     "subscription_group_id": "41234567-89ab-cdef-0123-456789abcdef",
     "from_phone_number": "+12123470922"
@@ -116,7 +120,7 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-### Canvas-Associated Events
+### Canvas-associated events
 
 Here are some example event payloads for various events, as they would appear if associated with a Canvas:
 ```
@@ -231,7 +235,7 @@ Here are some example event payloads for various other events that are not assoc
   "time": 1477502783,
   "user": {
     "user_id": "0123456789abcdef01234567",
-    "external_user_id": "user_id"
+    "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
     "timezone": "America/Chicago"
   },

@@ -14,7 +14,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 
 | Personalization Tag Type | Tags |
 | -------------  | ---- |
-| Default Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
+| Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | [Email List Attributes][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | [SMS Attributes][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
@@ -24,6 +24,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
+| Canvas Entry Properties| `{{canvas_entry_properties}}` |
 | Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -40,7 +41,7 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
 - `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps as triggered events, even when they are "scheduled" (except for Entry Steps, which can be scheduled). To learn more, refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
+- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas component name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
 ## Most recently used device information
@@ -52,7 +53,7 @@ You can template in the following attributes for the user's most recent device a
 |Tag | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
-|`{{most_recently_used_device.${id}}}` | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID. |
+|`{{most_recently_used_device.${id}}}` | This is Braze's device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
 | `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
@@ -73,7 +74,7 @@ For push notification and in-app message channels, you can template in the follo
 
 |Tag | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID. |
+| `{{targeted_device.${id}}}` | This is Braze's device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms it is a randomly generated UUID. |
 | `{{targeted_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
 | `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
@@ -187,6 +188,16 @@ Then, we send the sale message when converse_viewer is true. Otherwise, we abort
 
 This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information in Shopify's documentation on [iteration tags][32].
 
+## Syntax tags
+
+Syntax tags can be used to control how Liquid is rendered. You can use the `echo` tag to return an expression. This is the same as wrapping an expression using curly brackets, except you can use this tag within Liquid tags. You can also use the `liquid` tag to have a block of Liquid without any delimiters on each tag. Each tag has to be in its own line when using the `liquid` tag. Check out Shopify's documentation on [syntax tags][33] for more information and examples.
+
+With [whitespace control][49], you can remove whitespaces around your tags, helping you further control what the Liquid output looks like.
+
+## Theme tags
+
+Theme tags can assign content that is a part of your theme. Braze currently supports the `render` tag, which allows you to render a snippet or app block. For more information, check out Shopify's documentation on [`render` tags][30].
+
 ## HTTP status codes {#http-personalization}
 
 You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
@@ -240,9 +251,9 @@ You can also target users based off of their time zone. For example, send one me
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
 {% if hour_in_utc >= 19 && hour_in_utc < 20 %}
-It is between 2:00:00pm and 2:59:59pm ET!
+It is between 2:00:00 pm and 2:59:59 pm ET!
 {% elsif hour_in_utc >= 22 && hour_in_utc < 23 %}
-It is between 2:00:00pm and 2:59:59pm PT!
+It is between 2:00:00 pm and 2:59:59 pm PT!
 {% else %}
 {% abort_message %}
 {% endif %}
@@ -250,8 +261,10 @@ It is between 2:00:00pm and 2:59:59pm PT!
 
 {% endraw %}
 
+[30]: https://shopify.dev/api/liquid/tags#syntax-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
+[33]: https://shopify.dev/api/liquid/tags#syntax-tags
 [38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
 [17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
@@ -261,3 +274,4 @@ It is between 2:00:00pm and 2:59:59pm PT!
 [43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
 [47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
+[49]: https://shopify.github.io/liquid/basics/whitespace/

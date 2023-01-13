@@ -23,7 +23,7 @@ Active campaigns are in the process of sending. They can fall under one of the f
 - Scheduled to send on a recurring schedule and has at least one occurrence that hasn't finished sending
 
 ## Archived
-Archivced campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
+Archived campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
 To [archive a campaign][2], click on the gear icon for a given campaign, or simply check it off and select **Archive Selected**.
 
@@ -38,7 +38,6 @@ This status indicates campaigns with multivariate tests that have finished runni
 
 ## Completed
 Completed campaigns have finished sending and are not scheduled to send again in the future.
-
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns

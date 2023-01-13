@@ -10,7 +10,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-description: "This landing page includes all Braze partners. Use it to explore techncial documentation that will help implement Technology Partners into your braze SDK."
+description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
 
 valid_partner_list:
 - name: Jampp
@@ -157,7 +157,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
-- name: Line
+- name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/judo/
@@ -197,5 +197,35 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
+- name: Quikly
+  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+- name: actionable.me
+  url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
+- name: IAM Studio
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
+- name: Storyly
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
+- name: Lokalise
+  url: /docs/partners/message_personalization/localization/lokalise/
+- name: DataGrail
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+- name: Octolis
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
+- name: Ada
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
+- name: ThoughtSpot
+  url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
+- name: Wunderkind
+  url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
+- name: B.Layer 
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
+- name: Tellius
+  url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
+- name: Sheetlabs
+  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+- name: Contentsquare
+  url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 
 ---

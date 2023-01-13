@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 ### Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 25 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states). You can add up to 100 subscription groups per app group. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (Promotional, Newsletter, Product Updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using our [email preference center](#email-preference-center). 
 
@@ -69,7 +69,7 @@ By default, the past 30 days of state changes across all subscription groups are
 
 #### See subscription groups in campaign analytics
 
-You can see the number of users who changed their Subscription State (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
+You can see the number of users who changed their subscription state (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
 
 From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section and click the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
@@ -77,61 +77,7 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ### Email preference center
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
-
-To place a link to the preference center in your emails, use the following preference center Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
-
-{% raw %}
-```
-{{${preference_center_url}}}
-```
-{% endraw %}
-
-{% alert note %}
-The Preference Center has a checkbox that will allow your users to unsubscribe from all emails.
-{% endalert %}
-
-The preference center is intended to be used strictly within the email channel itself. The preference center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom preference center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
-
-#### Customize your preference center
-
-You can create and host on your web server a fully custom HTML preference center and sync to Braze using our [APIs][28].
-
-At this time, you can only have one preference center, which will list all of your current subscription groups.
-
-**Option 1: Link with string query parameters**
-
-Use query string field-value pairs in the body of the URL to pass the users ID and email category to the page so users will only need to confirm their choice to unsubscribe. This option is good for those who store a user identifier in a hashed format and do not already have a subscription center.
-
-For this option, each email category will require its own specific unsubscribe link:<br>
-`http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
-
-{% alert tip %}
-It is also possible to hash the users `external_id` at the point of send using a Liquid filter. This will convert the `user_id` to an md5 hash value, for example:
-{% raw %}
-```liquid
-{% assign my_string = {{${user_id}}} | md5 %}
-
-My encoded string is: {{my_string}}
-```
-{% endraw %}
-{% endalert %}
-
-**Option 2: JSON web token**
-
-Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate users to a part of your web server (e.g., account preferences) that is normally behind a layer of authentication such as username and password login. This approach does not require query string value-pairs embedded in the URL as these can be passed in the JSON web token's payload, for example:
-
-```json
-{
-    “user_id”: "1234567890",
-    "name": "John Doe",
-    “category": offers
-}
-```
-
-##### Logo
-
-You can edit the logo of your preference center. Click the gear, then click **Edit** from the menu that appears.
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/).
 
 ### Changing email subscriptions {#changing-email-subscriptions}
 
@@ -192,7 +138,7 @@ You can also choose to set a custom footer for plaintext emails from the **Email
 
 When a user clicks on an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the [email Settings][10] page.
+Optionally, you may provide HTML for your custom landing page that users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the **Email Settings** page.
 
 We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
@@ -240,7 +186,6 @@ For example, this can be useful if you want to target users who have neither opt
 
 ![Email Subscription Status used as a segment filter.][18]
 
-[10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
@@ -257,6 +202,6 @@ For example, this can be useful if you want to target users who have neither opt
 [25]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
+[28]: {{site.baseurl}}/api/endpoints/preference_center/
 [29]: {% image_buster /assets/img/user-sub-state-export.png %}
 [30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}

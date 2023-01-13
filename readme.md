@@ -5,9 +5,9 @@ This is where you can contribute to the [Braze Documentation site](http://www.br
 ## What You Need to Know
 
 - This is a [Jekyll](https://github.com/Appboy/braze-docs/wiki/Jekyll-Overview) site.
-- This branch is merged to our master branch and the production site at weekly on Tuesdays and Thursdays.
+- This branch is merged to our master branch and the production site weekly on Tuesdays and Thursdays.
 
-If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs GitHub Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at https://www.braze.com/docs/cla.
+If you would like us to incorporate your changes into the official version of the document, you can submit changes to the braze-inc/braze-docs GitHub Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at https://www.braze.com/docs/cla.
 
 ## Table of Contents
 - [About Braze](#about-braze)
@@ -43,6 +43,6 @@ Braze Documentation is licensed under a [Creative Commons Attribution-NonCommerc
 3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
   - [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide)
   - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
-  - [Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub)
-  - [Media Style Guide](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub#h.wstt3flbts5k)
+  - [Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub)
+  - [Media Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub)
   - [Markdown Formatting Style Guide](https://github.com/Appboy/braze-docs/wiki/Special-Formatting)

@@ -14,13 +14,13 @@ description: "This article outlines details about the Delete Scheduled API-Trigg
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 
-The delete schedule endpoint allows you to cancel a message that you previously scheduled API-triggered campaigns before it has been sent.
+Use this endpoint to cancel a Canvas message that you previously scheduled via API-triggered before it has been sent.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 

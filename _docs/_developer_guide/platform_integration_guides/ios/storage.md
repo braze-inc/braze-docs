@@ -8,7 +8,7 @@ description: "This reference article describes the device-level properties captu
 
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 # Storage
 
@@ -23,7 +23,7 @@ By default, Braze will collect the following [device-level properties](https://g
 * Device Locale
 * Device Model
 * Device OS Version
-* IDFV
+* IDFV (Optional with [iOS SDK v5.7.0+](https://github.com/braze-inc/braze-swift-sdk))
 * Push Enabled
 * Device Time Zone
 * Push Auth Status

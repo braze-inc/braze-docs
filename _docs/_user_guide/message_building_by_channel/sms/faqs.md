@@ -21,6 +21,8 @@ You can include any link in any SMS campaign you would like. However, there are 
 - Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
 - Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) would be the most reliable number type for including links.
 
+Braze also has its own Link Shortening feature that will shorten links and provide click-through analytics automatically. Refer to [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
+
 ### What SMS use cases does Braze not support?
 
 There are three common SMS use cases that Braze does not currently support:
@@ -89,17 +91,17 @@ Before sending SMS messages containing URLs to users in certain countries (for e
 
 ### What happens if multiple users have the same phone number?
 
-When multiple user profiles that share one phone number (enabled for SMS) are eligible for a campaign or Canvas step at the same time, triggered by the event of an inbound SMS, Braze will de-dupe users on the Canvas step level. This will ensure users do not receive more than one SMS text for a Canvas step, even if multiple users share the same phone number.
+When multiple user profiles that share one phone number (enabled for SMS) are eligible for a campaign or Canvas component at the same time, triggered by the event of an inbound SMS, Braze will de-dupe users on the Canvas component level. This will ensure users do not receive more than one SMS text for a Canvas component, even if multiple users share the same phone number.
 
 Braze will use the following flow to determine the recipient profile:
 - Check which profile received SMS most recently (up to 7 days ago); if one exists, send it to that user.
 - If neither had received SMS up to 7 days ago, send to the user who has a user alias of "phone" that matches the phone number.
 - If neither exists, send to a random profile between the ones available. 
 
-If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed.
+If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed. This also applies to API state changes. For example, if multiple profiles with different external IDs have the same phone numbers, a subscription group state change via the API will update all profiles with that phone number, even if only one external ID is specified.
 
 {% alert important %} 
-If you stagger your users into a Canvas and have different schedule times for each Canvas step, you can send a user with the same email or phone duplicate messages. 
+If you stagger your users into a Canvas and have different schedule times for each Canvas component, you can send a user with the same email or phone duplicate messages. 
 {% endalert %}
 
 ### Will SMS event properties capture keywords in a sentence?
@@ -132,4 +134,4 @@ In other countries:
 
 ### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
 
-If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout), they will receieve the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling), they will not receive the response for that keyword. 
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling), they will not receive the response for that keyword. 

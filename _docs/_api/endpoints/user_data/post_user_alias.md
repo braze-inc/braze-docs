@@ -28,7 +28,7 @@ You can add up to 50 user aliases per request.
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users alias new' %}
+{% multi_lang_include rate_limits.md endpoint='users alias new' %}
 
 ## Request body
 

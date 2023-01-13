@@ -8,7 +8,7 @@ description: "This reference article covers the initial SDK integration steps to
 ---
 
 # Initial SDK integration
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notifications.
 
@@ -36,7 +36,7 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
         <ApiKey>YOUR_API_KEY_HERE</ApiKey>
     </AppboyConfig>
 ```
->  Be sure to update `YOUR_API_KEY_HERE` with your API key that can found on the [settings][1] page in the Braze dashboard.
+>  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found in the **Developer Console** on the Braze dashboard.
 
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 
@@ -76,6 +76,5 @@ Braze should now be collecting data from your application. See the following art
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as “AppboyPlatform.Universal.Appboy”
 
-[1]: https://dashboard-01.braze.com/app_settings/app_settings "Settings"
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

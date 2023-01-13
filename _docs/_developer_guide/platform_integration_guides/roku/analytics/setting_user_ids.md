@@ -10,7 +10,7 @@ description: "This page covers methods to identify users, as well as best practi
 
 # Setting user IDs
 
-{% include archive/setting_user_ids/setting_user_ids.md %}
+{% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:
 
@@ -20,11 +20,11 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 
 ## Suggested user ID naming convention
 
-{% include archive/setting_user_ids/naming_convention.md %}
+{% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
 ## User ID integration best practices and notes
 
-{% include archive/setting_user_ids/best_practices.md %}
+{% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/

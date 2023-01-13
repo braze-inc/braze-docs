@@ -50,7 +50,7 @@ Filter for the recency of a user responding to your SMS program. This filter wil
 
 ### Filter by campaign or Canvas attribution
 
-Filter for users who have replied to a specific SMS campaign or Canvas step, keyword category, or tag.
+Filter for users who have replied to a specific SMS campaign or Canvas component, keyword category, or tag.
 
 **Filter by replied to a specific campaign category**<br>
 ![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."][12]
@@ -65,6 +65,10 @@ Filter for users who have replied to a specific SMS campaign or Canvas step, key
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
+{% alert tip %} 
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
+{% endalert %}
+
 **Trigger by inbound keyword category**<br>
 ![Action-based SMS campaign with the segmentation filter Sent keyword "Opt-in" to subscription group "Marketing SMS".][7]{: style="margin-top:10px;"}
 
@@ -73,7 +77,7 @@ Note when triggering a message on an "Other" keyword response, you will have the
 ![Action-based SMS campaign with keyword category as "Other" where the message body is exactly "Hello" or "Hey".][8]{: style="margin-top:10px;"}
 
 **Template keywords**<br>
-When triggering a campaign or Canvas Step on an inbound SMS or MMS, you can optionally template the text and/or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+When triggering a campaign or Canvas component on an inbound SMS or MMS, you can optionally template the text or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
 
 {% raw %}
 

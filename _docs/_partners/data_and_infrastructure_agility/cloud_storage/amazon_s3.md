@@ -242,7 +242,7 @@ Give the role a name and a description, and click **Create Role**.
 
 You should now see your newly created Role on the list.
 
-### Step 4: Link to braze AWS {#role-arn-4}
+### Step 4: Link to Braze AWS {#role-arn-4}
 
 In the AWS Console, find your newly created role in the list. Click the name to open up the details of that role.
 
@@ -298,7 +298,7 @@ A notification will inform you whether your credentials have been successfully v
 
 If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same app group, or split and created within multiple app groups. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
 
-If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two seperate policies as each integration requires different permissions.
+If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
 
 
 [11]: {% image_buster /assets/img_archive/S3_Credentials.png %}

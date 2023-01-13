@@ -39,5 +39,42 @@ Additionally, messages may be getting delivered and ending up in Spam, indicatin
 
 Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
 
+### Why are my email deliverability metrics not adding up to 100%?
 
+Email deliverability metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
+
+Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full", "server temporarily not available", and more. If the soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign deliverability metrics.
+
+### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric
+
+Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occurred. 
+
+**Workaround:** To achieve this same result, you could send an API call to Braze to update any user profiles where you recorded unsubscribes from your custom link. 
+
+### What are open tracking pixels?
+
+Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads up their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
+
+### How can I update user's email subscription groups?
+
+- **Rest API:** User profiles can be programmatically set by the [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint by using Braze's REST API.
+
+### How can I check a user's email subscription group?
+
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's email subscription groups. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API. 
+
+### What happens when an email campaign or Canvas is stopped?
+
+Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because once the send requests are sent out, they cannot be stopped from being delivered to the user.
+
+### Why am I seeing more email clicks than opens?
+
+You may be seeing more clicks than opens for any of the following reasons:
+- Users are performing multiple clicks on the body of the email within a single open.
+- Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
+- Users reopen an email that they previewed earlier.
+
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
 [1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

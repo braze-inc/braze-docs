@@ -1,6 +1,6 @@
 <div class="gitedit_div">
     <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank">
-        <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" /> &nbsp; Edit this page on GitHub
+        <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" /> &nbsp; {{ site.data.i18n[site.language]['edit_github'] | default: "Edit this page on GitHub" }}
     </a>
 </div>
 
@@ -8,16 +8,12 @@
     {%- if include.title -%}
     <div id="feedback_title">{{ include.title | upcase }} </div>
     {%- else -%}
-    <div id="feedback_title">WAS THIS PAGE HELPFUL? </div>
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "WAS THIS PAGE HELPFUL?" }} </div>
     {%- endif -%}
 
     <div id="feedback_answer">
         <a href="#" id="feedback_helpful_yes" data-value="Yes">
             <i class="fas fa-thumbs-up"></i>Yes</a>
-
-        <a href="#" id="feedback_helpful_but" data-value="Yes But">
-            <i class="fas fa-comment"></i> Yes, but...</a>
-
         <a href="#" id="feedback_helpful_no" data-value="No">
             <i class="fas fa-thumbs-down"></i> No
         </a>

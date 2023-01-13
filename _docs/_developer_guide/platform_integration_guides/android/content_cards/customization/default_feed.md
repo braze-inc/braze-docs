@@ -13,7 +13,7 @@ channel:
 
 # Customizing the default Content Card feed {#content-cards-fragment-customization}
 
-This section covers customization of the [ContentCardsFragment][49] whose source can be found [here][54].
+This section covers customization of the [ContentCardsFragment][49] whose source can be found on [GitHub][54].
 
 ## Customizing displayed card order {#customizing-displayed-card-order-for-android}
 
@@ -187,14 +187,14 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 If the [`ContentCardsFragment`][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [`EmptyContentCardsAdapter`][50] replaces the standard [`ContentCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
+A special adapter, the [`EmptyContentCardsAdapter`][50] replaces the standard [`ContentCardAdapter`][53] to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
 
 The style used to display this message can be found via [`Braze.ContentCardsDisplay.Empty`][52] and is reproduced in the following code snippet:
 
 ```xml
 <style name="Braze.ContentCardsDisplay.Empty">
   <item name="android:lineSpacingExtra">1.5dp</item>
-  <item name="android:text">@string/com_appboy_feed_empty</item>
+  <item name="android:text">@string/com_braze_feed_empty</item>
   <item name="android:textColor">@color/com_braze_content_card_empty_text_color</item>
   <item name="android:textSize">18.0sp</item>
   <item name="android:gravity">center</item>
@@ -207,10 +207,10 @@ To fully customize the network error behavior, you can extend the [`ContentCards
 
 [49]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530
-[53]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
-[50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
+[53]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt
+[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt
+[50]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/extras.html
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java

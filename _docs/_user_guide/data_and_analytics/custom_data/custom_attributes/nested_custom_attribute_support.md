@@ -21,20 +21,17 @@ Objects can contain existing [data types][1], such as:
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
-{% alert important %}
-Support for nested custom attributes is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Limitations
 
-- Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
+- Available on custom attributes sent via API only. The Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
+- Key names cannot contain spaces.
 
 ## API request body
 
-{% tabs local %}
+{% tabs %}
 {% tab Create %}
 The following is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
@@ -44,30 +41,14 @@ The following is a `/users/track` example with a "Most Played Song" object. To c
     {
       "external_id": "user_id",
       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
-          }
-      }
-    }
-  ]
-}
-```
-
-Here's another `/users/track` example with an "Important Dates" object to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
-
-```json
-{
-  "attributes": [ 
-    {
-      "external_id": "time_with_nca_test",
-      "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "genre": "Jazz",
+        "play_analytics": {
+            "count": 1000,
+            "top_10_listeners": true
+        }
       }
     }
   ]
@@ -96,14 +77,15 @@ After this request is received, the custom attribute object will now look like t
 
 ```json
 "most_played_song": {
-    "song_name": "Solea",
-    "artist_name" : "Miles Davis",
-    "album_name": "Sketches of Spain",
-    "year_released": 1960,
-    "genre": "Jazz",
-    "play_analytics": {
-        "count": 1000,
-        "top_10_listeners": true
+  "song_name": "Solea",
+  "artist_name" : "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "year_released": 1960,
+  "genre": "Jazz",
+  "play_analytics": {
+     "count": 1000,
+     "top_10_listeners": true
+  }
 }
 ```
 
@@ -128,6 +110,24 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 {% endtab %}
 {% endtabs %}
+
+#### Capturing dates as object properties
+
+To capture dates as object properties, you must use the `$time` key. In the following example, an "Important Dates" object is used to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+      }
+    }
+  ]
+}
+```
 
 ## Liquid templating
 
@@ -155,6 +155,12 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
 
+### Multi-criteria segmentation
+
+Use **Multi-Criteria Segmentation** to create a segment that matches multiple criteria within a single object. This qualifies the user into the segment if they have at least one object array that matches all the criteria specified. For example, users will only match this segment if their key is not blank, and if their number is more than 0.
+
+![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
+
 ### Generate a schema using the nested object explorer {#generate-schema}
 
 You can generate a schema for your objects to build segment filters without needing to memorize nested object paths. To do so, perform the following steps.
@@ -179,12 +185,10 @@ In the Braze dashboard, navigate to **Manage Settings** > **Custom Attributes**.
 ![][8]
 
 {% alert tip %}
-It may take a few minutes for your schema to generate depending on how much data you've sent us. Feel free to grab a coffee and check back on this later.
+It may take a few minutes for your schema to generate depending on how much data you've sent us.
 {% endalert %}
 
 After the schema has been generated, a new <i class="fas fa-plus"></i> plus button appears in place of the **Generate Schema** button. You can click on it to see what Braze knows about this nested custom attribute. 
-
-![][9]
 
 During schema generation, Braze looks at previous data sent and builds an ideal representation of your data for this attribute. Braze also analyzes and adds a data type for your nested values.
 
@@ -208,13 +212,39 @@ Create a segment and add the filter `Nested Custom Attribute`, then search for a
 
 Click the <i class="fas fa-plus"></i> plus button in the path field. This will bring up a representation of your object or object array. You can select any of the listed items and Braze will insert them into the path field for you. For our use case, we need to get the balance. Select the balance and the path (in this case, `[].balance`) is automatically populated in the path field.
 
-![][12]{: style="max-width:50%" }
+![][12]{: style="max-width:70%" }
 
 You can click **Validate** to verify that the contents of the path field is valid, then build the rest of the filter as needed. Here we've specified that the balance should be less than 100.
 
 ![][13]
 
 That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+
+### Trigger nested custom attribute changes
+
+You can trigger when a nested custom attribute object changes. This option is not available for changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
+
+![][16]
+
+For example, in the following action-based campaign, you can add a new trigger action for **Change Custom Attribute Value** to target users who have changed their neighborhood office preferences. 
+
+![][15]
+
+### Personalization
+
+Using the **Add Personalization** modal, you can also insert nested custom attributes into your messaging. Select **Nested Custom Attributes** as the personalization type. Next, select the top-level attribute and attribute key. 
+
+For example, in the personalization modal below, this inserts the nested custom attribute of a local neighborhood office based on a user's preferences.
+
+![][9]{: style="max-width:70%" }
+
+{% alert tip %}
+Check that a schema has been generated if you don't see the option to insert nested custom attributes.
+{% endalert %}
+
+### Regenerate schemas {#regenerate-schema}
+
+After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus button to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
 
 ## Data Points
 
@@ -225,15 +255,16 @@ Any key that is updated consumes a data point. For example, this object initiali
   "attributes": [
     {
       "external_id": "user_id",
-       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "year_released": 1960,
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
+      "most_played_song": {
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "year_released": 1960,
+        "genre": "Jazz",
+        "play_analytics": {
+          "count": 1000,
+          "top_10_listeners": true
+        }
       }
     }
   ]
@@ -244,15 +275,17 @@ Any key that is updated consumes a data point. For example, this object initiali
 Updating a custom attribute object to `null` also consumes a data point.
 {% endalert %}
 
-
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
 [5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
 [6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
 [7]: {% image_buster /assets/img_archive/nca_comparator.png %}
 [8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[9]: {% image_buster /assets/img_archive/nca_generate_schema_complete.png %}
+[9]:{% image_buster /assets/img_archive/nca_personalization.png %}
 [10]: {% image_buster /assets/img_archive/nca_schema.png %}
 [11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
 [12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
 [13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
+[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
+[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
+[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}

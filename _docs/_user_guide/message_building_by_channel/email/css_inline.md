@@ -1,7 +1,7 @@
 ---
 nav_title: CSS Inlining
 article_title: CSS Inlining
-page_order: 5
+page_order: 5.1
 description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
 channel:
   - email
@@ -16,16 +16,15 @@ For some email clients, CSS inlining can improve the way that emails render and 
 
 ## Using CSS inlining
 
-You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML Composer, and the **Advanced** tab of the Drag & Drop Editor.
+You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML editor.
 
-| HTML Composer | Drag & Drop Editor|
-| --- | --- |
-| ![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:80%;"} | ![Toggle to manage CSS inlining in Drag & Drop Editor.][3]{: style="max-width:80%;"} |
+![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:80%;"} 
 
-Additionally, you can set a default on or off state globally from **Manage Settings** > **Email Settings** > **Inline CSS**. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
+### Default inlining state
+
+You can set a default on or off state globally from **Manage Settings** > **Email Settings** > **Inline CSS**. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
 ![Inline CSS on new emails by default option located in email settings.][1]
 
 [1]:{% image_buster /assets/img_archive/css-inline1.png %}
 [2]:{% image_buster /assets/img_archive/css-inline2.png %}
-[3]:{% image_buster /assets/img_archive/css-inline3.png %}

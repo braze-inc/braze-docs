@@ -94,17 +94,18 @@ The following lists features and messaging channels supported today.
         <tr>
             <td>Apple TV OS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-times text-warning"></i></td>
-            <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>  
-            <td for="canvas">N/A</td>
+            <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fa-solid fa-minus"></i></td>  
+            <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
     </tbody>
 </table>
 
 - <i class="fas fa-check text-success"></i> = Supported
+- <i class="fa-solid fa-minus"></i> = Partial support
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
-- N/A = Not supported by platform
+- N/A = Not supported by OTT platform
 
 ## Integration guides
 
@@ -119,8 +120,9 @@ Features include:
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - In-app messages
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 
-For more information, visit the [Fire OS Integration Guide][2].
+For more information, visit the [Fire OS integration guide][2].
 
 ### Kindle Fire
 
@@ -133,7 +135,7 @@ Features include:
 - Content Cards
 - In-app messages
 
-For more information, visit the [Fire OS Integration Guide][2].
+For more information, visit the [Fire OS integration guide][2].
 
 ### Android TV
 
@@ -144,23 +146,28 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
 - In-app messages 
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 - &#42; Push Notifications (Manual Integration Required)
 
-For more information, visit the [Android SDK Integration Guide][2].
+For more information, visit the [Android SDK integration guide][2].
 
 Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
 
+{% alert note %}
+Make sure to create a new Android app in the dashboard for your Android OTT integration.
+{% endalert %}
+
 ### LG webOS
 
-Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lge.com/discover/discover-webos-tv/).
+Use Braze's Web SDK to integrate with [LG webOS TVs](https://webostv.developer.lge.com/discover).
 
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via Custom UI)
-- In-app messages (via Custom UI)
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
 
-For more information, visit the [Web Smart TV Integration Guide][8].
+For more information, visit the [Web Smart TV integration guide][8].
 
 ### Samsung Tizen
 
@@ -169,10 +176,10 @@ Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- Content Cards (via Custom UI)
-- In-app messages (via Custom UI)
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
 
-For more information, visit the [Web Smart TV Integration Guide][8].
+For more information, visit the [Web Smart TV integration guide][8].
 
 ### Roku
 
@@ -181,24 +188,58 @@ Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/doc
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- In-app messages (via Custom UI)
+- In-app messages (via [Headless UI](#custom-ui))
 
-For more information, visit the [Roku Integration Guide][3].
+For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS
 
-Use Braze's iOS SDK to collect data and analytics on your TV OS users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
+Use Braze's Swift SDK to integrate on tvOS
 
-For more information, visit the [iOS SDK Integration Guide][4].
+For more information, visit the [iOS Swift SDK integration guide][4].
 
-## In-app message with custom UI
+Features include:
 
-For platforms that support in-app messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native in-app message templates into your existing app designs.
+- Data and analytics collection for cross-channel engagement
+- Content Cards (via [Headless UI](#custom-ui))
+- In-app messages (via [Headless UI](#custom-ui))
+- Silent push notifications and update badging
 
+**Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+
+## App targeting {#app-targeting}
+
+To target OTT apps for messaging, we recommend creating a segment specific to your OTT app.
+
+![A segment created using the Android OTT app.][1]
+
+## Headless UI {#custom-ui}
+
+For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model (i.e., JSON) that your app can read and use within a UI your app controls. These platforms don't include any out-of-the-box UI or views.
+
+This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
+
+Read more about custom handling messaging:
+
+**Android SDK**
+- [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)
+- [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)
+
+**Swift SDK**
+- [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
+- [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
+
+**Web SDK**
+- [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
+- [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
+ 
+
+[1]: {% image_buster /assets/img/android_ott.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
+[4]: https://github.com/braze-inc/braze-swift-sdk
 [5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
+[android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310

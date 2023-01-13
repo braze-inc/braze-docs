@@ -75,9 +75,12 @@ Any event that Extole tracks can be sent to Braze. Work with your Extole impleme
 
 To start sending data from your Extole programs into Braze, create a new webhook integration in Extole’s outbound webhook center.
 
-1. In the Extole dashboard, navigate to **Tech Center > Outbound Webhooks** and select **+ New Integration**.
-2. Enter a name for the key and select **Webhook** as the key type. 
-3. Add your Braze REST API key in the **Partner Key ID** field, select `HTTP_BASIC` as the **Algorithm**, and click **Create Key**.<br><br>![][4]{: style="max-width:80%;"}
+
+1. Navigate to **Tech Center > Outbound Webhooks** in your My Extole account and click on the **+ New Integration** button.
+2. Enter a key name (i.e., how you'd like to refer to the key in Extole) and select **Webhook** as the key type. 
+3. In the partner key ID field, add a value that you will recognize for this credential (e.g., your account ID, email address, or user ID).
+4. Select `PASSWORD` from the algorithm drop-down.
+5. Add your Braze REST API key to the key field and click **Create Key**.<br><br>![][4]{: style="max-width:80%;"}
 
 Next, work with your Extole success or implementation manager to create a new webhook. They will configure the webhook for you using your newly generated key and Braze instance URL.<br><br>![][5]{: style="max-width:80%;"}
 
@@ -100,8 +103,8 @@ After connecting your Braze account to the Extole dashboard, events will automat
 Once the events and attributes you have configured are flowing into Braze, you can use the data to generate Braze audiences and campaign segmentation.
 
 [1]: https://www.extole.com
-[2]: https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/
-[3]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#request-body
+[2]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#request-body
 [4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
 [5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
 [6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}

@@ -33,7 +33,7 @@ The example use cases on this page assume that you're already familiar with [how
 
 While the specifics of your webhook request will vary from use case to use case, the general workflow for creating a Braze to Braze webhook stays the same.
 
-1. [Create a webhook][5] as a campaign or Canvas step. 
+1. [Create a webhook][5] as a campaign or Canvas component. 
 2. Choose **Blank Template**.
 3. In the **Compose** tab, specify the **Webhook URL** and **Request Body** as noted for your use case.
 4. In the **Settings** tab, specify your **HTTP Method** and **Request Headers** as noted for your use case.
@@ -43,7 +43,7 @@ While the specifics of your webhook request will vary from use case to use case,
 
 With this use case, you can update a user's profile with an event, event property, or attribute as part of a campaign or Canvas. For example, a B2C website may add an attribute of `purchase_lapsers=true` to a user's profile if they don't convert from an abandoned cart campaign or Canvas to allow those users to be retargeted with subsequent messaging.
 
-Another common use case is a workaround to make event properties persist throughout a Canvas, rather than just the first step. This involves adding an event property as a custom attribute so that you can reference that event property throughout a Canvas. Note that [Canvas persistent entry properties][6] solves for this issue, and is currently in beta. Reach out to your Braze account manager for more information.
+Another common use case is a workaround to make event properties persist throughout a Canvas, rather than just the first step. This involves adding an event property as a custom attribute so that you can reference that event property throughout a Canvas. Using [Canvas persistent entry properties][6] solves for this issue.
 
 {% alert important %}
 In order to reference an event property throughout a Canvas, you need to add the event property to the user profile as an attribute in the first step of the Canvas. Additionally, the Canvas itself must be triggered off of that event.

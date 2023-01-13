@@ -14,7 +14,9 @@ description: "This article outlines details about the Identify Users Braze endpo
 /users/identify
 {% endapimethod %}
 
-Use this endpoint to identify an unidentified (alias-only) user.
+Use this endpoint to identify an unidentified (alias-only) user. 
+
+Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile. To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user info is already present.
 
 {% alert note %}
 You can add up to 50 user aliases per request.
@@ -22,7 +24,7 @@ You can add up to 50 user aliases per request.
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified.
 
-You can associate multiple additional user aliases with a single `external_id`. When any of such associations are made, only the push tokens and message history associated with the user alias are retained; any attributes, events, or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
+You can associate multiple additional user aliases with a single `external_id`. When any of such associations are made, only the push tokens and message history associated with the user alias are retained; any attributes, events, or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), then re-associate the attributes, events, and purchases with the identified user.
 
 {% alert important %}
 Request fields and their values are case sensitive. Using different cases to reference an `external_id` will result in duplicate profiles. For example, "abc123" and "ABC123" are two different `external_ids`.
@@ -32,7 +34,7 @@ Request fields and their values are case sensitive. Using different cases to ref
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='users identify' %}
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## Request body
 

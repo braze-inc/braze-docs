@@ -15,7 +15,7 @@ On the left navigation bar of the Braze dashboard, choose the **Predictions** pa
 To create a new Prediction, choose **Create Prediction** and select a new **Churn Prediction**.
 
 {% alert note %}
-There is a limit of three concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your account manager for details.
+There is a limit of five concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your account manager for details.
 {% endalert %}
 
 On the **Basics** page, give your new Prediction a unique name. You can also provide an optional description to take any notes on this particular Prediction.
@@ -30,7 +30,7 @@ Remember, you don’t need to explain what behaviors might precede churn—only 
 
 #### Churn Window
 
-Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 14 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
+Churn Window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the Prediction. Additionally, once the Prediction is created and users receive scores, the Churn Risk Score indicates how likely a user is to churn within the number of days specified by the Churn Window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
@@ -52,7 +52,7 @@ Your Prediction Audience is the group of users you want to predict churn risk fo
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
+When the Prediction Window is 14 days or less, the time window for filters that begin with "Last..." like "Last Used App" and "Last Made Purchase" **cannot exceed the Churn Window specified** in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 14 days.
 
 #### Full Filter Mode
 
@@ -68,7 +68,7 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Select the **maximum frequency of updates** that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
-![Prediction Update Schedule set to daily at 5pm.][2]
+![Prediction Update Schedule set to daily at 5 pm.][2]
 
 {% alert note %}
 Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your account manager. 
@@ -86,7 +86,7 @@ The Prediction will be rebuilt ("retrained") again every **two weeks automatical
 
 **Sample Churn Definitions**<br>
 - “Within 7 days, do custom event ‘Subscription Cancellation’”<br>
-- “Within 14 days, do custom event ‘Trial Expired’”<br>
+- “Within 30 days, do custom event ‘Trial Expired’”<br>
 - “Within 1 day do uninstall.” <br>
 - “Within 14 days do not Make a Purchase.” <br>
 

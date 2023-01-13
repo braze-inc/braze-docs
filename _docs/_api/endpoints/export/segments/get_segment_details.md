@@ -14,13 +14,13 @@ description: "This article outlines details about and using the Segments Details
 /segments/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on the segment, which can be identified by the `segment_id`.
+Use this endpoint to retrieve relevant information on a segment, which can be identified by the `segment_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -44,12 +44,12 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
-      "created_at" : (string) date created as ISO 8601 date,
-      "updated_at" : (string) date last updated as ISO 8601 date,
-      "name" : (string) segment name,
-      "description" : (string) human-readable description of filters,
-      "text_description" : (string) segment description, 
-      "tags" : (array) tag names associated with the segment
+      "created_at" : (string) the date created as ISO 8601 date,
+      "updated_at" : (string) the date last updated as ISO 8601 date,
+      "name" : (string) the segment name,
+      "description" : (string) a human-readable description of filters,
+      "text_description" : (string) the segment description, 
+      "tags" : (array) the tag names associated with the segment formatted as strings
 }
 ```
 

@@ -10,17 +10,13 @@ page_order: 5
 
 # Persistent entry properties
 
-When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas V2 workflow. 
-
-{% alert important %}
-This feature is currently in beta and only available in the Canvas V2 workflow, which is the Canvas workflow that allows only Canvas components. Reach out to your Braze account manager for more information.
-{% endalert %}
+When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas Flow workflow. 
 
 Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 
 ## Using entry properties
 
-Entry properties can be used in Action-based and API-Triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
 - [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
@@ -70,7 +66,11 @@ url -X POST \
         {
           "external_user_id": Customer_123,
           "canvas_entry_properties": {
-            "food_allergies": “dairy”
+            "food_allergies": ["dairy", "soy"],
+            "nutrition": {
+              "calories_per_serving": 200,
+              "serving_size_in_ounces": 4
+            }
           }
         }
       ]
@@ -81,11 +81,11 @@ In this request, the global value for “food allergies” is “none”. For Cu
 
 ## Use cases
 
-If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
+If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 
-The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
+The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
 ![][2]{: style="border:0;margin-left:15px;"}
 

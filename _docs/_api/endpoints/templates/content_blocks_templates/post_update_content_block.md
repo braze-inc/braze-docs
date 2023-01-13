@@ -14,13 +14,13 @@ description: "This article outlines details about the Update Email Content Block
 /content_blocks/update
 {% endapimethod %}
 
-Use this endpoint to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to update a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 
@@ -73,9 +73,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "content_block_id": "newly-generated-block-id",
-  "liquid_tag": "generated-block-tag-from-content_block_name",
-  "created_at": "time-created-in-iso",
+  "content_block_id": (string) Your newly generated block id,
+  "liquid_tag": (string) The generated block tag from the Content Block name,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
   "message": "success"
 }
 ```

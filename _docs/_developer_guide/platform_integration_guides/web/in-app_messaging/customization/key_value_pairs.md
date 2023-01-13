@@ -3,7 +3,7 @@ nav_title: Key-Value Pairs
 article_title: In-App Message Key-Value Pairs for Web
 platform: Web
 channel: in-app messages
-page_order: 3
+page_order: 9
 page_type: reference
 description: "This article covers in-app messaging key-value pairs for your web application."
 
@@ -17,6 +17,13 @@ In-app message objects may carry key-value pairs as their `extras` property. The
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToInAppMessage(function(inAppMessage) {
+  // control group messages should always be "shown"
+  // this will log an impression and not show a visible message
+  if (inAppMessage instanceof braze.ControlMessage) {
+    return braze.showInAppMessage(inAppMessage);
+  }
+
+
   if (inAppMessage instanceof braze.InAppMessage) {
     const extras = inAppMessage.extras;
     if (extras) {

@@ -59,7 +59,6 @@ permalink: /swift/
 - [Tracking Custom Events]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
 - [Setting Custom Attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
 - [Logging Purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Social Data Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/social_data_tracking/)
 - [Location Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
 - [Uninstall Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/)
 - [Disabling iOS SDK Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/disabling_tracking/)

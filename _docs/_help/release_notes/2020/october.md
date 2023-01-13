@@ -32,10 +32,10 @@ Users can now add descriptions to campaigns and Canvases! This new field can be 
 
 ## Canvas exception events
 
-New documention has beed added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
+New documentaion has been added describing the expected behavior of [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) in Canvases. 
 
 ## User delete updates
 
-Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here](https://www.braze.com/docs/help/dp-technical-assistance/#braze-recommendation-2)
+Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

@@ -9,7 +9,7 @@ description: "This article contains release notes for January 2018."
 
 ## CSS inlining
 
-You can now toggle [CSS inlining][84] on or off for individual email messages by going to the [Email Settings section][83].
+You can now toggle [CSS inlining][84] on or off for individual email messages by going to your **Email Settings**.
 
 ## New segment filters
 
@@ -40,5 +40,4 @@ You can now use a [p8 file][80] when uploading an Apple Push Certificate, ensuri
 [80]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
 [81]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
 [82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
-[83]: https://dashboard-01.braze.com/app_settings/app_settings/email/
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining

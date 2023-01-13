@@ -9,11 +9,17 @@ tool: Canvas
 
 ---
 
-# Advancing your users through Canvas steps
+# Advancing your users through Canvas components
 
-The **Advancement Behavior** feature allows you to choose the criteria for advancement through your Canvas step.
+The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
-![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1] 
+{% alert important %}
+For components in Canvas Flow, the **Advancement Behavior** is set to always immediately advance the audience, or **Immediately Advance Audience**. This will also apply to [disconnected steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
+{% endalert %}
+
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
+
+Users must meet the step's criteria in order to be advanced through the step. With [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps, you can turn on delivery validations to check that your audience meets your delivery criteria at message send. This will count towards the step's criteria when using Canvas Flow.
 
 When **Advance When Message Sent** is selected, users will only be advanced to the subsequent Canvas steps when one of the following conditions occur:
 
@@ -33,22 +39,18 @@ When **Immediately Advance Audience** is selected, users will be advanced to the
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-{% alert important %}
-Users must meet the step's criteria in order to be advanced through the step. 
-{% endalert %}
-
 ### Scheduled steps
 
-For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
+For a scheduled component, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
 
-When sending a multichannel step with [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a step attempts to send.
+When sending a multichannel component with [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a component attempts to send.
 
 ### Action-based steps
 
 For action-based steps, users must perform the trigger action and meet the audience options in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.
 
 {% alert important %}
-Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
+Users who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
 ## Use case
@@ -65,7 +67,7 @@ When you select **Immediately Advance Audience** advancement behavior for the Da
 
 {% details Previous Canvas Advancement Behavior %}
 
-Prior to the release of Advancement Behavior, Braze advanced users through a Canvas step once they'd been sent a message from that step. For example, if a Canvas step included an email and a push, users would not advance to the next steps of the Canvas until either Braze sent the user the push or email.
+Prior to the release of Advancement Behavior, Braze advanced users through a Canvas component once they'd been sent a message from that component. For example, if a Canvas component included an email and a push, users would not advance to the next steps of the Canvas until either Braze sent the user the push or email.
 
 If the user wasn't sent the push or email, they would not advance to subsequent steps in the Canvas.
 

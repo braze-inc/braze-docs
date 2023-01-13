@@ -14,19 +14,23 @@ description: "This article outlines details about the News Feed Card Details end
 /feed/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on the card, which can be identified by the `card_id`.
+Use this endpoint to retrieve relevant information on a card, which can be identified by the `card_id`.
+
+{% alert note %}
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id`   | Required      | String    | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id` | Required | String | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -44,16 +48,16 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) The status of the export, returns 'success' when completed without errors,
-    "created_at" : (string) Date created as ISO 8601 date,
-    "updated_at" : (string) Date last updated as ISO 8601 date,
-    "name" : (string) Card name,
-    "publish_at" : (string) Date card was published as ISO 8601 date,
-    "end_at" : (string) Date card will stop displaying for users as ISO 8601 date,
-    "tags" : (array) Tag names associated with the card,
-    "title" : (string) Title of the card,
-    "image_url" : (string) Image URL used by this card,
-    "extras" : (dictionary) Dictionary containing key-value pair data attached to this card,
-    "description" : (string) Description text used by this card,
+    "created_at" : (string) the ate created as ISO 8601 date,
+    "updated_at" : (string) the ate last updated as ISO 8601 date,
+    "name" : (string) the card name,
+    "publish_at" : (string) the date the card was published as ISO 8601 date,
+    "end_at" : (string) the date the card will stop displaying for users as ISO 8601 date,
+    "tags" : (array) the tag names associated with the card,
+    "title" : (string) the title of the card,
+    "image_url" : (string) the image URL used by this card,
+    "extras" : (dictionary) a dictionary containing key-value pair data attached to this card,
+    "description" : (string) the description text used by this card,
     "archived": (boolean) whether this Card is archived,
     "draft": (boolean) whether this Card is a draft,
 }

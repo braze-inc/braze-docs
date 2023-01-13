@@ -11,7 +11,7 @@
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
   <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
-  
+
   <script type="application/ld+json">
   {
       "@context": "https://schema.org",
@@ -42,13 +42,17 @@
 
 
 {% include analytics.html %}
+{% include wovn.html %}
 
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
 
+<link type="text/css" rel="stylesheet" href="https://cdn-prod.securiti.ai/consent/cookie-consent.css" />
+
 
 {%- css_asset_tag global -%}
 - /assets/css/application.scss
+- /assets/css/securitiai.css
 {%- endcss_asset_tag -%}
 
 {%- case site.language -%}
@@ -57,6 +61,17 @@
 - /assets/css/_lang_fr.scss
 {%- endcss_asset_tag -%}
 {%- endcase -%}
+
+
+
+<script type="text/javascript">
+  const page_collection = '{{ page.collection }}';
+  const site_language = '{{ site.language }}';
+  const site_i18n = {};
+  {% for i18n in site.data.i18n[site.language] %}
+    site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
+  {%- endfor -%}
+</script>
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
@@ -68,8 +83,8 @@
 - /assets/js/toc.js
 - /assets/js/documents.js
 - /assets/js/feedback.js
-
 - /assets/js/contentcards.js
+- /assets/js/securitiai.js
 {% endjavascript_asset_tag %}
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js?{{site.time | date: '%s'}}' ></script>
@@ -78,8 +93,7 @@
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
 
 <script type="text/javascript">
-  const page_collection = '{{ page.collection }}';
-  const site_language = '{{ site.language }}';
+
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
   const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
   const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
@@ -132,7 +146,8 @@
   var algolia_debug = {{ site.search_debug }};
   var base_url = '{{site.baseurl}}';
 
-  var toc_minheaders = {{ page.toc_minheaders }};
+  var toc_minheaders = {{ page.toc_minheaders  | default: 2 }} ;
+  var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
   var algolia_doc_index = '{{ site.algolia.index_name }}';
   var algolia_lab_index = '{{ site.lab_index_name }}';
 

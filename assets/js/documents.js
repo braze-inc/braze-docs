@@ -1,4 +1,4 @@
-var query_str = window.location.search;
+var page_language = site_language;
 
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();//Timestamp
@@ -112,13 +112,34 @@ String.prototype.sanitize = function() {
   return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
 };
 
+function replaceParams(qs = '', pr = {}) {
+	var queryString = qs.replace(/^\?/,'').split('&');
+	var params = {};
+	queryString.forEach((e) => {
+		let param = e.split('=');
+		if (param.length >1){
+      // Ignore the parameter if it's blank
+      if (pr[param[0]] !== '') {
+        params[param[0]] = (pr[param[0]] || param[1]);
+      }
+		}
+	});
+
+  var queryStringParam = [];
+  for (const k in params) {
+    if (params.hasOwnProperty(k)) {
+      queryStringParam.push(`${k}=${params[k]}`);
+    }
+  }
+	return `?${queryStringParam.join('&')}`;
+};
+
 $(document).ready(function() {
   $("#braze_header").click((e) => {
     setTimeout(function() {
       let hide_backdrop = false;
       $("#braze_header .nav-link.dropdown-toggle").each((eb, ea) => {
         let itm = $(ea);
-        console.log(itm.attr('id'), itm.attr('aria-expanded'),)
         if(itm.attr('aria-expanded') == 'true') {
           hide_backdrop = true;
         }
@@ -145,8 +166,8 @@ $(document).ready(function() {
   });
 
   $('#toc').toc({
-    headers: 'h2, h3',
-    minimumHeaders: toc_minheaders
+    headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+    minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
   });
   // Use Bootstrap's "Scrollspy" plugin to dynamically expand/collapse ToC
   if ($('#toc nav').length) {
@@ -212,6 +233,7 @@ $(document).ready(function() {
   var y_last = 0;
   //var nav_bottom_height = $('#nav_bottom').height();
   var scrollHandler = function() {
+    var query_str = window.location.search;
     var y_cord = $(this).scrollTop();
     var bzheader_height = $('#braze_header').height();
     // var scroll_dir = 'down';
@@ -303,7 +325,7 @@ $(document).ready(function() {
     var pg_prev = nav_links.eq(nav_index - 1);//nav_active.prevAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_prev_link.attr('href',pg_prev.attr('href') );
-    pg_prev_div.html('<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> PREVIOUS</div>' + pg_prev.html() );
+    pg_prev_div.html(`<div class="nav_indicator"><i class="fas fa-long-arrow-alt-left"></i> ${site_i18n['previous'] || 'PREVIOUS'}</div> ${pg_prev.html()}`);
     pg_prev_div.css('display', 'inline-block');
     if (nav_index < (nav_links.length -1)) {
       pg_prev_div.css('border-right', '0px');
@@ -317,7 +339,7 @@ $(document).ready(function() {
     var pg_next = nav_links.eq(nav_index + 1);//nav_active.nextAll('[data-parent="' + data_parent + '"]').first();
     nav_bottom.addClass('flex');
     pg_next_link.attr('href',pg_next.attr('href') );
-    pg_next_div.html('<div class="nav_indicator">NEXT <i class="fas fa-long-arrow-alt-right"></i></div>' + pg_next.html() );
+    pg_next_div.html(`<div class="nav_indicator">${site_i18n['next'] || 'NEXT'} <i class="fas fa-long-arrow-alt-right"></i></div> ${pg_next.html()}`);
     pg_next_div.css('display', 'inline-block');
   }
   else {
@@ -334,7 +356,7 @@ $(document).ready(function() {
       nav_bar.removeClass('hide_sidebar');
       nav_icon.removeClass('fa-bars');
       nav_icon.addClass('fa-chevron-left');
-      Cookies.remove('ln');
+      Cookies.set('ln', '', { expires: 365 });
     } else {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');
@@ -436,4 +458,76 @@ $(document).ready(function() {
       $this.addClass('prewrap');
     }
   });
+
+  $('.lang-select').on('change', function(e){
+    let lang = this.value;
+    let path = window.location.pathname;
+    let query_str = window.location.search;
+
+    switch (page_language) {
+      // if current page is english, process jp on the same page, or redirect to different language
+      case 'en':
+        switch(lang) {
+          case 'ja':
+          case 'en':
+            let wovn_lang = WOVN.io.getCurrentLang();
+            let wovn_lang_code = wovn_lang['code'] || 'en';
+            $('.lang-select').each(function(ind) {
+              $(this).val(lang).prop('selected', true);
+            });
+            if (wovn_lang != wovn_lang_code) {
+              WOVN.io.changeLang(lang);
+            }
+          break;
+          default:
+            window.location.href = path.replace(/\/docs\/?/,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+        }
+        break;
+      // if curent page is not english, then check if it needs to be sent to japanese site otherwise just english
+      default:
+        let lang_re = new RegExp(`\/docs\/${page_language}\/?`);
+        switch(lang) {
+          case 'ja':
+            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str + '&wovn=ja' ,{'wovn': 'ja'});
+          break;
+          case 'en':
+            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+          default:
+            window.location.href = path.replace(lang_re,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
+          break;
+        }
+
+      break;
+    }
+
+  });
+
+  window.addEventListener('wovnApiReady', function(evt){
+    // only run wovn if current language is english
+    if (page_language == 'en') {
+      let wovn_lang = WOVN.io.getCurrentLang();
+      let wovn_lang_code = wovn_lang['code'] || 'en';
+      $('.lang-select').each(function(ind) {
+        let $this = $(this);
+        let current_lang = $this.val();
+        if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
+          $this.val(wovn_lang_code).prop('selected', true);
+        }
+      });
+    }
+  });
+
+  // For non us/jp language update language dropdown
+  switch (page_language) {
+    case 'en':
+    case 'ja':
+      break;
+    default:
+      $('.lang-select').each(function(ind) {
+        $(this).val(page_language).prop('selected', true);
+      });
+    break;
+  }
 });

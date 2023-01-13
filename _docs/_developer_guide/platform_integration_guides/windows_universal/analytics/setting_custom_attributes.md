@@ -8,7 +8,7 @@ description: "This reference article covers how to set custom attributes on the 
 ---
 
 # Setting custom attributes
-{% include archive/windows_deprecation.md %}
+{% multi_lang_include archive/windows_deprecation.md %}
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -28,8 +28,6 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 - `Country`
 - `HomeCity`
 - `PhoneNumber`
-- `FacebookData`
-- `TwitterData`
 
 **Example Implementation**
 

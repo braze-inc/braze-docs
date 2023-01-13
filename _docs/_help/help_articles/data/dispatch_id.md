@@ -9,7 +9,7 @@ description: "This article covers dispatch ID behavior, including it's usage, im
 
 # Dispatch ID behavior
 
-A `dispatch_id` is the ID of the message dispatch-a unique ID for each "transmission" sent from Braze. Users who are send a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
+A `dispatch_id` is the ID of the message dispatch-a unique ID for each "transmission" sent from Braze. Users who are sent a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
 
 {% alert important %}
 Note that `dispatch_ids` are per user, per campaign for triggered (action-based or API-triggered) messages.
@@ -24,7 +24,7 @@ Scheduled campaign messages get the same `dispatch_id`. Action-based or API-trig
 Multichannel campaigns will have the same behavior as described for their delivery type.
 
 {% alert warning %}
-Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas step will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.
+Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas component will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.
 {% endalert %}
 
 ## Template dispatch ID into messages with Liquid

@@ -9,7 +9,7 @@ description: "This article explains the different components of the User Alias o
 
 # User attributes object specification
 
-An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
+An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
 ```json
 {
@@ -35,8 +35,6 @@ An API request with any fields in the Attributes Object will create or update an
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
 }
 ```
-- [External User ID]({{site.baseurl}}/api/basics/#external-user-id-explanation)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
@@ -94,6 +92,9 @@ The following user profile fields are case sensitive, so be sure to reference th
 
 | User Profile Field | Data Type Specification |
 | ---| --- |
+| alias_name | (string) |
+| alias_label | (string) |
+| braze_id | (string, optional) When a user profile is recognized via the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
@@ -101,19 +102,20 @@ The following user profile fields are case sensitive, so be sure to reference th
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
-|email_open_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
-|email_click_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
-| external_id | (string) Of the unique user identifier. |
+| email_open_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
+| email_click_tracking_disabled |(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
+| external_id | (string) A unique identifier for a user profile. Once assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
 | language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. For supported languages, see our [list of accepted languages][2]. |
 | last_name | (string) |
-|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
+| marked_email_as_spam_at | (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
+| subscription_groups| Array of objects with `subscription_group_id` and `subscription_state` string, e.g. `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Available values for `subscription_state` are "subscribed" and "unsubscribed".|
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -121,6 +123,8 @@ The following user profile fields are case sensitive, so be sure to reference th
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
 ####  User attribute example request
+
+This example contains two user attribute objects with the allowed 75 requests per API call.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -139,20 +143,21 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
-      "push_tokens": [{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]
+      "push_tokens": [{"app_id": "Your App Identifier", "token": "abcd", "device_id": "optional_field_value"}]
 
     },
     {
       "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
       "first_name" : "Alice",
-      "has_profile_picture" : false,
+      "has_profile_picture" : false
+    },
+    {
+      "external_id": "user3",
+      "subscription_groups" : [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]
     }
   ]
 }
 ```
-
-This example contains two User Attribute objects of the allowed 75 per API call.
-
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/

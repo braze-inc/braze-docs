@@ -8,7 +8,7 @@ channel:
   - push
 ---
 
-{% include archive/ios-swift-upgrade.md %}
+{% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
 <br>
@@ -154,7 +154,7 @@ Note that the information requested here can be a wide range of things such as S
 
 To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
-![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_description" set as "Certified Braze marketers drive...".][9]
+![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".][9]
 
 #### Handling button actions
 
@@ -208,7 +208,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
-![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certificiation". 3. "Cert_decription" set as "Certified Braze marketers drive...".][18]{: style="max-width:80%;"}
+![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".][18]{: style="max-width:80%;"}
 
 ### Logging manually
 
@@ -216,7 +216,7 @@ Logging manually will require you to first configure app groups within Xcode, an
 
 It's also important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, users should consider the impact and if necessary, adjust their user journey to include opening the application to address this concern. 
 
-![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is recieved. 7. Analytics data is sent to Braze.][13]
+![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.][13]
 
 #### Step 1: Configure app groups within Xcode
 Add a capability `App Groups`. If you haven’t had any app group in your app, go to the capability of the main app target, turn on the `App Groups`, and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.

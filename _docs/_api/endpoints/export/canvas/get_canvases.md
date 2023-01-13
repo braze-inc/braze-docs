@@ -14,7 +14,7 @@ description: "This article outlines details about the Canvas List endpoint."
 /canvas/list
 {% endapimethod %}
 
-This endpoint allows you to export a list of Canvases, including the name, Canvas API identifier and associated tags. Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+Use this endpoint to export a list of Canvases, including the name, Canvas API identifier and associated tags. Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 Archived Canvases will not be included in the API response unless the `include_archived` field is specified. Canvases that are stopped but not archived, however, will be returned by default.
 
@@ -22,7 +22,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
-  		"id" : (string) Canvas API Identifier,
+  		"id" : (string) the Canvas API identifier,
   		"last_edited": (ISO 8601 string) the last edited time for the message,
-  		"name" : (string) Canvas name,
-  		"tags" : (array) tag names associated with the Canvas,
+  		"name" : (string) the Canvas name,
+  		"tags" : (array) the tag names associated with the Canvas formatted as strings,
   	},
     ... (more Canvases)
   ],

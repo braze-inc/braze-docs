@@ -14,7 +14,7 @@ description: "This article outlines details about the List User's Subscription G
 /subscription/user/status
 {% endapimethod %}
 
-Use these endpoints to list and get the subscription groups of a certain user.
+Use this endpoint to list and get the subscription groups of a certain user.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -26,7 +26,7 @@ If you want to see examples or test this endpoint for **SMS Subscription Groups*
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 

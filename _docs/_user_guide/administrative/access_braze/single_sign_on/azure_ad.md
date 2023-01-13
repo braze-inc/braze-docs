@@ -49,8 +49,6 @@ Search for **Braze** in the search box, then select it from the result panel, th
 
 In your Azure Portal, go to the **Braze Application Integration** page and select **Single sign-on**.
 
-![Azure portal navigation with Single sign-on highlighted.]({% image_buster /assets/img/azure_5.png %})
-
 Next, select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.
 
 ![Azure portal select a single sign-on method dialog.]({% image_buster /assets/img/azure_6.png %})
@@ -61,7 +59,7 @@ From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
 ![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_7.png %})
 
-###### Configure application in Idp-initated mode (required)
+###### Configure application in Idp-initiated mode (required)
 
 To configure the application in IdP-initiated mode, enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
@@ -70,6 +68,8 @@ To configure the application in IdP-initiated mode, enter a URL that combines yo
 ###### Configure RelayState (required)
 
 In the RelayState box, input your RelayState generated API key.
+
+![]({% image_buster /assets/img/relaystate2.png %})
 
 ###### Configure sign on URL (optional)
 
@@ -91,9 +91,16 @@ Use the following attribute pairings:
 
 - `givenname` = `user.givenname`
 - `surname`= `user.surname`
-- `emailaddress` = `user.userprincipalname`
+- `emailaddress` = `user.mail`
 - `name` = `user.userprincipalname`
+- `email` = `user.userprincipalname`
+- `first_name` = `user.givenname`
+- `last_name` = `user.surname`
 - `Unique User Identifier` = `user.userprincipalname`
+
+{% alert important %}
+It is critically important that the email field match what is set up for your users in Braze. In most cases, this will be the same as `user.userprincipalname` however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
+{% endalert %}
 
 {% endtab %}
 {% tab User Claims %}
@@ -109,6 +116,10 @@ Use the following claim name pairings:
 - `claims/emailaddress` = `user.userprincipalname`
 - `claims/name` = `user.userprincipalname`
 - `claims/nameidentifier` = `user.userprincipalname`
+
+{% alert important %}
+It is critically important that the email field match what is set up for your users in Braze. In most cases, this will be the same as `user.userprincipalname` however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
+{% endalert %}
 
 You can manage these user claims and values from the **Manage user claims** dialog:
 

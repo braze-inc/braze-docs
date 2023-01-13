@@ -4,7 +4,7 @@ article_title: News Feed
 page_order: 4
 layout: dev_guide
 guide_top_header: "News Feed"
-guide_top_text: "Push messages, emails, and in-app messages are wonderful but ephemeral content. Once swiped away, you lose your opportunity to engage. If you catch a user at the wrong time, that message is lost to them forever. Multichannel messaging helps to ameliorate this problem, but the News Feed really puts it to rest once and for all."
+guide_top_text: "This section includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the <a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>migration guide</a> for more."
 
 page_type: landing
 channel: news feed

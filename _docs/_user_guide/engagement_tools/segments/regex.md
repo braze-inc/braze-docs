@@ -12,18 +12,18 @@ tool:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions with Braze
 
-<!--{% include video.html id="3h5Xbhl-TxE" align="right" %}-->
+<!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
 >  This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
 
 A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [inhouse regex tester](#regex-debugger), a helpful cheatsheet, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [inhouse regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
 
 ## Resources
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
-- <i class="fas fa-file-pdf"></i> [Regex Cheat Sheet][cheatsheet]
+- [Regex Cheat Sheet]({{site.baseurl}}/regex_cheat_sheet/)
 - <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
 
 ## Regex debugger
@@ -34,7 +34,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the <code>/gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. <br><br>Regular expressions for custom event trigger properties use the <code>/g</code> modifier (case sensitive, see <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g modifier</a>).</p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the <code>/gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. <br><br>Regular expressions for custom event trigger properties use the <code>/g</code> modifier (case sensitive, see <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g modifier</a>) and do not use the <code>/i</code> modifier. For case insensitivity for custom event trigger properties, use <code>(?i)</code> instead.</p>
 </div></div>
 <div>
 Regex:
@@ -206,5 +206,4 @@ For example, let's say you wanted to filter users by phone number for a specific
 
 
 [regex]: https://regex101.com/
-[cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

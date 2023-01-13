@@ -37,7 +37,7 @@ glossaries:
   - name: Currents
     description: <a href = "https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/">Currents</a>, our data streaming export, is included in certain Braze packages. Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.
   - name: Custom Attributes
-    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/">Custom attributes</a> are a collection of your users’ unique traits. They best for storing attributes about your users, or information about low-value actions within your application. You can assign custom attributes to users within the dashboard. You can filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> campaigns.
+    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/">Custom attributes</a> are a collection of your users’ unique traits. They are best for storing attributes about your users, or information about low-value actions within your application. You can assign custom attributes to users within the dashboard. You can filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> campaigns.
   - name: Custom Events
     description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">custom events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.
   - name: Data Point
@@ -72,8 +72,6 @@ glossaries:
     description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: Multivariate Testing
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/">Multivariate testing</a> allows you to test multiple variables by comparing two or more versions of a message to assess which variant performs the best.
-  - name: News Feed
-    description: The <a href="http://www.braze.com/docs/user_guide/engagement_tools/news_feed/">News Feed</a> is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
   - name: New User
     description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
   - name: Personalization
@@ -91,7 +89,7 @@ glossaries:
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/manage_app_group/tags/">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.
   - name: Segmentation
-    description: dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
+    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, etc.
   - name: Software Development Kit (SDK)
     description: <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.
   - name: Sunsetting

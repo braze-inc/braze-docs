@@ -1,6 +1,6 @@
 ---
-nav_title: Action Paths Step
-article_title: Action Paths Step
+nav_title: Action Paths 
+article_title: Action Paths 
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
@@ -8,7 +8,7 @@ description: "This reference article covers Action Paths and how to use them in 
 tool: Canvas
 ---
 
-# Action Paths Step
+# Action Paths 
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -19,13 +19,13 @@ Action Paths in Canvas allow you to sort your users based on their actions. Usin
 
 ## Create Action Paths
 
-To create Action Paths, add a step to your Canvas. Then, using the dropdown menu at the top of the new step, select **Action Paths**.
+To create an action path, add a component to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Action Paths**.
 
 ### Action settings
 
 In the **Action Settings** module, you can choose how long you’d like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
 
-Within the **Action Settings**, you can also turn on the ranked order for your steps by switching on the **Advance users based on ranked order** toggle.
+Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
 ![][4]
 
@@ -37,9 +37,9 @@ When **Advanced users based on ranked order** is enabled, this means that **Rank
 
 Let's say you have an action path with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Make Purchase". If **Ranking** is turned on, then all users in the action path are "held" for one day. At the end of the day, if a user has started a session and made a purchase, then they advance to the highest rank path. In this case, the user would advance to Group 1. 
 
-In the precedeing example, if **Ranking** is off and when a user performs one of the trigger events ("Start Session" or "Make Purchase"), that user is advanced in the relevant action group based on the trigger action.
+In the preceding example, if **Ranking** is off and when a user performs one of the trigger events ("Start Session" or "Make Purchase"), that user is advanced in the relevant action group based on the trigger action.
 
-Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
+Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas Flow, Persistent Entry Properties are enabled and allow the entry properties to be re-used throughout the whole Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ### Action groups
 

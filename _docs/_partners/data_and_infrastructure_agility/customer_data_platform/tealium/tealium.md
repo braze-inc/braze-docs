@@ -69,7 +69,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium’s SDK to translate events into Braze’s native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (e.g., Content Cards). To use a Braze method that isn’t mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
-| [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
+| [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze’s REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Side-by-side SDK integration
@@ -86,13 +86,12 @@ Tealium offers two ways to integrate Mobile Remote Command, there is no loss of 
 | **JSON configuration file**<br>([Recommended](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption.<br><br>The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. It will also allow you to track location and social data on Twitter and Facebook - like the number of followers or friends a user has. Refer to the following chart for corresponding Braze methods.
+Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. Refer to the following chart for corresponding Braze methods.
 
 | Remote command | Braze method |
 | -------------- | ------------ |
 | appendcustomarrayattribute | addToCustomAttributeArrayWithKey()|
 | emailnotification | setEmailNotificationSubscriptionType() |
-| facebookuser | facebookUser() |
 | incrementcustomattribute | incrementCustomAttribute() |
 | Initalize | startWithApiKey() |
 | logcustomevent | logCustomEvent() |
@@ -102,7 +101,6 @@ Use Braze mobile remote command data mappings to set default user attributes and
 | setcustomattribute | setCustomAttributeArrayWithKey() |
 | setcustomarrayattribute | setCustomAttributeArrayWithKey() |
 | setlastknownlocation | setLastKnownLocationWithLatitude() |
-| twitteruser | twitterUser() |
 | unsetcustomattribute | unsetCustomAttributeWithKey() |
 | useralias | addAlias() |
 | userattribute | ABKUser() |
@@ -137,7 +135,7 @@ Use the Braze Web SDK Tag to deploy Braze’s Web SDK to your website. [Tealium 
 
 This integration forwards data from Tealium to the Braze REST API.
 
-Server-to-server integration does not support Braze UI features like in-app messaging, News Feed, Content Cards, or push notifications. There also exists automatically captured data (such as device-level fields) that are not available through this method.
+Server-to-server integration does not support Braze UI features like in-app messaging, Content Cards, or push notifications. There also exists automatically captured data (such as device-level fields) that are not available through this method.
 
 If you wish to use this data and these features, consider our [side-by-side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) SDK integration.
 
@@ -245,6 +243,12 @@ After your connector is up and running, you should test it to ensure it's workin
 5. Look for the action you want to validate and view the log status. 
 
 Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
+
+## Integration demo
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://drive.google.com/file/d/1m2JI4vdFt3fDePBdVvVcQWEjbC82ApGA/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Potential data point overages
 

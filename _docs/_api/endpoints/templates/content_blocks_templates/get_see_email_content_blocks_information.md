@@ -14,13 +14,13 @@ description: "This article outlines details about the See Available Content Bloc
 /content_blocks/info
 {% endapimethod %}
 
-This endpoint will call information for your existing [Email Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint to call information for your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request parameters
 
@@ -44,16 +44,16 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 Content-Type: application/json
 Authorization: Bearer YOUR-API-KEY-HERE
 {
-  "content_block_id": "string",
-  "name": "string",
-  "content": "string",
-  "description": "string",
-  "content_type": "html or text",
-  "tags":  "array of strings",
-  "created_at": "time-in-iso",
-  "last_edited": "time-in-iso",
-  "inclusion_count" : "integer",
-  "inclusion_data": "array",
+  "content_block_id": (string) the Content Block identifier,
+  "name": (string) the name of the Content Block,
+  "content": (string) the content in the Content Block,
+  "description": (string) the Content Block description,
+  "content_type": (string) the content type, html or text,
+  "tags": (array) An array of tags formatted as strings,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
+  "last_edited": (string) The time the Content Block was last edited in ISO 8601,
+  "inclusion_count" : (integer) the inclusion count,
+  "inclusion_data": (array) the inclusion data,
   "message": "success",
 }
 ```
