@@ -1,7 +1,7 @@
 ---
 nav_title: Completing the Integration
 article_title: Completing the iOS SDK Integration
-platform: Swift
+platform: iOS (Swift)
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
 page_order: 2
 

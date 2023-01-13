@@ -1,7 +1,7 @@
 ---
 nav_title: Overview
 article_title: Integration Overview for iOS
-platform: Swift
+platform: iOS (Swift)
 page_order: 0
 layout: featured
 
