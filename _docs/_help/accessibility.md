@@ -93,7 +93,7 @@ Depending on individual needs, these users rely on:
 
 ### Content
 
-- Keep your content on brand, but use plain language. Write to a United States 7th grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text’s reading level.
+- Keep your content on brand, but use plain language. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text’s reading level.
 - Structure your content logically, and make sure headings follow the correct hierarchy. Don't skip heading levels.
 - Avoid center-aligned text for long chunks of content. This can be difficult for users with cognitive or learning disabilities to read. Content that wraps to more than two lines should be aligned left.
 - Use sans-serif fonts, which are easier to read on digital devices.
