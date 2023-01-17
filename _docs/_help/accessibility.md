@@ -161,7 +161,7 @@ You can use the [WebAim Contrast Checker Tool](https://webaim.org/resources/cont
 
 **Avoid blocking invalid characters in fields** <br>Don't prevent certain character types from being input in form fields. It’s better to allow users to enter whatever they want and then provide an error message as to what’s wrong. Blocking keyboard input poses a particular problem for assistive technology users, as they rely heavily on inline validation to determine if they've filled in the form correctly.
 
-**Write clear error messages** <br>A good error message is made up of three parts: what’s happened, what went wrong, and how can they fix it. Error messaging should be clear and easy to understand. Try to speak in simple language. There’s no need for fancy jargon.
+**Write clear error messages** <br>A good error message is made up of three parts: what’s happened, what went wrong, and how they can fix it. Error messaging should be clear and easy to understand. Try to speak in simple language. There’s no need for fancy jargon.
 <br>
 
 ### Custom HTML
