@@ -10,7 +10,7 @@ channel: e-mail
 
 # Rendu HTML dans les e-mails de test
 
-Si votre [e-mail test][37] n’est pas terrible, nous vous recommandons de vérifier d’abord votre configuration HTML. Ensuite, vous pouvez vérifier ces problèmes :
+Si votre [e-mail de test][37] n’est pas terrible, nous vous recommandons de vérifier d’abord votre configuration HTML. Ensuite, vous pouvez vérifier ces problèmes :
 * [Conflits d’extension](#check-conflicts)
 * [Rendu des e-mails](#check-rendering)
 * [Inlining CSS](#switch-css-inlining)
@@ -21,7 +21,7 @@ Certaines extensions de navigateur peuvent causer des problèmes avec l’édite
 - Modifier les e-mails de Braze dans un navigateur qui n’a pas l’extension Grammarly
 - Contactez votre gestionnaire de compte Braze et demandez à changer vos éditeurs d’e-mails en HTML uniquement ou en texte brut. 
 
-La vue Texte brut supprime votre ```WYSIWYG``` éditeur (WYSIWYG), vous devez d’abord confirmer que tous les membres de l’équipe connaissent HTML avant de faire cette demande.
+La vue en texte brut supprime votre éditeur ```WYSIWYG``` (what you see is what you get), vous devez d’abord confirmer que tous les membres de l’équipe connaissent le HTML avant de faire cette demande.
 
 ### Rendu des e-mails
 

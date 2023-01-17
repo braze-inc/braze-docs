@@ -18,7 +18,7 @@ Vous pouvez maintenant enregistrer des messages webhook comme modèles pour une 
 
 ## Plusieurs adresses e-mail dans les Engagement Reports
 
-Les [Engagement Reports][25] peuvent maintenant être envoyés à plusieurs adresses e-mail.
+Les [Engagement Reports (Rapports d’engagement)][25] peuvent maintenant être envoyés à plusieurs adresses e-mail.
 
 ## Spécifier le temps pour la Livraison par événement
 

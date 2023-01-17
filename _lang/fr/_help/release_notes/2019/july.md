@@ -77,7 +77,7 @@ Regardez [plusieurs campagnes à la fois pour comparer leurs performances relati
 {% alert update %}
 Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En apprendre davantage sur le comportement [`dispatch_id` dans les campagnes et les Canvas]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-_Mise à jour notée en août 2019._
+_Mis à jour en août 2019._
 {% endalert %}
 
 Si vous souhaitez suivre l’envoi d’un message à partir du message (dans une URL, par exemple), vous pouvez intégrer le `dispatch_id`. Vous pouvez trouver le formatage dans notre liste de tags de personnalisation pris en charge, sous [Attributs Canvas]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).

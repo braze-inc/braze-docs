@@ -16,22 +16,19 @@ Les conversions se produisent lorsque votre utilisateur effectue une action dans
 
 Vos conversions peuvent ne pas être aussi élevées que prévu comparées aux campagnes précédentes ou à vos attentes. Les conversions sont une activité difficile, mais elles dépendent de quelques fonctions simples dans notre plateforme : le suivi des événements et les échéances de conversion.
 
-Pour résoudre rapidement le problème, nous vous recommandons de vérifier :
-
-* [Suivi des événements](#event-tracking)
-* [Échéances de conversion](#conversion-deadlines)
+Pour résoudre rapidement le problème, nous vous recommandons de vérifier les délais de suivi des événements et de la conversion.
 
 ## Suivi des événements
 
 Lorsqu’une campagne déclenche un événement de début de session ou un événement personnalisé, vous voulez vous assurer que cet événement ou session est assez fréquent pour déclencher le message. Vérifiez ces données sur les pages [Overview][1] (pour les données de session) ou [Custom Events][2] (Événements personnalisés) :
 
-![Statistiques de comptage des événements personnalisés][43]
+![La page Événements personnalisés avec les statistiques du nombre d’Événements personnalisés.][43]
 
 ## Échéances de conversion
 
 Pour chaque événement de conversion que vous sélectionnez par campagne, vous définissez une [échéance][44]. Cela signifie que vous définissez une limite de temps avant laquelle une conversion doit se produire pour être comptabilisée dans chaque campagne respective.
 
-Vérifiez que vous avez examiné les informations [calcul des conversions][45] afin de comprendre les mesures de votre campagne.
+Vérifiez que vous avez examiné les informations de [calcul des conversions][45] afin de comprendre les indicateurs de votre campagne. Pour les conversions d’utilisateurs dans Canvas, reportez-vous à la [FAQ Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 

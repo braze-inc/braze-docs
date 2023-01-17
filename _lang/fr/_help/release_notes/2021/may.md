@@ -17,7 +17,7 @@ Les vCards, également appelés Cartes de visite sans contact (VCF), sont un for
 
 ## Mises à jour des suppressions de l’utilisateur
 
-En octobre 2020, nous avons [amélioré](https://www.braze.com/docs/help/release_notes/2020/october/) la façon dont notre suppression d’utilisateur gère le numéro de téléphone ou l’adresse e-mail du sujet. 
+En octobre 2020, nous avons [amélioré]({{site.baseurl}}/help/release_notes/2020/october/) la façon dont notre suppression d’utilisateur gère le numéro de téléphone ou l’adresse e-mail du sujet. 
 
 ## Nouveaux partenariats Braze
 

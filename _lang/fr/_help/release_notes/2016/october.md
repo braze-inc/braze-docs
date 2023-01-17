@@ -11,7 +11,7 @@ description: "Cet article contient les notes de version d’octobre 2016."
 ## Nouveaux paramètres de sécurité
 Nous avons ajouté des fonctions de sécurité améliorées dans Braze, notamment des règles d’expiration, de longueur et de complexité des mots de passe, une liste blanche d’adresses IP pour se connecter au tableau de bord et une authentification à deux facteurs.
 
-> Mise à jour : Les paramètres de sécurité de Braze, accessibles depuis votre page [Company Settings](https://dashboard-01.braze.com/company_settings/company_settings) (Paramètres de l’entreprise), incluent également des règles pour la réutilisation et l’expiration des mots de passe.
+> Mise à jour : Les **Security Settings** (Paramètres de sécurité) de Braze, accessibles depuis votre page **Company Settings** (Paramètres de l’entreprise), comprennent également des règles pour la réutilisation et l’expiration des mots de passe.
 
 ## Téléchargement d’un CSV après importation
 Les utilisateurs de Braze peuvent désormais télécharger un CSV des utilisateurs récemment importés. Cela vous donne plus de visibilité sur la synchronisation des données dans vos systèmes. En savoir plus sur les [Importations CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).

@@ -13,7 +13,7 @@ Braze a arrêté sa prise en charge de l’IDE Eclipse, car [Google arrête sa p
 {% endalert %}
 
 ## Étape 1
-Via la ligne de commande, clonez le [référentiel GitHub de Braze Android][03].
+Via la ligne de commande, clonez le [référentiel GitHub Android de Braze][03].
 
 ```bash
 $ git clone git@github.com:Appboy/appboy-android-sdk.git
@@ -35,7 +35,7 @@ Dans Éclipse :
     ![Parcourir][06]
   - Cochez le dossier du projet de l’IU Braze ainsi que « copier le projet dans l’espace de travail » et cliquez sur « Terminer »."
 
-    ![Sélectionner Projet IU Android][07]
+    ![Sélectionner le Projet IU Android][07]
 
 ## Étape 3
 Référencez Braze dans votre propre projet.
@@ -43,10 +43,10 @@ Dans Éclipse :
 
   - Cliquez avec le bouton droit de la souris sur votre projet et sélectionnez Propriétés."
 
-    ![Cliquez sur Propriétés][08]
+    ![Cliquer sur Propriétés][08]
   - Sous « Android », cliquez sur « Add » (Ajouter) dans la section Bibliothèque et ajoutez android-sdk-ui à votre application en tant que bibliothèque.
 
-    ![Ajout de Braze][09]
+    ![Ajouter Braze][09]
 
 ## Étape 4
 Résoudre les erreurs de dépendance et corriger la cible du build.
@@ -58,7 +58,7 @@ Résoudre les erreurs de dépendance et corriger la cible du build.
       ![Construire la cible][10]
    - Cliquez avec le bouton droit de la souris sur le projet de l’IU Braze et sélectionnez Properties (Propriétés) -> Java Build Path (Chemin de build Java) -> Add JARs… (Ajouter des JARs...) puis ajoutez ‘android-support-v4.jar’ en tant que bibliothèque à partir de l’application principale.
 
-      ![Support][11]
+      ![Prise en charge][11]
 
 ## Étape 5
 
