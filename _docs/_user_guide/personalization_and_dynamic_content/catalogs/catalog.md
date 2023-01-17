@@ -194,7 +194,7 @@ This returns as the following:
 > Get the ultimate trio Tales, Teslagrad, and Acaratus today!
 
 {% alert tip %}
-Check out [filtered sets]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/) to create groups of data for more personalized messaging!
+Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
 {% endalert %}
 
 ### Using images {#using-images}
@@ -275,7 +275,7 @@ Refer to the following table for limitations that apply at a company level:
 | Number of catalogs | Up to 5 catalogs | Up to 10 catalogs |
 | Number of all catalogs items | Up to 5,000 items | Up to 100,000 items |
 | Catalog storage | Up to 100MB of catalog data | Up to 2GB of catalog data |
-| Filtered sets | Up to 1 selection per catalog | Up to 10 selections per catalog |
+| Selections | Up to 1 selection per catalog | Up to 10 selections per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The following table describes the limitations that apply at a catalog level:
