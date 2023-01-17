@@ -6,7 +6,11 @@ $(document).ready(function () {
     "parent_nav_top_platformintegrationguides_sdkprimer",
     "parent_nav_top_platformintegrationguides_sdkchangelogs",
   ];
+
   var url_selected = (location.pathname.split("/")[4] || "").replace(/_/g, "");
+  if (site_language != 'en') {
+    url_selected = (location.pathname.split("/")[5] || "").replace(/_/g, "");
+  }
   var dev_selected = url_selected
     ? `parent_nav_top_platformintegrationguides_${url_selected}`
     : Cookies.get("__dev_selected") || "";
@@ -32,7 +36,7 @@ $(document).ready(function () {
         }
       }
     }
-    
+
     // if no platform is selected, or in the discolure menu, show all platforms
     if ( !dev_selected && !url_selected || (location.pathname.indexOf('disclosures') > -1) || (location.pathname.indexOf('platform_wide') > -1) ) {
       platform_objects.each(function () {
