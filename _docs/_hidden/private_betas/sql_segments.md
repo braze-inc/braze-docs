@@ -40,14 +40,6 @@ Your SQL must adhere to the following rules:
 SELECT user_id FROM “INSERT TABLE NAME”
 ```
 
-### Data and schemas to use in your SQL
-
-> Content pending from PM/eng
-
-### Examples of SQL
-
-> Content pending from PM/eng
-
 ## Managing SQL Segment Extensions
 
 On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
