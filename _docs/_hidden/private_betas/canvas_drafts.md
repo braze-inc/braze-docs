@@ -16,7 +16,7 @@ You can create drafts within an active Canvas to build, save, and quality-check 
 Saving drafts for Canvas Flow is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
-To create a draft, go to an active Canvas and click the **Create Draft** button in the Canvas footer. Note that edits to the active Canvas cannot be made while a draft of a Canvas exists. You can launch the draft to apply changes, or discard the draft.
+To create a draft, go to an active Canvas and click the **Create Draft** button in the Canvas footer. Note that edits to the active Canvas cannot be made while a draft of a Canvas exists. You can launch the draft to apply changes, or discard the draft. If you want to update in-app message priority or link aliasing, first launch your draft, then edit the active Canvas directly.
 
 To reference the active Canvas, click **View Active Canvas** in the footer from the analytics view or the Canvas header from the draft. To return to an active Canvas, you can click **Edit Canvas** from the analytics view or the active Canvas view.
 
