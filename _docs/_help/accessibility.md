@@ -15,7 +15,7 @@ Marketing content that excludes people with disabilities, even unintentionally, 
 - **Better usability:** Accessibility encourages you to think about the usability of your app or site because you're thinking about how the user interacts with your content. That means accessibility often improves the online experience for all users, not just those with a disability.
 - **Extend market reach:** The global market of people with disabilities is over 1 billion people with a spending power of nearly $7 trillion.
    > "The market of people with disabilities is large and growing as the global population ages. In the UK, where the large disability market is known as the Purple Pound, people with disabilities and their families spend at least £249 billion every year. In the US, the annual discretionary spending of people with disabilities is over $200 billion. The global estimate of the disability market is nearly $7 trillion."<br>*Source: [W3C](https://www.w3.org/WAI/business-case/)*
-- **Minimize legal risk:** Many countries have laws requiring digital accessibility, and the issue is of increased legal concern.
+- **Minimize legal risk:** Many countries have laws requiring digital accessibility.
 
 ## Areas of disability to consider
 
