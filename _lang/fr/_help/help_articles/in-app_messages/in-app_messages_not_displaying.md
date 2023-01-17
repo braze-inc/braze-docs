@@ -32,7 +32,7 @@ La personnalisation de l’interface utilisateur ou des mécanismes de livraison
 
 Il est important de déterminer si l’événement déclencheur ne se produit pas, ou si le message lui-même ne peut pas s’afficher. Pour tester, déclenchez le message en utilisant une action différente (comme un début de session ou un événement personnalisé différent) et vérifiez s’il s’affiche. Cela permettra de déterminer s’il s’agit potentiellement d’un problème de données.
 
-Sinon, essayez d’utiliser un type différent de modèle de message in-app ou de taille d’image. Il y a des [spécifications à suivre pour les messages in-app][15]. Parfois, si une image est trop grande, cela empêchera le message In-App de s’afficher.
+Sinon, essayez d’utiliser un type différent de modèle de message in-app ou de taille d’image. Des [spécifications à suivre pour les messages in-app][15] doivent être suivies. Parfois, si une image est trop grande, cela empêchera le message In-App de s’afficher.
 
 ## Délai de session
 

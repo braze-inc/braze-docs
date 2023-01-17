@@ -16,7 +16,7 @@ Les noms et ID de campagne, Canvas et Canvas Step sont tous disponibles dans Liq
 
 ### Liquid
 
-Les attributs Campagne et Canvas sont disponibles sous forme de tags Liquid sur notre tableau de bord {% raw %}(c.-à-d. `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires valeur-clé. C’est généralement fait à des fins de suivi.
+Les attributs Campagne et Canvas sont disponibles sous forme de balises Liquid sur notre tableau de bord {% raw %}(i.e., `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires clé-valeur. C’est généralement fait à des fins de suivi.
 
 ### API REST
 
@@ -24,7 +24,7 @@ Les attributs Campagne et Canvas sont également disponibles dans l’[endpoint 
 
 ### Currents
 
-Les attributs Campagne et Canvas sont liés à [événements d’engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) de Currents. C’est important pour pouvoir déterminer la campagne ou la Canvas Step associée à l’envoi de push ou l’ouverture d’e-mail.
+Les attributs Campagne et Canvas sont liés à [événements d’engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) de Currents. C’est important pour pouvoir déterminer la campagne ou le composant Canvas associé à l’envoi de notifications push ou l’ouverture d’e-mail.
 
 ## Attributs de campagne 
 
@@ -46,6 +46,6 @@ Les attributs Campagne et Canvas sont liés à [événements d’engagement]({{s
 | Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | variants.name.id | canvas_variation_ID |
 | Nom de l’étape | {% raw %}`{{campaign.${name}}}`{% endraw %} | nom.étapes | canvas_étape_nom |
 | ID Étape | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | steps.id | canvas_étape_ID |
-| Canal de communication | N/A | étapes.messages.message_variation_canal.id | S.O. (inhérente à un type d’événement, par exemple envoi de push ou ouverture d’e-mail) |
+| Canal de communication | ‬S.O.‭ | étapes.messages.message_variation_canal.id | S.O. (inhérente à un type d’événement, par exemple envoi de push ou ouverture d’e-mail) |
 | Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | étapes.message.message_variation_ID | message_variation_ID |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}

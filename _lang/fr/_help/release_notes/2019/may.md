@@ -56,7 +56,7 @@ Notre sélecteur de plateforme facilite la sélection de vos messages in-app et 
 ## Champ Dispatch ID Currents pour l’e-mail
 
 {% alert update %}
-Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En apprendre davantage sur le comportement [`dispatch_id` de ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans les campagnes et les Canvas.
+Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En apprendre davantage sur le comportement [`dispatch_id` dans les campagnes et les Canvas]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Mise à jour notée en août 2019._
 {% endalert %}
@@ -90,7 +90,7 @@ Vous pouvez rechercher ces termes mis à jour dans notre [glossaire des indicate
 {% alert update %}
 Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». [En apprendre davantage sur le comportement [`dispatch_id` de ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans les campagnes et les Canvas.
 
-_Mise à jour notée en août 2019._
+_Mis à jour en août 2019._
 {% endalert %}
 
 

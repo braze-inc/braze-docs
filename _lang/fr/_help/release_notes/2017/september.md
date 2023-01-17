@@ -10,14 +10,14 @@ description: "Cet article contient les notes de version de septembre 2017."
 
 ## Nouvelle fonctionnalité pour les Engagement Reports
 
-Vous pouvez maintenant utiliser les [Engagement Reports][72] pour agréger les métriques d’une campagne sur des périodes spécifiques. Par exemple, vous pouvez exporter le nombre total d’ouvertures d’un trimestre ou le nombre total de clics de toute la durée de vie d’une campagne ou d’un Canvas. Tout ce que vous avez à faire, c’est :
+Vous pouvez maintenant utiliser les [Engagement Reports][72] (Rapports d’engagement) pour agréger les indicateurs d’une campagne sur des périodes spécifiques. Par exemple, vous pouvez exporter le nombre total d’ouvertures d’un trimestre ou le nombre total de clics de toute la durée de vie d’une campagne ou d’un Canvas. Tout ce que vous avez à faire, c’est :
 - Sélectionner une période pour l’exportation des données,
 - Planifier un rapport sur l’engagement envoyé régulièrement à un ou plusieurs destinataires, et
 - Ajouter des campagnes et des Canvas à votre rapport en fonction de leurs tags.
 
 ## Mises à jour de la page de profil utilisateur
 
-La page [User Profile][73] (Profil utilisateur) a été mise à jour.
+La [page User Profile][73] (Profil utilisateur) a été mise à jour.
 
 ## Notifications push Web nécessitant une action de l’utilisateur pour le rejet
 

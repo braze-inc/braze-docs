@@ -12,7 +12,7 @@ page_type: update
 La prise en charge de Grouparo a été arrêtée en avril 2022.
 {% endalert %}
 
-> [Grouparo][1] est un outil ETL inversé open source qui alimente vos outils Marketing, Ventes et Support avec les données de votre entrepôt de données. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
+> [Grouparo][1] est un outil ETL inversé open source qui alimente vos outils marketing, ventes et support avec les données de votre entrepôt de données. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
 
 L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des données stockées dans un entrepôt en les envoyant à Braze. En configurant des calendriers de synchronisation automatique, vous pouvez constamment améliorer vos communications client grâce à des informations actualisées.
 

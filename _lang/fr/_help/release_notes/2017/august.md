@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version d’août 2017."
 
 ## Mise à jour des boutons d’action push
 
-Nous avons ajouté la prise en charge des [boutons d’action push][70] à nos endpoints de messagerie REST.
+Nous avons ajouté la prise en charge des [boutons d’action de notification push][70] à nos endpoints d’API d’envoi de messages REST.
 
 ## Mise à jour du templating Liquid
 
@@ -57,11 +57,11 @@ Canvas a maintenant une sélection intelligente, ce qui vous permet de tester vo
 
 ## Mise à jour des noms d’affichage des e-mails
 
-Nous avons ajouté des caractères UTF-8 spéciaux dans les noms d’affichage des e-mails, afin que vous puissiez créer des e-mails encore plus personnalisés pour vos clients. En savoir plus sur les [meilleures pratiques pour l’e-mail][67].
+Nous avons ajouté des caractères UTF-8 spéciaux dans les noms d’affichage des e-mails, afin que vous puissiez créer des e-mails encore plus personnalisés pour vos clients. En savoir plus sur les [Meilleures pratiques pour l’e-mail][67].
 
 ## Engagement Reports agrégés sur CSV 
 
-Maintenant, vous pouvez recevoir des données consolidées pour chaque campagne et chaque Canvas dans deux fichiers distincts, quel que soit le nombre de campagnes ou de Canvas sélectionnés, pour avoir toutes les données dont vous avez besoin quand vous en avez besoin. En savoir plus sur les [Engagement Reports][59].
+Maintenant, vous pouvez recevoir des données consolidées pour chaque campagne et chaque Canvas dans deux fichiers distincts, quel que soit le nombre de campagnes ou de Canvas sélectionnés, pour avoir toutes les données dont vous avez besoin quand vous en avez besoin. En savoir plus sur les [Engagement Reports][59] (Rapports d’engagement).
 
 > Comme indiqué dans nos [Notes de version de septembre 2017]({{site.baseurl}}/help/release_notes/2017/august/#september-2017), vous pouvez maintenant regrouper les données d’une période spécifique, et programmer des exportations récurrentes.
 

@@ -1,6 +1,6 @@
 ---
 page_order: 0
-nav_title: Aide
+nav_title: Accueil
 article_title: Aide Braze
 layout: self_help
 help_top_header: "Aide Braze"
@@ -12,22 +12,22 @@ description: "Bienvenue dans la section d’aide en libre-service de Braze ! Vo
 resources_list:
   - name: Articles d’aide
     link: /docs/help/help_articles/overview/
-    image: /assets/img/pencil-paper.png
+    fa_icon: fa-solid fa-circle-info
   - name: Meilleures pratiques et FAQ
     link: /docs/help/faqs/
-    image: /assets/img/megaphone.png
+    fa_icon: fa-brands fa-readme
   - name: Notes de version
     link: /docs/help/release_notes/most_recent/
-    image: /assets/img/notebook.png
+    fa_icon: fa-solid fa-note-sticky
   - name: Connexion à Braze Learning
     link: https://learning.braze.com/
-    image: /assets/img/icons/icon-lab.png
+    fa_icon: fa-solid fa-chalkboard-user
   - name: Ressources Médias
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    image: /assets/img/icons/icon-document-ribbon.png
+    fa_icon: fa-brands fa-youtube
   - name: Assistance Braze
     link: /docs/braze_support/
-    image: /assets/img/sign-in.png
+    fa_icon: fa-solid fa-envelope
 
 popular_topic_list:
   - name: Comportement du Dispatch ID

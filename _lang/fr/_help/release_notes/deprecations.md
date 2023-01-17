@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Partenariat Apptimize
     link: /docs/help/release_notes/deprecations/apptimize/
     fa_icon: fas fa-vials
+  - name: Récepteur de diffusion personnalisée de notifications push pour Android
+    link: /docs/help/release_notes/deprecations/custom_broadcast_receiver/
+    fa_icon: fa-solid fa-mobile
   - name: Configuration du SDK Eclipse
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
@@ -32,6 +35,14 @@ guide_featured_list:
 
 # Journal des Obsolescences
 
+## Récepteur de diffusion personnalisée de notifications push pour Android
+
+**Fin du support** : Octobre 2022
+
+La prise en charge de Grouparo a été arrêtée en avril 2022.
+
+L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) à la place.
+
 ## Partenariat avec Grouparoo
 
 **Fin du support** : Avril 2022
@@ -40,9 +51,9 @@ La prise en charge de Grouparo a été arrêtée en avril 2022.
 
 ## SDK Windows Braze
 
-**24 mars 2022** : Le SDK Windows de Braze est obsolète et aucune nouvelle application Windows ne peut être créée dans le tableau de bord de Braze.<br>
-**15 septembre 2022** : Aucun nouveau message ne peut être envoyé aux applications Windows. Les messages existants et la collecte de données ne sont pas affectés.<br>
-**15 janvier 2023** : Braze ne sert plus de messages ni ne collecte de données à partir des applications Windows.
+**24 mars 2022 :** Le SDK Windows de Braze est obsolète et aucune nouvelle application Windows ne peut être créée dans le tableau de bord de Braze.<br>
+**15 septembre 2022 :** Aucun nouveau message ne peut être envoyé aux applications Windows. Les messages existants et la collecte de données ne sont pas affectés.<br>
+**15 janvier 2023 :** Braze ne sert plus de messages ni ne collecte de données à partir des applications Windows.
 
 ## Intégration des push Baidu
 

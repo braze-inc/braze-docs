@@ -36,6 +36,6 @@ Un document a été ajouté pour décrire le comportement attendu des [événeme
 
 ## Modifications des suppressions utilisateur
 
-Braze a apporté des améliorations à ses API pour permettre aux clients de supprimer simultanément, sans actions supplémentaires du client, non seulement les profils utilisateur finaux des personnes concernées qui demandent la suppression de leurs données, mais également tous les éventuels statuts d’abonnement associés au numéro de téléphone ou à l’adresse e-mail de la personne concernée. La documentation mise à jour est disponible [ici](https://www.braze.com/docs/help/dp-technical-assistance/#braze-recommendation-2)
+Braze a apporté des améliorations à ses API pour permettre aux clients de supprimer simultanément, sans actions supplémentaires du client, non seulement les profils utilisateur finaux des personnes concernées qui demandent la suppression de leurs données, mais également tous les éventuels statuts d’abonnement associés au numéro de téléphone ou à l’adresse e-mail de la personne concernée. La documentation mise à jour est disponible [ici]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

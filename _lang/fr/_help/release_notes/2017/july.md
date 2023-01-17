@@ -22,7 +22,7 @@ Le point de terminaison /campaign/details fournit maintenant des informations su
 
 ## Mises à jour du templating Liquid
 
-Nous avons ajouté la possibilité de modéliser des attributs de variante dans les Canvas et les campagnes. Dans Canvas, vous pouvez maintenant modéliser l’ID API de la variante ainsi que le nom de la variante, et dans les campagnes, vous pouvez maintenant modéliser le `message_api_id` et `message_name` d’un message. Ces deux mises à jour vous offrent plus de flexibilité dans vos communications, en vous permettant de créer des campagnes personnalisées. En savoir plus sur la [messagerie personnalisée][55].
+Nous avons ajouté la possibilité de modéliser des attributs de variante dans les Canvas et les campagnes. Dans Canvas, vous pouvez maintenant modéliser l’ID API de la variante ainsi que le nom de la variante, et dans les campagnes, vous pouvez maintenant modéliser le `message_api_id` et `message_name` d’un message. Ces deux mises à jour vous offrent plus de flexibilité dans vos communications, en vous permettant de créer des campagnes personnalisées. En savoir plus sur les [envois de messages personnalisés][55].
 
 ## Nouvel éditeur de messages HTML
 
@@ -34,7 +34,7 @@ Vous pouvez maintenant suivre la fenêtre d’écran lorsque vous faites défile
 
 ## Filtre d’adhésion à nouveau segment
 
-Nous avons ajouté un filtre [Segment Membership (Appartenance au segment)][52], pour vous permettre de cibler les utilisateurs en fonction de leur appartenance à l’un de vos segments existants. En outre, nous avons ajouté la possibilité d’utiliser les opérateurs « And » (ET) et « Or » (OU) dans les filtres de segment, ainsi que la capacité d’imbriquer des segments. Ces mises à jour vous permettent d’envoyer des messages personnalisés à vos clients avec plus de précision. 
+Nous avons ajouté un [filtre Segment Membership][52] (Appartenance au segment), pour vous permettre de cibler les utilisateurs en fonction de leur appartenance à l’un de vos segments existants. En outre, nous avons ajouté la possibilité d’utiliser les opérateurs « And » (ET) et « Or » (OU) dans les filtres de segment, ainsi que la capacité d’imbriquer des segments. Ces mises à jour vous permettent d’envoyer des messages personnalisés à vos clients avec plus de précision. 
 
 ## Mise à jour de la prévisualisation sur Android
 

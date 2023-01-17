@@ -26,7 +26,7 @@ Avec Braze Email, vous pouvez créer des e-mails personnalisés entièrement sur
 
 ## Importation d’alias utilisateur
 
-Pour cibler les utilisateurs qui n’ont pas de `external_id`, vous pouvez [importer une liste d’utilisateurs avec des alias utilisateurs.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias) Un alias sert d’identifiant utilisateur unique. Cela peut être utile si vous essayez de vendre à des utilisateurs anonymes qui ne sont pas abonnés ou n’ont pas créé de compte sur votre application. 
+Pour cibler les utilisateurs qui n’ont pas de `external_id`, vous pouvez [importer une liste d’utilisateurs avec des alias utilisateurs.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias) Un alias sert d’identifiant utilisateur unique alternatif. Cela peut être utile si vous essayez de vendre à des utilisateurs anonymes qui ne sont pas abonnés ou n’ont pas créé de compte sur votre application. 
 
 ## Guide de mise à niveau iOS 15
 

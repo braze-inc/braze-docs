@@ -14,13 +14,13 @@ Utilisez le tableau de bord **Total Data Points Usage** (Utilisation totale des 
 
 ## Modification de la régénération des extensions de segment
 
-À compter du 1er février 2022, le paramètre pour régénérer les extensions quotidiennement sera désactivé automatiquement pour les [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) (Extensions de segment) non utilisées. Braze définit les extensions qui répondent aux critères suivants comme étant non utilisées :
+À compter du 1er février 2022, le paramètre pour régénérer les extensions quotidiennement sera désactivé automatiquement pour les [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) (Extensions de segment) non utilisées. Braze définit les extensions non utilisées comme celles qui répondent aux critères suivants :
 
-- Non utilisées dans les campagnes, les Canvas ou les segments actifs
-- Non utilisées dans les campagnes, les Canvas ou les segments inactifs (ébauches, stoppés, archivés)
-- N’ont pas été modifiées depuis 7 jours ou plus
+- Utilisée dans aucune campagne, ni aucun Canvas ou segment actif
+- Utilisée dans aucune campagne, ni aucun Canvas ou segment actif (qu’il soit une ébauche, abandonné ou archivé)
+- N’a pas été modifiée depuis plus de 7 jours
 
-Braze informera le contact de la société et le créateur de l’extension quand ce paramètre est désactivé. La possibilité de régénérer les extensions quotidiennement peut être réactivée à tout moment.
+Braze informera la personne de contact de la société et le créateur de l’extension lorsque ce paramètre est désactivé. La possibilité de régénérer les extensions quotidiennement peut être réactivée à tout moment.
 
 ## Guides d’implémentation avancés Android
 

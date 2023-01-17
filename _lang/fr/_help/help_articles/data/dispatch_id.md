@@ -24,14 +24,14 @@ Les messages de campagne planifiés ont le même `dispatch_id`. Les messages bas
 Les campagnes multicanal auront le comportement décrit pour leur type de livraison.
 
 {% alert warning %}
-Les ID d’expédition sont générés de façon aléatoire pour toutes les Canvas Steps, car Braze traite les Canvas Steps comme des événements déclenchés, même lorsqu’ils sont « planifiés ». Cela peut entraîner des incohérences qui génèrent les ID. Parfois, une Canvas Step sera un `dispatch_ids` unique par utilisateur par envoi, ou elle peut avoir un `dispatch_ids` partagé entre les utilisateurs par envoi.
+Les ID d’expédition sont générés de façon aléatoire pour toutes les Canvas Steps, car Braze traite les Canvas Steps comme des événements déclenchés, même lorsqu’ils sont « planifiés ». Cela peut entraîner des incohérences qui génèrent les ID. Parfois, un composant Canvas sera un `dispatch_ids` unique par utilisateur par envoi, ou elle peut avoir un `dispatch_ids` partagé entre les utilisateurs par envoi.
 {% endalert %}
 
 ## Templater le dispatch_ID dans les messages avec Liquid
 
 Si vous souhaitez suivre l’envoi d’un message à partir du message (dans une URL, par exemple), vous pouvez intégrer le `dispatch_id`. Vous pouvez trouver le formatage dans notre liste de tags de personnalisation pris en charge, sous [Attributs Canvas]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
-Le comportement est exactement identique à `api_id`, c.-à-d. que comme `api_id` n’est pas disponible lors de la création de campagnes, il est affiché sous forme de marque substitutive et il sera prévisualisé comme `dispatch_id_for_unsent_campaign`. L’ID est généré avant l’envoi du message et sera ajouté au moment de l’envoi.
+Le comportement est exactement identique à `api_id`, c.-à-d. que lorsque `api_id` n’est pas disponible lors de la création de campagnes, il est affiché sous forme de marque substitutive et il sera prévisualisé comme `dispatch_id_for_unsent_campaign`. L’ID est généré avant l’envoi du message et sera ajouté au moment de l’envoi.
 
 {% alert warning %}
 Le templating Liquid de `dispatch_id_for_unsent_campaign` ne fonctionne pas avec les messages in-app, car les messages n’ont pas de `dispatch_id`.

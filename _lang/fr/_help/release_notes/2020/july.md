@@ -21,11 +21,11 @@ L’option de filtre pour les endpoints Get de Canvas et de campagne permet à v
 
 ## Currents `ad-id`
 
-Mise à jour de la [documentation sur la connexion au stockage][4] pour refléter les nouveaux champs `ad-id` (advertiser ID) dans Currents.
+Mise à jour de la [documentation sur la connexion au stockage][4] pour refléter les nouveaux champs `ad-id` (advertiser ID, ID publicitaire) dans Currents.
 
 ## Fonctionnalité CCi
 
-Le [paramètre Adresse CCi][5] vous permet d’ajouter et de gérer l’adresse CCi qui peut être jointe aux messages e-mail sortants envoyés par Braze.	
+Le [paramètre Adresse CCI][5] vous permet d’ajouter et de gérer l’adresse CCI qui peut être jointe aux messages e-mail sortants envoyés par Braze.	
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
