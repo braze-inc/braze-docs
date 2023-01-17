@@ -66,8 +66,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "steps": [
     {
       "name": (string) the name of step,
+      "type" (string) the type of step,
       "id": (string) the API identifier of the step,
       "next_step_ids": (array of strings) the API identifiers of steps following step,
+      "next_paths": (string) for decision splits, the property should evaluate to Yes or No, this property should evaluate to the group name (editable for the user), for experiment paths, this property should evaluate to the path name (editable for the user)
       "channels": (array of strings) the channels used in step,
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
