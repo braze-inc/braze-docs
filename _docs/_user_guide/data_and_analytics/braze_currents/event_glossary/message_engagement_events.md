@@ -1090,6 +1090,42 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
 
 {% api %}
 
+## SMS click events
+
+{% apitags %}
+SMS, Clicks
+{% endapitags %}
+
+This event occurs when a user clicks a short link.
+HERE
+```json
+// SMS Send: users.messages.sms.ShortLinkClick
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
+  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
+  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
+  "to_phone_number": (string) the number the message was sent to,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "send_id": (string) message send ID this message belongs to,
+  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
+}
+```
+{% endapi %}
+
 ## SMS send events
 
 {% apitags %}
@@ -1453,6 +1489,27 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 {% endapi %}
 
 {% api %}
+
+## Global state change events
+
+{% apitags %}
+Global state change
+{% endapitags %}
+
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+HERE
+```json
+// Uninstall Event: users.behaviors.subscription.GlobalStateChange
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
+}
+```
+
 ## Uninstall events
 
 {% apitags %}
