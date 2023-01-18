@@ -72,7 +72,8 @@ When using a device-mode connection, similar to integrating the Braze SDK native
 {% alert important %}
 The source code for the Android device mode integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
-The Braze SDK you use will depend on which Segment SDK you use
+<br>
+The Braze SDK you use will depend on which Segment SDK you use:
 
 | Segment SDK | Braze SDK |
 | ----------- | --------- |
@@ -97,7 +98,8 @@ The source code for the [Braze Web Mode (Actions) destination](https://github.co
 {% alert important %}
 The source code for the iOS device mode integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
-The Braze SDK you use will depend on which Segment SDK you use
+<br>
+The Braze SDK you use will depend on which Segment SDK you use:
 
 | Segment SDK | Braze SDK |
 | ----------- | --------- |
