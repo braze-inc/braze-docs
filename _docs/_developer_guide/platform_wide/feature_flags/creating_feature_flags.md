@@ -2,7 +2,7 @@
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
 hidden: true
-permalink: "/creating_feature_flags/"
+alias: "/creating_feature_flags/"
 page_order: 2
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
@@ -33,10 +33,12 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 ## Implement feature flags in the dashboard
 Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this app group.
 
-![A list of previously created feature flags on the Braze dashboard][1]
+![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
 ### Create a new feature flag
-To create a new feature flag, click **Create Feature Flag**. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
+To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
+
+![A blank feature flag form][2]{: style="float:right;max-width:55%;margin-left:15px;"}
 
 #### Details
 Give your new feature flag a **Name** and **ID**. 
@@ -44,17 +46,15 @@ Give your new feature flag a **Name** and **ID**.
 * The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. This must be unique and cannot be modified once created.
 * The **Description** field is an optional field that allows you to provide additional context around this feature flag.
 
-![A blank feature flag form, with blank fields for name, ID, and description.][2]
+Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
+
+For example, it's common to use a naming convention of `{verb}_{product}_{feature}`, such as `enable_rider_new_profile_page` to make it clear what enabling the feature flag does.
 
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
 Feature flags are shared across apps within an app group so that different platforms (i.e., iOS/Android/Web) can share references to the same feature.
 {% endalert %}
-
-Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
-
-For example, it's common to use a naming convention of `{verb}_{product}_{feature}`, such as `enable_rider_new_profile_page` to make it clear what enabling the feature flag does.
 
 #### Properties
 Custom properties can be defined as part of your feature flag. These properties will be accessible by your app through the Braze SDK when the feature is enabled. Defining properties is an optional step.
