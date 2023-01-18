@@ -8,6 +8,6 @@ description: "This page lists updates to Braze's iOS Swift SDK changelog."
 
 ---
 
-# iOS SDK changelog
+# Swift SDK changelog
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}

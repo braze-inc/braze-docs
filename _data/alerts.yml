@@ -4,6 +4,7 @@ important: '<div class="alert alert-important" role="alert"><div class="alert-ms
 warning: '<div class="alert alert-warning" role="alert"><div class="alert-msg"><b>Warning: </b>'
 update: '<div class="alert alert-update" role="alert"><div class="alert-msg"><b>Update: </b>'
 checkpoint: '<div class="alert alert-checkpoint" role="alert"><div class="alert-msg"><b>Checkpoint: </b>'
+Important: '<div class="alert alert-important2" role="alert"><div class="alert-msg"><b>Important: </b>'
 
 end: '</div></div>'
 

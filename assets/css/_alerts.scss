@@ -62,6 +62,16 @@ div.alert {
       background-color: $pink-cinderella;
     }
   }
+  &.alert-Important{
+    b {
+      color: $red-rose;
+    }
+    border-color: $pink-apricot;
+    background-image: url(#{$base_url}/assets/img/message-stop.png) ;
+    div.alert-msg {
+      background-color: $pink-cinderella;
+    }
+  }
   &.alert-important{
     b {
       color: $purple-orchard;

@@ -34,22 +34,10 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter
-  - name: iOS (legacy)
-    link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
-    fa_icon: fab fa-apple
-    nav_link: ios
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
-  - name: tvOS (legacy)
-    link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
-    image: /assets/img/tvos_icon.png
-    nav_link: tvos 
-  - name: MacOS (legacy)
-    link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
-    image: /assets/img/macOS_icon.png 
-    nav_link: macos
   - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
     image: /assets/img/unity.png
@@ -74,6 +62,21 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
     image: /assets/img/unreal.png
     nav_link: unrealengine
+
+guide_menu_title2: "Legacy Integrations"
+guide_menu_list2:
+  - name: iOS (legacy)
+    link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+    fa_icon: fab fa-apple
+    nav_link: ios
+  - name: MacOS (legacy)
+    link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
+    image: /assets/img/macOS_icon.png 
+    nav_link: macos
+  - name: tvOS (legacy)
+    link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
+    image: /assets/img/tvos_icon.png
+    nav_link: tvos 
 
 guide_footer_header: " "
 guide_footer_text: " "
