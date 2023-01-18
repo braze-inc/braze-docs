@@ -8,9 +8,13 @@ hidden: true
 
 > We're updating the Braze navigation to help you create and access your content more quickly and efficiently. To make this transition easier for you and your team, this guide covers what has changed and what you can expect next.
 
-The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable. Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Top-level categories are collapsed by default so you can get a better view of each section at a glance. Some pages have been renamed to better represent their contents.
+The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable. 
 
-Early access participants can turn on the new navigation at any time by going to _____.
+![]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="float:right;margin-left:15px;"}
+
+Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Top-level categories are collapsed by default so you can get a better view of each section at a glance. Some pages have been renamed to better represent their contents.
+
+Early access participants can turn on the new navigation at any time by selecting **Switch to the new nav** in the global header.
 
 {% alert important %}
 The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. If you have feedback you'd like to share, please reach out to ______.
@@ -112,6 +116,8 @@ If you're using our updated navigation, this change will appear throughout the p
 
 {% endtab %}
 {% tab Changes %}
+
+Top-level categories are now collapsed by default so you can get a better view of each section at a glance.
 
 The following table lists where each page is located in the new navigation. Some pages have been renamed, and the new name is referenced in the "New location" column.
 
