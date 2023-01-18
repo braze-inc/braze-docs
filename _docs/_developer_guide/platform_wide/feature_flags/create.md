@@ -1,15 +1,15 @@
 ---
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
-hidden: true
-alias: "/creating_feature_flags/"
+hidden: false
 page_order: 2
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
   - iOS
   - Android
   - Web
-  
+channel:
+  - feature flags 
 ---
 
 # Creating feature flags
