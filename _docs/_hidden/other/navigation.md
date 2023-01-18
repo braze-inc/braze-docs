@@ -17,7 +17,7 @@ Features are now organized into intuitive categories that are familiar and relev
 Early access participants can turn on the new navigation at any time by selecting **Switch to the new nav** in the global header.
 
 {% alert important %}
-The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. If you have feedback you'd like to share, please reach out to ______.
+The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. You can share feedback directly from the dashboard: when in the new navigation view, expand the **Take a tour** button and select **Send feedback**.
 {% endalert %}
 
 ## What to expect next
