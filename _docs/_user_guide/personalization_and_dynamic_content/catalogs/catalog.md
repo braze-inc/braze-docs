@@ -82,7 +82,7 @@ Your CSV file can be rejected if you go above [company limitations](#limits).
 
 ![][1]{: style="max-width:85%;"}
 
-Give your catalog a name. Keep in mind the following limitations for your catalog name:
+Give your catalog a name. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores
@@ -268,7 +268,7 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 ## Limitations {#limits}
 
-Refer to the following table for limitations that apply at a company level:
+Refer to the following table for the default limits that apply at a company level:
 
 | Limitation Area | Free version | Catalogs Pro |
 |---|---|---|
@@ -289,7 +289,7 @@ The following table describes the limitations that apply at a catalog level:
 | Characters limit for item column name | Up to 250 characters | Up to 250 characters |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Interested in upgrading your experience to Catalog Pro? Contact your account manager to get started.
+Interested in upgrading past these default limits? Contact your account manager to get started.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

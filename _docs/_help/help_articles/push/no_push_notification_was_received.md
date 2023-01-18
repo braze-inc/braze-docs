@@ -11,11 +11,11 @@ channel: push
 
 Experiencing delivery challenges with push notifications? There are a number of steps you can take to troubleshoot this issue by checking the:
 
-* [Push subscription status](#check-push-subscription-status)
-* [Segment](#check-segment)
-* [Push notification caps](#check-push-notification-caps)
-* [Rate limits](#check-rate-limits)
-* [Control group status](#check-control-group-status)
+* [Push subscription status](#push-subscription-status)
+* [Segment](#segment)
+* [Push notification caps](#push-notification-caps)
+* [Rate limits](#rate-limits)
+* [Control group status](#control-group-status)
 
 ### Push subscription status
 
@@ -26,7 +26,8 @@ Check your user profile in the [Engagement][1] tab in the **User Profile** secti
 You can also export the user profiles using Braze export endpoints:
 - [Users by identifier][12]
 - [Users by segment][13]
-This will return a push token object that includes push enablement information per device.
+
+Either endpoint will return a push token object that includes push enablement information per device.
 
 ### Segment
 
@@ -58,7 +59,7 @@ A push token is an identifier that senders use to target specific devices with a
 
 ### Push notification type
 
-Check that you're using the correct type of push notification. For example, if you want to target a FireTV, then you would use a Kindle push notification, not an Android push campaign. Check out the following articles for more information on unstanding the Braze workflow for:
+Check that you're using the correct type of push notification. For example, if you want to target a FireTV, then you would use a Kindle push notification, not an Android push campaign. Check out the following articles for more information on understanding the Braze workflow for:
 - [Apple Push Notification][10]
 - [Firebase Cloud Messaging][11]
 

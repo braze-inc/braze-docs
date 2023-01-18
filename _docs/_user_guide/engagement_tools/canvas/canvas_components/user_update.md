@@ -62,7 +62,7 @@ For example, if we want a group of users to be promoted to loyalty members, sele
 
 ## Personalization features
 
-To store the property of the trigger event for a Canvas as an attribute, you can use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
+To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)

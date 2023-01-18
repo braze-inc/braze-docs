@@ -13,8 +13,8 @@ Use an array of objects to group related attributes. For example, you may have a
 
 ## Limitations
 
-- Available on custom attributes sent via API only, not supported with Braze SDKs or CSV upload.
-- Partners do not yet support arrays of objects. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
+- Arrays of objects are intended for custom attributes sent via the API. They are not supported for use with Braze SDKs or CSV upload.
+- Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.

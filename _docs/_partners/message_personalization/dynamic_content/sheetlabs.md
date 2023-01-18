@@ -27,7 +27,7 @@ The Braze and Sheetlabs integration allows you to achieve the following use case
 
 1. **Separating marketer access from Braze campaign access**: Some teams wish to avoid giving all staff access to configure Braze templates and content directly. Instead, they want staff to update marketing content in a spreadsheet. Sheetlabs provides the bridge between spreadsheets and Braze and can be updated in real-time.
 2. **Translations**: Braze templates do not natively support translations. If you wish to support multiple languages, you must create multiple templates. By using Sheetlabs in conjunction with Braze, you can have a single Braze template that is translated into multiple languages.
-3. **Extending custom attributes**: Braze limits the number of custom attributes that can be configured. By using Sheetlabs in conjunction with Braze, you can overcome such limits.
+3. **Extending custom attributes**: Braze provides a certain the number of custom attributes that can be configured. By using Sheetlabs in conjunction with Braze, you can add additional custom attributes beyond this initial allotment.
 
 Refer to [Sheetlabs][3] for more information on these use cases.
 

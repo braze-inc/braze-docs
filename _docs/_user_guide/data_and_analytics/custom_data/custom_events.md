@@ -190,7 +190,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 #### Limitations
 
-- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
+- Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/), but not other event types.
 - Event property objects that contain array or object values can have an event property payload of up to 50 KB.
 - The following SDK versions support nested objects:
 
