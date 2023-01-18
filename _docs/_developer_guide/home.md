@@ -11,10 +11,10 @@ guide_featured_list:
   image: /assets/img/android.png
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
-- name: iOS (Swift)
+- name: Swift
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
-  nav_link: ios_swift
+  nav_link: swift
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   fa_icon: fas fa-globe
@@ -34,19 +34,19 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter
-  - name: iOS (Objective-C)
+  - name: iOS (legacy)
     link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
     fa_icon: fab fa-apple
-    nav_link: ios_c
+    nav_link: ios
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
-  - name: tvOS
+  - name: tvOS (legacy)
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
     image: /assets/img/tvos_icon.png
-    nav_link: tvos  
-  - name: MacOS
+    nav_link: tvos 
+  - name: MacOS (legacy)
     link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
     image: /assets/img/macOS_icon.png 
     nav_link: macos

@@ -1,5 +1,5 @@
 ---
-nav_title: iOS (Objective-C)
+nav_title: iOS (legacy)
 config_only: true
 layout: redirect
 redirect_to: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/

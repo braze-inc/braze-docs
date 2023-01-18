@@ -1,5 +1,5 @@
 ---
-nav_title: tvOS
+nav_title: tvOS (legacy)
 config_only: true
 layout: redirect
 redirect_to: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
