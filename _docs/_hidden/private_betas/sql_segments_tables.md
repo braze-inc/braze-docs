@@ -14,61 +14,61 @@ table td {
 
 Table | Description
 ------|------------
-[USERS_BEHAVIORS_CUSTOMEVENT_SHARED](USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | when a user makes a performs a custom event
-[USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED](USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED) | when a user installs an app and we attribute it to a partner
-[USERS_BEHAVIORS_LOCATION_SHARED](USERS_BEHAVIORS_LOCATION_SHARED) | when a user records a location
-[USERS_BEHAVIORS_PURCHASE_SHARED](USERS_BEHAVIORS_PURCHASE_SHARED) | when a user makes a purchase
-[USERS_BEHAVIORS_UNINSTALL_SHARED](USERS_BEHAVIORS_UNINSTALL_SHARED) | when a user uninstalls an app
-[USERS_BEHAVIORS_UPGRADEDAPP_SHARED](USERS_BEHAVIORS_UPGRADEDAPP_SHARED) | when a user upgrades the app
-[USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED](USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED) | when a user has their first session
-[USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | when a user views the news feed
-[USERS_BEHAVIORS_APP_SESSIONEND_SHARED](USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | when a user ends a session on an app
-[USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | when a user begins a session on an app
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
-[USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | when a user is subscribed or unsubscribed globally from a channel such as email
-[USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | when a user is subscribed or unsubscribed to/from a subscription group
-[USERS_CAMPAIGNS_ABORT_SHARED](USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
-[USERS_CAMPAIGNS_CONVERSION_SHARED](USERS_CAMPAIGNS_CONVERSION_SHARED) | when a user converts for a campaign
-[USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | when a user is enrolled in the control group for a campaign
-[USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | when a user gets frequency capped for a campaign
-[USERS_CAMPAIGNS_REVENUE_SHARED](USERS_CAMPAIGNS_REVENUE_SHARED) | when a user generates revenue with in the primary conversion period
-[USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | An originally scheduled contentcard message was aborted for some reason.
-[USERS_MESSAGES_CONTENTCARD_CLICK_SHARED](USERS_MESSAGES_CONTENTCARD_CLICK_SHARED) | when a user clicks a content card
-[USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED](USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED) | when a user dismisses a content card
-[USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED](USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED) | when a user views a content card
-[USERS_MESSAGES_CONTENTCARD_SEND_SHARED](USERS_MESSAGES_CONTENTCARD_SEND_SHARED) | when we send a content card to a user
-[USERS_MESSAGES_EMAIL_ABORT_SHARED](USERS_MESSAGES_EMAIL_ABORT_SHARED) | An originally scheduled email message was aborted for some reason.
-[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | An Email Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
-[USERS_MESSAGES_EMAIL_CLICK_SHARED](USERS_MESSAGES_EMAIL_CLICK_SHARED) | when a user clicks a link in an email
-[USERS_MESSAGES_EMAIL_DELIVERY_SHARED](USERS_MESSAGES_EMAIL_DELIVERY_SHARED) | when an email is delivered
-[USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED](USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED) | when an email is marked as spam
-[USERS_MESSAGES_EMAIL_OPEN_SHARED](USERS_MESSAGES_EMAIL_OPEN_SHARED) | when a user begins opens an email
-[USERS_MESSAGES_EMAIL_SEND_SHARED](USERS_MESSAGES_EMAIL_SEND_SHARED) | when we send an email to a user
-[USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED](USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED) | when an email soft bounces
-[USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED) | when a user unsubscribes from email
-[USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | An originally scheduled inappmessage message was aborted for some reason.
-[USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | when a user clicks an in app message
-[USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | when a user views an in app message
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | An originally scheduled newsfeedcard message was aborted for some reason.
-[USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | when a user clicks a news feed card
-[USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | when a user views a a news feed card
-[USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | An originally scheduled pushnotification message was aborted for some reason.
-[USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | when a push notification bounces
-[USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | when a user opens the app after receiving a notification without clicking on the notification
-[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | when a user receives a push notification while the app is open
-[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | when a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app)
-[USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | when we send a push notification to a user
-[USERS_MESSAGES_SMS_ABORT_SHARED](USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled sms message was aborted for some reason.
-[USERS_MESSAGES_SMS_CARRIERSEND_SHARED](USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | when a SMS message is sent to carrier
-[USERS_MESSAGES_SMS_DELIVERY_SHARED](USERS_MESSAGES_SMS_DELIVERY_SHARED) | when a SMS message is delivered
-[USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | when Braze is unable to deliver the SMS message to the SMS service provider
-[USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED](USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) | when a SMS message is received from a user
-[USERS_MESSAGES_SMS_REJECTION_SHARED](USERS_MESSAGES_SMS_REJECTION_SHARED) | when a SMS message is not delivered to a user
-[USERS_MESSAGES_SMS_SEND_SHARED](USERS_MESSAGES_SMS_SEND_SHARED) | when a SMS message is sent
-[USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED](USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED) | when a user clicks a Braze shortened URL included in an SMS message
-[USERS_MESSAGES_WEBHOOK_ABORT_SHARED](USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | An originally scheduled webhook message was aborted for some reason.
-[USERS_MESSAGES_WEBHOOK_SEND_SHARED](USERS_MESSAGES_WEBHOOK_SEND_SHARED) | when we send a webhook for a user
+[USERS_BEHAVIORS_CUSTOMEVENT_SHARED](#USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | when a user makes a performs a custom event
+[USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED](#USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED) | when a user installs an app and we attribute it to a partner
+[USERS_BEHAVIORS_LOCATION_SHARED](#USERS_BEHAVIORS_LOCATION_SHARED) | when a user records a location
+[USERS_BEHAVIORS_PURCHASE_SHARED](#USERS_BEHAVIORS_PURCHASE_SHARED) | when a user makes a purchase
+[USERS_BEHAVIORS_UNINSTALL_SHARED](#USERS_BEHAVIORS_UNINSTALL_SHARED) | when a user uninstalls an app
+[USERS_BEHAVIORS_UPGRADEDAPP_SHARED](#USERS_BEHAVIORS_UPGRADEDAPP_SHARED) | when a user upgrades the app
+[USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED](#USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED) | when a user has their first session
+[USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | when a user views the news feed
+[USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | when a user ends a session on an app
+[USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | when a user begins a session on an app
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+[USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | when a user is subscribed or unsubscribed globally from a channel such as email
+[USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | when a user is subscribed or unsubscribed to/from a subscription group
+[USERS_CAMPAIGNS_ABORT_SHARED](#USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
+[USERS_CAMPAIGNS_CONVERSION_SHARED](#USERS_CAMPAIGNS_CONVERSION_SHARED) | when a user converts for a campaign
+[USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | when a user is enrolled in the control group for a campaign
+[USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | when a user gets frequency capped for a campaign
+[USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | when a user generates revenue with in the primary conversion period
+[USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | An originally scheduled contentcard message was aborted for some reason.
+[USERS_MESSAGES_CONTENTCARD_CLICK_SHARED](#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED) | when a user clicks a content card
+[USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED](#USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED) | when a user dismisses a content card
+[USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED](#USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED) | when a user views a content card
+[USERS_MESSAGES_CONTENTCARD_SEND_SHARED](#USERS_MESSAGES_CONTENTCARD_SEND_SHARED) | when we send a content card to a user
+[USERS_MESSAGES_EMAIL_ABORT_SHARED](#USERS_MESSAGES_EMAIL_ABORT_SHARED) | An originally scheduled email message was aborted for some reason.
+[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](#USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | An Email Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
+[USERS_MESSAGES_EMAIL_CLICK_SHARED](#USERS_MESSAGES_EMAIL_CLICK_SHARED) | when a user clicks a link in an email
+[USERS_MESSAGES_EMAIL_DELIVERY_SHARED](#USERS_MESSAGES_EMAIL_DELIVERY_SHARED) | when an email is delivered
+[USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED](#USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED) | when an email is marked as spam
+[USERS_MESSAGES_EMAIL_OPEN_SHARED](#USERS_MESSAGES_EMAIL_OPEN_SHARED) | when a user begins opens an email
+[USERS_MESSAGES_EMAIL_SEND_SHARED](#USERS_MESSAGES_EMAIL_SEND_SHARED) | when we send an email to a user
+[USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED](#USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED) | when an email soft bounces
+[USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED) | when a user unsubscribes from email
+[USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | An originally scheduled inappmessage message was aborted for some reason.
+[USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | when a user clicks an in app message
+[USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | when a user views an in app message
+[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | An originally scheduled newsfeedcard message was aborted for some reason.
+[USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | when a user clicks a news feed card
+[USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | when a user views a a news feed card
+[USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | An originally scheduled pushnotification message was aborted for some reason.
+[USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | when a push notification bounces
+[USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | when a user opens the app after receiving a notification without clicking on the notification
+[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | when a user receives a push notification while the app is open
+[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | when a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app)
+[USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | when we send a push notification to a user
+[USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled sms message was aborted for some reason.
+[USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | when a SMS message is sent to carrier
+[USERS_MESSAGES_SMS_DELIVERY_SHARED](#USERS_MESSAGES_SMS_DELIVERY_SHARED) | when a SMS message is delivered
+[USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | when Braze is unable to deliver the SMS message to the SMS service provider
+[USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) | when a SMS message is received from a user
+[USERS_MESSAGES_SMS_REJECTION_SHARED](#USERS_MESSAGES_SMS_REJECTION_SHARED) | when a SMS message is not delivered to a user
+[USERS_MESSAGES_SMS_SEND_SHARED](#USERS_MESSAGES_SMS_SEND_SHARED) | when a SMS message is sent
+[USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED](#USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED) | when a user clicks a Braze shortened URL included in an SMS message
+[USERS_MESSAGES_WEBHOOK_ABORT_SHARED](#USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | An originally scheduled webhook message was aborted for some reason.
+[USERS_MESSAGES_WEBHOOK_SEND_SHARED](#USERS_MESSAGES_WEBHOOK_SEND_SHARED) | when we send a webhook for a user
 
 
 ### USERS_BEHAVIORS_CUSTOMEVENT_SHARED {#USERS_BEHAVIORS_CUSTOMEVENT_SHARED}
