@@ -7,7 +7,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# CocoaPods integration
+# CocoaPods Integration
 
 ## Step 1: Install CocoaPods
 

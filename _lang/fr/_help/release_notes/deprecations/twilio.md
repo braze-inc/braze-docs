@@ -15,7 +15,7 @@ channel:
 Notez que le support pour l’intégration du crochet Webhook Twilio sera interrompu le 31 janvier 2020. Si vous souhaitez toujours accéder aux services SMS avec Braze, consultez notre [Documentation SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/). 
 {% endalert %}
 
-Dans cet exemple, nous allons configurer le canal webhook Braze pour envoyer des SMS et MMS à vos utilisateurs via [l’API d’envoi de messages de Twilio][20]. Un modèle de webhook Twilio est inclus sur le tableau de bord.
+Dans cet exemple, nous allons configurer le canal webhook Braze pour envoyer des SMS et MMS à vos utilisateurs via [l’API d’envoi de messages][20] de Twilio. Un modèle de webhook Twilio est inclus sur le tableau de bord.
 
 ## URL HTTP
 
@@ -47,13 +47,13 @@ Autorisation | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base6
 
 Assurez-vous de remplacer `TWILIO_ACCOUNT_SID` et `TWILIO_AUTH_TOKEN` avec les valeurs de votre tableau de bord Twilio. Enfin, l’endpoint d’API Twilio attend une requête HTTP POST, alors choisissez cette option dans la liste déroulante pour la *Méthode HTTP*.
 
-![Méthode du webhook][30]
+![Méthode webhook][30]
 
 ## Prévisualiser votre requête
 
 Utilisez le compositeur de webhook pour prévisualiser la demande d’un utilisateur aléatoire, ou pour un utilisateur avec des identifiants particuliers, pour vous assurer que la demande est correctement exécutée.
 
-![Prévisualisation dans le Webhook][31]
+![Prévisualisation webhook][31]
 
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}

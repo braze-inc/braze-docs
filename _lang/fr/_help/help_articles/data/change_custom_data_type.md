@@ -7,7 +7,7 @@ page_type: solution
 description: "Cet article d’aide vous explique comment modifier le type de données d’un attribut personnalisé ou d’un événement personnalisé, ainsi que les implications si vous le faites."
 ---
 
-# Modifier un le type de données d’un attribut personnalisé ou un événement
+# Modifier un attribut personnalisé ou un type d’événement
 
 Pour modifier le type de données d’un attribut ou d’un événement personnalisé, à partir du tableau de bord de Braze, allez sur **Manage Settings (Gérer les paramètres)** et sélectionnez soit **Attributs personnalisés** soit **Événements personnalisés**. 
 

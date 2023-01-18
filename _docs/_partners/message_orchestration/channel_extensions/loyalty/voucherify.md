@@ -20,6 +20,7 @@ guide_featured_list:
 - name: Voucherify and Promotion Codes List
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list/
   fa_icon: fa fa-bullhorn
+  
 ---
 
 <br> 

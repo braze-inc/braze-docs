@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de janvier 2018."
 
 ## Inlining CSS
 
-Vous pouvez maintenant activer/désactiver l’[inlining CSS][84] pour des messages individuels en allant dans la section [Email Settings][83] (Paramètres des e-mails).
+Vous pouvez maintenant basculer l’[insertion CSS][84] pour des messages individuels en allant dans la section **Email Settings** (Paramètres des e-mails).
 
 ## Nouveaux filtres pour la segmentation
 
@@ -30,15 +30,14 @@ Vous pouvez utiliser l’ID d’appareil pour exporter tous les profils utilisat
 
 ## Mise à jour des Engagement Reports
 
-Des statistiques supplémentaires, telles que **le taux d’ouverture des push** et **le taux de conversion** sont maintenant disponibles dans les [Engagement Reports][81].
+Des statistiques supplémentaires, telles que **le taux d’ouverture des notification push** et le **taux de conversion** sont maintenant disponibles dans les [Engagement Reports.][81] (Rapports d’engagement).
 
 ## Certificats push pour Apple : Utilisation des fichiers.p8
 
-Vous pouvez désormais utiliser un [fichier p8][80] lors du chargement d’un Certificat Apple Push, vous assurant que vos identifiants Push iOS n’expireront jamais.
+Vous pouvez désormais utiliser un [fichier p8][80] lors du chargement d’un certificat Apple Push, vous assurant que vos identifiants de notification push iOS n’expireront jamais.
 
 
 [80]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
 [81]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
 [82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
-[83]: https://dashboard-01.braze.com/app_settings/app_settings/email/
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining

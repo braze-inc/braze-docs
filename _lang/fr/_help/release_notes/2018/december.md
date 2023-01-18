@@ -13,8 +13,8 @@ Les [Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_an
 
 Avec les Blocs de contenu, vous pouvez :
  - Créer un look & feel cohérent pour vos campagnes d’e-mail en utilisant des blocs de contenu pour les en-têtes et pieds de page.
- - Distribuer les mêmes codes d’offre à travers différents canaux.
- - Créer des actifs prédéfinis qui peuvent être utilisés pour créer des messages avec des informations et des assets cohérents.
+ - Distribuer les mêmes codes promotionnels sur différents canaux.
+ - Créer des ressources prédéfinies qui peuvent être utilisées pour créer des messages avec des informations et des ressources cohérentes.
  - Copier les corps de message entiers vers d’autres messages.
 
 ## Outil promotionnel Gmail

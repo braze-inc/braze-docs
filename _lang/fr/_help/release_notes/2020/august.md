@@ -7,7 +7,7 @@ description: "Cet article contient les notes de version d’août 2020."
 ---
 # Août
 
-## Endpoints de migration d’ID externes
+## Endpoints de migration de l’ID externe
 
 Braze a lancé deux nouveaux Endpoints de migration d’ID externes. Ces endpoints permettent aux clients de renommer ou de supprimer des ID externes de leurs utilisateurs via l’API Braze. Ces endpoints peuvent être utilisés pour migrer les utilisateurs avec des schémas de nommage différents tout en conservant les données historiques sur ces utilisateurs. Consultez nos documents pour en savoir plus sur les endpoints [`users.external_ids.rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) et [`users.external_ids.remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/).
 
@@ -31,7 +31,7 @@ Vizbee permet à tous les smartphones et TV connectées de votre maison de fonct
 
 ## Partenariat avec Bluedot
 
-Bluedot est une plateforme de localisation qui propose une localisation géographique précise et simple pour vos applications. Utilisez le SDK de Bluedot pour envoyer des messages plus intelligents, automatiser les enregistrements de commandes mobiles, optimiser les flux de travail et créer des expériences harmonieuses. Pour plus d’informations, consultez notre documentation [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot). 
+Bluedot est une plateforme de localisation qui propose une localisation géographique précise et simple pour vos applications. Vous pouvez utiliser le SDK de Bluedot pour envoyer des messages plus intelligents, automatiser les enregistrements de commandes mobiles, optimiser les flux de travail et créer des expériences sans problème. Pour plus d’informations, consultez notre documentation [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot). 
 
 ## Partenariat Iterate 
 

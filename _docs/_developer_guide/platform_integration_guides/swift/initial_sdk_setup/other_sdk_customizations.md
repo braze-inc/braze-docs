@@ -45,6 +45,18 @@ let configuration = Braze.Configuration(
 configuration.logger.level = .info
 let braze = Braze(configuration: configuration)
 ```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
+                                                                  endpoint:self.apiEndpoint];
+// Enable logging of general SDK information (e.g. user changes, etc.)
+[configuration.logger setLevel:BRZLoggerLevelInfo];
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+```
+
 {% endtab %}
 {% tab OBJECTIVE-C %}
 

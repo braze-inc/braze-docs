@@ -14,7 +14,7 @@ Nous prenons désormais les messages in-browser interactifs, y compris les forma
 
 ## Message in-app personnalisé avec contenu connecté
 
-Nous avons ajouté des blocs  {% raw %} { %connecté_contenu %} {% endraw %} dans les messages in-app déclenchés, qui vous permettent d’ajouter une personnalisation riche en insérant directement dans vos messages toute information accessible via l’API. Vous pouvez maintenant utiliser le Contenu connecté à l’intérieur de votre application en plus de vos notifications push, e-mails et webhooks. En savoir plus sur le [Contenu connecté][34].
+Nous avons ajouté des blocs {% raw %} {%connected_content%} {% endraw %} dans les messages in-app déclenchés, qui vous permettent d’ajouter une personnalisation riche en insérant directement dans vos messages toute information accessible via l’API. Vous pouvez maintenant utiliser le Contenu connecté à l’intérieur de votre application en plus de vos notifications push, e-mails et webhooks. En savoir plus sur le [Contenu connecté][34].
 
 ## Navigation améliorée sur les cartes de fil d’actualité
 
@@ -30,13 +30,13 @@ Nous avons ajouté « Ouvertures influencées » à notre liste des statistiqu
 
 ## Mise à niveau des groupes internes
 
-Vous pouvez maintenant créer plusieurs groupes internes et attribuer des propriétés indiquant si le groupe sera utilisé pour la journalisation SDK, la journalisation API REST ou les tests de contenu des messages. En savoir plus sur les [Journaux d’événements utilisateurs ][30].
+Vous pouvez maintenant créer plusieurs groupes internes et attribuer des propriétés indiquant si le groupe sera utilisé pour la journalisation SDK, la journalisation API REST ou les tests de contenu des messages. En savoir plus sur les [Journaux d’événements utilisateurs][30].
 
 > Mise à jour : Les groupes internes peuvent également être utilisés pour [envoyer des e-mails à des seedlists]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#seed-groups).
 
 ## Nouvelles options pour les URL Web
 
-Vous avez maintenant la possibilité d’ouvrir des URL Web dans un navigateur Web externe pour les messages push, les messages in-app et dans le navigateur, et les Cartes de fil d’actualité. L’action « Deep Link into App » (Liens profonds dans l’appli) est également compatible avec les liens profonds HTTP/HTTPS. Si vous utilisez un partenaire comme Branch ou Universal Links d’Apple, vous devez personnaliser le SDK. En savoir plus sur le [Deep linking][29].
+Vous avez maintenant la possibilité d’ouvrir des URL Web dans un navigateur Web externe pour les messages push, les messages in-app et dans le navigateur, et les Cartes de fil d’actualité. L’action « Deep Link into App » (Liens profonds dans l’appli) est également compatible avec les liens profonds HTTP/HTTPS. Si vous utilisez un partenaire comme Branch ou Universal Links d’Apple, vous devez personnaliser le SDK. En savoir plus sur la [Création de liens profonds][29].
 
 ## Nouvel événement « Performed Conversion » (Conversion effectuée) dans Canvas
 

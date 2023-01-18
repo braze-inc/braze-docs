@@ -18,5 +18,8 @@ guide_featured_list:
   - name: Email Performance Dashboard
     link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/
     fa_icon: fas fa-chart-line
+  - name: Conversions Dashboard
+    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/
+    fa_icon: fas fa-chart-simple
 ---
 <br><br>

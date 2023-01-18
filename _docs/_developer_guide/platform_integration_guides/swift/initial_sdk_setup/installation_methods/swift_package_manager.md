@@ -25,7 +25,7 @@ Enter the URL of our iOS Swift SDK repository (`https://github.com/braze-inc/bra
 
 ### Select packages
 
-Unlike the legacy AppboyKit iOS SDK, the Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects.
+The Braze Swift SDK separates features into standalone libraries to provide developers with more control over which features to import into their projects.
 
 | Package | Details |
 | ------- | ------- |
