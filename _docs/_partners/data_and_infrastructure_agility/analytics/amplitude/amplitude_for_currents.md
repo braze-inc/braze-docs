@@ -583,7 +583,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_variation_id": (string) ID of the Canvas variation the user is in,
   "canvas_step_id": (string) BSON ID of the Canvas step this event belongs to,
-  "canvas_api_id": (string) API ID of the canvas this event belongs to,
+  "canvas_api_id": (string) API ID of the Canvas this event belongs to,
   "canvas_variation_api_id": (string) API ID of the canvas variation this event belongs to,
   "canvas_step_api_id": (string) API ID of the canvas step this event belongs to,
 }
