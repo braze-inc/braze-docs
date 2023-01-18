@@ -42,7 +42,7 @@ You can see the differences between local number formatting as well as universal
 
 ### Adding users to SMS subscription groups
 
-For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal laws for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups][1]. 
+For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal requirements for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups][1]. 
 
 ### Handling invalid phone numbers
 
