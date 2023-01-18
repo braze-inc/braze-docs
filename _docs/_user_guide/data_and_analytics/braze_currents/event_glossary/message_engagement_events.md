@@ -1096,32 +1096,34 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
 SMS, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks a short link.
-HERE
+This event occurs when a user clicks an SMS short link.
+
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick
 {
   "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
+  "user_id": (string) Braze user ID of the user targeted by short_url,
+  "external_user_id": (string) External ID of the user, null if short_url,
+  "device_id": (string) Device ID of the user targeted by short_url if user is anonymous, 
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "to_phone_number": (string) the number the message was sent to,
+  "timezone": (string) IANA timezone of the user at the time of the event, null if short_url did not use user click tracking,
   "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
+  "campaign_name": (string) name of the campaign if from a campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
   "message_variation_name": (string) the name of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_name": (string) name of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation a user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
-  "send_id": (string) message send ID this message belongs to,
-  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
+  "canvas_step_message_variation_id": (string) ID of the message variation if from a Canvas,
+  "canvas_step_message_variation_name": (string) name of the message variation if from a Canvas,
+  "url": (string) original URL contained in message that was shortened for click tracking,
+  "short_url": (string) shortened URL that is sent to user for click tracking,
+  "user_agent": (string) User-Agent header of the device performing the click event,
+  "subscription_group_id": (string) ID of the subscription group that is used for sending,
+  "user_phone_number": (string) Phone number of the user that short_url was sent to
 }
 ```
 {% endapi %}
@@ -1493,20 +1495,38 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 ## Global state change events
 
 {% apitags %}
-Global state change
+Subscription
 {% endapitags %}
 
-This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
-HERE
+This event occurs when a subscription group state changes.
+
 ```json
 // Uninstall Event: users.behaviors.subscription.GlobalStateChange
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
+  "id": (string) unique ID of this event,
+  "user_id": (string) Braze BSON id of the user with this global subscription state change,
   "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "device_id": (string) id of the device on which the session occurred
+  "email_address": (string) User email address,
+  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
+  "channel": (string) Channel: only email for now,
+  "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API id of the app group this user belongs to,
+  "app_id": (string) BSON id of the app the event belongs to,
+  "app_api_id": (string) API id of the app the event belongs to,
+  "campaign_id": (string) BSON id of the Campaign if from a Campaign,
+  "campaign_api_id": (string) API id of the Campaign if from a Campaign,
+  "message_variation_id ": (string) BSON id of the message variation if from a Campaign,
+  "message_variation_api_id": (string) API id of the message variation if from a Campaign,
+  "canvas_id": (string) BSON id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) API id of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) BSON id of the Canvas variation if from a Canvas,
+  "canvas_variation_api_id  ": (string) API id of the Canvas variation if from a Canvas,
+  "canvas_step_id ": (string) BSON id of the Canvas step if from a Canvas,
+  "canvas_step_api_id": (string) API id of the Canvas step if from a Canvas,
+  "send_id": (string) Message send id this subscription state change action originated from
 }
 ```
 
