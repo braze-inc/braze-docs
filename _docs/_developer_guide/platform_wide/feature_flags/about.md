@@ -16,9 +16,7 @@ channel:
 
 > This reference article covers the basics of feature flags and why you would use them in Braze. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags]({{site.baseurl}}/creating_feature_flags).
 
-Feature flags allow a developer to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence. 
-
-For example, if your team has built a new profile page for your ride-sharing app, instead of releasing it (and potential bugs) to your entire user base, you can roll out the new profile page to just 5% of all users as a way to mitigate risk. 
+Feature flags allow product teams to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence. 
 
 {% alert important %} 
 Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
