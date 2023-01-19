@@ -25,8 +25,9 @@ Messages created using the Drag & Drop Editor can only be sent to users on the f
 
 If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
 
-**Additional Web SDK prerequisite**<br>
-The initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
+**Additional prerequisites**<br>
+- For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
+- If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
 
 ## Step 1: Create an in-app message
 

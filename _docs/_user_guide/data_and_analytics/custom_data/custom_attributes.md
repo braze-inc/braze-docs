@@ -87,6 +87,11 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+#### Number attribute details
+
+- "Exactly 0" and "Less Than" filters include users with NULL fields
+  - To exclude users without a value for custom attributes, you need to include the **is not blank** filter.
+
 ### Strings (alpha-numeric characters) {#strings}
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
