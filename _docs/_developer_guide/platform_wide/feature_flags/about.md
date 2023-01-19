@@ -66,5 +66,5 @@ To learn about more examples, see the [feature flag use cases][2] article.
 
 <!-- For example, imagine that your ecommerce team has a new checkout page design that they believe will improve purchase conversion rates. When you release this feature, you can display the new page to 50% of your users for one month. If it performs better than the old design, you can increase the rollout traffic to 100%. If it performs poorly, you can turn it off completely and revisit the designs. In either case, you have avoided a poor experience for 50% of your users. -->
 
-[1]: {% image_buster /assets/img_archive/feature-flag-rollout.GIF %} 
+[1]: {% image_buster /assets/img/feature-flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
