@@ -12,11 +12,11 @@ description: "Cet article de référence décrit les différents cookies utilis�
 
 Cet article décrit les différents cookies utilisés par le Braze Web SDK.
 
-Avant de poursuivre la lecture, notez que le Braze Web SDK ne stocke aucune donnée dans le navigateur (cookies ou autres) jusqu’à ce que votre site web [initialise][5] le SDK.
+Avant de poursuivre la lecture, notez que le Braze Web SDK ne stocke aucune donnée dans le navigateur (cookies ou autres) jusqu’à ce que votre site web [initialise le SDK][5].
 
 En outre, ces valeurs sont susceptibles d’être modifiées et ne doivent pas être consultées directement par le biais de votre intégration. Consultez plutôt notre documentation [Javascript][1] pour connaître les interfaces de notre API publique.
 
-{% include archive/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Cookies {#cookies}
 
@@ -30,7 +30,7 @@ Pour désactiver tous les cookies, utilisez l’option [`noCookies`][6] lors de 
 La désactivation des cookies vous empêchera d’associer des utilisateurs anonymes qui naviguent sur des sous-domaines et entraînera la création d’un nouvel utilisateur sur chaque sous-domaine.
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
     noCookies: true
@@ -68,7 +68,7 @@ Vous pouvez désactiver ou spécifier les propriétés que vous souhaitez collec
 import * as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
-    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
+    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // liste des `DeviceProperties` que vous souhaitez collecter
 });
 ```
 

@@ -19,12 +19,12 @@ channel:
 Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` et `Push Click`. En outre, les déclencheurs `Specific Purchase` et `Custom Event` contiennent des filtres de propriétés robustes.
 
 {% alert note %}
-Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK et non par le biais des API REST. Si vous travaillez avec iOS, consultez notre article sur le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour en savoir plus. 
+Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK de Braze. Les messages in-app peuvent être déclenchés via l’API ou les événements API (comme les événements d’achat). Si vous travaillez avec iOS, consultez notre article sur le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour en savoir plus. 
 {% endalert %}
 
 ## Sémantiques de livraison
 
-Tous les messages in-app qu’un utilisateur peut recevoir sont livrés au périphérique de l’utilisateur au démarrage de session. Pour plus d’informations sur les sémantiques de début de session du SDK, renseignez-vous au sujet de la [durée de vie des sessions][45]. Dès la livraison, le SDK capture à l’avance les actifs à mettre immédiatement à disponibilité au moment du déclenchement, réduisant ainsi la latence d’affichage.
+Tous les messages in-app qu’un utilisateur peut recevoir sont délivrés à l’appareil de l’utilisateur au démarrage de session. Si deux messages in-app sont déclenchés par un seul événement, le message in-app doté de la priorité la plus élevée est affiché. Pour plus d’informations sur les sémantiques de début de session du SDK, renseignez-vous au sujet de la [durée de vie des sessions.][45]. Dès la livraison, le SDK capture à l’avance les actifs à mettre immédiatement à disponibilité au moment du déclenchement, réduisant ainsi la latence d’affichage.
 
 Lorsqu’un événement déclencheur comporte plus d’un message in-app éligible associé, seul le message in-app avec la priorité la plus élevée sera livré.
 
@@ -32,15 +32,15 @@ Il peut y avoir une latence pour les messages in-app qui s’affichent immédiat
 
 ## Intervalle de temps minimum entre les déclencheurs
 
-Par défaut, nos limites de débit des messages in-app sont à une fois toutes les 30 secondes afin de garantir une expérience utilisateur de qualité.
+Par défaut, nous appliquons des limites de débit d’une fois toutes les 30 secondes pour les messages in-app afin de garantir une expérience utilisateur de qualité.
 
-Vous pouvez remplacer cette valeur par la `ABKMinimumTriggerTimeIntervalKey` dans le paramètre `appboyOptions` transmis à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définir le `ABKMinimumTriggerTimeIntervalKey` avec la valeur entière désirée comme durée minimale en secondes entre les messages in-app :
+Vous pouvez remplacer cette valeur par la clé `ABKMinimumTriggerTimeIntervalKey` dans le paramètre `appboyOptions` transmis à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définissez `ABKMinimumTriggerTimeIntervalKey` sur la valeur d’entier souhaitée comme durée minimale en secondes entre les messages in-app :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Sets the minimum trigger time interval to 5 seconds
+// Définit la durée de l’intervalle de déclenchement minimum sur 5 secondes
 [Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:options
@@ -85,14 +85,14 @@ Un message in-app déclenché peut être renvoyé à la pile dans les situations
 
 - Le message in-app est déclenché lorsque l’application est en arrière-plan.
 - Un autre message in-app est actuellement visible.
-- La [méthode de délégation de l’IU][38]`beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète n’a pas été implémentée et le clavier est actuellement affiché.
-- La [méthode de délégation][30] `beforeInAppMessageDisplayed:` ou la [méthode de délégation de l’IU][38] `beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète est renvoyée `ABKDisplayInAppMessageLater`.
+- La `beforeInAppMessageDisplayed:withKeyboardIsUp:` [méthode de délégation de l’IU][38] obsolète n’a pas été implémentée et le clavier est actuellement affiché.
+- La `beforeInAppMessageDisplayed:` [méthode de délégation][30] ou la `beforeInAppMessageDisplayed:withKeyboardIsUp:`méthode de délégation de l’IU[ ][38]obsolète est renvoyée `ABKDisplayInAppMessageLater`.
 
 #### Écarter les messages in-app
 
 Un message in-app déclenché sera écarté dans les situations suivantes :
 
-- La [méthode de délégation][30] `beforeInAppMessageDisplayed:` ou la [méthode de délégation de l’IU][38] `beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète est renvoyée `ABKDiscardInAppMessage`.
+- La `beforeInAppMessageDisplayed:` [méthode de délégation][30] ou la `beforeInAppMessageDisplayed:withKeyboardIsUp:` [méthode de délégation de l’IU][38]obsolète est renvoyée `ABKDiscardInAppMessage`.
 - L’actif (fichier image ou ZIP) du message in-app n’a pas pu être téléchargé.
 - Le message in-app est prêt à être affiché, mais a dépassé le délai d’expiration.
 - L’orientation du périphérique ne correspond pas à l’orientation du message in-app déclenché.

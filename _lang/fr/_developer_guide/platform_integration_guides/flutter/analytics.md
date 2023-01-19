@@ -6,7 +6,7 @@ page_order: 5
 description: "Cet article explique comment configurer et suivre l’analytique de base dans l’application Flutter."
 
 ---
-
+ 
 # Analytique
 
 Cet article explique comment configurer et suivre l’analytique de base dans votre application Flutter.
@@ -64,18 +64,68 @@ Les attributs suivants sont pris en charge :
 - Numéro de téléphone
 - Langue
 - E-mail
-- Données Twitter
-- Données Facebook
 
 Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
 
-#### Enlever la configuration d’un attribut personnalisé
+### Définition des valeurs d’attributs personnalisés
+
+Au-delà des attributs utilisateur par défaut, Braze vous permet également de définir des attributs personnalisés en utilisant un certain nombre de types de données différents :
+
+{% tabs %}
+{% tab Boolean Value %}
+
+```dart
+braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
+```
+
+{% endtab %}
+{% tab Integer %}
+
+```dart
+// Configurer un attribut entier
+braze.setIntCustomUserAttribute("custom int attribute key", integer);
+// incrémenter un attribut entier
+braze.incrementCustomUserAttribute("key", integer);
+```
+
+{% endtab %}
+{% tab Double %}
+```dart
+braze.setDoubleCustomUserAttribute("custom double attribute key", double);
+```
+
+{% endtab %}
+{% tab String %}
+
+```dart
+braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
+```
+
+{% endtab %}
+{% tab Date %}
+
+```dart
+braze.setDateCustomUserAttribute("custom date attribute key", date);
+```
+{% endtab %}
+{% tab Array %}
+
+```dart
+// Ajout d’un tableau
+braze.addToCustomAttributeArray("key", "attribute");
+// Supprimer un élément d’un tableau
+braze.removeFromCustomAttributeArray("key", "attribute");
+```
+{% endtab %}
+{% endtabs %}
+
+### Enlever la configuration d’un attribut personnalisé
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');
 ```
 
-## Enregistrer des achats
+## Enregistrer les achats
 
 Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
 
@@ -96,6 +146,9 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 {% alert tip %}
 Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
+
+### Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
 ### Clés réservées
 

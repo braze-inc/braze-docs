@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment définir des attributs
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][7].
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][7].
 
 Les attributs utilisateur peuvent être attribués au `IAppboyUser` actuel. Pour obtenir une référence au `IAppboyUser` actuel, appelez `Appboy.SharedInstance.AppboyUser`
 
@@ -28,8 +28,6 @@ Les attributs suivants doivent être définis comme des propriétés du `IAppboy
 - `Country`
 - `HomeCity`
 - `PhoneNumber`
-- `FacebookData`
-- `TwitterData`
 
 **Exemple d’implémentation**
 
@@ -74,15 +72,15 @@ bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
->  Les dates transmises à Braze doivent être dans au format [ISO 8601][2], par ex., `2013-07-16T19:20:30+01:00` ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`, par ex., `2016-12-14T13:32:31.601-0800`
+>  Les dates transmises à Braze doivent être au format [ISO 8601][2] par ex. `2013-07-16T19:20:30+01:00` ou au  format`yyyy-MM-dd'T'HH:mm:ss:SSSZ`, par exemple,`2016-12-14T13:32:31.601-0800`
 {% endtab %}
 {% tab Array %}
 ```csharp
-// Setting a custom attribute with an array value
+// Définir un attribut personnalisé avec une valeur de tableau
 Appboy.SharedInstance.EventLogger.SetCustomAttributeArray("custom_attribute_array_test", testSetArray);
-// Adding to a custom attribute with an array value
+// Ajouter un attribut personnalisé avec une valeur de tableau
 Appboy.SharedInstance.EventLogger.AddToCustomAttributeArray("custom_attribute_array_test", testAddString);
-// Removing a value from an array type custom attribute
+// Supprimer une valeur d’un attribut personnalisé de type tableau
 Appboy.SharedInstance.EventLogger.RemoveFromCustomAttributeArray("custom_attribute_array_test", testRemString);
 ```
 {% endtab %}
@@ -98,7 +96,7 @@ bool IncrementCustomAttribute(STRING_KEY, INCREMENT_INTEGER_VALUE);
 
 ### Enlever la configuration d’un attribut personnalisé
 
-La configuration des attributs personnalisés peut également être supprimée en utilisant la méthode suivante :
+Les attributs personnalisés peuvent également être annulés à l’aide de la méthode suivante :
 
 ```csharp
 bool UnsetCustomAttribute(STRING_KEY);
@@ -106,7 +104,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### Définir un attribut personnalisé via l’API REST
 
-Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API utilisateur][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API ][4] utilisateur pour plus de détails.
 
 ### Limites de valeur d’attribut personnalisé
 
@@ -128,7 +126,7 @@ Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification 
 - `PushNotificationSubscriptionType`
   - Les utilisateurs seront définis sur `Subscribed` automatiquement dès l’enregistrement d’une notification push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur.
 
->  Ces types tombent dans la catégorie `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Consultez [Gérer les abonnements utilisateur][10] pour plus de détails.
+>  Ces types tombent dans la catégorie `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Consultez [Gérer les abonnements utilisateur ][10] pour plus de détails.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
 [2]: http://en.wikipedia.org/wiki/ISO_8601

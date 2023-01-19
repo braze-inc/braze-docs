@@ -3,7 +3,7 @@ nav_title: Ouvrir le lien dans un nouvel onglet
 article_title: Ouvrir le lien d’un message in-app dans un nouvel onglet pour le Web
 platform: Web
 channel: messages in-app
-page_order: 3
+page_order: 8
 page_type: reference
 description: "Cet article explique comment configurer les liens de messages in-app pour qu’ils s’ouvrent dans un nouvel onglet de votre application Web."
 

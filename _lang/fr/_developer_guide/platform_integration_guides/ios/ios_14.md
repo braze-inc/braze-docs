@@ -21,7 +21,7 @@ Pour obtenir une liste complète des nouvelles mises à jour iOS 14, voir [Page
 #### Résumé des changements majeurs de l’iOS 14
 
 - Les applications ciblant iOS 14 / Xcode 12 doivent utiliser notre [version officielle iOS 14][1].
-- Les geofences [ne prennent plus en charge les images iOS][4] pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ .
+- Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ .
 - L’utilisation des fonctions de ciblage « Last Known Location » nécessite une mise à niveau vers SDK Braze pour iOS v3.26.1+ pour la compatibilité avec l’autorisation de  _localisation approximative_ . Notez que si vous utilisez XCode 12, vous devrez passer au moins à la mise à jour v3.27.0.
 - À partir d’iOS 14.5, la collecte IDFA et le [partage de certaines données][5] nécessiteront l’invite d’autorisation de la nouvelle infrastructure [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency).
 - Si vous utilisez le champ « Ad Tracking Enabled » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTracktrackTransparency pour signaler le statut d’adhésion des utilisateurs finaux.
@@ -42,20 +42,16 @@ table td {
 
 |Si votre application utilise :|Recommandation de la mise à jour|Description|
 |------|--------|---|
-|Xcode 12|**Mise à jour vers iOS SDK v3.27 ou version ultérieure**|Les clients utilisant Xcode 12 doivent utiliser la version v3.27.0+ pour la compatibilité. Si vous rencontrez des problèmes ou si vous avez des questions concernant notre compatibilité iOS 14, ouvrez un nouveau [Problème de Github][2].|
-|Emplacement le plus récent| **Mise à jour vers iOS SDK v3.26.1 ou version ultérieure**|Si vous utilisez la fonction de ciblage la plus récente de l’emplacement et que vous utilisez toujours XCode 11, vous devez passer au minimum à la version iOS v3.26.1 qui prend en charge la nouvelle fonction  _Approximate Location_  (Localisation approximative). Les anciens SDK ne pourront pas collecter de manière fiable la localisation lorsqu’un utilisateur est mis à niveau vers iOS 14 _et_ choisissez Approximate Location (Localisation approximative).<br>
-<br>
-Même si votre application n’est pas susceptible de cibler iOS 14, vos utilisateurs finaux peuvent mettre à niveau vers iOS 14 et commencer à utiliser l’option de précision de la localisation. Les applications qui ne sont pas mises à niveau vers iOS SDK v3.26.1+ ne pourront pas collecter de manière fiable les attributs de localisation lorsque les utilisateurs leur fournissent leur _emplacement approximatif_  sur les périphériques iOS 14.|
-|ID de suivi des annonces IDFA| **Il peut être nécessaire de mettre à niveau Xcode 12 et iOS SDK v3.27**|En 2021, Apple commencera à exiger une invite d’autorisation pour la collecte de l’IDFA. À ce moment, les applications doivent être mises à niveau vers Xcode 12 et utiliser la nouvelle infrastructure `AppTrackingTransparency` afin de continuer à recueillir l’IDFA. Si vous transmettez IDFA au SDK Braze, vous devez également mettre à niveau vers v3.27.0+ à ce moment-là.<br>
-<br>
-Les applications qui n’utilisent pas les nouvelles API iOS 14 ne pourront pas collecter l’IDFA et collecteront plutôt un ID vierge (`00000000-0000-0000-0000-000000000000`) quand Apple commencera à faire appliquer ce changement en 2021. Pour savoir si cela s’applique ou non à votre application, consultez les [Détails IDFA](#idfa).|
+|Xcode 12|**Mise à jour vers iOS SDK v3.27 ou version ultérieure**|Les clients utilisant Xcode 12 doivent utiliser la version v3.27.0+ pour la compatibilité. Si vous rencontrez des problèmes ou si vous avez des questions concernant notre compatibilité iOS 14, ouvrez un nouveau [Problème dans Github.][2].|
+|Emplacement le plus récent| **Mise à jour vers iOS SDK v3.26.1 ou version ultérieure**|Si vous utilisez la fonction de ciblage la plus récente de l’emplacement et que vous utilisez toujours XCode 11, vous devez passer au minimum à la version iOS v3.26.1 qui prend en charge la nouvelle fonction  _Approximate Location_  (Localisation approximative). Les anciens SDK ne pourront pas collecter de manière fiable la localisation lorsqu’un utilisateur est mis à niveau vers iOS 14 _et_ choisissez Approximate Location (Localisation approximative).<br><br>Même si votre application n’est pas susceptible de cibler iOS 14, vos utilisateurs finaux peuvent mettre à niveau vers iOS 14 et commencer à utiliser l’option de précision de la localisation. Les applications qui ne sont pas mises à niveau vers iOS SDK v3.26.1+ ne pourront pas collecter de manière fiable les attributs de localisation lorsque les utilisateurs leur fournissent leur _approximate location_  sur les périphériques iOS 14.|
+|ID de suivi des annonces IDFA| **Il peut être nécessaire de mettre à niveau Xcode 12 et iOS SDK v3.27**|En 2021, Apple commencera à exiger une invite d’autorisation pour la collecte de l’IDFA. À ce moment, les applications doivent être mises à niveau vers Xcode 12 et utiliser la nouvelle infrastructure `AppTrackingTransparency` afin de continuer à recueillir l’IDFA. Si vous transmettez IDFA au SDK Braze, vous devez également mettre à niveau vers v3.27.0+ à ce moment-là.<br><br>Les applications qui n’utilisent pas les nouvelles API iOS 14 ne pourront pas collecter l’IDFA et collecteront plutôt un ID vierge (`00000000-0000-0000-0000-000000000000`) quand Apple commencera à faire appliquer ce changement en 2021. Pour savoir si cela s’applique ou non à votre application, consultez les [Détails IDFA](#idfa).|
 
 
 ## Changements de comportement iOS 14
 
 ### Autorisation de localisation approximative
 
-![Localisation précise]{% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Localisation précise]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Overview
 
@@ -63,7 +59,7 @@ Lorsque vous demandez l’autorisation de localisation, les utilisateurs auront 
 
 #### Geofences {#geofences}
 
-Les geofences [ne prennent plus en charge les images iOS][4] pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ . Bien qu’aucune mise à jour ne soit requise pour votre intégration SDK Braze, vous devrez peut-être ajuster votre [stratégie marketing basée sur la localisation](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) pour les campagnes qui reposent sur des geofences.
+Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ . Bien qu’aucune mise à jour ne soit requise pour votre intégration SDK Braze, vous devrez peut-être ajuster votre [stratégie marketing basée sur la localisation](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) pour les campagnes qui reposent sur des geofences.
 
 #### Ciblage de localisation {#location-tracking}
 
@@ -92,7 +88,7 @@ Ces mises à jour IDFA prendront effet lorsque les utilisateurs finaux mettent l
 {% endalert %}
 
 #### Modifications apportées au recueil de l’IDFA Braze
-![IDFA]{% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 1. Braze continuera à autoriser les applications à fournir une valeur IDFA d’utilisateur _au_  SDK Braze.
 

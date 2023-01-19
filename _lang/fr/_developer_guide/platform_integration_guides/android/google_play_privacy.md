@@ -15,7 +15,7 @@ table td {
 
 # Questionnaire de confidentialité de Google Play
 
-À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs des pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze traite les données de votre application. 
+À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze traite les données de votre application. 
 
 En tant que développeur d’applications, vous contrôlez les données que vous envoyez à Braze. Les données reçues par Braze sont traitées conformément à vos instructions. Google le classifie en tant que [fournisseur de services][3]. 
 
@@ -193,8 +193,8 @@ Les données obtenues par Braze sont déterminées par votre intégration spéci
 
 Pour en savoir plus sur les autres données de l’appareil que Braze recueille, qui peuvent tomber en dehors des directives de sécurité des données de Google Play, consultez notre [aperçu du stockage Android][2] et nos [options de collecte de données SDK][5].
 
-[1]: https://www.braze.com/docs/api/data_retention/
-[2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/storage
+[1]: {{site.baseurl}}/api/data_retention/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/storage
 [3]: https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform
 [4]: https://support.google.com/googleplay/android-developer/answer/10787469
-[5]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration

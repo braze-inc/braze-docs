@@ -10,7 +10,7 @@ page_type: reference
 description: "Cet article couvre les étapes initiales de configuration du SDK pour les applications Android et FireOS fonctionnant sur Cordova."
 
 ---
-
+ 
 # Intégration Cordova
 
 ## Définition d’un endpoint API personnalisé
@@ -32,7 +32,7 @@ Un endpoint API personnalisé peut être configuré via `config.xml`. Par exempl
 </platform>
 ```
 
-## Notifications Push
+## Notifications push
 
 Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas à effectuer de nouveaux changements côté client. Pour les intégrations modifiées, voir les instructions d’intégration [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 
@@ -75,8 +75,11 @@ Consultez les instructions d’intégration [Android]({{site.baseurl}}/developer
 ```javascript
 var properties = {};
 properties["KeyOne"] = "ValueOne";
-AppboyPlugin.logPurchase("testPurchaseWithNullCurrency", 10, null, 5, properties);
+AppboyPlugin.logPurchase("product_id_with_null_currency", 10, null, 5, properties);
 ```
+
+#### Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
 ## Fil d’actualité
 

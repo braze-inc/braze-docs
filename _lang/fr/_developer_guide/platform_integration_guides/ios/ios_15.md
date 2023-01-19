@@ -1,83 +1,149 @@
 ---
-nav_title: Guide de mise à jour iOS 15
-article_title: Guide de mise à jour SDK iOS 15
-page_order: 7
 hidden: true
+nav_title: Guide de mise à jour iOS 14
+article_title: Guide de mise à jour SDK iOS 14
+page_order: 7
 platform: iOS
-description: "Cet article de référence couvre les nouvelles mises à jour du système d’exploitation iOS 15, les mises à jour SDK requises et les nouvelles fonctionnalités."
+description: "Cet article de référence couvre la mise à jour du SDK iOS 14, mettant en évidence les changements tels que les clôtures géographiques, le ciblage géographique, l’IDFA, etc."
 
 ---
 
-# Guide de mise à jour SDK iOS 15
+# Guide de mise à jour SDK iOS 14
 
-Ce guide décrit les modifications introduites dans iOS 15 (WWDC21) et les étapes de mise à niveau requises pour votre intégration SDK Braze pour iOS.
+Ce guide décrit les modifications liées à Braze introduites dans iOS 14 et les étapes de mise à niveau requises pour votre intégration SDK Braze pour iOS.
 
-> Pour obtenir une liste complète des nouvelles mises à jour iOS 15, consultez les [notes de publication iOS 15](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes) d’Apple.
-
-
-## Changements de transparence dans les navigations de l’interface utilisateur
-
-Dans le cadre de nos tests annuels des versions bêta d’iOS, nous avons identifié une modification apportée par Apple qui fait que certaines barres de navigation de l’interface utilisateur apparaissent transparentes et non opaques. Cela sera visible dans iOS 15 lors de l’utilisation de l’interface utilisateur par défaut de Braze pour les cartes de contenu, le fil d’actualités ou lorsque des liens profonds Web sont ouverts dans votre application plutôt que dans une application de navigateur distincte.
-
-Pour éviter ce changement visuel dans iOS 15, nous vous recommandons fortement de mettre à niveau vers la version [SDK Braze pour iOS v4.3.2][1] dès que possible, avant que les utilisateurs commencent à mettre leur téléphone à niveau vers le nouveau système d’exploitation iOS 15.
-
-## Nouveaux paramètres de notification {#notification-settings}
-
-iOS 15 a introduit de nouvelles fonctionnalités de notification pour aider les utilisateurs à rester focalisés et à éviter de fréquentes interruptions tout au long de la journée. Nous sommes ravis d’offrir une assistance pour ces nouvelles fonctionnalités. Ces fonctionnalités ne nécessitent aucune mise à niveau supplémentaire du SDK et ne seront appliquées qu’aux utilisateurs de périphériques iOS 15.
-
-### Modes de concentration {#focus-mode}
-
-Les utilisateurs d’iOS 15 peuvent désormais créer des « Modes de Concentration », des profils personnalisés utilisés pour déterminer les notifications qu’ils souhaitent voir franchir le mode de concentration et afficher en évidence.
-
-![]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
-### Niveaux d’interruption {#interruption-levels}
-
-Dans iOS 15, les notifications push peuvent être envoyées avec l’un des quatre niveaux d’interruption :
-
-* **Passive** (nouveau) - Pas de son, aucune vibration, pas de sortie de veille, pas de franchissement des paramètres du mode de concentration.
-* **Active** (par défaut) - Permet les sons, les vibrations, la sortie de veille, pas de franchissement des paramètres du mode de concentration.
-* **Contrainte de temps** (nouveau) - Permet les sons, les vibrations, la sortie de veille, peut franchir les commandes système si autorisé.
-* **Critique** - Permet le sons, les vibrations, la sortie de veille, peut franchir les commandes système et contourner le commutateur de sonnerie.
-
-Voir [Options de notification iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level) pour en savoir plus sur la manière de configurer cette option dans les notifications push iOS.
-
-### Résumé des notifications {#notification-summary}
-
-![]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
-Dans iOS 15, les utilisateurs peuvent (facultativement) choisir certaines heures de la journée pour recevoir un résumé des notifications. Les notifications qui ne nécessitent pas une attention immédiate (c’est-à-dire envoyées comme « passives » ou lorsque l’utilisateur est en mode de concentration) seront regroupées pour éviter les interruptions constantes tout au long de la journée.
-
-Pour chaque notification que vous envoyez, vous serez bientôt en mesure de spécifier un « score de pertinence » pour contrôler la notification devant apparaître en haut du résumé.
-
-Voir [Options de notification iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#relevance-score) pour en savoir plus sur la manière de définir le « score de pertinence » d’une notification.
-
-## Boutons de localisation {#location-buttons}
-
-iOS 15 introduit un nouveau moyen pratique pour les utilisateurs d’accorder temporairement l’accès à la position au sein d’une application. 
-
-Le nouveau bouton de localisation s’appuie sur l’autorisation existante « Autoriser une fois » sans le proposer à plusieurs reprises aux utilisateurs qui cliquent plusieurs fois dans la même session.
-
-Pour plus d’informations, regardez la vidéo d’Apple sur le [Bouton de localisation](https://developer.apple.com/videos/play/wwdc2021/10102/) diffusée lors de la Conférence mondiale des développeurs (WWDC) de cette année.
+Pour obtenir une liste complète des nouvelles mises à jour iOS 14, voir [Page iOS 14](https://www.apple.com/ios/ios-14/) d’Apple.
 
 {% alert tip %}
-Cette fonctionnalité vous donne une chance supplémentaire d’inviter les utilisateurs à obtenir leur autorisation ! Les utilisateurs ayant précédemment refusé des autorisations de localisation avant iOS 15 verront une invite lorsque vous cliquez sur le bouton de localisation comme une dernière opportunité de réinitialiser l’autorisation de l’état refusé.
+À partir d’iOS 14.5, la collecte **IDFA** et le [partage de certaines données](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) nécessiteront l’invite d’autorisation de la nouvelle infrastructure [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) ([En savoir plus](#idfa)).
 {% endalert %}
 
-### Utilisation des boutons de localisation avec Braze
+#### Résumé des changements majeurs de l’iOS 14
 
-Aucune intégration supplémentaire n’est requise lors de l’utilisation des boutons de localisation avec Braze. Votre application doit continuer à transmettre la localisation d’un utilisateur (une fois qu’il a accordé l’autorisation) comme d’habitude.
+- Les applications ciblant iOS 14 / Xcode 12 doivent utiliser notre [version officielle iOS 14][1].
+- Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ .
+- L’utilisation des fonctions de ciblage « Dernière position connue » nécessite une mise à niveau vers SDK Braze pour iOS v3.26.1+ pour la compatibilité avec l’autorisation de  _localisation approximative_ . Notez que si vous utilisez XCode 12, vous devrez passer au moins à la mise à jour v3.27.0.
+- À partir d’iOS 14.5, la collecte IDFA et le [partage de certaines données][5] nécessiteront l’invite d’autorisation de la nouvelle infrastructure [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency).
+- Si vous utilisez le champ « Suivi des annonces activé » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTracktrackTransparency pour signaler le statut d’adhésion des utilisateurs finaux.
 
-Selon Apple, pour les utilisateurs qui ont déjà partagé l’accès au site d’arrière-plan, l’option « While Using App » continuera à accorder ce niveau d’autorisation après qu’elles auront été mises à niveau vers iOS 15.
+## Résumé de la mise à jour
 
-## Courrier Apple {#mail}
+<style>
+table th:nth-child(1),
+table th:nth-child(2),
+table td:nth-child(1),
+table td:nth-child(2) {
+    min-width:230px;
+}
+table td {
+    word-break: break-word;
+}
+</style>
 
-Cette année, Apple a annoncé de nombreuses mises à jour du suivi des e-mails et de la confidentialité. Pour plus d’informations, consultez notre [blog post](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
+|Si votre application utilise :|Recommandation de la mise à jour|Description|
+|------|--------|---|
+|Xcode 12|**Mise à jour vers iOS SDK v3.27 ou version ultérieure**|Les clients utilisant Xcode 12 doivent utiliser la version v3.27.0+ pour la compatibilité. Si vous rencontrez des problèmes ou si vous avez des questions concernant notre compatibilité iOS 14, ouvrez un nouveau [Problème dans Github.][2].|
+|Emplacement le plus récent| **Mise à jour vers iOS SDK v3.26.1 ou version ultérieure**|Si vous utilisez la fonction de ciblage la plus récente de l’emplacement et que vous utilisez toujours XCode 11, vous devez passer au minimum à la version iOS v3.26.1 qui prend en charge la nouvelle fonction  _Localisation approximative_. Les anciens SDK ne pourront pas collecter de manière fiable la localisation lorsqu’un utilisateur est mis à niveau vers iOS 14 _et_ choisissez Localisation approximative.<br><br>Même si votre application n’est pas susceptible de cibler iOS 14, vos utilisateurs finaux peuvent mettre à niveau vers iOS 14 et commencer à utiliser l’option de précision de la localisation. Les applications qui ne sont pas mises à niveau vers iOS SDK v3.26.1+ ne pourront pas collecter de manière fiable les attributs de localisation lorsque les utilisateurs leur fournissent leur _emplacement approximatif_  sur les périphériques iOS 14.|
+|ID de suivi des annonces IDFA| **Il peut être nécessaire de mettre à niveau Xcode 12 et iOS SDK v3.27**|En 2021, Apple commencera à exiger une invite d’autorisation pour la collecte de l’IDFA. À ce moment, les applications doivent être mises à niveau vers Xcode 12 et utiliser la nouvelle infrastructure `AppTrackingTransparency` afin de continuer à recueillir l’IDFA. Si vous transmettez IDFA au SDK Braze, vous devez également mettre à niveau vers v3.27.0+ à ce moment-là.<br><br>Les applications qui n’utilisent pas les nouvelles API iOS 14 ne pourront pas collecter l’IDFA et collecteront plutôt un ID vierge (`00000000-0000-0000-0000-000000000000`) quand Apple commencera à faire appliquer ce changement en 2021. Pour savoir si cela s’applique ou non à votre application, consultez les [Détails IDFA](#idfa).|
 
-## Localisation de l’adresse IP dans Safari
 
-Dans iOS 15, les utilisateurs pourront configurer Safari pour rendre anonymes ou généraliser la localisation déterminée à partir de leurs adresses IP. Gardez cela à l’esprit lorsque vous utilisez un ciblage ou une segmentation basé sur la localisation.
+## Changements de comportement iOS 14
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
+### Autorisation de localisation approximative
+
+![Localisation précise]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+#### Overview
+
+Lorsque vous demandez l’autorisation de localisation, les utilisateurs auront désormais le choix de fournir leur _localisation précise_ (comportement précédent), ou la nouvelle _localisation approximative_. La localisation approximative renvoie un rayon plus large dans lequel l’utilisateur se trouve, au lieu de ses coordonnées exactes.
+
+#### Geofences {#geofences}
+
+Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ . Bien qu’aucune mise à jour ne soit requise pour votre intégration SDK Braze, vous devrez peut-être ajuster votre [stratégie marketing basée sur la localisation](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) pour les campagnes qui reposent sur des geofences.
+
+#### Ciblage de localisation {#location-tracking}
+
+Pour continuer à collecter la _dernière localisation connue_ des utilisateurs lorsque l’autorisation  _localisation approximative_ est accordée, votre application devra au moins passer à la mise à jour v3.26.1 du SDK Braze pour iOS. Gardez à l’esprit que la localisation sera moins précise et que, d’après nos tests, elle est supérieure à 12 000 mètres (+ de 7 miles). Lorsque vous utilisez les options de ciblage de la  _dernière localisation connue_  dans le tableau de bord de Braze, assurez-vous d’augmenter le rayon de la localisation pour tenir compte de nouvelles  _localisations approximatives_ (nous recommandons d’utiliser au moins 1,6 km de rayon).
+
+Les applications qui ne mettent pas à niveau le SDK Braze pour iOS à la version v3.26.1 ou supérieure ne pourront plus utiliser le suivi de la localisation lorsque l’autorisation de _localisation approximative_ est accordée sur les périphériques iOS 14.
+
+Les utilisateurs qui ont déjà accordé un accès à leur localisation continueront à fournir leur _localisation précise_ après la mise à niveau.
+
+Notez que si vous utilisez XCode 12, vous devrez passer au moins à la mise à jour v3.27.0.
+
+Pour plus d’informations sur la localisation approximative, voir la vidéo WWDC [Nouveautés concernant la localisation](https://developer.apple.com/videos/play/wwdc2020/10660/) d’Apple.
+
+### Transparence du suivi des applications et IDFA {#idfa}
+
+#### Overview
+
+L’IDFA (Identifiant pour les annonceurs) est un identifiant fourni par Apple pour une utilisation avec des partenaires publicitaires et d’attribution pour le suivi inter-périphérique et est lié à l’ID Apple d’une personne.
+
+À partir d’iOS 14.5, une nouvelle invite d’autorisation (lancée par la nouvelle infrastructure `AppTrackingTransparency`) doit être affichée pour recueillir le consentement explicite de l’utilisateur pour l’IDFA. Cette invite d’autorisation pour « vous suivre via les applications et les sites Web appartenant à d’autres sociétés » devra être demandée de la même manière que lorsque vous invitez les utilisateurs à partager leur localisation.
+
+Si un utilisateur n’accepte pas l’invite, ou si vous ne procédez pas à la mise à niveau vers l’infrastructure `AppTrackingTransparency` de Xcode 12, alors une valeur IDFA vide (`00000000-0000-0000-0000-000000000000`) sera renvoyée, et votre application ne sera pas autorisée à inviter à nouveau l’utilisateur.
+
+{% alert important %}
+Ces mises à jour IDFA prendront effet lorsque les utilisateurs finaux mettent leur périphérique à niveau vers iOS 14.5. Assurez-vous que votre application utilise le nouveau `AppTransparencyFramework` avec Xcode 12 si vous prévoyez de recueillir l’IDFA.
+{% endalert %}
+
+#### Modifications apportées au recueil de l’IDFA Braze
+![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+
+1. Braze continuera à autoriser les applications à fournir une valeur IDFA d’utilisateur _au_  SDK Braze.
+
+2. La macro de compilation `ABK_ENABLE_IDFA_COLLECTION`, qui devrait compiler en fonction du recueil automatique facultatif de l’IDFA, ne fonctionnera plus dans iOS 14 et a été supprimée dans la section 3.27.0. 
+
+3. Si vous utilisez le champ « Ad Tracking Enabled » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTrackingTransparency pour signaler le statut d’adhésion des utilisateurs finaux. La raison de cette modification est que dans iOS 14, l’ancien champ [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) n’est toujours pas renvoyé.
+
+4. Si votre application a utilisé l’IDFA ou l’IDFV comme ID externe Braze, nous vous recommandons fortement de faire migrer ces identifiants en faveur d’un UUID. Pour plus d’informations sur la migration des ID externes, consultez notre nouveau [endpoint d’API de migration de l’ID externe]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
+
+En savoir plus sur Apple à propos de leurs [Mises à jour de confidentialité](https://developer.apple.com/app-store/user-privacy-and-data-use/) et de la nouvelle [Infrastructure de transparence de suivi des applications](https://developer.apple.com/documentation/apptrackingtransparency).
+
+### Autorisation de notification push {#push-provisional-auth}
+
+{% alert important %}
+Aucune modification de l’autorisation Push provisoire n’est incluse dans iOS 14. Dans une version bêta antérieure d’iOS 14, Apple a introduit une modification qui a depuis été rétablie au comportement antérieur.
+{% endalert %}
+
+
+## Nouvelles fonctionnalités iOS 14
+
+### Présentation de la confidentialité et de la collecte de données de l’application {#app-privacy}
+
+Depuis le 8 décembre 2020, toutes les soumissions à l’App Store nécessitent des étapes supplémentaires pour respecter les [nouvelles normes de confidentialité d’Apple](https://developer.apple.com/app-store/app-privacy-details/).
+
+#### Questionnaire sur le portail développeur d’Apple
+
+Sur le _Portail Développeur d’Apple_ :
+* Il vous sera demandé de remplir un questionnaire pour décrire comment votre application ou des partenaires tiers collectent des données.
+  * Le questionnaire doit toujours être à jour avec votre version la plus récente dans l’App Store.
+  * Le questionnaire peut être mis à jour même sans nouvelle soumission d’application.
+* Vous devrez coller un lien vers l’URL de la politique de confidentialité de votre application.
+
+Lorsque vous remplissez votre questionnaire, consultez votre équipe juridique et réfléchissez à la manière dont votre utilisation de Braze dans les domaines suivants peut affecter vos exigences de divulgation.
+
+#### Collecte de données par défaut Braze
+**Identifiants** - Un identifiant de périphérique anonyme est toujours recueilli par le SDK Braze. Ce paramètre est actuellement défini sur l’IDFV (identifiant du fournisseur).
+
+**Données d’utilisation** - Cela peut inclure les données de session de Braze, ainsi que toute collection d’événements ou d’attributs que vous utilisez pour mesurer l’interaction du produit.
+
+#### Collecte de données facultatives
+Données que vous pouvez éventuellement collecter via votre utilisation de Braze :
+
+**Localisation** - La localisation approximative et la localisation précise peuvent facultativement être collectées par le SDK Braze. Ces fonctionnalités sont désactivées par défaut.
+
+**Coordonnées de contact** - Cela peut inclure des événements et des attributs liés à l’identité de l’utilisateur.
+
+**Achats** - Cela peut inclure des événements et des achats enregistrés au nom de l’utilisateur.
+
+{% alert important %}
+Notez qu’il ne s’agit pas d’une liste exhaustive. Si vous collectez manuellement d’autres informations sur vos utilisateurs dans Braze qui s’appliquent à d’autres catégories du questionnaire sur la confidentialité de l’application, vous devrez également les divulguer.
+{% endalert %}
+
+Pour en savoir plus sur cette fonctionnalité, consultez la rubrique [Confidentialité et utilisation des données d’Apple](https://developer.apple.com/app-store/user-privacy-and-data-use/).
+
+[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
+[4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
+[5]: https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track

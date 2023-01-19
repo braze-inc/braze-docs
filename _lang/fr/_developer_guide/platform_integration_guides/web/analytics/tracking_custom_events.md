@@ -12,13 +12,13 @@ description: "Cet article explique comment suivre les événements personnalisé
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][0]. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][0]. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ```javascript
 braze.logCustomEvent("YOUR-EVENT-NAME");
 ```
 
-Reportez-vous à la documentation [`logCustomEvent`][1] pour plus d’informations.
+Reportez-vous à la [`logCustomEvent`][1] documentation pour plus d’informations.
 
 ## Ajouter des propriétés {#properties-events}
 
@@ -39,7 +39,7 @@ braze.logCustomEvent("YOUR-EVENT-NAME", {
 });
 ```
 
-Reportez-vous à la [`logCustomEvent()`documentation][1] pour plus d’informations.
+Reportez-vous à la [`logCustomEvent()`documentation ][1] pour plus d’informations.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent

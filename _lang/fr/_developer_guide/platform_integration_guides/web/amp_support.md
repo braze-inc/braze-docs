@@ -33,12 +33,12 @@ Vous devez ajouter un widget qui permet aux utilisateurs de s’abonner et de se
 ```js
 <!-- A subscription widget -->
 <amp-web-push-widget visibility="unsubscribed" layout="fixed" width="250" height="80">
-  <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
+  <button on="tap:amp-web-push.subscribe">S’abonner aux notifications</button>
 </amp-web-push-widget>
 
 <!-- An unsubscription widget -->
 <amp-web-push-widget visibility="subscribed" layout="fixed" width="250" height="80">
-  <button on="tap:amp-web-push.unsubscribe">Unsubscribe from Notifications</button>
+  <button on="tap:amp-web-push.unsubscribe">Se désabonner des notifications</button>
 </amp-web-push-widget>
 ```
 
@@ -50,9 +50,7 @@ Le composant de notification push pour le Web en AMP fonctionne en créant une f
 
 Créez un fichier `service-worker.js` avec le contenu suivant et placez-le dans le répertoire racine de votre site Internet :
 
-```js
-self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Étape 5 : Configurer l’élément HTML des notifications push pour le Web en AMP
 

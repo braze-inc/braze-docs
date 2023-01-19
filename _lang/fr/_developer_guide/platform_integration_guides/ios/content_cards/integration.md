@@ -22,8 +22,8 @@ Pour accéder au modèle de données des cartes de contenu, abonnez-vous aux év
 {% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-// Subscribe to Content Cards updates
-// Note: you should remove the observer where appropriate
+// Abonner aux mises à jour des cartes de contenu
+// Remarque : vous devez supprimer l’observateur, le cas échéant
 [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:@selector(contentCardsUpdated:)
                                              name:ABKContentCardsProcessedNotification
@@ -31,30 +31,30 @@ Pour accéder au modèle de données des cartes de contenu, abonnez-vous aux év
 ```
 
 ```objc
-// Called when Content Cards are refreshed (via `requestContentCardsRefresh`)
+// Appelé lors de la réactualisation des Cartes de contenu (via `requestContentCardsRefresh`)
 - (void)contentCardsUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
-    // get the cards using [[Appboy sharedInstance].contentCardsController getContentCards];
+    // obtenir des cartes à l’aide [[Appboy sharedInstance].contentCardsController getContentCards];
   }
 }
 ```
 {% endtab %}
 {% tab swift %}
 ```swift
-// Subscribe to content card updates
-// Note: you should remove the observer where appropriate
+// Abonne aux mises à jour des cartes de contenu
+// Remarque : vous devez supprimer l’observateur, le cas échéant
 NotificationCenter.default.addObserver(self, selector:
   #selector(contentCardsUpdated),
   name:NSNotification.Name.ABKContentCardsProcessed, object: nil)
 ```
 
 ```swift
-// Called when the Content Cards are refreshed (via `requestContentCardsRefresh`)
+// Appelé lors de la réactualisation des Cartes de contenu (via `requestContentCardsRefresh`)
 @objc private func contentCardsUpdated(_ notification: Notification) {
   if let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
     if (updateIsSuccessful) {
-      // get the cards using Appboy.sharedInstance()?.contentCardsController.contentCards
+      // obtenir des cartes à l ‘aide Appboy.sharedInstance()?.contentCardsController.contentCards
     }
   }
 }
@@ -100,7 +100,7 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 | `imageAspectRatio` | Cette propriété est le rapport d’aspect de l’image de la carte.|
 | `title` | Le texte du titre pour la carte.|
 | `cardDescription` | Le texte du corps pour la carte.|
-| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action/la direction du clic sur la carte.|
+| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action/la direction du clic sur la carte.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte de contenu classique - ABKClassicContentCard
@@ -110,7 +110,7 @@ Braze propose trois types de cartes de contenu : bannière, image légendée et
 | `image` | (Facultatif) Cette propriété est l’URL de l’image de la carte.|
 | `title` | Le texte du titre pour la carte. |
 | `cardDescription` | Le texte du corps pour la carte. |
-| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | Le texte du lien pour l’URL de propriété, par exemple @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Méthodes de carte
@@ -162,7 +162,7 @@ Pour personnaliser le titre de la barre de navigation, définissez la propriét�
 
 ### Contexte modal
 
-Ce modal est utilisé pour présenter le contrôleur de visualisation dans une vue modale, avec une barre de navigation sur le dessus et un **Done** (Terminé) sur le côté de la barre.
+Ce modal est utilisé pour présenter le contrôleur de visualisation dans une vue modale, avec une barre de navigation sur le dessus et un **Terminé** sur le côté de la barre.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
