@@ -14,7 +14,7 @@ guide_featured_list:
 - name: About Feature Flags
   link: /docs/developer_guide/platform_wide/feature_flags/about/
   fa_icon: fas fa-check
-- name: Create a Content Card
+- name: Create a Feature Flag
   link: /docs/developer_guide/platform_wide/feature_flags/create/
   fa_icon: fas fa-columns
 - name: Example Use Cases
