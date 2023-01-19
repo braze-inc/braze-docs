@@ -33,7 +33,7 @@ With Braze Feature Flags we can now gradually roll out the feature and mitigate 
 
 In the Braze dashboard, all we have to do is create a new feature flag called `enable_live_chat`.
 
-{screenshot}
+![Feature flag called "enable_live_chat"][7]
 
 In our app code we will only show the Live Chat button when the Braze feature flag is enabled:
 
@@ -162,3 +162,4 @@ Once we determine our winner, we can stop this Canvas, and increase the Rollout 
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
 [6]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-experiment-step.png %}
+[7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
