@@ -78,7 +78,7 @@ Custom attributes are set via an `actionType` set to `customAttribute`. The Braz
 {% tab SWIFT %}
 ```swift
 let parameters: [String: Any] = ["customAttributeKey": "favorite song",
-                                "customAttributeValue": "Private Eyes"]
+                                 "customAttributeValue": "Private Eyes"]
 FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 ```
 {% endtab %}
