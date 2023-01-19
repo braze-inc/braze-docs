@@ -14,7 +14,7 @@ channel:
 
 # About feature flags
 
-> This reference article covers the basics of feature flags and why you would use them in Braze. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags]({{site.baseurl}}/creating_feature_flags).
+> This reference article covers the basics of feature flags and why you would use them in Braze. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
 
 Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence. 
 
@@ -43,9 +43,6 @@ Use feature flags to modify your app's functionality on-the-fly. This can be par
 
 For example, you can change homepage links or text on the fly using a feature flag's property values. You can even dynamically personalize this content using Braze profile attributes.
 
-<!-- TODO -->
-<!-- [David: Can you provide some examples of how they would do this?] -->
-
 ### Message coordination
 {% alert important %} 
 This functionality is not yet supported in beta.
@@ -66,5 +63,6 @@ To learn about more examples, see the [feature flag use cases][2] article.
 
 <!-- For example, imagine that your ecommerce team has a new checkout page design that they believe will improve purchase conversion rates. When you release this feature, you can display the new page to 50% of your users for one month. If it performs better than the old design, you can increase the rollout traffic to 100%. If it performs poorly, you can turn it off completely and revisit the designs. In either case, you have avoided a poor experience for 50% of your users. -->
 
-[1]: {% image_buster /assets/img/feature-flags/feature-flags-rollout.gif %} 
+[1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
+[3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/

@@ -104,6 +104,10 @@ As a result, the next time someone loads the app they will see the new Thanksgiv
 
 ## Messaging Coordination
 
+{% alert important %} 
+This functionality is not yet supported in beta.
+{% endalert %}
+
 When marketing and product teams don't coordinate product launches it can be difficult to coordinate the timing of promotional messaging with a feature's rollout.
 
 Feature Flags in Canvas let you apply the same sophisticated journey logic when it comes to enabling a feature for a select audience, and controlling any related messaging to those same users.
@@ -120,6 +124,10 @@ Now, users in this segment will start to see the new loyalty program, and once i
 
 
 ## Experimentation
+
+{% alert important %} 
+This functionality is not yet supported in beta.
+{% endalert %}
 
 A/B testing is a powerful strategy used to measure the impact to a metric when introducing a change.
 
@@ -148,9 +156,9 @@ Now, 50% of users will see the old experience, while the other 50% see the new e
 
 Once we determine our winner, we can stop this Canvas, and increase the Rollout Percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
-[1]: {% image_buster /assets/img/feature-flags/feature-flags-use-case-navigation-link-1.png %}
-[2]: {% image_buster /assets/img/feature-flags/feature-flags-use-case-navigation-link-2.png %}
-[3]: {% image_buster /assets/img/feature-flags/feature-flags-use-case-loyalty.png %}
-[4]: {% image_buster /assets/img/feature-flags/feature-flags-use-case-canvas-flow.png %}
+[1]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
+[2]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
+[3]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
+[4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {% image_buster /assets/img/feature-flags/feature-flags-use-case-canvas-experiment-step.png %}
+[6]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-experiment-step.png %}

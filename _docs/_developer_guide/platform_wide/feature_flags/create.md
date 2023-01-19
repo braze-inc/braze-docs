@@ -331,8 +331,8 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% endtabs %}
 
 
-[1]: {% image_buster /assets/img/feature-flags/feature-flags-list.png %} 
-[2]: {% image_buster /assets/img/feature-flags/feature-flags-create.png %}
-[3]: {% image_buster /assets/img/feature-flags/feature-flags-targeting.png %}
-[4]: {% image_buster /assets/img/feature-flags/feature-flags-rollout.png %}
+[1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
+[2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}
+[3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
+[4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
 [5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
