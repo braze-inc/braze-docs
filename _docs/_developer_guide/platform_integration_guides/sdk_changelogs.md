@@ -1,5 +1,5 @@
 ---
-page_order: 20
+page_order: 50
 nav_title: SDK Changelogs
 layout: dev_guide
 guide_top_header: "Braze SDK Changelogs"
@@ -11,11 +11,8 @@ guide_featured_list:
   - name: Android SDK
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
     image: /assets/img/android.png
-  - name: iOS SDK (Swift)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
-    fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
+  - name: Swift
+    link: /docs/developer_guide/platform_integration_guides/swift/changelog/
     fa_icon: fab fa-apple
   - name: Web SDK
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
@@ -29,6 +26,9 @@ guide_featured_list:
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/changelog/
     image: /assets/img/reactnative_icon.png
+  - name: Roku SDK
+    link: /docs/developer_guide/platform_integration_guides/roku/changelog/
+    image: /assets/img/roku.png
   - name: Unity SDK
     link: /docs/developer_guide/platform_integration_guides/unity/changelog/
     image: /assets/img/unity.png
@@ -38,20 +38,17 @@ guide_featured_list:
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/changelog/
     image: /assets/img/xamarin.png  
-  - name: Roku SDK
-    link: /docs/developer_guide/platform_integration_guides/roku/changelog/
-    image: /assets/img/roku.png
+  - name: iOS (legacy)
+    link: /docs/developer_guide/platform_integration_guides/ios/changelog/
+    fa_icon: fab fa-apple
 
 guide_menu_title: "Changelogs on Github"
 guide_menu_list:
   - name: Android SDK
     link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
     image: /assets/img/android.png
-  - name: iOS SDK (Swift)
+  - name: Swift
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
-    fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
-    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
   - name: Web SDK
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
@@ -65,6 +62,9 @@ guide_menu_list:
   - name: React Native
     link: https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md
     image: /assets/img/reactnative_icon.png
+  - name: Roku SDK
+    link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
+    image: /assets/img/roku.png
   - name: Unity SDK
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
     image: /assets/img/unity.png
@@ -74,7 +74,7 @@ guide_menu_list:
   - name: Xamarin
     link: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md
     image: /assets/img/xamarin.png  
-  - name: Roku SDK
-    link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
-    image: /assets/img/roku.png
+  - name: iOS (legacy)
+    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
+    fa_icon: fab fa-apple
 ---

@@ -16,6 +16,9 @@ div.alert {
   &.alert-checkpoint{
     background-image: url(#{$base_url}/assets/img/message-stop.png) !important;
   }
+  &.alert-Important{
+    background-image: url(#{$base_url}/assets/img/message-stop.png) !important;
+  }
   &.alert-important{
     background-image: url(#{$base_url}/assets/img/message-important.png) !important;
   }
