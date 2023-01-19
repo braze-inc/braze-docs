@@ -75,10 +75,10 @@ The source code for the Android device mode integration is maintained by Braze a
 <br>
 The Braze SDK you use will depend on which Segment SDK you use:
 
-| Segment SDK | Braze SDK |
-| ----------- | --------- |
-| [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/Appboy/appboy-segment-android) |
+| | Segment SDK | Braze SDK |
+| - | ----------- | --------- |
+| Preferred | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
+| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/Appboy/appboy-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -101,10 +101,10 @@ The source code for the iOS device mode integration is maintained by Braze and i
 <br>
 The Braze SDK you use will depend on which Segment SDK you use:
 
-| Segment SDK | Braze SDK |
-| ----------- | --------- |
-| [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/analytics-swift-braze) |
-| [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
+| | Segment SDK | Braze SDK |
+| - | ----------- | --------- |
+| Preferred | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/analytics-swift-braze) |
+| Legacy | [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endalert %}
 
