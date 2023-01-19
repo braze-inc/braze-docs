@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment définir les ID utilis
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
-Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après s’être connecté) afin de définir l’ID utilisateur :
+Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (généralement après la connexion) pour définir l’ID utilisateur :
 
 ```csharp
 Appboy.SharedInstance.ChangeUser(YOUR_USER_ID_STRING);

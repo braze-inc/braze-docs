@@ -16,7 +16,7 @@ Cet article décrit les différentes propriétés capturées lors de l’utilisa
 
 ## Propriétés du dispositif
 
-Par défaut, Braze collecte les [propriétés suivantes au niveau de l’appareil][1] pour permettre la personnalisation des messages en fonction de l’appareil, de la langue et du fuseau horaire :
+Par défaut, Braze collecte les [propriétés suivantes au niveau de l’appareil ][1] pour permettre la personnalisation des messages en fonction de l’appareil, de la langue et du fuseau horaire :
 
 * `AD_TRACKING_ENABLED`
 * `ANDROID_VERSION`

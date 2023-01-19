@@ -42,7 +42,7 @@ function showCardsByFeedType(feed_type) {
 Ensuite, vous pouvez configurer un basculement pour votre flux personnalisé :
 
 ```javascript
-// show the "Transactional" feed when this button is clicked
+// afficher le fil « Transactionnel » lorsque l’on clique sur ce bouton
 document.getElementById("show-transactional-feed").onclick = function() {
   showCardsByFeedType("Transactional"); 
 };

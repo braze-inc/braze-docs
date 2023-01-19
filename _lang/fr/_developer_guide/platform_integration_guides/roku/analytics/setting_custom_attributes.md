@@ -28,8 +28,7 @@ Les attributs utilisateur seront assignés à l’utilisateur actuellement actif
 - `HomeCity`
 - `PhoneNumber`
 
-**Exemple d’implémentation**<br>
-C’est ce qui définit ce à quoi le prénom ressemblera dans le code :
+**Exemple d’implémentation**<br>C’est ce qui définit ce à quoi le prénom ressemblera dans le code :
 
 ```javascript
 m.Braze.setFirstName("User's First Name")
@@ -98,7 +97,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Définir un attribut personnalisé via l’API REST
 
-Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API utilisateur][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API ][4] utilisateur pour plus de détails.
 
 ### Limites de valeur d’attribut personnalisé
 
@@ -117,7 +116,7 @@ Vous pouvez définir les statuts d’abonnement aux e-mails suivants pour vos ut
 
 >  Ces types tombent dans la catégorie `BrazeConstants().SUBSCRIPTION_STATES`.
 
-La méthode de définition du statut d’abonnement aux e-mails est `setEmailSubscriptionState()`. Les utilisateurs seront définis sur `Subscribed` automatiquement dès réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur. Consultez [Gérer les abonnements utilisateur][10] pour plus de détails.
+La méthode de définition du statut d’abonnement aux e-mails est `setEmailSubscriptionState()`. Les utilisateurs seront définis sur `Subscribed` automatiquement dès réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur. Consultez [Gérer les abonnements utilisateur pour plus de détails][10].
 
 Exemple d’utilisation :
 ```javascript

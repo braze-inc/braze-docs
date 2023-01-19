@@ -25,7 +25,7 @@ Pour configurer votre auditeur d’objet de jeu à l’exécution sur l’une ou
 
 ## Cartes d’analyse
 
-Les messages `string` entrants reçus dans votre rappel d’objet de jeu peuvent être analysés dans notre objet [Feed][11] (Fil) pré-fourni, qui contient une liste d’objets [Card][12] (Carte) pour plus de commodité.
+Les messages `string` entrants reçus dans votre fonction de rappel d’objet de jeu peuvent être analysés dans notre objet [Feed][11] (Fil) pré-fourni, qui contient une liste d’objets [Card (carte)][12] plus pratique.
 
 Pour plus de détails, consultez l’exemple suivant :
 
@@ -34,9 +34,9 @@ Pour plus de détails, consultez l’exemple suivant :
 ```csharp
 void FeedReceivedCallback(string message) {
   Feed feed = new Feed(message);
-  Debug.Log("Feed received: " + feed);
+  Debug.Log("Fils reçus : " + feed);
   foreach (Card card in feed.Cards) {
-    Debug.Log("Card: " + card);
+    Debug.Log("Carte : " + card);
   }
 }
 ```
@@ -46,7 +46,7 @@ void FeedReceivedCallback(string message) {
 Pour actualiser le fil d’actualité à partir de Braze, utilisez l’une des méthodes suivantes :
 
 ```csharp
-// results in a network request to Braze
+// entraîne une requête de réseau à Braze
 AppboyBinding.RequestFeedRefresh()
 
 AppboyBinding.RequestFeedRefreshFromCache()
@@ -58,7 +58,7 @@ Les deux méthodes informeront votre auditeur de fil d’actualités et transmet
 
 Les clics et les impressions doivent être enregistrés manuellement pour les cartes qui ne sont pas affichées directement par Braze.
 
-Utilisez `LogClick()` et `LogImpression()` dans [Card][12] (Carte) pour enregistrer des clics et des impressions pour des cartes spécifiques.
+Utilisez `LogClick()` et `LogImpression()` dans [Card (Carte)][12] pour enregistrer des clics et des impressions pour des cartes spécifiques.
 
 Pour consigner que l’utilisateur a consulté le flux dans son ensemble, appelez `AppboyBinding.LogFeedDisplayed()`.
 

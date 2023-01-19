@@ -14,11 +14,11 @@ description: "Cet article de référence couvre l’intégration de notification
 
 Ces instructions sont destinées à intégrer les notifications push à [Firebase Cloud Messaging (FCM)][9].
 
-Voir notre documentation [ADM Unity][64] pour les instructions d’intégration ADM.
+Voir notre documentation [ADM Unity ][64] pour les instructions d’intégration ADM.
 
 ## Étape 1 : Activer Firebase
 
-Pour commencer, suivez la [Documentation de configuration de Firebase Unity][11].
+Pour commencer, suivez la [Documentation de configuration de Firebase Unity.][11].
 
 {% alert note %}
 L’intégration du SDK Firebase Unity peut entraîner le remplacement de votre `AndroidManifest.xml`. Si cela se produit, assurez-vous de revenir à l’original.
@@ -26,10 +26,9 @@ L’intégration du SDK Firebase Unity peut entraîner le remplacement de votre 
 
 ## Étape 2 : Définir vos informations d’identification Firebase
 
-Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze : Pour ce faire, connectez-vous à la [Console Firebase Developers][58] et sélectionnez votre projet Firebase. Ensuite, sélectionnez **Cloud Messaging** dans **Settings** (Paramètres) et copiez la clé serveur et l’ID de l’expéditeur :<br>
-![][59]
+Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze : Pour ce faire, connectez-vous à la [Console Firebase Developers ][58] et sélectionnez votre projet Firebase. Ensuite, sélectionnez **Cloud Messaging** dans **Paramètres** et copiez la clé serveur et l’ID de l’expéditeur :<br>![][59]
 
-Dans Braze, sélectionnez votre application Android sur la page **App Settings** (Configuration de l’application) dans **Manage Settings** (Gérer les paramètres). Saisissez ensuite votre clé de serveur Firebase dans le champ **Firebase Cloud Messaging Server Key** (Clé du serveur de messagerie cloud Firebase) et ID d’expéditeur Firebase dans le champ ID **Firebase Cloud Messaging Sender** (Expéditeur de messagerie cloud Firebase).
+Dans Braze, sélectionnez votre application Android sur la page **Configuration de l’application** dans **Gérer les paramètres**. Saisissez ensuite votre clé de serveur Firebase dans le champ **Clé du serveur de messagerie cloud Firebase** et ID d’expéditeur Firebase dans le champ ID **Expéditeur de messagerie cloud Firebase**.
 
 ![][15]
 
@@ -37,34 +36,30 @@ Dans Braze, sélectionnez votre application Android sur la page **App Settings**
 
 Le SDK Braze peut gérer automatiquement l’enregistrement des notifications push avec les serveurs Firebase Cloud Messaging pour que les périphériques reçoivent des notifications push.
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automate Unity Android Integration » (Automatiser l’intégration d’Android Unity), « Push Notification Firebase Push » (Notification Push Firebase Push), « Push Configuration Handle Push Deeplinks Automatically » (Configuration Push gère les liens profonds Push automatiquement), « Push Configuration Push Notification HTML Rendering Enabled » (Configuration Push Rendu HTML des notification push activé) et « Set Push Deleted/Opened/Received Listeners » (Définir les auditeurs Push Supprimé/Ouvert/Reçu) sont définis. Les champs « Firebase Sender ID » (ID expéditeur Firebase), « Small/Grand Icon » (Possibilité de retrait de petite/grande icône), « Default Notification Accent Color » (Couleur de la notification par défaut) sont également fournis.][62]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automatiser l’intégration d’Android Unity », « Notification Push Firebase Push », « Configuration Push gère les liens profonds Push automatiquement », « Configuration Push Rendu HTML des notification push activé » et « Définir les auditeurs Push Supprimé/Ouvert/Reçu » sont définis. Les champs « ID expéditeur Firebase », « Possibilité de retrait de petite/grande icône », « Couleur de la notification par défaut » sont également fournis.][62]
 
-- **Automatic Firebase Cloud Messaging Registration Enabled**<br>
- (Enregistrement automatique de la messagerie cloud Firebase activé) Donne l’ordre au SDK Braze de récupérer et d’envoyer un jeton push FCM ^pour un périphérique. 
-- **ID expéditeur de messagerie cloud Firebase**<br>
- L’ID expéditeur de votre console Firebase.
-- **Gestion des liens profonds Push automatique**<br>
- Si le SDK doit traiter des liens profonds ou ouvrir l’application lorsque des notifications push sont cliquées.
-- **Petite icône de notification Drawable**<br>
- Le drawable doit être affiché comme petite icône chaque fois qu’une notification push est reçue. La notification utilisera l’icône de l’application comme petite icône si aucune icône n’est fournie.
+- **Enregistrement automatique de Firebase Cloud Messaging activé**<br> Donne l’ordre au SDK Braze de récupérer et d’envoyer automatiquement un jeton de notification push FCM pour un appareil. 
+- **ID de l’expéditeur de Firebase Cloud Messaging**<br> L’identifiant de l’expéditeur provenant de votre console Firebase.
+- **Traite les liens ciblés des notifications push automatiquement**<br> Si le SDK doit traiter des liens profonds ou ouvrir l’application lorsque des notifications push sont cliquées.
+- **Petite icône de notification Drawable**<br>Le drawable doit être affiché comme petite icône chaque fois qu’une notification push est reçue. La notification utilisera l’icône de l’application comme petite icône si aucune icône n’est fournie.
 
 ## Étape 4 : Définir les auditeurs de notifications push
 
 Si vous souhaitez transmettre des charges utiles de notification push à Unity ou prendre des mesures supplémentaires lorsqu’un utilisateur reçoit une notification push, Braze offre la possibilité de définir des auditeurs de notification push.
 
-Dans Braze, sélectionnez votre application Android sur la page **App Settings** (Configuration de l’application) dans **Manage Settings** (Gérer les paramètres). Saisissez ensuite votre clé de serveur Firebase dans le champ **Paramètres de notification Push** et ID d’expéditeur Firebase dans le champ ID **Paramètres de notification Push**.
+Dans Braze, sélectionnez votre application Android sur la page **Configuration de l’application** dans **Gérer les paramètres**. Saisissez ensuite votre clé de serveur Firebase dans le champ **Paramètres de notification Push** et ID d’expéditeur Firebase dans le champ ID **Paramètres de notification Push**.
 
 #### L’auditeur a reçu la notification push
 
-L’auditeur de notification push reçu est déclenché lorsqu’un utilisateur reçoit une notification push. Pour envoyer la charge utile de notification push à Unity, définissez le nom de votre objet de jeu et appuyez sur la méthode de rappel de l’auditeur reçu sous **Set Push Received Listener** (Définir l’auditeur reçu de notification push).
+L’auditeur de notification push reçu est déclenché lorsqu’un utilisateur reçoit une notification push. Pour envoyer la charge utile de notification push à Unity, définissez le nom de votre objet de jeu et appuyez sur la méthode de rappel de l’auditeur reçu sous **Définir l’auditeur reçu de notification push**.
 
 #### Auditeur ouvert de notification push
 
-L’auditeur ouvert est déclenché lorsqu’un utilisateur lance l’application en cliquant sur une notification push. Pour envoyer la charge utile de notification push à Unity, définissez le nom de votre objet de jeu et appuyez sur la méthode de rappel de l’écoute ouverte dans **Set Push Opened Listener** (Définir l’auditeur ouvert de notifications push) :
+L’auditeur ouvert est déclenché lorsqu’un utilisateur lance l’application en cliquant sur une notification push. Pour envoyer la charge utile de notification push à Unity, définissez le nom de votre objet de jeu et appuyez sur la méthode de rappel de l’écoute ouverte dans **Définir l’auditeur ouvert de notifications push** :
 
 #### Auditeur push supprimé (Android uniquement)
 
-L’auditeur push supprimé est déclenché lorsqu’un utilisateur balaye ou rejette une notification push. Pour envoyer la charge utile des notifications push à Unity, définissez le nom de votre objet de jeu et la méthode de rappel de l’auditeur supprimé des notifications push dans **Set Push Deleted Listener** (Définir l’auditeur supprimé des notifications push).
+L’auditeur push supprimé est déclenché lorsqu’un utilisateur balaye ou rejette une notification push. Pour envoyer la charge utile des notifications push à Unity, définissez le nom de votre objet de jeu et la méthode de rappel de l’auditeur supprimé des notifications push dans **Définir l’auditeur supprimé des notifications push**.
 
 #### Exemple d’implémentation d’auditeur de notification push
 
@@ -108,7 +103,7 @@ public class MainMenu : MonoBehaviour {
 
 ### Exemple d’implémentation
 
-Le projet d’échantillon dans le [Référentiel de développement du SDK Braze Unity][13] contient une application parfaitement fonctionnelle incluant FCM.
+Le projet d’échantillon dans le [Référentiel de développement du SDK Braze Unity ][13] contient une application parfaitement fonctionnelle incluant FCM.
 
 ## Ressources liens profonds vers in-app
 

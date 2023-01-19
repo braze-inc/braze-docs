@@ -36,7 +36,7 @@ Pour désactiver le suivi automatique de la position, définissez `com_braze_ena
 <bool name="com_braze_enable_location_collection">false</bool>
 ```
 
-Vous pouvez ensuite enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme ceci :
+Vous pouvez ensuite enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme suit :
 
 {% tabs %}
 {% tab JAVA %}

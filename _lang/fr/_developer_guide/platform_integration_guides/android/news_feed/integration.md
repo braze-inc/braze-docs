@@ -11,9 +11,9 @@ channel:
   
 ---
 
-# Intégration du fil d'actualité
+# Intégration du fil d’actualité
 
-Dans Android, le fil d'actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la documentation Google concernant les [fragments][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
+Dans Android, le fil d'actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la [documentation Google][3] concernant les fragments pour plus d’informations sur l’ajout d’un fragment à une activité.
 
 La classe `AppboyFeedFragment` se rafraîchira automatiquement, affichera le contenu du fil d'actualité et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le fil d'actualité d’un utilisateur sont définies sur le tableau de bord de Braze.
 
@@ -23,7 +23,7 @@ Braze possède cinq types de cartes uniques : image de bannière, image sous-ti
 
 ### Propriétés du modèle de carte de base
 
-Le modèle de [carte de base][29] fournit le comportement fondamental pour toutes les cartes.  
+Le modèle de [carte de base ][29]  fournit le comportement fondamental pour toutes les cartes.  
 
 |Propriété|Description|
 |---|---|
@@ -50,7 +50,7 @@ Les [cartes image de bannière][30] sont des images à taille réelle cliquables
 
 ### Propriétés de carte image sous-titrée
 
-Les [cartes images sous-titrées][31] sont des images à taille réelle cliquables accompagnées par un texte descriptif.
+Les [cartes images sous-titrées ][31]sont des images à taille réelle cliquables accompagnées par un texte descriptif.
 
 |Propriété|Description|
 |---|---|
@@ -103,26 +103,26 @@ Si vous souhaitez afficher le fil de manière entièrement personnalisée, il es
 Tout d’abord, déclarez une variable privée dans votre classe de fil personnalisée pour contenir votre abonné :
 
 ```java
-// subscriber variable
+// variable des utilisateurs abonnés
 private IEventSubscriber<FeedUpdatedEvent> mFeedUpdatedSubscriber;
 ```
 
 Ensuite, ajoutez le code suivant pour vous abonner aux mises à jour de fil d'actualité de Braze, généralement à l’intérieur de vos activités de fil personnalisé `Activity.onCreate()` :
 
 ```java
-// Remove the old subscription first
+//En premier lieu, supprimez l’ancien abonnement
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
   @Override
   public void trigger(final FeedUpdatedEvent event) {
-    // This list of Card objects included in the FeedUpdatedEvent should be used to populate your News Feed views.
+    // Cette liste d’objets de Carte incluse dans le FeedUpdateEvent doit servir à renseigner vos vues de Fil d’actualité.
     List<Card> cards = event.getFeedCards();
-    // your logic here
+    // votre logique ici
   }
 };
 Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 
-// Request a refresh of feed data
+// Demander un réactualisation des données du fil
 Braze.getInstance(context).requestFeedRefresh();
 ```
 
@@ -136,15 +136,15 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 Lorsque vous utilisez des vues personnalisées, vous devez enregistrer manuellement l’analytique, car elle ne peut être gérée automatiquement que lorsque vous utilisez des vues Braze.
 
-Pour enregistrer un affichage du fil, appelez [`Appboy.logFeedDisplayed()`][6].
+Pour enregistrer un affichage du fil, appelez [`Braze.logFeedDisplayed()`][6].
 
-Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClick()`][7] et [`Card.logImpression()`][8] respectivement.
+Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClick()`][7] et  [`Card.logImpression()`][8] respectivement.
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
+[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-feed-displayed.html
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
 [7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
 [8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types

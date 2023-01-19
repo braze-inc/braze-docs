@@ -15,13 +15,13 @@ channel:
 
 ## Types de déclencheurs
 
-Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` et `Push Click`. En outre, les déclencheurs `Specific Purchase` et `Custom Event` peuvent contenir des filtres de propriétés robustes.
+Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `N'importe quel achat`, `Achat spécifique`, `Démarrage de session`, `Événement personnalisé` et `Clic de notification push`. En outre, les déclencheurs `Achat spécifique` et `Événement personnalisé` peuvent contenir des filtres de propriétés robustes.
 
 {% alert note %}
-Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK et non par le biais des API REST. Assurez-vous de savoir comment [enregistrer des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/).
+Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK de Braze. Les messages in-app peuvent être déclenchés via l’API ou les événements API (comme les événements d’achat). Assurez-vous de savoir comment [enregistrer des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/).
 {% endalert %}
 
-## Sémantiques de livraison
+## Sémantique de livraison
 
 Tous les messages in-app qu’un utilisateur peut recevoir sont livrés à l’appareil de l’utilisateur au [démarrage de session][84]. Dès la livraison, le SDK capture à l’avance les actifs à mettre immédiatement à disponibilité au moment du déclenchement, réduisant ainsi la latence d’affichage.
 
@@ -43,21 +43,52 @@ Pour remplacer cette valeur, définissez `com_braze_trigger_action_minimum_time_
 
 Par défaut, les messages in-app sont déclenchés par des événements personnalisés enregistrés par le SDK. Si vous souhaitez déclencher des messages in-app par des événements envoyés par le serveur, vous pouvez également y parvenir.
 
-Pour activer cette fonction, une notification push silencieuse est envoyée à l’appareil ce qui permet à un récepteur de notification push personnalisé d’enregistrer un événement basé sur le SDK. Cet événement SDK déclenchera ensuite le message in-app pour l’utilisateur.
+Pour activer cette fonction, une notification push silencieuse est envoyée à l’appareil ce qui permet à une fonction de rappel de notification push personnalisé d’enregistrer un événement basé sur le SDK. Cet événement SDK déclenchera ensuite le message in-app pour l’utilisateur.
 
-### Étape 1 : Enregistrer un BroadcastReceiver personnalisé pour journaliser un événement personnalisé
+### Étape 1 : Créer une fonction de rappel de notification push pour recevoir une notification push silencieuse
 
-Enregistrez votre `BroadcastReceiver` personnalisé pour écouter une notification push silencieuse spécifique dans votre `AndroidManifest.xml`. Pour plus d’informations sur l’enregistrement d’un `BroadcastReceiver` personnalisé, consultez la [documentation de Braze sur les notifications push][78].
+Enregistrer votre fonction de rappel de notification push personnalisée pour écouter une notification push silencieuse spécifique. Pour des précisions, consultez la [Documentation des notification push de Braze ][78].
 
-### Étape 2 : Créer votre BroadcastReceiver
+Deux événements seront enregistrés pour que le message in-app soit livré, un par le serveur et l’autre à partir de votre fonction de rappel de notification push personnalisée. Pour garantir que le même événement ne soit pas dupliqué, l’événement enregistré depuis votre fonction de rappel de votre notification push doit suivre une convention de dénomination générique, par exemple, « événement déclencheur de message in-app » et non le même nom que l’événement envoyé par le serveur. Si cela n’est pas fait, la segmentation et les données utilisateur peuvent être affectées par des événements enregistrés en double pour une seule action utilisateur.
 
-Votre récepteur traitera la diffusion de l’intention par la notification push silencieuse et enregistrera un événement SDK. Elle va sous-classer `BroadcastReceiver` et écraser `onReceive()`. Consultez [`EventBroadcastReceiver.java`][72] pour obtenir un exemple détaillé.
+{% tabs %}
+{% tab JAVA %}
 
-Deux événements seront enregistrés pour que le message in-app soit livré, un par le serveur et l’autre à partir de votre `BroadcastReceiver` personnalisé. Pour garantir que le même événement ne soit pas dupliqué, l’événement enregistré depuis votre `BroadcastReceiver` doit suivre une convention de dénomination générique, par exemple, « événement déclencheur de message in-app » et non le même nom que l’événement envoyé par le serveur. Si cela n’est pas fait, la segmentation et les données utilisateur peuvent être affectées par des événements enregistrés en double pour une seule action utilisateur.
+```java
+Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
+  final Bundle kvps = event.getNotificationPayload().getBrazeExtras();
+  if (kvps.containsKey("IS_SERVER_EVENT")) {
+    BrazeProperties eventProperties = new BrazeProperties();
 
-Pour plus de détails sur le traitement personnalisé de reçus, d’ouvertures et de paires clé-valeur des notifications push, consultez la [documentation de Braze sur les notifications push][78].
+    // Le nom de la campagne est une chaîne de caractère supplémentaire que les clients peuvent inclure dans la notification push
+    String campaignName = kvps.getString("CAMPAIGN_NAME");
+    eventProperties.addProperty("campaign_name", campaignName);
+    Braze.getInstance(context).logCustomEvent("IAM Trigger", eventProperties);
+  }
+});
+```
 
-### Étape 3 : Créer une campagne de notification push
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event ->
+    val kvps = event.notificationPayload.brazeExtras
+    if (kvps.containsKey("IS_SERVER_EVENT")) {
+        val eventProperties = BrazeProperties()
+
+        // Le nom de la campagne est une chaîne de caractère supplémentaire que les clients peuvent inclure dans la notification push
+        val campaignName = kvps.getString("CAMPAIGN_NAME")
+        eventProperties.addProperty("campaign_name", campaignName)
+        Braze.getInstance(applicationContext).logCustomEvent("IAM Trigger", eventProperties)
+    }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Étape 2 : Créer une campagne de notification push
 
 Créez une [campagne de notification push silencieuse][73] déclenchée par l’événement envoyé par le serveur.
 
@@ -67,13 +98,13 @@ La campagne de notifications push doit inclure des suppléments de paires clé-v
 
 ![Deux ensembles de paires clé-valeur : IS_SERVER_EVENT défini sur « vrai » et CAMPAIGN_NAME défini sur « exemple de nom de campagne ».][76]{: style="max-width:70%;" }
 
-Le [`EventBroadcastReceiver.java`][72] reconnaît les paires clé-valeur et enregistre l’événement personnalisé SDK approprié.
+Le code exemple de fonction de rappel de notification push reconnaît les paires clé-valeur et enregistre l’événement personnalisé SDK approprié.
 
-Si vous souhaitez inclure les propriétés de l’événement à joindre à votre événement « déclencheur de message in-app », vous pouvez y parvenir en les transmettant dans les paires clé-valeur de la charge utile de la notification push. Dans cet exemple, le nom de campagne du message in-app suivant a été inclus. Votre `BroadcastReceiver` personnalisé peut ensuite transmettre la valeur comme paramètre de la propriété de l’événement lors de l’enregistrement de l’événement personnalisé.
+Si vous souhaitez inclure les propriétés de l’événement à joindre à votre événement « déclencheur de message in-app », vous pouvez y parvenir en les transmettant dans les paires clé-valeur de la charge utile de la notification push. Dans cet exemple, le nom de campagne du message in-app suivant a été inclus. Votre fonction de rappel de notification push personnalisée peut ensuite transmettre la valeur comme paramètre de la propriété de l’événement lors de l’enregistrement de l’événement personnalisé.
 
-### Étape 4 : Créer une campagne de messages in-app
+### Étape 3 : Créer une campagne de messages in-app
 
-Créez votre campagne de messages in-app depuis le tableau de bord de Braze. Cette campagne doit avoir une livraison par événement et être déclenchée par l’événement personnalisé enregistré à partir du [`EventBroadcastReceiver.java`][72] personnalisé.
+Créez votre campagne de messages in-app depuis le tableau de bord de Braze. Cette campagne doit avoir une livraison par événement et être déclenchée par l’événement personnalisé enregistré à partir de la fonction de rappel de notification push  personnalisée.
 
 Dans l’exemple suivant, le message in-app spécifique à déclencher a été configuré en envoyant la propriété de l’événement dans le cadre de la première notification push silencieuse.
 
@@ -89,18 +120,18 @@ Les messages in-app peuvent être créés dans l’application et affichés loca
 {% tab JAVA %}
 
 ```java
-// Initializes a new slideup type in-app message and specifies its message.
+// Initialise un nouveau type de slideup dans le message in-app et précise son message.
 InAppMessageSlideup inAppMessage = new InAppMessageSlideup();
-inAppMessage.setMessage("Welcome to Braze! This is a slideup in-app message.");
+inAppMessage.setMessage("Bienvenue chez Braze. Ceci est un message in-app slideup.");
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-// Initializes a new slideup type in-app message and specifies its message.
+// Initialise un nouveau type de slideup dans le message in-app et précise son message.
 val inAppMessage = InAppMessageSlideup()
-inAppMessage.message = "Welcome to Braze! This is a slideup in-app message."
+inAppMessage.message = "Bienvenue chez Braze. Ceci est un message in-app slideup."
 ```
 
 {% endtab %}
@@ -131,10 +162,9 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 {% endtab %}
 {% endtabs %}
 
-[72]: https://gist.github.com/robbiematthews/1d037e2c366e523b2dda5f2e053ea2a9
 [73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
 [77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
-[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
 [84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

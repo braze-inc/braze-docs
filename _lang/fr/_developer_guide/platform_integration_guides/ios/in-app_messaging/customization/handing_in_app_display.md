@@ -53,12 +53,9 @@ Vous pouvez personnaliser la gestion des messages in-app en implémentant cette 
 
 | `ABKInAppMessageDisplayChoice` | Comportement |
 | -------------------------- | -------- |
-| Objective-C: `ABKDisplayInAppMessageNow`<br>
-Swift : `displayInAppMessageNow` | Le message s’affichera immédiatement |
-| Objective-C: `ABKDisplayInAppMessageLater`<br>
-Swift : `displayInAppMessageLater` | Le message ne s’affichera pas et sera replacé sur le dessus de la pile. |
-| Objective-C: `ABKDiscardInAppMessage`<br>
-Swift : `discardInAppMessage`| Le message sera supprimé et ne sera pas affiché. |
+| Objective-C: `ABKDisplayInAppMessageNow`<br>Swift: `displayInAppMessageNow` | Le message s’affichera immédiatement |
+| Objective-C: `ABKDisplayInAppMessageLater`<br>Swift: `displayInAppMessageLater` | Le message ne s’affichera pas et sera replacé sur le dessus de la pile. |
+| Objective-C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage`| Le message sera supprimé et ne sera pas affiché. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Vous pouvez utiliser la méthode de délégation `beforeInAppMessageDisplayed:` pour ajouter une logique d’affichage des messages in-app, personnaliser les messages in-app avant que Braze ne les affiche, ou désactiver la logique d’affichage des messages in-app et l’interface utilisateur de Braze.
@@ -83,9 +80,9 @@ La journalisation des impressions et des clics de message in-app n’est pas aut
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Registers that a user has viewed an in-app message with the Braze server.
+// Enregistre qu’un utilisateur a visualisé un message in-app avec le serveur Braze.
 - (void) logInAppMessageImpression;
-// Registers that a user has clicked on an in-app message with the Braze server.
+// Enregistre qu’un utilisateur a cliqué sur un message in-app avec le serveur Braze.
 - (void) logInAppMessageClicked;
 ```
 
@@ -93,9 +90,9 @@ La journalisation des impressions et des clics de message in-app n’est pas aut
 {% tab swift %}
 
 ```swift
-// Registers that a user has viewed an in-app message with the Braze server.
+// Enregistre qu’un utilisateur a visualisé un message in-app avec le serveur Braze.
 func logInAppMessageImpression()
-// Registers that a user has clicked on an in-app message with the Braze server.
+// Enregistre qu’un utilisateur a cliqué sur un message in-app avec le serveur Braze.
 func logInAppMessageClicked()
 ```
 
@@ -108,7 +105,7 @@ De plus, vous devriez consigner les clics sur les boutons des sous-classes de`AB
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Logs button click analytics
+// Journalise l’analyse du clic sur le bouton
 - (void)logInAppMessageClickedWithButtonID:(NSInteger)buttonID;
 ```
 
@@ -116,7 +113,7 @@ De plus, vous devriez consigner les clics sur les boutons des sous-classes de`AB
 {% tab swift %}
 
 ```swift
-// Logs button click analytics
+// Journalise l’analyse du clic sur le bouton
 func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ```
 

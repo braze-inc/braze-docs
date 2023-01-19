@@ -4,30 +4,32 @@ article_title: Notifications push pour Flutter
 platform: Flutter
 page_order: 2
 description: "Cet article couvre les notifications push sur Flutter."
-channel: notification push
+channel: Notification push
 
 ---
 
-# Notifications push
+# Notifications push pour Flutter
 
-L’intégration des notifications push dans Flutter nécessite de configurer séparément chaque plateforme native. Suivez les guides d’intégration respectifs pour terminer l’installation.
+Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 
-## Étape 1 : Configuration native complète
+{% alert important %}
+Braze n’est pas compatible avec la couche wrapper Flutter pour envoyer des notifications push ou des liens profonds. Pour utiliser cette fonctionnalité avec votre application Flutter, vous devez configurer les notifications push séparément pour chaque plateforme native. 
+- **Android :** Suivez les [Instructions d’intégration Android.][1].
+- **iOS :** Suivez les [Instructions d’intégration iOS.][2].
+{% endalert %}
 
-- **Android :** Suivez les [Instructions d’intégration Android][1].
-- **iOS :** Suivez les [Instructions d’intégration iOS][2].
 
-## Étape 2 : Tester l’affichage des notifications push
+## Tester les notifications push
 
-Suivez ces étapes pour tester votre intégration de notification push.
+Lorsque vous avez configuré les notifications push dans la couche native, suivez les étapes ci-dessous pour tester votre intégration de notification push.
 
 {% alert important %}
 Vous ne pouvez pas tester le comportement des applications liées à la notification push sur un émulateur iOS car les émulateurs ne prennent pas en charge les jetons de périphérique requis pour envoyer et recevoir une notification push.
 {% endalert %}
 
 1. Configurez un utilisateur actif dans l’application Flutter. Pour ce faire, initialisez votre plug-in en appelant `braze.changeUser('your-user-id')`.
-2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plates-formes que vous souhaitez tester.
-3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer un test)**.
+2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
+3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajouter le même `user-id` comme utilisateur de test et cliquez sur **Envoyer le test**.
 4. Vous devriez recevoir rapidement la notification sur votre appareil. Vous devrez peut-être vérifier le centre de notification ou mettre à jour les paramètres si elle ne s’affiche pas.
 
 

@@ -84,7 +84,7 @@ Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitud
 {% endtab %}
 {% endtabs %}
 
-Consultez `ABKUser.h`][5] pour plus d’informations.
+Consultez [`ABKUser.h`][5] pour plus d’informations.
 
 [4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h

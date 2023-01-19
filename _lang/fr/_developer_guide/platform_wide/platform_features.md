@@ -40,7 +40,7 @@ Le tableau de bord de Braze affiche les graphiques mis à jour en temps réel su
 
 ### Segmentation utilisateur
 
-La segmentation vous permet de créer des groupes d’utilisateurs reposant sur des critères précis de comportement dans l’application, des données démographiques, des données sociales, etc. Braze vous permet également de définir toute action utilisateur in-app comme un « événement personnalisé » si l’action souhaitée n’est pas capturée par défaut. Il en va de même pour les caractéristiques de l’utilisateur via des « attributs personnalisés ». Une fois qu’un segment utilisateur est créé sur le tableau de bord, vos utilisateurs entreront et sortiront du segment selon qu’ils remplissent (ou ne remplissent pas) les critères définis. Par exemple, l’image suivante montre un segment qui inclut tous les utilisateurs qui ont dépensé de l’argent dans l’application et qui ont utilisé l’application il y a plus de deux semaines.
+La segmentation vous permet de créer des groupes d’utilisateurs reposant sur des critères précis de comportement dans l’application, des données démographiques, etc. Braze vous permet également de définir toute action utilisateur in-app comme un « événement personnalisé » si l’action souhaitée n’est pas capturée par défaut. Il en va de même pour les caractéristiques de l’utilisateur via des « attributs personnalisés ». Une fois qu’un segment utilisateur est créé sur le tableau de bord, vos utilisateurs entreront et sortiront du segment selon qu’ils remplissent (ou ne remplissent pas) les critères définis. Par exemple, l’image suivante montre un segment qui inclut tous les utilisateurs qui ont dépensé de l’argent dans l’application et qui ont utilisé l’application il y a plus de deux semaines.
 
 ![Un exemple de segment où les filtres « Dernier achat effectué il y a plus de 7 jours » et « Dernière utilisation de ces applications il y a plus de 4 semaines » sont définis.][2]
 
@@ -62,7 +62,7 @@ Avec les cartes de contenu, vous pouvez envoyer un flux dynamique et hautement c
 
 Braze prend en charge le service de notification Push Apple (APNS) pour iOS et Firebase Cloud Messaging (FCM) pour Android. Les notifications push peuvent être déclenchées par la publication de campagnes de messages et d’articles d’actualités.
 
-![Éditeur de messages push affichant un exemple de message push et de titre à envoyer aux canaux de messagerie Android, iOS et Web.][8]
+![Éditeur de messages de notification push affichant un exemple de message de notification push et de titre à envoyer aux canaux de communication Android, iOS et Web.][8]
 
 ### Messagerie dans l’application {#platform-features-in-app-messaging}
 

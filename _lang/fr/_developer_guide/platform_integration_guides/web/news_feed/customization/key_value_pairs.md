@@ -13,7 +13,7 @@ channel: fil d’actualité
 
 Les objets `Card` peuvent éventuellement porter des paires clé-valeur comme `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez `card.extras` pour accéder à ces valeurs.
 
-Consultez les JSDocs pour plus d’informations sur les [ClassicCard][3], les [Banner][4] et les [CaptionedImage][5].
+Consultez les JSDocs pour plus d’informations sur les [ClassicCard][3][Banner][4] et [CaptionedImage][5].
 
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html

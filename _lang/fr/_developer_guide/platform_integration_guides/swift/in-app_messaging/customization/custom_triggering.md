@@ -36,7 +36,7 @@ Ajoutez le code suivant à la méthode `application(_:didReceiveRemoteNotificati
 
 ```swift
 func handleExtras(userInfo: [AnyHashable : Any]) {
-  NSLog("A push was received");
+  NSLog ("Réception d’une notification push.");
   if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
     Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
   }
@@ -46,17 +46,17 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 {% endtab %}
 {% endtabs %}
 
-Lorsque la notification push silencieuse est reçue, un événement enregistré par le SDK « in-app message trigger » sera enregistré par rapport au profil utilisateur. Notez que ces messages in-app ne se déclencheront que si la notification push silencieuse est reçue pendant que l’application se trouve au premier plan.
+Lorsque la notification push silencieuse est reçue, un événement enregistré par le SDK « déclencheur de message in-app » sera enregistré par rapport au profil utilisateur. Notez que ces messages in-app ne se déclencheront que si la notification push silencieuse est reçue pendant que l’application se trouve au premier plan.
 
 ## Étape 2 : Créer une campagne de notification push
 
 Créer une campagne de notification push silencieuse déclenchée par l’événement envoyé par le serveur. Pour plus de détails sur la création d’une campagne de notification push silencieuse, reportez-vous à [notifications push silencieuses][39].
 
-![Une campagne de messages in-app de livraison par événement sera envoyée aux utilisateurs qui exécutent l’événement personnalisé « server_event ».][40]
+![Une campagne de communication in-app de livraison par événement sera envoyée aux utilisateurs qui exécutent l’événement personnalisé « server_event »][40]
 
 La campagne de notification push doit inclure des extras de paires clé-valeur, qui indiquent que cette campagne de notification push est envoyée pour enregistrer un événement personnalisé SDK. Cet événement sera utilisé pour déclencher le message in-app.
 
-![Une Campagne de messages in-app à la livraison basée sur des actions qui comporte deux paires clé-valeur. « CAMPAIGN_NAME » défini comme exemple « In-app message name example » et « IS_SERVER_EVENT » défini sur « true ».][41]
+![Une Campagne de messages in-app à la livraison basée sur des actions qui comporte deux paires clé-valeur. « CAMPAIGN_NAME » défini comme exemple « Message In-App name example » et « IS_SERVER_EVENT » défini sur « true ».][41]
 
 Le code de la méthode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` vérifie la clé `IS_SERVER_EVENT` et enregistrera un événement personnalisé SDK s’il existe.
 
@@ -68,7 +68,7 @@ Créez votre campagne de messages in-app visibles par l’utilisateur dans le ta
 
 Dans l’exemple suivant, le message in-app spécifique à déclencher a été configuré en envoyant la propriété de l’événement dans le cadre de la première notification push silencieuse.
 
-![Une campagne de messages in-app de livraison par événement sera envoyée aux utilisateurs qui exécutent l’événement personnalisé « In-app message trigger » où « campaign_name » correspond à « In-app message name example ».][42]
+![Une campagne de communication de messages in-app de livraison par événement sera envoyée aux utilisateurs qui exécutent l’événement personnalisé « déclencheur de message in-app » où « campaign_name » correspond à « exemple de nom de message in-app ».][42]
 
 En raison d’un message push utilisé pour enregistrer un événement personnalisé, Braze devra stocker un jeton de notification push pour chaque utilisateur afin de permettre cette solution. Pour les utilisateurs d’iOS, Braze ne stocke un jeton qu’à partir du point où un utilisateur a été invité à l’invite de notification push de l’iOS. Avant cela, l’utilisateur ne sera pas joignable par notification push, et la solution précédente ne sera pas possible.
 

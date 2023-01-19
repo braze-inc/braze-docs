@@ -34,4 +34,4 @@ Braze.setOutboundNetworkRequestsOffline(true)
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-outbound-network-requests-offline.html
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/outbound-network-requests-offline.html?query=var%20outboundNetworkRequestsOffline:%20Boolean
