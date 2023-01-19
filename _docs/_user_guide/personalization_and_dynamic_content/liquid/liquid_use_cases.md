@@ -869,7 +869,7 @@ Content Blocks have a size limit of 5 MB.
 
 ### Use a customer's subscription state to personalize content in messages {#misc-personalize-content}
 
-This use case takes a customer's subscription state to send personalized content. Customers are who subscribed to a specific subscription group will receive an exclusive message for both email and SMS subscription groups.
+This use case takes a customer's subscription state to send personalized content. Customers are who subscribed to a specific subscription group will receive an exclusive message for email subscription groups.
 
 {% raw %}
 ```liquid

@@ -13,7 +13,7 @@ description: "Cet article comprend des ressources sur les types de message in-ap
 
 Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à proposer du contenu à vos utilisateurs sans interrompre leur journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre public à tirer le meilleur parti de votre application. Avec plusieurs mises en page et outils de personnalisation, les messages in-app impliquent plus que jamais vos utilisateurs.
 
-Pour voir des exemples de messages in-app, consultez nos [études de cas][53].
+Pour voir des exemples de messages in-app, consultez notre [étude de cas][53].
 
 ## Types de messages in-app
 
@@ -26,7 +26,7 @@ Braze propose actuellement les types de messages in-app par défaut suivants :
 
 Chaque type de message in-app est personnalisable sur le contenu, les images, les icônes, les boutons d’action, l’analytique, l’affichage et la livraison.
 
-Tous les messages in-app intégrés héritent leur prototype de [`InAppMessage`][2] qui définit le comportement et les traits de base pour tous les messages in-app. Les sous-classes de prototypes sont [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7] et [`HtmlMessage`][12].
+Tous les messages in-app intégrés héritent leur prototype de [`InAppMessage`][2], qui définit le comportement et les traits de base pour tous les messages in-app. Les sous-classes de prototypes sont les suivantes : [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7] et [`HtmlMessage`][12].
 
 ## Comportements attendus par type de message
 
@@ -37,21 +37,21 @@ Voilà à quoi ressemble l’ouverture de nos types de messages in-app prêts à
 
 Les messages in-app [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html) sont ainsi nommés car, traditionnellement, sur les plateformes mobiles, ils « glissent vers le haut » ou « glissent vers le bas » depuis le haut ou le bas de l’écran. Dans le SDK Braze de Web, ces messages sont affichés comme une notification de style Growl ou Toast pour s’aligner sur le paradigme dominant du Web. Ils couvrent une petite partie de l’écran et fournissent une capacité de messagerie efficace et non intrusive.
 
-![Un message in-app glissant depuis le bas d’un écran de téléphone affichant : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché dans le coin inférieur d’une page Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Un message in-app surgissant du bas d’un écran de téléphone et affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, se trouve le même le message in-app que celui affiché dans l’angle inférieur d’une page Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Modal %}
 
-Les messages in-app [`Modal`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html) apparaissent au centre de l’écran et sont encadrés par un panneau translucide. Ils sont utiles pour les messages plus critiques et peuvent être équipés de jusqu’à deux boutons d’action permettant l’analytique.
+[`Modal`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html) Les messages in-app apparaissent au centre de l’écran et sont encadrés par un panneau transparent. Utiles pour les messages plus critiques, ils peuvent être pourvus de deux actions à clic et de boutons d’analyse.
 
-![Un message in-app modal au centre d’un écran de téléphone affichant : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché au centre d’une page Web.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Un message in-app modal au centre d’un écran de téléphone affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché au centre d’une page Web.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Full Screen %}
 
 Les messages in-app [`Full`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html) sont utiles pour maximiser le contenu et l’impact de votre communication utilisateur. Sur les fenêtres de navigateur étroites (par ex., le Web mobile), `full` les messages in-app prennent la totalité de la fenêtre du navigateur. Sur les fenêtres de navigateur plus grandes, les messages in-app `full` apparaissent de la même manière que les messages in-app `modal`. La moitié supérieure d’un message in-app `full` contient une image, et la moitié inférieure autorise jusqu’à huit lignes de texte ainsi que jusqu’à deux boutons d’action permettant l’analytique
 
-![Un message in-app en plein écran affiché sur l’ensemble d’un écran de téléphone affichant : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché en grand au centre d’une page Web.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Un message in-app en plein écran affiché sur l’ensemble d’un écran de téléphone affichant : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le message in-app est affiché en grand au centre d’une page Web.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Custom HTML %}
@@ -66,14 +66,14 @@ Pour activer les messages in-app HTML, votre intégration SDK **doit** fournir l
 
 L’exemple suivant montre un message in-app HTML paginé :
 
-![Un message in-app HTML avec un carrousel de contenu et des boutons interactifs.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![Un message in-app HTML avec un carrousel de contenus et des boutons interactifs.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 {% endtab %}
 {% endtabs %}
 
 ## Intégration
 
-Par défaut, les messages in-app sont automatiquement affichés dans le cadre des [instructions d’intégration][1] que nous recommandons. Une personnalisation supplémentaire peut être effectuée en suivant les étapes de ce guide.
+Par défaut, les messages in-app sont automatiquement affichés dans le cadre des [instructions d’intégration que nous recommandons][1]. Une personnalisation supplémentaire peut être effectuée en suivant les étapes de ce guide.
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html

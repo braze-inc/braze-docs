@@ -7,7 +7,7 @@ platform:
   - Android
 page_order: 1
 description: "Cet article couvre l’intégration de notifications push sur Android et FireOS pour la plate-forme Xamarin."
-channel: notification push 
+channel: push 
 ---
 
 # Notifications push
@@ -18,11 +18,11 @@ Consultez les [instructions d’intégration Android][11] pour savoir comment in
 
 ## iOS
 
-Consultez les [instructions d’intégration iOS][1] pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
+Consultez les [instructions d’intégration iOS][1]  pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
 
 ### Demander des autorisations de notifications push
 
-Configurez les autorisations de notifications push en ajoutant le code suivant à la section ```FinishedLaunching``` de votre ```AppDelegate.cs```:
+Configurez des autorisations de notification push en ajoutant le code suivant à la rubrique ```FinishedLaunching``` de votre ```AppDelegate.cs```:
 
 ```csharp
 // C#
@@ -35,7 +35,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 
 ### Enregistrer des jetons de notification push
 
-Enregistrez vos jetons de notification push en ajoutant le code suivant dans la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs```:
+Inscrivez vos jetons de notification push en ajoutant le code suivant dans la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs```:
 
 ```csharp
 // C#

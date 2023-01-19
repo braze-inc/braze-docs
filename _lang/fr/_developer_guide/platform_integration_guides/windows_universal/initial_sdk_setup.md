@@ -16,7 +16,7 @@ Le SDK Braze vous fournira une API pour signaler les informations à utiliser po
 
 ## Étape 1 : Installer le SDK via le gestionnaire de package NuGet
 
-Le SDK pour Windows Universal est installé à l’aide du [gestionnaire de package NuGet][14]. Pour installer le SDK Braze pour Windows via NuGet :
+Le SDK pour Windows Universal est installé à l’aide du [gestionnaire de package NuGet.][14]. Pour installer le SDK Braze pour Windows via NuGet :
 
 1. Cliquez avec le bouton droit sur le fichier du projet
 2. Cliquez sur « Gérer les package NuGet »"
@@ -36,7 +36,7 @@ Créez un fichier appelé `AppboyConfiguration.xml` dans le répertoire racine d
         <ApiKey>YOUR_API_KEY_HERE</ApiKey>
     </AppboyConfig>
 ```
->  Assurez-vous de mettre à jour `YOUR_API_KEY_HERE` avec votre clé API qui se trouve sur la page [Settings (Paramètres)][1] du tableau de bord de Braze.
+>  Assurez-vous de mettre à jour `YOUR_API_KEY_HERE` avec votre clé API qui se trouve sur la page **Console du développeur** du tableau de bord de Braze.
 
 Une fois que vous avez ajouté cet extrait de code, assurez-vous de modifier les propriétés de fichier suivantes pour `AppboyConfiguration.xml`
 
@@ -76,6 +76,5 @@ Braze devrait maintenant collecter des données depuis votre application. Consul
 
 >  Si vous utilisez le projet Braze Unity au sein de la même application, vous devrez peut-être qualifier pleinement les appels vers Braze en tant que « AppboyPlatform.Universal.Appboy »
 
-[1]: https://dashboard-01.braze.com/app_settings/app_settings "Settings"
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

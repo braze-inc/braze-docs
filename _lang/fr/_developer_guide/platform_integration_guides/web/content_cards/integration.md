@@ -84,14 +84,13 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 
 |Méthode | Description | Lien|
 |---|---|---|
-|`logCardImpressions`| Enregistre un événement d’impression pour la liste de cartes donnée. Cela est nécessaire si vous utilisez une IU personnalisée et non l’IU Braze.| [Documents JS pour logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions)|
+|`logContentCardImpressions`| Enregistre un événement d’impression pour la liste de cartes donnée. Cela est nécessaire si vous utilisez une IU personnalisée et non l’IU Braze.| [Documents JS pour logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)|
 |`logCardClick`| Enregistre un événement de clic pour une carte donnée. Cela est nécessaire si vous utilisez une IU personnalisée et non l’IU Braze.| [Documents JS pour logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardclick)|
 |`showContentCards`| Affiche les cartes de contenu de l’utilisateur. | [Documents JS pour showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)|
 |`hideContentCards`| Masque les cartes de contenu Braze actuellement affichées. | [Documents JS pour hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)
 |`toggleContentCards`| Affiche les cartes de contenu de l’utilisateur. | [Documents JS pour toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)
 |`getCachedContentCards()`|Obtient toutes les cartes actuellement disponibles depuis le dernier rafraîchissement de cartes de contenu.| [Documents JS pour getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Abonne aux mises à jour des cartes de contenu. <br>
- La fonction de rappel de l’abonné sera appelée chaque fois que les cartes de contenu seront mises à jour. |  [Documents JS pour subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)|
+|`subscribeToContentCardsUpdates(subscriber)`| Abonne aux mises à jour des cartes de contenu. <br> La fonction de rappel de l’abonné sera appelée chaque fois que les cartes de contenu seront mises à jour. |  [Documents JS pour subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)|
 |`dismissCard()`|Rejette la carte de manière programmatique (disponible dans la version 2.4.1).| [Documents JS pour dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismissCard)|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -111,12 +110,12 @@ Nous utiliserons trois boutons pour masquer, afficher ou basculer le flux (masqu
 
 ```html
 
-<button id="toggle" type="button">Toggle Cards Feed</button>
-<button id="hide" type="button">Hide Cards Feed</button>
-<button id="show" type="button">Show Cards Feed</button>
+<button id="toggle" type="button">Basculer le fil des cartes</button>
+<button id="hide" type="button">Dissimuler le fil des cartes</button>
+<button id="show" type="button">Afficher le fil des cartes</button>
 
 <nav>
-    <h1>Your Personalized Feed</h1>
+    <h1>Votre fil personnalisé</h1>
     <div id="feed"></div>
 </nav>
 

@@ -20,8 +20,7 @@ Si vous suivez nos guides d’intégration pour implémenter nos SDK, vous pourr
 {% alert note %}
 Toutes nos fonctionnalités sont configurables, mais il ne serait pas avantageux de ne pas les utiliser dans votre intégration. 
 
-<br>
-Par exemple, si vous choisissez de ne pas intégrer complètement la localisation dans l’un des SDK, vous ne pourrez pas personnaliser votre messagerie en fonction de la langue ou de la localisation. Si nécessaire, il est possible de [bloquer la collecte par défaut de certaines données, ainsi que les processus de liste d’autorisations qui bloquent la collecte](#blocking-data-collection).
+<br>Par exemple, si vous choisissez de ne pas intégrer complètement la localisation dans l’un des SDK, vous ne pourrez pas personnaliser votre messagerie en fonction de la langue ou de la localisation. Si nécessaire, il est possible de [bloquer la collecte par défaut de certaines données, ainsi que les processus de liste d’autorisations qui bloquent la collecte](#blocking-data-collection).
 {% endalert %}
 
 ### Propriétés du périphérique
@@ -36,11 +35,10 @@ Ces propriétés sont collectées par le SDK Web dans une intégration correcte.
 | BROWSER | Le nom du navigateur.  |
 | BROWSER_VERSION | La version du navigateur. |
 | OS | Le nom du système d’exploitation.  |
-| RESOLUTION | La résolution de l’écran du périphérique. Le format de cette valeur est "`<width>`x`<height>` ».  |
+| RESOLUTION | La résolution de l’écran du périphérique. Le format de cette valeur est « `<width>`x`<height>` ».  |
 | LANGUAGE | La langue configurée pour être utilisée par le navigateur.  |
 | TIME_ZONE | Le fuseau horaire du périphérique.  |
-| USER_AGENT | La chaîne de caractères de l’agent utilisateur du navigateur. <br>
- Consultez les [Documents de développeur Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) pour plus d’informations. |
+| USER_AGENT | La chaîne de caractères de l’agent utilisateur du navigateur. <br> Consultez les [Documents de développeur Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) pour plus d’informations. |
 {: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
@@ -50,16 +48,13 @@ Ces propriétés sont collectées par le SDK Android dans une intégration corre
 
 | Nom | Description |
 |---|---|
-| ANDROID_VERSION <br>
- `os_version` | La version du système d’exploitation Android installée sur le périphérique. |
+| VERSION_ANDROID <br> `os_version` | La version du système d’exploitation Android installée sur le périphérique. |
 | CARRIER | L’opérateur mobile. |
 | MODEL | Le matériel spécifique du périphérique. | 
-| RESOLUTION | La résolution de l’écran du périphérique. Le format de cette valeur est "`<width>`x`<height>` ». |
-| LOCALE | L’emplacement par défaut du périphérique. Le format de cette valeur est "`<language>`_`<COUNTRY>` » (par exemple, « en_US »). |
-| TIMEZONE <br>
- `time_zone` | Le fuseau horaire du périphérique |
-| NOTIFICATIONS_ENABLED <br>
- `remote_notification_enabled` | Si cette application a des notifications activées.|
+| RESOLUTION | La résolution de l’écran du périphérique. Le format de cette valeur est « `<width>`x`<height>` ». |
+| LOCALE | L’emplacement par défaut du périphérique. Le format de cette valeur est « `<language>`_`<COUNTRY>` » (par exemple, « en_US »). |
+| TIMEZONE <br> `time_zone` | Le fuseau horaire du périphérique |
+| NOTIFICATIONS_ACTIVÉES <br> `remote_notification_enabled` | Si cette application a des notifications activées.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -69,28 +64,17 @@ Ces propriétés sont collectées par le SDK iOS dans une intégration correcte.
 
 | Nom | Description |
 |---|---|
-| Résolution du périphérique <br>
- `ABKDeviceOptionResolution`| La résolution de l’écran du périphérique. Le format de cette valeur est "`<width>`x`<height>` ». |  
-| Opérateur de périphérique <br>
- `ABKDeviceOptionCarrier`| L’opérateur mobile déclaré. |
-| Emplacement du périphérique <br>
- `ABKDeviceOptionLocale`| L’emplacement par défaut du périphérique. |
-| Modèle du périphérique <br>
- `ABKDeviceOptionModel`| Le matériel spécifique du périphérique.
-| Version du système d’exploitation du périphérique <br>
- `ABKDeviceOptionOSVersion` | La version du système d’exploitation iOS installée sur le périphérique. |
-| IDFV du périphérique <br>
- `ABKDeviceOptionIDFV`| Identifiant du périphérique pour les fournisseurs. |
-| IDFA du périphérique <br>
- `ABKDeviceOptionIDFA`| (si fourni) Identifiant du périphérique pour les annonceurs. |
-| Notifications push activées sur le périphérique <br>
- `ABKDeviceOptionPushEnabled`| Si les notifications push sont activées sur cette application.
-| Fuseau horaire du périphérique <br>
- `ABKDeviceOptionTimezone`| Le fuseau horaire du périphérique.
-| Statut d’autorisation des notifications push du périphérique<br>
- `ABKDeviceOptionPushAuthStatus`| Si cette application dispose d’une autorisation de notification push pour le périphérique.
-| Suivi des campagnes publicitaires activé sur le périphérique <br>
- `ABKDeviceAdTrackingEnabled`| Si le suivi des campagnes publicitaires est activé sur cette application. |
+| Résolution du périphérique <br> `ABKDeviceOptionResolution`| La résolution de l’écran du périphérique. Le format de cette valeur est « `<width>`x`<height>` ». |  
+| Opérateur mobile <br> `ABKDeviceOptionCarrier`| L’opérateur mobile déclaré. |
+| Emplacement du périphérique <br> `ABKDeviceOptionLocale`| L’emplacement par défaut du périphérique. |
+| Modèle de l’appareil <br> `ABKDeviceOptionModel`| Le matériel spécifique du périphérique.
+| Version du système d’exploitation <br> `ABKDeviceOptionOSVersion` | La version du système d’exploitation iOS installée sur le périphérique. |
+| IDFV du dispositif <br> `ABKDeviceOptionIDFV`| Identifiant du périphérique pour les fournisseurs. |
+| IDFA du dispositif <br> `ABKDeviceOptionIDFA`| (si fourni) Identifiant du périphérique pour les annonceurs. |
+| Notifications push d’appareil activées <br> `ABKDeviceOptionPushEnabled`| Si les notifications push sont activées sur cette application.
+| Fuseau horaire d’appareil  <br> `ABKDeviceOptionTimezone`| Le fuseau horaire du périphérique.
+| Statut d’autorisation des notifications push d’appareil  <br> `ABKDeviceOptionPushAuthStatus`| Si cette application dispose d’une autorisation de notification push pour le périphérique.
+| Suivi des campagnes publicitaires activé sur l’appareil  <br> `ABKDeviceAdTrackingEnabled`| Si le suivi des campagnes publicitaires est activé sur cette application. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -119,13 +103,13 @@ Par exemple, si vous choisissez de ne pas intégrer complètement la localisatio
 
 Nous recommandons fortement d’intégrer pleinement les SDK pour tirer le meilleur parti des capacités de nos produits.
 
-### SDK Web
+### Web SDK
 
 Vous pouvez soit intégrer certaines parties du SDK, soit utiliser [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) pour un utilisateur. Cette méthode synchronisera les données enregistrées avant que `disableSDK()` soit appelé et tous les appels ultérieurs vers le SDK Braze pour le Web pour cette page et les charges de page ultérieures seront ignorés. Si vous souhaitez reprendre le recueil des données ultérieurement, vous pouvez utiliser la méthode [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) plus tard pour reprendre la collecte des données. Vous pouvez en apprendre plus à ce sujet dans notre article [Désactivation du suivi Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/).
 
-### SDK Android
+### Android SDK
 
-Vous pouvez utiliser [`setDeviceObjectAllowlist`][1] pour configurer uniquement un sous-ensemble de clés d’objet du périphérique ou de valeurs selon une liste de valeurs définie. Cette option doit être activée via [`setDeviceObjectAllowlistEnabled`][2].
+Vous pouvez utiliser [`setDeviceObjectAllowlist`][1] pour configurer uniquement un sous-ensemble de clés d’objet d’appareil ou de valeurs selon une liste de valeurs définie. Cette option doit être activée via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
 Une liste vide d’autorisations entraînera le **non** envoi des données du périphérique à Braze.

@@ -40,7 +40,7 @@ Le `inAppMessageClickActionType` peut être défini sur l’une des valeurs suiv
 
 ## Personnaliser les clics sur le corps du message in-app
 
-La méthode de délégation [`ABKInAppMessageUIDelegate`][34] suivante est employée lorsque l’on clique sur un message in-app :
+La méthode de délégation [`ABKInAppMessageUIDelegate`][34]  suivante est employée lorsque l’on clique sur un message in-app :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -61,7 +61,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ## Personnaliser les clics sur le bouton du message in-app
 
-Pour les clics sur les boutons du message in-app et les boutons du message in-app HTML (par exemple, des liens), [`ABKInAppMessageUIDelegate`][34] inclut les méthodes de délégation suivantes :
+Pour les clics sur les boutons du message in-app et les boutons du message in-app HTML (par exemple, des liens),[`ABKInAppMessageUIDelegate`][34] inclut les méthodes de délégation suivantes :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -101,7 +101,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
       ABKInAppMessageImmersive *immersiveIAM = (ABKInAppMessageImmersive *)inAppMessage;
       NSArray<ABKInAppMessageButton *> *buttons = immersiveIAM.buttons;
       for (ABKInAppMessageButton *button in buttons) {
-         // Button action type is accessible via button.buttonClickActionType
+         // Le type de bouton d’action est accessible via le bouton button.buttonClickActionType
       }
    }
 ```
@@ -113,7 +113,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
 if inAppMessage is ABKInAppMessageImmersive {
       let immersiveIAM = inAppMessage as! ABKInAppMessageImmersive;
       for button in inAppMessage.buttons as! [ABKInAppMessageButton]{
-        // Button action type is accessible via button.buttonClickActionType
+        // Le type de bouton d’action est accessible via le bouton button.buttonClickActionType
       }
     }
 ```

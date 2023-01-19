@@ -95,7 +95,7 @@ Le niveau de journalisation ne peut être défini qu’au moment de l’exécuti
 
 ## Collecte IDFA facultative
 
-La collecte IDFA est facultative dans le SDK Braze et désactivée par défaut. La collecte IDFA n’est requise dans Braze que si vous avez l’intention d’utiliser nos [intégrations d’attribution d’installation][21]. Si vous choisissez de stocker votre IDFA, nous le stockerons gratuitement, afin que vous puissiez profiter de ces options dès sa sortie sans travail de développement supplémentaire.
+La collecte IDFA est facultative dans le SDK Braze et désactivée par défaut. La collecte IDFA n’est requise dans Braze que si vous avez l’intention d’utiliser nos [intégrations d’attribution d’installation.][21]. Si vous choisissez de stocker votre IDFA, nous le stockerons gratuitement, afin que vous puissiez profiter de ces options dès sa sortie sans travail de développement supplémentaire.
 
 Par conséquent, nous vous recommandons de continuer à collecter l’IDFA si vous remplissez l’un des critères suivants :
 
@@ -112,7 +112,7 @@ L’invite d’autorisation de transparence du suivi des applications nécessite
 
 ```
 <key>NSUserTrackingUsageDescription</key>
-<string>To retarget ads and build a global profile to better serve you things you would like.</string>
+<string>Pour recibler les publicités et construire un profil global permettant de mieux gérer ce que vous souhaitez.</string>
 ```
 
 ### Implémentation de la collection IDFA
@@ -121,7 +121,7 @@ Suivez ces étapes pour implémenter la collection IDFA :
 
 ##### Étape 1 : Implémenter ABKIDFADelegate
 
-Créez une classe conforme au protocole [`ABKIDFADelegate`][29] :
+Créez une classe conforme au protocole [`ABKIDFADelegate`][29]  :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -151,7 +151,7 @@ Créez une classe conforme au protocole [`ABKIDFADelegate`][29] :
 {% tab swift %}
 
 ```swift
-import Appboy_iOS_SDK
+importer Appboy_iOS_SDK
 import AdSupport
 import AppTrackingTransparency
 
@@ -179,7 +179,7 @@ Dans le dictionnaire `appboyOptions` transmis à `startWithApiKey:inApplication:
 
 La taille du fichier de l’infrastructure de SDK d’iOS est d’environ 30 Mo, et la taille approximative de .ipa (ajout à un fichier d’application) est comprise entre 1 Mo et 2 Mo.
 
-Braze mesure la taille de notre SDK iOS en observant l’effet du SDK sur la taille `.ipa`, en fonction des [recommandations sur la taille des applications][31] d’Apple. Si vous calculez l’ajout de taille du SDK iOS à votre application, nous vous recommandons de suivre [Obtenir un rapport sur la taille de l’application][31] pour comparer la différence de taille entre votre `.ipa` avant et après l’intégration du SDK Braze pour iOS. Lorsque vous comparez les tailles à partir du rapport de taille d’amincissement des applications, nous vous recommandons également de regarder les tailles d’applications pour les fichiers `.ipa` légers, comme les fichiers `.ipa` universels seront plus volumineux que les binaires téléchargés sur l’App Store et installés sur les périphériques d’utilisateur.
+Braze mesure la taille de notre SDK iOS en observant l’effet du SDK sur la taille `.ipa`, en fonction des [recommandations sur la taille des applications d’Apple][31]. Si vous calculez l’ajout de taille du SDK iOS à votre application, nous vous recommandons de suivre [Obtenir un rapport sur la taille de l’application ][31] pour comparer la différence de taille dans votre `.ipa`avant et après l’intégration du SDK Braze pour iOS. Lorsque vous comparez les tailles à partir du rapport de taille d’amincissement des applications, nous vous recommandons également de regarder les tailles d’applications pour les fichiers `.ipa` légers, comme les fichiers `.ipa` universels seront plus volumineux que les binaires téléchargés sur l’App Store et installés sur les périphériques d’utilisateur.
 
 {% alert note %}
 Si vous intégrez via CocoaPods avec `use_frameworks!`, paramétrez les paramètres de construction de la cible sur `Enable Bitcode = NO` pour obtenir des tailles précises.

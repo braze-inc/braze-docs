@@ -11,11 +11,11 @@ description: "Cet article de référence montre comment vous abonner aux mises �
 
 # Suivre une session pour iOS
 
-Le SDK Braze rapporte les données de session utilisées par le tableau de bord de Braze pour calculer l’engagement des utilisateurs et d’autres analytiques essentielles à la compréhension de vos utilisateurs. Notre SDK génère des points de données « start session » (démarrage de session) et « close session » (fin de session) qui comptent pour la longueur de session et le comptage de sessions visibles dans le tableau de bord de Braze en fonction des sémantiques de session suivantes.
+Le SDK Braze rapporte les données de session utilisées par le tableau de bord de Braze pour calculer l’engagement des utilisateurs et d’autres analytiques essentielles à la compréhension de vos utilisateurs. Notre SDK génère des points de données « démarrage de session » et « fin de session » qui comptent pour la longueur de session et le comptage de sessions visibles dans le tableau de bord de Braze en fonction des sémantiques de session suivantes.
 
 ## Cycle de vie de la session
 
-Une session est lancée lorsque vous appelez `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`, après quoi les sessions par défaut commencent lorsque la notification `UIApplicationWillEnterForegroundNotification` est déclenchée (c.-à-d. que l’application passe en premier plan) et se termine lorsque l’application quitte le premier plan (c.-à-d. lorsque le `UIApplicationDidEnterBackgroundNotification` est déclenché ou lorsque l’application est fermée).
+Une session commence lorsque vous appelez `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`. Après quoi,  la session démarre par défaut lorsque la notification `UIApplicationWillEnterForegroundNotification` se lance (c.-à-d., l'application passe au premier plan) et se termine lorsque l'application quitte le premier plan (c.-à-d., quand la notification `UIApplicationDidEnterBackgroundNotification` se lance ou que l'application se ferme).
 
 {% alert note %}
 Si vous devez forcer une nouvelle session, vous pouvez le faire en changeant d’utilisateur.
@@ -25,13 +25,13 @@ Si vous devez forcer une nouvelle session, vous pouvez le faire en changeant d�
 
 À partir du SDK Braze pour iOS v3.14.1, vous pouvez définir l’expiration de la session en utilisant le fichier Info.plist. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la de sous-entrée numérique `SessionTimeout` et définissez la valeur sur votre délai d’expiration de session personnalisé. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur entière souhaitée dans votre objet `appboyOptions` transféré à [`startWithApiKey`][session_tracking_1].
+Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur entière souhaitée dans votre objet `appboyOptions` transféré à [`startWithApiKey`][session_tracking_1](suivi de session).
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Sets the session timeout to 60 seconds
+// Définit le délai de la session sur 60 secondes
 [Appboy startWithApiKey:@"YOUR-API_KEY"
           inApplication:application
       withLaunchOptions:options
@@ -42,7 +42,7 @@ Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur ent
 {% tab swift %}
 
 ```swift
-// Sets the session timeout to 60 seconds
+// Définit le délai de la session sur 60 secondes
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,

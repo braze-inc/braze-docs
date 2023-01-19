@@ -14,7 +14,7 @@ L’installation du SDK Roku de Braze vous fournira des fonctionnalités d’ana
 
 ## Étape 1 : Ajouter des fichiers
 
-Les fichiers SDK Braze sont disponibles dans le répertoire `sdk_files` dans le [dépôt de SDK Roku de Braze][1].
+Les fichiers SDK Braze sont disponibles dans le répertoire `sdk_files` dans le [référentiel de SDK Roku de Braze.][1].
 
 1. Ajouter `BrazeSDK.brs` à votre application dans le répertoire `source`.
 2. Ajouter `BrazeTask.brs` et `BrazeTask.xml` à votre application dans le répertoire `components`.

@@ -12,7 +12,7 @@ guide_top_header: "Personnalisation du message in-app pour le Web"
 guide_top_text: ""
 description: "Cette page d’accueil couvre les options de personnalisation de message in-app du SDK Braze pour le Web."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/custom_styling/

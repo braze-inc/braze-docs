@@ -18,7 +18,7 @@ Pour activer les rejets extérieurs, ajoutez un dictionnaire nommé `Braze` à v
 <key>Braze</key>
 <dict>
   <key>DismissModalOnOutsideTap</key>
-  <boolean>YES</boolean>
+  <boolean>Oui</boolean>
 </dict>
 ```
 

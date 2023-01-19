@@ -12,12 +12,12 @@ Tool:
 
 # Localisations et Geofences
 
-Les Geofences sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support] ou parlez avec votre gestionnaire du succès des clients Braze.
+Les Geofences sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support]  ou parlez avec votre gestionnaire du succès des clients Braze.
 
 Pour prendre en charge les geofences pour iOS :
 
 1. Votre intégration doit prendre en charge les notifications push en arrière-plan.
-2. Les Geofences Braze [doivent être activés][1] par le biais du SDK, soit implicitement en activant la collecte de sites, soit explicitement en activant la collecte geofence. Ils ne sont pas activés par défaut.
+2. Les Geofences Braze [doivent être activés ][1]par le biais du SDK, soit implicitement en activant la collecte de sites, soit explicitement en activant la collecte geofence. Ils ne sont pas activés par défaut.
 
 {% alert important %}
 Depuis iOS 14, les geofences ne fonctionnent pas de manière fiable pour les utilisateurs qui choisissent de donner leur autorisation de localisation approximative.
@@ -25,13 +25,13 @@ Depuis iOS 14, les geofences ne fonctionnent pas de manière fiable pour les ut
 
 ## Étape 1 : Activer les notifications push d’arrière-plan
 
-Pour utiliser pleinement notre stratégie de synchronisation de geofence, vous devez avoir activer les [notifications push en arrière-plan][6] en plus de l’intégration des notifications push standard.
+Pour utiliser pleinement notre stratégie de synchronisation de geofence, vous devez avoir activer les [notifications push][6] en arrière-plan en plus de l’intégration des notifications push standard.
 
 ## Étape 2 : Activer les geofences
 
 Par défaut, les geofences sont activées en fonction de l’activation ou non de la collecte automatique des emplacements. Vous pouvez activer les geofences en utilisant le fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableGeofences` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-Vous pouvez également activer les geofences au démarrage de l’application via la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4]. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableGeofencesKey` sur `YES`. Par exemple :
+Vous pouvez également activer les geofences au démarrage de l’application via la méthode[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4]. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableGeofencesKey` sur `YES`. Par exemple :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -98,11 +98,11 @@ Pour que le produit de position de Braze fonctionne correctement, vous devez ég
 
 ### Activer les geofences à partir de la page des positions
 
-![Les options de geofence sur la page des positions Braze.]{% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Les options de geofence sur la page des positions Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Activer les geofences à partir de la page des paramètres :
 
-![La case à cocher de geofence située sur les pages de paramètres Braze.]{% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![La case à cocher de geofence située sur les pages de paramètres Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## Désactiver les requêtes de geofence automatique
 

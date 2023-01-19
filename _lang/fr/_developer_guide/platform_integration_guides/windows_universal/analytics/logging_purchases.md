@@ -6,7 +6,7 @@ page_order: 4
 description: "Cet article de référence explique comment enregistrer les achats sur la plateforme Windows Universal."
 
 ---
-
+ 
 # Enregistrer les achats
 {% multi_lang_include archive/windows_deprecation.md %}
 
@@ -24,9 +24,12 @@ Tous les achats sont enregistrés en utilisant le `EventLogger`, qui est une pro
 bool LogPurchase(string productId, string currencyCode, decimal price)
 ```
 
+## Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
+
 ## API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API utilisateur][2] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API ][2] utilisateur pour plus de détails.
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

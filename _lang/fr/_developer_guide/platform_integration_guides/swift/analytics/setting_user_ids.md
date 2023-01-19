@@ -38,7 +38,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 {% endtabs %}
 
 {% alert warning %}
-**N’appelez pas `ChangeUser()` lorsqu’un utilisateur se déconnecte. `ChangeUser()` ne doit être appelé que lorsque l’utilisateur se connecte à l’application.** Définir [`changeUser()`][5] sur une valeur par défaut statique associera TOUTES les activités de l’utilisateur avec cet « utilisateur » par défaut jusqu’à ce qu’il se connecte à nouveau.
+**N’appelez pas `changeUser()` lorsqu’un utilisateur se déconnecte. `changeUser()` ne doit être appelé que lorsque l’utilisateur se connecte à l’application.** Définir [`changeUser()`][5] sur une valeur par défaut statique associera TOUTES les activités de l’utilisateur avec cet « utilisateur » par défaut jusqu’à ce qu’il se connecte à nouveau.
 {% endalert %}
 
 N’oubliez pas d’employer cette méthode dans le fil principal de votre application. L’utilisation asynchrone de la méthode peut entraîner un comportement non défini.

@@ -99,9 +99,9 @@ override func setUpUI() {
 
 Des interfaces personnalisées peuvent être fournies en enregistrant des classes personnalisées pour tous les types de cartes souhaités. 
 
-![Une bannière Content Card. Une bannière Content Card affiche une image à droite de la bannière avec le texte « Merci d’avoir téléchargé la démo de Braze ! ».]{% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Une carte de contenu avec une image légendée. Une captioned Content Card affiche une image Braze avec une légende superposée en bas « Merci d’avoir téléchargé la démo de Braze ! ». ]{% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![Une Classic Content Card. Une Classic Content Card affiche une image au centre de la carte avec les mots « Merci d’avoir téléchargé la démo de Braze » en dessous.]{% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![Une bannière Content Card. Une bannière de carte de contenu affiche une image à droite de la bannière avec le texte « Merci d’avoir téléchargé la démo de Braze ! ».]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![Une carte de contenu avec une image légendée. Une captioned Content Card affiche une image Braze avec une légende superposée en bas « Merci d’avoir téléchargé la démo de Braze ! ». ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Une Classic Content Card. Une Classic Content Card affiche une image au centre de la carte avec les mots « Merci d’avoir téléchargé la démo de Braze » en dessous.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze propose trois types de modèles de cartes de contenu : (bannière, image légendée et classique). Sinon, si vous souhaitez fournir vos propres interfaces personnalisées, référencez les extraits de code suivants :
 
@@ -111,7 +111,7 @@ Braze propose trois types de modèles de cartes de contenu : (bannière, image 
 - (void)registerTableViewCellClasses {
   [super registerTableViewCellClasses];
  
-  // Replace the default class registrations with custom classes for these two types of cards
+  // Remplace les enregistrements de classe par défaut par des classes personnalisées pour ces deux types de cartes
   [self.tableView registerClass:[CustomCaptionedImageContentCardCell class] forCellReuseIdentifier:@"ABKCaptionedImageContentCardCell"];
   [self.tableView registerClass:[CustomClassicContentCardCell class] forCellReuseIdentifier:@"ABKClassicCardCell"];
 }
@@ -122,7 +122,7 @@ Braze propose trois types de modèles de cartes de contenu : (bannière, image 
 override func registerTableViewCellClasses() {
   super.registerTableViewCellClasses()
      
-  // Replace the default class registrations with custom classes
+  // Remplacer les enregistrements de classe par défaut par des classes personnalisées
   tableView.register(CustomCaptionedImageContentCardCell.self, forCellReuseIdentifier: "ABKCaptionedImageContentCardCell")
   tableView.register(CustomBannerContentCardCell.self, forCellReuseIdentifier: "ABKBannerContentCardCell")
   tableView.register(CustomClassicImageContentCardCell.self, forCellReuseIdentifier: "ABKClassicImageCardCell")
@@ -142,7 +142,7 @@ Les cartes de contenu peuvent être modifiées de façon programmatique à l’a
 - (void)populateContentCards {
   NSMutableArray<ABKContentCard *> *cards = [NSMutableArray arrayWithArray:[Appboy.sharedInstance.contentCardsController getContentCards]];
   for (ABKContentCard *card in cards) {
-    // Replaces the card description for all Classic Content Cards
+    // Remplace la description de la carte pour toutes les Classic Content Cards
     if ([card isKindOfClass:[ABKClassicContentCard class]]) {
       ((ABKClassicContentCard *)card).cardDescription = @"Custom Feed Override title [classic cards only]!";
     }
@@ -156,7 +156,7 @@ Les cartes de contenu peuvent être modifiées de façon programmatique à l’a
 override func populateContentCards() {
   guard let cards = Appboy.sharedInstance()?.contentCardsController.contentCards else { return }
   for card in cards {
-    // Replaces the card description for all Classic Content Cards
+    // Remplace la description de la carte pour toutes les Classic Content Cards
     if let classicCard = card as? ABKClassicContentCard {
       classicCard.cardDescription = "Custom Feed Override title [classic cards only]!"
     }

@@ -6,7 +6,7 @@ page_order: 4
 description: "Cet article de référence montre comment suivre les achats et les revenus dans l’application et attribuer des propriétés d’achat dans votre application iOS."
 
 ---
-
+ 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
 
@@ -47,9 +47,10 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - Notez que si l’identifiant du produit est vide, l’achat ne sera pas enregistré dans Braze.
 
 ### Ajout de propriétés {#properties-purchases}
-Vous pouvez ajouter des métadonnées sur les achats en passant un `NSDictionary` renseigné avec `NSNumber`, `NSString`, ou `NSDate` valeurs.
 
-Reportez-vous à la [Documentation de classe iOS][8] pour plus de détails.
+Vous pouvez ajouter des métadonnées sur les achats en passant un [tableau de propriétés de l’événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou en passant un `NSDictionary``NSNumber` renseigné avec `NSString`, `NSDate`, ou  valeurs .
+
+Reportez-vous à la [Documentation de classe iOS ][8] pour plus de détails.
 
 ### Ajout d’une quantité
 Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `NSUInteger` pour la quantité.
@@ -58,7 +59,7 @@ Vous pouvez ajouter une quantité à vos achats si les clients effectuent le mê
 * Les méthodes sans entrée de quantité auront une valeur de quantité égale à 1 par défaut.
 * Les méthodes avec une entrée de quantité n’ont pas de valeur par défaut et **doivent** recevoir une entrée de quantité pour que le SDK puisse enregistrer un achat.
 
-Reportez-vous à la [Documentation de classe iOS][7] pour plus de détails.
+Reportez-vous à la [Documentation de classe iOS ][7] pour plus de détails.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -84,6 +85,9 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 Si vous transmettez une valeur de 10 USD et une quantité de 3, cela s’enregistrera dans le profil de l’utilisateur comme trois achats de 10 dollars pour un total de 30 dollars.
 {% endalert %}
 
+### Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
+
 ### Clés réservées
 
 Les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés d’achat :
@@ -97,7 +101,7 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 
 ### API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API utilisateur][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API ][4]utilisateur pour plus de détails.
 
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
