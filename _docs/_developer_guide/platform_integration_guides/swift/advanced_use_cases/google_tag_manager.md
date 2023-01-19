@@ -54,7 +54,7 @@ Lastly, when a user plays a song in our app, we will log an event through Fireba
 
 ```swift
 let parameters: [String: Any] = ["genre": "pop",
-                                "number of times listened": 42]
+                                 "number of times listened": 42]
 Analytics.logEvent("played song", parameters: parameters)
 ```
 
