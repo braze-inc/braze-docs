@@ -390,7 +390,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Has App
-    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. This generally requires users to open the app (start a session) to be included in this filter, however there are some exceptions, such as if a user was imported into Braze and manually associated with your app.
+    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. This generally requires users to open the app (start a session) to be included in this filter. However, there are some exceptions, such as if a user was imported into Braze and manually associated with your app.
     tags:
       - User Attributes
   - name: Language
